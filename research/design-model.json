@@ -1,0 +1,2380 @@
+{
+  "purpose": "Document-level planning model only; not a game Mod or runtime data.",
+  "schema": 1,
+  "baseline": "0.9.4.25-modbranch",
+  "date": "2026-10-11",
+  "main_quests": [
+    {
+      "id": "MQ01",
+      "name": "营火旁的迟信",
+      "region": "R01",
+      "requires": [],
+      "at_least": null,
+      "file": "design/05_主线/MQ01_营火旁的迟信.md"
+    },
+    {
+      "id": "MQ02",
+      "name": "盐封的货单",
+      "region": "R01",
+      "requires": [
+        "MQ01"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ02_盐封的货单.md"
+    },
+    {
+      "id": "MQ03",
+      "name": "旧渠中的目击者",
+      "region": "R01",
+      "requires": [
+        "MQ02"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ03_旧渠中的目击者.md"
+    },
+    {
+      "id": "MQ04",
+      "name": "一份不能结清的债",
+      "region": "R01",
+      "requires": [
+        "MQ03"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ04_一份不能结清的债.md"
+    },
+    {
+      "id": "MQ05",
+      "name": "渡口的三种说法",
+      "region": "R02",
+      "requires": [
+        "MQ04"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ05_渡口的三种说法.md"
+    },
+    {
+      "id": "MQ06",
+      "name": "被封存的页码",
+      "region": "R03",
+      "requires": [
+        "MQ05"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ06_被封存的页码.md"
+    },
+    {
+      "id": "MQ07",
+      "name": "军需账上的空名",
+      "region": "R04",
+      "requires": [
+        "MQ05"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ07_军需账上的空名.md"
+    },
+    {
+      "id": "MQ08",
+      "name": "不会散去的热病",
+      "region": "R05",
+      "requires": [
+        "MQ05"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ08_不会散去的热病.md"
+    },
+    {
+      "id": "MQ09",
+      "name": "把证据摆上桌",
+      "region": "R02",
+      "requires": [
+        "MQ05"
+      ],
+      "at_least": {
+        "count": 2,
+        "of": [
+          "MQ06",
+          "MQ07",
+          "MQ08"
+        ]
+      },
+      "file": "design/05_主线/MQ09_把证据摆上桌.md"
+    },
+    {
+      "id": "MQ10",
+      "name": "没有写下的见证",
+      "region": "R03",
+      "requires": [
+        "MQ09"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ10_没有写下的见证.md"
+    },
+    {
+      "id": "MQ11",
+      "name": "关隘外的交换",
+      "region": "R04",
+      "requires": [
+        "MQ10"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ11_关隘外的交换.md"
+    },
+    {
+      "id": "MQ12",
+      "name": "失踪者仍有名字",
+      "region": "R05",
+      "requires": [
+        "MQ11"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ12_失踪者仍有名字.md"
+    },
+    {
+      "id": "MQ13",
+      "name": "答案的代价",
+      "region": "R05",
+      "requires": [
+        "MQ12"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ13_答案的代价.md"
+    },
+    {
+      "id": "MQ14",
+      "name": "可以回去的路",
+      "region": "R06",
+      "requires": [
+        "MQ13"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ14_可以回去的路.md"
+    },
+    {
+      "id": "MQ15",
+      "name": "回声不等于真相",
+      "region": "R06",
+      "requires": [
+        "MQ14"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ15_回声不等于真相.md"
+    },
+    {
+      "id": "MQ16",
+      "name": "谁来保管余烬",
+      "region": "R06",
+      "requires": [
+        "MQ15"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ16_谁来保管余烬.md"
+    },
+    {
+      "id": "MQ17",
+      "name": "残光之井",
+      "region": "R06",
+      "requires": [
+        "MQ16"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ17_残光之井.md"
+    },
+    {
+      "id": "MQ18",
+      "name": "誓约之后",
+      "region": "R02",
+      "requires": [
+        "MQ17"
+      ],
+      "at_least": null,
+      "file": "design/05_主线/MQ18_誓约之后.md"
+    }
+  ],
+  "regions": [
+    {
+      "id": "R01",
+      "name": "布林外港与旧渠",
+      "nodes": 6,
+      "file": "design/02_世界与地图/区域_R01_布林外港与旧渠.md"
+    },
+    {
+      "id": "R02",
+      "name": "丹布里西路与渡口",
+      "nodes": 8,
+      "file": "design/02_世界与地图/区域_R02_丹布里西路与渡口.md"
+    },
+    {
+      "id": "R03",
+      "name": "曼恩边地",
+      "nodes": 12,
+      "file": "design/02_世界与地图/区域_R03_曼恩边地.md"
+    },
+    {
+      "id": "R04",
+      "name": "王廷关隘与边城",
+      "nodes": 10,
+      "file": "design/02_世界与地图/区域_R04_王廷关隘与边城.md"
+    },
+    {
+      "id": "R05",
+      "name": "灰烬湿地与疫村",
+      "nodes": 8,
+      "file": "design/02_世界与地图/区域_R05_灰烬湿地与疫村.md"
+    },
+    {
+      "id": "R06",
+      "name": "无名修院山地",
+      "nodes": 10,
+      "file": "design/02_世界与地图/区域_R06_无名修院山地.md"
+    }
+  ],
+  "region_edges": [
+    [
+      "BASE",
+      "R01"
+    ],
+    [
+      "R01",
+      "R02"
+    ],
+    [
+      "R02",
+      "R03"
+    ],
+    [
+      "R02",
+      "R04"
+    ],
+    [
+      "R03",
+      "R04"
+    ],
+    [
+      "R03",
+      "R05"
+    ],
+    [
+      "R04",
+      "R05"
+    ],
+    [
+      "R05",
+      "R06"
+    ]
+  ],
+  "side_chains": [
+    {
+      "id": "SQ01",
+      "name": "港税与自由",
+      "stages": [
+        "SQ01-A",
+        "SQ01-B",
+        "SQ01-C"
+      ],
+      "region": "R01",
+      "file": "design/06_支线/支线_SQ01_港税与自由.md"
+    },
+    {
+      "id": "SQ02",
+      "name": "被征用的冬粮",
+      "stages": [
+        "SQ02-A",
+        "SQ02-B",
+        "SQ02-C"
+      ],
+      "region": "R04",
+      "file": "design/06_支线/支线_SQ02_被征用的冬粮.md"
+    },
+    {
+      "id": "SQ03",
+      "name": "没有王旗的面包",
+      "stages": [
+        "SQ03-A",
+        "SQ03-B",
+        "SQ03-C"
+      ],
+      "region": "R03",
+      "file": "design/06_支线/支线_SQ03_没有王旗的面包.md"
+    },
+    {
+      "id": "SQ04",
+      "name": "一条不卖人的路",
+      "stages": [
+        "SQ04-A",
+        "SQ04-B",
+        "SQ04-C"
+      ],
+      "region": "R02",
+      "file": "design/06_支线/支线_SQ04_一条不卖人的路.md"
+    },
+    {
+      "id": "SQ05",
+      "name": "渡口与姓名",
+      "stages": [
+        "SQ05-A",
+        "SQ05-B",
+        "SQ05-C"
+      ],
+      "region": "R02",
+      "file": "design/06_支线/支线_SQ05_渡口与姓名.md"
+    },
+    {
+      "id": "SQ06",
+      "name": "抄本的背面",
+      "stages": [
+        "SQ06-A",
+        "SQ06-B",
+        "SQ06-C"
+      ],
+      "region": "R03",
+      "file": "design/06_支线/支线_SQ06_抄本的背面.md"
+    },
+    {
+      "id": "SQ07",
+      "name": "药不是赎罪券",
+      "stages": [
+        "SQ07-A",
+        "SQ07-B",
+        "SQ07-C"
+      ],
+      "region": "R05",
+      "file": "design/06_支线/支线_SQ07_药不是赎罪券.md"
+    },
+    {
+      "id": "SQ08",
+      "name": "逃兵的家书",
+      "stages": [
+        "SQ08-A",
+        "SQ08-B",
+        "SQ08-C"
+      ],
+      "region": "R04",
+      "file": "design/06_支线/支线_SQ08_逃兵的家书.md"
+    }
+  ],
+  "daily_templates": [
+    {
+      "id": "DT01",
+      "name": "粮车的最后一段",
+      "region": "R02",
+      "file": "design/07_日常任务/日常_DT01_粮车的最后一段.md"
+    },
+    {
+      "id": "DT02",
+      "name": "干净的井水",
+      "region": "R05",
+      "file": "design/07_日常任务/日常_DT02_干净的井水.md"
+    },
+    {
+      "id": "DT03",
+      "name": "无人认领的墓标",
+      "region": "R01",
+      "file": "design/07_日常任务/日常_DT03_无人认领的墓标.md"
+    },
+    {
+      "id": "DT04",
+      "name": "收割前的空地",
+      "region": "R03",
+      "file": "design/07_日常任务/日常_DT04_收割前的空地.md"
+    },
+    {
+      "id": "DT05",
+      "name": "驿馆的急用药",
+      "region": "R04",
+      "file": "design/07_日常任务/日常_DT05_驿馆的急用药.md"
+    },
+    {
+      "id": "DT06",
+      "name": "迷路者的路标",
+      "region": "R02",
+      "file": "design/07_日常任务/日常_DT06_迷路者的路标.md"
+    },
+    {
+      "id": "DT07",
+      "name": "一箱不该开封的货",
+      "region": "R01",
+      "file": "design/07_日常任务/日常_DT07_一箱不该开封的货.md"
+    },
+    {
+      "id": "DT08",
+      "name": "修好第二块桥板",
+      "region": "R02",
+      "file": "design/07_日常任务/日常_DT08_修好第二块桥板.md"
+    },
+    {
+      "id": "DT09",
+      "name": "药师指认的草",
+      "region": "R05",
+      "file": "design/07_日常任务/日常_DT09_药师指认的草.md"
+    },
+    {
+      "id": "DT10",
+      "name": "别让狼靠近夜岗",
+      "region": "R03",
+      "file": "design/07_日常任务/日常_DT10_别让狼靠近夜岗.md"
+    },
+    {
+      "id": "DT11",
+      "name": "两份抄本的交接",
+      "region": "R03",
+      "file": "design/07_日常任务/日常_DT11_两份抄本的交接.md"
+    },
+    {
+      "id": "DT12",
+      "name": "旧钟站的检修",
+      "region": "R06",
+      "file": "design/07_日常任务/日常_DT12_旧钟站的检修.md"
+    },
+    {
+      "id": "DT13",
+      "name": "一锅够分的热汤",
+      "region": "R02",
+      "file": "design/07_日常任务/日常_DT13_一锅够分的热汤.md"
+    },
+    {
+      "id": "DT14",
+      "name": "锈印章与假凭证",
+      "region": "R04",
+      "file": "design/07_日常任务/日常_DT14_锈印章与假凭证.md"
+    },
+    {
+      "id": "DT15",
+      "name": "封存之后的巡查",
+      "region": "R06",
+      "file": "design/07_日常任务/日常_DT15_封存之后的巡查.md"
+    },
+    {
+      "id": "DT16",
+      "name": "愿意继续治疗的人",
+      "region": "R05",
+      "file": "design/07_日常任务/日常_DT16_愿意继续治疗的人.md"
+    }
+  ],
+  "dungeons": [
+    {
+      "id": "D01",
+      "region": "R01",
+      "quest": "MQ02",
+      "file": "design/08_副本/副本_D01_外港封账仓.md"
+    },
+    {
+      "id": "D02",
+      "region": "R01",
+      "quest": "MQ03",
+      "file": "design/08_副本/副本_D02_旧渠检修墓室.md"
+    },
+    {
+      "id": "D03",
+      "region": "R02",
+      "quest": "MQ05",
+      "file": "design/08_副本/副本_D03_断桥税栈.md"
+    },
+    {
+      "id": "D04",
+      "region": "R03",
+      "quest": "MQ06",
+      "file": "design/08_副本/副本_D04_曼恩封存书库.md"
+    },
+    {
+      "id": "D05",
+      "region": "R03",
+      "quest": "MQ10",
+      "file": "design/08_副本/副本_D05_学院弃置试验庭.md"
+    },
+    {
+      "id": "D06",
+      "region": "R04",
+      "quest": "MQ07",
+      "file": "design/08_副本/副本_D06_柏石军需地窖.md"
+    },
+    {
+      "id": "D07",
+      "region": "R05",
+      "quest": "MQ08",
+      "file": "design/08_副本/副本_D07_灰烬疫所.md"
+    },
+    {
+      "id": "D08",
+      "region": "R05",
+      "quest": "MQ12",
+      "file": "design/08_副本/副本_D08_沉水档案井.md"
+    },
+    {
+      "id": "D09",
+      "region": "R06",
+      "quest": "MQ15",
+      "file": "design/08_副本/副本_D09_无名修院回声厅.md"
+    },
+    {
+      "id": "D10",
+      "region": "R06",
+      "quest": "MQ17",
+      "file": "design/08_副本/副本_D10_残光之井.md"
+    }
+  ],
+  "factions": [
+    {
+      "id": "F01",
+      "file": "design/03_势力/势力_城市联盟边地事务署.md"
+    },
+    {
+      "id": "F02",
+      "file": "design/03_势力/势力_王廷封印特使团.md"
+    },
+    {
+      "id": "F03",
+      "file": "design/03_势力/势力_灰色军团地方公议.md"
+    },
+    {
+      "id": "F04",
+      "file": "design/03_势力/势力_路誓行会.md"
+    },
+    {
+      "id": "F05",
+      "file": "design/03_势力/势力_无铭档案会.md"
+    },
+    {
+      "id": "F06",
+      "file": "design/03_势力/势力_自由渡民.md"
+    },
+    {
+      "id": "F07",
+      "file": "design/03_势力/势力_苍白债契.md"
+    },
+    {
+      "id": "F08",
+      "file": "design/03_势力/势力_黑账中间人.md"
+    }
+  ],
+  "characters": [
+    {
+      "id": "NPC01",
+      "file": "design/04_人物/人物_维伦.md"
+    },
+    {
+      "id": "NPC02",
+      "file": "design/04_人物/人物_葛文涅尔.md"
+    },
+    {
+      "id": "NPC03",
+      "file": "design/04_人物/人物_工匠 Darrel.md"
+    },
+    {
+      "id": "NPC04",
+      "file": "design/04_人物/人物_伊莲·沃斯.md"
+    },
+    {
+      "id": "NPC05",
+      "file": "design/04_人物/人物_雷奥·凯斯.md"
+    },
+    {
+      "id": "NPC06",
+      "file": "design/04_人物/人物_玛娅·禾.md"
+    },
+    {
+      "id": "NPC07",
+      "file": "design/04_人物/人物_托曼·索.md"
+    },
+    {
+      "id": "NPC08",
+      "file": "design/04_人物/人物_塞娜·里德.md"
+    },
+    {
+      "id": "NPC09",
+      "file": "design/04_人物/人物_欧达·苇.md"
+    },
+    {
+      "id": "NPC10",
+      "file": "design/04_人物/人物_赫斯·白.md"
+    },
+    {
+      "id": "NPC11",
+      "file": "design/04_人物/人物_罗温·雾.md"
+    },
+    {
+      "id": "NPC12",
+      "file": "design/04_人物/人物_莫伦·海.md"
+    }
+  ],
+  "evidence_producers": {
+    "E01": [
+      "MQ04"
+    ],
+    "E02": [
+      "MQ06"
+    ],
+    "E03": [
+      "MQ07"
+    ],
+    "E04": [
+      "MQ08",
+      "MQ13"
+    ],
+    "E05": [
+      "MQ15"
+    ]
+  },
+  "relief_producers": [
+    "SQ03",
+    "SQ05",
+    "SQ07"
+  ],
+  "ending_rules": {
+    "sealed": {
+      "requires_quest": "MQ15",
+      "containment_ready": true
+    },
+    "custody": {
+      "all_evidence": true,
+      "relief_min": 2,
+      "accountable": true,
+      "no_exchange_harm": true,
+      "assents_min": 2,
+      "trustee_assent": true,
+      "trustee_trust_min": 1
+    },
+    "distributed": {
+      "all_evidence": true,
+      "relief_min": 2,
+      "accountable": true,
+      "no_exchange_harm": true,
+      "archive_pact": true,
+      "transport_pacts_any": [
+        "route",
+        "ferry"
+      ]
+    },
+    "seized": {
+      "requires_quest": "MQ15",
+      "explicit_choice": true
+    }
+  },
+  "legacy_graph_status": "Historical MQ01–18 blueprint; new N1–18 screenplay supersedes it; no save migration",
+  "active_story": [
+    {
+      "id": "N1",
+      "name": "无钟之夜",
+      "region": "R02",
+      "requires": [],
+      "at_least": null,
+      "stage": "0.3.0 logic deployed; S62 routes and dialogue pending",
+      "file": "design/05_主线/台本/台本_N1_无钟之夜.md"
+    },
+    {
+      "id": "N2",
+      "name": "灰堤没有墓碑",
+      "region": "R01",
+      "requires": [
+        "N1"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N2_灰堤没有墓碑.md"
+    },
+    {
+      "id": "N3",
+      "name": "听审前的灯",
+      "region": "R01",
+      "requires": [
+        "N2"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N3_听审前的灯.md"
+    },
+    {
+      "id": "N4",
+      "name": "第一张空白债票",
+      "region": "R01",
+      "requires": [
+        "N3"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N4_第一张空白债票.md"
+    },
+    {
+      "id": "N5",
+      "name": "渡口的三种说法",
+      "region": "R02",
+      "requires": [
+        "N4"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N5_渡口的三种说法.md"
+    },
+    {
+      "id": "N6",
+      "name": "被封存的页码",
+      "region": "R03",
+      "requires": [
+        "N5"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N6_被封存的页码.md"
+    },
+    {
+      "id": "N7",
+      "name": "军需账上的空名",
+      "region": "R04",
+      "requires": [
+        "N5"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N7_军需账上的空名.md"
+    },
+    {
+      "id": "N8",
+      "name": "不会散去的热病",
+      "region": "R05",
+      "requires": [
+        "N5"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N8_不会散去的热病.md"
+    },
+    {
+      "id": "N9",
+      "name": "把证据摆上桌",
+      "region": "R02",
+      "requires": [
+        "N5"
+      ],
+      "at_least": {
+        "count": 2,
+        "of": [
+          "N6",
+          "N7",
+          "N8"
+        ]
+      },
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N9_把证据摆上桌.md"
+    },
+    {
+      "id": "N10",
+      "name": "没有写下的见证",
+      "region": "R03",
+      "requires": [
+        "N9"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N10_没有写下的见证.md"
+    },
+    {
+      "id": "N11",
+      "name": "关隘外的交换",
+      "region": "R04",
+      "requires": [
+        "N10"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N11_关隘外的交换.md"
+    },
+    {
+      "id": "N12",
+      "name": "失踪者仍有名字",
+      "region": "R05",
+      "requires": [
+        "N11"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N12_失踪者仍有名字.md"
+    },
+    {
+      "id": "N13",
+      "name": "答案的代价",
+      "region": "R05",
+      "requires": [
+        "N12"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N13_答案的代价.md"
+    },
+    {
+      "id": "N14",
+      "name": "可以回去的路",
+      "region": "R06",
+      "requires": [
+        "N13"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N14_可以回去的路.md"
+    },
+    {
+      "id": "N15",
+      "name": "回声不等于真相",
+      "region": "R06",
+      "requires": [
+        "N14"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N15_回声不等于真相.md"
+    },
+    {
+      "id": "N16",
+      "name": "谁来保管余烬",
+      "region": "R06",
+      "requires": [
+        "N15"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N16_谁来保管余烬.md"
+    },
+    {
+      "id": "N17",
+      "name": "残光之井",
+      "region": "R06",
+      "requires": [
+        "N16"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N17_残光之井.md"
+    },
+    {
+      "id": "N18",
+      "name": "誓约之后",
+      "region": "R02",
+      "requires": [
+        "N17"
+      ],
+      "at_least": null,
+      "stage": "S62 screenplay draft only",
+      "file": "design/05_主线/台本/台本_N18_誓约之后.md"
+    }
+  ],
+  "screenplays": [
+    {
+      "id": "N1",
+      "kind": "main",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N1_无钟之夜.md",
+      "scenes": 5
+    },
+    {
+      "id": "N2",
+      "kind": "main",
+      "region": "R01",
+      "secondary_region": null,
+      "requires": [
+        "N1"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N2_灰堤没有墓碑.md",
+      "scenes": 4
+    },
+    {
+      "id": "N3",
+      "kind": "main",
+      "region": "R01",
+      "secondary_region": null,
+      "requires": [
+        "N2"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N3_听审前的灯.md",
+      "scenes": 4
+    },
+    {
+      "id": "N4",
+      "kind": "main",
+      "region": "R01",
+      "secondary_region": null,
+      "requires": [
+        "N3"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+      "scenes": 4
+    },
+    {
+      "id": "N5",
+      "kind": "main",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [
+        "N4"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+      "scenes": 3
+    },
+    {
+      "id": "N6",
+      "kind": "main",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N6_被封存的页码.md",
+      "scenes": 3
+    },
+    {
+      "id": "N7",
+      "kind": "main",
+      "region": "R04",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N7_军需账上的空名.md",
+      "scenes": 3
+    },
+    {
+      "id": "N8",
+      "kind": "main",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N8_不会散去的热病.md",
+      "scenes": 3
+    },
+    {
+      "id": "N9",
+      "kind": "main",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": {
+        "count": 2,
+        "of": [
+          "N6",
+          "N7",
+          "N8"
+        ]
+      },
+      "file": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+      "scenes": 3
+    },
+    {
+      "id": "N10",
+      "kind": "main",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [
+        "N9"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+      "scenes": 3
+    },
+    {
+      "id": "N11",
+      "kind": "main",
+      "region": "R04",
+      "secondary_region": null,
+      "requires": [
+        "N10"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+      "scenes": 3
+    },
+    {
+      "id": "N12",
+      "kind": "main",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [
+        "N11"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N12_失踪者仍有名字.md",
+      "scenes": 3
+    },
+    {
+      "id": "N13",
+      "kind": "main",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [
+        "N12"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N13_答案的代价.md",
+      "scenes": 3
+    },
+    {
+      "id": "N14",
+      "kind": "main",
+      "region": "R06",
+      "secondary_region": null,
+      "requires": [
+        "N13"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N14_可以回去的路.md",
+      "scenes": 3
+    },
+    {
+      "id": "N15",
+      "kind": "main",
+      "region": "R06",
+      "secondary_region": null,
+      "requires": [
+        "N14"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N15_回声不等于真相.md",
+      "scenes": 3
+    },
+    {
+      "id": "N16",
+      "kind": "main",
+      "region": "R06",
+      "secondary_region": null,
+      "requires": [
+        "N15"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N16_谁来保管余烬.md",
+      "scenes": 3
+    },
+    {
+      "id": "N17",
+      "kind": "main",
+      "region": "R06",
+      "secondary_region": null,
+      "requires": [
+        "N16"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N17_残光之井.md",
+      "scenes": 3
+    },
+    {
+      "id": "N18",
+      "kind": "main",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [
+        "N17"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/05_主线/台本/台本_N18_誓约之后.md",
+      "scenes": 3
+    },
+    {
+      "id": "SQ01",
+      "kind": "side",
+      "region": "R01",
+      "secondary_region": null,
+      "requires": [
+        "N3"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/06_支线/台本/台本_SQ01_港税与自由.md",
+      "scenes": 3
+    },
+    {
+      "id": "SQ02",
+      "kind": "side",
+      "region": "R04",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/06_支线/台本/台本_SQ02_被征用的冬粮.md",
+      "scenes": 3
+    },
+    {
+      "id": "SQ03",
+      "kind": "side",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/06_支线/台本/台本_SQ03_没有王旗的面包.md",
+      "scenes": 3
+    },
+    {
+      "id": "SQ04",
+      "kind": "side",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [
+        "N4"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/06_支线/台本/台本_SQ04_一条不卖人的路.md",
+      "scenes": 3
+    },
+    {
+      "id": "SQ05",
+      "kind": "side",
+      "region": "R02",
+      "secondary_region": "R05",
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/06_支线/台本/台本_SQ05_渡口与姓名.md",
+      "scenes": 3
+    },
+    {
+      "id": "SQ06",
+      "kind": "side",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [],
+      "requires_any": [
+        "N6",
+        "N10"
+      ],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/06_支线/台本/台本_SQ06_抄本的背面.md",
+      "scenes": 3
+    },
+    {
+      "id": "SQ07",
+      "kind": "side",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [],
+      "requires_any": [
+        "N8",
+        "N12"
+      ],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/06_支线/台本/台本_SQ07_药不是赎罪券.md",
+      "scenes": 3
+    },
+    {
+      "id": "SQ08",
+      "kind": "side",
+      "region": "R04",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/06_支线/台本/台本_SQ08_逃兵的家书.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT01",
+      "kind": "daily",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT01_粮车的最后一段.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT02",
+      "kind": "daily",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT02_干净的井水.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT03",
+      "kind": "daily",
+      "region": "R01",
+      "secondary_region": null,
+      "requires": [
+        "N2"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT03_无人认领的墓标.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT04",
+      "kind": "daily",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT04_收割前的空地.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT05",
+      "kind": "daily",
+      "region": "R04",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT05_驿馆的急用药.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT06",
+      "kind": "daily",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT06_迷路者的路标.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT07",
+      "kind": "daily",
+      "region": "R01",
+      "secondary_region": null,
+      "requires": [
+        "N3"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT07_一箱不该开封的货.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT08",
+      "kind": "daily",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT08_修好第二块桥板.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT09",
+      "kind": "daily",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT09_药师指认的草.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT10",
+      "kind": "daily",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT10_别让狼靠近夜岗.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT11",
+      "kind": "daily",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT11_两份抄本的交接.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT12",
+      "kind": "daily",
+      "region": "R06",
+      "secondary_region": null,
+      "requires": [
+        "N15"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT12_旧钟站的检修.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT13",
+      "kind": "daily",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT13_一锅够分的热汤.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT14",
+      "kind": "daily",
+      "region": "R04",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT14_锈印章与假凭证.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT15",
+      "kind": "daily",
+      "region": "R06",
+      "secondary_region": null,
+      "requires": [
+        "N18"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT15_封存之后的巡查.md",
+      "scenes": 3
+    },
+    {
+      "id": "DT16",
+      "kind": "daily",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [
+        "N18"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/07_日常任务/台本/台本_DT16_愿意继续治疗的人.md",
+      "scenes": 3
+    },
+    {
+      "id": "D02",
+      "kind": "dungeon",
+      "region": "R01",
+      "secondary_region": null,
+      "requires": [
+        "N2"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D02_旧渠检修墓室.md",
+      "scenes": 3
+    },
+    {
+      "id": "D03",
+      "kind": "dungeon",
+      "region": "R02",
+      "secondary_region": null,
+      "requires": [
+        "N4"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D03_断桥税栈.md",
+      "scenes": 3
+    },
+    {
+      "id": "D04",
+      "kind": "dungeon",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D04_曼恩封存书库.md",
+      "scenes": 3
+    },
+    {
+      "id": "D05",
+      "kind": "dungeon",
+      "region": "R03",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D05_学院弃置试验庭.md",
+      "scenes": 3
+    },
+    {
+      "id": "D06",
+      "kind": "dungeon",
+      "region": "R04",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D06_柏石军需地窖.md",
+      "scenes": 3
+    },
+    {
+      "id": "D07",
+      "kind": "dungeon",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [
+        "N5"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D07_灰烬疫所.md",
+      "scenes": 3
+    },
+    {
+      "id": "D08",
+      "kind": "dungeon",
+      "region": "R05",
+      "secondary_region": null,
+      "requires": [],
+      "requires_any": [],
+      "story_requires": [
+        "N11"
+      ],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D08_沉水档案井.md",
+      "scenes": 3
+    },
+    {
+      "id": "D09",
+      "kind": "dungeon",
+      "region": "R06",
+      "secondary_region": null,
+      "requires": [
+        "N14"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D09_无名修院回声厅.md",
+      "scenes": 3
+    },
+    {
+      "id": "D10",
+      "kind": "dungeon",
+      "region": "R06",
+      "secondary_region": null,
+      "requires": [
+        "N16"
+      ],
+      "requires_any": [],
+      "story_requires": [],
+      "at_least": null,
+      "file": "design/08_副本/台本/台本_D10_残光之井.md",
+      "scenes": 3
+    }
+  ],
+  "active_evidence_producers": {
+    "NE1": [
+      "N4"
+    ],
+    "NE2": [
+      "N6"
+    ],
+    "NE3": [
+      "N7"
+    ],
+    "NE4": [
+      "N8",
+      "N13"
+    ],
+    "NE5": [
+      "N15"
+    ]
+  },
+  "active_region_layouts": [
+    {
+      "id": "R01",
+      "theme": "水路把劳动、欠账和战争遗骨叠在一处",
+      "concept": "先让玩家看见谁住在堤上、谁修理工具，再看到追索手续怎样改变普通人的生活。港街是公开收费的地方，灰堤是活计中断的地方，旧渠是未归的人能藏身的地方。水位、干湿分界和绞盘痕迹承担信息，不靠仓库里增加几张纸承担全部叙事。",
+      "mood": "盐灰、褐木、潮湿砖；港街白天忙，工营傍晚静，旧渠滴水。夜里听审灯只照公开栏，租屋暗窗暴露人对公开的恐惧。",
+      "movement": "高堤长视线通向工营，堤下短桥让视线断开；工坊是朝外的作业院，听审棚是可围观的半开放桌席，旧渠是环路。不得把三个空间复制成三层商店。",
+      "nodes": [
+        [
+          "port",
+          "港街复核亭",
+          "服务",
+          "住宿、取水、有限寄存与SQ01公示；不覆盖原海关"
+        ],
+        [
+          "camp",
+          "灰堤工营",
+          "探索",
+          "N2空棺、家属生活与后日谈"
+        ],
+        [
+          "hearing",
+          "听审棚与熄灯租屋",
+          "探索",
+          "N3公开与隐私的空间对比，包含短程接应支路"
+        ],
+        [
+          "workshop",
+          "堤外工坊与弃置驿站",
+          "探索",
+          "N4担保票、停炉／资产处分的可见后果"
+        ],
+        [
+          "canal",
+          "旧渠检修墓室",
+          "副本",
+          "D02；活人侧间与古墓分区"
+        ],
+        [
+          "salt",
+          "盐车道",
+          "连接",
+          "去R02与原布林城郊的原创接口，全球坐标待核"
+        ]
+      ],
+      "edges": [
+        [
+          "salt",
+          "port"
+        ],
+        [
+          "port",
+          "camp"
+        ],
+        [
+          "camp",
+          "hearing"
+        ],
+        [
+          "camp",
+          "canal"
+        ],
+        [
+          "canal",
+          "workshop"
+        ],
+        [
+          "workshop",
+          "hearing"
+        ],
+        [
+          "hearing",
+          "port"
+        ]
+      ],
+      "entry": "salt",
+      "services": "港街提供基本服务；工坊停炉只减少可选修理，不能删除所有基本修理；原布林住宿、犯罪和进口限制照常。",
+      "danger": "危险集中旧渠、塌堤和弃置驿站独立战区，不把敌人不断引到原城区；水与燃炉危险先告知。",
+      "return": "盐车道始终可步行；旧渠入口与维护梯形成闭环；听审被拒不封港街。",
+      "change": "按worker_status、nell_status、workshop_result和SQ01显示外套、灯、公示、炉火与赔付牌；改变本地服务，不改变布林主权。",
+      "art": "优先原创空棺外套、旧绞盘轴座、边纸印票台、半开听审棚；可复用原生材质和小物，必须重排碰撞与房间几何。生成素材只作装饰，文字用游戏字体，碰撞不从图片猜。",
+      "boundary": "布林外围场所全部Mod原创；不改海关既有进口限制，也不复刻已经退役D01。",
+      "links": [
+        "地点设定核对与冲突修订",
+        "势力_城市联盟边地事务署",
+        "势力_自由渡民"
+      ]
+    },
+    {
+      "id": "R02",
+      "theme": "同一条河把生计与自由送向不同岸",
+      "concept": "作为商队和各地人不断汇合的交通区域。旧渡口开篇以割绳和铺位建立信号的用途，断桥让步行、车行和过税分离；客店提供核验与后日谈，却不能在一桌对话里宣布全国真相。",
+      "mood": "石灰浅滩、暗蓝河水、湿草与暖汤；西堤开阔风大，钟房低矮遮光，暗渠湿冷却通向可见出口。日常有人情与劳务，不每个委托都在翻一场阴谋。",
+      "movement": "桥面长射线、桥墩短遮挡、河岸走弧线、浅滩多岔口；客店窗口能看河但隔断护隐私。三个旧渡口室内外布局已有0.3小样，完整地表落位尚待实现。",
+      "nodes": [
+        [
+          "ferryold",
+          "旧渡口故事点",
+          "探索",
+          "N1堤道、钟房、暗渠三个子场景；不计三倍世界节点"
+        ],
+        [
+          "tax",
+          "断桥税栈",
+          "副本",
+          "D03，分流与拒绝强运"
+        ],
+        [
+          "inn",
+          "渡口客店",
+          "服务",
+          "住宿、普通补给、N9公共桌与N18回访"
+        ],
+        [
+          "well",
+          "渡民岸井",
+          "服务",
+          "SQ05过滤井、授权取信柜与船票"
+        ],
+        [
+          "tracks",
+          "河岸轮印带",
+          "探索",
+          "N5箱角与轮轨核路线"
+        ],
+        [
+          "repair",
+          "护路维修坡",
+          "探索",
+          "SQ04桥结构与DT08非故事维修点"
+        ],
+        [
+          "ford",
+          "浅滩路标带",
+          "探索",
+          "始终开放步行回路，DT06普通旅人"
+        ],
+        [
+          "fork",
+          "西路分岔",
+          "连接",
+          "R01盐车道、R03北行与R04关税支路"
+        ]
+      ],
+      "edges": [
+        [
+          "fork",
+          "inn"
+        ],
+        [
+          "inn",
+          "well"
+        ],
+        [
+          "well",
+          "ferryold"
+        ],
+        [
+          "inn",
+          "tracks"
+        ],
+        [
+          "tracks",
+          "tax"
+        ],
+        [
+          "tax",
+          "repair"
+        ],
+        [
+          "repair",
+          "ford"
+        ],
+        [
+          "ford",
+          "inn"
+        ],
+        [
+          "ford",
+          "fork"
+        ]
+      ],
+      "entry": "fork",
+      "services": "新增客店、岸井和柜员明确独立于原丹布里；租住仍付费、危险与犯罪限制仍适用，商队停车不占原NPC门口。",
+      "danger": "桥面索税武装与普通野兽分区；暗渠开篇不是强制战斗副本。入门点附近至少有可转身安全空间，出口图标不压住角色。",
+      "return": "渡口关闭只影响车和价格，浅滩可步行；旧渡口小样回商队与最终地图落位分别记录，不提前承诺已拓展世界格。",
+      "change": "N1人物去向、桥牌出资、SQ05匿名船票、客店供给和N18实际结局各自显示，不由热汤供给替代政治承诺。",
+      "art": "原创钟架已生成；后续做桥墩斜视装饰、绳桩、岸井过滤架、暗渠分段墙。河面装饰与实际可走格分开，桥板须严格对齐26像素格。",
+      "boundary": "丹布里现有服务与城内剧情避让；渡口、新西路与全球相对方位属于原创功能拓扑。",
+      "links": [
+        "旧渡口_场景与通路",
+        "势力_路誓行会",
+        "势力_自由渡民",
+        "既有聚落与原作内容避让"
+      ]
+    },
+    {
+      "id": "R03",
+      "theme": "人和记录都需要藏身，但不能靠彼此消失来安全",
+      "concept": "曼恩外围的寒冷与迫害背景决定它不是正常学院游览区。民粮、迁藏、抄写和夜岗的生活是地域中心；停用请求与伪摘要分两次揭示，让塞娜的保护欲也接受核验。",
+      "mood": "冷灰石、湿黑木、旧蓝布与少量炉火暖色；积雪或寒风表现按原生天气未来验证。书袋、粮袋、遮雨布同处，不能有完整开放学院的繁华大厅。",
+      "movement": "地表路线穿受损房间外墙，磨坊给短视线，民田给开放收割区；D04低檐藏档横向遮挡，D05开阔试验庭加不对称附室。",
+      "nodes": [
+        [
+          "mill",
+          "旧磨坊站",
+          "服务",
+          "有限床、水、释读与中立回执"
+        ],
+        [
+          "ration",
+          "民粮站",
+          "服务",
+          "SQ03民户供给，不授全城安全"
+        ],
+        [
+          "library",
+          "迁藏封存书库",
+          "副本",
+          "D04、N6停用事实"
+        ],
+        [
+          "court",
+          "弃置试验庭",
+          "副本",
+          "D05、N10具体篡改"
+        ],
+        [
+          "road",
+          "风雪驿道",
+          "探索",
+          "原作天气接口待验，步行路线清楚"
+        ],
+        [
+          "depot",
+          "受损集散点",
+          "探索",
+          "早期采购与滞留旧货，不能默认自由进口"
+        ],
+        [
+          "hide",
+          "迁藏小路",
+          "探索",
+          "书袋足迹与有限护路"
+        ],
+        [
+          "burnt",
+          "烧毁旧屋",
+          "探索",
+          "地方迫害痕迹，不写全城最终裁判"
+        ],
+        [
+          "field",
+          "民田围栏",
+          "探索",
+          "DT04收粮与普通兽患"
+        ],
+        [
+          "watch",
+          "夜岗林缘",
+          "探索",
+          "DT10踪迹与阻隔"
+        ],
+        [
+          "scribe",
+          "抄写工棚",
+          "探索",
+          "SQ06证人选择与DT11日常交接"
+        ],
+        [
+          "border",
+          "争议支路",
+          "连接",
+          "接R02、R04与R05的功能道路"
+        ]
+      ],
+      "edges": [
+        [
+          "border",
+          "road"
+        ],
+        [
+          "road",
+          "depot"
+        ],
+        [
+          "depot",
+          "mill"
+        ],
+        [
+          "mill",
+          "ration"
+        ],
+        [
+          "ration",
+          "field"
+        ],
+        [
+          "field",
+          "watch"
+        ],
+        [
+          "watch",
+          "road"
+        ],
+        [
+          "mill",
+          "hide"
+        ],
+        [
+          "hide",
+          "library"
+        ],
+        [
+          "hide",
+          "burnt"
+        ],
+        [
+          "burnt",
+          "court"
+        ],
+        [
+          "court",
+          "scribe"
+        ],
+        [
+          "scribe",
+          "mill"
+        ]
+      ],
+      "entry": "border",
+      "services": "原创流亡者维护有限客床和药品；机构敌对可用旧磨坊中立核验，不能免原作犯罪、睡眠和危险限制。",
+      "danger": "档案掠夺者、部分看守压力和普通兽患；不把灰军全境都变作同一类敌人，也不造自动魔法军队。",
+      "return": "争议支路和风雪驿道保持；正式书库被禁可走废库，不用杀驻军才离开；所有闭门有公开替代线路。",
+      "change": "姓名是否受限、公议是否供粮、凯姆是否失印、莉德去向、匿名病例是否保存，分别映射柜、印台、粮牌和工棚。",
+      "art": "原创低檐迁藏库、包书粮袋、印台剖面、烧损门框、非对称试验附室。先画本地冷色小样，禁止热带植被、开放奢华学院或无出处机械军团。",
+      "boundary": "按S01、S28及曼恩基线的寒冷、法师外逃与迫害约束；地方公议和所有可玩外围布局原创，不保证官方学院本体状态。",
+      "links": [
+        "地点基线_曼恩",
+        "地点设定核对与冲突修订",
+        "势力_灰色军团地方公议",
+        "势力_无铭档案会"
+      ]
+    },
+    {
+      "id": "R04",
+      "theme": "秩序写在印章上，也必须能从印章外查到",
+      "concept": "柏石关是原创地方关隘，不借王廷首府的权威。药柜整齐与病床空名形成冲突，粮秤和仓单分开检视，雷奥从相信正本转向接受有边界的监督。",
+      "mood": "赭灰整砖、褪色小旗、长廊冷灯与驿馆暖色；军需轴线严整，关外民车拥挤。旗帜只用于地方职能，不编新国王纹章或官方军制。",
+      "movement": "主关道是直线压力，石匠道是可见步行旁路；药窖长轴连短廊，地表卸药亭与断车点不复用同一房间。",
+      "nodes": [
+        [
+          "inn",
+          "关外中立驿馆",
+          "服务",
+          "药柜、普通床位、N11与SQ08联系"
+        ],
+        [
+          "cellar",
+          "柏石军需地窖",
+          "副本",
+          "D06、N7有限伤害证据"
+        ],
+        [
+          "scale",
+          "关前粮秤",
+          "探索",
+          "SQ02命令与实际数量对照"
+        ],
+        [
+          "mason",
+          "修理石匠棚",
+          "探索",
+          "普通修理与旁路指引"
+        ],
+        [
+          "cart",
+          "冬粮断车点",
+          "探索",
+          "截货与此前侵吞分开"
+        ],
+        [
+          "camp",
+          "退役营地",
+          "探索",
+          "SQ08本人同意、家书与死者日记"
+        ],
+        [
+          "drug",
+          "卸药亭",
+          "探索",
+          "N11固定箱号与卸货轨迹"
+        ],
+        [
+          "market",
+          "军民交换场",
+          "探索",
+          "受害人与物资用途回访"
+        ],
+        [
+          "seal",
+          "封印复核棚",
+          "探索",
+          "监督回执、DT14标准对照"
+        ],
+        [
+          "bypass",
+          "石匠绕行道",
+          "连接",
+          "无官署通行也能步行至R02/R03/R05"
+        ]
+      ],
+      "edges": [
+        [
+          "bypass",
+          "mason"
+        ],
+        [
+          "mason",
+          "inn"
+        ],
+        [
+          "inn",
+          "scale"
+        ],
+        [
+          "scale",
+          "cellar"
+        ],
+        [
+          "cellar",
+          "seal"
+        ],
+        [
+          "seal",
+          "market"
+        ],
+        [
+          "market",
+          "inn"
+        ],
+        [
+          "inn",
+          "drug"
+        ],
+        [
+          "drug",
+          "cart"
+        ],
+        [
+          "cart",
+          "camp"
+        ],
+        [
+          "camp",
+          "bypass"
+        ]
+      ],
+      "entry": "bypass",
+      "services": "关外驿馆和修理棚提供普通服务，正规封存折扣由SQ02；主关许可证只属本批通行，不免全国税或原犯罪。",
+      "danger": "地窖侵吞者、退役路盗匪与明确油库火险；不可要求清掉整个原作王廷驻军。民粮与药病人都非默认敌对。",
+      "return": "石匠道始终步行可用；官署拒绝不让N7/N11永远卡死；退役营地有安全退回驿馆线。",
+      "change": "粮目的地、监督板、军医病例姓名、逃兵去向和搬运者是否被交出分别变化。真正通行权与地方信任分开。",
+      "art": "原创粮秤对照板、军需柜、配对床管、短封印棚和石匠道转弯；印章及小旗文字符号待核，不复刻首府或凭空画王位继承线索。",
+      "boundary": "王廷八地基线是名称及分项史料，本区域为新柏石关；可引用既有工艺或历史来源，但不移植整座奥尔德文，也不编考德城主。",
+      "links": [
+        "王廷与灰色军团聚落清单",
+        "地点设定核对与冲突修订",
+        "势力_王廷封印特使团",
+        "人物_雷奥·凯斯"
+      ]
+    },
+    {
+      "id": "R05",
+      "theme": "门开以后，生活仍要有人照料",
+      "concept": "寒凉盆地积水与损坏排水形成局部污染背景，既不是热带沼泽，也不是全部猩红瘟疫答案。病人选择、普通护理、责任与记录在此分开，不以解锁一个门就算解决所有苦难。",
+      "mood": "冷苇、灰水、低棚、红白水桶牌与稀疏暖药柜；危险水的色差不能是唯一提示，要有泡沫、木牌和对白。",
+      "movement": "岸堤曲折短视线与清楚高地；D07短横廊病房、D08纵向井环对比。隔离营就在可退安全高地，不能让补给穿过最终故事战区。",
+      "nodes": [
+        [
+          "care",
+          "隔离营",
+          "服务",
+          "普通床、水、药、N13责任核验"
+        ],
+        [
+          "ward",
+          "灰烬疫所",
+          "副本",
+          "D07、N8本地试验污染"
+        ],
+        [
+          "well",
+          "沉水档案井",
+          "副本",
+          "D08、N12找人与N13固定替代记录"
+        ],
+        [
+          "village",
+          "安息村井",
+          "探索",
+          "生活用水与DT02维护"
+        ],
+        [
+          "reeds",
+          "芦苇取样岸",
+          "探索",
+          "SQ05水路及DT09普通采点"
+        ],
+        [
+          "shelter",
+          "自愿安置棚",
+          "探索",
+          "匿名、拒迁、护理分开"
+        ],
+        [
+          "drain",
+          "废排水堤",
+          "探索",
+          "旧排水与新管线的时间对比"
+        ],
+        [
+          "road",
+          "山脚退役路",
+          "连接",
+          "接R03/R04及R06，保留回程"
+        ]
+      ],
+      "edges": [
+        [
+          "road",
+          "care"
+        ],
+        [
+          "care",
+          "village"
+        ],
+        [
+          "village",
+          "reeds"
+        ],
+        [
+          "reeds",
+          "drain"
+        ],
+        [
+          "drain",
+          "ward"
+        ],
+        [
+          "ward",
+          "shelter"
+        ],
+        [
+          "shelter",
+          "care"
+        ],
+        [
+          "drain",
+          "well"
+        ],
+        [
+          "well",
+          "road"
+        ]
+      ],
+      "entry": "road",
+      "services": "隔离营普通护理不要求继续试验；民用床位与原休息保存接口未来验证，不承诺已有新安全保存系统。站关闭有边棚基本设施，不免原作限制。",
+      "danger": "债契有限看守、明确异化的载体与普通废井怪物；常人疾病不自动敌对。环境先有预警再接行动，可撤回补给。",
+      "return": "退役路与高地回营保持；疫所排液坡、井维护升降口分别第二出口；拒绝迁居不删回程。",
+      "change": "水牌、同意登记、普通护理牌、葛文涅尔生死责任、病床占用各自显示；死亡不刷新新一批同名受害者。",
+      "art": "原创过滤井、水桶牌、床隔帘、旧新管卡、三层井壁装饰；寒地苇草优先本地参考，图片不承担水位模拟或碰撞。",
+      "boundary": "仅本地原创仿疫；不解释全国瘟疫、教会奇迹或官方灵魂学。病例命名、试验剂不冒充原版灵药。",
+      "links": [
+        "地点基线_曼恩",
+        "晶石机制与叙事规则",
+        "势力_自由渡民",
+        "势力_苍白债契"
+      ]
+    },
+    {
+      "id": "R06",
+      "theme": "奇迹的诱惑，要由能重复的维护约束",
+      "concept": "终局山地先看回头的路，再看回声，再谈政治。钟站是准备与问责的中心，回声厅验证有限方法，残光之井解除胁迫；不是在一个大殿连续说完所有剧情。",
+      "mood": "冷石、风蚀铁、微弱残留紫光和有人的灯；紫色只在明确介质与危险提示处使用，不能所有场景泛滥发光。原创修院与序章地点不同。",
+      "movement": "山路高差以房间与坡道说明，玩家格上仍清楚；前厅测台非对称，最终双环可绕视线，议桌在安全钟站，退出空间在画面中可见。",
+      "nodes": [
+        [
+          "station",
+          "旧钟站",
+          "服务",
+          "基本补给、回程和原休息接口待验"
+        ],
+        [
+          "echo",
+          "无名修院回声厅",
+          "副本",
+          "D09、N15验证，不强迫载体"
+        ],
+        [
+          "residual",
+          "残光之井",
+          "副本",
+          "D10、N17解除胁迫与最终操作"
+        ],
+        [
+          "sign",
+          "山脚回头牌",
+          "探索",
+          "N14实际回程路线"
+        ],
+        [
+          "shed",
+          "维护图棚",
+          "探索",
+          "工具用途与Darrel可选解释"
+        ],
+        [
+          "trial",
+          "有限试样院",
+          "探索",
+          "不接人体的小量准备与普通材质"
+        ],
+        [
+          "table",
+          "中立议桌",
+          "探索",
+          "N16真实承诺、缺项与意向"
+        ],
+        [
+          "seal",
+          "外圈封条路",
+          "探索",
+          "DT15普通维护，非首领刷新"
+        ],
+        [
+          "drain",
+          "辅助排水坎",
+          "探索",
+          "安全外围回路与DT12水阀"
+        ],
+        [
+          "slope",
+          "货运坡",
+          "连接",
+          "回R05；维护出口不依赖政治选择"
+        ]
+      ],
+      "edges": [
+        [
+          "slope",
+          "sign"
+        ],
+        [
+          "sign",
+          "station"
+        ],
+        [
+          "station",
+          "shed"
+        ],
+        [
+          "shed",
+          "trial"
+        ],
+        [
+          "trial",
+          "echo"
+        ],
+        [
+          "echo",
+          "drain"
+        ],
+        [
+          "drain",
+          "station"
+        ],
+        [
+          "station",
+          "table"
+        ],
+        [
+          "table",
+          "seal"
+        ],
+        [
+          "seal",
+          "residual"
+        ],
+        [
+          "residual",
+          "slope"
+        ]
+      ],
+      "entry": "slope",
+      "services": "钟站准备、补给和中立方案复核；确认前可下山补调查，确认后可补普通操作物资。未实施新商人库存，不先许无限售货。",
+      "danger": "有限护卫与首领战術上限；紫光和地形预警先于损伤。回声只给带来源噪声的片段，不读取玩家未提供秘密。",
+      "return": "货运坡与维护环保持；战斗结束不自动冻结方案，安全台最终确认才冻结；高级资格不足仍可封存。",
+      "change": "维护图、三读数牌、真正签署的回执、载体槽和结局封条变化；永久不巡查不撤销结局，政治结果不能被后做支线倒改。",
+      "art": "原创钟站工具架、三种刻线测台、介质龛、最终双环和维护铭牌；可生图装饰层后做格线适配，主机关必须原生逻辑配独立手绘图标。",
+      "boundary": "无名修院纯原创且非序章修院；不补尼尔、王位或宗教终极真相，不复制第二颗原作晶石，保管接口U03待核。",
+      "links": [
+        "晶石机制与叙事规则",
+        "势力_无铭档案会",
+        "势力_苍白债契",
+        "创作边界与待核验"
+      ]
+    }
+  ],
+  "active_ending_rules": {
+    "sealed": {
+      "requires_quest": "N15",
+      "containment_ready": true
+    },
+    "custody": {
+      "all_evidence": true,
+      "relief_min": 2,
+      "accountable": true,
+      "no_exchange_harm": true,
+      "shift_harm_absent_or_remedied": true,
+      "assents_min": 2,
+      "trustee_assent": true,
+      "trustee_trust_min": 1
+    },
+    "distributed": {
+      "all_evidence": true,
+      "relief_min": 2,
+      "accountable": true,
+      "no_exchange_harm": true,
+      "shift_harm_absent_or_remedied": true,
+      "archive_pact": true,
+      "transport_pacts_any": [
+        "route",
+        "ferry"
+      ]
+    },
+    "seized": {
+      "requires_quest": "N15",
+      "explicit_choice": true
+    }
+  },
+  "active_region_edges": [
+    [
+      "BASE",
+      "R01"
+    ],
+    [
+      "BASE",
+      "R02"
+    ],
+    [
+      "R01",
+      "R02"
+    ],
+    [
+      "R02",
+      "R03"
+    ],
+    [
+      "R02",
+      "R04"
+    ],
+    [
+      "R03",
+      "R04"
+    ],
+    [
+      "R03",
+      "R05"
+    ],
+    [
+      "R04",
+      "R05"
+    ],
+    [
+      "R05",
+      "R06"
+    ]
+  ],
+  "active_narrative_network": {
+    "file": "research/story-network.json",
+    "date": "2026-10-12",
+    "routes": 128,
+    "cross_effects": 74,
+    "ensemble_arcs": 14,
+    "implemented": false
+  }
+}

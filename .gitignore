@@ -1,18 +1,34 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+test-env/
+artifacts/
+backups/
+tools/vendor/
+tools/.dotnet-home/
+tools/packages/
+**/bin/
+**/obj/
+*.user
+*.win
+*.sav
+*.map
 
-# Other files and folders
-.settings/
+# Local commercial reference assets and build output
+stoneshard-assets-sample/
+*.sml
+*.dll
+*.exe
+*.pdb
+*.nupkg
+*.zip
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Local tooling, credentials and editor state
+**/__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+design/.obsidian/workspace*.json
+design/.obsidian/cache/
+.DS_Store
+Thumbs.db

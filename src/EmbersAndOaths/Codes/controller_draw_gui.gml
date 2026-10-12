@@ -1,0 +1,10 @@
+if (!instance_exists(o_globalmap) || !variable_global_exists("characterDataMap") || !variable_global_exists("f_dmg")) exit;
+if (!ds_exists(global.characterDataMap, ds_type_map)) exit;
+var _on = ds_map_exists(global.characterDataMap, "EAO_test_teleport_enabled") && ds_map_find_value(global.characterDataMap, "EAO_test_teleport_enabled") == 1;
+var _label = global.language == 3 ? (_on ? "测试传送：开启 | F8关闭 | 左键点击地图方块" : "测试传送：关闭 | F8开启") : (_on ? "TEST TELEPORT ON | F8: OFF | Left-click a map tile" : "TEST TELEPORT OFF | F8: ON");
+var _font = draw_get_font(); var _color = draw_get_color(); var _alpha = draw_get_alpha();
+var _ha = draw_get_halign(); var _va = draw_get_valign();
+draw_set_font(global.f_dmg); draw_set_alpha(1); draw_set_halign(fa_left); draw_set_valign(fa_top);
+draw_set_color(c_black); draw_text(17, 17, _label);
+draw_set_color(_on ? c_yellow : c_white); draw_text(16, 16, _label);
+draw_set_font(_font); draw_set_color(_color); draw_set_alpha(_alpha); draw_set_halign(_ha); draw_set_valign(_va);

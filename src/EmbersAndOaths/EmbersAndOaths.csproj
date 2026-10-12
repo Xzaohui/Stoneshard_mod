@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>0.3.0</Version>
+    <AssemblyName>EmbersAndOaths</AssemblyName>
+    <MslDir Condition="'$(MslDir)' == ''">D:\SteamLibrary\steamapps\common\Stoneshard\msl</MslDir>
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets/night-bell-v1.png" LogicalName="EAO.NightBell.png" />
+    <PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
+    <Reference Include="ModShardLauncher"><HintPath>$(MslDir)\ModShardLauncher.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UndertaleModLib"><HintPath>$(MslDir)\UndertaleModLib.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>
+
+

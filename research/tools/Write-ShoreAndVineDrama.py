@@ -1,0 +1,42 @@
+"""Render S81 character and review notes; no installation or player data writes."""
+from pathlib import Path
+import json,hashlib,re
+ROOT=Path(__file__).resolve().parents[2];V=ROOT/'design';m=json.loads((ROOT/'research/city-campaign.json').read_text(encoding='utf-8'));hp=ROOT/'research/shore-vine-generated-note-hashes.json';hashes={}
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+if hp.exists():
+ for rel,h in json.loads(hp.read_text(encoding='utf-8')).items():
+  if sha(ROOT/rel)!=h:raise SystemExit('Preserve/reconcile edited S81 note: '+rel)
+casts={cid:m['dramatic_casts'][cid] for cid in ['DEN','MNS']};qs=[q for q in m['quests'] if q['city'] in casts];cs={c['id']:c for c in m['cities']}
+def wl(p):return '[['+Path(p).stem+']]'
+def front(title,ident,kind):return f'---\ntitle: "{title}"\nid: {ident}\ntype: {kind}\nstatus: draft\ncanon: mod-original\nbaseline: "0.9.4.25-modbranch"\nupdated: 2026-10-12\ntags: [stoneshard, dialogue, S81]\naliases: []\n---\n\n# {title}\n\n'
+def write(rel,b):
+ p=V/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(b,encoding='utf-8');hashes['design/'+rel]=sha(p)
+def uses(q,key):return any(who==key for s in q['dramatic_scenes'] for who,_ in s['lines']) or any(who==key for pairs in q['dramatic_followups'].values() for who,_ in pairs) or any(f['speaker']==key for f in q['dramatic_feedback'])
+for cid,cast in casts.items():
+ for key,a in cast.items():
+  if a['existing']:continue
+  b=front(Path(a['file']).stem,'CITY-NPC-'+a['id'],'character')
+  for label,field in [('稳定ID','id'),('工作','role'),('所求','desire'),('所怕','fear'),('口吻','voice'),('可能弧线','arc')]:b+=f'**{label}**：{a[field]}\n\n'
+  b+='所属'+wl(cs[cid]['file'])+'；身份、经历和亲属关系为Mod原创。关联：'+' · '.join(wl(q['file']) for q in qs if q['city']==cid and uses(q,key))+'\n\n'
+  b+='一身体按本职、当时已选去向与实际约见移场；死亡、缺席、拒绝和隐私优先，不在每个任务各生一位。本人只说亲历、本段已准材料或收到的有限回执，双链不赋全城知情。无效的新代理、沉默、预览和一次点头不替本人签未来；已用物、款、床和工班先扣，旧伤害与欠项保留。\n\n[[丹布里与曼郡人物演出审查]] · [[空间_'+cid+'_'+cs[cid]['name']+']] · [[城市篇章与跨区域任务网]]\n'
+  write(a['file'],b)
+b=front('丹布里与曼郡人物演出审查','QA-SHORE-VINE-DRAMA-S81','narrative-audit')
+b+='丹布里与曼郡各一主章、三支线共八案的逐角色初稿。作者脚本research/tools/Author-ShoreAndVineDrama.py生成denbrie-drama.json与mannshire-drama.json；早晚回访分别来自denbrie-feedback.json与mannshire-feedback.json。更新前备份backups/city-drama-20261012-s81。本轮只写设计，不更新游戏或存档。\n\n'
+b+='## 地域区别与原作范围\n\n丹布里的旧岗哨可以重新亮，裂墙后的人却未必有家：门痕、晚间真实铺位、湿网割口、船上个人许可与饭桌声响承载事件。回迁不等重新入驻点工班，既有住房也不能以私家仪式和全部家史换取。新增三户、抄名人、旧指认和工班只是地方原创案件，不定全村现任官职、全国回迁法律或原战争结局。\n\n曼郡从葡架、死枝、蜡封、两道箍刻线和有限新酒呈现重建。家名可能是活着的人想找回失去者的方式，也可能使他们掩盖年份、工序和谁承担成本。旧枝、土地和三季投入不能互相吞掉；这个私人季约不改全镇地法。曼郡不是曼恩学院；现代本批酿造与桶工均原创，不把新师徒安到原木匠NPC名下。\n\n既有来源与未知见[[城市设计与原作避让审查]]。[[空间_DEN_丹布里]] · [[空间_MNS_曼郡]] · [[原素材参考与城市概念图]]\n\n'
+b+='## 当前八案\n\n|任务|场次|原方法|早／晚回访对|\n|---|---:|---:|---:|\n'
+for q in qs:b+='|'+wl(q['file'])+f"|{len(q['dramatic_scenes'])}|{len(q['routes'])}|{len(q['dramatic_feedback'])}|\n"
+b+='\n共24场、16种原方法、48组现场选项答复、30条既有传入回执（两城各15）。保原314边、所有方法与地点、NE、奖励所有者及N17；stages只留S63地理素材，S81 dramatic_scenes才为当前对白。effects.receiver旧摘要不充作实际新说话者，按dramatic_feedback.speaker演。\n\n'
+b+='## 关系、选择与留下的伤害\n\n|人物关系|怎样跨任务改变|不会自动发生的修复|\n|---|---|---|\n|瑟芬／蓓薇／卡蕾一家|漏名更正、旧居请求与本晚接收分开；共修少捕鱼，短租更费钱；分网仍可回迁，共网不代共修同意|瑟芬漏过妹妹仍留史，蓓薇暂住驿站不放弃过去，不要求先替村证明忠诚|\n|卡蕾／欧铎／艾蕾／坦瑟|三成年家人逐人同船或另航次都可救伤者，主章住处不买新航次许可；回岗仍问欧铎本人|坦瑟真伤且真报过名字；受助不免旧责任，家庭不需同船或原谅来证明愿救|\n|娜泽／哈伦／瑟芬|救人割网与未经问借分别认，共用要借权，分份少鱼；不同的补法不能自动叫破坏|娜泽不因救人全清，哈伦误指和瑟芬全体赶人的话也需改，不让孩子重演险处|\n|伊蕾／薇柯／卡蕾|留而礼饭分开，或真有限侧屋护理接续；主章先占的床不在邻居案再许|伊蕾失亲后的孤独真实却不买信仰；薇柯可帮碗、不念礼，不演知恩患者必须像失去的家人|\n|罗莎／提奥／墨达|新年份双来源或有限来处标都承认新酒；退款损旧价，老客可真离；桶与枝结果改实际量和卖期|死去／未归者不从旧蜡回来，墨达曾帮夸错也要更正；退款不买继续做客的同意|\n|凯诺／贝洛／芙伦|双押认责、护理实份／有限替代与双署／独立侧棚相互扣实桶、工班和料|垫同工饭不免退款，桶做得好不证明承诺没重叠；贝洛离棚不抹师承，拒替代者仍保款权|\n|琼荷／赛芙／罗莎|一季分收或自愿可行迁枝决定较低真产量，主章旧接单不能补回失败枝|原枝不吞三季工，投入不吞全坡地；迁枝少果和旧夸大成活留史，不保证来年复产|\n\n'
+b+='## 一身体与位置\n\n丹布里10名、曼郡8名，共18个不同演员身份；每城四位已有角色，另补十张原创角色卡。卡蕾、欧铎和艾蕾是三名成年人，不以父母许可替成年女儿答；瑟芬与蓓薇为兄妹。薇柯是另一位成人暂住患者，与坦瑟不是同一伤者。\n\n瑟芬默认渔网场或真受邀回迁会面，卡蕾一家在当时实际安全住处，蓓薇在已接短住点；哈伦在绳口驿，仅本人真到主章有限会面时答，未到只核已有有效记录。娜泽默认本职补网／家属安全点，孩子始终不在网险处演示。伊蕾在苇背院，薇柯在实际已选择的接续处，自愿短程会面或有效有限材料可复核；不能已搬出又为第三场自动搬回占床。\n\n船案第一场坦瑟在原岸干侧普通照护，第二场他仍在那里，不出现在苇背院；接收侧只用已有效获准护理范围。先到苇背只问接收能力，不预知旧指认或未准陈述。第三场由真实本地船手带到已确认安全岸点并有人实际接，未走不演已到。\n\n罗莎默认实际酒窖／小售廊，提奥在本批酿工／葡架核验点；凯诺默认桶石验桶台，贝洛在现时已选工棚或侧棚，不能新旧两处同时干活。墨达在本次真在场采购点，芙伦在本班有限接收／容器会面处，赛芙和琼荷在本次共同准的葡架台。提奥是酿酒学徒，贝洛是箍桶学徒，既不同人也不同工艺；原木匠NPC不作他们的替身。\n\n'
+b+='## 今晚的住处与接收去重\n\n|容量／资源|须证明的实际步骤|不允许的推导|\n|---|---|---|\n|旧屋两处可住空间|逐户当前人数和真铺位核，第三户每晚有实接住处；轮用需各方真愿|门痕、屋牌或共同修屋约不产生第三床，不轮到就去裂墙边睡|\n|独立短租与绳口驿|真实有限空位、接受者、住期和未重占资金；旁路安全回程|短租不等原产权已判定，也不买回岗、同船或以后合住|\n|D02两床及苇背本次接收|逐项扣现住者、已许护理／家庭位；转住实接且普通饭水续上|护理者真到不挤第三户，患者拒礼不失已签位，一床不被三案各许一次|\n|修外屋与新增铺位|真实专业工班、材料与安全验收；未竣工仍危险／待办|一份请工约不让房立即竣工，普通运输修理不派玩家收十块木头|\n|家船与有限另航次|船手、款、实际载重、逐人许可和两岸实接|卡蕾一人点头不签另两成年人，地图已到不等伤者已转运、护理已接|\n\n共同修与独立租各有代价，两个方案均先保证本晚实际安全接收；未有接收保持待办，可继续其它城案。旧居经历、有限当前住期、床、护理、同船与作工授权分别留，不给任何一人全城统筹权。\n\n'
+b+='## 葡枝、桶与错年份的实际账\n\n本季较低成活量／可收份、真实酒量、实际可用酒桶和护理容器、已收错价／双押、已退部分、工班和可用现金各分记，都是设计概念而非现有游戏变量。已售酒不仍在库，尚未卖的新酒不预生退款收入；一只桶收两笔押款不成为两只。护理桶按真实用途与专业验材，不凭清洗或家名认证装药安全，不重授SQ07。\n\n主章已售或已承诺的有限段先扣，桶案实接减少可用酒量并可能延售；木工署记本件实际撤独创，不让好手艺免双押责任。种枝认三季投入也认失败，季约只限一季；移枝需真专业可行、真受准旁坡与真实补投入／有效自愿有限分期。未付不伪写已付，不可移时不先拔枝制造证据。数值、详细工期、归属账实现和生产尺度仍待全局细化。\n\n'
+b+='## 顺序、知识与多解出口\n\n每城6条支线→主章、6条主章→支线；丹布里另有CX20有限护理者到位、CX23拒研究仍有基本护理与IN-DEN公开旧夜，曼郡另有CX07限定双署、CX29一季预售与IN-MNS旧案公开来源。30条分别写早到／晚到话。外来回执只为本段先例，私史、住址和全部他城状态不随双链传播；没有任何外城回执仍能本地固定物证进入，不要求三个支线都做。\n\n拒同船可另有限航次，拒共网可有限分网，拒礼保已签普通接续或自选真侧屋，拒共同村约可独立短租；老客拒新单仍有错价退款权，护理拒不合替代保原款，徒弟拒共署可有限侧棚，试种者拒强移可限定一季协商。技能流派、忠诚、全家信仰、公开病史与强制原谅都不作硬门槛。\n\nask只问本次有效愿讲，inspect真安全核且许可到位，preview不占款、不提交resolve；每场可离开。所有必须的实际款物、许可、专业处置或接收真落实＋二次确认后才结，未做到不演已全成。晚到只改未来报价、会面、下一班与真余量，不重选方法、不重复退款／奖励、不回滚漏名／误指／割网／误标／少产，不解冻N17。\n\n'
+remaining=sum('dramatic_scenes' not in q for q in m['quests'])
+b+=f'## 当前覆盖与剩余\n\n73篇城市任务中{73-remaining}篇已有逐角色初稿，尚有{remaining}篇待同等深化。十五地域与三十三周边均已有空间／总览，不等全部制作稿或运行任务已完成。时间轴、有限经济数字、比例房间与原素材映射、文学终审仍有工作；本轮未新生图，用既有两地域总览作风貌参考。自动检查只核来源／渲染、演员地点、方法回执和所列分支回归，不证明艺术质量、实际库存或游戏运行。报告research/shore-vine-drama-validation.json；十一份新增笔记哈希research/shore-vine-generated-note-hashes.json。\n\n[[斯孔弗特与约斯特文人物演出审查]] · [[布林人物对白与网状演出审查]] · [[奥尔德文人物对白与交叉演出审查]] · [[曼恩人物对白与去留交叉审查]] · [[城市与聚落设计总索引]] · [[城市扩展验收记录]]\n'
+if (ROOT/'research/shore-vine-task-art-20261012.json').exists():
+ b+='\n## 任务场所图文核对\n\n[[丹布里任务场所概念与台本映射]]与[[曼郡任务场所概念与台本映射]]补十二处场所构图，按本卡八案和稳定空间ID关联。候选v1/v2、生成／编辑提示词与参考哈希见research/shore-vine-task-art-20261012.json；坡面、两床、同桶双签和师徒区别仍按文字与后续制作核，图片不提交任何状态。\n'
+write('11_管理/丹布里与曼郡人物演出审查.md',b);hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+rule=f'\n<!-- CITY-DRAMA-S81:BEGIN -->\n2026-10-12 S81：丹布里／曼郡八案作者源由Author-ShoreAndVineDrama.py生成，两城各drama.json与feedback.json驱动。入口design/11_管理/丹布里与曼郡人物演出审查.md；24场、16原方法、30旧回执，10新卡。三户不从两空间造第三床，坦瑟第二场留原岸，家船三成年人逐人同意；提奥与贝洛分酿酒／箍桶，不替原NPC。当前{73-remaining}篇逐角色初稿、{remaining}篇待深化；床、船、护理、桶、枝、款和工班按实际单记，拒绝有独立出口，晚到不重奖／改N17。运行Validate-ShoreAndVineDrama.py及既有设计检查；数值、时间轴、比例图及游戏未验收。\n<!-- CITY-DRAMA-S81:END -->\n'
+for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+ t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S81:BEGIN -->.*?<!-- CITY-DRAMA-S81:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
+print(json.dumps(dict(quests=8,scenes=24,methods=16,choices=48,incoming_pairs=30,actors=18,new_cards=10,notes=len(hashes),covered=73-remaining,remaining=remaining),ensure_ascii=False))

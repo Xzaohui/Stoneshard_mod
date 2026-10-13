@@ -1,0 +1,141 @@
+{
+  "asset_id": "UNNAMED_ADULT_TRAINING_MODEL_ATTACK_V1",
+  "not_a_story_character": true,
+  "not_chiler": true,
+  "logical_canvas": [
+    1536,
+    1536
+  ],
+  "foot_reference": [
+    768,
+    1380
+  ],
+  "engine_origin": null,
+  "collision": null,
+  "native_fps": null,
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "scope": "original articulated limb-action study; NOT native Stoneshard frame reproduction",
+  "rendering": "flattened body plus weapon, no recoverable layered equipment master",
+  "processing": "imagegen1254-square originals normalized to1536 then every phase uniformly scaled1306/1536 about root(768,1380) to allow sword reach. D0 registrationy-24; D2 x+106 in final canvas compensates generator framing drift; no per-limb warping, no interpolation.",
+  "preview": "one-shot four genuine generated poses including new D3 recovery, not seamless loop",
+  "handedness": "same visible screen-right sword hand, anatomical side unverified",
+  "frames": [
+    {
+      "id": "D0",
+      "path": "frames/D0_guard.png",
+      "sha256": "458af75de19853d868043a5b66f2c9f7638bebb2e539f09eb1564c09f552c696",
+      "author_manual_markers": {
+        "sword_grip": [
+          984,
+          1026
+        ],
+        "blade_base_at_guard": [
+          1030,
+          1090
+        ],
+        "blade_tip": [
+          1275,
+          1332
+        ],
+        "coordinate_accuracy": "coarse approximately +/-12px from review board; not runtime socket",
+        "blade_projected_length_approx": 344.4
+      },
+      "original_sha256": "458af75de19853d868043a5b66f2c9f7638bebb2e539f09eb1564c09f552c696"
+    },
+    {
+      "id": "D1",
+      "path": "frames/D1_windup.png",
+      "sha256": "df6b5678ff5be91048b69aa33e1ac856d2b066cadaf2a106702bd75c7a9bbba4",
+      "author_manual_markers": {
+        "sword_grip": [
+          1122,
+          585
+        ],
+        "blade_base_at_guard": [
+          1104,
+          540
+        ],
+        "blade_tip": [
+          897,
+          300
+        ],
+        "coordinate_accuracy": "coarse approximately +/-12px from review board; not runtime socket",
+        "blade_projected_length_approx": 316.9
+      },
+      "original_sha256": "df6b5678ff5be91048b69aa33e1ac856d2b066cadaf2a106702bd75c7a9bbba4"
+    },
+    {
+      "id": "D2",
+      "path": "frames/D2_forward.png",
+      "sha256": "6a1a173390c64a76b40c5d7693c5a5f39e42e2e4ed8657abd9a1e36d7630c3cd",
+      "author_manual_markers": {
+        "sword_grip": [
+          1062,
+          966
+        ],
+        "blade_base_at_guard": [
+          1134,
+          993
+        ],
+        "blade_tip": [
+          1476,
+          1155
+        ],
+        "coordinate_accuracy": "coarse approximately +/-12px from review board; not runtime socket",
+        "blade_projected_length_approx": 378.4
+      },
+      "original_sha256": "6a1a173390c64a76b40c5d7693c5a5f39e42e2e4ed8657abd9a1e36d7630c3cd"
+    },
+    {
+      "id": "D3",
+      "path": "frames/D3_recovery.png",
+      "sha256": "d6907b0f1cace4952224072517135186c6d3e43d1f7126aeaee2cb64ba60984a",
+      "author_manual_markers": {
+        "sword_grip": [
+          927,
+          1026
+        ],
+        "blade_base_at_guard": [
+          987,
+          1098
+        ],
+        "blade_tip": [
+          1212,
+          1314
+        ],
+        "coordinate_accuracy": "coarse approximately +/-12px from review board; not runtime socket",
+        "blade_projected_length_approx": 311.9
+      },
+      "original_sha256": "d6907b0f1cace4952224072517135186c6d3e43d1f7126aeaee2cb64ba60984a"
+    }
+  ],
+  "review_status": "D0-D2 review pending; D3 newly generated",
+  "limits": [
+    "minor face and silhouette regeneration drift",
+    "sword geometric and ground contact precision need review",
+    "not a gameplay hit-confirm window",
+    "training model has more elongated body than Chiler aesthetic; independent pose experiment, not shared equip body"
+  ],
+  "projection_warning": "Author coarse blade projection lengths vary; no perspective explanation has been independently established. Do not claim weapon geometry or grip compatibility passed.",
+  "originals": [
+    {
+      "path": "originals/D3_recovery_raw_imagegen.png",
+      "sha256": "0161c90b53a7ac7d0ff29edd80b6265e932135f0b08f30fdd441bdb3457d97ec"
+    },
+    {
+      "path": "originals/D2_forward_raw_imagegen.png",
+      "sha256": "cdf31b3dacfe768976087f43baf7ceec0a725c5bf10f03df8d4db615fd1710ba"
+    },
+    {
+      "path": "originals/D1_windup_raw_imagegen.png",
+      "sha256": "d498fe75f62c24848a35b3ade3750476418623136536272f578cbe3c9ab69f18"
+    },
+    {
+      "path": "originals/D0_guard_raw_imagegen.png",
+      "sha256": "09f34fbec6fb3237a92484f37eee75651f24e4df6b708bbe183199bfa6871c6a"
+    }
+  ],
+  "package_status": "HISTORICAL_NOT_CURRENT_DEFAULT",
+  "safe_export": "Historical generated raw bytes untouched; derived frames only alpha0 RGB cleared, original SHA retained in source project."
+}

@@ -1,0 +1,66 @@
+{
+  "character_id": "OSB-NPC-VAS",
+  "selected": "raw/V1_raw_imagegen.png",
+  "new_static_pose_count": 1,
+  "method": "实际查看完整原锚与所选raw；双底板随后复看。",
+  "status": "ready_for_independent_final_review",
+  "identity": "保原成年脸、头发帽子、厚实体型、短腿与原衣装；奥辛画幅占高略增。",
+  "contact": "图左开放手掌贴围裙粉痕，图右夹住下侧缘；围裙仍穿身上。",
+  "composition_variation": "左右职责与brief对调，独审认定合理等价构图，不是身份或惯用手错误。",
+  "author_revision_calls": 1,
+  "unselected_research": [
+    "raw/V1_revision_unselected_raw_imagegen.png"
+  ],
+  "runtime_verified": false,
+  "technical": [
+    {
+      "id": "anchor",
+      "input": "sources/vasen_raw_imagegen.png",
+      "input_sha256": "f07c8883f991116563a323b691df4c9e1e06107468c72226cf57662256a40bca",
+      "output": "transparent/anchor.png",
+      "output_sha256": "8e18121d01fa5caf9de5800da05984776e7580f7fca8089ad595ce945ca2ae30",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "bbox": [
+        145,
+        45,
+        1004,
+        1386
+      ],
+      "alpha_cleanup": "Only alpha <32 becomes 0; all retained RGB and alpha unchanged",
+      "pixels_cleared": 18603,
+      "raw_unchanged": true
+    },
+    {
+      "id": "V1",
+      "input": "raw/V1_raw_imagegen.png",
+      "input_sha256": "0a83f88cb2c18c41f4f9ae03ae0f61f43df5fe9ff6b8467aef350fbeef1b7e41",
+      "output": "transparent/V1.png",
+      "output_sha256": "899296c0534a3d8bf557a71e4c661aab16f5601fed0b51696b82ccce57e663cc",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "bbox": [
+        191,
+        61,
+        1018,
+        1364
+      ],
+      "alpha_cleanup": "Only alpha <32 becomes 0; all retained RGB and alpha unchanged",
+      "pixels_cleared": 14933,
+      "raw_unchanged": true
+    }
+  ],
+  "limits": [
+    "只有一个新静态姿态，不声称连续动画、装备兼容或剧情结果。",
+    "未进行原生尺寸/碰撞/游戏运行验收。"
+  ],
+  "boards_actually_viewed": [
+    "light",
+    "dark"
+  ],
+  "board_result": "文字、完整头帽脚及接触可读；没有截肢，透明边缘双底无显著底色。"
+}

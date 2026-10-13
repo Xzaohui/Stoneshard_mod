@@ -1,0 +1,37 @@
+{
+  "decision": "halfstep_structure_readable_shoe_consistency_revision_requested",
+  "reviewer": "independent-visual-review",
+  "reviewedAt": "2026-10-13",
+  "method": "实际查看中文板和三张全尺寸关键帧，独立检查上身位移与分层合成。",
+  "frames": [
+    {
+      "path": "frames/K0_A_contact.png",
+      "sha256": "16e7c93c5c91c50a6a28631f7c5373e26f89b0aada8c67f75b930636e133afcf",
+      "sameUpperTranslationExact": true,
+      "layerCompositeExact": true
+    },
+    {
+      "path": "frames/K1_A_support_B_passing.png",
+      "sha256": "40d81e5cc1f8a28530bd59aa330e53fd2e2f54b24fdcce28fa2e7b4f99ab5284",
+      "sameUpperTranslationExact": true,
+      "layerCompositeExact": true
+    },
+    {
+      "path": "frames/K2_A_late_B_forward.png",
+      "sha256": "e6a7be29bebf72b629116450cf2eb6fe826d075ca32f557c5c1353d1bb5505ae",
+      "sameUpperTranslationExact": true,
+      "layerCompositeExact": true
+    }
+  ],
+  "visual": {
+    "identity": "上身头发脸手棒包同像素，稳定，不镜像；三个新下肢姿态。",
+    "hipJoin": "衣摆遮髋可读，无明显脱离或断裂；K1腿交叉遮挡较密但摆脚方向明确。",
+    "phase": "K0前触后足、K1一脚支撑另一脚摆过、K2前摆均可辨。",
+    "support": "A支撑足约每阶段向后130px，方向连续；需给root/world位移才可验证不滑。",
+    "shoeIssue": "A鞋K0约x850–1050宽200，K1约750–900宽150，K2约600–775宽175；朝向相近而长度明显变，需鞋型统一或有明确透视解释。像素坐标为人工视读近似。"
+  },
+  "request": "先统一A支撑鞋长度/鞋筒语汇，再扩另半步；保髋与摆腿结构。",
+  "complete_cycle": false,
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false
+}

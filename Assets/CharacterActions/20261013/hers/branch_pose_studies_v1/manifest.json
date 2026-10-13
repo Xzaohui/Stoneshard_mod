@@ -1,0 +1,127 @@
+{
+  "character_id": "NPC-HERS",
+  "aliases": [
+    "NPC10",
+    "CITY-NPC-NPC-HERS"
+  ],
+  "new_character_count": 0,
+  "accepted_new_pose_count": 2,
+  "mode": "builtin imagegen, identity-preserve",
+  "sources": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/hers/hers_raw_imagegen.png",
+      "sha256": "73dab2b373c8554440e67643c370d50f0641d4d5d050b624c4c9e335c3252b89"
+    },
+    {
+      "path": "design/04_人物/人物_赫斯·白.md",
+      "sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c"
+    },
+    {
+      "path": "design/04_人物/城市人物/人物_NPC-HERS_赫斯·白.md",
+      "sha256": "e74d94e04c28eaabef5274631ed6b3fd69faf5227cc70768a04710d60fa7b193"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N17_残光之井.md",
+      "sha256": "a7154c5bc087421b566054344c0556b583d5e53d8f1f4de1d8005e0a1033526d"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256": "7388d992b76f5988bb80c3bf3d95eccdd3d26e19ccb0250c64b7a95c9af7168c"
+    }
+  ],
+  "branch_evidence": [
+    {
+      "route": "N17-R-defection",
+      "line": 55,
+      "quote": "赫斯没有人替他挡价后可逃或独战，账页不丢。",
+      "pose": "escape_preparation",
+      "boundary": "仅转身准备，未逃脱"
+    },
+    {
+      "route": "N17-R-shutdown",
+      "line": 54,
+      "quote": "切两处可达支路，避开守卫视线后对峙；赫斯失去装置优势仍可能作有限反击。",
+      "pose": "remain_guarded",
+      "boundary": "仅空手戒备，未反击"
+    }
+  ],
+  "relationship": "mutually conditional alternatives, NOT sequential animation",
+  "processing": {
+    "alpha": "alpha values below 32 cleared to remove near-invisible background residue; original raw alpha preserved in raw files",
+    "body_transform": "none",
+    "board_transform": "common uniform nearest-neighbor scale",
+    "common_scale": 0.48,
+    "crop": "alpha bounding boxes for boards only"
+  },
+  "rejected": [
+    {
+      "file": "escape_preparation_rejected_raw_imagegen.png",
+      "reason": "extra third hand/arm in first generation; superseded with exactly two hands"
+    }
+  ],
+  "runtime_integrated": false,
+  "gif_created": false,
+  "independent_review": "pending",
+  "files": [
+    {
+      "path": "QA-author.json",
+      "sha256": "609cc306cd641d8667f501f38d425f79883b4c924d7939a1f5f412f31c17039d"
+    },
+    {
+      "path": "README.md",
+      "sha256": "fb2c80fcc383755b76df6bdf7cb61121d014b3fc53e521aabe8b25091b9b8a4e"
+    },
+    {
+      "path": "anchor_reference_transparent.png",
+      "sha256": "f5d6a4418e1a126b67c35a30fdb325b1277db6efc7be10a09af6d8522f552ca2"
+    },
+    {
+      "path": "build_review.py",
+      "sha256": "d514b59c49fecb1776056af79dca336b297c115b58c02cf8d9d108119d582f28"
+    },
+    {
+      "path": "escape_preparation_raw_imagegen.png",
+      "sha256": "d3810e4d7b7641d06339d33342845632ac620368eb6a39b5b34bd124393043b0"
+    },
+    {
+      "path": "escape_preparation_rejected_raw_imagegen.png",
+      "sha256": "d6667f2527a86fd85593b0291f18e5c3f511e604dd950ac69aa1e76321a8204d"
+    },
+    {
+      "path": "escape_preparation_transparent.png",
+      "sha256": "8386607462458019c04f8a00c53b309f0fb4fac4fe02a135ef0e0c1ba6bb2302"
+    },
+    {
+      "path": "hers_branch_pose_review_zh_dark.png",
+      "sha256": "77ab064bbb5f661095634d6fde0573316ca3a3f1daa71090eecae06f28306601"
+    },
+    {
+      "path": "hers_branch_pose_review_zh_light.png",
+      "sha256": "cbd54b1283e489cd66a8ab25723d68c7724fd02fab32827b05d7fde173495ab3"
+    },
+    {
+      "path": "prompt_escape_preparation.txt",
+      "sha256": "45f195ef2e985f65d4161e5608bf8ddff4a6fd53e96bca0e590673ca6ffe64e2"
+    },
+    {
+      "path": "prompt_escape_preparation_v2.txt",
+      "sha256": "79a4f73f7e39bc7541d0fd07d8cd4ed955edc76052e28fac2a29501ee8168d3f"
+    },
+    {
+      "path": "prompt_remain_guarded.txt",
+      "sha256": "c39915b1c5a28b229930d38566107f2c05f38d5971e28f472fb944b9131cb099"
+    },
+    {
+      "path": "remain_guarded_raw_imagegen.png",
+      "sha256": "0aadec74777b88d5ab05596ec453fe2b06c38e322896184c4900861ab4594543"
+    },
+    {
+      "path": "remain_guarded_transparent.png",
+      "sha256": "a9885b41b752e5f2fc70bbd7be06901e2e5fe50088a9d2fda1235beaf318f016"
+    },
+    {
+      "path": "source_roster_record.json",
+      "sha256": "49d39184a23dcb9c7441865b0abb9f811d2b11fae482407e23f946b9369dba14"
+    }
+  ]
+}

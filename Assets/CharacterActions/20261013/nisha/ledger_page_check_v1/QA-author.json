@@ -1,0 +1,80 @@
+{
+  "character_id": "SKO-NPC-NIS",
+  "method": "作者实际查看原锚、每张完整raw及浅深两板；中文与完整脚点无裁切。",
+  "provisional_decision": "ready_for_independent_review",
+  "new_poses": [
+    "N1",
+    "N2"
+  ],
+  "identity": "原脸型、发巾、衣裙、围裙及鞋保持；既有身颈稍长和细像素备注不洗掉。",
+  "contacts": "N1双手托开册；N2单页夹点及连脊可辨。",
+  "no_new_prop": true,
+  "story": "静态动作提案，不写回任何事件完成。",
+  "limitations": [
+    "概念图，非原生精灵、连续动画、装备兼容或runtime验收。",
+    "细像素与原比例备注保留。"
+  ],
+  "revision_calls": 0,
+  "technical": [
+    {
+      "id": "anchor",
+      "input": "sources/nisha_raw_imagegen.png",
+      "input_sha256": "9f8eb3464a0b75dfc35aa83076fef4c301f43f187cb7ddfbc0700fbcc9fecc78",
+      "output": "transparent/anchor.png",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "bbox_after_cleanup": [
+        273,
+        103,
+        843,
+        1376
+      ],
+      "fully_transparent_before": 1061928,
+      "alpha_cleanup": "Only alpha below 32 cleared; retained pixel RGB unchanged.",
+      "raw_preserved": true
+    },
+    {
+      "id": "N1",
+      "input": "raw/N1_raw_imagegen.png",
+      "input_sha256": "05f0762ff8af226c9de0986ba5e1770f92bc41d1eb2a18c54f2c78399bb26feb",
+      "output": "transparent/N1.png",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "bbox_after_cleanup": [
+        263,
+        105,
+        835,
+        1364
+      ],
+      "fully_transparent_before": 1069128,
+      "alpha_cleanup": "Only alpha below 32 cleared; retained pixel RGB unchanged.",
+      "raw_preserved": true
+    },
+    {
+      "id": "N2",
+      "input": "raw/N2_raw_imagegen.png",
+      "input_sha256": "f51aa76591184b86c2ef7b37b9ae7a350f3129611f26879c0cba56b1d42ebb15",
+      "output": "transparent/N2.png",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "bbox_after_cleanup": [
+        277,
+        97,
+        846,
+        1363
+      ],
+      "fully_transparent_before": 1063067,
+      "alpha_cleanup": "Only alpha below 32 cleared; retained pixel RGB unchanged.",
+      "raw_preserved": true
+    }
+  ],
+  "minor_notes": [
+    "打开后的宽面比原侧抱显大、厚度轻微漂移，仅概念层连续，不称固定书尺寸。"
+  ]
+}

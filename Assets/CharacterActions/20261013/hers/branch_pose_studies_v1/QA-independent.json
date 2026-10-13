@@ -1,0 +1,95 @@
+{
+  "reviewer": "independent visual review",
+  "status": "pass_concept_with_notes",
+  "canonical_id": "NPC-HERS",
+  "concept_only": true,
+  "runtime_verified": false,
+  "new_characters": 0,
+  "accepted_new_pose_count": 2,
+  "relationship": "conditional alternatives, not sequential animation",
+  "actually_viewed": [
+    "anchor on boards",
+    "accepted escape transparent full image",
+    "accepted guarded transparent full image",
+    "light and dark boards"
+  ],
+  "visual_findings": [
+    "成熟灰发后退发际、淡灰胡茬、戒备脸与黑直襟素领服装保持锚身份。",
+    "当前逃离准备图只有两只手：一只下垂、一只靠腰，手臂到袖连续；转肩回望和双足转向清楚，不再有已拒首稿的第三手。",
+    "留场姿态一手抬掌、一手低位戒备，屈膝宽站重心可信；完整双手双靴，无断臂。",
+    "单把钥匙始终在原腰侧，未重复；低位手接近钥匙挂带但没有拿起新物，无债簿、武器、装置或魔法。",
+    "两条件动作差异明确，浅深底无实体光晕或主体裁切；静态板明确区分准备逃离与留场戒备。"
+  ],
+  "limitations": [
+    "手指粗簇、钥匙挂带角度及脸轮廓有小幅生成漂移；非精准骨长或装备几何。",
+    "两个姿态分别依赖N17-R-defection与N17-R-shutdown，不能连成先后，不代表已经逃脱或反击。",
+    "alpha<32只清透明度，隐藏RGB保留；原稿历史保留，首次多手图不在接受列表。"
+  ],
+  "technical_checks": {
+    "exports": [
+      {
+        "name": "anchor_reference",
+        "alpha_only_export_exact": true,
+        "height": 1170,
+        "bbox": [
+          298,
+          111,
+          854,
+          1281
+        ],
+        "light_common_scale_exact": true,
+        "dark_common_scale_exact": true
+      },
+      {
+        "name": "escape_preparation",
+        "alpha_only_export_exact": true,
+        "height": 1166,
+        "bbox": [
+          314,
+          123,
+          819,
+          1289
+        ],
+        "light_common_scale_exact": true,
+        "dark_common_scale_exact": true
+      },
+      {
+        "name": "remain_guarded",
+        "alpha_only_export_exact": true,
+        "height": 1179,
+        "bbox": [
+          296,
+          119,
+          875,
+          1298
+        ],
+        "light_common_scale_exact": true,
+        "dark_common_scale_exact": true
+      }
+    ],
+    "source_hashes": true,
+    "manifest_file_hashes": true,
+    "no_gif_in_directory": true
+  },
+  "selected_artifacts": [
+    {
+      "path": "Assets/CharacterActions/20261013/hers/branch_pose_studies_v1/escape_preparation_transparent.png",
+      "sha256": "8386607462458019c04f8a00c53b309f0fb4fac4fe02a135ef0e0c1ba6bb2302"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/hers/branch_pose_studies_v1/remain_guarded_transparent.png",
+      "sha256": "a9885b41b752e5f2fc70bbd7be06901e2e5fe50088a9d2fda1235beaf318f016"
+    }
+  ],
+  "boards": [
+    {
+      "path": "hers_branch_pose_review_zh_light.png",
+      "sha256": "cbd54b1283e489cd66a8ab25723d68c7724fd02fab32827b05d7fde173495ab3"
+    },
+    {
+      "path": "hers_branch_pose_review_zh_dark.png",
+      "sha256": "77ab064bbb5f661095634d6fde0573316ca3a3f1daa71090eecae06f28306601"
+    }
+  ],
+  "manifest_at_review_sha256": "fc15ee39033d81b29403c8d0a60042504c5f4acfef784aa2c4444f579ac10410"
+}

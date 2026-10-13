@@ -1,0 +1,64 @@
+{
+  "character_id": "BRY-NPC-OSIN",
+  "selected": "raw/O1_raw_imagegen.png",
+  "new_static_pose_count": 1,
+  "method": "实际查看完整原锚与所选raw；双底板随后复看。",
+  "status": "ready_for_independent_final_review",
+  "identity": "保原成年脸、头发帽子、厚实体型、短腿与原衣装；奥辛画幅占高略增。",
+  "contact": "跨身手夹浅色原卷袖，另一空手下垂，黄色手套仍挂腰。",
+  "composition_variation": null,
+  "author_revision_calls": 0,
+  "unselected_research": [],
+  "runtime_verified": false,
+  "technical": [
+    {
+      "id": "anchor",
+      "input": "sources/osin_raw_imagegen_v2.png",
+      "input_sha256": "c9d2f3b392256b68e3689a5e7cc04009a309a3da44c5ee4cec5298110084373b",
+      "output": "transparent/anchor.png",
+      "output_sha256": "9c3e405533949e81145313f2da0564842a3e46a877169ec9221b85af4b5a7b08",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "bbox": [
+        177,
+        167,
+        982,
+        1375
+      ],
+      "alpha_cleanup": "Only alpha <32 becomes 0; all retained RGB and alpha unchanged",
+      "pixels_cleared": 10739,
+      "raw_unchanged": true
+    },
+    {
+      "id": "O1",
+      "input": "raw/O1_raw_imagegen.png",
+      "input_sha256": "15496ae32cc3c1159b343a076429a82aabf5d43a103db8cff15f9b9af3902b9d",
+      "output": "transparent/O1.png",
+      "output_sha256": "4b9d962772ff8cfc33aebb4be906c86ece99aea9c28c78cb9de5d2428237dfff",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "bbox": [
+        191,
+        67,
+        947,
+        1373
+      ],
+      "alpha_cleanup": "Only alpha <32 becomes 0; all retained RGB and alpha unchanged",
+      "pixels_cleared": 10372,
+      "raw_unchanged": true
+    }
+  ],
+  "limits": [
+    "只有一个新静态姿态，不声称连续动画、装备兼容或剧情结果。",
+    "未进行原生尺寸/碰撞/游戏运行验收。"
+  ],
+  "boards_actually_viewed": [
+    "light",
+    "dark"
+  ],
+  "board_result": "文字、完整头帽脚及接触可读；没有截肢，透明边缘双底无显著底色。"
+}

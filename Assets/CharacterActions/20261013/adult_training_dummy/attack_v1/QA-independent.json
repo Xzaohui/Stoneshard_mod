@@ -1,0 +1,140 @@
+{
+  "reviewer": "independent-visual-review",
+  "reviewedAt": "2026-10-13",
+  "method": "实际查看中文审图及关键单帧，核manifest和文件；不以hash/画布取代动作审美。",
+  "frames": [
+    {
+      "id": "D0",
+      "path": "frames/D0_guard.png",
+      "sha256": "458af75de19853d868043a5b66f2c9f7638bebb2e539f09eb1564c09f552c696",
+      "matchesManifest": true,
+      "canvas": [
+        1536,
+        1536
+      ],
+      "alphaBounds": [
+        499,
+        445,
+        1281,
+        1381
+      ]
+    },
+    {
+      "id": "D1",
+      "path": "frames/D1_windup.png",
+      "sha256": "df6b5678ff5be91048b69aa33e1ac856d2b066cadaf2a106702bd75c7a9bbba4",
+      "matchesManifest": true,
+      "canvas": [
+        1536,
+        1536
+      ],
+      "alphaBounds": [
+        539,
+        278,
+        1209,
+        1388
+      ]
+    },
+    {
+      "id": "D2",
+      "path": "frames/D2_forward.png",
+      "sha256": "6a1a173390c64a76b40c5d7693c5a5f39e42e2e4ed8657abd9a1e36d7630c3cd",
+      "matchesManifest": true,
+      "canvas": [
+        1536,
+        1536
+      ],
+      "alphaBounds": [
+        444,
+        463,
+        1494,
+        1375
+      ]
+    },
+    {
+      "id": "D3",
+      "path": "frames/D3_recovery.png",
+      "sha256": "d6907b0f1cace4952224072517135186c6d3e43d1f7126aeaee2cb64ba60984a",
+      "matchesManifest": true,
+      "canvas": [
+        1536,
+        1536
+      ],
+      "alphaBounds": [
+        513,
+        466,
+        1227,
+        1384
+      ]
+    }
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "decision": "deliverable_as_pose_study_not_geometry_verified_animation",
+  "uniqueGeneratedPoses": 4,
+  "visual": {
+    "phases": "预备低持、举剑蓄势、向前下方挥出、收臂回收均实际不同姿态且可读；D3非D0复用。",
+    "identity": "同无身份成年训练样板、灰帽蓝软甲棕裤手套保持；脸与轮廓有小漂移，不赋予剧情人物战斗能力。",
+    "grip": "四帧同一屏右图像侧手持柄，护手在手前，未见脱手或穿掌；柄尾/护手宽度略漂移，未作解剖左右断言。",
+    "support": "D0到D1屏左足近固定，D2扩步并屈前膝，D3收回可读。D1/D2足距有跳变，缺中间踏步及连续重心，不能据四图证明无滑步。",
+    "sword": "刃的屏幕投影有显著变化，D2更长、D3更短；可能含视角但没有平面/三维证据证明恒定长度。不能把动作存在当同剑几何验收。",
+    "crop": "全身及剑尖都完整，D2尖靠右边但未裁切；透明无明显污染。"
+  },
+  "swordApproximation": {
+    "method": "独立视读护手前刃根至尖端粗点，约±15px；非精确网格量测。",
+    "points": [
+      [
+        [
+          1040,
+          1090
+        ],
+        [
+          1265,
+          1320
+        ]
+      ],
+      [
+        [
+          1090,
+          535
+        ],
+        [
+          890,
+          299
+        ]
+      ],
+      [
+        [
+          1140,
+          1004
+        ],
+        [
+          1473,
+          1154
+        ]
+      ],
+      [
+        [
+          982,
+          1088
+        ],
+        [
+          1210,
+          1321
+        ]
+      ]
+    ],
+    "lengths": [
+      322,
+      309,
+      365,
+      326
+    ]
+  },
+  "requiredBeforeAnimationProduction": [
+    "建立固定武器长度/宽度模型和统一握点约束，复核D2较长投影及D1/D3护手柄漂移。",
+    "补步伐及重心中间阶段，验证足底轨迹，不直接强接D3到D0称无缝。",
+    "高分辨率合并图没有可恢复换装母版；native/方向/帧率/碰撞另验。"
+  ],
+  "qualification": "可以交付4姿态攻击段落概念；不得宣称剑几何连续性或可直接运行的攻击动画通过。"
+}

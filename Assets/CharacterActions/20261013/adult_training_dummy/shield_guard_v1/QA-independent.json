@@ -1,0 +1,153 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T07:17:42.313798+00:00",
+  "decision": "deliverable_as_shield_guard_key_pose_concept_with_notes",
+  "actually_viewed": [
+    "shield_guard_review_zh.png",
+    "equipment_closeups_light.png",
+    "frames/S1.png",
+    "frames/S2.png",
+    "中文板关闭盾层完整身体近景"
+  ],
+  "visual_findings": {
+    "identity_and_scale": "成年训练角色脸、灰头巾、蓝灰夹棉衣、棕手套靴身份保留。S0/S1站立头顶约445px、脚底约1381–1382px，跨组约935px主体基准相近；S2头下沉与承压前倾一致。细部仍有重绘漂移。",
+    "anatomy_under_shield": "盾层关闭近景显示S0完整垂臂，S1/S2完整肩肘腕及闭拳，没有为遮挡截掉手臂。抬臂拳回胸前姿态合理。",
+    "shield_grip": "盾脐中心的登记锚点位于背后手套闭拳区域，S1/S2按实际像素取点均为棕手套；手腕连接可读。正面盾遮住握把，未直接显示背把/背带，不能据此证明背面结构已制作。",
+    "sword_grip_and_occlusion": "画面右侧持剑手始终相同，手掌前景遮住剑柄；盾位于左臂/胸与部分下脸之前，不盖掉全部辨识性眼眉。S2剑与右手在盾边露出，层次可信。",
+    "support": "双腿分开承重，S2屈膝与躯干收紧可读。脚底轮廓与脚距有漂移，不是连续足锁验收。",
+    "prop_style": "木盾为同一圆形几何，原图统一直径约416px再旋转；木纹比人体簇细密，可作概念装备但生产还应统一像素材质。",
+    "alpha_and_crop": "可见alpha>=16主体在画布内，无主体/装备裁断。全体alpha0RGB为0；低alpha杂像素导致manifest原始bbox触边不等于可见肢体裁切。浅底板未见明显实体光晕。"
+  },
+  "independent_checks": [
+    {
+      "artifact": "frames/S0.png",
+      "sha256": "0f7f91fce0f8ac3394a08f5831dc5f8ee7375b1a89b39aaa244a539e05480b36",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "same_sword_rigid_exact": true,
+      "same_shield_rigid_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "body_visible_bbox_alpha16": [
+        502,
+        445,
+        1026,
+        1381
+      ],
+      "body_under_shield_grip_RGBA": [
+        33,
+        20,
+        21,
+        254
+      ]
+    },
+    {
+      "artifact": "frames/S1.png",
+      "sha256": "603fd4720dd194a28e0103f16be97dee0d3550282c1afb81fd2e10a80bc2d284",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "same_sword_rigid_exact": true,
+      "same_shield_rigid_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "body_visible_bbox_alpha16": [
+        514,
+        445,
+        1067,
+        1382
+      ],
+      "body_under_shield_grip_RGBA": [
+        141,
+        85,
+        61,
+        253
+      ]
+    },
+    {
+      "artifact": "frames/S2.png",
+      "sha256": "0f65daaa369b1de599800f6b3eeaec6b63e0b2c2d6b6ddf387d6645412a2796f",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "same_sword_rigid_exact": true,
+      "same_shield_rigid_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "body_visible_bbox_alpha16": [
+        512,
+        483,
+        1079,
+        1382
+      ],
+      "body_under_shield_grip_RGBA": [
+        138,
+        84,
+        61,
+        253
+      ]
+    },
+    {
+      "artifact": "frames/S3.png",
+      "sha256": "0f7f91fce0f8ac3394a08f5831dc5f8ee7375b1a89b39aaa244a539e05480b36",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "same_sword_rigid_exact": true,
+      "same_shield_rigid_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "body_visible_bbox_alpha16": [
+        502,
+        445,
+        1026,
+        1381
+      ],
+      "body_under_shield_grip_RGBA": [
+        33,
+        20,
+        21,
+        254
+      ]
+    }
+  ],
+  "canonical_sword_sha256": "03cea8f0e7d5e44b144ed8a7dfca1bfce326f51a8ed61e91bd6fb9b2dcc18931",
+  "canonical_shield_sha256": "61d4c8fc1107e16060899d8ff2a7123b3fe174d41154393cc62717e203d168b4",
+  "generation_and_reuse": {
+    "new_full_body_poses": 2,
+    "local_closed_glove_edit": 1,
+    "new_shield_source": 1,
+    "raw_generation_outputs": 4,
+    "presented_phases": 4,
+    "S3_byte_identical_to_S0": true,
+    "gif_frames": 4,
+    "gif_duration_ms": [
+      650,
+      800,
+      850,
+      1400
+    ],
+    "gif_loop_extension_present": false
+  },
+  "limitations": [
+    "三独立身体姿态含复用旧预备，四阶段不是四张新身体，回稳直接复用S0。",
+    "没有连续过渡、持续承力或无滑步证明；无撞击物和伤害/格挡成功判定。",
+    "同盾只作画面平面旋转，未制作侧转透视/背面结构；不称完整多方向装备。",
+    "固定道具分层概念验证不等于动态换装系统通过。",
+    "高分辨率关键姿态，未验native尺寸/网格、engine origin/collision/fps/directions/runtime。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "native_ready": false,
+  "artifacts": [
+    {
+      "artifact": "shield_guard_review_zh.png",
+      "sha256": "9adf1c608a71c7de423c376c1a35bf85535f14c6b07f1cfc00dca2b6fc22d77c"
+    },
+    {
+      "artifact": "equipment_closeups_light.png",
+      "sha256": "d4670fbb1258655d3f1a84b29abfa7ceabc6bc3a7ab3fabdf480804409c8d1fa"
+    },
+    {
+      "artifact": "shield_guard_preview_once.gif",
+      "sha256": "6f1b7db9a2ab8eb88c4f08b1d8a521e437fbf34cd321c6bd976b95f6f20ffb9e"
+    },
+    {
+      "artifact": "manifest.json",
+      "sha256": "615a7c0f166861ab81dd79596cf04378cafea716b53ea30b2c593992e858fce1"
+    }
+  ]
+}

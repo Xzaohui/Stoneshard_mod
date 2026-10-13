@@ -1,0 +1,239 @@
+{
+  "decision": "deliverable_as_four_stage_fixed_weapon_keyframe_concept",
+  "reviewer": "independent-visual-review",
+  "reviewedAt": "2026-10-13",
+  "method": "实际查看四阶段图、手掌近景、D1/D2单帧，独立重算canonical刚性变换与分层合成。 已独立验证安全导出全部alpha>0像素及alpha不变、alpha=0全清零；实际重看D1/D2安全成图。",
+  "frames": [
+    {
+      "id": "D0",
+      "path": "frames/D0_guard.png",
+      "sha256": "6938d529a5e143e9a8c207e00d59c0e4840b11d3345af262ea5faa93c7b51a4b",
+      "sameCanonicalRigidRender": true,
+      "layerCompositeExact": true,
+      "declaredAxisLength": 320.001,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "id": "D1",
+      "path": "frames/D1_windup.png",
+      "sha256": "15111a51296f2ecd941fcf79ead2dc95b97634545b6015c0afbbdabcfe911296",
+      "sameCanonicalRigidRender": true,
+      "layerCompositeExact": true,
+      "declaredAxisLength": 320.0,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "id": "D2",
+      "path": "frames/D2_forward.png",
+      "sha256": "0ef25228db0824826d5f71d1fbd93ce2fef5389ff734c6142eaed0776c615b2c",
+      "sameCanonicalRigidRender": true,
+      "layerCompositeExact": true,
+      "declaredAxisLength": 320.0,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "id": "D3",
+      "path": "frames/D3_recovery.png",
+      "sha256": "35da6572acc96416d5e747e065de9cd1a9cc5f96b2020c4ea2c074826675e1b9",
+      "sameCanonicalRigidRender": true,
+      "layerCompositeExact": true,
+      "declaredAxisLength": 320.001,
+      "canvas": [
+        1536,
+        1536
+      ]
+    }
+  ],
+  "technicalResult": "四剑层与单一canonical经刚性变换及8px重采样逐像素一致；三层合成等于成图，320px轴模型真实。",
+  "blockingVisualIssues": [],
+  "limits": [
+    "四阶段概念样板，不是连续循环/native/装备兼容验收。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "previousReview": {
+    "decision": "requires_old_weapon_remnant_cleanup",
+    "reviewer": "independent-visual-review",
+    "reviewedAt": "2026-10-13",
+    "method": "实际查看四阶段图、手掌近景、D1/D2单帧，独立重算canonical刚性变换与分层合成。",
+    "frames": [
+      {
+        "id": "D0",
+        "path": "frames/D0_guard.png",
+        "sha256": "eb90c6f84db4fbd74c9fec7614e0cdfc27884f68b8b9b95d712dbbc0738dedb5",
+        "sameCanonicalRigidRender": true,
+        "layerCompositeExact": true,
+        "declaredAxisLength": 320.001,
+        "canvas": [
+          1536,
+          1536
+        ]
+      },
+      {
+        "id": "D1",
+        "path": "frames/D1_windup.png",
+        "sha256": "d94bb61525911b237ddba7ee9f65b7223ea6d9b554d493a1df49d8818d72819d",
+        "sameCanonicalRigidRender": true,
+        "layerCompositeExact": true,
+        "declaredAxisLength": 320.0,
+        "canvas": [
+          1536,
+          1536
+        ]
+      },
+      {
+        "id": "D2",
+        "path": "frames/D2_forward.png",
+        "sha256": "2bfd3dd00c6e6582edfd67f34a53f6f3c89ec42e1082424976e122868d47a8d4",
+        "sameCanonicalRigidRender": true,
+        "layerCompositeExact": true,
+        "declaredAxisLength": 320.0,
+        "canvas": [
+          1536,
+          1536
+        ]
+      },
+      {
+        "id": "D3",
+        "path": "frames/D3_recovery.png",
+        "sha256": "9b3e8c37f728ff0273344a006898ea48ca1d8d1c6028ca4bde2289b654632f6a",
+        "sameCanonicalRigidRender": true,
+        "layerCompositeExact": true,
+        "declaredAxisLength": 320.001,
+        "canvas": [
+          1536,
+          1536
+        ]
+      }
+    ],
+    "technicalResult": "四剑层与单一canonical经刚性变换及8px重采样逐像素一致；三层合成等于成图，320px轴模型真实。",
+    "blockingVisualIssues": [
+      "D2新宽剑尖约1414,1127之外仍接旧窄剑尖至约1480,1160，body_base旧剑未清完整。",
+      "D1新尖约890,307之外仍残旧顶帽约870,280；放大单帧可见，缩略板不易见。"
+    ],
+    "request": "清除body_base中所有旧剑边/尖残影，保手腕和手指，再核单帧及新hash。",
+    "limits": [
+      "真实分层与固定剑模型不能取代合成图遮挡清理。",
+      "身体足轨迹/native/装备兼容仍未验。"
+    ],
+    "runtime_verified": false,
+    "equipment_compatibility_verified": false
+  },
+  "correction": "复核相同SHA确认D1旧帽/D2旧尖区域body_base alpha全0。真实alpha深底合成干净，先前直接RGBA预览把透明RGB显示，误判为实体残影，撤回该阻断。",
+  "sourceReview": "../../../adult_training_dummy/attack_v2_geometry/QA-independent.json",
+  "safeExportChecks": [
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/frames/D1_windup.png",
+      "sha256": "15111a51296f2ecd941fcf79ead2dc95b97634545b6015c0afbbdabcfe911296",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/frames/D3_recovery.png",
+      "sha256": "35da6572acc96416d5e747e065de9cd1a9cc5f96b2020c4ea2c074826675e1b9",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/frames/D2_forward.png",
+      "sha256": "0ef25228db0824826d5f71d1fbd93ce2fef5389ff734c6142eaed0776c615b2c",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/frames/D0_guard.png",
+      "sha256": "6938d529a5e143e9a8c207e00d59c0e4840b11d3345af262ea5faa93c7b51a4b",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D3_recovery_hand_foreground.png",
+      "sha256": "cf1493a56913d249fb479da7c001e9ac2847cf7fce3591643ca605c8de10baaa",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D2_forward_sword_rigid.png",
+      "sha256": "f40c0de4b0fe740bbcea4dcf48d7448255661ed2f4baf19297066e4f4e0de0ee",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D0_guard_body_base.png",
+      "sha256": "55a9e6748d973df7d2ef5bfd8b15fdf87df07953aaeb2031f8019c96a30ee980",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D1_windup_body_base.png",
+      "sha256": "df696f1966ced03ff6582c3303db632ddad96cb69058b3e56051a2ac0440ce52",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D2_forward_body_base.png",
+      "sha256": "43ffddd94d59e3298b7d27dda2f03cf130f79a837736034d9bc5f36a49b73b68",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D1_windup_hand_foreground.png",
+      "sha256": "f291ca72f873674157702b821d27986d367fc99f34306dfd360db48c221b8cf4",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/canonical_wood_sword.png",
+      "sha256": "03cea8f0e7d5e44b144ed8a7dfca1bfce326f51a8ed61e91bd6fb9b2dcc18931",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D3_recovery_body_base.png",
+      "sha256": "e3d733fce3531415cd113fe1d944a4ef842379254c0a7b650a6c646d8e43c653",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D0_guard_hand_foreground.png",
+      "sha256": "a9d4bf2f8544af0dc1f8462c2e6fffcfdfd03970c1c6a258f62c4b707175fbad",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D0_guard_sword_rigid.png",
+      "sha256": "4eafa5f85f5d00f0f104d4910d35b9e1f0160be454dc7fb0739d665c2e672a48",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D1_windup_sword_rigid.png",
+      "sha256": "c8cd2b00d02ae134ad190a77227f087ffa3caad4587033d64a9d5b7bbb68fc3a",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D2_forward_hand_foreground.png",
+      "sha256": "56216ddbde6aaa30ca27358d63f04076452ad017999ba419b347ecbbe85de4ae",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/attack_v2_geometry/layers/D3_recovery_sword_rigid.png",
+      "sha256": "2a26a560e06b2564fc44b3684369448cedb4ceaf7002047d82f1faa2bbc55254",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    }
+  ],
+  "safeExportIndependentVerified": true,
+  "visualAssessment": "四阶段准备、蓄力、挥出、回收可辨；握点遮挡成立，无实体旧剑边尖残留。统一320px刃轴刚性变换真实，安全预览已去透明RGB假残影。"
+}

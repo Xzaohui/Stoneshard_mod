@@ -1,0 +1,157 @@
+{
+  "asset_id": "UNNAMED_ADULT_TRAINING_MODEL_ATTACK_GEOMETRY_V2",
+  "source": "../attack_v1",
+  "logical_canvas": [
+    1536,
+    1536
+  ],
+  "canonical_weapon": "layers/canonical_wood_sword.png",
+  "canonical_grip": [
+    64,
+    80
+  ],
+  "canonical_blade_base": [
+    64,
+    140
+  ],
+  "canonical_blade_tip": [
+    64,
+    460
+  ],
+  "construction": "single original pixel reconstruction from D0 appearance; hidden handle reconstructed, not recovered source layer",
+  "layer_order": [
+    "body_base",
+    "sword_rigid",
+    "hand_foreground"
+  ],
+  "frames": [
+    {
+      "id": "D0",
+      "grip_anchor": [
+        982,
+        1030
+      ],
+      "rotation_degrees_screen_axis": 45,
+      "scale": 1,
+      "render_grid": 8,
+      "render_note": "8px nearest-neighbor contour sampling; canonical320px axis retained, raster edge differs within grid tolerance",
+      "blade_base": [
+        1024.426,
+        1072.426
+      ],
+      "blade_tip": [
+        1250.701,
+        1298.701
+      ],
+      "canonical_blade_length": 320,
+      "sword_layer": "layers/D0_guard_sword_rigid.png",
+      "body_base": "layers/D0_guard_body_base.png",
+      "foreground_hand": "layers/D0_guard_hand_foreground.png",
+      "erase_mask": "masks/D0_guard_old_weapon_removal_mask.png",
+      "hand_mask": "masks/D0_guard_hand_foreground_mask.png",
+      "frame_path": "frames/D0_guard.png",
+      "sha256": "6938d529a5e143e9a8c207e00d59c0e4840b11d3345af262ea5faa93c7b51a4b"
+    },
+    {
+      "id": "D1",
+      "grip_anchor": [
+        1144,
+        589
+      ],
+      "rotation_degrees_screen_axis": -132,
+      "scale": 1,
+      "render_grid": 8,
+      "render_note": "8px nearest-neighbor contour sampling; canonical320px axis retained, raster edge differs within grid tolerance",
+      "blade_base": [
+        1103.852,
+        544.411
+      ],
+      "blade_tip": [
+        889.73,
+        306.605
+      ],
+      "canonical_blade_length": 320,
+      "sword_layer": "layers/D1_windup_sword_rigid.png",
+      "body_base": "layers/D1_windup_body_base.png",
+      "foreground_hand": "layers/D1_windup_hand_foreground.png",
+      "erase_mask": "masks/D1_windup_old_weapon_removal_mask.png",
+      "hand_mask": "masks/D1_windup_hand_foreground_mask.png",
+      "frame_path": "frames/D1_windup.png",
+      "sha256": "15111a51296f2ecd941fcf79ead2dc95b97634545b6015c0afbbdabcfe911296"
+    },
+    {
+      "id": "D2",
+      "grip_anchor": [
+        1062,
+        985
+      ],
+      "rotation_degrees_screen_axis": 22,
+      "scale": 1,
+      "render_grid": 8,
+      "render_note": "8px nearest-neighbor contour sampling; canonical320px axis retained, raster edge differs within grid tolerance",
+      "blade_base": [
+        1117.631,
+        1007.476
+      ],
+      "blade_tip": [
+        1414.33,
+        1127.351
+      ],
+      "canonical_blade_length": 320,
+      "sword_layer": "layers/D2_forward_sword_rigid.png",
+      "body_base": "layers/D2_forward_body_base.png",
+      "foreground_hand": "layers/D2_forward_hand_foreground.png",
+      "erase_mask": "masks/D2_forward_old_weapon_removal_mask.png",
+      "hand_mask": "masks/D2_forward_hand_foreground_mask.png",
+      "frame_path": "frames/D2_forward.png",
+      "sha256": "0ef25228db0824826d5f71d1fbd93ce2fef5389ff734c6142eaed0776c615b2c"
+    },
+    {
+      "id": "D3",
+      "grip_anchor": [
+        948,
+        1026
+      ],
+      "rotation_degrees_screen_axis": 45,
+      "scale": 1,
+      "render_grid": 8,
+      "render_note": "8px nearest-neighbor contour sampling; canonical320px axis retained, raster edge differs within grid tolerance",
+      "blade_base": [
+        990.426,
+        1068.426
+      ],
+      "blade_tip": [
+        1216.701,
+        1294.701
+      ],
+      "canonical_blade_length": 320,
+      "sword_layer": "layers/D3_recovery_sword_rigid.png",
+      "body_base": "layers/D3_recovery_body_base.png",
+      "foreground_hand": "layers/D3_recovery_hand_foreground.png",
+      "erase_mask": "masks/D3_recovery_old_weapon_removal_mask.png",
+      "hand_mask": "masks/D3_recovery_hand_foreground_mask.png",
+      "frame_path": "frames/D3_recovery.png",
+      "sha256": "35da6572acc96416d5e747e065de9cd1a9cc5f96b2020c4ea2c074826675e1b9"
+    }
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "status": "independently_deliverable_as_fixed_weapon_geometry_and_occlusion_concept",
+  "canonical_weapon_sha256": "03cea8f0e7d5e44b144ed8a7dfca1bfce326f51a8ed61e91bd6fb9b2dcc18931",
+  "notes": [
+    "blade axis exact320px before contour grid sampling; actual pixel boundary can vary within8px grid",
+    "coarse pixels intentionally reconstructed; source-body internal pixel scale remains heterogeneous",
+    "D1 foreground hand includes protected wrist; glove occludes reconstructed handle",
+    "largest-component cleanup removes isolated old-weapon fragments from body base; raw source untouched"
+  ],
+  "safe_export": {
+    "method": "set RGBA to0 only where alpha==0; preserve every alpha>0 pixel and every alpha value exactly",
+    "check_file": "../../TRANSPARENT_RGB_SAFE_CHECKS.json",
+    "historical_source_directory": "Stoneshard_mod/Assets/CharacterActions/20261013/adult_training_dummy/attack_v2_geometry"
+  },
+  "acceptance_limits": [
+    "concept-only same-weapon rigid geometry and grasp occlusion",
+    "body gait not continuous-trajectory verified",
+    "not full loop or native/runtime/equipment system"
+  ]
+}

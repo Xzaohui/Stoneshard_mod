@@ -1,0 +1,136 @@
+{
+  "reviewer": "independent_visual_review",
+  "status": "pass_concept_with_notes",
+  "delivery_ready": true,
+  "actual_visual_review": [
+    "卷发浅帽、暖棕肤、蓝灰卷袖及深围裙/腰袋保留，成年脸专注朝下，未换人。",
+    "E1一手夹起原小衬布一角，另一手夹托低折边，形成柔软垂褶；E2一掌托底、另一指腹压上折。两手与前臂连续，布接触可信。",
+    "衬布尺度保持手掌级别，不是大毯、纸页或甲衣；折层数量/角度轻微漂移。两阶段实际区别明确，无新针剪工具。",
+    "新原稿、锚对照及浅深底板逐张实际查看；手足完整、支撑自然，无明显实体光晕。",
+    "细像素概念与轻微脸发衣褶轮廓漂移保留，不作为native/runtime验收。"
+  ],
+  "new_full_body_poses": 2,
+  "new_characters": 0,
+  "stage_count": 4,
+  "unique_states": 3,
+  "story_boundary": [
+    "技术获承认",
+    "公开家门",
+    "新订单成交",
+    "护甲已修好"
+  ],
+  "sources": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/emo/emo_raw_imagegen_v2.png",
+      "sha256": "76ec2c2964e4278acc6330b036ff35698ec5b53833310c56ad6d1c6e27ee0b76",
+      "roster_sha_matches": true,
+      "independent_qa_sha_matches": true,
+      "pixels_inspected_in_this_audit": true
+    },
+    {
+      "path": "design/04_人物/城市人物/人物_ALD-NPC-EMO_埃墨·衬.md",
+      "sha256": "463f8a636db3332200baa2fd540d43f3b205b356dc1440dd7b35d84e936fd236",
+      "roster_sha_matches": true,
+      "frontmatter_id": "CITY-NPC-ALD-NPC-EMO",
+      "relevant_lines": [
+        {
+          "line": 15,
+          "text": "**工作**：衬工。"
+        },
+        {
+          "line": 17,
+          "text": "**起点与转折**：想被承认技术，不想家族被调查找到。"
+        }
+      ]
+    }
+  ],
+  "technical_checks": {
+    "source_anchor": true,
+    "source_cards": true,
+    "brief": true,
+    "all_output_hashes": true,
+    "frames": [
+      {
+        "raw_sha_matches": true,
+        "exact_reconstruction": true,
+        "transparent_rgb_zero": true,
+        "bbox": [
+          186,
+          100,
+          455,
+          730
+        ]
+      },
+      {
+        "raw_sha_matches": true,
+        "exact_reconstruction": true,
+        "transparent_rgb_zero": true,
+        "bbox": [
+          166,
+          106,
+          474,
+          730
+        ]
+      },
+      {
+        "raw_sha_matches": true,
+        "exact_reconstruction": true,
+        "transparent_rgb_zero": true,
+        "bbox": [
+          184,
+          109,
+          456,
+          730
+        ]
+      }
+    ],
+    "boards_art_regions": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "first_last_same_bytes": true,
+    "gif": {
+      "frames": 4,
+      "loop_extension": null,
+      "durations": [
+        900,
+        1200,
+        1200,
+        900
+      ],
+      "mean_quantization_errors": [
+        0.23373530982905982,
+        0.24155515491452992,
+        0.22506209935897437,
+        0.23373530982905982
+      ]
+    }
+  },
+  "artifacts": {
+    "stages_once.gif": "f5ad33fca48a009a1d3e83273116d3fc4c85cc43b7dc398134f3bb9b255e4834",
+    "build_presentation.py": "215f93ce140d87f83a8fadcf2d8fdd2f5447724f1574dc35486cd0894e3562ad",
+    "QA-author.json": "a1bb9009e55fa043baf391cf9b320a3ef22e551178396f1842428dca59d086c6",
+    "contact_sheet_light.png": "5eab7570f79599a6f21680865c07e2f271c81fa26919105c61cf482b795ad159",
+    "contact_sheet_dark.png": "453a412a24daea4e20c9a7d1eda191d1b79b4cc3e35098f928e19b152180678b",
+    "manifest.json": "9fcc366b0210e8418e4dad12705acf5105582dd61c8dc97e11692e7d39d6b225",
+    "frames/02_E2.png": "9845d6e2d4ffb7c5cd08e0198bf41203e1c016e97503022c3bfb37fcfbfbae3f",
+    "frames/00_anchor.png": "f1f6cdfc6941819ecbee1070d5e8829264e06e4594ffd68931718797afbffb82",
+    "frames/03_return_anchor.png": "f1f6cdfc6941819ecbee1070d5e8829264e06e4594ffd68931718797afbffb82",
+    "frames/01_E1.png": "27863945a6bd57262aee996c894d4b97ff3218f37989bf99fa0bce8d46dcbd40",
+    "raw/E1_imagegen.png": "ada20870e5b5e4682764322acf528d0bc9e760417835b60524598fa2608aba54",
+    "raw/anchor.png": "76ec2c2964e4278acc6330b036ff35698ec5b53833310c56ad6d1c6e27ee0b76",
+    "raw/E2_imagegen.png": "096f1d75e84ac47f0e5f83ead5fcf58213ec89fdb162860b9cf543a11b01e1f7",
+    "prompts/E1.txt": "a26215ca82aa71adb8dc1a12cf2314c46977c95d9bf6c1425bc2cfe3e6ec2d74",
+    "prompts/E2.txt": "9282653d8f0eb448b39db3e5011b5442322f39e06e5e22dc5374f632f0239989"
+  },
+  "limitations": [
+    "仅稀疏阶段连看，首末锚复用；无真实中间运动/完整工序、认证或剧情结果。"
+  ],
+  "runtime_verified": false
+}

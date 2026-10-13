@@ -1,0 +1,303 @@
+{
+  "canonical_id": "NPC-N-NELL",
+  "name": "妮尔",
+  "status": "author_candidate_awaiting_independent_review",
+  "new_characters": 0,
+  "new_unique_poses": 2,
+  "stages": 4,
+  "generator": "builtin image_gen__imagegen",
+  "runtime_integrated": false,
+  "story_locators": [
+    "N3-R-testimony；N3-S03-L01",
+    "N3-R-testimony-L01；N3-R-collective-L01；X06"
+  ],
+  "story_boundary": "不公开姓名住址；不焚页；保护不等于免责。",
+  "sources": [
+    {
+      "path": "design/04_人物/台本新增人物与知识边界.md",
+      "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+      "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+      "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/briefs/next_main_cast_supplements.json",
+      "sha256": "61743e63fc2934cbf517a22aea6d4db16d6e6e6e8c15f1ebc0db1cf557eb5763"
+    }
+  ],
+  "frames": [
+    {
+      "stage": 0,
+      "label": "静态锚点",
+      "source": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+      "source_sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec",
+      "source_body_bbox": [
+        268,
+        199,
+        882,
+        1361
+      ],
+      "scale_common": [
+        0.4,
+        0.4
+      ],
+      "resampling": "NEAREST",
+      "translation": [
+        16,
+        16
+      ],
+      "body_rgb_unchanged_before_common_resize": true,
+      "cleaning": "keep largest 8-connected alpha>=128 component; clear alpha elsewhere only",
+      "newly_generated": false
+    },
+    {
+      "stage": 1,
+      "label": "护住闭簿",
+      "source": "Assets/CharacterActions/20261013/nell/story_gesture_v1/raw_01_ledger_boundary_v2.png",
+      "source_sha256": "cc09f028c3850e69ecfb7e34b743be6e5c846033bb60f06ed7119549d99402a0",
+      "source_body_bbox": [
+        272,
+        201,
+        883,
+        1363
+      ],
+      "scale_common": [
+        0.4,
+        0.4
+      ],
+      "resampling": "NEAREST",
+      "translation": [
+        16,
+        15
+      ],
+      "body_rgb_unchanged_before_common_resize": true,
+      "cleaning": "keep largest 8-connected alpha>=128 component; clear alpha elsewhere only",
+      "newly_generated": true
+    },
+    {
+      "stage": 2,
+      "label": "限定自述",
+      "source": "Assets/CharacterActions/20261013/nell/story_gesture_v1/raw_02_limited_account_v2.png",
+      "source_sha256": "31c466ccd6303736740119c0eaefebdb902cbe177fb2728d9529bddd822f785e",
+      "source_body_bbox": [
+        196,
+        197,
+        883,
+        1365
+      ],
+      "scale_common": [
+        0.4,
+        0.4
+      ],
+      "resampling": "NEAREST",
+      "translation": [
+        16,
+        14
+      ],
+      "body_rgb_unchanged_before_common_resize": true,
+      "cleaning": "keep largest 8-connected alpha>=128 component; clear alpha elsewhere only",
+      "newly_generated": true
+    },
+    {
+      "stage": 3,
+      "label": "回到锚点",
+      "source": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+      "source_sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec",
+      "source_body_bbox": [
+        268,
+        199,
+        882,
+        1361
+      ],
+      "scale_common": [
+        0.4,
+        0.4
+      ],
+      "resampling": "NEAREST",
+      "translation": [
+        16,
+        16
+      ],
+      "body_rgb_unchanged_before_common_resize": true,
+      "cleaning": "keep largest 8-connected alpha>=128 component; clear alpha elsewhere only",
+      "newly_generated": false
+    }
+  ],
+  "prompt_files": [
+    {
+      "path": "prompt_01.txt",
+      "sha256": "8038d6f872b49999d51566ce25f873fd6b131ffdb4efb5754e797b5d6ccf1fe3"
+    },
+    {
+      "path": "prompt_02.txt",
+      "sha256": "073052c4b95bc6c4739d018e7c021e6c869c235e12c776e6b011dbb3f7bc444e"
+    },
+    {
+      "path": "prompt_02_revision.txt",
+      "sha256": "9b5261387b20fb5238b3c03916db8b4f37f5d530c93b90c1ea156e78164d0a7b"
+    },
+    {
+      "path": "prompt_01_revision.txt",
+      "sha256": "2ed8a04aedfc8da6b2155608ac71e42a963973102b170884641d364a3d083906"
+    }
+  ],
+  "raw_files": [
+    {
+      "path": "raw_02_limited_account.png",
+      "sha256": "a7da65c93f837f67e983cd285b1838ed0fb584e0224bd25e54a09842d4b04a7e"
+    },
+    {
+      "path": "raw_02_limited_account_v2.png",
+      "sha256": "31c466ccd6303736740119c0eaefebdb902cbe177fb2728d9529bddd822f785e"
+    },
+    {
+      "path": "raw_01_ledger_boundary_v2.png",
+      "sha256": "cc09f028c3850e69ecfb7e34b743be6e5c846033bb60f06ed7119549d99402a0"
+    },
+    {
+      "path": "raw_01_ledger_boundary.png",
+      "sha256": "7501f3c980b81f5f7f90c14bd28191b4e0b2f1e633ae2e744974803d0b818ea8"
+    }
+  ],
+  "not_selected_raws": [
+    "raw_02_limited_account.png",
+    "raw_01_ledger_boundary.png"
+  ],
+  "processing": "alpha-only background residue cleanup; a single common nearest resize for all stages; whole-canvas ground translation; no body construction, warp, individual scaling or in-between generation",
+  "gif": {
+    "frames": 4,
+    "loop_extension": false,
+    "duration_ms": [
+      900,
+      1200,
+      1400,
+      900
+    ]
+  },
+  "author_visual_notes": [
+    "已实看锚与所有raw。",
+    "保留生成模型自然微差，未逐帧拉伸。妮尔两姿已按锚点重生成恢复头身比；塞尔腰钳轮廓随新姿态有轻微像素差。",
+    "首末同锚仅表示演示起落，不提交任何任务结果。"
+  ],
+  "generation_provenance": [
+    {
+      "output": "raw_01_ledger_boundary.png",
+      "sha256": "7501f3c980b81f5f7f90c14bd28191b4e0b2f1e633ae2e744974803d0b818ea8",
+      "prompt": "prompt_01.txt",
+      "prompt_sha256": "8038d6f872b49999d51566ce25f873fd6b131ffdb4efb5754e797b5d6ccf1fe3",
+      "reference_inputs": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+          "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec"
+        }
+      ]
+    },
+    {
+      "output": "raw_02_limited_account.png",
+      "sha256": "a7da65c93f837f67e983cd285b1838ed0fb584e0224bd25e54a09842d4b04a7e",
+      "prompt": "prompt_02.txt",
+      "prompt_sha256": "073052c4b95bc6c4739d018e7c021e6c869c235e12c776e6b011dbb3f7bc444e",
+      "reference_inputs": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+          "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec"
+        }
+      ]
+    },
+    {
+      "output": "raw_01_ledger_boundary_v2.png",
+      "sha256": "cc09f028c3850e69ecfb7e34b743be6e5c846033bb60f06ed7119549d99402a0",
+      "prompt": "prompt_01_revision.txt",
+      "prompt_sha256": "2ed8a04aedfc8da6b2155608ac71e42a963973102b170884641d364a3d083906",
+      "reference_inputs": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+          "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec"
+        },
+        {
+          "path": "Assets/CharacterActions/20261013/nell/story_gesture_v1/raw_01_ledger_boundary.png",
+          "sha256": "7501f3c980b81f5f7f90c14bd28191b4e0b2f1e633ae2e744974803d0b818ea8"
+        }
+      ]
+    },
+    {
+      "output": "raw_02_limited_account_v2.png",
+      "sha256": "31c466ccd6303736740119c0eaefebdb902cbe177fb2728d9529bddd822f785e",
+      "prompt": "prompt_02_revision.txt",
+      "prompt_sha256": "9b5261387b20fb5238b3c03916db8b4f37f5d530c93b90c1ea156e78164d0a7b",
+      "reference_inputs": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+          "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec"
+        }
+      ]
+    }
+  ],
+  "output_files": [
+    {
+      "path": "frames/clean_00_source.png",
+      "sha256": "80596371fb9a5e3b3a754dfd78098d975b61866eec0c64516319ad514ae7ca44"
+    },
+    {
+      "path": "frames/clean_01_source.png",
+      "sha256": "0e80e66385958ffbdc1b1e6bb658cb15986b8ec79ed0b351fdabae0361e1a076"
+    },
+    {
+      "path": "frames/clean_02_source.png",
+      "sha256": "27241e93636fb8089795cbd01e77e0636e7f7a7c293456d9af73126fa0fe458e"
+    },
+    {
+      "path": "frames/clean_03_source.png",
+      "sha256": "80596371fb9a5e3b3a754dfd78098d975b61866eec0c64516319ad514ae7ca44"
+    },
+    {
+      "path": "frames/frame_00.png",
+      "sha256": "a8d3be923685222bb5798e7543137d4319f5ab4c9144cedb17d5abbc0908c83d"
+    },
+    {
+      "path": "frames/frame_01.png",
+      "sha256": "3e417136132283e621f338fff9d85c9f04e092e9be803081c80787bda005b20b"
+    },
+    {
+      "path": "frames/frame_02.png",
+      "sha256": "cb457c2534669e4aeb9e40d9c8ab32ace94efd414571b911e1b794fc556b51cc"
+    },
+    {
+      "path": "frames/frame_03.png",
+      "sha256": "a8d3be923685222bb5798e7543137d4319f5ab4c9144cedb17d5abbc0908c83d"
+    },
+    {
+      "path": "nell_story_gesture_preview_once.gif",
+      "sha256": "173823a7d111d3f19a276f2edd10a77db33dee40f393624335490903c35aaf42"
+    },
+    {
+      "path": "nell_story_gesture_review_zh_dark.png",
+      "sha256": "d2c5f28309c9be758a4044aaed05502fc89fd61335135c6fbe8034f5c23cca73"
+    },
+    {
+      "path": "nell_story_gesture_review_zh_light.png",
+      "sha256": "024a85b772d8fa27118c2eab740602eb979f708794be1388e493ac276cfa6324"
+    },
+    {
+      "path": "raw_01_ledger_boundary.png",
+      "sha256": "7501f3c980b81f5f7f90c14bd28191b4e0b2f1e633ae2e744974803d0b818ea8"
+    },
+    {
+      "path": "raw_01_ledger_boundary_v2.png",
+      "sha256": "cc09f028c3850e69ecfb7e34b743be6e5c846033bb60f06ed7119549d99402a0"
+    },
+    {
+      "path": "raw_02_limited_account.png",
+      "sha256": "a7da65c93f837f67e983cd285b1838ed0fb584e0224bd25e54a09842d4b04a7e"
+    },
+    {
+      "path": "raw_02_limited_account_v2.png",
+      "sha256": "31c466ccd6303736740119c0eaefebdb902cbe177fb2728d9529bddd822f785e"
+    }
+  ]
+}

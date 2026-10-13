@@ -1,0 +1,139 @@
+{
+  "status": "awaiting_independent_review",
+  "character": "rhea",
+  "character_zh": "蕾雅",
+  "tool": "builtin imagegen",
+  "classification": "original_fullbody_dialogue_keypose_concept",
+  "new_characters": 0,
+  "new_body_images": 2,
+  "unique_body_states": 3,
+  "phase_count": 4,
+  "anchor": "Assets/CharacterDesigns/20261013/expressive/rhea/rhea_raw_imagegen.png",
+  "anchor_sha256": "88b9ad01792e0ed438c771776afbb0f66ea7c491324ce98db09214004dff4ed7",
+  "common_scale": 1.0,
+  "processing": "alpha threshold128; transparent RGB zero; common scale 1.0; sole-only vertical translation; no body construction/mirror/warp/interpolation",
+  "canvas": [
+    1118,
+    1407
+  ],
+  "sole_baseline": 1363,
+  "frames": [
+    {
+      "id": "D0_stand",
+      "new_drawing": false,
+      "source": "Assets/CharacterActions/20261013/rhea/dialogue_gesture_v1/raw/D0_anchor_source.png",
+      "source_sha256": "88b9ad01792e0ed438c771776afbb0f66ea7c491324ce98db09214004dff4ed7",
+      "frame_sha256": "7ab411c8d8f91043ef1bba8c759f1bfc38015dc51446854f8c1cd1b761a9522d",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        269,
+        101,
+        898,
+        1363
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        0
+      ],
+      "visible_bbox": [
+        269,
+        101,
+        898,
+        1363
+      ],
+      "low_alpha_pixels_removed": 15389,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D1_remind",
+      "new_drawing": true,
+      "source": "Assets/CharacterActions/20261013/rhea/dialogue_gesture_v1/raw/D1_remind.png",
+      "source_sha256": "f299b5d105b5d718fb3cc51710006342e99dde5ee0c7e8d099825a86fb5390c0",
+      "frame_sha256": "b5c1c816157d4ec6bb0380cec1e69b1f1616d5a1043c8ade337511c11cf19d16",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        147,
+        99,
+        898,
+        1365
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        -2
+      ],
+      "visible_bbox": [
+        147,
+        97,
+        898,
+        1363
+      ],
+      "low_alpha_pixels_removed": 13820,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D2_resolve",
+      "new_drawing": true,
+      "source": "Assets/CharacterActions/20261013/rhea/dialogue_gesture_v1/raw/D2_resolve.png",
+      "source_sha256": "e2a33d2fb0f212b9ef08d6b0e86f480dac687041a8490ea46affe943d7756d76",
+      "frame_sha256": "42dda722df180ab623b7fc2a866158373c4250b00b291ae4b4e9a415449ae81b",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        287,
+        100,
+        900,
+        1366
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        -3
+      ],
+      "visible_bbox": [
+        287,
+        97,
+        900,
+        1363
+      ],
+      "low_alpha_pixels_removed": 13371,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D3_stand_reuse_D0",
+      "new_drawing": false,
+      "source": "frames/D0_stand.png",
+      "frame_sha256": "7ab411c8d8f91043ef1bba8c759f1bfc38015dc51446854f8c1cd1b761a9522d",
+      "byte_identical_to_D0": true
+    }
+  ],
+  "gif_duration_ms": [
+    750,
+    1000,
+    1000,
+    900
+  ],
+  "gif_loop_extension": false,
+  "narrative_sources": [
+    "design/04_人物/人物_玛拉与伊沃.md",
+    "design/05_主线/台本/台本_N1_无钟之夜.md"
+  ],
+  "runtime_verified": false,
+  "native_ready": false,
+  "user_individual_character_approval_claimed": false,
+  "limitations": [
+    "四个稀疏关键姿态，不是连续补间或原生动画",
+    "衣褶、轮廓边缘和鞋型有细小生成漂移，未逐帧重绘修正",
+    "共同比例与鞋底地线不等于骨长、脚轨迹已锁定",
+    "未做原生尺寸、碰撞、装备换装或游戏运行验收"
+  ]
+}

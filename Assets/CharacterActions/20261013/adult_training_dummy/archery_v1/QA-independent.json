@@ -1,0 +1,140 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T08:00:04.880490+00:00",
+  "decision": "deliverable_as_archery_key_pose_concept_with_notes",
+  "actually_viewed": [
+    "archery_review_zh.png",
+    "frames/A1.png",
+    "cross_action_scale_review.png",
+    "中文板关装备肩肘腕及手箭弦近景"
+  ],
+  "visual_findings": {
+    "identity_scale": "成年训练角色的脸巾与衣裤靴保持，跨组对照身高/头肩尺度相近。A0/A1/A2身体bbox高935/938/941px，属于小轮廓差异，未逐帧拉伸拟合。",
+    "anatomy_support": "完整持弓臂伸出、拉弦臂屈肘后收、A2松手往后随势均可辨；双靴稳立，无明显额外肢体或关节断裂。",
+    "grip_arrow_string": "A1持弓拳环绕柄部，箭轴在握弓手上方通过；箭尾与拉弦手边靠近下颌，未遮住关键嘴眼。弦中心与箭尾登记坐标一致，独立弦完整连接弓两端；人体遮住远侧弦段，不把可见断线当断弦。精细钩弦手指仍只是概念级。",
+    "release": "A2拉弦手打开、弦回直且箭层为空；A3复用A0身体但保持无箭/直弦，没有第二箭凭空补回。离画箭为阶段省略，不是已制作连续飞行。",
+    "aesthetics": "瞄准/松弦/回稳可读，当前未见需阻断概念交付的明显接触或解剖硬错。弓箭材质比身体略细密，可在生产阶段统一。",
+    "full_body_alpha": "弓两端、箭头、手脚均完整，透明RGB为零。"
+  },
+  "independent_checks": [
+    {
+      "artifact": "frames/A0.png",
+      "sha256": "40d984990dd6fc6095227b6101022a2c1846be392e7058af762de4da2ef0e002",
+      "layer_recomposition_exact": true,
+      "fixed_bow_translation_exact": true,
+      "string_endpoint_redraw_exact": true,
+      "same_arrow_rigid_exact_or_empty_after_release": true,
+      "nock_string_distance": 0.0,
+      "alpha_zero_rgb_zero": true,
+      "body_bbox": [
+        488,
+        445,
+        1235,
+        1380
+      ]
+    },
+    {
+      "artifact": "frames/A1.png",
+      "sha256": "95b8b42894f12b1aa2ecb4f93ebe9b3a63a4ef1aff1d8789735c65cb4fd75995",
+      "layer_recomposition_exact": true,
+      "fixed_bow_translation_exact": true,
+      "string_endpoint_redraw_exact": true,
+      "same_arrow_rigid_exact_or_empty_after_release": true,
+      "nock_string_distance": 0.0,
+      "alpha_zero_rgb_zero": true,
+      "body_bbox": [
+        474,
+        442,
+        1301,
+        1380
+      ]
+    },
+    {
+      "artifact": "frames/A2.png",
+      "sha256": "0e40895946261f277455a34551be3fbcbcd5897fa14e43d76aa3af00d443e7cf",
+      "layer_recomposition_exact": true,
+      "fixed_bow_translation_exact": true,
+      "string_endpoint_redraw_exact": true,
+      "same_arrow_rigid_exact_or_empty_after_release": true,
+      "nock_string_distance": null,
+      "alpha_zero_rgb_zero": true,
+      "body_bbox": [
+        439,
+        439,
+        1304,
+        1380
+      ]
+    },
+    {
+      "artifact": "frames/A3.png",
+      "sha256": "398b9f6e3297be391f0ebaffaf36c732edc3f2148a70d74abbc1b9b350d946b0",
+      "layer_recomposition_exact": true,
+      "fixed_bow_translation_exact": true,
+      "string_endpoint_redraw_exact": true,
+      "same_arrow_rigid_exact_or_empty_after_release": true,
+      "nock_string_distance": null,
+      "alpha_zero_rgb_zero": true,
+      "body_bbox": [
+        488,
+        445,
+        1235,
+        1380
+      ]
+    }
+  ],
+  "canonical_props": {
+    "bow_size": [
+      171,
+      920
+    ],
+    "arrow_size": [
+      700,
+      35
+    ],
+    "bow_sha256": "6325b4465e50c7d32514d02feba0afc4bba774422af726694749cd1386c09e7c",
+    "arrow_sha256": "4e3bd9273a4bc3d78028cf38577f7415b55cae71541cc9a9108cf16e0e1be05a"
+  },
+  "count_reuse": {
+    "new_body_images": 3,
+    "new_equipment_source_images": 1,
+    "display_phases": 4,
+    "A3_body_pixel_equal_A0": true,
+    "A3_composite_not_equal_A0_due_to_arrow_string_state": true,
+    "gif_frames": 4,
+    "gif_duration_ms": [
+      900,
+      1100,
+      700,
+      1600
+    ],
+    "gif_loop_extension_present": false
+  },
+  "limitations": [
+    "固定弓臂不随拉距弯曲，弦几何因此不是物理弹性模拟；可接受为当前基础姿态/图层提案，不能称真实受力动画。",
+    "A0已搭箭轻拉，未绘从取箭到搭箭全过程；A2省略箭飞行，A3复用旧身体不计新姿态。",
+    "远侧弦遮挡与钩弦手指只验当前视角概念，不证明多方向背面或原生装备契约。",
+    "足边缘/脸巾轻微漂移，未做连续中间帧、无滑步、射速或命中判定。",
+    "原版落地与native规格不阻塞本轮概念绘制，也不能据概念通过宣称已验runtime/换装。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "native_ready": false,
+  "artifacts": [
+    {
+      "artifact": "archery_review_zh.png",
+      "sha256": "5a66adc9a4e50e3d8b729444078a1a0e1f539a28b8d9c43c85584ac05d8c7960"
+    },
+    {
+      "artifact": "cross_action_scale_review.png",
+      "sha256": "fed93cd944ed944a8b09753b8431cb04144a43445698a2056c730585bf9edaec"
+    },
+    {
+      "artifact": "archery_preview_once.gif",
+      "sha256": "7cc575bf19d6908edc89de53775b318204617853ee4259ae1a2ea3ed8cd2be23"
+    },
+    {
+      "artifact": "manifest.json",
+      "sha256": "47cfda95aace79a4cb458eeb5c8ea46f0164a571a832f9fbf8f9f777b8b907b1"
+    }
+  ]
+}

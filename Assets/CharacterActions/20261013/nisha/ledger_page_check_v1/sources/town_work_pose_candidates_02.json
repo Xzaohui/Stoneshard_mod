@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T15:08:41.235335+00:00",
+  "task": "下一小批职业基础动作：账册翻看与平托空碗",
+  "status": "planning_only_no_image_generation_no_dispatch",
+  "scope": "仅2名已交既有人物、最多3张新全身静态关键姿态；0新人物；不补167全套、不动剧情和游戏。",
+  "counts": {
+    "characters": 2,
+    "proposed_new_full_body_poses": 3,
+    "new_characters": 0,
+    "new_separate_props": 0,
+    "generated": 0,
+    "dispatched": 0
+  },
+  "evidence_snapshot": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256": "7377ba8e0047707cbbff87a2d6e1f4dc970029c49324d43d7800d8952a691733"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "9055dccf227b8a8daffa652067110d9a31263f54660cfd4a4dd4380e94d0a0cb"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "sha256": "c911fcd7a229631989c3abf4920381e542c1622565d5e435cf0c540b4d5c3d18"
+    }
+  ],
+  "selection_reason": "妮莎使用原闭册的铰接开合与单页捻翻，区别布折、木试片、木箍、提箱换握；多罗保持空碗口水平，双掌托底向外待递，区别重箱换抱。成人训练样板已有泛用递包，因此不宣称递交运动首次出现；多罗的价值是具名照护人、开口器皿的水平控制及保留拒绝空间。",
+  "global_guardrails": [
+    "只规划；不调用生图、不改roster/索引/覆盖台账/源图/QA。",
+    "锚可用是人物概念层面，装备机制unknown与runtime未验继续保留。现行07:52概念绘制授权不被旧装备门槛替代。",
+    "无新工具、工作台、椅子、托盘、顾客或被照护人；不出现漂浮工件。",
+    "新姿为美术提案，不是任务事件事实。无交易、签名、付款、认罪、免责、治疗完成、同意替代或新增伤病。",
+    "不把稀疏阶段当连续动画；拟定姿态独审未过不得列完成。原锚复用不是新增姿态。",
+    "脸、成年体型、衣装及既存轻微比例/细像素备注保持，不借动作重设计人物。"
+  ],
+  "alternatives_screened_not_selected": [
+    {
+      "canonical_id": "DEN-NPC-SEF",
+      "name": "瑟芬·网",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/sefin/rework_v2/sefin_rework_v2_raw_imagegen.png",
+        "sha256": "d81857841062d9ed57d5c06d5e10d50cda7bfd58e7c4fabb50a834dc55bcc677",
+        "pixels_inspected": true
+      },
+      "reason": "人物卡确为原村渔者，但实际锚双手空，腰侧是闭筹本而非渔网；不得凭职业生网，故不规划整理渔网。"
+    },
+    {
+      "canonical_id": "BRY-NPC-MIRO",
+      "name": "米罗·账",
+      "reason": "卡为商户联络员，QA指闭钱袋和斜袋，不能凭名字“账”认定持笔书；未选、未据此画记录。"
+    },
+    {
+      "canonical_id": "ALD-NPC-YIRONG",
+      "name": "伊榕",
+      "reason": "人物卡是死者母亲，QA为胸前私人物布，无职业依据；不做重复理布。"
+    },
+    {
+      "canonical_ids": [
+        "EED-NPC-SUOYA",
+        "ALD-NPC-VIAN",
+        "NPC01",
+        "NPC02",
+        "NPC03"
+      ],
+      "reason": "五个静态门槛未通过，全部排除。"
+    }
+  ],
+  "characters": [
+    {
+      "canonical_id": "SKO-NPC-NIS",
+      "name": "妮莎·炉",
+      "slug": "nisha",
+      "status": "candidate_planning_only_not_dispatched",
+      "current_static_status": "delivered_concept_candidate",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/nisha/nisha_raw_imagegen.png",
+        "sha256": "9f8eb3464a0b75dfc35aa83076fef4c301f43f187cb7ddfbc0700fbcc9fecc78",
+        "roster_sha_matches": true,
+        "independent_qa_sha_matches": true,
+        "pixels_inspected_in_this_audit": true
+      },
+      "independent_qa": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/nisha/QA-independent.json",
+        "sha256": "b62114a764e3e9720c086efac5000c56763dced5fc5b29fdc6472abd2d8c19cc",
+        "decision": "deliverable_with_minor_notes"
+      },
+      "delivery_evidence": {
+        "message_id": "Sentinel_42a00e52a0a88191aad6451b3dc3ed51",
+        "time_utc": "2026-10-13T05:58:00Z",
+        "artifact": "nisha_raw_imagegen.png"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_SKO-NPC-NIS_妮莎·炉.md",
+          "frontmatter_id": "CITY-NPC-SKO-NPC-NIS",
+          "sha256": "13343e2de284d57b652997a5e342fd364c0287cf8d7dfac41082b16726ad6ac4",
+          "actual_sha256": "13343e2de284d57b652997a5e342fd364c0287cf8d7dfac41082b16726ad6ac4",
+          "roster_sha_matches": true,
+          "relevant_lines": [
+            {
+              "line": 15,
+              "text": "**工作**：工班会计。"
+            },
+            {
+              "line": 17,
+              "text": "**起点与转折**：要弟弟回来却擅挪工人公款。"
+            },
+            {
+              "line": 23,
+              "text": "此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。"
+            }
+          ]
+        }
+      ],
+      "coverage_gap_evidence": {
+        "in_action_animation_branch": false,
+        "in_supplementary_work_in_progress": false,
+        "character_action_directory_exists": false,
+        "in_MASTER_SUPPLEMENT_INDEX.md": false,
+        "in_ACTION_COVERAGE.md": false
+      },
+      "new_props_required": false,
+      "new_props": [],
+      "art_inference_boundary": "职业由现行人物卡支持；外观与原持物由已审锚支持；以下动作、手势和未见内表面是新概念提案，不倒写成已发生剧情。",
+      "priority": 1,
+      "branch_proposal": "ledger_page_check_v1",
+      "new_full_body_pose_budget": 2,
+      "source_fact": "SKO-NPC-NIS为工班会计；弟弟未因图归家，挪用公款的历史不由翻册抹去。",
+      "anchor_observation": "实际view：棕短发、锈红巾、绿工作裙、暗围裙；画面右侧臂抱一册竖直闭合棕账册，画面左手空垂，双鞋站稳。未见笔、墨、独立纸张或文字。",
+      "inferred_existing_prop_surfaces": "新姿需要呈现原册打开后的纸页，属于同一册的未见内表面推定；封皮、书脊、装订页不得增为第二本或散页。内页只画低对比纸面，无可读姓名、数额、签名或认证，不能把空白页叫已记录账项。",
+      "poses": [
+        {
+          "id": "N1",
+          "title": "托脊打开、低头核看",
+          "steps": [
+            "原抱册臂下移，以掌根及前臂承托书脊与下封皮；空手先碰封面外缘后打开。",
+            "同一册移至腹前并略向上倾，打开约直角至钝角；两臂靠近躯干，腰腹不作为悬空书桌。",
+            "头和视线俯向内页、肘部展开，双脚不动。"
+          ],
+          "contact_and_weight": "托册掌根压实脊底，前臂承一半封皮；另一掌/拇指握另一封皮下缘。两半册始终连续绕书脊转动，不做两块漂浮木板。",
+          "readable_target": "从侧抱闭册变为腹前展开查看；依靠打开轮廓、俯头和双臂承托读出行为，而非只有表情变化。"
+        },
+        {
+          "id": "N2",
+          "title": "指腹捻起一页",
+          "steps": [
+            "保持N1书脊位置、打开角度及托册手不动，原开封面手改为拇指/食指捏住外侧单页角。",
+            "将仍连在书脊上的一页提起到半翻位置，指尖与纸角明确相接，手不遮整张页。",
+            "头略向捻页点转，肩肘形成比N1更聚拢的工作姿态；不撕纸、不书写。"
+          ],
+          "contact_and_weight": "托册掌与前臂独立承住册重；翻页手只动一页，页根始终连脊。纸角、指尖和页底前后遮挡可读，不画第三手。",
+          "readable_target": "至少一条弯起页边与两指夹点可辨，能与N1打开静看区分；若缩小后只像抚册则此姿删去，不硬凑两张。"
+        }
+      ],
+      "prop_continuity": "锁棕封皮颜色/宽高厚及书脊边；开合允许透视变化但不任意换书厚。无笔、墨瓶、印章、桌面或第二本。",
+      "presentation_proposal": {
+        "mode": "两张独立工作姿态＋锚参考；默认不做GIF",
+        "why": "闭→开与单页翻转之间没有连续过渡原画；不得自动用跳页/反向复用称完整翻页动画。"
+      },
+      "story_forbidden": [
+        "已完成工资核算、公开账册或账目更正",
+        "赎款已付、弟弟已归、挪款免责或新侵占行为成立",
+        "签字、出示工资姓名住址、支付承诺",
+        "收受纸张、玩家授权、全工班原谅"
+      ],
+      "risks": [
+        "未见内页只能作无内容表面推定，不新增具体账项。",
+        "N2若无法清楚单页/手指与书脊关系，宁可只做N1。",
+        "原锚身颈稍长与细像素备注保留，不为动作拉长手臂。"
+      ]
+    },
+    {
+      "canonical_id": "MAE-NPC-DORO",
+      "name": "多罗",
+      "slug": "doro",
+      "status": "candidate_planning_only_not_dispatched",
+      "current_static_status": "delivered_concept_candidate",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/doro/doro_raw_imagegen.png",
+        "sha256": "064ab7043936b7844f2924c8066537d7f0d81525503184d161bd4ddb1c463656",
+        "roster_sha_matches": true,
+        "independent_qa_sha_matches": true,
+        "pixels_inspected_in_this_audit": true
+      },
+      "independent_qa": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/doro/QA-independent.json",
+        "sha256": "71a508c49587e20d82d26650e2c3eed323bfe70418140f0bd9a878a84edc4cc7",
+        "decision": "deliverable_with_minor_notes"
+      },
+      "delivery_evidence": {
+        "message_id": "Sentinel_42a00e52a0a88191aad6451b3dc3ed51",
+        "time_utc": "2026-10-13T05:58:00Z",
+        "artifact": "doro_raw_imagegen.png"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_MAE-NPC-DORO_多罗.md",
+          "frontmatter_id": "CITY-NPC-MAE-NPC-DORO",
+          "sha256": "41f2f069a5ea126d0750716dd57331613753b87e185f6fc42658b429024f6010",
+          "actual_sha256": "41f2f069a5ea126d0750716dd57331613753b87e185f6fc42658b429024f6010",
+          "roster_sha_matches": true,
+          "relevant_lines": [
+            {
+              "line": 17,
+              "text": "**工作**：维芮的姐姐与日常照护人"
+            },
+            {
+              "line": 19,
+              "text": "**所求**：这几天有粮，妹妹也有能自主决定的日子。"
+            },
+            {
+              "line": 23,
+              "text": "**口吻**：算自己实际端过几碗、缝过几处，也能承认拿妹妹的沉默当愿意过。"
+            },
+            {
+              "line": 25,
+              "text": "**可能弧线**：可以学会把求助和卖物分开，有限过渡仍紧；拒继续代理某笔交易不等于拒妹妹。"
+            },
+            {
+              "line": 29,
+              "text": "共用一身体，按实际日常位置和本人约见移场；没来、死亡、拒绝、保密优先，不为了串任务各生成一人。只讲亲历、准用本段或已收有限回执，关联双链不等于知道全案。当前愿意只管本次范围，取消不结案；旧伤害、已用资源和欠项保留。"
+            }
+          ]
+        }
+      ],
+      "coverage_gap_evidence": {
+        "in_action_animation_branch": false,
+        "in_supplementary_work_in_progress": false,
+        "character_action_directory_exists": false,
+        "in_MASTER_SUPPLEMENT_INDEX.md": false,
+        "in_ACTION_COVERAGE.md": false
+      },
+      "new_props_required": false,
+      "new_props": [],
+      "art_inference_boundary": "职业由现行人物卡支持；外观与原持物由已审锚支持；以下动作、手势和未见内表面是新概念提案，不倒写成已发生剧情。",
+      "priority": 2,
+      "branch_proposal": "empty_bowl_present_v1",
+      "new_full_body_pose_budget": 1,
+      "source_fact": "MAE-NPC-DORO是维芮姐姐与日常照护人，卡明确说实际端过几碗；妹妹意愿不能由姐姐的动作替代。",
+      "anchor_observation": "实际view：栗发黄褐巾、橄榄裙、赭围裙；双手腹前围托同一小空木碗，开口可见、没有食物汤药或餐具；双鞋落地。",
+      "poses": [
+        {
+          "id": "D1",
+          "title": "双手平托空碗、向前待递",
+          "steps": [
+            "两手保持同一碗底两侧接触；肘逐渐向前展开，将碗从腹前移到身体前侧约一小臂距离。",
+            "碗口维持水平，指尖沿外壁/底缘而不插入内口；上身从髋部少量前倾，双脚原位站稳。",
+            "抬眼看前方、闭嘴保留询问/等待意味；停在双手仍承托处，不松手、不添画接收者。"
+          ],
+          "contact_and_weight": "两掌在碗底及下侧承托，拇指可贴外壁；碗不得与手间出现透明空缝。空碗无需负重痛苦或夸张屈膝。",
+          "readable_target": "碗与腹前之间出现明确前伸空间，双前臂前伸且碗口保持水平；不是原锚仅换表情或箱式双臂回抱。"
+        }
+      ],
+      "prop_continuity": "只使用同一小空木碗；锁口径、碗深、底形、木色和空腔。视角改变不能把空碗变托盘、杯、第二只碗或装满汤。",
+      "presentation_proposal": {
+        "mode": "一张独立待递姿态＋锚参考；默认不做GIF",
+        "why": "没有接收或放下阶段，也没有工作台，不能制造已递到或已放稳事实。"
+      },
+      "story_forbidden": [
+        "喂食/服药/治疗完成",
+        "妹妹已接收、同意、和好或恢复健康",
+        "卖袍、求助/交易已成交",
+        "新伤、悲痛加重等新增身体状态"
+      ],
+      "risks": [
+        "碗相对手小，必须保留开口和双掌接点；不以拉大碗换可读性。",
+        "“待递”与训练样板泛用递包有基础运动重合，价值限于具名照护人物与开口器皿控制，不称全新运动范式。",
+        "不追加放碗姿态：原锚没有可靠支撑面。"
+      ]
+    }
+  ],
+  "files_changed_by_this_task": [
+    "Assets/CharacterDesigns/20261013/expressive/briefs/town_work_pose_candidates_02.json"
+  ]
+}

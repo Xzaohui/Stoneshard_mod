@@ -1,0 +1,28 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "completed_utc": "2026-10-13T16:19:53.029172+00:00",
+  "raw_calls": [
+    {
+      "pose": "N1",
+      "prompt": "prompts/N1.txt",
+      "raw": "raw/N1_raw_imagegen.png",
+      "sha256": "05f0762ff8af226c9de0986ba5e1770f92bc41d1eb2a18c54f2c78399bb26feb",
+      "reference_inputs": [
+        "sources/nisha_raw_imagegen.png"
+      ]
+    },
+    {
+      "pose": "N2",
+      "prompt": "prompts/N2.txt",
+      "raw": "raw/N2_raw_imagegen.png",
+      "sha256": "f51aa76591184b86c2ef7b37b9ae7a350f3129611f26879c0cba56b1d42ebb15",
+      "reference_inputs": [
+        "raw/N1_raw_imagegen.png",
+        "sources/nisha_raw_imagegen.png"
+      ]
+    }
+  ],
+  "revision_calls": 0,
+  "processing": "build_review.py: alpha<32 cleared, whole-image uniform 0.46 nearest scale for board, translation only. No drawing, anatomy synthesis, nonuniform stretching, quantization or GIF.",
+  "raw_untouched": true
+}

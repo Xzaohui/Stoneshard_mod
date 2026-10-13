@@ -1,0 +1,86 @@
+{
+  "status": "pass_metadata_binding_addendum_no_visual_change",
+  "reviewer": "verify_expressive_design_outputs",
+  "reviewed_at_utc": "2026-10-13T17:07:00Z",
+  "scope": "非破坏性元数据绑定附录；原QA/冻结图/已交ZIP及receipt均保留原字节。",
+  "original_qa": {
+    "path": "Assets/CharacterActions/20261013/kien/sample_box_regrip_v1/QA-independent.json",
+    "sha256": "c63b6d4a84f548a2636823ce273f941a2979b5468b34781a44fd4e3284f362b7",
+    "visual_decision_retained": "pass_sparse_concept_with_prop_drift_notes"
+  },
+  "stale_bindings_corrected": [
+    {
+      "field": "artifacts.manifest.json",
+      "historical_sha256": "7da99861077cd7b50186ccdad6d825b1cf4bd16d05672937bc56b47de9c0f6f8",
+      "historical_snapshot": "Assets/CharacterActions/20261013/kien/sample_box_regrip_v1/pre_final_status/manifest.json",
+      "current_path": "Assets/CharacterActions/20261013/kien/sample_box_regrip_v1/manifest.json",
+      "current_sha256": "44d1d4a2e57fafea38ba67d0725ca8ff2ad9b7c417bb23c626fd258b987168ca",
+      "changed_top_level_metadata_keys": [
+        "files",
+        "final_status",
+        "gif_gate",
+        "independent_review",
+        "status"
+      ]
+    },
+    {
+      "field": "artifacts.FINAL_STATUS.json",
+      "historical_sha256": "c4ff884bb065aae7fd7c1f0ac7756c9fcf49179b95da82bcde6105ed313f2132",
+      "historical_snapshot": "Assets/CharacterActions/20261013/kien/sample_box_regrip_v1/pre_final_status/FINAL_STATUS.json",
+      "current_path": "Assets/CharacterActions/20261013/kien/sample_box_regrip_v1/FINAL_STATUS.json",
+      "current_sha256": "dc3043c0675bdaa6ff1c08963cf1f8fdad11c770c006f67a26ceaf4f99530537",
+      "changed_top_level_metadata_keys": [
+        "current_independent_qa",
+        "final_delivery_scope",
+        "historical_status_snapshot",
+        "status"
+      ]
+    }
+  ],
+  "current_metadata": {
+    "manifest.json": "44d1d4a2e57fafea38ba67d0725ca8ff2ad9b7c417bb23c626fd258b987168ca",
+    "FINAL_STATUS.json": "dc3043c0675bdaa6ff1c08963cf1f8fdad11c770c006f67a26ceaf4f99530537"
+  },
+  "visually_reviewed_artifacts_unchanged": {
+    "kien_review_zh_dark.png": "0b63c1c0bd98ede497db838f96d4c67548f281694d2c3fe540382e35162db642",
+    "kien_review_zh_light.png": "f6cd3fd103d0c5eca771783bbc9c46772fa80de23bf02cbb0a20208f273a2ef2",
+    "frames/02_K2.png": "18eea5122b680ef258519d2aa57a240e86679f2cdbda60abdaecb2609b384d70",
+    "frames/01_K1.png": "351d666a751866815f5ab2dda822e101b003003fbb6d1dfab0196757d962a1b3",
+    "frames/00_anchor.png": "5968c56645b88d9c94c593e25294a647631ba901b8015b747a075b015866dd4c",
+    "frames/03_anchor.png": "5968c56645b88d9c94c593e25294a647631ba901b8015b747a075b015866dd4c",
+    "raw/K1_raw_imagegen.png": "3488b6e4d0e25c1b2311bc063d2f07bfa3f074ca2d2109236f369f630a86b74b",
+    "raw/K2_raw_imagegen.png": "9f375deb6ee00e7b41a9ac11bed75ac5a5c121521d9f640ca6ade416580dd528",
+    "kien_sample_box_regrip_sparse_once.gif": "af67f8e333c5d5c11d8cee6a0bf7923ed54a2dbbce7742d96d0fa8125472ab35"
+  },
+  "visual_scope": "沿用原独审实际原稿、双底、透明帧及GIF增量结论；本次逐字节验证无新图像，未把元数据更新描述为重新绘图或新视觉审批。",
+  "historical_technical_fields_note": "原QA内空gif_files / gif_present=false是较早阶段技术快照；随后delta_checks.gif已覆盖最终GIF，此附录明确现状，不改历史字段。",
+  "gif_current_decode": {
+    "frames": 4,
+    "durations_ms": [
+      1100,
+      1500,
+      1500,
+      1100
+    ],
+    "loop_extension": false,
+    "first_last_pixels_equal": true
+  },
+  "delivery_evidence": {
+    "receipt": "Assets/CharacterDesigns/20261013/expressive/delivery_belo_kien_work_receipt.json",
+    "receipt_sha256": "aea9e1edf86cebc4d2a4a67919753b437590c2a63664595b2fb9b96644b89d3b",
+    "inventory": "Assets/CharacterActions/20261013/delivery_belo_kien_work_v1/DELIVERY_INVENTORY.json",
+    "inventory_sha256": "0f4632f35da640a4acf0a3556d1b6df77c92798baa6abcc6e1174654ba710a15",
+    "frozen_zip": "Assets/CharacterActions/20261013/delivery_belo_kien_work_v1/deliverables/belo_kien_work_poses_source_v1.zip",
+    "frozen_zip_sha256": "eaf6972ca00f2d88744b90b1d82feb368a2c0a51983879de34b13269f20f3215",
+    "crc_pass": true,
+    "all_qa_bound_files_match_current_zip_members": true,
+    "receipt_attachments_and_qa_hashes_match": true
+  },
+  "limitations_retained": [
+    "Belo检查箍缘，不称精确内缘。",
+    "Kien箱尺寸轻微漂移，未锁刚性物件几何。"
+  ],
+  "new_images": 0,
+  "new_characters": 0,
+  "runtime_verified": false
+}

@@ -1,0 +1,126 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T08:06:28.659443+00:00",
+  "decision": "deliverable_as_dialogue_gesture_key_pose_concept_with_notes",
+  "actually_viewed": [
+    "dialogue_gesture_review_zh.png",
+    "frames/D1_explain.png",
+    "frames/D2_withdraw.png",
+    "浅底中文板及透明原帧黑底预览"
+  ],
+  "visual_findings": {
+    "gesture": "D1画面右手朝上开放掌形、屈肘向外，配合开嘴微抬内眉，解释/商量可读。D2收臂到身前、嘴闭合，形成不同的收手阶段。",
+    "anatomy": "手腕接袖、肘到肩连续，手套指形为像素概括，没有明显断腕/多肢或穿胸。双脚站稳，完整头手靴均不裁切。",
+    "face_identity": "灰头巾、蓝灰夹棉衣、棕手套靴和成年训练脸持续一致。解释时眉口变化适度且有神态；不把表情变化误算身份变化。",
+    "proportion_scale": "站立基准935px，D1/D2主体高937/939px，仅数像素边缘漂移。同倍率935/761重建精确，无单帧bbox变形，整体头肩尺度一致。",
+    "scope": "无武器/物品/剧情事件，适合作为一般对话手势概念。",
+    "alpha": "浅底板和黑底透明帧轮廓干净，无可见杂背景；alpha0RGB为0。"
+  },
+  "independent_checks": [
+    {
+      "artifact": "frames/D0_stand_reuse_I0.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "matches_manifest": true,
+      "size": [
+        1536,
+        1536
+      ],
+      "bbox": [
+        511,
+        445,
+        1024,
+        1380
+      ],
+      "alpha_zero_rgb_zero": true,
+      "source_byte_identical": true
+    },
+    {
+      "artifact": "frames/D1_explain.png",
+      "sha256": "78c400e1c9887f6823e32a5c841dcb2e55471bf7c23984c1a95a9ec051630f36",
+      "matches_manifest": true,
+      "size": [
+        1536,
+        1536
+      ],
+      "bbox": [
+        519,
+        443,
+        1153,
+        1380
+      ],
+      "alpha_zero_rgb_zero": true,
+      "common_scale_threshold_translation_reconstruction_exact": true
+    },
+    {
+      "artifact": "frames/D2_withdraw.png",
+      "sha256": "2e110841684aab58546b33366afb728c03eee8d644a7dc94709cc09b04189e94",
+      "matches_manifest": true,
+      "size": [
+        1536,
+        1536
+      ],
+      "bbox": [
+        519,
+        441,
+        1014,
+        1380
+      ],
+      "alpha_zero_rgb_zero": true,
+      "common_scale_threshold_translation_reconstruction_exact": true
+    },
+    {
+      "artifact": "frames/D3_stand_reuse_D0.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "matches_manifest": true,
+      "size": [
+        1536,
+        1536
+      ],
+      "bbox": [
+        511,
+        445,
+        1024,
+        1380
+      ],
+      "alpha_zero_rgb_zero": true,
+      "source_byte_identical": true
+    }
+  ],
+  "reuse_gif": {
+    "new_body_images": 2,
+    "existing_body_sources_reused": 1,
+    "unique_body_poses": 3,
+    "display_phases": 4,
+    "gif_frames": 4,
+    "durations_ms": [
+      700,
+      1100,
+      600,
+      900
+    ],
+    "loop_extension_present": false,
+    "D0_D3_render_equal": true
+  },
+  "limitations": [
+    "四个稀疏阶段，不是完整补间、连续说话口型或无滑步动画。",
+    "脸巾、衣褶与鞋口仍有轻微重绘漂移；共同尺度/脚线不证明骨长恒定。",
+    "整身平面概念，未恢复原版部件/隐藏结构；本轮不以runtime/native待验阻塞概念，也不宣称通过。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "native_ready": false,
+  "artifacts": [
+    {
+      "artifact": "dialogue_gesture_review_zh.png",
+      "sha256": "801ea74ee1a53766ea4d214d6da7e71717609d36b4a9c11e4e72ed584d21ff33"
+    },
+    {
+      "artifact": "dialogue_gesture_once.gif",
+      "sha256": "e3c9d10e63e20fceb5f4068da2d863178f565b5892ae014ffebab6dc8b144a2b"
+    },
+    {
+      "artifact": "manifest.json",
+      "sha256": "6429b829cc9abfc81445ab2f5b69209bd7a8c8bcb6bc511ebbe52420144dec57"
+    }
+  ]
+}

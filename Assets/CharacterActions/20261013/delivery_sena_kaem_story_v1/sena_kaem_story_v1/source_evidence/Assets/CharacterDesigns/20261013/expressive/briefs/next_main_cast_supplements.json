@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T11:25:41.681284+00:00",
+  "status": "read_only_research_production_proposal_not_dispatched",
+  "scope": "仅下一轮6名既有原创人物、每人最多2个剧情对话关键姿态。未生图、未修改roster或runtime。",
+  "selection_basis": "N1→N2→N3→N4→N5续接优先，随后选N6→N9→N10反复对峙的既有人物。N9仍须N5及N6/N7/N8任二；选本轮人物不将N6改成必做。N10–N18顺序链未变。",
+  "evidence_snapshot": {
+    "roster_path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "roster_sha256_at_read": "b5a471d89cb2fc8c6ea0e99b247147ff13b1fba9b84a774bde0a8710e6257672",
+    "roster_updated_utc": "2026-10-13T11:21:39.886978+00:00",
+    "coverage_path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+    "coverage_sha256_at_read": "0b7096942cbf1da976485ea439cec9e82ad85230a08160c909f2fbf475d6714a",
+    "dependency_path": "design/09_系统逻辑/当前任务依赖与状态字典.md"
+  },
+  "batch_plan": [
+    {
+      "batch": 1,
+      "characters": [
+        "NPC-N-NARA",
+        "NPC-N-ENA"
+      ],
+      "focus": "N2伤腿坐姿拒绝与有限代理；先画2人各2姿态后审看。"
+    },
+    {
+      "batch": 2,
+      "characters": [
+        "NPC-N-NELL",
+        "NPC-N-SEL"
+      ],
+      "focus": "N3自述保护与N4担保对峙。"
+    },
+    {
+      "batch": 3,
+      "characters": [
+        "NPC-SENA",
+        "MAE-NPC-KAEM"
+      ],
+      "focus": "N6/N10保密、核验、让出解释权。"
+    }
+  ],
+  "global_production_boundaries": [
+    "先实际查看各current_anchor像素，再写imagegen编辑提示词；本文依据卡、台本、现有独审及SHA，不替代新图视觉审查。",
+    "每人2新关键姿态上限，首末可复用原锚但复用不算新增；不是完整动画或自然步态。",
+    "除明确叙事受伤的纳拉外，不给角色随机受击、攻击、死亡或胜利姿态。",
+    "不改当前静态选稿，不覆盖旧图；保持脸、衣装、比例与持物结构；六人均已有静态图，不新计人数。",
+    "Mia/Sela/Mara/Ivo/Tor/Rhea已有补件与Tor/Rhea对话在制不重复。齐勒失败walk与generic dummy已画动作不无理由重做。",
+    "原作参考/研究/拒绝5项不作为本轮前置，不趁机追加人物或推断入队、技能、换装兼容。",
+    "S62 R/X是现行条件；S61场次仅给表演素材，不能默认发生或覆盖同意、存活、缺席、拒绝。",
+    "只读准备完成即止；不自动扩为167人物全集或递归新增批次。"
+  ],
+  "deferred_note": "莉德是下一次真正进入N6/N10/SQ06见证场面时最自然的候选，本轮不追加第7人；N7莫伦/雷奥、N5托曼等同理按实际下一场需求再选。",
+  "characters": [
+    {
+      "priority": 1,
+      "canonical_id": "NPC-N-NARA",
+      "name": "纳拉",
+      "aliases": [],
+      "why_this_round": "N1续接N2的救援核心。伤腿坐姿和拒绝返营需要专属表演，不能用健康站立dummy替代。",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/nara/nara_v2_raw_imagegen.png",
+        "sha256": "f8a42dcd72870582183de2fbe7dfa672dabd31658fc93fc2f9d83245c42c7c1f",
+        "roster_hash_match": true,
+        "status": "delivered_concept_candidate",
+        "visual_review": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "纳拉（Nara，NPC-N-NARA）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "chapter": "N2",
+          "path": "design/05_主线/台本/台本_N2_灰堤没有墓碑.md",
+          "sha256": "f0d816aa190f7b80dcfae9a4e6bdc520b48103ca40ff972d53fcb014683106a6"
+        },
+        {
+          "chapter": "N3",
+          "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+          "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5"
+        }
+      ],
+      "already_drawn_do_not_repeat": {
+        "selected_static_concept": "Assets/CharacterDesigns/20261013/expressive/nara/nara_v2_raw_imagegen.png",
+        "superseded_static_versions": [
+          "Assets/CharacterDesigns/20261013/expressive/nara/nara_raw_imagegen.png"
+        ],
+        "supplementary_coverage": "截至此次读取，人物目录及ACTION_COVERAGE未见此人的侧背、表情或动作补绘；旧版本静态正面不算新姿态。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "seated_boundary",
+          "title": "坐着抬掌，请别替我签",
+          "visual_brief": "固定原凳、受伤腿木夹板及双靴接地点；保持伤腿前伸，一手仍靠近大腿支撑，另一手仅抬到胸前掌外；眉压紧、嘴微张，表达疼痛中的清楚拒绝。",
+          "story_anchor": "N2：X02-L01、N2-R-agency-L01；台本人物卡纳拉段。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        },
+        {
+          "key": "seated_explanation",
+          "title": "坐着解释自己能做什么",
+          "visual_brief": "仍不站起；躯干轻微向谈话者倾，一只空手在膝上方小幅指示工作范围，另一手保持稳定；眼神专注但疲惫，不画正在修轴或爬梯。",
+          "story_anchor": "N2：N2-S03-L03仅作场面素材；服从N2-R-return/protected/agency当下授权。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        }
+      ],
+      "story_boundaries": [
+        "不要新增裸伤、诊断、拐杖或康复站立。",
+        "N2 protected/agency接N3时禁用纳拉当面听审基准镜头；此图是本人所在地对话。",
+        "抬掌是表演研究，不代表已签实名、返营或全权委托。"
+      ],
+      "optional_views": "本轮不自动另开侧背/胸像套装；若动作确需转角，先做该动作可见结构，不以每人固定套装扩产。",
+      "runtime_integrated": false
+    },
+    {
+      "priority": 2,
+      "canonical_id": "NPC-N-ENA",
+      "name": "艾娜",
+      "aliases": [],
+      "why_this_round": "N2妻子与当事人、N3限定代理、N4讨薪、N9代理核查、N18回访多处复用；必须与曼恩同名艾娜分开。",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/ena/ena_v2_raw_imagegen.png",
+        "sha256": "fca0d358d7197c9ce2f4630407a525e397b01e1e4d26d8fb01810d56f81f4e21",
+        "roster_hash_match": true,
+        "status": "delivered_concept_candidate",
+        "visual_review": "independent_deliverable"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "艾娜（Ena，NPC-N-ENA）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "chapter": "N2",
+          "path": "design/05_主线/台本/台本_N2_灰堤没有墓碑.md",
+          "sha256": "f0d816aa190f7b80dcfae9a4e6bdc520b48103ca40ff972d53fcb014683106a6"
+        },
+        {
+          "chapter": "N3",
+          "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+          "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5"
+        },
+        {
+          "chapter": "N4",
+          "path": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+          "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90"
+        },
+        {
+          "chapter": "N9",
+          "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+          "sha256": "513c1b489b4e18ec899336fcd8da3c2ca3eaf4f7abea74cf1875232c1c64ab70"
+        },
+        {
+          "chapter": "N18",
+          "path": "design/05_主线/台本/台本_N18_誓约之后.md",
+          "sha256": "e8e0cd7fc74263e00907cc2c33b0510d139b2eb090bf8dbaed6a4fbba76cc152"
+        }
+      ],
+      "already_drawn_do_not_repeat": {
+        "selected_static_concept": "Assets/CharacterDesigns/20261013/expressive/ena/ena_v2_raw_imagegen.png",
+        "superseded_static_versions": [
+          "Assets/CharacterDesigns/20261013/expressive/ena/ena_raw_imagegen.png"
+        ],
+        "supplementary_coverage": "截至此次读取，人物目录及ACTION_COVERAGE未见此人的侧背、表情或动作补绘；旧版本静态正面不算新姿态。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "coat_guard",
+          "title": "抱紧旧外套，等待答案",
+          "visual_brief": "保留米头巾、补棕裙、可辨衣襟袖口的旧工作外套；外套从现有托抱稍收近胸腹，肩内收、抬眉紧嘴。不可变裹尸布，不加棺材。",
+          "story_anchor": "N2-DEFAULT与人物卡艾娜段；S01场面仅作语气参考。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        },
+        {
+          "key": "limited_advocacy",
+          "title": "一手托外套，一手阻止越权",
+          "visual_brief": "单前臂可靠托住原外套，另一手低位掌外；成年脸从焦虑变坚定追问，口略开。只表达自己的边界，不指向/拖拉纳拉。",
+          "story_anchor": "N3：X04-L01；N2-R-agency；N9-R-delegated；N18-R-receipts。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        }
+      ],
+      "story_boundaries": [
+        "canonical只用NPC-N-ENA；MAE-S03-NPC的ena_coldwindow不是此人。",
+        "不确认丈夫死亡、复工、已获赔或贫困消失；不画钱袋/奖牌/欠薪已结标记。",
+        "夫妻分别表达意愿；代理只限明确授权，不自动代表全部工人或丈夫到场作证。"
+      ],
+      "optional_views": "本轮不自动另开侧背/胸像套装；若动作确需转角，先做该动作可见结构，不以每人固定套装扩产。",
+      "runtime_integrated": false
+    },
+    {
+      "priority": 3,
+      "canonical_id": "NPC-N-NELL",
+      "name": "妮尔",
+      "aliases": [],
+      "why_this_round": "N3核心对峙和限定自述；其复核原则又经X06影响N10。补可读防备与自述，比重复正面或纯转身更有用。",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+        "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec",
+        "roster_hash_match": true,
+        "status": "delivered_concept_candidate",
+        "visual_review": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "妮尔（Nell，NPC-N-NELL）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "chapter": "N3",
+          "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+          "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5"
+        },
+        {
+          "chapter": "N4",
+          "path": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+          "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90"
+        },
+        {
+          "chapter": "N10",
+          "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+          "sha256": "d875533e03eedd738c7a44fbd1f09dd9d66644628f25dc8b6a100506267de0d6"
+        }
+      ],
+      "already_drawn_do_not_repeat": {
+        "selected_static_concept": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+        "superseded_static_versions": [
+          "Assets/CharacterDesigns/20261013/expressive/nell/nell_raw_imagegen.png"
+        ],
+        "supplementary_coverage": "截至此次读取，人物目录及ACTION_COVERAGE未见此人的侧背、表情或动作补绘；旧版本静态正面不算新姿态。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "ledger_boundary",
+          "title": "护住闭账簿，拒绝公开住址",
+          "visual_brief": "维持低盘发、蓝裙、米披肩和闭合工资簿；一臂抱簿靠胸，另一手横掌停在簿上方，紧眉侧望来者。",
+          "story_anchor": "N3-R-testimony的姓名保护、N3-S03-L01场面素材。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        },
+        {
+          "key": "limited_account",
+          "title": "松开防御，说明自己改过的部分",
+          "visual_brief": "账簿仍闭合在一臂上；空手向外微摊但不递出书，肩略放低、嘴轻开、目光直视；克制而不哭泣求赦。",
+          "story_anchor": "N3-R-testimony-L01、N3-R-collective-L01；N10 X06限定复核原则。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        }
+      ],
+      "story_boundaries": [
+        "原创妮尔不是原作尼尔；不重新设计脸和发髻。",
+        "不燃烧住址页、不展示可读姓名地址、判决或免责印。",
+        "解释手势不证明已获原谅、保住书记职位、伊沃无罪或全部港口清白。"
+      ],
+      "optional_views": "本轮不自动另开侧背/胸像套装；若动作确需转角，先做该动作可见结构，不以每人固定套装扩产。",
+      "runtime_integrated": false
+    },
+    {
+      "priority": 4,
+      "canonical_id": "NPC-N-SEL",
+      "name": "塞尔",
+      "aliases": [],
+      "why_this_round": "N3→N4→N5必经桥的工坊对峙；当前只有空垂双手站姿，缺推销担保与面对代价的对比。",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/sel/sel_v2_raw_imagegen.png",
+        "sha256": "696407c5dcf6401bc85dc429540b29004bf5f7db64b69638f2910c4f2d126de1",
+        "roster_hash_match": true,
+        "status": "delivered_concept_candidate",
+        "visual_review": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "塞尔（Sel，NPC-N-SEL）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "chapter": "N4",
+          "path": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+          "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90"
+        }
+      ],
+      "already_drawn_do_not_repeat": {
+        "selected_static_concept": "Assets/CharacterDesigns/20261013/expressive/sel/sel_v2_raw_imagegen.png",
+        "superseded_static_versions": [
+          "Assets/CharacterDesigns/20261013/expressive/sel/sel_raw_imagegen.png"
+        ],
+        "supplementary_coverage": "截至此次读取，人物目录及ACTION_COVERAGE未见此人的侧背、表情或动作补绘；旧版本静态正面不算新姿态。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "bargain_offer",
+          "title": "以空手邀谈，推销自己的解决办法",
+          "visual_brief": "锈红卷袖、炭围裙、腰钳不变；一只空手低位掌心向上，另一手停于围裙前，不拿工具；嘴微开、厚眉斜挑，表现务实中带算计。",
+          "story_anchor": "N4-DEFAULT；N4-R-shift相关风险说明。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        },
+        {
+          "key": "cost_acknowledgement",
+          "title": "双手收回，克制地面对成本",
+          "visual_brief": "双手收回腰腹但不叉腰逞强，一手半开另一手轻扶前臂，肩稍落、灰须间紧嘴、目光不闪避；与首姿形成收束。",
+          "story_anchor": "N4-R-installments-L01与N4-R-liquidate-L01的态度差异；不画路线特有物证。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        }
+      ],
+      "story_boundaries": [
+        "不实际递出票或写玩家签名，避免把单一坏路线画成默认已签。",
+        "不画大炉熄灭/出售、全工坊复产或已清债；同一动作可配条件台词，状态另核。",
+        "不新增战斗锤、全知幕后身份或定位失踪者能力。"
+      ],
+      "optional_views": "本轮不自动另开侧背/胸像套装；若动作确需转角，先做该动作可见结构，不以每人固定套装扩产。",
+      "runtime_integrated": false
+    },
+    {
+      "priority": 5,
+      "canonical_id": "NPC-SENA",
+      "name": "塞娜·里德",
+      "aliases": [
+        "CITY-NPC-NPC-SENA",
+        "NPC08"
+      ],
+      "why_this_round": "主线档案技术来源横跨N6、N9、N10、N15，并连接曼恩篇及SQ06/DT11；与Sela完全不同人物。",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/sena/sena_raw_imagegen.png",
+        "sha256": "f4dc6eb11fcf03aff30d9d8b9b6d1c5cc3475aba7ecaf499eb269ac29d1cf562",
+        "roster_hash_match": true,
+        "status": "delivered_concept_candidate",
+        "visual_review": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-SENA_塞娜·里德.md",
+          "frontmatter_id": "CITY-NPC-NPC-SENA",
+          "sha256": "233094e463a8d61b5154565d03db9cc2796e3dc01afa66b8e42be44e669692f1",
+          "actual_sha256": "233094e463a8d61b5154565d03db9cc2796e3dc01afa66b8e42be44e669692f1"
+        },
+        {
+          "path": "design/04_人物/人物_塞娜·里德.md",
+          "frontmatter_id": "NPC08",
+          "sha256": "9e3c9701bbf7ff2f6d2c359bc221a6b363b21857d1247a86c087a37fdf5bdb21",
+          "actual_sha256": "9e3c9701bbf7ff2f6d2c359bc221a6b363b21857d1247a86c087a37fdf5bdb21"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "chapter": "N6",
+          "path": "design/05_主线/台本/台本_N6_被封存的页码.md",
+          "sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0"
+        },
+        {
+          "chapter": "N9",
+          "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+          "sha256": "513c1b489b4e18ec899336fcd8da3c2ca3eaf4f7abea74cf1875232c1c64ab70"
+        },
+        {
+          "chapter": "N10",
+          "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+          "sha256": "d875533e03eedd738c7a44fbd1f09dd9d66644628f25dc8b6a100506267de0d6"
+        },
+        {
+          "chapter": "N15",
+          "path": "design/05_主线/台本/台本_N15_回声不等于真相.md",
+          "sha256": "1e440963a88f7012a65b77fbe02e5a911a97ebfa23cda975058b7ab669f5ffc0"
+        }
+      ],
+      "already_drawn_do_not_repeat": {
+        "selected_static_concept": "Assets/CharacterDesigns/20261013/expressive/sena/sena_raw_imagegen.png",
+        "superseded_static_versions": [],
+        "supplementary_coverage": "截至此次读取，人物目录及ACTION_COVERAGE未见此人的侧背、表情或动作补绘；旧版本静态正面不算新姿态。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "archive_boundary",
+          "title": "抱闭册，限定查阅范围",
+          "visual_brief": "保持灰黑短发与银额发、蓝袍米围巾、棕闭册闭袋；一臂稳抱书，另一手低位掌外划出小范围，视线严肃审慎。",
+          "story_anchor": "N6 X61-L01、N6-R-archive；人物卡信息与盲点。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        },
+        {
+          "key": "cede_explanation",
+          "title": "让出解释位置，转眼听证人",
+          "visual_brief": "身体仍面向主要交谈方向，仅肩与头轻转向旁侧发言者；书靠身保持闭合，空手由胸前缓缓降成侧向开放手掌；眉眼由防卫转成不情愿但认真倾听。",
+          "story_anchor": "N6-R-archive-L01；N10-R-sourcehearing、X13；不直接采用强制悔罪旧场次。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        }
+      ],
+      "story_boundaries": [
+        "canonical NPC-SENA / alias NPC08；不是BRY-NPC-SELA，也不是莉德家属。",
+        "不画档案认证已完成、正常学院重开、无权限整库开放、名字地址页或替凯姆洗责。",
+        "第二姿是可选场景表演，不宣告永久成长、替莉德授权或N15安全测试通过。"
+      ],
+      "optional_views": "本轮不自动另开侧背/胸像套装；若动作确需转角，先做该动作可见结构，不以每人固定套装扩产。",
+      "runtime_integrated": false
+    },
+    {
+      "priority": 6,
+      "canonical_id": "MAE-NPC-KAEM",
+      "name": "凯姆",
+      "aliases": [
+        "CITY-NPC-MAE-NPC-KAEM",
+        "NPC-N-KAEM"
+      ],
+      "why_this_round": "N6签名来源→N9拼接摘要→N10独立核验核心，并接曼恩CS-MAE-05；只补同一身体的辩解与让出话语权。",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/kaem/kaem_raw_imagegen.png",
+        "sha256": "dcfaf4da3aacb9b9f73ff0d4ddc12ca5acef5583272b725f789e696613dd2910",
+        "roster_hash_match": true,
+        "status": "delivered_concept_candidate",
+        "visual_review": "independent_deliverable"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_MAE-NPC-KAEM_凯姆.md",
+          "frontmatter_id": "CITY-NPC-MAE-NPC-KAEM",
+          "sha256": "cf464441953cc012351035181701414b919110b001840e189f38550113d896b8",
+          "actual_sha256": "cf464441953cc012351035181701414b919110b001840e189f38550113d896b8"
+        },
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "凯姆（Kaem，NPC-N-KAEM）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "chapter": "N6",
+          "path": "design/05_主线/台本/台本_N6_被封存的页码.md",
+          "sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0"
+        },
+        {
+          "chapter": "N9",
+          "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+          "sha256": "513c1b489b4e18ec899336fcd8da3c2ca3eaf4f7abea74cf1875232c1c64ab70"
+        },
+        {
+          "chapter": "N10",
+          "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+          "sha256": "d875533e03eedd738c7a44fbd1f09dd9d66644628f25dc8b6a100506267de0d6"
+        },
+        {
+          "chapter": "N11",
+          "path": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+          "sha256": "61a27dc3370b69216d707ee4a40c13611434ce668c91a3072213a907bfa9f415"
+        }
+      ],
+      "already_drawn_do_not_repeat": {
+        "selected_static_concept": "Assets/CharacterDesigns/20261013/expressive/kaem/kaem_raw_imagegen.png",
+        "superseded_static_versions": [],
+        "supplementary_coverage": "截至此次读取，人物目录及ACTION_COVERAGE未见此人的侧背、表情或动作补绘；旧版本静态正面不算新姿态。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "defensive_argument",
+          "title": "抱住闭筒，小幅强调自己的辩解",
+          "visual_brief": "炭灰衣、米领、棕袖、侧分发轻胡茬与原闭筒不变；一臂稳托筒，空手在胸前小幅强调，眼神防备、自负克制，嘴开但不狰狞。",
+          "story_anchor": "N10-DEFAULT；N10-R-confront。N6/N9仅有已知有限事实时使用。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        },
+        {
+          "key": "yield_the_floor",
+          "title": "停止抢话，空手放低让人说完",
+          "visual_brief": "闭筒始终由原持物臂稳定控制，不开筒不交接；空手降向身侧掌心半开，肩略松、目光转到旁侧证人，嘴收拢。",
+          "story_anchor": "N10-R-sourcehearing-L01；MAE角色卡的独立来源核验与沉默边界。",
+          "type": "one_new_full_body_key_pose_with_readable_expression"
+        }
+      ],
+      "story_boundaries": [
+        "canonical MAE-NPC-KAEM；NPC-N-KAEM是别名，不能新增第二凯姆。",
+        "不新增印章、重新授印、全知法师能力或英雄光效；不把沉默画成自动认罪。",
+        "不默认认罪/免责/失印/死亡状态；图不执行回执交付，也不证明住址可公开。"
+      ],
+      "optional_views": "本轮不自动另开侧背/胸像套装；若动作确需转角，先做该动作可见结构，不以每人固定套装扩产。",
+      "runtime_integrated": false
+    }
+  ]
+}

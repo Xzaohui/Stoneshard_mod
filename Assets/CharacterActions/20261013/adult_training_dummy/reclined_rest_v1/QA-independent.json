@@ -1,0 +1,68 @@
+{
+  "status": "pass_occluded_static_reclined_rest_concept_with_notes",
+  "delivery_ready": true,
+  "reviewer": "verify_expressive_design_outputs",
+  "reviewed_at_utc": "2026-10-13T16:52:20Z",
+  "artifacts": {
+    "QA-author.json": "44fe5cdae04f9aada1598073af5d61765f839b9d739cae37e59fff039273b130",
+    "README_zh.md": "231e87ecc7002db70995184e6b3bc6857f8468ff1fae9ac78c8b227b60a2f393",
+    "build_review.py": "773e9dc7c1c80697431027c8a99ad2efcef78ec7d81e97fca50d73537a1d867c",
+    "frames/R1_reclined_rest.png": "f3af342564da67f3ff59b7fe8ff7c8904e1244da131d3647e617d8cc9447a8a4",
+    "generation_call.json": "97bb9698fbb9a4a2dc70ad1a5377750a0ecb3fbfe1f671b051f474e635c33315",
+    "package_verified.py": "7add0ab50f6cda4a6c391eeb3b661846a1d60f5e046112e69f9570ddd2c69841",
+    "processing_log.json": "80d1f8cd84527dd0c8e0f63250795ca7ae0801b38e432db89114d015433e4d85",
+    "prompts/R1_reclined_rest.txt": "693d642bddc7afc1a08dbad373f568df3533861cc4429bcdcb16e1cbc9c0f111",
+    "raw/R1_reclined_rest_raw.png": "1f61ee99678a685693ee86c966ca634e60ef9a072edb5f0f8bbb7d437b6cfcd2",
+    "reclined_rest_review_dark_zh.png": "fe85703d76f43bd57c764f23a8ab0a3cc7807a19f4382a80033bff1e78ac6603",
+    "reclined_rest_review_light_zh.png": "e8d3f7340db7b5927e48d31b8ccbfa20ed552fad5c845fe361eee5749c4a9334",
+    "source_provenance.json": "dba313b5bb351742a947b0a4db4f8dc51b1ecf0f1a28e1371a005845b4551e4c",
+    "sources/AGENTS.md": "ad85e8e7c72914a0096b7c254e7e4feb23e43a2e478616eab549990b3990c8b6",
+    "sources/I0_stand.png": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+    "sources/STYLE_DIRECTION.md": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+    "sources/reclined_rest_pose_brief.md": "07ac7985801182212b3a2866c3cee38adc5eaecc599f55685c4b8b31e878cbf5",
+    "sources/reclined_rest_pose_evidence.json": "0191b6569b71a1616ecb998f02eb6a3314a4c67b241e78ffcf945a5616665223",
+    "manifest.json": "60ca8c0df8695980e1305627e72087c9d5860d5779e6064c127dfdc7379e19a2"
+  },
+  "actually_viewed": [
+    "raw/R1_reclined_rest_raw.png",
+    "sources/I0_stand.png"
+  ],
+  "findings": [
+    "睁眼平静侧望、嘴角轻松，首读为清醒短歇，不是伤亡或昏迷。",
+    "头侧后帽与棕手套接触，枕臂折肘低置，颈肩连续；另一袖至腕手完整，手掌在身前低处。",
+    "胸腰横卧、侧髋和下腿形成低位支撑，区别于坐凳/俯身/单膝。",
+    "上下两段棕裤及翻口可分，近靴完整，远靴只在近靴后方露出局部；未见明确断肢、多脚或共用单靴。",
+    "I0的成年粗眉脸、灰绗缝帽、蓝灰衣、方扣腰带、棕手套裤靴保持，像素簇仍清楚。"
+  ],
+  "limitations": [
+    "远踝和远靴大部遮挡，不满足 brief 理想的两腿两靴逐段完整可追踪；交付只声称遮挡中的静态侧卧概念。",
+    "头由手掌与折臂支撑，属于清醒倚臂侧卧，不是头平贴前臂的精确brief姿势。",
+    "头宽人工对应是近似显示尺度，不是统一骨长或鞋形锁定证据。",
+    "仅一新静态，无起卧/翻身流程、GIF、睡眠伤亡系统或runtime验收。"
+  ],
+  "manifest_sha256": "60ca8c0df8695980e1305627e72087c9d5860d5779e6064c127dfdc7379e19a2",
+  "new_static_poses": 1,
+  "new_characters": 0,
+  "gifs": 0,
+  "runtime_verified": false,
+  "technical_checks": {
+    "all_17_frozen_payload_hashes_and_sizes_match": true,
+    "source_copies_byte_exact_and_current_sources_match": true,
+    "alpha_le_8_RGBA_zero_remaining_RGBA_unchanged": true,
+    "transparent_frame_native_size": [
+      1774,
+      887
+    ],
+    "no_body_rescaling_in_export": true,
+    "review_board_scaling": "I0 0.64; R1 0.520233918128655; uniform nearest per whole image, approx hood-width match, not standing-height bbox match",
+    "both_boards_all_four_image_regions_reconstructed_pixel_exact": true,
+    "ground_contact_not_painted": true
+  },
+  "final_visual_findings": [
+    "实看浅深板和头臂/髋腿近景，头手贴合、折臂和低肘支撑可信，睁眼与平和口型清醒。",
+    "近侧大腿—膝—翻口—靴完整；下侧裤腿和翻口可分，远靴在近靴后仅露短段。接受自然遮挡的单张侧卧，不将遮挡处当作已验证完整关节链。",
+    "双底没有明显彩晕、背景残块或新增物，完整卧姿没有裁切。",
+    "等比头宽对照下成年身份和紧凑体型保持，脸角、帽褶、裤鞋表面存在生成漂移。"
+  ],
+  "historical_raw_visual_qa_sha256": "85c7b3223793e967e8fb229314f013b283a24786fdc94599640d6aeacf2dfed4"
+}

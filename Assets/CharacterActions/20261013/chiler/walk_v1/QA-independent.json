@@ -1,0 +1,75 @@
+{
+  "decision": "deliverable_as_three_phase_partial_step_concept_with_notes",
+  "reviewedAt": "2026-10-13",
+  "reviewer": "independent-visual-review",
+  "method": "实际查看三张单帧及并排审图，读取spec、README和manifest，再核画布及hash。",
+  "frames": [
+    {
+      "id": "W0",
+      "path": "frames/W0_support.png",
+      "sha256": "83a7aebf6d7ea13e3449def98a832c812f23b7a5ab17d2d34407105c03a9fbed",
+      "matchesManifest": true,
+      "canvas": [
+        1536,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaBounds": [
+        361,
+        268,
+        1023,
+        1382
+      ]
+    },
+    {
+      "id": "W1",
+      "path": "frames/W1_swing.png",
+      "sha256": "0724fb24bc5fe29bf0bf4e3c4c1f25005ddfab3c1d2a69423b6706a398389566",
+      "matchesManifest": true,
+      "canvas": [
+        1536,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaBounds": [
+        310,
+        255,
+        1019,
+        1372
+      ]
+    },
+    {
+      "id": "W2",
+      "path": "frames/W2_contact.png",
+      "sha256": "ef57b59a39f82dd55136b609e181d94542955ed3ad023645bbb38ce2f9ba5fbe",
+      "matchesManifest": true,
+      "canvas": [
+        1536,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaBounds": [
+        391,
+        274,
+        1072,
+        1377
+      ]
+    }
+  ],
+  "visual": {
+    "phaseReadability": "W0双足静站、W1屏右靴明显抬离地、W2屏右前靴落低并前移可区分，是实际不同腿姿而非同图平移。",
+    "footTrajectory": "W0到W1屏左支撑靴近原落点；屏右足抬高且前摆，W2下落前接触。W2后足整鞋仍略高于前足地线，能读作提踵/离地过渡，但不能据此证明精确脚尖接触或无滑步。三帧不能验证连续足轨迹。",
+    "registration": "三帧统一1536方画布与共同工作地线；W1曾整体平移校正已公开记录，不按各帧人物框再居中。地线及标记不是引擎origin/socket。",
+    "identity": "棕乱发、胡髭山羊须、黄披肩灰绿上衣、包和裤靴保持齐勒身份。脸宽、眉眼/发簇和布纹有轻微重绘漂移，概念可接受，生产动画需稳定。",
+    "pointer": "指示棒始终由同一屏左图像侧手持，朝下，与另一手分离；未换手或武器化。不确认未经骨骼证实的解剖左右。",
+    "occlusionAndCrop": "三帧头发、棒尖、手包与鞋完整，肢体数量正确，透明外轮廓未见明显污染。"
+  },
+  "limits": [
+    "仅原创三阶段短步关键帧，非完整走路循环，缺收步与左右交替；不可强接W2到W0称无缝。",
+    "未验证插值、真实帧率、完整重心转移和逐帧足底防滑。",
+    "高分辨率概念非native资源；runtime/装备换装/碰撞/方向映射未验。",
+    "不是从原版动作帧逐关节复刻；不得宣传已符合官方步态。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false
+}

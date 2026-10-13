@@ -1,0 +1,103 @@
+{
+  "reviewer": "independent_visual_review",
+  "status": "pass_sparse_concept_with_notes",
+  "concept_visual_pass": true,
+  "delivery_ready": true,
+  "required_change": "已完成：文字为“抬箍检查箍缘”。",
+  "artifacts": {
+    "QA-author.json": "04b942464625c16a1fae813afd1ac3bc165584a491ba6bc073d36cfd8a121f48",
+    "belo_review_zh_light.png": "a041c91260f97113ecf722e1875fd1cd6c629858ea4b5462d522d4253093a7f7",
+    "belo_review_zh_dark.png": "3b5a4bb8fb3f97a5db19af33438bcbac475e09d4f34213071d40bb4feebb2014",
+    "manifest.json": "10dc388d085ddc1c628fbcebe5c8f39695aec6c2fc02753fe2ccec3aeeedcbcc",
+    "frames/01_B1.png": "7629cf6b7b0af3151a9d0412eddc8229a268b1e6c7f06a8549e9719ff71d6a34",
+    "frames/00_anchor.png": "075098ae2a8a63b9fdafa805d3776beeab8f4730051b7b0843cbb5453a96daf0",
+    "frames/02_anchor.png": "075098ae2a8a63b9fdafa805d3776beeab8f4730051b7b0843cbb5453a96daf0",
+    "raw/B1_raw_imagegen.png": "c872870ebf82ccaa6389f0f1725627783dfdd60340795345ba9008508a01307e",
+    "FINAL_STATUS.json": "b430216c641b506d18c4f2aee14e4940a648b5ced1a09a05ac31e55f59af7989",
+    "belo_hoop_edge_check_sparse_once.gif": "49ad9dddebb9752d5f8cc2c8f158f54a6e4b54eab2448e3ee0e8984392012764"
+  },
+  "sources": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/belo/belo_raw_imagegen.png",
+      "sha256": "31e59e238f21b4867974b6e057eafb2cf20213b608dea1a0653a5a5300e6fbcb"
+    },
+    {
+      "path": "design/04_人物/城市人物/人物_MNS-NPC-BELO_贝洛.md",
+      "sha256": "233d3c1f43d406581ad46d8a5aa4f6b85ed67126ede21217e37af441142c7869"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/briefs/town_work_pose_candidates_01.json",
+      "sha256": "546964caa17a7907cb658b795b4ea048d64ebd4b4109aa04d641c9ff1ab2813e"
+    }
+  ],
+  "actual_visual_review": [
+    "新全身原稿与浅深底三列板实际查看；黑短发、粗眉无须成年脸、灰系带工衣短围裙裤靴和原锚一致。",
+    "低头、抬环双肘弯曲为可信检查姿态；恰有两手，画面左手握上缘，右手搭右缘，指节连接连续，无可见手指穿木。",
+    "完整单木环轮廓和孔洞连续，没有开环/新增工具；倾斜且更正面使投影变宽，长轴大致保留，无明显刚性物尺寸硬错。但未验证精密固定几何。",
+    "前臂/环/围裙前后遮挡清楚；双足完整站稳。原锚稍长颈是既有形象，本姿未进一步拉长。",
+    "深浅底未见实体光晕；细簇和脸发少量漂移保留为概念限制。"
+  ],
+  "counts": {
+    "new_full_body_poses": 1,
+    "new_characters": 0,
+    "unique_states_including_anchor": 2,
+    "display_stages": 3,
+    "gif_created": true
+  },
+  "sequence_gate": "3帧4000ms单次稀疏预览通过；首末原锚复用，不是连续工序动画。",
+  "story_boundary": [
+    "不表示改箍获认可、师傅原谅、署名或工具归属解决",
+    "不新增桶、样架或第二木环"
+  ],
+  "independent_technical_checks": {
+    "sources": true,
+    "files": true,
+    "frames": [
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "source_height_after_alpha_cleanup": 1124
+      },
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "source_height_after_alpha_cleanup": 1112
+      },
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "source_height_after_alpha_cleanup": 1124
+      }
+    ],
+    "boards": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "first_last_byte_equal": true,
+    "gif_files": []
+  },
+  "runtime_verified": false,
+  "delta_checks": {
+    "boards_below_y146_unchanged": true,
+    "raw_and_frames_unchanged": true,
+    "gif": {
+      "frames": 3,
+      "loop": null,
+      "durations": [
+        1100,
+        1800,
+        1100
+      ],
+      "art_quantization_mean_errors": [
+        0.4943775406504065,
+        0.4547624491869919,
+        0.4943775406504065
+      ],
+      "first_last_pixels_equal": true
+    }
+  }
+}

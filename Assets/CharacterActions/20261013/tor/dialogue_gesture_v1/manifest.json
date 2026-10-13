@@ -1,0 +1,139 @@
+{
+  "status": "awaiting_independent_review",
+  "character": "tor",
+  "character_zh": "托雷",
+  "tool": "builtin imagegen",
+  "classification": "original_fullbody_dialogue_keypose_concept",
+  "new_characters": 0,
+  "new_body_images": 2,
+  "unique_body_states": 3,
+  "phase_count": 4,
+  "anchor": "Assets/CharacterDesigns/20261013/expressive/tor/period_costume_v2/tor_period_costume_v2_transparent.png",
+  "anchor_sha256": "0a0098be404c9e597841827ca2b57c37f1f7f950f7195b714163c8893d6f8e6d",
+  "common_scale": 1.0,
+  "processing": "alpha threshold128; transparent RGB zero; common scale 1.0; sole-only vertical translation; no body construction/mirror/warp/interpolation",
+  "canvas": [
+    1118,
+    1407
+  ],
+  "sole_baseline": 1361,
+  "frames": [
+    {
+      "id": "D0_stand",
+      "new_drawing": false,
+      "source": "Assets/CharacterActions/20261013/tor/dialogue_gesture_v1/raw/D0_anchor_source.png",
+      "source_sha256": "0a0098be404c9e597841827ca2b57c37f1f7f950f7195b714163c8893d6f8e6d",
+      "frame_sha256": "5e6eb8c9e28adadd0a292f8dc4304c9584f80047ad960205ce3314db0e4d26a4",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        263,
+        203,
+        884,
+        1361
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        0
+      ],
+      "visible_bbox": [
+        263,
+        203,
+        884,
+        1361
+      ],
+      "low_alpha_pixels_removed": 5016,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D1_question",
+      "new_drawing": true,
+      "source": "Assets/CharacterActions/20261013/tor/dialogue_gesture_v1/raw/D1_question.png",
+      "source_sha256": "f83b5e71f0b4ae7980555970ef8bc3b903a125516bb68ee9345ed766ad323835",
+      "frame_sha256": "f03a0e99663b515d871de8a572b38c399b6dad8d6b8c80a317d9a782246400c3",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        260,
+        197,
+        1027,
+        1347
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        14
+      ],
+      "visible_bbox": [
+        260,
+        211,
+        1027,
+        1361
+      ],
+      "low_alpha_pixels_removed": 12479,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D2_weigh",
+      "new_drawing": true,
+      "source": "Assets/CharacterActions/20261013/tor/dialogue_gesture_v1/raw/D2_weigh.png",
+      "source_sha256": "ebcc9baaf2775a6910953ff4deb0860f3e02583c8b4219cc344f8ceff5e7e88f",
+      "frame_sha256": "a344343b3c74ffa4e41c2d6451ff26b20e59f22e453e4ec37d828d820edba895",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        264,
+        204,
+        859,
+        1362
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        -1
+      ],
+      "visible_bbox": [
+        264,
+        203,
+        859,
+        1361
+      ],
+      "low_alpha_pixels_removed": 10985,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D3_stand_reuse_D0",
+      "new_drawing": false,
+      "source": "frames/D0_stand.png",
+      "frame_sha256": "5e6eb8c9e28adadd0a292f8dc4304c9584f80047ad960205ce3314db0e4d26a4",
+      "byte_identical_to_D0": true
+    }
+  ],
+  "gif_duration_ms": [
+    750,
+    1000,
+    1000,
+    900
+  ],
+  "gif_loop_extension": false,
+  "narrative_sources": [
+    "design/04_人物/人物_玛拉与伊沃.md",
+    "design/05_主线/台本/台本_N1_无钟之夜.md"
+  ],
+  "runtime_verified": false,
+  "native_ready": false,
+  "user_individual_character_approval_claimed": false,
+  "limitations": [
+    "四个稀疏关键姿态，不是连续补间或原生动画",
+    "衣褶、轮廓边缘和鞋型有细小生成漂移，未逐帧重绘修正",
+    "共同比例与鞋底地线不等于骨长、脚轨迹已锁定",
+    "未做原生尺寸、碰撞、装备换装或游戏运行验收"
+  ]
+}

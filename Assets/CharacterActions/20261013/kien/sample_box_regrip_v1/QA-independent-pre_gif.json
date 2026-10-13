@@ -1,0 +1,92 @@
+{
+  "reviewer": "independent_visual_review",
+  "status": "pass_sparse_concept_with_prop_drift_notes",
+  "delivery_ready_static": true,
+  "actual_visual_review": [
+    "实际查看 K1/K2 原稿及浅深底原锚对照；沙短发、无须成年脸、蓝灰短衣棕肩披腰袋与靴保持。K1低头、双膝稍屈，K2回正抬眼，差别可读。",
+    "原提柄手始终在箱顶握柄，另一手掌由下托住箱底；手掌贴底缘而非悬空，两腕和前臂连续，没有第三手/手穿箱。",
+    "闭合无字木样箱仍为同一小体量，两条竖边框及横木面连续。新姿上表面减少、侧面面积变化，正面转向和手遮挡可以解释主要差异；细节仍有箱厚/框宽漂移，未锁定精密三维尺寸。",
+    "没有变为大货箱或打开箱盖，不新增第二箱或标签。以此概念门槛可接受同物连续，允许稀疏阶段展示。",
+    "鞋足完整站稳、透明双底无明显实体晕；粗簇风格和身份保持，发/领/袖少量漂移记限制。"
+  ],
+  "counts": {
+    "new_full_body_poses": 2,
+    "new_characters": 0,
+    "unique_states_including_anchor": 3,
+    "stages": 4
+  },
+  "gif_gate": "当前无GIF；允许基于已审帧做单次原锚→K1→K2→原锚的稀疏预览，新增GIF需另核。不得称连续搬运动画/真实受力或精确固定箱几何。",
+  "story_boundary": [
+    "非交货验收完成",
+    "非款项到手",
+    "非来源合法化或通关"
+  ],
+  "sources": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/kien/kien_raw_imagegen.png",
+      "sha256": "ff06621187754e9631eb42a717f5347e9451dc82e3013b88e8068e1985af943a"
+    },
+    {
+      "path": "design/04_人物/城市人物/人物_ALD-NPC-KIEN_奇恩.md",
+      "sha256": "1c129d8d4a601050ac780039ea4ff160426e6ff300a33717cf5a07833b29514a"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/briefs/town_work_pose_candidates_01.json",
+      "sha256": "546964caa17a7907cb658b795b4ea048d64ebd4b4109aa04d641c9ff1ab2813e"
+    }
+  ],
+  "technical_checks": {
+    "source_hashes": true,
+    "artifact_hashes": true,
+    "frames": [
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "raw_clean_height": 1244
+      },
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "raw_clean_height": 1268
+      },
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "raw_clean_height": 1258
+      },
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "raw_clean_height": 1244
+      }
+    ],
+    "board_art_regions": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "first_last_same_bytes": true,
+    "gif_present": false
+  },
+  "artifacts": {
+    "QA-author.json": "2b027940251d067400f264da7ec5b42c5d1e37ab2b9ac002161457735ccb3a8f",
+    "kien_review_zh_dark.png": "0b63c1c0bd98ede497db838f96d4c67548f281694d2c3fe540382e35162db642",
+    "build_review.py": "b3166ec2a2b45894646a19e223ada6c73cc42b56f22acf81779ab5952e6aeb7c",
+    "kien_review_zh_light.png": "f6cd3fd103d0c5eca771783bbc9c46772fa80de23bf02cbb0a20208f273a2ef2",
+    "manifest.json": "c5f20d2e753aad3f5b1b386cfd9dc2ef659e24de749da6a4501a6620d23dc96f",
+    "frames/02_K2.png": "18eea5122b680ef258519d2aa57a240e86679f2cdbda60abdaecb2609b384d70",
+    "frames/01_K1.png": "351d666a751866815f5ab2dda822e101b003003fbb6d1dfab0196757d962a1b3",
+    "frames/00_anchor.png": "5968c56645b88d9c94c593e25294a647631ba901b8015b747a075b015866dd4c",
+    "frames/03_anchor.png": "5968c56645b88d9c94c593e25294a647631ba901b8015b747a075b015866dd4c",
+    "raw/K1_raw_imagegen.png": "3488b6e4d0e25c1b2311bc063d2f07bfa3f074ca2d2109236f369f630a86b74b",
+    "raw/K2_raw_imagegen.png": "9f375deb6ee00e7b41a9ac11bed75ac5a5c121521d9f640ca6ade416580dd528",
+    "prompts/K1.txt": "d78448b377ef64e2a7d9d63dd7d739d03d0695caff537d921e7649b75ba13947",
+    "prompts/K2.txt": "62c5f7dab2b04ff357de29b05899a29fe3bdb55bf73a6f5767ab21ab42cb5593"
+  },
+  "runtime_verified": false
+}

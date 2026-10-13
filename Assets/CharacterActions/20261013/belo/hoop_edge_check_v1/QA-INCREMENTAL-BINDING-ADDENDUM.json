@@ -1,0 +1,83 @@
+{
+  "status": "pass_metadata_binding_addendum_no_visual_change",
+  "reviewer": "verify_expressive_design_outputs",
+  "reviewed_at_utc": "2026-10-13T17:07:00Z",
+  "scope": "非破坏性元数据绑定附录；原QA/冻结图/已交ZIP及receipt均保留原字节。",
+  "original_qa": {
+    "path": "Assets/CharacterActions/20261013/belo/hoop_edge_check_v1/QA-independent.json",
+    "sha256": "73d1d92c5085d7fc0350d64609a802b8743845f6404a5feb05225e4e8dad7269",
+    "visual_decision_retained": "pass_sparse_concept_with_notes"
+  },
+  "stale_bindings_corrected": [
+    {
+      "field": "artifacts.manifest.json",
+      "historical_sha256": "10dc388d085ddc1c628fbcebe5c8f39695aec6c2fc02753fe2ccec3aeeedcbcc",
+      "historical_snapshot": "Assets/CharacterActions/20261013/belo/hoop_edge_check_v1/pre_final_status/manifest.json",
+      "current_path": "Assets/CharacterActions/20261013/belo/hoop_edge_check_v1/manifest.json",
+      "current_sha256": "8564464bb8a0138c7610fbdce8e46a210395df0d58a98e980be609ba3a934de6",
+      "changed_top_level_metadata_keys": [
+        "files",
+        "final_status",
+        "gif_gate",
+        "independent_review",
+        "status"
+      ]
+    },
+    {
+      "field": "artifacts.FINAL_STATUS.json",
+      "historical_sha256": "b430216c641b506d18c4f2aee14e4940a648b5ced1a09a05ac31e55f59af7989",
+      "historical_snapshot": "Assets/CharacterActions/20261013/belo/hoop_edge_check_v1/pre_final_status/FINAL_STATUS.json",
+      "current_path": "Assets/CharacterActions/20261013/belo/hoop_edge_check_v1/FINAL_STATUS.json",
+      "current_sha256": "a7d72e9512ca83c0b8dc05a7b9c88a52ad8ceb6ffeb807e8a1d550a00e18121e",
+      "changed_top_level_metadata_keys": [
+        "current_independent_qa",
+        "final_delivery_scope",
+        "historical_status_snapshot",
+        "status"
+      ]
+    }
+  ],
+  "current_metadata": {
+    "manifest.json": "8564464bb8a0138c7610fbdce8e46a210395df0d58a98e980be609ba3a934de6",
+    "FINAL_STATUS.json": "a7d72e9512ca83c0b8dc05a7b9c88a52ad8ceb6ffeb807e8a1d550a00e18121e"
+  },
+  "visually_reviewed_artifacts_unchanged": {
+    "belo_review_zh_light.png": "a041c91260f97113ecf722e1875fd1cd6c629858ea4b5462d522d4253093a7f7",
+    "belo_review_zh_dark.png": "3b5a4bb8fb3f97a5db19af33438bcbac475e09d4f34213071d40bb4feebb2014",
+    "frames/01_B1.png": "7629cf6b7b0af3151a9d0412eddc8229a268b1e6c7f06a8549e9719ff71d6a34",
+    "frames/00_anchor.png": "075098ae2a8a63b9fdafa805d3776beeab8f4730051b7b0843cbb5453a96daf0",
+    "frames/02_anchor.png": "075098ae2a8a63b9fdafa805d3776beeab8f4730051b7b0843cbb5453a96daf0",
+    "raw/B1_raw_imagegen.png": "c872870ebf82ccaa6389f0f1725627783dfdd60340795345ba9008508a01307e",
+    "belo_hoop_edge_check_sparse_once.gif": "49ad9dddebb9752d5f8cc2c8f158f54a6e4b54eab2448e3ee0e8984392012764"
+  },
+  "visual_scope": "沿用原独审实际原稿、双底、透明帧及GIF增量结论；本次逐字节验证无新图像，未把元数据更新描述为重新绘图或新视觉审批。",
+  "historical_technical_fields_note": "原QA内空gif_files / gif_present=false是较早阶段技术快照；随后delta_checks.gif已覆盖最终GIF，此附录明确现状，不改历史字段。",
+  "gif_current_decode": {
+    "frames": 3,
+    "durations_ms": [
+      1100,
+      1800,
+      1100
+    ],
+    "loop_extension": false,
+    "first_last_pixels_equal": true
+  },
+  "delivery_evidence": {
+    "receipt": "Assets/CharacterDesigns/20261013/expressive/delivery_belo_kien_work_receipt.json",
+    "receipt_sha256": "aea9e1edf86cebc4d2a4a67919753b437590c2a63664595b2fb9b96644b89d3b",
+    "inventory": "Assets/CharacterActions/20261013/delivery_belo_kien_work_v1/DELIVERY_INVENTORY.json",
+    "inventory_sha256": "0f4632f35da640a4acf0a3556d1b6df77c92798baa6abcc6e1174654ba710a15",
+    "frozen_zip": "Assets/CharacterActions/20261013/delivery_belo_kien_work_v1/deliverables/belo_kien_work_poses_source_v1.zip",
+    "frozen_zip_sha256": "eaf6972ca00f2d88744b90b1d82feb368a2c0a51983879de34b13269f20f3215",
+    "crc_pass": true,
+    "all_qa_bound_files_match_current_zip_members": true,
+    "receipt_attachments_and_qa_hashes_match": true
+  },
+  "limitations_retained": [
+    "Belo检查箍缘，不称精确内缘。",
+    "Kien箱尺寸轻微漂移，未锁刚性物件几何。"
+  ],
+  "new_images": 0,
+  "new_characters": 0,
+  "runtime_verified": false
+}

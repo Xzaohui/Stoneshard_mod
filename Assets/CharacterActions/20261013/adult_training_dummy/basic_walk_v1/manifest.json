@@ -1,0 +1,201 @@
+{
+  "status": "research_only_alternating_walk_failed",
+  "generator": "builtin image_gen",
+  "character": "unidentified adult training dummy, not Chiler",
+  "requested_key_poses": 3,
+  "initial_body_generations": 3,
+  "targeted_revisions": 2,
+  "raw_image_count": 5,
+  "validated_alternating_walk": false,
+  "gif_created": false,
+  "runtime_verified": false,
+  "native_ready": false,
+  "source_reference": {
+    "path": "Assets/CharacterActions/20261013/adult_training_dummy/interaction_v1/raw/I0_stand.png",
+    "sha256": "e303bedfb334dc584bcb36b7924bae15276835ddecbafe4630c469c7776f75ad"
+  },
+  "records": [
+    {
+      "id": "W0_left_contact",
+      "raw": "raw/W0_left_contact.png",
+      "raw_sha256": "ec0deebc27a0506bb5750a153e02af821fcddc591f65e4e6530b5db4af294f1b",
+      "frame": "frames/W0_left_contact.png",
+      "frame_sha256": "683408d88c8abd38a13758d37cdaec2ce3c3804d4c9ae839bdb67dfd5bfd1fa8",
+      "size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        417,
+        364,
+        865,
+        1127
+      ],
+      "selected_for_review": true,
+      "transform": {
+        "alpha_threshold": 128,
+        "transparent_rgb_zero": true,
+        "scale": 1,
+        "translation": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "W1_passing",
+      "raw": "raw/W1_passing.png",
+      "raw_sha256": "51e796285e95d8c241f6433e85ccace78e4f42b8ff86eddd60ae14712a43372b",
+      "frame": "frames/W1_passing.png",
+      "frame_sha256": "089bf5b6052ea2aff00e9f43f653c8c4cbbfd4986f35550d9c339beea0ecfdaf",
+      "size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        420,
+        367,
+        864,
+        1127
+      ],
+      "selected_for_review": false,
+      "transform": {
+        "alpha_threshold": 128,
+        "transparent_rgb_zero": true,
+        "scale": 1,
+        "translation": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "W1_passing_revision1",
+      "raw": "raw/W1_passing_revision1.png",
+      "raw_sha256": "970d05cd1f5ba4657550ac96d9af1f2d33f3eb0b548b391fb9b64531e31bf36d",
+      "frame": "frames/W1_passing_revision1.png",
+      "frame_sha256": "39a1d7387973142dbd6e82a7c5514f2c4bd9f8f2148be4f739d2637073b557e2",
+      "size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        419,
+        366,
+        865,
+        1116
+      ],
+      "selected_for_review": true,
+      "transform": {
+        "alpha_threshold": 128,
+        "transparent_rgb_zero": true,
+        "scale": 1,
+        "translation": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "W2_right_contact",
+      "raw": "raw/W2_right_contact.png",
+      "raw_sha256": "f841f7ba1724899f634675f4a956510cf42cb5f7f46b7e740ef0d9b4834086ba",
+      "frame": "frames/W2_right_contact.png",
+      "frame_sha256": "14b8585ffb11ac8cf049702308a02bc33cf98e2de6420c2a4bc1e654208a99d6",
+      "size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        419,
+        363,
+        867,
+        1127
+      ],
+      "selected_for_review": false,
+      "transform": {
+        "alpha_threshold": 128,
+        "transparent_rgb_zero": true,
+        "scale": 1,
+        "translation": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "W2_right_contact_revision1",
+      "raw": "raw/W2_right_contact_revision1.png",
+      "raw_sha256": "135c06a2d6d09c55beaca4e04ad64089c3423ccf945a5cf937f69d20d5088193",
+      "frame": "frames/W2_right_contact_revision1.png",
+      "frame_sha256": "85a652d8127f811c9ee8873fa35805d8d3809baf89c8a1fa448e3be28ffd90ba",
+      "size": [
+        1254,
+        1254
+      ],
+      "visible_bbox": [
+        418,
+        363,
+        868,
+        1127
+      ],
+      "selected_for_review": true,
+      "transform": {
+        "alpha_threshold": 128,
+        "transparent_rgb_zero": true,
+        "scale": 1,
+        "translation": [
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "reference_graph": {
+    "W0_left_contact": [
+      "I0_stand"
+    ],
+    "W1_passing": [
+      "W0_left_contact",
+      "I0_stand"
+    ],
+    "W1_passing_revision1": [
+      "W1_passing"
+    ],
+    "W2_right_contact": [
+      "W0_left_contact"
+    ],
+    "W2_right_contact_revision1": [
+      "W2_right_contact"
+    ]
+  },
+  "review_board": {
+    "file": "basic_walk_review_zh.png",
+    "sha256": "1f1d48609c34a19dda5a9a4a3d516b29724d42d75ef2ab7813fc14360cdbdffc",
+    "shared_crop": [
+      360,
+      325,
+      900,
+      1150
+    ],
+    "shared_preview_scale": 0.9
+  },
+  "limitations": [
+    "W1 initial pose remains trailing rather than passing.",
+    "W1 revision lifts the foot but support-side identity appears swapped.",
+    "W2 initial and revision fail to clearly reverse near/far thigh occlusion from W0.",
+    "Foot volume and cuff cluster drift remains; no fixed skeletal correspondence verified.",
+    "Contact coordinates do not establish temporal no-sliding."
+  ],
+  "research_task_closed": true,
+  "deliverable_as_validated_walk": false,
+  "animation_delivery_allowed": false,
+  "independent_review": {
+    "path": "QA-independent.json",
+    "sha256": "779cfd3b8ea7ebffe73a86082569b938312b9a090a0adcca4169b6358ccdb6ce",
+    "reviewed_at_utc": "2026-10-13T08:34:05.202138+00:00",
+    "reviewed_manifest_sha256": "fa7f21db074ddfe81030ee5ad52ef4e630792c9ae9473c51ed251a37961be1aa",
+    "conclusion": "单张接触与抬步姿态可参考；W1支撑侧及W2遮挡不连续，交替步行未通过。",
+    "closure": "不继续修图或扩帧；无GIF，不交付动画；保全部原稿。"
+  }
+}

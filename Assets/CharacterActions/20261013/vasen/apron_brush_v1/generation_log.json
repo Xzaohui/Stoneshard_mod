@@ -1,0 +1,31 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "raw_calls": [
+    {
+      "pose": "V1",
+      "prompt": "prompts/V1.txt",
+      "raw": "raw/V1_raw_imagegen.png",
+      "raw_sha256": "0a83f88cb2c18c41f4f9ae03ae0f61f43df5fe9ff6b8467aef350fbeef1b7e41",
+      "reference_inputs": [
+        "sources/vasen_raw_imagegen.png"
+      ],
+      "selected": true
+    },
+    {
+      "pose": "V1_revision_unselected",
+      "prompt": "prompts/V1_revision.txt",
+      "raw": "raw/V1_revision_unselected_raw_imagegen.png",
+      "raw_sha256": "fc74eba270cd5a50afd10a355c7d1e8e60f17b1e445031fc94c0dd82b1c2c116",
+      "reference_inputs": [
+        "raw/V1_raw_imagegen.png",
+        "sources/vasen_raw_imagegen.png"
+      ],
+      "selected": false,
+      "reason": "Hand roles were swapped before review; independent review accepted first draft as equivalent composition. Retained as unselected research, not a necessary identity correction."
+    }
+  ],
+  "selected_key_pose_count": 1,
+  "processing": "scripts/build_review.py; alpha<32 cleanup, whole-image exact uniform 1/2 nearest scaling and translation only; exact transforms.json. No anatomy drawing/stretching/quantization/rotation/mirroring.",
+  "raw_preserved": true,
+  "frozen_before_final_review": true
+}

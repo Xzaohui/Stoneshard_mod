@@ -1,0 +1,145 @@
+{
+  "character": "NPC-MIA",
+  "date": "2026-10-13",
+  "status": "awaiting_independent_review",
+  "concept_only": true,
+  "runtimeVerified": false,
+  "new_generated_bodies": 2,
+  "reused_approved_stages": 2,
+  "display_stages": 4,
+  "generated_repair_attempts": 0,
+  "generator": "builtin image_gen",
+  "approved_source_unchanged": true,
+  "assets": [
+    {
+      "stage": 1,
+      "role": "reused_approved_reference",
+      "file": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+      "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        268,
+        104,
+        852,
+        1329
+      ],
+      "shared_display_scale": 0.5,
+      "translation_y_before_scale": 0,
+      "foot_baseline_source_y": 1329
+    },
+    {
+      "stage": 2,
+      "role": "new_generated_body",
+      "file": "Assets/CharacterActions/20261013/mia/blanket_adjust_v1/raw/mia_adjust_raw_imagegen.png",
+      "sha256": "8d9f9205bbcca21d17163ed5817892ec517c88f0b914f4d7e3ca4449174f8ff4",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        262,
+        99,
+        835,
+        1331
+      ],
+      "shared_display_scale": 0.5,
+      "translation_y_before_scale": -2,
+      "foot_baseline_source_y": 1329
+    },
+    {
+      "stage": 3,
+      "role": "new_generated_body",
+      "file": "Assets/CharacterActions/20261013/mia/blanket_adjust_v1/raw/mia_return_raw_imagegen.png",
+      "sha256": "56cd72254a7e46a9202d276e987e53575ee4df11c2abd1a83f01200e78cbc2e7",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        279,
+        97,
+        850,
+        1339
+      ],
+      "shared_display_scale": 0.5,
+      "translation_y_before_scale": -10,
+      "foot_baseline_source_y": 1329
+    },
+    {
+      "stage": 4,
+      "role": "reused_approved_reference",
+      "file": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+      "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        268,
+        104,
+        852,
+        1329
+      ],
+      "shared_display_scale": 0.5,
+      "translation_y_before_scale": 0,
+      "foot_baseline_source_y": 1329
+    }
+  ],
+  "processing": "Only alpha <=5 cleared; shared 0.5 nearest-neighbor uniform scale; sole-baseline translation and layout. No repaint, frame-specific scaling, warping or interpolation. GIF uses format-required indexed colors; PNG originals retained.",
+  "gif": {
+    "frames": 4,
+    "duration_ms": [
+      950,
+      1100,
+      1100,
+      1200
+    ],
+    "total_duration_ms": 4350,
+    "loop_extension": false,
+    "single_play": true
+  },
+  "limitations": [
+    "Two key poses, not a complete smooth animation",
+    "Small hair/head/cloth silhouette generation drift remains",
+    "Opening and closing stage repeat the identical approved standing reference",
+    "No gameplay, equipment-layer or runtime validation",
+    "Ordinary blanket motion adds no care skill, treatment, recovery or quest outcome"
+  ],
+  "deliverables": [
+    {
+      "file": "mia_adjust.png",
+      "sha256": "6853deae99485e8df07e070f440ae969a8406db112c2f09bb3b35d8eb6b7b802"
+    },
+    {
+      "file": "mia_blanket_adjust_review_zh.png",
+      "sha256": "281a56703f948ebb1dfe9843deb42fef63fc236656a1b411a3de84b201ca34cc"
+    },
+    {
+      "file": "mia_blanket_stage_01_zh.png",
+      "sha256": "b95ce20f70794c9eda1e172ee71508f1c4b8b2d874fc41253cb589d58c499f78"
+    },
+    {
+      "file": "mia_blanket_stage_02_zh.png",
+      "sha256": "18b0ba48ad07c1b8b75e96699afc2f4fc3f58deb0738eca140e23636251e56c9"
+    },
+    {
+      "file": "mia_blanket_stage_03_zh.png",
+      "sha256": "59f543ad622f4b5fc1ce09df56e387936b730d2e58b20044bbbc7e05159eebe9"
+    },
+    {
+      "file": "mia_blanket_stage_04_zh.png",
+      "sha256": "9079db1b425ec0c13d67c58782e13f03577c095427a7b54dca2ff694857dd4f1"
+    },
+    {
+      "file": "mia_return.png",
+      "sha256": "5cf6534e65f1426bd7fb495a6e75e7cf9e99e7c2061626e470b943ae1b9a5456"
+    },
+    {
+      "file": "mia_blanket_adjust_once.gif",
+      "sha256": "5b5571fd75a0be697dd273131a4c1dee7dc749909f59e1a94ac8784f3727d1a9"
+    }
+  ]
+}

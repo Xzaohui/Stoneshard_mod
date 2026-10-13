@@ -1,0 +1,189 @@
+{
+  "character": "BRY-NPC-SELA",
+  "status": "author_review_pending_independent",
+  "new_pose_count": 2,
+  "reused_pose_count": 2,
+  "new_character_count": 0,
+  "generator": "builtin imagegen",
+  "approved_source_sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+  "poses": [
+    {
+      "name": "01_rest_G",
+      "label": "01 待机 · 批准G复用",
+      "source": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+      "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+      "export": "01_rest_G.png",
+      "export_sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+      "source_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox_threshold_128": [
+        279,
+        128,
+        890,
+        1214
+      ],
+      "shoe_center_x": 577.5,
+      "visible_height": 1086,
+      "common_nearest_scale": 0.5,
+      "aligned_size": [
+        560,
+        700
+      ],
+      "paste": [
+        131,
+        77
+      ],
+      "foot_bottom": 620,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "02_open_palm",
+      "label": "02 摊掌说明 · 新姿态",
+      "source": "Assets/CharacterActions/20261013/sela/dialogue_gesture_v1/raw/01_open_palm_raw_imagegen.png",
+      "sha256": "e03a34803d43529c90da50927898168e00aaa63c592d422af93f568d2b69aca3",
+      "export": "02_open_palm.png",
+      "export_sha256": "e03a34803d43529c90da50927898168e00aaa63c592d422af93f568d2b69aca3",
+      "source_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox_threshold_128": [
+        193,
+        135,
+        896,
+        1196
+      ],
+      "shoe_center_x": 583.5,
+      "visible_height": 1061,
+      "common_nearest_scale": 0.5,
+      "aligned_size": [
+        560,
+        700
+      ],
+      "paste": [
+        85,
+        90
+      ],
+      "foot_bottom": 620,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "03_serious_confirm",
+      "label": "03 收手确认 · 新姿态",
+      "source": "Assets/CharacterActions/20261013/sela/dialogue_gesture_v1/raw/02_serious_confirm_raw_imagegen.png",
+      "sha256": "ab2ffd4c12e965e0b110a2d6eda12ba82baf9c253fda11c32e7e0f2a8bd70f24",
+      "export": "03_serious_confirm.png",
+      "export_sha256": "ab2ffd4c12e965e0b110a2d6eda12ba82baf9c253fda11c32e7e0f2a8bd70f24",
+      "source_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox_threshold_128": [
+        285,
+        131,
+        897,
+        1212
+      ],
+      "shoe_center_x": 585.5,
+      "visible_height": 1081,
+      "common_nearest_scale": 0.5,
+      "aligned_size": [
+        560,
+        700
+      ],
+      "paste": [
+        130,
+        80
+      ],
+      "foot_bottom": 620,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "04_return_G",
+      "label": "04 回待机 · 批准G复用",
+      "source": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+      "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+      "export": "04_return_G.png",
+      "export_sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+      "source_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox_threshold_128": [
+        279,
+        128,
+        890,
+        1214
+      ],
+      "shoe_center_x": 577.5,
+      "visible_height": 1086,
+      "common_nearest_scale": 0.5,
+      "aligned_size": [
+        560,
+        700
+      ],
+      "paste": [
+        131,
+        77
+      ],
+      "foot_bottom": 620,
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "sequence": [
+    "01_rest_G",
+    "02_open_palm",
+    "03_serious_confirm",
+    "04_return_G"
+  ],
+  "gif": {
+    "path": "sela_dialogue_once.gif",
+    "single_playback": true,
+    "loop_extension": false,
+    "durations_ms": [
+      850,
+      1100,
+      1100,
+      900
+    ],
+    "note": "四个停留关键帧，非补间、连续动画或游戏帧表"
+  },
+  "operations": [
+    "original raw byte copies",
+    "alpha>=128 bbox crop only, preserve contained alpha; no alpha edits",
+    "common 0.5 nearest-neighbor scaling",
+    "shoe-center and foot-bottom translation",
+    "board and GIF presentation"
+  ],
+  "runtime_verified": false,
+  "animation_verified": false,
+  "equipment_compatibility_verified": false,
+  "files": {
+    "qa_black_background.png": "7b7061d3088670530bd3fa22319a0aeac239fd01af654ee5b9432be3f8b81cd4",
+    "01_rest_G.png": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+    "02_open_palm_aligned.png": "3087889d058ed4371d850540d5d7d0af76ede748e1918788f859d4ee1105ef12",
+    "sela_dialogue_review_zh.png": "da091d6fd23f37d7d2ce22099a9f1e195b848311c3bffe4f3998d0933b0bd844",
+    "qa_white_background.png": "f7d196d25df29ae6491155a3d8cd3a9aae51decfa2a885c1b06d5426fb56cd60",
+    "02_open_palm.png": "e03a34803d43529c90da50927898168e00aaa63c592d422af93f568d2b69aca3",
+    "sela_dialogue_once.gif": "33097cbbc8d1b482fd98a04ffde6dcecbeda8e54c336c55bae1aacbbf7cc10a6",
+    "01_rest_G_aligned.png": "063dc6cd17707d381e242f77951db4fc431e341f32590dd564824d9cdf776b05",
+    "03_serious_confirm.png": "ab2ffd4c12e965e0b110a2d6eda12ba82baf9c253fda11c32e7e0f2a8bd70f24",
+    "03_serious_confirm_aligned.png": "9f5e6f2efe6c3809ee8174bfc9d1eb115a1bac300da82fe6e42f51155ea066d6",
+    "04_return_G.png": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+    "04_return_G_aligned.png": "063dc6cd17707d381e242f77951db4fc431e341f32590dd564824d9cdf776b05"
+  }
+}

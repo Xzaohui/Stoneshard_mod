@@ -1,0 +1,85 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T10:48:07.150732+00:00",
+  "character_id": "n1_ivo",
+  "status": "pass_sparse_dialogue_concept_with_notes",
+  "concept_deliverable": true,
+  "user_approved": false,
+  "artifact_sha256": {
+    "frames/D0_stand.png": "a317cfd2a430d983aecbb146d360445505267991b09ac4e479930988159b9c5e",
+    "frames/D3_stand_reuse_D0.png": "a317cfd2a430d983aecbb146d360445505267991b09ac4e479930988159b9c5e",
+    "frames/D1_explain.png": "4ae9c18d7d71251e139bf453bad006aa71ae56f33969f63ff9e242694c90059c",
+    "frames/D2_request.png": "78a8be18dd2aabe8b3732d6c6ff6e2bcc808a3686408bee318197ea0069c39c3",
+    "raw/D1_explain.png": "aa8d42e1930b081777ebc125a276f456a9f0143f2667b1c588130df414496ce2",
+    "raw/D2_request.png": "c07a2751f1acc82ecbe022dae1ac1c8243e746b7d5c1f8bc4f2099408f9871bf",
+    "raw/D0_anchor_source.png": "90a2b78662e4c5d9cf7acb7bf0ddce211ea0d8431cd712a5212f4bdca394cc80",
+    "manifest.json": "a1e9fc61bef4ab4c7e3a93238e2ba1de35d31bd6dd2d28578e1b0eabb1775bc3",
+    "dialogue_gesture_review_zh.png": "500c17d6e664508c934e2da9595734e59c32a1d5ec2bc44c711417aa82580cda",
+    "dialogue_gesture_once.gif": "9a026f585f6911f70bcdc4e7fc6b495bdb53c541e28b083bc31f22b436784668"
+  },
+  "identity_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/ivo/ivo_raw_imagegen_v2.png",
+    "sha256": "90a2b78662e4c5d9cf7acb7bf0ddce211ea0d8431cd712a5212f4bdca394cc80"
+  },
+  "actually_viewed": [
+    "current full-body concept anchor",
+    "frames/D1_explain.png",
+    "frames/D2_request.png",
+    "dialogue_gesture_review_zh.png both light/dark rows"
+  ],
+  "visual_findings": [
+    "灰软帽棕短须与戒备成年脸、灰绿补衣领巾斜带裤靴保持；身高964/967/965px，体型无明显跳变。",
+    "原解剖右臂（画面左）摊掌再靠胸请求，手掌与腕袖相连，原右上袖补丁随该臂运动而未移到左袖。另一手保持垂下，无多手。",
+    "左腰小工具始终收鞘，手未握刀柄；原斜带和腰具遮挡可读。请求主要由胸前手势表达，眉眼仍克制戒备，不能推定免责或家属同意。",
+    "全身冠发、双手双鞋和道具无裁切，浅深底干净；保持粗像素簇，未因技术通过忽略手势接触。",
+    "原1.0倍率无逐帧伸缩，alpha>=128置不透明其余清透明RGB，再仅Y微平移，独立重建逐像素精确。该阈值改变原半透明边缘，原稿仍保留。",
+    "D0/D3字节相同，2新身体+1既有身体共3独立状态4阶段；GIF四帧3650ms无loop。稀疏姿态可交，不声称连续补间、无滑步或游戏运行。"
+  ],
+  "independent_checks": {
+    "frames": [
+      {
+        "id": "D0_stand",
+        "source_hash_matches": true,
+        "frame_hash_matches": true,
+        "alpha_threshold_and_translation_exact": true,
+        "alpha0_rgb_zero": true,
+        "visible_height": 964
+      },
+      {
+        "id": "D1_explain",
+        "source_hash_matches": true,
+        "frame_hash_matches": true,
+        "alpha_threshold_and_translation_exact": true,
+        "alpha0_rgb_zero": true,
+        "visible_height": 967
+      },
+      {
+        "id": "D2_request",
+        "source_hash_matches": true,
+        "frame_hash_matches": true,
+        "alpha_threshold_and_translation_exact": true,
+        "alpha0_rgb_zero": true,
+        "visible_height": 965
+      }
+    ],
+    "gif": {
+      "frames": 4,
+      "loop": null,
+      "durations": [
+        750,
+        1000,
+        1000,
+        900
+      ]
+    },
+    "D0_D3_bytes_equal": true,
+    "anchor_hash_matches": true
+  },
+  "new_body_count": 2,
+  "unique_body_state_count": 3,
+  "phase_count": 4,
+  "new_character_count": 0,
+  "runtime_verified": false,
+  "complete_animation_verified": false,
+  "equipment_compatibility_verified": false
+}

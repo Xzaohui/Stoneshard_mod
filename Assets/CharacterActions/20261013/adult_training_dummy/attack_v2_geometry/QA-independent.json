@@ -1,0 +1,133 @@
+{
+  "decision": "rigid_weapon_geometry_pass_preview_rgb_cleanup_pending",
+  "reviewer": "independent-visual-review",
+  "reviewedAt": "2026-10-13",
+  "method": "实际查看四阶段图、手掌近景、D1/D2单帧，独立重算canonical刚性变换与分层合成。",
+  "frames": [
+    {
+      "id": "D0",
+      "path": "frames/D0_guard.png",
+      "sha256": "eb90c6f84db4fbd74c9fec7614e0cdfc27884f68b8b9b95d712dbbc0738dedb5",
+      "sameCanonicalRigidRender": true,
+      "layerCompositeExact": true,
+      "declaredAxisLength": 320.001,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "id": "D1",
+      "path": "frames/D1_windup.png",
+      "sha256": "d94bb61525911b237ddba7ee9f65b7223ea6d9b554d493a1df49d8818d72819d",
+      "sameCanonicalRigidRender": true,
+      "layerCompositeExact": true,
+      "declaredAxisLength": 320.0,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "id": "D2",
+      "path": "frames/D2_forward.png",
+      "sha256": "2bfd3dd00c6e6582edfd67f34a53f6f3c89ec42e1082424976e122868d47a8d4",
+      "sameCanonicalRigidRender": true,
+      "layerCompositeExact": true,
+      "declaredAxisLength": 320.0,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "id": "D3",
+      "path": "frames/D3_recovery.png",
+      "sha256": "9b3e8c37f728ff0273344a006898ea48ca1d8d1c6028ca4bde2289b654632f6a",
+      "sameCanonicalRigidRender": true,
+      "layerCompositeExact": true,
+      "declaredAxisLength": 320.001,
+      "canvas": [
+        1536,
+        1536
+      ]
+    }
+  ],
+  "technicalResult": "四剑层与单一canonical经刚性变换及8px重采样逐像素一致；三层合成等于成图，320px轴模型真实。",
+  "blockingVisualIssues": [],
+  "request": "仅安全导出alpha==0区域RGBA清零，非透明主体不变；随后绑定新hash。",
+  "limits": [
+    "四阶段概念样板，不是连续循环/native/装备兼容验收。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "previousReview": {
+    "decision": "requires_old_weapon_remnant_cleanup",
+    "reviewer": "independent-visual-review",
+    "reviewedAt": "2026-10-13",
+    "method": "实际查看四阶段图、手掌近景、D1/D2单帧，独立重算canonical刚性变换与分层合成。",
+    "frames": [
+      {
+        "id": "D0",
+        "path": "frames/D0_guard.png",
+        "sha256": "eb90c6f84db4fbd74c9fec7614e0cdfc27884f68b8b9b95d712dbbc0738dedb5",
+        "sameCanonicalRigidRender": true,
+        "layerCompositeExact": true,
+        "declaredAxisLength": 320.001,
+        "canvas": [
+          1536,
+          1536
+        ]
+      },
+      {
+        "id": "D1",
+        "path": "frames/D1_windup.png",
+        "sha256": "d94bb61525911b237ddba7ee9f65b7223ea6d9b554d493a1df49d8818d72819d",
+        "sameCanonicalRigidRender": true,
+        "layerCompositeExact": true,
+        "declaredAxisLength": 320.0,
+        "canvas": [
+          1536,
+          1536
+        ]
+      },
+      {
+        "id": "D2",
+        "path": "frames/D2_forward.png",
+        "sha256": "2bfd3dd00c6e6582edfd67f34a53f6f3c89ec42e1082424976e122868d47a8d4",
+        "sameCanonicalRigidRender": true,
+        "layerCompositeExact": true,
+        "declaredAxisLength": 320.0,
+        "canvas": [
+          1536,
+          1536
+        ]
+      },
+      {
+        "id": "D3",
+        "path": "frames/D3_recovery.png",
+        "sha256": "9b3e8c37f728ff0273344a006898ea48ca1d8d1c6028ca4bde2289b654632f6a",
+        "sameCanonicalRigidRender": true,
+        "layerCompositeExact": true,
+        "declaredAxisLength": 320.001,
+        "canvas": [
+          1536,
+          1536
+        ]
+      }
+    ],
+    "technicalResult": "四剑层与单一canonical经刚性变换及8px重采样逐像素一致；三层合成等于成图，320px轴模型真实。",
+    "blockingVisualIssues": [
+      "D2新宽剑尖约1414,1127之外仍接旧窄剑尖至约1480,1160，body_base旧剑未清完整。",
+      "D1新尖约890,307之外仍残旧顶帽约870,280；放大单帧可见，缩略板不易见。"
+    ],
+    "request": "清除body_base中所有旧剑边/尖残影，保手腕和手指，再核单帧及新hash。",
+    "limits": [
+      "真实分层与固定剑模型不能取代合成图遮挡清理。",
+      "身体足轨迹/native/装备兼容仍未验。"
+    ],
+    "runtime_verified": false,
+    "equipment_compatibility_verified": false
+  },
+  "correction": "复核相同SHA确认D1旧帽/D2旧尖区域body_base alpha全0。真实alpha深底合成干净，先前直接RGBA预览把透明RGB显示，误判为实体残影，撤回该阻断。"
+}

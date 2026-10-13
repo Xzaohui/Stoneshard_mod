@@ -1,0 +1,209 @@
+{
+  "classification": "Mod原创双手长棍关键姿态 / grip compatibility study",
+  "canvas": [
+    1536,
+    1536
+  ],
+  "canonical_reference": "../interaction_v1/frames/I0_stand.png",
+  "canonical_body_height_px": 935,
+  "raw_ready_height_px": 793,
+  "shared_scale": 1.178628389154705,
+  "normalization": "所有身体同一1478/1254最近邻倍率（整画布取1478，使准备身高精确935px）；仅平移到共用脚底，不逐帧bbox缩放",
+  "unique_final_body_poses": 3,
+  "generated_raw_count": 6,
+  "new_equipment_sources": 1,
+  "discarded_body_variants": [
+    "raw/T1.png",
+    "raw/T1_fix.png"
+  ],
+  "discard_reason": "初稿握距太窄；第一次修正握距过宽，均未用于成片。",
+  "staff_length_px": 1000,
+  "staff_width_px": 36,
+  "staff_local_grips": [
+    [
+      350,
+      17.5
+    ],
+    [
+      750,
+      17.5
+    ]
+  ],
+  "staff_source_crop": [
+    33,
+    323,
+    2139,
+    399
+  ],
+  "staff_source": "raw/staff.png",
+  "canonical_staff_sha256": "a2436ba73bf6c275970804a5380bf4d780afb9e3a421bd41a1f49f8c14be3062",
+  "layer_order": [
+    "body_base",
+    "staff_rigid",
+    "rear_fingers_foreground",
+    "front_fingers_foreground"
+  ],
+  "reference_evidence": "ReferenceAudit/20261013/actions/REFERENCE_AUDIT.md：官方长柄动态图未取得，未证实具体关节帧。此为原创，不是游戏长柄技能实现。",
+  "frames": [
+    {
+      "id": "T0",
+      "phase": "准备",
+      "source": "raw/T0.png",
+      "translation": [
+        28,
+        23
+      ],
+      "shared_body_scale": 1.178628389154705,
+      "root": [
+        768,
+        1380
+      ],
+      "grips": {
+        "rear": [
+          650.3157894736842,
+          902.2567783094098
+        ],
+        "front": [
+          1049.8710089898536,
+          921.1148417674002
+        ]
+      },
+      "staff_angle_degrees": 2.7022202681305245,
+      "staff_scale": 1,
+      "body_bbox": [
+        492,
+        445,
+        1083,
+        1380
+      ],
+      "layers": {
+        "body_base": "layers/T0_body_base.png",
+        "staff_rigid": "layers/T0_staff_rigid.png",
+        "rear_fingers_foreground": "layers/T0_rear_fingers_foreground.png",
+        "front_fingers_foreground": "layers/T0_front_fingers_foreground.png"
+      },
+      "masks": [
+        "masks/T0_rear_fingers_mask.png",
+        "masks/T0_front_fingers_mask.png"
+      ],
+      "support": "两靴支撑；短刺前膝弯曲、后腿延展。足底轮廓生成漂移未作物理校验"
+    },
+    {
+      "id": "T1",
+      "phase": "后收蓄力",
+      "source": "raw/T1_fix2.png",
+      "translation": [
+        28,
+        21
+      ],
+      "shared_body_scale": 1.178628389154705,
+      "root": [
+        768,
+        1380
+      ],
+      "grips": {
+        "rear": [
+          510.0590111642743,
+          877.8628389154704
+        ],
+        "front": [
+          909.9963741454123,
+          884.9413763133667
+        ]
+      },
+      "staff_angle_degrees": 1.0139787227853063,
+      "staff_scale": 1,
+      "body_bbox": [
+        435,
+        442,
+        1134,
+        1380
+      ],
+      "layers": {
+        "body_base": "layers/T1_body_base.png",
+        "staff_rigid": "layers/T1_staff_rigid.png",
+        "rear_fingers_foreground": "layers/T1_rear_fingers_foreground.png",
+        "front_fingers_foreground": "layers/T1_front_fingers_foreground.png"
+      },
+      "masks": [
+        "masks/T1_rear_fingers_mask.png",
+        "masks/T1_front_fingers_mask.png"
+      ],
+      "support": "两靴支撑；短刺前膝弯曲、后腿延展。足底轮廓生成漂移未作物理校验"
+    },
+    {
+      "id": "T2",
+      "phase": "向前短刺",
+      "source": "raw/T2.png",
+      "translation": [
+        28,
+        45
+      ],
+      "shared_body_scale": 1.178628389154705,
+      "root": [
+        768,
+        1380
+      ],
+      "grips": {
+        "rear": [
+          850.6826156299841,
+          851.1818181818181
+        ],
+        "front": [
+          1250.6199786111222,
+          844.103280783922
+        ]
+      },
+      "staff_angle_degrees": -1.01397872278529,
+      "staff_scale": 1,
+      "body_bbox": [
+        333,
+        476,
+        1315,
+        1380
+      ],
+      "layers": {
+        "body_base": "layers/T2_body_base.png",
+        "staff_rigid": "layers/T2_staff_rigid.png",
+        "rear_fingers_foreground": "layers/T2_rear_fingers_foreground.png",
+        "front_fingers_foreground": "layers/T2_front_fingers_foreground.png"
+      },
+      "masks": [
+        "masks/T2_rear_fingers_mask.png",
+        "masks/T2_front_fingers_mask.png"
+      ],
+      "support": "两靴支撑；短刺前膝弯曲、后腿延展。足底轮廓生成漂移未作物理校验"
+    },
+    {
+      "id": "T3",
+      "phase": "回稳（复用准备）",
+      "reuses": "T0",
+      "layers": {
+        "body_base": "layers/T0_body_base.png",
+        "staff_rigid": "layers/T0_staff_rigid.png",
+        "rear_fingers_foreground": "layers/T0_rear_fingers_foreground.png",
+        "front_fingers_foreground": "layers/T0_front_fingers_foreground.png"
+      },
+      "masks": [
+        "masks/T0_rear_fingers_mask.png",
+        "masks/T0_front_fingers_mask.png"
+      ],
+      "grips": {
+        "rear": [
+          650.3157894736842,
+          902.2567783094098
+        ],
+        "front": [
+          1049.8710089898536,
+          921.1148417674002
+        ]
+      }
+    }
+  ],
+  "engine_origin": null,
+  "native_fps": null,
+  "collision": null,
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "independent_review": "QA-independent.json; passed as original keypose concept"
+}

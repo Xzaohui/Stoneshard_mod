@@ -1,0 +1,110 @@
+{
+  "status": "awaiting_independent_review",
+  "classification": "original_dialogue_keypose_concept",
+  "character": "anonymous adult training dummy",
+  "new_body_images": 2,
+  "reused_existing_source_body_images": 1,
+  "unique_body_poses_total": 3,
+  "phase_count": 4,
+  "reused_display_phases": 2,
+  "canvas": [
+    1536,
+    1536
+  ],
+  "common_new_raw_scale": 1.228646517739816,
+  "reference_visible_body_height": 935,
+  "frames": [
+    {
+      "id": "D0",
+      "source": "../interaction_v1/frames/I0_stand.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "new_drawing": false,
+      "transform": "byte-identical copy"
+    },
+    {
+      "id": "D1_explain",
+      "source": "raw/D1_explain.png",
+      "raw_sha256": "986714e7bc3ae1c2c53d8911c34189436461c4b286619a4edb43d708cf2c1edf",
+      "frame_sha256": "78c400e1c9887f6823e32a5c841dcb2e55471bf7c23984c1a95a9ec051630f36",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "new_drawing": true,
+      "scale": 1.228646517739816,
+      "translation": [
+        0,
+        -7
+      ],
+      "bbox": [
+        519,
+        443,
+        1153,
+        1380
+      ],
+      "low_alpha_pixels_removed": 16360,
+      "alpha_policy": "alpha >=128 opaque, otherwise zero; transparent RGB zero",
+      "mirrored": false
+    },
+    {
+      "id": "D2_withdraw",
+      "source": "raw/D2_withdraw.png",
+      "raw_sha256": "e17cf6353b93ae142e20c35eac94610a2bf38e5fbe4f0ab8faa1950a4c71276d",
+      "frame_sha256": "2e110841684aab58546b33366afb728c03eee8d644a7dc94709cc09b04189e94",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "new_drawing": true,
+      "scale": 1.228646517739816,
+      "translation": [
+        0,
+        -9
+      ],
+      "bbox": [
+        519,
+        441,
+        1014,
+        1380
+      ],
+      "low_alpha_pixels_removed": 12199,
+      "alpha_policy": "alpha >=128 opaque, otherwise zero; transparent RGB zero",
+      "mirrored": false
+    },
+    {
+      "id": "D3",
+      "source": "frames/D0_stand_reuse_I0.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "new_drawing": false,
+      "transform": "byte-identical copy"
+    }
+  ],
+  "gif_sequence": [
+    "D0 existing I0",
+    "D1 new",
+    "D2 new",
+    "D3 reused D0"
+  ],
+  "gif_duration_ms": [
+    700,
+    1100,
+    600,
+    900
+  ],
+  "gif_loop_extension": false,
+  "new_images_tool": "builtin imagegen",
+  "image_processing_authorization": "User approved continued alignment and tool optimization; raw sources retained",
+  "runtime_verified": false,
+  "native_ready": false,
+  "equipment_compatibility_verified": false,
+  "engine_origin": null,
+  "native_fps": null,
+  "collision": null,
+  "limitations": [
+    "稀疏关键姿态，不是完整补间",
+    "脸、衣褶、鞋口有轻微生成漂移",
+    "统一尺度与地线不代表骨长/连续足轨迹固定",
+    "没有武器/物品/剧情事件，不核原作同类动作",
+    "身体为整张平面，不代表原版部件或隐藏结构"
+  ]
+}

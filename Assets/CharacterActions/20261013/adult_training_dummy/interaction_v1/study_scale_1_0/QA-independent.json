@@ -1,0 +1,111 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T06:51:41.848849+00:00",
+  "decision": "within_group_concept_pass_hold_delivery_for_cross_action_scale_alignment",
+  "actually_viewed": [
+    "interaction_review_zh.png",
+    "frames/I0_stand.png",
+    "frames/I1_bend.png",
+    "frames/I2_reach.png"
+  ],
+  "visual_findings": {
+    "identity": "成年训练角色的粗眉、鼻嘴、灰兜帽、蓝灰绗缝衣及棕手套靴持续可辨；俯身头转向地面符合动作。头巾簇与衣褶仍有轻微生成漂移。",
+    "support_anatomy": "站立到屈膝俯身、再下探可读。左手扶左膝、两膝屈曲与双靴支撑合理，髋部由衣摆自然遮盖，无明显肢体断裂或增加手指肢体。当前是姿态可读性通过，不证明骨长恒定/连续运动物理。",
+    "hand_and_ground": "伸手为空手；最低不透明像素约y1357，距逻辑地面y1380约23px。清单手动指尖点给28px，两者精度口径不同但均确认手仍离地。没有接触/抓住物体或完成拾取证据。",
+    "occlusion": "扶膝手在裤腿前，衣摆盖住髋与大腿上缘，伸手侧臂轮廓完整，无道具被遮挡后暗示持有。",
+    "aesthetics": "三个姿态清楚、重心转移有说服力，未见需要阻断概念交付的解剖或美感问题。",
+    "canvas_alpha": "1536方共享画布，全部全身与手靴完整。原稿alpha阈值128二值化并清零透明RGB可精确重建导出，未见明显可见杂边。"
+  },
+  "independent_checks": [
+    {
+      "id": "I0_stand",
+      "sha256": "5924199cf3d1f2ffdcecc294e8ec2af4ba35c32d3bd44965676964ce740dbeed",
+      "raw_sha_matches": true,
+      "frame_sha_matches": true,
+      "translation_threshold_reconstruction_exact": true,
+      "layer_recomposition_exact": true,
+      "fx_empty": true,
+      "alpha_zero_rgb_zero": true,
+      "binary_alpha": true,
+      "artifact": "frames/I0_stand.png"
+    },
+    {
+      "id": "I1_bend",
+      "sha256": "4482c25b803f29f235f634fbb67f7a0367ebe4d73eff97a5f8984a72330ba9df",
+      "raw_sha_matches": true,
+      "frame_sha_matches": true,
+      "translation_threshold_reconstruction_exact": true,
+      "layer_recomposition_exact": true,
+      "fx_empty": true,
+      "alpha_zero_rgb_zero": true,
+      "binary_alpha": true,
+      "artifact": "frames/I1_bend.png"
+    },
+    {
+      "id": "I2_reach",
+      "sha256": "412591416e251ef19631574aaa8f36528768a86fb5e49a531fa62c57343e5d8b",
+      "raw_sha_matches": true,
+      "frame_sha_matches": true,
+      "translation_threshold_reconstruction_exact": true,
+      "layer_recomposition_exact": true,
+      "fx_empty": true,
+      "alpha_zero_rgb_zero": true,
+      "binary_alpha": true,
+      "near_hand_lowest_opaque_y": 1357,
+      "gap_to_logical_ground_y_1380": 23,
+      "artifact": "frames/I2_reach.png"
+    }
+  ],
+  "reuse_checks": {
+    "unique_new_body_images": 3,
+    "phase_count": 4,
+    "I3_byte_identical_to_I0": true,
+    "gif_frame_count": 5,
+    "gif_sequence": [
+      "I0",
+      "I1",
+      "I2",
+      "I1 reused",
+      "I0 reused"
+    ],
+    "gif_I1_and_rise_intermediate_pixel_identical": true,
+    "gif_first_and_last_pixel_identical": true,
+    "gif_duration_ms": [
+      600,
+      450,
+      850,
+      450,
+      850
+    ],
+    "gif_loop_extension_present": false
+  },
+  "limitations": [
+    "站回只倒用俯身帧及站姿，不能计为独立新起身动画或完整补间循环。",
+    "右靴最低点登记不等于连续足轨迹；左靴轮廓及鞋口有轻微漂移，不宣称无滑脚。",
+    "本组1254原稿以1.0放进1536画布，人物可见高度约761px；前组防御预备约936px。共享画布不等于跨动作人物尺度一致，拼接动作集前仍需统一尺度和锚点。",
+    "身体是平面层，FX为空；未重建原生衣装/骨骼/隐藏肢体或换装。",
+    "Mod原创近地检查提案，未证实原作同类关节动作，不代表具名人物技能或剧情结果。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "native_ready": false,
+  "artifacts": [
+    {
+      "artifact": "frames/I3_recover_reuse_I0.png",
+      "sha256": "5924199cf3d1f2ffdcecc294e8ec2af4ba35c32d3bd44965676964ce740dbeed"
+    },
+    {
+      "artifact": "interaction_review_zh.png",
+      "sha256": "d4f385e7d9d77af86cbcabc9fe6b6ce92f49b977ba1b4b68354c37cf4d58bd33"
+    },
+    {
+      "artifact": "interaction_preview_once.gif",
+      "sha256": "ac0f2e3838a07a2b9a46079cdb9ab2b028d258b664b8f851ff31a8494b70aaea"
+    },
+    {
+      "artifact": "manifest.json",
+      "sha256": "455d2e6996cdc98845a22a26079d6fe5dd2f177f17be13766a097631179ddd6e"
+    }
+  ],
+  "delivery_hold": "Root要求跨动作统一人物尺度后再用户交付；本轮仅组内姿态美感与技术独审通过。统一版须重新实图及hash复审。"
+}

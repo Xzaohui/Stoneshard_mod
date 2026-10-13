@@ -1,0 +1,104 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T10:04:20.439395+00:00",
+  "character_id": "NPC-MIA",
+  "status": "pass_sparse_blanket_action_concept_with_notes",
+  "concept_deliverable": true,
+  "artifact_sha256": {
+    "mia_adjust.png": "6853deae99485e8df07e070f440ae969a8406db112c2f09bb3b35d8eb6b7b802",
+    "mia_blanket_adjust_review_zh.png": "281a56703f948ebb1dfe9843deb42fef63fc236656a1b411a3de84b201ca34cc",
+    "mia_blanket_stage_01_zh.png": "b95ce20f70794c9eda1e172ee71508f1c4b8b2d874fc41253cb589d58c499f78",
+    "mia_blanket_stage_02_zh.png": "18b0ba48ad07c1b8b75e96699afc2f4fc3f58deb0738eca140e23636251e56c9",
+    "mia_blanket_stage_03_zh.png": "59f543ad622f4b5fc1ce09df56e387936b730d2e58b20044bbbc7e05159eebe9",
+    "mia_blanket_stage_04_zh.png": "9079db1b425ec0c13d67c58782e13f03577c095427a7b54dca2ff694857dd4f1",
+    "mia_return.png": "5cf6534e65f1426bd7fb495a6e75e7cf9e99e7c2061626e470b943ae1b9a5456",
+    "mia_blanket_adjust_once.gif": "5b5571fd75a0be697dd273131a4c1dee7dc749909f59e1a94ac8784f3727d1a9",
+    "raw/mia_return_raw_imagegen.png": "56cd72254a7e46a9202d276e987e53575ee4df11c2abd1a83f01200e78cbc2e7",
+    "raw/mia_adjust_raw_imagegen.png": "8d9f9205bbcca21d17163ed5817892ec517c88f0b914f4d7e3ca4449174f8ff4",
+    "manifest.json": "c834fa90f942416a4ebcf10c56d713e333e6cba40d82082d6aee91bb98bc8241"
+  },
+  "approved_source": {
+    "stage": 1,
+    "role": "reused_approved_reference",
+    "file": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+    "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd",
+    "canvas": [
+      1118,
+      1407
+    ],
+    "alpha_gt5_bbox": [
+      268,
+      104,
+      852,
+      1329
+    ],
+    "shared_display_scale": 0.5,
+    "translation_y_before_scale": 0,
+    "foot_baseline_source_y": 1329
+  },
+  "actually_viewed": [
+    "approved Mia 1:1.5 full image",
+    "raw/mia_adjust_raw_imagegen.png",
+    "raw/mia_return_raw_imagegen.png",
+    "mia_blanket_adjust_review_zh.png",
+    "independent dark alpha composite all four stages"
+  ],
+  "visual_findings": [
+    "短鼻、眼距、成年下颏与单低辫、暗蓝绿披肩和米白裙/深褐软便鞋延续批准Mia，未新增腰带或靴。",
+    "理毯时眼睑下垂与脸部轻向下可读，画面左手掌及指组平贴上折面、另一手托底；抱回时画面左手托下层、右手指屈抓上缘，腕袖到手连续，没有额外手或悬空夹持。",
+    "始终一件普通灰米叠毯，折层与角度随整理改变可接受；没有第二包、手穿毯或新物品。",
+    "身体尺度沿批准Mia而非dummy935px；头冠/脸宽/裙褶鞋廓有轻微生图漂移，收回图头略更窄，不足以判换人。双足均站稳，没有通过齐脚线声称骨架或连续脚轨迹锁定。",
+    "共同0.5最近邻，源尺度仅Y平移0/-2/-10/0对齐原鞋底1329；主体没有被板分栏或画布裁切，双底合成干净。",
+    "新绘2身体，首末同一批准源复用，4阶段单次GIF4350ms无loop；最后一格是回置示意，不是额外新绘归位过程。",
+    "普通日常理毯动作无新增护理技能、痊愈、护工身份或任务完成。中文左右手按画面方位理解，未作为解剖侧别规格。"
+  ],
+  "independent_checks": {
+    "stages": [
+      {
+        "stage": 1,
+        "source_hash_matches": true,
+        "translation_y_before_scale": 0,
+        "no_visible_crop": true
+      },
+      {
+        "stage": 2,
+        "source_hash_matches": true,
+        "translation_y_before_scale": -2,
+        "no_visible_crop": true,
+        "alpha_only_export_exact": true
+      },
+      {
+        "stage": 3,
+        "source_hash_matches": true,
+        "translation_y_before_scale": -10,
+        "no_visible_crop": true,
+        "alpha_only_export_exact": true
+      },
+      {
+        "stage": 4,
+        "source_hash_matches": true,
+        "translation_y_before_scale": 0,
+        "no_visible_crop": true
+      }
+    ],
+    "board_body_region_pixel_exact": true,
+    "gif": {
+      "n_frames": 4,
+      "loop_extension": null,
+      "durations_ms": [
+        950,
+        1100,
+        1100,
+        1200
+      ]
+    },
+    "all_deliverable_hashes_match": true
+  },
+  "new_body_pose_count": 2,
+  "display_stage_count": 4,
+  "approved_reference_reuse_count": 2,
+  "complete_animation_verified": false,
+  "runtime_verified": false,
+  "native_ready": false,
+  "equipment_compatibility_verified": false
+}

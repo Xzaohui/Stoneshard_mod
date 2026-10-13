@@ -1,0 +1,129 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T08:15:41.760019+00:00",
+  "decision": "deliverable_as_light_hit_recovery_key_pose_concept_with_notes",
+  "actually_viewed": [
+    "hit_recovery_review_zh.png",
+    "frames/H1_recoil.png",
+    "frames/H2_settle.png",
+    "浅底板及黑底透明帧"
+  ],
+  "visual_findings": {
+    "recoil_support": "H1胸腹向画面左后倾、膝屈曲、双手反射展开，头仍在两足支撑跨度附近，没有明显悬空或膝反折。张口紧眉反应清楚。",
+    "recovery": "H2胸腹回正、双手下落、嘴闭合，与H1后仰明显不同，也不只是站姿平移。",
+    "identity_scale": "成年训练脸、灰巾蓝灰衣裤靴保持。H1主体860px为屈膝后仰造成，高于旧首稿偏高问题已解；H2主体940px与935基准相近，两新图同一倍率重建精确。",
+    "hands_feet": "肩肘腕连续、手套指形完整，双靴宽距支撑可读。脚距鞋形有轻微漂移，不宣称连续脚掌锁定。",
+    "style_alpha": "像素簇仍清楚，图形完整不裁切，浅底/黑底无明显背景杂边且alpha0RGB全零。",
+    "story": "无血伤、倒地、武器或具名剧情事件。"
+  },
+  "independent_checks": [
+    {
+      "artifact": "frames/H0_stand_reuse_I0.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "matches_manifest": true,
+      "size": [
+        1536,
+        1536
+      ],
+      "bbox": [
+        511,
+        445,
+        1024,
+        1380
+      ],
+      "alpha_zero_rgb_zero": true,
+      "source_byte_identical": true
+    },
+    {
+      "artifact": "frames/H1_recoil.png",
+      "sha256": "89c827893117ef830980bf249ab4d1f0944fa244a32239dbdf28468a6ae3883e",
+      "matches_manifest": true,
+      "size": [
+        1536,
+        1536
+      ],
+      "bbox": [
+        494,
+        520,
+        1150,
+        1380
+      ],
+      "alpha_zero_rgb_zero": true,
+      "common_scale_threshold_translation_reconstruction_exact": true
+    },
+    {
+      "artifact": "frames/H2_settle.png",
+      "sha256": "912b17a709e804bea056af06b73bff2ff3152086a6d9f9ea5518f36fa6e8956f",
+      "matches_manifest": true,
+      "size": [
+        1536,
+        1536
+      ],
+      "bbox": [
+        520,
+        440,
+        1107,
+        1380
+      ],
+      "alpha_zero_rgb_zero": true,
+      "common_scale_threshold_translation_reconstruction_exact": true
+    },
+    {
+      "artifact": "frames/H3_stand_reuse_H0.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "matches_manifest": true,
+      "size": [
+        1536,
+        1536
+      ],
+      "bbox": [
+        511,
+        445,
+        1024,
+        1380
+      ],
+      "alpha_zero_rgb_zero": true,
+      "source_byte_identical": true
+    }
+  ],
+  "count_reuse": {
+    "new_final_body_poses": 2,
+    "generated_outputs": 3,
+    "discarded_H1_version": 1,
+    "existing_pose_reused": 1,
+    "unique_final_body_poses_total": 3,
+    "display_phases": 4,
+    "H0_H3_byte_identical": true,
+    "gif_frames": 4,
+    "durations_ms": [
+      700,
+      500,
+      800,
+      900
+    ],
+    "loop_extension_present": false
+  },
+  "limitations": [
+    "关键姿态概念，不是连续受力、固定骨长或无滑步验证；未制作撞击物、伤害判定或恢复速度。",
+    "首末均复用旧站姿，不能把四显示阶段计四张新图。",
+    "脸巾、衣褶与靴口小漂移保留，不为可接受概念差异无限重绘。",
+    "仅整身平面提案，未验原生部件、native/runtime与换装。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "native_ready": false,
+  "artifacts": [
+    {
+      "artifact": "hit_recovery_review_zh.png",
+      "sha256": "c84cc9d62965ed2bb0d606abe8aee72a173c4add901b332b4d75f8468912631f"
+    },
+    {
+      "artifact": "hit_recovery_once.gif",
+      "sha256": "400172fcabab9e1e67d26a825d75c9cc41cd5be68e31ecb54cd541877ab4c878"
+    },
+    {
+      "artifact": "manifest.json",
+      "sha256": "3321c17e685d9cf1b56f3618eedb1b0f9ceb05daedaed68083f9eaf4d07dd8ce"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "raw_calls": [
+    {
+      "pose": "O1",
+      "prompt": "prompts/O1.txt",
+      "raw": "raw/O1_raw_imagegen.png",
+      "raw_sha256": "15496ae32cc3c1159b343a076429a82aabf5d43a103db8cff15f9b9af3902b9d",
+      "reference_inputs": [
+        "sources/osin_raw_imagegen_v2.png"
+      ],
+      "selected": true
+    }
+  ],
+  "selected_key_pose_count": 1,
+  "processing": "scripts/build_review.py; alpha<32 cleanup, whole-image exact uniform 1/2 nearest scaling and translation only; exact transforms.json. No anatomy drawing/stretching/quantization/rotation/mirroring.",
+  "raw_preserved": true,
+  "frozen_before_final_review": true
+}

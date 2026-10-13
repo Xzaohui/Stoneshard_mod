@@ -1,0 +1,130 @@
+{
+  "character_id": "ALD-NPC-KIEN",
+  "name": "奇恩",
+  "status": "static_candidate_pending_independent_review",
+  "new_pose_count": 2,
+  "mode": "builtin imagegen identity-preserve",
+  "sources": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/kien/kien_raw_imagegen.png",
+      "sha256": "ff06621187754e9631eb42a717f5347e9451dc82e3013b88e8068e1985af943a"
+    },
+    {
+      "path": "design/04_人物/城市人物/人物_ALD-NPC-KIEN_奇恩.md",
+      "sha256": "1c129d8d4a601050ac780039ea4ff160426e6ff300a33717cf5a07833b29514a"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/briefs/town_work_pose_candidates_01.json",
+      "sha256": "546964caa17a7907cb658b795b4ea048d64ebd4b4109aa04d641c9ff1ab2813e"
+    }
+  ],
+  "sequence": [
+    "anchor",
+    "K1",
+    "K2",
+    "anchor"
+  ],
+  "gif_created": false,
+  "gif_gate": "小闭箱侧面与高度随透视有变化，待独审确认同物尺寸；暂只静态候选。",
+  "processing": {
+    "common_uniform_nearest_scale": 0.44952681388012616,
+    "alpha_cleanup": "alpha below 32 cleared; raw retained",
+    "body_synthesis": false,
+    "nonuniform_stretch": false,
+    "grounding": "common bottom y620"
+  },
+  "runtime_integrated": false,
+  "story_boundary": [
+    "非交货验收完成",
+    "非款项到手",
+    "非来源合法化或通关"
+  ],
+  "files": [
+    {
+      "path": "QA-author.json",
+      "sha256": "2b027940251d067400f264da7ec5b42c5d1e37ab2b9ac002161457735ccb3a8f"
+    },
+    {
+      "path": "build_review.py",
+      "sha256": "b3166ec2a2b45894646a19e223ada6c73cc42b56f22acf81779ab5952e6aeb7c"
+    },
+    {
+      "path": "frames/00_anchor.png",
+      "sha256": "5968c56645b88d9c94c593e25294a647631ba901b8015b747a075b015866dd4c"
+    },
+    {
+      "path": "frames/01_K1.png",
+      "sha256": "351d666a751866815f5ab2dda822e101b003003fbb6d1dfab0196757d962a1b3"
+    },
+    {
+      "path": "frames/02_K2.png",
+      "sha256": "18eea5122b680ef258519d2aa57a240e86679f2cdbda60abdaecb2609b384d70"
+    },
+    {
+      "path": "frames/03_anchor.png",
+      "sha256": "5968c56645b88d9c94c593e25294a647631ba901b8015b747a075b015866dd4c"
+    },
+    {
+      "path": "kien_review_zh_dark.png",
+      "sha256": "0b63c1c0bd98ede497db838f96d4c67548f281694d2c3fe540382e35162db642"
+    },
+    {
+      "path": "kien_review_zh_light.png",
+      "sha256": "f6cd3fd103d0c5eca771783bbc9c46772fa80de23bf02cbb0a20208f273a2ef2"
+    },
+    {
+      "path": "prompts/K1.txt",
+      "sha256": "d78448b377ef64e2a7d9d63dd7d739d03d0695caff537d921e7649b75ba13947"
+    },
+    {
+      "path": "prompts/K2.txt",
+      "sha256": "62c5f7dab2b04ff357de29b05899a29fe3bdb55bf73a6f5767ab21ab42cb5593"
+    },
+    {
+      "path": "raw/K1_raw_imagegen.png",
+      "sha256": "3488b6e4d0e25c1b2311bc063d2f07bfa3f074ca2d2109236f369f630a86b74b"
+    },
+    {
+      "path": "raw/K2_raw_imagegen.png",
+      "sha256": "9f375deb6ee00e7b41a9ac11bed75ac5a5c121521d9f640ca6ade416580dd528"
+    }
+  ],
+  "generations": [
+    {
+      "pose": "K1",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "prompt": "prompts/K1.txt",
+      "prompt_sha256": "d78448b377ef64e2a7d9d63dd7d739d03d0695caff537d921e7649b75ba13947",
+      "inputs": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/kien/kien_raw_imagegen.png",
+          "sha256": "ff06621187754e9631eb42a717f5347e9451dc82e3013b88e8068e1985af943a"
+        }
+      ],
+      "raw": "raw/K1_raw_imagegen.png",
+      "raw_sha256": "3488b6e4d0e25c1b2311bc063d2f07bfa3f074ca2d2109236f369f630a86b74b",
+      "inspected": true
+    },
+    {
+      "pose": "K2",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "prompt": "prompts/K2.txt",
+      "prompt_sha256": "62c5f7dab2b04ff357de29b05899a29fe3bdb55bf73a6f5767ab21ab42cb5593",
+      "inputs": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/kien/kien_raw_imagegen.png",
+          "sha256": "ff06621187754e9631eb42a717f5347e9451dc82e3013b88e8068e1985af943a"
+        },
+        {
+          "path": "Assets/CharacterActions/20261013/kien/sample_box_regrip_v1/raw/K1_raw_imagegen.png",
+          "sha256": "3488b6e4d0e25c1b2311bc063d2f07bfa3f074ca2d2109236f369f630a86b74b"
+        }
+      ],
+      "raw": "raw/K2_raw_imagegen.png",
+      "raw_sha256": "9f375deb6ee00e7b41a9ac11bed75ac5a5c121521d9f640ca6ade416580dd528",
+      "inspected": true
+    }
+  ]
+}

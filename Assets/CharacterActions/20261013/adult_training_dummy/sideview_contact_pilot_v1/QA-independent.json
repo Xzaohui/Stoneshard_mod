@@ -1,0 +1,93 @@
+{
+  "reviewer": "independent_visual_review",
+  "decision": "research_only_contact_pair_not_accepted",
+  "deliverable_as_accepted_contact_pose_set": false,
+  "S0_previous_gate_preserved": true,
+  "generation_budget": {
+    "cap": 3,
+    "used": 3,
+    "no_more_generation": true
+  },
+  "actual_visual_review": [
+    "S0/S1/S2全身原稿均实际查看；另看共同原像素尺度腰髋膝靴局部浅底诊断图。结论来自可见遮挡、轮廓与接地点，不是提示词或裤色明暗标签。"
+  ],
+  "per_pose": {
+    "S1": {
+      "status": "research_only",
+      "camera_identity": "朝右单眼侧面与灰兜帽/蓝灰衣/棕手套裤靴身份延续。近肩连接的可见大袖向后，远臂从躯干前侧露出向前，手臂反相可辨。",
+      "leg_topology": "前伸腿的大腿内侧轮廓在裆处分隔并压住后伸腿根部，支持近腿向前、远腿向后的读法；衣摆仍遮住髋根，不能凭此宣称所有骨段和左右标识已锁定。两条腿都可从可见大腿经膝方向、靴筒追至脚，没有明显断肢或反折膝。",
+      "contact_weight": "后靴后跟抬起、前掌/趾着地可读；前靴后跟较低且尖部翘起，接触意图可辨，两接点间容纳躯干重心。不过前靴曲线存在下面的设计硬错。",
+      "hard_failure": "前靴鞋头末端明显向上卷曲，鞋底前段弯成翘钩，且相对S0靴更长。这不是把同一平直靴整体绕踝翘起，而是鞋形本身变化，不能作为同鞋接触位通过。",
+      "proportion_note": "alpha≥128主体高999px对S0的932px；约+7.2%只是画幅/姿态差异指标，非单独判错理由。头大致近原尺寸但躯段显得更长，衣摆/靴也漂移，不能声称统一骨长。"
+    },
+    "S2": {
+      "status": "research_only",
+      "camera_identity": "保持朝右脸，近侧可见肩袖向前穿过躯干，远臂从后缘向后，和S1反相可读。",
+      "leg_topology": "后伸大腿在衣摆下占据较连续前景轮廓，前伸腿根从其后方出现，支持近腿后伸、远腿前伸；不只依据亮暗认腿。髋根仍遮挡，无中间经过姿态，不能当成完整左右腿轨迹证明。",
+      "contact_weight": "后脚跟抬起而前掌低，前脚主要平掌着地；前脚没有清楚的独立抬尖/后跟初接触，因此只能读作宽步双支撑，未精确达成所写前跟接触。膝踝连接总体可信，重心没有明显落在支撑区之外。",
+      "hard_failure": "原S0/S1朝前（画面右）的方腰扣，S2移到腰部后侧（画面左、近臂后方）。固定朝右镜头下不是合理透视小漂，属于衣装结构错位。",
+      "proportion_note": "主体高946px约S0+1.5%；总体身架近S0。前后鞋大小仍有差异，但本图主要阻断为腰扣错位。"
+    }
+  },
+  "overall_findings": [
+    "本次两张前后腿/双臂反相有可见改善，不应一概写成同腿未换。",
+    "仍不满足同一衣装和同一靴的成套接触位门槛；单图姿态能用于失败分析，不能混入已通过动作候选交付。",
+    "只有站姿与两接触姿势，没有passing、离地、下沉/抬升、稳定相位及足轨迹证据；绝不表示完整自然walk。"
+  ],
+  "next_action": "按3图上限停止生成，保留S0独立侧视门槛通过及S1/S2失败研究记录；不制作GIF。",
+  "measurements_and_raw_sha256": [
+    {
+      "path": "raw/S0_stand.png",
+      "sha256": "153e84ddd0a70fa4965ba42beb6ea70359bec26a18f4ed871acd36d5cf7da7cf",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha128_bbox": [
+        502,
+        244,
+        763,
+        1176
+      ],
+      "height": 932
+    },
+    {
+      "path": "raw/S1_contact_right_front.png",
+      "sha256": "596e795cf4fbe0b5f33ef87613f345001d3d75298bd76c6d4c1fff53d396ea4a",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha128_bbox": [
+        374,
+        161,
+        935,
+        1160
+      ],
+      "height": 999
+    },
+    {
+      "path": "raw/S2_contact_left_front.png",
+      "sha256": "584dafaa193b8b0d6c81eca829a2b83c68bff00ead3710d2717a8fdcc9c16724",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha128_bbox": [
+        384,
+        242,
+        882,
+        1188
+      ],
+      "height": 946
+    }
+  ],
+  "reviewed_prompt_hashes": {
+    "prompts/S2_contact_left_front.txt": "3d8344db5736c3220121f8430186b56707df526b2d1ef241fbcbf15251f94c80",
+    "prompts/S0_stand.txt": "dc5a476c836e36db438efefe3ea17430471f6558d0a6ccd71d858397c9e9f78f",
+    "prompts/S1_contact_right_front.txt": "2d6339248fe6c9d9359c2a66eb6197514419823805c75a3e7702a9dcf12a2ef1"
+  },
+  "review_scope": "绑定上述raw字节；作者静态板与manifest在制作中，不对尚未冻结排版作通过结论。",
+  "runtime_verified": false,
+  "images_modified": false
+}

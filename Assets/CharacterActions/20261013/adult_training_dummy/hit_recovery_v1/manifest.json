@@ -1,0 +1,122 @@
+{
+  "status": "awaiting_independent_review",
+  "classification": "original_light_hit_recovery_keypose_concept",
+  "character": "anonymous adult training dummy",
+  "new_body_poses_final": 2,
+  "generation_outputs": 3,
+  "discarded_pose_versions": 1,
+  "reused_existing_source_body_images": 1,
+  "unique_body_poses_total": 3,
+  "phase_count": 4,
+  "reused_display_phases": 2,
+  "canvas": [
+    1536,
+    1536
+  ],
+  "common_new_raw_scale": 1.228646517739816,
+  "frames": [
+    {
+      "id": "H0",
+      "source": "../interaction_v1/frames/I0_stand.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "new_drawing": false,
+      "transform": "byte-identical copy"
+    },
+    {
+      "id": "H1_recoil",
+      "source": "raw/H1_recoil_v2.png",
+      "raw_sha256": "6b584b483643a80608365aa581f76e3a910aaabc6a3715419c23a9035f2aa167",
+      "frame_sha256": "89c827893117ef830980bf249ab4d1f0944fa244a32239dbdf28468a6ae3883e",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "new_drawing": true,
+      "scale": 1.228646517739816,
+      "translation": [
+        0,
+        -1
+      ],
+      "bbox": [
+        494,
+        520,
+        1150,
+        1380
+      ],
+      "low_alpha_pixels_removed": 13800,
+      "alpha_policy": "alpha>=128 opaque, otherwise zero; transparent RGB zero",
+      "mirrored": false
+    },
+    {
+      "id": "H2_settle",
+      "source": "raw/H2_settle.png",
+      "raw_sha256": "2f8c7198f3f4974ecbd16f7a8c67fd1a06299cba340f8be02a648bfae4ef1b40",
+      "frame_sha256": "912b17a709e804bea056af06b73bff2ff3152086a6d9f9ea5518f36fa6e8956f",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "new_drawing": true,
+      "scale": 1.228646517739816,
+      "translation": [
+        0,
+        -10
+      ],
+      "bbox": [
+        520,
+        440,
+        1107,
+        1380
+      ],
+      "low_alpha_pixels_removed": 16703,
+      "alpha_policy": "alpha>=128 opaque, otherwise zero; transparent RGB zero",
+      "mirrored": false
+    },
+    {
+      "id": "H3",
+      "source": "frames/H0_stand_reuse_I0.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "new_drawing": false,
+      "transform": "byte-identical copy"
+    }
+  ],
+  "gif_sequence": [
+    "H0 existing I0",
+    "H1 new v2",
+    "H2 new",
+    "H3 reused H0"
+  ],
+  "gif_duration_ms": [
+    700,
+    500,
+    800,
+    900
+  ],
+  "gif_loop_extension": false,
+  "tool": "builtin imagegen",
+  "authorization_message": "Sentinel_cd750e0413208191ad349263d4850431",
+  "runtime_verified": false,
+  "native_ready": false,
+  "equipment_compatibility_verified": false,
+  "engine_origin": null,
+  "native_fps": null,
+  "collision": null,
+  "revision": "H1 original approximately825px tall versus761px stance, retained as H1_recoil.png and byte-identical H1_recoil_v1_scale_drift.png; H1_v2 actual generated redraw selected, not frame-specific scaling",
+  "limitations": [
+    "稀疏关键姿态，不是完整补间",
+    "脸、衣褶和鞋形有生成漂移",
+    "统一尺度与地线不代表骨长/连续足轨迹固定",
+    "不增加剧情伤害、事件或技能",
+    "身体为整张平面，不代表原版部件或隐藏结构"
+  ],
+  "reference_sources": [
+    {
+      "path": "../interaction_v1/raw/I0_stand.png",
+      "sha256": "e303bedfb334dc584bcb36b7924bae15276835ddecbafe4630c469c7776f75ad"
+    },
+    {
+      "path": "../interaction_v1/frames/I0_stand.png",
+      "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b"
+    }
+  ]
+}

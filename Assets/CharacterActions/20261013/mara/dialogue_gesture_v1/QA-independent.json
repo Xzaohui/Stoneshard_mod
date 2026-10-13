@@ -1,0 +1,85 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T10:48:07.145272+00:00",
+  "character_id": "n1_mara",
+  "status": "pass_sparse_dialogue_concept_with_notes",
+  "concept_deliverable": true,
+  "user_approved": false,
+  "artifact_sha256": {
+    "frames/D2_hesitate.png": "c35f7b68091315ef28bc3e0a094820e0b3330d0babaf6d00fd4648b2c5ec0af2",
+    "frames/D0_stand.png": "c4ae990dfea1ba72381555650ecf1e577ade7257eb94ae3e27d95d2569fdca88",
+    "frames/D3_stand_reuse_D0.png": "c4ae990dfea1ba72381555650ecf1e577ade7257eb94ae3e27d95d2569fdca88",
+    "frames/D1_inquire.png": "d92ad1e1fcb5d951438215c127d62fdc44cf51767cd4af0230b90bc0c81a39dc",
+    "raw/D2_hesitate.png": "839fd3066f08b37754f53c755a9f7825677cb7e069343f3b2331b253ac7168fd",
+    "raw/D0_anchor_source.png": "03a4d26e32ae7c22362aa1de2546bf0e18dfd79f0285c34694db015f3f64410f",
+    "raw/D1_inquire.png": "e363b2c9790b79a885cc525986c2a6159514210c346a0c86a6b4f20a1a27820f",
+    "manifest.json": "5d831d0d78282ec66dc3225e6c2a554d145d06c0f4990e36673cb7764b2e69ad",
+    "dialogue_gesture_review_zh.png": "ecd0f4eeaf2ab45e47a9d8464847f99d9364f383cb081d39dc3cceabd499d196",
+    "dialogue_gesture_once.gif": "9185e37a5e72b82eb8f2f9c1837c337fd84ae870514144521537edec07d27ecb"
+  },
+  "identity_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/mara/mara_raw_imagegen_v2.png",
+    "sha256": "03a4d26e32ae7c22362aa1de2546bf0e18dfd79f0285c34694db015f3f64410f"
+  },
+  "actually_viewed": [
+    "current full-body concept anchor",
+    "frames/D1_inquire.png",
+    "frames/D2_hesitate.png",
+    "dialogue_gesture_review_zh.png both light/dark rows"
+  ],
+  "visual_findings": [
+    "原低发髻/担忧成年脸、红围巾赭裙围裙和旧鞋保持，身高1136/1136/1135px几乎一致，仍记录发裙鞋细小漂移。",
+    "原右手始终握同一工作绳圈，左手空掌抬起询问再收胸前迟疑；肩肘腕连续，手指为粗簇概括，无多手。绳圈轮廓局部重绘但未变第二件道具或绳索用途。",
+    "表情变化微弱，询问和迟疑主要由手势区分；胸前手接近本人围巾，无交付或弟弟归来含义。",
+    "全身冠发、双手双鞋和道具无裁切，浅深底干净；保持粗像素簇，未因技术通过忽略手势接触。",
+    "原1.0倍率无逐帧伸缩，alpha>=128置不透明其余清透明RGB，再仅Y微平移，独立重建逐像素精确。该阈值改变原半透明边缘，原稿仍保留。",
+    "D0/D3字节相同，2新身体+1既有身体共3独立状态4阶段；GIF四帧3650ms无loop。稀疏姿态可交，不声称连续补间、无滑步或游戏运行。"
+  ],
+  "independent_checks": {
+    "frames": [
+      {
+        "id": "D0_stand",
+        "source_hash_matches": true,
+        "frame_hash_matches": true,
+        "alpha_threshold_and_translation_exact": true,
+        "alpha0_rgb_zero": true,
+        "visible_height": 1136
+      },
+      {
+        "id": "D1_inquire",
+        "source_hash_matches": true,
+        "frame_hash_matches": true,
+        "alpha_threshold_and_translation_exact": true,
+        "alpha0_rgb_zero": true,
+        "visible_height": 1136
+      },
+      {
+        "id": "D2_hesitate",
+        "source_hash_matches": true,
+        "frame_hash_matches": true,
+        "alpha_threshold_and_translation_exact": true,
+        "alpha0_rgb_zero": true,
+        "visible_height": 1135
+      }
+    ],
+    "gif": {
+      "frames": 4,
+      "loop": null,
+      "durations": [
+        750,
+        1000,
+        1000,
+        900
+      ]
+    },
+    "D0_D3_bytes_equal": true,
+    "anchor_hash_matches": true
+  },
+  "new_body_count": 2,
+  "unique_body_state_count": 3,
+  "phase_count": 4,
+  "new_character_count": 0,
+  "runtime_verified": false,
+  "complete_animation_verified": false,
+  "equipment_compatibility_verified": false
+}

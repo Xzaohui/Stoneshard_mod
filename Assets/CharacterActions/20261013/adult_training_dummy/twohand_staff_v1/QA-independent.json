@@ -1,0 +1,126 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T07:32:00.760476+00:00",
+  "decision": "deliverable_as_twohand_staff_key_pose_and_grip_concept_with_notes",
+  "actually_viewed": [
+    "twohand_staff_review_zh.png",
+    "cross_action_scale_review.png",
+    "frames/T2.png",
+    "中文板关闭装备身体近景及双手握点近景"
+  ],
+  "visual_findings": {
+    "aesthetics_identity": "训练角色成年脸、头巾、蓝灰夹棉衣裤靴一致，粗眉目光专注。T0准备、T1后收、T2前膝屈曲后腿延展并伸臂，短刺方向可读，无明显断肢/漂浮或关节反折。",
+    "two_hand_contact": "实际近景中棍从两只闭手的两侧连续进出，手指前景覆盖棍，手腕接前臂合理；两拳均在同一杆轴上。T2后手前臂在棍后方，前臂伸出与前拳相连，未见棍穿出手背或胸腔的错层。",
+    "shoulder_elbow": "关闭棍层后能辨完整肩肘腕。T1后肘抬起、手回收；T2后臂弯曲前臂伸直。未因遮挡截臂。",
+    "scale": "并列统一I0与T0实际看头、肩、腿尺寸相近。T0身体bbox高935px，T1高938px、T2高904px与屈膝前倾方向一致；三身体使用同一1478/1254最近邻倍率而非按姿态bbox拉伸。",
+    "support": "T2前膝弯曲、后腿延伸，双靴整体支撑可读。脚距及鞋口仍有生成变化，未验连续足轨迹或物理受力。",
+    "staff_geometry": "同一1000×36px木棍层只刚性转移旋转，四帧独立重建全部逐像素相等；两局部握点350/750对应固定400px握距。几何检查与实际接触近景共同支持本组概念。",
+    "full_body_alpha": "头脚与棍两端完整，T2棍尖最右约1500px，尚有约35px画布边距。透明RGB清零。"
+  },
+  "independent_checks": [
+    {
+      "artifact": "frames/T0.png",
+      "sha256": "43358134bdd9d9621be855d79455759ead8e92ab30c1fc9b96172a117f495a01",
+      "layer_recomposition_exact": true,
+      "canonical_rigid_staff_exact": true,
+      "grip_separation_px": 399.99999999999994,
+      "alpha_zero_rgb_zero": true,
+      "visible_bbox": [
+        300,
+        445,
+        1300,
+        1380
+      ],
+      "same_scale_source_reconstruction_exact": true
+    },
+    {
+      "artifact": "frames/T1.png",
+      "sha256": "e2bd193099adff107b2446cb6828b181753b29a0fd07a8b36d7f92fea150fc84",
+      "layer_recomposition_exact": true,
+      "canonical_rigid_staff_exact": true,
+      "grip_separation_px": 400.0,
+      "alpha_zero_rgb_zero": true,
+      "visible_bbox": [
+        160,
+        442,
+        1160,
+        1380
+      ],
+      "same_scale_source_reconstruction_exact": true
+    },
+    {
+      "artifact": "frames/T2.png",
+      "sha256": "8e9c2f1b5f3c19268906badf192e1e539336dbab7deb5605a4bd83af05ea989f",
+      "layer_recomposition_exact": true,
+      "canonical_rigid_staff_exact": true,
+      "grip_separation_px": 400.00000000000006,
+      "alpha_zero_rgb_zero": true,
+      "visible_bbox": [
+        333,
+        476,
+        1501,
+        1380
+      ],
+      "same_scale_source_reconstruction_exact": true
+    },
+    {
+      "artifact": "frames/T3.png",
+      "sha256": "43358134bdd9d9621be855d79455759ead8e92ab30c1fc9b96172a117f495a01",
+      "layer_recomposition_exact": true,
+      "canonical_rigid_staff_exact": true,
+      "grip_separation_px": 399.99999999999994,
+      "alpha_zero_rgb_zero": true,
+      "visible_bbox": [
+        300,
+        445,
+        1300,
+        1380
+      ]
+    }
+  ],
+  "canonical_staff_sha256": "a2436ba73bf6c275970804a5380bf4d780afb9e3a421bd41a1f49f8c14be3062",
+  "count_and_reuse": {
+    "final_independent_body_poses": 3,
+    "staff_source": 1,
+    "raw_outputs_preserved": 6,
+    "T1_local_edit_attempts": 2,
+    "presented_phases": 4,
+    "T3_byte_identical_to_T0": true,
+    "gif_frame_count": 4,
+    "gif_durations_ms": [
+      650,
+      750,
+      850,
+      1400
+    ],
+    "gif_loop_extension_present": false
+  },
+  "limitations": [
+    "两次T1局部修正是保留原稿的生成尝试，不能额外计成两张可用独立动作。",
+    "回稳复用T0，不是另绘回收阶段。仅稀疏关键姿态，无完整速度/连续补间/无滑步验证。",
+    "棍始终基本在画面平面内，没有多方向透视或手指环绕棍背面的完整制作证明。",
+    "脸巾与鞋口有轻微重绘漂移，最近邻等比例归一不等于原生骨骼或像素网格锁定。",
+    "原创短刺提案，不宣称原作长柄技能、命中/伤害判定；未验native/runtime或换装系统。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "native_ready": false,
+  "artifacts": [
+    {
+      "artifact": "twohand_staff_review_zh.png",
+      "sha256": "acdd0c56bc5de06ecc02ece0ed65daebaa1ca9ea71c4f4a53e74e573e8a2fb72"
+    },
+    {
+      "artifact": "cross_action_scale_review.png",
+      "sha256": "c7e41865d4345c57abaa3ed5af532d4d5267f101995f5abfc1a66c509e926c19"
+    },
+    {
+      "artifact": "twohand_staff_preview_once.gif",
+      "sha256": "83fd9777182974fc4f646905e27a8c4d7dc55ab1053ce4225761356628a123e2"
+    },
+    {
+      "artifact": "manifest.json",
+      "sha256": "8d7163128fdb6ca7210209ee4fcbfe2e28597e793552943ff45d3590e3cb755a"
+    }
+  ]
+}

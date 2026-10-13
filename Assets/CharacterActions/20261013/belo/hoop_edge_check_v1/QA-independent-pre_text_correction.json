@@ -1,0 +1,82 @@
+{
+  "reviewer": "independent_visual_review",
+  "status": "visual_pass_text_correction_required",
+  "concept_visual_pass": true,
+  "delivery_ready": false,
+  "required_change": "标题及说明将“抬箍触检内缘”改为“抬箍检查箍缘”；当前指腹主要接触画面右侧前缘/外缘，不能断言内缘。无需重绘。",
+  "artifacts": {
+    "QA-author.json": "04b942464625c16a1fae813afd1ac3bc165584a491ba6bc073d36cfd8a121f48",
+    "belo_review_zh_light.png": "027a87f9c902baf03612c1a6765055cf6f467d065c9bac6d323510861e7b7360",
+    "belo_review_zh_dark.png": "53c41972a80f4b494a11e53af82e66efd6a693e0096d2dfc82c2b7cc93cced00",
+    "manifest.json": "eb1a14c310cb4b205884d67db6779201d6e2b46ceb1cc39c298e65910e24816a",
+    "frames/01_B1.png": "7629cf6b7b0af3151a9d0412eddc8229a268b1e6c7f06a8549e9719ff71d6a34",
+    "frames/00_anchor.png": "075098ae2a8a63b9fdafa805d3776beeab8f4730051b7b0843cbb5453a96daf0",
+    "frames/02_anchor.png": "075098ae2a8a63b9fdafa805d3776beeab8f4730051b7b0843cbb5453a96daf0",
+    "raw/B1_raw_imagegen.png": "c872870ebf82ccaa6389f0f1725627783dfdd60340795345ba9008508a01307e"
+  },
+  "sources": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/belo/belo_raw_imagegen.png",
+      "sha256": "31e59e238f21b4867974b6e057eafb2cf20213b608dea1a0653a5a5300e6fbcb"
+    },
+    {
+      "path": "design/04_人物/城市人物/人物_MNS-NPC-BELO_贝洛.md",
+      "sha256": "233d3c1f43d406581ad46d8a5aa4f6b85ed67126ede21217e37af441142c7869"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/briefs/town_work_pose_candidates_01.json",
+      "sha256": "546964caa17a7907cb658b795b4ea048d64ebd4b4109aa04d641c9ff1ab2813e"
+    }
+  ],
+  "actual_visual_review": [
+    "新全身原稿与浅深底三列板实际查看；黑短发、粗眉无须成年脸、灰系带工衣短围裙裤靴和原锚一致。",
+    "低头、抬环双肘弯曲为可信检查姿态；恰有两手，画面左手握上缘，右手搭右缘，指节连接连续，无可见手指穿木。",
+    "完整单木环轮廓和孔洞连续，没有开环/新增工具；倾斜且更正面使投影变宽，长轴大致保留，无明显刚性物尺寸硬错。但未验证精密固定几何。",
+    "前臂/环/围裙前后遮挡清楚；双足完整站稳。原锚稍长颈是既有形象，本姿未进一步拉长。",
+    "深浅底未见实体光晕；细簇和脸发少量漂移保留为概念限制。"
+  ],
+  "counts": {
+    "new_full_body_poses": 1,
+    "new_characters": 0,
+    "unique_states_including_anchor": 2,
+    "display_stages": 3,
+    "gif_created": false
+  },
+  "sequence_gate": "允许改文案后制作原锚→新姿→原锚的单次稀疏阶段GIF；这不是已核GIF、连续触检或工序/物理验证。GIF产物需另核。",
+  "story_boundary": [
+    "不表示改箍获认可、师傅原谅、署名或工具归属解决",
+    "不新增桶、样架或第二木环"
+  ],
+  "independent_technical_checks": {
+    "sources": true,
+    "files": true,
+    "frames": [
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "source_height_after_alpha_cleanup": 1124
+      },
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "source_height_after_alpha_cleanup": 1112
+      },
+      {
+        "exact_rebuild": true,
+        "alpha0_rgb_zero": true,
+        "source_height_after_alpha_cleanup": 1124
+      }
+    ],
+    "boards": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "first_last_byte_equal": true,
+    "gif_files": []
+  },
+  "runtime_verified": false
+}

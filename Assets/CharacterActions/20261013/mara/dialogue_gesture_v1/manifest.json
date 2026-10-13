@@ -1,0 +1,139 @@
+{
+  "status": "awaiting_independent_review",
+  "character": "mara",
+  "character_zh": "玛拉",
+  "tool": "builtin imagegen",
+  "classification": "original_fullbody_dialogue_keypose_concept",
+  "new_characters": 0,
+  "new_body_images": 2,
+  "unique_body_states": 3,
+  "phase_count": 4,
+  "anchor": "Assets/CharacterDesigns/20261013/expressive/mara/mara_raw_imagegen_v2.png",
+  "anchor_sha256": "03a4d26e32ae7c22362aa1de2546bf0e18dfd79f0285c34694db015f3f64410f",
+  "common_scale": 1.0,
+  "processing": "alpha threshold128; transparent RGB zero; common scale 1.0; sole-only vertical translation; no body construction/mirror/warp/interpolation",
+  "canvas": [
+    1118,
+    1407
+  ],
+  "sole_baseline": 1357,
+  "frames": [
+    {
+      "id": "D0_stand",
+      "new_drawing": false,
+      "source": "Assets/CharacterActions/20261013/mara/dialogue_gesture_v1/raw/D0_anchor_source.png",
+      "source_sha256": "03a4d26e32ae7c22362aa1de2546bf0e18dfd79f0285c34694db015f3f64410f",
+      "frame_sha256": "c4ae990dfea1ba72381555650ecf1e577ade7257eb94ae3e27d95d2569fdca88",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        276,
+        221,
+        882,
+        1357
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        0
+      ],
+      "visible_bbox": [
+        276,
+        221,
+        882,
+        1357
+      ],
+      "low_alpha_pixels_removed": 15502,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D1_inquire",
+      "new_drawing": true,
+      "source": "Assets/CharacterActions/20261013/mara/dialogue_gesture_v1/raw/D1_inquire.png",
+      "source_sha256": "e363b2c9790b79a885cc525986c2a6159514210c346a0c86a6b4f20a1a27820f",
+      "frame_sha256": "d92ad1e1fcb5d951438215c127d62fdc44cf51767cd4af0230b90bc0c81a39dc",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        276,
+        223,
+        936,
+        1359
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        -2
+      ],
+      "visible_bbox": [
+        276,
+        221,
+        936,
+        1357
+      ],
+      "low_alpha_pixels_removed": 15737,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D2_hesitate",
+      "new_drawing": true,
+      "source": "Assets/CharacterActions/20261013/mara/dialogue_gesture_v1/raw/D2_hesitate.png",
+      "source_sha256": "839fd3066f08b37754f53c755a9f7825677cb7e069343f3b2331b253ac7168fd",
+      "frame_sha256": "c35f7b68091315ef28bc3e0a094820e0b3330d0babaf6d00fd4648b2c5ec0af2",
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "raw_clean_bbox": [
+        277,
+        223,
+        882,
+        1358
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        -1
+      ],
+      "visible_bbox": [
+        277,
+        222,
+        882,
+        1357
+      ],
+      "low_alpha_pixels_removed": 13873,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D3_stand_reuse_D0",
+      "new_drawing": false,
+      "source": "frames/D0_stand.png",
+      "frame_sha256": "c4ae990dfea1ba72381555650ecf1e577ade7257eb94ae3e27d95d2569fdca88",
+      "byte_identical_to_D0": true
+    }
+  ],
+  "gif_duration_ms": [
+    750,
+    1000,
+    1000,
+    900
+  ],
+  "gif_loop_extension": false,
+  "narrative_sources": [
+    "design/04_人物/人物_玛拉与伊沃.md",
+    "design/05_主线/台本/台本_N1_无钟之夜.md"
+  ],
+  "runtime_verified": false,
+  "native_ready": false,
+  "user_individual_character_approval_claimed": false,
+  "limitations": [
+    "四个稀疏关键姿态，不是连续补间或原生动画",
+    "衣褶、轮廓边缘和鞋型有细小生成漂移，未逐帧重绘修正",
+    "共同比例与鞋底地线不等于骨长、脚轨迹已锁定",
+    "未做原生尺寸、碰撞、装备换装或游戏运行验收"
+  ]
+}

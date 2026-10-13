@@ -1,0 +1,111 @@
+{
+  "reviewer": "independent-visual-review",
+  "reviewedAt": "2026-10-13",
+  "method": "实际查看中文审图及关键单帧，核manifest和文件；不以hash/画布取代动作审美。 已独立验证安全导出全部alpha>0像素及alpha不变、alpha=0全清零；实际重看D1/D2安全成图。",
+  "frames": [
+    {
+      "id": "H0",
+      "path": "frames/H0_normal.png",
+      "sha256": "458af75de19853d868043a5b66f2c9f7638bebb2e539f09eb1564c09f552c696",
+      "canvas": [
+        1536,
+        1536
+      ],
+      "alphaBounds": [
+        499,
+        445,
+        1281,
+        1381
+      ]
+    },
+    {
+      "id": "H1",
+      "path": "frames/H1_flash_composite.png",
+      "sha256": "22dee1b52a50d1ba7d6d2a156a78d034f31a5ec7aa39d338326c843fd5b6922f",
+      "canvas": [
+        1536,
+        1536
+      ],
+      "alphaBounds": [
+        499,
+        445,
+        1281,
+        1381
+      ]
+    },
+    {
+      "id": "H2",
+      "path": "frames/H2_restore_reuse_H0.png",
+      "sha256": "458af75de19853d868043a5b66f2c9f7638bebb2e539f09eb1564c09f552c696",
+      "canvas": [
+        1536,
+        1536
+      ],
+      "alphaBounds": [
+        499,
+        445,
+        1281,
+        1381
+      ]
+    }
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "decision": "deliverable_as_separate_overlay_effect_concept",
+  "uniqueBodyPoses": 1,
+  "displayStates": 3,
+  "verification": {
+    "body_equals_attack_D0": true,
+    "H0_equals_H2_bytes": true,
+    "alpha_composite_body_overlay_equals_H1_pixels": true,
+    "overlay_support_inside_body_alpha": true,
+    "overlay_nontransparent_rgb": [
+      255,
+      249,
+      235
+    ]
+  },
+  "visual": {
+    "readability": "正常→白闪→恢复清楚；白闪覆盖身体及木剑，轮廓仍可读。",
+    "layering": "真实body_unchanged及white_flash_overlay两个文件；逐像素核合成等于H1、关掉overlay回原体，非口头假分层。",
+    "count": "没有新增受击关节姿态。H0/H2重复不计独立图，H1是同主体叠效果。"
+  },
+  "limits": [
+    "120ms和暖白0.92、不排除木剑均原创表现提案，未验原版精确时长遮罩。",
+    "效果层分开不等于身体装备分层兼容；非native受击动画。"
+  ],
+  "sourceReview": "../../../adult_training_dummy/hit_fx_v1/QA-independent.json",
+  "safeExportChecks": [
+    {
+      "path": "adult_training_dummy/hit_fx_v1/frames/H2_restore_reuse_H0.png",
+      "sha256": "458af75de19853d868043a5b66f2c9f7638bebb2e539f09eb1564c09f552c696",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/hit_fx_v1/frames/H1_flash_composite.png",
+      "sha256": "22dee1b52a50d1ba7d6d2a156a78d034f31a5ec7aa39d338326c843fd5b6922f",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/hit_fx_v1/frames/H0_normal.png",
+      "sha256": "458af75de19853d868043a5b66f2c9f7638bebb2e539f09eb1564c09f552c696",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/hit_fx_v1/layers/white_flash_overlay.png",
+      "sha256": "d1053aa867ce0b2a7de03fef2d6e306ba91b069d0320eddd324c0f0fd767f423",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    },
+    {
+      "path": "adult_training_dummy/hit_fx_v1/layers/body_unchanged.png",
+      "sha256": "458af75de19853d868043a5b66f2c9f7638bebb2e539f09eb1564c09f552c696",
+      "allAlphaPositivePixelsExact": true,
+      "transparentRGBAZero": true
+    }
+  ],
+  "safeExportIndependentVerified": true
+}

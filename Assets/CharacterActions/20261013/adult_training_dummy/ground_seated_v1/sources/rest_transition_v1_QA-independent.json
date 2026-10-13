@@ -1,0 +1,128 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T07:03:42.587816+00:00",
+  "decision": "deliverable_as_sparse_rest_transition_key_pose_concept_with_notes",
+  "actually_viewed": [
+    "rest_transition_review_zh.png",
+    "frames/R1_lower.png",
+    "frames/R2_seated.png"
+  ],
+  "visual_findings": {
+    "identity_scale": "灰兜帽、粗眉鼻嘴、蓝灰夹棉衣、棕手套裤靴与既有训练角色一致。站姿直接复用最新统一I0；两张新图头部尺度相近，未出现上组曾有的明显整人缩小。脸/头巾及衣褶有小幅重绘漂移。",
+    "seated_contact": "R2臀后缘与衣摆在凳面上相接，下方凳板和腿支撑连续，没有明显透明缝隙悬浮或凳板穿过躯干。人体盖住座面前侧及部分凳腿，手在大腿之前，当前视角遮挡合理。",
+    "knees_feet": "R1/R2双膝弯曲、大腿前伸、小腿下落，靴子完整，承重形态可读。两足在透视画面中底端不同，不能把逻辑y1380理解为每只脚每个像素同线。",
+    "lowering_readability": "R1较R2后坐前倾但下沉幅度较小，接近凳面，不能视为明确悬空的完整下坐过程。作为疏采样姿态仍可辨。",
+    "stool": "原创几何木凳为同一固定像素层，五帧没有变形换凳。人/凳前后关系合理；凳形比人体更简化，可用于概念讨论。",
+    "unarmed": "全程空手，无武器、伤口、额外物品或剧情身份暗示。",
+    "aesthetics": "未发现需要阻断概念交付的漂浮、穿凳或明显肢体错误；连续动作质量尚未验收。"
+  },
+  "independent_checks": [
+    {
+      "artifact": "frames/R0_stand.png",
+      "sha256": "53422ab349aa14da96a496fc5293fb63b1d3727fa4e737821ab831f8ed749706",
+      "body_sha256": "7c485eca55879664d58c71ca6ba2729369db875c3b8152c5e4f01182f84edc04",
+      "fixed_stool_then_body_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "artifact": "frames/R1_lower.png",
+      "sha256": "ce56a9cd194cd1871f9ada720b7ee0426841245382b60efd62a558f3023d2230",
+      "body_sha256": "d54622704f59906441fa797fdc37310f1081797413b0c1d0baed8c76f1787885",
+      "fixed_stool_then_body_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "artifact": "frames/R2_seated.png",
+      "sha256": "8e0c09fc0d80689e35b3232d7756f7708939e5dd9e577fb38f9c54080cd88601",
+      "body_sha256": "c44420e2a93ac39d2f749d8a652df6381949af3d5de82a440a94b430e06754f6",
+      "fixed_stool_then_body_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "artifact": "frames/R3_rise_reuse_R1.png",
+      "sha256": "ce56a9cd194cd1871f9ada720b7ee0426841245382b60efd62a558f3023d2230",
+      "body_sha256": "d54622704f59906441fa797fdc37310f1081797413b0c1d0baed8c76f1787885",
+      "fixed_stool_then_body_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "canvas": [
+        1536,
+        1536
+      ]
+    },
+    {
+      "artifact": "frames/R4_stand_reuse_R0.png",
+      "sha256": "53422ab349aa14da96a496fc5293fb63b1d3727fa4e737821ab831f8ed749706",
+      "body_sha256": "7c485eca55879664d58c71ca6ba2729369db875c3b8152c5e4f01182f84edc04",
+      "fixed_stool_then_body_exact": true,
+      "alpha_zero_rgb_zero": true,
+      "canvas": [
+        1536,
+        1536
+      ]
+    }
+  ],
+  "source_transform_checks": {
+    "R0_latest_I0_translation_only_exact": true,
+    "R1_raw_threshold_same_nearest_scale_translation_exact": true,
+    "R2_raw_threshold_same_nearest_scale_translation_exact": true,
+    "new_body_shared_scale": 1.228646517739816,
+    "fixed_stool_sha256": "d0f13967551fb9a2d921303888f6de63d20fddf74cd432c8ef83048314e95739"
+  },
+  "reuse_and_preview": {
+    "new_body_images": 2,
+    "unique_body_poses_including_reused_I0": 3,
+    "display_phases": 5,
+    "R3_identical_to_R1": true,
+    "R4_identical_to_R0": true,
+    "gif_frames": 5,
+    "gif_durations_ms": [
+      600,
+      500,
+      1100,
+      500,
+      800
+    ],
+    "gif_loop_extension_present": false
+  },
+  "limitations": [
+    "R0到R1/R2脚位明显重摆，鞋口轮廓亦漂移。没有连续足轨迹/固定骨长检验，不称无滑步。",
+    "R1到R2下沉较小，仍须设计下坐与起身的中间姿态及速度，起身反用R1并非新绘起身动画。",
+    "固定分层木凳和身体平面合成不等于原生骨骼、隐藏结构或动态装备系统。",
+    "高分辨率原创概念姿态，未验native网格、engine origin/collision/fps/directions或runtime。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "native_ready": false,
+  "artifacts": [
+    {
+      "artifact": "rest_transition_review_zh.png",
+      "sha256": "4786d5b571adf913e9e7b2763c12037f0ad465a26f99f91fa7f3ffe4c7bcc39f",
+      "previous_sha256": "f06b72770db5a7a77d9f07c460cbc88b7b23412bbd75a9020fa333cdb0a77023"
+    },
+    {
+      "artifact": "rest_transition_once.gif",
+      "sha256": "d6d15bec4d9b0ed5b7d588d58593b184a6dabdd80349c2a80eb1ae0fd8312878"
+    },
+    {
+      "artifact": "manifest.json",
+      "sha256": "c2a56d9b3ae23c228895db141db76508dbd3945931fb0fe374581246d09221e7"
+    },
+    {
+      "artifact": "layers/stool_fixed.png",
+      "sha256": "d0f13967551fb9a2d921303888f6de63d20fddf74cd432c8ef83048314e95739"
+    }
+  ],
+  "preview_text_revision_review": "已实看新版中文板：R1接触近景改为“屈膝接近座面（稀疏姿态）”，准确表达下沉较小/非完整悬空轨迹。仅文字板更新，身体结论保持。"
+}

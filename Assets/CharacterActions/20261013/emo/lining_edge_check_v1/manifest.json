@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "canonical_id": "ALD-NPC-EMO",
+  "name": "埃墨·衬",
+  "status": "candidate_pending_independent_review",
+  "generator": "builtin image_gen.imagegen",
+  "created_utc": "2026-10-13",
+  "source_brief": "Assets/CharacterDesigns/20261013/expressive/briefs/town_work_pose_candidates_01.json",
+  "source_brief_sha256": "546964caa17a7907cb658b795b4ea048d64ebd4b4109aa04d641c9ff1ab2813e",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/emo/emo_raw_imagegen_v2.png",
+    "sha256": "76ec2c2964e4278acc6330b036ff35698ec5b53833310c56ad6d1c6e27ee0b76",
+    "roster_sha_matches": true,
+    "independent_qa_sha_matches": true,
+    "pixels_inspected_in_this_audit": true
+  },
+  "source_cards": [
+    {
+      "path": "design/04_人物/城市人物/人物_ALD-NPC-EMO_埃墨·衬.md",
+      "sha256": "463f8a636db3332200baa2fd540d43f3b205b356dc1440dd7b35d84e936fd236",
+      "roster_sha_matches": true,
+      "frontmatter_id": "CITY-NPC-ALD-NPC-EMO",
+      "relevant_lines": [
+        {
+          "line": 15,
+          "text": "**工作**：衬工。"
+        },
+        {
+          "line": 17,
+          "text": "**起点与转折**：想被承认技术，不想家族被调查找到。"
+        }
+      ]
+    }
+  ],
+  "authorization": "Root dispatched 2 Emo new poses and 1 Geli new pose after user requested continuation of character actions and designs, without runtime work. Prior brief planning-only status is historical.",
+  "new_generated_pose_count": 2,
+  "sequence": [
+    "anchor",
+    "E1",
+    "E2",
+    "anchor"
+  ],
+  "anchor_reuse": true,
+  "transform_policy": "Only common nearest 0.5 scaling and whole-frame foot alignment / layout. No anatomy generation by scripts, stretching, inpainting, or morph interpolation.",
+  "frames": [
+    {
+      "input": "Assets/CharacterActions/20261013/emo/lining_edge_check_v1/raw/anchor.png",
+      "input_sha256": "76ec2c2964e4278acc6330b036ff35698ec5b53833310c56ad6d1c6e27ee0b76",
+      "original_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox": [
+        306,
+        113,
+        845,
+        1372
+      ],
+      "alpha_cleanup": "alpha <= 8 made transparent; RGB and remaining alpha untouched",
+      "common_scale": 0.5,
+      "interpolation": "nearest",
+      "translation_xy": [
+        33,
+        44
+      ],
+      "foot_baseline": 730,
+      "output": "Assets/CharacterActions/20261013/emo/lining_edge_check_v1/frames/00_anchor.png",
+      "output_sha256": "f1f6cdfc6941819ecbee1070d5e8829264e06e4594ffd68931718797afbffb82"
+    },
+    {
+      "input": "Assets/CharacterActions/20261013/emo/lining_edge_check_v1/raw/E1_imagegen.png",
+      "input_sha256": "ada20870e5b5e4682764322acf528d0bc9e760417835b60524598fa2608aba54",
+      "original_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox": [
+        244,
+        97,
+        860,
+        1344
+      ],
+      "alpha_cleanup": "alpha <= 8 made transparent; RGB and remaining alpha untouched",
+      "common_scale": 0.5,
+      "interpolation": "nearest",
+      "translation_xy": [
+        44,
+        58
+      ],
+      "foot_baseline": 730,
+      "output": "Assets/CharacterActions/20261013/emo/lining_edge_check_v1/frames/01_E1.png",
+      "output_sha256": "27863945a6bd57262aee996c894d4b97ff3218f37989bf99fa0bce8d46dcbd40"
+    },
+    {
+      "input": "Assets/CharacterActions/20261013/emo/lining_edge_check_v1/raw/E2_imagegen.png",
+      "input_sha256": "096f1d75e84ac47f0e5f83ead5fcf58213ec89fdb162860b9cf543a11b01e1f7",
+      "original_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox": [
+        307,
+        107,
+        850,
+        1348
+      ],
+      "alpha_cleanup": "alpha <= 8 made transparent; RGB and remaining alpha untouched",
+      "common_scale": 0.5,
+      "interpolation": "nearest",
+      "translation_xy": [
+        31,
+        56
+      ],
+      "foot_baseline": 730,
+      "output": "Assets/CharacterActions/20261013/emo/lining_edge_check_v1/frames/02_E2.png",
+      "output_sha256": "9845d6e2d4ffb7c5cd08e0198bf41203e1c016e97503022c3bfb37fcfbfbae3f"
+    }
+  ],
+  "gif": {
+    "path": "stages_once.gif",
+    "single_play": true,
+    "loop_extension": false,
+    "author_prop_continuity": "pass_pending_independent_review",
+    "warning": "稀疏阶段切换，非连续运动或工序证明"
+  },
+  "prompts": [
+    {
+      "path": "prompts/E1.txt",
+      "sha256": "a26215ca82aa71adb8dc1a12cf2314c46977c95d9bf6c1425bc2cfe3e6ec2d74"
+    },
+    {
+      "path": "prompts/E2.txt",
+      "sha256": "9282653d8f0eb448b39db3e5011b5442322f39e06e5e22dc5374f632f0239989"
+    }
+  ],
+  "author_qa": {
+    "status": "author_checked_pending_independent_review",
+    "pixels_inspected": [
+      "raw/anchor.png",
+      "raw/E1_imagegen.png",
+      "raw/E2_imagegen.png"
+    ],
+    "identity": "逐张目检：脸型、发帽或辫、衣装及成年比例同系；低头带来颈部投影变化，未机械拉伸。",
+    "anatomy": "双手各有连贯前臂，未见多手；头脚完整。",
+    "prop_continuity": "通过作者目检：同一块小衬布，仅一折轻展开及指腹回压，未添针剪刀。",
+    "notes": [
+      "这是稀疏阶段图，不是逐帧流畅动画。",
+      "生成重绘存在微小轮廓和衣褶变化，细像素概念并非原生精灵。",
+      "独审仍须复核持物尺寸、曲率或折层；若未通过，应停止GIF使用、保留静态候选。"
+    ],
+    "story_boundary": [
+      "技术获承认",
+      "公开家门",
+      "新订单成交",
+      "护甲已修好"
+    ]
+  },
+  "outputs": [
+    {
+      "path": "QA-author.json",
+      "sha256": "a1bb9009e55fa043baf391cf9b320a3ef22e551178396f1842428dca59d086c6"
+    },
+    {
+      "path": "contact_sheet_dark.png",
+      "sha256": "453a412a24daea4e20c9a7d1eda191d1b79b4cc3e35098f928e19b152180678b"
+    },
+    {
+      "path": "contact_sheet_light.png",
+      "sha256": "5eab7570f79599a6f21680865c07e2f271c81fa26919105c61cf482b795ad159"
+    },
+    {
+      "path": "frames/00_anchor.png",
+      "sha256": "f1f6cdfc6941819ecbee1070d5e8829264e06e4594ffd68931718797afbffb82"
+    },
+    {
+      "path": "frames/01_E1.png",
+      "sha256": "27863945a6bd57262aee996c894d4b97ff3218f37989bf99fa0bce8d46dcbd40"
+    },
+    {
+      "path": "frames/02_E2.png",
+      "sha256": "9845d6e2d4ffb7c5cd08e0198bf41203e1c016e97503022c3bfb37fcfbfbae3f"
+    },
+    {
+      "path": "frames/03_return_anchor.png",
+      "sha256": "f1f6cdfc6941819ecbee1070d5e8829264e06e4594ffd68931718797afbffb82"
+    },
+    {
+      "path": "prompts/E1.txt",
+      "sha256": "a26215ca82aa71adb8dc1a12cf2314c46977c95d9bf6c1425bc2cfe3e6ec2d74"
+    },
+    {
+      "path": "prompts/E2.txt",
+      "sha256": "9282653d8f0eb448b39db3e5011b5442322f39e06e5e22dc5374f632f0239989"
+    },
+    {
+      "path": "raw/E1_imagegen.png",
+      "sha256": "ada20870e5b5e4682764322acf528d0bc9e760417835b60524598fa2608aba54"
+    },
+    {
+      "path": "raw/E2_imagegen.png",
+      "sha256": "096f1d75e84ac47f0e5f83ead5fcf58213ec89fdb162860b9cf543a11b01e1f7"
+    },
+    {
+      "path": "raw/anchor.png",
+      "sha256": "76ec2c2964e4278acc6330b036ff35698ec5b53833310c56ad6d1c6e27ee0b76"
+    },
+    {
+      "path": "stages_once.gif",
+      "sha256": "f5ad33fca48a009a1d3e83273116d3fc4c85cc43b7dc398134f3bb9b255e4834"
+    }
+  ]
+}

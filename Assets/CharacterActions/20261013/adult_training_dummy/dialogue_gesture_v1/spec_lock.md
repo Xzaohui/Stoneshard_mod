@@ -1,0 +1,5 @@
+# Dialogue gesture v1 — current concept continuation
+Anonymous adult training model; no named NPC, event or skill. Retain approved interaction I0 identity: grey coif, blue-grey vertically quilted medieval tunic, brown belt/gloves/trousers/cuffed boots; mature expressive face. Compact adult proportions, three-quarter screen right, no mirroring, no weapon/prop.
+New image count: 2, D1 palm-up explaining and D2 hand withdrawing. D0 existing I0 neutral stance reused; D3 D0 reused. Shared concept canvas 1536²; native engine size/fps/origin/collision remain unknown. Source-scale target same as I0 raw (1254², visible height761px); unified concept scale935/761 when authorized; no frame-dependent bbox resizing.
+D1 body newly posed through shoulder/elbow/wrist; screen-right hand palm-up at low chest level, other relaxed. Mildly questioning warm face. D2 same arm drawn halfway back towards torso/waist, elbow lowering; face soft attentive. Feet remain planted, no story implication.
+Palette reference-derived neutral grey, desaturated blue, warm skin and brown; no hard quantization mandate. Builtin imagegen only for drawing, raw preserved. No runtime/compatibility claims.

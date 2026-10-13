@@ -1,0 +1,50 @@
+{
+  "asset_id": "ALD-NPC-CHILER_STARTLE_CONCEPT_V1",
+  "logical_canvas": [
+    1536,
+    1536
+  ],
+  "foot_anchor": [
+    768,
+    1380
+  ],
+  "engine_origin": null,
+  "collision": null,
+  "native_timing": null,
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "scope": "non-injurious original startled performance; not combat hurt",
+  "processing": "R1 built-in imagegen1254 square normalized whole canvas to1536 nearest-neighbor; alpha<16 removed; no local warp.",
+  "preview": "one-shot3 stages/2unique images; no interpolation; R2 exact reuse R0",
+  "frames": [
+    {
+      "id": "R0",
+      "path": "frames/R0_still.png",
+      "sha256": "83a7aebf6d7ea13e3449def98a832c812f23b7a5ab17d2d34407105c03a9fbed",
+      "reuse_of": null
+    },
+    {
+      "id": "R1",
+      "path": "frames/R1_startle.png",
+      "sha256": "5e9502a8239fefed06dbec3334c63700e70cc60d42e01efa16b534b89b8c33f3",
+      "reuse_of": null
+    },
+    {
+      "id": "R2",
+      "path": "frames/R2_return_reuse_R0.png",
+      "sha256": "83a7aebf6d7ea13e3449def98a832c812f23b7a5ab17d2d34407105c03a9fbed",
+      "reuse_of": "R0"
+    }
+  ],
+  "originals": [
+    {
+      "path": "originals/R1_startle_raw_imagegen.png",
+      "sha256": "4e292fbd025560d1918719459803df374864c080d94cceaa80b15bbd4920c7a3"
+    }
+  ],
+  "safe_export": {
+    "method": "set RGBA to0 only where alpha==0; preserve every alpha>0 pixel and every alpha value exactly",
+    "check_file": "../../TRANSPARENT_RGB_SAFE_CHECKS.json",
+    "historical_source_directory": "Stoneshard_mod/Assets/CharacterActions/20261013/chiler/startle_v1"
+  }
+}

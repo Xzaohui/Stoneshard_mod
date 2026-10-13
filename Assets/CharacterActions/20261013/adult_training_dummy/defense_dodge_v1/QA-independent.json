@@ -1,0 +1,148 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T06:42:05.120888+00:00",
+  "decision": "deliverable_as_defense_and_lateral_shift_key_pose_concepts_with_notes",
+  "scope": "两组三阶段动作概念检视；四个新身体姿态，G0/E0为同一个既有预备姿态。",
+  "actually_viewed": [
+    "defense_dodge_review_zh.png",
+    "grip_closeups_review.png",
+    "frames/defense/G1.png",
+    "frames/defense/G2.png",
+    "frames/dodge/E1.png",
+    "frames/dodge/E2.png",
+    "G1/E1浅底实际alpha合成",
+    "G2空手修前及修后浅底放大"
+  ],
+  "visual_findings": {
+    "identity": "灰头巾、蓝灰夹棉衣、棕手套靴与成年脸身份保持。头巾及脸部像素、衣褶有轻微重绘漂移，尚非锁定精灵表。",
+    "defense": "G1抬手护持、G2低位回稳清晰。握拳前景覆盖剑柄，剑护手与拳的连接可读；双腿支撑可接受。",
+    "lateral_shift": "E1左腿屈膝承重、右腿伸展，躯干向左下移，衣摆髋部没有断裂。剑在手掌之后、前大腿之前的遮挡合理。E2收脚回到站姿，动作阶段有差别。",
+    "weapon": "逐帧独立从同一canonical剑层用清单角度和握点重建，刚性变换及8px呈现采样与导出层完全相等。解析刃长320px；不把栅格轮廓尺寸当新剑长。",
+    "full_body_and_alpha": "六帧均1536方画布，可见主体/剑/手脚完整；alpha>=16边界在画布内。所有alpha0的RGB为0。E1低alpha边缘像素不构成主体裁切。",
+    "resolved_G2_hand": "首审发现空手局部补色导致两处棕方块/细白边，作者局部清理后独立浅底再看，碎块消失且手指轮廓保留。最终G2 SHA e79e4a94596d047011a8f7659bc88aa5a332bdd6c06914f58a0528060158e56d。"
+  },
+  "independent_checks": [
+    {
+      "id": "E0",
+      "sha256": "6938d529a5e143e9a8c207e00d59c0e4840b11d3345af262ea5faa93c7b51a4b",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "rigid_weapon_exact": true,
+      "alpha0_rgb_zero": true,
+      "visible_bbox": [
+        499,
+        445,
+        1264,
+        1381
+      ],
+      "artifact": "frames/dodge/E0.png"
+    },
+    {
+      "id": "E1",
+      "sha256": "ab10059a76f757c4f347c866fb808d71e5a9009acd47d654b31e75c391f64c13",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "rigid_weapon_exact": true,
+      "alpha0_rgb_zero": true,
+      "visible_bbox": [
+        301,
+        530,
+        1152,
+        1381
+      ],
+      "artifact": "frames/dodge/E1.png"
+    },
+    {
+      "id": "E2",
+      "sha256": "097f8f96035a9aea7946244d759a55cb8201e7f233d8725b62cffb5062e14016",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "rigid_weapon_exact": true,
+      "alpha0_rgb_zero": true,
+      "visible_bbox": [
+        516,
+        466,
+        1264,
+        1385
+      ],
+      "artifact": "frames/dodge/E2.png"
+    },
+    {
+      "id": "G0",
+      "sha256": "6938d529a5e143e9a8c207e00d59c0e4840b11d3345af262ea5faa93c7b51a4b",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "rigid_weapon_exact": true,
+      "alpha0_rgb_zero": true,
+      "visible_bbox": [
+        499,
+        445,
+        1264,
+        1381
+      ],
+      "artifact": "frames/defense/G0.png"
+    },
+    {
+      "id": "G1",
+      "sha256": "719c90afa21384579e7cf536014f220ce0733026123d85687e056525e2accef8",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "rigid_weapon_exact": true,
+      "alpha0_rgb_zero": true,
+      "visible_bbox": [
+        522,
+        368,
+        1064,
+        1380
+      ],
+      "artifact": "frames/defense/G1.png"
+    },
+    {
+      "id": "G2",
+      "sha256": "e79e4a94596d047011a8f7659bc88aa5a332bdd6c06914f58a0528060158e56d",
+      "matches_manifest": true,
+      "recomposition_exact": true,
+      "rigid_weapon_exact": true,
+      "alpha0_rgb_zero": true,
+      "visible_bbox": [
+        503,
+        447,
+        1336,
+        1379
+      ],
+      "artifact": "frames/defense/G2.png"
+    }
+  ],
+  "canonical_weapon_sha256": "03cea8f0e7d5e44b144ed8a7dfca1bfce326f51a8ed61e91bd6fb9b2dcc18931",
+  "limitations": [
+    "只验可读关键姿态。没有连续足轨迹、固定骨长或世界坐标根运动验证；不宣称无滑步。",
+    "侧撤是原创姿态提案，不证明原作技能、防御成功、闪避判定、无敌帧或伤害机制。",
+    "没有完整平滑循环或中间过渡；两个GIF各3帧、无loop扩展，为单次检视。",
+    "高分辨率概念，未验native尺寸、引擎origin/collision/fps/directions/runtime或换装。"
+  ],
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "native_ready": false,
+  "preview_artifacts": [
+    {
+      "artifact": "defense_dodge_review_zh.png",
+      "sha256": "45ec23b403a3179f5cb5983d5a7609e8f08ca25cbd9ce350a6a02d3fcee1820e"
+    },
+    {
+      "artifact": "grip_closeups_review.png",
+      "sha256": "6de43cf808bb40e7f156780d42042eefd6c1450165193c1cd2b688e0293e07f3"
+    },
+    {
+      "artifact": "defense_preview_once.gif",
+      "sha256": "93cf74ab8e209ce7a193e47c8017a1467bf5de9fa8ebc0c54a3975c84141ce0e",
+      "frames": 3,
+      "loop_extension_present": false
+    },
+    {
+      "artifact": "dodge_preview_once.gif",
+      "sha256": "eea7add2975e8bf5a4e7d161ecf200e187dc8db56bf70eaa406d64013e176530",
+      "frames": 3,
+      "loop_extension_present": false
+    }
+  ]
+}

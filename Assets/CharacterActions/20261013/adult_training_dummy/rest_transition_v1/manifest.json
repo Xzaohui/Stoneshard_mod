@@ -1,0 +1,127 @@
+{
+  "status": "awaiting_independent_review",
+  "classification": "original_mod_keypose_proposal",
+  "unique_new_body_images": 2,
+  "unique_body_poses_including_reused_I0": 3,
+  "phase_count": 5,
+  "canvas": [
+    1536,
+    1536
+  ],
+  "preview_only": true,
+  "loop_extension": false,
+  "sequence": [
+    "R0_stand",
+    "R1_lower",
+    "R2_seated",
+    "R3_rise_reuse_R1",
+    "R4_stand_reuse_R0"
+  ],
+  "scale_policy": "R0 copied latest canonical I0 with translation only; both new raw 1254 square frames share 935/761 nearest factor, no per-frame bbox fitting",
+  "canonical_body_height": 935,
+  "stool_layer": "layers/stool_fixed.png",
+  "stool_sha256": "d0f13967551fb9a2d921303888f6de63d20fddf74cd432c8ef83048314e95739",
+  "stool_geometry": {
+    "seat_top_polygon": [
+      [
+        544,
+        1080
+      ],
+      [
+        712,
+        1040
+      ],
+      [
+        832,
+        1088
+      ],
+      [
+        664,
+        1144
+      ]
+    ],
+    "front_leg_bottom_y": 1376,
+    "same_every_frame": true
+  },
+  "ground_y": 1380,
+  "layers_note": "Flat character layers and original fixed geometric stool; not native skeletal layers",
+  "source_evidence": "No verified original sitting or getting-up joint animation. Original mod proposal.",
+  "engine_origin": null,
+  "collision": null,
+  "native_fps": null,
+  "native_directions": null,
+  "frames": [
+    {
+      "id": "R0_stand",
+      "source": "../interaction_v1/frames/I0_stand.png",
+      "translation": [
+        55,
+        0
+      ],
+      "scale": 1,
+      "new": false,
+      "body_bbox": [
+        566,
+        445,
+        1079,
+        1380
+      ],
+      "ground_y": 1380,
+      "weapon": null,
+      "head_height_estimate_px": 328
+    },
+    {
+      "id": "R1_lower",
+      "source": "raw/R1_lower.png",
+      "translation": [
+        0,
+        -2
+      ],
+      "scale": 1.228646517739816,
+      "new": true,
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "raw_sha256": "fb4422aba2b6ed0f4ad67cd40cefc20aa1a747c882b6f7257a284c0a39619f15",
+      "body_bbox": [
+        562,
+        448,
+        1078,
+        1380
+      ],
+      "ground_y": 1380,
+      "weapon": null,
+      "head_height_estimate_px": 327
+    },
+    {
+      "id": "R2_seated",
+      "source": "raw/R2_seated.png",
+      "translation": [
+        -55,
+        -7
+      ],
+      "scale": 1.228646517739816,
+      "new": true,
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "raw_sha256": "1c2b93bcec4f7b8bdbc98c25ef77e8297e7369cb89dc76251b010bc2be0d59e1",
+      "body_bbox": [
+        503,
+        481,
+        1057,
+        1380
+      ],
+      "ground_y": 1380,
+      "weapon": null,
+      "head_height_estimate_px": 329
+    }
+  ],
+  "known_limits": [
+    "Sparse poses with repositioning feet, not a continuous joint animation.",
+    "Getting up reuses lowering pose, not separately drawn.",
+    "Boot contour and perspective vary between generated poses; no planted-foot lock claim."
+  ]
+}

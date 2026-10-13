@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "canonical_id": "EED-NPC-GELI",
+  "name": "葛黎",
+  "status": "candidate_pending_independent_review",
+  "generator": "builtin image_gen.imagegen",
+  "created_utc": "2026-10-13",
+  "source_brief": "Assets/CharacterDesigns/20261013/expressive/briefs/town_work_pose_candidates_01.json",
+  "source_brief_sha256": "546964caa17a7907cb658b795b4ea048d64ebd4b4109aa04d641c9ff1ab2813e",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/geli/geli_raw_imagegen.png",
+    "sha256": "32f141533ed291203cf185a2267b90bcd4df4097c169813371c1b8b37666a363",
+    "roster_sha_matches": true,
+    "independent_qa_sha_matches": true,
+    "pixels_inspected_in_this_audit": true
+  },
+  "source_cards": [
+    {
+      "path": "design/04_人物/城市人物/人物_EED-NPC-GELI_葛黎.md",
+      "sha256": "28f1d73e6c6cf4a1ab5d6aa0bfc2a8621a62a32ef2947a330e3542a1413ba258",
+      "roster_sha_matches": true,
+      "frontmatter_id": "CITY-NPC-EED-NPC-GELI",
+      "relevant_lines": [
+        {
+          "line": 17,
+          "text": "**工作**：苏槿的成年侄女与弓材学徒"
+        },
+        {
+          "line": 19,
+          "text": "**所求**：让旧料改法被认真试，不靠砍更多树保家名。"
+        },
+        {
+          "line": 21,
+          "text": "**所怕**：姑母宁肯承认整门手艺已死，也不肯承认能改。"
+        },
+        {
+          "line": 23,
+          "text": "**口吻**：举一块弯试片而非喊家艺万岁；愿留学也有范围。"
+        },
+        {
+          "line": 25,
+          "text": "**可能弧线**：姑母公开认错不自动承认她的贡献，有限来源署记仍问；不能把交家谱当工艺试验前置。"
+        },
+        {
+          "line": 29,
+          "text": "同一身体按真实去向、工作与本人许可约见，不在每案复制一次。死亡、缺席、拒绝与隐私优先；只说亲历、受准本段材料或已收到的有限回执。双链不授全城知情。余料、钱、份、床与工班单账，实际支付／交还／安置／专业处置后才确认；晚到改未来，不改旧史、奖励或N17。"
+        }
+      ]
+    }
+  ],
+  "authorization": "Root dispatched 2 Emo new poses and 1 Geli new pose after user requested continuation of character actions and designs, without runtime work. Prior brief planning-only status is historical.",
+  "new_generated_pose_count": 1,
+  "sequence": [
+    "anchor",
+    "G1",
+    "anchor"
+  ],
+  "anchor_reuse": true,
+  "transform_policy": "Only common nearest 0.5 scaling and whole-frame foot alignment / layout. No anatomy generation by scripts, stretching, inpainting, or morph interpolation.",
+  "frames": [
+    {
+      "input": "Assets/CharacterActions/20261013/geli/wood_coupon_inspect_v1/raw/anchor.png",
+      "input_sha256": "32f141533ed291203cf185a2267b90bcd4df4097c169813371c1b8b37666a363",
+      "original_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox": [
+        285,
+        88,
+        858,
+        1348
+      ],
+      "alpha_cleanup": "alpha <= 8 made transparent; RGB and remaining alpha untouched",
+      "common_scale": 0.5,
+      "interpolation": "nearest",
+      "translation_xy": [
+        35,
+        56
+      ],
+      "foot_baseline": 730,
+      "output": "Assets/CharacterActions/20261013/geli/wood_coupon_inspect_v1/frames/00_anchor.png",
+      "output_sha256": "35e8271e27ab7d628b34508c8c7df5cedbab0008cf19ab8e0f3eace0d32c3269"
+    },
+    {
+      "input": "Assets/CharacterActions/20261013/geli/wood_coupon_inspect_v1/raw/G1_imagegen.png",
+      "input_sha256": "46afcfdd71732afa2caa94e4c4341b1d107e8ddb3d5a42cf48b38889c387b9f9",
+      "original_size": [
+        1118,
+        1407
+      ],
+      "alpha_bbox": [
+        248,
+        91,
+        880,
+        1321
+      ],
+      "alpha_cleanup": "alpha <= 8 made transparent; RGB and remaining alpha untouched",
+      "common_scale": 0.5,
+      "interpolation": "nearest",
+      "translation_xy": [
+        38,
+        70
+      ],
+      "foot_baseline": 730,
+      "output": "Assets/CharacterActions/20261013/geli/wood_coupon_inspect_v1/frames/01_G1.png",
+      "output_sha256": "41acdd400ac01eaeb7591ffc98a18adde5fb92ade33efe4cb77a1978020739e2"
+    }
+  ],
+  "gif": {
+    "path": "stages_once.gif",
+    "single_play": true,
+    "loop_extension": false,
+    "author_prop_continuity": "pass_pending_independent_review",
+    "warning": "稀疏阶段切换，非连续运动或工序证明"
+  },
+  "prompts": [
+    {
+      "path": "prompts/G1.txt",
+      "sha256": "6063f79e311151e1a6d4a360d478a7ac9a1892ebd9078100a3d47c6c333068ed"
+    }
+  ],
+  "author_qa": {
+    "status": "author_checked_pending_independent_review",
+    "pixels_inspected": [
+      "raw/anchor.png",
+      "raw/G1_imagegen.png"
+    ],
+    "identity": "逐张目检：脸型、发帽或辫、衣装及成年比例同系；低头带来颈部投影变化，未机械拉伸。",
+    "anatomy": "双手各有连贯前臂，未见多手；头脚完整。",
+    "prop_continuity": "通过作者目检：一块小木试片两端均持握，抬转而非掰弯，无裂纹、弓弦或新器械。",
+    "notes": [
+      "这是稀疏阶段图，不是逐帧流畅动画。",
+      "生成重绘存在微小轮廓和衣褶变化，细像素概念并非原生精灵。",
+      "独审仍须复核持物尺寸、曲率或折层；若未通过，应停止GIF使用、保留静态候选。"
+    ],
+    "story_boundary": [
+      "旧料已通过安全检验",
+      "姑母认错或认可贡献",
+      "公开家谱或图样",
+      "完成订单或新增砍树许可"
+    ]
+  },
+  "outputs": [
+    {
+      "path": "QA-author.json",
+      "sha256": "6008807b513144247a0ac47fcae897a6dc68a3c27fd2e32fe6dbd591a950e5c8"
+    },
+    {
+      "path": "contact_sheet_dark.png",
+      "sha256": "9aec6a73198fe9f633d621070ca72b30766d6e394319db5c533bad60e58a17a6"
+    },
+    {
+      "path": "contact_sheet_light.png",
+      "sha256": "e5d7ed5051b7030e0604a6cc01531b12b7e089f5c6e9ab8c5e9521ffbd93dde2"
+    },
+    {
+      "path": "frames/00_anchor.png",
+      "sha256": "35e8271e27ab7d628b34508c8c7df5cedbab0008cf19ab8e0f3eace0d32c3269"
+    },
+    {
+      "path": "frames/01_G1.png",
+      "sha256": "41acdd400ac01eaeb7591ffc98a18adde5fb92ade33efe4cb77a1978020739e2"
+    },
+    {
+      "path": "frames/02_return_anchor.png",
+      "sha256": "35e8271e27ab7d628b34508c8c7df5cedbab0008cf19ab8e0f3eace0d32c3269"
+    },
+    {
+      "path": "prompts/G1.txt",
+      "sha256": "6063f79e311151e1a6d4a360d478a7ac9a1892ebd9078100a3d47c6c333068ed"
+    },
+    {
+      "path": "raw/G1_imagegen.png",
+      "sha256": "46afcfdd71732afa2caa94e4c4341b1d107e8ddb3d5a42cf48b38889c387b9f9"
+    },
+    {
+      "path": "raw/anchor.png",
+      "sha256": "32f141533ed291203cf185a2267b90bcd4df4097c169813371c1b8b37666a363"
+    },
+    {
+      "path": "stages_once.gif",
+      "sha256": "0f49035933774996b3c428fb6528f32aaadf02ef6b58899a5e30cbd2b46cd28d"
+    }
+  ]
+}

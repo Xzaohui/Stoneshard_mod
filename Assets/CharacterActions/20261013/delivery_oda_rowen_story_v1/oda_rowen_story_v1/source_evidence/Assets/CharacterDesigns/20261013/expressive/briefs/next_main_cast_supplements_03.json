@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T12:05:06.591819+00:00",
+  "status": "prepared_only_not_dispatched",
+  "scope": "主线常用剧情基础姿态收尾：只建议2名既有角色共3张，不凑4人或每人2张，不自动续批。",
+  "evidence_snapshot": {
+    "roster_sha256": "cccbabb88dbacba5c9a000e2f4716dcc245a9bdb78bc4e3c8d88bbd29d38c5cd",
+    "coverage_path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+    "coverage_sha256": "99af300d8a368fe6bdaace0affdf3dffbc6f6b4867cb01244548e0add88f3a59",
+    "previous_briefs_unchanged": {
+      "Assets/CharacterDesigns/20261013/expressive/briefs/next_main_cast_supplements.json": "61743e63fc2934cbf517a22aea6d4db16d6e6e6e8c15f1ebc0db1cf557eb5763",
+      "Assets/CharacterDesigns/20261013/expressive/briefs/next_main_cast_supplements_02.json": "579d648ce2ed8058b8a58c9db4593896fe4a22b8c4f39bfbf83896d42af7cf35"
+    },
+    "parent_assignment_status": "brief02四人8姿态独审通过，正在交付；本规划不重排其任务。"
+  },
+  "source_corrections": [
+    "欧达直接对应N5、SQ05等；N8迁居/水路目标不能证明欧达本人到场。",
+    "伊莲主线明确在N16；N11对手是罗温，艾伦只在SQ08 relocate提供有限回执后的X40出现。",
+    "NPC-N-AREN逃兵艾伦与BRY-NPC-ELEN城市艾伦不同。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "NPC09",
+      "name": "欧达·苇",
+      "aliases": [],
+      "reason": "主线N5的摆渡人确有独特职业性动作缺口；不能从N8迁居目标推定欧达必定在场。",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/oda/oda_raw_imagegen.png",
+        "sha256": "124e4137b407677d1f895dbaa02299626e6bb1c094019a1dcc64946b7ab90850",
+        "roster_hash_match": true
+      },
+      "sources": [
+        {
+          "path": "design/04_人物/人物_欧达·苇.md",
+          "frontmatter_id": "NPC09",
+          "sha256": "6a22f8ab69e9c190c5365ce0474b8134e0d06357e13dea082edcb43b9f77de87",
+          "actual_sha256": "6a22f8ab69e9c190c5365ce0474b8134e0d06357e13dea082edcb43b9f77de87"
+        }
+      ],
+      "scripts": [
+        {
+          "path": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+          "sha256": "596f7c96981fe7acdf1b7d9386c2d54b43127d630f3c166d95f0baa028147695"
+        }
+      ],
+      "existing_coverage": "人物目录未见补充姿态子目录；对应CharacterActions目录不存在，ACTION_COVERAGE未见其专属动作交付。只排本轮实际差异姿态。",
+      "proposed_drawings": [
+        {
+          "key": "check_stowed_rope",
+          "title": "垂眼检查原腰绳，准备但尚未开船",
+          "visual_brief": "保留苇绿旧衣、棕围领、灰发与原腰侧收纳绳圈。绳圈保持原固定位置与闭合圈形，一手轻稳原绳圈上缘，另一手只以拇指食指检查原有系结可见处；小幅低头，不下蹲、不解绳、不拉出新绳段。腿与鞋支撑沿锚图。",
+          "story_source": "N5-R-ferry共同查船绳与箱签、只运自愿人及可核货物；N5-S01系旧桩仅为场面素材。本图是既有工具检查的美术提案，不复现系桩结果。"
+        },
+        {
+          "key": "withhold_departure",
+          "title": "停下检查，留住绳圈看向请求者",
+          "visual_brief": "保持与上一图完全相同的闭合绳圈、系结、两手接触位置和双脚；仅直起肩颈、头转向旁侧请求者，肘略收、唇压紧、眼神坚定。表现暂缓执行，不向外拉绳、不放绳、不张掌。与前图的低头操作视线有清楚区别。",
+          "story_source": "N5-R-ferry-L01拒绝把被押者当乘客；人物卡拒绝强迫劳动者偷渡。只有相关请求出现且本人愿谈时才以该语义使用。"
+        }
+      ],
+      "story_boundaries": [
+        "不生成桩、船、桨、乘客、绳头或新增长绳；原腰绳不离腰、不松结、不瞬间出入。",
+        "检查收纳绳不等于正式航前安全验收；第二图也不自动取消/签订运输约。",
+        "不标“欧达N8现场救援”，N8没有指定她到场。与SQ05或迁居衔接要另核本人、病患、目的地同意。",
+        "不画患者签字、已渡人、已迁村、痊愈、军旗船长或捆人。",
+        "必须使用首稿oda_raw_imagegen.png；未选oda_revision_raw_imagegen.png不是当前锚。"
+      ],
+      "runtime_integrated": false
+    },
+    {
+      "canonical_id": "NPC11",
+      "name": "罗温·雾",
+      "aliases": [],
+      "reason": "N11唯一主交易对手仍只有静态概念；用被拆穿垄断后的防卫收臂，补与推销站姿不同的剧情反应。",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/rowen/rowen_raw_imagegen.png",
+        "sha256": "0b998f4829fec8eb196babdf8c6829f9560fc906b420c6338251740481752fe2",
+        "roster_hash_match": true
+      },
+      "sources": [
+        {
+          "path": "design/04_人物/人物_罗温·雾.md",
+          "frontmatter_id": "NPC11",
+          "sha256": "91170e9e790f0f641ca0e8ad68743614ace38b8de5fcb4df800609a58e11b288",
+          "actual_sha256": "91170e9e790f0f641ca0e8ad68743614ace38b8de5fcb4df800609a58e11b288"
+        }
+      ],
+      "scripts": [
+        {
+          "path": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+          "sha256": "61a27dc3370b69216d707ee4a40c13611434ce668c91a3072213a907bfa9f415"
+        }
+      ],
+      "existing_coverage": "人物目录未见补充姿态子目录；对应CharacterActions目录不存在，ACTION_COVERAGE未见其专属动作交付。只排本轮实际差异姿态。",
+      "proposed_drawings": [
+        {
+          "key": "price_challenged",
+          "title": "收臂戒备，重新估量已经找到路的人",
+          "visual_brief": "沿原梅棕直边旅行衣、炭围巾、旧闭肩包及成熟瘦颊脸。双前臂低位交叠于腹胸之间，一手握自己另一前臂近肘处；肩轻收、上身微向后但双鞋仍原位，头略侧转、眼紧盯对方，嘴压成不悦。无需地图、钱币、信纸、印章或交易物；保持克制而非奸笑。",
+          "story_source": "N11-R-trace-L01玩家已走通路线，拆掉其“只有我知道”的报价；N11结案回访必须按实际trace和本人在场愿谈。具体收臂姿势是美术演绎，不是台本逐字动作。"
+        }
+      ],
+      "story_boundaries": [
+        "空手锚始终空手；不为N11-S01翻图场面凭空生成地图，不显示家庭住址或拘捕。",
+        "这张是trace条件反应，不能无条件替代pay/surrender，也不以表情默认已找到井或已结案。",
+        "不做恐吓攻击、魔法施法或投降归队；拒交易仍有固定物证通路，不设隐藏倒计时。",
+        "旧闭包保形不打开，肩带与交叠前臂遮挡核实；不在回收帧突然少手/少包。"
+      ],
+      "runtime_integrated": false
+    }
+  ],
+  "not_dispatched": [
+    {
+      "anchor": {
+        "canonical_id": "NPC04",
+        "name": "伊莲·沃斯",
+        "path": "Assets/CharacterDesigns/20261013/expressive/elaine/elaine_raw_imagegen.png",
+        "sha256": "a300870982403abf7715693f473f436e1bae3eae24b4185d5e57dfeb511c1227"
+      },
+      "reason": "伊莲当前静态锚已包含有限开掌解释；N16默认句谈运输监督并不足以推导另一独特身体动作。为了“还有人没补动作”再画摊手没有高优先价值。",
+      "needed_before_more": "选定实际N16会议/双边/最小路线及她的有效授权、持物和座位调度，才决定审阅/撤回等动作；不直接生成签字或盖章。"
+    },
+    {
+      "anchor": {
+        "canonical_id": "NPC-N-AREN",
+        "name": "艾伦",
+        "path": "Assets/CharacterDesigns/20261013/expressive/aren/aren_raw_imagegen.png",
+        "sha256": "e4563375adc65aaa15d84acb326214c34ad9603d53134a2cd1ef0b559406a561"
+      },
+      "reason": "逃兵艾伦只有N11 X40这一条件回访，而现锚已持闭折家书。增“指牌/递信”容易把识别旧卸货点、公开住处和家书送达混同。常用主线收尾不扩进SQ08动作全集。",
+      "needed_before_more": "先选SQ08/N11的具体演出；若家书已送出，须确定该场使用无信造型还是获准副件，不能从手持原信锚瞬间变出变没。"
+    },
+    {
+      "anchor": {
+        "canonical_id": "NPC-HERS",
+        "name": "赫斯·白",
+        "path": "Assets/CharacterDesigns/20261013/expressive/hers/hers_raw_imagegen.png",
+        "sha256": "73dab2b373c8554440e67643c370d50f0641d4d5d050b624c4c9e335c3252b89"
+      },
+      "reason": "N17高优先确实仍缺装置依赖、断源后反应/逃或近战演出；但不是再加空手摊掌能完成的缺口。",
+      "needed_before_more": "选战术路线与明确非战斗反应/近战/逃脱之一，锁定固定债簿、装置操作点、人物站位及是否持物；不要凭腰钥匙发明遥控、法术或新武器。当前仅保静态概念，不称N17完整覆盖。"
+    },
+    {
+      "anchor": {
+        "canonical_id": "NPC-MAYA",
+        "name": "玛娅·禾",
+        "path": "Assets/CharacterDesigns/20261013/expressive/maya/maya_raw_imagegen.png",
+        "sha256": "b537ef8f2942504cc682a12bce4f8036e14cbc903a58ddafdd7ccdb156527c43"
+      },
+      "reason": "玛娅在N16为条件代表，当前闭配给册静态可用于听议；尚无必须单独新增动作的高频主线场面。",
+      "needed_before_more": "与伊莲同样须先选真实会谈路线及代理授权；不为所有潜在代表机械补“展示、签署、拒绝”整套。"
+    }
+  ],
+  "remaining_main_coverage_assessment": [
+    {
+      "chapters": "N1–N4",
+      "state": "开篇四人及Nara/Ena/Nell/Sel已有本轮专属关键姿态，不再固定追加表情/侧背。"
+    },
+    {
+      "chapters": "N5–N10",
+      "state": "Toman、Sena、Kaem、Morlen、Leo、Lyd本轮已审；Mia已有理毯。Oda是此次有限新增。N9分支证据不是全员集会强制条件。"
+    },
+    {
+      "chapters": "N11",
+      "state": "新增Rowen一张trace反应；Toman已有，Aren条件回访暂不扩。"
+    },
+    {
+      "chapters": "N12–N15",
+      "state": "Toman/Morlen/Sena已有基础演出；原作人物参考门槛仍单列不重启。救人、机械操作和复杂持物并非已有站姿能证明，需具体场面设计。"
+    },
+    {
+      "chapters": "N16–N18",
+      "state": "N16代表按真实授权可用当前静态与已做Leo/Sena/Toman；N17赫斯关键战术演出须单独选择，不能称主线动画全部完成；N18既有角色条件回访可先复用当前姿态，不补所有结局欢庆。"
+    }
+  ],
+  "production_rules": [
+    "执行前实际查看锚图像素；此规划核对文件/原独审，不替代新图视觉验收。",
+    "两人三张均为稀疏剧情关键姿态，不是完整动画/自然循环/runtime。Oda可作为两张同道具研究；Rowen只一新姿态，展示可用原锚—新姿态—原锚，复用不计新增。",
+    "不新增道具，尤其不要把站姿变成突然拿出地图/票据/钱币；需新增物件的场次留待专门调度。",
+    "保持成熟面部、原衣装和自然比例，不重新强压头身比；保留选稿和旧文件。",
+    "无人物入队、技能、装备换装或剧情状态推断。"
+  ],
+  "stopping_boundary": "本brief的2人3张独审交付后，停止按人物名册派基础对话姿态。常用主线对话已有足够一轮样本；余缺明确属于具体路线/持物连续性/场景操作/战斗选择。以用户反馈或明确待演镜头重新开小任务，不把“未人人两张”当继续理由。",
+  "mutations": "只新写本brief；无图、无roster/runtime或旧brief修改。",
+  "hers_minimum_art_decision": {
+    "question": "赫斯断源后的第一张，你想先看他转身准备逃离，还是留在原地继续对峙？",
+    "basis": "已实际查看hers_raw_imagegen.png：双手空置，钥匙固定腰间，未持债簿或武器；N17-R-shutdown允许断源后对峙，N17-R-defection/S02保留逃走或独战分支。先选一个可读身体意图，后续才定战斗物件，不需要runtime参数。",
+    "scope": "问题只给后续美术选择，不纳入本轮2人3图，不自动派赫斯。"
+  }
+}

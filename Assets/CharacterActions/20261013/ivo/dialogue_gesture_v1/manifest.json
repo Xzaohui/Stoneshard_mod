@@ -1,0 +1,139 @@
+{
+  "status": "awaiting_independent_review",
+  "character": "ivo",
+  "character_zh": "伊沃",
+  "tool": "builtin imagegen",
+  "classification": "original_fullbody_dialogue_keypose_concept",
+  "new_characters": 0,
+  "new_body_images": 2,
+  "unique_body_states": 3,
+  "phase_count": 4,
+  "anchor": "Assets/CharacterDesigns/20261013/expressive/ivo/ivo_raw_imagegen_v2.png",
+  "anchor_sha256": "90a2b78662e4c5d9cf7acb7bf0ddce211ea0d8431cd712a5212f4bdca394cc80",
+  "common_scale": 1.0,
+  "processing": "alpha threshold128; transparent RGB zero; common scale 1.0; sole-only vertical translation; no body construction/mirror/warp/interpolation",
+  "canvas": [
+    1213,
+    1296
+  ],
+  "sole_baseline": 1168,
+  "frames": [
+    {
+      "id": "D0_stand",
+      "new_drawing": false,
+      "source": "Assets/CharacterActions/20261013/ivo/dialogue_gesture_v1/raw/D0_anchor_source.png",
+      "source_sha256": "90a2b78662e4c5d9cf7acb7bf0ddce211ea0d8431cd712a5212f4bdca394cc80",
+      "frame_sha256": "a317cfd2a430d983aecbb146d360445505267991b09ac4e479930988159b9c5e",
+      "raw_size": [
+        1213,
+        1296
+      ],
+      "raw_clean_bbox": [
+        336,
+        204,
+        889,
+        1168
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        0
+      ],
+      "visible_bbox": [
+        336,
+        204,
+        889,
+        1168
+      ],
+      "low_alpha_pixels_removed": 11575,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D1_explain",
+      "new_drawing": true,
+      "source": "Assets/CharacterActions/20261013/ivo/dialogue_gesture_v1/raw/D1_explain.png",
+      "source_sha256": "aa8d42e1930b081777ebc125a276f456a9f0143f2667b1c588130df414496ce2",
+      "frame_sha256": "4ae9c18d7d71251e139bf453bad006aa71ae56f33969f63ff9e242694c90059c",
+      "raw_size": [
+        1213,
+        1296
+      ],
+      "raw_clean_bbox": [
+        245,
+        203,
+        894,
+        1170
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        -2
+      ],
+      "visible_bbox": [
+        245,
+        201,
+        894,
+        1168
+      ],
+      "low_alpha_pixels_removed": 12074,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D2_request",
+      "new_drawing": true,
+      "source": "Assets/CharacterActions/20261013/ivo/dialogue_gesture_v1/raw/D2_request.png",
+      "source_sha256": "c07a2751f1acc82ecbe022dae1ac1c8243e746b7d5c1f8bc4f2099408f9871bf",
+      "frame_sha256": "78a8be18dd2aabe8b3732d6c6ff6e2bcc808a3686408bee318197ea0069c39c3",
+      "raw_size": [
+        1213,
+        1296
+      ],
+      "raw_clean_bbox": [
+        338,
+        206,
+        892,
+        1171
+      ],
+      "scale": 1.0,
+      "translation": [
+        0,
+        -3
+      ],
+      "visible_bbox": [
+        338,
+        203,
+        892,
+        1168
+      ],
+      "low_alpha_pixels_removed": 11202,
+      "transparent_rgb_nonzero": 0
+    },
+    {
+      "id": "D3_stand_reuse_D0",
+      "new_drawing": false,
+      "source": "frames/D0_stand.png",
+      "frame_sha256": "a317cfd2a430d983aecbb146d360445505267991b09ac4e479930988159b9c5e",
+      "byte_identical_to_D0": true
+    }
+  ],
+  "gif_duration_ms": [
+    750,
+    1000,
+    1000,
+    900
+  ],
+  "gif_loop_extension": false,
+  "narrative_sources": [
+    "design/04_人物/人物_玛拉与伊沃.md",
+    "design/05_主线/台本/台本_N1_无钟之夜.md"
+  ],
+  "runtime_verified": false,
+  "native_ready": false,
+  "user_individual_character_approval_claimed": false,
+  "limitations": [
+    "四个稀疏关键姿态，不是连续补间或原生动画",
+    "衣褶、轮廓边缘和鞋型有细小生成漂移，未逐帧重绘修正",
+    "共同比例与鞋底地线不等于骨长、脚轨迹已锁定",
+    "未做原生尺寸、碰撞、装备换装或游戏运行验收"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T10:17:01.259380+00:00",
+  "character_id": "BRY-NPC-SELA",
+  "status": "pass_sparse_dialogue_concept_with_notes",
+  "concept_deliverable": true,
+  "artifact_sha256": {
+    "qa_black_background.png": "7b7061d3088670530bd3fa22319a0aeac239fd01af654ee5b9432be3f8b81cd4",
+    "01_rest_G.png": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+    "02_open_palm_aligned.png": "3087889d058ed4371d850540d5d7d0af76ede748e1918788f859d4ee1105ef12",
+    "sela_dialogue_review_zh.png": "da091d6fd23f37d7d2ce22099a9f1e195b848311c3bffe4f3998d0933b0bd844",
+    "qa_white_background.png": "f7d196d25df29ae6491155a3d8cd3a9aae51decfa2a885c1b06d5426fb56cd60",
+    "02_open_palm.png": "e03a34803d43529c90da50927898168e00aaa63c592d422af93f568d2b69aca3",
+    "sela_dialogue_once.gif": "33097cbbc8d1b482fd98a04ffde6dcecbeda8e54c336c55bae1aacbbf7cc10a6",
+    "01_rest_G_aligned.png": "063dc6cd17707d381e242f77951db4fc431e341f32590dd564824d9cdf776b05",
+    "03_serious_confirm.png": "ab2ffd4c12e965e0b110a2d6eda12ba82baf9c253fda11c32e7e0f2a8bd70f24",
+    "03_serious_confirm_aligned.png": "9f5e6f2efe6c3809ee8174bfc9d1eb115a1bac300da82fe6e42f51155ea066d6",
+    "04_return_G.png": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+    "04_return_G_aligned.png": "063dc6cd17707d381e242f77951db4fc431e341f32590dd564824d9cdf776b05",
+    "manifest.json": "4ba5ae2b396474cd8cc7353ba73b79b0500cb3b64c75fc2bb1b556f97aa9bbc9"
+  },
+  "approved_G_sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+  "actually_viewed": [
+    "approved G full reference",
+    "raw/01_open_palm_raw_imagegen.png",
+    "raw/02_serious_confirm_raw_imagegen.png",
+    "sela_dialogue_review_zh.png",
+    "qa_black_background.png",
+    "qa_white_background.png"
+  ],
+  "visual_findings": [
+    "高棕束发卷鬓、短鼻上睑与暖肤脸、G自身大头短身比例延续，未套Mia或dummy尺度。摊掌张口说明与收手闭口认真表情可读。",
+    "摊掌从肩肘到腕连接自然，手掌指组采用G相同粗簇简化；收手胸前掌与袖相连，不是浮手。每图只有两手，另一手仍垂于身侧。",
+    "蓝绿肩巾、奶油胸袖块、灰下装与深褐鞋保持；左腰环位置及形状延续不定功能。胸袖色块在弯肘/收手时有重绘漂移，未构成换衣。",
+    "两新姿态全身稳定双足，源可见高1086/1061/1081，最大约2.3%漂移可接受概念；脚点对齐不代表真实运动轨迹或骨长锁定。",
+    "黑白底没有明显实体晕边，头发手鞋完整；仅alpha>=128边界裁切用于展示，框内原alpha保留，原始字节副本不改。",
+    "首末复用批准G，2新姿态4阶段GIF单次3950ms，回待机是复用示意，无中间动作验证。没有付款签字授权或剧情完成。"
+  ],
+  "independent_checks": {
+    "poses": [
+      {
+        "name": "01_rest_G",
+        "hash_matches": true,
+        "export_exact_source_bytes": true,
+        "bbox_matches": true,
+        "same_scale_translation_exact": true,
+        "bottom": 620
+      },
+      {
+        "name": "02_open_palm",
+        "hash_matches": true,
+        "export_exact_source_bytes": true,
+        "bbox_matches": true,
+        "same_scale_translation_exact": true,
+        "bottom": 620
+      },
+      {
+        "name": "03_serious_confirm",
+        "hash_matches": true,
+        "export_exact_source_bytes": true,
+        "bbox_matches": true,
+        "same_scale_translation_exact": true,
+        "bottom": 620
+      },
+      {
+        "name": "04_return_G",
+        "hash_matches": true,
+        "export_exact_source_bytes": true,
+        "bbox_matches": true,
+        "same_scale_translation_exact": true,
+        "bottom": 620
+      }
+    ],
+    "all_manifest_file_hashes_match": true,
+    "first_last_aligned_bytes_identical": true,
+    "gif": {
+      "frames": 4,
+      "loop_extension": null,
+      "durations_ms": [
+        850,
+        1100,
+        1100,
+        900
+      ]
+    }
+  },
+  "new_pose_count": 2,
+  "new_character_count": 0,
+  "runtime_verified": false,
+  "complete_animation_verified": false,
+  "equipment_compatibility_verified": false
+}

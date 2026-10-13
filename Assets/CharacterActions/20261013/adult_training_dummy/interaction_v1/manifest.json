@@ -1,0 +1,238 @@
+{
+  "status": "awaiting_independent_review",
+  "classification": "original_mod_keypose_proposal",
+  "character": "adult_training_dummy; no narrative identity",
+  "canvas": [
+    1536,
+    1536
+  ],
+  "unique_new_body_images": 3,
+  "phase_count": 4,
+  "preview_sequence": [
+    "I0",
+    "I1",
+    "I2",
+    "I1 reused as rise intermediate",
+    "I0 reused as recovered"
+  ],
+  "preview_only": true,
+  "preview_loop_extension": false,
+  "source_animation_evidence": "No verified original near-ground interaction joint animation; no new search performed",
+  "reference_paths": [
+    "../../../../ReferenceAudit/20261013/actions/REFERENCE_AUDIT.md",
+    "../../../../ReferenceAudit/20261013/actions/KEYFRAME_BRIEF.md"
+  ],
+  "input_reference": "../attack_v2_geometry/layers/D0_guard_body_base.png",
+  "input_reference_sha256": "50681cb371ea5d80a1e88d96d24b7246e89fc81d214320f014610eac4f06ce24",
+  "engine_origin": null,
+  "collision": null,
+  "texture_trim_offset": null,
+  "native_fps": null,
+  "native_directions": null,
+  "layers_note": "Body retained flat; FX transparent. Not native skeletal layers. No weapon layer necessary.",
+  "cross_action_scale": {
+    "reference": "../defense_dodge_v1/layers/G0_body_base.png",
+    "reference_body_height_px": 935,
+    "I0_raw_body_height_px": 761,
+    "shared_scale": 1.228646517739816,
+    "reference_head_height_estimated_px": 333,
+    "I0_raw_head_height_estimated_px": 267,
+    "I0_scaled_head_height_estimated_px": 328,
+    "measurement_note": "alpha >=128 body height; hood top-to-neck manually estimated; no sword included",
+    "transform": "Same full-canvas nearest-neighbor resize for all three raw images then per-frame translation; never per-frame bbox scale"
+  },
+  "frames": [
+    {
+      "frame_id": "I0_stand",
+      "phase": "站立准备 · 双手空置",
+      "source": "raw/I0_stand.png",
+      "raw_sha256": "e303bedfb334dc584bcb36b7924bae15276835ddecbafe4630c469c7776f75ad",
+      "frame_sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "translation": [
+        0,
+        -6
+      ],
+      "scale": 1.228646517739816,
+      "mirrored": false,
+      "alpha_policy": "Threshold at 128 to binary alpha; zero RGB when transparent; raw unchanged",
+      "removed_low_alpha_pixels": 13713,
+      "bbox": [
+        511,
+        445,
+        1024,
+        1380
+      ],
+      "ground_y": 1380,
+      "root": [
+        768,
+        1380
+      ],
+      "support": "both boots; screen-right boot baseline aligned, screen-left minor generated contour drift",
+      "landmarks_estimated": {
+        "head": [
+          767,
+          608
+        ],
+        "screen_left_hand": [
+          554,
+          1041
+        ],
+        "screen_right_hand": [
+          973,
+          1057
+        ],
+        "screen_left_knee": [
+          667,
+          1143
+        ],
+        "screen_right_knee": [
+          887,
+          1158
+        ],
+        "reach_tip": [
+          977,
+          1112
+        ]
+      },
+      "reach_tip_ground_gap_estimate": 268,
+      "weapon": null,
+      "held_item": null,
+      "layers": [
+        "layers/I0_stand_body_flat.png",
+        "layers/I0_stand_fx_empty.png"
+      ]
+    },
+    {
+      "frame_id": "I1_bend",
+      "phase": "屈膝俯身 · 左侧手扶膝",
+      "source": "raw/I1_bend.png",
+      "raw_sha256": "e428ca630e2f074dd4e7e59480b48a2063fdc8f87b00553fc629f3c6586caf80",
+      "frame_sha256": "e28dc5a3368e354ab82a755a86158e89f730ffc7a8d6b927e54acd6ef3bd9ba0",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "translation": [
+        0,
+        0
+      ],
+      "scale": 1.228646517739816,
+      "mirrored": false,
+      "alpha_policy": "Threshold at 128 to binary alpha; zero RGB when transparent; raw unchanged",
+      "removed_low_alpha_pixels": 11847,
+      "bbox": [
+        542,
+        676,
+        1085,
+        1380
+      ],
+      "ground_y": 1380,
+      "root": [
+        768,
+        1380
+      ],
+      "support": "both boots; screen-right boot baseline aligned, screen-left minor generated contour drift",
+      "landmarks_estimated": {
+        "head": [
+          921,
+          812
+        ],
+        "screen_left_hand": [
+          646,
+          1068
+        ],
+        "screen_right_hand": [
+          1036,
+          1207
+        ],
+        "screen_left_knee": [
+          650,
+          1150
+        ],
+        "screen_right_knee": [
+          880,
+          1155
+        ],
+        "reach_tip": [
+          1064,
+          1274
+        ]
+      },
+      "reach_tip_ground_gap_estimate": 106,
+      "weapon": null,
+      "held_item": null,
+      "layers": [
+        "layers/I1_bend_body_flat.png",
+        "layers/I1_bend_fx_empty.png"
+      ]
+    },
+    {
+      "frame_id": "I2_reach",
+      "phase": "近地伸手 · 不指认拾取物",
+      "source": "raw/I2_reach.png",
+      "raw_sha256": "fae59b590ecaabe8a353c1117d5adf68cdd3d55bfe8bb7a22573b21990b400f2",
+      "frame_sha256": "14e2230a306929c1c197b40a73ff80e7feddf1a2be687423cc3a4e66932daf68",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "translation": [
+        0,
+        11
+      ],
+      "scale": 1.228646517739816,
+      "mirrored": false,
+      "alpha_policy": "Threshold at 128 to binary alpha; zero RGB when transparent; raw unchanged",
+      "removed_low_alpha_pixels": 13043,
+      "bbox": [
+        546,
+        757,
+        1161,
+        1380
+      ],
+      "ground_y": 1380,
+      "root": [
+        768,
+        1380
+      ],
+      "support": "both boots; screen-right boot baseline aligned, screen-left minor generated contour drift",
+      "landmarks_estimated": {
+        "head": [
+          952,
+          897
+        ],
+        "screen_left_hand": [
+          654,
+          1077
+        ],
+        "screen_right_hand": [
+          1093,
+          1290
+        ],
+        "screen_left_knee": [
+          651,
+          1160
+        ],
+        "screen_right_knee": [
+          886,
+          1166
+        ],
+        "reach_tip": [
+          1149,
+          1345
+        ]
+      },
+      "reach_tip_ground_gap_estimate": 35,
+      "weapon": null,
+      "held_item": null,
+      "layers": [
+        "layers/I2_reach_body_flat.png",
+        "layers/I2_reach_fx_empty.png"
+      ]
+    }
+  ]
+}

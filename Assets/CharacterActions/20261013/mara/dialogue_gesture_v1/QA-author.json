@@ -1,0 +1,28 @@
+{
+  "status": "author_visual_check_pass_pending_independent_review",
+  "checked_images": [
+    "raw/D0_anchor_source.png",
+    "raw/D1_inquire.png",
+    "raw/D2_hesitate.png",
+    "dialogue_gesture_review_zh.png"
+  ],
+  "checks": {
+    "identity_and_head_body_ratio_retained": true,
+    "actual_arm_pose_changes": true,
+    "two_new_fullbody_images": true,
+    "feet_visible_and_planted": true,
+    "original_prop_continuity": true,
+    "no_new_props_or_people": true,
+    "no_weapon_draw": true,
+    "D0_D3_byte_identical": true,
+    "no_loop_extension": true,
+    "four_gif_frames": true,
+    "transparent_rgb_zero": true
+  },
+  "limitations": [
+    "四个稀疏关键姿态，不是连续补间或原生动画",
+    "衣褶、轮廓边缘和鞋型有细小生成漂移，未逐帧重绘修正",
+    "共同比例与鞋底地线不等于骨长、脚轨迹已锁定",
+    "未做原生尺寸、碰撞、装备换装或游戏运行验收"
+  ]
+}

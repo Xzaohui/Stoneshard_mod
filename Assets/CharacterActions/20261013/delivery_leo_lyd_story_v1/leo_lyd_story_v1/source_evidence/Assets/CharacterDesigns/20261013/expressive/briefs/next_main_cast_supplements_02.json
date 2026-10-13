@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T11:49:15.756068+00:00",
+  "status": "prepared_only_not_dispatched",
+  "scope": "限定下一小轮最多4名既有角色、每人2个不同于通用摊手的剧情关键姿态；不是新人物或自动续产规则。",
+  "evidence": {
+    "roster_path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "roster_sha256": "6b327dbdafedf67c0ae1abf26c6173fcaab2b5bf168b3d27b0d7cefcca20601e",
+    "coverage_path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+    "coverage_sha256": "62f7656803f1e36f38a2d065775911f736abf1326601f25f33806bad49f94476",
+    "dependency_path": "design/09_系统逻辑/当前任务依赖与状态字典.md",
+    "prior_brief_path": "Assets/CharacterDesigns/20261013/expressive/briefs/next_main_cast_supplements.json",
+    "prior_brief_sha256_unchanged": "61743e63fc2934cbf517a22aea6d4db16d6e6e6e8c15f1ebc0db1cf557eb5763",
+    "parent_status_at_assignment": "Nara/Ena/Nell/Sel已交；Sena/Kaem独审通过正在封包。覆盖台账较派工消息滞后，不据此重派前六人。"
+  },
+  "priority_rationale": "补N5承运者实际查路、N7普通护理与地方封存、N10来源本人发言。托曼与莫伦另跨N11/N14、N8/N13，雷奥在N16只有限定地方资格，莉德承接N6/N10与SQ06。四人均有角色卡和具体台本支持，不需要凑第5人。",
+  "recommended_batches": [
+    {
+      "characters": [
+        "NPC07",
+        "NPC-MORREN"
+      ],
+      "reason": "先补查路俯察与照护倾听，避免再做相同摊手。"
+    },
+    {
+      "characters": [
+        "NPC-REY",
+        "NPC-LYD"
+      ],
+      "reason": "再补闭匣检查与本人核段；道具需要冻结一致。"
+    }
+  ],
+  "global_boundaries": [
+    "本文依据现行卡、R/X、已有独审及实际文件hash；执行前仍须查看锚图像素，不把文字计划当新图视觉验收。",
+    "保持原装、脸、成熟年龄与选稿比例；不硬改头身比，不改静态锚图和roster。",
+    "S61场次只给表演素材，S62 R/X与本人当下同意/在场/存活优先；未满足条件不能演成已经发生。",
+    "两张是稀疏概念关键姿态，不承诺连续过渡、步态、接触动力学或runtime；首末锚复用不计新画。",
+    "不为已齐者固定补侧背、胸像，不重启失败walk，不进入原作参考门槛5项。",
+    "涉及持物要锁定同一匣/杖/纸叠几何和手部遮挡；不从简单手势推断入队、装备兼容或技能。"
+  ],
+  "stopping_boundary": {
+    "max_characters": 4,
+    "max_new_poses": 8,
+    "stop_when": "本小轮四人各两姿态完成审看交付后停止派新人物，回看缺口与用户反馈；若某姿态源/身份/支撑结构不足，可少画，不用新人物补满。",
+    "no_automatic_next_round": true,
+    "revisit_only_if": "出现明确待演场景仍缺关键可读动作，再按该场卡/台本有限选人；全167人的动作整套化不是本次目标。"
+  },
+  "characters": [
+    {
+      "priority": 1,
+      "canonical_id": "NPC07",
+      "name": "托曼·索",
+      "aliases": [],
+      "production_purpose": "扶杖查路，不是通用讲解",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/toman/toman_raw_imagegen.png",
+        "sha256": "35be488126859cf153d9b6a48498b8e1fe3445e39e545cb74e024334063ebb21",
+        "roster_hash_match": true,
+        "review_status": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/人物_托曼·索.md",
+          "frontmatter_id": "NPC07",
+          "sha256": "88ac71ff3c502a8d852982e69de3c064434e32e232446b3a07ef7e2f6325eaa9",
+          "actual_sha256": "88ac71ff3c502a8d852982e69de3c064434e32e232446b3a07ef7e2f6325eaa9"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "path": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+          "sha256": "596f7c96981fe7acdf1b7d9386c2d54b43127d630f3c166d95f0baa028147695"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+          "sha256": "61a27dc3370b69216d707ee4a40c13611434ce668c91a3072213a907bfa9f415"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N14_可以回去的路.md",
+          "sha256": "5835682a1ffd83ecd698d47b1410d19ddb447bd6ee66f4808bd1b59d927852d4"
+        }
+      ],
+      "existing_coverage_verified": {
+        "action_directory_exists": false,
+        "character_supplement_directories": [],
+        "coverage_statement": "只发现已选静态概念及旧稿/QA；当前人物目录、动作目录和覆盖台账未见该人已有可用专属动作。莫伦另有历史结构静站研究，不等于本轮动作。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "rut_check",
+          "title": "扶杖俯察车辙",
+          "visual_brief": "沿当前木杖和双脚支撑构图，杖仍作支撑而非武器；髋部小幅折叠、膝微弯，空手轻抵自身大腿，头与目光向下查路。仅人物透明稿，不需要添加完整桥、车或地表。",
+          "story_anchor": "N5-R-carrier共同验转运实物；N14-S01查看断裂车辙、N14-DEFAULT关于回程。N14场次是S61素材，必须按S62当下路线及本人是否参与剪裁。",
+          "count": "1 new whole-body key pose"
+        },
+        {
+          "key": "route_recheck",
+          "title": "扶杖抬头核对前路",
+          "visual_brief": "同一杖、同握点、同鞋形，回到较直的身体；空手仍靠自身腰带/闭包，头抬起朝路的侧前方看，重心稳定，表情从近处估量变谨慎判断。不迈步、不摊手、不把杖举成路标。",
+          "story_anchor": "N11 X12-L01仅知道卸货点；N14-DEFAULT强调能否带伤员返回。",
+          "count": "1 new whole-body key pose"
+        }
+      ],
+      "story_boundaries": [
+        "原木杖长度、粗细、朝向及落点尽量固定；不是行走循环、登山动作或自然迈步证明。",
+        "保留闭路线包；不展示家庭住址、暗示已签路约/包下运输或普遍通行。",
+        "N11交人路线取消托曼人身接应；N14若本人没同意参与，不能靠这组图安排他到场。",
+        "不画修桥已完、免费劳工、伤员被迫押送或新战斗技能。"
+      ],
+      "runtime_integrated": false
+    },
+    {
+      "priority": 2,
+      "canonical_id": "NPC-MORREN",
+      "name": "莫伦·海",
+      "aliases": [
+        "CITY-NPC-NPC-MORREN",
+        "NPC12"
+      ],
+      "production_purpose": "照护者先听，再收回替患者发言的位置",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/morlen/morlen_raw_imagegen.png",
+        "sha256": "a48e9fa9043104fbb4dea8635cfc509ffdb13a8274db52da09d6e519a87ee7d6",
+        "roster_hash_match": true,
+        "review_status": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-MORREN_莫伦·海.md",
+          "frontmatter_id": "CITY-NPC-NPC-MORREN",
+          "sha256": "e0585bb556c3f1917bbe88623f216748bd0d269192bb23001a76c6a53b8d05f3",
+          "actual_sha256": "e0585bb556c3f1917bbe88623f216748bd0d269192bb23001a76c6a53b8d05f3"
+        },
+        {
+          "path": "design/04_人物/人物_莫伦·海.md",
+          "frontmatter_id": "NPC12",
+          "sha256": "28edec2ce196d76666a79ff4070fa1b1aa1fc8e257c4efc411a47302800d4677",
+          "actual_sha256": "28edec2ce196d76666a79ff4070fa1b1aa1fc8e257c4efc411a47302800d4677"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "path": "design/05_主线/台本/台本_N7_军需账上的空名.md",
+          "sha256": "1ccafe13df70f4e57636c3762f8f232fa966eb1e730d4311963672812380ca79"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N8_不会散去的热病.md",
+          "sha256": "1fde91cc0e5a14b2de7bb324de0f3d3ed9db15fc0da830dbc990df66ca564690"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N13_答案的代价.md",
+          "sha256": "592fe96a68a135ac6dbcc6c88acc8a49dfc71b7b2cdfb5fc577de1b0ec172491"
+        }
+      ],
+      "existing_coverage_verified": {
+        "action_directory_exists": false,
+        "character_supplement_directories": [],
+        "coverage_statement": "只发现已选静态概念及旧稿/QA；当前人物目录、动作目录和覆盖台账未见该人已有可用专属动作。莫伦另有历史结构静站研究，不等于本轮动作。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "bedside_listen",
+          "title": "俯身听床侧的人说话",
+          "visual_brief": "保橄榄长衣、米围巾及闭合医药包；双脚稳定，小幅弯膝/髋前倾，双手分别放自身大腿上，脸朝画外较低的病床位置认真听。画面不加患者、药碗或触碰治疗。",
+          "story_anchor": "N7-R-inspection核床和普通护理；N7-R-withdraw逐人自愿退出；N7-S01空床药碗仅给站位高度素材，不画作已用药。",
+          "count": "1 new whole-body key pose"
+        },
+        {
+          "key": "withhold_authority",
+          "title": "直身收手，把回答留给当事人",
+          "visual_brief": "同一身体起回较直姿；双手收在自己腹前，一手轻握自身另一手腕，肘不外张；闭包仍挂原侧，头转向画外发言者并保持嘴闭合。不是指挥或安慰性摊手，强调克制听完。",
+          "story_anchor": "N13 X39-L01：已交照护主持权后只认自己的部分；N13-R-contract-L01：赔偿不以见面、握手、原谅为条件。",
+          "count": "1 new whole-body key pose"
+        }
+      ],
+      "story_boundaries": [
+        "第二姿可以研究“克制旁听”，只有X39真实满足时才演成“已交主持权”；不得单凭动作推进人物成长。",
+        "不开医药包、不交药、不作触诊/治愈演出，不新增护理对象、病情或两人的授权。",
+        "莫伦不是能解释全部病因的万能医生；死亡、缺席和拒绝仍走原资料替代。",
+        "与既有morlen结构静站/概念重复区分：这一轮才补明确俯身及收手关键姿态，不再重画普通站立。"
+      ],
+      "runtime_integrated": false
+    },
+    {
+      "priority": 3,
+      "canonical_id": "NPC-REY",
+      "name": "雷奥·凯斯",
+      "aliases": [
+        "CITY-NPC-NPC-REY",
+        "NPC05"
+      ],
+      "production_purpose": "封存匣从权威象征转为可被核查的对象",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/leo/leo_raw_imagegen.png",
+        "sha256": "cf5d3efee6a62e23c00e3f94f4d1b85dab0e74dd141a5c791b8608e98b05ebf1",
+        "roster_hash_match": true,
+        "review_status": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-REY_雷奥·凯斯.md",
+          "frontmatter_id": "CITY-NPC-NPC-REY",
+          "sha256": "15dd1f5e8268ffea68e170b2d4b14c004f08adc19324ab36f81aff5d4d708a87",
+          "actual_sha256": "15dd1f5e8268ffea68e170b2d4b14c004f08adc19324ab36f81aff5d4d708a87"
+        },
+        {
+          "path": "design/04_人物/人物_雷奥·凯斯.md",
+          "frontmatter_id": "NPC05",
+          "sha256": "2e7159e57480bffc3698f7243b6f1830d4b771ce3d72a4555d2d09d0fde2dfa5",
+          "actual_sha256": "2e7159e57480bffc3698f7243b6f1830d4b771ce3d72a4555d2d09d0fde2dfa5"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "path": "design/05_主线/台本/台本_N7_军需账上的空名.md",
+          "sha256": "1ccafe13df70f4e57636c3762f8f232fa966eb1e730d4311963672812380ca79"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N16_谁来保管余烬.md",
+          "sha256": "92e3d99960d32bc5f183be3cedea8f521d33bae9bbc2d07a5ee430c123950b37"
+        }
+      ],
+      "existing_coverage_verified": {
+        "action_directory_exists": false,
+        "character_supplement_directories": [],
+        "coverage_statement": "只发现已选静态概念及旧稿/QA；当前人物目录、动作目录和覆盖台账未见该人已有可用专属动作。莫伦另有历史结构静站研究，不等于本轮动作。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "seal_inspection",
+          "title": "低头检查闭匣接缝",
+          "visual_brief": "沿原闭封存匣尺寸与材质，两手稳托同一闭匣在腹前；一只拇指/指腹停在盖缝附近但不撬盖，头俯下、眼盯接缝，肘向身体收拢。不要生成可读印文或王廷徽章。",
+          "story_anchor": "人物卡“危险必须封存，命令也必须可以复查”；N7-R-inspection限定本地库；N7-S02-L03只核本地几例。具体检匣姿势是美术提案，不冒称台本逐字动作。",
+          "count": "1 new whole-body key pose"
+        },
+        {
+          "key": "external_review_listen",
+          "title": "把闭匣放低，侧身听复核者",
+          "visual_brief": "双手仍支撑原闭匣，降至腰前可控高度，不递向镜头、不打开、不交第三人；头肩转向一侧画外复核者，嘴闭合、下颏微收，站姿放松但不退步。",
+          "story_anchor": "N7-R-parallel后雷奥须承认外部查案，不能冒称内部自查；人物卡接受第三方监督。N16-S01-L02仅本地封存队程序。",
+          "count": "1 new whole-body key pose"
+        }
+      ],
+      "story_boundaries": [
+        "canonical NPC-REY，目录leo，旧卡别名NPC05；不混同其它雷奥/礼昂。",
+        "本轮封口检视不认证真实封印、不执行接管，不把闭匣画成开启或转手。",
+        "不画宣誓、盖章、签协议、王冠/统帅徽章、新武器；N7完成不等于SQ02监督承诺或N16结盟。",
+        "只改变头肩和持匣高度；手指、匣体与护甲遮挡若不稳，宁减幅度，不补无关动作凑数。"
+      ],
+      "runtime_integrated": false
+    },
+    {
+      "priority": 4,
+      "canonical_id": "NPC-LYD",
+      "name": "莉德",
+      "aliases": [
+        "CITY-NPC-NPC-LYD",
+        "NPC-N-LYD"
+      ],
+      "production_purpose": "由本人指认抄写段，保留未授权内容",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/lyd/lyd_revision_raw_imagegen.png",
+        "sha256": "9d397012199b3b31f2dff47102bd585c6787b46379414e55431cef25095c59a9",
+        "roster_hash_match": true,
+        "review_status": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-LYD_莉德.md",
+          "frontmatter_id": "CITY-NPC-NPC-LYD",
+          "sha256": "831b29ed79b329b715176a860c495e18af0166ded3d5c7bf5d1acdaaa3bb39e7",
+          "actual_sha256": "831b29ed79b329b715176a860c495e18af0166ded3d5c7bf5d1acdaaa3bb39e7"
+        },
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "莉德（Lyd，NPC-N-LYD）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "related_main_scripts": [
+        {
+          "path": "design/05_主线/台本/台本_N6_被封存的页码.md",
+          "sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+          "sha256": "d875533e03eedd738c7a44fbd1f09dd9d66644628f25dc8b6a100506267de0d6"
+        }
+      ],
+      "existing_coverage_verified": {
+        "action_directory_exists": false,
+        "character_supplement_directories": [],
+        "coverage_statement": "只发现已选静态概念及旧稿/QA；当前人物目录、动作目录和覆盖台账未见该人已有可用专属动作。莫伦另有历史结构静站研究，不等于本轮动作。"
+      },
+      "proposed_drawings": [
+        {
+          "key": "identify_copy",
+          "title": "低头指认自己抄过的一小段",
+          "visual_brief": "保持年轻成年面孔、高束发、锈褐短衣灰围领与闭腰袋；新增一小叠双联纸示意持于腹胸间，纸正面朝本人、外侧空白不可读，一手支住下沿，另一食指仅点内侧近边一处；颈肩轻俯，目光清楚锁定自己的段落。",
+          "story_anchor": "台本新增人物卡莉德：保留双联、只知自己抄的部分；N6-R-witness；N10-R-sourcehearing核各人的装订段、X13-L01先说自己写过的。",
+          "count": "1 new whole-body key pose"
+        },
+        {
+          "key": "retain_unshared_copy",
+          "title": "收回双联，抬眼要求自己说完",
+          "visual_brief": "沿同一纸叠尺寸、手中位置来源，把纸正面朝内收近胸腹，双手夹住纸侧/下沿，不撕不折不递；抬头直看交谈者，嘴微开、眉坚定。拒绝被凯姆代答，和第一姿的低头核段形成清楚对比。",
+          "story_anchor": "N10 X13-L01、N10-R-sourcehearing和X21对SQ06独立掌副本；人物卡住处保护与本人去向同意。",
+          "count": "1 new whole-body key pose"
+        }
+      ],
+      "story_boundaries": [
+        "新增纸只是面向本人、外侧不可读的演出示意，不重设计任何关键物证，不得生成真实姓名住址、密文、认证印或可读台词。",
+        "canonical NPC-LYD，NPC-N-LYD为别名；不是塞娜亲属、未成年或凯姆附属接口。",
+        "抬头发言不等于公开真名/住址、已认证证词、同意迁居或原谅凯姆；匿名与撤回公开出席仍保留。",
+        "只认本人所抄部分，不因看见稿件便知道古代仪式真相；纸叠不转手，动作不提交交付。"
+      ],
+      "runtime_integrated": false
+    }
+  ]
+}

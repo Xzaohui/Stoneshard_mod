@@ -1,0 +1,78 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T08:34:05.202138+00:00",
+  "status": "research_only_alternating_walk_failed",
+  "deliverable_as_validated_walk": false,
+  "scope": "基础动作概念；失败原因是实际腿部时序，不是runtime规格。",
+  "actually_viewed": [
+    "basic_walk_review_zh.png",
+    "raw/W0_left_contact.png",
+    "raw/W1_passing.png",
+    "raw/W1_passing_revision1.png",
+    "raw/W2_right_contact.png",
+    "raw/W2_right_contact_revision1.png"
+  ],
+  "visual_findings": [
+    "W0单张前足落地/后跟抬起可信，可留接触姿态研究。",
+    "W1首稿后脚仍在身后，未形成经过中线的摆腿。修订虽抬脚，但从W0到W1看，原先前方可见腿似被直接抬起，而非后腿摆过；支撑侧身份连续性不成立。",
+    "W2原稿与修订仍为画面右侧前腿覆盖左侧后腿，未明确反转W0近远腿关系，因此不构成交替落地。",
+    "单张人物成年脸/衣装/比例大体一致，手脚无裁切，抬步稿可作孤立姿态研究；不能据此宣称步行序列通过。",
+    "鞋体积、靴口簇和衣摆略漂移；手臂基本不变，缺少明确交替摆臂。"
+  ],
+  "counts": {
+    "initial_generations": 3,
+    "targeted_revisions": 2,
+    "raw_images": 5,
+    "selected_candidates": 3,
+    "gif_files_found": 0
+  },
+  "technical_checks": [
+    {
+      "id": "W0_left_contact",
+      "raw_sha256": "ec0deebc27a0506bb5750a153e02af821fcddc591f65e4e6530b5db4af294f1b",
+      "frame_sha256": "683408d88c8abd38a13758d37cdaec2ce3c3804d4c9ae839bdb67dfd5bfd1fa8",
+      "manifest_hashes_match": true,
+      "raw_threshold_reconstruction_exact": true,
+      "transparent_rgb_zero": true
+    },
+    {
+      "id": "W1_passing",
+      "raw_sha256": "51e796285e95d8c241f6433e85ccace78e4f42b8ff86eddd60ae14712a43372b",
+      "frame_sha256": "089bf5b6052ea2aff00e9f43f653c8c4cbbfd4986f35550d9c339beea0ecfdaf",
+      "manifest_hashes_match": true,
+      "raw_threshold_reconstruction_exact": true,
+      "transparent_rgb_zero": true
+    },
+    {
+      "id": "W1_passing_revision1",
+      "raw_sha256": "970d05cd1f5ba4657550ac96d9af1f2d33f3eb0b548b391fb9b64531e31bf36d",
+      "frame_sha256": "39a1d7387973142dbd6e82a7c5514f2c4bd9f8f2148be4f739d2637073b557e2",
+      "manifest_hashes_match": true,
+      "raw_threshold_reconstruction_exact": true,
+      "transparent_rgb_zero": true
+    },
+    {
+      "id": "W2_right_contact",
+      "raw_sha256": "f841f7ba1724899f634675f4a956510cf42cb5f7f46b7e740ef0d9b4834086ba",
+      "frame_sha256": "14b8585ffb11ac8cf049702308a02bc33cf98e2de6420c2a4bc1e654208a99d6",
+      "manifest_hashes_match": true,
+      "raw_threshold_reconstruction_exact": true,
+      "transparent_rgb_zero": true
+    },
+    {
+      "id": "W2_right_contact_revision1",
+      "raw_sha256": "135c06a2d6d09c55beaca4e04ad64089c3423ccf945a5cf937f69d20d5088193",
+      "frame_sha256": "85a652d8127f811c9ee8873fa35805d8d3809baf89c8a1fa448e3be28ffd90ba",
+      "manifest_hashes_match": true,
+      "raw_threshold_reconstruction_exact": true,
+      "transparent_rgb_zero": true
+    }
+  ],
+  "artifacts": {
+    "manifest_sha256": "fa7f21db074ddfe81030ee5ad52ef4e630792c9ae9473c51ed251a37961be1aa",
+    "review_board_sha256": "1f1d48609c34a19dda5a9a4a3d516b29724d42d75ef2ab7813fc14360cdbdffc"
+  },
+  "next_action": "保留研究；不制作GIF或扩帧冒充交替步行。后续若重启须先明确左右腿身份、支撑足与遮挡次序。",
+  "runtime_verified": false,
+  "native_ready": false
+}

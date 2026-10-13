@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-13",
+  "source": "revision_1to1/sela_structural_idle_view01_f000.png",
+  "candidate": "sela_face_C_native.png",
+  "candidate_sha256": "7176706fe53403dad1f8df41fc3da4c19488076380d06b2947d569620d6b39e2",
+  "visual_review": {
+    "evidence": [
+      "实际看comparison_C_originals_1x.png原尺寸全身",
+      "实际看comparison_C_originals_8x.png",
+      "实际看face_C_closeups_10x.png"
+    ],
+    "verdict": "C在五官清晰度、鼻口分隔与3/4转面读形上明显优于A/B，建议本轮主展示候选；不等于用户已认可或游戏运行已验收。",
+    "eyes": "远眼单暗点与近眼双暗像素有轻重差别，鼻梁亮肤间隔建立双眼关系；主眼焦点比A/B清楚，未靠大眼/眼白高光。",
+    "nose_and_mouth": "鼻在脸内由肤色簇表达，y18留肤色，y19短暖嘴独立；突鼻主导的长侧脸读形明显减弱。",
+    "expression": "成年、沉静且稍严肃；近眼上缘较平、眉眼被简化为同一暗簇，略凝视，但不是严重呆滞或发眉粘成黑条。无需为此无休止再修。",
+    "limitations": "仍保较窄成年脸与原发型，不等同Gunda的柔和粉色脸；原版匹配只是方向改善，没有理由提白或幼态化。",
+    "next_step": "停止本轮像素微调，交用户审美选择。"
+  },
+  "independent_checks": {
+    "changed_pixels": 50,
+    "all_changes_inside_x10_18_y11_19": true,
+    "body_hands_clothes_neck_chin_y20_and_below_unchanged": true,
+    "crown_hair_y0_10_unchanged": true,
+    "bun_x23_and_above_unchanged": true,
+    "alpha_changed_coordinates": [
+      [
+        10,
+        17
+      ],
+      [
+        10,
+        18
+      ]
+    ],
+    "silhouette_scope": "颅顶/头宽/发髻外缘保持；仅鼻面部外突两枚alpha收回，不能称全头外轮廓逐像素相同。",
+    "preserved_landmarks": {
+      "crown_y": 4,
+      "last_chin_skin_y": 20,
+      "chin_outline_y": 21,
+      "sole_y": 37,
+      "head_pixels": 17,
+      "below_chin_pixels": 17
+    },
+    "preview_sync_differing_pixels": 0,
+    "preview_sync_method": "当前native crop [7,3,29,23]，10x最近邻，与preview的C分区逐像素合成比对",
+    "palette_new_colors": 0
+  },
+  "runtime_tested": false,
+  "user_review_followup": {
+    "feedback": "好一点但是还是太丑了，你重新调整一下，要有一点情绪表达",
+    "effect": "C不作为最终审美通过。此前结论只捕捉五官可读性改善，未达到用户要求的美感与情绪表达。",
+    "reinspection": [
+      "等高眼线、近眼2px平横，眼眉缺方向",
+      "(14,19)孤立暗肤嘴点欠口型，颊面直且平",
+      "(13,17)单暗肤鼻点并非客观大片胡须，但与嘴的竖向暗点节奏有胡茬/鼻唇沟误读风险"
+    ],
+    "next_direction": "D温和警觉与E略倔强，用眉眼主信号+嘴角辅助构成，不靠标签；保持成年低魔像素风。",
+    "acceptance": "必须在无情绪标签候选的实际1x和放大读出表情，再判断美感；技术一致性不替代审美。"
+  }
+}

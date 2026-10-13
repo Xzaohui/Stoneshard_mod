@@ -1,0 +1,208 @@
+{
+  "schema": "independent-art-qa-v1",
+  "reviewed_at_utc": "2026-10-13T02:26:00Z",
+  "reviewer": "review_liqui_post_redraws",
+  "target": "TRADE-NPC-LIQUI",
+  "verdict": "retain-structure-candidate-with-required-style-rework",
+  "style_pass": false,
+  "native_production_pass": false,
+  "runtimeVerified": false,
+  "manifest_sha256": "e398eca35388953950eec597e1981c9756aa9f7df55335664dccf38afc166d67",
+  "visual_views_used": 3,
+  "visual_evidence": [
+    "liqui_old_concept_native_comparison.png: old177 crop, imagegen v2, final nearest enlargement",
+    "liqui_native_reference_comparison.png: candidate and Frid/Bert/Jurg/Gunda at common 7x",
+    "liqui_native_v1.png: actual 35x44 native file"
+  ],
+  "identity_review": {
+    "unique_card": "design/04_人物/城市人物/人物_TRADE-NPC-LIQUI_莉葵.md",
+    "result": "Same single travelling trader; one closed satchel, green coat, ochre inner clothing, brown trousers/boots, short thick auburn braid. No new person, visible currency/stock, permission or completed transaction implied.",
+    "limits": "Card establishes narrative identity, not a pixel model sheet. Old177 appearance and supplied brief establish visual continuity."
+  },
+  "visual_findings": [
+    {
+      "area": "silhouette / head-body",
+      "result": "Torso shortened substantially from old177, legs and separated soles readable. Candidate shares reference footprint, but the head/face reads elongated and straight frontal relative to the more directional compact reference faces; matching bbox is insufficient style evidence."
+    },
+    {
+      "area": "eyes / nose",
+      "result": "Single-pixel eyes and nose shadow are individually readable enlarged. At native size the face remains a bright mottled vertical mass; brows/cheeks/mouth need fewer coherent planes, and head pitch/direction should be reconciled with reference camera."
+    },
+    {
+      "area": "hands",
+      "result": "Both small empty hands remain separate from body; current 2px palm/thumb clusters are minimally readable. No reliable fingers or gripping action should be claimed."
+    },
+    {
+      "area": "bag / strap",
+      "result": "One closed bag and diagonal shoulder strap are present; stripe crosses high-contrast waist/buckle region, giving multiple competing brown/gray clusters. Clean strap-to-flap junction and belt separation before production acceptance."
+    },
+    {
+      "area": "hair / clothing",
+      "result": "Short thick braid and green/ochre/brown identity survive. Braid tip is clearer enlarged than native; keep its separation from right shoulder while reducing face noise."
+    }
+  ],
+  "required_rework": [
+    "Rebuild face into fewer light/shadow clusters and align head pitch/direction with same-scale NPC references; do not just quantize again.",
+    "Clarify diagonal strap at waist/belt and where it joins the single closed satchel.",
+    "Recheck native silhouette/hand-bag separation after edits and perform another bounded independent review."
+  ],
+  "technical": {
+    "sources": [
+      {
+        "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch47/177_trade_liqui_cast.png",
+        "match": true
+      },
+      {
+        "path": "design/04_人物/城市人物/人物_TRADE-NPC-LIQUI_莉葵.md",
+        "match": true
+      },
+      {
+        "path": "Assets/ReferenceAudit/20261013/original-reference-metadata.json",
+        "match": true
+      },
+      {
+        "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch47/manifest.json",
+        "match": true
+      },
+      {
+        "path": "Assets/ReferenceAudit/20261013/character_redraw_triage.json",
+        "match": true
+      },
+      {
+        "path": "Assets/ReferenceAudit/20261013/character_native_refs_contact.png",
+        "match": true
+      },
+      {
+        "path": "Assets/ReferenceAudit/20261013/originals/s_npc_herbalist_0.png",
+        "match": true
+      },
+      {
+        "path": "Assets/ReferenceAudit/20261013/originals/s_npc_merchant01_0.png",
+        "match": true
+      },
+      {
+        "path": "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png",
+        "match": true
+      },
+      {
+        "path": "Assets/ReferenceAudit/20261013/originals/s_peasantfemale_09_0.png",
+        "match": true
+      }
+    ],
+    "outputs": [
+      {
+        "file": "README.md",
+        "match": true
+      },
+      {
+        "file": "author_pixel_edits.py",
+        "match": true
+      },
+      {
+        "file": "build_comparison.py",
+        "match": true
+      },
+      {
+        "file": "build_study.py",
+        "match": true
+      },
+      {
+        "file": "gunda_inspection.png",
+        "match": true
+      },
+      {
+        "file": "liqui_before_preview.png",
+        "match": true
+      },
+      {
+        "file": "liqui_native_before_pixel_edits.png",
+        "match": true
+      },
+      {
+        "file": "liqui_native_preview_16x.png",
+        "match": true
+      },
+      {
+        "file": "liqui_native_reference_comparison.png",
+        "match": true
+      },
+      {
+        "file": "liqui_native_v1.png",
+        "match": true
+      },
+      {
+        "file": "liqui_old_concept_native_comparison.png",
+        "match": true
+      },
+      {
+        "file": "liqui_structure_concept_v1.png",
+        "match": true
+      },
+      {
+        "file": "liqui_structure_concept_v2.png",
+        "match": true
+      },
+      {
+        "file": "pixel_edit_log.json",
+        "match": true
+      },
+      {
+        "file": "pixel_edits_spec.json",
+        "match": true
+      },
+      {
+        "file": "prompt.txt",
+        "match": true
+      },
+      {
+        "file": "prompt_v2.txt",
+        "match": true
+      },
+      {
+        "file": "write_manifest.py",
+        "match": true
+      }
+    ],
+    "rebuild": {
+      "liqui_native_before_pixel_edits.png": true,
+      "liqui_native_v1.png": true,
+      "liqui_native_preview_16x.png": true,
+      "liqui_before_preview.png": true,
+      "pixel_edit_log.json": true
+    },
+    "spec_generator_exact": true,
+    "log_replay_exact": true,
+    "log_entries": 98,
+    "unique_changed_coordinates": 97,
+    "net_changed_pixels": 97,
+    "canvas": [
+      35,
+      44
+    ],
+    "bbox": [
+      8,
+      4,
+      28,
+      38
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 18,
+    "bottom_opaque_y": 37,
+    "native_sha256": "92d1abb4d4087634f0b994ba3613052362cfc62e673fdd1cf34d45a3cc689ddf",
+    "isolated_rebuild_directory": "Temporary /tmp mirror; scripts unchanged; initial shallow mirror failed on D.parents[3], corrected to matching hierarchy."
+  },
+  "script_safety_review": {
+    "reviewed": [
+      "build_study.py",
+      "author_pixel_edits.py",
+      "build_comparison.py",
+      "write_manifest.py"
+    ],
+    "result": "Only pathlib/json/hashlib/Pillow/numpy operations; no network, subprocess, runtime or arbitrary deletion. Rebuild/author scripts executed only from /tmp mirror. Comparison and manifest scripts read for safety but not run against author directory."
+  },
+  "count_interpretation": "18 opaque RGB colors plus transparent entry; 98 sequential log operations at 97 distinct coordinates, resulting in 97 net changed pixels. Operation count is not unique-pixel count.",
+  "boundaries": "Only this QA file written in author folder; no author PNG/source/global/runtime mutations, uploads or push. Reference files are locally retained community-wiki game artwork references; local installation match and production reuse rights are not established by this QA."
+}

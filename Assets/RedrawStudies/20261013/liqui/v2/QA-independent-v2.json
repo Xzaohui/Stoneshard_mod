@@ -1,0 +1,84 @@
+{
+  "schema": "independent-art-qa-v1",
+  "reviewed_at_utc": "2026-10-13T02:30:00Z",
+  "reviewer": "review_liqui_post_redraws",
+  "target": "TRADE-NPC-LIQUI v2",
+  "verdict": "local-corrections-verified-whole-body-proportions-blocked",
+  "technical_pass": true,
+  "style_pass": false,
+  "native_production_pass": false,
+  "runtimeVerified": false,
+  "manifest_sha256": "8a0022a605240957087247f89dca918aad6456980cb640bf129291be9d530acc",
+  "visual_views_used": 2,
+  "total_views_across_liqui_v1_v2_and_post": 8,
+  "visual_evidence": [
+    "comparison_v1_v2_refs_8x.png: v1/v2 and four original NPCs at identical 8x",
+    "native_1x_strip.png at original dimensions: v1/v2 and four original NPCs"
+  ],
+  "local_visual_results": [
+    "Earlier mouth/jaw and merged forehead/cheek planes reduce the long bright face appearance; nose and eyes remain readable. This is a local cluster improvement, not a full-body proportion correction.",
+    "Subdued waist buckle removes the competing gray block; one diagonal strap, belt and single closed satchel are more clearly separated. Empty hand remains distinct from bag.",
+    "Auburn short thick braid, green coat, ochre tunic and brown trouser/boot identity remain. Single-body narrative identity is unchanged."
+  ],
+  "new_blocker": {
+    "source": "Latest user feedback relayed by parent through author worker on 2026-10-13 02:30 UTC",
+    "feedback": "Head/body still looks strange, approaching head:remaining body 1:1.",
+    "effect": "Do not expand this proportion into more poses or actors. Await explicit head-top/chin/sole landmark calibration. This bounded 78-pixel edit did not rework the overall silhouette, and must not be described as solving the whole-body proportion feedback.",
+    "qualification": "The reported 1:1 is user visual feedback, not an independently measured ratio. A common canvas/bbox or reference footprint cannot validate anatomy."
+  },
+  "remaining_work": [
+    "Mark actual head-top, chin and sole rows on original references and candidate; distinguish hair/head silhouette from face and neck.",
+    "Use those landmarks to reconsider torso/limb mass and overall head-to-rest-of-body ratio before another structural redraw.",
+    "Keep v1 and v2 for comparison; no additional edit or generation authorized by this QA."
+  ],
+  "technical": {
+    "rebuild_hash_matches": {
+      "comparison_v1_v2_refs_8x.png": true,
+      "native_1x_strip.png": true,
+      "pixel_edit_log_v2.json": true,
+      "liqui_native_v2_8x.png": true,
+      "liqui_native_v2.png": true,
+      "build_v2.py": true
+    },
+    "input_hash_match": true,
+    "log_before_after_replay_exact": true,
+    "operations": 78,
+    "unique_coordinates": 78,
+    "net_changed_pixels": 78,
+    "canvas": [
+      35,
+      44
+    ],
+    "bbox": [
+      8,
+      4,
+      28,
+      38
+    ],
+    "bottom_opaque_y": 37,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 17,
+    "native_sha256": "695a1979420abe0fc88e0046d478b6b246c87cf3ca55ae312b8fdca41c5526c1",
+    "manifest_source_hash_matches": {
+      "Assets/RedrawStudies/20261013/liqui/liqui_native_v1.png": true,
+      "Assets/RedrawStudies/20261013/liqui/manifest.json": true,
+      "Assets/RedrawStudies/20261013/liqui/QA-independent.json": true
+    },
+    "manifest_output_hash_matches": {
+      "README.md": true,
+      "build_v2.py": true,
+      "comparison_v1_v2_refs_8x.png": true,
+      "liqui_native_v2.png": true,
+      "liqui_native_v2_8x.png": true,
+      "native_1x_strip.png": true,
+      "pixel_edit_log_v2.json": true
+    }
+  },
+  "script_safety_review": "build_v2.py fully read: local Pillow/pathlib/json/hashlib; no network, arbitrary command execution or runtime writes. Ran unchanged in /tmp mirrored hierarchy with only required reference/input copies. Rebuilt all six files exactly and replayed each logged before/after value.",
+  "palette_note": "18-entry inherited palette, 17 actually used opaque RGB colors. 78 operations, 78 distinct coordinates and 78 net changed pixels.",
+  "scope_note": "Facing direction and skin-color differences alone are not failure criteria. Functional plane grouping, anatomical landmarks and clear object connections govern review.",
+  "boundaries": "Added this separate QA only; v1 QA, all author PNGs and manifests, old sources, global/runtime unchanged. No uploads or push."
+}

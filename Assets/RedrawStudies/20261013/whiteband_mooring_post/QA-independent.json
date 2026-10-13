@@ -1,0 +1,122 @@
+{
+  "schema": "independent-art-qa-v1",
+  "reviewed_at_utc": "2026-10-13T02:29:00Z",
+  "reviewer": "review_liqui_post_redraws",
+  "target": "whiteband_mooring_post",
+  "verdict": "retain-single-structure-study-candidate",
+  "style_pass": false,
+  "native_production_pass": false,
+  "runtimeVerified": false,
+  "manifest_sha256": "09c347cdf2e9df11517d2ef1e5c4fb773fd2f27b4e6cb8268c83dd7e9ef872fe",
+  "visual_views_used": 3,
+  "visual_evidence": [
+    "old_new_reference_comparison.png: old04 left crop, candidate, barrel and Jurg",
+    "material_camera_review.png: 1x/8x candidate, shelf and environment camera/material comparison",
+    "native_32x48.png at actual size"
+  ],
+  "visual_findings": [
+    {
+      "area": "white band",
+      "result": "Clearly the first readable identifying feature at 1x; broad pale band wraps shaded right face. No writing, arrow, ownership or permission marker."
+    },
+    {
+      "area": "rope / knot",
+      "result": "Separate tan rope beneath white band, left protruding knot and loose end with negative gap are visible. Detailed knot construction is not certified; winding/knot is less immediately legible than band at 1x."
+    },
+    {
+      "area": "water stain",
+      "result": "Desaturated dark green-brown lower cluster reads as tide staining, without barnacle noise or extra load-level marks."
+    },
+    {
+      "area": "volume / camera",
+      "result": "Light left/front and dark right give rounded timber volume; flattened top is shallow enough for a useful camera study. Longer bright wood streak remains but does not destroy solid read."
+    },
+    {
+      "area": "scale",
+      "result": "42px visible height exceeds Jurg 34px; this reads as a tall landmark rather than a low mooring bollard. It is not intrinsically rejected, but actual shore placement, occlusion and intended marker height must determine final scale."
+    }
+  ],
+  "production_gates": [
+    "Test 42px visible height and silhouette in intended shore placement, with walkable return route and occlusion; do not declare engine dimensions from this study.",
+    "Check dark-background right outline in actual scene and adjust only if it disappears; reviewer did not spend extra view on standalone dark-background image.",
+    "Check band/rope distinction at actual gameplay zoom; no same-object original sprite comparison exists."
+  ],
+  "technical": {
+    "input_hash_matches": {
+      "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/04_dock_landmark_props.png": true,
+      "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/manifest.json": true,
+      "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/PROMPTS.md": true,
+      "design/02_世界与地图/任务空间/空间_BRY-X11_低潮侧泊棚.md": true,
+      "design/06_支线/城市支线/台本_CS-BRY-11_不写船名的夜泊.md": true,
+      "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png": true,
+      "Assets/ReferenceAudit/20261013/originals/Bookshelf_0.png": true,
+      "Assets/ReferenceAudit/20261013/originals/Barrel_0.png": true,
+      "Assets/ReferenceAudit/20261013/originals/Frid_environ.png": true
+    },
+    "output_hash_matches": {
+      "README.md": true,
+      "concept_imagegen.png": true,
+      "edits.json": true,
+      "make_review.py": true,
+      "material_camera_review.png": true,
+      "native_32x48.png": true,
+      "native_8x.png": true,
+      "native_before_edits.png": true,
+      "old04_left_crop_review.png": true,
+      "old_new_reference_comparison.png": true,
+      "prompt.txt": true,
+      "qa_metrics.json": true,
+      "reproduce.py": true,
+      "view_1x_dark.png": true,
+      "view_1x_light.png": true,
+      "view_1x_neutral.png": true,
+      "view_8x_dark.png": true,
+      "view_8x_light.png": true,
+      "view_8x_neutral.png": true
+    },
+    "isolated_rebuild_matches": {
+      "qa_metrics.json": true,
+      "view_8x_light.png": true,
+      "view_1x_light.png": true,
+      "view_8x_dark.png": true,
+      "view_1x_dark.png": true,
+      "view_8x_neutral.png": true,
+      "view_1x_neutral.png": true,
+      "native_8x.png": true,
+      "native_32x48.png": true,
+      "native_before_edits.png": true,
+      "edits.json": true,
+      "concept_imagegen.png": true,
+      "reproduce.py": true
+    },
+    "canvas": [
+      32,
+      48
+    ],
+    "bbox": [
+      7,
+      3,
+      24,
+      45
+    ],
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 13,
+    "bottom_opaque_y": 44,
+    "logged_operations": 255,
+    "unique_coordinates": 255,
+    "net_changed_pixels": 255,
+    "edits_replay_exact": true,
+    "native_sha256": "7db3957918dc0cba6ef32601d825f00e21b281bd2db8f774cb1a52c461dcaf58"
+  },
+  "pixel_log_review": "edits.json contains exact coordinate, palette and reason, without before values. Independent replay from pre-edit bitmap reproduces exact result; reviewer reconstructs before/after while checking.",
+  "script_safety_review": "Read reproduce.py and make_review.py fully. Both use local pathlib/Pillow/NumPy/json/hash operations. reproduce.py executed unchanged only in matching-depth /tmp mirror; comparison/manifest author script was not run against original folder.",
+  "reference_limits": [
+    "No original same-object mooring-post sprite was located. Barrel/bookshelf/NPC/environment provide material, camera and comparison-scale evidence only.",
+    "Historical wiki references are not verified against installed 0.9.4.25 and do not establish reuse rights."
+  ],
+  "narrative_review": "BRY-X11/CS-BRY-11 sources require visible return marker and real return path/boarding checks. A white band does not establish permission, ownership, ship handover, departure or task completion. No load marks or extra objects added.",
+  "boundaries": "Only QA-independent.json written in candidate folder. No source PNG, old source, global index, runtime, upload or push mutations."
+}

@@ -1,0 +1,98 @@
+{
+  "candidate_key": "morlen",
+  "source_report_repository_path": "Assets/RedrawStudies/20261013/morlen/QA-independent.json",
+  "source_report_sha256": "43b881f1b1a15a5bfadcfd61be4e2ac986039fd98425a22ae50019a9d963f605",
+  "source_section": null,
+  "normalization": "Historical absolute temporary paths omitted; this is a review evidence copy, not a rebuild log replay. Original full report remains in repository.",
+  "evidence": {
+    "temp_root": "[historical temporary path omitted]",
+    "safe_script_review": "Only local Pillow/numpy image work and writes to script directory; no network, subprocess, deletion, source edits or installation in reviewed build scripts.",
+    "reproduction_hash_match": {
+      "morlen_native_structural_baseline.png": true,
+      "morlen_native_v1.png": true,
+      "morlen_native_v1_8x.png": true,
+      "pixel_log_v1.json": true,
+      "geometry_v1.json": true,
+      "comparison_native_v1.png": true,
+      "comparison_old_native_originals_v1.png": true
+    },
+    "source_hashes_match": {
+      "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch10/46_leo_moren_aren_cast.png": true,
+      "Assets/ReferenceAudit/20261013/character_redraw_triage.json": true,
+      "Assets/ReferenceAudit/20261013/character_landmark_appendix.json": true,
+      "Assets/ReferenceAudit/20261013/character_native_refs_contact.png": true,
+      "design/04_人物/人物_莫伦·海.md": true,
+      "design/04_人物/城市人物/人物_NPC-MORREN_莫伦·海.md": true,
+      "design/05_主线/台本/台本_N13_答案的代价.md": true,
+      "Assets/ReferenceAudit/20261013/originals/s_peasantfemale_09_0.png": true,
+      "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png": true,
+      "Assets/ReferenceAudit/20261013/originals/s_npc_herbalist_0.png": true,
+      "Assets/ReferenceAudit/20261013/originals/s_npc_merchant01_0.png": true
+    },
+    "native_sha256": "c0258a3839fe8ee95b0ec29d5a4f65c14711592f40f3b3493e40ac9546a41289",
+    "canvas": [
+      35,
+      44
+    ],
+    "alpha_bbox_half_open": [
+      7,
+      4,
+      27,
+      38
+    ],
+    "actual_opaque_rgb_colors": 20,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "visible_pixel_count": 488,
+    "pixel_operations": 517,
+    "actual_changed_assignments": 517,
+    "pixel_before_values_match": true,
+    "pixel_replay_equals_native": true,
+    "sole_y": 37,
+    "sole_occupied_x": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "runtimeVerified": false,
+    "userStyleApproved": false,
+    "productionApproved": false,
+    "date": "2026-10-13",
+    "reviewer": "Independent reviewer, separate from asset author",
+    "review_scope": "静态新native候选、旧造型身份、社区原版单帧并排对照、确定性临时重跑和日志；无游戏导入或运行。",
+    "reference_scope": "已读original-reference-metadata.json与character_landmark_appendix.json。Gunda/Jurg/Frid/Bert为社区原版单帧参考，未逐项与本地vanilla版本核验；35×44画布、可见34高或landmark不构成引擎统一标准。",
+    "numerical_pass_is_not_style_pass": true,
+    "unchanged_scope": "未修改旧source、native图、生成脚本、全局索引、runtime或游戏包；独立重跑仅在/tmp。",
+    "decision": "retain_single_frame_candidate_with_visual_caveats",
+    "style_pass": false,
+    "requires_mandatory_structural_redraw": false,
+    "actually_viewed": [
+      "comparison_old_native_originals_v1.png（包含1×、8×及旧造型裁切）",
+      "旧batch10/46完整板，确认上中莫伦与对应背面定位"
+    ],
+    "identity_and_story": [
+      "NPC12/NPC-MORREN同一退役军医；新图保留旧46的年长灰发灰须、橄榄长衣、浅围巾、棕药袋，不新增精确年龄。",
+      "灰须在下颏形成独立冷灰块，浅围巾在肩胸形成暖灰浅块；单闭合药袋在画面右侧，斜带可循；不画病例或患者，不暗示代签授权/医治成功。已核N13沉默及患者本人授权边界。"
+    ],
+    "visual_findings": [
+      "相对旧图头部视觉质量扩大，短颈、紧凑身躯及短分叉靴接近当前少量原版参考；原图长腿问题已修复。",
+      "眉下双眼簇与鼻梁可分，1×视图仍呈偏亮眼白，面部比Frid/Jurg更正对镜头且光滑对称；不是精确原作风格复刻。",
+      "灰须/围巾交界基本清晰；围巾胸前纵向浅块、衣襟和斜带挤在极小区域，细看仍有棋盘状交错。闭袋仍像箱形带扣袋，但闭合与携带语义清楚。",
+      "y37脚底两组像素，中间x17空隙，靴短且落在同一水平；药袋计入宽度不能用于碰撞。"
+    ],
+    "next_use": "可保存作结构候选及后续单帧精修基底。需最终实际背景可读性、方向/动画/原点/碰撞及用户审美验收；不以技术通过写production/style approved。"
+  }
+}

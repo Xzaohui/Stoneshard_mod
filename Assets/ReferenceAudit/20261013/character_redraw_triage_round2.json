@@ -1,0 +1,895 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-10-13T02:26:09.039150+00:00",
+  "scope": "第二轮22张第一轮未查静态城市/聚落角色板：22张接触表实际广筛，7张原整图细看。两轮合计39张不同板，绝不代表概念全库已审完。",
+  "selection_reason": "布林6、奥尔德文5、曼恩4，其余斯孔弗特/约斯特文/丹布里/曼郡/佛尔霍特/奥斯布鲁克/考德各1；排除第一轮17张及在重绘的安菈、雅尼、莫伦、赫斯、莉葵、瑟拉。",
+  "method": "Pillow仅做审查接触表，不修改源PNG，不生成正式美术。先实际看4张接触表，再看130/131/136/137/139/158v2/168七张完整源图。view_image显示可能缩放，不声称逐像素1:1验收。读取每板manifest来源及角色卡身份和边界段。",
+  "categories": {
+    "保留叙事/角色设计概念": 17,
+    "需要结构重绘": 4,
+    "缺足够同类原版参照": 1,
+    "可局部工具修整": 0
+  },
+  "category_definitions": {
+    "保留叙事/角色设计概念": "有明确衣装、道具、身份价值；并非生产或像素风格通过，contact-only尚无充分细节判制作路径。",
+    "可局部工具修整": "仅局部技术缺陷且结构已足够的候选；本轮没有足够证据将任何板归此，数量0。",
+    "需要结构重绘": "已细看并指出头身/颈腰/下身和簇结构的问题；只针对本条明确角色，不抹除原设计价值。",
+    "缺足够同类原版参照": "特殊姿态等不能由现有四位站立NPC判定；仍可记录可见高频细节。"
+  },
+  "reference_sources": [
+    "Assets/ReferenceAudit/20261013/character_redraw_triage.json",
+    "Assets/ReferenceAudit/20261013/character_landmark_appendix.json",
+    "Assets/ReferenceAudit/20261013/original-reference-metadata.json"
+  ],
+  "native_reference_visuals_viewed": [
+    "Assets/ReferenceAudit/20261013/character_native_refs_contact.png",
+    "Assets/ReferenceAudit/20261013/character_landmark_inspection.png"
+  ],
+  "reference_interpretation": "Frid/Bert/Jurg/Gunda支持头部视觉质量强、短颈、短下身和连贯色簇倾向；须区分胡须覆胸、垂发覆肩、裙衣遮腿，不是人人16头/8上身/10下身。35×44是透明canvas，33–34高为这些样本可见bbox而非所有人物/引擎规范。社区原版来源，未与vanilla安装逐项核。",
+  "assets": [
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch33/126_bry_herlin_avi_osin_cast.png",
+      "sha256": "baa3a8dc7cd2fb4eeed4d3867370f30ebd1c73bbe47d6529564bcdb26df78048",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_1.jpg",
+      "contact_cell_1_based": 1,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-HERLIN_赫林.md",
+        "design/04_人物/城市人物/人物_BRY-NPC-AVI_阿薇.md",
+        "design/04_人物/城市人物/人物_BRY-NPC-OSIN_奥辛·锤.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-HERLIN_赫林.md": "d6a5619f51b1a641649664319704d7bc1fca5d9813541e3ebd862a6013114c19",
+        "design/04_人物/城市人物/人物_BRY-NPC-AVI_阿薇.md": "475f39b6530f97b7df89e199e4f5909b8d7298740b038c08d7e7bba2577570d1",
+        "design/04_人物/城市人物/人物_BRY-NPC-OSIN_奥辛·锤.md": "78f155a52b1cc75e1e2f8574ebf2b65e940a078530d0cbf548b2cf3ef772fa71"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "三人全身正背齐，赫林及奥辛裤腿分段长；未整图量头颈。",
+        "costume": "锈衣围裙、阿薇蓝头巾赭裙、奥辛深围衣分工清楚。",
+        "pixel_clusters": "缩略已有围裙斑点与靴褶密纹；不据此核原生像素。",
+        "key_props": "赫林小工具、阿薇手持布与腰卷、奥辛交臂可读；侧别未细核。",
+        "concept_value": "保留修铆／临时缝补／班长三人各自谋生的衣装提案。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch33/127_bry_pelan_maler_cast.png",
+      "sha256": "c0b346d7725ccebc13b95b76fc275e23f3f294b16d8b622f26f079019a17e1ee",
+      "image_size": [
+        1312,
+        1199
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_1.jpg",
+      "contact_cell_1_based": 2,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-PELAN_佩兰.md",
+        "design/04_人物/城市人物/人物_BRY-NPC-MALER_麦勒.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-PELAN_佩兰.md": "5d768f085201bda3a4baac139d5127067e1edac0c6a618e00fad44acadea4086",
+        "design/04_人物/城市人物/人物_BRY-NPC-MALER_麦勒.md": "373152ac8f6d6635f9fb633d7b9d8ee4c712133094de049856c0eeb16ea6237d"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "佩兰与麦勒完整站姿，头部占比偏小、麦勒裤腿长，尚未整图。",
+        "costume": "佩兰补丁绿裙与麦勒背心有独立轮廓。",
+        "pixel_clusters": "补丁边、鞋带、钥匙为高频细节。",
+        "key_props": "闭册与维修木槌／钥匙可辨，不能把闭册当租权已认。",
+        "concept_value": "保留住客与会维修的房主识别；不画成和解或签新租。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch33/129_bry_ive_vit_vimon_cast.png",
+      "sha256": "aaa32b5fdc98aaff6018653fc0b55a615d2d91a31022a41c1fc3aa428fafe32e",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_1.jpg",
+      "contact_cell_1_based": 3,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-IVE_伊芙.md",
+        "design/04_人物/城市人物/人物_BRY-NPC-VIT_薇特·灰.md",
+        "design/04_人物/城市人物/人物_BRY-NPC-VIMON_维松.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-IVE_伊芙.md": "0f6954a53ab5445d781366cd6f8fd4904b3eadbba6694d357405db974aff1d21",
+        "design/04_人物/城市人物/人物_BRY-NPC-VIT_薇特·灰.md": "c84163198b4bc17c515ef1525eb19f08fa68422b07b1a0fe526ff4c3e7e9e1a9",
+        "design/04_人物/城市人物/人物_BRY-NPC-VIMON_维松.md": "aa121293924c5cc8a5968db0e16448b1146eefde1e07f6c0cefef2811bcabb48"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "伊芙长裙与另外两人的腿长差异可见；含护肩人物缺守卫同类参照。",
+        "costume": "深裙披肩、绿绗衣、蓝背心三组区分清楚。",
+        "pixel_clusters": "披肩流苏、绗线和维松腰链密集。",
+        "key_props": "伊芙捧小碗形物；维松腰垂物缩略不能确认，待细核。",
+        "concept_value": "保留安静纪念者与两位不同旧值夜者；不新增奖章或复职。"
+      },
+      "reference_gap": "含护肩的薇特缺守卫/甲衣同类样本",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch34/130_bry_taori_hase_cast.png",
+      "sha256": "09739374c04269d7d5f137e1677e8d5917b37a73bb93e3c2006ef7d43aa4fd71",
+      "image_size": [
+        1312,
+        1199
+      ],
+      "category": "需要结构重绘",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": true,
+      "actual_view_level": "detail_full_image",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_1.jpg",
+      "contact_cell_1_based": 4,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-TAORI_陶芮.md",
+        "design/04_人物/城市人物/人物_BRY-NPC-HASE_哈塞.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-TAORI_陶芮.md": "01748b7ee9a512c0015e607a850911d1ead3d0be2bf7c4d3267836b703f4ec24",
+        "design/04_人物/城市人物/人物_BRY-NPC-HASE_哈塞.md": "cb3b7131f70e7bf865d78caa6ddadbf917fc460d96d17f297702a50e8fb0173e"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "哈塞颈部、胸腹、长外套与裤腿逐段展开，头明显小于原生NPC头部视觉质量；陶芮坐姿不得套站姿比例。",
+        "costume": "哈塞翻领、马甲纽扣、袖口和多袋叠层；陶芮披肩／膝毯／裙分层完整。",
+        "pixel_clusters": "脸部眉眼分指、碎发、外套抖色和毯流苏依赖高分辨率。",
+        "key_props": "瓶与提瓶手可分，但瓶颈／标签太细；凳、脚、裙边需分别做坐姿遮挡。",
+        "concept_value": "保留医药商品代理的温和商人装与陶芮疲倦但自主的坐姿；不表示疗效或签广告。"
+      },
+      "reference_gap": "陶芮坐姿缺同类参考；本板结构重绘判定仅针对哈塞",
+      "next_step": "按本轮具体brief做单角色结构试验",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch34/131_bry_loda_rukan_risha_cast.png",
+      "sha256": "a4c772e17a9ea474d6f977f61ffa07abfb98485a3b0779ca4bd4ffcad65b8db1",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "需要结构重绘",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": true,
+      "actual_view_level": "detail_full_image",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_1.jpg",
+      "contact_cell_1_based": 5,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-LODA_洛妲.md",
+        "design/04_人物/聚落人物/人物_BRY-S01-NPC_鲁坎.md",
+        "design/04_人物/聚落人物/人物_BRY-S02-NPC_芮莎.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-LODA_洛妲.md": "e1da638a97f2fb502ffd5246b1924d835934ba051bf405ee97f648a9a9be8b37",
+        "design/04_人物/聚落人物/人物_BRY-S01-NPC_鲁坎.md": "e734a2c30c5d574f0ba4ef2bf88c83da48307ff9d4f2c92dbd6a825834ee6d20",
+        "design/04_人物/聚落人物/人物_BRY-S02-NPC_芮莎.md": "207c96e0d5f6ca152731aaef9d5a84cd26ee5d7a909f3f7acaa297c9539b9b07"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "比130更紧凑，但洛妲头仍仅为身高的小部分，围裙下裤膝靴三段占量明显；鲁坎胡须不能当头骨。",
+        "costume": "蓝卷袖棕围裙、鲁坎赭兜帽、芮莎红头巾米围裙辨识明确。",
+        "pixel_clusters": "粗阶梯边已出现，但洛妲绳圈细股、鞋带、芮莎围裙褶仍切成细纹；粗外边不是原生簇通过。",
+        "key_props": "洛妲腰绳与小工具清楚；鲁坎持短杆与挂手套、芮莎粮碗与袋可保留但要减内部线。",
+        "concept_value": "保留有限水门匠、领班和粮保管人的分人设计，后续先只做洛妲一个站姿。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "按本轮具体brief做单角色结构试验",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch34/132_bry_oder_milei_cast.png",
+      "sha256": "86a59d97798b4eaa7c5085c1cb867cccf7565012a9c6c11806b0018ad910bc7e",
+      "image_size": [
+        1312,
+        1199
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_1.jpg",
+      "contact_cell_1_based": 6,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-ODER_奥德.md",
+        "design/04_人物/聚落人物/人物_BRY-S03-NPC_米蕾.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-ODER_奥德.md": "4ff1226842a9704c2f0d1bbd57e0225ce624024dbe25cf411d36f10119a787c3",
+        "design/04_人物/聚落人物/人物_BRY-S03-NPC_米蕾.md": "5c183fe1bac584239bf26ec8f21762cf20a4875e877d7a5df008013868f9db99"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "两人完整，奥德较短壮而米蕾长裙占量大；未整图头颈。",
+        "costume": "蓝外衣／青披肩与棕裙区分。",
+        "pixel_clusters": "绳股、米蕾木板纵纹及裙褶密集。",
+        "key_props": "船主绳圈与姐姐抱板可见，抱板用途须回提示词核；不作水手归来证据。",
+        "concept_value": "保留船主与等待者的不同动作，暂存概念。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch34/133_ald_hel_emo_vian_cast.png",
+      "sha256": "98409e0f333a5af6f89cee6049f4dc76b52ad43b181b58c94a3a80b6c4553c58",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_2.jpg",
+      "contact_cell_1_based": 1,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-HEL_赫莲·金.md",
+        "design/04_人物/城市人物/人物_ALD-NPC-EMO_埃墨·衬.md",
+        "design/04_人物/城市人物/人物_ALD-NPC-VIAN_维安.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_ALD-NPC-HEL_赫莲·金.md": "3c771811b1c0314a49211ed44718c25249fc4efcd42afb34b4d512aefb171040",
+        "design/04_人物/城市人物/人物_ALD-NPC-EMO_埃墨·衬.md": "463f8a636db3332200baa2fd540d43f3b205b356dc1440dd7b35d84e936fd236",
+        "design/04_人物/城市人物/人物_ALD-NPC-VIAN_维安.md": "d1219ab7c086ae5a566efc556fde24fd516e4d6d7522de7ffd8f511a3389cca4"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "三人完整站姿，靴与下腿段长；未整图。",
+        "costume": "装配围裙、蓝卷袖、绿披肩保持职业差别。",
+        "pixel_clusters": "腰工具多条细线、衣皱和面部小块密。",
+        "key_props": "布条、试验者手持小器具可见，缩略不足核器具功能与手伤。",
+        "concept_value": "保留装配／衬工／独立试验三工种，不以全手画面证明旧伤痊愈。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch35/134_ald_sino_yirong_muko_cast.png",
+      "sha256": "87b4fce1d9e2c93527b9022c5ee706a234a1b5245fab88a476bcd6a7455d3720",
+      "image_size": [
+        1230,
+        1278
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_2.jpg",
+      "contact_cell_1_based": 2,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-SIN_司诺·庭.md",
+        "design/04_人物/城市人物/人物_ALD-NPC-YIRONG_伊榕.md",
+        "design/04_人物/城市人物/人物_ALD-NPC-MUKO_穆柯.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_ALD-NPC-SIN_司诺·庭.md": "3b689d3a3e80161d2ca9b9f2283017cc31083ec54e20e519903a3a3b4944d655",
+        "design/04_人物/城市人物/人物_ALD-NPC-YIRONG_伊榕.md": "2ebd5a0da7697edcbc7993bf94b50f135e04bb7a50725b492a2cd97a5728b57a",
+        "design/04_人物/城市人物/人物_ALD-NPC-MUKO_穆柯.md": "bcbbd0ec92a1f3a43a188d64ce354868ad2de8d9314aa9ca15e3fd06f81c5a2f"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "长袍、老年长裙和短衣三种轮廓清楚，年龄块未细核。",
+        "costume": "司诺深袍红缘、伊榕棕披肩绿裙、穆柯蓝衣不混人。",
+        "pixel_clusters": "大色组比写实板简洁，但脸部与披肩褶仍未核原生簇。",
+        "key_props": "司诺白布、伊榕合握布、穆柯捧碗形物；不从合手推断信仰一致。",
+        "concept_value": "保留不同礼仪／亲属立场，三人不是一个共同同意姿态。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch35/135_ald_kona_kien_naetin_cast.png",
+      "sha256": "186e200f4ac6bae841b9952bf69d18304e208bbc508da61843d780e4a383938a",
+      "image_size": [
+        1312,
+        1199
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_2.jpg",
+      "contact_cell_1_based": 3,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-KONA_科纳.md",
+        "design/04_人物/城市人物/人物_ALD-NPC-KIEN_奇恩.md",
+        "design/04_人物/城市人物/人物_ALD-NPC-NAETIN_奈汀.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_ALD-NPC-KONA_科纳.md": "70acc4144762d719215b87ffb544fe5c37b1cd28c1dd6655a6916333810f96b6",
+        "design/04_人物/城市人物/人物_ALD-NPC-KIEN_奇恩.md": "1c129d8d4a601050ac780039ea4ff160426e6ff300a33717cf5a07833b29514a",
+        "design/04_人物/城市人物/人物_ALD-NPC-NAETIN_奈汀.md": "3952d6fa6ddea7b1d25a4f04fa5c5d3fbae8c5fb1d1c21244a87b332a19be996"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "三位男性头身相对紧凑，腿与靴仍多段，未细核。",
+        "costume": "棕短外衣、蓝衣披肩、紫背心区别清楚。",
+        "pixel_clusters": "腰带袋扣、靴褶在缩略仍显；未核像素格。",
+        "key_props": "奇恩工具箱、奈汀闭册、科纳斜包均有身份作用。",
+        "concept_value": "保留订单联络／运输联络／赞助者，不把工具箱当禁货获准。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch35/136_ald_chiler_buya_cast.png",
+      "sha256": "7815c0f2fd5256d2d0c8bedf7f0b5ee46b62d89f6a9832646186c2d7bd8bc5ca",
+      "image_size": [
+        1199,
+        1312
+      ],
+      "category": "需要结构重绘",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": true,
+      "actual_view_level": "detail_full_image",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_2.jpg",
+      "contact_cell_1_based": 4,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-CHILER_齐勒.md",
+        "design/04_人物/城市人物/人物_ALD-NPC-BUYA_布娅.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_ALD-NPC-CHILER_齐勒.md": "225819d765fc46b304c22cc796d480be7a48295beb253cfd42ec50a8ed3879a9",
+        "design/04_人物/城市人物/人物_ALD-NPC-BUYA_布娅.md": "e17be9e81efad0f50dcd7ab23c9efe79482ec712a2c2454237d98ba18e3fc47f"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "齐勒与布娅均有细颈、长前臂、较小头和长下身；布娅长裙加高靴尤其伸长，非只靠限色可修。",
+        "costume": "齐勒芥黄短披肩橄榄衣、布娅紫披肩灰绿裙及辫子可保留。",
+        "pixel_clusters": "摊掌每指、辫结、包扣、披肩布纹与靴带高度细分。",
+        "key_props": "齐勒短指示杆保持与武器区分；布娅斜包完整；对话手势宜先另存，静态只留简单手块。",
+        "concept_value": "保留讲述导者与付费访客的不同职责，不加英雄护甲、危机警报或已退款结果。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "按本轮具体brief做单角色结构试验",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch35/137_ald_poen_lodo_cast.png",
+      "sha256": "44a740961019579e6a5280b454df8ef6354e8f7c739f9a17f1067a1ff91491db",
+      "image_size": [
+        1374,
+        1145
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": true,
+      "actual_view_level": "detail_full_image",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_2.jpg",
+      "contact_cell_1_based": 5,
+      "original_cards": [
+        "design/04_人物/聚落人物/人物_ALD-S01-NPC_泊恩.md",
+        "design/04_人物/聚落人物/人物_ALD-S03-NPC_萝铎.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/聚落人物/人物_ALD-S01-NPC_泊恩.md": "392e8e2f38024630080d37d4b677ee544ab994f3d4b5a7708f93dceb7dbf9b52",
+        "design/04_人物/聚落人物/人物_ALD-S03-NPC_萝铎.md": "afbd3580e61f7c89dc92d3d2bc0fd1a9c0058d316ef5ab30407308263961e3df"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "两人壮实轮廓和短可见脚比长衣板紧凑；含胡须头块仍不能等同解剖头长。",
+        "costume": "泊恩赭衣深围裙，萝铎锈裙蓝围裙米头巾很清楚。",
+        "pixel_clusters": "旧料小高光、围裙脏点、键齿和鞋带仍细碎；未以调色数量证明匹配。",
+        "key_props": "泊恩举旧料加布，萝铎勺与钥匙语义可读；旧料仅物件提案不证明材质年代。",
+        "concept_value": "值得保留的回收匠／驿主设计，无需因非sprite废弃全板；生产转换另排结构测试。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；生产转换前做原尺寸结构测试",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch36/138_mae_vere_doro_zaho_cast.png",
+      "sha256": "d9d73e14ce1bdc33a5f2444dda62a93eb715a3bc74f6b7fc7fdfbaf5a39e0759",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_2.jpg",
+      "contact_cell_1_based": 6,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-VERE_维芮.md",
+        "design/04_人物/城市人物/人物_MAE-NPC-DORO_多罗.md",
+        "design/04_人物/城市人物/人物_MAE-NPC-ZAHO_扎禾.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_MAE-NPC-VERE_维芮.md": "2eb207bd6c480bac91d236cc02f1afc85e5f11b7f5e7b53067742014284c1e6b",
+        "design/04_人物/城市人物/人物_MAE-NPC-DORO_多罗.md": "41f2f069a5ea126d0750716dd57331613753b87e185f6fc42658b429024f6010",
+        "design/04_人物/城市人物/人物_MAE-NPC-ZAHO_扎禾.md": "606f450759854b421a7a9e0d19102396e0368633be2d8bb635ae240cd534c083"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "三名女性完整，长裙与短上身均可读；未整图核头部。",
+        "costume": "蓝裙、绿衣黄围裙、红短衣黑裙三组明显。",
+        "pixel_clusters": "裙纹、发辫及手内小物仍细。",
+        "key_props": "旧袍／碗／梭形物有叙事价值，衣领不能作为族史证据。",
+        "concept_value": "保留维芮持自己的袍、多罗日常照护、扎禾自有技术三种识别。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch36/139_mae_niv_beno_ena_cast.png",
+      "sha256": "f4ee909accf1bfa6062f17f4e9bd03a6c27e03b1a5df1f8ce4c175905dcf51a2",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "缺足够同类原版参照",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": true,
+      "actual_view_level": "detail_full_image",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_3.jpg",
+      "contact_cell_1_based": 1,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-NIV_尼芙.md",
+        "design/04_人物/城市人物/人物_MAE-NPC-BENO_贝诺.md",
+        "design/04_人物/聚落人物/人物_MAE-S03-NPC_艾娜.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_MAE-NPC-NIV_尼芙.md": "1c7794839c963f933b63b6ee3bc8e8fa2418d15590d6d662d412bf77fa54d077",
+        "design/04_人物/城市人物/人物_MAE-NPC-BENO_贝诺.md": "280d226ba39b7254105f878c8a4b6ff15b523c9d942079b8b3304888f1387c2e",
+        "design/04_人物/聚落人物/人物_MAE-S03-NPC_艾娜.md": "5b0d9154110b5aabc9c2a24c05b82ee9a5fa6c9c6f96ec51ae4ce570fb42cd71"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "尼芙坐姿凳／毯／鞋关系可读但现参考全为站立；贝诺壮体与艾娜长衣不能拿同一坐姿公式处理。",
+        "costume": "尼芙绿披肩棕衣、贝诺蓝工作衣米围裙、艾娜赭披肩绿裙独立。",
+        "pixel_clusters": "尼芙钥齿、毯流苏、贝诺胸前折痕、艾娜靴带多小块。",
+        "key_props": "尼芙手中钥匙形物，贝诺空手腰袋，艾娜闭册；钥匙不代表已迁出交钥。",
+        "concept_value": "保留需连续护理的成人与有限接班者的静态方案；不得从坐姿发明诊断／伤口。"
+      },
+      "reference_gap": "尼芙坐姿/毯凳原生同类缺失；贝诺/艾娜可用普通站姿样本作方向性参照",
+      "next_step": "补原生坐姿同类样本再判坐姿结构；暂保留概念",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch36/140_mae_tiver_gulan_fil_cast.png",
+      "sha256": "55a599849ef48a8098ca2da9ecfea2b41035f6dd8f52e47fce4c9c82987e6dd9",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_3.jpg",
+      "contact_cell_1_based": 2,
+      "original_cards": [
+        "design/04_人物/聚落人物/人物_MAE-S01-NPC_缇弗.md",
+        "design/04_人物/城市人物/人物_MAE-NPC-GULAN_古岚.md",
+        "design/04_人物/城市人物/人物_MAE-NPC-FIL_菲勒·火.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/聚落人物/人物_MAE-S01-NPC_缇弗.md": "fa20d6f047072d59a3aa79fce9ba79e5fe28f716cdebf08654d33af0cf48f5c9",
+        "design/04_人物/城市人物/人物_MAE-NPC-GULAN_古岚.md": "8771d21f67af240d92886a14aa8a9e9d06ee5742681a36245c875d073c8a576c",
+        "design/04_人物/城市人物/人物_MAE-NPC-FIL_菲勒·火.md": "28a1b8fc30bcb4615658b76b7e1e803b542aa41ebe172c5736e6d712664377a0"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "缇弗长裙、古岚长背心、菲勒短衣的高矮块明确；未细核颈线。",
+        "costume": "红裙米围裙／棕背心／蓝衣三色组可读。",
+        "pixel_clusters": "腰袋、闭册与靴褶偏细。",
+        "key_props": "缇弗杯和菲勒闭册可见，古岚无夸张领袖道具。",
+        "concept_value": "保留照护工、动员者、工头独立身份，不以摆姿证明支持公议。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch36/141_mae_ouran_weiyu_cast.png",
+      "sha256": "573a74dacbb0e48ef7ac7f96198f1059ffc0082630636d04217cb9350b3b92b7",
+      "image_size": [
+        1219,
+        1290
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_3.jpg",
+      "contact_cell_1_based": 3,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-OURAN_欧岚.md",
+        "design/04_人物/聚落人物/人物_MAE-S02-NPC_薇榆.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_MAE-NPC-OURAN_欧岚.md": "b1241a7d49f2f4fb9d9c7c48acf4fbc571f1f11851701062289c7339e8db47ab",
+        "design/04_人物/聚落人物/人物_MAE-S02-NPC_薇榆.md": "f2d5078c05449e8a1cfc9143be607b81485478e5c2e33eb5a633b18b47a9e025"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "欧岚略前倾与薇榆直立清楚，披风掩肩不能当头部量测界。",
+        "costume": "灰披风和青长裙区分；长衣下摆细分。",
+        "pixel_clusters": "披风破边、胡须、褶皱密，未整图。",
+        "key_props": "薇榆闭册清楚，欧岚空手，不把焚毁结果预画进站姿。",
+        "concept_value": "保留看守和抄写人；不新增全箱烧毁或全部资料公开。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch37/143_sko_nisha_saler_cast.png",
+      "sha256": "9e981cb537dd408d5a4d97b65b6fb448c0fad1a8351b867890de463354c71886",
+      "image_size": [
+        1246,
+        1263
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_3.jpg",
+      "contact_cell_1_based": 4,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_SKO-NPC-NIS_妮莎·炉.md",
+        "design/04_人物/城市人物/人物_SKO-NPC-SALER_桑勒.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_SKO-NPC-NIS_妮莎·炉.md": "13343e2de284d57b652997a5e342fd364c0287cf8d7dfac41082b16726ad6ac4",
+        "design/04_人物/城市人物/人物_SKO-NPC-SALER_桑勒.md": "de09db36642aaa5ff38068e356deb0a06544eebce27a062e8f8526a888fb8db3"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "妮莎与桑勒完整，桑勒长外衣下腿伸长；未整图。",
+        "costume": "红头巾深围裙与紫外衣构成不同工作身份。",
+        "pixel_clusters": "账册边、腰袋扣与靴带细。",
+        "key_props": "妮莎闭册和桑勒钱袋形物可辨，不推兑筹=归人。",
+        "concept_value": "保留会计与中介，不替未归弟弟画归家结果。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch37/145_yos_taya_tina_meibei_cast.png",
+      "sha256": "ee6fecd79ed1c5d0a8ef2398c57a9f85d7f66520be78597378487e22f28379a5",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_3.jpg",
+      "contact_cell_1_based": 5,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_YOS-NPC-TAY_塔雅·梭.md",
+        "design/04_人物/城市人物/人物_YOS-NPC-TIN_缇娜·染.md",
+        "design/04_人物/聚落人物/人物_YOS-S01-NPC_梅蓓.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_YOS-NPC-TAY_塔雅·梭.md": "27fcf5b92bb3dc6d41917724809a80e0c16b8ff670f5e12261b5ddecf2b693d4",
+        "design/04_人物/城市人物/人物_YOS-NPC-TIN_缇娜·染.md": "42c6401b48f1e9a652a21860fb29e82a1e0cb421fde7ecbcf36e842950e2a30e",
+        "design/04_人物/聚落人物/人物_YOS-S01-NPC_梅蓓.md": "86ab9085bd88ebc5a3a4386002c4c578fd6f800216a57288e717cf3c78788a7c"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "三女性头部／裙下脚较清楚；尚未细核头颈比例。",
+        "costume": "塔雅赭衣紫围裙、缇娜蓝染斑衣、梅蓓绿衣棕裙各有识别。",
+        "pixel_clusters": "辫节、围裙系带、染斑数量需后续减少与正背核对。",
+        "key_props": "梭形物、空手、线管形物可读；具体侧别未细核。",
+        "concept_value": "保留两工种与夜织工，不把塔雅家纹强加缇娜或梅蓓。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch38/148_den_kare_odo_ele_cast.png",
+      "sha256": "069c4c1f6cbf9851fb3cbd742fdc153457c2dcb6b7a41638fb9fd170f4b51477",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_3.jpg",
+      "contact_cell_1_based": 6,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-KAR_卡蕾·棚.md",
+        "design/04_人物/城市人物/人物_DEN-NPC-ODO_欧铎.md",
+        "design/04_人物/城市人物/人物_DEN-NPC-ELE_艾蕾.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_DEN-NPC-KAR_卡蕾·棚.md": "523c8d2987186b928aa6b92a8302e0a63c5b261c9afdbc93cce3cb0efca1120d",
+        "design/04_人物/城市人物/人物_DEN-NPC-ODO_欧铎.md": "a0d687af131b61d170baf8bc50d6a2fdd283b2c86db5b39b10618216e6c9501d",
+        "design/04_人物/城市人物/人物_DEN-NPC-ELE_艾蕾.md": "4d07f41a524d1f1bca86101ce2c78ef7ac990bbb9ab2f42e50425753b3124d31"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "三人虽紧凑，成年艾蕾脸大眼偏幼化趋势需细看而非凭缩略改年龄。",
+        "costume": "卡蕾蓝围裙红头巾、欧铎棕背心、艾蕾赭衣米披肩分开。",
+        "pixel_clusters": "腰绳细股和长辫高频，未核像素。",
+        "key_props": "欧铎绳圈和两女性腰物可辨；无船位交付行为。",
+        "concept_value": "保留一家三成年人各自服装；不得把女儿画成无自主权小孩。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch39/152_mns_rosa_tio_moda_cast.png",
+      "sha256": "557e662b3722d2640b050031efce8de361d0a8b0edfac82fc80556abd49f2c10",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_4.jpg",
+      "contact_cell_1_based": 1,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_MNS-NPC-ROS_罗莎·藤.md",
+        "design/04_人物/城市人物/人物_MNS-NPC-TIO_提奥·桶.md",
+        "design/04_人物/城市人物/人物_MNS-NPC-MODA_墨达.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_MNS-NPC-ROS_罗莎·藤.md": "05629330bfaa9265d001e8a09834bdada9e602c8448ff2b060d31a580bef3c1a",
+        "design/04_人物/城市人物/人物_MNS-NPC-TIO_提奥·桶.md": "0e963efad2cf35985ea2d9faf61f886222d697657821a17faeb983ace16e5f61",
+        "design/04_人物/城市人物/人物_MNS-NPC-MODA_墨达.md": "b5ca72c60dbb81b609a434157f9688bbe45f22f6a222d57a869402a6ecb88dd5"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "罗莎与墨达长裙、提奥短衣分工明确，未整图。",
+        "costume": "酒色上衣／白围裙／蓝裙红披肩三色组。",
+        "pixel_clusters": "裙褶、提奥靴分段和酒杯边较细。",
+        "key_props": "杯、长勺、闭册可读；提奥是酿酒学徒不变成箍桶匠。",
+        "concept_value": "保留师徒与采购人角色，不把旧年标签当真年份。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch42/158_for_mano_ape_xijie_cast_v2.png",
+      "sha256": "125727359831e940cee9896433ad72b38a50d512fd57d6e84a05c6b1ccaea1af",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "需要结构重绘",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": true,
+      "actual_view_level": "detail_full_image",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_4.jpg",
+      "contact_cell_1_based": 2,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_FOR-NPC-MAN_玛诺·灯.md",
+        "design/04_人物/城市人物/人物_FOR-NPC-APE_艾珀·风.md",
+        "design/04_人物/城市人物/人物_FOR-NPC-XIJIE_西婕.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_FOR-NPC-MAN_玛诺·灯.md": "e018198dbc1b773a36966e9e5c09e880e359a3f779c28b296c7ac57b327b6843",
+        "design/04_人物/城市人物/人物_FOR-NPC-APE_艾珀·风.md": "f6e6dba8b713a31ad8af8e7b40a1b9ac0a4d8a7b20ad45856ee4c55d85895b15",
+        "design/04_人物/城市人物/人物_FOR-NPC-XIJIE_西婕.md": "691735d9ed9ce4f9e38d55fb557b83c61f433dcf539f913c68043e4bb8aa3720"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "三人比130紧凑，但颈／腰／膝／绑靴仍连续长分段；玛诺、西婕大眼小鼻童感不能代表成年角色要求已验收。",
+        "costume": "赭短衣帽、蓝灰维护衣、绿卷袖棕围裙稳定。",
+        "pixel_clusters": "大片衣色仍混细褶，灯笼栏杆、绳结／靴褶细于原生同类工装的簇预算。",
+        "key_props": "玛诺灯笼完整且无光效；艾珀腰工具、西婕标尺类杆体清楚，杆刻线可简化。",
+        "concept_value": "保留矿班／维护／独立检查三身份；此轮确认需结构转换但不抢先给第4个重绘brief。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留设计，生产前重建头部质量/颈腰/下身及道具簇；不追加本轮重绘数量",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch43/161_osb_fud_don_luoshan_cast.png",
+      "sha256": "cb8efdbc3ac0ea98f440710be2339ff3faf3d88ca42e294e1dcda1b0d0b4b7fd",
+      "image_size": [
+        1145,
+        1374
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": false,
+      "actual_view_level": "contact_sheet_only",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_4.jpg",
+      "contact_cell_1_based": 3,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-FUD_芙朵·谷.md",
+        "design/04_人物/城市人物/人物_OSB-NPC-DON_多恩.md",
+        "design/04_人物/城市人物/人物_OSB-NPC-LUOSHAN_洛珊.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_OSB-NPC-FUD_芙朵·谷.md": "3aad7acda8387237607f5c560b934546dc32804f25deb2e8a8f456325e818253",
+        "design/04_人物/城市人物/人物_OSB-NPC-DON_多恩.md": "cd2d73636412947fea13de1684b66a5d5942e4a5d92d1e3d17468515b692484f",
+        "design/04_人物/城市人物/人物_OSB-NPC-LUOSHAN_洛珊.md": "c4968fa7cfda06e61fc6e34b0a7f2201822c0ec7c9b4edb5dc9a33ceb98b0c77"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "父辈灰发、芙朵长辫、洛珊头巾分开；芙朵面部年龄仍需细看。",
+        "costume": "黄裙绿围裙／棕短衣补丁裤／酒红裙棕围裙可读。",
+        "pixel_clusters": "筐编纹、补丁密点、辫节较细。",
+        "key_props": "洛珊一只小筐突出修筐师身份；不视为芙朵已承诺学作。",
+        "concept_value": "保留三人衣色，不把父债、女儿劳动与导师工班合并。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；先整图复核再决定生产转换",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch45/168_kor_noda_evan_tafei_cast.png",
+      "sha256": "22f94148a23a02cf61f26f80bc4ea7469435e0fca8cf9011258ad1da924a47df",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "保留叙事/角色设计概念",
+      "viewed": true,
+      "contact_viewed": true,
+      "detail_viewed": true,
+      "actual_view_level": "detail_full_image",
+      "contact_sheet": "Assets/ReferenceAudit/20261013/character_round2_contact_4.jpg",
+      "contact_cell_1_based": 4,
+      "original_cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-NOD_诺妲·门.md",
+        "design/04_人物/城市人物/人物_KOR-NPC-EV_埃文·行.md",
+        "design/04_人物/城市人物/人物_KOR-NPC-TAFEI_塔斐.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_KOR-NPC-NOD_诺妲·门.md": "23be288ad5fa12812290ee5cdc76405005c8911841cc9dbf6b51111a992bdc74",
+        "design/04_人物/城市人物/人物_KOR-NPC-EV_埃文·行.md": "6ebdaca0f1d052b710040578cfb2d3f694855d96de58d209db052ebd1a625ce2",
+        "design/04_人物/城市人物/人物_KOR-NPC-TAFEI_塔斐.md": "3280004dd1244546b944f369a642ef82db347075076889874b5ce7f1e5a08f13"
+      },
+      "card_read_scope": "各卡身份/工作与动机/有限许可段；不是所有关联台本全文审读",
+      "observations": {
+        "head_body": "三人完整且均具短壮倾向；脸部质量仍小于原版样本，塔斐高靴分段明显，未判生产通过。",
+        "costume": "诺妲蓝裙米围裙、埃文橄榄披风赭衣、塔斐灰披肩蓝衣辨识好。",
+        "pixel_clusters": "披风内点状纹与绑腿细节可减，但这不是唯一结构问题。",
+        "key_props": "诺妲闭册、埃文斜包、塔斐空手；彼此无物品交接。",
+        "concept_value": "保留寄存助手、旅人、旧同行三独立人；衣装不证明同姓或全权亲属。"
+      },
+      "reference_gap": "仅4个原生村镇NPC单朝向，正背匹配、专用道具与本地版本仍未验证",
+      "next_step": "保留角色概念；生产转换前做原尺寸结构测试",
+      "style_pass": false,
+      "native_production_pass": false,
+      "narrative_appearance_status": "服装/年龄外观是原创提案；人物卡工作与叙事边界不能等同衣装已获原作认证"
+    }
+  ],
+  "priority_redraw_briefs": [
+    {
+      "priority": 1,
+      "actor": "BRY-NPC-HASE 哈塞",
+      "board": "batch34/130_bry_taori_hase_cast.png",
+      "visible_mismatch": "小头、可见长颈、翻领马甲多层胸腹、外套下长裤与鞋独立多段，瓶手五指和扣带细节需大图才读。",
+      "preserve": "成年医药商品代理；深橄榄商人衣、棕斜包、胡须、单闭合小瓶。",
+      "change": "只重绘哈塞单人中性站姿，增加头脸整体视觉质量，收短颈与腿靴；外套保轮廓但马甲/纽扣合簇，瓶身与手明确分块。不要抄原药师紫衣或胡须模板。",
+      "comparison": "用Bert商人色簇和Jurg/Frid紧凑身体并排比较，胡须覆胸单独标明，不固定16/8/10。",
+      "narrative_guardrail": "不是原作药师；不加药效、诊疗动作、广告同意或付款；陶芮不随本次重画。",
+      "acceptance": "完整单身轮廓、瓶和手可读、头颈腰足近似landmark图、原尺寸及最近邻并排；缩小/限色单独不算通过。"
+    },
+    {
+      "priority": 2,
+      "actor": "ALD-NPC-CHILER 齐勒",
+      "board": "batch35/136_ald_chiler_buya_cast.png",
+      "visible_mismatch": "长前臂与每根摊指、狭颈、小头、裤膝与绑靴占量大；黄披肩与发丝依赖大量细明暗。",
+      "preserve": "旧墙讲述导者；芥黄短披肩、橄榄短衣、棕斜包、单指示杆和小胡须。",
+      "change": "先做非摊掌的单人静态站姿，头发/脸/胡须各少数连贯簇，短颈紧凑腰腿，手用整体手块；杆保持指示工具而不是法杖。布娅的紫披肩访客设计留作后续，不复制导者。",
+      "comparison": "Jurg与Bert只提供紧凑站姿/色簇倾向；不能以同一个宽高公式消除导者的偏瘦体态。",
+      "narrative_guardrail": "不加围城警报、武装领袖、魔法效果、访客已相信或已退款。",
+      "acceptance": "完整衣摆和双脚，指示杆单独可读；原尺寸并排检查颈、腰、腿与色簇，另列尚缺的朝向。"
+    },
+    {
+      "priority": 3,
+      "actor": "BRY-NPC-LODA 洛妲",
+      "board": "batch34/131_bry_loda_rukan_risha_cast.png",
+      "visible_mismatch": "当前虽有粗方块，头部质量仍弱，围裙下裤膝绑靴分段长，腰绳多股内线和工具细边挤占视觉。",
+      "preserve": "有限水门维修匠；深发髻、蓝卷袖、棕围裙、裤装、腰侧绳圈和一件小工具。",
+      "change": "在保留现色组与体态的基础上结构性局部重排：更强头部块、短颈、上移有效腰线并压短膝靴，绳圈改成单清楚环形簇，工具只留主轮廓。不是全板重生，不要求改穿Gunda裙。",
+      "comparison": "Gunda用于头/短颈倾向，Jurg用于工作服簇；发髻和围裙边单独说明，禁止当统一解剖切线。",
+      "narrative_guardrail": "不画水门已修、无风险标志、全城无限救援；鲁坎、芮莎不混入该角色。",
+      "acceptance": "完整单人、绳与工具分辨、保留蓝棕身份，原尺寸比对后才决定是否做后背；不以灰底去除或量化调色代替结构验收。"
+    }
+  ],
+  "unviewed_scope": "所选22张全部contact viewed；其中15张detail未看。所选之外不增加已看标记，第一轮记录保持原状。",
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "source_png_changed": false,
+  "first_round_changed": false,
+  "global_audit_changed": false,
+  "push_performed": false
+}

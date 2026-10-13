@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "character": "BRY-NPC-HASE",
+  "status": "single_pose_structural_study_not_production_accepted",
+  "technical": {
+    "canvas": [
+      35,
+      44
+    ],
+    "visible_bbox_exclusive": [
+      7,
+      4,
+      30,
+      38
+    ],
+    "visible_height": 34,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "opaque_colors": 19,
+    "opaque_components_4_connected": [
+      485
+    ],
+    "reproducible_native_sha256": "fd63e1183f5ff81a5335e6b5ee666d20ac89cc68af8fda191d1be5e865ba9394",
+    "rebuild_byte_identical": true
+  },
+  "landmarks": {
+    "convention": "zero-based inclusive rows; head includes crown, excludes trailing beard",
+    "crown_y": 4,
+    "inferred_anatomical_chin_y": [
+      19,
+      20
+    ],
+    "chin_estimate_uncertainty": "Jaw is covered by short beard; inferred interval rather than visible skin contour. Do not treat beard end as chin.",
+    "beard_last_y": 22,
+    "sole_y": 37,
+    "head_rows_range": [
+      16,
+      17
+    ],
+    "remaining_body_rows_range": [
+      17,
+      18
+    ],
+    "body_per_head_range": [
+      1.0,
+      1.125
+    ],
+    "cranium_width_estimate_px": [
+      15,
+      16
+    ],
+    "free_neck_rows_estimate": [
+      0,
+      1
+    ]
+  },
+  "actual_visual_review": {
+    "viewed": [
+      "concept_v1_unapproved.png",
+      "hase_native_v1_16x.png",
+      "hase_native_v1_8x.png",
+      "hase_old_native_originals_comparison.png",
+      "hase_native_landmarks_20x.png"
+    ],
+    "findings": [
+      "Head/remaining-body mass is near 1:1, unlike tall prior illustration. Broad crown and neck nested in shoulders.",
+      "Two separate dark eye pixels, nose skin highlight and beard retained.",
+      "Olive garment is compact with simple neckline, no lapels or waistcoat chain.",
+      "One brown cross-body satchel with flap/clasp; one capped amber bottle with pale label and separate skin hold.",
+      "Nearest mapping alone was insufficient: explicit 221 pixel edits merge cloth/hair and restore face, hand/bottle.",
+      "Remaining limitation: stylized face is simplified; beard hides exact anatomical chin and reduced bottle needs user artistic review."
+    ]
+  },
+  "semantic_constraints": [
+    "Adult commercial medicinal-goods agent, not original pharmacist replacement",
+    "No diagnosis, healing efficacy, agreement or payment depicted",
+    "Taori source retained unchanged"
+  ],
+  "not_verified": [
+    "local installation sprite match",
+    "all directions and animation",
+    "engine pivot/collision",
+    "in-game readability",
+    "final aesthetic acceptance"
+  ],
+  "native_production_pass": false,
+  "style_pass": false
+}

@@ -1,0 +1,136 @@
+{
+  "candidate_key": "cloth_barrel",
+  "source_report_repository_path": "Assets/RedrawStudies/20261013/cloth_barrel/v2/QA-independent.json",
+  "source_report_sha256": "7d56956bc15bc123e753e0d475b292edce21f2d9c7fd51b98d85a4f8b24ccef4",
+  "source_section": null,
+  "normalization": "Historical absolute temporary paths omitted; this is a review evidence copy, not a rebuild log replay. Original full report remains in repository.",
+  "evidence": {
+    "reviewer": "independent visual and technical QA",
+    "candidate": "candidate_water_container_native.png",
+    "sha256": "e0872127fcb256463f1e0a78e9911f6599549ed5368b99022a236561ccdd80d7",
+    "source_hash_checks": {
+      "Assets/RedrawStudies/20261013/cloth_barrel/candidate_water_container_native.png": true,
+      "Assets/RedrawStudies/20261013/cloth_barrel/manifest.json": true,
+      "Assets/RedrawStudies/20261013/cloth_barrel/concept_v1.prompt.txt": true,
+      "Assets/ReferenceAudit/20261013/originals/Barrel_0.png": true,
+      "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch53/197_mns_separate_use_barrel_inspection.png": true
+    },
+    "output_hash_checks": {
+      "QA.json": true,
+      "README.md": true,
+      "candidate_water_container_8x.png": true,
+      "candidate_water_container_native.png": true,
+      "native_background_QA.png": true,
+      "pixel_edits_v1_to_v2.json": true,
+      "refine.py": true,
+      "revision_brief.txt": true,
+      "v1_v2_reference_comparison.png": true
+    },
+    "independent_rebuild": {
+      "safety": "Read complete author script first. Local Pillow/NumPy drawing only, no network/shell/game writes. Executed copied script against copied inputs in isolated /tmp tree. Original scripts and PNGs untouched.",
+      "temporary_root": "[historical temporary path omitted]",
+      "exit_code": 0,
+      "stdout": "changed 581 colors 17 bbox (3, 3, 30, 29)\n",
+      "stderr": "",
+      "matches": {
+        "candidate_water_container_native.png": true,
+        "candidate_water_container_8x.png": true,
+        "v1_v2_reference_comparison.png": true,
+        "native_background_QA.png": true,
+        "pixel_edits_v1_to_v2.json": true
+      }
+    },
+    "measurements": {
+      "canvas": [
+        32,
+        32
+      ],
+      "bbox": [
+        3,
+        3,
+        30,
+        29
+      ],
+      "opaque_colors": 17,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "last_opaque_row": 28,
+      "opaque_pixels": 576,
+      "bottom_row_x": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    "runtime_verified": false,
+    "final_art_style_approved": false,
+    "decision": "保留为单帧研究候选；非最终风格/身份验收",
+    "visual_pass_as_candidate": true,
+    "views": [
+      "v1_v2_reference_comparison.png",
+      "native_background_QA.png",
+      "candidate_water_container_native.png (1x)"
+    ],
+    "visual_findings": [
+      "v2木身以深右侧、较亮左中部和底部内收建立桶曲面，纵向短折木纹簇取代v1的几块平色直板；确有体积改善。",
+      "上下箍压窄，短冷灰高光与暗下沿让其更像金属带；上箍前部仍略均匀黑直，但已不再是v1粗塑料圈。",
+      "布顶有不对称明暗面，左绳结和参差下垂角有软褶读形；右垂角和中央褶打破硬盖轮廓，虽顶面依然略平，适合作候选保留。",
+      "在浅/中/深背景及1x下均能区分布、木、箍；深背景右侧暗箍/边框对比较低，尚需游戏场景验看。",
+      "未见纸签、订单号、封印、合格勾、消毒或认证符号；布盖与绳结本身不证明清水、安全或清洁。",
+      "Barrel_0元数据为2021-11-22官方Wiki历史图，25×27；未与安装0.9.4.25核对。该原桶仅作木材/曲面/箍参考，不当现版本提取或复用许可。"
+    ],
+    "reference_measurements": {
+      "canvas": [
+        25,
+        27
+      ],
+      "bbox": [
+        1,
+        1,
+        25,
+        26
+      ],
+      "opaque_colors": 12,
+      "alpha_values": [
+        0,
+        102,
+        255
+      ],
+      "last_opaque_row": 25,
+      "opaque_pixels": 480,
+      "bottom_row_x": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "edit_log_replay": {
+      "before_values_match": true,
+      "final_pixel_bytes_match": true,
+      "logged_changed_pixels": 581
+    },
+    "next_step": "可保留当前布盖桶候选；不要扩大含义为合格/消毒容器。最终美术前可在真实场景检查右暗轮廓、顶部布面的平整感。",
+    "all_recorded_hashes_match": true,
+    "review_did_not_change_recorded_files": true
+  }
+}

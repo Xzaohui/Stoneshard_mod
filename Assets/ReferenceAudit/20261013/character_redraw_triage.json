@@ -1,0 +1,501 @@
+{
+  "audited_at": "2026-10-13T02:00:45Z",
+  "scope": "第一轮已有角色板系统分诊，17张：16张接触表广筛，9张整图细看（8张优先样本＋补入玛拉/伊沃普通夜巡对照）。没有审完299输出。",
+  "categories": {
+    "留作概念": 9,
+    "可工具修整": 0,
+    "需要补重绘": 6,
+    "缺原版参照": 2
+  },
+  "method": "读取coverage-cast-through-batch47、独立coverage审查、style-calibration审查、batch79独立QA、所选manifest/README及角色卡相关段；接触表仅浏览，不冒充逐像素通过。view_image整图受显示缩放影响，非声称1:1每个像素均已核定。",
+  "reference_limit": "最初Verren25×38，随后实际查看Frid/Bert/Jurg/Gunda四个社区原版小精灵；男性工作衣和一名女性长裙得到补充，仍缺精灵女性及普通守卫样本。社区标注0.9.4.25未与本地vanilla逐项核。35×44是透明canvas，身体bbox约19–20×33–34不是35×44；不能定义全游戏统一规范。",
+  "references": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/verren_npc_community_wiki.png",
+      "size": [
+        25,
+        38
+      ],
+      "viewed": true,
+      "version_verified_against_local_vanilla": false
+    },
+    {
+      "path": "Assets/ReferenceAudit/20261013/originals/s_npc_herbalist_0.png",
+      "name": "Frid",
+      "size": [
+        35,
+        44
+      ],
+      "alpha_bbox": [
+        8,
+        5,
+        28,
+        38
+      ],
+      "sha256": "b89b3edb38944d911814a99e43026fddac61a073f72f5e8d507e1f8110e9412a",
+      "viewed": true,
+      "view_method": "three-image nearest-neighbor contact display",
+      "source_page": "https://www.stoneshardwiki.com/en/people/frid/",
+      "provenance": "同组来源核验后本人实际视检；社区资料，不是安装包提取",
+      "version_verified_against_local_vanilla": false
+    },
+    {
+      "path": "Assets/ReferenceAudit/20261013/originals/s_npc_merchant01_0.png",
+      "name": "Bert",
+      "size": [
+        35,
+        44
+      ],
+      "alpha_bbox": [
+        8,
+        4,
+        28,
+        38
+      ],
+      "sha256": "8bef4d1b8f0390e4bff3d347fc1beb4b492606c80a40b4f2834c27b9a4032646",
+      "viewed": true,
+      "view_method": "three-image nearest-neighbor contact display",
+      "source_page": "https://www.stoneshardwiki.com/en/people/bert/",
+      "provenance": "同组来源核验后本人实际视检；社区资料，不是安装包提取",
+      "version_verified_against_local_vanilla": false
+    },
+    {
+      "path": "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png",
+      "name": "Jurg",
+      "size": [
+        35,
+        44
+      ],
+      "alpha_bbox": [
+        8,
+        4,
+        28,
+        38
+      ],
+      "sha256": "7d6b6502bc27a6023009e6470ba0c9e7c98e4f8f974ab7bcb91a536e71834caf",
+      "viewed": true,
+      "view_method": "three-image nearest-neighbor contact display",
+      "source_page": "https://www.stoneshardwiki.com/en/people/jurg/",
+      "provenance": "同组来源核验后本人实际视检；社区资料，不是安装包提取",
+      "version_verified_against_local_vanilla": false
+    },
+    {
+      "path": "Assets/ReferenceAudit/20261013/originals/s_peasantfemale_09_0.png",
+      "name": "Gunda",
+      "size": [
+        35,
+        44
+      ],
+      "alpha_bbox": [
+        8,
+        4,
+        27,
+        38
+      ],
+      "sha256": "db681ed82fbd4b3f9e8ef827c9f40bca8a6ff1b434d6f4f2cdec9df89c784452",
+      "viewed": true,
+      "view_method": "10x nearest-neighbor full image",
+      "source_page": "https://www.stoneshardwiki.com/en/people/gunda/",
+      "version_verified_against_local_vanilla": false
+    }
+  ],
+  "priority_redraw": [
+    "batch01/02_yani_dialogue_poses.png",
+    "batch33/128_bry_anla_wolen_jotin_cast.png",
+    "batch10/46_leo_moren_aren_cast.png",
+    "batch32/124_hers_white_debt_controller_cast.png",
+    "batch47/177_trade_liqui_cast.png"
+  ],
+  "assets": [
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/01_sela_turnaround.png",
+      "sha256": "56b6261ebf4612c6904cf034d41d0159285ddff042f52a112e1bae6dc18043e6",
+      "image_size": [
+        1774,
+        887
+      ],
+      "category": "留作概念",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-SELA_瑟拉.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-SELA_瑟拉.md": "b2f07faaa1e5f0fc91a6483d43e3c5552bc014dd504b2a2f6e16d9348f0d8d61"
+      },
+      "evidence": "旧四向设计可保留，长腿、分指、绳股与连续衣褶明显超出小精灵的信息量；已有batch79替代校准候选，不再重画旧四向。",
+      "minimum_next_step_or_redraw_brief": "保留发髻、青披肩、卷袖、绳圈身份设计；生产试验转batch79。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/02_yani_dialogue_poses.png",
+      "sha256": "a471d3f401c4e08757342bb804967a163f2048fe87077b89ec0431dcb55e3bb3",
+      "image_size": [
+        1717,
+        916
+      ],
+      "category": "需要补重绘",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-YANI_雅尼.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-YANI_雅尼.md": "e1d5a0e656f9c45d2ceb781d9779c2dc1178d3a25ed7bffb69817b880ade3095"
+      },
+      "evidence": "三张坐姿全身完整，但脸部眉眼、五指、靴褶、木凳和披肩细节密集；膝腿/凳腿识别依靠高分辨率阴影。没有以两只靴子推断义肢情况。",
+      "minimum_next_step_or_redraw_brief": "先重绘一张完整中性坐姿：同一成年退役者、橄榄衣棕披肩、双手放膝、腿与凳子分层色块；不新增伤口、不确定的义肢结构或痊愈。坐姿确认后再做说话/制止。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch02/07_maris_four_views.png",
+      "sha256": "83cc0795d615b20a8e56d6b0a0bc42bf3f03c3f72b2c3d94fe6fada1afea82fe",
+      "image_size": [
+        1983,
+        793
+      ],
+      "category": "缺原版参照",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-MARIS_玛莉丝.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-MARIS_玛莉丝.md": "58a78b3c070d68d08d3c5f733bd43b6e1e7fd2515915a1c5f6cabf38e374f822"
+      },
+      "evidence": "玛莉丝全身和耳/辫/双腰袋可读，但眼白、大眼、头身与Verren差异混有人种/性别/设计因素；细链、辫结和布料小色阶仍过多。缺原版成年精灵女性小精灵参照，不能把男性Verren比例套用。",
+      "minimum_next_step_or_redraw_brief": "先补可靠精灵/成年女性原版站姿样本；保留紫外衣与匠商身份，简化耳/发/腰物，不贸然改成年年龄或人种。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch05/22_n1_tor_rhea_pair.png",
+      "sha256": "761ac64a8193ce0611984546a680e71aab6d790052024839aaf0f917211f8a79",
+      "image_size": [
+        1536,
+        1024
+      ],
+      "category": "留作概念",
+      "actual_view_level": "contact_sheet_only",
+      "original_cards": [
+        "design/04_人物/台本新增人物与知识边界.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/台本新增人物与知识边界.md": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+      },
+      "evidence": "托尔闭册、蕾娅抱布轮廓在缩略图清楚，棕灰衣料有高密度明暗；尚未独立整图核像素或正背附件侧别。",
+      "minimum_next_step_or_redraw_brief": "先保留角色服装概念；后续逐图确认服装块与道具侧别，再决定局部修还是重绘。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch06/26_ena_nara_pair.png",
+      "sha256": "8ad44128bac7d21c81d4ce904a3484341e64a5a2a2cc29056e411107541f1b82",
+      "image_size": [
+        1774,
+        887
+      ],
+      "category": "留作概念",
+      "actual_view_level": "contact_sheet_only",
+      "original_cards": [
+        "design/04_人物/台本新增人物与知识边界.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/台本新增人物与知识边界.md": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+      },
+      "evidence": "艾娜持衣、纳拉坐凳与腿部支具轮廓可见；缩略检查不能确认支具细节或转向一致性。",
+      "minimum_next_step_or_redraw_brief": "不因概念板改变纳拉伤腿状态；先细查坐姿支撑结构与衣物保持，禁止以直接缩图当生产精灵。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch10/46_leo_moren_aren_cast.png",
+      "sha256": "d5079309e0e6188a6811c570e783713eae6c16f3804ca16176b03fafa7032f81",
+      "image_size": [
+        1536,
+        1024
+      ],
+      "category": "需要补重绘",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/人物_雷奥·凯斯.md",
+        "design/04_人物/人物_莫伦·海.md",
+        "design/04_人物/台本新增人物与知识边界.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/人物_雷奥·凯斯.md": "2e7159e57480bffc3698f7243b6f1830d4b771ce3d72a4555d2d09d0fde2dfa5",
+        "design/04_人物/人物_莫伦·海.md": "28edec2ce196d76666a79ff4070fa1b1aa1fc8e257c4efc411a47302800d4677",
+        "design/04_人物/台本新增人物与知识边界.md": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+      },
+      "evidence": "雷奥/莫伦/阿伦的前后各身完整；军服护肩、灰发胡须、药袋与破披风依赖密集细纹/多层褶皱。莫伦包扣、靴带和衣摆比Verren复杂；不同身份可读应保留。",
+      "minimum_next_step_or_redraw_brief": "先重绘中列莫伦一张完整站姿，保留灰胡须、橄榄长衣、浅围巾、单闭合药袋；简化袋扣/衣褶/鞋带。雷奥甲块另以守卫样本核定，阿伦不复制莫伦衣装。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch19/82_ald_fenko_sore_character_review.png",
+      "sha256": "3421b86139fd424d76c554adcdbc6d7fa164986b2b823c300832c7a1c0e83a0e",
+      "image_size": [
+        1283,
+        1226
+      ],
+      "category": "留作概念",
+      "actual_view_level": "contact_sheet_only",
+      "original_cards": [
+        "design/04_人物/聚落人物/人物_ALD-S02-NPC_芬珂.md",
+        "design/04_人物/城市人物/人物_ALD-NPC-SORE_索芮.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/聚落人物/人物_ALD-S02-NPC_芬珂.md": "fc93f582217b0796bb767d573bf1c2b6d1a1876a965f9d5e888c98437673483d",
+        "design/04_人物/城市人物/人物_ALD-NPC-SORE_索芮.md": "4332146a980d9b45b04a293207cd4ab9070bd28d2fe95eb4aafd0c76b7d7ee4f"
+      },
+      "evidence": "芬珂、索芮正背服装与完整四肢清楚；卷袖、缝布与腰袋仍是概念级细节，未逐像素验护具。",
+      "minimum_next_step_or_redraw_brief": "先保留，两人年龄和受伤身份依卡，不凭看似健全轮廓声明伤愈；护具制作需单独核。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch32/124_hers_white_debt_controller_cast.png",
+      "sha256": "2aeb144561a9f78b433c442091907caabd8cd8342e0b82cfb92968d6fe6edde0",
+      "image_size": [
+        2172,
+        724
+      ],
+      "category": "需要补重绘",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/人物_赫斯·白.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/人物_赫斯·白.md": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c"
+      },
+      "evidence": "赫斯四姿态完整，但秃发碎点、长衣细密抖色和靴褶高密度；右端桌/书捆与人粘成场景块。深灰衣轮廓有基础，不能用减色修出原生像素簇。",
+      "minimum_next_step_or_redraw_brief": "重绘单人中性站姿：深炭色实用长衣、普通钥匙、克制脸；书和石台分离为道具，不加法袍、光效或全知头目符号。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch33/128_bry_anla_wolen_jotin_cast.png",
+      "sha256": "2235a2ee1105744d9e375e76c80667ce78eb304d560fc8bb44e44fc90f3bae17",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "需要补重绘",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-ANLA_安菈.md",
+        "design/04_人物/城市人物/人物_BRY-NPC-WOLEN_沃伦.md",
+        "design/04_人物/城市人物/人物_BRY-NPC-JOTIN_乔彤.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-ANLA_安菈.md": "4650406afd6fcb5b676240567c625fd146ac1fc722bd9d8ff065f23ee3247414",
+        "design/04_人物/城市人物/人物_BRY-NPC-WOLEN_沃伦.md": "5dd43ddef710d42f7d0fdc747dbb16e5e8fedd7a1b496594cda523239be19de9",
+        "design/04_人物/城市人物/人物_BRY-NPC-JOTIN_乔彤.md": "374abc8d7f264d30fbeebb9903b04ffa71da7a165e06e6d89343912b8f616021"
+      },
+      "evidence": "安菈/沃伦/乔彤六身呈较写实长身比例，围裙斑点、鞋带、辫节与分指密集；乔彤字盘格子与安菈卡扣依赖高分辨率。",
+      "minimum_next_step_or_redraw_brief": "优先安菈单人小站姿与后背：锈红卷袖、深工作围裙、棕发辫、一小簇卡扣；不添加师徒和解或署名结果。沃伦小锤与乔彤排字盘之后分人确认。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch37/142_sko_boh_reha_cast.png",
+      "sha256": "b5544b261393bff4d7bddc8b617cc318a894f2506e3f933b1d701eef8e688d42",
+      "image_size": [
+        1254,
+        1254
+      ],
+      "category": "留作概念",
+      "actual_view_level": "contact_sheet_only",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_SKO-NPC-BOH_博赫·冷.md",
+        "design/04_人物/聚落人物/人物_SKO-S02-NPC_雷哈.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_SKO-NPC-BOH_博赫·冷.md": "c9e1623cccb0097e8d30b5383f19f544b5c16cf50496fec61cda9f4e89f5d820",
+        "design/04_人物/聚落人物/人物_SKO-S02-NPC_雷哈.md": "d919a0b40f5447895a90deb984721fa2f13c769b2cabcadfc7d70845c96e1d55"
+      },
+      "evidence": "博赫卷包、雷哈帽子与服装块可辨，比例较早期紧凑；阴影衣褶仍复杂，未细看工具/包物连续性。",
+      "minimum_next_step_or_redraw_brief": "保留父子独立服装提案，先细查卷包与空手姿势，不把赎回画成归家或服役。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch43/164_osb_vas_buxi_cast.png",
+      "sha256": "9e6f57c09dae6d81c69948ca7295df7b94bda50d572696c4417d26a0758de9bc",
+      "image_size": [
+        1536,
+        1024
+      ],
+      "category": "留作概念",
+      "actual_view_level": "contact_sheet_only",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-VAS_瓦森·磨.md",
+        "design/04_人物/城市人物/人物_OSB-NPC-BUXI_布希.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_OSB-NPC-VAS_瓦森·磨.md": "e505a363ecedbe5f5b2c725e098702c9dd13dfdc3d4658347752f3fc566f22d2",
+        "design/04_人物/城市人物/人物_OSB-NPC-BUXI_布希.md": "a0e89e40202e840b5750cd42572f033f93cb24c3a0d066fd8a8b98f09274e11d"
+      },
+      "evidence": "瓦森围裙与布希蓝裙轮廓分开，完整站姿可见；头身风格与其他板明显不一致。",
+      "minimum_next_step_or_redraw_brief": "保留衣服分工概念，细审后才排制作；不把瓦森当原版磨坊NPC。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch46/172_pas_elon_shabo_xinya_cast.png",
+      "sha256": "ec62655e1d8abd2d852e456317aecdada34fde55498658a4735e7b01cad0c952",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "留作概念",
+      "actual_view_level": "contact_sheet_only",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_PAS-NPC-ELON_礼昂.md",
+        "design/04_人物/城市人物/人物_PAS-NPC-SHABO_莎帛.md",
+        "design/04_人物/聚落人物/人物_PAS-S01-NPC_辛娅.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_PAS-NPC-ELON_礼昂.md": "1a7cfa3b90830d7654368073ccace2370f220baa0fa9a343cd9533b5f9cfc181",
+        "design/04_人物/城市人物/人物_PAS-NPC-SHABO_莎帛.md": "0afd1e326e0156630c7f819865d2067b88953a4f2d4178aeeffa037349486b47",
+        "design/04_人物/聚落人物/人物_PAS-S01-NPC_辛娅.md": "85fd17ceee9116d68fb20f32f8b072b22cfd799a54552b4eec991251ae0cea88"
+      },
+      "evidence": "礼昂披肩、莎帛围裙头巾、辛娅量器三类可读，但长裙/裤褶仍多；未逐像素核量器与手掌分离。",
+      "minimum_next_step_or_redraw_brief": "保留普通民服方向；礼昂是装卸工患者而非守卫，不加军章；量器只保轮廓。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch47/175_ash_lint_niko_oya_cast.png",
+      "sha256": "043af2e43253372b0aeb2831fce7f92acf4317bb9f531595c604a969bae8a31a",
+      "image_size": [
+        1024,
+        1536
+      ],
+      "category": "留作概念",
+      "actual_view_level": "contact_sheet_only",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_ASH-NPC-LINT_琳汀·床.md",
+        "design/04_人物/聚落人物/人物_ASH-S01-NPC_妮蔻.md",
+        "design/04_人物/聚落人物/人物_ASH-S02-NPC_奥娅.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_ASH-NPC-LINT_琳汀·床.md": "bf2c8513a216bfc6bfb102620abfb725b471d320ee50a7319ef3c3f07dda2a6f",
+        "design/04_人物/聚落人物/人物_ASH-S01-NPC_妮蔻.md": "4122590ba3ab303859b3bf5a0b69327a14e4565989fe47b02ee70e72aa671400",
+        "design/04_人物/聚落人物/人物_ASH-S02-NPC_奥娅.md": "ddffe519601acf69518f4b4146c20da224fd9ab9de2eda0d49ba2cb7badf2331"
+      },
+      "evidence": "三位成人护理相关角色独立正背站姿，黄/蓝/紫块分开；脸偏卡通、裙褶多。无明显病诊或伤口新增。",
+      "minimum_next_step_or_redraw_brief": "留概念，结合女性原版样本再压缩脸与裙装块；不把妮蔻换作米娅或把奥娅画成痊愈。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch47/176_hig_hepo_siyu_cast.png",
+      "sha256": "a66131b57a26678c3e54af192576767c525ea1c37b6ec821bd836c4e8e0d493f",
+      "image_size": [
+        1223,
+        1286
+      ],
+      "category": "留作概念",
+      "actual_view_level": "contact_sheet_only",
+      "original_cards": [
+        "design/04_人物/聚落人物/人物_HIG-S01-NPC_赫珀.md",
+        "design/04_人物/聚落人物/人物_HIG-S02-NPC_司榆.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/聚落人物/人物_HIG-S01-NPC_赫珀.md": "b8da7412f60f3251d0e81a9280212e19d442735349ecc51ac4e879305c3d3432",
+        "design/04_人物/聚落人物/人物_HIG-S02-NPC_司榆.md": "6b1f99ffa3c14d62f34180f01663660325ca280e36015c8ff56b4520ceaba176"
+      },
+      "evidence": "赫珀短披肩/补裤与司榆闭册可辨，正背脚齐全；书抱胸姿态和长衣褶尚未细核。",
+      "minimum_next_step_or_redraw_brief": "保留山路维护者/读数员两身份，不用同一人改色替代；先细查抱册两手/前后尺寸。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch47/177_trade_liqui_cast.png",
+      "sha256": "34b9c159bd0539a0f4977d1eb3db7e7fda99c53fe51783ae85d903d9386e7dfe",
+      "image_size": [
+        1536,
+        1024
+      ],
+      "category": "需要补重绘",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_TRADE-NPC-LIQUI_莉葵.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_TRADE-NPC-LIQUI_莉葵.md": "8a9aaf917dfe4103f08935ead9a2d7a4b10e11c830dc6b28bc54f1e05d59c920"
+      },
+      "evidence": "莉葵正背完整、单挎包侧别基本一致；但发辫编织、外套斑点、逐指与靴带多，色块内部持续抖色；轮廓仍接近高分辨率卡通插画。",
+      "minimum_next_step_or_redraw_brief": "单人小站姿：绿旅行外衣、赭内衫、棕裤靴、粗短辫、单闭合挎包；胸/腿压缩为少数块，包带一条；不新增交易或第二城市身体。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/01_sela_sprite_calibration_v2.png",
+      "sha256": "5b37df35503c61ba000b69c143a1c3b140cdc63b72c7afc1e1246cbb7a974413",
+      "image_size": [
+        1312,
+        1199
+      ],
+      "category": "需要补重绘",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-SELA_瑟拉.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/城市人物/人物_BRY-NPC-SELA_瑟拉.md": "b2f07faaa1e5f0fc91a6483d43e3c5552bc014dd504b2a2f6e16d9348f0d8d61"
+      },
+      "evidence": "追加逐行landmark对照显示：79v2头发顶至颏约26–29%可见高度；pilotC保留这一分配（约9–10/34头部，腰下约14–16行）。Gunda/Jurg头部视觉块约近半且腰下约7–9行；量化和15×34可见bbox不能修复源图分段差异。不是仅色阶/背景问题。",
+      "minimum_next_step_or_redraw_brief": "先做一份结构局部重排候选：相对现C扩大头部视觉块、提前腰线/压缩腿靴、保持完整披肩和分叉足；用Gunda/Jurg给出并排原尺寸证据。不要只把整身再压到34像素后宣称已匹配。无需照抄头巾/胡须/红裙；不能把16/8/10设为引擎硬标准。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实",
+      "previous_category": "可工具修整",
+      "reassessment_at": "2026-10-13T02:04:10Z",
+      "landmark_appendix": "Assets/ReferenceAudit/20261013/character_landmark_appendix.json"
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch05/21_n1_mara_ivo_pair.png",
+      "sha256": "b0d311843e65b75f2ecf8cb488f83fbdd65fa866e041a9e8a76efb757de6d4ed",
+      "image_size": [
+        1536,
+        1024
+      ],
+      "category": "缺原版参照",
+      "actual_view_level": "detail_full_image",
+      "original_cards": [
+        "design/04_人物/人物_玛拉与伊沃.md"
+      ],
+      "card_source_hashes": {
+        "design/04_人物/人物_玛拉与伊沃.md": "27945298fd154bc07e7aab59ae741e7cff371e360767c5bbb2becda21374da58"
+      },
+      "evidence": "玛拉与伊沃四身完整；玛拉篮子在正背保持画面右侧而非身体侧，伊沃后背银色短刀像裸刃，均为需修具体问题。普通夜巡装不是正规军甲；现缺匹配守卫原版参照。",
+      "minimum_next_step_or_redraw_brief": "先局部修篮子身体侧、短刀鞘与光晕；原版普通守卫/巡夜人参照补齐后再决定身体重绘。不能拿雷奥军服或Verren冒充守卫标准。",
+      "style_pass": false,
+      "native_production_pass": false,
+      "source_appearance_status": "原创美术提案；卡片一般仅确定身份与剧情，不授权把衣装定为原作事实"
+    }
+  ],
+  "runtimeVerified": false,
+  "original_images_modified": false,
+  "new_art_generated": false,
+  "global_indexes_modified": false,
+  "supplemental_reference_findings": "Frid紫衣灰须、Bert深外衣浅胸衣、Jurg金发胡须/灰工作围裙：脸、手、皮带和短腿用少量大像素块分开，无逐指/鞋带/布料噪点。支持莫伦、赫斯与工匠板的信息量压缩结论；不将这些男性具体服饰复制给原创角色。 最后查看Gunda女性长裙：脸部几块红暖色、灰袖/黑躯干/红裙三大组、双脚短且分开；进一步支持劳动女性板压缩细节，不要求莉葵穿裙。",
+  "reassessment_note": "Sela79v2原先建议先工具清理，追加原版landmark证据后改为结构性局部重排；旧建议不再当前有效。"
+}

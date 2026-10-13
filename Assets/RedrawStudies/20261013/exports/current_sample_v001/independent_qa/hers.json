@@ -1,0 +1,86 @@
+{
+  "candidate_key": "hers",
+  "source_report_repository_path": "Assets/RedrawStudies/20261013/hers/v2/QA-independent.json",
+  "source_report_sha256": "36b69c84aa4f6b6d1ebcd57056e126eae6718557ccbe25b825588960e1ff6cfb",
+  "source_section": null,
+  "normalization": "Historical absolute temporary paths omitted; this is a review evidence copy, not a rebuild log replay. Original full report remains in repository.",
+  "evidence": {
+    "date": "2026-10-13",
+    "reviewer": "Independent reviewer",
+    "decision": "retain_v2_as_single_frame_candidate; local v1 failure corrected; no final style or runtime pass",
+    "safe_script_review": "build_v2 only reads v1 sprites and writes its own directory; independently copied and rerun in /tmp, no source writes/network/install/deletion.",
+    "reproduction_hash_match": {
+      "hers_native_v2.png": true,
+      "hers_native_v2_8x.png": true,
+      "ledger_native_v2.png": true,
+      "ledger_native_v2_8x.png": true,
+      "v1_v2_native_and_8x.png": true,
+      "pixel_edit_log.json": true,
+      "QA.json": true
+    },
+    "hers_sha256": "0c8342b3dc02c4628ddbd5c7ccf29ae99cda310a1689d9c79408a7fd736a30ac",
+    "ledger_sha256": "8ad0df9f5f43ae8be46bf3093f0c3df0a4e25245c6e01c2fb65a0862c68c370a",
+    "hers": {
+      "canvas": [
+        35,
+        44
+      ],
+      "alpha_bbox_half_open": [
+        8,
+        4,
+        28,
+        38
+      ],
+      "actual_opaque_rgb_colors": 19,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_pixels": 448
+    },
+    "ledger": {
+      "canvas": [
+        12,
+        8
+      ],
+      "alpha_bbox_half_open": [
+        0,
+        0,
+        12,
+        8
+      ],
+      "actual_opaque_rgb_colors": 5,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_pixels": 88
+    },
+    "pixel_log": {
+      "hers_operations": 111,
+      "before_values_correct": true,
+      "hers_replay_exact": true,
+      "ledger_assignments": 88,
+      "ledger_replay_exact": true
+    },
+    "v1_preserved": true,
+    "actually_viewed": [
+      "v1_v2_native_and_8x.png",
+      "hers_native_v2.png at native size",
+      "ledger_native_v2.png at native size"
+    ],
+    "visual_findings": [
+      "灰发与额颊像素更连续，眼/鼻主要簇仍可分；原v1杂纹明显减少，较近本轮所见原版的粗色簇。",
+      "尖V翻领与长条衬衣纹已移除，短浅领配直闭合暗大衣可读。空手、左髋钥匙、短分叉靴保持。",
+      "账簿12×8现在在1×读成小闭书，8×封面、暗书脊、浅页边明确。原v1不规则杂物问题已修复；稍正对/图标化，只是独立道具读形候选，还没有场景透视与尺度验收。",
+      "Hers发块较整齐，旧124稀疏后退发际与严厉面相只能大致保留；短须/颏/浅领之间仍需背景下辨识。技术与局部改进不证明精确人物相貌或原作风格完成。"
+    ],
+    "narrative_scope": "人物依旧空手，ledger独立；不准解释为随身账簿。N17死亡/逃脱固定账簿的未来场景实现仍需单独测试。",
+    "reference_limit": "原版社区NPC参考未逐项核本地vanilla；本次未新增原版读取，沿用前一轮已实际同框查看的Frid/Bert/Jurg。没有35×44或12×8引擎标准声明。",
+    "style_pass": false,
+    "runtimeVerified": false,
+    "userStyleApproved": false,
+    "productionApproved": false,
+    "next_use": "v2替代v1作为Hers单帧待选候选；保留v1审查记录。不需再整套生成，后续仅在实际背景/多方向与用户审美反馈中决定精修。"
+  }
+}

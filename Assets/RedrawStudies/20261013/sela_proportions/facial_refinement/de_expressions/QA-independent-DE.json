@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-13",
+  "revision": "v2",
+  "checks": [
+    {
+      "variant": "D",
+      "sha256": "4b23d974bf33e02e68b74c3bb1f7bf9d4133f4dcda3908d2aca47cf562495446",
+      "preview_sync_pixel_differences": 0
+    },
+    {
+      "variant": "E",
+      "sha256": "c80cb66bb8eafb3e03a208d33e809bdd353c0c5da709d30253606a0bfc7dfecf",
+      "preview_sync_pixel_differences": 0
+    }
+  ],
+  "visual_review": {
+    "actual_views": [
+      "face_CDE_review_v2_10x.png",
+      "comparison_CDE_review_v2_1x.png"
+    ],
+    "result": "未通过本轮审美/情绪要求；保留探索，不推荐再次单独交用户。",
+    "improvements": "眼焦点比v1更清楚，鼻下孤立深点去除，D嘴角略上扬，嘴比C点嘴自然。",
+    "remaining_problems": "纵长平脸与大面积空面未解决；D只略温和，E眉眼虽独立但倔强不明确；1x两种情绪的差异弱，依然依赖文字标签。",
+    "correction": "初版实际眼色已是deep_brown #35271f；先前观察所谓眼色太浅应表述为簇与邻色组织导致视觉焦点弱，不能错误归因为RGB变浅。",
+    "stop_condition": "停止局部2px修补循环，待G整体重组脸部后再看。"
+  },
+  "user_accepted": false,
+  "runtime_tested": false
+}

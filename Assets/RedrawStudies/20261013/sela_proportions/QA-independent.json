@@ -1,0 +1,97 @@
+{
+  "reviewer": "independent",
+  "candidate_sha256": "b4dcca5a9a554173f045ca59ad29bd78327fca2390a3dee5852a556035ff6db1",
+  "source_hash_checks": {
+    "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/01_sela_sprite_calibration_v2.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_pixel_edits.json": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_idle_view01_f000.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/b_48x64_idle_view01_f000.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/comparison_v2.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/QA-producer-C.json": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/palette.json": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_preview_8x.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/b_48x64_preview_8x.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/a_32x48_idle_view01_f000.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/a_32x48_baseline.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/build_pilot.py": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/a_32x48_preview_8x.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/QA-independent.json": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/build_reference_budget.py": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/b_48x64_pixel_edits.json": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/README.md": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/QA-producer.json": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/intermediate_cutout_full.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/a_32x48_pixel_edits.json": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_baseline.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/comparison.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/b_48x64_baseline.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/manifest.json": true
+  },
+  "reference_hash_checks": {
+    "Assets/ReferenceAudit/20261013/originals/s_peasantfemale_09_0.png": true,
+    "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png": true,
+    "Assets/ReferenceAudit/20261013/originals/s_npc_herbalist_0.png": true,
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_idle_view01_f000.png": true
+  },
+  "output_hash_checks": {
+    "sela_structural_idle_view01_f000.png": true,
+    "sela_structural_baseline.png": true,
+    "sela_structural_preview_8x.png": true,
+    "comparison_native_1x.png": true,
+    "comparison_ground_aligned_8x.png": true
+  },
+  "script_hash_matches": true,
+  "independent_rebuild": {
+    "safety": "Only local reads and writes to supplied --out; no network, no game updates",
+    "exit_code": 0,
+    "matches": {
+      "palette.json": true,
+      "pixel_edits.json": true,
+      "sela_structural_idle_view01_f000.png": true,
+      "QA-producer.json": true,
+      "sela_structural_baseline.png": true,
+      "sela_structural_preview_8x.png": true,
+      "comparison_native_1x.png": true,
+      "comparison_ground_aligned_8x.png": true
+    }
+  },
+  "measurements": {
+    "canvas": [
+      35,
+      44
+    ],
+    "bbox": [
+      9,
+      4,
+      26,
+      38
+    ],
+    "opaque_colors": 19,
+    "palette_subset": true,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "last_opaque_row": 37
+  },
+  "edit_log_replay": {
+    "before_values_match": true,
+    "final_pixels_match": true
+  },
+  "views": [
+    "comparison_ground_aligned_8x.png",
+    "source batch79 v2",
+    "comparison_native_1x.png"
+  ],
+  "decision": "保留单姿态结构重排候选；不授予原版风格/游戏验收",
+  "structural_findings": [
+    "新头部视觉量相较C明显增大、腿部缩短；分区重采样是实际比例重排，不是整身统一缩小。",
+    "源发髻、暗青披肩、麻色袖、裤装、双足和腰侧绳圈仍可辨；绳圈与双手改为低像素符号。",
+    "成年女性/租船人身份由角色卡提供，像素本身不能证明年龄或职业。",
+    "仍有较强侧脸与暖黄肤色，颏颈转折偏长尖，麻衫中央明暗碎簇；不能称肤色/视角/块面完全同原版。"
+  ],
+  "limits": [
+    "仅一姿态，未做动画、游戏对齐、碰撞或原版版本本地核验。",
+    "35×44和34px可见高度只为当前参考预算。"
+  ]
+}

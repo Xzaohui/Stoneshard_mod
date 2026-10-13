@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-13",
+  "scope": "独立实际查看Before/A/B/Gunda/Bert的1x、8x、10x对照；未编辑任何native。只对当前候选哈希有效。",
+  "checks": [
+    {
+      "variant": "A",
+      "sha256": "aca2f5c48958844839db456fb864e443f38b2611c15e2dbfc5c7c0a8c289efa3",
+      "changed_pixels": 24,
+      "changed_bbox_inclusive": [
+        10,
+        13,
+        16,
+        19
+      ],
+      "all_pixels_y20_and_below_unchanged": true,
+      "all_pixels_y12_and_above_unchanged": true
+    },
+    {
+      "variant": "B",
+      "sha256": "028b21189acc3814c73c008e9cc61f1d96f1c30810099f4b6810bfb066eb849f",
+      "changed_pixels": 14,
+      "changed_bbox_inclusive": [
+        10,
+        14,
+        16,
+        19
+      ],
+      "all_pixels_y20_and_below_unchanged": true,
+      "all_pixels_y12_and_above_unchanged": true
+    }
+  ],
+  "preferred_direction": "A：建议作为本轮主展示候选；B保原朝向对照",
+  "visual_verdict": {
+    "A": "当前近眼转成小竖簇后闭眼/疲惫感明显减弱，眼、鼻、暖嘴在1x分工更清楚；鼻嘴阴影已有分隔，较Before更自然完整。保留成年、偏严肃的中性表情，未幼态化。仍因原发际遮面而偏侧3/4，不应声称已完全转正或与Gunda同面向。",
+    "B": "当前嘴颊横带已打断，柔化有效；但仍以单眼侧面轮廓为主，鼻投影感比A强。适合明确想保原朝向时选择，当前推荐A而非B。",
+    "ear": "无需因大耳指控改轮廓：可见肤色2x3px与Bert同量级，主要是亮肤与深发对比醒目。",
+    "not_proven_errors": [
+      "眼块过大",
+      "下半脸几何超长",
+      "单眼侧面本身错误",
+      "肤色需提亮/变白"
+    ]
+  },
+  "acceptance_pending": [
+    "用户审美选择；游戏实际渲染未测"
+  ],
+  "runtime_tested": false,
+  "revision_reviewed": "制作方按独立建议微调后重新实际查看当前1x/10x；哈希与checks相符。",
+  "applied_suggestions": [
+    {
+      "target": "A near eye",
+      "suggestion": "(15,14)由hair_mid改skin_mid，(14,15)由skin_light改deep_brown，试小竖簇而非水平闭眼线；不增眼白。",
+      "reason": "原版眼簇常有2行深度；总面积无需增加。"
+    },
+    {
+      "target": "A nose-mouth separation",
+      "suggestion": "(13,17)鼻下shadow试还skin_mid，保持(13,18)暖短嘴；避免鼻影与嘴粘成竖线。",
+      "reason": "用色阶间隔区分器官，不加细碎纹理。"
+    },
+    {
+      "target": "B mouth band",
+      "suggestion": "先将(15,18)恢复skin_light打断x14..16连续中间调；嘴保(13,18)一像素及邻色过渡。",
+      "reason": "减横线感，保单眼朝向。"
+    }
+  ],
+  "optional_unapplied": "耳高光可进一步试1px，但目前没有必要继续改以避免无止境微调。",
+  "review_result": "局部五官候选视觉复核通过，A可供用户审阅；不等于用户定稿或运行验收。",
+  "preview_native_sync": {
+    "preview": "face_closeups_10x.png",
+    "preview_sha256": "f461637c38364805eeb373a1c15fa88299eb296995d1a9a62dad454436ec4ba2",
+    "method": "Compare preview A/B crops against current native crop [7,3,29,23], nearest-neighbor 10x, alpha composite onto RGB [180,183,172].",
+    "A_differing_pixels": 0,
+    "B_differing_pixels": 0,
+    "result": "exact_match"
+  },
+  "latest_aesthetic_clarification": "A主眼可读成小竖眼窝，比初版横线自然；深棕与发侧阴影接近，清晰度仍不如Gunda/Bert。鼻口分離改善，但外轮廓与发际仍读偏长侧面/侧3/4，B更明显。A是局部改善候选，不能称已根治面部差距。"
+}

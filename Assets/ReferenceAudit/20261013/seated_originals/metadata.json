@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "retrieved_at": "2026-10-13T03:00:00Z",
+  "purpose": "Bounded public original-game seated-reference search for Yani/Tauri/Niv posture audit; no new character artwork.",
+  "accepted_image_count": 2,
+  "accepted_full_seated_silhouette_count": 1,
+  "accepted_native_sprite_count": 0,
+  "global_limits": [
+    "Screenshots do not prove native sprite canvas, native scaling, origin/pivot, collision, animation frames, or installed-version equivalence.",
+    "Uniform screenshot scaling is not independently verified; do not convert screenshot pixels to native pixels or enforce standing 17+17 landmarks on seated poses.",
+    "Named NPC identity is not asserted without direct source mapping.",
+    "No verified rising/getting-up frame found in this bounded search."
+  ],
+  "references": [
+    {
+      "id": "Drunken_Woodsman_Inn_ground_floor",
+      "path": "Assets/ReferenceAudit/20261013/seated_originals/Drunken_Woodsman_Inn_ground_floor.png",
+      "source_kind": "In-game location screenshot hosted by Official Stoneshard wiki; community uploader",
+      "source_page": "https://stoneshard.com/wiki/Drunken_Woodsman_Inn",
+      "file_page": "https://stoneshard.com/wiki/File:Drunken_Woodsman_Inn_ground_floor.png",
+      "permanent_file_page": "https://stoneshard.com/wiki/index.php?title=File:Drunken_Woodsman_Inn_ground_floor.png&oldid=67675",
+      "image_url": "https://stoneshard.com/wiki/images/1/11/Drunken_Woodsman_Inn_ground_floor.png",
+      "source_page_sha256": "a7f3188081f82ef280f87a6bd50b030cf78c3608ea8301c17abd820057572aad",
+      "file_uploaded_at": "2024-12-27 08:31 (wiki displayed time; timezone not stated)",
+      "uploader": "Questionable bowel",
+      "game_build": "Not stated on file page; upload date does not establish capture date/build",
+      "dimensions": [
+        875,
+        870
+      ],
+      "sha256": "113292f699b3f061d6c63d4e4365b41329cf4781f8c60128bbfb1148f99c8a2b",
+      "visually_inspected": true,
+      "classification": "Screenshot-only posture reference; not a native sprite",
+      "copyright": "Stoneshard game artwork. No image-specific open reuse license shown on these file pages. Reference/audit use only; no runtime packaging or redistribution rights asserted.",
+      "runtime_asset": false,
+      "is_generated": false,
+      "exclude_from_generated_art_counts": true,
+      "observations": [
+        {
+          "label": "Fireplace-side red-haired seated NPC",
+          "identity": "Specific name not proven; page NPC list is insufficient to attach a name to this figure",
+          "roi_xyxy": [
+            21,
+            470,
+            77,
+            544
+          ],
+          "view": "Front / slight three-quarter view, seated on a backed wooden chair/stool, hands toward knees; two dark lower legs and feet visible",
+          "usable_for": "Seated knee/hand compression, head mass, chair-body occlusion, full seated silhouette",
+          "limits": "Some chair/body pixels overlap. Screenshot has rendered illumination; exact original sprite pixels and scale unverified."
+        },
+        {
+          "label": "Right-table helmeted seated NPC",
+          "identity": "Specific name not proven",
+          "roi_xyxy": [
+            471,
+            612,
+            517,
+            711
+          ],
+          "view": "Side / three-quarter seated at right-hand table, facing image-left; helmet, face and bent forearm visible",
+          "usable_for": "Side seated head/arm/table relationship",
+          "limits": "Table and seating obscure lower body; must not estimate head-to-whole-body ratio from visible height."
+        }
+      ]
+    },
+    {
+      "id": "BlackBoarInn",
+      "path": "Assets/ReferenceAudit/20261013/seated_originals/BlackBoarInn.png",
+      "source_kind": "In-game location screenshot hosted by Official Stoneshard wiki; community uploader",
+      "source_page": "https://stoneshard.com/wiki/Black_Boar_Inn",
+      "file_page": "https://stoneshard.com/wiki/File:BlackBoarInn.png",
+      "permanent_file_page": "https://stoneshard.com/wiki/index.php?title=File:BlackBoarInn.png&oldid=66646",
+      "image_url": "https://stoneshard.com/wiki/images/2/2d/BlackBoarInn.png",
+      "source_page_sha256": "4c478d88abbeadd46c60abb9b20c7b84ac58b8bfea988fb5b0fa4ce1a70dca34",
+      "file_uploaded_at": "2024-02-27 16:27 (wiki displayed time; timezone not stated)",
+      "uploader": "Mindwitness",
+      "game_build": "Not stated on file page; upload date does not establish capture date/build",
+      "dimensions": [
+        775,
+        679
+      ],
+      "sha256": "514c9e5124a0d80be8e331d1b844308d472520565597e123bed6143d87ce6dca",
+      "visually_inspected": true,
+      "classification": "Screenshot-only posture reference; not a native sprite",
+      "copyright": "Stoneshard game artwork. No image-specific open reuse license shown on these file pages. Reference/audit use only; no runtime packaging or redistribution rights asserted.",
+      "runtime_asset": false,
+      "is_generated": false,
+      "exclude_from_generated_art_counts": true,
+      "observations": [
+        {
+          "label": "Lower-right table patron",
+          "identity": "Specific name not proven",
+          "roi_xyxy": [
+            352,
+            492,
+            410,
+            550
+          ],
+          "view": "Front-ish seated patron behind table; head and arms visible",
+          "usable_for": "Seated head/table overlap and upper-body gesture only",
+          "limits": "Table occludes lower body. Not useful for whole-body head ratio; not evidence of native sprite canvas."
+        }
+      ]
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "source_page": "https://stoneshard.com/wiki/File:TheBlackBoar.png",
+      "reason": "Actual visual inspection shows no usable seated character. Download retained only in temporary storage, not reference set."
+    },
+    {
+      "source_page": "https://stoneshard.com/wiki/Verren",
+      "reason": "Portrait and promotional art; not a seated native sprite."
+    },
+    {
+      "source_page": "https://www.stoneshardwiki.com/en/people/verren/",
+      "reason": "Page exposes s_VerrenNPC_0.png but pose not inspected or proven; not downloaded/accepted merely from filename."
+    }
+  ]
+}

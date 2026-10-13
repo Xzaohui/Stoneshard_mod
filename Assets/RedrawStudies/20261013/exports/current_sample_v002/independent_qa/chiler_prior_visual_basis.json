@@ -1,0 +1,90 @@
+{
+  "candidate_key": "chiler",
+  "source_report_repository_path": "Assets/RedrawStudies/20261013/chiler/QA-independent.json",
+  "source_report_sha256": "d470dad0f4016a0d2c0388dc98378975860e60e9270280bafa94650d7ff27565",
+  "role": "Prior visual/proportion evidence; current revision QA separately verifies minimal pixel difference. This baseline report alone does not approve current hash.",
+  "evidence": {
+    "character": "ALD-NPC-CHILER",
+    "reviewer": "independent second-round review",
+    "actual_views": [
+      "chiler_native_v1_1x.png",
+      "comparison_landmarks_8x.png",
+      "chiler_landmarks_20x.png"
+    ],
+    "view_count": 3,
+    "technical": {
+      "script_read_before_execution": true,
+      "rebuild_tmp": "[historical temporary path omitted]",
+      "rebuild_byte_identical": true,
+      "pixel_edit_log_byte_identical": true,
+      "sha256": "baf4b628821050dfa88b43a9fcd72efa4d5aab4dbfea49c009516333992f1be5",
+      "manifest_output_hash_mismatches": [],
+      "manifest_source_hash_mismatches": [],
+      "actually_visible_rgb_colors": 20,
+      "binary_alpha_values": [
+        0,
+        255
+      ],
+      "opaque_pixels": 419,
+      "bbox_exclusive": [
+        5,
+        4,
+        26,
+        38
+      ],
+      "source_low_alpha_pixel_count": 11035,
+      "source_bbox_warning": "Generated alpha dust excluded at128; no alpha>0 source bbox used as human anatomy.",
+      "local_log_entries": 10,
+      "actual_non_noop_local_edits": 8,
+      "transparent_gap_pixels_checked": {
+        "11,7": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "12,18": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "landmarks": {
+      "crown_y": 4,
+      "visible_skin_chin_y": 20,
+      "dark_chin_collar_y": 21,
+      "sole_y": 37,
+      "head_rows": 17,
+      "remainder_rows": 17,
+      "head_core_x": [
+        9,
+        24
+      ],
+      "head_core_width_px": 16,
+      "cape_shoulder_width_estimate_px": 16,
+      "visible_basis": "Jaw narrows from broad cheek at17–18 to skin19 and two visible chin pixels17..18 at20. Dark21 immediately joins mustard collar, not long exposed neck. Crown4 is connected hair and soles37 are two separate boots, excluding pointer end33. Hair core x9..24 is broad and does not need further expansion."
+    },
+    "near_one_to_one_result": "Direct visible chin supports17/17 (dark-border convention18/16).",
+    "identity_readability": {
+      "mustard_cape_olive_tunic_brown_satchel": true,
+      "single_downward_pointer": true,
+      "magic_or_weapon_adornments": false,
+      "adult_stylized_face": "Adult reading plausible, but small moustache/stubble identity not confidently distinct at1x; mouth and jaw edge may serve instead.",
+      "narrative_guardrail": "No new siege alarm, leader insignia, magical effects, visitor agreement or refund outcome depicted."
+    },
+    "specific_revision_notes": [
+      "Two fully transparent one-pixel gaps at11,7 inside hair and12,18 near side hair/ear create background-colored pinholes; fill or explicitly justify before production.",
+      "Log contains10 assignments but only8 actual before/after changes; describe it as10 operations/8 changed pixels rather than10 changed pixels.",
+      "Pointer is one plain diagonal rod, no magic. At1x it reads as short stick; specific guide-pointer purpose comes from character context.",
+      "Hair has many small alternating brown clusters and face is strongly angular; artistic integration still needs review. Do not label numeric/palette success style acceptance."
+    ],
+    "style_pass": false,
+    "native_production_pass": false,
+    "runtimeVerified": false,
+    "source_png_modified": false,
+    "global_or_runtime_modified": false,
+    "push_performed": false
+  }
+}

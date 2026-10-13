@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "scope": "First-pass prop and scene triage: 16 selected existing boards, 6 full-image detail views, not all 299 original concepts.",
+  "original_assets_modified": false,
+  "new_generated_art_count": 0,
+  "runtime_integrated": false,
+  "review_assets_excluded_from_generated_counts": true,
+  "reference_metadata": "Assets/ReferenceAudit/20261013/original-reference-metadata.json",
+  "measured_reference_extents": [
+    {
+      "path": "Assets/ReferenceAudit/20261013/originals/Barrel_0.png",
+      "canvas": [
+        25,
+        27
+      ],
+      "visible_alpha_bbox": [
+        1,
+        1,
+        25,
+        26
+      ],
+      "visible_extent": [
+        24,
+        25
+      ],
+      "rgba_color_count_including_transparent": 13
+    },
+    {
+      "path": "Assets/ReferenceAudit/20261013/originals/Bookshelf_0.png",
+      "canvas": [
+        66,
+        64
+      ],
+      "visible_alpha_bbox": [
+        6,
+        9,
+        60,
+        55
+      ],
+      "visible_extent": [
+        54,
+        46
+      ],
+      "rgba_color_count_including_transparent": 29
+    }
+  ],
+  "source_limits": [
+    "2021官方Wiki桶/书架是历史原画参考，未与安装0.9.4.25逐资源核对。",
+    "Frid_environ 279×280只给环境气质，缩放和版本未知，不能反推原生格。",
+    "约20×34 NPC可见身体仅是比例对照，不代表所有人物、门或家具标准。",
+    "没有原版船、桥、码头桩、完整室内与大型机构的直接参照。",
+    "官方Wiki图仅审查输入，不进入runtime或新生图计数；没有资产复用授权。"
+  ],
+  "core_findings": [
+    "16张大多可留作叙事/布局或物证概念，但没有一张因减色即可自动认定引擎可用。",
+    "低分辨率不是唯一门槛：相机、可见体积、轮廓主次、材质簇、实体/动画分层分别核验。",
+    "近景调查板和上视几何门pilot的用途不同；不能因非世界精灵视角一律判坏。",
+    "可像素工具修整只限保留原用途的色簇/边缘；相机、体积、物证成因错误需要重新构造。"
+  ],
+  "classifications": {
+    "保留叙事概念": 6,
+    "可像素工具修整": 2,
+    "缺参照": 2,
+    "需结构重绘": 6
+  },
+  "entries": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/03_low_tide_mooring_night.png",
+      "sha256": "c62d82daa58cf41f9a675e3c38e01cc4a0bc6bed8d2d29ff446fa5bbc5c09d7d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "保留叙事概念",
+      "visual_observation": "夜泊、水岸与单船读得清，斜向码头和纵深照明是氛围构图。",
+      "camera_scale_volume": "整体高斜俯视；地面、船、棚未绑定共同原生比例。",
+      "story_and_next_step": "保单一回岸路、公开座与私密屏风；完整像素重构前先定场景平面。",
+      "sources": [],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/04_dock_landmark_props.png",
+      "sha256": "2c8c04e4f76b0159e67f6291e964d0d090f1b3c3ef9f80364852bc57d1dd473e",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "review_level": "full_image_detail",
+      "classification": "需结构重绘",
+      "visual_observation": "三件道具的侧面/顶面、白带和结绳轮廓明确；木纹、藤壶和铁锈过密。",
+      "camera_scale_volume": "各物件近景3/4体积；未提供与原生NPC同倍率的比例锚，不能比较大画布占高或直接缩图决定正式尺度。",
+      "story_and_next_step": "仅拆出左侧回岸标记桩；保白带、绳结和水痕，不重做全码头。",
+      "sources": [],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/05_boat_four_keyframes.png",
+      "sha256": "204911473c66d893cbdf758c2630a237a07dd768cd61f4445b8993b56649c917",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "review_level": "full_image_detail",
+      "classification": "需结构重绘",
+      "visual_observation": "四帧同一锚桩/舟概念可读，但水纹和船体独立重绘，边缘与尺寸不能视为刚体帧。",
+      "camera_scale_volume": "大幅3/4船体，侧壁长透视和背景融合；无原版船参照。",
+      "story_and_next_step": "保单空船、单桨、同岸锚；先做一艘静态资产再分离水纹，不认定已有1px升降。",
+      "sources": [],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch03/13_old_bookbinding_stall_v2.png",
+      "sha256": "b43a6d94a573f3eb4e6f66133eb85c8f55c9aa13312a802c68f582a1569dd1ba",
+      "dimensions": [
+        1500,
+        1049
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "保留叙事概念",
+      "visual_observation": "开放装帧台、书架与工作台具有清晰用途。",
+      "camera_scale_volume": "近正面剖屋+俯视地面；台面和书架材质比54×46可见原书架细密得多。",
+      "story_and_next_step": "保装帧工作物与可达前沿；拆分家具及前后遮挡，原版书架仅校验材质与体积。",
+      "sources": [],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch05/23_n1_broken_ferry_yard.png",
+      "sha256": "b3136d613c5f5e2030e0162d1c960778c7414d7ba2063ecea3637a937311542c",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "缺参照",
+      "visual_observation": "河流、断桥和两岸建筑可读，适合地点草图。",
+      "camera_scale_volume": "大景鸟瞰，建筑缩景；不能用279×280旧花园截图推河道或桥格。",
+      "story_and_next_step": "保破渡场矛盾和岸上绕路；需要原版河岸/桥/房间参照后再定结构。",
+      "sources": [],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch05/24_n1_silent_bellhouse.png",
+      "sha256": "6c56ccd5ed623ee83fdfd7fa80f520524eaa284f9468558cc2b00c64031fc8db",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "保留叙事概念",
+      "visual_observation": "无钟屋、邻水槽和房间构成可辨。",
+      "camera_scale_volume": "屋顶移除与鸟瞰环境组合，整房尺寸和入口可达性未证。",
+      "story_and_next_step": "保静默地标与回岸路径；不凭图声明门数和碰撞。",
+      "sources": [],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch06/29_canal_maintenance_side_room.png",
+      "sha256": "e3e724bff3f2f34a6b56be9081f374d2dfda3a2056d30ea2c8d90ee6d1605c1f",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "需结构重绘",
+      "visual_observation": "狭长水渠与维修室有明确分隔，结构功能可保留。",
+      "camera_scale_volume": "后高前低的强3/4剖面、墙厚和床体体积彼此需重新量定。",
+      "story_and_next_step": "将床、工作台、水渠切为独立件；无原版水渠参照，不直接整室降采样。",
+      "sources": [
+        "design/05_主线/台本/台本_N2_灰堤没有墓碑.md#N2-S03"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch07/33_nell_unlit_rented_room.png",
+      "sha256": "c96945118e96f872f36de68b7b53f16c58a707711a8955ad321483e4c6ca1b36",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "保留叙事概念",
+      "visual_observation": "未点灯租室的床、桌和灶可读，气氛克制。",
+      "camera_scale_volume": "正面剖屋但地板俯视，人物缺席无比例锚。",
+      "story_and_next_step": "保住处叙事；家具与可达空间需用原生房间样本重排。",
+      "sources": [
+        "design/05_主线/台本/台本_N3_听审前的灯.md#N3-S02"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch07/34_sel_apparatus_workshop.png",
+      "sha256": "5292be23ceff5e800e3b3d1e6bc91e09a61f28dbff5008332aa90190a353aa5c",
+      "dimensions": [
+        1499,
+        1049
+      ],
+      "review_level": "full_image_detail",
+      "classification": "需结构重绘",
+      "visual_observation": "工艺分区与瓶架/工作台清楚；双炉、散工具和纹理信息压过任务重点。",
+      "camera_scale_volume": "室内正面与高角台面并存，人物身高和家具比例属于插画而非原生网格。",
+      "story_and_next_step": "保工作分区与普通出口；删噪声不是结构修复，先拆任务核心器具。",
+      "sources": [
+        "design/05_主线/台本/台本_N4_第一张空白债票.md#N4-S01",
+        "design/05_主线/台本/台本_N4_第一张空白债票.md#N4-S03"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch09/43_sealed_maen_library_annex.png",
+      "sha256": "48bc1d91298f40b43fe8caee84099ad304b2f79280696791866a5a2bd9b36768",
+      "dimensions": [
+        1499,
+        1049
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "缺参照",
+      "visual_observation": "封闭图书附室、书架和桌面可读。",
+      "camera_scale_volume": "斜墙与后墙透视、桌椅体积需原版室内样本；书架参考不能代表整图。",
+      "story_and_next_step": "保附室气氛与封存概念；原生墙/门/室内参照缺失。",
+      "sources": [
+        "design/05_主线/台本/台本_N6_被封存的页码.md#N6-S02",
+        "design/05_主线/台本/台本_N6_被封存的页码.md#N6-S03"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch14/66_n14_old_bell_station_workshop.png",
+      "sha256": "4cfeabc533dfc9ff84dad4dac58b2ecf055f52372ca0ebaba7460928b66da50d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "保留叙事概念",
+      "visual_observation": "旧站工坊里的工具台与退役机构可辨。",
+      "camera_scale_volume": "大房间三面剖墙；齿轮体积和固定点未有原件参照。",
+      "story_and_next_step": "保废旧工艺背景；不能把画内机构当工程或状态验证。",
+      "sources": [
+        "design/05_主线/台本/台本_N14_可以回去的路.md"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch19/81_ald_empty_crate_separate_obligations.png",
+      "sha256": "00f47028da3826457b0964701408820c07a9baffa70f493c3718f83678fc1b68",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "保留叙事概念",
+      "visual_observation": "双地点板能传达木箱与独立义务的并置。",
+      "camera_scale_volume": "两个房间各自构图，没有共同物理比例或连续通路。",
+      "story_and_next_step": "不把两板并列当同室、任务顺序或义务已结；逐项物证仍需细看。",
+      "sources": [
+        "design/02_世界与地图/任务空间/空间_ALD_奥尔德文.md",
+        "design/06_支线/城市支线/台本_CS-ALD-06_往布林的空箱.md",
+        "design/06_支线/城市支线/台本_CS-ALD-05_师傅没有失去的手.md"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch53/197_mns_separate_use_barrel_inspection.png",
+      "sha256": "7a806d0390871bca0931815695cfc1610ed8266761eb28c186b9c611c6844d2b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "review_level": "full_image_detail",
+      "classification": "需结构重绘",
+      "visual_observation": "左右用途分架、同旧桶双签与回程可读；中央检架看似半只桶，工具几何未解决。",
+      "camera_scale_volume": "强透视庭院和近景桶；布盖桶纤维/板缝密度远高于原生24×25可见桶。",
+      "story_and_next_step": "先独立重绘右侧一个布盖候选容器；保旧酒桶双签属于旧桶，不转移到新桶。",
+      "sources": [
+        "design/02_世界与地图/周边聚落/聚落_MNS-S02_桶石驿.md",
+        "design/02_世界与地图/任务空间/空间_MNS_曼郡.md",
+        "research/mannshire-drama.json"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch54/198_mns_dual_maker_hoop_sample.png",
+      "sha256": "4979c3e6c103abf3bfb45f0751e25e2d25d0281d03156e13dbb5a74913a5bb7d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "review_level": "full_image_detail",
+      "classification": "可像素工具修整",
+      "visual_observation": "旧长刻与新增短刻、两种箍接形态清楚；材质出现均匀颗粒与光滑渐层。",
+      "camera_scale_volume": "此为允许放大的调查近景，不应强压到世界道具大小。",
+      "story_and_next_step": "保两件样本和长短刻关系，可在既定展示尺寸去抖动/并色/轮廓清理；若转世界精灵则另作结构重绘。",
+      "sources": [
+        "design/02_世界与地图/周边聚落/聚落_MNS-S02_桶石驿.md",
+        "research/mannshire-drama.json"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch59/212_n5_three_clamp_marks_crate_corner.png",
+      "sha256": "7a667ca97b96a3966f2000b0f7c4e11fd61b498fdbbc92c62b5677b0e83a10a2",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "review_level": "full_image_detail",
+      "classification": "需结构重绘",
+      "visual_observation": "同箱角的三类痕迹可辨，但窄痕与弧痕显得深切刻线，宽痕近刻框，易误读人为符号。",
+      "camera_scale_volume": "证据近景用途有效；斜透视与夸张凹槽是语义风险，不是单纯分辨率问题。",
+      "story_and_next_step": "先重构压伤纤维和钝压深浅；保一个箱子三种痕，别改成三箱或确证作案路线。",
+      "sources": [
+        "design/05_主线/台本/台本_N5_渡口的三种说法.md"
+      ],
+      "not_runtime_approved": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch53/195_bry_retained_berth_detail_props.png",
+      "sha256": "5df7f9e06299955f2e3166f12e9448c4663cea35218fbb22475b1da5ab34d588",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "review_level": "contact_sheet_triage",
+      "classification": "可像素工具修整",
+      "visual_observation": "空泊环、松解绳结、旧席板三物分离且轮廓清楚。",
+      "camera_scale_volume": "允许的近景道具板；投影/木纹过细，尚非世界同尺度。",
+      "story_and_next_step": "可保当前概念做轮廓/色簇修整，分别标明用途；原生转换另定相机和尺寸。",
+      "sources": [
+        "design/02_世界与地图/任务空间/空间_BRY_布林.md",
+        "design/12_美术参考/布林任务场所概念与台本映射.md"
+      ],
+      "not_runtime_approved": true
+    }
+  ],
+  "redraw_priority": [
+    {
+      "rank": 1,
+      "object": "197右架的单个布盖候选清水容器",
+      "source": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch53/197_mns_separate_use_barrel_inspection.png",
+      "source_story": [
+        "design/02_世界与地图/周边聚落/聚落_MNS-S02_桶石驿.md",
+        "research/mannshire-drama.json"
+      ],
+      "reference": "Assets/ReferenceAudit/20261013/originals/Barrel_0.png",
+      "reason": "有直接小桶原版体积参照，单件可独立校验；整场重做成本更高且缺原生庭院参照。",
+      "brief": "单独一只直立木桶，覆盖浅麻布并有真实扎绳；略俯视近正交的正面，顶口压扁椭圆、桶身紧凑饱满，暗轮廓与少量连续木/铁/布色簇。以原桶可见24×25与NPC约20×34的量级作并置试验，不把25×27画布设为所有道具规格。淡布盖需与深桶身清晰分离，不画字、护理认证、药标、水质认证、自动洗净效果、重复库存。单独透明资产，不带院落、架子或第二桶。",
+      "acceptance": [
+        "与原桶同倍率并置，顶面开合和主体高度协调；不拿大画布伪充原生尺寸",
+        "布盖与结绳在实际展示尺度可辨、木纹不抢轮廓",
+        "保候选性质，容器安全/库存/碰撞/锚点未验证"
+      ]
+    },
+    {
+      "rank": 2,
+      "object": "04左侧回岸标记桩",
+      "source": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/04_dock_landmark_props.png",
+      "source_story": [
+        "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/PROMPTS.md",
+        "design/02_世界与地图/任务空间/空间_BRY-X11_低潮侧泊棚.md"
+      ],
+      "reference": "Barrel_0用于木材/椭圆顶面；Frid_environ仅环境气质，无原版码头桩直接参照",
+      "reason": "从三物板拆出一个安全回岸地标，保叙事功能；缺同类原生参照，优先级低于桶。",
+      "brief": "一根短实心旧系缆桩，清楚平顶椭圆、一条浅水平带、一圈带可辨结头的绳与克制水痕。近正交略俯视，顶部与正面大色簇，去密集藤壶/年轮/纵向高光。透明背景无船无栈台无文字；高度为对照试验而非正式世界尺寸。不要把载重刻度桩和回岸白带桩并成一根。",
+      "acceptance": [
+        "白带与绳结在最终候选尺度独立可辨",
+        "无新增载重刻度/产权/自动出航含义",
+        "原版码头桩尺寸、锚点、深度与交互范围仍待核"
+      ]
+    }
+  ],
+  "pilot_exception": {
+    "path": "src/EmbersAndOaths/Assets/PixelPilots/20261013/refuge_door/README.md",
+    "review_type": "Read purpose/limits and existing QA metadata only; no additional detailed image review",
+    "finding": "128×128上视四姿态是刚体铰链机制提案，可继续作为几何测试，不因相机与世界视角不同判坏；不代表原生门或完整解锁动作。"
+  },
+  "stopping_condition": "Triage and minimum briefs saved. No generation, no original edits, no runtime/global changes, no push.",
+  "artifacts": [
+    "prop_scene_contact_sheet.jpg",
+    "prop_scene_reference_sheet.png",
+    "prop_scene_selection.txt",
+    "prop_scene_redraw_triage.json",
+    "prop_scene_redraw_triage.md"
+  ]
+}

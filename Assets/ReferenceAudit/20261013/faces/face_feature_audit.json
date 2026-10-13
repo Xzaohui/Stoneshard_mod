@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "scope": "只审Sela五官；不修改精灵PNG、不生图、不更改已验17:17头身。对照图为无损最近邻分析衍生物。",
+  "source": {
+    "path": "Assets/RedrawStudies/20261013/sela_proportions/revision_1to1/sela_structural_idle_view01_f000.png",
+    "sha256": "53b588b17eae59d3bdebd7190f7cf96e35c297354393dcf34174c49777f41b98",
+    "canvas": [
+      35,
+      44
+    ],
+    "coordinates": "0-based，范围均含端点；五官功能解读有约1px主观误差",
+    "preserved_landmarks": {
+      "crown_y": 4,
+      "last_chin_skin_y": 20,
+      "chin_outline_y": 21,
+      "sole_y": 37,
+      "head_to_below_chin_pixels": [
+        17,
+        17
+      ]
+    }
+  },
+  "references": [
+    {
+      "name": "Bert",
+      "path": "Assets/ReferenceAudit/20261013/originals/s_npc_merchant01_0.png",
+      "source_page": "https://www.stoneshardwiki.com/en/people/bert/",
+      "sha256": "8bef4d1b8f0390e4bff3d347fc1beb4b492606c80a40b4f2834c27b9a4032646",
+      "limitations": "社区wiki原尺寸单帧；非本地游戏提取，版本/朝向覆盖未验；仅技法参考，不拷贝为运行资产"
+    },
+    {
+      "name": "Jurg",
+      "path": "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png",
+      "source_page": "https://www.stoneshardwiki.com/en/people/jurg/",
+      "sha256": "7d6b6502bc27a6023009e6470ba0c9e7c98e4f8f974ab7bcb91a536e71834caf",
+      "limitations": "社区wiki原尺寸单帧；非本地游戏提取，版本/朝向覆盖未验；仅技法参考，不拷贝为运行资产"
+    },
+    {
+      "name": "Gunda",
+      "path": "Assets/ReferenceAudit/20261013/originals/s_peasantfemale_09_0.png",
+      "source_page": "https://www.stoneshardwiki.com/en/people/gunda/",
+      "sha256": "db681ed82fbd4b3f9e8ef827c9f40bca8a6ff1b434d6f4f2cdec9df89c784452",
+      "limitations": "社区wiki原尺寸单帧；非本地游戏提取，版本/朝向覆盖未验；仅技法参考，不拷贝为运行资产"
+    }
+  ],
+  "viewing_evidence": [
+    "facial_comparison_1x_7x_4x.png：同原尺寸1x全身、同尺度7x头部、4x全身，未按脸宽归一化",
+    "sela_feature_regions_20x.png：只定位，不作为美感验收尺度"
+  ],
+  "priority_summary": "主要不是头身或五官像素太少，而是近侧面轮廓、鼻头外伸和无明确嘴线组合，使脸读成较长、较硬的侧脸。应先重组少量轮廓/五官簇，在1x检验表情；不要增加纹理、眼白或大眼。",
+  "features": [
+    {
+      "feature": "眼线高度/眉眼暗簇",
+      "region": {
+        "eye": [
+          13,
+          14,
+          14,
+          14
+        ],
+        "brow_hair": [
+          11,
+          10,
+          17,
+          13
+        ]
+      },
+      "finding": "眼仅x13..14,y14的2枚outline，不是大片黑眼；眼线y14与Gunda/Bert/Jurg的y14..15相当。上方大暗团主要是遮面头发，不宜全部当眉毛。",
+      "judgment": "眼高不是明确错误；大黑眼指控不成立。眉发连成一块和眼色偏硬可局部改善。",
+      "brief": "先保y14；可把眼2px改deep_brown，或保一深一暖。只在A方向试远眼1px，不能同时放大近眼。"
+    },
+    {
+      "feature": "鼻梁/眼鼻间距",
+      "region": {
+        "eye": [
+          13,
+          14,
+          14,
+          14
+        ],
+        "tip": [
+          10,
+          17,
+          12,
+          17
+        ],
+        "under_tip": [
+          10,
+          18,
+          12,
+          18
+        ]
+      },
+      "finding": "鼻的最左亮肤投影在y17，距眼行3px；原作主要以鼻梁亮簇和中间鼻翼色差在y16..17示意，面部轮廓较连续。Sela从y16外轮廓x10的暗边跳到y17 x10..11亮肤，再回到y18暗边，突出尖长侧鼻。",
+      "judgment": "偏侧脸本身是角色方向差异；若目标是与这组原作站姿统一，鼻轮廓与面向确实需要处理。",
+      "brief": "优先回收/重排x10..11,y17的亮肤投影1..2px；在x12..13,y16..17用既有skin_mid/shadow提示鼻尖，不加黑鼻孔。不要机械把整条脸向右挪。"
+    },
+    {
+      "feature": "嘴线",
+      "region": {
+        "target": [
+          12,
+          18,
+          14,
+          19
+        ]
+      },
+      "finding": "当前x12,y18..19的skin_shadow是连续侧脸阴影，与鼻下边界混合；缺少可识别的横向短嘴簇。Gunda在x14..15,y18使用两枚红褐像素，既读出嘴又不与黑外轮廓粘连。",
+      "judgment": "这是本轮最可执行的缺口；无需画完整嘴唇。",
+      "brief": "在y18或y19选定一行，用1..2px现有暖肤阴影表现嘴，不画3px以上黑嘴线，不加高光唇妆。配鼻缩短后看1x是否能读出中性成年神态。"
+    },
+    {
+      "feature": "颏/下半脸",
+      "region": {
+        "chin_skin": [
+          12,
+          20,
+          16,
+          20
+        ],
+        "chin_outline": [
+          13,
+          21,
+          16,
+          21
+        ]
+      },
+      "finding": "当前颏底有约5px肤色平台，非单点尖颏。眼y14到末颏y20的6行差与Gunda相当，不能称下半脸几何长度明显超标；长脸感更多来自鼻外伸和嘴空缺。",
+      "judgment": "尖颏与下半脸绝对太长的判断不成立。",
+      "brief": "锁y20末颏和y21颏边；先补嘴、收鼻，再决定是否需要1px侧颊轮廓调整。不要削掉整行下巴或缩小头。"
+    },
+    {
+      "feature": "面颊明暗",
+      "region": {
+        "light_plane": [
+          12,
+          15,
+          16,
+          20
+        ],
+        "side_plane": [
+          16,
+          14,
+          17,
+          19
+        ]
+      },
+      "finding": "大面积skin_light在面中下段连续，鼻/嘴/颊之间层次弱；眼侧与耳前暗边较直，更强调侧面。原作在亮鼻梁、暖中间调、偏红侧颊间形成块面。",
+      "judgment": "Sela三色面肤并非错误，但可让中间调承担更多形体。",
+      "brief": "可将2..4枚连续skin_light换skin_mid，形成连贯颊面；保留鼻梁或上颊一个亮簇，不散点加纹理、不新增皱纹。"
+    },
+    {
+      "feature": "脸与手肤色",
+      "region": {
+        "face": [
+          10,
+          10,
+          20,
+          21
+        ],
+        "hands": [
+          10,
+          29,
+          24,
+          33
+        ]
+      },
+      "finding": "face与hands均使用同一既有三色肤色：skin_shadow #b36641、skin_mid #db9461、skin_light #efbb82。与原作粉红肤色不同，但这是调色方向，不是角色自相矛盾。",
+      "judgment": "无需为接近原作而变白或整盘改粉。",
+      "brief": "本轮沿用三色肤色，若尝试柔和也只改变脸内分布；不得脸单独变白。"
+    },
+    {
+      "feature": "耳朵与五官相对高度",
+      "region": {
+        "ear": [
+          19,
+          14,
+          20,
+          16
+        ],
+        "eye_y": 14,
+        "nose_tip_y": 17,
+        "mouth_target_y": [
+          18,
+          19
+        ],
+        "chin_y": 20
+      },
+      "finding": "耳肤色簇实为2×3px（x19..20,y14..16），与Bert约2×3px可见耳处同量级；Gunda头发遮耳不适合据此要求无耳。Sela耳上沿与眼齐平，下缘比鼻尖高1px，尚未见明显高度错位。耳亮色与眼前大片暗发相邻使其醒目，主因对比而非客观巨大。",
+      "judgment": "不能将大耳判为已证实错误。当前侧面单眼也不是错误；选A才调整面向。",
+      "brief": "位置/轮廓：先不移动或缩耳；仅当A转3/4后重新比较可见耳量。明暗：可把x19,y14的skin_light换skin_mid试验1px降低耳高光，保留skin_shadow形成耳内暗面。不需加黑耳孔或改整块头型。"
+    }
+  ],
+  "controlled_directions": [
+    {
+      "id": "A",
+      "label": "较接近所选原作站姿的克制3/4五官",
+      "preferred": true,
+      "changes": [
+        "保近眼y14；可在x11..12,y14附近择1px设远眼并留肤色鼻梁隔开，具体位置随鼻轮廓微调",
+        "鼻外伸回收1..2px，鼻体转由内部肤色簇表达",
+        "嘴1..2px暖阴影；颊面2..4px中间调重分布"
+      ],
+      "caveat": "改变面向属于设计选择；不能声称原侧脸错误。若远眼无空间可读，不要硬塞双眼。建议小步逐项测试而非一次性涂满区域。"
+    },
+    {
+      "id": "B",
+      "label": "保留现有朝向的柔和局部",
+      "preferred": false,
+      "changes": [
+        "维持单眼和发际，眼由outline转deep_brown可先单独对比",
+        "鼻投影先只收1px，不转正脸",
+        "1px至2px暖嘴簇，少量颊面中间调"
+      ],
+      "caveat": "局部修正更保留角色原貌，但面向差距仍存在；这是保守对照，不是必然更美。"
+    }
+  ],
+  "acceptance": [
+    "以1x并排能看出自然鼻/嘴而不是新增噪声为首要验收；7x/20x只查簇",
+    "成年民服身份、发髻、头发整体、衣装、手肤色、17:17头身和脚底不动",
+    "不增加动漫大眼、眼白高光、幼态圆脸、口红或变白",
+    "记录实际改动坐标与差异数，不能仅凭审美描述称完成；若未在游戏中测试，不称运行验收"
+  ],
+  "source_png_modified": false,
+  "brief_by_operation": {
+    "position_and_silhouette": [
+      "鼻外伸回收1..2px是最高优先轮廓实验",
+      "A选择性调整为3/4；B保单眼侧面；眼y14/颏y20不动",
+      "耳2×3px无需先削，先压其亮点"
+    ],
+    "useful_value_structure": [
+      "嘴用1..2px暖肤阴影产生横向节奏",
+      "颊2..4px由亮肤转中间调，保大簇，不散点",
+      "眼2px可由outline转deep_brown；耳仅1px亮转中间调"
+    ],
+    "not_supported_as_errors": [
+      "黑眼块过大",
+      "单点尖颏",
+      "下半脸绝对长度超标",
+      "面手肤色不统一",
+      "耳实际尺寸明显过大"
+    ]
+  }
+}

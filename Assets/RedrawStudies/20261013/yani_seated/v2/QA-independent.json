@@ -1,0 +1,77 @@
+{
+  "reviewer": "independent",
+  "candidate": "v2/native.png",
+  "sha256": "5fa49af333ba02bab0d916c332510b0efcdeaec86e6e6e8984239dc5163dee36",
+  "source_hash_checks": {
+    "Assets/RedrawStudies/20261013/yani_seated/new_concept.png": true,
+    "Assets/RedrawStudies/20261013/yani_seated/native.png": true,
+    "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png": true,
+    "Assets/ReferenceAudit/20261013/originals/s_peasantfemale_09_0.png": true
+  },
+  "output_hash_checks": {
+    "pixel_edits_from_v1.json": true,
+    "README.md": true,
+    "qa.json": true,
+    "v1_v2_comparison.png": true,
+    "native.png": true,
+    "build_v2.py": true,
+    "native_8x.png": true
+  },
+  "independent_rebuild": {
+    "safety": "Script reads parent concept and v1, writes only its own directory; copied to temp tree before run. No network or game changes.",
+    "exit_code": 0,
+    "matches": {
+      "native.png": true,
+      "native_8x.png": true,
+      "v1_v2_comparison.png": true,
+      "pixel_edits_from_v1.json": true,
+      "qa.json": true
+    }
+  },
+  "edit_log_replay": {
+    "before_values_match": true,
+    "final_matches": true
+  },
+  "measurements": {
+    "canvas": [
+      35,
+      44
+    ],
+    "bbox": [
+      7,
+      9,
+      27,
+      38
+    ],
+    "opaque_colors": 14,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "last_opaque_row": 37
+  },
+  "decision": "结构进步候选，仍待美术修整；不通过最终风格/身份细节验收",
+  "visual_pass": false,
+  "structural_findings": [
+    "相比v1，头脸视觉量增大，眼鼻与短胡茬可读；横向膝块及左木凳支脚使坐姿已较明确。",
+    "仍有两大腿水平裤块与右膝方形外伸，凳面只剩左侧短木簇；尚未具备生成结构稿的自然髋膝折角。",
+    "鼻前凸和浅灰胡茬使脸带夸张感；旧概念的成年沉稳身份未可靠保留到像素面部。",
+    "灰棕披肩/橄榄衫/浅袖/棕靴与木凳保留，但袖口与手掌色值近；双手、两条全遮盖腿只是概括。",
+    "角色卡证实退役者与义肢情境；本姿态不显示义肢，不可据靴形推断身体状态/康复。"
+  ],
+  "views": [
+    "parent old_new_comparison.png",
+    "v2/v1_v2_comparison.png",
+    "v2/native_8x.png"
+  ],
+  "next_step": "保持仅单姿态研究，不扩帧；精修面部鼻颏/灰胡茬及髋膝、木凳面独立轮廓。",
+  "runtime_verified": false,
+  "original_identity_source_hash_checks": {
+    "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/02_yani_dialogue_poses.png": true,
+    "design/04_人物/城市人物/人物_BRY-NPC-YANI_雅尼.md": true,
+    "design/06_支线/城市支线/台本_CS-BRY-15_招募告示的背面.md": true,
+    "Assets/ReferenceAudit/20261013/character_redraw_triage.json": true,
+    "Assets/ReferenceAudit/20261013/character_native_refs_contact.png": true,
+    "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/PROMPTS.md": true
+  }
+}

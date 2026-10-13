@@ -1,0 +1,112 @@
+{
+  "temp_root": "/tmp/morlen-hers-independent-ko2qnmiu",
+  "safe_script_review": "Only local Pillow/numpy image work and writes to script directory; no network, subprocess, deletion, source edits or installation in reviewed build scripts.",
+  "reproduction_hash_match": {
+    "hers_native_preedit.png": true,
+    "hers_native_v1.png": true,
+    "hers_native_v1_8x.png": true,
+    "hers_native_preedit_8x.png": true,
+    "ledger_native_v1.png": true,
+    "ledger_native_v1_8x.png": true,
+    "pixel_edit_log.json": true
+  },
+  "source_hashes_match": {
+    "design/04_人物/人物_赫斯·白.md": true,
+    "design/04_人物/城市人物/人物_NPC-HERS_赫斯·白.md": true,
+    "design/05_主线/台本/台本_N17_残光之井.md": true,
+    "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch32/manifest.json": true,
+    "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch66/hers_prompt.txt": true,
+    "Assets/ReferenceAudit/20261013/character_redraw_triage.json": true,
+    "Assets/ReferenceAudit/20261013/character_landmark_appendix.json": true,
+    "Assets/ReferenceAudit/20261013/original-reference-metadata.json": true,
+    "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch32/124_hers_white_debt_controller_cast.png": true,
+    "Assets/ReferenceAudit/20261013/originals/s_npc_herbalist_0.png": true,
+    "Assets/ReferenceAudit/20261013/originals/s_npc_merchant01_0.png": true,
+    "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png": true
+  },
+  "native_sha256": "ea06aa9d4620e7bf0f7d9dec5c958b120bda48fefc25f34a51855928e7da25f4",
+  "canvas": [
+    35,
+    44
+  ],
+  "alpha_bbox_half_open": [
+    8,
+    4,
+    28,
+    38
+  ],
+  "actual_opaque_rgb_colors": 18,
+  "alpha_values": [
+    0,
+    255
+  ],
+  "visible_pixel_count": 448,
+  "pixel_operations": 76,
+  "actual_changed_assignments": 70,
+  "pixel_before_values_match": true,
+  "pixel_replay_equals_native": true,
+  "sole_y": 37,
+  "sole_occupied_x": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "runtimeVerified": false,
+  "userStyleApproved": false,
+  "productionApproved": false,
+  "ledger": {
+    "canvas": [
+      9,
+      6
+    ],
+    "bbox": [
+      0,
+      0,
+      9,
+      6
+    ],
+    "actual_opaque_rgb_colors": 10,
+    "alpha_values": [
+      0,
+      255
+    ]
+  },
+  "date": "2026-10-13",
+  "reviewer": "Independent reviewer, separate from asset author",
+  "review_scope": "静态新native候选、旧造型身份、社区原版单帧并排对照、确定性临时重跑和日志；无游戏导入或运行。",
+  "reference_scope": "已读original-reference-metadata.json与character_landmark_appendix.json。Gunda/Jurg/Frid/Bert为社区原版单帧参考，未逐项与本地vanilla版本核验；35×44画布、可见34高或landmark不构成引擎统一标准。",
+  "numerical_pass_is_not_style_pass": true,
+  "unchanged_scope": "未修改旧source、native图、生成脚本、全局索引、runtime或游戏包；独立重跑仅在/tmp。",
+  "decision": "retain_character_structure_but_return_local_style_and_ledger_for_revision",
+  "style_pass": false,
+  "requires_mandatory_structural_redraw": false,
+  "actually_viewed": [
+    "comparison_native_and_8x.png（1×与8×原版同框）",
+    "ledger_comparison.png（1×与8×）",
+    "旧batch32/124完整板（正背侧及固定石台账簿）"
+  ],
+  "identity_and_story": [
+    "NPC10/NPC-HERS是原创装置控制者；保留年长成年男性、灰发、暗长衣、浅麻领、腰带、棕靴与普通操作钥匙，不新增精确年龄。",
+    "当前人物空手，9×6 ledger为独立文件，未绑定手或逃走姿势。已核人物卡死亡/逃脱固定债簿与N17-S02出口；当前没有随身/逃脱完成/洗白语义，但仅分离文件不能证明未来引擎实现账簿固定。"
+  ],
+  "visual_findings": [
+    "头部质量相对旧124增大，腿靴显著缩短，肩/腰/脚底结构有改善，可留人物比例基底。",
+    "眼睛左右暗簇与鼻部暖色桥可读，但灰发的分散明暗像素、鼻颊下颏及胸领连续细竖条仍比原版同框参考零碎；1×头颈表情较糊，8×能看到碎簇。",
+    "深色大衣的斜翻领/V角仍带现代外套轮廓，作者也已在QA列明未完全去掉；应局部合并领口并保留旧造型身份，不需整套再生成。",
+    "钥匙亮簇在解剖左髋/画面右侧，可视为符号但不宜宣称细节造型已精准；双手与袖可区分且空手。",
+    "独立ledger的9×6轮廓及色块过于不规则，在1×/8×没有稳定长方封面、书脊或页边，读成棕色杂物而非闭账簿。这是具体可读性失败，不能以二值alpha/色数通过代替。"
+  ],
+  "required_local_fixes": [
+    "将独立ledger重建为可读的闭合书：连贯封面平面、一条明确书脊、受控浅页边，删去孤立外凸/杂点；保持独立固定场景物件，绝不可作为随身物。",
+    "合并Hers灰发与鼻颊/下颏的碎簇，保留后退发际与成熟面相；把胸口连续细竖纹及尖翻领化成简洁中世纪开合结构，再做1×/8×原版并排视检。"
+  ],
+  "next_use": "人物可保留为比例结构候选；整套不通过风格交付。优先局部修账簿及头领簇，不全套推倒；无需重复旧source。"
+}

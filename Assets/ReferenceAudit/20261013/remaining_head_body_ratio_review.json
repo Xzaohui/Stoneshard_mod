@@ -1,0 +1,385 @@
+{
+  "audited_at": "2026-10-13T02:44:21.081509+00:00",
+  "method": "Read actual native PNGs at nearest-neighbor 20x with source pixel grid; inspected exact row pixel values and existing edit scripts as corroboration, not as substitute for vision. Created annotation composites only.",
+  "coordinate_convention": "Zero-based source pixels, inclusive endpoints. H=chin-top+1, B=sole-chin. Crown includes normal hair/hat; trailing braids excluded. Widths are approximate visible cranial/clothed-shoulder envelopes, not anatomical segmentation.",
+  "reference_audit": "Assets/ReferenceAudit/20261013/one_to_one_proportion_review.json",
+  "standing_conclusion": "Sela revised is already near 1:1 and unchanged. Anla is borderline near target with broad head. Hers borderline with uncertain jaw, optional 1-3 row study only after choosing boundary. Liqui v2 is the clearest short-head allocation: 13:21 observed, 14:20 generous. Morlen cannot be certified either wrong or exact 1:1 due beard/scarf occlusion. Do not apply blanket enlargement.",
+  "records": [
+    {
+      "name": "Morlen v1",
+      "path": "Assets/RedrawStudies/20261013/morlen/morlen_native_v1.png",
+      "top": 4,
+      "chin_range": [
+        17,
+        19
+      ],
+      "central": 18,
+      "sole": 37,
+      "head_core_x": [
+        9,
+        23
+      ],
+      "shoulder_x": [
+        7,
+        23
+      ],
+      "shoulder_rows": [
+        20,
+        24
+      ],
+      "independent_neck_rows": null,
+      "confidence": "low: anatomical chin occluded",
+      "classification": "cannot reliably certify exact ratio; do not auto-enlarge",
+      "note": "Mouth/lower-face skin around y16; beard covers y17..20 and scarf overlaps y20 onward. Anatomical chin estimate y17..19 only. Beard tip y20 is NOT a measured chin and cannot establish 17:17. Broad 15px cranium against 17px coat shoulders and no exposed neck stem already read compact. Retain pending clearer jaw evidence; no definite pixel growth prescribed.",
+      "sha256": "c0258a3839fe8ee95b0ec29d5a4f65c14711592f40f3b3493e40ac9546a41289",
+      "canvas": [
+        35,
+        44
+      ],
+      "alpha_bbox_half_open": [
+        7,
+        4,
+        27,
+        38
+      ],
+      "total_visible_height": 34,
+      "head_height_range": [
+        14,
+        16
+      ],
+      "remaining_body_height_range": [
+        18,
+        20
+      ],
+      "head_to_body_pairs": [
+        [
+          14,
+          20
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          18
+        ]
+      ],
+      "head_core_width": 15,
+      "shoulder_width": 17,
+      "head_to_shoulder_width_ratio": 0.882
+    },
+    {
+      "name": "Hers v2",
+      "path": "Assets/RedrawStudies/20261013/hers/v2/hers_native_v2.png",
+      "top": 4,
+      "chin_range": [
+        17,
+        19
+      ],
+      "central": 18,
+      "sole": 37,
+      "head_core_x": [
+        11,
+        23
+      ],
+      "shoulder_x": [
+        10,
+        25
+      ],
+      "shoulder_rows": [
+        20,
+        23
+      ],
+      "independent_neck_rows": null,
+      "confidence": "medium-low: short beard/jaw/collar boundary ambiguous",
+      "classification": "borderline; conditional 1-3-row study, not mandatory wholesale enlargement",
+      "note": "Top y4 is a single crown hair pixel; broad crown begins y5. Visible lower facial skin y16 and lateral patch y18, stubble y17..19, linen collar starts y20. Chin cannot be anatomically isolated: plausible y17..19 (central y18), not beard tip by default. Central 15:19 would approach 16:18 after 1 row or 17:17 after 2. Up to 3 rows only if y17 is confirmed chin. Core width 13 vs shoulders 16; no long exposed neck proven. Treat head/scalp proportions and jaw transition together; do not force 3 rows.",
+      "sha256": "0c8342b3dc02c4628ddbd5c7ccf29ae99cda310a1689d9c79408a7fd736a30ac",
+      "canvas": [
+        35,
+        44
+      ],
+      "alpha_bbox_half_open": [
+        8,
+        4,
+        28,
+        38
+      ],
+      "total_visible_height": 34,
+      "head_height_range": [
+        14,
+        16
+      ],
+      "remaining_body_height_range": [
+        18,
+        20
+      ],
+      "head_to_body_pairs": [
+        [
+          14,
+          20
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          18
+        ]
+      ],
+      "head_core_width": 13,
+      "shoulder_width": 16,
+      "head_to_shoulder_width_ratio": 0.812
+    },
+    {
+      "name": "Liqui v2",
+      "path": "Assets/RedrawStudies/20261013/liqui/v2/liqui_native_v2.png",
+      "top": 4,
+      "chin_range": [
+        16,
+        17
+      ],
+      "central": 16,
+      "sole": 37,
+      "head_core_x": [
+        10,
+        25
+      ],
+      "shoulder_x": [
+        9,
+        26
+      ],
+      "shoulder_rows": [
+        19,
+        23
+      ],
+      "independent_neck_rows": [
+        17,
+        17
+      ],
+      "confidence": "high at visible chin y16; y17 retained only as boundary tolerance",
+      "classification": "clear structural priority; test +3 head rows with corresponding -3 torso allocation",
+      "note": "Broad visible chin y16 at x15..18; y17 narrows to x16..18 neck skin between dark collar edges, green collar y18. Pixel edit source explicitly calls y16 chin and y17 neck, consistent with visual inspection. Thus observed head is 13 and remainder 21; generous jaw interpretation y17 gives 14:20, still short. Existing 16px cranial width versus 18px shoulders is substantial: do not uniformly scale or indiscriminately widen. Move/rebuild jaw/face toward y19 first (16:18); exact 17:17 from observed chin would need FOUR, not three rows, ending y20. Do not describe +3 as exact 1:1. Exclude right trailing braid y16..19 and lower bag from measurements. Ochre chest highlight y20 is clothing, not a continuing bare neck.",
+      "sha256": "695a1979420abe0fc88e0046d478b6b246c87cf3ca55ae312b8fdca41c5526c1",
+      "canvas": [
+        35,
+        44
+      ],
+      "alpha_bbox_half_open": [
+        8,
+        4,
+        28,
+        38
+      ],
+      "total_visible_height": 34,
+      "head_height_range": [
+        13,
+        14
+      ],
+      "remaining_body_height_range": [
+        20,
+        21
+      ],
+      "head_to_body_pairs": [
+        [
+          13,
+          21
+        ],
+        [
+          14,
+          20
+        ]
+      ],
+      "head_core_width": 16,
+      "shoulder_width": 18,
+      "head_to_shoulder_width_ratio": 0.889
+    },
+    {
+      "name": "Anla v3",
+      "path": "Assets/RedrawStudies/20261013/anla/anla_native_v3.png",
+      "top": 4,
+      "chin_range": [
+        18,
+        19
+      ],
+      "central": 19,
+      "sole": 37,
+      "head_core_x": [
+        10,
+        27
+      ],
+      "shoulder_x": [
+        11,
+        27
+      ],
+      "shoulder_rows": [
+        25,
+        26
+      ],
+      "independent_neck_rows": [
+        20,
+        21
+      ],
+      "confidence": "high: visible skin edge and dark jaw border",
+      "classification": "near-target borderline; optional 1-2-row structural adjustment only",
+      "note": "Rechecked existing finding: skin chin y18, dark lower contour y19, neck y20..21. 15:19 by skin versus 16:18 by contour. Main upper head/hair x10..27 gives same 18px width as prior x9..26 estimate, whose left edge included lower side hair. Shoulder x11..27 measured below hanging hair. Head already wider than 17px shoulders; do not widen again. A one-row contour/neck redistribution or two rows from visible skin reaches central 17:17; borderline, not a gross defect.",
+      "sha256": "d7c144a04fa957aee6bb35372948c2bfba2e94a12341acd02ed6037477a4cd6f",
+      "canvas": [
+        35,
+        44
+      ],
+      "alpha_bbox_half_open": [
+        8,
+        4,
+        28,
+        38
+      ],
+      "total_visible_height": 34,
+      "head_height_range": [
+        15,
+        16
+      ],
+      "remaining_body_height_range": [
+        18,
+        19
+      ],
+      "head_to_body_pairs": [
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          18
+        ]
+      ],
+      "head_core_width": 18,
+      "shoulder_width": 17,
+      "head_to_shoulder_width_ratio": 1.059
+    },
+    {
+      "name": "Yani seated reset",
+      "path": "Assets/RedrawStudies/20261013/yani_seated/style_reset/native.png",
+      "top": 9,
+      "chin_range": [
+        19,
+        21
+      ],
+      "central": 20,
+      "sole": 37,
+      "head_core_x": [
+        9,
+        25
+      ],
+      "shoulder_x": [
+        8,
+        25
+      ],
+      "shoulder_rows": [
+        25,
+        25
+      ],
+      "independent_neck_rows": null,
+      "confidence": "low: beard obscures jaw and seated pose lacks matched source reference",
+      "classification": "not comparable to standing 17+17 rule; no resizing recommendation",
+      "note": "Sitting collapses vertical torso/leg projection; 29px total height is not head-size evidence. Beard/lower face spans y19..22, possible chin y19..21 only; y23 center skin is likely neck. Stool and hands excluded from shoulder width. No original seated comparison in supplied reference set. Descriptive projected ratios are recorded only and must not be used as a standing acceptance threshold.",
+      "sha256": "a558c5c2a6b28ac4e902425a1b2da894065000ccd8c07321bbc7fc74f5b344a4",
+      "canvas": [
+        35,
+        44
+      ],
+      "alpha_bbox_half_open": [
+        7,
+        9,
+        28,
+        38
+      ],
+      "total_visible_height": 29,
+      "head_height_range": [
+        11,
+        13
+      ],
+      "remaining_body_height_range": [
+        16,
+        18
+      ],
+      "head_to_body_pairs": [
+        [
+          11,
+          18
+        ],
+        [
+          12,
+          17
+        ],
+        [
+          13,
+          16
+        ]
+      ],
+      "head_core_width": 17,
+      "shoulder_width": 18,
+      "head_to_shoulder_width_ratio": 0.944
+    }
+  ],
+  "comparisons": [
+    "Assets/ReferenceAudit/20261013/remaining_head_body_same_ground_1x.png",
+    "Assets/ReferenceAudit/20261013/remaining_head_body_same_ground_8x.png",
+    "Assets/ReferenceAudit/20261013/remaining_yani_seated_separate_1x_8x.png"
+  ],
+  "limits": [
+    "No character PNG changed, no image generation, no runtime/index/package changes.",
+    "A 1px jaw change transfers a row from remainder to head; range endpoints are paired, not independent.",
+    "Original sources are a small art sample, not universal proportions or engine requirements.",
+    "Beard contours do not establish anatomical chins; seated projected height is not standing anatomy."
+  ],
+  "anla_revision_followup": {
+    "path": "Assets/RedrawStudies/20261013/anla/revision_1to1/anla_native_1to1.png",
+    "sha256": "e463e7ed23691e0d244930d35a16b3d98eeabe45fff9979bd6a9f36196012b73",
+    "method": "Independently opened actual revised PNG at 20x with every row labeled; read row20 and row21 RGBA and compared all pixels y22..43 to v3.",
+    "crown_y": 4,
+    "visible_skin_chin_y": 20,
+    "dark_jaw_border_y": 21,
+    "sole_y": 37,
+    "head_height": 17,
+    "remaining_body_height": 17,
+    "independent_visible_neck_rows": 0,
+    "head_width_unchanged": true,
+    "body_y22_to_bottom_identical_to_v3": true,
+    "result": "Near1:1 structure confirmed using skin-chin convention; 18:16 if dark border included. No extra head width was added. This supports this limited proportion correction, not overall style, animation or runtime acceptance."
+  },
+  "liqui_revision_followup": {
+    "path": "Assets/RedrawStudies/20261013/liqui/revision_1to1/liqui_native_1to1.png",
+    "sha256": "c15f2d8995f2c0177a83b2130b92ab39fcf4ba074f37bcf855248956672fe72d",
+    "method": "Independently viewed actual revised native at 20x source row grid and read RGBA at jaw/collar rows; additionally inspected delivered same-ground 8x with originals.",
+    "crown_y": 4,
+    "primary_visible_skin_chin_y": 20,
+    "conservative_chin_y": 19,
+    "sole_y": 37,
+    "head_height_primary": 17,
+    "remaining_body_height_primary": 17,
+    "conservative_pair": [
+      16,
+      18
+    ],
+    "jaw_detail": "Row19 skin x15..18 = FOUR pixels, with dark jaw flanks. Row20 skin x16..18 = three pixels within bilateral dark outlines, plausibly rounded chin. Row21 only x17 skin between green collar, one embedded neck pixel; excluded from head.",
+    "head_core_x": [
+      10,
+      25
+    ],
+    "head_core_width": 16,
+    "shoulder_x": [
+      9,
+      26
+    ],
+    "shoulder_rows": [
+      22,
+      25
+    ],
+    "shoulder_width": 18,
+    "result": "Near1:1 structural allocation supported. Exact anatomical split retains ordinary one-row tolerance; no need for further head widening.",
+    "remaining_style_limits": "Near-frontal symmetric warm face, limited face/hair hue separation, pointed jaw contour remain stylistically different from specific original examples. Proportion check does not certify full visual style, animation or runtime."
+  }
+}

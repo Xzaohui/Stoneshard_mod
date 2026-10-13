@@ -1,0 +1,84 @@
+{
+  "character": "BRY-NPC-HASE",
+  "revision": "v1_1",
+  "scope": "one-pixel forehead material correction only",
+  "source": {
+    "path": "../hase_native_v1.png",
+    "sha256": "fd63e1183f5ff81a5335e6b5ee666d20ac89cc68af8fda191d1be5e865ba9394"
+  },
+  "edit": {
+    "x": 18,
+    "y": 11,
+    "before_rgba": [
+      48,
+      48,
+      33,
+      255
+    ],
+    "after_rgba": [
+      242,
+      161,
+      123,
+      255
+    ],
+    "reason": "Independent QA found isolated olive cloth palette pixel inside forehead. Replace with adjacent warm skin midtone shared by x17,y11 and x21,y11; darker than forehead highlight, appropriate to hairline edge."
+  },
+  "validation": {
+    "changed_native_pixels": 1,
+    "changed_yx": [
+      [
+        11,
+        18
+      ]
+    ],
+    "old_v1_unchanged": true,
+    "canvas": [
+      35,
+      44
+    ],
+    "bbox_exclusive": [
+      7,
+      4,
+      30,
+      38
+    ],
+    "alpha_unchanged": true,
+    "proportions_direction_and_other_pixels_unchanged": true
+  },
+  "landmarks": {
+    "crown": 4,
+    "inferred_chin": [
+      19,
+      20
+    ],
+    "beard_end": 22,
+    "sole": 37
+  },
+  "limitations": [
+    "Front-biased simplified face differs from original three-quarter view; retained as aesthetic limitation, not corrected in this one-pixel revision.",
+    "Anatomical chin under beard remains inferred.",
+    "No style/production/runtime acceptance."
+  ],
+  "outputs": [
+    {
+      "path": "hase_native_landmarks_v1_1_20x.png",
+      "sha256": "2c02ae308137db697cfc20b0206fda2c083051f08aad4dd50c592d927b18149d"
+    },
+    {
+      "path": "hase_native_v1_1.png",
+      "sha256": "614c628c28bcc78c588ee83e46a23a4e84559a057f39d6da7be2956b989803da"
+    },
+    {
+      "path": "hase_native_v1_1_16x.png",
+      "sha256": "3866d83041e45697fa5499c2492332a52b7b9bafde8716ecfd3aaa829ab732ee"
+    },
+    {
+      "path": "hase_native_v1_1_8x.png",
+      "sha256": "9739b144f042317b83dfc1220acb8327ae8029bb8cb08db7e26daecc2ba55e21"
+    },
+    {
+      "path": "hase_old_native_originals_comparison_v1_1.png",
+      "sha256": "d120a0644fe5f8ed99d44af5644a82f6099e0921a82e3777e72af1157da3237c"
+    }
+  ]
+}

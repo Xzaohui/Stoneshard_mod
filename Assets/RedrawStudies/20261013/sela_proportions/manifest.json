@@ -1,0 +1,117 @@
+{
+  "status": "structural_rearrangement_candidate_not_original_style_acceptance",
+  "source": {
+    "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/01_sela_sprite_calibration_v2.png",
+    "sha256": "5b37df35503c61ba000b69c143a1c3b140cdc63b72c7afc1e1246cbb7a974413"
+  },
+  "segments": [
+    {
+      "name": "head_hair_chin",
+      "source_box": [
+        458,
+        228,
+        820,
+        463
+      ],
+      "target_box": [
+        8,
+        4,
+        27,
+        19
+      ]
+    },
+    {
+      "name": "neck_cape_rolls_belt",
+      "source_box": [
+        458,
+        463,
+        820,
+        688
+      ],
+      "target_box": [
+        9,
+        19,
+        26,
+        29
+      ]
+    },
+    {
+      "name": "hands_rope_trousers_boots",
+      "source_box": [
+        458,
+        688,
+        820,
+        1055
+      ],
+      "target_box": [
+        9,
+        29,
+        26,
+        38
+      ]
+    }
+  ],
+  "method": "Re-extract gray background from full source. Per-segment weighted RGB palette mapping, dominant area cells, coverage >=0.45; explicit per-pixel corrections. No old-C upscaling.",
+  "transformation_note": "Head full crop width19 vs body17; source neck y463 and waist y688 approximate, chosen for this pose only. Head15 / neck-to-belt10 / hands-legs9 non-overlap bands; anatomical parts overlap these semantic bands.",
+  "references": [
+    {
+      "name": "Gunda",
+      "path": "Assets/ReferenceAudit/20261013/originals/s_peasantfemale_09_0.png",
+      "sha256": "db681ed82fbd4b3f9e8ef827c9f40bca8a6ff1b434d6f4f2cdec9df89c784452",
+      "copied_pixels": false
+    },
+    {
+      "name": "Jurg",
+      "path": "Assets/ReferenceAudit/20261013/originals/s_npc_carpenter_0.png",
+      "sha256": "7d6b6502bc27a6023009e6470ba0c9e7c98e4f8f974ab7bcb91a536e71834caf",
+      "copied_pixels": false
+    },
+    {
+      "name": "Frid",
+      "path": "Assets/ReferenceAudit/20261013/originals/s_npc_herbalist_0.png",
+      "sha256": "b89b3edb38944d911814a99e43026fddac61a073f72f5e8d507e1f8110e9412a",
+      "copied_pixels": false
+    },
+    {
+      "name": "Old C",
+      "path": "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_idle_view01_f000.png",
+      "sha256": "1f830a5686790893fea903ee7d6c42ba328f4e32a7641e4d989e86910011ab0c",
+      "copied_pixels": false
+    }
+  ],
+  "protected_inputs": {
+    "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/01_sela_sprite_calibration_v2.png": "5b37df35503c61ba000b69c143a1c3b140cdc63b72c7afc1e1246cbb7a974413",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_pixel_edits.json": "be420ca433c41257055c1fbe22d45e511638e05cbfb8a27596ffa88825b41094",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_idle_view01_f000.png": "1f830a5686790893fea903ee7d6c42ba328f4e32a7641e4d989e86910011ab0c",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/b_48x64_idle_view01_f000.png": "35cf8edaa010b1992abda02b0d3775044934ffca855f99ea40e24142090be0db",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/comparison_v2.png": "d380cf417b09d513fc1cf22d687d4d3ac2e0030e0246a49b6abcfd5534c22858",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/QA-producer-C.json": "5fc6b82a2d3b9fd875a8d50feb4d744ab6ebdb5910d14035691a683098dc1299",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/palette.json": "98aa4178792fe3869e5a4004a26ad576b43f6e550714d96b28aa6d55eb546931",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_preview_8x.png": "df85e6cc2eb49016571b6535dbee7dc2c75f463130c42d3b7e872dfd7d0fb1cf",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/b_48x64_preview_8x.png": "aa338abbcf30be7e4d07c9f3757e0a91af45c8ee22f11814f9be753124c0687a",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/a_32x48_idle_view01_f000.png": "d91bee0944286b51296eee819d9c15c4f787074e145a821bd80d9b2a8c40ce60",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/a_32x48_baseline.png": "e55e8061d6464d671ae456d3b257957ca79b293d45f4a05e72f119dcc5aeaa71",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/build_pilot.py": "39aa9fbbbd20e55c12ce2717864dde6fd42db0ad41cbf32868f2457c05df7cd1",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/a_32x48_preview_8x.png": "f6e516089ebf689de3861162a6a02de596f421eab230efca346366c11972e004",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/QA-independent.json": "eb75e13d1fe63422f8efd3a87d14bd2f0429ecb1b5573c7a34cc2de2bae623d8",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/build_reference_budget.py": "0793cf536c65f16df8cce5d88c34d4b9b566554e315130561f9683ed78cb8ba3",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/b_48x64_pixel_edits.json": "e3b923888a9664b4aae4a1cfd27e5d413f25c23ad35fd770180949197ee6727c",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/README.md": "1ac1155b42fecb058dd6a202488ccd0a531dc9964fcb29afd13e2cbeaa327658",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/QA-producer.json": "a0c6d5421953c3a64e37f02e58a48906dd82b0cb5eb4789e41b05cc4121e4d20",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/intermediate_cutout_full.png": "42e6c7f56fa9a3ca13a48c46093033076e6f2af571a511b09450cf8e2adc8275",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/a_32x48_pixel_edits.json": "a815c14ec2feea043d8bd396053accb9c886887c30b344b938c8520cb39202a6",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/c_32x48_reference_budget_baseline.png": "fe81c7e8eb5b1044161487528cae423c9aabca3eff87eb5737c1b5da73b23056",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/comparison.png": "0e402f857bb30a4e60965308b19ef2da1a46ff4b1ba8539fabe8ac4c4b781581",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/b_48x64_baseline.png": "41de25e5ab49fbc60e16dae38462391dc3d12d9d8a19e03446db5ebfb36efacc",
+    "src/EmbersAndOaths/Assets/PixelPilots/20261013/sela/manifest.json": "de055f3d8ebcca8689928becdb6e5f9556d5622d9b94e39b9db808b704c5dc98"
+  },
+  "script_sha256": "26a049f04d1e02ada8c955c26d9aa55a60dffc1744f575a741aa23fde5b99702",
+  "artifacts": {
+    "sela_structural_idle_view01_f000.png": "b4dcca5a9a554173f045ca59ad29bd78327fca2390a3dee5852a556035ff6db1",
+    "sela_structural_baseline.png": "da67a3ea6873de0ed06a5119a58b7cdc9639806f35be7fe13881a5f1a843be55",
+    "sela_structural_preview_8x.png": "7bbf69246d878e4866239c9d3bb880021456569b0c37be352606f566a5b42d01",
+    "comparison_native_1x.png": "362941805f7b509a3a98d1a431ce5bba793cc48d3376729f1f12959af7246053",
+    "comparison_ground_aligned_8x.png": "fe3a0b345353f91f50bb84e019bbfab76acf9b5c0ad2350649d15099ce256d5c"
+  },
+  "runtime_changes": false
+}

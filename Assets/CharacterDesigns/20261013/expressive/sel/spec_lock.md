@@ -1,0 +1,3 @@
+# Concept specification lock
+
+User-approved Sela G mature expressive chunky pixel concept direction. One full figure, clear adult facial individuality, near 1:1 anatomical head to remainder of body; seated proportions checked independently, not by shrinking the head. Transparent raw PNG, no forced native canvas/palette quantization. Clothing identity from current labor_06 brief and actually viewed old board; narrative facts from current character card. One initial generation plus at most one important correction. Whole-body concept only, not modular production, equipment compatibility unverified. No old image, runtime or global audit changes.

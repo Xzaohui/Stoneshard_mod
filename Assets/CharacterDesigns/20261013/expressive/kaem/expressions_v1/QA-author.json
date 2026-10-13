@@ -1,0 +1,74 @@
+{
+  "character": "kaem",
+  "status": "author_review_complete_pending_independent",
+  "raw_actually_viewed": true,
+  "transparent_board_actually_viewed": true,
+  "revision_count": 0,
+  "identity": "anchor face, hair, skin and medieval collar retained",
+  "expression_notes": [
+    "斜压眉 · 横向反驳口形",
+    "忧眉睁眼 · 短小停顿口形",
+    "较平缓眉 · 压住插话的闭唇"
+  ],
+  "limitations": [
+    "Generated bust crop, head angle and scarf folds vary modestly; board scale uniformly normalizes head height, does not warp anatomy.",
+    "Conditional expressions are concept studies, not an animation or story outcome."
+  ],
+  "processing": [
+    {
+      "raw": "raw/01_defend_own_value_raw_imagegen.png",
+      "selected": "selected/01_defend_own_value_transparent.png",
+      "dimensions": [
+        1118,
+        1407
+      ],
+      "raw_sha256": "0069aa36691cd91f06e3710ca235b8a8221aaab0209480302d990846d1e7500c",
+      "selected_sha256": "9a685e838dcafdeb3a80827d541626d9d3c0b185fdef0b2a862ce7a54d31cd9e",
+      "cleanup": "RGBA cleared only where source alpha <32; other pixels unchanged",
+      "nonzero_alpha_pixels_cleared": 12735,
+      "preserved_pixels_exact": true
+    },
+    {
+      "raw": "raw/02_independent_check_unease_raw_imagegen.png",
+      "selected": "selected/02_independent_check_unease_transparent.png",
+      "dimensions": [
+        1118,
+        1407
+      ],
+      "raw_sha256": "a089bd1c2608183dae603d49aa5bdf9edb3e29fa4f41289fbfa18084c74695fd",
+      "selected_sha256": "988b0cff83db2013562ef7d674d1bff0d91119433875d4b3666118183756efaf",
+      "cleanup": "RGBA cleared only where source alpha <32; other pixels unchanged",
+      "nonzero_alpha_pixels_cleared": 11198,
+      "preserved_pixels_exact": true
+    },
+    {
+      "raw": "raw/03_let_source_speak_raw_imagegen.png",
+      "selected": "selected/03_let_source_speak_transparent.png",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "raw_sha256": "1437685945baf36c39e4e1eee0df6c9e82530e68291cc847d3412e8fc4c734ae",
+      "selected_sha256": "81faf5ec6b50f2ead6b2fd92e8b61abe8864869efe350bc8b146620ae0a4488e",
+      "cleanup": "RGBA cleared only where source alpha <32; other pixels unchanged",
+      "nonzero_alpha_pixels_cleared": 16423,
+      "preserved_pixels_exact": true
+    }
+  ],
+  "board_processing": "Manual crown/chin measurements; uniform nearest-neighbor per-image scale to 340px head height; alpha bounding-box crop only; native selected images unscaled.",
+  "landmarks_crown_chin_y": [
+    [
+      80,
+      900
+    ],
+    [
+      120,
+      894
+    ],
+    [
+      30,
+      824
+    ]
+  ],
+  "transparent_board_findings": "Light/dark backgrounds clean, no large halo, labels clear after layout correction; three expressions read distinctly."
+}

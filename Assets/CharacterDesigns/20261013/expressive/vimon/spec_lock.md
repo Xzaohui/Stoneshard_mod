@@ -1,0 +1,2 @@
+# Vimon concept lock
+BRY-NPC-VIMON, testimony_10 current card/old129 bottom row read/viewed. Lean mature male, tied grey-streaked dark hair, subtle stubble, oatmeal shirt/short faded blue vest/brown trousers, ordinary waist rope. Relaxed refusal-capable calm eyes/closed questioning mouth; no medals, uniform, weapon or return-to-unit claim. Natural compact G clusters, full transparent concept. concept_only=true; equipment_compatibility_verified=false; mechanism unknown.

@@ -1,0 +1,2 @@
+# Ondo concept lock
+YOS-NPC-ONDO materials_24 current card/old146 middle row read/viewed. Adult salt-brown short hair/small moustache, olive round/slit neck shirt ochre apron, short cloth measuring strip and small folded plain wool sample. Calm focused limited check, not medical diagnosis/all-size approval/distribution. Natural compact head/neck/waist/legs, coarse G style independent face. concept_only=true; equipment_compatibility_verified=false; unknown mechanism.

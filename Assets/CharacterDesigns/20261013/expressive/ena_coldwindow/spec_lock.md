@@ -1,0 +1,2 @@
+# Coldwindow Ena concept lock
+MAE-S03-NPC, NOT NPC-N-ENA. Current card/old139 bottom row read/viewed. Adult land-route receiving woman, grey-brown hood folded back, ochre short cape/deep green travel dress/short boots, closed blank schedule book. Concern learning others may remain, no rescue victory/evacuation/blocked return implication. Short neck/compact shoulders/waist/skirt. concept_only=true; equipment_compatibility_verified=false; unknown mechanisms.

@@ -1,0 +1,139 @@
+{
+  "character": "n1_ivo",
+  "date": "2026-10-13",
+  "concept_only": true,
+  "runtimeVerified": false,
+  "directional_animation": false,
+  "generator": "builtin image_gen",
+  "new_selected_images": 2,
+  "total_generation_calls": 3,
+  "concept_anchor_unchanged": true,
+  "user_approved": false,
+  "assets": [
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/ivo/ivo_raw_imagegen_v2.png",
+      "sha256": "90a2b78662e4c5d9cf7acb7bf0ddce211ea0d8431cd712a5212f4bdca394cc80",
+      "canvas": [
+        1213,
+        1296
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        335,
+        203,
+        892,
+        1168
+      ],
+      "transparent_pixels": 1159327,
+      "partial_alpha_pixels": 411967,
+      "display_scale": 0.6
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/ivo/turnaround_v1/raw/ivo_side_v2_raw_imagegen.png",
+      "sha256": "c2ab282fe9cda92f720780d71bf5e38b3fd4c34cd73ecc37be221d4da74ecd7a",
+      "canvas": [
+        1213,
+        1296
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        339,
+        200,
+        865,
+        1179
+      ],
+      "transparent_pixels": 1226036,
+      "partial_alpha_pixels": 344927,
+      "display_scale": 0.6
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/ivo/turnaround_v1/raw/ivo_back_raw_imagegen.png",
+      "sha256": "65ab46b5221e6e17c8a6293c5adcfb8316461650c4b399013ce48f2f1ba3ec12",
+      "canvas": [
+        1213,
+        1296
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        343,
+        205,
+        861,
+        1172
+      ],
+      "transparent_pixels": 1186191,
+      "partial_alpha_pixels": 385301,
+      "display_scale": 0.6
+    }
+  ],
+  "processing": "Review boards only: identical 0.60 nearest-neighbor uniform scaling and translation to common foot baseline. Raw images and original alpha preserved; individual files byte-identical raw copies. No character drawn, stretched or repainted by script.",
+  "design_inferences": [
+    "软帽后方折褶与后脑头发排列",
+    "灰绿外衣背片、旧斜带的背部走向",
+    "工具刀位置为原有左腰，后视遮挡属于视角变化",
+    "背领V形垂褶为连衣折领/软兜帽提案，原前视未锁定裁片"
+  ],
+  "status": "awaiting independent review",
+  "limitations": [
+    "概念转面，非精确正交或动作精灵",
+    "脸发像素与视角存在生成漂移，待独立审看",
+    "背面结构为设计推定，不作原作事实",
+    "无装备兼容或运行验证"
+  ],
+  "prompts": [
+    {
+      "file": "prompts/ivo_back.txt",
+      "sha256": "2207f5b265b11ac4a028dd2997a3818c92796b8d604ba445ad940f223bbc36c6",
+      "full_text": "Use case: identity-preserve. Asset type: concept-art character turnaround, not runtime sprite. Input image 1 is the sole identity and outfit anchor. Ivo, the same adult male night watchman. Lock his huge head and short compact torso and legs, tense mature angular face and short dark stubble, brown hair under plain gray soft cap, muted gray-green patched open jacket with rolled cuffs, cream shirt, brown neck cloth, dark brown trousers with gray cuffs, brown plain boots. Preserve belt, existing diagonal brown strap and the small wood-handled fully sheathed tool knife on HIS LEFT belt (image-right in the reference); both hands empty. No sword, badge, backpack or new props. Change ONLY camera/view to a straight full-body rear view, face completely hidden, same standing pose, identity, proportions and clothing. Infer only minimal plain rear clothing construction; no new decorations. Respect anatomical hand and tool sides after turning. Match reference pixel-art block size, crisp stepped contours, palette and soft pixel-cluster shading. Do not beautify or infantilize face, do not adopt another character's features. Very important: match original head-to-body ratio and total full-body subject height in source image; do not stretch limbs or slim the head. One isolated character centered, ample transparent margin, entire head, shoes and existing prop in frame. Real transparent RGBA background, no floor, shadow, text, grid or labels. This is one view only.\n"
+    },
+    {
+      "file": "prompts/ivo_side.txt",
+      "sha256": "8768ce1731a45714f12804c15f3419425902b2cb9bf58e565b4ed484286615f2",
+      "full_text": "Use case: identity-preserve. Asset type: concept-art character turnaround, not runtime sprite. Input image 1 is the sole identity and outfit anchor. Ivo, the same adult male night watchman. Lock his huge head and short compact torso and legs, tense mature angular face and short dark stubble, brown hair under plain gray soft cap, muted gray-green patched open jacket with rolled cuffs, cream shirt, brown neck cloth, dark brown trousers with gray cuffs, brown plain boots. Preserve belt, existing diagonal brown strap and the small wood-handled fully sheathed tool knife on HIS LEFT belt (image-right in the reference); both hands empty. No sword, badge, backpack or new props. Change ONLY camera/view to a true left-facing full-body profile, nose points screen-left, exactly one eye visible. Keep the same relaxed standing pose, identity, proportions and clothing. Match reference pixel-art block size, crisp stepped contours, palette and soft pixel-cluster shading. Do not beautify or infantilize face, do not adopt another character's features. Very important: match original head-to-body ratio and total full-body subject height in source image; do not stretch limbs or slim the head. One isolated character centered, ample transparent margin, entire head, shoes and existing prop in frame. Real transparent RGBA background, no floor, shadow, text, grid or labels. This is one view only.\n"
+    },
+    {
+      "file": "prompts/ivo_side_v2.txt",
+      "sha256": "174ac6ce44838b4a1fc1f0153cc069d38a08cb02729aadb3e755dba830b247d4",
+      "full_text": "Use case: precise-object-edit. Supplied image is a pixel-art Ivo left-facing side-view. Make ONE tiny correction only: remove the tan/brown square patch from the NEAR sleeve on screen-right upper arm, approximately x755-813,y768-823 in this 1213x1296 image. Replace only that patch with the same muted gray-green cloth pixel clusters as the surrounding sleeve. The original character has a patch on HIS RIGHT arm, which is on the far side and occluded in this view. Do not draw a new patch anywhere. Do NOT change the face, beard, hair, hat, body proportions, pose, clothing except this patch, belt, sheathed tool knife, hands, boots or canvas placement. Preserve genuine transparent background and pixel-art contours. No new objects, no text.\n"
+    }
+  ],
+  "raw_versions": [
+    {
+      "file": "raw/ivo_back_raw_imagegen.png",
+      "sha256": "65ab46b5221e6e17c8a6293c5adcfb8316461650c4b399013ce48f2f1ba3ec12"
+    },
+    {
+      "file": "raw/ivo_side_raw_imagegen.png",
+      "sha256": "23542d7fe1747ee352dad5ac839bf19dcbe45565f524c525150a6ee16a5d09fd"
+    },
+    {
+      "file": "raw/ivo_side_v2_raw_imagegen.png",
+      "sha256": "c2ab282fe9cda92f720780d71bf5e38b3fd4c34cd73ecc37be221d4da74ecd7a"
+    }
+  ],
+  "deliverables": [
+    {
+      "file": "ivo_side.png",
+      "sha256": "c2ab282fe9cda92f720780d71bf5e38b3fd4c34cd73ecc37be221d4da74ecd7a"
+    },
+    {
+      "file": "ivo_back.png",
+      "sha256": "65ab46b5221e6e17c8a6293c5adcfb8316461650c4b399013ce48f2f1ba3ec12"
+    },
+    {
+      "file": "ivo_turnaround_review_zh.png",
+      "sha256": "b1ad42b46065d260acfd2698b52d558ecc337045adb5ab79918823b50204331b"
+    },
+    {
+      "file": "QA_background_comparison.png",
+      "sha256": "146dd5d30794763d5905c06e249077656340c5368fbfd4a511e1b168e608f0ee"
+    }
+  ],
+  "edit_inputs": [
+    {
+      "output": "raw/ivo_side_v2_raw_imagegen.png",
+      "input": "raw/ivo_side_raw_imagegen.png",
+      "input_sha256": "23542d7fe1747ee352dad5ac839bf19dcbe45565f524c525150a6ee16a5d09fd",
+      "prompt": "prompts/ivo_side_v2.txt"
+    }
+  ]
+}

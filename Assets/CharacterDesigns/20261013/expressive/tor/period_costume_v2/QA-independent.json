@@ -1,0 +1,51 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T10:54:36.538658+00:00",
+  "character_id": "n1_tor",
+  "status": "pass_period_costume_revision_concept",
+  "concept_deliverable": true,
+  "artifact": "tor_period_costume_v2_transparent.png",
+  "sha256": "0a0098be404c9e597841827ca2b57c37f1f7f950f7195b714163c8893d6f8e6d",
+  "artifact_sha256": {
+    "prepare_previews.py": "ad11a0e56db8b0ae6c6e52ead45fd6ce3aa92086313965787ed7e9d402a4f08d",
+    "prompt.txt": "3a9919340d4fe0af6887ad7dbc03ac77ef3c7509258c381eb1fb09db580fc44f",
+    "tor_old_new_same_scale.png": "7e2db03fb58edf647d986e2d66fb5c2c53b1e45975da8393807a69caa7c56b7d",
+    "tor_period_costume_v2_black.png": "5006ddf1745f5a5ebd618f7186f1fb201651dc18887e2ce2efd0b642209afef8",
+    "tor_period_costume_v2_black_white.png": "d2448b9bcf76364d43b81a5c0c9a4024d53b5d39735465c09bd922083d54c256",
+    "tor_period_costume_v2_raw_imagegen.png": "65293356a6dab8f040c8565becf6cc306aa89803082d0711505f9ca8cddabfc7",
+    "tor_period_costume_v2_transparent.png": "0a0098be404c9e597841827ca2b57c37f1f7f950f7195b714163c8893d6f8e6d",
+    "tor_period_costume_v2_white.png": "df5df9690e2ae68ec9c24ddbdbaf4bb61a71645731c8acac3a511648d874cf92",
+    "QA-author.json": "d4bbfc73b335cdb628414e8e00f8f51d53e07249fa5317d3507acdc7c37420c8"
+  },
+  "old_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/tor/tor_raw_imagegen.png",
+    "sha256": "7b8d9d02a237d32585e873b4b5e3b87c5169329c46b634a24b5860648c8cef7d"
+  },
+  "actually_viewed": [
+    "tor_old_new_same_scale.png",
+    "tor_period_costume_v2_transparent.png",
+    "tor_period_costume_v2_black_white.png"
+  ],
+  "visual_findings": [
+    "西装缺口翻领、衬衫尖领与马甲尖摆已撤，改为朴素棕直边外衣、灰束腰衣和白开衩领；仍保原棕衣轮廓，近代西装组合问题已解决。",
+    "同人深棕发、成熟短须和审视眉口保持，头肩短身比例、账本手姿/另一空手、闭肩包/腰带/鞋未改坏；少量簇位漂移可接受。",
+    "账本闭合无文字，未新增官方徽记、武器或签字收款演出；服装修订不改变托雷剧情权限。",
+    "全身无裁切，手与账本接触可信，黑白底真透明无实体光晕；候选只改alpha<=5，所有RGB和较高alpha RGBA逐像素保留。",
+    "旧锚原SHA未动，同0.5最近邻旧新板独立重建精确。当前可作衣装更新候选，未修改全局roster或抹去旧稿。"
+  ],
+  "independent_checks": {
+    "alpha_only_cleanup_exact": true,
+    "all_RGB_unchanged": true,
+    "alpha_gt5_RGBA_unchanged": true,
+    "all_source_hashes_match": true,
+    "all_output_hashes_match": true,
+    "old_new_common_scale_board_exact": [
+      true,
+      true
+    ]
+  },
+  "runtime_verified": false,
+  "equipment_compatibility_verified": false,
+  "equipment_mechanism": "unknown",
+  "selected_in_roster_by_reviewer": false
+}

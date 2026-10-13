@@ -1,0 +1,65 @@
+{
+  "actor": "n1_tor",
+  "status": "author_visual_pass_pending_independent_review",
+  "userApproved": false,
+  "new_characters": 0,
+  "new_expressions": 3,
+  "visual_findings": [
+    "Same brown hair, full short beard, angular nose and mature chin maintained. Scrutiny has tight eyes and closed level mouth; question raised brow and open speaking mouth; weighing inner brow rise and off-center pressed mouth.",
+    "Initial busts regressed to folded lapels; one built-in costume-only repair per expression removed all lapels, preserving face/expression perceptually. Repair raw and prompts are retained.",
+    "No verdict, official insignia, canceled debt or villain caricature."
+  ],
+  "technical_checks": {
+    "same_source_canvas": [
+      1254,
+      1254
+    ],
+    "common_crop": [
+      0,
+      0,
+      1254,
+      1120
+    ],
+    "candidate_dimensions": [
+      1254,
+      1120
+    ],
+    "board_image_scale": 0.5,
+    "resampling": "nearest",
+    "no_anisotropic_stretch": true,
+    "raw_untouched": true,
+    "alpha_cleanup": "only alpha <=5 to zero inside common crop; RGB unchanged",
+    "crop_scope": "intentional uniform lower-chest truncation removes varying lower arm/waist framing; hair and shoulders retained"
+  },
+  "runtimeVerified": false,
+  "equipmentCompatibilityVerified": false,
+  "equipmentMechanism": "unknown",
+  "independentReview": "pending",
+  "technical_verification": [
+    {
+      "id": "01_scrutiny",
+      "exact_crop_and_alpha_only": true,
+      "alpha_zero_pixels": 685440,
+      "alpha_255_pixels": 1676
+    },
+    {
+      "id": "02_question",
+      "exact_crop_and_alpha_only": true,
+      "alpha_zero_pixels": 704611,
+      "alpha_255_pixels": 1519
+    },
+    {
+      "id": "03_weighing",
+      "exact_crop_and_alpha_only": true,
+      "alpha_zero_pixels": 730808,
+      "alpha_255_pixels": 1672
+    }
+  ],
+  "actually_viewed": [
+    "01_scrutiny_costume_fixed_raw_imagegen.png",
+    "02_question_costume_fixed_raw_imagegen.png",
+    "03_weighing_costume_fixed_raw_imagegen.png",
+    "tor_expressions_black_white_zh.png"
+  ],
+  "outputs_hashes_verified_before_finalization": true
+}

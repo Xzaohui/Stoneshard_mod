@@ -1,0 +1,127 @@
+{
+  "character": "n1_tor",
+  "date": "2026-10-13",
+  "concept_only": true,
+  "runtimeVerified": false,
+  "equipment_compatibility_verified": false,
+  "equipment_mechanism": "unknown",
+  "directional_animation": false,
+  "generator": "builtin image_gen",
+  "new_selected_images": 2,
+  "generation_calls": 2,
+  "new_characters": 0,
+  "anchor_unchanged": true,
+  "user_approved": false,
+  "assets": [
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/tor/period_costume_v2/tor_period_costume_v2_transparent.png",
+      "sha256": "0a0098be404c9e597841827ca2b57c37f1f7f950f7195b714163c8893d6f8e6d",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        260,
+        202,
+        885,
+        1362
+      ],
+      "transparent_pixels": 1057932,
+      "partial_alpha_pixels": 513828,
+      "display_scale": 0.6
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/tor/turnaround_v1/tor_left_raw_imagegen.png",
+      "sha256": "4a08e44454edfab44dd236fffa14d09dabf3675599ffdbf75db76a079c48b4e6",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        277,
+        196,
+        839,
+        1372
+      ],
+      "transparent_pixels": 1101160,
+      "partial_alpha_pixels": 470149,
+      "display_scale": 0.6
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/tor/turnaround_v1/tor_back_raw_imagegen.png",
+      "sha256": "88408488fa0f8558b0dacee833b7f4cf0c80ba9fdc2ef492b9c4520cfb3b8842",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        264,
+        135,
+        860,
+        1361
+      ],
+      "transparent_pixels": 1036526,
+      "partial_alpha_pixels": 534655,
+      "display_scale": 0.6
+    }
+  ],
+  "processing": "Raw and individual transparent PNGs byte-identical. Review boards crop by alpha>5 bbox only for layout, retain source alpha; all panels common 0.60 nearest-neighbor uniform scale and foot translation. No shape, anatomy, color edits or per-view stretching. Black/white single-image composites preserve full canvas.",
+  "design_inferences": [
+    "背面未见发束、素色衣片、披肩/斜带结构作保守设计推定，不新增身份、道具或剧情结果。"
+  ],
+  "status": "awaiting independent review",
+  "prompts": [
+    {
+      "file": "tor_back_prompt.txt",
+      "sha256": "64170a7639a85b03ff3a6f1982cc5968c31429a7df891d55d6a4a201f73f405e",
+      "full_text": "Use case: identity-preserve. Asset: single full-body character turnaround concept, transparent background. Reference is the exact approved front-three-quarter appearance; change viewing direction only, preserve identity, mature face, compact LARGE HEAD and SHORT BODY proportions, costume colors, chunky square pixel-cluster rendering and dark outline. One character only, no scene, shadow, labels, text or extra objects. Match the reference full canvas 1118 x 1407 framing and visible body height (~1160px), top around y202 and soles around y1360. Do not make a realistic tall body or tiny head. Tor: mature brown side-parted thick hair, short dense beard, wary stern brows. Plain straight-edged long brown medieval outer coat without notched lapels, charcoal belted tunic, simple offwhite split neck, dark trousers, brown ankle boots. The closed small dark brown ledger stays in his anatomical RIGHT hand, held to his RIGHT ribs; left hand hangs empty, satchel hangs at his anatomical LEFT hip with strap from anatomical RIGHT shoulder. Book remains closed without lettering. Preserve the coat's plain straight front and simple medieval construction; no modern waistcoat, jacket lapels, pointed shirt collar, badges, weapons or new props. Draw BACK VIEW facing away, feet planted, face not visible. Subject's anatomical RIGHT is now screen-right so ledger held in RIGHT arm at screen-right with only plausible edges visible; left hip satchel at screen-left. Shoulder strap runs across back from screen-right shoulder to screen-left hip. Back of coat plain brown with only restrained cloth folds, no invented emblems, flaps, straps or armor. Unseen back construction is conservative design inference. Preserve the large hair/head to compact torso ratio.\n"
+    },
+    {
+      "file": "tor_left_prompt.txt",
+      "sha256": "0b1a749fbba902600a5563fa3340d38dd34126680ea2958a6576a98a1cefe1cc",
+      "full_text": "Use case: identity-preserve. Asset: single full-body character turnaround concept, transparent background. Reference is the exact approved front-three-quarter appearance; change viewing direction only, preserve identity, mature face, compact LARGE HEAD and SHORT BODY proportions, costume colors, chunky square pixel-cluster rendering and dark outline. One character only, no scene, shadow, labels, text or extra objects. Match the reference full canvas 1118 x 1407 framing and visible body height (~1160px), top around y202 and soles around y1360. Do not make a realistic tall body or tiny head. Tor: mature brown side-parted thick hair, short dense beard, wary stern brows. Plain straight-edged long brown medieval outer coat without notched lapels, charcoal belted tunic, simple offwhite split neck, dark trousers, brown ankle boots. The closed small dark brown ledger stays in his anatomical RIGHT hand, held to his RIGHT ribs; left hand hangs empty, satchel hangs at his anatomical LEFT hip with strap from anatomical RIGHT shoulder. Book remains closed without lettering. Preserve the coat's plain straight front and simple medieval construction; no modern waistcoat, jacket lapels, pointed shirt collar, badges, weapons or new props. Draw a LEFT-FACING SIDE ELEVATION (nose pointing screen-left). Modest near-side display angle acceptable to retain readable book and satchel, but unmistakably side view rather than repeating front three-quarter. Face and feet point left; preserve physical right-hand ledger/left-hip satchel rather than mirror sides.\n"
+    }
+  ],
+  "deliverables": [
+    {
+      "file": "QA_background_comparison.png",
+      "sha256": "d882dc020375548d0ad077f58c125a3505119ea7a5207699abe6ecd8dbd5f01d"
+    },
+    {
+      "file": "tor_back_black.png",
+      "sha256": "038af8f857f066b6faa4b80f119977d644a9e58e9040dd3c43257470e78b070c"
+    },
+    {
+      "file": "tor_back_raw_imagegen.png",
+      "sha256": "88408488fa0f8558b0dacee833b7f4cf0c80ba9fdc2ef492b9c4520cfb3b8842"
+    },
+    {
+      "file": "tor_back_transparent.png",
+      "sha256": "88408488fa0f8558b0dacee833b7f4cf0c80ba9fdc2ef492b9c4520cfb3b8842"
+    },
+    {
+      "file": "tor_back_white.png",
+      "sha256": "bd8f0b615c72915ab7d5c3a8d498f12b305283b49d4c252e45b942a23c3f3fd3"
+    },
+    {
+      "file": "tor_left_black.png",
+      "sha256": "cf4f3a7cb3c9bed75ea9d6f8f263de6767a4a5db90349883f16c7fed7b57fd47"
+    },
+    {
+      "file": "tor_left_raw_imagegen.png",
+      "sha256": "4a08e44454edfab44dd236fffa14d09dabf3675599ffdbf75db76a079c48b4e6"
+    },
+    {
+      "file": "tor_left_transparent.png",
+      "sha256": "4a08e44454edfab44dd236fffa14d09dabf3675599ffdbf75db76a079c48b4e6"
+    },
+    {
+      "file": "tor_left_white.png",
+      "sha256": "00ce92ab00f9a4366988495156c275397a2c58c022c5d1903c73eab20febd5f3"
+    },
+    {
+      "file": "tor_turnaround_review_zh.png",
+      "sha256": "8b22dbaa8739b0efe706ee1ec54779768a3a6141f9f74a26860a1945528b5481"
+    }
+  ]
+}

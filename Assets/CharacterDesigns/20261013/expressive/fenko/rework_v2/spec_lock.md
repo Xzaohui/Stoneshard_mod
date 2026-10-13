@@ -1,0 +1,2 @@
+# Fenko geometry-guided rework
+Preserve adult face, linen cap/sage dress/charcoal apron/sewing pouch/blank lining sample. Geometry guide not deliverable: head unchanged, shorten neck/chest and skirt. Built-in image_gen redraw must restore natural square clusters, neckline and hand/textile relationships within new compact silhouette. concept_only=true; equipment_compatibility_verified=false; original untouched.

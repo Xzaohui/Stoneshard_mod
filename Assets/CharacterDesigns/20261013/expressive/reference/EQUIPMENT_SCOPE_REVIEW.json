@@ -1,0 +1,1201 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-10-13T04:25:24.003247+00:00",
+  "status": "read_only_source_review_and_new_reference_deliverable",
+  "root": "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod",
+  "scope": "19名新增独审人物＋1名用户认可瑟拉基准＋下一队列8人，共28人；不是172人普查。",
+  "roster_snapshot": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "sha256": "0bc98becbab39e4ffcf5f13af99a2b14dd65868fbdfd24f8ba92ec1a53c52a2e",
+    "updated_utc": "2026-10-13T04:20:56.595817+00:00",
+    "selection": "new_design_paths非空20人；following_batches减去已生成玛娅得到8人"
+  },
+  "counts": {
+    "total": 28,
+    "cohorts": {
+      "independently_reviewed_19": 19,
+      "approved_baseline_1": 1,
+      "next_queue_8": 8
+    },
+    "confirmed_scope": {
+      "unknown": 28
+    },
+    "production_recommendations": {
+      "固定外观": 23,
+      "少量预设": 5
+    },
+    "explicit_full_equipment_candidates": 0
+  },
+  "decision_boundary": [
+    "信息不足不等于不可换装；固定外观/少量预设是当前概念生产建议，不改人物设定。",
+    "本次源卡没有一人明确可入队、可控制或有装备选择机制，因此所有实际机制字段unknown，不提出完整换装角色名单。",
+    "源卡也未明确永久固定服饰，不能杜撰一组已证明永不换装人物。现有衣装brief只是单套外观美术提案。",
+    "如下一阶段出现明确队友证据，先按MODULAR-1决定实际范围，不倒推当前172人全部拆层。",
+    "仅新增本报告两文件；不改roster、剧情、既有图、dispatch_control、runtime或游戏包，不新生成图。"
+  ],
+  "general_sources": [
+    {
+      "path": "design/04_人物/人物弧光与关系转折.md",
+      "lines": [
+        21,
+        21
+      ],
+      "finding": "14组关系弧不是14个新同伴/可招募角色。"
+    },
+    {
+      "path": "design/04_人物/人物_玛拉与伊沃.md",
+      "lines": [
+        32,
+        32
+      ],
+      "finding": "剧情确认离场不等于已实现护送AI。"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/reference/MODULAR_CHARACTER_ART_DRAFT.md",
+      "locator": "分层接口、头盔与特殊姿态、导出与引擎适配、最小试点与验收"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/reference/EQUIPMENT_COMPATIBILITY_AUDIT.md",
+      "locator": "结论、原版Mod适配必须补核、最小验证与停止点"
+    }
+  ],
+  "gates": {
+    "FIXED-1": [
+      "源卡身份、同人归并和所处状态一致；衣装注明美术提案，不新增王冠/军徽/武器等设定。",
+      "固定外观概念仍需原生尺度重制；正式画布、方向、动作、原点、碰撞、点击和深度待核。",
+      "保留原始概念、透明边界、来源与版本；单张PNG不能冒充已拆层母版。"
+    ],
+    "PRESET-1": [
+      "先列少数确实需要的情境/姿态与触发证据；未证实状态不生成，不自动编造伤愈或入队。",
+      "身体与固定衣装可整身制作，道具、毯、支撑或围巾按真实遮挡需要分开；是否运行时分层另定。",
+      "坐姿需独立检查腿、衣摆、座面、支撑与脚点，不能压缩站姿或取消既有伤腿。"
+    ],
+    "MODULAR-1": [
+      "先补角色专属可入队/可控制/换装机制证据并明确具体可见装备范围；只有入队一项仍不能证明支持任意装备。",
+      "冻结实际body_profile与同一逻辑画布、foot_anchor、方向/动作/帧ID；engine_origin、碰撞和点击单独核实。",
+      "交付可编辑干净身体与真实衣甲/头发/头盔/手持源层，被遮挡区域完整；不将整身PNG机械裁块算底模完成。",
+      "试点空手、单手+盾、双手武器；检查左右握点、方向相关遮挡和副手互斥。",
+      "试点无盔/两顶盔，检查发型隐藏区/蒙版与脸部；试点一套衣甲穿脱还原完整底图。",
+      "坐姿等特殊姿态单独验收；特殊体型或支具声明兼容边界与明确回退预设，不能承诺全装备通用。",
+      "PNG/图集+JSON保逻辑画布、trim_offset、anchors、draw_order、hide_masks、支持组合及版本；运行适配另核。",
+      "正式运行验收穿脱、切武器组、过图、存读档、原生并排尺度与点击/通行；未运行一律runtime_verified=false。"
+    ]
+  },
+  "characters": [
+    {
+      "id": "ALD-NPC-CHILER",
+      "name": "齐勒",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "旧墙讲述导者，经营讲述与退款边界。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_ALD-NPC-CHILER_齐勒.md",
+          "lines": [
+            15,
+            31
+          ],
+          "sha256": "225819d765fc46b304c22cc796d480be7a48295beb253cfd42ec50a8ed3879a9",
+          "excerpt": "**稳定ID**：ALD-NPC-CHILER\n\n**工作**：旧墙讲述导者\n\n**所求**：用卖得动的故事养自己与一个助手。\n\n**所怕**：说清未知之后，听客把他当什么都不知道的人，退款让下一班无钱。\n\n**口吻**：开场善用你看这道裂；被指出年代时不再把大家都这么说当来源。\n\n**可能弧线**：可缩小讲述范围留下可信生意，也可停卖虚标游约退款；不必靠害怕新围城继续谋生。\n\n身份与经历全部Mod原创；所属[[聚落_ALD_奥尔德文]]。关联：[[台本_CS-ALD-04_旧墙不是新围城]]\n\n同一身体按本人日常位置和实际约见移场，不在每个任务各生一个。只讲亲历、准用本案材料或已收有限回执，不从关联链接得知全部剧情。拒绝、死亡、保密与缺席优先；未结案不自动表态，已结案不重选或反复领同项款。\n\n[[奥尔德文人物对白与交叉演出审查]] · [[空间_ALD_奥尔德文]] · [[城市篇章与跨区域任务网]]"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "BRY-NPC-ANLA",
+      "name": "安菈",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "成年卡扣学徒，留坊或离坊是劳动关系选择。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-ANLA_安菈.md",
+          "lines": [
+            15,
+            35
+          ],
+          "sha256": "4650406afd6fcb5b676240567c625fd146ac1fc722bd9d8ff065f23ee3247414",
+          "excerpt": "**稳定演员ID**：`BRY-NPC-ANLA`。**工作**：改出关键卡扣的成年学徒。\n\n**所求**：作品有自己的印，又不想装作从没被师傅教过。\n\n**所怕**：离坊就失工具与旧客，留下就一辈子只剩家印。\n\n**说话方式**：解释卡扣接点很准，解释自己想走或留时很慢。\n\n**可能弧线**：分署让她留在有旧恩也有控制的关系中重新谈边界；独立离坊损收入并需明示延期。她不必把师傅全盘否定才能成长，也不必道谢到放弃未来。\n\n所属 [[聚落_BRY_布林]]。关联当前台本：[[台本_CM-BRY_城墙之内]] · [[台本_CS-BRY-03_学徒的印]]。\n\n姓名、经历、关系均Mod原创，不替原NPC或原作统治者。台词只在本人存活/在场且有来源时演；不知的案不因和玩家熟就知，现时位置不能自动传所有同城人物。缺席仅用事前有效有限陈述，代理不能新造本人去留/和解/续作同意。\n\n同一演员只有一个身体和真实位置：私人住处／本职岗位为默认，当前协商的有限会面才可排剧情位置。共享多个任务时，先问本次谈哪件，未谈案不自动结。已结方法只回访，不搬回危险处重演，不用人物死亡后替身台词凑完整演出。\n\n[[布林人物对白与网状演出审查]] · [[空间_BRY_布林]] · [[城市篇章与跨区域任务网]]\n\n<!-- BRYNN-CONTINUATION-S85:BEGIN -->\n## S85同一人物的续篇\n"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "BRY-NPC-DARAN",
+      "name": "达兰",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "亡者姐姐兼旧板材商，哀悼与私人注记的选择。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-DARAN_达兰.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "2fff9e21a6f9d1c6b5e568bf24a3db1e3381594640fe7b7a0cb59b5a050c8fa2",
+          "excerpt": "所属：[[聚落_BRY_布林]]。原创身份：一名原创亡者的姐姐，兼做旧板材生意。不是原作领袖/官方机构的现任代表。\n\n口吻：说起弟弟只叫名字；遇到一整群替死者说话的人，反问是谁问过家属。\n\n跨任务弧光：她曾借工具铺事件的公告解释弟弟之死，却没有证据证明弟弟属于公告里的死者。14分开家中损失与原作案件，13可决定只留私人注记，16也能拒绝公开哀悼。\n\n当前台本：[[台本_CS-BRY-13_页边的另一个名字]] · [[台本_CS-BRY-14_地窖之外]] · [[台本_CS-BRY-16_空椅不是赞成]]。\n\n[[布林续篇任务与伏笔回收总表]] · [[布林续篇逻辑与人物弧光审查]]\n\n死亡优先，其次缺席、拒绝与用途授权；最后才检查有限回执和当前目标状态。询问、预览、读纸、关闭均不写resolve。实际行动及交接验毕、费用来源核过，再确认才写唯一resolve。反悔只重评未来，不回滚已发生付款、曝光、伤害与责任。本人缺席不创建第二个身体，未授权代理不替其签字。\n\n本案是一次人物事件，不按日刷新、不做普通运输/修理/清运委托。拒做保原生服务与主线；没有完成全部布林任务的门槛。有限调查费只由本案paid记一次，金额仍待经济核算；受助者的工资/退款不是玩家奖金，接收边不另结奖。N17安全快照独立冻结；本案不发NE或accountable，不为N16买资格。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_core_03.json",
+        "locator": "$.characters[?(@.id=='BRY-NPC-DARAN')].costume_props",
+        "text": "旧图提示：成年女性，风霜面容、实用深色头巾、褪苔绿外衣、补丁锈褐裙罩裤、工作靴、腰边细量尺；结实的劳动者手臂。",
+        "constraints": "现行卡明确是原创亡者的姐姐；旧prompt中“弟弟失踪未确认死亡”已经过时，不得沿用。仍无证据把弟弟归入原作公告死者，不添加原作案件真相、不默认公开哀悼。"
+      }
+    },
+    {
+      "id": "BRY-NPC-ELEN",
+      "name": "艾伦",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "成年装帧修复者；不是逃兵NPC-N-AREN。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-ELEN_艾伦.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "4c9ec733c87e395824d1e80aa134470feb044b2804e4d36b34cb40bb45a36c50",
+          "excerpt": "所属：[[聚落_BRY_布林]]。原创身份：没有大学正式职位的成年装帧修复者。不是原作领袖/官方机构的现任代表。\n\n口吻：分清原页、后添页和自己的推测，遇见卖价时会说得比证据更肯定。\n\n跨任务弧光：她以小科雷昂的名字提高残本卖价，其实重要的名单是后来一位无名抄手所添。13能主动更正、守住私藏或出让展览权；16面对自己的权威欲，不升任官方大学代表。\n\n当前台本：[[台本_CS-BRY-13_页边的另一个名字]]。\n\n[[布林续篇任务与伏笔回收总表]] · [[布林续篇逻辑与人物弧光审查]]\n\n死亡优先，其次缺席、拒绝与用途授权；最后才检查有限回执和当前目标状态。询问、预览、读纸、关闭均不写resolve。实际行动及交接验毕、费用来源核过，再确认才写唯一resolve。反悔只重评未来，不回滚已发生付款、曝光、伤害与责任。本人缺席不创建第二个身体，未授权代理不替其签字。\n\n本案是一次人物事件，不按日刷新、不做普通运输/修理/清运委托。拒做保原生服务与主线；没有完成全部布林任务的门槛。有限调查费只由本案paid记一次，金额仍待经济核算；受助者的工资/退款不是玩家奖金，接收边不另结奖。N17安全快照独立冻结；本案不发NE或accountable，不为N16买资格。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_brynn_02.json",
+        "locator": "$.characters[?(@.id=='BRY-NPC-ELEN')].costume_props",
+        "text": "旧提示词：栗发低束，褪色酒红无袖罩裙、燕麦白袖、炭灰工作围裙；腰间小骨折刀与亚麻线，工具保持细小。",
+        "constraints": "成年女性独立装帧修复者，不是NPC-N-AREN逃兵，无大学正式职位；不能以小科雷昂名号作为证实作者或大学权威，不画魔法书或默认展览授权。"
+      }
+    },
+    {
+      "id": "BRY-NPC-HASE",
+      "name": "哈塞",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "医药商品代理，有限营销用途与款项交易。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-HASE_哈塞.md",
+          "lines": [
+            15,
+            31
+          ],
+          "sha256": "cb3b7131f70e7bf865d78caa6ddadbf917fc460d96d17f297702a50e8fb0173e",
+          "excerpt": "**稳定演员ID**：`BRY-NPC-HASE`。**工作**：原创医药商品代理。\n\n**所求**：买到可用于这一批广告的观察，不想带一整页坏消息。\n\n**所怕**：开了如实记录先例后每笔营销都不能全归自己。\n\n**说话方式**：态度温和，钱给得真；常用一大叠条款包住一句很小的承诺。\n\n**可能弧线**：有限用途交易会削独家宣传价值，拒售使其退未用款；他能继续生意但不能把私人付款说成已问责或已治愈。不是原作药师的替身。\n\n所属 [[聚落_BRY_布林]]。关联当前台本：[[台本_CS-BRY-07_药瓶上的商标]]。\n\n姓名、经历、关系均Mod原创，不替原NPC或原作统治者。台词只在本人存活/在场且有来源时演；不知的案不因和玩家熟就知，现时位置不能自动传所有同城人物。缺席仅用事前有效有限陈述，代理不能新造本人去留/和解/续作同意。\n\n同一演员只有一个身体和真实位置：私人住处／本职岗位为默认，当前协商的有限会面才可排剧情位置。共享多个任务时，先问本次谈哪件，未谈案不自动结。已结方法只回访，不搬回危险处重演，不用人物死亡后替身台词凑完整演出。\n\n[[布林人物对白与网状演出审查]] · [[空间_BRY_布林]] · [[城市篇章与跨区域任务网]]"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "BRY-NPC-LODA",
+      "name": "洛妲",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "有限水门维修班匠人，作业与赔付边界。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-LODA_洛妲.md",
+          "lines": [
+            15,
+            31
+          ],
+          "sha256": "e1da638a97f2fb502ffd5246b1924d835934ba051bf405ee97f648a9a9be8b37",
+          "excerpt": "**稳定演员ID**：`BRY-NPC-LODA`。**工作**：本案有限水门维修班的匠人。\n\n**所求**：做得完一班的安全安排，不让派错的工单再次算对。\n\n**所怕**：承认错槽后失去生计，别人要求她用冒险补回来。\n\n**说话方式**：指槽、支架和实际能退的路，很少讲抽象公正；不肯再拿住户试水。\n\n**可能弧线**：先隔低屋会损货并留赔付缺口，两段分流会多付工班和临时停市。她的成长是能说明自己做错哪段以及下一班能力在哪，不是变成无限治水救星。\n\n所属 [[聚落_BRY_布林]]。关联当前台本：[[台本_CM-BRY_城墙之内]] · [[台本_CS-BRY-09_谁关上水门]]。\n\n姓名、经历、关系均Mod原创，不替原NPC或原作统治者。台词只在本人存活/在场且有来源时演；不知的案不因和玩家熟就知，现时位置不能自动传所有同城人物。缺席仅用事前有效有限陈述，代理不能新造本人去留/和解/续作同意。\n\n同一演员只有一个身体和真实位置：私人住处／本职岗位为默认，当前协商的有限会面才可排剧情位置。共享多个任务时，先问本次谈哪件，未谈案不自动结。已结方法只回访，不搬回危险处重演，不用人物死亡后替身台词凑完整演出。\n\n[[布林人物对白与网状演出审查]] · [[空间_BRY_布林]] · [[城市篇章与跨区域任务网]]"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "BRY-NPC-MARIS",
+      "name": "玛莉丝",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "精灵扣件匠商；不是全族代表。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-MARIS_玛莉丝.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "58a78b3c070d68d08d3c5f733bd43b6e1e7fd2515915a1c5f6cabf38e374f822",
+          "excerpt": "所属：[[聚落_BRY_布林]]。原创身份：独立经营小批进口扣件的精灵匠商。不是原作领袖/官方机构的现任代表。\n\n口吻：先分实物、归责和她的来历；拒绝用同族关系保证所有货物。\n\n跨任务弧光：12中她隐去运输时的拆装以保退货资格；可赔付自身责任、只承担检测或买断批次。16中她要承认受歧视和瞒报可以同时成立，不被迫代表碧罗商馆。\n\n当前台本：[[台本_CS-BRY-12_两种火候]] · [[台本_CS-BRY-16_空椅不是赞成]]。\n\n[[布林续篇任务与伏笔回收总表]] · [[布林续篇逻辑与人物弧光审查]]\n\n死亡优先，其次缺席、拒绝与用途授权；最后才检查有限回执和当前目标状态。询问、预览、读纸、关闭均不写resolve。实际行动及交接验毕、费用来源核过，再确认才写唯一resolve。反悔只重评未来，不回滚已发生付款、曝光、伤害与责任。本人缺席不创建第二个身体，未授权代理不替其签字。\n\n本案是一次人物事件，不按日刷新、不做普通运输/修理/清运委托。拒做保原生服务与主线；没有完成全部布林任务的门槛。有限调查费只由本案paid记一次，金额仍待经济核算；受助者的工资/退款不是玩家奖金，接收边不另结奖。N17安全快照独立冻结；本案不发NE或accountable，不为N16买资格。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_brynn_02.json",
+        "locator": "$.characters[?(@.id=='BRY-NPC-MARIS')].costume_props",
+        "text": "旧图：成年精灵女性，深棕长辫和尖耳，暗梅紫外衣、灰米内裙、棕腰带和小货袋；腰边细小金属扣件可简化为一个，不画武器或魔法。",
+        "constraints": "独立进口扣件匠商，不代表碧罗商馆或全族；运输拆装隐瞒与受歧视可同时成立，不默认检测结案、赔付或公开哀悼同意。"
+      }
+    },
+    {
+      "id": "BRY-NPC-ROAN",
+      "name": "罗安",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "成年本地装配匠，责任通过拆检判定。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-ROAN_罗安.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "caf921a47a308a60eccd962f4811c71e1633b99b6513dfd04b08d01f7b3b99a9",
+          "excerpt": "所属：[[聚落_BRY_布林]]。原创身份：接小件修理的成年本地装配匠。不是原作领袖/官方机构的现任代表。\n\n口吻：爱把断件说成外来货；认错时先承认自己凿过的那个孔。\n\n跨任务弧光：他因进口失去订单，却用本地身份替过载装配辩护。12实际拆检才改变归责；14面对安全检查时可能不再把顾客的怀疑当敌意；没有一句和好抹去旧排挤。\n\n当前台本：[[台本_CS-BRY-12_两种火候]] · [[台本_CS-BRY-14_地窖之外]]。\n\n[[布林续篇任务与伏笔回收总表]] · [[布林续篇逻辑与人物弧光审查]]\n\n死亡优先，其次缺席、拒绝与用途授权；最后才检查有限回执和当前目标状态。询问、预览、读纸、关闭均不写resolve。实际行动及交接验毕、费用来源核过，再确认才写唯一resolve。反悔只重评未来，不回滚已发生付款、曝光、伤害与责任。本人缺席不创建第二个身体，未授权代理不替其签字。\n\n本案是一次人物事件，不按日刷新、不做普通运输/修理/清运委托。拒做保原生服务与主线；没有完成全部布林任务的门槛。有限调查费只由本案paid记一次，金额仍待经济核算；受助者的工资/退款不是玩家奖金，接收边不另结奖。N17安全快照独立冻结；本案不发NE或accountable，不为N16买资格。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_brynn_02.json",
+        "locator": "$.characters[?(@.id=='BRY-NPC-ROAN')].costume_props",
+        "text": "旧图四视图同人：成年男性，短深灰棕发、浓短胡须、赭黄卷袖衬衣、深棕皮围裙、深灰裤和短靴；腰侧小钳／细錾保留一两件即可，无大武器。",
+        "constraints": "成年本地装配匠；把断件说成外来货不等于异族就是责任方。只能表现静态人物，不画拆检成功、和解、赔款或责任被抹去。"
+      }
+    },
+    {
+      "id": "BRY-NPC-SELA",
+      "name": "瑟拉",
+      "cohort": "approved_baseline_1",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "独立夜渡船租船人，只能承诺一趟实际船运。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-SELA_瑟拉.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "b2f07faaa1e5f0fc91a6483d43e3c5552bc014dd504b2a2f6e16d9348f0d8d61",
+          "excerpt": "所属：[[聚落_BRY_布林]]。原创身份：独立夜渡船的租船人。不是原作领袖/官方机构的现任代表。\n\n口吻：用潮位和载重说话；被问到谁付钱，先把自己的垫款算出来。\n\n跨任务弧光：她替伤者瞒去名字，起初也拿隐私挡住别人问运费。11中须把身份和费用拆开；16中她只能承诺一趟已占用的船，不能成为城市运输总管。\n\n当前台本：[[台本_CS-BRY-11_不写船名的夜泊]]。\n\n[[布林续篇任务与伏笔回收总表]] · [[布林续篇逻辑与人物弧光审查]]\n\n死亡优先，其次缺席、拒绝与用途授权；最后才检查有限回执和当前目标状态。询问、预览、读纸、关闭均不写resolve。实际行动及交接验毕、费用来源核过，再确认才写唯一resolve。反悔只重评未来，不回滚已发生付款、曝光、伤害与责任。本人缺席不创建第二个身体，未授权代理不替其签字。\n\n本案是一次人物事件，不按日刷新、不做普通运输/修理/清运委托。拒做保原生服务与主线；没有完成全部布林任务的门槛。有限调查费只由本案paid记一次，金额仍待经济核算；受助者的工资/退款不是玩家奖金，接收边不另结奖。N17安全快照独立冻结；本案不发NE或accountable，不为N16买资格。"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "BRY-NPC-YANI",
+      "name": "雅尼",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "limited_presets",
+      "production_recommendation_label": "少量预设",
+      "recommendation_is_inference": true,
+      "source_role": "带未合适义肢回城的成年退役者，伤残不代表战斗队友。",
+      "reason": "义肢/支具与姿态需独立适配；只留已确认状态，不能自造康复或更换义肢分支。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "PRESET-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_BRY-NPC-YANI_雅尼.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "e1d5a0e656f9c45d2ceb781d9779c2dc1178d3a25ed7bffb69817b880ade3095",
+          "excerpt": "所属：[[聚落_BRY_布林]]。原创身份：带着未合适义肢回城的成年退役者。不是原作领袖/官方机构的现任代表。\n\n口吻：不许别人搀住后就替他说话；会用不合身的支具打断励志故事。\n\n跨任务弧光：他既怕被当逃兵，也不愿接受苦难英雄的席位。11决定谁能知道本次回程，15追索自己那一班的旧欠，16可拒绝替所有伤者发言。\n\n当前台本：[[台本_CS-BRY-11_不写船名的夜泊]] · [[台本_CS-BRY-15_招募告示的背面]] · [[台本_CS-BRY-16_空椅不是赞成]]。\n\n[[布林续篇任务与伏笔回收总表]] · [[布林续篇逻辑与人物弧光审查]]\n\n死亡优先，其次缺席、拒绝与用途授权；最后才检查有限回执和当前目标状态。询问、预览、读纸、关闭均不写resolve。实际行动及交接验毕、费用来源核过，再确认才写唯一resolve。反悔只重评未来，不回滚已发生付款、曝光、伤害与责任。本人缺席不创建第二个身体，未授权代理不替其签字。\n\n本案是一次人物事件，不按日刷新、不做普通运输/修理/清运委托。拒做保原生服务与主线；没有完成全部布林任务的门槛。有限调查费只由本案paid记一次，金额仍待经济核算；受助者的工资/退款不是玩家奖金，接收边不另结奖。N17安全快照独立冻结；本案不发NE或accountable，不为N16买资格。"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "MAE-NPC-KAEM",
+      "name": "凯姆",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "与N10同人的副馆员，失印与责任共用。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_MAE-NPC-KAEM_凯姆.md",
+          "lines": [
+            15,
+            34
+          ],
+          "sha256": "cf464441953cc012351035181701414b919110b001840e189f38550113d896b8",
+          "excerpt": "> [!info] 共用人物\n> 这就是[[台本_N10_没有写下的见证]]里的凯姆，本轮补卡而非新增另一个凯姆。存活、失印、旧责任与已结方法共用，城市任务不重奖或重新洗清；设计ID用于引用，不是运行资源索引。\n\n**稳定ID**：MAE-NPC-KAEM\n\n**工作**：N10已有副馆员，本轮补角色卡\n\n**所求**：保存记录，也保自己作为唯一救记录者的地位。\n\n**所怕**：独立来源核验让自己的摘要和认证垄断失去价值。\n\n**口吻**：以我保下过这些开头；受物证约束只能答自己的日期和归属，不指控全部来源人。\n\n**可能弧线**：沿N10已发生责任和存活状态；本城新错归段另核，不能再授旧失印的编辑权，也不能把沉默当新增认罪。\n\n所属[[聚落_MAE_曼恩]]，身份／经历Mod原创。关联：[[台本_CM-MAE_留下来的城]] · [[台本_CS-MAE-05_凯姆没能改掉的字]]\n\n共用一身体，按实际日常位置和本人约见移场；没来、死亡、拒绝、保密优先，不为了串任务各生成一人。只讲亲历、准用本段或已收有限回执，关联双链不等于知道全案。当前愿意只管本次范围，取消不结案；旧伤害、已用资源和欠项保留。\n\n[[曼恩人物对白与去留交叉审查]] · [[空间_MAE_曼恩]] · [[城市篇章与跨区域任务网]]"
+        },
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "lines": [
+            47,
+            51
+          ],
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "excerpt": "## 凯姆（Kaem，NPC-N-KAEM）\n\n无铭档案会的原创副馆员，历史总纲已提到，现有完整台本定位。想靠技术救人和保书获得地位，后来拿前者为具体篡改辩解。他收到过停止请求、转交过材料、重排过摘要日期；知道关外一处收药点，不知道每个载体和最终所有装置。\n\n让他失印、受核验或未公开责任均有独立结果；不能用个案将整个档案会定罪。死亡留预先出库回执，不让遗稿临时知道更多。关联[[台本_N6_被封存的页码]]、[[台本_N9_把证据摆上桌]]、[[台本_N10_没有写下的见证]]、[[势力_无铭档案会]]、[[区域_R03_曼恩边地]]。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_core_01.json",
+        "locator": "$.characters[?(@.id=='MAE-NPC-KAEM')].costume_props",
+        "text": "旧图中列：成年男性，深棕侧分短发与短胡茬，炭灰长外套、米白领口、棕皮袖口和腰带、斜挎闭合卷轴筒。大头短身重新设计，勿照搬旧图的长身比例。",
+        "constraints": "与NPC-N-KAEM同一人。记录与自保并存；失印、既往责任和存活共用；不得画重新授印、无罪认证、全部档案会定罪或第二身体。卷轴筒闭合，不出现未授权文书内容。"
+      }
+    },
+    {
+      "id": "NPC-HERS",
+      "name": "赫斯·白",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "装置控制者；卡中拒绝正常可加入洗白线，但不是换装机制定义。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-HERS_赫斯·白.md",
+          "lines": [
+            15,
+            25
+          ],
+          "sha256": "e74d94e04c28eaabef5274631ed6b3fd69faf5227cc70768a04710d60fa7b193",
+          "excerpt": "**工作**：已有Mod装置控制者。\n\n**起点与转折**：以承担代价辩护，依赖别人挡价。\n\n城市：[[聚落_HIG_无名修院山地]]\n\n关联篇章：[[台本_CM-HIG_回程也是答案]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]"
+        },
+        {
+          "path": "design/04_人物/人物_赫斯·白.md",
+          "lines": [
+            21,
+            39
+          ],
+          "sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c",
+          "excerpt": "## 身份与愿望\n\n原创人物。角色命题：你欠的命，总有人要支付。\n\n追求：将救命债、晶石和器具变成控制人的合同。组织关联：[[势力_苍白债契]]。\n\n## 信息与盲点\n\n把自己的试验当作命运，刻意掩盖失败。\n\n可提供：只知道现有装置的操作，非全知幕后主使。没有出处的秘密不能靠对白突然补出，相关证据见 [[证据与结局]]。\n\n## 底线与关系变化\n\n不给正常可加入洗白线；谈判只是战术或坏结局选择。人物态度用任务中的具体选择改变，地方信任不替代责任、犯罪或已签协议。其成长需在 [[主线任务索引]] 和 [[支线任务索引]] 可见，不由日常刷金币直接完成。\n\n## 失效替代\n\n死亡/逃脱都留下固定债簿与仪式状态，不重生发奖。死亡保持一次性状态；固定资料可以替代任务功能，不能重置道德后果或再次提供唯一奖励。"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "NPC-LYD",
+      "name": "莉德",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "来源抄写者，保护去向与作证须本人同意。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-LYD_莉德.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "831b29ed79b329b715176a860c495e18af0166ded3d5c7bf5d1acdaaa3bb39e7",
+          "excerpt": "**工作**：已有Mod来源抄写者。\n\n**起点与转折**：要自己的说话位置，不一定要公开真名。\n\n城市：[[聚落_MAE_曼恩]]\n\n关联篇章：[[台本_CM-MAE_留下来的城]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]\n\n当前曼恩逐角色对白、共用人物与先后顺序回应见[[曼恩人物对白与去留交叉审查]]；S79为原创台本初稿，未导入游戏。"
+        },
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "lines": [
+            53,
+            57
+          ],
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "excerpt": "## 莉德（Lyd，NPC-N-LYD）\n\n年轻抄写者，给塞娜做短工；不因同名词根成为塞娜家属。被逼改停用文书，保留双联与页背求助。她知道自己抄了什么、回执给谁，不知道古代仪式真正用途。害怕住处被公开，保护选择先问她去哪，再问愿不愿作证。\n\n手稿留错不是解谜机关暗号，而是她害怕改写痕迹全被抹掉。关联[[台本_SQ06_抄本的背面]]、[[台本_D05_学院弃置试验庭]]、[[区域_R03_曼恩边地]]。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_core_01.json",
+        "locator": "$.characters[?(@.id=='NPC-LYD')].costume_props",
+        "text": "旧图右列：年轻抄写者，棕发高束髻、锈褐短外衣、米色内衫、暗灰围领、腰间小袋、深裤短靴；手中纸页可省略或闭合，不能显露私密内容。",
+        "constraints": "与NPC-N-LYD同人，不因姓名词根成为塞娜家属；保护先问去向与作证意愿，手稿留错不是神秘暗号，不默认公开住址或证词。"
+      }
+    },
+    {
+      "id": "NPC-MAYA",
+      "name": "玛娅·禾",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "地方民粮代理，非全阵营领袖。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-MAYA_玛娅·禾.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "c8edbe3abd64616a15f8167c1f3e27c5a45eafd4408189707df0fe6b3ad545b8",
+          "excerpt": "**工作**：已有Mod民粮代理。\n\n**起点与转折**：保护自己人不能等于决定谁是自己人。\n\n城市：[[聚落_MAE_曼恩]]\n\n关联篇章：[[台本_CM-MAE_留下来的城]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]\n\n当前曼恩逐角色对白、共用人物与先后顺序回应见[[曼恩人物对白与去留交叉审查]]；S79为原创台本初稿，未导入游戏。"
+        },
+        {
+          "path": "design/04_人物/人物_玛娅·禾.md",
+          "lines": [
+            21,
+            39
+          ],
+          "sha256": "b06f3e9000554bb1ee94402877eb28ecfbfb31fa2e203a6bb7ad3950fd5cdce7",
+          "excerpt": "## 身份与愿望\n\n原创人物。角色命题：不再让村民成为别人账簿里的数字。\n\n追求：保障救济与匿名，约束公议中的报复派。组织关联：[[势力_灰色军团地方公议]]。\n\n## 信息与盲点\n\n以为所有档案都用于抓人；后来区分病例与征发名册。\n\n可提供：平民证言、粮票和公议代表资格。没有出处的秘密不能靠对白突然补出，相关证据见 [[证据与结局]]。\n\n## 底线与关系变化\n\n拒绝献祭式医疗，接受可退出的自愿研究。人物态度用任务中的具体选择改变，地方信任不替代责任、犯罪或已签协议。其成长需在 [[主线任务索引]] 和 [[支线任务索引]] 可见，不由日常刷金币直接完成。\n\n## 失效替代\n\n公议副代表保存已签承诺；死亡不会让整个原作灰军消失。死亡保持一次性状态；固定资料可以替代任务功能，不能重置道德后果或再次提供唯一奖励。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_routes_04.json",
+        "locator": "$.characters[?(@.id=='NPC-MAYA')].costume_props",
+        "text": "旧板同一人四种姿态：成年女性，略带灰发藏在炭灰头巾下、结实普通体态、深橄榄补肘外衣、石板灰肩巾、普通棕腰带与小粮票袋、深裤旧冬靴；可选闭合配给册，不能露姓名住址。",
+        "constraints": "是地方公议救济代理，不是全阵营领袖；无军徽、武器、王旗。可站姿或普通坐凳休息，但不得因旧图有坐姿就虚构残疾；不画签承诺、批准研究或献祭医疗。与主线NPC06同一身体。"
+      }
+    },
+    {
+      "id": "NPC-MIA",
+      "name": "米娅",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "limited_presets",
+      "production_recommendation_label": "少量预设",
+      "recommendation_is_inference": true,
+      "source_role": "本地疫所患者，想先坐到门外且不一定迁村。",
+      "reason": "坐姿/站姿与披肩、普通叠毯可作为有依据的表现预设；不是痊愈或自由换装。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "PRESET-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-MIA_米娅.md",
+          "lines": [
+            15,
+            25
+          ],
+          "sha256": "4f0ed56296c8281082d26ec00054e14c17429cfc3e1955a2d4aee3f4dd68a08e",
+          "excerpt": "**工作**：已有Mod患者。\n\n**起点与转折**：被救后仍要决定生活，不能所有病人由她代表。\n\n城市：[[聚落_ASH_寒凉盆地与护理村]]\n\n关联篇章：[[台本_CM-ASH_不是空床的村庄]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]"
+        },
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "lines": [
+            59,
+            63
+          ],
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "excerpt": "## 米娅（Mia，NPC-N-MIA）\n\n本地疫所病人。见过管线改动、阀换新及窗口被封；口供不能证明污染因果，仍需排程与病例。她想先坐到门外，不一定想迁村；普通护理和匿名船票给她继续选择的空间。\n\n不把她当对所有病患授权的“受害代表”。需要机构方案时采用已授权的多人回执与护理记录。关联[[台本_N8_不会散去的热病]]、[[台本_SQ05_渡口与姓名]]、[[台本_D07_灰烬疫所]]、[[区域_R05_灰烬湿地与疫村]]。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_core_01.json",
+        "locator": "$.characters[?(@.id=='NPC-MIA')].costume_props",
+        "text": "旧图上排患者：深棕低辫，朴素米白长裙、暗青披肩、柔软便鞋；可抱一件普通叠毯，避免夸张病容、伤口或凭空医疗器具。不是下排棕围裙护理者。",
+        "constraints": "与NPC-N-MIA同一人；不是妮蔻。她的口供不能证明污染因果，不代表所有病患授权；不能默认迁村、康复、治疗成功或护工身份。"
+      }
+    },
+    {
+      "id": "NPC-MORREN",
+      "name": "莫伦·海",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "退役军医，病例与伤患保护职责。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-MORREN_莫伦·海.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "e0585bb556c3f1917bbe88623f216748bd0d269192bb23001a76c6a53b8d05f3",
+          "excerpt": "**工作**：已有Mod退役军医。\n\n**起点与转折**：补偿沉默，需交照护主持权。\n\n城市：[[聚落_PAS_柏石关与关外聚落]]\n\n关联篇章：[[台本_CM-PAS_关口两边]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]\n\n寄存与关口两地的逐角色稿、缺席者／同人／原任务复用见[[考德与柏石关人物演出审查]]；S84为Mod原创初稿，未导入游戏。"
+        },
+        {
+          "path": "design/04_人物/人物_莫伦·海.md",
+          "lines": [
+            21,
+            39
+          ],
+          "sha256": "28edec2ce196d76666a79ff4070fa1b1aa1fc8e257c4efc411a47302800d4677",
+          "excerpt": "## 身份与愿望\n\n原创退役军医。角色命题：一瓶药救了谁，应当能查得到。\n\n追求：修复病例，保护自己的伤患不被再次征用。组织关联：[[势力_王廷封印特使团]]。\n\n## 信息与盲点\n\n一度只统计领药人数，忽略离开名册后的痛苦。\n\n可提供：军需对照病例与受害者保护协议。没有出处的秘密不能靠对白突然补出，相关证据见 [[证据与结局]]。\n\n## 底线与关系变化\n\n不为葛文涅尔免罪；治疗不需要献人。人物态度用任务中的具体选择改变，地方信任不替代责任、犯罪或已签协议。其成长需在 [[主线任务索引]] 和 [[支线任务索引]] 可见，不由日常刷金币直接完成。\n\n## 失效替代\n\n死亡时封存病例柜和带日期的军需副账可核验E03。死亡保持一次性状态；固定资料可以替代任务功能，不能重置道德后果或再次提供唯一奖励。"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "NPC-REY",
+      "name": "雷奥·凯斯",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "地方军需代理；衬垫旅行甲是美术提案，不证明可换甲。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-REY_雷奥·凯斯.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "15dd1f5e8268ffea68e170b2d4b14c004f08adc19324ab36f81aff5d4d708a87",
+          "excerpt": "**工作**：已有Mod地方军需代理。\n\n**起点与转折**：相信封印，逐步接受外部监督。\n\n城市：[[聚落_PAS_柏石关与关外聚落]]\n\n关联篇章：[[台本_CM-PAS_关口两边]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]\n\n寄存与关口两地的逐角色稿、缺席者／同人／原任务复用见[[考德与柏石关人物演出审查]]；S84为Mod原创初稿，未导入游戏。"
+        },
+        {
+          "path": "design/04_人物/人物_雷奥·凯斯.md",
+          "lines": [
+            21,
+            39
+          ],
+          "sha256": "2e7159e57480bffc3698f7243b6f1830d4b771ce3d72a4555d2d09d0fde2dfa5",
+          "excerpt": "## 身份与愿望\n\n原创人物。角色命题：危险必须封存，命令也必须可以复查。\n\n追求：安全接管而不被本国军需腐败拖下水。组织关联：[[势力_王廷封印特使团]]。\n\n## 信息与盲点\n\n起初把军队记录视为比平民证言可靠。\n\n可提供：封印材料、军需原件与地方签署资格。没有出处的秘密不能靠对白突然补出，相关证据见 [[证据与结局]]。\n\n## 底线与关系变化\n\n可让第三方监督，不能轻易认同全军有罪。人物态度用任务中的具体选择改变，地方信任不替代责任、犯罪或已签协议。其成长需在 [[主线任务索引]] 和 [[支线任务索引]] 可见，不由日常刷金币直接完成。\n\n## 失效替代\n\n关外退役军医和已签文书替代接口；未完成SQ02不取得承诺。死亡保持一次性状态；固定资料可以替代任务功能，不能重置道德后果或再次提供唯一奖励。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_core_03.json",
+        "locator": "$.characters[?(@.id=='NPC-REY')].costume_props",
+        "text": "旧图／prompt：成年男性地方封印特使，普通暗钢色衬垫旅行甲、褪蓝罩衣、朴素闭合封存匣；不加王冠、全国统帅徽记或新增武器。",
+        "constraints": "与主线NPC05同人，地方签署权限有限，不认定全军有罪、不画结盟承诺或安全接管已完成；未完成SQ02不取得承诺。"
+      }
+    },
+    {
+      "id": "NPC-SENA",
+      "name": "塞娜·里德",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "藏档人，资料比对与有限抄本职责。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-SENA_塞娜·里德.md",
+          "lines": [
+            15,
+            27
+          ],
+          "sha256": "233094e463a8d61b5154565d03db9cc2796e3dc01afa66b8e42be44e669692f1",
+          "excerpt": "**工作**：已有Mod藏档人。\n\n**起点与转折**：替朋友解释的习惯必须交出。\n\n城市：[[聚落_MAE_曼恩]]\n\n关联篇章：[[台本_CM-MAE_留下来的城]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]\n\n当前曼恩逐角色对白、共用人物与先后顺序回应见[[曼恩人物对白与去留交叉审查]]；S79为原创台本初稿，未导入游戏。"
+        },
+        {
+          "path": "design/04_人物/人物_塞娜·里德.md",
+          "lines": [
+            21,
+            39
+          ],
+          "sha256": "9e3c9701bbf7ff2f6d2c359bc221a6b363b21857d1247a86c087a37fdf5bdb21",
+          "excerpt": "## 身份与愿望\n\n原创人物。角色命题：保存事实必须先承认谁删过事实。\n\n追求：清理档案会内部篡改，建立公开核验规则。组织关联：[[势力_无铭档案会]]。\n\n## 信息与盲点\n\n把保存资料看得比救活眼前的人更紧迫。\n\n可提供：页码、材料比对和有限协议抄本。没有出处的秘密不能靠对白突然补出，相关证据见 [[证据与结局]]。\n\n## 底线与关系变化\n\n最终必须允许受害者匿名与多方副本。人物态度用任务中的具体选择改变，地方信任不替代责任、犯罪或已签协议。其成长需在 [[主线任务索引]] 和 [[支线任务索引]] 可见，不由日常刷金币直接完成。\n\n## 失效替代\n\n固定认证图解+副档案员替代；不能用她的一句口供核实所有证据。死亡保持一次性状态；固定资料可以替代任务功能，不能重置道德后果或再次提供唯一奖励。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_core_03.json",
+        "locator": "$.characters[?(@.id=='NPC-SENA')].costume_props",
+        "text": "旧图左列：成年女性灰黑短发／侧分发，褪蓝长袍、米白围巾、棕皮斜袋，可抱闭合普通书册。与瑟拉G的棕发丸子头不是同人。",
+        "constraints": "主线档案会人物NPC08同人；没有出处的秘密不能凭对白补出，最终需允许匿名与多方副本；不画已认证书页、不默认受害者授权。"
+      }
+    },
+    {
+      "id": "TRADE-NPC-LIQUI",
+      "name": "莉葵",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "跨两地衣料采购人；换衣/冬衣库存交易不是本人穿脱装备接口。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/城市人物/人物_TRADE-NPC-LIQUI_莉葵.md",
+          "lines": [
+            15,
+            35
+          ],
+          "sha256": "8a9aaf917dfe4103f08935ead9a2d7a4b10e11c830dc6b28bc54f1e05d59c920",
+          "excerpt": "**稳定ID**：TRADE-NPC-LIQUI\n\n**工作**：往返两地的有限旧料与衣料采购人\n\n**所求**：把真实可用的旧坯与普通衣料买卖出去，保自己的有限周转。\n\n**所怕**：每个地方都把同一笔现金当救一切的钱，或把旧料当新精料索价。\n\n**口吻**：先指实物和实际余额，再报性能；不把另一地陌生人的秘密带来换价。\n\n**可能弧线**：买坯和换衣须分别真实记账，同款同物只占一次；两地交接按旅程单一身体移动，别地已结改变的是未来真实报价，不生成无限库存。\n\n所属／实际活动范围：[[聚落_SKO_斯孔弗特]] · [[聚落_YOS_约斯特文]]。身份、经历与关系均Mod原创，设计ID不是运行资源索引。\n\n关联：[[台本_CM-SKO_第二次赎回]] · [[台本_CM-YOS_最后一匹家纹]] · [[台本_CS-YOS-01_冬毛的最后一捆]]\n\n## 共用人物与有限交易\n\nSKO和YOS的莉葵是同一身体、同一笔周转和同一批在手货。城间实际行程期间两市都不能同时点到她；已有有效本单记录可核，缺席不补新的本人交易同意。只知道她亲自成交的物、款与质量，不带妮莎的家事或呼蕾的病史换价格。\n\n报价预览不占款；双方实订才占本单尚未占用款／货，到款与交物逐项确认后记已执行。撤单只释放未执行段，已经花掉的钱不自动退回，旧坯未卖出不能当收益。冬衣已给一户不能仍在第二案库里。利润与周转不无限刷新，往另一城前按实余量更新报价。"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "NPC07",
+      "name": "托曼·索",
+      "cohort": "next_queue_8",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "护路契约人与路线提供者；护路资格不等于可控制队友。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/人物_托曼·索.md",
+          "lines": [
+            21,
+            39
+          ],
+          "sha256": "88ac71ff3c502a8d852982e69de3c064434e32e232446b3a07ef7e2f6325eaa9",
+          "excerpt": "## 身份与愿望\n\n原创人物。角色命题：收钱把人带到路的另一端。\n\n追求：让护路契约不被战争吞掉。组织关联：[[势力_路誓行会]]。\n\n## 信息与盲点\n\n为了中立可能最初回避揭露自己运过器具。\n\n可提供：路线、物流副账和安全运输资格。没有出处的秘密不能靠对白突然补出，相关证据见 [[证据与结局]]。\n\n## 底线与关系变化\n\n不会强制押送实验载体；能接受救济运费折扣。人物态度用任务中的具体选择改变，地方信任不替代责任、犯罪或已签协议。其成长需在 [[主线任务索引]] 和 [[支线任务索引]] 可见，不由日常刷金币直接完成。\n\n## 失效替代\n\n驿站账簿与副领路人替代，安全路线不因其死亡删除。死亡保持一次性状态；固定资料可以替代任务功能，不能重置道德后果或再次提供唯一奖励。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_routes_04.json",
+        "locator": "$.characters[?(@.id=='NPC07')].costume_props",
+        "text": "旧板右组前后同人：成熟男性，褪棕有兜帽旅行外衣、实用靴、闭合路线小挎包和简单木行杖；不是战杖，不加盔甲武器。",
+        "constraints": "路线承包与护路资格有限；中立不免除运过器具的责任，不画强制押送、已签救济折扣或人质；路线存在不等于人物同意出行。"
+      }
+    },
+    {
+      "id": "NPC09",
+      "name": "欧达·苇",
+      "cohort": "next_queue_8",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "守水源与水路互助者；迁居帮助不等于入队。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/人物_欧达·苇.md",
+          "lines": [
+            21,
+            39
+          ],
+          "sha256": "6a22f8ab69e9c190c5365ce0474b8134e0d06357e13dea082edcb43b9f77de87",
+          "excerpt": "## 身份与愿望\n\n原创人物。角色命题：渡口是活人通过的地方。\n\n追求：守住水源，帮助愿意离开的人迁居。组织关联：[[势力_自由渡民]]。\n\n## 信息与盲点\n\n会把所有官署的人视为征税者，需要具体行动改变。\n\n可提供：水路、病患观察和互助见证。没有出处的秘密不能靠对白突然补出，相关证据见 [[证据与结局]]。\n\n## 底线与关系变化\n\n保护匿名，拒绝偷渡强迫劳动者。人物态度用任务中的具体选择改变，地方信任不替代责任、犯罪或已签协议。其成长需在 [[主线任务索引]] 和 [[支线任务索引]] 可见，不由日常刷金币直接完成。\n\n## 失效替代\n\n遗留水路图、隔离营副员和物理病例替代。死亡保持一次性状态；固定资料可以替代任务功能，不能重置道德后果或再次提供唯一奖励。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_routes_04.json",
+        "locator": "$.characters[?(@.id=='NPC09')].costume_props",
+        "text": "旧板左组前后同人：成熟女性，系起的灰发、旧芦苇绿外衣、腰侧一小圈普通绳、日常裤鞋；工用绳不是束人绳。",
+        "constraints": "保护水源与匿名，帮助愿意离开的人；拒绝强迫劳动运输，不画已渡人、既定迁村、船长海军身份或替患者签字。不是洛妲Loda。"
+      }
+    },
+    {
+      "id": "NPC-N-ENA",
+      "name": "艾娜",
+      "cohort": "next_queue_8",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "limited_presets",
+      "production_recommendation_label": "少量预设",
+      "recommendation_is_inference": true,
+      "source_role": "受欠薪困扰的工人妻子，折叠外套是场面物件。",
+      "reason": "本人衣服与怀抱外套分开保留，便于静态手持预设；不要把外套当她可自由穿脱的装备。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "PRESET-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "lines": [
+            23,
+            27
+          ],
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "excerpt": "## 艾娜（Ena，NPC-N-ENA）\n\n灰堤工人纳拉的妻子。想停止追索、拿到工伤和欠薪，眼前先得吃饭；因此可能接受没有尸体的死亡登记。知道工营旧工资和丈夫手艺，不知道他确切藏身点，也不知道器具试验。看到丈夫活着先问能否吃住，不要求他替赔付公开住址。\n\n外套、空棺与结案后的欠薪牌是她的场面物件。不会因为选了保护就从此不再贫困。关联[[台本_N2_灰堤没有墓碑]]、[[台本_N3_听审前的灯]]、[[台本_N4_第一张空白债票]]、[[台本_N18_誓约之后]]；所属[[区域_R01_布林外港与旧渠]]。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_labor_06.json",
+        "locator": "$.characters[?(@.id=='NPC-N-ENA')].costume_props",
+        "text": "旧板左两格：成年工人妻子，打补丁低饱和棕羊毛工作裙、朴素米白头巾，怀里一件折叠旧棕工作外套；不是裹尸布。",
+        "constraints": "与MAE-S03-NPC同名艾娜不是同人；丈夫纳拉仍可活着，可能接受无尸体死亡登记是处境选择，不画确认死亡、永久脱贫、已领赔偿或公开丈夫住址。"
+      }
+    },
+    {
+      "id": "NPC-N-NARA",
+      "name": "纳拉",
+      "cohort": "next_queue_8",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "limited_presets",
+      "production_recommendation_label": "少量预设",
+      "recommendation_is_inference": true,
+      "source_role": "伤腿绞盘维修工，不能因画站姿而默认为痊愈。",
+      "reason": "优先坐姿、伤腿支撑与工具收纳预设；不先扩通用站立底模。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "PRESET-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "lines": [
+            29,
+            33
+          ],
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "excerpt": "## 纳拉（Nara，NPC-N-NARA）\n\n事故中伤腿的绞盘维修工。活着不返营是怕重新被记为可劳作债务人，不是超自然复活。他知道事故后的拆轴、自己的刻记、借工具的人；不能证明所有采购人的目的或远方研究。只有本人同意才能实名作证；死亡用此前的工伤存根与已留委托，不由家属代造新同意。\n\n话围绕“爬不回堤”“还能修轴”“不能再签回营”，别写成学者发言。关联[[台本_N2_灰堤没有墓碑]]、[[台本_D02_旧渠检修墓室]]、[[区域_R01_布林外港与旧渠]]。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_labor_06.json",
+        "locator": "$.characters[?(@.id=='NPC-N-NARA')].costume_props",
+        "text": "旧板右两格：活着的成年绞盘维修工，暗锈色工作衫、皮工具带、长裤；坐在简单木凳上，一条裤腿外普通木夹板支撑。保留完整凳脚、双脚和支撑，脸仍近G的大头短身；不可为了统一站姿取消伤腿。",
+        "constraints": "伤腿是剧情已有事实；不裸露伤口、不加新诊断、断肢或现代医疗器具。不是复活，不能站直暗示康复，不默认实名作证、返营或家属代造同意。"
+      }
+    },
+    {
+      "id": "NPC-N-NELL",
+      "name": "妮尔",
+      "cohort": "independently_reviewed_19",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "原创劳务书记；非原作尼尔，租屋/听审为情境变化。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "lines": [
+            35,
+            39
+          ],
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "excerpt": "## 妮尔（Nell，NPC-N-NELL）\n\n原创地方劳务书记，**与原作尼尔不是同一人**。她第一次改伤者栏是想多拨一点供给，之后受工头控制继续改。藏工资副账、烧住址页是自保，也保住可追索资料；她有责任，保护她不等于免责。\n\n知道自己改过的栏目、谁借过印、票边来自哪批；不了解晶石，也不能给伊沃正式无罪裁定。熄灯租屋与听审棚是两种被看见的方式。关联[[台本_N3_听审前的灯]]、[[台本_N4_第一张空白债票]]、[[区域_R01_布林外港与旧渠]]。"
+        }
+      ],
+      "art_brief": null
+    },
+    {
+      "id": "NPC-N-SEL",
+      "name": "塞尔",
+      "cohort": "next_queue_8",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "器具工坊师傅，炉与劳动债务是剧情对象。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "lines": [
+            41,
+            45
+          ],
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "excerpt": "## 塞尔（Sel，NPC-N-SEL）\n\n堤外器具工坊师傅。想让炉继续点、工人继续领钱，也想把旧债推给下一批人。他确实见过葛文涅尔订器具，后来收过代理货款；不知道实验全貌，不能只凭认脸定位失踪者。\n\n坏选择对话直接说空白担保将由未同意的新雇工承担；不把他写成早知一切的幕后。停大炉、留小炉或变卖资产让选择可见。关联[[台本_N4_第一张空白债票]]、[[台本_SQ01_港税与自由]]、[[区域_R01_布林外港与旧渠]]。"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_labor_06.json",
+        "locator": "$.characters[?(@.id=='NPC-N-SEL')].costume_props",
+        "text": "旧板右组：成年器具工坊师傅，旧锈红工作衫、炭灰围裙、泛灰短胡须、皮腰带小钳和普通靴；工具收在腰侧，不画巨大锤斧。",
+        "constraints": "知道订器具与代理货款但不懂实验全貌；不画已证幕后、不默认新工承担空白担保、不能凭认脸定位失踪者；普通静态概念不代演停炉结案。"
+      }
+    },
+    {
+      "id": "n1_mara",
+      "name": "玛拉",
+      "cohort": "next_queue_8",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "limited_presets",
+      "production_recommendation_label": "少量预设",
+      "recommendation_is_inference": true,
+      "source_role": "绳匠与伊沃姐姐；围巾是剧情关联物。",
+      "reason": "围巾或工作小道具有明确情境，可保单套衣服并有限切换道具；状态触发须另查台本。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "PRESET-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/人物_玛拉与伊沃.md",
+          "lines": [
+            25,
+            25
+          ],
+          "sha256": "27945298fd154bc07e7aab59ae741e7cff371e360767c5bbb2becda21374da58",
+          "excerpt": "| 玛拉 / Mara / n1_mara | 弟弟活着回来，家人不被牵连 | 见过孩子却不追问；将复杂事件说成失踪委托，以为少说可减少被出卖的风险 | 是否被追问；收到不同结案消息，她分别保留围巾或去探视 |"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_opening_05.json",
+        "locator": "$.characters[?(@.id=='n1_mara')].costume_props",
+        "text": "旧板前两位为玛拉前后视：成年绳匠女性，打补丁赭黄工作裙、低饱和红围巾、小段未编好绳圈与小篮可二选一避免道具压脸。",
+        "constraints": "与伊沃是姐弟，不能画恋人；想护家人而隐藏细节，不画已经团圆、弟弟获无罪或被迫替家属签未来保证。绳工道具不是捆绑证据。"
+      }
+    },
+    {
+      "id": "n1_ivo",
+      "name": "伊沃",
+      "cohort": "next_queue_8",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "守夜人；逃离/听审分支不是入队机制。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/人物_玛拉与伊沃.md",
+          "lines": [
+            26,
+            26
+          ],
+          "sha256": "27945298fd154bc07e7aab59ae741e7cff371e360767c5bbb2becda21374da58",
+          "excerpt": "| 伊沃 / Ivo / n1_ivo | 家属免遭追索 | 认为姐姐不知道藏人；把破坏查债信号视作唯一救法 | 逃离与隐姓，或留下听审；他不能替家属接受未来保证 |"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_opening_05.json",
+        "locator": "$.characters[?(@.id=='n1_ivo')].costume_props",
+        "text": "旧板后两位为伊沃前后视：成年守夜男性，灰绿色外衣、朴素帽、皮腰带、日常靴；仅腰间小收鞘割绳刀，手不握刀，不画血或战斗姿势。",
+        "constraints": "姐姐是玛拉。持收鞘割绳刀不证明罪责；不画逃亡成功、听审无罪、家属已获永久保障或军团身份。"
+      }
+    },
+    {
+      "id": "n1_tor",
+      "name": "托雷",
+      "cohort": "next_queue_8",
+      "evidence_classification": "unknown",
+      "evidence_classification_label": "信息不足",
+      "recruitable": "unknown",
+      "player_controllable": "unknown",
+      "equipment_mutability": "unknown",
+      "permanently_fixed_costume": "unknown",
+      "full_modular_equipment_required": "unknown",
+      "full_modular_production_authorized_by_this_review": false,
+      "production_recommendation": "fixed_appearance_concept",
+      "production_recommendation_label": "固定外观",
+      "recommendation_is_inference": true,
+      "source_role": "私人债务追索者；撤票/失踪分支不是装备界面。",
+      "reason": "现有来源约束职业、身份、关系或任务职责，未规定装备选择机制。可继续单套身份外观概念，不能把制作建议写成永久不可换装的剧情事实。",
+      "concept_can_continue_after_parent_dispatch_gate": true,
+      "concept_gate": "沿已记录衣装提案与源卡身份继续；保留原图和提示词，不把扁平整身图宣称可编辑装备层，不自行解除QUEUE_HOLD。",
+      "required_production_gate": "FIXED-1",
+      "if_later_confirmed_recruitable_gate": "MODULAR-1",
+      "sources": [
+        {
+          "path": "design/04_人物/人物_玛拉与伊沃.md",
+          "lines": [
+            27,
+            27
+          ],
+          "sha256": "27945298fd154bc07e7aab59ae741e7cff371e360767c5bbb2becda21374da58",
+          "excerpt": "| 托雷 / Tor / n1_tor | 可执行的债账和公开交接 | 用“偷钟逃债”给自己的追索便利辩护；不解释债票来源 | 在公开确认下撤销家属债票，但保留伊沃听审；暗渠路线中失去人物踪迹 |"
+        }
+      ],
+      "art_brief": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_opening_05.json",
+        "locator": "$.characters[?(@.id=='n1_tor')].costume_props",
+        "text": "旧板前两位为托雷前后视：成年私人追债人，旧棕外衣、朴素挎包、闭合小计数账本；无官方徽记和武装护卫。",
+        "constraints": "私人债务追索者，不是官方法官或原作领袖；以偷钟逃债辩护不自动成立，不画已撤家属债票、已判伊沃或获全国执法权。"
+      }
+    }
+  ],
+  "runtime_verified": false
+}

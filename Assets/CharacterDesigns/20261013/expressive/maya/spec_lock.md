@@ -1,0 +1,2 @@
+# Maya concept lock
+Read briefs/batch_next_routes_04.json; current cards and old86 visually checked. Mature woman, grey-flecked hair under charcoal kerchief, olive patched coat, slate shawl, grain-ticket pouch, closed ledger, short winter boots. Warm but firm civilian relief agent, no military role. Head half visible height, tiny equal-height body/legs; Sela G broad clusters, alpha, neutral standing.

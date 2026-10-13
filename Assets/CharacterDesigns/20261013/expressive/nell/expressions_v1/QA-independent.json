@@ -1,0 +1,158 @@
+{
+  "reviewer": "independent_visual_review",
+  "status": "pass_expression_concept_with_notes",
+  "delivery_ready": true,
+  "canonical_id": "NPC-N-NELL",
+  "actual_visual_review": [
+    "逐张对照v2原锚及3raw，并实际看最终浅深板；成熟偏长脸、短鼻厚上睑、棕侧后髻、深蓝领与米白流苏披巾延续。E3正面脸颊较宽是视角轻漂，没有改成另一人物。",
+    "E1侧眼/压睑、不对称眉和闭口收唇，戒备询问可读；E2内眉抬聚、眼裂/睑斜势略改、小不规则开口，是不安发言；E3更正面、平低眉/集中目光和横向小口，克制申明可读。",
+    "E1/E2头姿接近，眼睑差比眉嘴轻，不应宣传成强烈头姿变化或夸张惊恐；仍不是单独替换嘴型。缩略板三态可区分。",
+    "E2/E3开口皆小而无大排牙，E3坚定不过度愤怒；没有手势代替情绪、没有新道具。",
+    "浅深底发髻/发缘、肩线和下裁边清楚，没有实体光晕。原raw底沿杂色经真实alpha合成未形成不透明彩边。",
+    "粗簇像素风格延续，面部/发束/衣褶存在生成级细小变化；只作独立表情概念。"
+  ],
+  "counts": {
+    "new_bust_expressions": 3,
+    "revision_generations": 0,
+    "new_characters": 0,
+    "animation_frames_claimed": 0
+  },
+  "sources": {
+    "anchor": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+      "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec",
+      "matches_roster_reviewed_artifact": true,
+      "matches_manifest_v2": true,
+      "actually_viewed": true,
+      "view_method": "tools.view_image full current v2 PNG, 2026-10-13",
+      "anchor_status": "independent_deliverable_with_minor_notes",
+      "old_v1_not_anchor": true
+    },
+    "evidence": [
+      {
+        "path": "design/04_人物/台本新增人物与知识边界.md",
+        "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+        "locator": "## 妮尔（Nell，NPC-N-NELL）"
+      },
+      {
+        "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+        "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5",
+        "locator": "当前S62：人物冲突；N3-R-testimony / audit / collective及播放条件。S61 N3-S02-L01与N3-S03-L01仅作情绪素材，不用旧结局。"
+      }
+    ],
+    "brief_sha256": "822b26f738009368dcb8485c71a85aa1980d373ca869ada78e8a552f33b75c0d"
+  },
+  "technical_checks": {
+    "manifest_hashes_match": true,
+    "source_anchor_match": true,
+    "source_evidence_match": true,
+    "images": [
+      {
+        "raw": "raw/nell_E1_guarded_question_raw_imagegen.png",
+        "raw_sha256": "e936e846bc7c920806f5a69ff838cb384965c5decaf6bd0f693d13bff6ae3b27",
+        "selected": "selected/nell_E1_guarded_question.png",
+        "selected_sha256": "5584f9515287c6c41e88890c18ef85978659972876d18d360a72af982aa8b464",
+        "size": [
+          1254,
+          1254
+        ],
+        "exact_alpha_only_cleanup": true,
+        "RGB_unchanged": true,
+        "alpha128_bbox": [
+          165,
+          95,
+          1094,
+          1189
+        ],
+        "head_and_shoulders_clear_of_edges": true,
+        "alpha_extrema": [
+          0,
+          255
+        ]
+      },
+      {
+        "raw": "raw/nell_E2_alarm_boundary_raw_imagegen.png",
+        "raw_sha256": "ed74688c65544d6a5a65aaa00e1b5f951bd767c1dacf75d54e18768fbd482496",
+        "selected": "selected/nell_E2_alarm_boundary.png",
+        "selected_sha256": "b73f846db9f6deef78eccd147f507015479e20404e47f943c1593fab3e1afc2d",
+        "size": [
+          1254,
+          1254
+        ],
+        "exact_alpha_only_cleanup": true,
+        "RGB_unchanged": true,
+        "alpha128_bbox": [
+          180,
+          90,
+          1102,
+          1199
+        ],
+        "head_and_shoulders_clear_of_edges": true,
+        "alpha_extrema": [
+          0,
+          255
+        ]
+      },
+      {
+        "raw": "raw/nell_E3_controlled_resolve_raw_imagegen.png",
+        "raw_sha256": "c6da8b62f7a76cb1c1639bc7b17689496886013b777af5f2acb26d6a82bb6126",
+        "selected": "selected/nell_E3_controlled_resolve.png",
+        "selected_sha256": "6acafac1816f0bf37fb49ba28c47ebaa61dd6882f5ced07cb9f7913898a33beb",
+        "size": [
+          1254,
+          1254
+        ],
+        "exact_alpha_only_cleanup": true,
+        "RGB_unchanged": true,
+        "alpha128_bbox": [
+          187,
+          52,
+          1108,
+          1204
+        ],
+        "head_and_shoulders_clear_of_edges": true,
+        "alpha_extrema": [
+          0,
+          255
+        ]
+      }
+    ],
+    "boards": [
+      {
+        "theme": "light",
+        "art_region_exact_uniform_one_third_nearest": true
+      },
+      {
+        "theme": "dark",
+        "art_region_exact_uniform_one_third_nearest": true
+      }
+    ]
+  },
+  "artifacts": {
+    "QA-author.json": "5c98b386a20a7d6a7f152e9bc525ea259be27093f2eb6d6ae9036c63d4909b2a",
+    "build_review.py": "2718052e9ea4d8383c57bc70bb00be4b1fb8ceaf0e7df642cb9ecf1297ac4182",
+    "nell_expressions_review_zh_dark.png": "5c858dc2285ea0189c243c14d442d143a4bc724bee42ab5f6a695fbcc7da9811",
+    "README.md": "db9fa0e7afcf43ff10bfbdffac711597e744ef8e3e6ee0ef2928fa805567e11c",
+    "nell_expressions_review_zh_light.png": "b43ce3bef61b14c9ea2ce6340bc8673b49c7e922816294c3655e9be1ec1e1738",
+    "manifest.json": "6b1de660799a777f9b56bdd43e34d878da6b04ed8177e48b12a92cc7bfc7629f",
+    "raw/nell_E3_controlled_resolve_raw_imagegen.png": "c6da8b62f7a76cb1c1639bc7b17689496886013b777af5f2acb26d6a82bb6126",
+    "raw/nell_E1_guarded_question_raw_imagegen.png": "e936e846bc7c920806f5a69ff838cb384965c5decaf6bd0f693d13bff6ae3b27",
+    "raw/nell_E2_alarm_boundary_raw_imagegen.png": "ed74688c65544d6a5a65aaa00e1b5f951bd767c1dacf75d54e18768fbd482496",
+    "sources/台本新增人物与知识边界.md": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+    "sources/nell_v2_raw_imagegen.png": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec",
+    "sources/next_main_cast_expressions_nell_sel_01.json": "822b26f738009368dcb8485c71a85aa1980d373ca869ada78e8a552f33b75c0d",
+    "sources/台本_N3_听审前的灯.md": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5",
+    "prompts/nell_E2_alarm_boundary.txt": "8c0352458d9db0ddb6a356d39b127fcab3b35515e086bca93349b3e88cadc5ec",
+    "prompts/nell_E1_guarded_question.txt": "53616939bc0e49354b21d67db7ef89181653f3fba267b312c531ff61dc2589cd",
+    "prompts/nell_E3_controlled_resolve.txt": "e9299861b9603fc2cb872a6c1983d5daccc05bb31450993bdbbe380c753eab05",
+    "selected/nell_E2_alarm_boundary.png": "b73f846db9f6deef78eccd147f507015479e20404e47f943c1593fab3e1afc2d",
+    "selected/nell_E1_guarded_question.png": "5584f9515287c6c41e88890c18ef85978659972876d18d360a72af982aa8b464",
+    "selected/nell_E3_controlled_resolve.png": "6acafac1816f0bf37fb49ba28c47ebaa61dd6882f5ced07cb9f7913898a33beb"
+  },
+  "narrative_limits": [
+    "不代表已作证/认罪/保护/赦免",
+    "不代表担保已签、工坊得救、清债或路线结局",
+    "不新增武器装备，不作为游戏动画/native/runtime验收"
+  ],
+  "runtime_verified": false
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T13:20:00Z",
+  "status": "planning_only_not_generated",
+  "scope": "下一小批现有剧情人物胸像表情；2名上限、每人3张上限、0新人；不实施游戏／动作／全167人生产。",
+  "selection_reason": "Nell的已交QA明确表情变化轻、手势主导；Sel已有轻微眉嘴差别，但欠独立高可读胸像三态。两人的责任／自保与生计／转嫁冲突可形成不靠开心悲伤模板的不同情绪。",
+  "deferred": [
+    "Sena、Kaem有稳定锚但本批不并行扩围。",
+    "Mia、Sela、Mara、Ivo、Tor、Rhea各3表情已交，不重复。",
+    "Suoya研究未通过、Vian无图阻断；原版无锚人物排除。"
+  ],
+  "control_sources": [
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "bcc0262fa9c7d6485a89bfc44bc27e70cceaeaac91ddf74b1235eca0e56e9302",
+      "locator": "现有交付／Nell与Sel／未完成范围"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256": "06bd4e58b37fb82da66c4ee597cc1cfa15859897b0a1f64a4c1994054ece7f2e",
+      "locator": "characters[NPC-N-NELL,NPC-N-SEL]"
+    }
+  ],
+  "global_art_direction": [
+    "沿用成熟、美观、有个体面貌的粗簇像素概念方向；透明背景，保持同一脸部比例、视图尺度与像素细节密度。",
+    "每人三张上胸胸像，头顶、束髻／短发和两肩不裁断；不画手，避免手势替代情绪。",
+    "夸张适中但必须读得出：每两张至少眼睑／视线、眉形、嘴型、头姿四项中三项有可见变化；小缩略图仍能辨情绪。",
+    "不新增恋爱、认罪、胜利、赦免、受伤、死亡、签约、全知或任务结局；图是情绪可用性研究，不是剧情状态。",
+    "未来若生成须逐张实际view并独审脸型／发须／领袖／肩带；最多一次关键修正，未过留研究，不以自动检查代替视觉审看。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "NPC-N-NELL",
+      "slug": "nell",
+      "name": "妮尔",
+      "aliases": [],
+      "anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+        "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec",
+        "matches_roster_reviewed_artifact": true,
+        "matches_manifest_v2": true,
+        "actually_viewed": true,
+        "view_method": "tools.view_image full current v2 PNG, 2026-10-13",
+        "anchor_status": "independent_deliverable_with_minor_notes",
+        "old_v1_not_anchor": true
+      },
+      "identity": "原创成年地方劳务书记；不是原作尼尔。受胁迫也主动改账，保护不等于免责；只知道经手栏目、借印与票边批次。",
+      "face_and_hair_lock": [
+        "保留锚的成熟偏长脸、窄长眼裂与厚上眼睑、平直有角度眉、短鼻及清晰但不过厚的唇。",
+        "深棕分区蓬松头发、额前偏分与两侧鬓发、后侧束髻；不可改少女双马尾、齐刘海、圆婴儿脸或大闪亮眼。",
+        "卡／既往记录写低盘发，动作QA曾写高束发；以本次实际view的v2侧后束髻轮廓为唯一视觉依据，不新增发型。"
+      ],
+      "costume_sleeve_collar_lock": [
+        "深蓝高领内衣与长袖；米白／暖灰披巾包双肩、边缘短流苏；胸像不得改成裸肩、短袖或新领口。",
+        "胸像统一裁至上胸／胸中段，肩宽和领巾固定；手完全在画外，不用握书／摊手承担表情。原闭账簿若裁到，仅固定不动的少量边角，不露字页。"
+      ],
+      "source_evidence": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "locator": "## 妮尔（Nell，NPC-N-NELL）"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+          "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5",
+          "locator": "当前S62：人物冲突；N3-R-testimony / audit / collective及播放条件。S61 N3-S02-L01与N3-S03-L01仅作情绪素材，不用旧结局。"
+        }
+      ],
+      "existing_delivered_scope": {
+        "story_gesture_directory": "Assets/CharacterActions/20261013/nell/story_gesture_v1",
+        "pose_count": 2,
+        "expression_bust_directory_exists": false,
+        "qa_record": {
+          "path": "Assets/CharacterActions/20261013/nell/story_gesture_v1/QA-independent.json",
+          "sha256": "deb2d39ec80aa56f4b9e9a011b4dc33bd60aec1f489d31ca271d2e5d81fb0c16",
+          "locator": "visual_findings / limitations"
+        },
+        "not_duplicate_reason": "现有两张全身手势只在手臂与持物上主导差异；本批须以眉、眼、嘴和头姿产生独立可读差异，不能裁切旧姿充作新表情。"
+      },
+      "planned_max_new_busts": 3,
+      "expressions": [
+        {
+          "key": "nell_E1_guarded_question",
+          "label": "戒备询问",
+          "eyes": "双眼明显向画侧对话者偏移，上眼睑压低但视线警觉；保留清晰眼白。",
+          "brows": "近对话侧眉轻抬，另一眉保持水平内收，形成可见不对称。",
+          "mouth": "嘴闭合、唇角微收一侧，非微笑。",
+          "head_pose": "三分之二侧朝对话者，头微后收，下巴水平。",
+          "story_support": "卡中的藏账自保；N3-S02-L01“你带着他们的票来？”仅为场面素材。",
+          "condition_and_limit": "询问时的戒备，不表达已经交出账簿、接受公开作证或得到保护。"
+        },
+        {
+          "key": "nell_E2_alarm_boundary",
+          "label": "不安设界",
+          "eyes": "眼睑较E1明显打开，瞳孔向对话者，勿夸张成惊恐圆眼。",
+          "brows": "双眉内端抬高并向中聚，外端略下压。",
+          "mouth": "唇自然分开，短促发言的小不规则开口；下唇略紧，不露大排牙。",
+          "head_pose": "更接近正面，微偏头后退，不能靠耸肩代替脸。",
+          "story_support": "卡中住址页自保与N3-R-testimony要求先移出住址字段；N3-S03-L01只作边界情绪素材。",
+          "condition_and_limit": "仅表达不愿被公开住址；不画认罪哭诉、已受保护、公开证言或审判结论。"
+        },
+        {
+          "key": "nell_E3_controlled_resolve",
+          "label": "克制申明",
+          "eyes": "目光正视，眼裂较E1更稳更集中、较E2更窄。",
+          "brows": "双眉内端略低，舒平额部，坚定而不凶狠。",
+          "mouth": "嘴小幅横向张开如清楚说完一句，唇线平直；不露笑。",
+          "head_pose": "近正面、下巴轻抬，与E2退缩显著不同。",
+          "story_support": "N3-R-testimony-L01、N3-R-collective-L01中的限定责任与他人自主边界，仅抽取克制申明情绪。",
+          "condition_and_limit": "独立情绪研究，不绑定路线结果。若未来套用这些原句，必须遵原resolve_N3及存活在场愿谈条件；本图不代表已经认罪、受监督补账或取得原谅。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "NPC-N-SEL",
+      "slug": "sel",
+      "name": "塞尔",
+      "aliases": [],
+      "anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/sel/sel_v2_raw_imagegen.png",
+        "sha256": "696407c5dcf6401bc85dc429540b29004bf5f7db64b69638f2910c4f2d126de1",
+        "matches_roster_reviewed_artifact": true,
+        "matches_manifest_v2": true,
+        "actually_viewed": true,
+        "view_method": "tools.view_image full current v2 PNG, 2026-10-13",
+        "anchor_status": "independent_deliverable_with_minor_notes",
+        "old_v1_not_anchor": true
+      },
+      "identity": "成熟／中年堤外器具工坊师傅；既想维持工人与工坊，也想把旧债转嫁下一班。只知器具订购和代理收款，不知实验全貌。",
+      "face_and_hair_lock": [
+        "保留灰棕短乱发与显著银灰发束、粗深眉、窄眼、长而有棱角鼻梁、成熟面颊与下颌。",
+        "保留棕灰连鬓短须、灰白下巴须和清晰髭线；须不可遮掉新嘴型，不改成少年无须或魔王邪笑。"
+      ],
+      "costume_sleeve_collar_lock": [
+        "砖红翻领工衫，喉部小片浅色内衣；两袖原为卷至肘部，不增加长袖口／护甲／手套。胸像只见上臂，不凭空把卷袖画到肩部。",
+        "深灰褐皮围裙胸兜形体和两根黑棕肩带、黄铜固定点保持；衣领开合、肩带左右位置稳定。",
+        "统一上胸／胸中段裁切，手与腰钳在画外；不新增债票、火炉、工具、签名或售产物件。"
+      ],
+      "source_evidence": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "locator": "## 塞尔（Sel，NPC-N-SEL）"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+          "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90",
+          "locator": "当前S62：人物冲突、N4-DEFAULT、N4-R-installments / liquidate / shift及播放条件；S61场次仅作有条件情绪素材。"
+        }
+      ],
+      "existing_delivered_scope": {
+        "story_gesture_directory": "Assets/CharacterActions/20261013/sel/story_gesture_v1",
+        "pose_count": 2,
+        "expression_bust_directory_exists": false,
+        "qa_record": {
+          "path": "Assets/CharacterActions/20261013/sel/story_gesture_v1/QA-independent.json",
+          "sha256": "4edfe4aae200c46f6cb9169fb4ea6abe39215211e963caed1467d558c19a77dd",
+          "locator": "visual_findings / limitations"
+        },
+        "not_duplicate_reason": "现有两张全身手势只在手臂与持物上主导差异；本批须以眉、眼、嘴和头姿产生独立可读差异，不能裁切旧姿充作新表情。"
+      },
+      "planned_max_new_busts": 3,
+      "expressions": [
+        {
+          "key": "sel_E1_persuasive_pitch",
+          "label": "试探劝说",
+          "eyes": "眼睛比锚略开，视线集中在画侧听者。",
+          "brows": "一眉抬高、另一眉略松，呈算计中仍在说服的神色。",
+          "mouth": "一侧唇角微扬且嘴小开，带短促讨价还价口型，绝非灿笑／邪笑。",
+          "head_pose": "三分之二侧微向听者前倾，下巴略抬。",
+          "story_support": "现行N4-DEFAULT请求玩家补担保。",
+          "condition_and_limit": "只是在提出要求；没有玩家签字、工人同意或工坊得救的结果。"
+        },
+        {
+          "key": "sel_E2_pressed_defensive",
+          "label": "受压反驳",
+          "eyes": "两眼明显收窄，直视质疑者。",
+          "brows": "双眉内端明显下压并聚拢；与E1单眉抬高形成清晰差异。",
+          "mouth": "下颌微紧，嘴横向开成反问的窄口，能看到唇而非被髭须吞没；不咆哮龇牙。",
+          "head_pose": "更接近正面，下巴向前少许，脸上紧张而非用手指责。",
+          "story_support": "现行人物冲突及三路线成本；N4-S02-L02“谁来出这笔”仅作反问情绪素材。",
+          "condition_and_limit": "不将争辩画成攻击玩家、幕后阴谋暴露或已认罪。"
+        },
+        {
+          "key": "sel_E3_worried_calculation",
+          "label": "忧虑盘算",
+          "eyes": "目光明显低垂偏侧，眼睑放松但不闭眼；不能只是把E2瞳孔挪动。",
+          "brows": "内眉抬起形成疲惫的浅忧纹，外眉放低。",
+          "mouth": "紧闭、下唇轻收、嘴角略向下；与E1/E2开口状态相区别。",
+          "head_pose": "头下倾约十度，仍露清楚完整面部；不垂首谢罪。",
+          "story_support": "N4-R-installments与liquidate成本：收入慢／岗位减少／失去大器具能力；用于预览代价时的盘算。",
+          "condition_and_limit": "只担心未来成本，不表示已停炉、卖掉器具、清债、认错或获得新工作。"
+        }
+      ]
+    }
+  ],
+  "mutations_performed": [
+    "仅新增此独立brief JSON；未改索引、roster、人物卡、剧情或现有资源。"
+  ],
+  "generation_performed": false,
+  "runtime_integrated": false
+}

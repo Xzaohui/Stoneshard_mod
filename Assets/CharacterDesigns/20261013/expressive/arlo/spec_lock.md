@@ -1,0 +1,2 @@
+# Arlo concept lock
+YOS-NPC-ARLO, materials_24 current card/old147 top row read/viewed. Sturdy middle-aged dark-haired stubbled worker, faded teal round/slit-neck tunic, brown apron/tall plain work boots, empty hands. Tired guarded willingness to own specific error, no pollution verdict. Natural compact neck/torso/legs G style without face copy or mechanical ratios. concept_only=true; equipment_compatibility_verified=false; unknown mechanisms.

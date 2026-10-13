@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "status": "frozen_candidate_for_independent_QA",
+  "canonical_id": "NPC-HERS",
+  "character": "hers",
+  "name": "赫斯·白",
+  "generator": "built-in image_gen.imagegen",
+  "brief_sha256": "7899f59ff259f512a0f3a962d966992f0bf170ddfdc52368e486e894718ebd3c",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/hers/hers_raw_imagegen.png",
+    "sha256": "73dab2b373c8554440e67643c370d50f0641d4d5d050b624c4c9e335c3252b89",
+    "locator": "roster reviewed_artifact",
+    "matches_roster_reviewed_artifact": true,
+    "actually_viewed": true,
+    "view_method": "2026-10-13 tools.view_image实际查看完整原锚PNG"
+  },
+  "expressions": [
+    {
+      "key": "hers_E1_cost_justification",
+      "label": "以代价辩护",
+      "brows": "一侧眉内端稍提、另一侧近平，弱化原锚双眉下压；是反问而非友善。",
+      "eyes": "上睑略开，瞳孔稳定朝对话者，保成熟窄长眼；不鬼祟挤眼或全白眼。",
+      "mouth": "小幅横向发言，嘴角一侧稍收，无笑无露齿咆哮。",
+      "head_pose": "原三分之二角，颏保持水平。",
+      "story_support": "N17-DEFAULT与当前人物冲突：将控制装置称作承担代价，以既有苦难为继续试验辩护。",
+      "condition_and_limit": "仅适用于本人存活在场、仍能对峙的默认或相符谈判语境；不等于他说法属实、受害者同意、玩家入伙或谈判洗白。"
+    },
+    {
+      "key": "hers_E2_disrupted_composure",
+      "label": "受挫停顿",
+      "brows": "双眉内端短暂上提而眉尾压稳，区别E1单眉反问；不改成惊恐哭眉。",
+      "eyes": "眼裂略宽于原锚，目光短暂移向画侧后仍聚焦；不圆瞪、不失神。",
+      "mouth": "双唇稍分成很短纵向暗缝、下唇收紧，像压住下一句话；不咬牙露齿或吐血。",
+      "head_pose": "头轻侧偏，下颏不低垂，肩位固定；不做跪败姿势。",
+      "story_support": "N17-R-shutdown：装置优势失去后仍可能有限反击；N17-R-shutdown-L01指出话语所依赖的东西被动了。",
+      "condition_and_limit": "演出停顿须真实已切断相应支路并失去装置优势、本人尚在场存活；原R-shutdown-L01回访另须resolve_N17=shutdown与愿谈。不得凭图把路线提交、装置完全安全或赫斯落败／悔改写成事实。"
+    }
+  ],
+  "branch_boundary": [
+    "两胸像是可选条件对话表情，不作为E1→E2→逃离→独战的连续剧情。",
+    "N17-R-defection中无人挡价后可逃或独战，并非固定二连段；现成逃离准备没有已经逃脱，现成留场防备没有已经反击。",
+    "N17 combat/shutdown/defection方法与死亡／逃脱状态分别核验；不存在者不新发言。固定债簿留存不因图中未画而消失。",
+    "当前威胁解除与安全桌政治确认独立；表情不写final_commit、ending或任何治理同意；不新增洗白、变魔、死亡或全员招降。"
+  ],
+  "new_bust_count": 2,
+  "new_character_count": 0,
+  "revision_count": 0,
+  "runtime_integrated": false,
+  "roster_changed": false,
+  "generation_log_included": true,
+  "author_observed_variations": [
+    "概念胸像，非动画／运行精灵。",
+    "E2口型实际为短横暗缝，非brief纵缝；眉口与视线变化仍可区分。受挫不是落败／认罪。"
+  ],
+  "processing": [
+    {
+      "raw": "raw/E1_raw_imagegen.png",
+      "selected": "selected/hers_E1_cost_justification_transparent.png",
+      "raw_sha256": "5193b867cddfec1cdca1d28890541a4d4dd3d43499be67b038a54b3696118e9f",
+      "selected_sha256": "9448e0a66fde333518cd47d1df776d3ce0948be6f455c1514ef9f96b1e4ed19b",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "processing": "Only zero RGBA for original alpha <32; all other pixels unchanged; selected unscaled.",
+      "nonzero_alpha_pixels_cleared": 9422,
+      "preserved_pixels_exact": true
+    },
+    {
+      "raw": "raw/E2_raw_imagegen.png",
+      "selected": "selected/hers_E2_disrupted_composure_transparent.png",
+      "raw_sha256": "e06810ec91776bf242ac6b02b73bbae78caccb6f8565023c998748323e89ce63",
+      "selected_sha256": "895394c801f2f9784716ed5dca23c604ac501aab69df7b8ae2f61da45920819b",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "processing": "Only zero RGBA for original alpha <32; all other pixels unchanged; selected unscaled.",
+      "nonzero_alpha_pixels_cleared": 10463,
+      "preserved_pixels_exact": true
+    }
+  ],
+  "board_transforms": [
+    {
+      "selected": "selected/hers_E1_cost_justification_transparent.png",
+      "input_dimensions": [
+        1254,
+        1254
+      ],
+      "crop": null,
+      "resize_dimensions": [
+        552,
+        552
+      ],
+      "uniform_scale": 0.44019138755980863,
+      "resampling": "NEAREST",
+      "paste_xy": [
+        24,
+        140
+      ]
+    },
+    {
+      "selected": "selected/hers_E2_disrupted_composure_transparent.png",
+      "input_dimensions": [
+        1254,
+        1254
+      ],
+      "crop": null,
+      "resize_dimensions": [
+        552,
+        552
+      ],
+      "uniform_scale": 0.44019138755980863,
+      "resampling": "NEAREST",
+      "paste_xy": [
+        624,
+        140
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "QA-author.json",
+      "bytes": 2511,
+      "sha256": "45307d2f102c99d62d9c31b53595e98224038787055d7ced208d2e682f2f7d2c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 911,
+      "sha256": "0b12126e56708fb89b40864cfc9056814b4893c37f0ef8b023365967958f2182"
+    },
+    {
+      "path": "build_review.py",
+      "bytes": 3764,
+      "sha256": "e4898b336726b205df963be60d76574c8205a7faa8b572e8028e5ce3095acd27"
+    },
+    {
+      "path": "generation-log.json",
+      "bytes": 1390,
+      "sha256": "5fc0c0e5cfa244eaa404e240f27bda8ed0b4142e8720c9d5aa67f1d226d9b47d"
+    },
+    {
+      "path": "prompts/E1.txt",
+      "bytes": 2623,
+      "sha256": "67e06beb5ac1e1fd7b6e3c4016934caed9fd484a1947d97520a5eba88cc09737"
+    },
+    {
+      "path": "prompts/E2.txt",
+      "bytes": 2761,
+      "sha256": "ce04094a4c21d3f4c083958266c2068a07d02568122392696c8b033fc7d29427"
+    },
+    {
+      "path": "raw/E1_raw_imagegen.png",
+      "bytes": 870886,
+      "sha256": "5193b867cddfec1cdca1d28890541a4d4dd3d43499be67b038a54b3696118e9f"
+    },
+    {
+      "path": "raw/E2_raw_imagegen.png",
+      "bytes": 846586,
+      "sha256": "e06810ec91776bf242ac6b02b73bbae78caccb6f8565023c998748323e89ce63"
+    },
+    {
+      "path": "review/hers_expressions_review_zh_dark.png",
+      "bytes": 378354,
+      "sha256": "998ae5c9d583adc2c8c0ad745a3470d96dd432187caeb2a14de6467f1f8b30b9"
+    },
+    {
+      "path": "review/hers_expressions_review_zh_light.png",
+      "bytes": 383852,
+      "sha256": "afc40fcb2f720377b1826a716a685df4bab0fb91ac78da7efd23a0d886dba129"
+    },
+    {
+      "path": "selected/hers_E1_cost_justification_transparent.png",
+      "bytes": 721030,
+      "sha256": "9448e0a66fde333518cd47d1df776d3ce0948be6f455c1514ef9f96b1e4ed19b"
+    },
+    {
+      "path": "selected/hers_E2_disrupted_composure_transparent.png",
+      "bytes": 696352,
+      "sha256": "895394c801f2f9784716ed5dca23c604ac501aab69df7b8ae2f61da45920819b"
+    },
+    {
+      "path": "sources/AGENTS.md",
+      "bytes": 20848,
+      "sha256": "ad85e8e7c72914a0096b7c254e7e4feb23e43a2e478616eab549990b3990c8b6"
+    },
+    {
+      "path": "sources/MASTER_SUPPLEMENT_INDEX.md",
+      "bytes": 20684,
+      "sha256": "a9f975ae0079adaaa88c4aecc3d3083d8e56b71a1f3d1ed404abc03502b4da67"
+    },
+    {
+      "path": "sources/STYLE_DIRECTION.md",
+      "bytes": 6187,
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    {
+      "path": "sources/hers_raw_imagegen.png",
+      "bytes": 635921,
+      "sha256": "73dab2b373c8554440e67643c370d50f0641d4d5d050b624c4c9e335c3252b89"
+    },
+    {
+      "path": "sources/next_main_cast_expressions_lyd_hers_01.json",
+      "bytes": 16919,
+      "sha256": "7899f59ff259f512a0f3a962d966992f0bf170ddfdc52368e486e894718ebd3c"
+    },
+    {
+      "path": "sources/next_main_cast_expressions_morren_rey_01.json",
+      "bytes": 20341,
+      "sha256": "beb493bab5d7b55333708346b3b4026c9ae0fd854b1971f4049f3bcde736a7f8"
+    },
+    {
+      "path": "sources/roster.json",
+      "bytes": 739273,
+      "sha256": "5c0c3cfa4b0f46c814a2b19bcfc3eef715f68597ee3d9615b6ea54ab585906ef"
+    },
+    {
+      "path": "sources/source_verification.json",
+      "bytes": 2148,
+      "sha256": "aaeebbcb4e713a6bcfac2498f5ebea5b8b28d284edb71aa99e66c6285546ad62"
+    },
+    {
+      "path": "sources/人物_NPC-HERS_赫斯·白.md",
+      "bytes": 766,
+      "sha256": "e74d94e04c28eaabef5274631ed6b3fd69faf5227cc70768a04710d60fa7b193"
+    },
+    {
+      "path": "sources/人物_赫斯·白.md",
+      "bytes": 1856,
+      "sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c"
+    },
+    {
+      "path": "sources/台本_N17_残光之井.md",
+      "bytes": 13272,
+      "sha256": "a7154c5bc087421b566054344c0556b583d5e53d8f1f4de1d8005e0a1033526d"
+    }
+  ]
+}

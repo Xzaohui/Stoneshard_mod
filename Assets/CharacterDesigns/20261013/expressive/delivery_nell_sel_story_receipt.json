@@ -1,0 +1,81 @@
+{
+  "group": "nell_sel_story_gesture_v1",
+  "character_ids": [
+    "NPC-N-NELL",
+    "NPC-N-SEL"
+  ],
+  "state": "sent",
+  "status": "concept_delivered",
+  "time_utc": "2026-10-13T11:42:54.815381+00:00",
+  "message_id": "Sentinel_46b882354760819193fc5f807b20eec6",
+  "attachments": [
+    {
+      "path": "Assets/CharacterActions/20261013/nell_sel_story_gesture_v1_delivery/nell_sel_story_gesture_v1_sources.zip",
+      "sha256": "46553ac9edb232c25e22d30d611cc184a7bf8564c1f735f12680697cdf6c6c75",
+      "bytes": 13495198,
+      "library_file_id": "libfile_2400f45e0de88191851d3a815f481ea2"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/nell_sel_story_gesture_v1_delivery/nell_story_gesture_preview_once.gif",
+      "sha256": "173823a7d111d3f19a276f2edd10a77db33dee40f393624335490903c35aaf42",
+      "bytes": 272677,
+      "library_file_id": "libfile_10f6989eddac8191ba762d68362f9350"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/nell_sel_story_gesture_v1_delivery/nell_story_gesture_review_zh_light.png",
+      "sha256": "024a85b772d8fa27118c2eab740602eb979f708794be1388e493ac276cfa6324",
+      "bytes": 374069,
+      "library_file_id": "libfile_8c177487fbfc8191be84b9f5321452ae"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/nell_sel_story_gesture_v1_delivery/sel_story_gesture_preview_once.gif",
+      "sha256": "d09c1082bf29bf8295e625c0d131e5c2ec20003aebbef4bb0dafa622cbe23baf",
+      "bytes": 283162,
+      "library_file_id": "libfile_1641a80d91ac819193d2e721b1131bc6"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/nell_sel_story_gesture_v1_delivery/sel_story_gesture_review_zh_light.png",
+      "sha256": "e5810f5cea6e34a88d6b43a0a644191f01ff69e730944f55de121ba092e031f9",
+      "bytes": 434438,
+      "library_file_id": "libfile_0c7eec06838481919bc316e96a388988"
+    }
+  ],
+  "qa_records": [
+    {
+      "path": "Assets/CharacterActions/20261013/nell/story_gesture_v1/QA-independent.json",
+      "sha256": "deb2d39ec80aa56f4b9e9a011b4dc33bd60aec1f489d31ca271d2e5d81fb0c16",
+      "status": "pass_concept_with_notes",
+      "canonical_id": "NPC-N-NELL",
+      "limitations": [
+        "两个新姿态眉眼嘴差异很轻微，主要由护簿与摊手区别状态；应称姿态研究，不夸大为明显不同表情。",
+        "手指以粗簇概括，披巾流苏与书边有少量生成漂移。",
+        "锚/新姿态原高度1162/1162/1168px，最大约0.52%；0.4共同nearest未逐张拉伸。",
+        "清理源图保留透明RGB；最终合成帧透明RGB归零。四阶段仍为稀疏概念，非连续动画。"
+      ]
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/sel/story_gesture_v1/QA-independent.json",
+      "sha256": "4edfe4aae200c46f6cb9169fb4ea6abe39215211e963caed1467d558c19a77dd",
+      "status": "pass_concept_with_notes",
+      "canonical_id": "NPC-N-SEL",
+      "limitations": [
+        "腰钳形状、手指细节、围裙褶及肩宽有轻微生成漂移。",
+        "锚/新姿态原高度1297/1287/1293px，最大约0.77%；共同0.4最近邻未逐图校正比例。",
+        "清理源图保留透明RGB；最终合成帧透明RGB为零。稀疏姿态不构成连续动画或任务状态。"
+      ]
+    }
+  ],
+  "verification_path": "Assets/CharacterActions/20261013/nell_sel_story_gesture_v1_delivery/PACKAGE_VERIFICATION.json",
+  "verification_sha256": "92144aefa2668c50b5d9480c0f78b38b47412015ae82b9cc527c2ac4fa33e442",
+  "all_archive_member_hashes_and_crc_verified": true,
+  "verified_archive_members": 56,
+  "new_body_poses": 4,
+  "logical_stages_per_character": 4,
+  "anchor_reused_first_last": true,
+  "new_character_count": 0,
+  "runtime_verified": false,
+  "limitations": [
+    "Nell表情差异较小，主要依靠手势表达。",
+    "稀疏概念关键姿态；非完整动画、装备或runtime验收。"
+  ]
+}

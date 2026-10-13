@@ -1,0 +1,2 @@
+# Maler concept lock
+BRY-NPC-MALER; remaining_13 current card and old127 bottom row read/viewed. Older sturdy grey-haired bearded man, plum-brown vest/tan shirt/leather work belt, small wooden mallet and two keys hanging, empty hands. Competent but conservative self-defense, no eviction/refund. G pixels + approved revised Mia natural proportions only. concept_only=true; equipment_compatibility_verified=false; equipment mechanism unknown.

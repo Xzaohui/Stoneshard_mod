@@ -1,0 +1,153 @@
+{
+  "character": "sel",
+  "canonical_id": "NPC-N-SEL",
+  "generator": "built-in image_gen.imagegen",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/sel/sel_v2_raw_imagegen.png",
+    "sha256": "696407c5dcf6401bc85dc429540b29004bf5f7db64b69638f2910c4f2d126de1",
+    "matches_roster_reviewed_artifact": true,
+    "matches_manifest_v2": true,
+    "actually_viewed": true,
+    "view_method": "tools.view_image full current v2 PNG, 2026-10-13",
+    "anchor_status": "independent_deliverable_with_minor_notes",
+    "old_v1_not_anchor": true
+  },
+  "source_evidence": [
+    {
+      "path": "design/04_人物/台本新增人物与知识边界.md",
+      "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+      "locator": "## 塞尔（Sel，NPC-N-SEL）"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+      "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90",
+      "locator": "当前S62：人物冲突、N4-DEFAULT、N4-R-installments / liquidate / shift及播放条件；S61场次仅作有条件情绪素材。"
+    }
+  ],
+  "expressions": [
+    {
+      "key": "sel_E1_persuasive_pitch",
+      "label": "试探劝说",
+      "eyes": "眼睛比锚略开，视线集中在画侧听者。",
+      "brows": "一眉抬高、另一眉略松，呈算计中仍在说服的神色。",
+      "mouth": "一侧唇角微扬且嘴小开，带短促讨价还价口型，绝非灿笑／邪笑。",
+      "head_pose": "三分之二侧微向听者前倾，下巴略抬。",
+      "story_support": "现行N4-DEFAULT请求玩家补担保。",
+      "condition_and_limit": "只是在提出要求；没有玩家签字、工人同意或工坊得救的结果。"
+    },
+    {
+      "key": "sel_E2_pressed_defensive",
+      "label": "受压反驳",
+      "eyes": "两眼明显收窄，直视质疑者。",
+      "brows": "双眉内端明显下压并聚拢；与E1单眉抬高形成清晰差异。",
+      "mouth": "下颌微紧，嘴横向开成反问的窄口，能看到唇而非被髭须吞没；不咆哮龇牙。",
+      "head_pose": "更接近正面，下巴向前少许，脸上紧张而非用手指责。",
+      "story_support": "现行人物冲突及三路线成本；N4-S02-L02“谁来出这笔”仅作反问情绪素材。",
+      "condition_and_limit": "不将争辩画成攻击玩家、幕后阴谋暴露或已认罪。"
+    },
+    {
+      "key": "sel_E3_worried_calculation",
+      "label": "忧虑盘算",
+      "eyes": "目光明显低垂偏侧，眼睑放松但不闭眼；不能只是把E2瞳孔挪动。",
+      "brows": "内眉抬起形成疲惫的浅忧纹，外眉放低。",
+      "mouth": "紧闭、下唇轻收、嘴角略向下；与E1/E2开口状态相区别。",
+      "head_pose": "头下倾约十度，仍露清楚完整面部；不垂首谢罪。",
+      "story_support": "N4-R-installments与liquidate成本：收入慢／岗位减少／失去大器具能力；用于预览代价时的盘算。",
+      "condition_and_limit": "只担心未来成本，不表示已停炉、卖掉器具、清债、认错或获得新工作。"
+    }
+  ],
+  "runtime_integrated": false,
+  "independent_review": "pending",
+  "files": [
+    {
+      "path": "QA-author.json",
+      "bytes": 1000,
+      "sha256": "1b73506ac4ef0632cfc4a5842efa86fd78743b9aa99570810b474f25bb9a5aee"
+    },
+    {
+      "path": "README.md",
+      "bytes": 410,
+      "sha256": "3f52884c45d69ada85237129d24ae9a953c524c90bcfded3016ae3fe3c2c2db5"
+    },
+    {
+      "path": "build_review.py",
+      "bytes": 4414,
+      "sha256": "2718052e9ea4d8383c57bc70bb00be4b1fb8ceaf0e7df642cb9ecf1297ac4182"
+    },
+    {
+      "path": "prompts/sel_E1_persuasive_pitch.txt",
+      "bytes": 2443,
+      "sha256": "102779a6bf38708fbbd5a4ac46d5132ddc9afcb50f5817c6052fb9213dcf9fd5"
+    },
+    {
+      "path": "prompts/sel_E2_pressed_defensive.txt",
+      "bytes": 2454,
+      "sha256": "820171825be8bfe97e6073059af8dc7dd6af79ddcf20524e6afaee9c817cb1bd"
+    },
+    {
+      "path": "prompts/sel_E3_worried_calculation.txt",
+      "bytes": 2477,
+      "sha256": "9f904cdf10c8de80419da7abe56a382e8c3ae5a0fd648987ad4c21d9be368a48"
+    },
+    {
+      "path": "raw/sel_E1_persuasive_pitch_raw_imagegen.png",
+      "bytes": 1018219,
+      "sha256": "740d54a759ae7ef2a363eae00a3dafcf64b0202f02f58427aa99e2b50ef8bc9e"
+    },
+    {
+      "path": "raw/sel_E2_pressed_defensive_raw_imagegen.png",
+      "bytes": 971568,
+      "sha256": "fe7486d28509007db108fc02c5dab334458d501dc643bb5ce5c9bdc90575f4aa"
+    },
+    {
+      "path": "raw/sel_E3_worried_calculation_raw_imagegen.png",
+      "bytes": 956875,
+      "sha256": "1bd5e9fff06df4e323a016d85ecadd8c6ded84f4b7265ea8645e0dfd32bb870d"
+    },
+    {
+      "path": "sel_expressions_review_zh_dark.png",
+      "bytes": 420242,
+      "sha256": "b281379c5c618a083cd0996c322f569f12ba863531c28f3935e5776b658337ee"
+    },
+    {
+      "path": "sel_expressions_review_zh_light.png",
+      "bytes": 426064,
+      "sha256": "aac178cc3d34a735ae2ff8fa14a6eec457e216788b00ce62667a89dd6ae4aeb0"
+    },
+    {
+      "path": "selected/sel_E1_persuasive_pitch.png",
+      "bytes": 889362,
+      "sha256": "10a9340ccd102b14753ea987bda3370411faca899dc6f7ef09c0af32ce3e5b8c"
+    },
+    {
+      "path": "selected/sel_E2_pressed_defensive.png",
+      "bytes": 856016,
+      "sha256": "058bf735f8eeae0b31a1d616637fa8a875b376b39d15a73146848723137aa5b0"
+    },
+    {
+      "path": "selected/sel_E3_worried_calculation.png",
+      "bytes": 837565,
+      "sha256": "fcdfb70b2e018ebf0999c8716a0db49183817c0563833e469aeac0e28f99e136"
+    },
+    {
+      "path": "sources/next_main_cast_expressions_nell_sel_01.json",
+      "bytes": 12596,
+      "sha256": "822b26f738009368dcb8485c71a85aa1980d373ca869ada78e8a552f33b75c0d"
+    },
+    {
+      "path": "sources/sel_v2_raw_imagegen.png",
+      "bytes": 825353,
+      "sha256": "696407c5dcf6401bc85dc429540b29004bf5f7db64b69638f2910c4f2d126de1"
+    },
+    {
+      "path": "sources/台本_N4_第一张空白债票.md",
+      "bytes": 11995,
+      "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90"
+    },
+    {
+      "path": "sources/台本新增人物与知识边界.md",
+      "bytes": 6162,
+      "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+    }
+  ]
+}

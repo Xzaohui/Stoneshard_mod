@@ -1,0 +1,85 @@
+{
+  "reviewer": "independent_visual_review",
+  "reviewed_at_utc": "2026-10-13T09:52:51.138876+00:00",
+  "character_id": "NPC-MIA",
+  "status": "pass_expression_concepts_with_notes",
+  "concept_deliverable": true,
+  "artifact_sha256": {
+    "raw/mia_concerned_inquiry_raw_imagegen.png": "2bb2f1669bc1004a25ec67db067d5dd748d56b9ac23b81d096d136ba978b8eb9",
+    "mia_concerned_inquiry.png": "abd4f11b6292a1c824b8f86778977f3beb8972d38d3a32f783ccfe03ca815eb4",
+    "raw/mia_attentive_listening_raw_imagegen.png": "a3c7e84aab4c752d5d11fadd2899e95e74fe62424a1a960d90ffd28052962606",
+    "mia_attentive_listening.png": "f17e9a0568c9e8bcb84199daaae5a2e676076bd4c5674645ebf066848d243859",
+    "raw/mia_gentle_encouragement_raw_imagegen.png": "4addbd5ab0b066e5c3cfc4a7cf383c3847afb45747e36ab9050058e8d7e64407",
+    "mia_gentle_encouragement.png": "955df96ce30ab0604df6cdfda3db4036f7512fe3eaf91e637f8e3887f8bc21f8",
+    "mia_expressions_review_zh.png": "6fc95363f5b0321d8c8772e452b2e5c6d8a55e76f6096d986b23da943267728e",
+    "manifest.json": "d1264f7fee9cc18f89a2ddd26bd2db7f7057010fd40b7b65b6ff887a9669d88b"
+  },
+  "identity_authority": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+    "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+  },
+  "actually_viewed": [
+    "approved Mia ratio 1:1.5 full image",
+    "raw/mia_concerned_inquiry_raw_imagegen.png",
+    "raw/mia_attentive_listening_raw_imagegen.png",
+    "raw/mia_gentle_encouragement_raw_imagegen.png",
+    "mia_expressions_review_zh.png",
+    "independent dark alpha composite of all three exports"
+  ],
+  "visual_findings": [
+    "三图均保留批准Mia的短鼻、眼距和成年下颏、深棕侧分发/单低辫、暗蓝绿披肩与米白衣；头部像素簇有少量变化但没有换人。",
+    "关切询问内眉抬高、微张嘴与略忧目光可读；认真倾听眉较平收拢、口闭合专注；温和鼓励嘴角轻扬且眼眉放松，差异克制但清楚。",
+    "鼓励没有夸张大笑或健康状态变化；没有新增护理者身份、诊断、伤情、治愈或任务完成语义。",
+    "原稿为胸上构图，手与毯未入画不是移除身份道具；共同裁切仅修齐胸下边，冠发、耳、辫与肩部保留，没有误切头发。",
+    "大方簇与阶梯轮廓可读，双底干净。三图下颏/发团/衣褶存在轻微生成漂移，应作为独立表情概念而不是可直接播放的对齐动画。"
+  ],
+  "independent_checks": [
+    {
+      "slug": "concerned_inquiry",
+      "raw_hash_matches": true,
+      "export_hash_matches": true,
+      "alpha_only_cleanup_common_crop_exact": true,
+      "common_nearest_board_exact": true
+    },
+    {
+      "slug": "attentive_listening",
+      "raw_hash_matches": true,
+      "export_hash_matches": true,
+      "alpha_only_cleanup_common_crop_exact": true,
+      "common_nearest_board_exact": true
+    },
+    {
+      "slug": "gentle_encouragement",
+      "raw_hash_matches": true,
+      "export_hash_matches": true,
+      "alpha_only_cleanup_common_crop_exact": true,
+      "common_nearest_board_exact": true
+    }
+  ],
+  "processing_verified": {
+    "common_crop": [
+      190,
+      65,
+      1050,
+      1140
+    ],
+    "export_size": [
+      860,
+      1075
+    ],
+    "cleanup": "alpha <=5 is set to zero; RGB and alpha>5 RGBA retained exactly",
+    "board_nominal_common_scale": 0.55,
+    "board_integer_size": [
+      473,
+      591
+    ],
+    "note": "591px is integer rounding of 1075×0.55; identical for all three"
+  },
+  "new_expression_count": 3,
+  "targeted_correction_count": 0,
+  "new_character_count": 0,
+  "animation_verified": false,
+  "runtime_verified": false,
+  "native_ready": false,
+  "equipment_compatibility_verified": false
+}

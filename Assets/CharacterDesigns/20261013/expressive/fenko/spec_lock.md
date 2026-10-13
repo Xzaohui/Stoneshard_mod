@@ -1,0 +1,2 @@
+# Fenko concept lock
+ALD-S02-NPC current card/old82 top row read/viewed. Adult lining-repair woman, sage work dress/charcoal waist apron/linen cap/sewing pouch/brown shoes, modest unmarked cream cloth lining sample held to own waist. Skilled restrained self-respect and authorship hesitation, no public names/address/orders. Revised Mia compact full-body reference only, independent face. concept_only=true; equipment_compatibility_verified=false; unknown mechanisms.

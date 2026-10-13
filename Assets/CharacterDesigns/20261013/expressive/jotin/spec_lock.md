@@ -1,0 +1,2 @@
+# Jotin concept lock
+BRY-NPC-JOTIN; testimony_10 card and old128 bottom row read/viewed. Adult female typesetter, practical dark bun, muted blue shirt, linen sleeves, grey lightly inked apron, small typesetting ruler. Focused worry/wry hesitation, independent mature face. Natural compact G clusters, approx 2.3-head silhouette only a guide. Full alpha single pose; concept_only=true; equipment_compatibility_verified=false; unknown mechanism.

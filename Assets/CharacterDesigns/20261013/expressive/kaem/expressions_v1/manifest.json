@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "character": "kaem",
+  "canonical_id": "MAE-NPC-KAEM",
+  "aliases": [
+    "CITY-NPC-MAE-NPC-KAEM",
+    "NPC-N-KAEM"
+  ],
+  "generator": "built-in image_gen.imagegen",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/kaem/kaem_raw_imagegen.png",
+    "sha256": "dcfaf4da3aacb9b9f73ff0d4ddc12ca5acef5583272b725f789e696613dd2910",
+    "actually_viewed": true,
+    "roster_sha256": "dcfaf4da3aacb9b9f73ff0d4ddc12ca5acef5583272b725f789e696613dd2910",
+    "roster_hash_match": true
+  },
+  "brief_sha256": "3d9c983461b9573fa9fe3936973418400f6707939dd94cb813a16e3ae0f00f56",
+  "expressions": [
+    {
+      "key": "defend_own_value",
+      "title": "保书者的自负辩解",
+      "facial_design": {
+        "brows": "眉头内压，远侧眉向上挑，质疑与自负同在。",
+        "eyes": "眼裂略收，上睑锐但不变反派邪眼，目光对交谈者。",
+        "mouth": "横向张开发话形，一侧唇角略抬显反驳；不是大笑，不露獠牙。"
+      },
+      "evidence": {
+        "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+        "key": "N10-DEFAULT",
+        "quote_or_summary": "要是每个借过器具的名字都被读出来，这里连一本书也剩不下。"
+      },
+      "usage_condition": "未知相关事实时默认议题；表现防御性自我价值，不先定责任处置。",
+      "excludes": "保书动机不等同清白，不增认证权或救人成功。"
+    },
+    {
+      "key": "independent_check_unease",
+      "title": "发现摘要再也兜不住",
+      "facial_design": {
+        "brows": "紧眉打开，两眉内侧抬高，远侧略高，保粗眉厚度。",
+        "eyes": "双眼比第一张明确睁开，上睑抬、下睑轻绷，目光微偏而头角不变；无夸张白眼。",
+        "mouth": "唇微张成短小近圆停顿口形，两唇留可读间隙；与第一张横长口形区别。"
+      },
+      "evidence": {
+        "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+        "key": "X20-L01",
+        "quote_or_summary": "给一柜的新版本骗不了另一柜。你们这次不是把纸藏起来就算完。"
+      },
+      "usage_condition": "N9 sealedreview有限回执已收到并核验；只表现独立双柜可互核后的紧张警觉。",
+      "excludes": "不是被捕定罪、全案真相、惊慌逃跑、魔法暴露或默认失印；紧张不自动认罪。"
+    },
+    {
+      "key": "let_source_speak",
+      "title": "克制停嘴，把话还给来源人",
+      "facial_design": {
+        "brows": "从防御斜眉改为较平低弧，内眉轻夹而不尖；不要恢复第一张原锚眉。",
+        "eyes": "上睑略低，下睑放松，稳看场外发言者；眼裂比第二张窄、比第一张柔。",
+        "mouth": "闭口且下唇轻收，一侧唇角微下坠，压下插话；胸像中有完整唇轮廓，不是单点小横线。"
+      },
+      "evidence": {
+        "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+        "key": "N10-R-sourcehearing-L01",
+        "quote_or_summary": "她不是我的附注。哪句话是她写的，让她自己指。"
+      },
+      "usage_condition": "仅sourcehearing按核验及授权实际完成后的条件回应，表现不舒服但不抢话。",
+      "excludes": "不是强制忏悔、洗清、重新授印、全部认罪、公开住址；沉默不算额外承认。"
+    }
+  ],
+  "runtime_integrated": false,
+  "roster_changed": false,
+  "independent_review": "pending",
+  "files": [
+    {
+      "path": "QA-author.json",
+      "bytes": 2789,
+      "sha256": "48894e43dcbcd0c602911fd79da76f0f49ce2c19a4f2e735263bd6a466af69ed"
+    },
+    {
+      "path": "README.md",
+      "bytes": 518,
+      "sha256": "7069529ccbe7f1aa4eb44ff98cb0079d6f9be7a11d949d5ab38eae4e1735ca52"
+    },
+    {
+      "path": "build_review.py",
+      "bytes": 4850,
+      "sha256": "f6834ac918b2ea2dfa900947b528f3e111aeaa10889ee89373fabf0bcabec0ea"
+    },
+    {
+      "path": "prompts/01_defend_own_value.txt",
+      "bytes": 1712,
+      "sha256": "f8f37cb131e64e21fdd955b18d47efea734c2f1a67f415aaf12b886497ea9fd3"
+    },
+    {
+      "path": "prompts/02_independent_check_unease.txt",
+      "bytes": 1838,
+      "sha256": "5c09956bf1cd44b9dcb5d9c404737e7646b38f92430b972a09567dbbda2d75dd"
+    },
+    {
+      "path": "prompts/03_let_source_speak.txt",
+      "bytes": 1855,
+      "sha256": "63a3849c76768e8dd134e15f355152eac135a10121476ff1e610708141bd0cff"
+    },
+    {
+      "path": "raw/01_defend_own_value_raw_imagegen.png",
+      "bytes": 920631,
+      "sha256": "0069aa36691cd91f06e3710ca235b8a8221aaab0209480302d990846d1e7500c"
+    },
+    {
+      "path": "raw/02_independent_check_unease_raw_imagegen.png",
+      "bytes": 833270,
+      "sha256": "a089bd1c2608183dae603d49aa5bdf9edb3e29fa4f41289fbfa18084c74695fd"
+    },
+    {
+      "path": "raw/03_let_source_speak_raw_imagegen.png",
+      "bytes": 913459,
+      "sha256": "1437685945baf36c39e4e1eee0df6c9e82530e68291cc847d3412e8fc4c734ae"
+    },
+    {
+      "path": "review/kaem_expressions_review_zh_dark.png",
+      "bytes": 543785,
+      "sha256": "d28121bdf57733a65508ca6b1d4135d097727a004f993e780477ea2333fab7bb"
+    },
+    {
+      "path": "review/kaem_expressions_review_zh_light.png",
+      "bytes": 553309,
+      "sha256": "69cdef0aeb2a8c85574cecc636f2c7c972c4265ee77ecbc23cf48406a2c0d655"
+    },
+    {
+      "path": "selected/01_defend_own_value_transparent.png",
+      "bytes": 763824,
+      "sha256": "9a685e838dcafdeb3a80827d541626d9d3c0b185fdef0b2a862ce7a54d31cd9e"
+    },
+    {
+      "path": "selected/02_independent_check_unease_transparent.png",
+      "bytes": 681951,
+      "sha256": "988b0cff83db2013562ef7d674d1bff0d91119433875d4b3666118183756efaf"
+    },
+    {
+      "path": "selected/03_let_source_speak_transparent.png",
+      "bytes": 747325,
+      "sha256": "81faf5ec6b50f2ead6b2fd92e8b61abe8864869efe350bc8b146620ae0a4488e"
+    },
+    {
+      "path": "sources/brief.json",
+      "bytes": 12952,
+      "sha256": "3d9c983461b9573fa9fe3936973418400f6707939dd94cb813a16e3ae0f00f56"
+    },
+    {
+      "path": "sources/kaem_raw_imagegen.png",
+      "bytes": 655930,
+      "sha256": "dcfaf4da3aacb9b9f73ff0d4ddc12ca5acef5583272b725f789e696613dd2910"
+    },
+    {
+      "path": "sources/provenance.json",
+      "bytes": 1317,
+      "sha256": "87cd9c2366e594dfa8732b4286bb40d2b8cadc42c3d1b7290b5ecbf6db26f4ea"
+    },
+    {
+      "path": "sources/人物_MAE-NPC-KAEM_凯姆.md",
+      "bytes": 1664,
+      "sha256": "cf464441953cc012351035181701414b919110b001840e189f38550113d896b8"
+    },
+    {
+      "path": "sources/台本_N10_没有写下的见证.md",
+      "bytes": 13744,
+      "sha256": "d875533e03eedd738c7a44fbd1f09dd9d66644628f25dc8b6a100506267de0d6"
+    },
+    {
+      "path": "sources/台本_N6_被封存的页码.md",
+      "bytes": 11632,
+      "sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0"
+    },
+    {
+      "path": "sources/台本新增人物与知识边界.md",
+      "bytes": 6162,
+      "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+    }
+  ],
+  "prompt_storage": "Exact sent prompt text plus a terminal newline; one anchor path per call; transparent_background=true."
+}

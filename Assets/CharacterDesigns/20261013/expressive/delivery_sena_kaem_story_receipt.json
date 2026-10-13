@@ -1,0 +1,80 @@
+{
+  "group": "sena_kaem_story_gesture_v1",
+  "character_ids": [
+    "NPC-SENA",
+    "MAE-NPC-KAEM"
+  ],
+  "state": "sent",
+  "status": "concept_delivered",
+  "time_utc": "2026-10-13T11:47:36.516151+00:00",
+  "message_id": "Sentinel_5745719924dc81918dcc78c4ae572f3c",
+  "attachments": [
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_sena_kaem_story_v1/sena_story_gesture_review_zh_light.png",
+      "bytes": 404286,
+      "sha256": "6d9674e095afe298e631ff393476fc7e301c3f7bff97e19e32862121027b193b",
+      "library_file_id": "libfile_8889bfcf7dbc8191aca0e2e301f50afb"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_sena_kaem_story_v1/kaem_story_gesture_review_zh_light.png",
+      "bytes": 380027,
+      "sha256": "2f132f0d66185c65fa7b140fd393fe48793f33a62cff506a868daf68690981c4",
+      "library_file_id": "libfile_7868466d53e88191a83a27bc0652cb6c"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_sena_kaem_story_v1/sena_story_gesture_preview_once.gif",
+      "bytes": 280315,
+      "sha256": "454e0c07ab610fd3d3e8bf2e2372b494e8b31d8da5a47d717feb47dc616c423a",
+      "library_file_id": "libfile_9d0e01fac29881918cc75d9ce01e1bf6"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_sena_kaem_story_v1/kaem_story_gesture_preview_once.gif",
+      "bytes": 290938,
+      "sha256": "9fb06d9a1f42cb364b7c066e4da1209523c71300aad2d0ddf5b74bc377b55a42",
+      "library_file_id": "libfile_895890c94adc81918c01319f6db0f19b"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_sena_kaem_story_v1/sena_kaem_story_v1_reviewed.zip",
+      "bytes": 10952923,
+      "sha256": "e48fe0049c05edcbda615df6645ab920e91d44cfe3de5a1d2f58dec67c8247fa",
+      "library_file_id": "libfile_99af197255c8819188b4d90ba3184bc8"
+    }
+  ],
+  "qa_records": [
+    {
+      "path": "Assets/CharacterActions/20261013/sena/story_gesture_v1/QA-independent.json",
+      "sha256": "127d288c7f169bbd9f758d00bcd8b20ad768abef3b116a3db0eb318f008a31f7",
+      "status": "pass_concept_with_notes",
+      "canonical_id": "NPC-SENA",
+      "limitations": [
+        "第二姿头发外轮廓、眼鼻簇位和肩衣褶有轻微生成漂移，属于转面概念范围；不能称逐像素锁脸。",
+        "侧望和放低手不自动证明人物永久成长、证人已授权或测试安全。",
+        "两张新姿态加首末锚，四阶段稀疏演示，不是完整动画。"
+      ]
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/kaem/story_gesture_v1/QA-independent.json",
+      "sha256": "8ad485b188de674a0276191164cdf36e2487ddf58f51e4f0f2614d6b8dde362f",
+      "status": "pass_concept_with_notes",
+      "canonical_id": "MAE-NPC-KAEM",
+      "limitations": [
+        "第二姿接近锚站姿，不能宣称为幅度明显的新动作；它是小变化的收手倾听状态。",
+        "身体和脸色簇、卷筒边缘有轻微生成漂移，不以输出不同hash证明动作价值。",
+        "沉默倾听不等于认罪、重授印信或故事责任解除；四阶段只是稀疏概念。"
+      ]
+    }
+  ],
+  "verification_path": "Assets/CharacterActions/20261013/delivery_sena_kaem_story_v1/DELIVERY_CHECKS.json",
+  "verification_sha256": "adb6afd58d52dc480dc75b18a784ce45c180ae0797c1a4593974879e9ae5ee34",
+  "all_archive_member_hashes_and_crc_verified": true,
+  "verified_archive_members": 59,
+  "new_body_poses": 4,
+  "logical_stages_per_character": 4,
+  "anchor_reused_first_last": true,
+  "new_character_count": 0,
+  "runtime_verified": false,
+  "limitations": [
+    "Kaem第二姿态接近锚，变化幅度较小，不能夸称强动作差异。",
+    "稀疏概念关键姿态；非完整动画、装备或runtime验收。"
+  ]
+}

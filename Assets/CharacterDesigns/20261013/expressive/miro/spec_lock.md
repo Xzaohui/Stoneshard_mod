@@ -1,0 +1,2 @@
+# Miro concept lock
+BRY-NPC-MIRO; current card and old19 first two panels checked. Adult male merchant liaison, neat brown short beard, modest muted-brown coat/cream shirt, small pouch and closed satchel. Restrained polite half-smile with wary calculating eyes. No payment/contract completion or noble role. Sela G bold clusters, natural compact adult proportions over ratio; transparent full body. concept_only=true; equipment_compatibility_verified=false.

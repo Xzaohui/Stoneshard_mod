@@ -1,0 +1,86 @@
+{
+  "group": "nara_ena_story_gesture_v1",
+  "character_ids": [
+    "NPC-N-NARA",
+    "NPC-N-ENA"
+  ],
+  "state": "sent",
+  "status": "concept_delivered",
+  "time_utc": "2026-10-13T11:40:58.467915+00:00",
+  "message_id": "Sentinel_64da94784fd481919202d3a6d5eb8c13",
+  "attachments": [
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_nara_ena_story_gesture_v1/nara_story_gesture_review_zh.png",
+      "bytes": 565254,
+      "sha256": "e8c9efc976083d661ef7e8e20c46c7fc26b7acb718b749890b2d4acea98fd5e1",
+      "library_file_id": "libfile_720b5ee9f9308191a8642d436399736f"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_nara_ena_story_gesture_v1/nara_story_gesture_once.gif",
+      "bytes": 501127,
+      "sha256": "8fac472e23609fb5dcf9ca62ef944b0f11a32e5a4d49687e1d1b525f2b3ef55d",
+      "library_file_id": "libfile_25512a0f2b9c819192639296fca74d04"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_nara_ena_story_gesture_v1/ena_story_gesture_review_zh.png",
+      "bytes": 427617,
+      "sha256": "f85deaa1a1f891ad9cf6793d04d10751515693e52eb4b83de47c6116439d3cbc",
+      "library_file_id": "libfile_d61dbfc93248819188c57a6f1e654b21"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_nara_ena_story_gesture_v1/ena_story_gesture_once.gif",
+      "bytes": 378344,
+      "sha256": "e02e41bb525e7140de1df00a25a0a8a473824f0b4f4b661d067ccded4297c366",
+      "library_file_id": "libfile_701b868726148191ba80ee94da0bcd4e"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_nara_ena_story_gesture_v1/nara_story_gesture_v1_sources.zip",
+      "bytes": 10843417,
+      "sha256": "83d4b98fe90293678f5b608258c0ec83d2a6082cc99092d859078300d8ee2e4a",
+      "library_file_id": "libfile_b2d23d037b5c819185f255ffc6ae02e2"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/delivery_nara_ena_story_gesture_v1/ena_story_gesture_v1_sources.zip",
+      "bytes": 8394525,
+      "sha256": "37a41dde61ceaee7434cb56c833d359638f22f8c38aac053f86d4b5c1ed3b346",
+      "library_file_id": "libfile_134cf21718ec81919aefeb0e86d810af"
+    }
+  ],
+  "qa_records": [
+    {
+      "path": "Assets/CharacterActions/20261013/nara/story_gesture_v1/QA-independent.json",
+      "sha256": "adfcd7d65a6038fa6c4d8429d6dc73ff5919baaff5a2f65f84ae87db65bc3422",
+      "status": "pass_concept_with_notes",
+      "canonical_id": "NPC-N-NARA",
+      "limitations": [
+        "D1可见高1225px对锚1280px约-4.30%，D2为1286px；没有按帧缩放掩盖差异。",
+        "凳形、靴形、膝位与接地点有生成漂移，作为单张稀疏关键姿态可用，尚非连续坐姿动画或硬锁家具几何。",
+        "D2原始画幅右边留白很窄，但选定最终帧靴尖轮廓完整，未见主体切断。"
+      ]
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/ena/story_gesture_v1/QA-independent.json",
+      "sha256": "80a6f262a6926640e2d6670fed45871bdb480cd4f8c195e854096b79926fd5f3",
+      "status": "pass_concept_with_notes",
+      "canonical_id": "NPC-N-ENA",
+      "limitations": [
+        "D2头身与高度仍比原锚略大约5.7%，头巾轮廓/裙边和袖口有生成漂移；单张关键姿态自然，不能称精确同骨长动画。",
+        "二张新增姿态加原锚构成三种状态，四阶段末帧复用；共同1.0倍率仅整图平移，不额外按帧缩放掩盖体型差异。"
+      ]
+    }
+  ],
+  "freeze_path": "Assets/CharacterActions/20261013/delivery_nara_ena_story_gesture_v1/FROZEN_DELIVERY.json",
+  "freeze_sha256": "defc843d2de61ea217f6c7a90381af7dfda25f7b9371cd6a3ef3592664677216",
+  "all_archive_member_hashes_and_crc_verified": true,
+  "verified_archive_members": 50,
+  "new_body_poses": 4,
+  "logical_stages_per_character": 4,
+  "anchor_reused_first_last": true,
+  "new_character_count": 0,
+  "runtime_verified": false,
+  "limitations": [
+    "Nara凳及靴接地点漂移，不能当固定地面坐姿动画。",
+    "Ena D2较锚高5.66%，保概念比例漂移备注。",
+    "稀疏关键姿态；无插帧、换装、runtime验收。"
+  ]
+}

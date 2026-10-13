@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T14:53:58.913017+00:00",
+  "status": "prepared_only_not_dispatched",
+  "scope": "仅规划已有妮尔/塞尔各1侧+1背，共4张静态衣装结构补设定；0新人、0新表情、0动作帧。本次没有生图或修改索引。",
+  "selection_rationale": "已实看4人现行锚、已交动作板及旧板背面。妮尔披肩层次与塞尔围裙连接最有明确结构辨识收益；不按每人固定套装凑数。",
+  "historical_back_views_disclosure": "4人旧长比例均已有背面，本次仅现行衣装/比例的缺失结构补设定，不能宣传为从无到有的首次背面。",
+  "evidence": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256": "7377ba8e0047707cbbff87a2d6e1f4dc970029c49324d43d7800d8952a691733"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "9055dccf227b8a8daffa652067110d9a31263f54660cfd4a4dd4380e94d0a0cb"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "sha256": "c911fcd7a229631989c3abf4920381e542c1622565d5e435cf0c540b4d5c3d18"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch07/31_nell_sel_pair.png",
+      "sha256": "e2b619f2fd6f12a22edd7ec314c2cad80c1b2858fbb275c61b93f897c9ad0354",
+      "visually_inspected": true
+    }
+  ],
+  "global_constraints": [
+    "未知背面必须标设计推定；人物为Mod原创，不宣称原作衣装事实。",
+    "保留现行锚的脸、年龄、体量、衣长、同手/同侧道具；不套旧长比例，不从头改服装。",
+    "单图单人全身透明背景；新增只计侧与背，正面只能复用作为检视对照。",
+    "保持粗簇像素、无武器/包/徽章/现代西装翻领，未列新构件不添加。",
+    "0新人，不重复16人46表情，不改故事结果、回执、索引或旧图。",
+    "不依赖runtime或换装验证；本计划既不是游戏动画，也不是拆层装备资产。"
+  ],
+  "characters": [
+    {
+      "slug": "nell",
+      "canonical_id": "NPC-N-NELL",
+      "name": "妮尔",
+      "aliases": [],
+      "directory_aliases": [
+        "nier"
+      ],
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+        "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec",
+        "visually_inspected": true,
+        "roster_sha256_match": true
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "妮尔（Nell，NPC-N-NELL）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "existing_action_review": {
+        "path": "Assets/CharacterActions/20261013/nell/story_gesture_v1/nell_story_gesture_review_zh_light.png",
+        "sha256": "024a85b772d8fa27118c2eab740602eb979f708794be1388e493ac276cfa6324",
+        "visually_inspected": true,
+        "coverage": "前四分之三手势；没有侧面或背面衣层展示"
+      },
+      "existing_action_manifest": {
+        "path": "Assets/CharacterActions/20261013/nell/story_gesture_v1/manifest.json",
+        "sha256": "0efb5403dd7b8a74fafcab261efc1e71c8e6a51b990c6616af10d78fabf615bf"
+      },
+      "selected_action_raws": [
+        {
+          "path": "Assets/CharacterActions/20261013/nell/story_gesture_v1/raw_01_ledger_boundary_v2.png",
+          "sha256": "cc09f028c3850e69ecfb7e34b743be6e5c846033bb60f06ed7119549d99402a0"
+        },
+        {
+          "path": "Assets/CharacterActions/20261013/nell/story_gesture_v1/raw_02_limited_account_v2.png",
+          "sha256": "31c466ccd6303736740119c0eaefebdb902cbe177fb2728d9529bddd822f785e"
+        }
+      ],
+      "existing_expression_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/nell/expressions_v1/manifest.json",
+        "sha256": "6b1de660799a777f9b56bdd43e34d878da6b04ed8177e48b12a92cc7bfc7629f"
+      },
+      "historical_reference": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch07/31_nell_sel_pair-v2.png",
+          "sha256": "94ab7793df01a7598f089ad2a0e45b14f21f0c4985e7abe1fc9a6ae3f948434d",
+          "visually_inspected": true,
+          "contains_back_view": true
+        }
+      ],
+      "selected": true,
+      "priority": 1,
+      "new_unique_views": 2,
+      "value": "短流苏披肩后缘、腰侧米色垂布与蓝裙是两个不同衣层；现行正面与手势无法确认后背长度与重叠关系，直接影响人物转面后仍可辨识。",
+      "history_disclosure": "20261012配对板v1/v2均有妮尔背面，后背三角披肩与腰带已出现；是旧比例参考，不是现行锚的背面。旧背还出现棕色腰侧袋状体，现行锚没有清楚支持，禁止带回。",
+      "identity_lock": [
+        "NPC-N-NELL；aliases为空；nier仅目录别名，不是新人，不是原作尼尔。",
+        "沿用现行v2成熟五官、棕色低发髻、蓝灰裙、米色流苏披肩及鞋；不按旧长比例回拉，也不借本轮强行改成严格1:1。"
+      ],
+      "hand_and_prop_lock": [
+        "身体左手/左臂固定抱闭簿于身体左前胸（当前锚画面右侧）；身体右手从下方托住。侧背只是转视角，不换手、不翻页、不交接。",
+        "背面可由躯干遮住账簿大部，但左前侧可见同一闭合书边；不能在背部另画一本书。",
+        "米色腰侧垂布锁在身体左侧（当前锚画面右）；不是第二披肩、袋口或开放工资名单。"
+      ],
+      "layer_rules": [
+        "内层蓝灰衣裙；短米色披肩覆双肩与上臂；手臂与闭簿位于身前；腰带/腰侧垂布是低于披肩的独立层。",
+        "背部披肩延续旧稿短三角轮廓，但按现行肩宽/短身量体；后尖不得伸到裙摆或变成长斗篷。流苏只沿披肩自由边，不能长成手指。",
+        "腰侧米色垂布从原腰位下垂，不与上肩披布跨空连成一根长飘带；不加新腰袋。"
+      ],
+      "design_inferences": [
+        "现行锚未显示后背，短三角后片与流苏连续性是结合旧提案的最小设计推定，不是原游戏事实或已批准后背。",
+        "腰侧垂布只维持现行可见长度/位置，背面不新增结头或装饰扣。"
+      ],
+      "views": [
+        {
+          "key": "left_side",
+          "title": "身体左侧面：闭簿与披肩分层",
+          "camera": "角色朝画面右，镜头看身体左侧，约90度侧面；不能只重复现有前四分之三。",
+          "brief": "完整站姿、双脚踏同一地线；低发髻后凸保留。近侧左臂抱紧闭簿，远侧右手承托可部分遮挡。让上肩短披布、书厚度、袖口、腰侧米色垂布的高度分离清楚；中性戒备表情，不做新动作。"
+        },
+        {
+          "key": "back",
+          "title": "正背面：短披肩后缘与腰布分层",
+          "camera": "正背面，头不回望，不露正脸。",
+          "brief": "现行宽头短身原比例；低发髻、肩上短三角米披布及有限流苏可见，蓝裙后片自然落下。左腰的米色垂布从左侧露出，闭簿仍在左前胸；不得为证明持物把书搬到背后。"
+        }
+      ],
+      "story_boundaries": [
+        "不公开姓名住址页、不烧页、不作免责或无罪裁定；没有新剧情结果。"
+      ]
+    },
+    {
+      "slug": "sel",
+      "canonical_id": "NPC-N-SEL",
+      "name": "塞尔",
+      "aliases": [],
+      "directory_aliases": [],
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/sel/sel_v2_raw_imagegen.png",
+        "sha256": "696407c5dcf6401bc85dc429540b29004bf5f7db64b69638f2910c4f2d126de1",
+        "visually_inspected": true,
+        "roster_sha256_match": true
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "塞尔（Sel，NPC-N-SEL）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "existing_action_review": {
+        "path": "Assets/CharacterActions/20261013/sel/story_gesture_v1/sel_story_gesture_review_zh_light.png",
+        "sha256": "e5810f5cea6e34a88d6b43a0a644191f01ff69e730944f55de121ba092e031f9",
+        "visually_inspected": true,
+        "coverage": "前四分之三手势；没有侧面或背面衣层展示"
+      },
+      "existing_action_manifest": {
+        "path": "Assets/CharacterActions/20261013/sel/story_gesture_v1/manifest.json",
+        "sha256": "c8797b94790b8e530f9c678e4ec8d356b8d1c3d8d9e64c84fc08f4bcf511520f"
+      },
+      "selected_action_raws": [
+        {
+          "path": "Assets/CharacterActions/20261013/sel/story_gesture_v1/raw_01_bargain_offer_v2.png",
+          "sha256": "c795999e6d089fde9422859036a680158c37f57382fd1335a33204fe2064d76b"
+        },
+        {
+          "path": "Assets/CharacterActions/20261013/sel/story_gesture_v1/raw_02_cost_acknowledgement.png",
+          "sha256": "837bd4f40497e9b12a27bd9e9e48b17be465155f033b7b30555b32c81d3c4df6"
+        }
+      ],
+      "existing_expression_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/sel/expressions_v1/manifest.json",
+        "sha256": "4adf2c249c4207c274a19c683f4b3b3a1fd3389c374e4a295e777106ee4c14c4"
+      },
+      "historical_reference": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch07/31_nell_sel_pair-v2.png",
+          "sha256": "94ab7793df01a7598f089ad2a0e45b14f21f0c4985e7abe1fc9a6ae3f948434d",
+          "visually_inspected": true,
+          "contains_back_view": true
+        }
+      ],
+      "selected": true,
+      "priority": 2,
+      "new_unique_views": 2,
+      "value": "现行前围裙两条上端固定带、后颈与腰带之间的接续，以及腰钳在转面中的同侧位置不清；旧背有腰带却没有清楚的上带连接。用侧+背解决围裙不是背心/武器挂具的误读。",
+      "history_disclosure": "20261012配对板v1/v2均有塞尔背面；旧背红衫、腰横带与下垂绑带已存在，不能称首次背面。旧图长裸钳及腰侧小包不适用于现行v2的紧凑带套腰钳，不得抄回。",
+      "identity_lock": [
+        "NPC-N-SEL；aliases为空；与Sela/瑟拉、Sena/塞娜完全不同人物。",
+        "锁定现行v2成熟偏年长面孔、灰杂短发短须、锈红卷袖、炭灰围裙、棕裤靴及结实身架；保留现行比例，不增现代西装翻领。"
+      ],
+      "hand_and_prop_lock": [
+        "两手保持空手自然下垂，左手不抓工具、右手不持新物。",
+        "单件紧凑腰钳及棕色收纳套固定在身体左前侧腰位（当前锚画面右），不翻转到右臀，不在背面复制第二套。",
+        "工具处于收纳状态；不开钳作业、不拔出、不增锤斧剑包。"
+      ],
+      "layer_rules": [
+        "锈红卷袖衫在内，炭围裙只覆盖前胸/前腿，不延成全背皮甲；腰带环绕腰位，后背仍是红衫。",
+        "当前前围裙两上端黑带优先作一条经后颈相连的窄颈带；背面仅在红衫领缘处露有限深色连接，不凭空增交叉背带或整副背部吊具。",
+        "腰横带延续现行棕色腰带；不画第二根黑宽腰封、夸张蝴蝶结或长拖尾。前围裙后侧边界在腰侧收止，腿后见原裤。",
+        "钳套处在腰带外侧、围裙边缘前侧；两手与套之间保留负空间。"
+      ],
+      "design_inferences": [
+        "前面两固定带的后颈连接未由现行图证明。本轮选择最小U形颈带方案，属于可撤回原创设计推定，不是原游戏事实；不能声称后背双肩带曾被验证。",
+        "不沿用旧板背面缺连接的画法，也不把该缺省解释成隐形肩带；侧面与背面必须采用同一个连接方案。"
+      ],
+      "views": [
+        {
+          "key": "left_side",
+          "title": "身体左侧面：围裙侧缘与腰钳归位",
+          "camera": "角色朝画面右，镜头看身体左侧，约90度侧面。",
+          "brief": "自然站直，双手空垂；近侧左腰小钳套清楚、与手不相穿。前围裙只包前身，后侧红衫可见；颈带从前胸上沿沿肩颈进入后领，粗像素解释连接即可。卷袖厚度、前裙下缘和短裤靴不增细碎写实纹理。"
+        },
+        {
+          "key": "back",
+          "title": "正背面：颈带最小连接与腰带连续",
+          "camera": "正背面不回头，完整头脚。",
+          "brief": "灰杂短发后脑与红衫背部占主体；窄深色颈带在后领缘有限露出，腰带连续绕后腰，不变交叉武装。腰钳仍在身体左前腰，可只露侧边套轮廓；被遮挡就遮挡，不把工具后移。前围裙后背不可出现整块炭灰面。"
+        }
+      ],
+      "story_boundaries": [
+        "不默认签空白担保、停炉、售产、清债或认罪；工具不攻击、不变全知幕后。"
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "slug": "sena",
+      "canonical_id": "NPC-SENA",
+      "name": "塞娜·里德",
+      "aliases": [
+        "CITY-NPC-NPC-SENA",
+        "NPC08"
+      ],
+      "directory_aliases": [],
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/sena/sena_raw_imagegen.png",
+        "sha256": "f4dc6eb11fcf03aff30d9d8b9b6d1c5cc3475aba7ecaf499eb269ac29d1cf562",
+        "visually_inspected": true,
+        "roster_sha256_match": true
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-SENA_塞娜·里德.md",
+          "frontmatter_id": "CITY-NPC-NPC-SENA",
+          "sha256": "233094e463a8d61b5154565d03db9cc2796e3dc01afa66b8e42be44e669692f1",
+          "actual_sha256": "233094e463a8d61b5154565d03db9cc2796e3dc01afa66b8e42be44e669692f1"
+        },
+        {
+          "path": "design/04_人物/人物_塞娜·里德.md",
+          "frontmatter_id": "NPC08",
+          "sha256": "9e3c9701bbf7ff2f6d2c359bc221a6b363b21857d1247a86c087a37fdf5bdb21",
+          "actual_sha256": "9e3c9701bbf7ff2f6d2c359bc221a6b363b21857d1247a86c087a37fdf5bdb21"
+        }
+      ],
+      "existing_action_review": {
+        "path": "Assets/CharacterActions/20261013/sena/story_gesture_v1/sena_story_gesture_review_zh_light.png",
+        "sha256": "6d9674e095afe298e631ff393476fc7e301c3f7bff97e19e32862121027b193b",
+        "visually_inspected": true,
+        "coverage": "前四分之三手势；没有侧面或背面衣层展示"
+      },
+      "existing_action_manifest": {
+        "path": "Assets/CharacterActions/20261013/sena/story_gesture_v1/manifest.json",
+        "sha256": "09722748a8dd0eb66077635fe0de5bda59c4c9519ffcc700d0f4c8bf0e57509e"
+      },
+      "selected_action_raws": [
+        {
+          "path": "Assets/CharacterActions/20261013/sena/story_gesture_v1/raw_01_archive_boundary.png",
+          "sha256": "40f6e6fe6c865c93478510dc50684bdb727448676dc6ece5225b202fa23efac2"
+        },
+        {
+          "path": "Assets/CharacterActions/20261013/sena/story_gesture_v1/raw_02_cede_explanation.png",
+          "sha256": "60cf351d472508e5e8ad1928f3a97332b2e1b0226fe1b7afffd9ae306357b237"
+        }
+      ],
+      "existing_expression_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/sena/expressions_v1/manifest.json",
+        "sha256": "9fd031d04740de0a35e03b97bc0a11772c43c0b9998b7b3560a2f6ab8d090842"
+      },
+      "historical_reference": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch09/41_sena_kaem_lyd_cast.png",
+          "sha256": "f81c39201f1fc2c4253003a8bc653d73625edf013dc8741b96a2aa9ed83f4bfa",
+          "visually_inspected": true,
+          "contains_back_view": true
+        }
+      ],
+      "selected": false,
+      "reason": "旧背已揭示米围巾后垂和袋带关系；虽现行背面未作，短披肩/围裙接续更值得先补，不强行凑四人。"
+    },
+    {
+      "slug": "kaem",
+      "canonical_id": "MAE-NPC-KAEM",
+      "name": "凯姆",
+      "aliases": [
+        "CITY-NPC-MAE-NPC-KAEM",
+        "NPC-N-KAEM"
+      ],
+      "directory_aliases": [],
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/kaem/kaem_raw_imagegen.png",
+        "sha256": "dcfaf4da3aacb9b9f73ff0d4ddc12ca5acef5583272b725f789e696613dd2910",
+        "visually_inspected": true,
+        "roster_sha256_match": true
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_MAE-NPC-KAEM_凯姆.md",
+          "frontmatter_id": "CITY-NPC-MAE-NPC-KAEM",
+          "sha256": "cf464441953cc012351035181701414b919110b001840e189f38550113d896b8",
+          "actual_sha256": "cf464441953cc012351035181701414b919110b001840e189f38550113d896b8"
+        },
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "frontmatter_id": "NPC-SCRIPT-CAST",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "section": "凯姆（Kaem，NPC-N-KAEM）",
+          "actual_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "existing_action_review": {
+        "path": "Assets/CharacterActions/20261013/kaem/story_gesture_v1/kaem_story_gesture_review_zh_light.png",
+        "sha256": "2f132f0d66185c65fa7b140fd393fe48793f33a62cff506a868daf68690981c4",
+        "visually_inspected": true,
+        "coverage": "前四分之三手势；没有侧面或背面衣层展示"
+      },
+      "existing_action_manifest": {
+        "path": "Assets/CharacterActions/20261013/kaem/story_gesture_v1/manifest.json",
+        "sha256": "de225d750cca6775b52ad760c1c9f38fb15743bb9ef8207085cec90e9da8f304"
+      },
+      "selected_action_raws": [
+        {
+          "path": "Assets/CharacterActions/20261013/kaem/story_gesture_v1/raw_01_defensive_argument.png",
+          "sha256": "8cb34f402e20a133deac4a273b7837816cbd7d6a4fb82c65b7db7e1d0f270364"
+        },
+        {
+          "path": "Assets/CharacterActions/20261013/kaem/story_gesture_v1/raw_02_yield_the_floor.png",
+          "sha256": "b7ac5fc6c8b0f5f0da07ea9295d3843202bff4c82c8a04de40bdb9280854aa2c"
+        }
+      ],
+      "existing_expression_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/kaem/expressions_v1/manifest.json",
+        "sha256": "a34db903ff9c2febb3ecc836071d5b78fdd5b90a9e2f20ff55c730d8fb87b6aa"
+      },
+      "historical_reference": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch09/41_sena_kaem_lyd_cast.png",
+          "sha256": "f81c39201f1fc2c4253003a8bc653d73625edf013dc8741b96a2aa9ed83f4bfa",
+          "visually_inspected": true,
+          "contains_back_view": true
+        }
+      ],
+      "selected": false,
+      "reason": "旧背已揭示斜带/闭筒与炭衣后片；现行侧背优先度低，本轮不改领形、不增包或第二闭筒。"
+    }
+  ],
+  "acceptance": [
+    "侧面必须真正转到约90度，不能复用既有手势角度；背面不回眸。",
+    "对照同一锚检查持物手别、腰布/腰钳身体侧别、闭合状态、图层与后片终止高度。",
+    "Sel颈带连接须两视角一致；没有证据的X背带/武器挂具/大包一律退修。",
+    "Nell短披肩与腰布不能粘成一个穿身体的长围巾；不加旧稿腰袋。",
+    "后续如果生成应另存原图、prompt、源SHA、作者与独立视觉QA；此JSON只是规划，不计交付。"
+  ]
+}

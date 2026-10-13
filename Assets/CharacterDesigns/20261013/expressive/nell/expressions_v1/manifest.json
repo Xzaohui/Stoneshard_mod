@@ -1,0 +1,153 @@
+{
+  "character": "nell",
+  "canonical_id": "NPC-N-NELL",
+  "generator": "built-in image_gen.imagegen",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/nell/nell_v2_raw_imagegen.png",
+    "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec",
+    "matches_roster_reviewed_artifact": true,
+    "matches_manifest_v2": true,
+    "actually_viewed": true,
+    "view_method": "tools.view_image full current v2 PNG, 2026-10-13",
+    "anchor_status": "independent_deliverable_with_minor_notes",
+    "old_v1_not_anchor": true
+  },
+  "source_evidence": [
+    {
+      "path": "design/04_人物/台本新增人物与知识边界.md",
+      "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+      "locator": "## 妮尔（Nell，NPC-N-NELL）"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+      "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5",
+      "locator": "当前S62：人物冲突；N3-R-testimony / audit / collective及播放条件。S61 N3-S02-L01与N3-S03-L01仅作情绪素材，不用旧结局。"
+    }
+  ],
+  "expressions": [
+    {
+      "key": "nell_E1_guarded_question",
+      "label": "戒备询问",
+      "eyes": "双眼明显向画侧对话者偏移，上眼睑压低但视线警觉；保留清晰眼白。",
+      "brows": "近对话侧眉轻抬，另一眉保持水平内收，形成可见不对称。",
+      "mouth": "嘴闭合、唇角微收一侧，非微笑。",
+      "head_pose": "三分之二侧朝对话者，头微后收，下巴水平。",
+      "story_support": "卡中的藏账自保；N3-S02-L01“你带着他们的票来？”仅为场面素材。",
+      "condition_and_limit": "询问时的戒备，不表达已经交出账簿、接受公开作证或得到保护。"
+    },
+    {
+      "key": "nell_E2_alarm_boundary",
+      "label": "不安设界",
+      "eyes": "眼睑较E1明显打开，瞳孔向对话者，勿夸张成惊恐圆眼。",
+      "brows": "双眉内端抬高并向中聚，外端略下压。",
+      "mouth": "唇自然分开，短促发言的小不规则开口；下唇略紧，不露大排牙。",
+      "head_pose": "更接近正面，微偏头后退，不能靠耸肩代替脸。",
+      "story_support": "卡中住址页自保与N3-R-testimony要求先移出住址字段；N3-S03-L01只作边界情绪素材。",
+      "condition_and_limit": "仅表达不愿被公开住址；不画认罪哭诉、已受保护、公开证言或审判结论。"
+    },
+    {
+      "key": "nell_E3_controlled_resolve",
+      "label": "克制申明",
+      "eyes": "目光正视，眼裂较E1更稳更集中、较E2更窄。",
+      "brows": "双眉内端略低，舒平额部，坚定而不凶狠。",
+      "mouth": "嘴小幅横向张开如清楚说完一句，唇线平直；不露笑。",
+      "head_pose": "近正面、下巴轻抬，与E2退缩显著不同。",
+      "story_support": "N3-R-testimony-L01、N3-R-collective-L01中的限定责任与他人自主边界，仅抽取克制申明情绪。",
+      "condition_and_limit": "独立情绪研究，不绑定路线结果。若未来套用这些原句，必须遵原resolve_N3及存活在场愿谈条件；本图不代表已经认罪、受监督补账或取得原谅。"
+    }
+  ],
+  "runtime_integrated": false,
+  "independent_review": "pending",
+  "files": [
+    {
+      "path": "QA-author.json",
+      "bytes": 983,
+      "sha256": "5c98b386a20a7d6a7f152e9bc525ea259be27093f2eb6d6ae9036c63d4909b2a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 410,
+      "sha256": "db9fa0e7afcf43ff10bfbdffac711597e744ef8e3e6ee0ef2928fa805567e11c"
+    },
+    {
+      "path": "build_review.py",
+      "bytes": 4414,
+      "sha256": "2718052e9ea4d8383c57bc70bb00be4b1fb8ceaf0e7df642cb9ecf1297ac4182"
+    },
+    {
+      "path": "nell_expressions_review_zh_dark.png",
+      "bytes": 376647,
+      "sha256": "5c858dc2285ea0189c243c14d442d143a4bc724bee42ab5f6a695fbcc7da9811"
+    },
+    {
+      "path": "nell_expressions_review_zh_light.png",
+      "bytes": 381743,
+      "sha256": "b43ce3bef61b14c9ea2ce6340bc8673b49c7e922816294c3655e9be1ec1e1738"
+    },
+    {
+      "path": "prompts/nell_E1_guarded_question.txt",
+      "bytes": 2532,
+      "sha256": "53616939bc0e49354b21d67db7ef89181653f3fba267b312c531ff61dc2589cd"
+    },
+    {
+      "path": "prompts/nell_E2_alarm_boundary.txt",
+      "bytes": 2543,
+      "sha256": "8c0352458d9db0ddb6a356d39b127fcab3b35515e086bca93349b3e88cadc5ec"
+    },
+    {
+      "path": "prompts/nell_E3_controlled_resolve.txt",
+      "bytes": 2599,
+      "sha256": "e9299861b9603fc2cb872a6c1983d5daccc05bb31450993bdbbe380c753eab05"
+    },
+    {
+      "path": "raw/nell_E1_guarded_question_raw_imagegen.png",
+      "bytes": 865002,
+      "sha256": "e936e846bc7c920806f5a69ff838cb384965c5decaf6bd0f693d13bff6ae3b27"
+    },
+    {
+      "path": "raw/nell_E2_alarm_boundary_raw_imagegen.png",
+      "bytes": 898456,
+      "sha256": "ed74688c65544d6a5a65aaa00e1b5f951bd767c1dacf75d54e18768fbd482496"
+    },
+    {
+      "path": "raw/nell_E3_controlled_resolve_raw_imagegen.png",
+      "bytes": 910722,
+      "sha256": "c6da8b62f7a76cb1c1639bc7b17689496886013b777af5f2acb26d6a82bb6126"
+    },
+    {
+      "path": "selected/nell_E1_guarded_question.png",
+      "bytes": 735339,
+      "sha256": "5584f9515287c6c41e88890c18ef85978659972876d18d360a72af982aa8b464"
+    },
+    {
+      "path": "selected/nell_E2_alarm_boundary.png",
+      "bytes": 771577,
+      "sha256": "b73f846db9f6deef78eccd147f507015479e20404e47f943c1593fab3e1afc2d"
+    },
+    {
+      "path": "selected/nell_E3_controlled_resolve.png",
+      "bytes": 791466,
+      "sha256": "6acafac1816f0bf37fb49ba28c47ebaa61dd6882f5ced07cb9f7913898a33beb"
+    },
+    {
+      "path": "sources/nell_v2_raw_imagegen.png",
+      "bytes": 644886,
+      "sha256": "ead24af3aa19a19c77ed2c37c0d2f832670348585600852fa57ef67978baf7ec"
+    },
+    {
+      "path": "sources/next_main_cast_expressions_nell_sel_01.json",
+      "bytes": 12596,
+      "sha256": "822b26f738009368dcb8485c71a85aa1980d373ca869ada78e8a552f33b75c0d"
+    },
+    {
+      "path": "sources/台本_N3_听审前的灯.md",
+      "bytes": 12796,
+      "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5"
+    },
+    {
+      "path": "sources/台本新增人物与知识边界.md",
+      "bytes": 6162,
+      "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+    }
+  ]
+}

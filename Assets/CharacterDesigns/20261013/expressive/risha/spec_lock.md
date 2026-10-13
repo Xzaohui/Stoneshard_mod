@@ -1,0 +1,2 @@
+# Risha concept lock
+BRY-S02-NPC current card/old131 bottom row read/viewed. Adult woman outfit proposal: black hair/rust kerchief/olive work dress/pale apron, one closed tied grain sample bag held to self, no handover. Shrewd worried hesitation not saint. G pixels + approved revised Mia natural adult proportions only. Complete transparent concept, concept_only=true; equipment_compatibility_verified=false; mechanisms unknown.

@@ -1,0 +1,292 @@
+{
+  "updated_utc": "2026-10-13T06:44:34.525448+00:00",
+  "scope": "明确返工与参考门槛；不以全部已出图替代全部补完。",
+  "required_rework": [
+    {
+      "id": "EED-NPC-SUOYA",
+      "name": "朔娅",
+      "status": "research_candidate_not_final_pass",
+      "artifact": "rework_v3/suoya_rework_v3c_raw_imagegen.png",
+      "review_record": "Assets/CharacterDesigns/20261013/expressive/suoya/QA-independent.json",
+      "issues": [],
+      "assigned": false,
+      "assigned_worker": "repair_pending_character_designs",
+      "next_action": "v3c结构通过但风格与细节未过，root已决定停止重绘，研究不可交。",
+      "revision_status": "stopped_research_retained"
+    },
+    {
+      "id": "KOR-NPC-BILUO",
+      "name": "碧珞",
+      "status": "research_candidate_not_final_pass",
+      "artifact": "biluo_raw_imagegen.png",
+      "review_record": "Assets/CharacterDesigns/20261013/expressive/biluo/QA-independent.json"
+    },
+    {
+      "id": "KOR-NPC-NAYA",
+      "name": "娜娅",
+      "status": "research_candidate_not_final_pass",
+      "artifact": "naya_raw_imagegen.png",
+      "review_record": "Assets/CharacterDesigns/20261013/expressive/naya/QA-independent.json"
+    }
+  ],
+  "blocked_reference_verification": [
+    {
+      "id": "NPC01",
+      "name": "维伦",
+      "reason": "原作人物：须先核实原版身份与外貌参考，不能凭G风格虚构替代。",
+      "source_cards": [
+        {
+          "path": "design/04_人物/人物_维伦.md",
+          "frontmatter_id": "NPC01",
+          "sha256": "709592423d00981ed486305d081fe09510c680d727314886a7a8b8aab8a93dde"
+        }
+      ],
+      "next_action": "先只读核实可靠原版身份与外貌来源；缺失不凭空替代，未解除门槛不得生成。"
+    },
+    {
+      "id": "NPC02",
+      "name": "葛文涅尔",
+      "reason": "葛文涅尔外貌仍未核实；暂停生成，不得把剧情描述当面容证据。",
+      "source_cards": [
+        {
+          "path": "design/04_人物/人物_葛文涅尔.md",
+          "frontmatter_id": "NPC02",
+          "sha256": "4f72b1e7ee7988eb43771f92961c117b13fb092ad2d1babcc923bbeb239a9ece"
+        }
+      ],
+      "next_action": "先只读核实可靠原版身份与外貌来源；缺失不凭空替代，未解除门槛不得生成。"
+    },
+    {
+      "id": "NPC03",
+      "name": "工匠 Darrel",
+      "reason": "原作人物：须先核实原版身份与外貌参考，不能凭G风格虚构替代。",
+      "source_cards": [
+        {
+          "path": "design/04_人物/人物_工匠 Darrel.md",
+          "frontmatter_id": "NPC03",
+          "sha256": "69334d24a728520ade972c20727091c74931093945182acdf738b15b6e293ee7"
+        }
+      ],
+      "next_action": "先只读核实可靠原版身份与外貌来源；缺失不凭空替代，未解除门槛不得生成。"
+    }
+  ],
+  "retained_revision_history": [
+    {
+      "id": "NPC-N-NELL",
+      "rejected": "nell/nell_raw_imagegen.png",
+      "current": "nell/nell_v2_raw_imagegen.png",
+      "current_scope": "v2可交付，比例偏长备注保留；不是未完成返工。"
+    },
+    {
+      "id": "BRY-NPC-LODA",
+      "rejected": "loda/loda_raw_imagegen.png",
+      "current": "loda/loda_raw_imagegen_v2.png",
+      "current_scope": "v2独审可交付；旧图不删除。"
+    }
+  ],
+  "optional_notes_not_failures": [
+    "Liqui v2、Nell v2、Sena等比例边缘备注保留在roster；不要误记为全通过原生资产，也不要将已经可交付概念自动退修。"
+  ],
+  "completed_single_character_trials": [
+    {
+      "id": "NPC-MIA",
+      "name": "米娅",
+      "artifact": "mia/mia_raw_imagegen.png",
+      "status": "user_approved",
+      "issues": [
+        "用户认为头太大，单独试1:1.5"
+      ],
+      "user_message_id": "Sentinel_40c6ee4333908191b7b8d8b8a22fa4f3",
+      "next_action": "1:1.5试稿已交付，独审约1:1.49通过；待用户反馈，不扩大到其他人物。",
+      "assigned": false,
+      "scope": "仅米娅单人，非全局／runtime。",
+      "selected_artifact": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+      "selected_artifact_sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd",
+      "user_approval_message_id": "Sentinel_ac5ebc882e8881918d2436058fec7dff"
+    }
+  ],
+  "resolved_identity_corrections": [
+    {
+      "id": "BRY-NPC-VIT",
+      "rejected": "vit/vit_v2_raw_imagegen.png",
+      "selected": "vit/vit_v3_raw_imagegen.png",
+      "resolution": "v3局部去痕后独审通过；v2错误留历史。"
+    }
+  ],
+  "completed_reworks": [
+    {
+      "id": "BRY-NPC-ANLA",
+      "name": "安菈",
+      "selected_artifact": "rework_v3/anla_rework_v3c_raw_imagegen.png",
+      "sha256": "67422f8b940390f7da7cac56c3b9ac723f99a7ef437c24e311c7c6bab397f658",
+      "status": "independent_pass",
+      "scope": "旧稿历史保留；未自动扩成用户认可。"
+    },
+    {
+      "id": "BRY-NPC-ELEN",
+      "name": "艾伦",
+      "selected_artifact": "rework_v3/elen_rework_v3_raw_imagegen.png",
+      "sha256": "593a4a2639f5527091bf3645c17eb50a64df593f0e5a6368291939dde06fca2a",
+      "status": "independent_pass",
+      "scope": "旧稿历史保留；未自动扩成用户认可。"
+    },
+    {
+      "id": "BRY-NPC-HERLIN",
+      "name": "赫林",
+      "selected_artifact": "rework_v3/herlin_rework_v3_raw_imagegen.png",
+      "sha256": "bccfd71e29e07f49e663c1414d35342f44b0ae3b723e5a0f9a05adfc902cd120",
+      "status": "independent_pass",
+      "scope": "旧稿历史保留；未自动扩成用户认可。"
+    },
+    {
+      "id": "BRY-NPC-IVE",
+      "name": "伊芙",
+      "selected_artifact": "rework_v3/ive_rework_v3_raw_imagegen.png",
+      "sha256": "5069c8f8b460bbace62f8d413d018fe6e8b6efc3abcac45605683ec2ab41bea3",
+      "status": "independent_pass",
+      "scope": "旧稿历史保留；未自动扩成用户认可。"
+    },
+    {
+      "id": "BRY-NPC-ODER",
+      "name": "奥德",
+      "selected_artifact": "rework_v3/oder_rework_v3_raw_imagegen.png",
+      "sha256": "40626c77cf3a3263590312f7857969abd794fa02913dc7f83463cd15b89bd7b5",
+      "status": "independent_pass",
+      "scope": "旧稿历史保留；未自动扩成用户认可。"
+    },
+    {
+      "id": "BRY-NPC-RENA",
+      "name": "蕾娜·维尔",
+      "selected_artifact": "rework_v3/rena_rework_v3_raw_imagegen.png",
+      "sha256": "dce31cdf3f307b4d5753c5863c39b6657f3ed0bb0f079a3f3bc5766048b8e6a4",
+      "status": "independent_pass",
+      "scope": "旧稿历史保留；未自动扩成用户认可。"
+    },
+    {
+      "id": "ALD-NPC-BUYA",
+      "name": "布娅",
+      "selected_artifact": "rework_v3/buya_rework_v3_raw_imagegen.png",
+      "sha256": "e1a09dfdb07dc4fd4fa59c2798459cce1c9f8f04d7f276914e8dd8d7736fd479",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；不等于用户认可／runtime。"
+    },
+    {
+      "id": "MAE-NPC-VERE",
+      "name": "维芮",
+      "selected_artifact": "rework_v3/vere_rework_v3_raw_imagegen.png",
+      "sha256": "be7deda8f1062d9ec5706b6cb9b765627517a88cedd2d80a0564bf17f889bdcc",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；不等于用户认可／runtime。"
+    },
+    {
+      "id": "ALD-S02-NPC",
+      "name": "芬珂",
+      "selected_artifact": "rework_v2/fenko_rework_v2_raw_imagegen.png",
+      "sha256": "0d27e494d29fcf60287c167c5f382ccdce8213d9755aaea423eaa50b508aacd4",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；不等于用户认可／runtime。"
+    },
+    {
+      "id": "ALD-S03-NPC",
+      "name": "萝铎",
+      "selected_artifact": "rework_v3/lodo_rework_v3_raw_imagegen.png",
+      "sha256": "8c70e35c14740804a3545e5bd66a84657f763d031ac263cfd625f34ef00f4ec9",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；不等于用户认可／runtime。"
+    },
+    {
+      "id": "BRY-S01-NPC",
+      "name": "鲁坎",
+      "selected_artifact": "rework_v3/rukan_rework_v3_alpha_safe.png",
+      "sha256": "8e73e46338b02802968451876145fec3abe2c964a71ab6ecd2ff295781357258",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；不等于用户认可／runtime。"
+    },
+    {
+      "id": "BRY-S02-NPC",
+      "name": "芮莎",
+      "selected_artifact": "rework_v3/risha_rework_v3_raw_imagegen.png",
+      "sha256": "3c5c85f4765039b3b2e87ef24d6538558a4224fb0263153c3de811d4865edd46",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；不等于用户认可／runtime。"
+    },
+    {
+      "id": "SKO-NPC-GOREN",
+      "name": "古烈",
+      "selected_artifact": "rework_v2/goren_rework_v2_raw_imagegen.png",
+      "sha256": "13e30e22b868c6280902614e5a2ee6e6e0cb1ebdbda850ad7fd7f53b9066eacb",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "DEN-NPC-ELE",
+      "name": "艾蕾",
+      "selected_artifact": "rework_v2/ele_rework_v2_raw_imagegen.png",
+      "sha256": "eb4603db28ca1d2ac712192099001f350ae9fbd74386a376c29ff3da50fe3a96",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "SKO-NPC-SALER",
+      "name": "桑勒",
+      "selected_artifact": "rework_v3_style/saler_style_v3_raw_imagegen.png",
+      "sha256": "6c3d36b11c76a9d9c9cad8de2c2d5d6cc18b63b65e12fb8ba1515d65e6c96080",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "SKO-NPC-WENNO",
+      "name": "温诺",
+      "selected_artifact": "rework_v3_style/wenno_style_v3_raw_imagegen.png",
+      "sha256": "7b137b2b427f4e7e45fd5df34f029a7013f7efa9abecb5fc4cf4369320c6e143",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "YOS-NPC-TIN",
+      "name": "缇娜·染",
+      "selected_artifact": "rework_v3/tina_rework_v3_raw_imagegen.png",
+      "sha256": "4814613ccce5e5f54ad0cf9a93c279eacb0bef52974d812056a6094be0046e7f",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "SKO-S01-NPC",
+      "name": "布岚",
+      "selected_artifact": "rework_v3_style/buran_style_v3_raw_imagegen.png",
+      "sha256": "f1a011e68662f0833e63557a94c8331d51f5c513712ab5d0d0e39ac97694dd74",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "SKO-S02-NPC",
+      "name": "雷哈",
+      "selected_artifact": "period_v3/reha_period_v3_alpha_safe.png",
+      "sha256": "0058c056a964f363367243a891ee4b6ad83a4aab04e4fe191064f58350fabba9",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "EED-NPC-OLA",
+      "name": "奥菈·纹",
+      "selected_artifact": "rework_v2/ola_rework_v2_raw_imagegen.png",
+      "sha256": "1c369bb7e4b2e1a95f67f9ad25a1c36e5cd2336deefaa61676fe5a0e87423f26",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "FOR-S01-NPC",
+      "name": "艾钦",
+      "selected_artifact": "aiqin_revision_raw_imagegen.png",
+      "sha256": "9c95e4fc3a14f5ddb8068377423f2e21c2239ece3a69b75f423548c2756c3a2d",
+      "status": "independent_pass",
+      "scope": "具体新稿通过，旧图保留；非用户逐人／runtime认可。"
+    },
+    {
+      "id": "OSB-NPC-RUIYIN",
+      "name": "芮茵",
+      "status": "independent_pass",
+      "selected_artifact": "rework_v2/ruiyin_rework_v2_raw_imagegen.png"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Ive concept lock
+BRY-NPC-IVE, testimony_10, current card and old129 top row read/viewed. Mature round face, short grey-streaked braid, brown wool wrap/charcoal dress, own unlit clay oil lamp. Calm sustained anger, no generic tears or reconciliation; no flame/glow or shared ceremony. Natural compact adult G-cluster style, full alpha. concept_only=true; equipment_compatibility_verified=false; unknown mechanisms.

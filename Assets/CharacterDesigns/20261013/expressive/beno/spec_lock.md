@@ -1,0 +1,2 @@
+# Beno concept lock
+MAE-NPC-BENO, care_19 current card/old139 middle row read/viewed. Middle-aged broad ordinary care-shift receiver, dark short beard, blue wool/linen apron/closed pouch/empty hands, no doctor emblem or infinite capacity/treatment claim. Reliable gentle but finite promise, short neck into broad shoulders and compact waist/legs. Transparent full-body concept_only=true; equipment_compatibility_verified=false; unknown mechanisms.

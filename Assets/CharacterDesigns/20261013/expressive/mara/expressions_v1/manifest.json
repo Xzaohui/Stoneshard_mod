@@ -1,0 +1,126 @@
+{
+  "character": "n1_mara",
+  "date": "2026-10-13",
+  "concept_only": true,
+  "runtimeVerified": false,
+  "animation": false,
+  "new_characters": 0,
+  "new_generated_images": 3,
+  "generator": "builtin image_gen",
+  "status": "awaiting independent review",
+  "user_approved": false,
+  "assets": [
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/mara/expressions_v1/raw/01_restrained_inquiry_raw_imagegen.png",
+      "sha256": "781d746bdb66af2d63fef6ae461d2e6e428b51bc0a35a2443cf1606883b3830f",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_gt5_bbox": [
+        149,
+        46,
+        1140,
+        1220
+      ],
+      "transparent_pixels": 690748,
+      "partial_alpha_pixels": 879334,
+      "label": "克制询问",
+      "prompt": "prompts/01_restrained_inquiry.txt",
+      "prompt_sha256": "52752bc799461b5cce0f717ae823c21cedad81468f3e0586bb8bd5b73ad48239",
+      "inputs": [
+        "../mara_raw_imagegen_v2.png"
+      ]
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/mara/expressions_v1/raw/02_guarded_reserve_raw_imagegen.png",
+      "sha256": "1358ef10571d83d32a7426efac6ec473c7140603a708634603b2fe2195596221",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_gt5_bbox": [
+        150,
+        44,
+        1140,
+        1221
+      ],
+      "transparent_pixels": 692069,
+      "partial_alpha_pixels": 877456,
+      "label": "警惕保留",
+      "prompt": "prompts/02_guarded_reserve.txt",
+      "prompt_sha256": "f653c618ab97ef8a82e393245489cc7d692a0e3b562ab3f5d09201e8e38128ec",
+      "inputs": [
+        "raw/01_restrained_inquiry_raw_imagegen.png",
+        "../mara_raw_imagegen_v2.png"
+      ]
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/mara/expressions_v1/raw/03_slight_relief_raw_imagegen.png",
+      "sha256": "649a784e44a559830611063c069215a273aaff05d7525777e9855bc2ab93da3f",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_gt5_bbox": [
+        149,
+        46,
+        1140,
+        1221
+      ],
+      "transparent_pixels": 689367,
+      "partial_alpha_pixels": 880054,
+      "label": "稍松口气",
+      "prompt": "prompts/03_slight_relief.txt",
+      "prompt_sha256": "b0393ffa98b052a9330a7b6a814839d9022d8e12d58615a3a2d44af7b3fcc10c",
+      "inputs": [
+        "raw/01_restrained_inquiry_raw_imagegen.png",
+        "../mara_raw_imagegen_v2.png"
+      ]
+    }
+  ],
+  "processing": {
+    "individual_pngs": "Exact byte copies of retained generated raws.",
+    "board": "Same union crop, same uniform nearest-neighbor scale; compositing on cream/white/black only. No face painting, quantization, alpha cleanup or nonuniform scaling.",
+    "common_crop": [
+      149,
+      44,
+      1140,
+      1221
+    ],
+    "common_scale": 0.45879354290569246
+  },
+  "deliverables": [
+    {
+      "file": "mara_01_restrained_inquiry.png",
+      "sha256": "781d746bdb66af2d63fef6ae461d2e6e428b51bc0a35a2443cf1606883b3830f"
+    },
+    {
+      "file": "mara_02_guarded_reserve.png",
+      "sha256": "1358ef10571d83d32a7426efac6ec473c7140603a708634603b2fe2195596221"
+    },
+    {
+      "file": "mara_03_slight_relief.png",
+      "sha256": "649a784e44a559830611063c069215a273aaff05d7525777e9855bc2ab93da3f"
+    },
+    {
+      "file": "mara_expressions_review_zh.png",
+      "sha256": "231ced923cd855ff389909e192f5e9fb6c0d1a781fc422acf8a9c4b207131cfb"
+    }
+  ]
+}

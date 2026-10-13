@@ -1,0 +1,119 @@
+{
+  "character": "BRY-NPC-SELA",
+  "date": "2026-10-13",
+  "concept_only": true,
+  "runtimeVerified": false,
+  "animation": false,
+  "new_characters": 0,
+  "new_generated_images": 3,
+  "targeted_revisions": 0,
+  "generator": "builtin image_gen",
+  "status": "awaiting independent review",
+  "assets": [
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/sela/expressions_v1/raw/01_friendly_greeting_raw_imagegen.png",
+      "sha256": "a2d1efe461871be16e7ff39242354d83ee60bb44ff6dcf098833479a050403db",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        232,
+        91,
+        1094,
+        1108
+      ],
+      "transparent_pixels": 927461,
+      "partial_alpha_pixels": 642097,
+      "label": "亲切招呼",
+      "prompt": "prompts/01_friendly_greeting.txt",
+      "prompt_sha256": "e5b90802d671f790b240d79137f0448fab4715c3e71d90c91aa92e7cba44a811",
+      "inputs": [
+        "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png"
+      ]
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/sela/expressions_v1/raw/02_serious_explanation_raw_imagegen.png",
+      "sha256": "cd4a7590a71a044c3a630970aa5aadf51a2a0e19c43a01d61769e0fd05ba031d",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        232,
+        91,
+        1097,
+        1109
+      ],
+      "transparent_pixels": 923799,
+      "partial_alpha_pixels": 646213,
+      "label": "认真解释",
+      "prompt": "prompts/02_serious_explanation.txt",
+      "prompt_sha256": "c8370107726afb394bd8c50eb5cc690d4f554b5a099ad6b17e49c8742d4dbbdb",
+      "inputs": [
+        "Assets/CharacterDesigns/20261013/expressive/sela/expressions_v1/raw/01_friendly_greeting_raw_imagegen.png",
+        "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png"
+      ]
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/sela/expressions_v1/raw/03_questioning_scrutiny_raw_imagegen.png",
+      "sha256": "a1cb47a950ea12f218d9a98c73435d581fd08028d835366e9cf00460a5390096",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        233,
+        91,
+        1096,
+        1109
+      ],
+      "transparent_pixels": 923086,
+      "partial_alpha_pixels": 646480,
+      "label": "疑惑审视",
+      "prompt": "prompts/03_questioning_scrutiny.txt",
+      "prompt_sha256": "af6877ab924c807ba74fbb56116304e797bb23667e562b6a3a5f4cca7f79a1dc",
+      "inputs": [
+        "Assets/CharacterDesigns/20261013/expressive/sela/expressions_v1/raw/01_friendly_greeting_raw_imagegen.png",
+        "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png"
+      ]
+    }
+  ],
+  "processing": {
+    "individual_pngs": "Exact byte copies of retained generated raws.",
+    "board": "Same union crop, same 0.50 nearest-neighbor scale, translation only; original alpha composited on cream board. No face paint, stretching, quantization or alpha cleanup.",
+    "common_crop": [
+      232,
+      91,
+      1097,
+      1109
+    ],
+    "common_scale": 0.5
+  },
+  "limitations": [
+    "Original G identity kept as reference; generated portraits have slightly more open eyes than original.",
+    "Minor generated cluster drift outside brows, eyes and mouth remains; not pixel-locked expression deltas.",
+    "Only concept studies; not runtime or final sprite assets."
+  ],
+  "deliverables": [
+    {
+      "file": "sela_01_friendly_greeting.png",
+      "sha256": "a2d1efe461871be16e7ff39242354d83ee60bb44ff6dcf098833479a050403db"
+    },
+    {
+      "file": "sela_02_serious_explanation.png",
+      "sha256": "cd4a7590a71a044c3a630970aa5aadf51a2a0e19c43a01d61769e0fd05ba031d"
+    },
+    {
+      "file": "sela_03_questioning_scrutiny.png",
+      "sha256": "a1cb47a950ea12f218d9a98c73435d581fd08028d835366e9cf00460a5390096"
+    },
+    {
+      "file": "sela_expressions_review_zh.png",
+      "sha256": "082208366838cf88c9747e52d56cc71a327b0ab6d1251f9008ec8cfec7f2d9c4"
+    }
+  ]
+}

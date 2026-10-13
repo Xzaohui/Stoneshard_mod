@@ -1,0 +1,2 @@
+# Hase expressive concept lock
+Sela G approved style direction, head/body near 1:1, mature and expressive male face, short dark full beard distinct from Morlen grey beard and Hers stubble. One complete neutral three-quarter standing pose, genuine alpha, broad hard pixel clusters. Muted olive, brown leather, amber bottle and warm skin; no numeric palette or native size imposed at concept stage. Medicinal-goods agent only; one closed satchel, one small sealed bottle. No animations, game state, runtime changes or global index updates.

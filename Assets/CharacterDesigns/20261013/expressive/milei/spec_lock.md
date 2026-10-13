@@ -1,0 +1,2 @@
+# Milei concept lock
+BRY-S03-NPC current card/old132 bottom row read/viewed. Middle-aged woman appearance proposal, loose dark bun, faded sea-green shawl/brown wool dress/sturdy shoes. Upright worn blank seat plank held close along own side with both hands, no handover. Unreturned sailor's sister, brother fate unknown; stubborn unresolved waiting, not confirmed bereavement. G clusters and revised Mia natural adult proportions only. concept_only=true; equipment_compatibility_verified=false; unknown mechanics.

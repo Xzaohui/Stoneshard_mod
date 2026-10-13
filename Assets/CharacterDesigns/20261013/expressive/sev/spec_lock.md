@@ -1,0 +1,2 @@
+# Sev concept lock
+BRY-NPC-SEV, batch_next_brynn_accounts_07; current card read and old16 all four views checked. Adult civilian intermediary, tied dark hair, slate wool/cream collar, closed small pouch, work shoes. Guarded reasonable look, no official/military role or payment event. Sela G coarse style with naturally compact adult proportions, numerical ratio secondary to beauty. Transparent full body; concept_only=true; equipment_compatibility_verified=false.

@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T14:17:00.981881+00:00",
+  "status": "planning_only_not_generated",
+  "scope": "有限主线表情补充：Morren与Rey最多各3胸像，最多6图，0新人；不生图、不改索引、不实现游戏。",
+  "selection_reason": "两人同属N7却分别承担照护与地方监督职责，并跨N13/N16；动作已补而独立胸像为零，优先补可读眉眼嘴。",
+  "control_sources": [
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "874d157ce1a204c06da6d1a2d9eff4e63d675efb5dc2c96b734120965f655274",
+      "locator": "莫伦／雷奥／剩余已交主线条目"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256": "0076707c093bd184845c9f67fe8a50019cf3d4d9c7920bba017866163398fea6",
+      "locator": "characters[id=NPC-MORREN,NPC-REY] 与稳定别名"
+    }
+  ],
+  "global_art_direction": [
+    "延续当前粗簇像素、成熟身份与个体美感、透明背景；保同人五官、衣领、同尺度光向。",
+    "每态眉眼嘴三项都须可辨，尤其厚须不能遮掉口型；小幅头姿辅助，不能仅靠转头、裁切或换衣充数。",
+    "3为上限，若第三态不足以区别可只留2态。不强画笑／怒／哭模板，不让两个人共用同一套脸。",
+    "S62 R/X及在场存活愿谈、有限回执、本人同意优先；S61只提供条件素材。本组独立表情非一段认罪或和解的连续剧情。"
+  ],
+  "global_prohibitions": [
+    "不得仅凭图认证责任、认罪、治愈、护理完成、主持权交接、付款、签约、获胜或政治同意。",
+    "不新增人物、伤情、患者、道具、可读隐私／印章、武器、勋章或原作事实。",
+    "不修改当前锚、人物卡、台本、roster或MASTER，不补全167人；不做游戏落地或动作插帧。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "NPC-MORREN",
+      "slug": "morlen",
+      "name": "莫伦·海",
+      "aliases": [
+        "CITY-NPC-NPC-MORREN",
+        "NPC12"
+      ],
+      "anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/morlen/morlen_raw_imagegen.png",
+        "sha256": "a48e9fa9043104fbb4dea8635cfc509ffdb13a8274db52da09d6e519a87ee7d6",
+        "locator": "roster reviewed_artifact",
+        "matches_roster_reviewed_artifact": true,
+        "actually_viewed": true,
+        "view_method": "2026-10-13 tools.view_image 完整原PNG实看，非只读QA。"
+      },
+      "source_evidence": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-MORREN_莫伦·海.md",
+          "sha256": "e0585bb556c3f1917bbe88623f216748bd0d269192bb23001a76c6a53b8d05f3",
+          "locator": "CITY-NPC-NPC-MORREN"
+        },
+        {
+          "path": "design/04_人物/人物_莫伦·海.md",
+          "sha256": "28edec2ce196d76666a79ff4070fa1b1aa1fc8e257c4efc411a47302800d4677",
+          "locator": "NPC12"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N7_军需账上的空名.md",
+          "sha256": "1ccafe13df70f4e57636c3762f8f232fa966eb1e730d4311963672812380ca79",
+          "locator": "S62 N7人物冲突、DEFAULT、R-inspection/parallel/withdraw；S02为条件素材"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N13_答案的代价.md",
+          "sha256": "592fe96a68a135ac6dbcc6c88acc8a49dfc71b7b2cdfb5fc577de1b0ec172491",
+          "locator": "S62 N13-DEFAULT、R-hearing/contract/private、X39"
+        }
+      ],
+      "existing_delivered_scope": {
+        "story_gesture_directory": "Assets/CharacterActions/20261013/morlen/story_gesture_v1",
+        "new_whole_body_poses": 2,
+        "expression_bust_directory_exists": false,
+        "qa_record": {
+          "path": "Assets/CharacterActions/20261013/morlen/story_gesture_v1/QA-independent.json",
+          "sha256": "2f9adf7fbdc35c12dfc15f938114a97de394d4ee4b72e3dbf0c1c4efa8d2d835",
+          "locator": "visual_findings / limitations"
+        },
+        "not_duplicate_reason": "已有动作有克制脸部变化但未有独立胸像套组；新图须重绘眉眼嘴，不能裁旧动作充数。"
+      },
+      "planned_max_new_busts": 3,
+      "runtime_integrated": false,
+      "identity": "NPC-MORREN／Morren，目录沿用morlen；NPC12与CITY-NPC-NPC-MORREN同人。年长退役军医，不是全知医者，不能替患者作答。",
+      "face_and_hair_lock": [
+        "实看原锚：浓密后掠灰发，额前灰白弧形发束；宽成熟脸、较宽鼻、粗灰眉、清楚厚上眼睑与侧向深瞳。",
+        "保留连鬓灰白厚须、短髭和须中小唇空间；保额头原有横纹、颧颊和耳形。不得少年化、剃须、加哭肿或夸张衰病纹。",
+        "发须簇可简洁整理但不能改发际、胡须长度及宽脸轮廓；嘴形须从厚须中读出。"
+      ],
+      "costume_and_crop_lock": [
+        "原橄榄长衣上部、暗棕内衣、米白围巾绕颈与画右垂端保持；胸前斜皮带及金褐扣不移侧。",
+        "统一上胸裁切、全头发与双肩完整，双手／医药包留画外。不新增药碗、徽章、医疗符号、患者或文书。",
+        "三张同尺度同光向；围巾不能变成祭司领或白大褂，裁切不暗示已交包／交主持权。"
+      ],
+      "expressions": [
+        {
+          "key": "morlen_E1_concerned_listen",
+          "label": "疲惫关切",
+          "brows": "双眉内端微提，外段顺下，保灰眉厚度。",
+          "eyes": "上睑略垂，下睑放松；瞳孔朝稍低的画外说话者，不能闭目。",
+          "mouth": "双唇闭合微松，嘴角轻下垂，胡须中唇线清楚。",
+          "head_pose": "原三分之二角，下颏略收。",
+          "story_support": "N7-DEFAULT对被漏列护理者的关切；卡中保护伤患的职责。",
+          "condition_and_limit": "只是倾听与挂心，不画病人、不添病症，不证明给药、治愈或任何人同意。"
+        },
+        {
+          "key": "morlen_E2_limited_self_account",
+          "label": "谨慎自述",
+          "brows": "一侧眉内端提起，另一眉压平，区别E1对称忧眉。",
+          "eyes": "视线低向侧前，眼裂比E1稍窄而瞳孔仍见，非羞愧闭眼。",
+          "mouth": "嘴小幅纵向分开，像艰难选择准确措辞；不咧嘴露齿。",
+          "head_pose": "头稍偏侧，肩仍固定。",
+          "story_support": "N7-R-parallel-L01知道而没说的部分须单独算；N13-R-hearing-L01先放上自己知道却没说的部分。",
+          "condition_and_limit": "两条路线是各自条件素材，不连续播放；使用原句分别需resolve_N7=parallel或resolve_N13=hearing及对应核验、本人存活在场愿谈。脸只表示审慎自述，不独立认证认罪或全面悔改，也不证明提交材料。"
+        },
+        {
+          "key": "morlen_E3_consent_objection",
+          "label": "克制异议",
+          "brows": "双眉内端压低、外段近水平，不重复前两态提眉。",
+          "eyes": "眼睑明显打开至清醒直视，不瞪圆眼。",
+          "mouth": "横向短句开口，唇角平，口腔仅少量暗色，无怒吼齿列。",
+          "head_pose": "头近正面，下颏水平。",
+          "story_support": "N13-DEFAULT不以未来替眼前人签同意；N13-R-contract-L01赔偿不得要求见面、握手或原谅。",
+          "condition_and_limit": "通用异议不代表已签补偿约；原contract句仅resolve_N13=contract且本人存活在场愿谈。若以后借X39旁听语境，另须resolve_SQ07=independent与有限回执核验；图不移交主持权。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "NPC-REY",
+      "slug": "leo",
+      "name": "雷奥·凯斯",
+      "aliases": [
+        "CITY-NPC-NPC-REY",
+        "NPC05"
+      ],
+      "anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/leo/leo_raw_imagegen.png",
+        "sha256": "cf5d3efee6a62e23c00e3f94f4d1b85dab0e74dd141a5c791b8608e98b05ebf1",
+        "locator": "roster reviewed_artifact",
+        "matches_roster_reviewed_artifact": true,
+        "actually_viewed": true,
+        "view_method": "2026-10-13 tools.view_image 完整原PNG实看，非只读QA。"
+      },
+      "source_evidence": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-REY_雷奥·凯斯.md",
+          "sha256": "15dd1f5e8268ffea68e170b2d4b14c004f08adc19324ab36f81aff5d4d708a87",
+          "locator": "CITY-NPC-NPC-REY"
+        },
+        {
+          "path": "design/04_人物/人物_雷奥·凯斯.md",
+          "sha256": "2e7159e57480bffc3698f7243b6f1830d4b771ce3d72a4555d2d09d0fde2dfa5",
+          "locator": "NPC05"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N7_军需账上的空名.md",
+          "sha256": "1ccafe13df70f4e57636c3762f8f232fa966eb1e730d4311963672812380ca79",
+          "locator": "S62人物冲突／R-inspection／R-parallel／X45；N7-S01-L02与S02-L03为条件素材"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N16_谁来保管余烬.md",
+          "sha256": "92e3d99960d32bc5f183be3cedea8f521d33bae9bbc2d07a5ee430c123950b37",
+          "locator": "S62授权／意向边界；N16-S01-L02仅地方资格的条件素材"
+        }
+      ],
+      "existing_delivered_scope": {
+        "story_gesture_directory": "Assets/CharacterActions/20261013/leo/story_gesture_v1",
+        "new_whole_body_poses": 2,
+        "expression_bust_directory_exists": false,
+        "qa_record": {
+          "path": "Assets/CharacterActions/20261013/leo/story_gesture_v1/QA-independent.json",
+          "sha256": "89bc9428f1ef721a59388bd05ede1d5d1445b6eb298220591624755e603d65f4",
+          "locator": "visual_findings / limitations"
+        },
+        "not_duplicate_reason": "已有动作有克制脸部变化但未有独立胸像套组；新图须重绘眉眼嘴，不能裁旧动作充数。"
+      },
+      "planned_max_new_busts": 3,
+      "runtime_integrated": false,
+      "identity": "NPC-REY／Rey，中文雷奥·凯斯；目录leo，旧主线卡NPC05与城市卡CITY-NPC-NPC-REY同人。地方军需代理／封存资格有限，不是王廷全权代表。",
+      "face_and_hair_lock": [
+        "实看原锚：深棕蓬松后掠短发，额前不规则下垂发束，浓深眉、长眼裂与清楚上睑，灰深瞳，成熟直鼻和棱角颊颏。",
+        "保短深胡茬、下颏髭须与连鬓线；不同于莫伦灰白长厚须和宽鼻。不要剃须、变少年、加长发或整张改阴险脸。",
+        "鼻长、耳位、发际和脸长固定；不能靠放大眼睛或换脸制造情绪。"
+      ],
+      "costume_and_crop_lock": [
+        "蓝色罩衣、浅灰领口、左右分段灰肩甲及其米灰镶边保持，暗内层与原皮带关系不换。",
+        "统一上胸裁至胸带上方或固定胸带处，完整发与双肩；手及侧提闭匣留画外，不把动作稿变厚／扁的匣体带入锚。",
+        "不加王冠、勋章、权杖、章印、护额或新披风；三张不变甲片数量来表达态度。"
+      ],
+      "expressions": [
+        {
+          "key": "leo_E1_scope_challenge",
+          "label": "审慎限定",
+          "brows": "一侧眉略挑、另一眉内端下压，形成询问式不对称。",
+          "eyes": "眼裂收窄、瞳孔横看对话者，保原成熟长眼型。",
+          "mouth": "嘴闭合压成短直线，一角轻收，不做轻蔑笑。",
+          "head_pose": "原三分之二角，下颏略收。",
+          "story_support": "N7人物冲突：起初相信封印；N7-S01-L02可以查本地，不先宣布整支军队有罪。",
+          "condition_and_limit": "S61台词仅当前条件下的素材；表情不是已批准检查令，也不是拒绝所有监督或判定全军无罪。"
+        },
+        {
+          "key": "leo_E2_weigh_external_question",
+          "label": "受质询衡量",
+          "brows": "双眉内端略升、两眉趋对称，区别E1挑眉和E3压平。",
+          "eyes": "眼裂比E1打开，目光微下移后落画侧，清醒而无惊恐瞪眼。",
+          "mouth": "双唇微分成窄小竖向口，唇角松开；不得微笑或泪目。",
+          "head_pose": "头略垂但不低头忏悔，肩甲位置固定。",
+          "story_support": "人物卡逐步接受外部监督；N7-R-parallel要求不能把独立查案冒称内部自查。",
+          "condition_and_limit": "仅面对质询的权衡表情；若放在parallel结果回访须真实resolve_N7=parallel及本人在场存活愿谈。不证明他已认罪、接受SQ02监督承诺、失去全部权限或被击败。"
+        },
+        {
+          "key": "leo_E3_state_local_limit",
+          "label": "清楚划权限",
+          "brows": "双眉平稳稍压内端，去掉质问的不对称。",
+          "eyes": "直视听者，上睑打开但较E2坚定，下睑稳住。",
+          "mouth": "小幅横向发言口型，唇角平，不笑、不咆哮露齿。",
+          "head_pose": "近正面、下巴水平，头肩不摆成宣誓。",
+          "story_support": "人物卡只持地方签署资格；N16-S01-L02仅能承诺本地封存队程序；N7-S02-L03只说核查的几例。",
+          "condition_and_limit": "仅清楚说明权限，不证明签约／封存／结盟已完成。N16演出须已有实际SQ02承诺或合法代理资格，不能用脸补未签回执，不能替王廷或缺席者许愿。"
+        }
+      ]
+    }
+  ],
+  "finite_main_scope_review": {
+    "already_sufficient_expression_sets": [
+      "Mia",
+      "Sela",
+      "Mara",
+      "Ivo",
+      "Tor",
+      "Rhea",
+      "Nell",
+      "Sel",
+      "Sena",
+      "Kaem"
+    ],
+    "already_in_final_review_do_not_duplicate": [
+      "Nara",
+      "Ena（灰堤妻，非冷窗驿艾娜）"
+    ],
+    "remaining_candidates": [
+      {
+        "canonical_id": "NPC-LYD",
+        "name": "莉德",
+        "slug": "lyd",
+        "recommendation": "有实质缺口，下一次有明确需求时优先；本批不派",
+        "reason": "N6/N10本人发言与防止被代答有差异；现有核段／收纸动作由手势主导，可补警觉、专注、坚定发言，但不能把匿名／出席／认罪合为结果。",
+        "expression_directory_exists": false,
+        "source_evidence": [
+          {
+            "path": "design/04_人物/城市人物/人物_NPC-LYD_莉德.md",
+            "sha256": "831b29ed79b329b715176a860c495e18af0166ded3d5c7bf5d1acdaaa3bb39e7",
+            "locator": "CITY-NPC-NPC-LYD"
+          },
+          {
+            "path": "design/04_人物/台本新增人物与知识边界.md",
+            "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+            "locator": "莉德（Lyd，NPC-N-LYD）"
+          },
+          {
+            "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+            "sha256": "d875533e03eedd738c7a44fbd1f09dd9d66644628f25dc8b6a100506267de0d6",
+            "locator": "S62现行人物冲突／路线／R与X条件"
+          }
+        ]
+      },
+      {
+        "canonical_id": "NPC-HERS",
+        "name": "赫斯·白",
+        "slug": "hers",
+        "recommendation": "有实质缺口但后置，不自动续产",
+        "reason": "N17控制话语、断源受挫、守卫离开后戒备是不同条件；现两张互斥动作已有大轮廓。本阶段可先用，若做对话特写再补，不能加洗白或以图宣布玩家获胜。",
+        "expression_directory_exists": false,
+        "source_evidence": [
+          {
+            "path": "design/04_人物/城市人物/人物_NPC-HERS_赫斯·白.md",
+            "sha256": "e74d94e04c28eaabef5274631ed6b3fd69faf5227cc70768a04710d60fa7b193",
+            "locator": "CITY-NPC-NPC-HERS"
+          },
+          {
+            "path": "design/04_人物/人物_赫斯·白.md",
+            "sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c",
+            "locator": "NPC10"
+          },
+          {
+            "path": "design/05_主线/台本/台本_N17_残光之井.md",
+            "sha256": "a7154c5bc087421b566054344c0556b583d5e53d8f1f4de1d8005e0a1033526d",
+            "locator": "S62现行人物冲突／路线／R与X条件"
+          }
+        ]
+      },
+      {
+        "canonical_id": "NPC07",
+        "name": "托曼·索",
+        "slug": "toman",
+        "recommendation": "当前概念演出足够，暂不补胸像",
+        "reason": "扶杖查路／抬头核路及侧背已有；N5/N11/N14谨慎可靠的细差主要由具体路线和对白承载，无必要为了三态硬加欢喜／悔过。",
+        "expression_directory_exists": false,
+        "source_evidence": [
+          {
+            "path": "design/04_人物/人物_托曼·索.md",
+            "sha256": "88ac71ff3c502a8d852982e69de3c064434e32e232446b3a07ef7e2f6325eaa9",
+            "locator": "NPC07"
+          },
+          {
+            "path": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+            "sha256": "596f7c96981fe7acdf1b7d9386c2d54b43127d630f3c166d95f0baa028147695",
+            "locator": "S62现行人物冲突／路线／R与X条件"
+          },
+          {
+            "path": "design/05_主线/台本/台本_N14_可以回去的路.md",
+            "sha256": "5835682a1ffd83ecd698d47b1410d19ddb447bd6ee66f4808bd1b59d927852d4",
+            "locator": "S62现行人物冲突／路线／R与X条件"
+          }
+        ]
+      },
+      {
+        "canonical_id": "NPC09",
+        "name": "欧达·苇",
+        "slug": "oda",
+        "recommendation": "当前概念演出足够，暂不补胸像",
+        "reason": "已有两剧情姿态；保护匿名和拒绝强迫可由已有锚及手势表达。无新的近脸辨读问题前不套用通用三情绪。",
+        "expression_directory_exists": false,
+        "source_evidence": [
+          {
+            "path": "design/04_人物/人物_欧达·苇.md",
+            "sha256": "6a22f8ab69e9c190c5365ce0474b8134e0d06357e13dea082edcb43b9f77de87",
+            "locator": "NPC09"
+          },
+          {
+            "path": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+            "sha256": "596f7c96981fe7acdf1b7d9386c2d54b43127d630f3c166d95f0baa028147695",
+            "locator": "S62现行人物冲突／路线／R与X条件"
+          }
+        ]
+      },
+      {
+        "canonical_id": "NPC11",
+        "name": "罗温·雾",
+        "slug": "rowen",
+        "recommendation": "当前概念演出足够，暂不补胸像",
+        "reason": "虽仅一新姿，但N11报价／估量与原锚足够表现中间人；付款和交地址属于状态，不能靠新增满意笑脸代替真实分支。",
+        "expression_directory_exists": false,
+        "source_evidence": [
+          {
+            "path": "design/04_人物/人物_罗温·雾.md",
+            "sha256": "91170e9e790f0f641ca0e8ad68743614ace38b8de5fcb4df800609a58e11b288",
+            "locator": "NPC11"
+          },
+          {
+            "path": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+            "sha256": "61a27dc3370b69216d707ee4a40c13611434ce668c91a3072213a907bfa9f415",
+            "locator": "S62现行人物冲突／路线／R与X条件"
+          }
+        ]
+      }
+    ],
+    "excluded_reference_gate": "Suoya研究、Vian工具阻断、Verren/Gwynnel/Darrel原版外貌待核；不借主线表情任务越过既有门槛。",
+    "stopping_condition": "此brief只派上述两人。交付后有限主线清单只剩Lyd和Hers为可论证的条件候选，不自动排产；Toman/Oda/Rowen本轮不补。若用户未指定近脸需求且现图已够用，则停止本方向，不扩成全角色全套。"
+  },
+  "future_visual_acceptance": [
+    "执行者先再view两张完整锚并校SHA；生成后逐张view原图并并排缩略图独审。",
+    "核完整发须双肩、原衣甲／围巾、眉眼嘴独立辨识，无手／新道具漏进裁切。",
+    "六态只为情绪概念；结果条件在说明保留，不能把表情标题命名成已认罪／已治愈／已接管。",
+    "保存原始输入SHA、提示词、原始图和独审记录；本brief没有任何新生成或新图通过。"
+  ]
+}

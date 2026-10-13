@@ -1,0 +1,2 @@
+# Toman concept lock
+NPC07; batch_next_routes_04; mature cautious route contractor. Raised faded brown hood, short grey-brown beard, closed route satchel, plain wooden walking stick, short boots. No armor/weapon, magical or escort event. Actual head half visible height, small body/legs, Sela G coarse clusters. Transparent whole standing concept. concept_only=true; equipment_compatibility_verified=false; equipment mechanism unknown, no permanent-clothes inference, no runtime work.

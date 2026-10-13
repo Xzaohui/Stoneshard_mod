@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T13:03:30.981909+00:00",
+  "status": "prepared_only_not_dispatched",
+  "scope": "最多2名已有主线人物，每人1侧面＋1背面，共4张静态补充设定；0新人物。不生图，不改索引。",
+  "evidence": [
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "86da6f23ccf22cfba3300426a1615aa58a23320c2ee4e74ed7c57c56d615efdf"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "sha256": "0b6375ac88c343ae20b1f04655305a41a19189a3fcf5957fa55ef3e4b82550ee"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256": "09b71117b6f8790f9fed0efd98dd106fb375ca17c905445d214c18ca22f6298b"
+    }
+  ],
+  "selection_rationale": "优先补具明确道具和层叠衣装辨识需求的托曼与雷奥；不会因为总人数167就全套化。已核实际现行锚、旧设计板和已交动作检视图。",
+  "historical_back_views_disclosure": "两人20261012旧身材比例设计已有背面。本计划补的是20261013现行成熟大头短身锚的缺失侧背，不应宣传成此前完全没有背面。",
+  "global_constraints": [
+    "人物卡用于身份和故事边界，现行已交锚用于外形；冲突时不自行修改剧情。",
+    "保留当前人物脸型、年龄感、像素簇、配色、衣长和持物手别，不硬套新的统一头身比例。",
+    "单张单人完整全身透明背景，侧面应明显区别于已有前四分之三手势；背面不露正脸。",
+    "正面锚只在检视板复用，不能计作新增绘图；不生成GIF或声称转身动画。",
+    "背面未知结构明确标为设计推定，旧稿仅辅助，不证明当前背结构已获认可。",
+    "衣装结构辨识优先；不新增医疗伤势或缺证据装备。",
+    "未来游戏落地、帧表、换装和runtime未验，不作为本次设定制作的阻塞条件。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "NPC07",
+      "name": "托曼·索",
+      "slug": "toman",
+      "aliases": [],
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/toman/toman_raw_imagegen.png",
+        "sha256": "35be488126859cf153d9b6a48498b8e1fe3445e39e545cb74e024334063ebb21",
+        "roster_sha256_match": true,
+        "visually_inspected": true,
+        "delivery": {
+          "reported_by": "root",
+          "time_utc": "2026-10-13T04:38:00Z",
+          "message_id": "Sentinel_540307d00b708191b92544ee10579251",
+          "group_preview_library_file_ids": [
+            "libfile_6880bdae682c8191b010437db2ca2404",
+            "libfile_89322eb4982c819181b4fd3a28c46bf1"
+          ],
+          "artifact": "toman_raw_imagegen.png",
+          "scope": "第五组六人已交付概念预览，非用户逐人认可／装备验收。"
+        },
+        "visual_review": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/人物_托曼·索.md",
+          "frontmatter_id": "NPC07",
+          "sha256": "88ac71ff3c502a8d852982e69de3c064434e32e232446b3a07ef7e2f6325eaa9",
+          "actual_sha256": "88ac71ff3c502a8d852982e69de3c064434e32e232446b3a07ef7e2f6325eaa9"
+        }
+      ],
+      "historical_reference": {
+        "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch08/36_oda_toman_pair.png",
+        "sha256": "c2826deab38872c15e5888d36bd0e66e1bf739533c4ac35712a890951e7e2cff",
+        "visually_inspected": true,
+        "contains_back_view": true,
+        "use": "旧比例前背设计仅作历史参考；新图以20261013已交锚为准，不能声称首次补出此人的背面。"
+      },
+      "existing_action_review": {
+        "path": "Assets/CharacterActions/20261013/toman/story_gesture_v1/toman_story_gesture_review_zh_light.png",
+        "sha256": "a24493b77218f9e4605af98057f28fb6a2a78d7460ac76dd0686bf5dc3323000",
+        "visually_inspected": true,
+        "coverage": "2个正面/前四分之三剧情手势，未解决侧背服装结构；不能把动作图当侧背设定。"
+      },
+      "current_turnaround_directory_exists": false,
+      "proposed_output_directory": "Assets/CharacterDesigns/20261013/expressive/toman/turnaround_v1",
+      "new_views": 2,
+      "new_character_count": 0,
+      "priority": 1,
+      "gap_value": "当前大头短身版本的立体兜帽深度、肩部叠布、背部斜挎带与腰侧闭包厚度尚不明；现行锚外衣已大幅缩短，旧长身长衣背图不能替代。两新视图直接支持这个既有人物的衣装辨识。",
+      "card_supported_identity": [
+        "护路契约与路线运输的务实承包者；路线、物流副账、安全运输资格有限。",
+        "不会强制押送实验载体；同意折扣、启程或运输承诺不能凭画面新增。"
+      ],
+      "anchor_observed_costume": [
+        "棕灰立起兜帽，灰棕头发及短须，凝眉侧望的成熟脸；小身体与短靴。",
+        "短棕外衣、浅灰内层、深裤、方扣腰带；原图胸前有斜挎带，闭路线包在角色左髋（原图画面右侧）。",
+        "普通木行杖在角色右手（原图画面左侧），杖与身体保持间隙，杖底近足底；没有甲胄或武器。"
+      ],
+      "evidence_scope": "人物卡支持职业与伦理边界；兜帽、闭包、杖的精确形状属于已交美术锚提案，不冒称卡片明文。",
+      "proposed_drawings": [
+        {
+          "key": "side",
+          "count": 1,
+          "view": "人物左侧，脸朝画面左，接近90度侧视",
+          "purpose": "以近侧髋包读出包厚、挎带和外衣叠层，同时显示兜帽开口深度。",
+          "brief": "同一成熟脸和灰短须，同一头身与衣长。中立双脚着地不走路。左髋包在近侧，右手原杖在远侧；允许自然部分遮挡，不换手、不开包、不移包到背心。杖保持实际长度，可在轮廓外保留可见上端与下端。不要为展示全套道具把身体拧回前四分之三。"
+        },
+        {
+          "key": "back",
+          "count": 1,
+          "view": "正背面静站",
+          "purpose": "补现行大头短身兜帽背体量、肩布层次、斜带路线及包与衣摆关系。",
+          "brief": "兜帽仍戴起，头背不露正脸；右手杖在背视画面右侧，左髋包在背视画面左侧。保留短外衣和宽靴，不复制旧长衣。不要新增背包、铺盖、箭筒或大型披风。"
+        }
+      ],
+      "back_design_inferences": [
+        "现行锚没有展示兜帽后缝、肩布背层及挎带背面；只作最少普通布料延伸，均标记设计推定。",
+        "旧背图显示普通斜带与兜帽的方向，可作有限参考；现行锚比例和衣长优先，不把旧背面当已冻结现行结构。"
+      ],
+      "do_not_add": [
+        "武器化/魔法化木杖",
+        "强制押送或已签契约剧情",
+        "新增伤势/医疗动作",
+        "新徽章、甲、背包、路线文字"
+      ]
+    },
+    {
+      "canonical_id": "NPC-REY",
+      "name": "雷奥·凯斯",
+      "slug": "leo",
+      "aliases": [
+        "CITY-NPC-NPC-REY",
+        "NPC05"
+      ],
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/leo/leo_raw_imagegen.png",
+        "sha256": "cf5d3efee6a62e23c00e3f94f4d1b85dab0e74dd141a5c791b8608e98b05ebf1",
+        "roster_sha256_match": true,
+        "visually_inspected": true,
+        "delivery": {
+          "reported_by": "root",
+          "time_utc": "2026-10-13T04:27:00Z",
+          "message_id": "Sentinel_c5022d0a7bd08191a96e8588caa5f5c7",
+          "group_preview_library_file_ids": [
+            "libfile_efecee1b1d6c8191a9d6df3eece14e06",
+            "libfile_32460977f7c08191a5b9401bf0440c53"
+          ],
+          "scope": "六人第四组预览已发送；非用户逐人认可／装备动画或native验收。"
+        },
+        "visual_review": "independent_deliverable_with_minor_notes"
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_NPC-REY_雷奥·凯斯.md",
+          "frontmatter_id": "CITY-NPC-NPC-REY",
+          "sha256": "15dd1f5e8268ffea68e170b2d4b14c004f08adc19324ab36f81aff5d4d708a87",
+          "actual_sha256": "15dd1f5e8268ffea68e170b2d4b14c004f08adc19324ab36f81aff5d4d708a87"
+        },
+        {
+          "path": "design/04_人物/人物_雷奥·凯斯.md",
+          "frontmatter_id": "NPC05",
+          "sha256": "2e7159e57480bffc3698f7243b6f1830d4b771ce3d72a4555d2d09d0fde2dfa5",
+          "actual_sha256": "2e7159e57480bffc3698f7243b6f1830d4b771ce3d72a4555d2d09d0fde2dfa5"
+        }
+      ],
+      "historical_reference": {
+        "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch10/46_leo_moren_aren_cast.png",
+        "sha256": "d5079309e0e6188a6811c570e783713eae6c16f3804ca16176b03fafa7032f81",
+        "visually_inspected": true,
+        "contains_back_view": true,
+        "use": "旧比例前背设计仅作历史参考；新图以20261013已交锚为准，不能声称首次补出此人的背面。"
+      },
+      "existing_action_review": {
+        "path": "Assets/CharacterActions/20261013/leo/story_gesture_v1/leo_story_gesture_review_zh_light.png",
+        "sha256": "c088a27e4eeaef6e4aaec29929eb988f0e33830c581822356395ba26a2b695e6",
+        "visually_inspected": true,
+        "coverage": "2个正面/前四分之三剧情手势，未解决侧背服装结构；不能把动作图当侧背设定。"
+      },
+      "current_turnaround_directory_exists": false,
+      "proposed_output_directory": "Assets/CharacterDesigns/20261013/expressive/leo/turnaround_v1",
+      "new_views": 2,
+      "new_character_count": 0,
+      "priority": 2,
+      "gap_value": "当前蓝罩衣短甲版缺肩甲/前臂甲侧面叠层、灰领围背形与短罩衣背面；旧背板为长身长袍，手提匣换手方向也与当前锚不同，不能直接充当现行背面。侧视同时可冻结闭匣厚度，补此前手势中匣厚漂移的辨识缺口。",
+      "card_supported_identity": [
+        "当前城市卡：已有Mod地方军需代理，相信封印，逐步接受外部监督。",
+        "主卡：危险应封存、命令可复查，能提供封印材料、军需原件及地方签署资格。",
+        "仅地方资格，不能代表全国阵营；不能画成接管、联盟或契约已完成。"
+      ],
+      "anchor_observed_costume": [
+        "深棕短发、短胡茬、灰暗眼，谨慎成年脸；大头短身。",
+        "普通暗钢色分层肩甲与前臂甲，灰色领围，褪蓝短罩衣及浅色镶边、棕腰带手套短靴。",
+        "一个棕色普通闭匣，由角色右手低位提着（原图画面左侧）；方扣、顶部把手，无遮露内容、可读字或阵营徽号。"
+      ],
+      "evidence_scope": "人物卡支持封存身份；甲与闭匣的具体造型是已交美术方案而非已验证历史装备或原版物件。",
+      "proposed_drawings": [
+        {
+          "key": "side",
+          "count": 1,
+          "view": "人物右侧，脸朝画面右，接近90度侧视",
+          "purpose": "把提匣手放近侧，读出手柄/握点/匣厚，以及肩甲、前臂甲与罩衣的侧层次。",
+          "brief": "保留当前锚的同一右手低位提匣、左手自然放松，双脚静站。匣是原图一个棕色方匣，不借动作稿改成浅盘、圆包或双手托匣。新画侧面时锁定原匣宽高及合理深度；只改变透视，不打开、不新增封印图案。甲片不过度细分，不新增剑鞘、盾或披风。"
+        },
+        {
+          "key": "back",
+          "count": 1,
+          "view": "正背面静站",
+          "purpose": "补当前短罩衣背片、腰带与普通甲衣后侧关系，并确认闭匣的同手携带与背视轮廓。",
+          "brief": "同发型后脑与灰领围、同肩甲体量、短蓝罩衣和短靴。右手闭匣位于背视画面右侧，不沿旧版手别。背片保持朴素蓝色及浅色边，腰带延续，无大徽、王旗、华丽背甲或新武器。"
+        }
+      ],
+      "back_design_inferences": [
+        "背部罩衣、领围后片及甲衣连接不可从现行正面确认，按最少朴素延伸设计，明确标记推定。",
+        "当前锚的肩/胸棕带可见但背部连接不明；只延续有必要的普通带，不从旧图生搬完整交叉背带/额外携具。",
+        "闭匣背面/侧面的木皮与扣件细节未完整可见；保持简洁，不用新纹章解释内容。"
+      ],
+      "do_not_add": [
+        "全国统帅/王权符号",
+        "剑、盾、披风或新装备",
+        "打开匣子、可读证据页、封印生效",
+        "已接管/已结盟/已签约剧情",
+        "镜像换手"
+      ]
+    }
+  ],
+  "verification_before_dispatch": [
+    "重新确认尚无同角色当前侧背在制/交付，避免并发重派。",
+    "核anchor SHA仍匹配；制作与独审都须实际看锚图，不仅阅读brief。"
+  ],
+  "acceptance_focus": [
+    "2张是真实不同视角，不是正面镜像或转头冒充侧视。",
+    "头身体量、衣长和脚底线可对照现行锚；超过轻微漂移需修，不硬标精确正交。",
+    "手别、包/匣数量、闭合状态与握点遮挡可读；杖不缩长、不变魔杖。",
+    "交付说明注明背结构推定、历史旧背已存在、0新人物、仅静态概念。"
+  ],
+  "stop_condition": "这2人4张审看与交付后回看具体缺口；不能自动扩为167人全套；证据或可读性不足可少画。"
+}

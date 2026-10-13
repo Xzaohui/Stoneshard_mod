@@ -1,0 +1,2 @@
+# Mia concept lock
+Source: briefs/batch_next_core_01.json. Adult female patient, not caregiver. Brown low braid, cream linen dress, dark teal shawl, soft shoes, ordinary folded blanket. Head occupies half visible height; whole tiny torso/dress/legs occupy the other half, no long dress-driven body. Tired thoughtful guarded agency, no forced smile or cure. Sela G coarse pixel cluster style, alpha, full body, single pose, not production sprite.

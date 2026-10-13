@@ -1,0 +1,2 @@
+# Hure concept lock
+YOS-NPC-HURE materials_24 current card/old146 top row read/viewed. Mature chestnut-haired woman, oatmeal scarf/grey thick shawl/plum-brown dress, only a short plain knotted string near own waist. Concerned firm inquiry, no received wool/patient/medical consent. Compact natural neck/torso/skirt, G pixel style independent face. concept_only=true; equipment_compatibility_verified=false; unknown mechanism.

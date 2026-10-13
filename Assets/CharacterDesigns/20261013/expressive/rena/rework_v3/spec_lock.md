@@ -1,0 +1,1 @@
+BRY-NPC-RENA adult female lodging recorder; mature concerned/guilty reserved face, cream kerchief, dark green practical dress, cream apron and closed brown ledger hugged privately. Preserve two hands clasping ledger, no text or disclosure or rent settlement. Natural short neck/compact skirt; concept only, equipment unknown, no runtime.

@@ -1,0 +1,210 @@
+{
+  "brief_id": "adult_basic_body_pose_gap_01",
+  "created_at_utc": "2026-10-13T16:37:56.932977+00:00",
+  "status": "planning_only_not_generated_not_reviewed_not_delivered",
+  "scope": "已有无身份成年训练样板，补一张静态身体姿态；无新角色、无武器道具、无剧情事件、无动画或runtime。",
+  "counts": {
+    "proposed_new_static_body_poses": 1,
+    "new_characters": 0,
+    "generated_images": 0,
+    "approved_images": 0,
+    "delivered_images": 0,
+    "planned_gifs": 0
+  },
+  "coverage_source": {
+    "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+    "sha256": "dd13cc493692a62accafba5f0dcab30dbd9ad0a5b71938931bd143e988f2dd70"
+  },
+  "anchor": {
+    "path": "Assets/CharacterActions/20261013/adult_training_dummy/interaction_v1/frames/I0_stand.png",
+    "sha256": "655252240bbab30454400339ff5baf259111af549f677b551833bdafa717999b",
+    "role": "唯一生成身份、衣装、头身原锚；不得从其他新动作连续派生",
+    "approval_evidence": {
+      "path": "Assets/CharacterActions/20261013/adult_training_dummy/interaction_v1/QA-independent.json",
+      "sha256": "28d9a1dad411e1b76b25b3ef780695cb9fce2303c5c0b3f1ea6410987183c94e"
+    },
+    "approval_decision": "deliverable_as_scale_aligned_near_ground_interaction_key_pose_concept_with_notes",
+    "raw_ancestry": {
+      "path": "Assets/CharacterActions/20261013/adult_training_dummy/interaction_v1/raw/I0_stand.png",
+      "sha256": "e303bedfb334dc584bcb36b7924bae15276835ddecbafe4630c469c7776f75ad"
+    },
+    "canvas": [
+      1536,
+      1536
+    ],
+    "body_height_px": 935,
+    "estimated_hood_head_height_px": 328,
+    "note": "935/761统一尺度属于此前概念显示约定，不是原生帧规格。新跪姿不能按bbox拉回935px。"
+  },
+  "dedup_actual_visual_review": [
+    {
+      "action": "interaction_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/interaction_v1/interaction_review_zh.png",
+        "sha256": "0e4d19f9119d47f5629e27dfde04808af011f21d1a26ab7fc665adbffd7a5b20"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/interaction_v1/QA-independent.json",
+        "sha256": "28d9a1dad411e1b76b25b3ef780695cb9fce2303c5c0b3f1ea6410987183c94e"
+      },
+      "actually_viewed": true,
+      "observation": "I1/I2均双靴着地，俯身、单手扶膝、另一手下探；I2手仍离地。没有单膝着地。"
+    },
+    {
+      "action": "rest_transition_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/rest_transition_v1/rest_transition_review_zh.png",
+        "sha256": "4786d5b571adf913e9e7b2763c12037f0ad465a26f99f91fa7f3ffe4c7bcc39f"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/rest_transition_v1/QA-independent.json",
+        "sha256": "62a411b7d1d3552398c82bc0246f0ea00376acec1e50a7ec6ea272783b36b006"
+      },
+      "actually_viewed": true,
+      "observation": "R1/R2臀部接近或压在固定凳面，双手搭大腿、双靴落地；没有无凳膝地支撑。"
+    },
+    {
+      "action": "defense_dodge_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/defense_dodge_v1/defense_dodge_review_zh.png",
+        "sha256": "45ec23b403a3179f5cb5983d5a7609e8f08ca25cbd9ce350a6a02d3fcee1820e"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/defense_dodge_v1/QA-independent.json",
+        "sha256": "2b4d061fae70d1434bcc248d98bce62ea4ff54e198e03acccb2907e0e519d1f1"
+      },
+      "actually_viewed": true,
+      "observation": "侧撤E1为一腿屈一腿伸，两靴仍为支撑端，膝盖未触地。"
+    },
+    {
+      "action": "hit_recovery_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/hit_recovery_v1/hit_recovery_review_zh.png",
+        "sha256": "c84cc9d62965ed2bb0d606abe8aee72a173c4add901b332b4d75f8468912631f"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/hit_recovery_v1/QA-independent.json",
+        "sha256": "d0d6b055f8f02827b45e88ab0887cf30f0447a973facbeb8b63f2bd98fe032b2"
+      },
+      "actually_viewed": true,
+      "observation": "后仰屈膝与回正，双靴撑地，未倒地或跪地。"
+    },
+    {
+      "action": "attack_v2_geometry",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/attack_v2_geometry/dummy_attack_geometry_v2_review_zh.png",
+        "sha256": "b2c1f665119300c5612577ab8c243d267b0201d32b6ebef2ad29da2b9f705c86"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/attack_v2_geometry/QA-independent.json",
+        "sha256": "8e84807505988a862163e66b5f6511d478245b84928defd43efcef890eef9040"
+      },
+      "actually_viewed": true,
+      "observation": "举剑/挥出/回收，最宽姿态仍是双足弓步。"
+    },
+    {
+      "action": "shield_guard_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/shield_guard_v1/shield_guard_review_zh.png",
+        "sha256": "9adf1c608a71c7de423c376c1a35bf85535f14c6b07f1cfc00dca2b6fc22d77c"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/shield_guard_v1/QA-independent.json",
+        "sha256": "eddef46d95fe84f5e6943ca7439dccdc2e8af03b013f9d57e3af68afb93a2772"
+      },
+      "actually_viewed": true,
+      "observation": "承压S2双膝下沉但双靴支撑，未跪地。"
+    },
+    {
+      "action": "twohand_staff_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/twohand_staff_v1/twohand_staff_review_zh.png",
+        "sha256": "acdd0c56bc5de06ecc02ece0ed65daebaa1ca9ea71c4f4a53e74e573e8a2fb72"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/twohand_staff_v1/QA-independent.json",
+        "sha256": "5008e446f0ac695b4de48b3c26e980dcaa9611ea177f9e127ee45728d08fbd8f"
+      },
+      "actually_viewed": true,
+      "observation": "T2前膝屈后腿伸展的前刺弓步，后膝未着地。"
+    },
+    {
+      "action": "archery_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/archery_v1/archery_review_zh.png",
+        "sha256": "5a66adc9a4e50e3d8b729444078a1a0e1f539a28b8d9c43c85584ac05d8c7960"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/archery_v1/QA-independent.json",
+        "sha256": "c14cb46860605417731431ec164d2bf92354e9284e7c36692e8c9af29bee0055"
+      },
+      "actually_viewed": true,
+      "observation": "宽距双足站立持弓，关节变化主要在肩肘腕。"
+    },
+    {
+      "action": "dialogue_gesture_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/dialogue_gesture_v1/dialogue_gesture_review_zh.png",
+        "sha256": "801ea74ee1a53766ea4d214d6da7e71717609d36b4a9c11e4e72ed584d21ff33"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/dialogue_gesture_v1/QA-independent.json",
+        "sha256": "6bf3410b4b6e3a5d18cd5f92cc161d43a54865e8dd08b20ddf2183c496e8107f"
+      },
+      "actually_viewed": true,
+      "observation": "双足站立，掌形和前臂变化。"
+    },
+    {
+      "action": "item_offer_v1",
+      "board": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/item_offer_v1/item_offer_review_zh.png",
+        "sha256": "53cc6521fbd98d7e131f30ce4f5471cde965b3fa20aec0f8552b6561bb5e4e0f"
+      },
+      "qa": {
+        "path": "Assets/CharacterActions/20261013/adult_training_dummy/item_offer_v1/QA-independent.json",
+        "sha256": "7b1ea3187bcbd5061d6c27262e6084d2bd38da2988333189b620ccdd00b57782"
+      },
+      "actually_viewed": true,
+      "observation": "双足站立持包/前递，躯干近直立。"
+    }
+  ],
+  "selected_poses": [
+    {
+      "id": "K1_single_knee_rest",
+      "label_zh": "单膝落地短歇",
+      "unique_gap": "从现有双靴支撑或凳面承臀，改为一只前靴全底接地＋后膝/小腿近地支撑；身体形成不对称低位轮廓。",
+      "pose_description": "沿I0朝画面右的三分之四视角。画面右侧腿前置、前膝屈曲、前靴全底着地；画面左侧腿折回，后膝明确落在同一地面平面，小腿向后连接完整短靴。髋部降低但躯干近直立、只轻微前倾；一手轻放前侧大腿近膝处，另一手自然垂于身体侧面，均为空手。不画下跪过程或起身。",
+      "silhouette_acceptance": [
+        "缩到既有板的角色展示尺寸，仍一眼可辨单膝地面接触，不能只是I2俯身挪手。",
+        "前膝明显高于着地后膝；一条大腿前伸、一条大腿下落，髋—膝—踝连接可读。",
+        "低位轮廓来自关节折叠，不压缩头、不拉长胫骨、不把整人缩小。"
+      ],
+      "joint_support_acceptance": [
+        "保留完整前靴底地接触，后膝前下缘有可读地面接触，不留透明悬缝、不穿地。",
+        "后膝—小腿—后靴连续；后靴不能突然增长、卷尖、消失，也不能穿过前脚。",
+        "胸腹重心保持前靴与后膝支撑区域内；不把头倾成失衡前扑。",
+        "前手掌搭在前大腿上缘，手腕接袖且不穿膝；另一手完整可见。",
+        "透视允许近远接触点y值不同，禁止为了共y强拉腿；检视板画简明地面导线辅助判断。"
+      ],
+      "identity_acceptance": [
+        "保留I0成年脸、粗眉、鼻嘴、灰绗缝兜帽、蓝灰绗缝衣、腰带方扣、棕裤/手套/短靴。",
+        "同一视角下头帽尺度以I0约328px为参考；若明显变大变小或腿身趋细长直接拒收，不以重采样掩饰。",
+        "无武器、凳子、新护膝、背包、地面道具、伤口、泪、祈祷或投降手势。"
+      ],
+      "failure_policy": "若新图膝地接触不明确、只是现有俯身/弓步近似、腿长漂移或换脸，停止将其计为补缺；保留失败证据，不扩成步态/多阶段/GIF以凑完成。",
+      "future_deliverable_if_assigned": "1张透明完整身体PNG＋含I0/I2/R2对照与膝靴接触近景的静态检视板＋原稿/提示词/hash/独审资料；I0/I2/R2仅参考复用，不计新绘。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "label": "双手扶膝短歇",
+      "reason": "与I1/I2单手扶膝俯身及R1/R2双手搭膝已近；单改手的位置不足以证明新的基础身体轮廓与地面支撑缺口，不派画。"
+    }
+  ],
+  "constraints": [
+    "仅规划，不生图，不改索引/名单/交付统计。",
+    "交替步行basic_walk及sideview_contact失败研究保持停止；不从其失败稿派生。",
+    "不宣称自然呼吸循环、连续动画、原生方向、换装、游戏事件或runtime已完成。",
+    "已有167人计数不变。"
+  ]
+}

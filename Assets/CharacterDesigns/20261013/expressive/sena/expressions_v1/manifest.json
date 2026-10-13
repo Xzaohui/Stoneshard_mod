@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "character": "sena",
+  "canonical_id": "NPC-SENA",
+  "aliases": [
+    "CITY-NPC-NPC-SENA",
+    "NPC08"
+  ],
+  "generator": "built-in image_gen.imagegen",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/sena/sena_raw_imagegen.png",
+    "sha256": "f4dc6eb11fcf03aff30d9d8b9b6d1c5cc3475aba7ecaf499eb269ac29d1cf562",
+    "actually_viewed": true,
+    "roster_sha256": "f4dc6eb11fcf03aff30d9d8b9b6d1c5cc3475aba7ecaf499eb269ac29d1cf562",
+    "roster_hash_match": true
+  },
+  "brief_sha256": "3d9c983461b9573fa9fe3936973418400f6707939dd94cb813a16e3ae0f00f56",
+  "expressions": [
+    {
+      "key": "privacy_boundary",
+      "title": "审慎立界：先说清查哪几页",
+      "facial_design": {
+        "brows": "近侧眉尾微抬、另一眉略压，形成清楚不对称的追问弧。",
+        "eyes": "保杏眼和粗上睑，眼裂略收，锁定交谈者，不能只移动瞳孔。",
+        "mouth": "上下唇分开成窄发话形；保唇厚，不露齿尖叫。"
+      },
+      "evidence": {
+        "path": "design/05_主线/台本/台本_N6_被封存的页码.md",
+        "key": "X61-L01",
+        "quote_or_summary": "你看哪几页，我们先说清。不借这一回打开所有人的名字。"
+      },
+      "usage_condition": "D04 inside的有限回执已收到并核验；表现当下边界，不提交路线。",
+      "excludes": "不是怒斥、开放整库、公开名单、NE2认证或拒绝基本出口。"
+    },
+    {
+      "key": "friend_accountability",
+      "title": "难过也不替熟人免责",
+      "facial_design": {
+        "brows": "两眉内侧上提并靠拢，外段缓落；不要第一张斜压眉。",
+        "eyes": "上睑松开、眼裂略圆，视线下落少许，下睑轻绷；无泪滴。",
+        "mouth": "闭唇呈清楚浅下弧，下唇留体积，一侧唇角稍压；不得照抄锚的小斜嘴。"
+      },
+      "evidence": {
+        "path": "design/05_主线/台本/台本_N6_被封存的页码.md",
+        "key": "N6-R-archive-L01",
+        "quote_or_summary": "我可以替他留一张椅子，不能替他留一个没有责任的位置。"
+      },
+      "usage_condition": "仅N6 archive按现场核验与本人授权实际完成后的条件表演；这是难过而非崩溃。",
+      "excludes": "不是全案认罪、与凯姆绝交、成长永久完成或替受害者原谅。"
+    },
+    {
+      "key": "listen_without_speaking_for",
+      "title": "收住代述，专心听对方",
+      "facial_design": {
+        "brows": "双眉向外舒展，内眉轻抬但不内收；与第二张难过不同。",
+        "eyes": "上睑明显抬起，眼裂较前两张开阔，平视场外发言者；不能靠转头假装新情绪。",
+        "mouth": "自然闭唇或极小放松缝，唇角水平柔和，无紧抿、无庆功笑。"
+      },
+      "evidence": {
+        "path": "design/05_主线/台本/台本_N10_没有写下的见证.md",
+        "key": "N10-R-sourcehearing；Sena城市卡起点与转折",
+        "quote_or_summary": "来源人分别作证且可匿名；卡文：替朋友解释的习惯必须交出。"
+      },
+      "usage_condition": "美术演绎而非新增塞娜台词；来源人当前同意发言且独立作证场景可进行，只表现当下倾听。",
+      "excludes": "不替莉德授权／署名／公开，不假定证人原谅凯姆，不宣告听证结案。"
+    }
+  ],
+  "runtime_integrated": false,
+  "roster_changed": false,
+  "independent_review": "pending",
+  "files": [
+    {
+      "path": "QA-author.json",
+      "bytes": 2877,
+      "sha256": "4b3a68cd6ab77a67b564e81c0114d820b860edf83b53428391d7ada23f078f5f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 526,
+      "sha256": "59e9b0a07928655f22857061646a6fbd06d51f5e83aed40b24f572b3f2164550"
+    },
+    {
+      "path": "build_review.py",
+      "bytes": 4850,
+      "sha256": "f6834ac918b2ea2dfa900947b528f3e111aeaa10889ee89373fabf0bcabec0ea"
+    },
+    {
+      "path": "prompts/01_privacy_boundary.txt",
+      "bytes": 1687,
+      "sha256": "4d42c69d4ff366c8783fdb05a4942cb3e62daa4cd1bcd4ab9799f2482f3e037f"
+    },
+    {
+      "path": "prompts/02_friend_accountability.txt",
+      "bytes": 1751,
+      "sha256": "3bc1ee21e64efaee12233ea798441af1f815f90dfb4c0dfd677020e41492a3f3"
+    },
+    {
+      "path": "prompts/03_listen_without_speaking_for.txt",
+      "bytes": 1785,
+      "sha256": "1352e33a44d2710a5fb6753e3f022d169b0d9290c5684a935b0037700184be3b"
+    },
+    {
+      "path": "raw/01_privacy_boundary_raw_imagegen.png",
+      "bytes": 983848,
+      "sha256": "de795ca8747d514bcdc436822e62de3549fc98da79c63ddafa1646fcd619335a"
+    },
+    {
+      "path": "raw/02_friend_accountability_raw_imagegen.png",
+      "bytes": 1009253,
+      "sha256": "2e2fdc69bff7f96259a9b5a58ee75557366ac5aed86dd4048c79c1b121636119"
+    },
+    {
+      "path": "raw/03_listen_without_speaking_for_raw_imagegen.png",
+      "bytes": 904935,
+      "sha256": "9e47696c222a114bdc22ea941df6c393a3b90427f1975e44e131e4ee92fd221b"
+    },
+    {
+      "path": "review/sena_expressions_review_zh_dark.png",
+      "bytes": 635986,
+      "sha256": "9238868e6aa7230948aa15b941a00a839fcf66abe67a8223501f235717e4dd1d"
+    },
+    {
+      "path": "review/sena_expressions_review_zh_light.png",
+      "bytes": 645604,
+      "sha256": "4fd703ac7094b6caba92c8e90d440c2378ec0963645c2916a9361f07374f6cfe"
+    },
+    {
+      "path": "selected/01_privacy_boundary_transparent.png",
+      "bytes": 825773,
+      "sha256": "08724a7a950bcf628aef9e7dbce853579c6fc7428d9f1553b57435357ae17f9d"
+    },
+    {
+      "path": "selected/02_friend_accountability_transparent.png",
+      "bytes": 845880,
+      "sha256": "7084ca5d1279b5e5639c17810d606080295479fa6bc49e01f353aa727dd1bc5f"
+    },
+    {
+      "path": "selected/03_listen_without_speaking_for_transparent.png",
+      "bytes": 763756,
+      "sha256": "a5e5a4cfc413a62c64aee7f753f7e92355b1db0ec57a428ae317eba9866e2c59"
+    },
+    {
+      "path": "sources/brief.json",
+      "bytes": 12952,
+      "sha256": "3d9c983461b9573fa9fe3936973418400f6707939dd94cb813a16e3ae0f00f56"
+    },
+    {
+      "path": "sources/provenance.json",
+      "bytes": 1282,
+      "sha256": "84b412b83921e150085140165630bbd95dfbb61b22e905e91de1df90714f085d"
+    },
+    {
+      "path": "sources/sena_raw_imagegen.png",
+      "bytes": 681051,
+      "sha256": "f4dc6eb11fcf03aff30d9d8b9b6d1c5cc3475aba7ecaf499eb269ac29d1cf562"
+    },
+    {
+      "path": "sources/人物_NPC-SENA_塞娜·里德.md",
+      "bytes": 906,
+      "sha256": "233094e463a8d61b5154565d03db9cc2796e3dc01afa66b8e42be44e669692f1"
+    },
+    {
+      "path": "sources/人物_塞娜·里德.md",
+      "bytes": 2025,
+      "sha256": "9e3c9701bbf7ff2f6d2c359bc221a6b363b21857d1247a86c087a37fdf5bdb21"
+    },
+    {
+      "path": "sources/台本_N10_没有写下的见证.md",
+      "bytes": 13744,
+      "sha256": "d875533e03eedd738c7a44fbd1f09dd9d66644628f25dc8b6a100506267de0d6"
+    },
+    {
+      "path": "sources/台本_N6_被封存的页码.md",
+      "bytes": 11632,
+      "sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0"
+    }
+  ],
+  "prompt_storage": "Exact sent prompt text plus a terminal newline; one anchor path per call; transparent_background=true."
+}

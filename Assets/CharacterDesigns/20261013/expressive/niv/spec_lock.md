@@ -1,0 +1,2 @@
+# Niv concept lock
+MAE-NPC-NIV, care_19 current card/old139 top row read/viewed. Adult seated upright on BACKLESS stool, bent knees, feet supported, lap blanket, own small room key. Grey-brown shoulder hair, moss shawl/brown dress. Tired but alert independent choice, no diagnosis or migration/healthy claim. Compact natural neck/torso in seated anatomy; revised Mia style only. concept_only=true; equipment_compatibility_verified=false; mechanisms unknown.

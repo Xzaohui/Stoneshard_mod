@@ -1,0 +1,2 @@
+# Naetin concept lock
+ALD-NPC-NAETIN, authorship_16 current card/old135 bottom row read/viewed. Mature sturdy man, black-grey trimmed beard, plum sleeveless coat/olive wool, closed notebook under arm and small pouch. Reassuring measured smile with calculating eyes; no gift handover or nobility. STYLE_DIRECTION read; revised Mia primary full-body reference, no identity copying. concept_only=true; equipment_compatibility_verified=false; unknown mechanisms.

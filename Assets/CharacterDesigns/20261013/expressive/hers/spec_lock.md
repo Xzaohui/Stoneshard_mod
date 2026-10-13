@@ -1,0 +1,2 @@
+# Hers expressive concept lock
+Approved direction: Sela G expressive large head / compact body, approximately 1:1, legible mature face. User asked to continue other character designs. This is concept art, not strict native sprite conversion. Full body, one neutral three-quarter pose, real alpha, no fixed logical pixel size or animation. Restricted charcoal/ash-grey/bone/leather palette with warm face planes. Plain collar and straight fastening; empty hands; no ledger. No runtime or global index changes.

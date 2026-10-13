@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "frozen_candidate_for_independent_QA",
+  "canonical_id": "NPC-MORREN",
+  "character": "morlen",
+  "name": "莫伦·海",
+  "aliases": [
+    "CITY-NPC-NPC-MORREN",
+    "NPC12"
+  ],
+  "generator": "built-in image_gen.imagegen",
+  "brief_sha256": "beb493bab5d7b55333708346b3b4026c9ae0fd854b1971f4049f3bcde736a7f8",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/morlen/morlen_raw_imagegen.png",
+    "sha256": "a48e9fa9043104fbb4dea8635cfc509ffdb13a8274db52da09d6e519a87ee7d6",
+    "locator": "roster reviewed_artifact",
+    "matches_roster_reviewed_artifact": true,
+    "actually_viewed": true,
+    "view_method": "2026-10-13 tools.view_image 完整原PNG实看，非只读QA。"
+  },
+  "expressions": [
+    {
+      "key": "morlen_E1_concerned_listen",
+      "label": "疲惫关切",
+      "brows": "双眉内端微提，外段顺下，保灰眉厚度。",
+      "eyes": "上睑略垂，下睑放松；瞳孔朝稍低的画外说话者，不能闭目。",
+      "mouth": "双唇闭合微松，嘴角轻下垂，胡须中唇线清楚。",
+      "head_pose": "原三分之二角，下颏略收。",
+      "story_support": "N7-DEFAULT对被漏列护理者的关切；卡中保护伤患的职责。",
+      "condition_and_limit": "只是倾听与挂心，不画病人、不添病症，不证明给药、治愈或任何人同意。"
+    },
+    {
+      "key": "morlen_E2_limited_self_account",
+      "label": "谨慎自述",
+      "brows": "一侧眉内端提起，另一眉压平，区别E1对称忧眉。",
+      "eyes": "视线低向侧前，眼裂比E1稍窄而瞳孔仍见，非羞愧闭眼。",
+      "mouth": "嘴小幅纵向分开，像艰难选择准确措辞；不咧嘴露齿。",
+      "head_pose": "头稍偏侧，肩仍固定。",
+      "story_support": "N7-R-parallel-L01知道而没说的部分须单独算；N13-R-hearing-L01先放上自己知道却没说的部分。",
+      "condition_and_limit": "两条路线是各自条件素材，不连续播放；使用原句分别需resolve_N7=parallel或resolve_N13=hearing及对应核验、本人存活在场愿谈。脸只表示审慎自述，不独立认证认罪或全面悔改，也不证明提交材料。"
+    },
+    {
+      "key": "morlen_E3_consent_objection",
+      "label": "克制异议",
+      "brows": "双眉内端压低、外段近水平，不重复前两态提眉。",
+      "eyes": "眼睑明显打开至清醒直视，不瞪圆眼。",
+      "mouth": "横向短句开口，唇角平，口腔仅少量暗色，无怒吼齿列。",
+      "head_pose": "头近正面，下颏水平。",
+      "story_support": "N13-DEFAULT不以未来替眼前人签同意；N13-R-contract-L01赔偿不得要求见面、握手或原谅。",
+      "condition_and_limit": "通用异议不代表已签补偿约；原contract句仅resolve_N13=contract且本人存活在场愿谈。若以后借X39旁听语境，另须resolve_SQ07=independent与有限回执核验；图不移交主持权。"
+    }
+  ],
+  "selected_revisions": {
+    "E2": 1
+  },
+  "all_raw_retained": true,
+  "runtime_integrated": false,
+  "roster_changed": false,
+  "freeze_policy": "Manifest frozen before final independent QA. Final QA and FINAL_STATUS are external records, not added afterwards.",
+  "files": [
+    {
+      "path": "QA-author.json",
+      "bytes": 2594,
+      "sha256": "2acf672f5fe4e5cd3603786fb2aca7ddc1c15a82f0545b9963b326bbe3638524"
+    },
+    {
+      "path": "QA-independent-raw-visual.json",
+      "bytes": 1965,
+      "sha256": "4426527c12b1eb50a1f89667a006d4523ab5cff631bb23166e15afc5c52bcbbe"
+    },
+    {
+      "path": "README.md",
+      "bytes": 471,
+      "sha256": "7e4d2088717d14feb888fc8c2eb1b31b8f7931ef95c9c6e1dd4866db488201c3"
+    },
+    {
+      "path": "build_review.py",
+      "bytes": 4240,
+      "sha256": "93e14b8db647af5ff3e94d2f77a2289144592189c95fc153b55e96085906b3cd"
+    },
+    {
+      "path": "generation-log.json",
+      "bytes": 2157,
+      "sha256": "7064f2caaa8334510d44da807e5ece774b76115e0a9c15e80b73a56f88b8ccf3"
+    },
+    {
+      "path": "prompts/morlen_E1_concerned_listen.txt",
+      "bytes": 2355,
+      "sha256": "d86b1d8cd138b0ff6c07485f6a4bd4b719dd6461d35a4749523ec1b9d25d9994"
+    },
+    {
+      "path": "prompts/morlen_E2_limited_self_account.txt",
+      "bytes": 2517,
+      "sha256": "87161c1b207c5612703220729f5d434138fdddf6081e5f5fb6cedbe0fdd1fd26"
+    },
+    {
+      "path": "prompts/morlen_E2_limited_self_account_revision1.txt",
+      "bytes": 1122,
+      "sha256": "dd293c31452e2cdac456b5086a1ec2dd853d106ecd89cacac51d858d25c2b48f"
+    },
+    {
+      "path": "prompts/morlen_E3_consent_objection.txt",
+      "bytes": 2458,
+      "sha256": "ae2557b3411ec71f0ad3da28d257635287035cb57c1e8ff1f1fd7480a2fb02ad"
+    },
+    {
+      "path": "raw/morlen_E1_concerned_listen_raw_imagegen.png",
+      "bytes": 1057856,
+      "sha256": "de52421252354a619cb831dbc0a633218d0505d8925d9ba42c2ed75bde194e29"
+    },
+    {
+      "path": "raw/morlen_E2_limited_self_account_raw_imagegen.png",
+      "bytes": 961500,
+      "sha256": "8981b6a3cdce3977319cc0bf6f50638235813f238451a4256a1fb47161ec213b"
+    },
+    {
+      "path": "raw/morlen_E2_limited_self_account_revision1_raw_imagegen.png",
+      "bytes": 977416,
+      "sha256": "70355f495ba4bf4043e31a259417c9fdce7c7a8129d680672980e179397c61cc"
+    },
+    {
+      "path": "raw/morlen_E3_consent_objection_raw_imagegen.png",
+      "bytes": 1233262,
+      "sha256": "62e97d47b935298938e030e7d1605a88f6d972a626b3bde7cec6f82e05d7b2ae"
+    },
+    {
+      "path": "review/morlen_expressions_review_zh_dark.png",
+      "bytes": 654443,
+      "sha256": "effbedd63326f1555b8dc9c08bf272cfc81b3382effebb56473c8ad109b18a89"
+    },
+    {
+      "path": "review/morlen_expressions_review_zh_light.png",
+      "bytes": 663567,
+      "sha256": "76dda96466c269968544ea9e80e08bdf71a240683e661135f5ee15ed07857432"
+    },
+    {
+      "path": "selected/morlen_E1_concerned_listen_transparent.png",
+      "bytes": 906591,
+      "sha256": "344a919e80d5078c7ab01f4c43455b81e3bb8f3f80d49dce02a1be809740eef4"
+    },
+    {
+      "path": "selected/morlen_E2_limited_self_account_transparent.png",
+      "bytes": 831288,
+      "sha256": "5d94996151aa3309ed5b1b7a7ff16d5511784292d5c2c2e4ca0b21515e57ed5d"
+    },
+    {
+      "path": "selected/morlen_E3_consent_objection_transparent.png",
+      "bytes": 1070063,
+      "sha256": "52d92b831980b6fa0f7e10edd764ded8d42a0f3fefe9f911de61564dcc34b739"
+    },
+    {
+      "path": "sources/AGENTS.md",
+      "bytes": 20848,
+      "sha256": "ad85e8e7c72914a0096b7c254e7e4feb23e43a2e478616eab549990b3990c8b6"
+    },
+    {
+      "path": "sources/STYLE_DIRECTION.md",
+      "bytes": 6187,
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    {
+      "path": "sources/morlen_raw_imagegen.png",
+      "bytes": 717957,
+      "sha256": "a48e9fa9043104fbb4dea8635cfc509ffdb13a8274db52da09d6e519a87ee7d6"
+    },
+    {
+      "path": "sources/next_main_cast_expressions_morren_rey_01.json",
+      "bytes": 20341,
+      "sha256": "beb493bab5d7b55333708346b3b4026c9ae0fd854b1971f4049f3bcde736a7f8"
+    },
+    {
+      "path": "sources/source_index.json",
+      "bytes": 1729,
+      "sha256": "a453b271987dac20b262533da184820a6d1d9f28eaa43f89df081517119f2f5b"
+    },
+    {
+      "path": "sources/人物_NPC-MORREN_莫伦·海.md",
+      "bytes": 930,
+      "sha256": "e0585bb556c3f1917bbe88623f216748bd0d269192bb23001a76c6a53b8d05f3"
+    },
+    {
+      "path": "sources/人物_莫伦·海.md",
+      "bytes": 2013,
+      "sha256": "28edec2ce196d76666a79ff4070fa1b1aa1fc8e257c4efc411a47302800d4677"
+    },
+    {
+      "path": "sources/台本_N13_答案的代价.md",
+      "bytes": 14731,
+      "sha256": "592fe96a68a135ac6dbcc6c88acc8a49dfc71b7b2cdfb5fc577de1b0ec172491"
+    },
+    {
+      "path": "sources/台本_N7_军需账上的空名.md",
+      "bytes": 12369,
+      "sha256": "1ccafe13df70f4e57636c3762f8f232fa966eb1e730d4311963672812380ca79"
+    }
+  ]
+}

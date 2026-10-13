@@ -1,0 +1,135 @@
+{
+  "character": "nara",
+  "status": "author_review_complete_pending_final_independent",
+  "raw_actually_viewed": true,
+  "transparent_board_actually_viewed": true,
+  "revision_count": 0,
+  "expression_notes": [
+    "不对称压眉 · 窄眼侧看 · 闭唇",
+    "内眉上提 · 倦眼低视 · 短横气口",
+    "平眉申明 · 直视 · 横向开口"
+  ],
+  "limitations": [
+    "Head pose, hair clusters and collar folds vary modestly; not a locked animation sprite sheet.",
+    "Expression depicts no completed branch, no new injury and no consent.",
+    "E2 mouth is a short horizontal breathing gap, not the planned vertical aperture. E3 hair/collar has minor drift."
+  ],
+  "processing": [
+    {
+      "raw": "raw/01_nara_E1_wary_assessment_raw_imagegen.png",
+      "selected": "selected/01_nara_E1_wary_assessment_transparent.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "raw_sha256": "3a6e8dd26c4c7c812eeec0f47156ce1418393a9d4bd73b5d5e123292c618b4e4",
+      "selected_sha256": "ccd26ab5ccefd34a4a916ff290ee7510e315075929beac8e50a1b67a94f9307f",
+      "cleanup": "Set RGBA to zero only where source alpha <32; all other pixels exact",
+      "nonzero_alpha_pixels_cleared": 16999,
+      "preserved_pixels_exact": true
+    },
+    {
+      "raw": "raw/02_nara_E2_weary_request_raw_imagegen.png",
+      "selected": "selected/02_nara_E2_weary_request_transparent.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "raw_sha256": "a608d2fce1b3e51e99d7b0a0ab05da14bd3d3db5ca64939579626ac4c2f91049",
+      "selected_sha256": "771321cfeeb89ef9f7de8c422d8512bb7277f7e599db986efee1ca6e4584b763",
+      "cleanup": "Set RGBA to zero only where source alpha <32; all other pixels exact",
+      "nonzero_alpha_pixels_cleared": 14979,
+      "preserved_pixels_exact": true
+    },
+    {
+      "raw": "raw/03_nara_E3_measured_objection_raw_imagegen.png",
+      "selected": "selected/03_nara_E3_measured_objection_transparent.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "raw_sha256": "85b7739f39b338ee93aa2e456e9801eb4274619b11559db57090e3e8f1c8e11a",
+      "selected_sha256": "be730f69d138886bf2d19e3a5557fd36c974ca47cf5588acb4693b0fb8bedc8d",
+      "cleanup": "Set RGBA to zero only where source alpha <32; all other pixels exact",
+      "nonzero_alpha_pixels_cleared": 15376,
+      "preserved_pixels_exact": true
+    }
+  ],
+  "board_transforms": [
+    {
+      "index": 1,
+      "source_alpha_bbox": [
+        20,
+        60,
+        1236,
+        1212
+      ],
+      "head_crown_chin_y": [
+        60,
+        860
+      ],
+      "uniform_scale_requested": 0.45625,
+      "destination_size": [
+        555,
+        526
+      ],
+      "destination_xy": [
+        22,
+        140
+      ],
+      "resample": "NEAREST",
+      "rounding": "round whole-image dimensions independently to integer; no local warping",
+      "selected_native_unscaled": true
+    },
+    {
+      "index": 2,
+      "source_alpha_bbox": [
+        32,
+        57,
+        1225,
+        1214
+      ],
+      "head_crown_chin_y": [
+        57,
+        877
+      ],
+      "uniform_scale_requested": 0.4451219512195122,
+      "destination_size": [
+        531,
+        515
+      ],
+      "destination_xy": [
+        634,
+        140
+      ],
+      "resample": "NEAREST",
+      "rounding": "round whole-image dimensions independently to integer; no local warping",
+      "selected_native_unscaled": true
+    },
+    {
+      "index": 3,
+      "source_alpha_bbox": [
+        10,
+        48,
+        1245,
+        1235
+      ],
+      "head_crown_chin_y": [
+        49,
+        824
+      ],
+      "uniform_scale_requested": 0.47096774193548385,
+      "destination_size": [
+        582,
+        559
+      ],
+      "destination_xy": [
+        1209,
+        140
+      ],
+      "resample": "NEAREST",
+      "rounding": "round whole-image dimensions independently to integer; no local warping",
+      "selected_native_unscaled": true
+    }
+  ]
+}

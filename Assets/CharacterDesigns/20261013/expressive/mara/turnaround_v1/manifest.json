@@ -1,0 +1,156 @@
+{
+  "character": "n1_mara",
+  "date": "2026-10-13",
+  "concept_only": true,
+  "runtimeVerified": false,
+  "directional_animation": false,
+  "generator": "builtin image_gen",
+  "new_selected_images": 2,
+  "total_generation_calls": 5,
+  "concept_anchor_unchanged": true,
+  "user_approved": false,
+  "assets": [
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/mara/mara_raw_imagegen_v2.png",
+      "sha256": "03a4d26e32ae7c22362aa1de2546bf0e18dfd79f0285c34694db015f3f64410f",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        276,
+        218,
+        883,
+        1360
+      ],
+      "transparent_pixels": 1068993,
+      "partial_alpha_pixels": 502421,
+      "display_scale": 0.6
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/mara/turnaround_v1/raw/mara_side_v3_raw_imagegen.png",
+      "sha256": "feff731ac47cd7d143178abddef246882495f14fc903b40d243d05752f39183e",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        260,
+        220,
+        885,
+        1375
+      ],
+      "transparent_pixels": 1148463,
+      "partial_alpha_pixels": 422690,
+      "display_scale": 0.6
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/mara/turnaround_v1/raw/mara_back_v2_raw_imagegen.png",
+      "sha256": "9646f28acfeefdf6bb17ad8e1977c336d1815f4f7bd27455281b04cc2bd6c76b",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha_gt5_bbox": [
+        265,
+        221,
+        840,
+        1366
+      ],
+      "transparent_pixels": 1103696,
+      "partial_alpha_pixels": 467089,
+      "display_scale": 0.6
+    }
+  ],
+  "processing": "Review boards only: identical 0.60 nearest-neighbor uniform scaling and translation to common foot baseline. Raw images and original alpha preserved; individual files byte-identical raw copies. No character drawn, stretched or repainted by script.",
+  "design_inferences": [
+    "后背素色裙片、领口与围裙系带结构",
+    "低发髻的后方发束连接；围巾端留前方",
+    "前方补丁在背面遮挡，右手绳圈仍保留"
+  ],
+  "status": "awaiting independent review",
+  "limitations": [
+    "概念转面，非精确正交或动作精灵",
+    "脸发像素与视角存在生成漂移，待独立审看",
+    "背面结构为设计推定，不作原作事实",
+    "无装备兼容或运行验证"
+  ],
+  "prompts": [
+    {
+      "file": "prompts/mara_back.txt",
+      "sha256": "ee714411c411f8d90f6b87bf7239672e5c8b4fb297cdfa31f9253ddded9a882a",
+      "full_text": "Use case: identity-preserve. Asset type: concept-art character turnaround, not runtime sprite. Input image 1 is the sole identity and outfit anchor. Mara, the same adult female rope worker. Lock her very large head, compact short body and legs, weary half-lidded concerned expression, angular adult nose and mouth, brown wavy hair and low messy bun, brick-red scarf, cream rolled-sleeve blouse, ochre patched dress with dark gray lower hem, light cream waist apron, brown flat ankle boots. Preserve the loose working rope coil in HER RIGHT hand (visible on image-left in the reference); other hand empty. No new props. Change ONLY camera/view to a straight full-body rear view, face completely hidden, same standing pose, identity, proportions and clothing. Infer only minimal plain rear clothing construction; no new decorations. Respect anatomical hand and tool sides after turning. Match reference pixel-art block size, crisp stepped contours, palette and soft pixel-cluster shading. Do not beautify or infantilize face, do not adopt another character's features. Very important: match original head-to-body ratio and total full-body subject height in source image; do not stretch limbs or slim the head. One isolated character centered, ample transparent margin, entire head, shoes and existing prop in frame. Real transparent RGBA background, no floor, shadow, text, grid or labels. This is one view only.\n"
+    },
+    {
+      "file": "prompts/mara_back_v2.txt",
+      "sha256": "5a9e672df18d9f5913975824c5d63cb9e7d31aa3e767f79a7fcb0248421caa72",
+      "full_text": "Use case: identity-preserve. Asset type: concept-art character turnaround, not runtime sprite. Input image 1 is the sole identity and outfit anchor. Mara, the same adult female rope worker. Lock her very large head, compact short body and legs, weary half-lidded concerned expression, angular adult nose and mouth, brown wavy hair and low messy bun, brick-red scarf, cream rolled-sleeve blouse, ochre patched dress with dark gray lower hem, light cream waist apron, brown flat ankle boots. Preserve the loose working rope coil in HER RIGHT hand (visible on image-left in the reference); other hand empty. No new props. Change ONLY camera/view to a straight full-body rear view, face completely hidden, same standing pose, identity, proportions and clothing. Infer only minimal plain rear clothing construction; no new decorations. Respect anatomical hand and tool sides after turning. Match reference pixel-art block size, crisp stepped contours, palette and soft pixel-cluster shading. Do not beautify or infantilize face, do not adopt another character's features. Very important: match original head-to-body ratio and total full-body subject height in source image; do not stretch limbs or slim the head. One isolated character centered, ample transparent margin, entire head, shoes and existing prop in frame. Real transparent RGBA background, no floor, shadow, text, grid or labels. This is one view only. Correction priority: scarf loose ends stay on the FRONT of the body and must NOT hang down the back. Rear neckline of ochre dress is a plain modest straight back, not a duplicate front low neck. No new rear skirt patches: the original front/right-side patch is occluded or only barely at the side edge. Rear apron is only a simple narrow waist tie, no new apron panel on the back.\n"
+    },
+    {
+      "file": "prompts/mara_side.txt",
+      "sha256": "e35ca72a08755e3a73591e1d6d39cc71a79004e91c050da059ddcf2f5a2475e4",
+      "full_text": "Use case: identity-preserve. Asset type: concept-art character turnaround, not runtime sprite. Input image 1 is the sole identity and outfit anchor. Mara, the same adult female rope worker. Lock her very large head, compact short body and legs, weary half-lidded concerned expression, angular adult nose and mouth, brown wavy hair and low messy bun, brick-red scarf, cream rolled-sleeve blouse, ochre patched dress with dark gray lower hem, light cream waist apron, brown flat ankle boots. Preserve the loose working rope coil in HER RIGHT hand (visible on image-left in the reference); other hand empty. No new props. Change ONLY camera/view to a true left-facing full-body profile, nose points screen-left, exactly one eye visible. Keep the same relaxed standing pose, identity, proportions and clothing. Match reference pixel-art block size, crisp stepped contours, palette and soft pixel-cluster shading. Do not beautify or infantilize face, do not adopt another character's features. Very important: match original head-to-body ratio and total full-body subject height in source image; do not stretch limbs or slim the head. One isolated character centered, ample transparent margin, entire head, shoes and existing prop in frame. Real transparent RGBA background, no floor, shadow, text, grid or labels. This is one view only.\n"
+    },
+    {
+      "file": "prompts/mara_side_v2.txt",
+      "sha256": "efdafa86703b5252b9e656d9c8bb00b3f359f110c979d92ff68fe92244d85b9b",
+      "full_text": "Use case: identity-preserve. Asset type: concept-art character turnaround, not runtime sprite. Input image 1 is the sole identity and outfit anchor. Mara, the same adult female rope worker. Lock her very large head, compact short body and legs, weary half-lidded concerned expression, angular adult nose and mouth, brown wavy hair and low messy bun, brick-red scarf, cream rolled-sleeve blouse, ochre patched dress with dark gray lower hem, light cream waist apron, brown flat ankle boots. Preserve the loose working rope coil in HER RIGHT hand (visible on image-left in the reference); other hand empty. No new props. Change ONLY camera/view to a true left-facing full-body profile, nose points screen-left, exactly one eye visible. Keep the same relaxed standing pose, identity, proportions and clothing. Match reference pixel-art block size, crisp stepped contours, palette and soft pixel-cluster shading. Do not beautify or infantilize face, do not adopt another character's features. Very important: match original head-to-body ratio and total full-body subject height in source image; do not stretch limbs or slim the head. One isolated character centered, ample transparent margin, entire head, shoes and existing prop in frame. Real transparent RGBA background, no floor, shadow, text, grid or labels. This is one view only. Correction priority: rotate the WHOLE torso, skirt and both feet into true left profile, not merely the head. The near left hand is empty; the far right hand and rope are naturally partly occluded. Keep original eye character and hair, do not enlarge head further.\n"
+    },
+    {
+      "file": "prompts/mara_side_v3.txt",
+      "sha256": "0210082f18c8d21c3783c86c4ec78841deea32d6304810f27662e0568ceeee29",
+      "full_text": "Use case: precise-object-edit. Edit the supplied pixel-art Mara side-view ONLY in one small location: remove the stray narrow red scarf tail hanging BEHIND her near shoulder at image coordinates approximately x640–710,y755–885 (canvas 1118x1407). This is the red vertical strip behind the cream upper sleeve at screen-right. Restore a clean cream sleeve and plain ochre back contour there, with transparent background outside the silhouette. Keep the red scarf wrapped at the neck and its existing FRONT hanging end intact. Preserve absolutely everything else: exact facial features and expression, eye, nose, mouth, hair/bun, head and body proportions, all other costume, hands, rope coil, shoes, pose, full-body placement and pixel-art style. Do not add any equipment or markings. Genuine transparent RGBA; no floor or shadow or text. Single surgical scarf correction only.\n"
+    }
+  ],
+  "raw_versions": [
+    {
+      "file": "raw/mara_back_raw_imagegen.png",
+      "sha256": "beaf3b38aff2b40fbdc5ea3d641443b28b0f1ec2add09cb3a1fc4704d2daa0d1"
+    },
+    {
+      "file": "raw/mara_back_v2_raw_imagegen.png",
+      "sha256": "9646f28acfeefdf6bb17ad8e1977c336d1815f4f7bd27455281b04cc2bd6c76b"
+    },
+    {
+      "file": "raw/mara_side_raw_imagegen.png",
+      "sha256": "62a18e65f3b44143fa6765d5c6300aec8c37cd0afde9bb24ea373f61bda99547"
+    },
+    {
+      "file": "raw/mara_side_v2_raw_imagegen.png",
+      "sha256": "6ff8d3a0601761b57e3320326dbaa9d2632535c08d568d0d0785f75bddb9594e"
+    },
+    {
+      "file": "raw/mara_side_v3_raw_imagegen.png",
+      "sha256": "feff731ac47cd7d143178abddef246882495f14fc903b40d243d05752f39183e"
+    }
+  ],
+  "deliverables": [
+    {
+      "file": "mara_side.png",
+      "sha256": "feff731ac47cd7d143178abddef246882495f14fc903b40d243d05752f39183e"
+    },
+    {
+      "file": "mara_back.png",
+      "sha256": "9646f28acfeefdf6bb17ad8e1977c336d1815f4f7bd27455281b04cc2bd6c76b"
+    },
+    {
+      "file": "mara_turnaround_review_zh.png",
+      "sha256": "c3ab4462a016223f2bd4df7c0493e16800756f2b3930fb83a25c66585a372e9c"
+    },
+    {
+      "file": "QA_background_comparison.png",
+      "sha256": "cc563134e4e6e3fcabc476863180044274e2437c73b29dfc885dbdfc62364082"
+    }
+  ],
+  "edit_inputs": [
+    {
+      "output": "raw/mara_side_v3_raw_imagegen.png",
+      "input": "raw/mara_side_v2_raw_imagegen.png",
+      "input_sha256": "6ff8d3a0601761b57e3320326dbaa9d2632535c08d568d0d0785f75bddb9594e",
+      "prompt": "prompts/mara_side_v3.txt"
+    }
+  ]
+}

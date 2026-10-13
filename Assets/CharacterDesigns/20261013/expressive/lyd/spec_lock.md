@@ -1,0 +1,2 @@
+# Lyd concept lock
+Source: briefs/batch_next_core_01.json. Young adult female copyist, warm brown compact high bun, rust coat, cream shirt, dark scarf/trousers, small waist pouch and short boots. Empty hands. Alert weighing trust, closed mouth not smile. Actual head near half total height, do not inflate bun instead. Sela G coarse clusters; transparent whole single figure; no paper, disclosed testimony or narrative result.

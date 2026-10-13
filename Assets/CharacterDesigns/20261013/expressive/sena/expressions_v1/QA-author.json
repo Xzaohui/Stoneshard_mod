@@ -1,0 +1,75 @@
+{
+  "character": "sena",
+  "status": "author_review_complete_pending_independent",
+  "raw_actually_viewed": true,
+  "transparent_board_actually_viewed": true,
+  "revision_count": 0,
+  "identity": "anchor face, hair, skin and medieval collar retained",
+  "expression_notes": [
+    "非对称追问眉 · 窄发话口形",
+    "内眉上提 · 下视闭唇",
+    "舒眉开眼 · 平视放松唇"
+  ],
+  "limitations": [
+    "Generated bust crop, head angle and scarf folds vary modestly; board scale uniformly normalizes head height, does not warp anatomy.",
+    "Conditional expressions are concept studies, not an animation or story outcome.",
+    "Sena E1 mouth is more finely rendered than surrounding coarse clusters."
+  ],
+  "processing": [
+    {
+      "raw": "raw/01_privacy_boundary_raw_imagegen.png",
+      "selected": "selected/01_privacy_boundary_transparent.png",
+      "dimensions": [
+        1118,
+        1407
+      ],
+      "raw_sha256": "de795ca8747d514bcdc436822e62de3549fc98da79c63ddafa1646fcd619335a",
+      "selected_sha256": "08724a7a950bcf628aef9e7dbce853579c6fc7428d9f1553b57435357ae17f9d",
+      "cleanup": "RGBA cleared only where source alpha <32; other pixels unchanged",
+      "nonzero_alpha_pixels_cleared": 15774,
+      "preserved_pixels_exact": true
+    },
+    {
+      "raw": "raw/02_friend_accountability_raw_imagegen.png",
+      "selected": "selected/02_friend_accountability_transparent.png",
+      "dimensions": [
+        1118,
+        1407
+      ],
+      "raw_sha256": "2e2fdc69bff7f96259a9b5a58ee75557366ac5aed86dd4048c79c1b121636119",
+      "selected_sha256": "7084ca5d1279b5e5639c17810d606080295479fa6bc49e01f353aa727dd1bc5f",
+      "cleanup": "RGBA cleared only where source alpha <32; other pixels unchanged",
+      "nonzero_alpha_pixels_cleared": 15106,
+      "preserved_pixels_exact": true
+    },
+    {
+      "raw": "raw/03_listen_without_speaking_for_raw_imagegen.png",
+      "selected": "selected/03_listen_without_speaking_for_transparent.png",
+      "dimensions": [
+        1118,
+        1407
+      ],
+      "raw_sha256": "9e47696c222a114bdc22ea941df6c393a3b90427f1975e44e131e4ee92fd221b",
+      "selected_sha256": "a5e5a4cfc413a62c64aee7f753f7e92355b1db0ec57a428ae317eba9866e2c59",
+      "cleanup": "RGBA cleared only where source alpha <32; other pixels unchanged",
+      "nonzero_alpha_pixels_cleared": 13437,
+      "preserved_pixels_exact": true
+    }
+  ],
+  "board_processing": "Manual crown/chin measurements; uniform nearest-neighbor per-image scale to 340px head height; alpha bounding-box crop only; native selected images unscaled.",
+  "landmarks_crown_chin_y": [
+    [
+      83,
+      859
+    ],
+    [
+      72,
+      865
+    ],
+    [
+      91,
+      804
+    ]
+  ],
+  "transparent_board_findings": "Light/dark backgrounds clean, no large halo, labels clear after layout correction; three expressions read distinctly."
+}

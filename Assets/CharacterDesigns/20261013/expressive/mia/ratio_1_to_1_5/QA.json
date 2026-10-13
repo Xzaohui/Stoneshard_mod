@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-13",
+  "character": "NPC-MIA",
+  "concept_only": true,
+  "runtimeVerified": false,
+  "equipment_compatibility_verified": false,
+  "selected": "mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+  "visual_review_performed": true,
+  "measurement_method": "Actual generated PNG inspected at source resolution. Visible crown and sole from alpha > 5 silhouette; anatomical chin manually located at lowest jaw skin edge, excluding neck, dark outline thickness and braid. Coordinates are approximate anatomical landmarks, not generation prompt claims. Full visible height excludes transparent margins.",
+  "measurements": {
+    "original": {
+      "crown_y": 71,
+      "chin_y_approx": 707,
+      "sole_y_exclusive": 1339,
+      "head_height_px": 636,
+      "rest_height_px": 632,
+      "head_to_rest": "1:0.994"
+    },
+    "v1_rejected": {
+      "crown_y": 205,
+      "chin_y_approx": 588,
+      "sole_y_exclusive": 1293,
+      "head_height_px": 383,
+      "rest_height_px": 705,
+      "head_to_rest": "1:1.841",
+      "reason": "Head over-shrunk, overshoots requested 1:1.5 toward 1:2."
+    },
+    "v2_selected": {
+      "crown_y": 104,
+      "chin_y_approx": 598,
+      "sole_y_exclusive": 1329,
+      "head_height_px": 494,
+      "rest_height_px": 731,
+      "head_to_rest": "1:1.480",
+      "head_fraction": 0.403265306122449,
+      "landmark_uncertainty_px": 5,
+      "decision": "Approximate requested ratio reached; not mathematically exact."
+    }
+  },
+  "observations": [
+    "Adult identity, leftward orientation, thoughtful tired closed-mouth expression, low braid, off-white clothing, teal shawl, blanket and standing pose preserved.",
+    "Head clearly smaller than original at matched total character height; remaining body still compact, shoes and lower legs short.",
+    "Face was redrawn by image generator, not low-resolution cut-and-shrink compositing. Slight pixel-level face/hair and fold variation remains.",
+    "Large head remains stylized; this is a proportion trial pending user preference, not accepted final sprite."
+  ],
+  "technical": [
+    {
+      "file": "mia_raw_imagegen.png",
+      "size": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_gt5_bbox": [
+        179,
+        71,
+        937,
+        1339
+      ],
+      "sha256": "5da876d32f4485a7fbc0d8461cdc7a9e8663022ef925664a2c1b590b0419acd2"
+    },
+    {
+      "file": "mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+      "size": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_gt5_bbox": [
+        268,
+        104,
+        852,
+        1329
+      ],
+      "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+    },
+    {
+      "file": "mia_ratio_1_to_1_5_raw_imagegen.png",
+      "size": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "alpha_gt5_bbox": [
+        328,
+        205,
+        800,
+        1293
+      ],
+      "sha256": "3074c7d2fd624b5df4e312a8d63ba0fcfb822674df57bdd38b57de3c5a5fef09"
+    }
+  ],
+  "presentation": {
+    "file": "mia_before_after_mobile_600.png",
+    "width_px": 600,
+    "whole_body_display_height_px_each": 470,
+    "face_display_height_px_each": 237,
+    "scaling": "Nearest-neighbour for comparison presentation only; source PNG bytes remain unmodified."
+  }
+}

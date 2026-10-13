@@ -1,0 +1,127 @@
+{
+  "character": "n1_rhea",
+  "date": "2026-10-13",
+  "concept_only": true,
+  "runtimeVerified": false,
+  "equipment_compatibility_verified": false,
+  "equipment_mechanism": "unknown",
+  "directional_animation": false,
+  "generator": "builtin image_gen",
+  "new_selected_images": 2,
+  "generation_calls": 2,
+  "new_characters": 0,
+  "anchor_unchanged": true,
+  "user_approved": false,
+  "assets": [
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/rhea/rhea_raw_imagegen.png",
+      "sha256": "88b9ad01792e0ed438c771776afbb0f66ea7c491324ce98db09214004dff4ed7",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        267,
+        100,
+        899,
+        1364
+      ],
+      "transparent_pixels": 998874,
+      "partial_alpha_pixels": 572426,
+      "display_scale": 0.6
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/rhea/turnaround_v1/rhea_left_raw_imagegen.png",
+      "sha256": "d46d5ed31d2317bc59377c390dfa61267b736d35f2779d1a119027c83ca18dcc",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        329,
+        98,
+        806,
+        1370
+      ],
+      "transparent_pixels": 1103390,
+      "partial_alpha_pixels": 468156,
+      "display_scale": 0.6
+    },
+    {
+      "file": "Assets/CharacterDesigns/20261013/expressive/rhea/turnaround_v1/rhea_back_raw_imagegen.png",
+      "sha256": "3221ef33270c7511200619622dd067cdd536bb22698c4857789f12daf8f61e5d",
+      "canvas": [
+        1118,
+        1407
+      ],
+      "alpha_gt5_bbox": [
+        269,
+        96,
+        877,
+        1372
+      ],
+      "transparent_pixels": 1015038,
+      "partial_alpha_pixels": 556615,
+      "display_scale": 0.6
+    }
+  ],
+  "processing": "Raw and individual transparent PNGs byte-identical. Review boards crop by alpha>5 bbox only for layout, retain source alpha; all panels common 0.60 nearest-neighbor uniform scale and foot translation. No shape, anatomy, color edits or per-view stretching. Black/white single-image composites preserve full canvas.",
+  "design_inferences": [
+    "背面未见发束、素色衣片、披肩/斜带结构作保守设计推定，不新增身份、道具或剧情结果。"
+  ],
+  "status": "awaiting independent review",
+  "prompts": [
+    {
+      "file": "rhea_back_prompt.txt",
+      "sha256": "8222224320ad9b9b2f4cbde3e8eb73e6e7836fa39fc151bb6e36d2e9dfab91d5",
+      "full_text": "Use case: identity-preserve. Asset type: single character full-body turnaround concept on genuine transparent background. Input image is the exact front-three-quarter anchor. Preserve the same mature woman's identity, compact large-head/short-body proportions, broad jaw, straight short bangs, brown low bun, stern alert eyes and flat firm mouth, muted blue shoulder shawl, gray long practical belted dress with offwhite neckline and rolled cuffs, plain brown boots. She holds an ordinary rolled cream blanket VERTICALLY in her anatomical LEFT arm, against her LEFT ribs. Anatomical RIGHT arm hangs empty. Roll is cloth, clearly spiral top and rolled/folded bottom, not a baby. No child, healing, symbols, weapons, bag or new props. Preserve coarse square pixel-cluster artwork, restrained highlights and dark contours. Match reference's 1118 x 1407 canvas framing: head around y105, soles y1360. Do not lengthen body or neck; preserve head width and relative scale. One entire character, all hair and both boots uncropped, no text, floor or shadow. Draw BACK VIEW facing away; slight back-three-quarter angle acceptable. Anatomical LEFT arm and rolled blanket are now on screen-left, and anatomical RIGHT empty hand on screen-right. Blanket may be partly occluded but still held vertically at left ribs. Blue shawl drapes simply across shoulders/upper back, with low brown bun clearly readable above. Dress back plain gray, minimal seams, belt horizontal. Do not add decorative back clasps, lacing, pouches or new construction. Unseen back details are conservative design inference.\n"
+    },
+    {
+      "file": "rhea_left_prompt.txt",
+      "sha256": "624a72218707754913b4d9f0929f5c4eda40e0702d1dc37d6574814baf63bd3b",
+      "full_text": "Use case: identity-preserve. Asset type: single character full-body turnaround concept on genuine transparent background. Input image is the exact front-three-quarter anchor. Preserve the same mature woman's identity, compact large-head/short-body proportions, broad jaw, straight short bangs, brown low bun, stern alert eyes and flat firm mouth, muted blue shoulder shawl, gray long practical belted dress with offwhite neckline and rolled cuffs, plain brown boots. She holds an ordinary rolled cream blanket VERTICALLY in her anatomical LEFT arm, against her LEFT ribs. Anatomical RIGHT arm hangs empty. Roll is cloth, clearly spiral top and rolled/folded bottom, not a baby. No child, healing, symbols, weapons, bag or new props. Preserve coarse square pixel-cluster artwork, restrained highlights and dark contours. Match reference's 1118 x 1407 canvas framing: head around y105, soles y1360. Do not lengthen body or neck; preserve head width and relative scale. One entire character, all hair and both boots uncropped, no text, floor or shadow. Draw a LEFT-FACING SIDE VIEW, nose and feet point screen-left; slightly off-orthogonal display angle acceptable. Her anatomical LEFT side is the near side, with the LEFT arm hugging the rolled blanket; the empty RIGHT arm is farther away. Keep roll at her left ribs, same size as reference. Low bun sits behind head, not high on crown. Do not repeat front-three-quarter view.\n"
+    }
+  ],
+  "deliverables": [
+    {
+      "file": "QA_background_comparison.png",
+      "sha256": "8a2881dddd2259964d0151bc439655b15c57ae77ad4108ebf9905e3de6f5107c"
+    },
+    {
+      "file": "rhea_back_black.png",
+      "sha256": "12d009989cf3601b1ec0bdc626c3964fc29d070e0af6c914b8606373047abc1e"
+    },
+    {
+      "file": "rhea_back_raw_imagegen.png",
+      "sha256": "3221ef33270c7511200619622dd067cdd536bb22698c4857789f12daf8f61e5d"
+    },
+    {
+      "file": "rhea_back_transparent.png",
+      "sha256": "3221ef33270c7511200619622dd067cdd536bb22698c4857789f12daf8f61e5d"
+    },
+    {
+      "file": "rhea_back_white.png",
+      "sha256": "147fe68ddbee96e49ae31e430044d7744f0b993ca255ee19a225a2892f8fec54"
+    },
+    {
+      "file": "rhea_left_black.png",
+      "sha256": "e86e6b947da3d5d80d16e12d176e72a690701a57832fe909b6e275cc0c3f2d1a"
+    },
+    {
+      "file": "rhea_left_raw_imagegen.png",
+      "sha256": "d46d5ed31d2317bc59377c390dfa61267b736d35f2779d1a119027c83ca18dcc"
+    },
+    {
+      "file": "rhea_left_transparent.png",
+      "sha256": "d46d5ed31d2317bc59377c390dfa61267b736d35f2779d1a119027c83ca18dcc"
+    },
+    {
+      "file": "rhea_left_white.png",
+      "sha256": "8763753d785c9e1ac2016559b51dfd09893a26af121110b46ff4436eeb4e162c"
+    },
+    {
+      "file": "rhea_turnaround_review_zh.png",
+      "sha256": "aad04e1972902415cb5f0ac303cc80d390c1d931511a9b8f0b84fd7722887bf1"
+    }
+  ]
+}

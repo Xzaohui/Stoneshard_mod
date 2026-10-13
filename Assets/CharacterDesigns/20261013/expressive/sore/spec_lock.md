@@ -1,0 +1,2 @@
+# Sore concept lock
+ALD-NPC-SORE adult fitting apprentice, current card and old82 bottom row read/viewed. Private injury remains undisclosed: long opaque ochre sleeves cover both full arms/wrists, ordinary gloves cover hands/fingers, no scars/bandages/diagnosis/prosthetic/missing limbs. Focused guarded adult face not pain performance. Brown apron, charcoal trousers, thick-handled tool safely at waist. Revised Mia natural compact full-body reference, own identity. concept_only=true; equipment_compatibility_verified=false; no healed claim.

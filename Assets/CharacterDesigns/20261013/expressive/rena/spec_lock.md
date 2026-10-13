@@ -1,0 +1,2 @@
+# Rena concept lock
+BRY-NPC-RENA, current card and old19 last two panels checked. Adult female lodging recorder, cream kerchief, dark green practical dress, plain cream apron, closed brown ledger. Reserved serious concerned/guilty glance, pressed mouth, no smile or disclosures. Natural adult compact proportions and G coarse clusters prioritized over exact ratio. Transparent whole single figure. concept_only=true; equipment_compatibility_verified=false; no runtime.

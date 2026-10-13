@@ -1,0 +1,2 @@
+# Oda concept lock
+NPC09, brief batch_next_routes_04. Mature grey-haired woman, worn reed-green work coat, small working rope coil, everyday trousers/shoes. Warm attentive caution; head half visible height, body/legs other half; Sela G coarse clusters. Transparent single complete standing pose. concept_only=true; equipment_compatibility_verified=false; actual equipment mechanics unknown. Outfit proposal does not mean permanently fixed clothing. No runtime or modular asset production.

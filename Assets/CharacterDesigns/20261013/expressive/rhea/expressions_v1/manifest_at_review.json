@@ -1,0 +1,156 @@
+{
+  "actor": "n1_rhea",
+  "version": "expressions_v1",
+  "createdAtUTC": "2026-10-13T11:07:16.357439+00:00",
+  "generation": "built-in image_gen; separate call per expression; transparent_background=true",
+  "new_character_count": 0,
+  "new_expression_count": 3,
+  "sources": [
+    {
+      "path": "design/04_人物/人物_玛拉与伊沃.md",
+      "sha256": "27945298fd154bc07e7aab59ae741e7cff371e360767c5bbb2becda21374da58"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N1_无钟之夜.md",
+      "sha256": "5a51c1c89304250d26b969746cf5098f03a34bc899ce56de767169ebe128de9a"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/rhea/rhea_raw_imagegen.png",
+      "sha256": "88b9ad01792e0ed438c771776afbb0f66ea7c491324ce98db09214004dff4ed7"
+    }
+  ],
+  "expressions": [
+    {
+      "id": "01_listening",
+      "label": "警惕倾听",
+      "raw": "01_listening_raw_imagegen.png",
+      "candidate": "01_listening_transparent.png",
+      "raw_sha256": "f46f6f0b8f319ff7e77225220ea41dcb89690d9c735d76d60732d192601f62ed",
+      "candidate_sha256": "52d353c284f22f46eac131577841daaff1e6d8fb80dc798ece2506c4564532c1",
+      "alpha_le5_cleaned_pixels_in_crop": 6796,
+      "crop": [
+        0,
+        0,
+        1254,
+        1120
+      ]
+    },
+    {
+      "id": "02_reminder",
+      "label": "清楚提醒",
+      "raw": "02_reminder_raw_imagegen.png",
+      "candidate": "02_reminder_transparent.png",
+      "raw_sha256": "b3a29df0eb971417ccdca97cf8efa70a39eb57a6b85fc097dd4028a7e19aebae",
+      "candidate_sha256": "be31504c89ed8d7fb27d5f4d7a825a3768c5aa361602910e06ec0276c97862c4",
+      "alpha_le5_cleaned_pixels_in_crop": 6113,
+      "crop": [
+        0,
+        0,
+        1254,
+        1120
+      ]
+    },
+    {
+      "id": "03_resolve",
+      "label": "柔和但坚定",
+      "raw": "03_resolve_raw_imagegen.png",
+      "candidate": "03_resolve_transparent.png",
+      "raw_sha256": "f3d25f23b59f3eb0c62254366dadeab87da90bda030371fc6621bd6b45e1e2ca",
+      "candidate_sha256": "c635e4b5e691ae543caae5a1ff1c3e754db9875f71d90b2269f19ddc4b4568ea",
+      "alpha_le5_cleaned_pixels_in_crop": 4795,
+      "crop": [
+        0,
+        0,
+        1254,
+        1120
+      ]
+    }
+  ],
+  "postprocessing": "Common crop [0,0,1254,1120]; alpha <=5 zeroed; no RGB repaint. Boards use exactly 0.5x nearest-neighbor isotropic scale. Chinese labels outside art. Raw images untouched.",
+  "presentationBoard": "rhea_expressions_white_zh.png",
+  "blackWhiteBoard": "rhea_expressions_black_white_zh.png",
+  "authorQA": "QA-author.json",
+  "independentReview": "pending",
+  "userApproved": false,
+  "conceptOnly": true,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "equipmentCompatibilityVerified": false,
+  "equipmentMechanism": "unknown",
+  "outputs": [
+    {
+      "path": "01_listening_prompt.txt",
+      "sha256": "ab4220730c80b6883792f01ddef97dc8895d12108d830450561a8cd2e648c230",
+      "bytes": 1895
+    },
+    {
+      "path": "01_listening_raw_imagegen.png",
+      "sha256": "f46f6f0b8f319ff7e77225220ea41dcb89690d9c735d76d60732d192601f62ed",
+      "bytes": 943729
+    },
+    {
+      "path": "01_listening_transparent.png",
+      "sha256": "52d353c284f22f46eac131577841daaff1e6d8fb80dc798ece2506c4564532c1",
+      "bytes": 749967
+    },
+    {
+      "path": "02_reminder_prompt.txt",
+      "sha256": "03f7bb4c96682e4b4c28fc2fbca4bff97c4f031afc67d813518534851ccf8538",
+      "bytes": 1918
+    },
+    {
+      "path": "02_reminder_raw_imagegen.png",
+      "sha256": "b3a29df0eb971417ccdca97cf8efa70a39eb57a6b85fc097dd4028a7e19aebae",
+      "bytes": 944342
+    },
+    {
+      "path": "02_reminder_transparent.png",
+      "sha256": "be31504c89ed8d7fb27d5f4d7a825a3768c5aa361602910e06ec0276c97862c4",
+      "bytes": 733783
+    },
+    {
+      "path": "03_resolve_prompt.txt",
+      "sha256": "8ae2616c1cb456302058f0b85d88706864708fc1fe9e082d01d1ab54e2cb866d",
+      "bytes": 1940
+    },
+    {
+      "path": "03_resolve_raw_imagegen.png",
+      "sha256": "f3d25f23b59f3eb0c62254366dadeab87da90bda030371fc6621bd6b45e1e2ca",
+      "bytes": 967370
+    },
+    {
+      "path": "03_resolve_transparent.png",
+      "sha256": "c635e4b5e691ae543caae5a1ff1c3e754db9875f71d90b2269f19ddc4b4568ea",
+      "bytes": 743632
+    },
+    {
+      "path": "QA-author.json",
+      "sha256": "8c892d933f13f30f0caf9558905b9a7f41169cd4fa8a3c5d9a534461f2efa1b5",
+      "bytes": 2034
+    },
+    {
+      "path": "prepare_boards.py",
+      "sha256": "dd7d111dca363acf5fc3b91b430cbb8e1b9cbc253a1e8e5cc5b229da470ed536",
+      "bytes": 5541
+    },
+    {
+      "path": "rhea_expressions_black_white_zh.png",
+      "sha256": "a274950633818f82d194e553e8891e641cc47348db66772a290999ab426961ea",
+      "bytes": 1286167
+    },
+    {
+      "path": "rhea_expressions_black_zh.png",
+      "sha256": "d6e8a31b4da92da94375e0a316e146e23e08c82cfed3c29562cf811ce221d194",
+      "bytes": 637632
+    },
+    {
+      "path": "rhea_expressions_white_zh.png",
+      "sha256": "0f3ce50bcc8ee7230483d0608aec7278d203acf606385dabdfd2b600ef2951a6",
+      "bytes": 650705
+    }
+  ]
+}

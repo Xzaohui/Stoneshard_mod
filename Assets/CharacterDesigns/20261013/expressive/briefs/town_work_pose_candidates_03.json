@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T16:26:22.432939+00:00",
+  "batch": "town_work_pose_candidates_03",
+  "status": "read_only_research_then_brief_only_not_dispatched",
+  "scope": {
+    "max_characters": 2,
+    "planned_characters": 2,
+    "max_new_poses": 3,
+    "planned_new_poses": 2,
+    "new_character_count": 0,
+    "image_generation_performed": false,
+    "indexes_modified": false,
+    "runtime_verified": false
+  },
+  "selection_rationale": "已经有大量对话、递物、开册检查。本批改为原衣物上的职业准备/收工动作：一张跨身收袖，一张髋部前屈拂围裙。不是重新画物件检查，也不从职业称呼凭空添加作业工具。只计划两姿，不为填满三姿而追加复位图。",
+  "coverage_checked": [
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256_at_check": "be81a3fdf71217f2cd24e9cf0995e9fea203eac811eb1f12deb7d893b1910a3e"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "sha256_at_check": "dd13cc493692a62accafba5f0dcab30dbd9ad0a5b71938931bd143e988f2dd70"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256_at_check": "9b721c26453a8f2f6b89ad88797d105c2ec770a1f7c4a38a5612269eb34a3e80"
+    }
+  ],
+  "coverage_notes": [
+    "MASTER及ACTION_COVERAGE未列奥辛/瓦森动作；实际CharacterActions下两人目录不存在。roster确认两人已交静态人物。",
+    "父线程确认Nisha开册捻页/Doro托碗三姿已通过正在交付，故不因台账仍称在制而重复派画。",
+    "自然步行各失败研究、五个静态gate均不触碰，不改变其结论。"
+  ],
+  "global_acceptance": [
+    "成年原脸、原大头短身与原块面像素感；不拉长颈、腿、手臂，不写死不同角色同一比例数字。",
+    "动作改变需在缩图时由肩线、肘线、躯干轮廓可读，不能只换手掌或眼神。",
+    "双脚在地，重心落两脚支撑内；手必须与指定衣物产生明确接触/遮挡，无第三手与悬空工具。",
+    "服装构造及道具数量不变；原衣物仍穿在身上，不能变为可递出的布片。",
+    "每人只1新姿。若姿态差不清楚或接触失败，最多针对该问题修订1次，仍失败停止，不扩大动作。",
+    "本brief只是允许后续选用的概念提案，不声称人物卡记载了该具体动作；不推导剧情结果。"
+  ],
+  "candidates": [
+    {
+      "canonical_id": "BRY-NPC-OSIN",
+      "name": "奥辛·锤",
+      "slug": "osin",
+      "branch": "sleeve_settle_v1",
+      "status": "planned_only_not_generated",
+      "new_pose_count": 1,
+      "source_card": {
+        "path": "design/04_人物/城市人物/人物_BRY-NPC-OSIN_奥辛·锤.md",
+        "frontmatter_id": "CITY-NPC-BRY-NPC-OSIN",
+        "sha256": "78f155a52b1cc75e1e2f8574ebf2b65e940a078530d0cbf548b2cf3ef772fa71",
+        "actual_sha256": "78f155a52b1cc75e1e2f8574ebf2b65e940a078530d0cbf548b2cf3ef772fa71",
+        "read_in_full": true
+      },
+      "source_card_text": "---\ntitle: \"人物_BRY-NPC-OSIN_奥辛·锤\"\nid: CITY-NPC-BRY-NPC-OSIN\ntype: character\nstatus: draft\ncanon: mod-original\nbaseline: \"0.9.4.25-modbranch\"\nupdated: 2026-10-12\ntags: [stoneshard, city-campaign, S63]\naliases: []\n---\n\n# 人物_BRY-NPC-OSIN_奥辛·锤\n\n**工作**：副工场班长。\n\n**起点与转折**：保护工人，也想借停工做全城发言人。\n\n城市：[[聚落_BRY_布林]]\n\n关联篇章：[[台本_CM-BRY_城墙之内]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]\n\n<!-- CITY-DRAMA-S76:BEGIN -->\n当前布林逐角色对白、条件回访、演员位置与未终审范围见[[布林人物对白与网状演出审查]]。S76为Mod原创台本，未导入游戏。\n<!-- CITY-DRAMA-S76:END -->\n\n六处场所的原素材参考图与逐任务用途见[[布林任务场所概念与台本映射]]；画板分格不是任务必访顺序。\n",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/osin/osin_raw_imagegen_v2.png",
+        "sha256": "c9d2f3b392256b68e3689a5e7cc04009a309a3da44c5ee4cec5298110084373b",
+        "actually_viewed": true,
+        "view_method": "tools.view_image full current anchor"
+      },
+      "existing_delivery": {
+        "reported_by": "root",
+        "time_utc": "2026-10-13T04:55:00Z",
+        "message_id": "Sentinel_f97d448181e48191a65a25e4a2f34aa4",
+        "group_preview_library_file_ids": [
+          "libfile_b7b855cbb1fc8191a4441f4a50edcc89",
+          "libfile_ca26990c3b58819189ffaa3ee6b71403"
+        ],
+        "artifact": "osin_raw_imagegen_v2.png",
+        "scope": "第七组六人已发送；非用户逐人认可／装备验收。"
+      },
+      "identity_qa": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/osin/QA-independent.json",
+        "sha256": "3d0dfc7e2de315ef6356f2e4e9bdb20392c3a04e0326ed80073d6a5916ff698e"
+      },
+      "purpose": "工场班长开工前把已卷起的袖口压稳；以跨身肩臂轮廓填补静站与对话手势之外的日常准备姿。",
+      "pose": "O1：双脚沿原站位稳定，胸廓轻转向画面左侧约15度；画面右侧粗壮前臂斜跨腹胸，手指实际捏住画面左臂原浅色卷袖外沿。左肘离躯干稍展开，左前臂斜向前下方、空手放松，头低一点看袖口。肩肘组成清楚不对称三角，不做抱臂、防御或对外指挥。",
+      "contact": "接触唯一目标为原浅色袖口；拇指/指尖在卷袖两侧小范围遮挡，袖口仍连接橄榄衫。腰侧黄色工作手套原位悬挂，数量轮廓保持，不拿下来、不穿戴、不变成多手。",
+      "face_and_proportion_lock": "锁秃顶棕发缘、浓直眉、深短整须、宽厚下颌、短颈粗臂与原头/余身约1:1.54的自然感。原炭背心、橄榄工衫、宽皮带和短靴。头俯而不重绘年轻脸；不为姿态把身段拉长。",
+      "story_exclusions": [
+        "不新增锤、砧、工台、钳、旗帜。",
+        "不表示停工开始、代表权获授、全城工人同意或争端完成。"
+      ],
+      "planned_directory": "Assets/CharacterActions/20261013/osin/sleeve_settle_v1",
+      "no_existing_action_directory": true,
+      "presentation": "1新全身静态关键姿态＋原锚并列检视。默认不做GIF，不用首末复用冒充新增，不宣称连续过渡。"
+    },
+    {
+      "canonical_id": "OSB-NPC-VAS",
+      "name": "瓦森·磨",
+      "slug": "vasen",
+      "branch": "apron_brush_v1",
+      "status": "planned_only_not_generated",
+      "new_pose_count": 1,
+      "source_card": {
+        "path": "design/04_人物/城市人物/人物_OSB-NPC-VAS_瓦森·磨.md",
+        "frontmatter_id": "CITY-NPC-OSB-NPC-VAS",
+        "sha256": "e505a363ecedbe5f5b2c725e098702c9dd13dfdc3d4658347752f3fc566f22d2",
+        "actual_sha256": "e505a363ecedbe5f5b2c725e098702c9dd13dfdc3d4658347752f3fc566f22d2",
+        "read_in_full": true
+      },
+      "source_card_text": "---\ntitle: \"人物_OSB-NPC-VAS_瓦森·磨\"\nid: CITY-NPC-OSB-NPC-VAS\ntype: character\nstatus: draft\ncanon: mod-original\nbaseline: \"0.9.4.25-modbranch\"\nupdated: 2026-10-12\ntags: [stoneshard, city-campaign, S63]\naliases: []\n---\n\n# 人物_OSB-NPC-VAS_瓦森·磨\n\n**工作**：老磨租人。\n\n**起点与转折**：认为赊粮就是亲情，后来发现别人无权拒绝。\n\n城市：[[聚落_OSB_奥斯布鲁克]]\n\n关联篇章：[[台本_CM-OSB_留到来年的一袋]]\n\n此卡概括弧线；实际台词、路线代价与去留见篇章台本。只有亲历、本人授权或有限回执可解锁回应，不能代表全国阵营。熟悉玩家不抵消拒绝/死亡/保密；退出后保已发生的责任记录。\n\n[[城市与聚落设计总索引]]\n\n粮村与纪念地域的逐角色对白、两户女儿、现时护栏和有限给付见[[奥斯布鲁克与拉滕人物演出审查]]；S83为Mod原创初稿，未导入游戏。\n",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/vasen/vasen_raw_imagegen.png",
+        "sha256": "f07c8883f991116563a323b691df4c9e1e06107468c72226cf57662256a40bca",
+        "actually_viewed": true,
+        "view_method": "tools.view_image full current anchor"
+      },
+      "existing_delivery": {
+        "group": "seventeen",
+        "reported_by": "root",
+        "message_id": "Sentinel_c1466852ed5c81918471ca884e0cf9de",
+        "time_utc": "2026-10-13T08:11:00Z",
+        "artifact": "Assets/CharacterDesigns/20261013/expressive/exports/batch17_clean/vasen_alpha_safe.png",
+        "artifact_sha256": "30ed8f8c2a915cd30754a5b02e6e36246769cbfb21841bff241cf59220672f1b",
+        "source_qa_artifact": "Assets/CharacterDesigns/20261013/expressive/vasen/vasen_raw_imagegen.png",
+        "attachments": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/exports/expressive_seventeenth_a_mobile.png",
+            "sha256": "ada855f83b31636e0212f9ca37b7c5d56188b3e7b15b8fd410dc6652a1be6b92",
+            "library_file_id": "libfile_946b1623b6cc81919f924462e3a22edc"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/exports/expressive_seventeenth_b_mobile.png",
+            "sha256": "7b308d1061625f4611a908b4a2b1643699948027d642fc1ced095d801685015a",
+            "library_file_id": "libfile_bb3f662d1afc8191860da16cbf2eddc8"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/exports/character_concepts_batch17_v001.zip",
+            "sha256": "0145838983841a7dc1a0733e2848a93c35d96a6f8da004128176455ef2b138b2",
+            "library_file_id": "libfile_58f9661590708191b798287a396a270f"
+          }
+        ]
+      },
+      "identity_qa": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/vasen/QA-independent.json",
+        "sha256": "8a382c9f46908991b5f99b5e24ea971779973b27d52e51a6520e6c18465c19a7"
+      },
+      "purpose": "磨坊日常短暂停手整理沾粉围裙；不是持布检查或给出粮物，身体前屈与原直站差异应当清楚。",
+      "pose": "V1：双脚保持原宽站地，膝轻松弯曲，髋部前屈约15–20度形成清楚低肩/前俯轮廓，头目光落在围裙下半部。画面左手拇指食指捏住自己原围裙侧下缘，向外离腿少量，围裙仍由颈带与腰带连在身上；画面右手张开的掌侧贴住围裙大腿高度粉痕区，呈向下拂过的中途静态姿。两手不重叠。",
+      "contact": "左手与原围裙侧缘直接夹持，右掌贴原围裙表面，手掌遮挡粉痕一小块。粉痕仍留在原衣物上，不生成灰尘粒子、不另加抹布/刷子/盆/粮袋；不是证明清洁已完成。",
+      "face_and_proportion_lock": "锁布帽、宽灰眉、大厚鼻、灰整须和忧虑克制成年老脸；原宽肩厚腰短腿，前屈不能瘦身/拉腿或缩头。原锈色开衩工衫、暗厚围裙、旧裤靴；帽与脸无遮挡。",
+      "story_exclusions": [
+        "不表示已赊粮、收债、债清、抵押解除、丰收、免费供粮或全村授权。",
+        "不添加磨盘、粮袋、扫帚或空中粉尘；不将粉痕一次抹掉改为全新围裙。"
+      ],
+      "planned_directory": "Assets/CharacterActions/20261013/vasen/apron_brush_v1",
+      "no_existing_action_directory": true,
+      "presentation": "1新全身静态关键姿态＋原锚并列检视。默认不做GIF，不用首末复用冒充新增，不宣称连续过渡。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "canonical_id": "DEN-NPC-SEF",
+      "current_anchor_path": "Assets/CharacterDesigns/20261013/expressive/sefin/rework_v2/sefin_rework_v2_raw_imagegen.png",
+      "actual_anchor_sha256": "d81857841062d9ed57d5c06d5e10d50cda7bfd58e7c4fabb50a834dc55bcc677",
+      "actually_viewed": true,
+      "source_card_path": "design/04_人物/城市人物/人物_DEN-NPC-SEF_瑟芬·网.md",
+      "actual_source_card_sha256": "a0c6831b5b0761de9cea75826efdc5838df8ce8333833a8d4a67e758e4e7dfb5",
+      "reason": "实际原锚双空手、腰挂册，无渔网或绳。停补网提议，不新增网。"
+    },
+    {
+      "canonical_id": "MNS-NPC-TIO",
+      "current_anchor_path": "Assets/CharacterDesigns/20261013/expressive/tio/rework_v2/tio_rework_v2_raw_imagegen.png",
+      "actual_anchor_sha256": "bbbd93bc1dbc6c6039e46dd64314e04a82e094e66418bf025eaab7c9b45095df",
+      "actually_viewed": true,
+      "source_card_path": "design/04_人物/城市人物/人物_MNS-NPC-TIO_提奥·桶.md",
+      "actual_source_card_sha256": "0e963efad2cf35985ea2d9faf61f886222d697657821a17faeb983ace16e5f61",
+      "reason": "原锚只有木勺，无桶或工作台。停搅桶/舀液提议，单独抬勺又像递物，价值不足。"
+    },
+    {
+      "canonical_id": "MAE-NPC-FIL",
+      "current_anchor_path": "Assets/CharacterDesigns/20261013/expressive/fil/fil_raw_imagegen.png",
+      "actual_anchor_sha256": "fa727cac0c97720bd11935bad9dc7e3180623e94863b757211c17a87125874d2",
+      "actually_viewed": true,
+      "source_card_path": "design/04_人物/城市人物/人物_MAE-NPC-FIL_菲勒·火.md",
+      "actual_source_card_sha256": "28a1b8fc30bcb4615658b76b7e1e803b542aa41ebe172c5736e6d712664377a0",
+      "reason": "原锚仅持闭册，开册会重复Nisha，停本候选。"
+    },
+    {
+      "canonical_id": "YOS-NPC-TIN",
+      "current_anchor_path": "Assets/CharacterDesigns/20261013/expressive/tina/rework_v3/tina_rework_v3_raw_imagegen.png",
+      "actual_anchor_sha256": "4814613ccce5e5f54ad0cf9a93c279eacb0bef52974d812056a6094be0046e7f",
+      "actually_viewed": true,
+      "source_card_path": "design/04_人物/城市人物/人物_YOS-NPC-TIN_缇娜·染.md",
+      "actual_source_card_sha256": "42c6401b48f1e9a652a21860fb29e82a1e0cb421fde7ecbcf36e842950e2a30e",
+      "reason": "原锚染斑工衣、腰袋、双空手，无染缸布匹。停染布提议，不从职业加设备。"
+    },
+    {
+      "canonical_id": "KOR-NPC-LULING",
+      "current_anchor_path": "Assets/CharacterDesigns/20261013/expressive/luling/luling_revision_raw_imagegen.png",
+      "actual_anchor_sha256": "4a2f53d3500da911fe988b7aad7a0059b051b35f8366fa030fcca42796909ec7",
+      "actually_viewed": true,
+      "source_card_path": "design/04_人物/城市人物/人物_KOR-NPC-LULING_卢绫.md",
+      "actual_source_card_sha256": "aa1877de17d8b63b1814402f21f6987915a33687652fabd4470d8c92ee6f81bf",
+      "reason": "原锚双空手，无门、寄物或箱。交还物件需新增道具且容易误示结果，停本候选。"
+    }
+  ]
+}

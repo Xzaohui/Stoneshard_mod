@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T14:00:24.050656+00:00",
+  "status": "planning_only_not_generated",
+  "scope": "现有Nara与灰堤Ena胸像表情规划；每人最多3张，合计最多6张，0新人。只写本brief，不生图、不改索引、不做游戏落地。",
+  "selection_reason": "MASTER只登记两人全身锚与各2张新剧情姿态，目录无expressions_v1；已有动作表情并非零，但本批补眉眼嘴独立可读胸像，不把旧动作裁切冒称新增。",
+  "excluded_existing": [
+    "Mia",
+    "Sela",
+    "Mara",
+    "Ivo",
+    "Tor",
+    "Rhea",
+    "Nell",
+    "Sel",
+    "Sena／Kaem最新已通过待交，不重复"
+  ],
+  "control_sources": [
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "874d157ce1a204c06da6d1a2d9eff4e63d675efb5dc2c96b734120965f655274",
+      "locator": "纳拉／艾娜条目；仅锚和story_gesture"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256": "0076707c093bd184845c9f67fe8a50019cf3d4d9c7920bba017866163398fea6",
+      "locator": "characters[NPC-N-NARA,NPC-N-ENA,MAE-S03-NPC]与同名分人规则"
+    }
+  ],
+  "global_art_direction": [
+    "保成熟、五官美感、个体身份与粗簇像素方向；透明背景，不做写实平滑、幼态化或统一情绪模板。",
+    "同人保持一致胸像尺度、构图、脸型和光向；小幅头姿可变但完整头发／头巾／双肩不可裁断。",
+    "每一对表情必须眉、眼、嘴三项均有可见差异；缩略图仍读得出。不以换颜色、加泪、换衣、身体动作或重裁切充数。",
+    "本规划的六态是可用情绪，绝非任务结果。S62当前方法与R/X条件优先；S61场次只能按当前条件剪裁。",
+    "每人3是上限；若执行时第3张与前2不够区分或缺可靠剧情支撑，宁保2张。不能为了数量新增剧情或加重伤情。"
+  ],
+  "global_prohibitions": [
+    "不新增病症、伤口、流血、断肢、治愈、站起或复工；不以夸张痛苦面孔新增伤势严重度。",
+    "不新增道具、恋爱、哭嚎、丧偶事实、死亡确认、贫困解除、赔付成功、签字、实名作证、全权授权或全知。",
+    "不抄Nell／Sel或Sena／Kaem整组情绪；本两人亦不共用开心／悲伤／愤怒模板。",
+    "不是游戏精灵、换装验证或已实施动画；不要求运行门槛才能继续概念规划。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "NPC-N-NARA",
+      "slug": "nara",
+      "name": "纳拉",
+      "english_name": "Nara",
+      "aliases": [],
+      "identity": "NPC-N-NARA，纳拉／Nara；活着的成年伤腿绞盘维修工，灰堤艾娜的丈夫。不是复活者或已康复工人。",
+      "anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/nara/nara_v2_raw_imagegen.png",
+        "sha256": "f8a42dcd72870582183de2fbe7dfa672dabd31658fc93fc2f9d83245c42c7c1f",
+        "matches_roster_reviewed_artifact": true,
+        "matches_manifest_v2": true,
+        "actually_viewed": true,
+        "view_method": "tools.view_image完整当前v2原PNG，2026-10-13；非只读QA或缩略图",
+        "status": "independent_deliverable_with_minor_notes",
+        "old_v1_not_anchor": true
+      },
+      "face_and_hair_lock": [
+        "原锚实际所见：深棕蓬松乱短发、偏侧额发与清楚的耳廓，粗深眉、沉稳眼睑、较直鼻、成熟棱角颊颏。",
+        "保留连鬓短胡须与深髭线、须间小块唇部空间；不可剃须、改少年圆脸、夸张老人皱纹或美型少女眼。",
+        "六种面部变化只动眉眼嘴与小幅头姿，固定鼻长度、颧颏结构、耳位和发量；成熟个体美感优先。"
+      ],
+      "costume_and_crop_lock": [
+        "赭锈色翻领工衫、暗内衣、原卷袖；棕皮双肩带和方形灰金属扣位置不换。",
+        "上胸裁切到两肩带方扣下方、腰工具上方，手与工具全在画外；不新增工具、证件、符号或新装备。",
+        "保原坐姿的略前收肩颈关系；胸像不显示凳腿和伤腿，不用裁切制造站立／痊愈含义。若后续扩图必须沿原凳、裤外木夹板、绑带及完整靴结构，禁止新增诊断、血痕、绷带和裸伤。"
+      ],
+      "source_evidence": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "locator": "## 纳拉（Nara，NPC-N-NARA）"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N2_灰堤没有墓碑.md",
+          "sha256": "f0d816aa190f7b80dcfae9a4e6bdc520b48103ca40ff972d53fcb014683106a6",
+          "locator": "当前S62人物冲突／R方法／X条件；N2-S03、S04为条件素材"
+        },
+        {
+          "path": "design/04_人物/人物弧光与关系转折.md",
+          "sha256": "4646c6ad5c2ddeb0f1593e6b86a3616dc930ce1615a55da7083d4d934dd11090",
+          "locator": "ARC-02 艾娜与纳拉"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/nara/manifest_v2.json",
+          "sha256": "aa5a2ba4485e487b44d6ab143bb88db2b26bf6f96cb4f92dae2d3e24d2cf8a96",
+          "locator": "当前锚输出SHA"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/nara/QA-independent.json",
+          "sha256": "329de24576e52523ad7bd6a10ebd1accfb28d311b11a513bdb02d7069a95ae5c",
+          "locator": "原锚独审身份和服装"
+        }
+      ],
+      "existing_delivered_scope": {
+        "story_gesture_directory": "Assets/CharacterActions/20261013/nara/story_gesture_v1",
+        "new_pose_count": 2,
+        "expression_bust_directory_exists": false,
+        "qa_record": {
+          "path": "Assets/CharacterActions/20261013/nara/story_gesture_v1/QA-independent.json",
+          "sha256": "adfcd7d65a6038fa6c4d8429d6dc73ff5919baaff5a2f65f84ae87db65bc3422",
+          "locator": "visual_findings / limitations"
+        },
+        "not_duplicate_reason": "已有拒绝／解释等手势中带轻度表情，但不是独立胸像；需要新眉眼嘴组合，禁止直接裁旧姿。"
+      },
+      "planned_max_new_busts": 3,
+      "expressions": [
+        {
+          "key": "nara_E1_wary_assessment",
+          "label": "警觉审视",
+          "brows": "近画侧眉略抬、另一粗眉内端压低，轻微不对称。",
+          "eyes": "眼裂中等偏窄，瞳孔侧看对话者；上眼睑有重量，眼白仍清楚。",
+          "mouth": "嘴闭合，须间唇线横向压紧，一侧嘴角略收；不露齿。",
+          "head_pose": "保原三分之二角度，下巴稍收，稳住颈肩。",
+          "story_support": "人物卡怕重新被记为可劳作债务人；N2-S03-L01的欠薪／欠债顾虑只作有条件情绪素材。",
+          "condition_and_limit": "表达对陌生询问的审视；不是已决定返营、认债或拒绝所有援助。"
+        },
+        {
+          "key": "nara_E2_weary_request",
+          "label": "倦中求缓",
+          "brows": "双眉内端略抬，外段松开，眉间不做夸张痛褶。",
+          "eyes": "眼睑比E1明显下落、向低处看但不闭眼；瞳孔可见，不画昏厥。",
+          "mouth": "唇轻分形成小纵向气口，唇角自然下垂；髭须不得吃掉口型。",
+          "head_pose": "头微垂，与E1的侧审视拉开，颈肩仍是坐姿休息的自然承托。",
+          "story_support": "N2-R-protected-L01“先让我在这里睡一夜”；卡中伤腿与不能爬回堤支持需要休息。",
+          "condition_and_limit": "只是疲惫和请求缓一缓，绝不新增疾病、疼痛等级或恶化；引用原路线台词需resolve_N2=protected、存活在场愿谈且原执行守卫成立，图本身不证明已安置。"
+        },
+        {
+          "key": "nara_E3_measured_objection",
+          "label": "克制分账",
+          "brows": "粗眉两端较平、内端微压，去掉E1单眉挑起，形成有分量的正面申明。",
+          "eyes": "眼睑较E2打开，目光直向听者，稳而不瞪。",
+          "mouth": "小幅横向开口如清楚说出短句，唇角平，最多一点暗色口腔，不做怒吼露牙。",
+          "head_pose": "近正面，下巴恢复水平略前送，不挺身站起。",
+          "story_support": "N2-R-return-L01把工资与欠款分开算；N2-R-agency-L01只授权这次救助，支持明确而有限的申明。",
+          "condition_and_limit": "两句属于互斥方法，只提炼人物的具体边界，不把return和agency同时完成；未来用原句须对应resolve_N2和存活在场愿谈，不能据脸写入实名同意或授权。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "NPC-N-ENA",
+      "slug": "ena",
+      "name": "艾娜",
+      "english_name": "Ena",
+      "aliases": [],
+      "identity": "NPC-N-ENA，艾娜／Ena；灰堤工人纳拉的妻子。与MAE-S03-NPC冷窗驿外部接应人明确分人。",
+      "anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/ena/ena_v2_raw_imagegen.png",
+        "sha256": "fca0d358d7197c9ce2f4630407a525e397b01e1e4d26d8fb01810d56f81f4e21",
+        "matches_roster_reviewed_artifact": true,
+        "matches_manifest_v2": true,
+        "actually_viewed": true,
+        "view_method": "tools.view_image完整当前v2原PNG，2026-10-13；非只读QA或缩略图",
+        "status": "independent_deliverable",
+        "old_v1_not_anchor": true
+      },
+      "face_and_hair_lock": [
+        "原锚实际所见：深棕偏分弧形额发、两侧鬓发、米白头巾包后脑并在画右后方系结垂尾；头巾不是丧服面纱。",
+        "保留成熟的偏长眼裂、重而整洁的上睑线、弧眉、清晰鼻梁、薄唇和成熟女性颊颏；不加少女腮红、闪亮大眼或过量衰老纹。",
+        "固定头巾折角、发际、耳颊关系、鼻唇比例；各情绪保原朴素美感与实际年貌，不用可怜化变丑。"
+      ],
+      "costume_and_crop_lock": [
+        "棕色补丁工作裙上身、深内领和米白围裙肩带／领边按锚，不改成黑色寡妇丧服、贵妇装或低领裸肩。",
+        "固定裁至上胸，完整头巾、垂尾和双肩，不画手。若胸口下缘出现怀抱旧外套的一小段，三张固定同一衣襟边缘，需明确为有袖口／衣襟的普通棕旧工衣。",
+        "不为表情新增怀抱动作，不把旧工衣拉成裹尸布、婴儿包、血衣；不新增棺、欠薪牌、钱袋或文件。"
+      ],
+      "source_evidence": [
+        {
+          "path": "design/04_人物/台本新增人物与知识边界.md",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "locator": "## 艾娜（Ena，NPC-N-ENA）"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N2_灰堤没有墓碑.md",
+          "sha256": "f0d816aa190f7b80dcfae9a4e6bdc520b48103ca40ff972d53fcb014683106a6",
+          "locator": "当前S62人物冲突／R方法／X条件；N2-S03、S04为条件素材"
+        },
+        {
+          "path": "design/04_人物/人物弧光与关系转折.md",
+          "sha256": "4646c6ad5c2ddeb0f1593e6b86a3616dc930ce1615a55da7083d4d934dd11090",
+          "locator": "ARC-02 艾娜与纳拉"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/ena/manifest_v2.json",
+          "sha256": "5234451ff099b0aca4fe154fbb5c73c3427015ea9102b9d29c18f2431ceb86b2",
+          "locator": "当前锚输出SHA"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/ena/QA-independent.json",
+          "sha256": "898a792a142d0484a83b12c1a5ea5198e836821dd49859d196fa3d05faf23163",
+          "locator": "原锚独审身份和服装"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+          "sha256": "0cc42940c49f5bc107e5e7f474d4830374c6c74dac7bbcd5cd8768a3711063b5",
+          "locator": "S62 X04及N3-R-collective有限代理"
+        },
+        {
+          "path": "design/04_人物/聚落人物/人物_MAE-S03-NPC_艾娜.md",
+          "sha256": "5b0d9154110b5aabc9c2a24c05b82ee9a5fa6c9c6f96ec51ae4ce570fb42cd71",
+          "locator": "同名排除：冷窗驿外部接应人，非灰堤妻"
+        }
+      ],
+      "existing_delivered_scope": {
+        "story_gesture_directory": "Assets/CharacterActions/20261013/ena/story_gesture_v1",
+        "new_pose_count": 2,
+        "expression_bust_directory_exists": false,
+        "qa_record": {
+          "path": "Assets/CharacterActions/20261013/ena/story_gesture_v1/QA-independent.json",
+          "sha256": "80a6f262a6926640e2d6670fed45871bdb480cd4f8c195e854096b79926fd5f3",
+          "locator": "visual_findings / limitations"
+        },
+        "not_duplicate_reason": "已有拒绝／解释等手势中带轻度表情，但不是独立胸像；需要新眉眼嘴组合，禁止直接裁旧姿。"
+      },
+      "planned_max_new_busts": 3,
+      "expressions": [
+        {
+          "key": "ena_E1_practical_challenge",
+          "label": "生计质问",
+          "brows": "眉内端降低、外段略提，与锚的内眉上扬显著不同；一侧略高。",
+          "eyes": "上眼睑打开到中等，直看对话者；保锚成熟偏长眼型，非怒瞪圆眼。",
+          "mouth": "小幅斜向开口，短句问话口型，唇角一侧略紧；不微笑。",
+          "head_pose": "下巴水平、头微向听者前倾，肩与旧衣固定。",
+          "story_support": "当前N2-DEFAULT“肯承认他死”却要放弃欠薪的矛盾；卡中眼前先吃饭。",
+          "condition_and_limit": "是现实质问和讨生活，不是假定丈夫已死、已知藏身点或已领取补偿。"
+        },
+        {
+          "key": "ena_E2_address_concern",
+          "label": "住址担忧",
+          "brows": "双眉内端明显抬高并轻聚，外端下降；不要加新额纹。",
+          "eyes": "视线偏向画侧，上眼睑稍压、下眼睑有一点紧张；与E1直视、E3稳视拉开。",
+          "mouth": "双唇闭合但微向内收，嘴角轻下压，保原清晰薄唇；无泪和咬破唇。",
+          "head_pose": "头略偏低回看对话者，保头巾完整结与下垂端。",
+          "story_support": "N2-S04-L01“他们会问他住哪”只作有条件场面素材；人物卡不要求丈夫为赔付公开住址。",
+          "condition_and_limit": "是担心隐私被索取，不表达地址已泄露、丈夫已经返回、保护完成或新增威胁。"
+        },
+        {
+          "key": "ena_E3_leave_him_choice",
+          "label": "坚定留选择",
+          "brows": "眉形舒平，内端仅轻低；不复制E1的质问挑眉或E2的八字忧眉。",
+          "eyes": "目光正向而稳定，上下睑放松但保持清醒；眼裂较E2稍开。",
+          "mouth": "小而横向的发言开口，唇角平且无甜笑，像把一句话说完。",
+          "head_pose": "头近正面、下巴稍抬，肩颈松稳；不要用手势担当区别。",
+          "story_support": "N2-S04-L03“让他自己选”为条件场面素材；当前N3 X04-L01“不能替他坐进证人席”及ARC-02有限代理／保留说不支持此意。",
+          "condition_and_limit": "不宣布人物弧光已永久完成，也不擅写丈夫同意；若使用N3原句，需resolve_N2∈[protected,agency]、有限回执已核和说话者存活在场愿谈。"
+        }
+      ],
+      "explicitly_not_alias_of": [
+        "MAE-S03-NPC",
+        "ena_coldwindow"
+      ]
+    }
+  ],
+  "future_visual_acceptance": [
+    "逐张实际view原图并并排看缩略图，独立复核成熟脸、眉眼嘴辨识、像素密度、衣领肩带／头巾与原锚身份。",
+    "Nara有须仍须看清闭唇、小纵口和横向发言；Ena不因眉形变化失去原眼鼻唇结构。",
+    "不把任何方法的条件对白标成已发生结果；出现自动授权／治愈／丧偶暗示即退回。",
+    "若制作，原始生成、输入锚SHA、提示词与独审记录需保留；本brief没有生成或通过任何新图。"
+  ]
+}

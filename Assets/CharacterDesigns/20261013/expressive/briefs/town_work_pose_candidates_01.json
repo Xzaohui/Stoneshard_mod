@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T12:26:20.339082+00:00",
+  "task": "城镇职业/日常动作缺口候选01",
+  "status": "planning_only_no_image_generation",
+  "scope": "最多4名现有原创角色、6张新全身关键姿态建议；0新人物；不自动扩167全套。",
+  "evidence_snapshot": [
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "6ee5db695bf3166906aacb96ec125862f23c87e30f5a2040755f0fdf3a08441b"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "sha256": "e8f13ab06a0492ffda7cb87a9af88734c82975aaf81ba546891d30db787a04b5"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+      "sha256": "602bf8f5527adc6323545867006362967136bc94135d1f31f8825e242180a72b"
+    }
+  ],
+  "selection_reason": "优先手上已经有实物的角色，四类分别是软布、短木试片、硬箍环和闭箱，肢体机制与重心不同，避免通用摊手对话。",
+  "counts": {
+    "candidates": 4,
+    "proposed_new_full_body_poses": 6,
+    "new_characters": 0,
+    "new_prop_assets": 0,
+    "generated_or_dispatched": 0
+  },
+  "exclusions": [
+    "Mia已交理毯",
+    "Sela、开篇四人及已交主线补绘",
+    "Suoya、Vian、Verren、Gwynnel、Darrel五个静态门槛",
+    "随机战斗、受伤、胜利姿态",
+    "新增场景、工台、大型设备或全城服务事件"
+  ],
+  "alternatives_screened_not_selected": [
+    {
+      "id": "BRY-NPC-ANLA",
+      "reason": "静态实际两手空，腰前小金属件不能仅凭prompt认定为可取下独立样扣；真正装配需先明确新工件或仅抽工具，优先级低于现持物。"
+    },
+    {
+      "id": "BRY-NPC-ROAN",
+      "reason": "两手空、工具在腰；真正修理要新增明确工件与支撑，避免悬空凿铆。"
+    },
+    {
+      "id": "ALD-NPC-HEL",
+      "reason": "同样工具在腰、无工件；职业动作不能用摆工具冒充实际装配，也不能暗示已获谅解。"
+    },
+    {
+      "id": "PAS-NPC-LEVAN",
+      "reason": "现锚空手，要新增箱/包；且合同/家书边界与工作身份不宜被搬货完成替代。"
+    },
+    {
+      "id": "ALD-S02-NPC",
+      "reason": "芬珂同为持衬布样，可用于后轮，但本批与埃墨重复，先保4类不同运动。"
+    }
+  ],
+  "global_guardrails": [
+    "先以现锚角色特征与手中物为锁，不修改roster、runtime、已交图、原brief或旧QA。",
+    "不新增道具；如果制作阶段实需新物件，退回明确美术提案，不能伪装原来源事实。",
+    "不做针线/刀具细活、真实弯料试验或锤凿敲击，从可读的拿稳/转看/压边开始。",
+    "姿态不写任务resolve、工资/订单、原谅/师承、署名/家门、源料认证或全城服务状态。",
+    "锚首末复用不是新图；稀疏关键姿态不是连续动画、物理验证或游戏落地。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "ALD-NPC-EMO",
+      "name": "埃墨·衬",
+      "status": "candidate_planning_only_not_dispatched",
+      "current_static_status": "delivered_concept_candidate",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/emo/emo_raw_imagegen_v2.png",
+        "sha256": "76ec2c2964e4278acc6330b036ff35698ec5b53833310c56ad6d1c6e27ee0b76",
+        "roster_sha_matches": true,
+        "independent_qa_sha_matches": true,
+        "pixels_inspected_in_this_audit": true
+      },
+      "independent_qa": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/emo/QA-independent.json",
+        "sha256": "c0e146f4b68be2473b751a8166166cea506864a095b7648c15def3e42cb85dba",
+        "decision": "deliverable_with_minor_notes",
+        "existing_notes": [
+          "像素簇比G细，非native精灵验收。",
+          "自然成年比例优先；Mia约1:1.5不是全员固定数字。"
+        ]
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_ALD-NPC-EMO_埃墨·衬.md",
+          "sha256": "463f8a636db3332200baa2fd540d43f3b205b356dc1440dd7b35d84e936fd236",
+          "roster_sha_matches": true,
+          "frontmatter_id": "CITY-NPC-ALD-NPC-EMO",
+          "relevant_lines": [
+            {
+              "line": 15,
+              "text": "**工作**：衬工。"
+            },
+            {
+              "line": 17,
+              "text": "**起点与转折**：想被承认技术，不想家族被调查找到。"
+            }
+          ]
+        }
+      ],
+      "coverage_gap_evidence": {
+        "in_master_supplement_index": false,
+        "in_action_animation_branch": false,
+        "in_supplementary_work_in_progress": false,
+        "character_action_directory_exists": false,
+        "interpretation": "本仓库当前覆盖资料无该角色职业/日常动作；已交静态形象不等于已交动作。"
+      },
+      "new_full_body_pose_budget": 2,
+      "new_props_required": false,
+      "new_props": [],
+      "art_inference_boundary": "以下动作设计是新美术提案，不是人物卡已发生事件或工序机械正确性的证据。已有持物由当前已审概念图佐证，不把全部外观设定倒写为剧情事实。",
+      "presentation_proposal": {
+        "sequence": [
+          "anchor",
+          "E1",
+          "E2",
+          "anchor"
+        ],
+        "new_pose_count": 2,
+        "anchor_reuse_display_positions": 2,
+        "note": "仅若后续动作图通过物件连续性审查，才可稀疏阶段连看；否则独立姿态呈现。未授权本轮出图或生成GIF。"
+      },
+      "priority": 1,
+      "slug": "emo",
+      "branch_proposal": "lining_edge_check_v1",
+      "source_fact": "人物卡明确为衬工；技术认可不等于家族身份公开。",
+      "anchor_observation": "已实际看图：双手腹前握同一块浅色折叠衬布；卷发亚麻帽、蓝灰衫、暗围裙及腰包完整。",
+      "poses": [
+        {
+          "id": "E1",
+          "title": "展边看针路",
+          "proposal": "低头视线落在手中衬布；双肘稍向外，一手捏原样片上角、另一手托原下折边，轻展开原有折口以看边缘。仅拉开一折，不凭空变为大幅布或甲衣。"
+        },
+        {
+          "id": "E2",
+          "title": "沿边压平回折",
+          "proposal": "保持同一块布由一手托住，另一手掌根或并拢指腹沿同一边轻压平，再收向腹前；肩、肘和朝下视线与E1形成可读差别。"
+        }
+      ],
+      "prop_continuity": "使用现有单块衬布。E1/E2不新增针、线、剪刀或支架；不是缝针完成过程。",
+      "risks": [
+        "原布样小且折层厚，展开不能暴涨为Mia叠毯；无文字、家庭标记或公开署名。",
+        "两手遮挡不得把布变成纸、金属或第三只手；E2不能只是原锚镜像。",
+        "原锚颈/上身略长及细像素是既存备注，动作不得顺便重设计身体或拉长。"
+      ],
+      "story_forbidden": [
+        "技术获承认",
+        "公开家门",
+        "新订单成交",
+        "护甲已修好"
+      ]
+    },
+    {
+      "canonical_id": "EED-NPC-GELI",
+      "name": "葛黎",
+      "status": "candidate_planning_only_not_dispatched",
+      "current_static_status": "delivered_concept_candidate",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/geli/geli_raw_imagegen.png",
+        "sha256": "32f141533ed291203cf185a2267b90bcd4df4097c169813371c1b8b37666a363",
+        "roster_sha_matches": true,
+        "independent_qa_sha_matches": true,
+        "pixels_inspected_in_this_audit": true
+      },
+      "independent_qa": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/geli/QA-independent.json",
+        "sha256": "684f05ff22f3d273428ab3b522b4fc0f0493b78a50865b0d5f82f37686b021e7",
+        "decision": "deliverable_as_character_concept_with_notes",
+        "existing_notes": [
+          "裸颈略长但短胸腰自然，保年轻身形差异；暗辫脸同系而非复制同一个头。"
+        ]
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_EED-NPC-GELI_葛黎.md",
+          "sha256": "28f1d73e6c6cf4a1ab5d6aa0bfc2a8621a62a32ef2947a330e3542a1413ba258",
+          "roster_sha_matches": true,
+          "frontmatter_id": "CITY-NPC-EED-NPC-GELI",
+          "relevant_lines": [
+            {
+              "line": 17,
+              "text": "**工作**：苏槿的成年侄女与弓材学徒"
+            },
+            {
+              "line": 19,
+              "text": "**所求**：让旧料改法被认真试，不靠砍更多树保家名。"
+            },
+            {
+              "line": 21,
+              "text": "**所怕**：姑母宁肯承认整门手艺已死，也不肯承认能改。"
+            },
+            {
+              "line": 23,
+              "text": "**口吻**：举一块弯试片而非喊家艺万岁；愿留学也有范围。"
+            },
+            {
+              "line": 25,
+              "text": "**可能弧线**：姑母公开认错不自动承认她的贡献，有限来源署记仍问；不能把交家谱当工艺试验前置。"
+            },
+            {
+              "line": 29,
+              "text": "同一身体按真实去向、工作与本人许可约见，不在每案复制一次。死亡、缺席、拒绝与隐私优先；只说亲历、受准本段材料或已收到的有限回执。双链不授全城知情。余料、钱、份、床与工班单账，实际支付／交还／安置／专业处置后才确认；晚到改未来，不改旧史、奖励或N17。"
+            }
+          ]
+        }
+      ],
+      "coverage_gap_evidence": {
+        "in_master_supplement_index": false,
+        "in_action_animation_branch": false,
+        "in_supplementary_work_in_progress": false,
+        "character_action_directory_exists": false,
+        "interpretation": "本仓库当前覆盖资料无该角色职业/日常动作；已交静态形象不等于已交动作。"
+      },
+      "new_full_body_pose_budget": 1,
+      "new_props_required": false,
+      "new_props": [],
+      "art_inference_boundary": "以下动作设计是新美术提案，不是人物卡已发生事件或工序机械正确性的证据。已有持物由当前已审概念图佐证，不把全部外观设定倒写为剧情事实。",
+      "presentation_proposal": {
+        "sequence": [
+          "anchor",
+          "G1",
+          "anchor"
+        ],
+        "new_pose_count": 1,
+        "anchor_reuse_display_positions": 2,
+        "note": "仅若后续动作图通过物件连续性审查，才可稀疏阶段连看；否则独立姿态呈现。未授权本轮出图或生成GIF。"
+      },
+      "priority": 2,
+      "slug": "geli",
+      "branch_proposal": "wood_coupon_inspect_v1",
+      "source_fact": "卡载苏槿的成年侄女与弓材学徒，口吻明确举一块弯试片；旧料改法要被认真试，但贡献未自动获认。",
+      "anchor_observation": "已实际看图：两手横握腰前一块轻弯旧木试片，锈色工衣、短围裙、暗辫、裤靴。",
+      "poses": [
+        {
+          "id": "G1",
+          "title": "侧转试片察弧",
+          "proposal": "双手始终各握原试片一端，将试片略转为斜侧朝向；头略俯、视线沿木边，前臂一高一低读出察看弧度。保持原来的弯曲，不画硬掰或新裂纹。"
+        }
+      ],
+      "prop_continuity": "仅原有一块小木试片；不用弓、弦、刀、弯试床或其他木料。",
+      "risks": [
+        "固定两端、长度/厚度和曲率；透视可变但木片不能变弓或第二块木。",
+        "单姿态是观察动作，不能声称完成强度试验或材质认证。",
+        "旧锚裸颈略长、像素较细的备注保留；脸、辫、衣装不改。"
+      ],
+      "story_forbidden": [
+        "旧料已通过安全检验",
+        "姑母认错或认可贡献",
+        "公开家谱或图样",
+        "完成订单或新增砍树许可"
+      ]
+    },
+    {
+      "canonical_id": "MNS-NPC-BELO",
+      "name": "贝洛",
+      "status": "candidate_planning_only_not_dispatched",
+      "current_static_status": "delivered_concept_candidate",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/belo/belo_raw_imagegen.png",
+        "sha256": "31e59e238f21b4867974b6e057eafb2cf20213b608dea1a0653a5a5300e6fbcb",
+        "roster_sha_matches": true,
+        "independent_qa_sha_matches": true,
+        "pixels_inspected_in_this_audit": true
+      },
+      "independent_qa": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/belo/QA-independent.json",
+        "sha256": "a377eb87aeba933b0c21a232e117c406124403fa0fac47d2e4eb17050b484ccc",
+        "decision": "deliverable_as_character_concept_with_notes",
+        "existing_notes": [
+          "颈稍长但整体结实协调，细像素概念。"
+        ]
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_MNS-NPC-BELO_贝洛.md",
+          "sha256": "233d3c1f43d406581ad46d8a5aa4f6b85ed67126ede21217e37af441142c7869",
+          "roster_sha_matches": true,
+          "frontmatter_id": "CITY-NPC-MNS-NPC-BELO",
+          "relevant_lines": [
+            {
+              "line": 17,
+              "text": "**工作**：凯诺的成人箍桶学徒与改箍者"
+            },
+            {
+              "line": 19,
+              "text": "**所求**：留自己小刻线的来源，也可独立慢做一班。"
+            },
+            {
+              "line": 21,
+              "text": "**所怕**：认过师承就得抹每一段新改法，离棚后又被师傅拿旧订单扣工具。"
+            },
+            {
+              "line": 23,
+              "text": "**口吻**：用空样架和两种箍口示改，过去教过什么说过去，不被逼真人试塌。"
+            },
+            {
+              "line": 25,
+              "text": "**可能弧线**：可双来源留作或有限独立侧棚；两者都清真料份与未做单，旧师承不抹，未来再问。"
+            }
+          ]
+        }
+      ],
+      "coverage_gap_evidence": {
+        "in_master_supplement_index": false,
+        "in_action_animation_branch": false,
+        "in_supplementary_work_in_progress": false,
+        "character_action_directory_exists": false,
+        "interpretation": "本仓库当前覆盖资料无该角色职业/日常动作；已交静态形象不等于已交动作。"
+      },
+      "new_full_body_pose_budget": 1,
+      "new_props_required": false,
+      "new_props": [],
+      "art_inference_boundary": "以下动作设计是新美术提案，不是人物卡已发生事件或工序机械正确性的证据。已有持物由当前已审概念图佐证，不把全部外观设定倒写为剧情事实。",
+      "presentation_proposal": {
+        "sequence": [
+          "anchor",
+          "B1",
+          "anchor"
+        ],
+        "new_pose_count": 1,
+        "anchor_reuse_display_positions": 2,
+        "note": "仅若后续动作图通过物件连续性审查，才可稀疏阶段连看；否则独立姿态呈现。未授权本轮出图或生成GIF。"
+      },
+      "priority": 3,
+      "slug": "belo",
+      "branch_proposal": "hoop_edge_check_v1",
+      "source_fact": "卡载成人箍桶学徒与改箍者，用空样架和两种箍口示改；师承、署名、料份、旧单与工具边界各自独立。",
+      "anchor_observation": "已实际看图：一手在体侧握单个竖立浅木箍环上缘，另一手空垂；黑短发无须、灰衫、短米褐围裙、裤靴。",
+      "poses": [
+        {
+          "id": "B1",
+          "title": "抬箍触检内缘",
+          "proposal": "握环手把同一木箍略提至腰腹前保持竖立，原空手指腹接触内缘一小段，头低看接触点；不是向人递环，不开环、不新增接头剖面。"
+        }
+      ],
+      "prop_continuity": "沿用现有完整木箍样环，双手始终有承托。无需桶、锤、样架或第二种箍。",
+      "risks": [
+        "木环是刚性整体；保外径、带宽和厚度，避免椭圆透视被误画为变形/断裂。",
+        "指腹接触边缘不能变成单指穿木，空洞应保可读。",
+        "原图1368×1150且上下留白很紧；后续同尺度透明工作画布应留头脚边，不以缩短人物/箍环制造空间。"
+      ],
+      "story_forbidden": [
+        "改箍方案获通过",
+        "师傅原谅或公开署名",
+        "工具所有权解决",
+        "已经离棚或独立开业",
+        "真人试塌"
+      ]
+    },
+    {
+      "canonical_id": "ALD-NPC-KIEN",
+      "name": "奇恩",
+      "status": "candidate_planning_only_not_dispatched",
+      "current_static_status": "delivered_concept_candidate",
+      "current_anchor": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/kien/kien_raw_imagegen.png",
+        "sha256": "ff06621187754e9631eb42a717f5347e9451dc82e3013b88e8068e1985af943a",
+        "roster_sha_matches": true,
+        "independent_qa_sha_matches": true,
+        "pixels_inspected_in_this_audit": true
+      },
+      "independent_qa": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/kien/QA-independent.json",
+        "sha256": "4feadcc41f543a8e2c5ed108a51dae1d2539a2947cbbf39e1c9ef633e0c4c456",
+        "decision": "deliverable",
+        "existing_notes": [
+          "此为概念图，不是原生精灵或游戏运行验收。",
+          "未改图片、作者manifest或全局索引。"
+        ]
+      },
+      "source_cards": [
+        {
+          "path": "design/04_人物/城市人物/人物_ALD-NPC-KIEN_奇恩.md",
+          "sha256": "1c129d8d4a601050ac780039ea4ff160426e6ff300a33717cf5a07833b29514a",
+          "roster_sha_matches": true,
+          "frontmatter_id": "CITY-NPC-ALD-NPC-KIEN",
+          "relevant_lines": [
+            {
+              "line": 17,
+              "text": "**工作**：赶工与器材运输联络人"
+            },
+            {
+              "line": 19,
+              "text": "**所求**：保住已答应的交期和一批运输收益。"
+            },
+            {
+              "line": 21,
+              "text": "**所怕**：原料缩产与真实来源都公开后，自己多卖的便利无人肯付。"
+            },
+            {
+              "line": 23,
+              "text": "**口吻**：称旧件为临时替代，被问是哪一件时必须指实物；没有全国通行权。"
+            },
+            {
+              "line": 25,
+              "text": "**可能弧线**：如实交代有限批次会失速赚收益；改本地旧件仍有校验成本，箱上换名不能让禁货换来源。"
+            }
+          ]
+        }
+      ],
+      "coverage_gap_evidence": {
+        "in_master_supplement_index": false,
+        "in_action_animation_branch": false,
+        "in_supplementary_work_in_progress": false,
+        "character_action_directory_exists": false,
+        "interpretation": "本仓库当前覆盖资料无该角色职业/日常动作；已交静态形象不等于已交动作。"
+      },
+      "new_full_body_pose_budget": 2,
+      "new_props_required": false,
+      "new_props": [],
+      "art_inference_boundary": "以下动作设计是新美术提案，不是人物卡已发生事件或工序机械正确性的证据。已有持物由当前已审概念图佐证，不把全部外观设定倒写为剧情事实。",
+      "presentation_proposal": {
+        "sequence": [
+          "anchor",
+          "K1",
+          "K2",
+          "anchor"
+        ],
+        "new_pose_count": 2,
+        "anchor_reuse_display_positions": 2,
+        "note": "仅若后续动作图通过物件连续性审查，才可稀疏阶段连看；否则独立姿态呈现。未授权本轮出图或生成GIF。"
+      },
+      "priority": 4,
+      "slug": "kien",
+      "branch_proposal": "sample_box_regrip_v1",
+      "source_fact": "卡载赶工与器材运输联络人；有限批次校验与运输收益有边界，不享全国通行权。",
+      "anchor_observation": "已实际看图：一手经小提柄低提闭合无字木样箱，另一手空垂；沙色短发、蓝灰短外衣、棕肩披、腰包和靴。",
+      "poses": [
+        {
+          "id": "K1",
+          "title": "提柄不松、空手托底",
+          "proposal": "保持原提柄手握住，稍屈双膝并把小闭箱拉近腰侧，原空手从下托住箱底，视线下看；双脚仍在原地，不是拾起地面新箱。"
+        },
+        {
+          "id": "K2",
+          "title": "双手稳住胸腹低抱",
+          "proposal": "同一箱移到腹前，一手仍连着提柄、一手托底，双肘向身侧收稳；上身小幅回正，脸从箱上抬起。保持箱在腹胸之间，不遮脸，不伸手交货。"
+        }
+      ],
+      "prop_continuity": "只移动原小闭箱，始终闭合、无字、无标签，提柄固定。不是大货箱搬运、装车、走路或交接。",
+      "risks": [
+        "两姿态须锁箱宽高厚、提柄位置、手柄握点；避免像Leo已有备注那样箱厚跳变。",
+        "托底手与箱/外衣需要明确前后遮挡，不能留出承重悬空。",
+        "不把联络人扩大为重载搬运工，不增表演性的痛苦或新伤，箱内物品仍未知。"
+      ],
+      "story_forbidden": [
+        "交货或验收完成",
+        "款项到手",
+        "货物来源合法化",
+        "通关批准",
+        "全国通行权限"
+      ]
+    }
+  ],
+  "files_changed_by_this_task": [
+    "Assets/CharacterDesigns/20261013/expressive/briefs/town_work_pose_candidates_01.json"
+  ]
+}

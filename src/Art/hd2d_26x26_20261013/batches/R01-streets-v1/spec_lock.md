@@ -1,0 +1,182 @@
+# Execution Lock — R01 Streets
+
+## authorization
+Previously confirmed HD2D style and six parameters, continued by user 2026-10-13; scenes only.
+
+## canvas
+- base_size: 26x26
+- tile_size: 26x26
+- format: RGBA PNG
+- r01_port: 1040x780
+- r01_hearing: 1040x780
+- r01_workshop: 1040x780
+- r01_salt: 1040x780
+- r01_rental: 624x520
+- r01_region: 1664x1248 regional schematic artwork; not a native walkable room, actual world coordinates pending
+- architecture_master: 1536x1024, 3x2 isolated structures; five populated slots
+- props_master: 1536x1536, 3x3 isolated props; eight populated slots
+- r01_port_kiosk: 260x208, origin [130, 190], one static frame, transparent
+- r01_hearing_canopy: 312x208, origin [156, 190], one static frame, transparent
+- r01_rental_house: 260x234, origin [130, 216], one static frame, transparent
+- r01_forge_building: 260x234, origin [130, 216], one static frame, transparent
+- r01_abandoned_post: 182x156, origin [91, 140], one static frame, transparent
+- r01_notice_board: 52x78, origin [26, 65], one static frame, transparent
+- r01_twin_ledger_table: 78x52, origin [39, 45], one static frame, transparent
+- r01_stamp_bench: 52x52, origin [26, 43], one static frame, transparent
+- r01_basic_repair_bench: 78x52, origin [39, 45], one static frame, transparent
+- r01_storage_chest: 52x52, origin [26, 43], one static frame, transparent
+- r01_drying_rack: 78x78, origin [39, 65], one static frame, transparent
+- r01_ash_stove: 52x78, origin [26, 65], one static frame, transparent
+- r01_water_basin: 52x52, origin [26, 43], one static frame, transparent
+
+## palette
+- name: BRY-R01-128
+- colors:
+  - #DBCAA2
+  - #D1BD98
+  - #CBB792
+  - #C9AE84
+  - #B7AD8F
+  - #C0A177
+  - #B39F7D
+  - #AC9E7F
+  - #9D9C8C
+  - #BA9065
+  - #AD916D
+  - #A9906E
+  - #A39277
+  - #A38A68
+  - #9C8D76
+  - #9C8868
+  - #94886E
+  - #858B82
+  - #AF7855
+  - #9B7C5C
+  - #938067
+  - #937456
+  - #8C7F69
+  - #8B7965
+  - #8B7355
+  - #837766
+  - #827556
+  - #806C56
+  - #78715A
+  - #776A56
+  - #696E5D
+  - #975E45
+  - #875C43
+  - #7F6249
+  - #7F533D
+  - #776251
+  - #785C42
+  - #77503C
+  - #6F6153
+  - #6F5E44
+  - #6F5340
+  - #6F4B38
+  - #676053
+  - #665A4E
+  - #65564C
+  - #666040
+  - #655740
+  - #655041
+  - #64493B
+  - #654834
+  - #5A5A52
+  - #5B583C
+  - #595141
+  - #584D40
+  - #564943
+  - #56473E
+  - #584736
+  - #42575C
+  - #3D4D4E
+  - #3E4947
+  - #43463F
+  - #2E454D
+  - #693E31
+  - #5D3D31
+  - #593C31
+  - #534035
+  - #53362C
+  - #4B403A
+  - #4A3A36
+  - #4C3C2F
+  - #4B322B
+  - #433E3B
+  - #433B36
+  - #433C32
+  - #413633
+  - #413C2C
+  - #42352C
+  - #40312F
+  - #41302A
+  - #412F25
+  - #402824
+  - #304045
+  - #373333
+  - #38372B
+  - #36312B
+  - #342E2E
+  - #352D2A
+  - #342D25
+  - #322A2B
+  - #342924
+  - #312627
+  - #322520
+  - #302221
+  - #301D1D
+  - #2A4049
+  - #293E46
+  - #263D45
+  - #273C43
+  - #263A45
+  - #253942
+  - #223741
+  - #24393E
+  - #22353E
+  - #24353A
+  - #1F343D
+  - #1F323B
+  - #1E2E38
+  - #272A29
+  - #272527
+  - #272521
+  - #192A33
+  - #272226
+  - #272122
+  - #28211D
+  - #1F2123
+  - #241D22
+  - #241C1E
+  - #241B19
+  - #1E1B1F
+  - #171B20
+  - #1B1A19
+  - #1F1619
+  - #191619
+  - #161519
+  - #181115
+  - #0F1218
+  - #0F0E10
+  - #08070B
+
+## style
+- sub_style: textured HD-2D, square-grid orthographic oblique
+- materials: salt-grey stone, brown timber, wet brick, dull russet shingles, muted earth and teal water
+- light_direction: top-left
+- lighting: static unlit base, dynamic sources separate
+
+## per_sprite_budget
+- max_colors: 128
+
+## invariants
+- Public hearing is a local labor review, not a formal Brynn court. Separate public space and private rental access.
+- Rental includes a desk, drying pages and cold stove, no invented bedroom capacity.
+- Basic repair bench remains distinct from the large furnace and printing bench. No route outcome, sold assets or active flames baked in.
+- Notices/pages are blank shapes; text and states use engine fonts/logic. Storage is appearance only, not inventory/loot quantities.
+- Salt road has a continuous dry walking route; world interface coordinates are pending, never present the diagram as official geography.
+- Region overview follows the seven declared R01 topology edges, not measured global distances.
+- No people/NPCs, dialogue, actors, corpses, readable text, labels, UI, purple glow or arbitrary extra doors baked into art.
+- Explicit floor masks and authored occupancy; no collisions inferred from alpha. Roofs and foreground separate.
+- Raw masters immutable; documented crops, nearest-neighbor normalization, exact palette and binary alpha are authorized post-processing.

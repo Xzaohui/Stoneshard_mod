@@ -1,0 +1,31 @@
+紫色晶石 / N1 HD-2D 导入包 v1
+
+范围：旧渡口岸院、钟屋、暗渠。26张生产PNG，另附六物件精灵表。
+本N1包覆盖6项视图。全项目进度由artwork-state.json单独统计。
+validation.json是本素材导出时的静态证据；当前Mod部署与游戏测试证据另见项目artifacts/。
+
+1. 用浏览器直接打开 preview.html，无需服务器；同目录相对路径必须保留。
+2. assets/backgrounds/*__plan.png 是1040×780的平面材质图；guides/*_plan.png 为带点位的技术图。
+3. 分层使用顺序：backing → floor → structure → 按脚底Y排序的原生人物与独立物件 → foreground。
+   房间层原点(0,0)，比例1:1，最近邻采样，关闭平滑和mipmap。不可自动裁掉画布透明边。
+4. objects放置公式：左上角 = (cellX*26+13,cellY*26+13) - sprite_origin。
+   原点、尺寸、SHA256见 manifest.json。图集sheet_origin包含图集偏移；cell_origin用于拆分后的208方格。
+   图集包含六个独立静态物件，不是动画帧。逐物件原PNG无需使用图集就能导入。
+5. 钟、断绳与铺盖仅在preview中按现有锚点合成；它们未烘焙进房间底图。
+   两张铺盖与小鞋在一个物件PNG中。其他水壶、门拱、灯尚无新增交互/库存。
+6. 原生可走格、门点、落点、灯点及剧情物件锚点见 native_layouts.json。
+   mask白=原生可走地面，黑=阻挡。不要从美术透明轮廓推算人物或门的碰撞。
+   原生门实例、保存和转场必须保留，D标记仅为技术覆盖层。
+7. n1_bellhouse_exterior.png 是312×260独立外观，不能当室内比例图或直接烘焙到岸院。
+   原点为门槛参考点；启用前需在引擎中校准遮挡、入口和实际碰撞。
+8. 静态图片没有烘焙发光。native_layouts已登记原生灯点，由现有动态光源渲染。
+9. raw/是生图原稿，含几何近似和半透明边；应导入assets/中的校正版本。
+   完整提示词/输入输出哈希在notes/及generation-log.json，裁切步骤在manifest.json。
+10. source_snapshot/NightRooms.cs仅为该导出对应的Mod几何源码快照，不替换当前项目源码。
+    validation.json仅证明静态文件/像素/通路检查，不证明游戏运行、对白或用户美术认可。
+
+重建（在项目根目录，用可用Python/Pillow）：
+  python tools/Prepare-Hd2dProduction.py
+  python tools/Export-Hd2dN1.py
+  python tools/Package-Hd2dN1.py
+生图原稿须保留；重建命令复用raw/，不会重新调用图像生成。

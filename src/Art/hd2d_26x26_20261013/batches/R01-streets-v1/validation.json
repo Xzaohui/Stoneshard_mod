@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-13",
+  "batch": "R01-streets-v1",
+  "scope": "Static PNG imports, authored grid proposals, paths, roof splits, schematic topology and provenance; no native game/NPC test",
+  "production_pngs": 68,
+  "new_generated_masters": 8,
+  "view_slots": 9,
+  "checks_passed": 691,
+  "errors": [],
+  "paths": [
+    {
+      "scene": "r01_port",
+      "walkable_cells": 638,
+      "reachable_cells": 638,
+      "exits": [
+        "salt",
+        "camp",
+        "hearing"
+      ]
+    },
+    {
+      "scene": "r01_hearing",
+      "walkable_cells": 611,
+      "reachable_cells": 611,
+      "exits": [
+        "camp",
+        "workshop",
+        "port",
+        "rental_private"
+      ]
+    },
+    {
+      "scene": "r01_workshop",
+      "walkable_cells": 593,
+      "reachable_cells": 593,
+      "exits": [
+        "canal",
+        "hearing"
+      ]
+    },
+    {
+      "scene": "r01_salt",
+      "walkable_cells": 984,
+      "reachable_cells": 984,
+      "exits": [
+        "R02_interface_pending",
+        "port"
+      ]
+    },
+    {
+      "scene": "r01_rental",
+      "walkable_cells": 230,
+      "reachable_cells": 230,
+      "exits": [
+        "hearing_private_return"
+      ]
+    }
+  ],
+  "passed": true,
+  "runtime_verified": false,
+  "visual_review": [
+    "Five south-facing structures and eight independent props inspected before and after normalization.",
+    "Dry ground replaces the generated port guide pools; all actual floors use exact authored masks.",
+    "Rental stove/desk/drying sheets separate; no invented bedroom.",
+    "Public hearing exits remain separate from private rental; basic repair remains distinct from furnace.",
+    "Regional map follows seven design edges but does not register native world coordinates."
+  ]
+}

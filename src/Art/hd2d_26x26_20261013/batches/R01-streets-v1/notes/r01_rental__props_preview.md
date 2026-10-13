@@ -1,0 +1,10 @@
+# r01_rental__props_preview
+
+- Category: backgrounds
+- Size: 624x520
+- Origin: [0, 0]
+- Colors: 101 from BRY-R01-128
+- Animation: none
+- Design: placement_preview_only_use_individual_sprites_for_game
+- Sampling: nearest; retain transparent canvas
+- Runtime: pending native integration; scenes only

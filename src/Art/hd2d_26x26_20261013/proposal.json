@@ -1,0 +1,118 @@
+{
+  "status": "production_in_progress_importable_batches",
+  "date": "2026-10-13",
+  "style_already_requested": "HD-2D，参考现有紫色晶石设计",
+  "skill": {
+    "url": "https://github.com/424431185/pixel-asset-master-skills",
+    "commit": "33d891c421a9ad3608f5a09af97271388ca923af",
+    "local": "tools/vendor/pixel-asset-master-skills/skills/pixel-asset-master/SKILL.md",
+    "gate": "Step 4: Present Six Confirmations to user, wait for explicit confirmation.",
+    "local_use_only": true
+  },
+  "six_parameters": {
+    "canvas": {
+      "native_tile": [
+        26,
+        26
+      ],
+      "existing_n1_room": [
+        1040,
+        780
+      ],
+      "new_local_scene_proposal": [
+        1040,
+        780
+      ],
+      "overview_max_edge": 2048,
+      "building_sprites": "逐建筑按26像素格确定边界与原点；不能将整城2048图缩小当建筑精灵",
+      "large_scenes": "超出单场景容量时分区连接，保留全部安全回程与独立权限"
+    },
+    "count": {
+      "initial_view_slots": 745,
+      "inventory": "inventory.json",
+      "includes": "十五城市/地域、六十六街区、一百三十二任务空间、三十三卫星聚落、六主线区域及五十四功能节点、六布林续篇场所、四十四野外地点、三已实现N1房间",
+      "caveat": "视图槽包含不同尺度对同一地点的表现，非745座建筑；分层PNG、额外楼层和状态变体另计。户外空间不强造室内。",
+      "production_order": [
+        "N1三场景",
+        "R01—R06及九个副本",
+        "十五城及卫星聚落",
+        "布林续篇与野外地点"
+      ]
+    },
+    "platform": "Stoneshard / GameMaker / 现有MSL工程；导出PNG、相对路径清单、像素原点与门点；不改现有游戏包",
+    "palette": "从各地已有概念图提取当地固定色板，保留冷暖地域差异；紫光只用于台本明确的介质/危险点。生成锁定时记录全部HEX；底色和灯光层分开。",
+    "style": "HD-2D；沿原作斜俯视的正交格方向，统一人物尺度、左上基础光照、清晰像素块；平面图正投影；屋顶/前景遮挡可独立关闭。",
+    "animation": "本轮静态场景、建筑和室内资源，每项单帧；门、水、火和晶石动态不凭空增加帧数"
+  },
+  "recommended_delivery": {
+    "level": "importable_layered_assets",
+    "files": [
+      "平面地图PNG",
+      "建筑外观RGBA PNG",
+      "室内/作业空间分层RGBA PNG",
+      "可查看的场景合成预览",
+      "manifest.json",
+      "逐项提示词及生成来源",
+      "输入/输出SHA256",
+      "静态检查报告"
+    ],
+    "layer_proposal": [
+      "地面",
+      "结构/后墙",
+      "独立道具",
+      "前景/屋顶遮挡",
+      "独立灯光"
+    ],
+    "metadata": [
+      "尺寸",
+      "原点",
+      "格尺寸",
+      "门点",
+      "通行/占地掩码",
+      "关联任务/空间ID",
+      "图层绘制顺序"
+    ],
+    "acceptance": "逐图核对台本、床位/库存/出入口约束、透明边、尺寸、颜色和通行；生成不自动等于验收。图像可导入与真实运行分别记账。"
+  },
+  "completed": [
+    "skill下载与版本固定",
+    "全范围745视图需求清单",
+    "N1逐图生成与提示词留存",
+    "N1三场景分层与独立建筑/道具导出",
+    "128色量化及244项静态检查",
+    "可切换图层的离线预览与导入包"
+  ],
+  "finished_new_images": 134,
+  "generation_started": true,
+  "confirmation": {
+    "date": "2026-10-13",
+    "message": "继续"
+  },
+  "generated_master_files": 21,
+  "production_pngs": 134,
+  "fulfilled_view_slots": 20,
+  "remaining_view_slots": 725,
+  "production_batches": {
+    "N1": {
+      "path": ".",
+      "production_pngs": 26,
+      "generated_master_files": 7,
+      "static_passed": true,
+      "runtime_verified": false
+    },
+    "R01-camp-canal-v1": {
+      "path": "batches/R01-camp-canal-v1",
+      "production_pngs": 40,
+      "generated_master_files": 6,
+      "static_passed": true,
+      "runtime_verified": false
+    },
+    "R01-streets-v1": {
+      "path": "batches/R01-streets-v1",
+      "production_pngs": 68,
+      "generated_master_files": 8,
+      "static_passed": true,
+      "runtime_verified": false
+    }
+  }
+}

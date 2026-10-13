@@ -1,0 +1,444 @@
+[
+  {
+    "id": "r01_camp",
+    "location": "R01-camp",
+    "name_zh": "灰堤工营",
+    "size": [
+      1040,
+      780
+    ],
+    "cells": [
+      40,
+      30
+    ],
+    "walkable_rectangles": [
+      [
+        4,
+        4,
+        35,
+        9
+      ],
+      [
+        5,
+        10,
+        22,
+        24
+      ],
+      [
+        23,
+        14,
+        35,
+        24
+      ],
+      [
+        22,
+        10,
+        25,
+        13
+      ]
+    ],
+    "blocked_rectangles": [
+      [
+        7,
+        5,
+        16,
+        7
+      ],
+      [
+        28,
+        5,
+        34,
+        6
+      ]
+    ],
+    "exits": [
+      {
+        "id": "port",
+        "cell": [
+          8,
+          24
+        ]
+      },
+      {
+        "id": "hearing",
+        "cell": [
+          5,
+          15
+        ]
+      },
+      {
+        "id": "canal",
+        "cell": [
+          35,
+          20
+        ]
+      }
+    ],
+    "reserved": [
+      {
+        "id": "coffin_inspect",
+        "cell": [
+          12,
+          17
+        ]
+      },
+      {
+        "id": "winch_inspect",
+        "cell": [
+          30,
+          19
+        ]
+      },
+      {
+        "id": "shed_front",
+        "cell": [
+          12,
+          11
+        ]
+      },
+      {
+        "id": "repair_front",
+        "cell": [
+          31,
+          9
+        ]
+      }
+    ],
+    "objects": [
+      {
+        "id": "r01_worker_shed",
+        "cell": [
+          12,
+          11
+        ],
+        "plane_bounds": [
+          7,
+          5,
+          16,
+          10
+        ],
+        "roof": true
+      },
+      {
+        "id": "r01_winch_shed",
+        "cell": [
+          31,
+          9
+        ],
+        "plane_bounds": [
+          28,
+          5,
+          34,
+          8
+        ],
+        "roof": true
+      },
+      {
+        "id": "r01_coffin_coat",
+        "cell": [
+          12,
+          15
+        ]
+      },
+      {
+        "id": "r01_winch_socket",
+        "cell": [
+          30,
+          17
+        ]
+      }
+    ],
+    "rationale": "High embankment, communal shed court, broken lower bank and separate winch court. Open shed front is working space; no additional NPC or grave proof.",
+    "cell_pixels": 26,
+    "origin": [
+      0,
+      0
+    ],
+    "geometry_authority": "Mod art geometry proposal, not an implemented game room",
+    "implementation_verified": false,
+    "runtime_verified": false
+  },
+  {
+    "id": "r01_canal_pump",
+    "location": "R01-canal",
+    "name_zh": "旧渠高位泵房与检修侧间",
+    "size": [
+      1352,
+      884
+    ],
+    "cells": [
+      52,
+      34
+    ],
+    "walkable_rectangles": [
+      [
+        4,
+        4,
+        47,
+        10
+      ],
+      [
+        4,
+        11,
+        10,
+        29
+      ],
+      [
+        18,
+        14,
+        29,
+        20
+      ],
+      [
+        37,
+        11,
+        47,
+        28
+      ],
+      [
+        11,
+        16,
+        17,
+        18
+      ],
+      [
+        30,
+        16,
+        36,
+        18
+      ],
+      [
+        4,
+        27,
+        47,
+        29
+      ]
+    ],
+    "blocked_rectangles": [
+      [
+        39,
+        18,
+        39,
+        20
+      ],
+      [
+        39,
+        23,
+        39,
+        24
+      ],
+      [
+        40,
+        18,
+        46,
+        18
+      ],
+      [
+        40,
+        24,
+        46,
+        24
+      ]
+    ],
+    "exits": [
+      {
+        "id": "camp_entry",
+        "cell": [
+          7,
+          5
+        ]
+      },
+      {
+        "id": "maintenance_return",
+        "cell": [
+          44,
+          6
+        ]
+      },
+      {
+        "id": "tomb",
+        "cell": [
+          26,
+          29
+        ]
+      }
+    ],
+    "reserved": [
+      {
+        "id": "sluice_control",
+        "cell": [
+          24,
+          8
+        ]
+      },
+      {
+        "id": "side_room_front",
+        "cell": [
+          38,
+          21
+        ]
+      },
+      {
+        "id": "inspection_plate",
+        "cell": [
+          9,
+          10
+        ]
+      }
+    ],
+    "objects": [
+      {
+        "id": "r01_sluice_wheel",
+        "cell": [
+          24,
+          7
+        ]
+      },
+      {
+        "id": "r01_maintenance_ladder",
+        "cell": [
+          44,
+          5
+        ]
+      },
+      {
+        "id": "r01_shelter_bedroll",
+        "cell": [
+          44,
+          21
+        ]
+      },
+      {
+        "id": "r01_water_jug",
+        "cell": [
+          45,
+          22
+        ]
+      }
+    ],
+    "water_rectangles": [
+      [
+        11,
+        11,
+        17,
+        26
+      ],
+      [
+        30,
+        11,
+        36,
+        26
+      ]
+    ],
+    "rationale": "Two longitudinal channels, high pump hall, dry perimeter loop and bridges. Living side room stays on the east dry bank, separated from the lower tomb.",
+    "cell_pixels": 26,
+    "origin": [
+      0,
+      0
+    ],
+    "geometry_authority": "Mod art geometry proposal, not an implemented game room",
+    "implementation_verified": false,
+    "runtime_verified": false
+  },
+  {
+    "id": "r01_canal_tomb",
+    "location": "R01-canal",
+    "name_zh": "旧渠下层墓龛环道",
+    "size": [
+      936,
+      728
+    ],
+    "cells": [
+      36,
+      28
+    ],
+    "walkable_rectangles": [
+      [
+        4,
+        4,
+        31,
+        7
+      ],
+      [
+        4,
+        8,
+        7,
+        22
+      ],
+      [
+        28,
+        8,
+        31,
+        22
+      ],
+      [
+        8,
+        19,
+        27,
+        22
+      ],
+      [
+        12,
+        10,
+        23,
+        17
+      ],
+      [
+        8,
+        12,
+        11,
+        14
+      ],
+      [
+        24,
+        12,
+        27,
+        14
+      ]
+    ],
+    "blocked_rectangles": [],
+    "exits": [
+      {
+        "id": "pump_entry",
+        "cell": [
+          6,
+          5
+        ]
+      },
+      {
+        "id": "maintenance_return",
+        "cell": [
+          6,
+          20
+        ]
+      }
+    ],
+    "reserved": [
+      {
+        "id": "history_inspection",
+        "cell": [
+          18,
+          13
+        ]
+      }
+    ],
+    "objects": [
+      {
+        "id": "r01_maintenance_ladder",
+        "cell": [
+          5,
+          20
+        ]
+      }
+    ],
+    "rationale": "Dry central platform inside an annular maintenance route; low wall niches face the ring. No resident or occupied bed in the tomb, no automatic loot ownership.",
+    "cell_pixels": 26,
+    "origin": [
+      0,
+      0
+    ],
+    "geometry_authority": "Mod art geometry proposal, not an implemented game room",
+    "implementation_verified": false,
+    "runtime_verified": false
+  }
+]

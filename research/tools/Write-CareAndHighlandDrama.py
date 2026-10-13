@@ -1,6 +1,7 @@
 """S86 scoped rendering: change the final eight tasks, preserve the other 65."""
 from pathlib import Path
 import json,hashlib,re
+from NotePreserve import preserve_foreign
 from AdditionalCityDrama import apply_city
 from CityDrama import render_scenes,render_method,render_exceptions
 ROOT=Path(__file__).resolve().parents[2];V=ROOT/'design';AUDIT='寒凉盆地与修院山地人物演出审查'
@@ -27,6 +28,7 @@ model['dramatic_scope']='Active authored cities: '+', '.join(model['dramatic_cas
 cs={c['id']:c for c in model['cities']};qs=[q for q in model['quests'] if q['city'] in ['ASH','HIG']]
 casts={c:model['dramatic_casts'][c] for c in ['ASH','HIG']};changed=set();generated={}
 def put(rel,t,own=False):
+ t=preserve_foreign(V,rel,t)
  p=V/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(t,encoding='utf-8');k='design/'+rel
  changed.add(k)
  if own:generated[k]=sha(p)

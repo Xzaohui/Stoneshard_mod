@@ -14,6 +14,8 @@ for qid,q in qs.items():
  for key in ['id','city','routes','requires','stages','locations','need','turn','title','kind']:check(q[key]==oq[qid][key],qid+'-structural-'+key)
  if q['city'] in ['OSB','RAT','KOR','PAS'] and 'dramatic_scenes' in q:
   check(matching_additional_source(ROOT,q),qid+'-exact-later-scoped-source');continue
+ if q['city'] in ['ASH','HIG'] and q.get('dramatic_revision')=='S86':
+  check(matching_additional_source(ROOT,q),qid+'-exact-S86-authored-source');continue
  if qid not in covered:
   for key in set(q)|set(oq[qid]):
    if key.startswith('dramatic_'):check(q.get(key)==oq[qid].get(key),qid+'-other-city-unchanged-'+key)
@@ -84,6 +86,6 @@ check('不自动捐回工资池' in qs['CS-FOR-03']['dramatic_guards']['b'] and 
 for file in ['forest-mine-generated-note-hashes.json','city-generated-note-hashes.json','city-space-note-hashes.json']:
  for rel,h in read('research/'+file).items():check(sha(ROOT/rel)==h,rel+'-authoring-hash')
 check(len(read('research/forest-mine-generated-note-hashes.json'))==11,'ten-new-cards-and-one-audit')
-coverage=sum('dramatic_scenes' in q for q in m['quests']);check(coverage==49+sum(q['city'] in ['OSB','RAT','KOR','PAS'] and 'dramatic_scenes' in q for q in m['quests']),'scoped-authored-coverage-no-false-full-coverage')
+coverage=sum('dramatic_scenes' in q for q in m['quests']);check(coverage==49+sum(q['city'] in ['OSB','RAT','KOR','PAS'] and 'dramatic_scenes' in q for q in m['quests'])+sum(q['city'] in ['ASH','HIG'] and 'dramatic_scenes' in q for q in m['quests']),'scoped-authored-coverage-no-false-full-coverage')
 report=dict(date='2026-10-12',scope='S82 exact source/rendering, forest/mine identities, actual rescue and finite resource guards, preserved existing branches/receipts; not literary quality, numeric economy, collision or runtime',quests=8,scenes=scene_count,methods=method_count,unique_actors=len(unique),new_cards=len(newactors),dialogue_utterances=utterances,choice_answers=choice_count,early_late_pairs=len(all_feedback),covered_city_quests=coverage,pending_city_quests=73-coverage,checks_passed=len(checks),errors=errors,passed=not errors,runtimeVerified=False)
 (ROOT/'research/forest-mine-drama-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print(json.dumps(report,ensure_ascii=False));raise SystemExit(0 if report['passed'] else 1)

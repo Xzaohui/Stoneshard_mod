@@ -56,6 +56,13 @@ def write(rel, text):
     p.write_text(text, encoding='utf-8')
     generated_hashes['design/' + rel] = hashlib.sha256(p.read_bytes()).hexdigest()
     return 'design/' + rel
+def preserve_foreign(rel, text):
+    # Wholesale-regenerated notes keep registry blocks owned by later phases.
+    p=VAULT / rel
+    if not p.exists(): return text
+    old=p.read_text(encoding='utf-8-sig')
+    blocks=[m.group(0) for m in re.finditer(r'<!--\s*[A-Za-z0-9-]+:BEGIN\s*-->.*?<!--\s*[A-Za-z0-9-]+:END\s*-->', old, re.S)]
+    return text.rstrip()+'\n\n'+'\n\n'.join(blocks)+'\n' if blocks else text
 def supplement(name, body):
     found=list(VAULT.rglob(name + '.md'))
     if len(found)!=1: raise ValueError(f'Expected one note: {name}')
@@ -116,10 +123,14 @@ for group, folder in [(main,'05_主线/台本'),(side,'06_支线/台本'),(daily
             b+='\n这些是授权与处置选择，不充作第二套解法数量。\n\n'
         if q in daily:
             b+='## 一次人物事件与普通服务\n\n'+q['deadline']+'旧计划冷却值'+str(q['cooldown'])+'小时仅保留为历史字段，不刷新同一冲突。\n\n'+q['state']+'\n\n'
+            first=re.search(r'玩家：‘([^’]+)’',q.get('field') or '')
+            open_line=first.group(1) if first else '我先听两边。接受调查，不等于已经替你们选了办法。'
+            mid_line=q.get('player_mid') or '事实查清后，成本和谁能拒绝也要讲清。'
+            close_line=q.get('player_close') or '这次怎样做，留在回执里。以后再见面也不能当作没发生。'
             q['scenes']=[
-                {'name':'当事人提出互相冲突的需要','place':region_names[q['region']],'beat':'起','stage':'unseen→active','setup':'两方各讲自己拥有的权利与缺口，不用柜员派送货清单。','lines':[[q['speaker'],q['opening']],['玩家','我先听两边。接受调查，不等于已经替你们选了办法。']],'exit':'明确接受本人物事件；拒绝不重置他人的生活或强制刷新相同受害者。'},
-                {'name':'事实与解法预览','place':'本案现场与中立会谈点','beat':'承与转','stage':'active→事实可核','setup':nq['conflict'],'lines':[['玩家','事实查清后，成本和谁能拒绝也要讲清。']],'exit':'采用上方路线核验；非玩家专业劳务由有限付费服务执行。'},
-                {'name':'选择后的关系','place':'本案回访点','beat':'合','stage':'事实可核→resolved','setup':'按实际路线播放上方R键对白，不同时播放两条互斥结果。','lines':[['玩家','这次怎样做，留在回执里。以后再见面也不能当作没发生。']],'exit':'任务ID唯一提交；后续按X边读取结果，不重播初次冲突。'}]
+                {'name':'当事人提出互相冲突的需要','place':region_names[q['region']],'beat':'起','stage':'unseen→active','setup':'两方各讲自己拥有的权利与缺口，不用柜员派送货清单。','lines':[[q['speaker'],q['opening']],['玩家',open_line]],'exit':'明确接受本人物事件；拒绝不重置他人的生活或强制刷新相同受害者。'},
+                {'name':'事实与解法预览','place':'本案现场与中立会谈点','beat':'承与转','stage':'active→事实可核','setup':nq['conflict'],'lines':[['玩家',mid_line]],'exit':'采用上方路线核验；非玩家专业劳务由有限付费服务执行。'},
+                {'name':'选择后的关系','place':'本案回访点','beat':'合','stage':'事实可核→resolved','setup':'按实际路线播放上方R键对白，不同时播放两条互斥结果。','lines':[['玩家',close_line]],'exit':'任务ID唯一提交；后续按X边读取结果，不重播初次冲突。'}]
         if q in dungeons:
             b+='## 几何、进出与危险\n\n'+q['shape']+'\n\n通路：'+q['route']+'\n\n危险：'+q['hazard']+'\n\n关联主线：'+tasklinks(q['main'])+'；支线：'+tasklinks(q['side'])+'。副本环境台本不再次发同一主线奖励。\n\n'
         b+='## 逐场素材（按上方条件剪裁）\n\n下列镜头不组成自动播完的直线；互斥台词、死者答复与未经本人授权的去向必须按S62规范替换。\n\n'
@@ -154,7 +165,7 @@ for group, folder in [(main,'05_主线/台本'),(side,'06_支线/台本'),(daily
         b+='后续／可选关联：'+(tasklinks(nxt) if nxt else '无强制后续任务')+'。\n\n'
         links=q.get('links',[])+['台本新增人物与知识边界','新区域设计与任务总表']
         b+=' · '.join(wl(x) for x in dict.fromkeys(links))+'。\n'
-        paths[qid]=write(folder+'/'+name+'.md',b)
+        paths[qid]=write(folder+'/'+name+'.md',preserve_foreign(folder+'/'+name+'.md',b))
 
 # Add semantic backlinks to existing entity cards; prior logic is explicitly historical.
 back={}
@@ -196,7 +207,7 @@ for title,group in [('主线四幕',main),('支线三阶段',side),('日常短�
         index+=f"| {q['id']} | {wl(task_names[q['id']])} | {wl(region_names[q['region']])} | {req}；"+('逻辑小样已部署，新增对白草稿' if q['id']=='N1' else '台本草稿，未实现')+' |\n'
     index+='\n'
 index+='## 阅读顺序与历史\n\n先读N1—N5，再任选调查路线读N6/N7/N8，接N9—N18；支线可在对应主线前置后插入。台本中的选项键、场次键和对白键稳定，标题可改。\n\n历史开发见'+wl('剧情重构与旧任务退役')+'，故事总览见'+wl('剧情总纲')+'。\n'
-write('00_导航/任务台本总索引.md',index)
+write('00_导航/任务台本总索引.md',preserve_foreign('00_导航/任务台本总索引.md',index))
 area=front('新区域设计与任务总表','MAP-SCRIPT-INDEX','index','region')
 area+='六个原创区域包共54功能节点。它们是可走关系与场所预算，不是当前安装已经新增54格或六座城市。地图审美与场景用途见各区当前修订节；旧渡口为R02的入门故事点，三个子场景不重复计世界节点。\n\n| 区域 | 设计主题 | 节点 | 主线 | 支线 | 日常 | 副本 |\n| --- | --- | --- | --- | --- | --- | --- |\n'
 for r in regions:
@@ -205,7 +216,7 @@ for r in regions:
 area+='\n入口：原作商队→R02旧渡口入门点；N1结案→R01灰堤；N4完成→R02西路；N5公开R03/R04/R05路线；N13后剧情指引上R06。道路可先探索普通区，关键故事段只随任务生成，不能提前删掉后续证人。\n\n'
 area+='原世界图坐标尚未核验，R01—R06只表示功能拓扑，不能据它推断原作政治疆界。推荐等级是调试目标：N1入门点6–9，其余R02调查9–15；R01调查6–10、R03 12–20、R04 13–21、R05 16–24、R06 22–28。主线不承诺单独提供全部升级经验。\n\n'
 area+='退役D01预算改作工营／听审与工坊组合中的地表叙事空间；R01由2副本改为1副本，不再用旧封账仓硬凑10个有效副本。其余功能预算按本次节点表，全球格数另定。\n\n'+wl('任务台本总索引')+' · '+wl('地图扩张总图')+' · '+wl('旧渡口_场景与通路')+' · '+wl('地点设定核对与冲突修订')+'。\n'
-write('02_世界与地图/新区域设计与任务总表.md',area)
+write('02_世界与地图/新区域设计与任务总表.md',preserve_foreign('02_世界与地图/新区域设计与任务总表.md',area))
 
 model['active_story']=[{'id':q['id'],'name':q['name'],'region':q['region'],'requires':q['requires'],'at_least':q.get('at_least'),'stage':('0.3.0 logic deployed; S62 routes and dialogue pending' if q['id']=='N1' else 'S62 screenplay draft only'),'file':paths[q['id']]} for q in main]
 model['active_narrative_network']={'file':'research/story-network.json','date':DATE,'routes':sum(len(q['routes']) for q in network['tasks'].values()),'cross_effects':len(network['edges']),'ensemble_arcs':len(network['arcs']),'implemented':False}

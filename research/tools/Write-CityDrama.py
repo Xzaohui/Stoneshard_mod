@@ -1,6 +1,7 @@
 """S76 cast and auditable coverage, without overwriting unrelated generated cards."""
 from pathlib import Path
 import json,hashlib,re
+from NotePreserve import preserve_foreign
 ROOT=Path(__file__).resolve().parents[2];V=ROOT/'design';DATE='2026-10-12'
 model=json.loads((ROOT/'research/city-campaign.json').read_text(encoding='utf-8'));cast=model['dramatic_cast'];covered=[q for q in model['quests'] if q['city']=='BRY' and 'dramatic_scenes' in q]
 hp=ROOT/'research/brynn-generated-note-hashes.json';hashes={}
@@ -10,6 +11,7 @@ if hp.exists():
 def wl(file):return '[['+Path(file).stem+']]'
 def front(title,ident,kind):return f'---\ntitle: "{title}"\nid: {ident}\ntype: {kind}\nstatus: draft\ncanon: mod-original\nbaseline: "0.9.4.25-modbranch"\nupdated: {DATE}\ntags: [stoneshard, brynn, dialogue, S76]\naliases: []\n---\n\n# {title}\n\n'
 def write(rel,body):
+ body=preserve_foreign(V,rel,body)
  p=V/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(body,encoding='utf-8');hashes['design/'+rel]=hashlib.sha256(p.read_bytes()).hexdigest()
 def uses(q,key):
  return any(key==who for s in q['dramatic_scenes'] for who,_ in s['lines']) or any(key==who for pairs in q['dramatic_followups'].values() for who,_ in pairs) or any(f['speaker']==key for f in q['dramatic_feedback'])

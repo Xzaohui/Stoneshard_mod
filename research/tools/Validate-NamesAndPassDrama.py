@@ -93,6 +93,6 @@ check('[[文书_PAS_列梵的家书与口信]]' in (V/qs['CS-PAS-03']['file']).r
 for file in ['names-pass-generated-note-hashes.json','city-generated-note-hashes.json','city-space-note-hashes.json']:
  for rel,h in read('research/'+file).items():check(sha(ROOT/rel)==h,rel+'-authoring-hash')
 check(len(read('research/names-pass-generated-note-hashes.json'))==14,'twelve-new-cards-one-letter-and-one-audit')
-coverage=sum('dramatic_scenes' in q for q in m['quests']);check(coverage==65,'65-authored-8-pending-no-false-full-coverage')
+coverage=sum('dramatic_scenes' in q for q in m['quests']);check(coverage==73,'73-authored-no-pending')
 report=dict(date='2026-10-12',scope='S84 exact source/rendering, limited identity and real letter/bed/wages, preserved original N7/SQ02 methods and old receipts; not literary quality, numeric economy, collision or runtime',quests=8,scenes=scene_count,methods=method_count,unique_actors=len(unique),new_cards=len(newactors),dialogue_utterances=utterances,choice_answers=choice_count,early_late_pairs=len(all_feedback),world_texts=1,covered_city_quests=coverage,pending_city_quests=73-coverage,checks_passed=len(checks),errors=errors,passed=not errors,runtimeVerified=False)
 (ROOT/'research/names-pass-drama-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print(json.dumps(report,ensure_ascii=False));raise SystemExit(0 if report['passed'] else 1)

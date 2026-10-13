@@ -1,7 +1,7 @@
-param([string]$ProjectRoot = (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent))
+﻿param([string]$ProjectRoot = (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent))
 $ErrorActionPreference = 'Stop'
 $vault = Join-Path $ProjectRoot 'design'
-$model = Get-Content -LiteralPath (Join-Path $ProjectRoot 'research/design-model.json') -Raw | ConvertFrom-Json
+$model = Get-Content -LiteralPath (Join-Path $ProjectRoot 'research/design-model.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $notes = @(Get-ChildItem -LiteralPath $vault -Filter '*.md' -Recurse | Where-Object { $_.Name -ne 'AGENTS.md' })
 $errors = [System.Collections.Generic.List[string]]::new()
 $byName = @{}
@@ -10,7 +10,7 @@ $texts = @{}
 $incoming = @{}
 $linkCount = 0
 foreach ($note in $notes) {
-    $body = Get-Content -LiteralPath $note.FullName -Raw
+    $body = Get-Content -LiteralPath $note.FullName -Raw -Encoding UTF8
     $texts[$note.BaseName] = $body
     if ($byName.ContainsKey($note.BaseName)) { $errors.Add("Duplicate note name: $($note.BaseName)") }
     $byName[$note.BaseName] = $note.FullName

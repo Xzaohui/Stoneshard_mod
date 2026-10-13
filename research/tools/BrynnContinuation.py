@@ -1,6 +1,7 @@
 """Emit and reconcile the authoritative S85 design supplement; no game writes."""
 from pathlib import Path
 import hashlib,json,re
+from NotePreserve import preserve_foreign as keep_foreign
 
 ROOT=Path(__file__).resolve().parents[2]
 V=ROOT/'design'
@@ -65,6 +66,7 @@ def apply(root=ROOT):
     # Check complete protected state before writing any output.
     for rel in protected:verify(root/rel)
     def write(rel,text):
+        text=keep_foreign(v,rel,text)
         p=v/rel;p.parent.mkdir(parents=True,exist_ok=True)
         p.write_text(text,encoding='utf-8');k=p.relative_to(root).as_posix()
         changed.add(k);emitted[k]=sha(p)
@@ -73,6 +75,14 @@ def apply(root=ROOT):
         if not p.exists():raise RuntimeError('Missing integration endpoint: '+rel)
         t=replace_block(p.read_text(encoding='utf-8-sig'),body)
         p.write_text(t,encoding='utf-8');changed.add(p.relative_to(root).as_posix())
+    def preserve_foreign(rel,t):
+        # Wholesale-regenerated notes keep registry blocks owned by other phases.
+        p=v/rel
+        if not p.exists():return t
+        old=p.read_text(encoding='utf-8-sig')
+        blocks=[m.group(0) for m in re.finditer(r'<!--\s*[A-Za-z0-9-]+:BEGIN\s*-->.*?<!--\s*[A-Za-z0-9-]+:END\s*-->',old,re.S)
+                if f'<!-- {MARK}:BEGIN -->' not in m.group(0)]
+        return t.rstrip()+'\n\n'+'\n\n'.join(blocks)+'\n' if blocks else t
 
     common='''死亡优先，其次缺席、拒绝与用途授权；最后才检查有限回执和当前目标状态。询问、预览、读纸、关闭均不写resolve。实际行动及交接验毕、费用来源核过，再确认才写唯一resolve。反悔只重评未来，不回滚已发生付款、曝光、伤害与责任。本人缺席不创建第二个身体，未授权代理不替其签字。
 
@@ -137,7 +147,7 @@ def apply(root=ROOT):
         for r,pair in e['route_dialogue'].items():
             t+=f"- `{r}` 早到：「{pair['early']}」；晚到：「{pair['late']}」。只知对应回执，现实资源变化须现场复核；句中说已付/已接只限已有实际交接。\n"
         t+=f"\n实际影响：{e['action']}\n\n早到：「{e['early']}」\n\n晚到：「{e['late']}」\n\n未做/未知/拒传：「{e['missing']}」；保持目标本地独立方法。\n\n这三句只给当前存活/在场/愿谈的指定发言人；死亡或缺席不播放其新句。隐私被撤回则仅能讨论自己已有公开范围，授权不能由高声望代替。{e['knowledge']} {e['timing']} {e['reward']}\n\n"
-    write('00_导航/'+INDEX+'.md',t)
+    write('00_导航/'+INDEX+'.md',preserve_foreign('00_导航/'+INDEX+'.md',t))
 
     t=front(LORE,'LORE-BRYNN-CONTINUATION-S85','research-note','mixed')
     t+='''实际调查日期：2026-10-12。只读原vanilla.win；当前组合data.win未作为原作证据。2021官方设定稿说明背景/计划，不证明本版领袖可对话；本地文本存在不证明当前存档可达。没有保存官方全文、整页Wiki或游戏完整对白。
@@ -179,7 +189,7 @@ research/brynn-local-lore-locators.json记录输入SHA、64个同键命中元数
 
 '''
     t+=f'[[{INDEX}]] · [[{AUDIT}]] · [[来源登记]] · [[城市设计与原作避让审查]]\n'
-    write('01_原作基线/'+LORE+'.md',t)
+    write('01_原作基线/'+LORE+'.md',preserve_foreign('01_原作基线/'+LORE+'.md',t))
 
     t=front(ITEMS,'DOC-BRYNN-CONTINUATION-S85','story-documents')
     t+='这些是Mod原创可选物件的正文草稿，不是游戏现有物品。只装准许内容，不把长资料塞进对白或做六份纸齐收门槛。物件在原柜复核/现场见证可替代；副件授权和原件去向分别记账。\n\n'
@@ -194,7 +204,7 @@ research/brynn-local-lore-locators.json记录输入SHA、64个同键命中元数
         t+=f"## BC85-DOC-{num}：{name}\n\n所属：{ql(q['id'])}。\n\n可选正文：「{body}」\n\n"
         t+='生成条件：实际处置/观察范围已有记录，物主准许副件；这里只给文字模板，未做到的字段不填写、不将其他路线费用自动打勾。拿到短单不触发解锁/领奖。寄存/交售的原件离开背包，未授权私页不复制。\n\n'
     t+=f'[[{INDEX}]] · [[{AUDIT}]]\n'
-    write('06_支线/城市支线/'+ITEMS+'.md',t)
+    write('06_支线/城市支线/'+ITEMS+'.md',preserve_foreign('06_支线/城市支线/'+ITEMS+'.md',t))
 
     t=front(AUDIT,'AUDIT-BRYNN-CONTINUATION-S85','design-review')
     t+='本轮六篇仍为逐角色设计草稿；检查为文档/状态参考模型，不能证明文学质量、数值平衡或游戏运行。\n\n'
@@ -203,7 +213,7 @@ research/brynn-local-lore-locators.json记录输入SHA、64个同键命中元数
     t+='\n## 纸面反例审查\n\n- 雅尼不与原维松、礼昂、雷奥莫伦合并；此轮七新角色共享自身ID，场次归本人，不强制同场。\n- 达兰弟弟未归不认定原工具铺死者；原食尸鬼不再刷第二只作续作。\n- 瑟拉夜渡只是一次民船；不宣称迪·贝罗官方神秘夜船均装支具。\n- 玛莉丝不是碧罗商馆首领，不为全族保证质量；ロ安的羞辱与实际扩孔可同时有责。\n- 艾伦不授晶石认证；名人残页存疑，不解官方旧市长被害悬案。\n- 支款实领不等于军役重签；米罗的担保/赞助与监察资格不同。\n- 听席可独立进入；六案不是主线清单；每次授权逐用途，空椅不计同意。\n- 船、余料、柜位、工位、款袋不通过三条方法同时发；实际钱到手才paid，回访不再奖。\n- 原S76蕾娜删记承认与玛莉丝实赔等句必须有各自来源，未做旧案显示询问而不强认。\n\n'
     t+='## 所有权与收尾\n\n原73篇/314单方法回执保留为基线；本批6篇/15组桥（45方法版本）为登记扩展，合计79篇。桥组与单方法回执计数单位不同，分别列。既有65逐角色稿+6新稿=71篇，原8篇仍待深化。原51篇晶石任务另计；数字经济、时间轴、比例地图与游戏对话树继续待制作。design根与项目根AGENTS分别登记；后续NPC计划仍排在城市与全局收尾后。\n\n'
     t+=f'验收入口：research/tools/Validate-BrynnContinuation.py，并运行原三项及城市/空间检查。实际结果以research/brynn-continuation-validation.json为准，不提前标通过。\n\n[[{INDEX}]] · [[{LORE}]] · [[{ITEMS}]] · [[特殊地点与野外NPC对白扩展计划]]\n'
-    write('11_管理/'+AUDIT+'.md',t.replace('ロ安','罗安'))
+    write('11_管理/'+AUDIT+'.md',preserve_foreign('11_管理/'+AUDIT+'.md',t.replace('ロ安','罗安')))
 
     # Add all conditional bridges to both endpoints, with full target-visible detail.
     endpoints={}

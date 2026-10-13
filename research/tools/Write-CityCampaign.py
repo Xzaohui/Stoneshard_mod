@@ -394,10 +394,24 @@ written={}
 from CityArtLinks import add_city_art
 from CitySpaces import side_placement,enrich_city_spaces,add_city_space_links
 from CityDrama import apply_city_drama,render_scenes,render_method,render_exceptions,add_drama_links
+def preserve_foreign(rel,body):
+    # After the link helpers have appended their own registry blocks, carry over any
+    # remaining blocks owned by later phases, once each, without duplicating markers
+    # that this pipeline already regenerated.
+    p=V/rel
+    if not p.exists():return body
+    old=p.read_text(encoding='utf-8-sig')
+    out=[];seen=set()
+    for m in re.finditer(r'<!--\s*([A-Za-z0-9-]+):BEGIN\s*-->.*?<!--\s*\1:END\s*-->',old,re.S):
+        marker=m.group(1)
+        if f'<!-- {marker}:BEGIN -->' in body or marker in seen:continue
+        seen.add(marker);out.append(m.group(0))
+    return body.rstrip()+'\n\n'+'\n\n'.join(out)+'\n' if out else body
 def write(rel,body):
     body=add_city_art(ROOT,rel,body)
     body=add_city_space_links(ROOT,rel,body,model)
     body=add_drama_links(rel,body,model)
+    body=preserve_foreign(rel,body)
     p=V/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(body,encoding='utf-8');written['design/'+rel]=hashlib.sha256(p.read_bytes()).hexdigest()
 def picture(rel,imagepath,label):
     return f'![{label}]({Path(os.path.relpath(V/imagepath,(V/rel).parent)).as_posix()})\n\n'
@@ -518,6 +532,10 @@ model=dict(date=DATE,status='draft',cities=cities,quests=quests,effects=effects,
            verified_runtime=False,source='S63用户范围扩充；事实以逐城基线卡及城市设计与原作避让审查为准。')
 model=enrich_city_spaces(ROOT,model)
 model=apply_city_drama(ROOT,model)
+_old=json.loads(MODEL.read_text(encoding='utf-8')) if MODEL.exists() else {}
+for _k in ['continuation_registries']:
+    if _k in _old and _k not in model:model[_k]=_old[_k]
+model['dramatic_scope']='Active authored cities: '+', '.join(model['dramatic_casts'])+'; all 73 baseline quests have current authored scenes; six Brynn continuation quests remain in their registered supplement.'
 
 def map_svg(c,sat=None):
     title=(sat or c)['name'];nodes=c['nodes'] if sat is None else [n for n in c['nodes'] if n['id'].startswith(sat['id']+'-')]
@@ -570,7 +588,10 @@ for c in cities:
 for q in quests:
     c=bycity[q['city']];rel=q['file'];body=front(Path(rel).stem,q['id'],'regional-screenplay' if q['kind']=='regional-main' else 'city-screenplay')
     body+=f"地点：{clink(c['id'])}。主题：{c['theme']}。\n\n**需要**：{q['need']}\n\n**转折**：{q['turn']}\n\n"
-    body+='## 入口与依赖\n\n到本地入口得知实际事件；接受、旁观、拒绝均可。拒绝只暂停本案，原生服务/晶石主线保持。'+('前置：'+' · '.join(qlink(x) for x in q['requires']) if q['requires'] else '无跨城硬前置；现场固定基础线索足够进入。')+'\n\n'
+    if q['id']=='CS-HIG-03':
+        body+='## 入口与依赖\n\n正式一次事件只在N17真实威胁后安全桌冻结后触发；此前可查旧工资/工约，不能演离任结算或井关句。拒绝本案不影响原主线；本案不是N17前置。\n\n'
+    else:
+        body+='## 入口与依赖\n\n到本地入口得知实际事件；接受、旁观、拒绝均可。拒绝只暂停本案，原生服务/晶石主线保持。'+('前置：'+' · '.join(qlink(x) for x in q['requires']) if q['requires'] else '无跨城硬前置；现场固定基础线索足够进入。')+'\n\n'
     if q['city'] in ['PAS','ASH','HIG'] and q['kind']=='regional-main':body+='> [!warning] 编排章\n> 本章合并本地域已有任务，不再发NE、唯一奖或第二次终局；下面解法只说明地方接续组织，由原任务逐项结算。\n\n'
     if 'dramatic_scenes' in q:body+=render_scenes(q,model)
     else:
@@ -602,4 +623,13 @@ for p in people.values():
 
 MODEL.write_text(json.dumps(model,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (ROOT/'research/city-generated-note-hashes.json').write_text(json.dumps(written,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+for _hp in sorted((ROOT/'research').glob('*note-hashes.json')):
+    if _hp==HASH_FILE:continue
+    try:_h=json.loads(_hp.read_text(encoding='utf-8'))
+    except Exception:continue
+    if not isinstance(_h,dict) or not all(isinstance(v,str) for v in _h.values()):continue
+    _touched=False
+    for _rel in list(_h):
+        if _rel in written and _h[_rel]!=written[_rel]:_h[_rel]=written[_rel];_touched=True
+    if _touched:_hp.write_text(json.dumps(_h,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(dict(cities=len(cities),satellites=sum(len(c['satellites']) for c in cities),quests=len(quests),nodes=sum(len(c['nodes']) for c in cities),effects=len(effects),notes=len(written)),ensure_ascii=False))

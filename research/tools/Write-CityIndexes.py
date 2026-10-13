@@ -1,12 +1,16 @@
 """S63 navigation and evidence notes. Preserve earlier screenplay models."""
 from pathlib import Path
 import json,re,hashlib
+from NotePreserve import preserve_foreign
 ROOT=Path(__file__).resolve().parents[2];V=ROOT/'design';DATE='2026-10-12'
 m=json.loads((ROOT/'research/city-campaign.json').read_text(encoding='utf-8'));cs=m['cities'];qs={q['id']:q for q in m['quests']}
 def front(title,ident,kind='navigation',canon='mod-original'):
  return f'---\ntitle: "{title}"\nid: {ident}\ntype: {kind}\nstatus: draft\ncanon: {canon}\nbaseline: "0.9.4.25-modbranch"\nupdated: {DATE}\ntags: [stoneshard, S63, cities]\naliases: []\n---\n\n# {title}\n\n'
 def wl(file):return '[['+Path(file).stem+']]'
+changed=set()
 def write(rel,body):
+ body=preserve_foreign(V,rel,body)
+ changed.add('design/'+rel)
  if rel in ['00_导航/城市与聚落设计总索引.md','11_管理/城市扩展验收记录.md'] and (V/'11_管理/特殊地点与野外NPC对白扩展计划.md').exists():
   body+='\n用户2026-10-12追加阶段见[[特殊地点与野外NPC对白扩展计划]]：先收尾城市与全局逻辑，再逐NPC只读核对原版中英文并扩特殊地点／野外对白；该追加阶段尚未开展，不计本页当前完成数。\n'
  if m.get('dramatic_casts',{}).get('KOR') and m.get('dramatic_casts',{}).get('PAS') and rel in ['00_导航/城市与聚落设计总索引.md','11_管理/城市扩展验收记录.md']:
@@ -116,7 +120,7 @@ write('11_管理/城市扩展验收记录.md',b)
 
 # Promote current scope in existing documents, without erasing historical decisions.
 promotions={
-'设计总览':'当前城市范围已扩到十二个命名聚落＋三原创地域，入口[[城市与聚落设计总索引]]。六区54节点是保留的早期连接场景，不再代表完整城市稿。N1—N18与S62状态规则继续有效，新CM/CS按[[城市篇章与跨区域任务网]]接入。',
+'设计总览':'当前城市范围已扩到十二个命名聚落＋三原创地域，入口[[城市与聚落设计总索引]]。六区54节点是保留的早期连接场景，不再代表完整城市稿。N1—N18与S62状态规则继续有效，新CM/CS按[[城市篇章与跨区域任务网]]接入。城市收尾后的追加阶段（特殊地点与野外NPC）入口[[特殊地点与野外NPC阶段验收记录]]：8区域/44地点清点、28名野外人物（中英对照）、44地点卡、16迹象、12文书、条件流与规则审计；剩余经济/比例/运行见[[特殊地点阶段制作与校准规程]]。',
 '地图扩张总图':'新增城市/卫星规划见[[城市与聚落设计总索引]]与[[城市美术与图片目录]]。旧六区只作连接场景；新交通是原创拓扑，非原作全球坐标，不能将两组重叠节点预算相加。',
 '剧情总纲':'晶石主线N1—N18保持；十五城市篇章与58支线独立收束并互相影响。详见[[城市篇章与跨区域任务网]]。城市全巡不是主线硬前置，地方章不能重新结算NE或N17终局。',
 '当前任务依赖与状态字典':'新增resolve_CM/CS与paid是设计命名，详见[[城市篇章与跨区域任务网]]及各台本；本地菜单预览不写，实际确认才写唯一方案，回执范围与费用占用先核。',
@@ -145,6 +149,17 @@ rule='\n<!-- CITY-S63:BEGIN -->\n2026-10-12 S63：城市范围为十二命名聚
 for p in [ROOT/'AGENTS.md',V/'AGENTS.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-S63:BEGIN -->.*?<!-- CITY-S63:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 p=ROOT/'README.md';t=p.read_text(encoding='utf-8-sig');block='\n<!-- CITY-S63:BEGIN -->\n2026-10-12：新增城市/周边设计入口 [城市与聚落设计总索引](design/00_导航/城市与聚落设计总索引.md)，十五地域章与58支线初稿，48通路SVG和三大城概念板。全稿仍draft，具体限制见 [城市扩展验收记录](design/11_管理/城市扩展验收记录.md)。本轮不构建/部署或改存档。\n<!-- CITY-S63:END -->\n';t=re.sub(r'\n<!-- CITY-S63:BEGIN -->.*?<!-- CITY-S63:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+block,encoding='utf-8')
+# Reconcile every note-hash manifest for the notes this writer regenerated.
+for _hp in sorted((ROOT/'research').glob('*note-hashes.json')):
+    try: _h=json.loads(_hp.read_text(encoding='utf-8'))
+    except Exception: continue
+    if not isinstance(_h,dict) or not all(isinstance(v,str) for v in _h.values()): continue
+    _touched=False
+    for _rel in list(_h):
+        if _rel in changed:
+            _new=hashlib.sha256((ROOT/_rel).read_bytes()).hexdigest()
+            if _h[_rel]!=_new: _h[_rel]=_new; _touched=True
+    if _touched: _hp.write_text(json.dumps(_h,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 from CityLinks import add_city_links
 hp=ROOT/'research/story-generated-note-hashes.json';hashes=json.loads(hp.read_text(encoding='utf-8'))
 for relative,expected in hashes.items():

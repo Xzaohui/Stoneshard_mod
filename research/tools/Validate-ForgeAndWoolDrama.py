@@ -14,6 +14,8 @@ for qid,q in qs.items():
  for key in ['id','city','routes','requires','stages','locations','need','turn','title','kind']:check(q[key]==oq[qid][key],qid+'-structural-'+key)
  if q['city'] in ['DEN','MNS','EED','FOR','OSB','RAT','KOR','PAS'] and 'dramatic_scenes' in q:
   check(matching_additional_source(ROOT,q),qid+'-separate-exact-s81-source')
+ elif q['city'] in ['ASH','HIG'] and q.get('dramatic_revision')=='S86':
+  check(matching_additional_source(ROOT,q),qid+'-exact-S86-authored-source')
  elif qid not in covered:
   for key in set(q)|set(oq[qid]):
    if key.startswith('dramatic_'):check(q.get(key)==oq[qid].get(key),qid+'-other-city-unchanged-'+key)
@@ -82,6 +84,6 @@ li=(V/casts['SKO']['li']['file']).read_text(encoding='utf-8');check(all(t in li 
 for file in ['forge-wool-generated-note-hashes.json','city-generated-note-hashes.json','city-space-note-hashes.json']:
  for rel,h in read('research/'+file).items():check(sha(ROOT/rel)==h,rel+'-authoring-hash')
 check(len(read('research/forge-wool-generated-note-hashes.json'))==9,'eight-new-cards-and-one-audit')
-coverage=sum('dramatic_scenes' in q for q in m['quests']);check(coverage==33+sum(q['city'] in ['DEN','MNS','EED','FOR','OSB','RAT','KOR','PAS'] and 'dramatic_scenes' in q for q in m['quests']),'scoped-authored-coverage-no-false-full-coverage')
+coverage=sum('dramatic_scenes' in q for q in m['quests']);check(coverage==33+sum(q['city'] in ['DEN','MNS','EED','FOR','OSB','RAT','KOR','PAS'] and 'dramatic_scenes' in q for q in m['quests'])+sum(q['city'] in ['ASH','HIG'] and 'dramatic_scenes' in q for q in m['quests']),'scoped-authored-coverage-no-false-full-coverage')
 report=dict(date='2026-10-12',scope='S80 exact authoring/rendering, scoped actors and spaces, existing branches/receipts and stated domain regressions; not literary quality, numeric economy, collision or game runtime',quests=8,scenes=scene_count,methods=method_count,unique_actors=len(unique),new_cards=len(newactors),dialogue_utterances=utterances,choice_answers=choice_count,early_late_pairs=len(all_feedback),covered_city_quests=coverage,pending_city_quests=73-coverage,checks_passed=len(checks),errors=errors,passed=not errors,runtimeVerified=False)
 (ROOT/'research/forge-wool-drama-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print(json.dumps(report,ensure_ascii=False));raise SystemExit(0 if report['passed'] else 1)

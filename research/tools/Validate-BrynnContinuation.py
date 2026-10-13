@@ -114,6 +114,8 @@ official=read(ROOT/'research/brynn-official-lore-source-fingerprints.json')
 check(len(official)==2 and all(x['chars']>7000 and x['contents_sha256'] for x in official),'two-official-full-read-fingerprints')
 for rel,h in read(ROOT/'research/brynn-continuation-note-hashes.json').items():
     check(hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==h,rel+'-authoring-hash')
+for rel,exp in (read(ROOT/'research/brynn-continuation-integration.json').get('updated_existing') or {}).items():
+    check((ROOT/rel).exists() and hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==exp,'integration-hash-'+rel)
 report=dict(date='2026-10-12',scope='S85 design notes, provenance, scoped receipt evaluator and hand-reviewed regressions; not literature approval, numeric economy or game runtime',
     additional_quests=6,combined_city_quests=79,baseline_single_method_receipts=314,additional_bridge_groups=15,additional_method_variants=45,scenes=18,methods=18,
     actors=7,spaces=6,bridges=15,method_payoff_cases=len(scenarios),checks_passed=len(checks),

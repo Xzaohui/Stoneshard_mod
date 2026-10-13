@@ -20,10 +20,13 @@ for key,a in cast.items():
 for qid,q in qs.items():
  for key in ['routes','requires','stages','locations','need','turn','title','kind']:
   check(q[key]==oq[qid][key],qid+'-structural-'+key+'-preserved')
- if qid not in expected and q['city'] not in ['ALD','MAE','SKO','YOS','DEN','MNS','EED','FOR','OSB','RAT','KOR','PAS']:check('dramatic_scenes' not in q,qid+'-not-falsely-covered')
+ if qid not in expected and q['city'] not in ['ALD','MAE','SKO','YOS','DEN','MNS','EED','FOR','OSB','RAT','KOR','PAS','ASH','HIG']:check('dramatic_scenes' not in q,qid+'-not-falsely-covered')
  if q['city'] in ['SKO','YOS','DEN','MNS','EED','FOR','OSB','RAT','KOR','PAS'] and 'dramatic_scenes' in q:
   from ScopedDramaCoverage import matching_additional_source
   check(matching_additional_source(ROOT,q),qid+'-separate-exact-authored-source')
+ if q['city'] in ['ASH','HIG'] and 'dramatic_scenes' in q:
+  from ScopedDramaCoverage import matching_additional_source
+  check(matching_additional_source(ROOT,q),qid+'-separate-exact-S86-authored-source')
  if q['city']=='MAE' and 'dramatic_scenes' in q:check(q.get('dramatic_source')=='research/maen-drama.json' and q.get('dramatic_revision')=='S79',qid+'-separate-authored-city-source')
  if q['city']=='ALD' and 'dramatic_scenes' in q:check(q.get('dramatic_source')=='research/aldwynn-drama.json' and q.get('dramatic_revision')=='S78',qid+'-separate-authored-city-source')
 utterances=0;choice_answers=0;feedbacks=0;scene_ids=[]

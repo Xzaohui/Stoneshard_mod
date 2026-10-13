@@ -1,6 +1,7 @@
 """Render S79 Maen cast additions, shared identity notes and scene review."""
 from pathlib import Path
 import json,hashlib,re
+from NotePreserve import preserve_foreign
 ROOT=Path(__file__).resolve().parents[2];V=ROOT/'design';m=json.loads((ROOT/'research/city-campaign.json').read_text(encoding='utf-8'));cast=m['dramatic_casts']['MAE'];qs=[q for q in m['quests'] if q['city']=='MAE'];hp=ROOT/'research/maen-generated-note-hashes.json';hashes={}
 if hp.exists():
  for rel,h in json.loads(hp.read_text(encoding='utf-8')).items():
@@ -8,6 +9,7 @@ if hp.exists():
 def wl(p):return '[['+Path(p).stem+']]'
 def front(title,ident,kind):return f'---\ntitle: "{title}"\nid: {ident}\ntype: {kind}\nstatus: draft\ncanon: mod-original\nbaseline: "0.9.4.25-modbranch"\nupdated: 2026-10-12\ntags: [stoneshard, maen, dialogue, S79]\naliases: []\n---\n\n# {title}\n\n'
 def write(rel,b):
+ b=preserve_foreign(V,rel,b)
  p=V/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(b,encoding='utf-8');hashes['design/'+rel]=hashlib.sha256(p.read_bytes()).hexdigest()
 def uses(q,key):return any(key==who for s in q['dramatic_scenes'] for who,_ in s['lines']) or any(key==who for pairs in q['dramatic_followups'].values() for who,_ in pairs) or any(f['speaker']==key for f in q['dramatic_feedback'])
 for key,a in cast.items():

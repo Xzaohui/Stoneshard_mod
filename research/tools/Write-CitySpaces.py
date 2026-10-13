@@ -1,6 +1,7 @@
 """Render S75 architecture intent and explicit task location review in the Obsidian vault."""
 from pathlib import Path
 import json,hashlib,re
+from NotePreserve import preserve_foreign
 ROOT=Path(__file__).resolve().parents[2];V=ROOT/'design';DATE='2026-10-12'
 m=json.loads((ROOT/'research/city-campaign.json').read_text(encoding='utf-8'));qs={q['id']:q for q in m['quests']}
 old=json.loads((ROOT/'backups/city-spaces-20261012-s75/research/city-campaign.json').read_text(encoding='utf-8'));oq={q['id']:q for q in old['quests']}
@@ -29,6 +30,7 @@ def write(rel,body):
  body=body.replace('其它62篇城市台本',f"其它{sum('dramatic_scenes' not in q for q in m['quests'])}篇城市台本")
  if m.get('dramatic_casts',{}).get('ALD') and rel in ['02_世界与地图/任务空间/空间_ALD_奥尔德文.md','11_管理/任务空间与地点关联审查.md']:
   body+='\n奥尔德文七篇逐角色对白与条件回访见[[奥尔德文人物对白与交叉演出审查]]；当前场次沿此卡空间，不增加必访或新奖励。\n'
+ body=preserve_foreign(V,rel,body)
  p=V/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(body,encoding='utf-8');hashes['design/'+rel]=hashlib.sha256(p.read_bytes()).hexdigest()
 changes=[]
 for c in m['cities']:

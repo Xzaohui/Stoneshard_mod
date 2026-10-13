@@ -1,6 +1,7 @@
 """Render authored S80 characters and review; one shared trader, no game writes."""
 from pathlib import Path
 import json,hashlib,re
+from NotePreserve import preserve_foreign
 ROOT=Path(__file__).resolve().parents[2];V=ROOT/'design';m=json.loads((ROOT/'research/city-campaign.json').read_text(encoding='utf-8'));hp=ROOT/'research/forge-wool-generated-note-hashes.json';hashes={}
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 if hp.exists():
@@ -10,6 +11,7 @@ casts={c:m['dramatic_casts'][c] for c in ['SKO','YOS']};qs=[q for q in m['quests
 def wl(p):return '[['+Path(p).stem+']]'
 def front(title,ident,kind):return f'---\ntitle: "{title}"\nid: {ident}\ntype: {kind}\nstatus: draft\ncanon: mod-original\nbaseline: "0.9.4.25-modbranch"\nupdated: 2026-10-12\ntags: [stoneshard, dialogue, S80]\naliases: []\n---\n\n# {title}\n\n'
 def write(rel,body):
+ body=preserve_foreign(V,rel,body)
  p=V/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(body,encoding='utf-8');hashes['design/'+rel]=sha(p)
 def uses(q,ident):
  cast=casts[q['city']]

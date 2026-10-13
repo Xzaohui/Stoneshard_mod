@@ -1,0 +1,127 @@
+"""S128: playtest walkthrough and checklist derived from the designed content.
+
+Turns the design into an actionable test route: per segment, exact steps, what
+to observe and what evidence to record. Links and script ids are checked by the
+validator; no new design content.
+"""
+from pathlib import Path
+import json, hashlib, re
+from NotePreserve import preserve_foreign
+ROOT = Path(__file__).resolve().parents[2]; V = ROOT / 'design'
+MARK = 'PLAYTEST-S128'
+CARD = '11_管理/试玩路线与检查单.md'
+PLAN = '11_管理/特殊地点与野外NPC对白扩展计划.md'
+def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+SEGMENTS = [
+ dict(id='PT-01', name='开篇与主线先后', entry=['台本_N1_无钟之夜', '台本_N2_灰堤没有墓碑', '台本_N3_听审前的灯'],
+      steps=['从旧档或新档进入布林外港一带，触发 N1 无钟之夜。', '分别走「藏身」与「放走」两条处置，记录伊沃是否出现在公开听审。',
+             '先做 N2 再回访 N3；另开一档反过来做一次。', '在听审现场核对玛拉的封存证词是否可用、弟弟是否被拿来替她免责。'],
+      observe=['N1 选择影响 N3 的在场与证词（X01）。', '先做/后做只改未来回应，旧结不回滚。', '死亡/缺席时不出现替身新句。'],
+      record=['resolve_N1 取值、encountered_N3、callback_* 是否按路线写入', '两档的差异截图或日志', '与 [[叙事交叉影响矩阵]] X01/X02 的一致性']),
+ dict(id='PT-02', name='城市主章与声望可见性', entry=['台本_CM-BRY_城墙之内', '城镇声望与信任系统', '城镇闲谈池', '声望档街头反应'],
+      steps=['按 CM-BRY 走完一章，分别触发两条以上路线。', '在同一座城反复切换声望档（−1 与 +2），看柜台台词与街头反应是否分池播放。',
+             '到本城服务班看档位便利是否只改范围与便利，不删基本安全。'],
+      observe=['柜台五档台词与街头冷/热口气互不串用。', '低档仍能买、能办基本事项；高档只多便利不换账页。',
+               '街头反应不承诺服务、不发物品。'],
+      record=['声望档位、柜台与街头各一条实播台词的截图', '服务班便利的实际范围变化', '与 [[城市服务班与有限库存]] 的一致性']),
+ dict(id='PT-03', name='城市支线多方法与回执', entry=['台本_CS-BRY-01_一年之后', '全库条件流投影'],
+      steps=['接 CS-BRY-01，分别走 civic/separate/patron 三条路线各一次（分档或读档）。',
+             '每走一条，看逐路线回执是否只播一次、早晚回执是否只在对应时点出现。', '在任一路线上试一次拒绝：确认有替代出口且不取消基本安全。'],
+      observe=['三条路线各自的实际代价与结果。', 'callback_* 与 receipt_* 只在对应节点写入。', '拒绝后仍能继续或体面退出。'],
+      record=['三条路线的结算截图', '拒绝路径的出口', '与 [[对白分支覆盖审计]] 的城市族口径一致']),
+ dict(id='PT-04', name='小城支线：取物与照护分开', entry=['台本_CS-ASH-01_安息村的旧钥匙', '台本_CS-HIG-01_回风驿的停牌'],
+      steps=['走 CS-ASH-01：按本人授权取两件、另付真班陪护、保留住权争议。', '试一次把取物单当放弃书使用——确认系统不允许。',
+             '走 CS-HIG-01：确认停牌与回程两条路线各自结算。'],
+      observe=['取物、照护、住权三件事分别记录。', '授权只覆盖本人准的范围。', '留营不自动等于交出旧权。'],
+      record=['取物清单与授权范围', '停牌与回程的两次结算', '与两篇台本的 exceptions 一致']),
+ dict(id='PT-05', name='日常：一次地方人物事件', entry=['台本_DT01_粮车的最后一段', '台本_DT16_愿意继续治疗的人', '副本与日常氛围句'],
+      steps=['做 DT01：分别走先付工钱与先通车。', '做 DT16：走继续治疗与停止治疗各一次。', '两案完成后回原地，听日常周边句是否只改未来口气。'],
+      observe=['日常不刷新成跑腿；普通工作由本地服务承担。', 'after 句不回滚旧结、不改结算。', '同一案不重复给奖。'],
+      record=['两案的结算与回访', 'after 句实播', '与 [[时序与奖励总表]] 的奖励唯一性一致']),
+ dict(id='PT-06', name='副本现场与出口', entry=['台本_D02_旧渠检修墓室', '副本与日常氛围句'],
+      steps=['进 D02，听三条现场句（到场/内部/离场）。', '走到墓龛环道，确认初始入口始终可退。', '试一次中途退出：确认不淹没唯一出口。'],
+      observe=['现场句只写现场，不揭未核真相。', '出口在任一状态都可用。', '结算仍只由 N2 记录。'],
+      record=['三条现场句实播', '两次进出的路线', '与 D02 台本的 route/recovery 一致']),
+ dict(id='PT-07', name='野外人物与条件回访', entry=['人物_FX-QRY_德茹', '人物_FX-MIL_霍珥', '台本_FX_野外人物对白'],
+      steps=['到石场见德茹：先不接 N7 听一次，接 N7 未完成听一次，完成后听一次。', '另开一档先做 N7 再见她，比较先后分支。',
+             '到水磨坊见霍珥，试一次拒绝开闸，确认有替代出口。'],
+      observe=['任务进行中/完成后与先做/后做四类回访各自触发。', '拒绝不取消基本安全，也不替下游背账。', '缺席时只有 proxy 句可播。'],
+      record=['四类回访各一条', '拒绝路径', '与 [[野外对白条件流]] 的节点一致']),
+ dict(id='PT-08', name='野外人物第二批', entry=['人物_FX-MN2_锉珥', '人物_FX-GH2_埕珥', '人物_FX-CP1_燧珥'],
+      steps=['到矿洞见锉珥：分别走巡查进行中与完成后。', '到废弃窖口见埕珥：试一次夜里接近，确认灯与上风规则。', '到土匪营地侧坡见燧珥：试一次从正坡接近，确认绊索提示。'],
+      observe=['三人的知情边界（不认领车件/不说窖里/不说同伴）在实际对话中成立。', '危险提示给退路不给解法。', '他们的回访绑定各自台本（DT15/N16/N9）。'],
+      record=['三类回访', '危险提示实播', '与 [[野外迹象与观察]] 的现场口径一致']),
+ dict(id='PT-09', name='文书与迹象只给信息', entry=['文书_FX_野外地点短稿', '野外迹象与观察'],
+      steps=['读疫村封条（DOC-PLG）与病院清单（DOC-LEP）：确认不能凭阅读通行或抓药。', '在蛛洞与兽道各看一处迹象：确认判定不含数值与掉落。',
+             '试一次用副件替代本人到场（认领/销账）——确认系统拒绝。'],
+      observe=['阅读与观察不推进任务、不发物品。', '副件与残件不具原件效力。', '判定提示只写“看得出什么”。'],
+      record=['两份文书阅读界面', '两处迹象观察', '被拒的替代尝试']),
+ dict(id='PT-10', name='闲谈池分层播放', entry=['地区闲谈池', '城镇闲谈池', '声望档街头反应', '副本与日常氛围句'],
+      steps=['在 R01 与 R05 各听地区闲谈，确认按地区取材。', '在布林与曼恩各听城镇闲谈，确认按行当与街面。',
+             '把声望切到冷/热档，听街头反应；再把声望切回中间档，确认不播档位池。', '进副本与做完日常后听氛围句。'],
+      observe=['四套池子互不串台词、无克隆。', '中间档不播档位池。', '闲谈不改任何结算。'],
+      record=['四池各一条实播', '中间档静默', '与 [[中英对照覆盖报告]] 的中英一致性']),
+ dict(id='PT-11', name='桥接层核对（实现后）', entry=['状态键映射总表', '事件桩映射总表', '实现交接总表'],
+      steps=['按 [[实现交接总表]] 的六步顺序实现后，逐项核对状态键：resolve/encountered/callback/consent/paid/order/presence/receipt。',
+             '对 3 个脚本抽查事件桩：hub 不写键、入口写 encountered、route 读 resolve。', '抽一次缺席路径：确认只播 proxy 且不代写决定。'],
+      observe=['键名与取值与 [[状态键映射总表]] 一致。', '写入只发生在结算/回执/授权类节点。', '旧档不自动迁移且不报错覆盖。'],
+      record=['抽查脚本的键读写日志', '缺席路径', '与 [[键名口径对账]] 的旧名/现名对照']),
+]
+stems = {p.stem for p in V.rglob('*.md')}
+for s in SEGMENTS:
+    for e in s['entry']:
+        assert e in stems, s['id'] + ' entry ' + e
+    assert len(s['steps']) >= 3 and len(s['observe']) >= 3 and len(s['record']) >= 3, s['id']
+out = dict(date='2026-10-13', scope='S128 playtest walkthrough: segments with steps, observations and evidence to record; derived from designed content, no new design',
+           segments=SEGMENTS)
+(ROOT / 'research' / 'playtest-walkthrough.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+changed = set(); generated = {}
+def put(rel, t):
+    p = V / rel; p.parent.mkdir(parents=True, exist_ok=True)
+    t = preserve_foreign(V, rel, t)
+    p.write_text(t, encoding='utf-8'); changed.add('design/' + rel); generated['design/' + rel] = sha(p)
+n = ('---\ntitle: "试玩路线与检查单"\nid: MGMT-PLAYTEST-S128\ntype: guide\nstatus: draft\ncanon: mod-original\n'
+     'baseline: "0.9.4.25-modbranch"\nupdated: 2026-10-13\ntags: [stoneshard, S128, guide, playtest]\naliases: []\n---\n\n'
+     '# 试玩路线与检查单\n\n'
+     f"把设计变成可执行的试玩路线：{len(SEGMENTS)} 段，每段给出步骤、观察点与要记录的证据。"
+     '实现前可先按各台本静态核对；实现后按 [[特殊地点阶段制作与校准规程]] 记录运行证据。本页不新增设计内容。\n\n'
+     '| 段 | 主题 | 入口 |\n|---|---|---|\n')
+for s in SEGMENTS:
+    n += f"| {s['id']} | {s['name']} | " + ' · '.join('[[' + e + ']]' for e in s['entry']) + ' |\n'
+for s in SEGMENTS:
+    n += f"\n## {s['id']} {s['name']}\n\n**步骤**：\n\n" + '\n'.join('- ' + x for x in s['steps']) + \
+         '\n\n**观察点**：\n\n' + '\n'.join('- ' + x for x in s['observe']) + \
+         '\n\n**要记录的证据**：\n\n' + '\n'.join('- ' + x for x in s['record']) + '\n'
+n += ('\n## 使用口径\n\n- 静态阶段：按步骤核对台本、条件流与状态键是否一致；不一致先改设计再谈实现。\n'
+      '- 实现后：每段按规程记录版本指纹、步骤、观察、截图/日志与差异结论；未跑过的段不得标“已验证”。\n'
+      '- 段与段之间可独立执行；不要求全段巡礼，也不构成任何任务前置。\n\n'
+      '[[实现交接总表]] · [[特殊地点阶段制作与校准规程]] · [[叙事内容清单]] · [[任务台本总索引]] · [[逻辑验收记录]]\n')
+put(CARD, n)
+a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'
+summary = ('## S128试玩路线与检查单（当前登记）\n\n'
+           f"[[试玩路线与检查单]]：{len(SEGMENTS)} 段试玩路线（主线先后、城市主章与声望可见性、城市支线多方法、小城支线、日常、副本、野外人物两批、文书与迹象、四套闲谈池、桥接核对），每段含步骤/观察点/证据项。")
+t = (V / PLAN).read_text(encoding='utf-8-sig')
+nb = a + '\n' + summary + '\n' + z
+t2 = re.sub(re.escape(a) + '.*?' + re.escape(z), lambda _: nb, t, flags=re.S) if a in t else t.rstrip() + '\n\n' + nb + '\n'
+put(PLAN, t2)
+own = ROOT / 'research/playtest-note-hashes.json'
+own.write_text(json.dumps(generated, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
+    if hp == own: continue
+    try: h = json.loads(hp.read_text(encoding='utf-8'))
+    except Exception: continue
+    if not isinstance(h, dict) or not all(isinstance(v, str) for v in h.values()): continue
+    touched = False
+    for rel in list(h):
+        if rel in changed and h[rel] != generated[rel]: h[rel] = generated[rel]; touched = True
+    if touched: hp.write_text(json.dumps(h, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+rule = ('\n<!-- PLAYTEST-S128:BEGIN -->\n2026-10-13 S128：试玩路线与检查单。'
+        f'research/playtest-walkthrough.json 十一试玩段（步骤/观察点/证据项），由既有设计派生；入口design/11_管理/试玩路线与检查单.md。'
+        '不新增设计内容；实现后按规程记录运行证据。运行Validate-Playtest.py及既有检查；不部署游戏包。\n<!-- PLAYTEST-S128:END -->\n')
+for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+    t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PLAYTEST-S128:BEGIN -->.*?<!-- PLAYTEST-S128:END -->\n', '', t, flags=re.S)
+    p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
+p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+t = re.sub(r'\n<!-- PLAYTEST-S128:BEGIN -->.*?<!-- PLAYTEST-S128:END -->\n', '', t, flags=re.S)
+p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/试玩路线与检查单.md', '入口 [试玩路线与检查单](design/11_管理/试玩路线与检查单.md)'), encoding='utf-8')
+print(json.dumps(dict(segments=len(SEGMENTS), notes=len(generated)), ensure_ascii=False))

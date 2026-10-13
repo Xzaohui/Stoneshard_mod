@@ -20,6 +20,9 @@ for qid,q in qs.items():
   check(matching_additional_source(ROOT,q),qid+'-separate-exact-authored-source')
  elif q['city']=='MAE' and 'dramatic_scenes' in q:
   check(q.get('dramatic_source')=='research/maen-drama.json' and q.get('dramatic_revision')=='S79',qid+'-separate-matching-new-authored-source')
+ elif q['city'] in ['ASH','HIG'] and q.get('dramatic_revision')=='S86':
+  from ScopedDramaCoverage import matching_additional_source
+  check(matching_additional_source(ROOT,q),qid+'-separate-exact-S86-authored-source')
  elif qid not in expected:
   for key in set(q)|set(oq[qid]):
    if key.startswith('dramatic_'):check(q.get(key)==oq[qid].get(key),qid+'-no-other-city-rewrite-'+key)

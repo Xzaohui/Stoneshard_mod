@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-13",
+  "scope": "S130 ambient layer review: per-scale counts, speaker/condition semantics, freeze recommendation; review only, no content changes",
+  "layers": [
+    {
+      "id": "field_npc",
+      "scale": "地点级（人物）",
+      "count": 36,
+      "unit": "人",
+      "lines": 504,
+      "speaker": "指定人物（本人）",
+      "when": "初次/复访/夜里；任务进行中/完成后；先做/后做；拒绝；缺席替代",
+      "entry": "台本_FX_野外人物对白",
+      "note": "每人 14 槽；缺席只播 proxy，旁人不得代述新决定"
+    },
+    {
+      "id": "docs",
+      "scale": "地点级（文书）",
+      "count": 12,
+      "unit": "份",
+      "lines": 36,
+      "speaker": "无（可读物）",
+      "when": "到达并在场时阅读",
+      "entry": "文书_FX_野外地点短稿",
+      "note": "原件/副件/残件分记；阅读只给信息"
+    },
+    {
+      "id": "signs",
+      "scale": "地点级（迹象）",
+      "count": 16,
+      "unit": "处",
+      "lines": 64,
+      "speaker": "无（观察）",
+      "when": "到达并在场时观察",
+      "entry": "野外迹象与观察",
+      "note": "观察/判定/退路；不含数值与掉落"
+    },
+    {
+      "id": "region_gossip",
+      "scale": "地域级",
+      "count": 30,
+      "unit": "条",
+      "lines": 30,
+      "speaker": "路人口吻",
+      "when": "any/night/band:+1/band:−1/after:<台本>",
+      "entry": "地区闲谈池",
+      "note": "六地域；只谈本区生活与旧事"
+    },
+    {
+      "id": "town_gossip",
+      "scale": "城镇级",
+      "count": 60,
+      "unit": "条",
+      "lines": 60,
+      "speaker": "街面行当口吻",
+      "when": "any/night/after:<本城主章>",
+      "entry": "城镇闲谈池",
+      "note": "十五城各 4 条"
+    },
+    {
+      "id": "band_reactions",
+      "scale": "城镇/地域级（声望）",
+      "count": 42,
+      "unit": "条",
+      "lines": 42,
+      "speaker": "街面行当口吻",
+      "when": "band:−1（冷）/band:+2（热）",
+      "entry": "声望档街头反应",
+      "note": "只写口气；与柜台台词分池"
+    },
+    {
+      "id": "district_gossip",
+      "scale": "街区级",
+      "count": 66,
+      "unit": "条",
+      "lines": 66,
+      "speaker": "本街行当口吻",
+      "when": "在场即可",
+      "entry": "街区氛围句",
+      "note": "66 街区各 1 条；不构成必访清单"
+    },
+    {
+      "id": "interior_ambient",
+      "scale": "副本/日常级",
+      "count": 59,
+      "unit": "条",
+      "lines": 59,
+      "speaker": "现场观察 + 当事人周边口吻",
+      "when": "on_arrival/inside/on_exit；any/after",
+      "entry": "副本与日常氛围句",
+      "note": "9 副本×3＋16 日常×2"
+    },
+    {
+      "id": "counter_lines",
+      "scale": "服务台（声望）",
+      "count": 75,
+      "unit": "条",
+      "lines": 75,
+      "speaker": "各城经办人",
+      "when": "按档位取值",
+      "entry": "城镇声望与信任系统",
+      "note": "五档×十五城；与街头反应分池"
+    }
+  ],
+  "total_lines": 936,
+  "freeze": [
+    "氛围层冻结在 S129 的尺度：地点/地域/城镇/街区/副本日常五级，共 936 个可播单元。",
+    "只有新增地点、聚落或派系时才新增氛围句；不为已有地点继续加句数。",
+    "不再新增“室内级”逐间台词：132 室内已有可观察物与交互，逐间加句会稀释密度。",
+    "新氛围句仍须过：中英成对、与既有池零克隆、无后台词、不发奖励、不写状态键。",
+    "每条新池子都会让各校验器计数 +2（清单回写），新增池子前先评估维护成本。"
+  ],
+  "risks": [
+    "过饱和：同一条在短距离内反复播会显得机械；按层控制密度（街区 1 条、城镇 4 条）。",
+    "翻译量：用户可见文本已 100% 中英成对，新增池子须同步英文稿。",
+    "维护成本：每新增一份清单，所有校验器的“清单回写”检查各 +2 项。"
+  ]
+}

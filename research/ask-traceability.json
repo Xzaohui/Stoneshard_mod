@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-13",
+  "scope": "S173 traceability: each clause of the user request mapped to delivered pages, their guards and status; deferred items point at the open-item register",
+  "rows": [
+    {
+      "ask": "继续完善游戏背景故事",
+      "deliver": [
+        "[[世界背景与译名]]",
+        "[[城市与聚落设计总索引]]",
+        "[[新区域设计与任务总表]]"
+      ],
+      "guard": "Test-DesignVault.ps1（双链/ID/锚点）",
+      "status": "done",
+      "note": "十五地域＋33 卫星＋区域卡；地方篇章不代替国策。"
+    },
+    {
+      "ask": "台词",
+      "deliver": [
+        "[[逐角色稿完成度核对]]",
+        "[[说话人与人物卡闭合核对]]",
+        "[[对白去重与独特性核对]]"
+      ],
+      "guard": "Validate-DialogueCoverage／SpeakerClosure／DialogueDistinctiveness",
+      "status": "done",
+      "note": "131 篇台本、2,717 行；说话人 232 位全闭合；重复 18 组全为主章—副本配对。"
+    },
+    {
+      "ask": "任务设计",
+      "deliver": [
+        "[[任务台本总索引]]",
+        "[[城市篇章与跨区域任务网]]",
+        "[[时序与奖励总表]]"
+      ],
+      "guard": "Validate-StoryScripts／CityCampaign／TimelineRegistry／CorpusFlows",
+      "status": "done",
+      "note": "N1—N18＋SQ＋DT＋D＋CS＋CM 共 131 篇；方法数守卫保证每篇 ≥2 条解法。"
+    },
+    {
+      "ask": "各城镇声望系统",
+      "deliver": [
+        "[[城镇声望与信任系统]]",
+        "[[城市服务班与有限库存]]",
+        "[[原作声誉档位与地方状态参照]]"
+      ],
+      "guard": "Validate-TownReputation／ServiceRegistry／ReputationReference",
+      "status": "done",
+      "note": "三层分账（原作声誉／阵营承诺／城镇信任）；信任档只改范围与便利，不照搬原版数值。"
+    },
+    {
+      "ask": "中英对照版本",
+      "deliver": [
+        "[[城镇声望系统中英对照]]",
+        "[[中英对照覆盖报告]]"
+      ],
+      "guard": "Validate-BilingualCoverage",
+      "status": "done",
+      "note": "用户可见条目成对 1,384、中文单列 0。"
+    },
+    {
+      "ask": "参照优秀游戏剧情设计",
+      "deliver": [
+        "[[参考游戏叙事与声望机制对照]]"
+      ],
+      "guard": "Validate-ReferenceGames",
+      "status": "done",
+      "note": "BG3／DOS1／DOS2／Drova 四款机制＋教训＋取舍映射，引用 15 条 URL。"
+    },
+    {
+      "ask": "网状叙述、任务关联",
+      "deliver": [
+        "[[叙事交叉影响矩阵]]",
+        "[[全库条件流投影]]",
+        "[[任务状态与依赖]]"
+      ],
+      "guard": "Validate-NarrativeNetwork＋质量守卫「X边闭合」",
+      "status": "done",
+      "note": "74 条 X 边双向闭合（无脚本引用 0、悬空 0）。"
+    },
+    {
+      "ask": "埋伏笔与回收伏笔",
+      "deliver": [
+        "[[伏笔与回收台账]]",
+        "[[布林续篇任务与伏笔回收总表]]"
+      ],
+      "guard": "Validate-ForeshadowLedger",
+      "status": "done",
+      "note": "主线丝线＋成组引用＋有意留白三档。"
+    },
+    {
+      "ask": "丰富的 NPC、独特的对话",
+      "deliver": [
+        "[[人物细描与随身物]]",
+        "[[说话人与人物卡闭合核对]]"
+      ],
+      "guard": "Validate-FineDetails／CastRoster",
+      "status": "done",
+      "note": "217 张人物卡、172 名细描；无卡说话人 0。"
+    },
+    {
+      "ask": "扒原作剧情与对话系统作参照",
+      "deliver": [
+        "[[原作剧情与对话系统参照]]",
+        "[[原作契据任务与声誉结构参照]]",
+        "[[原作声誉档位与地方状态参照]]",
+        "[[原作名与原创名碰撞核对]]",
+        "[[特殊地点与野外NPC清点]]"
+      ],
+      "guard": "Probe-*（只读）＋Validate-OriginalNpcReading／NameCollision",
+      "status": "done",
+      "note": "只存键名/定位/≤46 字片段；不落原作全文。"
+    },
+    {
+      "ask": "当前设计作为重要参考",
+      "deliver": [
+        "[[设计总览]]",
+        "[[叙事内容清单]]",
+        "[[质量守卫总表]]"
+      ],
+      "guard": "Validate-ContentInventory／NavBlock／QualityGuards",
+      "status": "done",
+      "note": "645 篇设计库、86 校验器、13 万项检查。"
+    },
+    {
+      "ask": "（阶段规则）本轮不部署新包",
+      "deliver": [
+        "[[实现侧现状核对]]",
+        "[[构建前置核对]]",
+        "[[试点批次总表]]"
+      ],
+      "guard": "Validate-ImplState／BuildReadiness／PilotIndex",
+      "status": "done",
+      "note": "只构建候选（S170），未部署、未改游戏目录；部署与实机登记为 OI-10／OI-11。"
+    }
+  ]
+}

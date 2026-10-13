@@ -1,0 +1,550 @@
+{
+  "date": "2026-10-13",
+  "scope": "S124 interior and daily ambient: dungeon on-site observations and daily ambient remarks, CN/EN parity; no rewards, no task progress, no knowledge leaks",
+  "vocabulary": [
+    "on_arrival",
+    "inside",
+    "on_exit",
+    "any",
+    "after"
+  ],
+  "rules": [
+    "副本句只写现场观察，不替任何当事人发言，不揭未核真相",
+    "日常句只写本事件周边口气，不推进任务、不发物品",
+    "after 只改未来口气，不回滚旧结",
+    "与迹象、闲谈池不重复：同地点同事实只留一处"
+  ],
+  "lines": [
+    {
+      "id": "IA-D02-on_arrival",
+      "kind": "dungeon",
+      "owner": "D02",
+      "when": "on_arrival",
+      "cn": "水槽还在往下淌，桥面是后来搭的。",
+      "en": "The channel still runs; the walkway was added later.",
+      "link": "副本_D02_旧渠检修墓室"
+    },
+    {
+      "id": "IA-D02-inside",
+      "kind": "dungeon",
+      "owner": "D02",
+      "when": "inside",
+      "cn": "墓龛围着干台子，活人住过的地方比死人那边整齐。",
+      "en": "Niche walls ring the dry platform; where the living stayed is tidier than where the dead rest.",
+      "link": "副本_D02_旧渠检修墓室"
+    },
+    {
+      "id": "IA-D02-on_exit",
+      "kind": "dungeon",
+      "owner": "D02",
+      "when": "on_exit",
+      "cn": "检修梯通回泵房。别把唯一出口当备用。",
+      "en": "The service ladder leads back to the pump room. Never treat the only exit as a spare.",
+      "link": "副本_D02_旧渠检修墓室"
+    },
+    {
+      "id": "IA-D03-on_arrival",
+      "kind": "dungeon",
+      "owner": "D03",
+      "when": "on_arrival",
+      "cn": "桥断了，税栈没断。箱子照样过秤。",
+      "en": "The bridge broke; the tax shed did not. Crates still get weighed.",
+      "link": "副本_D03_断桥税栈"
+    },
+    {
+      "id": "IA-D03-inside",
+      "kind": "dungeon",
+      "owner": "D03",
+      "when": "inside",
+      "cn": "箱号对不上脚印。混单就是这么来的。",
+      "en": "Crate numbers do not match the footprints. That is how one manifest swallows many.",
+      "link": "副本_D03_断桥税栈"
+    },
+    {
+      "id": "IA-D03-on_exit",
+      "kind": "dungeon",
+      "owner": "D03",
+      "when": "on_exit",
+      "cn": "桥墩下有小路。走的人多了，就不是小路。",
+      "en": "There is a path under the pier. Enough walkers and it stops being a path.",
+      "link": "副本_D03_断桥税栈"
+    },
+    {
+      "id": "IA-D04-on_arrival",
+      "kind": "dungeon",
+      "owner": "D04",
+      "when": "on_arrival",
+      "cn": "冷库先是保存点，后来才成了别的地方。",
+      "en": "The cold store began as a depot and only later became something else.",
+      "link": "副本_D04_曼恩封存书库"
+    },
+    {
+      "id": "IA-D04-inside",
+      "kind": "dungeon",
+      "owner": "D04",
+      "when": "inside",
+      "cn": "病历夹在粮袋和封柜之间。放的位置就是答案。",
+      "en": "Case notes sit between grain sacks and sealed cabinets. Where they sit is the answer.",
+      "link": "副本_D04_曼恩封存书库"
+    },
+    {
+      "id": "IA-D04-on_exit",
+      "kind": "dungeon",
+      "owner": "D04",
+      "when": "on_exit",
+      "cn": "门口的人只放你一次。下次得重新说。",
+      "en": "The man at the door lets you in once. Next time you explain again.",
+      "link": "副本_D04_曼恩封存书库"
+    },
+    {
+      "id": "IA-D05-on_arrival",
+      "kind": "dungeon",
+      "owner": "D05",
+      "when": "on_arrival",
+      "cn": "空庭不说话。器材会。",
+      "en": "The empty court says nothing. The equipment does.",
+      "link": "副本_D05_学院弃置试验庭"
+    },
+    {
+      "id": "IA-D05-inside",
+      "kind": "dungeon",
+      "owner": "D05",
+      "when": "inside",
+      "cn": "墨迹要问时间和出处。问不清的，先别当真相。",
+      "en": "Ink marks must be asked when and from where. Unanswered, they are not yet truth.",
+      "link": "副本_D05_学院弃置试验庭"
+    },
+    {
+      "id": "IA-D05-on_exit",
+      "kind": "dungeon",
+      "owner": "D05",
+      "when": "on_exit",
+      "cn": "废弃设备不是真相机。带走的只有你核过的。",
+      "en": "Abandoned gear is no truth machine. Carry out only what you checked.",
+      "link": "副本_D05_学院弃置试验庭"
+    },
+    {
+      "id": "IA-D06-on_arrival",
+      "kind": "dungeon",
+      "owner": "D06",
+      "when": "on_arrival",
+      "cn": "编号完整，所以空名才像误差。",
+      "en": "The numbering is complete, which is why a blank name reads as a rounding error.",
+      "link": "副本_D06_柏石军需地窖"
+    },
+    {
+      "id": "IA-D06-inside",
+      "kind": "dungeon",
+      "owner": "D06",
+      "when": "inside",
+      "cn": "授权、病例、粮袋各有去处，别放在一张单上核。",
+      "en": "Warrants, case notes and grain sacks each go somewhere; do not check them on one sheet.",
+      "link": "副本_D06_柏石军需地窖"
+    },
+    {
+      "id": "IA-D06-on_exit",
+      "kind": "dungeon",
+      "owner": "D06",
+      "when": "on_exit",
+      "cn": "地窖的整齐是给人看的。看完就上来。",
+      "en": "The cellar is tidy for visitors. Look, then climb back up.",
+      "link": "副本_D06_柏石军需地窖"
+    },
+    {
+      "id": "IA-D07-on_arrival",
+      "kind": "dungeon",
+      "owner": "D07",
+      "when": "on_arrival",
+      "cn": "管线是后建的。护理和控制不是同一套设计。",
+      "en": "The piping was added later. Care and control were never one design.",
+      "link": "副本_D07_灰烬疫所"
+    },
+    {
+      "id": "IA-D07-inside",
+      "kind": "dungeon",
+      "owner": "D07",
+      "when": "inside",
+      "cn": "出口开了不等于人都好了。照护才刚开始。",
+      "en": "An open door is not everyone healed. Care has only started.",
+      "link": "副本_D07_灰烬疫所"
+    },
+    {
+      "id": "IA-D07-on_exit",
+      "kind": "dungeon",
+      "owner": "D07",
+      "when": "on_exit",
+      "cn": "别把离开当痊愈。名单还在。",
+      "en": "Do not take leaving for recovering. The list remains.",
+      "link": "副本_D07_灰烬疫所"
+    },
+    {
+      "id": "IA-D08-on_arrival",
+      "kind": "dungeon",
+      "owner": "D08",
+      "when": "on_arrival",
+      "cn": "高处放资料，低处放人。顺序就是优先次序。",
+      "en": "Records up high, people down low. The order is the priority.",
+      "link": "副本_D08_沉水档案井"
+    },
+    {
+      "id": "IA-D08-inside",
+      "kind": "dungeon",
+      "owner": "D08",
+      "when": "inside",
+      "cn": "水下的架子不是图书馆，是留置点。",
+      "en": "The submerged racks are not a library; they are a holding point.",
+      "link": "副本_D08_沉水档案井"
+    },
+    {
+      "id": "IA-D08-on_exit",
+      "kind": "dungeon",
+      "owner": "D08",
+      "when": "on_exit",
+      "cn": "井口的风比井里冷。上来先晒一晒。",
+      "en": "The wind at the well mouth is colder than below. Dry off first.",
+      "link": "副本_D08_沉水档案井"
+    },
+    {
+      "id": "IA-D09-on_arrival",
+      "kind": "dungeon",
+      "owner": "D09",
+      "when": "on_arrival",
+      "cn": "回声大，回声有限。别把感觉当结论。",
+      "en": "The echo is loud and bounded. Feeling is not a conclusion.",
+      "link": "副本_D09_无名修院回声厅"
+    },
+    {
+      "id": "IA-D09-inside",
+      "kind": "dungeon",
+      "owner": "D09",
+      "when": "inside",
+      "cn": "机械台的读数错过一次。错的那次最像奇迹。",
+      "en": "The bench misread once. The wrong reading looked most like a miracle.",
+      "link": "副本_D09_无名修院回声厅"
+    },
+    {
+      "id": "IA-D09-on_exit",
+      "kind": "dungeon",
+      "owner": "D09",
+      "when": "on_exit",
+      "cn": "能安全做到的很少。承认这一点再走。",
+      "en": "What can be done safely is little. Admit it, then walk out.",
+      "link": "副本_D09_无名修院回声厅"
+    },
+    {
+      "id": "IA-D10-on_arrival",
+      "kind": "dungeon",
+      "owner": "D10",
+      "when": "on_arrival",
+      "cn": "外环能拆，内圈能退。退路先看。",
+      "en": "The outer ring can be dismantled and the inner one left. Check the way back first.",
+      "link": "副本_D10_残光之井"
+    },
+    {
+      "id": "IA-D10-inside",
+      "kind": "dungeon",
+      "owner": "D10",
+      "when": "inside",
+      "cn": "装置有限，人有限。别让门替你决定。",
+      "en": "The device is finite and so are people. Do not let a door decide for you.",
+      "link": "副本_D10_残光之井"
+    },
+    {
+      "id": "IA-D10-on_exit",
+      "kind": "dungeon",
+      "owner": "D10",
+      "when": "on_exit",
+      "cn": "先安全，再谈方案。顺序反了，什么都没了。",
+      "en": "Safety first, then terms. Reverse the order and nothing is left.",
+      "link": "副本_D10_残光之井"
+    },
+    {
+      "id": "IA-DT01-any",
+      "kind": "daily",
+      "owner": "DT01",
+      "when": "any",
+      "cn": "车队欠桥工的工钱，旅店要交货。两头都是真账。",
+      "en": "The caravan owes the bridge crew and the inn owes a delivery. Both ledgers are real.",
+      "link": "人物_托曼·索"
+    },
+    {
+      "id": "IA-DT01-after",
+      "kind": "daily",
+      "owner": "DT01",
+      "when": "after",
+      "cn": "粮约履行过以后，桥工的钱还没算完。",
+      "en": "The grain delivery was honoured; the crew's wages are still open.",
+      "link": "人物_托曼·索"
+    },
+    {
+      "id": "IA-DT02-any",
+      "kind": "daily",
+      "owner": "DT02",
+      "when": "any",
+      "cn": "上游的菜田和营地都要水。谁都不是污染源。",
+      "en": "The vegetable plots and the camp both need water. Neither is the source of the trouble.",
+      "link": "支线_SQ05_渡口与姓名"
+    },
+    {
+      "id": "IA-DT02-after",
+      "kind": "daily",
+      "owner": "DT02",
+      "when": "after",
+      "cn": "水的事说开以后，桶还是各用各的。",
+      "en": "With the water matter aired, each still uses their own bucket.",
+      "link": "支线_SQ05_渡口与姓名"
+    },
+    {
+      "id": "IA-DT03-any",
+      "kind": "daily",
+      "owner": "DT03",
+      "when": "any",
+      "cn": "两家认同一枚工牌。一家要人，一家要给付。",
+      "en": "Two households claim one work tag. One wants the body, the other the payment.",
+      "link": "副本_D02_旧渠检修墓室"
+    },
+    {
+      "id": "IA-DT03-after",
+      "kind": "daily",
+      "owner": "DT03",
+      "when": "after",
+      "cn": "墓标立起来以后，名单还是三个人。",
+      "en": "The marker stands; the list still holds three names.",
+      "link": "副本_D02_旧渠检修墓室"
+    },
+    {
+      "id": "IA-DT04-any",
+      "kind": "daily",
+      "owner": "DT04",
+      "when": "any",
+      "cn": "地是佃农的，作物是流离者种的。",
+      "en": "The land belongs to an injured tenant; the crop was sown by the displaced.",
+      "link": "支线_SQ03_没有王旗的面包"
+    },
+    {
+      "id": "IA-DT04-after",
+      "kind": "daily",
+      "owner": "DT04",
+      "when": "after",
+      "cn": "空地收完以后，地契和庄稼分开算。",
+      "en": "Once the clearing is harvested, the deed and the crop are reckoned apart.",
+      "link": "支线_SQ03_没有王旗的面包"
+    },
+    {
+      "id": "IA-DT05-any",
+      "kind": "daily",
+      "owner": "DT05",
+      "when": "any",
+      "cn": "一批退热药，军民两边都订了。",
+      "en": "One batch of fever medicine, ordered by both the garrison and the town.",
+      "link": "人物_莫伦·海"
+    },
+    {
+      "id": "IA-DT05-after",
+      "kind": "daily",
+      "owner": "DT05",
+      "when": "after",
+      "cn": "药分完以后，单子还在两边手里。",
+      "en": "The medicine is split; both sides still hold their slips.",
+      "link": "人物_莫伦·海"
+    },
+    {
+      "id": "IA-DT06-any",
+      "kind": "daily",
+      "owner": "DT06",
+      "when": "any",
+      "cn": "躲的是雇主，找的人付过旅费。",
+      "en": "He hides from an employer; the one looking covered his fare.",
+      "link": "人物_欧达·苇"
+    },
+    {
+      "id": "IA-DT06-after",
+      "kind": "daily",
+      "owner": "DT06",
+      "when": "after",
+      "cn": "路标立好以后，路费和去留分开谈。",
+      "en": "With the signpost up, fare and whereabouts are discussed separately.",
+      "link": "人物_欧达·苇"
+    },
+    {
+      "id": "IA-DT07-any",
+      "kind": "daily",
+      "owner": "DT07",
+      "when": "any",
+      "cn": "箱主说保密，搬运的说刺激物泄漏。",
+      "en": "The owner calls it confidential; the handlers call it an irritant leak.",
+      "link": "人物_伊莲·沃斯"
+    },
+    {
+      "id": "IA-DT07-after",
+      "kind": "daily",
+      "owner": "DT07",
+      "when": "after",
+      "cn": "箱子的事处理完，伤害记录单独留。",
+      "en": "The crate is settled; the harm record is kept apart.",
+      "link": "人物_伊莲·沃斯"
+    },
+    {
+      "id": "IA-DT08-any",
+      "kind": "daily",
+      "owner": "DT08",
+      "when": "any",
+      "cn": "桥工要欠薪，赶药车的要通路。",
+      "en": "The bridge crew wants unpaid wages; the medicine cart wants a road.",
+      "link": "支线_SQ04_一条不卖人的路"
+    },
+    {
+      "id": "IA-DT08-after",
+      "kind": "daily",
+      "owner": "DT08",
+      "when": "after",
+      "cn": "第二块板修好以后，工钱还没付清。",
+      "en": "The second plank is fixed; the wages are not.",
+      "link": "支线_SQ04_一条不卖人的路"
+    },
+    {
+      "id": "IA-DT09-any",
+      "kind": "daily",
+      "owner": "DT09",
+      "when": "any",
+      "cn": "助手把乡民用法当自己发现。",
+      "en": "The assistant takes a village remedy for his own discovery.",
+      "link": "支线_SQ07_药不是赎罪券"
+    },
+    {
+      "id": "IA-DT09-after",
+      "kind": "daily",
+      "owner": "DT09",
+      "when": "after",
+      "cn": "草指认过以后，来源和效果分开说。",
+      "en": "The herb is identified; source and effect are stated apart.",
+      "link": "支线_SQ07_药不是赎罪券"
+    },
+    {
+      "id": "IA-DT10-any",
+      "kind": "daily",
+      "owner": "DT10",
+      "when": "any",
+      "cn": "守夜的想杀狼，肉商不认弃血。",
+      "en": "The watch wants the wolves killed; the butcher denies the dumped blood.",
+      "link": "人物_玛娅·禾"
+    },
+    {
+      "id": "IA-DT10-after",
+      "kind": "daily",
+      "owner": "DT10",
+      "when": "after",
+      "cn": "夜岗安生以后，狼还在坡上。",
+      "en": "The night watch is quiet; the wolves are still on the slope.",
+      "link": "人物_玛娅·禾"
+    },
+    {
+      "id": "IA-DT11-any",
+      "kind": "daily",
+      "owner": "DT11",
+      "when": "any",
+      "cn": "两柜互验记录，一方要匿名对照表。",
+      "en": "Two cabinets cross-check records; one side wants the anonymous table too.",
+      "link": "人物_塞娜·里德"
+    },
+    {
+      "id": "IA-DT11-after",
+      "kind": "daily",
+      "owner": "DT11",
+      "when": "after",
+      "cn": "抄本交接过以后，对照表仍留在原柜。",
+      "en": "The copies changed hands; the table stayed in its cabinet.",
+      "link": "人物_塞娜·里德"
+    },
+    {
+      "id": "IA-DT12-any",
+      "kind": "daily",
+      "owner": "DT12",
+      "when": "any",
+      "cn": "螺栓不是核心件，雇主说封存已完成。",
+      "en": "The bolt is not a core part, and the employer says sealing is done.",
+      "link": "副本_D09_无名修院回声厅"
+    },
+    {
+      "id": "IA-DT12-after",
+      "kind": "daily",
+      "owner": "DT12",
+      "when": "after",
+      "cn": "检修做完以后，面子的事归面子。",
+      "en": "The maintenance is finished; face is face's own business.",
+      "link": "副本_D09_无名修院回声厅"
+    },
+    {
+      "id": "IA-DT13-any",
+      "kind": "daily",
+      "owner": "DT13",
+      "when": "any",
+      "cn": "掌勺的先祷告再领饭。有人不愿被看见立场。",
+      "en": "The cook prays before serving. Some would rather not be seen taking a side.",
+      "link": "人物_欧达·苇"
+    },
+    {
+      "id": "IA-DT13-after",
+      "kind": "daily",
+      "owner": "DT13",
+      "when": "after",
+      "cn": "汤分完以后，站着的人还是站着。",
+      "en": "The pot is empty; those who stood aside still stand aside.",
+      "link": "人物_欧达·苇"
+    },
+    {
+      "id": "IA-DT14-any",
+      "kind": "daily",
+      "owner": "DT14",
+      "when": "any",
+      "cn": "有人用假牌找药，有人混卖假牌牟利。",
+      "en": "One uses a forged tag to find medicine; another sells forgeries for profit.",
+      "link": "人物_雷奥·凯斯"
+    },
+    {
+      "id": "IA-DT14-after",
+      "kind": "daily",
+      "owner": "DT14",
+      "when": "after",
+      "cn": "假牌的事处理完，找药的人还得看诊。",
+      "en": "The forgeries are dealt with; the one seeking medicine still needs care.",
+      "link": "人物_雷奥·凯斯"
+    },
+    {
+      "id": "IA-DT15-any",
+      "kind": "daily",
+      "owner": "DT15",
+      "when": "any",
+      "cn": "非核心排水费，被转给了不参加托管的村户。",
+      "en": "Non-core drainage costs were shifted onto households outside the trust.",
+      "link": "副本_D10_残光之井"
+    },
+    {
+      "id": "IA-DT15-after",
+      "kind": "daily",
+      "owner": "DT15",
+      "when": "after",
+      "cn": "巡查做完了，维护费还得重新分。",
+      "en": "The inspection is done; the upkeep still has to be re-split.",
+      "link": "副本_D10_残光之井"
+    },
+    {
+      "id": "IA-DT16-any",
+      "kind": "daily",
+      "owner": "DT16",
+      "when": "any",
+      "cn": "患者想停一项有副作用的照护，家属怕被说放弃。",
+      "en": "The patient wants one side-effect treatment stopped; the family fears being called quitters.",
+      "link": "支线_SQ07_药不是赎罪券"
+    },
+    {
+      "id": "IA-DT16-after",
+      "kind": "daily",
+      "owner": "DT16",
+      "when": "after",
+      "cn": "照护方案改过以后，副作用记录留着。",
+      "en": "The care plan changed; the side-effect record stays.",
+      "link": "支线_SQ07_药不是赎罪券"
+    }
+  ]
+}

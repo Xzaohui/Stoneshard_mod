@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-13",
+  "scope": "S144 offline toolchain checks: MSL input precheck positive and negative controls, formal-environment check status, struct-regression re-runnability; read-only, no build or deployment",
+  "msl_input": {
+    "positive": {
+      "input": "vanilla.win",
+      "sha256": "99965AB8E26A07C913BE4F7E4FB8D3A8D71C7A89D93D77D07B3A3C2174E19444",
+      "exit_code": 0,
+      "passed": true,
+      "summary": "MSL input precheck passed: no known MSL/EAO object markers. This is not an independent vanilla provenance check.",
+      "loaded": {
+        "code_entries": 34189,
+        "objects": 9663,
+        "rooms": 1067
+      }
+    },
+    "negative": {
+      "input": "data.win",
+      "sha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508",
+      "exit_code": 1,
+      "rejected": true,
+      "summary": "Do not use this file as native MSL packaging input. Load the original vanilla.win again."
+    }
+  },
+  "formal_environment": {
+    "exit_code": 1,
+    "superseded": true,
+    "reason": "隔离期检查：快照指向已移除的 test-env/backups/20261011-134931/formal-userdata/account.ini；AGENTS 已改为“不隔离，直接在当前路径下开发”，该检查不再是门槛。",
+    "observed": "ormal-userdata\\account.ini������Ϊ��·�������ڡ�"
+  },
+  "struct_regression": {
+    "re_runnable": true,
+    "reason": "S166 关闭：broken 输入在 backups 中找到（direct-20261011-155606-160/data.win），fixed 输入改用当前构建 artifacts/direct-data.win（2026-10-11 记录的 fixed 文件已不满足今日更严的 linkage 检查）；并修好两处工具缺陷（见下）。",
+    "inputs": {
+      "broken": "backups/direct-20261011-155606-160/data.win",
+      "broken_sha256": "67B2D55E1D3920F4B83D93A0E92360F64BD640C1C1D0C00C73DD042AA54CA6C1",
+      "fixed": "artifacts/direct-data.win",
+      "fixed_sha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508"
+    },
+    "harness_fixes": [
+      "broken 运行改用 Continue 偏好，避免预期 stderr 终止脚本",
+      "产物写入改 [IO.File]::WriteAllText（PS5.1 无 -Encoding utf8NoBOM）"
+    ],
+    "recorded": {
+      "date": "2026-10-13T22:35:55.0377253+08:00",
+      "brokenDataSha256": "67B2D55E1D3920F4B83D93A0E92360F64BD640C1C1D0C00C73DD042AA54CA6C1",
+      "fixedDataSha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508",
+      "brokenStructReceiverRejected": true,
+      "fixedSerializedResourcePassed": true,
+      "runtimeVerified": false
+    },
+    "probes": [
+      {
+        "path": "C:/Users/83912/DeskBox/我的桌面/project/Stoneshard_mod/artifacts/direct-data.win",
+        "exists": true,
+        "exit_code": 0,
+        "passed": true,
+        "summary": "EAO struct receiver check passed."
+      },
+      {
+        "path": "C:/Users/83912/DeskBox/我的桌面/project/Stoneshard_mod/artifacts/repeat-data.win",
+        "exists": true,
+        "exit_code": 3762504530,
+        "passed": false,
+        "summary": "Unhandled exception. System.IO.InvalidDataException: Courier Create coerces a struct receiver to an integer instance index (0.1.4 regression)."
+      },
+      {
+        "path": "C:/Users/83912/DeskBox/我的桌面/project/Stoneshard_mod/artifacts/vanilla-0.2.0.win",
+        "exists": true,
+        "exit_code": 0,
+        "passed": true,
+        "summary": "EAO struct receiver check passed."
+      }
+    ]
+  },
+  "gameprobe": {
+    "dll_present": true,
+    "sha256": "A07D28B1B7D8760BBFC1ECACCD31E09BB3976524B2903D591FC202CEC2635883"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-13",
+  "scope": "S122 implementation hand-off: artifact list, build order, per-step acceptance, standing gates and open items; counts read live from validation reports",
+  "artifacts": [
+    {
+      "path": "research/corpus-flows.json",
+      "what": "条件流（130 脚本节点与引用）",
+      "entry": "[[全库条件流投影]]"
+    },
+    {
+      "path": "research/state-keys.json",
+      "what": "状态键（1385）",
+      "entry": "[[状态键映射总表]]"
+    },
+    {
+      "path": "research/event-stubs.json",
+      "what": "事件桩（1735）",
+      "entry": "[[事件桩映射总表]]"
+    },
+    {
+      "path": "research/field-scene-flows.json",
+      "what": "野外人物条件流（28 人）",
+      "entry": "[[野外对白条件流]]"
+    },
+    {
+      "path": "research/field-npc-dialogue.json",
+      "what": "野外人物对白（中英）",
+      "entry": "[[台本_FX_野外人物对白]]"
+    },
+    {
+      "path": "research/field-docs.json",
+      "what": "野外文书（中英）",
+      "entry": "[[文书_FX_野外地点短稿]]"
+    },
+    {
+      "path": "research/field-signs.json",
+      "what": "野外迹象（中英）",
+      "entry": "[[野外迹象与观察]]"
+    },
+    {
+      "path": "research/ambient-gossip.json",
+      "what": "地区闲谈（中英）",
+      "entry": "[[地区闲谈池]]"
+    },
+    {
+      "path": "research/town-gossip.json",
+      "what": "城镇闲谈（中英）",
+      "entry": "[[城镇闲谈池]]"
+    },
+    {
+      "path": "research/band-gossip.json",
+      "what": "声望档街头反应（中英）",
+      "entry": "[[声望档街头反应]]"
+    },
+    {
+      "path": "research/town-reputation.json",
+      "what": "城镇声望与信任（五档）",
+      "entry": "[[城镇声望与信任系统]]"
+    },
+    {
+      "path": "research/service-registry.json",
+      "what": "城市服务班（十五城）",
+      "entry": "[[城市服务班与有限库存]]"
+    },
+    {
+      "path": "research/item-registry.json",
+      "what": "物品与术语对照",
+      "entry": "[[原创物品与装备总表]]"
+    },
+    {
+      "path": "research/npc-fine-details.json",
+      "what": "人物细描（172）",
+      "entry": "[[人物细描与随身物]]"
+    },
+    {
+      "path": "research/special-location-inventory.json",
+      "what": "原作地点清点",
+      "entry": "[[特殊地点与野外NPC清点]]"
+    },
+    {
+      "path": "research/region-content-map.json",
+      "what": "原作区域映射",
+      "entry": "[[原作地图区域与Mod内容映射]]"
+    },
+    {
+      "path": "research/production-protocol.json",
+      "what": "制作与校准规程",
+      "entry": "[[特殊地点阶段制作与校准规程]]"
+    },
+    {
+      "path": "research/bilingual-coverage.json",
+      "what": "中英对照覆盖",
+      "entry": "[[中英对照覆盖报告]]"
+    }
+  ],
+  "steps": [
+    {
+      "name": "状态键落库",
+      "how": "按 [[状态键映射总表]] 建存档字段：`resolve_*`（结算前 none）、`encountered_*`、`callback_*`、`consent_*`、`paid_*`、`order_*`、`presence_*`、`receipt_*`；旧字段不自动迁移。",
+      "accept": "键名与取值与表一致；读档后未结算脚本仍为 none；不写入未登记键。"
+    },
+    {
+      "name": "事件桩建事件",
+      "how": "按 [[事件桩映射总表]] 逐桩建事件：触发、读写键、冷却；引擎事件号自行分配并回写本表。",
+      "accept": "桩与节点一一对应；hub 类不写键；入口写 encountered；route 类读 resolve。"
+    },
+    {
+      "name": "台词与守卫接线",
+      "how": "按 [[全库条件流投影]] 的 refs 接线台词：refs 文本必须与台本逐字一致；守卫按节点 notes 与台本 guards 落地。",
+      "accept": "播放条件与顺序正确；拒绝有出口；缺席不代播。"
+    },
+    {
+      "name": "服务班与声望档",
+      "how": "按 [[城市服务班与有限库存]] 与 [[城镇声望与信任系统]] 实现档位便利、边界与刷新；柜台台词与街头反应分池播放。",
+      "accept": "低档只限范围、不删基本安全；不新增柜台；两池不串台词。"
+    },
+    {
+      "name": "野外人物与文书迹象",
+      "how": "按 [[台本_FX_野外人物对白]]、[[文书_FX_野外地点短稿]]、[[野外迹象与观察]] 落地：存在性四态、缺席替代、文书只给信息。",
+      "accept": "缺席只播 proxy；文书阅读不推进任务、不发物品；迹象判定不含数值掉落。"
+    },
+    {
+      "name": "闲谈池播放",
+      "how": "按地区/城镇/声望档三池与条件词表播放；`after` 只改未来台词。",
+      "accept": "三池互不克隆；中间档不播档位池；闲谈不改任何结算。"
+    }
+  ],
+  "gates": [
+    "更新前备份 data.win、MSL 设置、本 Mod 旧包与用户数据；不主动删除角色、不覆盖存档。",
+    "游戏或 MSL 占用文件时暂停部署；不强制结束用户进程。",
+    "候选包 SHA 与校验场景匹配后才部署（沿用 tools/ 下既有链与检查）。",
+    "运行验证按 [[特殊地点阶段制作与校准规程]] 记录：版本指纹、步骤、观察、截图/日志、差异与结论。",
+    "未跑过的内容不得标“已验证”；静态校验不替代运行结果。"
+  ],
+  "open_items": [
+    "引擎事件号、触发距离、作息与生成点：实现阶段分配与测量。",
+    "存档字段名与旧档迁移：本表只给键语义，迁移策略另定。",
+    "经济数值：服务与材料价格须实机采样（规程已定口径，未采样不写数字）。",
+    "比例地图与碰撞：地点卡只给相对布局与可认锚点。",
+    "内部散文英文：人物细描、条件流、键与桩、阅读摘要仍中文先行（不计缺口）。",
+    "配音与本地化终审：未做。"
+  ],
+  "validation": {
+    "corpus-flows": 4476,
+    "state-keys": 8061,
+    "event-stubs": 12330,
+    "field-flows": 2756,
+    "field-npc": 5808,
+    "field-docs": 1112,
+    "field-signs": 1214,
+    "ambient-gossip": 1150,
+    "town-gossip": 1623,
+    "band-gossip": 1345,
+    "town-reputation": 2143,
+    "service-registry": 1242,
+    "fine-details": 5335,
+    "special-location": 1359,
+    "region-map": 961,
+    "prod-protocol": 866,
+    "bilingual-coverage": 836
+  }
+}

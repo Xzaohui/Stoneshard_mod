@@ -1,0 +1,1136 @@
+{
+  "date": "2026-10-12",
+  "status": "draft",
+  "canon": "mod-original",
+  "scope": "S88时序与奖励总表：从既有结构化台本抽取的单一审计视图；不新增数字、不替代[[经济与奖励]]的校准口径。",
+  "global_rules": [
+    "无隐藏全局倒计时；已接受日常与额外紧急救援按显式游戏时间期限失败，核心线索与主线出口不因逾期删除。",
+    "日常episode_state=unseen/active/resolved/declined；具名冲突不随冷却回到unseen。",
+    "N17安全台明确最终确认后冻结：之后只回访与未来维护，不重选旧方法、不改旧快照。",
+    "奖励一次任务键/实例键去重；桥组与单方法回执分别计；接收边不发奖。",
+    "数值仍按B档在干净基线校准；本表所载为设计口径，不是已生效报酬。"
+  ],
+  "main": [
+    {
+      "id": "N1",
+      "name": "无钟之夜",
+      "requires": [],
+      "at_least": null,
+      "reward": "设计：0.25B一次性劳务费，不因选择路线增减；0.3.0实际尚未接金币。"
+    },
+    {
+      "id": "N2",
+      "name": "灰堤没有墓碑",
+      "requires": [
+        "N1"
+      ],
+      "at_least": null,
+      "reward": "0.35B一次；修理棚开放普通服务，伤者不成为无限维修商。"
+    },
+    {
+      "id": "N3",
+      "name": "听审前的灯",
+      "requires": [
+        "N2"
+      ],
+      "at_least": null,
+      "reward": "0.4B一次，追回欠薪归受害人；不把赔付再作为玩家金币奖励。"
+    },
+    {
+      "id": "N4",
+      "name": "第一张空白债票",
+      "requires": [
+        "N3"
+      ],
+      "at_least": null,
+      "reward": "0.4B一次调查费；卖工具的款项属于赔付池，不由玩家再次领取。"
+    },
+    {
+      "id": "N5",
+      "name": "渡口的三种说法",
+      "requires": [
+        "N4"
+      ],
+      "at_least": null,
+      "reward": "0.3B一次，地图与路线信息不可售。"
+    },
+    {
+      "id": "N6",
+      "name": "被封存的页码",
+      "requires": [
+        "N5"
+      ],
+      "at_least": null,
+      "reward": "0.45B一次与有限释读服务，无永久属性书。"
+    },
+    {
+      "id": "N7",
+      "name": "军需账上的空名",
+      "requires": [
+        "N5"
+      ],
+      "at_least": null,
+      "reward": "0.5B一次，可选普通护理材料计入总报酬。"
+    },
+    {
+      "id": "N8",
+      "name": "不会散去的热病",
+      "requires": [
+        "N5"
+      ],
+      "at_least": null,
+      "reward": "0.5B一次；救援奖励另有实例键且总收益限额。"
+    },
+    {
+      "id": "N9",
+      "name": "把证据摆上桌",
+      "requires": [
+        "N5"
+      ],
+      "at_least": {
+        "count": 2,
+        "of": [
+          "N6",
+          "N7",
+          "N8"
+        ]
+      },
+      "reward": "0.25B一次文书核验劳务费。"
+    },
+    {
+      "id": "N10",
+      "name": "没有写下的见证",
+      "requires": [
+        "N9"
+      ],
+      "at_least": null,
+      "reward": "0.45B一次与普通工具材料，无新法术树。"
+    },
+    {
+      "id": "N11",
+      "name": "关隘外的交换",
+      "requires": [
+        "N10"
+      ],
+      "at_least": null,
+      "reward": "0.3B一次；买说明的费用独立且有限，不返还以套利。"
+    },
+    {
+      "id": "N12",
+      "name": "失踪者仍有名字",
+      "requires": [
+        "N11"
+      ],
+      "at_least": null,
+      "reward": "0.6B一次委托分期报酬，未活救不领取额外人身救援酬金。"
+    },
+    {
+      "id": "N13",
+      "name": "答案的代价",
+      "requires": [
+        "N12"
+      ],
+      "at_least": null,
+      "reward": "0.35B一次核验劳务费，赔偿归受害人；公开责任不强制永久扣角色属性。"
+    },
+    {
+      "id": "N14",
+      "name": "可以回去的路",
+      "requires": [
+        "N13"
+      ],
+      "at_least": null,
+      "reward": "0.25B一次，借用工具不卖不无限补领。"
+    },
+    {
+      "id": "N15",
+      "name": "回声不等于真相",
+      "requires": [
+        "N14"
+      ],
+      "at_least": null,
+      "reward": "0.5B一次与有限环境工具，无永久无限回血。"
+    },
+    {
+      "id": "N16",
+      "name": "谁来保管余烬",
+      "requires": [
+        "N15"
+      ],
+      "at_least": null,
+      "reward": "无金币，免费方案复核服务一次解锁；重复预览不发奖。"
+    },
+    {
+      "id": "N17",
+      "name": "残光之井",
+      "requires": [
+        "N16"
+      ],
+      "at_least": null,
+      "reward": "0.6B一次危险委托尾款；工具奖励统一计入同一结算，不再在N18重复。"
+    },
+    {
+      "id": "N18",
+      "name": "誓约之后",
+      "requires": [
+        "N17"
+      ],
+      "at_least": null,
+      "reward": "无第二笔尾款；只开放相应服务与日常，唯一物件不重复领取。"
+    }
+  ],
+  "side": [
+    {
+      "id": "SQ01",
+      "name": "港税与自由",
+      "requires": [
+        "N3"
+      ],
+      "reward": "A0.2B、B0.3B、C0.3B，各阶段只结算一次；赔付、运费与护理预算属于当事人，不返作玩家酬金。卖可选原件所得仅一次普通交易，不附加剧情赏；原封口/军功额外0.5B设计停…"
+    },
+    {
+      "id": "SQ02",
+      "name": "被征用的冬粮",
+      "requires": [
+        "N5"
+      ],
+      "reward": "A0.2B、B0.3B、C0.3B，各阶段只结算一次；赔付、运费与护理预算属于当事人，不返作玩家酬金。卖可选原件所得仅一次普通交易，不附加剧情赏；原封口/军功额外0.5B设计停…"
+    },
+    {
+      "id": "SQ03",
+      "name": "没有王旗的面包",
+      "requires": [
+        "N5"
+      ],
+      "reward": "A0.2B、B0.3B、C0.3B，各阶段只结算一次；赔付、运费与护理预算属于当事人，不返作玩家酬金。卖可选原件所得仅一次普通交易，不附加剧情赏；原封口/军功额外0.5B设计停…"
+    },
+    {
+      "id": "SQ04",
+      "name": "一条不卖人的路",
+      "requires": [
+        "N4"
+      ],
+      "reward": "A0.2B、B0.3B、C0.3B，各阶段只结算一次；赔付、运费与护理预算属于当事人，不返作玩家酬金。卖可选原件所得仅一次普通交易，不附加剧情赏；原封口/军功额外0.5B设计停…"
+    },
+    {
+      "id": "SQ05",
+      "name": "渡口与姓名",
+      "requires": [
+        "N5"
+      ],
+      "reward": "A0.2B、B0.3B、C0.3B，各阶段只结算一次；赔付、运费与护理预算属于当事人，不返作玩家酬金。卖可选原件所得仅一次普通交易，不附加剧情赏；原封口/军功额外0.5B设计停…"
+    },
+    {
+      "id": "SQ06",
+      "name": "抄本的背面",
+      "requires": [],
+      "reward": "A0.2B、B0.3B、C0.3B，各阶段只结算一次；赔付、运费与护理预算属于当事人，不返作玩家酬金。卖可选原件所得仅一次普通交易，不附加剧情赏；原封口/军功额外0.5B设计停…"
+    },
+    {
+      "id": "SQ07",
+      "name": "药不是赎罪券",
+      "requires": [],
+      "reward": "A0.2B、B0.3B、C0.3B，各阶段只结算一次；赔付、运费与护理预算属于当事人，不返作玩家酬金。卖可选原件所得仅一次普通交易，不附加剧情赏；原封口/军功额外0.5B设计停…"
+    },
+    {
+      "id": "SQ08",
+      "name": "逃兵的家书",
+      "requires": [
+        "N5"
+      ],
+      "reward": "A0.2B、B0.3B、C0.3B，各阶段只结算一次；赔付、运费与护理预算属于当事人，不返作玩家酬金。卖可选原件所得仅一次普通交易，不附加剧情赏；原封口/军功额外0.5B设计停…"
+    }
+  ],
+  "daily": [
+    {
+      "id": "DT01",
+      "name": "粮车的最后一段",
+      "requires": [
+        "N5"
+      ],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT02",
+      "name": "干净的井水",
+      "requires": [],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT03",
+      "name": "无人认领的墓标",
+      "requires": [
+        "N2"
+      ],
+      "cooldown": 72,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT04",
+      "name": "收割前的空地",
+      "requires": [
+        "N5"
+      ],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT05",
+      "name": "驿馆的急用药",
+      "requires": [
+        "N5"
+      ],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT06",
+      "name": "迷路者的路标",
+      "requires": [
+        "N5"
+      ],
+      "cooldown": 72,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT07",
+      "name": "一箱不该开封的货",
+      "requires": [
+        "N3"
+      ],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT08",
+      "name": "修好第二块桥板",
+      "requires": [],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT09",
+      "name": "药师指认的草",
+      "requires": [],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT10",
+      "name": "别让狼靠近夜岗",
+      "requires": [
+        "N5"
+      ],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT11",
+      "name": "两份抄本的交接",
+      "requires": [
+        "N5"
+      ],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT12",
+      "name": "旧钟站的检修",
+      "requires": [
+        "N15"
+      ],
+      "cooldown": 72,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT13",
+      "name": "一锅够分的热汤",
+      "requires": [
+        "N5"
+      ],
+      "cooldown": 48,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT14",
+      "name": "锈印章与假凭证",
+      "requires": [
+        "N5"
+      ],
+      "cooldown": 72,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT15",
+      "name": "封存之后的巡查",
+      "requires": [
+        "N18"
+      ],
+      "cooldown": 72,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    },
+    {
+      "id": "DT16",
+      "name": "愿意继续治疗的人",
+      "requires": [
+        "N18"
+      ],
+      "cooldown": 72,
+      "deadline": "本人物事件无隐藏倒计时；有即时医疗风险须另行可见确认，不作为强制解法。",
+      "state": "episode_state=unseen/active/resolved/declined；resolved不可改为unseen。历史冷却字段仅保留兼容旧计划，不用于刷新此人物…",
+      "reward": "一次地方调解费，上限0.2B；投入与赔付不返作玩家奖励，选择较便宜解法不额外发奖金"
+    }
+  ],
+  "dungeon": [
+    {
+      "id": "D02",
+      "name": "旧渠检修墓室",
+      "requires": [
+        "N2"
+      ],
+      "main": "['N2']",
+      "side": "",
+      "reward": "普通工具与材料；主线报酬只由N2结算。"
+    },
+    {
+      "id": "D03",
+      "name": "断桥税栈",
+      "requires": [
+        "N4"
+      ],
+      "main": "['N5']",
+      "side": "['SQ04']",
+      "reward": "普通箱有限刷新；争议税银归N5/SQ04唯一结算。"
+    },
+    {
+      "id": "D04",
+      "name": "曼恩封存书库",
+      "requires": [
+        "N5"
+      ],
+      "main": "['N6']",
+      "side": "['SQ03']",
+      "reward": "普通抄写工具，唯一技术认证由N6。"
+    },
+    {
+      "id": "D05",
+      "name": "学院弃置试验庭",
+      "requires": [
+        "N5"
+      ],
+      "main": "['N10']",
+      "side": "['SQ06']",
+      "reward": "有限工具材料，无整套高级法术奖励。"
+    },
+    {
+      "id": "D06",
+      "name": "柏石军需地窖",
+      "requires": [
+        "N5"
+      ],
+      "main": "['N7']",
+      "side": "['SQ02', 'SQ08']",
+      "reward": "普通军需材料有限；N7及支线独立一次结算，不无限领征发物。"
+    },
+    {
+      "id": "D07",
+      "name": "灰烬疫所",
+      "requires": [
+        "N5"
+      ],
+      "main": "['N8']",
+      "side": "['SQ05']",
+      "reward": "普通护理材料，救援若另奖必须与N8总报酬校准去重。"
+    },
+    {
+      "id": "D08",
+      "name": "沉水档案井",
+      "requires": [],
+      "main": "['N12', 'N13']",
+      "side": "['SQ07']",
+      "reward": "排水工具绑定借用，普通材料有限；无可刷研究者遗体特殊掉落。"
+    },
+    {
+      "id": "D09",
+      "name": "无名修院回声厅",
+      "requires": [
+        "N14"
+      ],
+      "main": "['N15']",
+      "side": "",
+      "reward": "一次环境工具由N15结算，后续样本不重复加证据。"
+    },
+    {
+      "id": "D10",
+      "name": "残光之井",
+      "requires": [
+        "N16"
+      ],
+      "main": "['N17']",
+      "side": "",
+      "reward": "N17/18统一唯一结算；本副本不追加晶石刷取。"
+    }
+  ],
+  "city": [
+    {
+      "id": "CM-BRY",
+      "city": "BRY",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "失踪者不是被某一万能黑幕绑架：他自愿躲租债，却被班长当作停工口号、被商户当作假工伤样本。帮助他的妻子也曾借其名字领过一次补助。",
+      "need": "查清一名租客为何从劳动与居住记录同时消失，并让几种城市利益真正面对当事人。"
+    },
+    {
+      "id": "CM-DEN",
+      "city": "DEN",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "驻点发屋牌时按围城出工算，逃走的人不是全都背叛；渔者自己把一户隐去了。",
+      "need": "解决三户同时认一处可住旧屋的争议，让重建不只意味着岗哨再次亮灯。"
+    },
+    {
+      "id": "CM-OSB",
+      "city": "OSB",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "女儿卖粮是为了救弟弟，磨租人留押种粮是旧恩情索还；两人都瞒了村户。",
+      "need": "让来年播种与眼前饥饿都有可执行安排，查明少粮并非单一盗匪所为。"
+    },
+    {
+      "id": "CM-MNS",
+      "city": "MNS",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "所谓藏下的陈年酒是新酒混装；归乡学徒改配方让存活酒可用，师傅却盖了旧家印。",
+      "need": "恢复有限酒业收益并决定旧声誉如何承认战争断层。"
+    },
+    {
+      "id": "CM-ALD",
+      "city": "ALD",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "外壳合格而内衬换错，赫莲不是完全伪造者，曾擅借旧军需印；埃墨救了装配，却隐去一个同样经手者的错误。",
+      "need": "查清一批旧护具的失效与未署名修护，决定技术责任和人的身份怎样公开。"
+    },
+    {
+      "id": "CM-SKO",
+      "city": "SKO",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "一份赎约已兑却无归人；寄柜中介挪账，妮莎也为弟弟挪过一部分，不是全案无辜受害。",
+      "need": "在公款、有限炉料和家属赎金冲突中，承认归来者仍有自己的人生。"
+    },
+    {
+      "id": "CM-YOS",
+      "city": "YOS",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "家纹新布靠迁居者染记，但师傅把独家标写成她的身契；徒弟也借标提前收过款。",
+      "need": "把来源、离乡与有限保暖需求分开，不让温暖等于服从家族。"
+    },
+    {
+      "id": "CM-KOR",
+      "city": "KOR",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "遗物合法归属与家庭关系不是同一证明；助手用相近姓拼接记录，不是发现隐藏王室。",
+      "need": "核一份同姓归属误认，让取物、租住和代表权不再混作一件事。"
+    },
+    {
+      "id": "CM-EED",
+      "city": "EED",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "所谓被外城偷走的木不是全丢：民兵地方料棚留一部分，另有工人把申诉藏入订单；护林者将拒交名视背叛。",
+      "need": "决定一批已付木材怎样履约，保护林地不能使普通人失去发言。"
+    },
+    {
+      "id": "CM-FOR",
+      "city": "FOR",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "事故不是矿工懒散也不是神秘古骑卫诅咒：通风缺陷被班长和矿份出资者各隐去一部分。",
+      "need": "解除一口旧支井的困人危险，并决定哪种停工与工资权能真正执行。"
+    },
+    {
+      "id": "CM-RAT",
+      "city": "RAT",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "新夜响由普通野兽和借传说遮欠款者两部分构成；修工曾删去英雄也没救到的家庭名，爵士史实不改。",
+      "need": "调查新夜响与旧赔偿缺口，让纪念不靠复活旧灾维持意义。"
+    },
+    {
+      "id": "CM-PAS",
+      "city": "PAS",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "原N7与SQ02事实仍有效；印章是真的，过量征发与病例漏人也是真的。",
+      "need": "核军需与民粮所受的不同损失，真正落实监督和有限通路。"
+    },
+    {
+      "id": "CM-ASH",
+      "city": "ASH",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "已有N8/N12/N13与SQ05/SQ07不重复办理；留营、迁居、拒某项照护都是有效愿望。",
+      "need": "把切断污染、救人和真实护理接续分开，村子不能因任务完成就显示全员治愈。"
+    },
+    {
+      "id": "CM-HIG",
+      "city": "HIG",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "N14工具与回程不认证安全；N15才NE5，N17威胁后安全桌才冻结；地域章不发第二次结局。",
+      "need": "让深入、实测、解除威胁与最终治理成为各自可核的行动。"
+    },
+    {
+      "id": "CM-MAE",
+      "city": "MAE",
+      "kind": "regional-main",
+      "requires": [],
+      "turn": "有人焚姓名为保护逃亡者，另有人借同一火销毁自己改账；塞娜替凯姆解释过，玛娅的同伴又想把粮票变投效票。",
+      "need": "让剩下的人和记录各自有保留、离开与反对的权利，查明一场拟焚档冲突。"
+    },
+    {
+      "id": "CS-BRY-01",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "年居习俗仅采社区记述，原生公民授予尚待核；本案只管原创租约连续性，不发全城公民旗。",
+      "need": "租屋者快住满一年，房东要求搬到另一巷重算租期。"
+    },
+    {
+      "id": "CS-BRY-02",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "其中一人当年关过邻家门自保，新记忆不能推翻原围城胜败。",
+      "need": "老楼两家同时要求一间旧屋纪念亲人。"
+    },
+    {
+      "id": "CS-BRY-03",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "学徒改过关键卡扣，师傅曾承担教养费而非拥有其未来。",
+      "need": "新会副工场师傅想把所有作品按家印出售。"
+    },
+    {
+      "id": "CS-BRY-04",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "印工不是原印坊老板；她删过无钱街，为的是保住工位。",
+      "need": "原创印工副坊要印一则断水告示，商户只愿登有付钱的街。"
+    },
+    {
+      "id": "CS-BRY-05",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "收定金者替病子用去一部分，剩余底种与已订生活粮权分开。",
+      "need": "城市采购方要镇内全部新粮，镇里有人已经收过定金。"
+    },
+    {
+      "id": "CS-BRY-06",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "同班自愿离开因拒认错报，军功名单与真实救人不能互证。",
+      "need": "退役值夜者想找回失踪同班的获奖名字。"
+    },
+    {
+      "id": "CS-BRY-07",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "家庭需要钱，患者允许使用有限观察却拒绝无限代理。",
+      "need": "原创医药代理想买出患者新观察，付钱条件是不再提副作用。"
+    },
+    {
+      "id": "CS-BRY-08",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "未归者没有死亡证据；家属曾把租船款拿来办不确定的丧礼。",
+      "need": "船工家属要保存未归水手的席位，船主缺可租船位。"
+    },
+    {
+      "id": "CS-BRY-09",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "异常不是故意害病人：旧门错位、工班用错维修范围，商户瞒有限货损争取优先。",
+      "need": "两片低屋住户要同时开排水，商货区怕新货浸水。"
+    },
+    {
+      "id": "CS-BRY-10",
+      "city": "BRY",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "三种代理都不自动代表租客、患者与不愿公开者，米罗私下预选了听话名单。",
+      "need": "夜会馆准备让富商、工场和退役者各推一名代理。"
+    },
+    {
+      "id": "CS-DEN-01",
+      "city": "DEN",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "工人是真受伤，家人怕带回曾指认其亲属者，不是只计负重。",
+      "need": "三人约定的家船被要求再载一位受伤驻点工。"
+    },
+    {
+      "id": "CS-DEN-02",
+      "city": "DEN",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "割网者为救被网缠的孩子，但也瞒了自己未经同意用网。",
+      "need": "一张共用网被割，原村人要赶走新来者。"
+    },
+    {
+      "id": "CS-DEN-03",
+      "city": "DEN",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "户主真正怕孤独，不只是索回租金；患者愿帮生活不愿署信仰。",
+      "need": "接收患者的户主想要求患者参加自家仪式。"
+    },
+    {
+      "id": "CS-OSB-01",
+      "city": "OSB",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "父亲曾欠同一债主，想以女儿续住工来摆脱；自己的恐惧不能替她同意。",
+      "need": "女儿想离村学艺，父亲称路费只能借未来劳力。"
+    },
+    {
+      "id": "CS-OSB-02",
+      "city": "OSB",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "共围保护过大家，也被两户当作不许退出的理由。",
+      "need": "三个邻户共围田，其中一户要退却被堵牲口出口。"
+    },
+    {
+      "id": "CS-OSB-03",
+      "city": "OSB",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "女方愿成家却想保自己那块地，母亲曾将它预作陪嫁收礼。",
+      "need": "订婚家庭各认为女方应把井旁菜地带入新家。"
+    },
+    {
+      "id": "CS-MNS-01",
+      "city": "MNS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "木匠重复收定金，为替失业同工垫生活，双方真实需要不同。",
+      "need": "同批旧桶被酒户与护理点都预订。"
+    },
+    {
+      "id": "CS-MNS-02",
+      "city": "MNS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "原木匠NPC来源仅可选引用，新增工棚师徒另人；师傅怕没人再来找自己。",
+      "need": "木工作品多出学徒的独立改法，师傅要求抹掉小刻线。"
+    },
+    {
+      "id": "CS-MNS-03",
+      "city": "MNS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "枝活了，旧户现在想认收益；迁居户投入也不等全部土地归其。",
+      "need": "旧户要收回分给迁居户的葡枝，称当年只是借。"
+    },
+    {
+      "id": "CS-ALD-01",
+      "city": "ALD",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "本人可以署技术代号；家属不同意也不能替有能力本人选择全部匿名。",
+      "need": "衬工想认技术功劳，家属怕真名公开被追索。"
+    },
+    {
+      "id": "CS-ALD-02",
+      "city": "ALD",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "助手怕冲突失控，原宗教分裂无新神迹结论；死者没留下全部礼仪意愿。",
+      "need": "礼仪助手要求家属参加统一仪式才能领葬务补助。"
+    },
+    {
+      "id": "CS-ALD-03",
+      "city": "ALD",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "护具真能帮伤者，赠与被借作责任广告；原作装备只局部背景。",
+      "need": "赞助者要赠一副精工护具，条件是受赠者公开赞他无过。"
+    },
+    {
+      "id": "CS-SKO-01",
+      "city": "SKO",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "会计擅将两份收入写同袋，不是炭工必须忠诚就多干一班。",
+      "need": "炭工发现同笔工钱被说既是赎金也是炉料预款。"
+    },
+    {
+      "id": "CS-SKO-02",
+      "city": "SKO",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "归人不是每战都勇敢，也无义务以战功偿家人付钱。",
+      "need": "归人家属要求公开他是英雄以证明赎款值得。"
+    },
+    {
+      "id": "CS-SKO-03",
+      "city": "SKO",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "护符是普通私人信仰，实际热渣入水时间可核，不需证实神不存在。",
+      "need": "工人将接触冷却支沟后不适说成旧护符失效。"
+    },
+    {
+      "id": "CS-YOS-01",
+      "city": "YOS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "所谓余量包含已答给患者家的冬料，签字者想替全村提升价格。",
+      "need": "外客要买本村全部余毛，牧户说这正好证明村富了。"
+    },
+    {
+      "id": "CS-YOS-02",
+      "city": "YOS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "徒弟曾预收一单没做，但债务与强制人身归属分别核。",
+      "need": "师傅藏徒弟路费，称教养费必须全还才许走。"
+    },
+    {
+      "id": "CS-YOS-03",
+      "city": "YOS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "一个工班排残料，其他染工来源不同；颜色不是唯一可见危险判据。",
+      "need": "下游以新染色水拒所有迁来染工。"
+    },
+    {
+      "id": "CS-KOR-01",
+      "city": "KOR",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "旅人只授权留一晚床，驿主把等待当全月订单。",
+      "need": "驿主替未到旅人签了入住同意，要其家属付整月租。"
+    },
+    {
+      "id": "CS-KOR-02",
+      "city": "KOR",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "年轻人自选名不是隐藏贵族，取物与父母代理权分开。",
+      "need": "两个同姓家庭都要求代表能表达意愿的年轻人领取旧物。"
+    },
+    {
+      "id": "CS-KOR-03",
+      "city": "KOR",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "现有Kord缺镇史，画上人物未知，不能按相似姓外推官方统治。",
+      "need": "一张旧画被当地旅人称是城主肖像以抬售价。"
+    },
+    {
+      "id": "CS-EED-01",
+      "city": "EED",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "病木范围可由固定林记核，家族也曾把非病株记作病来截订单。",
+      "need": "护林者要砍一株标为病木的弓材，弓工称其为家族唯一传统。"
+    },
+    {
+      "id": "CS-EED-02",
+      "city": "EED",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "屋主以往借住给工人，实际拆梁会使活人无屋，捐桥不自动善行。",
+      "need": "旧屋主想卖屋梁供城市桥工，住屋者不同意。"
+    },
+    {
+      "id": "CS-EED-03",
+      "city": "EED",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "有人借巡林找欠债者，岗长本人只愿核危险林段却放过这项索名。",
+      "need": "地方岗要所有猎户报家庭住址作巡林证明。"
+    },
+    {
+      "id": "CS-FOR-01",
+      "city": "FOR",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "器物历史与现存组织不同，原骑卫存续待核，不造现役骑兵系统。",
+      "need": "旧物柜保一只骑卫纹杯，后人要重建现时骑卫荣光。"
+    },
+    {
+      "id": "CS-FOR-02",
+      "city": "FOR",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "少量尾料与真实生活水相连，领款者有权不接受未来无限排放。",
+      "need": "出资者要以一次金币给付了结生活水污染。"
+    },
+    {
+      "id": "CS-FOR-03",
+      "city": "FOR",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "份额收益与人身工班是两个权利，祖父合同写得含糊，不能自动束后人。",
+      "need": "家属要继承旧矿份，也要求伤矿工回井做对应班。"
+    },
+    {
+      "id": "CS-RAT-01",
+      "city": "RAT",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "旧怪物早已死，新损失不冒领旧赔款；旧村人也不能以先来剥新诉求。",
+      "need": "补偿名册只认旧村姓，新住户也有新畜损。"
+    },
+    {
+      "id": "CS-RAT-02",
+      "city": "RAT",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "仿的是这枚纪念物，不是自动证明原爵士故事虚构；她借旧原章价卖过。",
+      "need": "修工卖仿章，被要求承认从未真有英雄事迹。"
+    },
+    {
+      "id": "CS-RAT-03",
+      "city": "RAT",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "有人真愿仪式，有人拒重复悲痛；不推爵士死活与神迹。",
+      "need": "纪念日组织者以不参加者不该领取家庭援助。"
+    },
+    {
+      "id": "CS-PAS-01",
+      "city": "PAS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "必要通路有已有旁路，主路便利被当作强征理由。",
+      "need": "修路者要结欠工钱，关口称边境需要不许停。"
+    },
+    {
+      "id": "CS-PAS-02",
+      "city": "PAS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "同名不证明同人；合簿会公开家庭和病史。",
+      "need": "军民床簿各把同一名当不存在，接收员想合成一簿。"
+    },
+    {
+      "id": "CS-PAS-03",
+      "city": "PAS",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "家书本身不等于逃岗，官署与本人愿望要分开核。",
+      "need": "代理要拦自愿离岗者家书，称这样会让人想回去逃军需。"
+    },
+    {
+      "id": "CS-ASH-01",
+      "city": "ASH",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "家属怕感染并非全邪恶，钥匙属于本人旧权，局部新污染不证明全病传染。",
+      "need": "患者要取旧屋物件，家属愿送出却要收回其住所钥匙。"
+    },
+    {
+      "id": "CS-ASH-02",
+      "city": "ASH",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "患者愿换普通护理者，家属的疲劳与患者意愿都不应被抹。",
+      "need": "家属连续照护要停一段，被医者说是放弃患者。"
+    },
+    {
+      "id": "CS-ASH-03",
+      "city": "ASH",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "观察有有限价值，也不能把普通照护变人身试验交易。",
+      "need": "接收点称只剩一份护理物资，应给愿参加观察的病人。"
+    },
+    {
+      "id": "CS-HIG-01",
+      "city": "HIG",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "缺陷属于普通走台，不代表晶石封存失败；停牌不是拿命勒钱。",
+      "need": "维护者挂停牌，探索者要付钱让其撤牌不验。"
+    },
+    {
+      "id": "CS-HIG-02",
+      "city": "HIG",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "误差真实，不能用公众害怕合理化假安全，固定重复试断仍可做。",
+      "need": "仪表保管者想把不稳定读数补成平稳以让人放心。"
+    },
+    {
+      "id": "CS-HIG-03",
+      "city": "HIG",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "安全终局已冻结，劳工续约与处置类型分开；不是少巡一次井就重开。",
+      "need": "终局后维护人手被公开称全体自愿，实际有人只签一班。"
+    },
+    {
+      "id": "CS-MAE-01",
+      "city": "MAE",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "服饰不证明全身份，衣着风险原资料仍保，来源公开范围由本人或合法限权代理。",
+      "need": "躲藏者家属想卖其旧贵服换粮，怕卖物会证明本人贵族身份。"
+    },
+    {
+      "id": "CS-MAE-02",
+      "city": "MAE",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "姓名页、连续护理和篡改责任三种不同；烧全部会保护罪责且伤患者。",
+      "need": "看守想把混箱全部烧成无追索信息。"
+    },
+    {
+      "id": "CS-MAE-03",
+      "city": "MAE",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "护工只拒作阵营证人，仍愿照护；玛娅同伴将两项绑一起。",
+      "need": "民粮站把拒参与公议的护工删去，称不愿坐桌就是不愿担责任。"
+    },
+    {
+      "id": "CS-ALD-04",
+      "city": "ALD",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "历史书古围城不证明现代废墟，导者卖危机新故事。",
+      "need": "游客要把旧墙毁痕讲成今日奥尔德文再次陷落。"
+    },
+    {
+      "id": "CS-ALD-05",
+      "city": "ALD",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "师傅技术可真，广告让人以为无风险；学徒有权拒公开伤照也有权提工伤。",
+      "need": "工场广告只展示师傅完好的手，学徒受伤被要求藏在后间。"
+    },
+    {
+      "id": "CS-ALD-06",
+      "city": "ALD",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "中立转船不自动合法，地方器材可以买却不能给全国进口许可。",
+      "need": "运商称中立箱可以合法免去布林对奥尔德文货的限制。"
+    },
+    {
+      "id": "CS-MAE-04",
+      "city": "MAE",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "工人真实受过保护，但本人未授权永久代工；馈赠与控制可并存。",
+      "need": "工头说安置过的工人必须把新技永留其棚。"
+    },
+    {
+      "id": "CS-MAE-05",
+      "city": "MAE",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "原N10认证责任不自动解决莉德每段来源，塞娜不能代她选择署名。",
+      "need": "来源抄写者要查自己一段背注被凯姆摘要归作旁人所写。"
+    },
+    {
+      "id": "CS-MAE-06",
+      "city": "MAE",
+      "kind": "city-side",
+      "requires": [],
+      "turn": "留城者各有家、工或照护关系；撤离是选择，不等于给出唯一获救定义。",
+      "need": "救援者要把所有留城者迁出，以便宣布疏散完成。"
+    }
+  ],
+  "continuation": [
+    {
+      "id": "CS-BRY-11",
+      "title": "不写船名的夜泊",
+      "requires": [],
+      "repeatable": false,
+      "reward_owner": "CS-BRY-11"
+    },
+    {
+      "id": "CS-BRY-12",
+      "title": "两种火候",
+      "requires": [],
+      "repeatable": false,
+      "reward_owner": "CS-BRY-12"
+    },
+    {
+      "id": "CS-BRY-13",
+      "title": "页边的另一个名字",
+      "requires": [],
+      "repeatable": false,
+      "reward_owner": "CS-BRY-13"
+    },
+    {
+      "id": "CS-BRY-14",
+      "title": "地窖之外",
+      "requires": [],
+      "repeatable": false,
+      "reward_owner": "CS-BRY-14"
+    },
+    {
+      "id": "CS-BRY-15",
+      "title": "招募告示的背面",
+      "requires": [],
+      "repeatable": false,
+      "reward_owner": "CS-BRY-15"
+    },
+    {
+      "id": "CS-BRY-16",
+      "title": "空椅不是赞成",
+      "requires": [],
+      "repeatable": false,
+      "reward_owner": "CS-BRY-16"
+    }
+  ]
+}

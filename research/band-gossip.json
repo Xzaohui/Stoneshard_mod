@@ -1,0 +1,394 @@
+{
+  "date": "2026-10-13",
+  "scope": "S117 street-level reputation-band reactions: cold/warm tone lines per town and region, CN/EN parity; tone only, no service promises, no items, no knowledge",
+  "vocabulary": [
+    "band:-1",
+    "band:+2"
+  ],
+  "rules": [
+    "只写口气与场面：不承诺服务、不发物品、不给情报",
+    "服务台口径仍归[[城镇声望与信任系统]]；本池不得与柜台台词重复",
+    "band:-1 代表 ≤−1 的冷档，band:+2 代表 ≥+2 的热档；中间档不播本池",
+    "不含奖励、不推进任务、不写状态键"
+  ],
+  "lines": [
+    {
+      "id": "BG-BRY-low",
+      "place": "BRY",
+      "speaker": "摊主",
+      "when": "band:-1",
+      "cn": "布林人不记仇，只记账。你那笔，最近没人替你划。",
+      "en": "Brynn folk keep no grudges, only ledgers. Lately nobody strikes your entry.",
+      "link": "聚落_BRY_布林"
+    },
+    {
+      "id": "BG-BRY-high",
+      "place": "BRY",
+      "speaker": "摊主",
+      "when": "band:+2",
+      "cn": "你走这条街，摊主会先点头。点头不算折扣，算熟。",
+      "en": "Walk this street and the stalls nod first. A nod is not a discount - it is being known.",
+      "link": "聚落_BRY_布林"
+    },
+    {
+      "id": "BG-DEN-low",
+      "place": "DEN",
+      "speaker": "渡工",
+      "when": "band:-1",
+      "cn": "渡口的风认得人。你现在站上风处，没人跟你换位。",
+      "en": "The ford wind knows faces. You stand upwind now and nobody trades places with you.",
+      "link": "聚落_DEN_丹布里"
+    },
+    {
+      "id": "BG-DEN-high",
+      "place": "DEN",
+      "speaker": "渡工",
+      "when": "band:+2",
+      "cn": "船家会给你留靠里的位置。里面不湿鞋。",
+      "en": "The boatmen save you the inner seat. Inner seats stay dry.",
+      "link": "聚落_DEN_丹布里"
+    },
+    {
+      "id": "BG-OSB-low",
+      "place": "OSB",
+      "speaker": "乡民",
+      "when": "band:-1",
+      "cn": "村里借东西讲个来回。你的来回还没走完。",
+      "en": "Borrowing in this village goes both ways. Your way back is not walked yet.",
+      "link": "聚落_OSB_奥斯布鲁克"
+    },
+    {
+      "id": "BG-OSB-high",
+      "place": "OSB",
+      "speaker": "乡民",
+      "when": "band:+2",
+      "cn": "你来借筛子，会有人先应一声。",
+      "en": "Come for the sieve and someone answers before you finish asking.",
+      "link": "聚落_OSB_奥斯布鲁克"
+    },
+    {
+      "id": "BG-MNS-low",
+      "place": "MNS",
+      "speaker": "店主",
+      "when": "band:-1",
+      "cn": "酒馆的杯子都干净，给你那只例外。",
+      "en": "The tavern cups are all clean. Yours is the exception.",
+      "link": "聚落_MNS_曼郡"
+    },
+    {
+      "id": "BG-MNS-high",
+      "place": "MNS",
+      "speaker": "店主",
+      "when": "band:+2",
+      "cn": "你进门不用报名字，柜台知道给你倒哪一壶。",
+      "en": "You do not give your name here; the counter knows which jug is yours.",
+      "link": "聚落_MNS_曼郡"
+    },
+    {
+      "id": "BG-ALD-low",
+      "place": "ALD",
+      "speaker": "匠人",
+      "when": "band:-1",
+      "cn": "铺子肯收你的活，但不肯让你碰料。",
+      "en": "The shop takes your work but will not let you touch the stock.",
+      "link": "聚落_ALD_奥尔德文"
+    },
+    {
+      "id": "BG-ALD-high",
+      "place": "ALD",
+      "speaker": "匠人",
+      "when": "band:+2",
+      "cn": "匠人会让你看衬里的针脚。看针脚是给熟人的。",
+      "en": "The smith lets you see the lining stitches. Stitches are shown to familiars.",
+      "link": "聚落_ALD_奥尔德文"
+    },
+    {
+      "id": "BG-SKO-low",
+      "place": "SKO",
+      "speaker": "炉工",
+      "when": "band:-1",
+      "cn": "炉边热，你站的地方不热。",
+      "en": "The furnace side is warm. The spot you stand in is not.",
+      "link": "聚落_SKO_斯孔弗特"
+    },
+    {
+      "id": "BG-SKO-high",
+      "place": "SKO",
+      "speaker": "炉工",
+      "when": "band:+2",
+      "cn": "炉工会替你留一铲煤。留煤是给常来的人。",
+      "en": "The furnace men keep a shovel of coal for you. Kept coal is for regulars.",
+      "link": "聚落_SKO_斯孔弗特"
+    },
+    {
+      "id": "BG-YOS-low",
+      "place": "YOS",
+      "speaker": "织工",
+      "when": "band:-1",
+      "cn": "织机的声音会停一下，你走过去再响。",
+      "en": "The loom pauses while you pass, then starts again.",
+      "link": "聚落_YOS_约斯特文"
+    },
+    {
+      "id": "BG-YOS-high",
+      "place": "YOS",
+      "speaker": "织工",
+      "when": "band:+2",
+      "cn": "牧人会让你摸摸新剪的毛。摸毛是给熟客的。",
+      "en": "The shepherds let you feel the new fleece. Fleece is for familiar hands.",
+      "link": "聚落_YOS_约斯特文"
+    },
+    {
+      "id": "BG-KOR-low",
+      "place": "KOR",
+      "speaker": "寄存人",
+      "when": "band:-1",
+      "cn": "寄存的条子会多写一行日期。写细的，是防你的。",
+      "en": "Your storage slip gains an extra date line. Fine writing is written against you.",
+      "link": "聚落_KOR_考德"
+    },
+    {
+      "id": "BG-KOR-high",
+      "place": "KOR",
+      "speaker": "寄存人",
+      "when": "band:+2",
+      "cn": "库房会先给你开门，再问你办什么。",
+      "en": "The storeroom opens for you first and asks what for second.",
+      "link": "聚落_KOR_考德"
+    },
+    {
+      "id": "BG-EED-low",
+      "place": "EED",
+      "speaker": "护林人",
+      "when": "band:-1",
+      "cn": "护林人跟你说话会看着斧子。",
+      "en": "The forester talks to you with one eye on your axe.",
+      "link": "聚落_EED_伊德斯"
+    },
+    {
+      "id": "BG-EED-high",
+      "place": "EED",
+      "speaker": "护林人",
+      "when": "band:+2",
+      "cn": "护林人会指给你一条新踩出来的路。",
+      "en": "The forester points you down a freshly walked path.",
+      "link": "聚落_EED_伊德斯"
+    },
+    {
+      "id": "BG-FOR-low",
+      "place": "FOR",
+      "speaker": "矿工",
+      "when": "band:-1",
+      "cn": "井口的灯不会为你多点一盏。",
+      "en": "No extra lamp is lit at the shaft mouth for you.",
+      "link": "聚落_FOR_佛尔霍特"
+    },
+    {
+      "id": "BG-FOR-high",
+      "place": "FOR",
+      "speaker": "矿工",
+      "when": "band:+2",
+      "cn": "矿工会先指给你水桶在哪，再问你要下到哪层。",
+      "en": "The miners point out the water pail first, then ask which level you are going down to.",
+      "link": "聚落_FOR_佛尔霍特"
+    },
+    {
+      "id": "BG-RAT-low",
+      "place": "RAT",
+      "speaker": "农人",
+      "when": "band:-1",
+      "cn": "量地的人把绳子收得快。",
+      "en": "The surveyor winds the rope up fast.",
+      "link": "聚落_RAT_拉滕"
+    },
+    {
+      "id": "BG-RAT-high",
+      "place": "RAT",
+      "speaker": "农人",
+      "when": "band:+2",
+      "cn": "量地的人会告诉你去年的界在哪。",
+      "en": "The surveyor tells you where last year's line ran.",
+      "link": "聚落_RAT_拉滕"
+    },
+    {
+      "id": "BG-PAS-low",
+      "place": "PAS",
+      "speaker": "关兵",
+      "when": "band:-1",
+      "cn": "关兵翻你的文书会多翻两页。",
+      "en": "The gate men leaf two pages further through your papers.",
+      "link": "聚落_PAS_柏石关与关外聚落"
+    },
+    {
+      "id": "BG-PAS-high",
+      "place": "PAS",
+      "speaker": "关兵",
+      "when": "band:+2",
+      "cn": "关兵会先放你过，再补一句路上小心。",
+      "en": "The gate men wave you through first, then add: mind the road.",
+      "link": "聚落_PAS_柏石关与关外聚落"
+    },
+    {
+      "id": "BG-ASH-low",
+      "place": "ASH",
+      "speaker": "护理者",
+      "when": "band:-1",
+      "cn": "护理者会先问你来过几次。",
+      "en": "The carers ask how many times you have come before.",
+      "link": "聚落_ASH_寒凉盆地与护理村"
+    },
+    {
+      "id": "BG-ASH-high",
+      "place": "ASH",
+      "speaker": "护理者",
+      "when": "band:+2",
+      "cn": "门口的名册会先翻到有你名字的那页。",
+      "en": "The list at the door opens first to the page with your name.",
+      "link": "聚落_ASH_寒凉盆地与护理村"
+    },
+    {
+      "id": "BG-HIG-low",
+      "place": "HIG",
+      "speaker": "挑夫",
+      "when": "band:-1",
+      "cn": "药棚的水壶会收进去，等你走远再放出来。",
+      "en": "The shed puts its water jug away until you are well past.",
+      "link": "聚落_HIG_无名修院山地"
+    },
+    {
+      "id": "BG-HIG-high",
+      "place": "HIG",
+      "speaker": "挑夫",
+      "when": "band:+2",
+      "cn": "山道上的人会先招呼你歇一歇。",
+      "en": "People on the trail greet you and tell you to rest a while.",
+      "link": "聚落_HIG_无名修院山地"
+    },
+    {
+      "id": "BG-MAE-low",
+      "place": "MAE",
+      "speaker": "学者",
+      "when": "band:-1",
+      "cn": "学院的听差会先看你的鞋。",
+      "en": "The college porter looks at your shoes first.",
+      "link": "聚落_MAE_曼恩"
+    },
+    {
+      "id": "BG-MAE-high",
+      "place": "MAE",
+      "speaker": "学者",
+      "when": "band:+2",
+      "cn": "学者会停下讲半句，等你想清楚再问。",
+      "en": "A scholar stops mid-sentence and waits for you to think before asking.",
+      "link": "聚落_MAE_曼恩"
+    },
+    {
+      "id": "BG-R01-low",
+      "place": "R01",
+      "speaker": "渠口工人",
+      "when": "band:-1",
+      "cn": "渠口的人会停下说话，等你走开再继续。",
+      "en": "The culvert men stop talking and pick it up once you are gone.",
+      "link": "区域_R01_布林外港与旧渠"
+    },
+    {
+      "id": "BG-R01-high",
+      "place": "R01",
+      "speaker": "渠口工人",
+      "when": "band:+2",
+      "cn": "渠口的灯会为你多留一刻。",
+      "en": "The culvert lamp is kept burning a while longer for you.",
+      "link": "区域_R01_布林外港与旧渠"
+    },
+    {
+      "id": "BG-R02-low",
+      "place": "R02",
+      "speaker": "摆渡人",
+      "when": "band:-1",
+      "cn": "摆渡的会先问你去对岸做什么。",
+      "en": "The ferryman asks what you want on the far bank before he poles off.",
+      "link": "区域_R02_丹布里西路与渡口"
+    },
+    {
+      "id": "BG-R02-high",
+      "place": "R02",
+      "speaker": "摆渡人",
+      "when": "band:+2",
+      "cn": "摆渡的会把船往你这边靠半尺。",
+      "en": "The ferryman brings the boat half a foot closer to your side.",
+      "link": "区域_R02_丹布里西路与渡口"
+    },
+    {
+      "id": "BG-R03-low",
+      "place": "R03",
+      "speaker": "农人",
+      "when": "band:-1",
+      "cn": "草场上的陷，没人会告诉你新摆在哪。",
+      "en": "Nobody tells you where the new snares went in the meadow.",
+      "link": "区域_R03_曼恩边地"
+    },
+    {
+      "id": "BG-R03-high",
+      "place": "R03",
+      "speaker": "农人",
+      "when": "band:+2",
+      "cn": "设陷的人会喊一声，让你别踩那条线。",
+      "en": "The trapper calls out so you do not step on that line.",
+      "link": "区域_R03_曼恩边地"
+    },
+    {
+      "id": "BG-R04-low",
+      "place": "R04",
+      "speaker": "石工",
+      "when": "band:-1",
+      "cn": "关道上的石工会停下手里的活看你走过去。",
+      "en": "The quarrymen on the pass stop working to watch you walk by.",
+      "link": "区域_R04_王廷关隘与边城"
+    },
+    {
+      "id": "BG-R04-high",
+      "place": "R04",
+      "speaker": "石工",
+      "when": "band:+2",
+      "cn": "石工会让开半边道，让你先过。",
+      "en": "The quarrymen step aside and let you pass first.",
+      "link": "区域_R04_王廷关隘与边城"
+    },
+    {
+      "id": "BG-R05-low",
+      "place": "R05",
+      "speaker": "乡民",
+      "when": "band:-1",
+      "cn": "湿地边的人会绕开你走。",
+      "en": "Folk on the wetland edge walk around you.",
+      "link": "区域_R05_灰烬湿地与疫村"
+    },
+    {
+      "id": "BG-R05-high",
+      "place": "R05",
+      "speaker": "乡民",
+      "when": "band:+2",
+      "cn": "湿地边的人会替你指那条横着走的路。",
+      "en": "Folk on the wetland edge point out the way to cross sideways.",
+      "link": "区域_R05_灰烬湿地与疫村"
+    },
+    {
+      "id": "BG-R06-low",
+      "place": "R06",
+      "speaker": "药农",
+      "when": "band:-1",
+      "cn": "山道上的人会先问你从哪来，再决定说不说话。",
+      "en": "On the trail they ask where you came from before deciding to talk.",
+      "link": "区域_R06_无名修院山地"
+    },
+    {
+      "id": "BG-R06-high",
+      "place": "R06",
+      "speaker": "药农",
+      "when": "band:+2",
+      "cn": "山道上的人会分你半壶热水。",
+      "en": "On the trail someone shares half a flask of hot water with you.",
+      "link": "区域_R06_无名修院山地"
+    }
+  ]
+}

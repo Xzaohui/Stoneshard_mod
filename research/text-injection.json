@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-13",
+  "scope": "S176 text injection and localization conventions extracted from the implemented sample; planning only, nothing wired",
+  "evidence": {
+    "flow_injection": {
+      "line": 114,
+      "code": "\"variable_struct_set(global.__dialogue_flow_data, variable_struct_get(_flow, \\\"RootFragment\\\"), _flow);\\n\" +"
+    },
+    "line_injection": {
+      "line": 130,
+      "code": "\"    ds_map_set(global.npc_lines_map, _key, _row);\\n\" +"
+    },
+    "language_slot": {
+      "line": 129,
+      "code": "\"    variable_struct_set(_line, \\\"line_text\\\", array_get(_texts, global.language == 3 ? 1 : 0));\\n\" +"
+    },
+    "struct_guard": {
+      "line": 3,
+      "code": "if (instance_exists(o_player) && instance_exists(o_inventory) && variable_global_exists(\"consum_stat_data\") && variable_"
+    },
+    "quote_helper": {
+      "line": 39,
+      "code": "internal static string Quote(string value) => JsonSerializer.Serialize(value, new JsonSerializerOptions { Encoder = Java"
+    }
+  },
+  "conventions": {
+    "slots": "对白与文书文本以**双语数组**提供：索引 0＝EN，索引 1＝CN；`global.language == 3` 取 CN。",
+    "flow": "`__dialogue_flow_data` 挂 `RootFragment` 结构；`Fragments` 节点指向下一节点、行键或 `@dialogue_end`；`Speakers`／`Specs`（hub/technical/action）／`Scripts`（回调名）随流注册。",
+    "lines": "`npc_lines_map` 逐行挂 `key` 与 `line_text`；文本经 `json_parse` 注入，**不改 STRG、不依赖外部文件**。",
+    "documents": "文书类由 `NativeDocuments` 提供 ReadCheck／CarryCheck／GiveCode／Quote 等原语，阅读与携带状态走原生物品机制。"
+  },
+  "sample": {
+    "en": "Toman told me to find Verren's caravan. ",
+    "cn": "托曼叫我来找维伦的商队。这里有一封迟送的信、一张"
+  },
+  "sample_line_count": 19,
+  "flow_key_sample": [
+    "EAO_accept_pc",
+    "EAO_close_pc",
+    "EAO_copyfirst_pc",
+    "EAO_defer_pc",
+    "EAO_delivered",
+    "EAO_delivered_close_pc"
+  ],
+  "our_content": {
+    "dialogue_lines": 2717,
+    "documents": 12,
+    "signs": 16,
+    "field_npc_lines": 504,
+    "gossip_lines": 132,
+    "bilingual_pairs": 1384
+  }
+}

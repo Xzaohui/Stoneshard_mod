@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-13",
+  "scope": "S146 preservation-baseline registry: every concrete backups/ path referenced by tools, hashed read-only; deleting a snapshot breaks the preservation checks",
+  "entries": [
+    {
+      "snapshot": "backups/20261011-134931/formal-userdata/account.ini",
+      "used_by": [
+        "Write-BaselineRegistry.py",
+        "Write-ToolchainRecord.py"
+      ],
+      "bytes": 0,
+      "sha256": "",
+      "role": "not-a-dependency",
+      "purpose": "仅出现在工具链记录的“已停用检查”说明文本中，不是读取依赖。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s76/research/city-campaign.json",
+      "used_by": [
+        "Validate-CityDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 910585,
+      "sha256": "DBE8D74CE6B73E8020D1C9F11504D32BC56A185FB84110B5B1B3F74FD819F4BE",
+      "role": "preservation-baseline",
+      "purpose": "S76 布林批之前的城市模型：证明该批未改写其他城市的字段与戏剧源。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s78/city-campaign.json",
+      "used_by": [
+        "Validate-AdditionalCityDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 1044027,
+      "sha256": "197724B91DD92C49ED2FEAF830F8E9A6FF5326A098E36779F854B11245379ECB",
+      "role": "preservation-baseline",
+      "purpose": "S78 奥尔德文批之前的模型：证明布林演员表与全局字段保持不变。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s79/city-campaign.json",
+      "used_by": [
+        "Validate-MaenDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 1138728,
+      "sha256": "3E63DF662CE818BBF74DC2D7C252A1857E5C0A56BDCD646E688E9BBBC72E5011",
+      "role": "preservation-baseline",
+      "purpose": "S79 曼恩批之前的模型：证明既有城市与演员不被并入。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s80-art-followup/city-campaign.json",
+      "used_by": [
+        "Validate-ForgeAndWoolDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 1226511,
+      "sha256": "CB9E59A29EAD979DB9B7A0BDEFB18B6DD625381DE3C914BC796394551C90BD23",
+      "role": "preservation-baseline",
+      "purpose": "S80 冶炼／羊毛批之前的模型：证明既有回执与路线字段保留。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s81/city-campaign.json",
+      "used_by": [
+        "Validate-ShoreAndVineDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 1316469,
+      "sha256": "0FF47CFDE3EB4444F211C6AF529E9971BD5144539C00828D829F2A70B73167D3",
+      "role": "preservation-baseline",
+      "purpose": "S81 丹布里／曼郡批之前的模型：证明两城独立、他城不被改写。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s82/city-campaign.json",
+      "used_by": [
+        "Validate-ForestAndMineDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 1409967,
+      "sha256": "BA359E00AF0F64E119F5A928F078E999FE51BDFC280B8CA40E36D4203587CB27",
+      "role": "preservation-baseline",
+      "purpose": "S82 伊德斯／佛尔霍特批之前的模型：同上保留性检查。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s83/city-campaign.json",
+      "used_by": [
+        "Validate-GrainAndMemoryDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 1503151,
+      "sha256": "A4822018AD030CED169CDA9AFF93EED141B292D95F946F4D5A486C08A97CF45F",
+      "role": "preservation-baseline",
+      "purpose": "S83 奥斯布鲁克／拉滕批之前的模型：同上。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s84/city-campaign.json",
+      "used_by": [
+        "Validate-NamesAndPassDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 1597852,
+      "sha256": "DCDD754E290664964F6C3731B1516918FE758381CA9DD9FF29F65C5CE33DEEB1",
+      "role": "preservation-baseline",
+      "purpose": "S84 考德／柏石关批之前的模型：同上。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s84/story-network.json",
+      "used_by": [
+        "Validate-NamesAndPassDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 239685,
+      "sha256": "E18BC6ACB5806FF26A18C7F1AB2B00324465A832F4FD0B8780EC2239875F387C",
+      "role": "preservation-baseline",
+      "purpose": "S84 之前的网状叙事登记：证明该批未改写主线边与依赖。"
+    },
+    {
+      "snapshot": "backups/city-drama-20261012-s86/research/city-campaign.json",
+      "used_by": [
+        "Validate-CareAndHighlandDrama.py",
+        "Write-BaselineRegistry.py"
+      ],
+      "bytes": 1693799,
+      "sha256": "7699B7F5FB1430C35A7AFE24D5BD9875AEF4A45272EA73F8A862E9B4DFBEAAA6",
+      "role": "preservation-baseline",
+      "purpose": "S86 寒凉盆地／无名修院批之前的模型：证明 ASH／HIG 深化未改他城。"
+    },
+    {
+      "snapshot": "backups/city-spaces-20261012-s75/research/city-campaign.json",
+      "used_by": [
+        "Validate-CitySpaces.py",
+        "Write-BaselineRegistry.py",
+        "Write-CitySpaces.py"
+      ],
+      "bytes": 650023,
+      "sha256": "37198073D7495AD496DB3B51F470F7D0DD2B08D8D3455702861846A09E4A7746",
+      "role": "preservation-baseline",
+      "purpose": "S75 空间替换之前的模型：城市空间写手与校验器用它做差异源。"
+    }
+  ]
+}

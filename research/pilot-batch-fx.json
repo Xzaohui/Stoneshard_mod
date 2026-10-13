@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-13",
+  "scope": "S157 pilot batch field layer: one field NPC with four-state presence and visits, one document, one sign, ambient pool counts; planning only",
+  "npc": {
+    "id": "FX-QRY",
+    "role": "石场看守",
+    "site": "rumor_abandonedQuarry1",
+    "greetings": 3,
+    "chats": 3,
+    "site_lines": 3,
+    "visits": {
+      "task": "note",
+      "before": 1,
+      "after": 1,
+      "early": 1,
+      "late": 1,
+      "proxy": 1
+    }
+  },
+  "flow": {
+    "id": "FX-QRY",
+    "nodes": [
+      "intro",
+      "night",
+      "hub",
+      "before",
+      "after",
+      "early",
+      "late",
+      "refusal",
+      "proxy"
+    ]
+  },
+  "doc": {
+    "id": "DOC-PLG",
+    "kind": null
+  },
+  "sign": {
+    "id": "SGN-BR1",
+    "kind": null
+  },
+  "pools": {
+    "ambient-gossip": 30,
+    "town-gossip": 60,
+    "band-gossip": 42
+  },
+  "scenarios": [
+    {
+      "id": "FX-T01",
+      "name": "存在性四态",
+      "steps": [
+        "以 present 接近该人物",
+        "分别模拟 absent／dead／refused 后重访"
+      ],
+      "invariants": [
+        "absent 只播代理句",
+        "dead/refused 停本人新句但保事前有限陈述",
+        "不伪造新同意"
+      ]
+    },
+    {
+      "id": "FX-T02",
+      "name": "条件回访",
+      "steps": [
+        "先做任务再回访",
+        "或先回访再做任务"
+      ],
+      "invariants": [
+        "已结案只追加新句",
+        "顺序颠倒只重评未来",
+        "不回滚旧结"
+      ]
+    },
+    {
+      "id": "FX-T03",
+      "name": "文书只给信息",
+      "steps": [
+        "拾取并阅读该文书"
+      ],
+      "invariants": [
+        "不推进任务、不发物品、不改结算",
+        "原件/副件/残件分记"
+      ]
+    },
+    {
+      "id": "FX-T04",
+      "name": "迹象判定",
+      "steps": [
+        "观察该迹象并按提示判断"
+      ],
+      "invariants": [
+        "提示不含数值与掉落",
+        "观察不改变实际生成与判定"
+      ]
+    },
+    {
+      "id": "FX-T05",
+      "name": "闲谈三池",
+      "steps": [
+        "在地区／城镇／声望档三种语境下听闲谈"
+      ],
+      "invariants": [
+        "三池互不克隆",
+        "中间档不播档位池",
+        "闲谈不改任何结算"
+      ]
+    }
+  ]
+}

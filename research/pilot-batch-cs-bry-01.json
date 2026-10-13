@@ -1,0 +1,449 @@
+{
+  "date": "2026-10-13",
+  "scope": "S156 pilot batch CS-BRY-01: city case with systems wiring (service desk, trust bands, gossip pools); planning only, nothing implemented",
+  "quest": "CS-BRY-01",
+  "stubs": [
+    {
+      "event": "evt_CS_BRY_01_entry",
+      "node": "entry",
+      "trigger": "on_first_interaction",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_hub",
+      "node": "hub",
+      "trigger": "on_interaction",
+      "cooldown": "repeatable"
+    },
+    {
+      "event": "evt_CS_BRY_01_route_continuity",
+      "node": "route.continuity",
+      "trigger": "on_route_selected",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_route_exit",
+      "node": "route.exit",
+      "trigger": "on_route_selected",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_feedback_1_early",
+      "node": "feedback.1.early",
+      "trigger": "on_state_change",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_feedback_1_late",
+      "node": "feedback.1.late",
+      "trigger": "on_state_read",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_feedback_2_early",
+      "node": "feedback.2.early",
+      "trigger": "on_state_change",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_feedback_2_late",
+      "node": "feedback.2.late",
+      "trigger": "on_state_read",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_feedback_3_early",
+      "node": "feedback.3.early",
+      "trigger": "on_state_change",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_feedback_3_late",
+      "node": "feedback.3.late",
+      "trigger": "on_state_read",
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_CS_BRY_01_refusal",
+      "node": "refusal",
+      "trigger": "on_refusal",
+      "cooldown": "repeatable"
+    },
+    {
+      "event": "evt_CS_BRY_01_absent",
+      "node": "absent",
+      "trigger": "on_presence_check",
+      "cooldown": "repeatable"
+    },
+    {
+      "event": "evt_CS_BRY_01_before_city",
+      "node": "before_city",
+      "trigger": "on_state_read",
+      "cooldown": "repeatable"
+    },
+    {
+      "event": "evt_CS_BRY_01_after_city",
+      "node": "after_city",
+      "trigger": "on_state_read",
+      "cooldown": "repeatable"
+    }
+  ],
+  "keys": [
+    {
+      "key": "encountered_CS_BRY_01",
+      "kind": "encounter",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "resolve_CS_BRY_01",
+      "kind": "resolve",
+      "values": [
+        "none",
+        "continuity",
+        "exit"
+      ]
+    },
+    {
+      "key": "callback_CS_BRY_01_continuity",
+      "kind": "callback",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "consent_CS_BRY_01_continuity",
+      "kind": "consent",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "paid_CS_BRY_01_continuity",
+      "kind": "paid",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "callback_CS_BRY_01_exit",
+      "kind": "callback",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "consent_CS_BRY_01_exit",
+      "kind": "consent",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "paid_CS_BRY_01_exit",
+      "kind": "paid",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "presence_CS_BRY_01",
+      "kind": "presence",
+      "values": [
+        "present",
+        "absent",
+        "dead",
+        "refused"
+      ]
+    },
+    {
+      "key": "order_CS_BRY_01",
+      "kind": "order",
+      "values": [
+        "early",
+        "late",
+        "unknown"
+      ]
+    }
+  ],
+  "flow_nodes": [
+    "entry",
+    "hub",
+    "route.continuity",
+    "route.exit",
+    "feedback.1.early",
+    "feedback.1.late",
+    "feedback.2.early",
+    "feedback.2.late",
+    "feedback.3.early",
+    "feedback.3.late",
+    "refusal",
+    "absent",
+    "before_city",
+    "after_city"
+  ],
+  "methods": [
+    "continuity：跨巷限定居住见证",
+    "exit：撤争议租约，独立短租与申诉"
+  ],
+  "x_edges": [],
+  "systems": {
+    "service": {
+      "id": "SVC-BRY",
+      "name": "小批货样核验与运单誊写班",
+      "operator": "米罗·账",
+      "stock": [
+        "样扣核验：每批3件",
+        "布样核验：每批2幅",
+        "运单誊写：每案1份"
+      ]
+    },
+    "trust_town": "BRY",
+    "town_gossip_lines": 4,
+    "band_gossip_lines": 2
+  },
+  "scenarios": [
+    {
+      "id": "BRY01-T01",
+      "name": "接取与首见",
+      "steps": [
+        "在布林找到本案入口并首次交谈"
+      ],
+      "writes": [
+        [
+          "encountered_CS_BRY_01",
+          "true"
+        ]
+      ],
+      "invariants": [
+        "resolve 保持 none",
+        "不写 consent/paid"
+      ]
+    },
+    {
+      "id": "BRY01-T02",
+      "name": "continuity 路线结算",
+      "steps": [
+        "完成实际核验",
+        "选 continuity 并二次确认"
+      ],
+      "writes": [
+        [
+          "resolve_CS_BRY_01",
+          "continuity"
+        ],
+        [
+          "callback_CS_BRY_01_continuity",
+          "true"
+        ],
+        [
+          "consent_CS_BRY_01_continuity",
+          "true"
+        ],
+        [
+          "paid_CS_BRY_01_continuity",
+          "true"
+        ]
+      ],
+      "invariants": [
+        "exit 组键不写",
+        "未二次确认保持 pending"
+      ]
+    },
+    {
+      "id": "BRY01-T03",
+      "name": "exit 路线结算",
+      "steps": [
+        "完成实际核验",
+        "选 exit 并二次确认"
+      ],
+      "writes": [
+        [
+          "resolve_CS_BRY_01",
+          "exit"
+        ],
+        [
+          "callback_CS_BRY_01_exit",
+          "true"
+        ],
+        [
+          "consent_CS_BRY_01_exit",
+          "true"
+        ],
+        [
+          "paid_CS_BRY_01_exit",
+          "true"
+        ]
+      ],
+      "invariants": [
+        "continuity 组键不写",
+        "两路线互斥"
+      ]
+    },
+    {
+      "id": "BRY01-T04",
+      "name": "拒绝与缺席",
+      "steps": [
+        "明确拒绝本案",
+        "再接近同一人物"
+      ],
+      "writes": [
+        [
+          "presence_CS_BRY_01",
+          "refused"
+        ]
+      ],
+      "invariants": [
+        "resolve 保持 none",
+        "缺席时只播代理句"
+      ]
+    },
+    {
+      "id": "BRY01-T05",
+      "name": "早到/晚到回执",
+      "steps": [
+        "先做后续章再回本案",
+        "或先结本案再做后续章"
+      ],
+      "writes": [
+        [
+          "order_CS_BRY_01",
+          "early"
+        ],
+        [
+          "order_CS_BRY_01",
+          "late"
+        ]
+      ],
+      "invariants": [
+        "两种顺序只改未来台词",
+        "不回滚已结案",
+        "不重复结算"
+      ]
+    },
+    {
+      "id": "BRY01-T06",
+      "name": "服务班档位",
+      "steps": [
+        "以 0 档与 +1 档分别访问 BRY 服务班"
+      ],
+      "writes": [],
+      "invariants": [
+        "0 档按基础范围与正常价",
+        "+1 档只多一处小便利",
+        "不越权、不无限供给"
+      ]
+    },
+    {
+      "id": "BRY01-T07",
+      "name": "闲谈池分离",
+      "steps": [
+        "分别以 0 档与 +1 档听街头反应"
+      ],
+      "writes": [],
+      "invariants": [
+        "城镇池与声望档池不串",
+        "中间档不播档位池",
+        "闲谈不改任何结算"
+      ]
+    }
+  ],
+  "write_matrix": [
+    {
+      "scenario": "BRY01-T01",
+      "key": "encountered_CS_BRY_01",
+      "value": "true",
+      "kind": "encounter"
+    },
+    {
+      "scenario": "BRY01-T02",
+      "key": "resolve_CS_BRY_01",
+      "value": "continuity",
+      "kind": "resolve"
+    },
+    {
+      "scenario": "BRY01-T02",
+      "key": "callback_CS_BRY_01_continuity",
+      "value": "true",
+      "kind": "callback"
+    },
+    {
+      "scenario": "BRY01-T02",
+      "key": "consent_CS_BRY_01_continuity",
+      "value": "true",
+      "kind": "consent"
+    },
+    {
+      "scenario": "BRY01-T02",
+      "key": "paid_CS_BRY_01_continuity",
+      "value": "true",
+      "kind": "paid"
+    },
+    {
+      "scenario": "BRY01-T03",
+      "key": "resolve_CS_BRY_01",
+      "value": "exit",
+      "kind": "resolve"
+    },
+    {
+      "scenario": "BRY01-T03",
+      "key": "callback_CS_BRY_01_exit",
+      "value": "true",
+      "kind": "callback"
+    },
+    {
+      "scenario": "BRY01-T03",
+      "key": "consent_CS_BRY_01_exit",
+      "value": "true",
+      "kind": "consent"
+    },
+    {
+      "scenario": "BRY01-T03",
+      "key": "paid_CS_BRY_01_exit",
+      "value": "true",
+      "kind": "paid"
+    },
+    {
+      "scenario": "BRY01-T04",
+      "key": "presence_CS_BRY_01",
+      "value": "refused",
+      "kind": "presence"
+    },
+    {
+      "scenario": "BRY01-T05",
+      "key": "order_CS_BRY_01",
+      "value": "early",
+      "kind": "order"
+    },
+    {
+      "scenario": "BRY01-T05",
+      "key": "order_CS_BRY_01",
+      "value": "late",
+      "kind": "order"
+    }
+  ],
+  "gml_files": [
+    "cs_bry_01_entry.gml",
+    "cs_bry_01_hub.gml",
+    "cs_bry_01_route_continuity.gml",
+    "cs_bry_01_route_exit.gml",
+    "cs_bry_01_feedback_1_early.gml",
+    "cs_bry_01_feedback_1_late.gml",
+    "cs_bry_01_feedback_2_early.gml",
+    "cs_bry_01_feedback_2_late.gml",
+    "cs_bry_01_feedback_3_early.gml",
+    "cs_bry_01_feedback_3_late.gml",
+    "cs_bry_01_refusal.gml",
+    "cs_bry_01_absent.gml",
+    "cs_bry_01_before_city.gml",
+    "cs_bry_01_after_city.gml"
+  ]
+}

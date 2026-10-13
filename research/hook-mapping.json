@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-13",
+  "scope": "S171 hook mapping: eight trigger kinds mapped to concrete engine hook patterns with evidence from the implemented sample; read-only",
+  "trigger_counts": {
+    "on_first_interaction": 166,
+    "on_interaction": 166,
+    "on_route_selected": 247,
+    "on_state_change": 365,
+    "on_state_read": 552,
+    "on_refusal": 166,
+    "on_presence_check": 109,
+    "on_interaction_if_night": 36
+  },
+  "cooldown_counts": {
+    "once": 1132,
+    "repeatable": 675
+  },
+  "hooks": {
+    "on_first_interaction": {
+      "pattern": "对象创建 + 原生对白流登记",
+      "evidence": [
+        {
+          "file": "night_controller_step.gml",
+          "line": 27,
+          "code": "instance_create_depth(_px, _py, -_py, _obj);"
+        },
+        {
+          "file": "night_controller_step.gml",
+          "line": 3,
+          "code": "if (!instance_exists(o_player) || !variable_global_exists(\"characterDataMap\") || !variable_global_exists(\"__di"
+        }
+      ],
+      "rule": "首见对象只在原生前置满足时生成；对话经 `__dialogue_flow_data` 登记，写 encountered 一次。"
+    },
+    "on_interaction": {
+      "pattern": "对象存在 + 可重复对白",
+      "evidence": [
+        {
+          "file": "night_controller_step.gml",
+          "line": 2,
+          "code": "if (instance_exists(o_dialogue) || instance_exists(o_smoothRoomChanger)) exit;"
+        }
+      ],
+      "rule": "对象已存在即播；不写键（可重复），只按既有回执分流。"
+    },
+    "on_route_selected": {
+      "pattern": "结算提交点 + 键写入",
+      "evidence": [
+        {
+          "file": "controller_step.gml",
+          "line": 23,
+          "code": "ds_map_set(global.characterDataMap, \"EAO_D01_archive_visited\", 1);"
+        }
+      ],
+      "rule": "只在\"实际处置 + 二次确认\"之后写 resolve/callback/consent/paid；预览与关闭不写。"
+    },
+    "on_state_change": {
+      "pattern": "键写入 + 后续重评",
+      "evidence": [
+        {
+          "file": "night_entry_alarm.gml",
+          "line": 4,
+          "code": "ds_map_set(global.characterDataMap, \"EAO_N1_origin_room\", room_get_name(room));"
+        }
+      ],
+      "rule": "状态变化只重评未来行动；不回溯已结案，不重复结算。"
+    },
+    "on_state_read": {
+      "pattern": "只读判定（对话线选择）",
+      "evidence": [
+        {
+          "file": "night_controller_step.gml",
+          "line": 20,
+          "code": "if (_n == 1 && (!ds_map_exists(global.characterDataMap, \"EAO_N1_stage\") || ds_map_find_value(global.characterD"
+        }
+      ],
+      "rule": "读取只用于选线与守卫；读不改状态，也不构成\"已知\"授权。"
+    },
+    "on_refusal": {
+      "pattern": "拒绝分支（不写 resolve）",
+      "evidence": [
+        {
+          "file": "test_teleport_execute.gml",
+          "line": 1,
+          "code": "if (!ds_map_exists(global.characterDataMap, \"EAO_test_map_pending\") || ds_map_find_value(global.characterDataM"
+        }
+      ],
+      "rule": "拒绝写 presence=refused；resolve 保持 none，拒绝后只播拒绝回应。"
+    },
+    "on_presence_check": {
+      "pattern": "存在性四态评估 + 缺席替代",
+      "evidence": [
+        {
+          "file": "controller_step.gml",
+          "line": 3,
+          "code": "if (instance_exists(o_player) && instance_exists(o_inventory) && variable_global_exists(\"consum_stat_data\") &&"
+        }
+      ],
+      "rule": "present/absent/dead/refused 四态先判；缺席只播代理句，死亡/拒绝停本人新句。"
+    },
+    "on_interaction_if_night": {
+      "pattern": "昼夜条件 + 对白",
+      "evidence": [
+        {
+          "file": "night_controller_step.gml",
+          "line": 2,
+          "code": "if (instance_exists(o_dialogue) || instance_exists(o_smoothRoomChanger)) exit;"
+        }
+      ],
+      "rule": "按房间/时段条件决定是否播；条件不满足时保留基础入口，不吞掉对话。"
+    }
+  }
+}

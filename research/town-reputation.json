@@ -1,0 +1,343 @@
+{
+ "date": "2026-10-12",
+ "status": "draft",
+ "canon": "mod-original",
+ "scope": "Mod原创城镇信任层；与原作声誉、本Mod阵营承诺分层。设计语义，未映射引擎；不改游戏包。",
+ "source_layers": [
+  {"id": "original_reputation", "name_cn": "原作声誉", "name_en": "Original Reputation", "note_cn": "聚落与阵营两级、档位、来源明细、历史与跨地传播均归原作；本设计不改写、不冒充其档位消息，也不把同一行为重复计两份。原版经验见[[原作剧情与对话系统参照]]。", "note_en": "Village and faction scopes, tiers, source ledger, history and spread belong to the base game; this design never rewrites them or double-counts the same deed."},
+  {"id": "faction_commitments", "name_cn": "阵营承诺", "name_en": "Faction Commitments", "note_cn": "沿用现有F01..F08的local_trust −2..+2，只在具体支线条款实际执行后写入；托管资格等按原字段判定。", "note_en": "Existing F01..F08 local_trust stays as-is; written only after concrete clauses actually execute."},
+  {"id": "town_trust", "name_cn": "城镇信任", "name_en": "Town Trust", "note_cn": "本页新增层：十五个地域各一条记录，五档；只从实际执行、最小核验的成果写入；用于对话语气、有限服务与回访伏笔，不替代结局资格。", "note_en": "This layer: one record per region, five bands, written only from executed and minimally verified outcomes; drives voice, limited services and callbacks — never ending eligibility."}
+ ],
+ "scale": [
+  {"value": -2, "class": "exclusion", "name_cn": "排斥", "name_en": "Exclusion", "behavior_cn": "只保原基本服务与双向回程；本地新增服务关闭；NPC只谈当下事务，不给邀请与转介；不缉拿、不代原版犯罪处理。", "behavior_en": "Base services and return route only; mod services closed; no invitations or referrals; never applies base-game crime handling."},
+  {"value": -1, "class": "guarded", "name_cn": "戒备", "name_en": "Guarded", "behavior_cn": "本地新增服务限范围或限时开放；报价不改，但先问已核事实；需要本人分项授权的事逐项再问。", "behavior_en": "Mod services open only in restricted scope or hours; prices unchanged; verified facts asked first; consent items re-asked one by one."},
+  {"value": 0, "class": "stranger", "name_cn": "陌生", "name_en": "Stranger", "behavior_cn": "基础服务按原价；可听公开需要；不授予本地署名、邀请与优先位置。", "behavior_en": "Base services at normal price; public needs audible; no local credit, invitations or priority."},
+  {"value": 1, "class": "recognized", "name_cn": "认可", "name_en": "Recognized", "behavior_cn": "回执语气按已核事实回应；一处小便利（预约位/优先时段/小额折扣，单渠道不超15%）；可收到本地待办提示。", "behavior_en": "Receipts answered by verified fact; one small convenience (slot/priority/wording discount up to 15% in one channel); local pending work hinted."},
+  {"value": 2, "class": "entrusted", "name_cn": "受托", "name_en": "Entrusted", "behavior_cn": "获得本地具名位置与一次性回访伏笔；仍不越本人授权、不无限供物、不代签。", "behavior_en": "A named local place and one-time callbacks; still no override of consent, no unlimited stock, no proxy signatures."}
+ ],
+ "rules": [
+  {"id": "R1", "cn": "只写实际执行且经最小核验的成果；预览、询问、拒绝、缺场、单纯完成对话都不写。", "en": "Only executed and minimally verified outcomes write; previews, questions, refusals, absences and dialogue alone never do."},
+  {"id": "R2", "cn": "每来源一次：主线章按实际路线±1，支线按实际交付±1，日常不改档；重大明确伤害−1；上限±2。", "en": "Once per source: regional chapters and side chains ±1 by real delivery; dailies never change bands; explicit grave harm −1; cap ±2."},
+  {"id": "R3", "cn": "与原作声誉分开：不改写其档位消息与来源，也不把同一行为重复计为两份声望。", "en": "Separate from base-game reputation: never rewrite its tier messages or sources, never double-count one deed."},
+  {"id": "R4", "cn": "罪行、赃物与刑罚仍由原作处理；城镇信任不能洗罪名、抵罚金或换销赃。", "en": "Crime, stolen goods and punishment remain base-game; town trust never washes charges, fines or fences goods."},
+  {"id": "R5", "cn": "低信任不锁主线、基本服务与双向回程；负档不逼卖人，也不生成寻仇刷怪。", "en": "Low trust never locks the main line, base services or return routes; negative bands never force selling people or spawn revenge mobs."},
+  {"id": "R6", "cn": "服务折扣单渠道≤15%，不叠成负价；高信任不无限抽物资、劳工、床位或仓位。", "en": "Service discounts ≤15% in one channel, never stacking below cost; high trust never yields unlimited stock, labour, beds or berths."},
+  {"id": "R7", "cn": "无静默衰减；补救与实际赔付另记，伤害史不删；只重评未来，不倒改历史。", "en": "No silent decay; remedies and real compensation are logged separately; history never rewrites, only future reevaluates."},
+  {"id": "R8", "cn": "最终确认之后冻结：之后只做回访与未来维护，不重选旧方法、不改旧快照。", "en": "Frozen after the final confirmation: only callbacks and future upkeep; old methods and snapshots never change."},
+  {"id": "R9", "cn": "死亡、缺席、拒绝优先：死者不发言、不补授权；缺场只留记录，不拿柜员代答。", "en": "Death, absence and refusal come first: the dead never speak or grant; records stand in, never a clerk's impersonation."},
+  {"id": "R10", "cn": "跨城只走明列传递与听闻；同一成果不得在多城重复计成同等数字。", "en": "Cross-town flow uses only listed transfers and hearsay entries; one deed never counts as full value in several towns."}
+ ],
+ "ui": {
+  "label_cn": "地方信任", "label_en": "Local Trust",
+  "standing_cn": "你在〈{town}〉的记录：{band}", "standing_en": "Your standing in {town}: {band}",
+  "changed_cn": "〈{town}〉对你的口气变了：{band}。", "changed_en": "The tone in {town} has changed: {band}.",
+  "record_title_cn": "城镇信任记录", "record_title_en": "Town Trust Record",
+  "legend_cn": "只记实际做过的事；拒绝与中立不写负数；查明伤害另记；原作声誉另页。", "legend_en": "Only verifiable deeds are recorded; refusal is not a negative; proven harm is separate; base-game reputation stays on its own page.",
+  "gate_cn": "这扇门现在只开到{band}允许的范围。", "gate_en": "This door opens only as far as {band} allows.",
+  "freeze_cn": "残光之井确认之后，城镇记录不再回写旧选择。", "freeze_en": "After the Well confirmation, town records never rewrite past choices."
+ },
+ "groups": {
+  "union": ["BRY", "DEN", "OSB", "MNS"],
+  "court": ["ALD", "SKO", "YOS", "KOR"],
+  "legion": ["MAE", "EED", "FOR", "RAT"]
+ },
+ "transfers": [
+  {"when": "CM-OSB", "from": "OSB", "to": "BRY", "delta": 1, "once": true, "cn": "粮路账目实际进港并核验后，布林按城联旧例收下‘部分’份额；重复运粮不再叠加。", "en": "Once the grain ledger actually reaches the harbour and is verified, Brynn records its union 'portion'; repeated hauling never stacks."},
+  {"when": "CM-MNS", "from": "MNS", "to": "BRY", "delta": 1, "once": true, "cn": "酒账经港口报关核验后记一次；家酿小单不触发。", "en": "One entry after the cellar ledger clears the harbour; small private orders do not trigger it."},
+  {"when": "CM-DEN", "from": "DEN", "to": "BRY", "delta": 1, "once": true, "cn": "堤料账并入城联记录后记一次；不含未付预付款。", "en": "One entry once the dike-material account joins the union record; unpaid advances excluded."},
+  {"when": "CM-YOS", "from": "YOS", "to": "ALD", "delta": 1, "once": true, "cn": "王廷采买旧例：家纹布实际进入衬里线核验后，奥尔德文记一次‘部分’。", "en": "Court custom: after marked cloth actually enters the lining line, Aldwynn records its 'portion' once."},
+  {"when": "CM-EED", "from": "EED", "to": "FOR", "delta": 1, "once": true, "cn": "灰军旧例：经核验的旧梁实际进入矿架后记一次；不证明现时木材永远充足。", "en": "Legion custom: one entry after verified old timber reaches the pit frames; no proof of endless supplies."},
+  {"when": "CM-MAE", "from": "MAE", "to": "ASH", "delta": 1, "once": true, "cn": "护理抄本线实际接通后记一次；药物与工时仍按实际到班另核。", "en": "One entry once the care-copy line actually connects; drugs and shifts still verified on delivery."}
+ ],
+ "towns": [
+  {
+   "id": "BRY", "name_cn": "布林", "name_en": "Brynn",
+   "bands": [
+    {"value": -2, "name_cn": "上了另一本账", "name_en": "On the Other Ledger", "line_cn": "「不用报了。你这名字在另一本簿子上。」", "line_en": "\"Don't bother calling. Your name sits in the other ledger.\""},
+    {"value": -1, "name_cn": "生面孔", "name_en": "New Face", "line_cn": "「东西可以买。话先说到能查的那一段。」", "line_en": "\"You can buy. Talk only goes as far as it can be checked.\""},
+    {"value": 0, "name_cn": "过路客", "name_en": "Passer-Through", "line_cn": "「布林不留人，只留账。」", "line_en": "\"Brynn keeps ledgers, not guests.\""},
+    {"value": 1, "name_cn": "账上认过人", "name_en": "Counted Once", "line_cn": "「那一笔我看见了。下次报名字短一点就行。」", "line_en": "\"I saw that entry. Next time, your name can be shorter.\""},
+    {"value": 2, "name_cn": "城墙内的人", "name_en": "Within the Walls", "line_cn": "「进来吧。灯位给你留着，账还是照记。」", "line_en": "\"Come in. A lamp seat is kept for you — the ledger still rules.\""}
+   ],
+   "writes": [
+    {"source": "CM-BRY", "match": ["civic", "separate", "patron"], "delta": 1, "cn": "本地主章任一实际路线执行并交接后记一次。", "en": "Once after any executed regional-chapter route actually hands over."},
+    {"source": "CS-BRY-06", "match": ["amend", "record"], "delta": 1, "cn": "实际更正与留档执行后。", "en": "After the real amendment and record are executed."},
+    {"source": "CS-BRY-09", "match": ["homes", "splitflow"], "delta": 1, "cn": "水门实际分流并在两栏登记后。", "en": "After the water gate actually splits flow and both columns are logged."},
+    {"source": "N2", "match": ["return", "protected", "agency"], "delta": 1, "cn": "工人生死与去向按本人范围实际落定、回执按IN-BRY实际送达后记一次；worker_status=dead不写。", "en": "Once worker status lands within personal scope and the IN-BRY receipt is actually passed; not with worker_status=dead."},
+    {"source": "SQ01", "match": ["public", "guild"], "delta": 1, "cn": "撤保、停追与赔付实际执行后按既有条款记一次；buyout只救人，不写制度承诺。", "en": "Once after guarantees are actually withdrawn and compensation executed; buyout saves people but writes no institutional promise."},
+    {"source": "N4", "match": ["shift"], "delta": -1, "cn": "转嫁伤害已执行且未remedied时写−1；补救完成后不再回改，这条负档只说明历史。", "en": "−1 while shifted harm stands unremedied; after remedy it still stands as history, never rewritten."}
+   ],
+   "receipt": {"source": "N2", "cn": "IN-BRY回执只含本案已公开的核验范围；不展未授权名单与住址。", "en": "The IN-BRY receipt carries only this case's already-public verification scope."},
+   "unlock": {"anchor": "米罗·账", "cn": "受托可在〈四区小听席〉旁听一次；不代投票、不保证议题、不换账页。", "en": "Entrusted: one listening seat at the Four-Ward Bench; no vote, no agenda promise, no ledger pages."},
+   "echo": {"from": "OSB", "anchor": "米罗·账", "cn": "听闻（奥斯布鲁克粮路经核验）：可以问「那车到了没有」，但不自动知道全部粮账。", "en": "Hearsay (verified Osbrook grain): you may ask about that cart, never the whole ledger."},
+   "limits": {"cn": "四城区原街、原商店与原任务不因信任改开门；犯罪照原作；高信任不给无限仓位与免费修补。", "en": "Original streets, shops and quests never re-gate by trust; crime stays base-game; high trust grants no free berths or repairs."}
+  },
+  {
+   "id": "DEN", "name_cn": "丹布里", "name_en": "Denbrie",
+   "bands": [
+    {"value": -2, "name_cn": "空堤对面", "name_en": "Across the Empty Dike", "line_cn": "「堤上不留对面的人。水退不退，都一样的。」", "line_en": "\"The dike keeps no room for the other side. Water or no water.\""},
+    {"value": -1, "name_cn": "只在潮线外", "name_en": "Outside the Tide Line", "line_cn": "「潮线上来之前，你把话说完。」", "line_en": "\"Finish before the tide line.\""},
+    {"value": 0, "name_cn": "等水退的", "name_en": "Waiting for the Water", "line_cn": "「都在等。你要是也等，就往边上站站。」", "line_en": "\"Everyone's waiting. If you're waiting too, stand aside.\""},
+    {"value": 1, "name_cn": "堤上有手印", "name_en": "Handprints on the Dike", "line_cn": "「那一段有你抬过的石头。别自己再把它抬走。」", "line_en": "\"You carried stones for that stretch. Don't carry them off again.\""},
+    {"value": 2, "name_cn": "堤上有名字", "name_en": "A Name on the Dike", "line_cn": "「名字上堤了。潮来的时候我们照念，不照拜。」", "line_en": "\"Your name is on the dike. We read it at high water — we don't worship it.\""}
+   ],
+   "writes": [
+    {"source": "CM-DEN", "match": ["shared", "leases"], "delta": 1, "cn": "堤段与租约实际落定后记一次。", "en": "Once after dike sections and leases actually settle."},
+    {"source": "CS-DEN-01", "match": ["a"], "delta": 1, "cn": "第四人身份按本人授权实际处理后才写；b路保0，不扣。", "en": "Only after the fourth person's case is handled on personal consent; route b stays 0, no penalty."},
+    {"source": "N1", "match": ["shelter", "hearing", "mediation"], "delta": 1, "cn": "IN-DEN回执实际送达且本地接收棚按本人范围确认后记一次。", "en": "Once the IN-DEN receipt is actually delivered and shelters confirm within personal scope."}
+   ],
+   "receipt": {"source": "N1", "cn": "无钟之夜的结果只以本地已公开范围进入丹布里；不替失踪者签名，不预支安置。", "en": "The bell-night outcome enters Denbrie only as its public scope; no proxy signatures, no advance housing."},
+   "unlock": {"anchor": "瑟芬·网", "cn": "受托可在棚簿留一行经手记录（只读一圈，不改租契、不动床位）。", "en": "Entrusted: one handling line in the shelters' book — one read-around, no lease or bed changes."},
+   "echo": {"from": "BRY", "anchor": "瑟芬·网", "cn": "听闻（布林港账问过堤料）：可以回答「布林的账房问过」，不自动知道价格与工期。", "en": "Hearsay: you may say Brynn's clerks asked about dike materials — never the price or schedule."},
+   "limits": {"cn": "洪灾旧损与租住条件照原；负档不赶人出屋、不收回已付租；水位与保存仍按原作。", "en": "Flood damage and tenancy stay base-game; negative bands neither evict nor reclaim settled rent."}
+  },
+  {
+   "id": "OSB", "name_cn": "奥斯布鲁克", "name_en": "Osbrook",
+   "bands": [
+    {"value": -2, "name_cn": "不许碰篱门", "name_en": "Off the Gate Line", "line_cn": "「篱门不是给你扶的。往路边站。」", "line_en": "\"The gate isn't yours to hold. Stand off.\""},
+    {"value": -1, "name_cn": "先问再借", "name_en": "Ask Before Borrowing", "line_cn": "「用哪件先说，别顺手。」", "line_en": "\"Name it before you take it.\""},
+    {"value": 0, "name_cn": "来年再说", "name_en": "Maybe Next Year", "line_cn": "「今年说今年的话。来年的事来年问。」", "line_en": "\"This year's talk for this year. Ask next year for next.\""},
+    {"value": 1, "name_cn": "留过一袋种", "name_en": "A Sack Kept", "line_cn": "「你留的那袋没动。要不要看看袋口？」", "line_en": "\"Your sack's untouched. Want to see the knot?\""},
+    {"value": 2, "name_cn": "三篱让路", "name_en": "Let Through the Three Hedges", "line_cn": "「三道篱都认得你。别把篱当门踹。」", "line_en": "\"All three hedges know you. Don't kick them like doors.\""}
+   ],
+   "writes": [
+    {"source": "CM-OSB", "match": ["seed", "advance"], "delta": 1, "cn": "留种或预支实际交付后记一次。", "en": "Once after the kept seed or advance is actually delivered."},
+    {"source": "CS-OSB-02", "match": ["a"], "delta": 1, "cn": "三篱门实际共用安排执行后；b保持0。", "en": "After the shared-gate arrangement executes; b stays 0."}
+   ],
+   "receipt": {"source": "DT04", "cn": "日常回执只改本地服务的物料与时段，不改档。", "en": "Daily receipts change local service materials and hours only, never bands."},
+   "unlock": {"anchor": "德娅", "cn": "受托可先看麦根庄未分柜的实到量（只读、不外带、不截留）。", "en": "Entrusted: first look at Maigen's unallocated deliveries — read-only, nothing carried off."},
+   "echo": {"from": "MNS", "anchor": "德娅", "cn": "听闻（曼郡酒账）：可问「今年桶够不够」，不改变任何配给。", "en": "Hearsay: you may ask whether barrels suffice this year; allocations stay untouched."},
+   "limits": {"cn": "粮、地契与领主关系照原；信任不改收成、不给预留田；负档不烧青苗、不锁磨坊。", "en": "Grain, deeds and lordship stay base-game; trust changes no harvest and reserves no field; negative bands never burn crops or lock the mill."}
+  },
+  {
+   "id": "MNS", "name_cn": "曼郡", "name_en": "Mannshire",
+   "bands": [
+    {"value": -2, "name_cn": "不给第二杯", "name_en": "No Second Pour", "line_cn": "「第一杯是生意。第二杯先别提。」", "line_en": "\"The first pour is trade. Don't ask for the second.\""},
+    {"value": -1, "name_cn": "桶上有旧账", "name_en": "Old Debt on the Barrel", "line_cn": "「桶底的字你还认得吧？」", "line_en": "\"You still know the letters on the barrel's base?\""},
+    {"value": 0, "name_cn": "外地口味", "name_en": "An Outsider's Palate", "line_cn": "「先尝尝。别急着说年份。」", "line_en": "\"Taste first. Don't call the year yet.\""},
+    {"value": 1, "name_cn": "记得的年份", "name_en": "A Year They Recall", "line_cn": "「你经手那批的颜色，我们记得。」", "line_en": "\"We recall the colour of the batch you handled.\""},
+    {"value": 2, "name_cn": "存着你的酒位", "name_en": "Your Rack, Kept", "line_cn": "「那格空着，牌上写着你的记号。」", "line_en": "\"That rack stays empty — the tag carries your mark.\""}
+   ],
+   "writes": [
+    {"source": "CM-MNS", "match": ["newlabel", "limited"], "delta": 1, "cn": "新标或限量方案实际执行后记一次。", "en": "Once after the new label or limited scheme actually executes."},
+    {"source": "CS-MNS-03", "match": ["a"], "delta": 1, "cn": "种枝实际交接与收益分开后。", "en": "After cuttings actually hand over with proceeds separated."},
+    {"source": "SQ06", "match": ["twocopies", "custodian"], "delta": 1, "cn": "两处独立保管/校核实际成立后记一次；exclusive不写、不扣。", "en": "Once two independent custodies/checks actually hold; exclusive writes nothing and loses nothing."}
+   ],
+   "receipt": {"source": "SQ06", "cn": "抄本回执只谈技术差异与保管，不宣布全库已见。", "en": "Copy receipts speak to technical gaps and custody only; never to having seen the whole archive."},
+   "unlock": {"anchor": "提奥·桶", "cn": "受托可得一格空酒位存玩家自己的桶（不可售、不代管配方）。", "en": "Entrusted: one empty rack for your own cask — not for sale, no recipe custody."},
+   "echo": {"from": "BRY", "anchor": "赛芙", "cn": "听闻（布林报关）：可以问「港上这批要不要换标」，不自动知道配额。", "en": "Hearsay: you may ask whether the harbour batch needs a new label; quotas stay unknown."},
+   "limits": {"cn": "酒业产值与商会关系照原；信任不改税、不给独家配方；负档不砸桶、不锁酒窖。", "en": "Wine economy and guild ties stay base-game; no tax or recipe changes; negative bands never smash barrels or lock cellars."}
+  },
+  {
+   "id": "ALD", "name_cn": "奥尔德文", "name_en": "Aldwynn",
+   "bands": [
+    {"value": -2, "name_cn": "不打你的尺", "name_en": "Not Measured", "line_cn": "「尺不为你开。站远一点，别碰架。」", "line_en": "\"The measure stays closed. Step back from the rack.\""},
+    {"value": -1, "name_cn": "只看不试", "name_en": "Look, Don't Fit", "line_cn": "「看可以。合不合身，今天不提。」", "line_en": "\"Looking is fine. Fitting is not for today.\""},
+    {"value": 0, "name_cn": "门外客", "name_en": "At the Door", "line_cn": "「门开着，案子上的名字不是你的。」", "line_en": "\"The door is open; the name on the bench isn't yours.\""},
+    {"value": 1, "name_cn": "尺上有痕", "name_en": "A Mark on the Measure", "line_cn": "「你那道痕还在尺上。别急着刮平。」", "line_en": "\"Your mark is still on the measure. Don't smooth it yet.\""},
+    {"value": 2, "name_cn": "名字缝进衬里", "name_en": "Stitched into the Lining", "line_cn": "「衬里上的字按你同意的缝。要拆，也得你来说。」", "line_en": "\"The lining letters are stitched as you agreed. Unpicking is yours to ask.\""}
+   ],
+   "writes": [
+    {"source": "CM-ALD", "match": ["open", "distributed", "seal"], "delta": 1, "cn": "公开、分散或封存方案实际执行后记一次。", "en": "Once after the open, distributed or sealed scheme actually executes."},
+    {"source": "CS-ALD-04", "match": ["a"], "delta": 1, "cn": "旧墙实际按新用途保下后。", "en": "After the old wall is actually kept for its new use."},
+    {"source": "N7", "match": ["withdraw", "parallel", "inspection"], "delta": 1, "cn": "IN-ALD回执实际送达且监督条款落地后记一次；不代发原奖励。", "en": "Once the IN-ALD receipt passes and supervision clauses land; no re-issuing original rewards."}
+   ],
+   "receipt": {"source": "N7", "cn": "军需回执只含已公开监督范围；不重发军需奖励。", "en": "The quartermaster receipt holds only public supervision scope; no re-issued rewards."},
+   "unlock": {"anchor": "赫莲·金", "cn": "受托可申请一件私人工具的挂墙位（工具仍限借出、照费）。", "en": "Entrusted: wall space for one personal tool — loans and fees unchanged."},
+   "echo": {"from": "YOS", "anchor": "泊恩", "cn": "听闻（约斯特文布批）：可问「衬里的布到了没有」，不保证优先取料。", "en": "Hearsay: you may ask whether the lining cloth arrived; no priority claim."},
+   "limits": {"cn": "军需与宗教史照原；信任不改原商店、不替王室授权；负档不砸炉、不拒基础修理。", "en": "Armory and religious history stay base-game; no royal authority; negative bands never smash forges or block base repairs."}
+  },
+  {
+   "id": "SKO", "name_cn": "斯孔弗特", "name_en": "Skonfert",
+   "bands": [
+    {"value": -2, "name_cn": "冷炉", "name_en": "Cold Forge", "line_cn": "「炉子不认识你。要等，就在门外等。」", "line_en": "\"The forge doesn't know you. Wait outside.\""},
+    {"value": -1, "name_cn": "只卖熟人", "name_en": "Known Buyers Only", "line_cn": "「不是不卖，是先卖认识的人。」", "line_en": "\"Not refusing — just serving the known first.\""},
+    {"value": 0, "name_cn": "新添火的", "name_en": "New at the Fire", "line_cn": "「站远点，火星不认新衣服。」", "line_en": "\"Stand back; sparks don't respect new clothes.\""},
+    {"value": 1, "name_cn": "添过一把炭", "name_en": "One Handful of Coal", "line_cn": "「你添的那把炭，火记得。」", "line_en": "\"The fire remembers the coal you fed it.\""},
+    {"value": 2, "name_cn": "炉边留位", "name_en": "A Place at the Forge", "line_cn": "「炉边那块地方留着。别拿它当招牌。」", "line_en": "\"A spot by the forge is kept. Don't use it as a signboard.\""}
+   ],
+   "writes": [
+    {"source": "CM-SKO", "match": ["repay", "sale"], "delta": 1, "cn": "赎金实付到人或合法处置实际执行后记一次；家属未获真结果不写。", "en": "Once ransom truly reaches the family or a lawful disposal executes; no write without a real family outcome."},
+    {"source": "CS-SKO-01", "match": ["a"], "delta": 1, "cn": "预付款实际结清到人后。", "en": "After the advance actually settles to the worker."},
+    {"source": "SQ02", "match": ["restitution", "rationing"], "delta": 1, "cn": "补偿或配给实际到受害方且库可查后记一次；military不写、不扣。", "en": "Once compensation or rationing really reaches victims with a checkable store; military writes nothing."}
+   ],
+   "receipt": {"source": "SQ02", "cn": "被征用冬粮回执按已公开范围到本地；不把未补损失说成已补。", "en": "The requisition receipt lands with its public scope; unpaid losses never read as paid."},
+   "unlock": {"anchor": "妮莎·炉", "cn": "受托可预约一次炉位（不插队、不免料、不押工)。", "en": "Entrusted: one reserved forge slot — no queue jumps, no free stock, no bonded labour."},
+   "echo": {"from": "ALD", "anchor": "古烈", "cn": "听闻（奥尔德文采买）：可问「甲片什么时候过炉」，不换工期。", "en": "Hearsay: you may ask when the plate takes the fire; schedules stay fixed."},
+   "limits": {"cn": "冶炼、征募与王廷辖属照原；信任不折赎金为积分、不许无限代工；负档不熄公用炉。", "en": "Smelting, levy and court rule stay base-game; no ransom-as-points, no endless commission; negative bands never douse the public forge."}
+  },
+  {
+   "id": "YOS", "name_cn": "约斯特文", "name_en": "Yostwayne",
+   "bands": [
+    {"value": -2, "name_cn": "背面不示", "name_en": "The Back Stays Hidden", "line_cn": "「想看反面？这块布还轮不到你。」", "line_en": "\"The reverse side? Not for you yet.\""},
+    {"value": -1, "name_cn": "只卖素色", "name_en": "Plain Cloth Only", "line_cn": "「花边先收着。素的够你过冬。」", "line_en": "\"The figured trim stays boxed. Plain cloth will warm you.\""},
+    {"value": 0, "name_cn": "等织的", "name_en": "Waiting on the Loom", "line_cn": "「织机排着。你的名字在队尾。」", "line_en": "\"The loom is queued; your name sits at the tail.\""},
+    {"value": 1, "name_cn": "暖过一冬", "name_en": "Warmed One Winter", "line_cn": "「去年那件没冻着人。行里的账记得。」", "line_en": "\"Last winter's piece didn't freeze anyone. The row remembers.\""},
+    {"value": 2, "name_cn": "留一匹素面", "name_en": "A Plain Bolt Kept", "line_cn": "「素面留了一匹。价钱照旧，绣样另谈。」", "line_en": "\"A plain bolt is kept. Same price; figure work is separate.\""}
+   ],
+   "writes": [
+    {"source": "CM-YOS", "match": ["sharedmark", "independent"], "delta": 1, "cn": "共用家纹或独立方案实际执行后记一次。", "en": "Once after the shared-mark or independent scheme actually executes."},
+    {"source": "CS-YOS-02", "match": ["a"], "delta": 1, "cn": "徒弟离坊或续约按本人意愿实际落定后。", "en": "After the apprentice's leave or renewal actually lands on their own will."},
+    {"source": "CS-YOS-03", "match": ["a"], "delta": 1, "cn": "水堰颜色与排放实际处理后才写。", "en": "Only after the weir's colour and discharge are actually handled."}
+   ],
+   "receipt": {"source": "N14", "cn": "IN-YOS只收已公开的回程核验；不宣布全山安全、不预支国家资格。", "en": "IN-YOS takes only the public return verification; no mountain-wide safety claim, no state clearance."},
+   "unlock": {"anchor": "塔雅·梭", "cn": "受托留一匹素面布的优先购买权（实价、限一匹、可拒卖）。", "en": "Entrusted: priority claim on one plain bolt — real price, one bolt, seller may still decline."},
+   "echo": {"from": "ALD", "anchor": "塔雅·梭", "cn": "听闻（奥尔德文衬里线）：可问「哪一色先织」，不替匠人排期。", "en": "Hearsay: you may ask which colour weaves first; artisans keep their schedule."},
+   "limits": {"cn": "羊毛与旧亚麻印象分开；信任不无限供货、不炫配方；负档不剪断织机、不追回已售布。", "en": "Wool is kept distinct from old linen impressions; no endless supply or recipe exposure; negative bands never cut looms or reclaim sold cloth."}
+  },
+  {
+   "id": "KOR", "name_cn": "考德", "name_en": "Kord",
+   "bands": [
+    {"value": -2, "name_cn": "不提你的名", "name_en": "Your Name Unsaid", "line_cn": "「这门里没有你的名字。问了也一样。」", "line_en": "\"No name of yours in this door. Asking changes nothing.\""},
+    {"value": -1, "name_cn": "先看凭据", "name_en": "Papers First", "line_cn": "「凭据先放桌上，再谈别的。」", "line_en": "\"Papers on the desk first.\""},
+    {"value": 0, "name_cn": "寄存的陌生人", "name_en": "The Deposited Stranger", "line_cn": "「柜子有格子。人没有。」", "line_en": "\"The cabinet has slots. People don't.\""},
+    {"value": 1, "name_cn": "对过一件真凭", "name_en": "One Paper Verified", "line_cn": "「那一件对上了。就那一件。」", "line_en": "\"That one matched. Just that one.\""},
+    {"value": 2, "name_cn": "有人为你留灯", "name_en": "A Lamp Kept", "line_cn": "「留灯驿那盏，写着给你留的。宿资照收。」", "line_en": "\"The lamp at Liudeng is kept for you. Lodging still costs.\""}
+   ],
+   "writes": [
+    {"source": "CM-KOR", "match": ["limited", "custody"], "delta": 1, "cn": "限权或保管方案实际执行后记一次；族史unknown不填。", "en": "Once the limited or custody scheme executes; unknown family history stays unfilled."},
+    {"source": "CS-KOR-02", "match": ["a"], "delta": 1, "cn": "成年的当事者实际获得合法安排后。", "en": "After the adult party actually receives a lawful arrangement."},
+    {"source": "SQ08", "match": ["anonymous", "surrender", "relocate"], "delta": 1, "cn": "IN-KOR按本人许可实际送达且本地只读该范围后记一次。", "en": "Once the IN-KOR receipt passes within personal consent and the town reads only that scope."}
+   ],
+   "receipt": {"source": "SQ08", "cn": "家书回执只到投递与本人许可范围；不公开未准地址。", "en": "Letter receipts carry delivery and consent scope only; unapproved addresses stay closed."},
+   "unlock": {"anchor": "玛迪", "cn": "受托可在留灯驿留一盏夜灯一次（不赊宿资、不换取凭据）。", "en": "Entrusted: one night lamp at Liudeng — no credit, no papers traded."},
+   "echo": {"from": "PAS", "anchor": "玛迪", "cn": "听闻（柏石关点名）：可问「那边点到什么名字」，不合并两本册。", "en": "Hearsay: you may ask which names the Pass called; the two ledgers never merge."},
+   "limits": {"cn": "身份、寄存与族史照原未知范围；信任不判归属、不换真凭；负档不夺旧寄存物。", "en": "Identity, deposits and family history stay within original unknowns; trust never assigns kinship or trades papers."}
+  },
+  {
+   "id": "EED", "name_cn": "伊德斯", "name_en": "Eeders",
+   "bands": [
+    {"value": -2, "name_cn": "林线之外", "name_en": "Outside the Treeline", "line_cn": "「林子今天不请你。旧道也别走。」", "line_en": "\"The woods don't invite you today. Not even the old path.\""},
+    {"value": -1, "name_cn": "只走旧道", "name_en": "Old Paths Only", "line_cn": "「走旧道，别抄近的。」", "line_en": "\"Old paths. No shortcuts.\""},
+    {"value": 0, "name_cn": "问路的外人", "name_en": "Asking the Way", "line_cn": "「路可以指。林子的事少问。」", "line_en": "\"Directions, yes. Fewer questions about the woods.\""},
+    {"value": 1, "name_cn": "留过一株", "name_en": "One Tree Spared", "line_cn": "「你留的那株长着。别到处说。」", "line_en": "\"The tree you spared is growing. Don't brag.\""},
+    {"value": 2, "name_cn": "岗哨认得哨声", "name_en": "Your Whistle Known", "line_cn": "「你的哨声岗上认得。夜路别吹错调。」", "line_en": "\"The post knows your whistle. Don't blow the wrong tune at night.\""}
+   ],
+   "writes": [
+    {"source": "CM-EED", "match": ["oldstock", "localfirst"], "delta": 1, "cn": "旧料或本地优先方案实际执行后记一次。", "en": "Once after the old-stock or local-first scheme executes."},
+    {"source": "CS-EED-03", "match": ["a"], "delta": 1, "cn": "护林岗哨与巡段安排实际落定后。", "en": "After the forest post and patrol arrangements actually settle."},
+    {"source": "SQ04", "match": ["cooperative", "contract"], "delta": 1, "cn": "拒押送、实际试车与承运条款落地后记一次；sponsor保留运输伤害，不写。", "en": "Once refusal-of-press, a real trial run and a carriage clause land; sponsor keeps its transport harm and writes nothing."}
+   ],
+   "receipt": {"source": "SQ04", "cn": "桥路回执只到实际承运与拒押范围；不预支通行垄断。", "en": "Bridge receipts carry actual carriage and refusal scope only; no passage monopoly."},
+   "unlock": {"anchor": "黎恩·岗", "cn": "受托可申请一次同行走旧道的引导（不代巡、不代罚）。", "en": "Entrusted: one escorted walk on the old path — no patrol duty, no punishment proxy."},
+   "echo": {"from": "FOR", "anchor": "岱里", "cn": "听闻（佛尔霍特矿架）：可问「旧梁够不够架一段」，不转金账。", "en": "Hearsay: you may ask whether old beams suffice for one frame; gold accounts stay put."},
+   "limits": {"cn": "林地管辖与民兵照原；信任不改木材出口量、不给猎场特权；负档不退已运木材、不封村。", "en": "Forest authority and militia stay base-game; no export or hunting privilege; negative bands never reclaim delivered timber."}
+  },
+  {
+   "id": "FOR", "name_cn": "佛尔霍特", "name_en": "Forholt",
+   "bands": [
+    {"value": -2, "name_cn": "井下无灯", "name_en": "No Lamp Below", "line_cn": "「你的灯下不了井。上头照照就回吧。」", "line_en": "\"Your lamp doesn't go below. Shine above and leave.\""},
+    {"value": -1, "name_cn": "工头盯着", "name_en": "Watched by the Foreman", "line_cn": "「走下去每一步，工头都记着。」", "line_en": "\"Every step down is marked by the foreman.\""},
+    {"value": 0, "name_cn": "临时来客", "name_en": "A Temporary Guest", "line_cn": "「矿上认砂，不认脸。」", "line_en": "\"The pit knows its sand, not faces.\""},
+    {"value": 1, "name_cn": "交过一罐砂", "name_en": "One Vial Panned", "line_cn": "「你淘的那罐过了秤。井上也有你一句话。」", "line_en": "\"Your vial weighed true. Your word counts above now.\""},
+    {"value": 2, "name_cn": "停班簿上有人答", "name_en": "Answered at the Stop", "line_cn": "「停班的时候，簿上会有人替你答一声。」", "line_en": "\"At the stop, someone answers for you in the book.\""}
+   ],
+   "writes": [
+    {"source": "CM-FOR", "match": ["workerstop", "external"], "delta": 1, "cn": "停班或外部方案实际执行后记一次。", "en": "Once after the stop-work or external scheme executes."},
+    {"source": "CS-FOR-03", "match": ["a"], "delta": 1, "cn": "矿份按实际持有人分配后。", "en": "After mine-shares land with their actual holders."},
+    {"source": "CS-FOR-02", "match": ["a"], "delta": 1, "cn": "洗砂村水色与砂账实际分开处理后。", "en": "After the washing village separates water tone from sand accounts."}
+   ],
+   "receipt": {"source": "N14", "cn": "IN-FOR只读已公开的回程核验；不宣布矿脉安全、不授采矿权。", "en": "IN-FOR reads only the public return verification; no seam safety claim, no mining rights."},
+   "unlock": {"anchor": "玛诺·灯", "cn": "受托可看停班簿上已核工时（只读一次，不改排班与欠款）。", "en": "Entrusted: one read of verified hours in the stop book — no roster or debt changes."},
+   "echo": {"from": "EED", "anchor": "祁铎", "cn": "听闻（伊德斯旧梁）：可问「梁到哪一批」，不换矿份。", "en": "Hearsay: you may ask which beam batch arrived; shares stay untouched."},
+   "limits": {"cn": "金矿、旧骑卫与北疆石场分开；信任不减安全规程、不许无票下井；负档不填井、不夺已发工钱。", "en": "Gold mine, old riders and northern quarries stay distinct; no safety rollback or unticketed descent; negative bands never seal pits or claw back wages."}
+  },
+  {
+   "id": "RAT", "name_cn": "拉滕", "name_en": "Ratten",
+   "bands": [
+    {"value": -2, "name_cn": "钟不为你响", "name_en": "No Bell for You", "line_cn": "「铃不响给外面的人听。」", "line_en": "\"The bell doesn't ring for outsiders.\""},
+    {"value": -1, "name_cn": "故事先核对", "name_en": "Match the Story First", "line_cn": "「讲可以。先对一对年份。」", "line_en": "\"Tell it, but match the year first.\""},
+    {"value": 0, "name_cn": "听传闻的", "name_en": "Here for the Tale", "line_cn": "「兽死了，故事还活着。你听哪一版？」", "line_en": "\"The beast is dead; the story lives. Which version?\""},
+    {"value": 1, "name_cn": "补过一行纪录", "name_en": "One Line Amended", "line_cn": "「你补的那行，和旧碑并排挂着。」", "line_en": "\"Your line hangs beside the old stele.\""},
+    {"value": 2, "name_cn": "静铃记得你", "name_en": "The Still Bell Remembers", "line_cn": "「静铃那一刻，会有人想到你的名字。就一次。」", "line_en": "\"At the still bell, someone thinks of your name. Once.\""}
+   ],
+   "writes": [
+    {"source": "CM-RAT", "match": ["addendum", "family"], "delta": 1, "cn": "补录或家属方案实际执行后记一次。", "en": "Once the addendum or family scheme actually executes."},
+    {"source": "CS-RAT-03", "match": ["a"], "delta": 1, "cn": "静铃仪式与纪念物用途实际厘清后。", "en": "After the still-bell rite and memorial uses are actually settled."}
+   ],
+   "receipt": {"source": "DT03", "cn": "墓标回执只含已登记身份范围；不公开未准墓位。", "en": "Marker receipts hold registered identity scope only; unapproved plots stay closed."},
+   "unlock": {"anchor": "阿莉·铃", "cn": "受托可在静铃一刻留一次默记（不发纪念章、不改碑文）。", "en": "Entrusted: one silent remembrance at the bell — no medal, no stele edits."},
+   "echo": {"from": "FOR", "anchor": "芬罗", "cn": "听闻（佛尔霍特停班）：可问「他们真的停过吗」，不替死者下结论。", "en": "Hearsay: you may ask whether the stop really happened; conclusions about the dead stay open."},
+   "limits": {"cn": "旧狂兽已死，不再复活卖第二遍；信任不改纪念物归属、不伪英雄故事；负档不挖旧碑。", "en": "The old beast stays dead; no second hero tale; memorial ownership and truth stay fixed."}
+  },
+  {
+   "id": "PAS", "name_cn": "柏石关", "name_en": "Basalt Pass",
+   "bands": [
+    {"value": -2, "name_cn": "名单上画了道", "name_en": "Struck from the List", "line_cn": "「名字上画了道。今天不用排了。」", "line_en": "\"Your name is struck. No queue for you today.\""},
+    {"value": -1, "name_cn": "每次查印", "name_en": "Seal Checked Every Time", "line_cn": "「每次都要看印。别嫌慢。」", "line_en": "\"The seal is checked every time. Don't complain.\""},
+    {"value": 0, "name_cn": "关外来的人", "name_en": "From Beyond the Pass", "line_cn": "「关里的规矩，先说一遍再进。」", "line_en": "\"The pass rules get said once before you enter.\""},
+    {"value": 1, "name_cn": "点名对过一次", "name_en": "One Roll Call Matched", "line_cn": "「上一次点名，你对上了。」", "line_en": "\"Last roll call, your line matched.\""},
+    {"value": 2, "name_cn": "夜行不叫住", "name_en": "Not Halted at Night", "line_cn": "「夜里过，不叫你。印还是要看一次。」", "line_en": "\"At night you pass uncalled — the seal still gets one look.\""}
+   ],
+   "writes": [
+    {"source": "CM-PAS", "match": ["joint", "neutral"], "delta": 1, "cn": "联合或中立核验方案实际执行后记一次。", "en": "Once the joint or neutral verification scheme executes."},
+    {"source": "CS-PAS-02", "match": ["a"], "delta": 1, "cn": "两份点名实际对上同一名单后。", "en": "After the two roll calls actually match one list."},
+    {"source": "N7", "match": ["withdraw", "parallel", "inspection"], "delta": 1, "cn": "IN-PAS回执按已公开监督范围送达后记一次。", "en": "Once the IN-PAS receipt passes within public supervision scope."},
+    {"source": "N11", "match": ["surrender"], "delta": -1, "cn": "交出藏身人写exchange_harm时记−1；trace/pay不清除。", "en": "−1 when a hiding person is surrendered (exchange_harm); trace/pay never erase it."}
+   ],
+   "receipt": {"source": "N7", "cn": "军需回执只读已公开范围；二奖不因本地信任补发。", "en": "Quartermaster receipts read public scope only; trust never re-issues rewards."},
+   "unlock": {"anchor": "雷奥·凯斯", "cn": "受托可在副榜旁看一次实到点名（只读、不代点、不补章）。", "en": "Entrusted: one read of the actual roll beside the deputy list — no proxy call, no seal substitutions."},
+   "echo": {"from": "KOR", "anchor": "辛娅", "cn": "听闻（考德寄存）：可问「那边有没有我的凭据」，不跨册合并。", "en": "Hearsay: you may ask whether Kord holds your papers; ledgers never merge."},
+   "limits": {"cn": "秩序经得起查问：信任不替代印章与点名，低信任也保双向与其他常规通行；负档不押人、不扣合法货。", "en": "Order survives scrutiny: trust never replaces seals or roll calls, and low trust keeps passage; negative bands never jail or seize lawful goods."}
+  },
+  {
+   "id": "ASH", "name_cn": "寒凉盆地", "name_en": "Ash Basin",
+   "bands": [
+    {"value": -2, "name_cn": "空床登记过你", "name_en": "Listed as an Empty Bed", "line_cn": "「登记簿上有过你的位置。后来谁都没来。」", "line_en": "\"Your slot was logged once. Nobody came for it.\""},
+    {"value": -1, "name_cn": "只给基本水", "name_en": "Basic Water Only", "line_cn": "「水给你。别的先别问。」", "line_en": "\"Water, yes. Ask nothing else today.\""},
+    {"value": 0, "name_cn": "新来的看护", "name_en": "A New Helper", "line_cn": "「先看你今天能接哪一班。」", "line_en": "\"First: which shift can you actually take today?\""},
+    {"value": 1, "name_cn": "那班真到过", "name_en": "That Shift Was Real", "line_cn": "「你到的那班有记录。人也真歇过。」", "line_en": "\"The shift you took is logged. Someone truly rested.\""},
+    {"value": 2, "name_cn": "空碗旁留名", "name_en": "A Name Beside the Bowl", "line_cn": "「碗照空着，名字留了。下一班再问本人。」", "line_en": "\"The bowl stays empty; the name stays kept. The next shift asks them first.\""}
+   ],
+   "writes": [
+    {"source": "CM-ASH", "match": ["localcare", "distributedcare"], "delta": 1, "cn": "留营或分散接收按本人范围实际执行后记一次。", "en": "Once local or distributed care executes within personal scope."},
+    {"source": "CS-ASH-02", "match": ["a"], "delta": 1, "cn": "替护真到班且患者与陪护各自同意后。", "en": "After relief shifts truly arrive with patient and carer consent each."},
+    {"source": "CS-ASH-03", "match": ["a"], "delta": 1, "cn": "观察捆绑实际撤销、普通分配真到人后；b保持0。", "en": "After observation is truly unbundled and ordinary shares delivered; b stays 0."},
+    {"source": "N8", "match": ["isolate", "relocate", "publicworks"], "delta": 1, "cn": "IN-ASH回执按已公开范围送达且本地水/护理按本人核验后记一次。", "en": "Once the IN-ASH receipt lands within public scope and local water/care passes personal checks."}
+   ],
+   "receipt": {"source": "N8", "cn": "热病回执只到已核的水与班次；不说全营痊愈、不代签研究。", "en": "Fever receipts cover verified water and shifts only; no camp-wide cure, no research proxy."},
+   "unlock": {"anchor": "琳汀·床", "cn": "受托可列席一次班次分配（只读、不代签、不占床位）。", "en": "Entrusted: one seat at shift allotment — listen only, no proxy, no bed taken."},
+   "echo": {"from": "MAE", "anchor": "琳汀·床", "cn": "听闻（曼恩护理抄本）：可问「那页剂量到没到」，药与工时仍另核。", "en": "Hearsay: you may ask whether that dosage page arrived; drugs and hours still verified separately."},
+   "limits": {"cn": "护理不是研究许可、普通照护不是救济资格；低信任保水与回程；负档不停基本水、不赶轻患者。", "en": "Care is not research consent; ordinary aid is not relief eligibility; low trust keeps water and return; negative bands never cut basic water."}
+  },
+  {
+   "id": "HIG", "name_cn": "修院山地", "name_en": "Unnamed Highlands",
+   "bands": [
+    {"value": -2, "name_cn": "不许碰仪器", "name_en": "Hands Off the Gauge", "line_cn": "「读数不是给你看的。站到栏外。」", "line_en": "\"The readings aren't for you. Behind the rail.\""},
+    {"value": -1, "name_cn": "只走外道", "name_en": "Outer Path Only", "line_cn": "「外道够你走。里头的回声别应。」", "line_en": "\"The outer path suffices. Don't answer the echoes.\""},
+    {"value": 0, "name_cn": "听回声的", "name_en": "Echo Listener", "line_cn": "「想听就听。别拿听到的当证据。」", "line_en": "\"Listen if you will. What you hear isn't evidence.\""},
+    {"value": 1, "name_cn": "空载对过一格", "name_en": "One Empty Load Matched", "line_cn": "「你那次空载对上了一格。就一格。」", "line_en": "\"Your empty load matched a cell. Just one.\""},
+    {"value": 2, "name_cn": "停牌旁有记号", "name_en": "A Mark by the Stop-Board", "line_cn": "「停牌旁边有你的记号，路还是按现在这段走。」", "line_en": "\"Your mark sits by the stop-board; the path still follows today's stretch.\""}
+   ],
+   "writes": [
+    {"source": "CM-HIG", "match": ["maintenance", "minimal"], "delta": 1, "cn": "维护或最小方案实际执行后记一次。", "en": "Once the maintenance or minimal scheme actually executes."},
+    {"source": "CS-HIG-01", "match": ["a"], "delta": 1, "cn": "限载验修与停牌范围实际核过后；b保持0，不扣。", "en": "After limited-load repair and board scope are verified; b stays 0."},
+    {"source": "CS-HIG-02", "match": ["a", "b"], "delta": 1, "cn": "复测或实交支架按实际条件完成且差异留unknown后记一次。", "en": "Once re-tests or a delivered brace complete on real terms with differences left unknown."},
+    {"source": "CS-HIG-03", "match": ["a", "b"], "delta": 1, "cn": "N17冻结后的旧薪/交钥/必要职责按实际接收完成后记一次。", "en": "Once wages, keys and required handovers complete after the N17 freeze."}
+   ],
+   "receipt": {"source": "N14", "cn": "回程核验只到已走的段与外道；不授NE5、不宣布井已稳。", "en": "Return verification covers walked sections and outer paths only; no NE5, no stable-well claim."},
+   "unlock": {"anchor": "司榆", "cn": "受托可先看下一班固定槽读数（只读、不代校、不带出）。", "en": "Entrusted: first read of the next fixed-gauge cycle — read-only, no calibration proxy."},
+   "echo": {"from": "ASH", "anchor": "司榆", "cn": "听闻（寒凉盆地护理）：可问「那一班人手够不够」，不改排班表。", "en": "Hearsay: you may ask whether that shift is staffed; the roster stays fixed."},
+   "limits": {"cn": "校表不等于核心认证、支架不等于NE5；低信任保绕行与回程；负档不停外道、不清旧记录。", "en": "Gauge work is not core certification, braces are not NE5; low trust keeps bypasses and return; negative bands never stop outer paths."}
+  },
+  {
+   "id": "MAE", "name_cn": "曼恩", "name_en": "Maen",
+   "bands": [
+    {"value": -2, "name_cn": "名字不进书库", "name_en": "Name Barred from the Stacks", "line_cn": "「目录里没有你。书库更不会有。」", "line_en": "\"You're in no catalog. The stacks even less.\""},
+    {"value": -1, "name_cn": "只借目录", "name_en": "Catalog Only", "line_cn": "「先给你目录。页数以后再说。」", "line_en": "\"The catalog first. Pages come later.\""},
+    {"value": 0, "name_cn": "访学的", "name_en": "A Visiting Scholar", "line_cn": "「桌上有你的位置，架子上还没有。」", "line_en": "\"A desk place, not a shelf place.\""},
+    {"value": 1, "name_cn": "抄本过过手", "name_en": "One Copy Handled", "line_cn": "「你经手的那册登记过了。落款别改。」", "line_en": "\"The copy you handled is logged. Don't alter the colophon.\""},
+    {"value": 2, "name_cn": "冷窗留灯", "name_en": "A Cold-Window Lamp", "line_cn": "「冷窗那盏给你留一夜。书不出馆。」", "line_en": "\"A lamp at the cold window for one night. Books stay inside.\""}
+   ],
+   "writes": [
+    {"source": "CM-MAE", "match": ["separate", "evacuate", "control"], "delta": 1, "cn": "去留方案实际执行后记一次；焚毁与控制留史不改写。", "en": "Once the stay-or-leave scheme executes; burning and control stay on record."},
+    {"source": "CS-MAE-05", "match": ["a"], "delta": 1, "cn": "凯姆的字按实际权责更正或留档后。", "en": "After Kem's lines are corrected or archived on real authority."},
+    {"source": "N6", "match": ["archive", "witness", "external"], "delta": 1, "cn": "IN-MAE回执送达且来源资格实际核过后记一次。", "en": "Once the IN-MAE receipt passes with source credentials actually verified."}
+   ],
+   "receipt": {"source": "N6", "cn": "封存页回执只到来源与日期范围；不宣布全库已见。", "en": "Sealed-page receipts cover source and date scope only; never the whole archive."},
+   "unlock": {"anchor": "艾娜", "cn": "受托可先看一册已登记抄本（不带出、不代署名）。", "en": "Entrusted: one logged copy to read on site — no removal, no proxy signature."},
+   "echo": {"from": "RAT", "anchor": "薇榆", "cn": "听闻（拉滕旧狂兽）：可问「那篇记录谁写的」，作者责任照原。", "en": "Hearsay: you may ask who wrote that record; authorship stays as-is."},
+   "limits": {"cn": "留下知识不等于留下压人的人；低信任保阅读基本入口与回程；负档不烧书、不逐合法住户。", "en": "Keeping knowledge never keeps its oppressors; low trust keeps basic reading and return; negative bands never burn books or evict lawful residents."}
+  }
+ ]
+}

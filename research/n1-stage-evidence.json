@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-13",
+  "scope": "S161 N1 sample key evidence: every EAO_N1_* usage classified read/write; migration proposal for OI-03; static analysis only, runtime not verified",
+  "usages": [
+    {
+      "key": "EAO_N1_origin_x",
+      "file": "dev_portal_alarm.gml",
+      "line": 5,
+      "kind": "read",
+      "code": "scr_atr_set_simple(\"localX\",ds_map_find_value(global.characterDataMap,\"EAO_N1_origin_x\"));"
+    },
+    {
+      "key": "EAO_N1_origin_y",
+      "file": "dev_portal_alarm.gml",
+      "line": 6,
+      "kind": "read",
+      "code": "scr_atr_set_simple(\"localY\",ds_map_find_value(global.characterDataMap,\"EAO_N1_origin_y\"));"
+    },
+    {
+      "key": "EAO_N1_origin_room",
+      "file": "dev_portal_alarm.gml",
+      "line": 8,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap,\"EAO_N1_origin_room\",room_get_name(room));"
+    },
+    {
+      "key": "EAO_N1_origin_x",
+      "file": "dev_portal_alarm.gml",
+      "line": 9,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap,\"EAO_N1_origin_x\",o_player.x);"
+    },
+    {
+      "key": "EAO_N1_origin_y",
+      "file": "dev_portal_alarm.gml",
+      "line": 10,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap,\"EAO_N1_origin_y\",o_player.y);"
+    },
+    {
+      "key": "EAO_N1_origin_grid_x",
+      "file": "dev_portal_alarm.gml",
+      "line": 11,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap,\"EAO_N1_origin_grid_x\",global.playerGridX);"
+    },
+    {
+      "key": "EAO_N1_origin_grid_y",
+      "file": "dev_portal_alarm.gml",
+      "line": 12,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap,\"EAO_N1_origin_grid_y\",global.playerGridY);"
+    },
+    {
+      "key": "EAO_N1_yard_in",
+      "file": "dev_visit.gml",
+      "line": 5,
+      "kind": "reference",
+      "code": "var _tag = \"EAO_N1_yard_in\";"
+    },
+    {
+      "key": "EAO_N1_origin_room",
+      "file": "dev_visit.gml",
+      "line": 8,
+      "kind": "read",
+      "code": "if (!_inside || !ds_map_exists(global.characterDataMap,\"EAO_N1_origin_room\")) exit;"
+    },
+    {
+      "key": "EAO_N1_origin_room",
+      "file": "dev_visit.gml",
+      "line": 9,
+      "kind": "read",
+      "code": "_target = asset_get_index(ds_map_find_value(global.characterDataMap,\"EAO_N1_origin_room\"));"
+    },
+    {
+      "key": "EAO_N1_house_in",
+      "file": "dev_visit.gml",
+      "line": 12,
+      "kind": "reference",
+      "code": "} else if (room == r_eao_n1_yard) { _target=r_eao_n1_bellhouse; _tag=\"EAO_N1_house_in\"; }"
+    },
+    {
+      "key": "EAO_N1_drain_in",
+      "file": "dev_visit.gml",
+      "line": 13,
+      "kind": "reference",
+      "code": "else if (room == r_eao_n1_bellhouse) { _target=r_eao_n1_underpass; _tag=\"EAO_N1_drain_in\"; }"
+    },
+    {
+      "key": "EAO_N1_stage",
+      "file": "night_controller_step.gml",
+      "line": 20,
+      "kind": "read",
+      "code": "if (_n == 1 && (!ds_map_exists(global.characterDataMap, \"EAO_N1_stage\") || ds_map_find_value(global.characterDataMap, \"E"
+    },
+    {
+      "key": "EAO_N1_stage",
+      "file": "night_controller_step.gml",
+      "line": 20,
+      "kind": "read",
+      "code": "if (_n == 1 && (!ds_map_exists(global.characterDataMap, \"EAO_N1_stage\") || ds_map_find_value(global.characterDataMap, \"E"
+    },
+    {
+      "key": "EAO_N1_origin_room",
+      "file": "night_entry_alarm.gml",
+      "line": 4,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap, \"EAO_N1_origin_room\", room_get_name(room));"
+    },
+    {
+      "key": "EAO_N1_origin_x",
+      "file": "night_entry_alarm.gml",
+      "line": 5,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap, \"EAO_N1_origin_x\", o_player.x);"
+    },
+    {
+      "key": "EAO_N1_origin_y",
+      "file": "night_entry_alarm.gml",
+      "line": 6,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap, \"EAO_N1_origin_y\", o_player.y);"
+    },
+    {
+      "key": "EAO_N1_origin_grid_x",
+      "file": "night_entry_alarm.gml",
+      "line": 7,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap, \"EAO_N1_origin_grid_x\", global.playerGridX);"
+    },
+    {
+      "key": "EAO_N1_origin_grid_y",
+      "file": "night_entry_alarm.gml",
+      "line": 8,
+      "kind": "write",
+      "code": "ds_map_set(global.characterDataMap, \"EAO_N1_origin_grid_y\", global.playerGridY);"
+    },
+    {
+      "key": "EAO_N1_origin_x",
+      "file": "night_return_alarm.gml",
+      "line": 3,
+      "kind": "read",
+      "code": "if (!_changing && instance_exists(o_smoothRoomChanger) && ds_map_exists(global.characterDataMap, \"EAO_N1_origin_x\")) {"
+    },
+    {
+      "key": "EAO_N1_origin_x",
+      "file": "night_return_alarm.gml",
+      "line": 4,
+      "kind": "read",
+      "code": "scr_atr_set_simple(\"localX\", ds_map_find_value(global.characterDataMap, \"EAO_N1_origin_x\"));"
+    },
+    {
+      "key": "EAO_N1_origin_y",
+      "file": "night_return_alarm.gml",
+      "line": 5,
+      "kind": "read",
+      "code": "scr_atr_set_simple(\"localY\", ds_map_find_value(global.characterDataMap, \"EAO_N1_origin_y\"));"
+    }
+  ],
+  "written_keys": [
+    "EAO_N1_origin_grid_x",
+    "EAO_N1_origin_grid_y",
+    "EAO_N1_origin_room",
+    "EAO_N1_origin_x",
+    "EAO_N1_origin_y"
+  ],
+  "read_keys": [
+    "EAO_N1_origin_room",
+    "EAO_N1_origin_x",
+    "EAO_N1_origin_y",
+    "EAO_N1_stage"
+  ],
+  "stage_has_writer": false,
+  "n1_registry_keys": [
+    "encountered_N1",
+    "presence_N1",
+    "resolve_N1"
+  ],
+  "proposal": {
+    "entry_spawn_key": "encountered_N1",
+    "resolution_key": "resolve_N1",
+    "compat": "EAO_N1_stage 仅作读取垫片：若旧档存在且 ≥1，视为 encountered_N1=true；不再写入"
+  }
+}

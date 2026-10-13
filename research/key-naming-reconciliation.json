@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-13",
+  "scope": "S123 key naming reconciliation: legacy S62-era field names mapped to the S114 per-script keys; current map is authoritative, legacy names stay as reading aliases only",
+  "legacy_found": {
+    "09_系统逻辑/当前任务依赖与状态字典.md": [],
+    "09_系统逻辑/网状叙事与条件对话规范.md": [
+      "callback_seen",
+      "consent",
+      "encountered",
+      "resolve_ID",
+      "target_receipt"
+    ]
+  },
+  "mapping": [
+    {
+      "legacy": "resolve_ID",
+      "current": "resolve_<脚本ID>",
+      "status": "refined",
+      "note": "S114 把结算键具体到脚本：ID 中的 `-` 换 `_`（CS-BRY-01 → CS_BRY_01）；取值＝路线/选项键，结算前 none。"
+    },
+    {
+      "legacy": "resolve_CM",
+      "current": "resolve_<CM-XXX>",
+      "status": "refined",
+      "note": "S63 的 resolve_CM/CS 是族级命名；现按脚本逐个建键，不再用族级键。"
+    },
+    {
+      "legacy": "encountered",
+      "current": "encountered_<脚本ID>",
+      "status": "refined",
+      "note": "首次接触按脚本记；bool。"
+    },
+    {
+      "legacy": "callback_seen",
+      "current": "callback_<脚本ID>_<路线>",
+      "status": "refined",
+      "note": "回执按路线/选项逐条记；只表示已播，不重复给奖。"
+    },
+    {
+      "legacy": "consent",
+      "current": "consent_<脚本ID>_<路线>",
+      "status": "refined",
+      "note": "授权按路线逐条记；未授权不写。"
+    },
+    {
+      "legacy": "paid",
+      "current": "paid_<脚本ID>_<路线>",
+      "status": "refined",
+      "note": "费用按路线逐条记一次；仅路线含费用时建键。"
+    },
+    {
+      "legacy": "target_receipt",
+      "current": "receipt_<回执ID>",
+      "status": "refined",
+      "note": "跨任务回执按 CX##/BC85-## 建键；接收者与时机记在条目里，不写进键名。"
+    }
+  ],
+  "rules": [
+    "[[状态键映射总表]] 为唯一权威：键名、取值与语义以该表为准",
+    "旧文档中的 resolve_ID/encountered/target_receipt/consent/callback_seen/paid 只作阅读别名，不双写",
+    "实现时不得同时写族级键与脚本级键；族级命名仅保留在历史文档",
+    "回执接收者与时机写在条目里，不进入键名"
+  ]
+}

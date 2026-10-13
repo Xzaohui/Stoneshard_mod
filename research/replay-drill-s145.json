@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-13",
+  "scope": "S145 fifth full-chain replay drill: canonical-order writer run in the main tree, and a minimal copy (design/research/tools/src) re-running the same order plus all validators; documentation of reproducibility and environment dependencies, not runtime",
+  "main_run": {
+    "order": "design/11_管理/设计库生成与校验流程.md 生成链表内顺序（去重后 61 项，跳过 Validate-* 与需外部素材者）",
+    "writers_ok": 54,
+    "env_skipped": 6,
+    "failures": 0,
+    "env_skipped_list": [
+      "Record-CityTaskArt.py",
+      "Record-ShoreVineTaskArt.py",
+      "Record-BrynnTaskArt.py",
+      "Prepare-CityArt.py",
+      "Finalize-CityArtMetadata.py",
+      "Write-CitySpaces.py"
+    ],
+    "note": "主库按此顺序重跑后，65 个校验器与 Test-DesignVault.ps1 全通过。"
+  },
+  "copy_run": {
+    "copy": "%TEMP%/eao-replay-s145（仅 design/research/tools/src＋两份部署记录与 .sml）",
+    "writers_ok": 46,
+    "env_skipped": 6,
+    "aborted": 8,
+    "aborted_list": [
+      "Write-CityIndexes.py",
+      "BrynnContinuation.py",
+      "Write-TownReputation.py",
+      "Write-ForeshadowLedger.py",
+      "Write-TimelineRegistry.py",
+      "Write-FineDetails.py",
+      "Write-ServiceRegistry.py",
+      "Write-ImplState.py"
+    ],
+    "abort_reason": "缺 backups/ 差异源与 artifacts/ 记录；首个中止后下游“保留既有笔记”守卫按设计连锁触发（不是静默覆盖）。",
+    "validators_ok": 49,
+    "validators_failed": 16,
+    "failed_validators": [
+      "Validate-AdditionalCityDrama.py",
+      "Validate-BrynnContinuation.py",
+      "Validate-CareAndHighlandDrama.py",
+      "Validate-CityArt.py",
+      "Validate-CityDrama.py",
+      "Validate-CitySpaces.py",
+      "Validate-CityTaskArt.py",
+      "Validate-FineDetails.py",
+      "Validate-ForestAndMineDrama.py",
+      "Validate-ForgeAndWoolDrama.py",
+      "Validate-GrainAndMemoryDrama.py",
+      "Validate-ImplHandoff.py",
+      "Validate-MaenDrama.py",
+      "Validate-NamesAndPassDrama.py",
+      "Validate-ShoreAndVineDrama.py",
+      "Validate-ShoreVineTaskArt.py"
+    ],
+    "failed_reason": "全部为环境项或首轮中止的后果：戏剧/城市类校验器读 backups/ 快照，美术类读 stoneshard-assets-sample，ImplHandoff 读计数页（依赖已中止的写手）。",
+    "vault": "Test-DesignVault.ps1 在副本中通过"
+  },
+  "inventory": {
+    "writers": 79,
+    "probes": 6,
+    "validators": 90
+  },
+  "s165": {
+    "copy": "%TEMP%/eao-replay-s165（design/research/tools/src ＋ artifacts 四件：两份部署记录、.sml、顺序表）",
+    "writers_ok": 54,
+    "env_skipped": 6,
+    "aborted": 0,
+    "note": "本轮把 artifacts 四件一并复制，写手链在副本中 54/0 全通过（S145 时缺 artifacts 导致 8 个写手中止）。",
+    "validators_ok": 66,
+    "validators_failed": 16,
+    "failed_validators": [
+      "Validate-AdditionalCityDrama.py",
+      "Validate-CareAndHighlandDrama.py",
+      "Validate-CityArt.py",
+      "Validate-CityDrama.py",
+      "Validate-CitySpaces.py",
+      "Validate-CityTaskArt.py",
+      "Validate-ForestAndMineDrama.py",
+      "Validate-ForgeAndWoolDrama.py",
+      "Validate-GrainAndMemoryDrama.py",
+      "Validate-MaenDrama.py",
+      "Validate-NamesAndPassDrama.py",
+      "Validate-PreservationBaselines.py",
+      "Validate-PhaseClose.py",
+      "Validate-ShoreAndVineDrama.py",
+      "Validate-ShoreVineTaskArt.py",
+      "Validate-ToolchainChecks.py"
+    ],
+    "failed_reason": "全部为环境项或其后果：11 个戏剧/城市/快照类读 backups/，2 个美术类读 stoneshard-assets-sample，ToolchainChecks 需 artifacts 的候选 .win 输入，PhaseClose 的数字取自主库（副本内校验器失败会改变合计）。",
+    "vault": "Test-DesignVault.ps1 在副本中通过"
+  }
+}

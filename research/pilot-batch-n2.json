@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-13",
+  "scope": "S153 pilot implementation batch N2: registry inputs extracted read-only; planning only, nothing implemented or deployed",
+  "script": "N2",
+  "title": "灰堤没有墓碑",
+  "stubs": [
+    {
+      "event": "evt_N2_entry",
+      "node": "entry",
+      "when": "first_meet",
+      "trigger": "on_first_interaction",
+      "reads": [
+        "encountered_N2"
+      ],
+      "writes": [
+        "encountered_N2"
+      ],
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_N2_hub",
+      "node": "hub",
+      "when": "any",
+      "trigger": "on_interaction",
+      "reads": [
+        "encountered_N2"
+      ],
+      "writes": [],
+      "cooldown": "repeatable"
+    },
+    {
+      "event": "evt_N2_choice_protected",
+      "node": "choice.protected",
+      "when": "route(protected)",
+      "trigger": "on_route_selected",
+      "reads": [
+        "resolve_N2"
+      ],
+      "writes": [
+        "callback_N2_protected",
+        "callback_N2_public"
+      ],
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_N2_choice_public",
+      "node": "choice.public",
+      "when": "route(public)",
+      "trigger": "on_route_selected",
+      "reads": [
+        "resolve_N2"
+      ],
+      "writes": [
+        "callback_N2_protected",
+        "callback_N2_public"
+      ],
+      "cooldown": "once"
+    },
+    {
+      "event": "evt_N2_refusal",
+      "node": "refusal",
+      "when": "refused",
+      "trigger": "on_refusal",
+      "reads": [
+        "presence_N2"
+      ],
+      "writes": [],
+      "cooldown": "repeatable"
+    }
+  ],
+  "keys": [
+    {
+      "key": "encountered_N2",
+      "kind": "encounter",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "resolve_N2",
+      "kind": "resolve",
+      "values": [
+        "none",
+        "protected",
+        "public"
+      ]
+    },
+    {
+      "key": "callback_N2_protected",
+      "kind": "callback",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "callback_N2_public",
+      "kind": "callback",
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "key": "presence_N2",
+      "kind": "presence",
+      "values": [
+        "present",
+        "absent",
+        "dead",
+        "refused"
+      ]
+    }
+  ],
+  "flow_nodes": [
+    "entry",
+    "hub",
+    "choice.protected",
+    "choice.public",
+    "refusal"
+  ],
+  "methods": [
+    "N2-R-agency",
+    "N2-R-protected",
+    "N2-R-return"
+  ],
+  "x_edges": [
+    "X02",
+    "X04",
+    "X05",
+    "X57",
+    "X58"
+  ],
+  "gml_files": [
+    "n2_entry.gml",
+    "n2_hub.gml",
+    "n2_choice_protected.gml",
+    "n2_choice_public.gml",
+    "n2_refusal.gml"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-13",
+  "scope": "S154 pilot batch N2 acceptance scenarios: expected writes checked against the state-key value sets; planning only, nothing implemented",
+  "scenarios": [
+    {
+      "id": "N2-T01",
+      "name": "接取与首见",
+      "steps": [
+        "在灰堤找到当事人并首次交谈",
+        "听完入口三句后仍可离开"
+      ],
+      "writes": [
+        [
+          "encountered_N2",
+          "true"
+        ]
+      ],
+      "invariants": [
+        "resolve_N2 仍为 none",
+        "不因只交谈而写入任何 callback_*"
+      ]
+    },
+    {
+      "id": "N2-T02",
+      "name": "保护路线结算",
+      "steps": [
+        "完成现场实际观察",
+        "选择保护路线并二次确认",
+        "实际处置发生后才提交"
+      ],
+      "writes": [
+        [
+          "resolve_N2",
+          "protected"
+        ],
+        [
+          "callback_N2_protected",
+          "true"
+        ]
+      ],
+      "invariants": [
+        "callback_N2_public 不写",
+        "缺实际观察或未二次确认时保持 pending"
+      ]
+    },
+    {
+      "id": "N2-T03",
+      "name": "公开路线结算",
+      "steps": [
+        "完成现场实际观察",
+        "选择公开路线并二次确认"
+      ],
+      "writes": [
+        [
+          "resolve_N2",
+          "public"
+        ],
+        [
+          "callback_N2_public",
+          "true"
+        ]
+      ],
+      "invariants": [
+        "callback_N2_protected 不写",
+        "两条路线互斥，先结算者生效"
+      ]
+    },
+    {
+      "id": "N2-T04",
+      "name": "拒绝与缺席",
+      "steps": [
+        "明确拒绝本案",
+        "再次接近同一当事人"
+      ],
+      "writes": [
+        [
+          "presence_N2",
+          "refused"
+        ]
+      ],
+      "invariants": [
+        "resolve_N2 保持 none",
+        "拒绝后不播结算台词，只播拒绝回应"
+      ]
+    },
+    {
+      "id": "N2-T05",
+      "name": "已结案回访",
+      "steps": [
+        "任一结算后再次回访",
+        "查阅相关物件"
+      ],
+      "writes": [],
+      "invariants": [
+        "不回滚 resolve_N2",
+        "不重复结算或发奖",
+        "只追加新回应"
+      ]
+    },
+    {
+      "id": "N2-T06",
+      "name": "存读档与顺序",
+      "steps": [
+        "结算后保存并重载",
+        "先做后续章再回访本案"
+      ],
+      "writes": [],
+      "invariants": [
+        "键值跨读档保持",
+        "顺序颠倒只重评未来，不回滚历史"
+      ]
+    }
+  ],
+  "write_matrix": [
+    {
+      "scenario": "N2-T01",
+      "key": "encountered_N2",
+      "value": "true",
+      "kind": "encounter"
+    },
+    {
+      "scenario": "N2-T02",
+      "key": "resolve_N2",
+      "value": "protected",
+      "kind": "resolve"
+    },
+    {
+      "scenario": "N2-T02",
+      "key": "callback_N2_protected",
+      "value": "true",
+      "kind": "callback"
+    },
+    {
+      "scenario": "N2-T03",
+      "key": "resolve_N2",
+      "value": "public",
+      "kind": "resolve"
+    },
+    {
+      "scenario": "N2-T03",
+      "key": "callback_N2_public",
+      "value": "true",
+      "kind": "callback"
+    },
+    {
+      "scenario": "N2-T04",
+      "key": "presence_N2",
+      "value": "refused",
+      "kind": "presence"
+    }
+  ]
+}

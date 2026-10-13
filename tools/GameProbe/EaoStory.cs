@@ -40,6 +40,12 @@ internal static class EaoStory
             var reached=new HashSet<string>();var queue=new Queue<string>();queue.Enqueue(root);
             while(queue.TryDequeue(out var n)) if(reached.Add(n)&&n!="@dialogue_end") foreach(var e in edges[n])queue.Enqueue(e);
             if(!reached.Contains("@dialogue_end")||edges.Keys.Any(n=>!reached.Contains(n)))throw new InvalidDataException("Unreachable story branch.");
+            if(id is "rope" or "cots") {
+                var leave="N1_"+id+"_leave_pc";
+                if(!edges["N1_"+id+"_intro"].Contains(leave)||!edges[leave].SequenceEqual(new[]{"@dialogue_end"}))
+                    throw new InvalidDataException("Clue preview cannot exit before quest acceptance.");
+                checks.Add(id+"-unconditional-exit-before-quest-acceptance");
+            }
             if(lines.RootElement.EnumerateObject().Any(l=>l.Value.GetArrayLength()!=2||l.Value[1].GetString()!.Length>100))throw new InvalidDataException("Story localization invalid/too long.");
             foreach(var kind in new[]{EventType.Mouse,EventType.Draw})if(!Asm(obj.Events[(int)kind].Single(e=>e.EventSubtype==(kind==EventType.Mouse?4U:0U)).Actions.Single().CodeId.Name.Content).Contains("event_inherited"))throw new InvalidDataException("Story actor replaced native interaction.");
             checks.Add(id+"-native-dialogue-connected-localized-and-preview-safe");

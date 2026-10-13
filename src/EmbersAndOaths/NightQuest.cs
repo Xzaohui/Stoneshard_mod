@@ -111,7 +111,8 @@ internal static class NightQuest
     private static string ClueFlow(string id, string cn, string en)
     {
         var f = new Flow("eao_n1_" + id, "EAO_Clue");
-        f.N("N1_" + id + "_intro", cn, en, "N1_" + id + "_inspect_pc");
+        f.N("N1_" + id + "_intro", cn, en, "N1_" + id + "_inspect_pc", "N1_" + id + "_leave_pc");
+        f.P("N1_" + id + "_leave_pc", "先离开这里。", "Leave for now.");
         f.P("N1_" + id + "_inspect_pc", "查看并记住现场。", "Examine and remember the scene.", "instruction_N1_" + id);
         f.A("instruction_N1_" + id, "eao_n1_" + id, "N1_" + id + "_done", "N1_" + id + "_intro");
         f.N("N1_" + id + "_done", id == "rope" ? "绳索有整齐的刀口，钟仍在架上。这里发生的不是偷钟。" : "铺盖有大小不同的脚印，角落留着孩子的布鞋。昨夜躲在这里的不止一个守夜人。", id == "rope" ? "A clean knife cut; the bell is still here. No bell was stolen." : "Different-sized footprints and a child's cloth shoe. The keeper was not alone.", "N1_" + id + "_end_pc");
@@ -145,7 +146,9 @@ internal static class NightQuest
             obj.Sprite = Msl.GetSprite(n.Item4); obj.ParentId=Msl.GetObject("o_simple_NPC"); obj.Visible=true;
             var create = files.GetCode("courier_create.gml").Replace("路誓行会信使",n.Item2).Replace("Roadsworn courier",n.Item3).Replace("eao_mq01","eao_n1_"+n.Item1).Replace("s_peasantmale_13P",n.Item5);
             set(obj, create + ActionsCode() + n.Item6, EventType.Create, 0);
-            set(obj, "event_inherited();", EventType.Draw, 0); set(obj, "event_inherited();", EventType.Mouse, 4);
+            var draw = "event_inherited();";
+            if(n.Item1 is "rope" or "cots") draw="if ("+Hd2dArt.Active+") { draw_sprite("+Hd2dArt.Sprite(n.Item1=="rope"?"n1_cut_rope":"n1_bedding")+",0,x,y); } else { event_inherited(); }";
+            set(obj, draw, EventType.Draw, 0); set(obj, "event_inherited();", EventType.Mouse, 4);
         }
         // Resolve dialogue text as well as actual on-scene actor presence.
         set(Msl.GetObject("o_eao_n1_ivo"), "event_inherited(); if (ds_map_exists(global.characterDataMap, \"EAO_N1_ivo\")) { var _f = ds_map_find_value(global.characterDataMap, \"EAO_N1_ivo\"); if (_f == \"escaped\" && !instance_exists(o_dialogue)) instance_destroy(); if (_f == \"held\") name = global.language == 3 ? \"伊沃（等待听审）\" : \"Ivo (awaiting hearing)\"; }", EventType.Step, 0);
@@ -173,10 +176,10 @@ internal static class NightQuest
             set(obj,"event_inherited(); position_tag = \"EAO_N1_"+marker+"\";",EventType.Create,0);
         }
         var floor=Msl.AddObject("o_eao_n1_floor",isVisible:true);
-        set(floor,"depth = 100;",EventType.Create,0); set(floor,NightRooms.FloorDraw(),EventType.Draw,0);
+        set(floor,"depth = 100;",EventType.Create,0); set(floor,Hd2dArt.DrawFloor()+NightRooms.FloorDraw(),EventType.Draw,0);
         var prop=Msl.AddObject("o_eao_n1_bell_art",isVisible:true);
         set(prop,"depth = -y;",EventType.Create,0);
-        set(prop,"draw_sprite_ext(s_eao_n1_bell, 0, x, y, 104 / sprite_get_width(s_eao_n1_bell), 104 / sprite_get_width(s_eao_n1_bell), 0, c_white, 1);",EventType.Draw,0);
+        set(prop,"if ("+Hd2dArt.Active+") { draw_sprite("+Hd2dArt.Sprite("n1_bell")+",0,x,y); } else { draw_sprite_ext(s_eao_n1_bell, 0, x, y, 104 / sprite_get_width(s_eao_n1_bell), 104 / sprite_get_width(s_eao_n1_bell), 0, c_white, 1); }",EventType.Draw,0);
         NightRooms.Build();
     }
 }

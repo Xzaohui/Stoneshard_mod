@@ -12,9 +12,9 @@ public sealed class EmbersAndOathsMod : Mod
 {
     public override string Name => "余烬与誓约（开发版）";
     public override string Author => "Stoneshard_mod project";
-    public override string Version => "0.3.0";
+    public override string Version => "0.3.1";
     public override string TargetVersion => "0.9.4.25";
-    public override string ShortDesc => "无钟之夜 · 剧情与场景重构";
+    public override string ShortDesc => "无钟之夜 · HD2D开发观察模式";
     public override string Description => "旧文书查档任务退役；无钟之夜包含现场探索、失踪者反转与两条可执行的处理路线。原存档资源保留，F8地图测试保留；大型扩展仍在开发。";
 
     public override void PatchMod()
@@ -77,6 +77,7 @@ public sealed class EmbersAndOathsMod : Mod
         // Room constants must exist before compiling target/room comparisons.
         NativeRooms.Prepare();
         NightQuest.Prepare();
+        DevTools.Prepare();
         Msl.AddObject("o_eao_d01_clerk", spriteName: "s_peasantmale_13", parentName: "o_simple_NPC", isVisible: true);
         foreach (var pair in new[] { ("o_eao_d01_entry", "o_Doors_all_small"), ("o_eao_d01_return", "o_Doors_all_small"), ("o_eao_d01_archive_door", "o_mannshireavern2floorladderup55"), ("o_eao_d01_down", "o_tavernladerdown01") })
             Msl.AddObject(pair.Item1, parentName: pair.Item2, isVisible: true).Sprite = Msl.GetObject(pair.Item2).Sprite;
@@ -90,6 +91,7 @@ public sealed class EmbersAndOathsMod : Mod
             else Msl.SetStringGMLInFile(code, existing.Actions.Single().CodeId.Name.Content);
         }
         SetEvent(controller, ModFiles.GetCode("controller_create.gml"), EventType.Create, 0);
+        DevTools.Configure(SetEvent, ModFiles);
         var step = ModFiles.GetCode("controller_step.gml").Replace("// Native port-store annex:", "event_user(2); if (instance_exists(o_smoothRoomChanger)) exit;\n// Native port-store annex:");
         SetEvent(controller, ModFiles.GetCode("night_controller_step.gml"), EventType.Step, 1);
         SetEvent(controller, ModFiles.GetCode("annex_entry_spawn.gml"), EventType.Other, 14);

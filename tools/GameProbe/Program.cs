@@ -160,6 +160,12 @@ if (args.Length > 1 && args[1] == "--test-eao-teleport") {
     File.WriteAllText(ProjectPaths.Output(Path.Combine(ProjectPaths.Root(),"artifacts","test-teleport-validation.json"),"artifacts"),JsonSerializer.Serialize(report,new JsonSerializerOptions { WriteIndented=true }));
     Console.WriteLine(JsonSerializer.Serialize(report)); return;
 }
+if (args.Length > 1 && args[1] == "--test-eao-dev") {
+    var checks=EaoDevChecks.Validate(data);
+    var report=new {date=DateTimeOffset.Now,checks,inputSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(args[0]))),runtimeVerified=false};
+    File.WriteAllText(ProjectPaths.Output(Path.Combine(ProjectPaths.Root(),"artifacts","dev-validation.json"),"artifacts"),JsonSerializer.Serialize(report,new JsonSerializerOptions{WriteIndented=true}));
+    Console.WriteLine(JsonSerializer.Serialize(report));return;
+}
 if (args.Length > 1 && args[1] == "--test-eao-story") {
     var checks=EaoStory.Validate(data);
     var report=new {date=DateTimeOffset.Now,checks,inputSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(args[0]))),runtimeVerified=false};

@@ -1,0 +1,8 @@
+global.EAO_dev_enabled = false;
+global.EAO_dev_art = true;
+dev_reveal = false;
+dev_grid = false;
+dev_fog_owned = false;
+dev_fog_before = true;
+dev_character_map = -1;
+depth = -100000;

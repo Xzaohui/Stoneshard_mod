@@ -42,7 +42,7 @@ foreach ($taskCulture in (Get-ChildItem -LiteralPath $taskMsl -Directory | Where
     Copy-Item -LiteralPath $taskCulture.FullName -Destination $taskLauncher -Recurse
 }
 New-Item -ItemType Directory -Path (Join-Path $taskLauncher 'Mods'),(Join-Path $taskLauncher 'ModSources') | Out-Null
-'{"Language":"Chinese","EnableLogger":true,"EnabledMods":[]}' | Set-Content -LiteralPath (Join-Path $taskLauncher 'Settings.json') -Encoding utf8NoBOM
+[IO.File]::WriteAllText((Join-Path $taskLauncher 'Settings.json'), '{"Language":"Chinese","EnableLogger":true,"EnabledMods":[]}', (New-Object System.Text.UTF8Encoding($false)))
 $taskFingerprint = [ordered]@{ created=(Get-Date -Format o); baselineOrigin='User-confirmed original vanilla.win'; runtimeVerified=$false; launchAllowed=$false; formalGame=$GameDirectory; backup=$taskBackup; resources=@(); formalUserData=@() }
 foreach ($taskName in 'vanilla.win','data.win','StoneShard.exe') {
     $taskFingerprint.resources += @{ name=$taskName; sha256=(Get-FileHash -LiteralPath (Join-Path $GameDirectory $taskName) -Algorithm SHA256).Hash }
@@ -50,5 +50,5 @@ foreach ($taskName in 'vanilla.win','data.win','StoneShard.exe') {
 foreach ($taskFile in (Get-ChildItem -LiteralPath $taskOriginalUserData -Recurse -File)) {
     $taskFingerprint.formalUserData += @{ relative=$taskFile.FullName.Substring($taskOriginalUserData.Length + 1); sha256=(Get-FileHash -LiteralPath $taskFile.FullName -Algorithm SHA256).Hash }
 }
-$taskFingerprint | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $taskEnvRoot 'manifests\formal-before.json') -Encoding utf8NoBOM
+[IO.File]::WriteAllText((Join-Path $taskEnvRoot 'manifests\formal-before.json'), ($taskFingerprint | ConvertTo-Json -Depth 6), (New-Object System.Text.UTF8Encoding($false)))
 Write-Output 'Prepared baseline, work copy, launcher and formal-data backup. Game launch remains blocked pending isolation verification.'

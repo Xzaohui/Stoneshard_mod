@@ -41,6 +41,8 @@ try {
     if ($LASTEXITCODE) { throw 'Optional test teleport/native transition checks failed; nothing deployed.' }
     dotnet $taskProbe artifacts/direct-data.win --test-eao-story
     if ($LASTEXITCODE) { throw 'New story/retirement/scene checks failed; nothing deployed.' }
+    dotnet $taskProbe artifacts/direct-data.win --test-eao-dev
+    if ($LASTEXITCODE) { throw 'Developer mode and embedded HD2D checks failed; nothing deployed.' }
     Copy-Item -LiteralPath 'artifacts\offline-validation.json' -Destination 'artifacts\direct-validation.json'
     if ($Deploy) {
         & (Join-Path $PSScriptRoot 'Deploy-Mod.ps1') -ValidatedInput $taskInput

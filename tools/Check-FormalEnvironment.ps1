@@ -21,6 +21,6 @@ foreach ($taskFile in (Get-ChildItem -LiteralPath $taskUserRoot -Recurse -File))
     if (!$taskExpected.ContainsKey($taskRelative)) { $taskProblems.Add('New formal user file appeared.') }
 }
 $taskReport = [ordered]@{ checked=(Get-Date -Format o); gameResourcesChecked=$taskSnapshot.resources.Count; userFilesChecked=$taskSnapshot.formalUserData.Count; backupMatchesSnapshot=($taskProblems.Count -eq 0); formalFilesUnchanged=($taskProblems.Count -eq 0); errors=@($taskProblems) }
-$taskReport | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $taskRoot 'test-env\manifests\formal-after.json') -Encoding utf8NoBOM
+[IO.File]::WriteAllText((Join-Path $taskRoot 'test-env\manifests\formal-after.json'), ($taskReport | ConvertTo-Json -Depth 4), (New-Object System.Text.UTF8Encoding($false)))
 $taskReport | ConvertTo-Json -Depth 4
 if ($taskProblems.Count) { throw 'Formal environment check failed. Do not automatically restore files; investigate external changes first.' }

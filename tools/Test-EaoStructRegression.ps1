@@ -2,8 +2,12 @@ param([Parameter(Mandatory)][string]$BrokenData, [Parameter(Mandatory)][string]$
 $ErrorActionPreference = 'Stop'
 $taskRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $taskProbe = Join-Path $taskRoot 'tools/GameProbe/bin/Release/net10.0-windows/GameProbe.dll'
+# The broken input is expected to fail: keep its stderr from becoming a terminating error.
+$taskSavedPreference = $ErrorActionPreference
+$ErrorActionPreference = 'Continue'
 $taskBrokenOutput = @(& dotnet $taskProbe $BrokenData --assert-eao-struct-access 2>&1)
 $taskBrokenExit = $LASTEXITCODE
+$ErrorActionPreference = $taskSavedPreference
 if ($taskBrokenExit -eq 0 -or ($taskBrokenOutput -join "`n") -notmatch 'Courier Create coerces a struct receiver to an integer instance index') {
     throw 'The known broken bytecode was not rejected for the expected reason.'
 }
@@ -17,5 +21,7 @@ $taskResult = [ordered]@{
     fixedSerializedResourcePassed=$true
     runtimeVerified=$false
 }
-$taskResult | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $taskRoot 'artifacts/struct-access-regression.json') -Encoding utf8NoBOM
-$taskResult | ConvertTo-Json
+# Windows PowerShell 5.1 has no -Encoding utf8NoBOM; write UTF-8 without BOM explicitly.
+$taskJson = $taskResult | ConvertTo-Json
+[IO.File]::WriteAllText((Join-Path $taskRoot 'artifacts/struct-access-regression.json'), $taskJson, (New-Object System.Text.UTF8Encoding($false)))
+$taskJson

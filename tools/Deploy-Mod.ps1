@@ -37,11 +37,16 @@ if ([version]$taskReport.modVersion -ge [version]'0.2.4' -and (@($taskActions.co
 }
 if ([version]$taskReport.modVersion -ge [version]'0.3.0') {
     $taskStory = Get-Content -LiteralPath (Join-Path $taskRoot 'artifacts\story-validation.json') -Raw | ConvertFrom-Json
-    if ($taskStory.inputSha256 -ne $taskReport.outputSha256 -or @($taskStory.checks).Count -lt 19 -or @($taskActions.compiledCallbackScenarios | Where-Object { $_ -like 'night-*' }).Count -lt 10) {
+    $taskStoryMinimum = if ([version]$taskReport.modVersion -ge [version]'0.3.1') { 21 } else { 19 }
+    if ($taskStory.inputSha256 -ne $taskReport.outputSha256 -or @($taskStory.checks).Count -lt $taskStoryMinimum -or @($taskActions.compiledCallbackScenarios | Where-Object { $_ -like 'night-*' }).Count -lt 10) {
         throw 'Story retirement/branch/scene checks do not match this candidate; nothing deployed.'
     }
 }
 if (Get-Process -Name ModShardLauncher -ErrorAction SilentlyContinue) { throw 'MSL is running; close it before updating. No process was stopped.' }
+if ([version]$taskReport.modVersion -ge [version]'0.3.1') {
+    $taskDev = Get-Content -LiteralPath (Join-Path $taskRoot 'artifacts/dev-validation.json') -Raw | ConvertFrom-Json
+    if ($taskDev.inputSha256 -ne $taskReport.outputSha256 -or @($taskDev.checks).Count -lt 59) { throw 'Developer/art checks do not match this candidate.' }
+}
 if (!$PackageOnly -and (Get-Process -Name StoneShard -ErrorAction SilentlyContinue)) { throw 'Game is running; close it before updating data.win. No process was stopped.' }
 function Test-TaskNoLink([string]$Path) {
     $taskAbsolute = [IO.Path]::GetFullPath($Path)
@@ -62,10 +67,10 @@ if ($PackageOnly) {
     if (Test-Path -LiteralPath $taskDestination) { Copy-Item -LiteralPath $taskDestination -Destination (Join-Path $taskPackageBackup 'EmbersAndOaths.sml') }
     Copy-Item -LiteralPath $taskPackage -Destination $taskDestination
     $taskConfiguration.EnableMods = @($taskConfiguration.EnableMods | Where-Object { $_ -ne 'EmbersAndOaths' }) + @('EmbersAndOaths')
-    $taskConfiguration | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $taskSettings -Encoding utf8NoBOM
+    [IO.File]::WriteAllText($taskSettings, ($taskConfiguration | ConvertTo-Json -Depth 10), (New-Object System.Text.UTF8Encoding($false)))
     if ((Get-FileHash -LiteralPath $taskDestination -Algorithm SHA256).Hash -ne $taskReport.packageSha256 -or (Get-FileHash -LiteralPath $taskData -Algorithm SHA256).Hash -ne $taskOldHash) { throw 'Package deployment verification failed.' }
     $taskPackageResult = [ordered]@{ date=(Get-Date -Format o); mode='package only while game running'; package=$taskDestination; packageSha256=$taskReport.packageSha256; settingsBackup=$taskPackageBackup; mslEnabled=$true; gameResourceUpdated=$false; gameDataUnchanged=$true; runtimeVerified=$false }
-    $taskPackageResult | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $taskRoot 'artifacts\package-deployment.json') -Encoding utf8NoBOM
+    [IO.File]::WriteAllText((Join-Path $taskRoot 'artifacts\package-deployment.json'), ($taskPackageResult | ConvertTo-Json -Depth 5), (New-Object System.Text.UTF8Encoding($false)))
     $taskPackageResult | ConvertTo-Json -Depth 5
     return
 }
@@ -93,7 +98,8 @@ $taskUserSnapshot = @(Get-ChildItem -LiteralPath $taskUserData -File -Recurse | 
 if ((Get-FileHash -LiteralPath (Join-Path $taskBackup 'data.win') -Algorithm SHA256).Hash -ne $taskOldHash) { throw 'Game-data backup mismatch.' }
 $taskVanillaHash = (Get-FileHash -LiteralPath (Join-Path $taskGame 'vanilla.win') -Algorithm SHA256).Hash
 $taskPreEaoInput = if ($taskReport.targetedRepair) { $null } elseif ($taskOldHash -eq $taskReport.inputSha256) { Join-Path $taskBackup 'data.win' } else { [IO.Path]::GetFullPath($ValidatedInput) }
-@{ created=(Get-Date -Format o); game=$taskGame; beforeDataSha256=$taskOldHash; vanillaSha256=$taskVanillaHash; userFiles=$taskUserSnapshot } | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $taskBackup 'before.json') -Encoding utf8NoBOM
+$taskBeforeJson = @{ created=(Get-Date -Format o); game=$taskGame; beforeDataSha256=$taskOldHash; vanillaSha256=$taskVanillaHash; userFiles=$taskUserSnapshot } | ConvertTo-Json -Depth 5
+[IO.File]::WriteAllText((Join-Path $taskBackup 'before.json'), $taskBeforeJson, (New-Object System.Text.UTF8Encoding($false)))
 # Copy into the destination volume and hash before replacing the game resource.
 $taskPending = Join-Path $taskGame 'data.win.eao-pending'
 Test-TaskNoLink $taskPending
@@ -104,7 +110,7 @@ Copy-Item -LiteralPath $taskPackage -Destination $taskDestination
 [IO.File]::Move($taskPending, $taskData, $true)
 # Local MSL identifies its settings entries by package filename, not the display name.
 $taskConfiguration.EnableMods = @($taskConfiguration.EnableMods | Where-Object { $_ -ne 'EmbersAndOaths' }) + @('EmbersAndOaths')
-$taskConfiguration | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $taskSettings -Encoding utf8NoBOM
+[IO.File]::WriteAllText($taskSettings, ($taskConfiguration | ConvertTo-Json -Depth 10), (New-Object System.Text.UTF8Encoding($false)))
 if ((Get-FileHash -LiteralPath $taskData -Algorithm SHA256).Hash -ne $taskReport.outputSha256 -or (Get-FileHash -LiteralPath $taskDestination -Algorithm SHA256).Hash -ne $taskReport.packageSha256) { throw 'Deployment verification failed.' }
 if ((Get-FileHash -LiteralPath (Join-Path $taskGame 'vanilla.win') -Algorithm SHA256).Hash -ne $taskVanillaHash) { throw 'Original vanilla changed externally.' }
 foreach ($taskEntry in $taskUserSnapshot) {
@@ -112,5 +118,5 @@ foreach ($taskEntry in $taskUserSnapshot) {
 }
 if (@(Get-ChildItem -LiteralPath $taskUserData -Recurse -File).Count -ne $taskUserSnapshot.Count) { throw 'User file count changed during deployment.' }
 $taskResult = [ordered]@{ date=(Get-Date -Format o); mode='current installation, no isolation'; game=$taskGame; package=$taskDestination; backup=$taskBackup; targetedRepair=[bool]$taskReport.targetedRepair; repairSourceData=if ($taskReport.targetedRepair) { Join-Path $taskBackup 'data.win' } else { $null }; preEaoInput=$taskPreEaoInput; preEaoInputSha256=if ($taskPreEaoInput) { $taskReport.inputSha256 } else { $null }; deployedDataSha256=$taskReport.outputSha256; packageSha256=$taskReport.packageSha256; vanillaUnchanged=$true; userFilesUnchanged=$true; userFilesChecked=$taskUserSnapshot.Count; runtimeVerified=$false }
-$taskResult | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $taskLastFile -Encoding utf8NoBOM
+[IO.File]::WriteAllText($taskLastFile, ($taskResult | ConvertTo-Json -Depth 5), (New-Object System.Text.UTF8Encoding($false)))
 $taskResult | ConvertTo-Json -Depth 5

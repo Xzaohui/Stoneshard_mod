@@ -1,0 +1,3 @@
+# Batch62: FIX-09-BRY-CLASP-INSPECTION
+
+One supplemental opaque inspection concept. Source: CS-BRY-12-S1/S2 and BRY-X12. Exactly one intact baseline and two complementary pieces of one broken counterpart, same-scale comparison; visibly enlarged sample hole; localized opposing seat/contact traces on same clasp, repeated in a zoom inset only. Idle drill beside samples. No people, invented guilt, ethnicity, material-fault verdict, test results, compensation or runtime claims. Muted iron gray and wood brown; crisp pixel-style clusters; no strict native pixel grid or exact canonical measurement claimed. No animation needed. Preserve prior outputs; only batch62 writable. Third-party pixel-asset-master read as guidance, scripts not executed. Built-in imagegen only.

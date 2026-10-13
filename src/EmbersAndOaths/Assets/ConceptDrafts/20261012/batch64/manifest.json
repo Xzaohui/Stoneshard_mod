@@ -1,0 +1,64 @@
+{
+  "batch": 64,
+  "date": "2026-10-12",
+  "strategy": "Two separate fixed-camera keyframes; generate adjacent master pair, then builtin edit using first image as target. No four-frame panel redraw.",
+  "entries": [
+    {
+      "id": "N6-45-ADJACENT",
+      "output": "45_keyframe01_adjacent.png",
+      "output_sha256": "59b6461e979bc1b61828130630fe7f5f00a90f5b2c5d2504cec4ecd40f733003",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "prompt_file": "45_keyframe01_prompt.txt",
+      "prompt": "Use case: stylized-concept. Asset type: single source-grounded pixel-art comparison keyframe, not a storyboard. Generate ONE square 1024x1024 overhead orthographic image. Plain flat dark brown background, exactly TWO simple blank parchment sheets and nothing else. Crisp chunky controlled pixel-art contours and sparse pixel texture, muted warm parchment palette, no gradients or shadows, no perspective. These are two versions of the same archival page whose binding holes can align. Composition coordinates are critical: fixed baseline sheet A at x128..448, y256..736, width320 height480; moving sheet B at x576..880, y256..736, width304 height480. Both rectangular, perfectly parallel, straight uncurled edges, B has a clean trimmed right margin 16px narrower than A. Each sheet has exactly THREE 16x16 dark square punched binding holes with centers at x32 relative to its left edge, y80,240,400 relative to its top. Thus A hole centers (160,336),(160,496),(160,656), B hole centers (608,336),(608,496),(608,656). All corresponding holes share exact horizontal rows. A is ochre parchment, B slightly paler parchment. Hole geometry equal, no random extra tears or notches. Sheets totally blank, no letters, lines, signatures, stamps, labels, arrows, figures, props, border, grid or multiple panels. Leave the ample margins and simple flat background intact. Exact geometry is a proposed production study, not evidence of identity, receipt or dispatch. Do not create an overlapping second frame: THIS IMAGE ONLY shows the initial adjacent pair.",
+      "generation_tool": "builtin image_gen__imagegen",
+      "origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-4a5afd84-b35d-4952-9a3d-d91af9a0088a.png",
+      "reference": null,
+      "reference_sha256": null,
+      "source": "design/05_主线/台本/台本_N6_被封存的页码.md",
+      "source_sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0",
+      "source_anchor": "N6-S02 / lines 128–140; N6-R-archive and N6-R-witness / lines 53,55",
+      "runtimeVerified": false,
+      "engineReady": false
+    },
+    {
+      "id": "N6-45-OVERLAP",
+      "output": "45_keyframe02_overlap.png",
+      "output_sha256": "9d7270e80c13652d57578c0336ae40181d0afb7c71d43df6cd68a4b2d5fc166c",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "prompt_file": "45_keyframe02_prompt.txt",
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target and master geometry for a TWO-image animation keyframe test. Output ONE image, same square size and exact same fixed overhead camera. Make ONLY ONE change: rigidly translate the complete right pale paper B horizontally left by 535 actual image pixels (about42.66% of canvas width), without any vertical motion, until its left edge sits directly over the left edge of ochre paper A. Place B on TOP of A. A's master bounds in this image are approximately x168..602,y313..970; B starts x703..1085,y313..970. New B bounds must be x168..550,y313..970. KEEP A absolutely fixed, unchanged and at its original x168 position; do not center or enlarge the stacked papers. Preserve ALL original silhouettes, top/bottom coordinates, width, height, textures and hole positions as rigid objects. Exactly THREE square B holes now fall directly over the corresponding three A holes in one vertical column at approx x215,y433,646,858, showing darkness through both. Do not add a second column of holes. The wider ochre A remains visibly exposed as a vertical lower-layer strip from x550..602 on the stack's RIGHT edge; this width comes from existing A and B, not resizing either one. Former B location on right becomes the same plain empty brown background. Never redraw A, never alter either paper's size, edge shape, scale, hole spacing, count or local textures, never rotate, no new shadows or props. Preserve original background and composition margins with stack deliberately on LEFT and empty right half. No grid, no panels, no words, no hand, no arrows, no extra sheet. This illustrates physical hole registration only, not any identity or receipt/dispatch conclusion. Most important invariants: A remains locked to its original canvas coordinates; B moves as one unchanged rigid bitmap; all three holes register; exposed ochre strip stays visible.",
+      "generation_tool": "builtin image_gen__imagegen",
+      "origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-96b17407-96b2-42ed-90d5-1d5c3f508f26.png",
+      "reference": "45_keyframe01_adjacent.png",
+      "reference_sha256": "59b6461e979bc1b61828130630fe7f5f00a90f5b2c5d2504cec4ecd40f733003",
+      "source": "design/05_主线/台本/台本_N6_被封存的页码.md",
+      "source_sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0",
+      "source_anchor": "N6-S02 / lines 128–140; N6-R-archive and N6-R-witness / lines 53,55",
+      "runtimeVerified": false,
+      "engineReady": false
+    }
+  ],
+  "rigorousMatchAchieved": false,
+  "selectedFor": "Source-bounded comparison concept only",
+  "notSelectedFor": [
+    "Exact rigid animation",
+    "Engine sprites",
+    "Forensic registration proof"
+  ],
+  "revision_count": 0,
+  "raster_postprocessing": false,
+  "source_limits": [
+    "Source explicitly says two versions of same page can align by binding holes.",
+    "Source does not specify exactly three holes, square punches, dimensions, colors, spacing, trim side or camera. These are art proposals.",
+    "Blank sheets deliberately omit the actual edge annotation; this pair does not illustrate the full text clue.",
+    "Alignment alone does not certify receipt, continued dispatch, identity or responsibility."
+  ]
+}

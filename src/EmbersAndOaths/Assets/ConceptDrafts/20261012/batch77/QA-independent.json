@@ -1,0 +1,86 @@
+{
+  "batch": 77,
+  "reviewed_at": "2026-10-12T23:10:54.850681+00:00",
+  "independent": true,
+  "scope": "Both output PNGs, historical batch71 Avi image and batch33 clothing reference actually viewed. Current scene, character card and drama scene read; source, reference, output SHA and prompt files checked.",
+  "reviewed_count": 2,
+  "raster_modified": false,
+  "overall_status": "hand_role_continuity_corrected_as_bounded_concept; exact_stitch_geometry_unresolved",
+  "rigorousMatchAchieved": false,
+  "findings": [
+    "旧batch71首帧与后两帧持针手换侧。batch77两版均固定俯视构图：每帧两手，画面左/解剖左手夹住裂口左端布边，画面右/解剖右手始终持银针，逐步向右拉开；未见换手或第三手。此项有限视觉目标已修正。",
+    "两版同一旧袖筒、右上袖口和左侧方补丁保留，三帧裂口仍明显开放。v1首帧长垂尾、中帧近闭圆环及末帧额外垂线妨碍单线连续读法；v2去掉这些形状，首帧短松弧、中帧U形松线、末帧近直绷线可辨，作为优选概念。",
+    "v2中帧U线右端在针/手附近有短向上段，其与针眼的精确连接不清；末帧银针与棕线近乎共线，不能认定穿针眼、入布/出布点或恰好新增一针。图没有足够清楚的离散新针脚可计数。",
+    "三帧支撑点大体稳定，袖口、补丁与手指仍有位置/形状漂移。v2对v1除线外亦出现纹理与轮廓细化变化，不能把thread-only提示词当像素不变证明；未做逐像素注册或原生帧制作验收。",
+    "已重看126中排阿薇服装：赭衣、奶油袖与棕色布层可读；新稿遮掉面部与头巾，不能据此终审人物相貌，单凭画面不能独立确认身份。",
+    "源CM-BRY场1只有给小外衣补袖，精确一针和左右手配置是本批动作设计，不是源台本额外事实。本人须存活、在场、自愿；不意味着整衣完成、床位生活痕或孩子姓名授权、欠费/补助结算、家庭和解或奖励。",
+    "本次三份来源、两份图像来源、两份输出及完整提示词文件核验结果见记录。仅审阅概念；原生像素网格、有限调色板、精灵导入、碰撞和游戏运行均未验证。"
+  ],
+  "sources": [
+    {
+      "path": "design/05_主线/城市篇章/台本_CM-BRY_城墙之内.md",
+      "sha256": "ec94af587bf279d282b2c97c39f8611d9b77f3b2eebcf92c4307261f6edf6c00",
+      "locator": "场1，第35行",
+      "excerpt": "阿薇在给一件小外衣补袖",
+      "current_sha256": "ec94af587bf279d282b2c97c39f8611d9b77f3b2eebcf92c4307261f6edf6c00",
+      "current_sha_matches": true
+    },
+    {
+      "path": "research/brynn-drama.json",
+      "sha256": "bc9a0d52e24350cf9a0dae251cb46ab03e5d56a6364318b6bd2afa68c9b3a2dc",
+      "locator": "CM-BRY scene setup",
+      "current_sha256": "bc9a0d52e24350cf9a0dae251cb46ab03e5d56a6364318b6bd2afa68c9b3a2dc",
+      "current_sha_matches": true
+    },
+    {
+      "path": "design/04_人物/城市人物/人物_BRY-NPC-AVI_阿薇.md",
+      "sha256": "475f39b6530f97b7df89e199e4f5909b8d7298740b038c08d7e7bba2577570d1",
+      "locator": "稳定演员ID与在场边界",
+      "current_sha256": "475f39b6530f97b7df89e199e4f5909b8d7298740b038c08d7e7bba2577570d1",
+      "current_sha_matches": true
+    }
+  ],
+  "references": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch33/126_bry_herlin_avi_osin_cast.png",
+      "sha256": "baa3a8dc7cd2fb4eeed4d3867370f30ebd1c73bbe47d6529564bcdb26df78048",
+      "role": "generation clothing reference, middle row only",
+      "actualPixelsViewed": true,
+      "current_sha_matches": true,
+      "independently_actual_pixels_viewed": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch71/03_avi_one_cuff_stitch.png",
+      "sha256": "0f7c4317f4ab012ff14f0019e0bb764114374296e811b631d9465d3207fe08df",
+      "role": "old defect reviewed, NOT generation input",
+      "actualPixelsViewed": true,
+      "current_sha_matches": true,
+      "independently_actual_pixels_viewed": true
+    }
+  ],
+  "entries": [
+    {
+      "filename": "01_avi_fixed_hand_cuff_stitch.png",
+      "sha256": "dea41a1e405d0457404011b173988c50be7768d83b977cdce3746c505d69b0bb",
+      "manifest_hash_matches": true,
+      "actual_pixels_viewed": true,
+      "selected": false,
+      "engineReady": false,
+      "runtimeVerified": false,
+      "prompt_file_matches": true
+    },
+    {
+      "filename": "01_avi_fixed_hand_cuff_stitch-v2.png",
+      "sha256": "1cc0b7a52b1996eee6c50fe1a7b0e7875855a91fa695ac26c145ba7fde1231f7",
+      "manifest_hash_matches": true,
+      "actual_pixels_viewed": true,
+      "selected": true,
+      "engineReady": false,
+      "runtimeVerified": false,
+      "prompt_file_matches": true
+    }
+  ],
+  "engineReady": false,
+  "runtimeVerified": false,
+  "decision": "Retain v1 as revision history; prefer v2 for stable hand-role and simplified thread concept only. Exact one-stitch topology and animation registration remain open. No regeneration or raster editing."
+}

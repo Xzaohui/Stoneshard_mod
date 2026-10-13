@@ -1,0 +1,185 @@
+{
+  "batch": 66,
+  "date": "2026-10-12",
+  "generation_tool": "builtin image_gen__imagegen",
+  "scope": "Exactly three source-grounded character motion concepts, three keyframes each; Hers original plus one correction retained.",
+  "external_guidance_read_only": "https://raw.githubusercontent.com/424431185/pixel-asset-master-skills/main/skills/pixel-asset-master/SKILL.md",
+  "policy": "Existing concept project continued. Sequential builtin generation; no third-party generation scripts, raster postprocessing, globals, runtime integration or push.",
+  "audit_sha256": "3d5679582910c5d678f793eb1645d400dc31c842a3ac2ed88d2e25534b19570d",
+  "spec_lock_sha256": "5d2fab2e0db53f5e1a509c4f92057e3012eb6d4a961604e6be6b3194084f8ccc",
+  "entries": [
+    {
+      "id": "MOTION-N17-HERS-CONDITIONAL-RETREAT",
+      "output": "01_hers_conditional_retreat.png",
+      "output_sha256": "8ca0bf12e6a7f6eba7cc1bee49aa41ae4685787da8957b452f751430a245b49c",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-f04a172e-8f87-48ee-aa4c-e232b0891c8d.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGB",
+      "prompt_file": "hers_prompt.txt",
+      "prompt": "Use case: stylized-concept. Make ONE wide 1536x1024 pixel-art character motion concept board, exactly THREE equal panels left-to-right. Image 1 is an appearance/style reference, NOT an edit target. Use the same older receding grey-haired stern man Hers, dark charcoal long wool coat, bone linen collar, plain brown belt, worn brown boots and one ordinary iron operation key attached to his left hip throughout. Simplify modern lapels to plain medieval closure, otherwise preserve identity and silhouette. Full bodies visible, ample margins, crisp chunky pixel clusters and dark outlines, restrained reference earth palette, flat opaque neutral grey background, no text or headings. Same fixed slightly elevated three-quarter camera, scale and ground baseline in every panel. A single waist-high stone shelf with a single closed brown ledger is at LEFT of each panel, IDENTICAL screen-relative placement, size, book orientation and closed state across all panels. At the start Hers stands immediately RIGHT of this shelf. Panel1: his protective hand has just withdrawn a small distance ABOVE the closed ledger, visibly releasing it, weight shifting away. Panel2: he turns toward the open RIGHT side and takes first step right away from shelf, hands empty. Panel3: he takes a second distinct step farther RIGHT, turned away, hands empty, still fully in frame. Shelf and ledger never move, remain clearly visible at original left-hand location, do not follow him; no paper or book carried. Body travels progressively right, do not center him independently in each frame. This is ONLY the conditional fleeing branch after actual apparatus disconnection, not successful escape. Do not draw apparatus, weapons, combat, magic, guards, other characters, escape completion, death, surrender, redemption or political outcome. The three postures are proposed motion keyframes, not engine-ready animation. Three clean panel divisions, no arrows, labels, duplicates within panels or props beyond fixed shelf/book and worn outfit/key.\n",
+      "prompt_sha256": "49f3ca2a74ba89250916312e249e9961a44bf64d8dfd2320a0e622835ae15f92",
+      "reference": "../batch32/124_hers_white_debt_controller_cast.png",
+      "reference_sha256": "2aeb144561a9f78b433c442091907caabd8cd8342e0b82cfb92968d6fe6edde0",
+      "sources": [
+        {
+          "file": "design/05_主线/台本/台本_N17_残光之井.md",
+          "location": "N17-R-defection line55; N17-S02 lines141–153",
+          "exact_requirement": "赫斯没有人替他挡价后可逃或独战，账页不丢。 / 守债簿、依赖辅助装置、断开后逃走或近战。 / 赫斯死亡或逃脱都留固定债簿。",
+          "sha256": "a7154c5bc087421b566054344c0556b583d5e53d8f1f4de1d8005e0a1033526d",
+          "verified_sha256": "a7154c5bc087421b566054344c0556b583d5e53d8f1f4de1d8005e0a1033526d"
+        },
+        {
+          "file": "design/04_人物/人物_赫斯·白.md",
+          "location": "失效替代",
+          "exact_requirement": "死亡/逃脱都留下固定债簿与仪式状态，不重生发奖。",
+          "sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c",
+          "verified_sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c"
+        }
+      ],
+      "guards": "Conditional retreat branch only after apparatus is actually disconnected and branch selects fleeing; not every N17 outcome. No death, surrender, redemption, magical action, apparatus redesign or political outcome. Torso/step choreography is an art proposal, while escape branch is explicit source. No invented weapon or combat move.",
+      "outfit": "Same older receding grey-haired man; dark charcoal long wool coat, bone linen collar, plain brown belt, ordinary iron operation key and worn brown boots. Existing lapels are too modern; retain silhouette but plain medieval closure. Key location must stay fixed.",
+      "minimal_keyframes": [
+        "Fixed closed ledger and waist-high stone shelf; same Hers releases his forearm from ledger and shifts his body weight away.",
+        "Same shelf and ledger stay motionless; Hers turns toward open side and takes first retreating step, coat follows physical movement.",
+        "Hers takes next step away; closed ledger still visibly left in its original place, no carried pages, no disappearing character or completed-escape icon."
+      ],
+      "selected_concept": false,
+      "engineReady": false,
+      "runtimeVerified": false
+    },
+    {
+      "id": "MOTION-N17-HERS-CONDITIONAL-RETREAT",
+      "output": "01_hers_conditional_retreat_v2.png",
+      "output_sha256": "2ee927a53bf1ff8e620bbded8ca50866030ab1fd4be954e2241402b679618f33",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-be481717-66d3-452b-8199-f10699c5d4c5.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGB",
+      "prompt_file": "hers_correction_prompt.txt",
+      "prompt": "Use case: precise-object-edit. Input image is the THREE-panel Hers retreat board to correct. Keep the entire panel1 and panel2 poses, all three original stone shelves and closed brown ledgers, their original positions, all faces, camera, background, frame divisions, scale, hands, outfit colors and belt key attachment unchanged. The crucial correction is PANEL3 ONLY: make it a clearly distinct SECOND STEP, with the OPPOSITE leg leading from panel2. Panel2 has his anatomical LEFT leg leading toward screen right and RIGHT leg trailing. In PANEL3 plant his anatomical RIGHT boot ahead at far right and bring his LEFT boot behind as the following leg, with natural slight bend and a small additional body shift right within panel margins. Show the back/outer side of his right leg now clearly in front; do not simply translate the existing pose. Same man, same coat, same empty hands and same key attached to his left hip. Keep both boots entirely within panel3. Closed ledger must remain fixed on original shelf well behind him, never move, open or enter his hands. Also simplify the conspicuously modern notched coat lapels to a plain straight medieval wool-coat neckline in ALL three panels, retaining existing charcoal silhouette and bone linen inner collar; change no other costume detail. No added props, apparatus, people, weapon, labels, glow, escape completion or narrative outcome. This is the conditional retreat after disconnection, ending mid-motion still on camera, not proof of successful escape. Preserve the crisp muted medieval pixel-art appearance, no raster smoothing. Primary goal is a distinct alternate-leg second step in third panel.\n",
+      "prompt_sha256": "cce64c90ca4c3087ed304548174e09975711e161d64a88bbb7eabaeedeb7bc9b",
+      "reference": "../batch32/124_hers_white_debt_controller_cast.png",
+      "reference_sha256": "2aeb144561a9f78b433c442091907caabd8cd8342e0b82cfb92968d6fe6edde0",
+      "sources": [
+        {
+          "file": "design/05_主线/台本/台本_N17_残光之井.md",
+          "location": "N17-R-defection line55; N17-S02 lines141–153",
+          "exact_requirement": "赫斯没有人替他挡价后可逃或独战，账页不丢。 / 守债簿、依赖辅助装置、断开后逃走或近战。 / 赫斯死亡或逃脱都留固定债簿。",
+          "sha256": "a7154c5bc087421b566054344c0556b583d5e53d8f1f4de1d8005e0a1033526d",
+          "verified_sha256": "a7154c5bc087421b566054344c0556b583d5e53d8f1f4de1d8005e0a1033526d"
+        },
+        {
+          "file": "design/04_人物/人物_赫斯·白.md",
+          "location": "失效替代",
+          "exact_requirement": "死亡/逃脱都留下固定债簿与仪式状态，不重生发奖。",
+          "sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c",
+          "verified_sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c"
+        }
+      ],
+      "guards": "Conditional retreat branch only after apparatus is actually disconnected and branch selects fleeing; not every N17 outcome. No death, surrender, redemption, magical action, apparatus redesign or political outcome. Torso/step choreography is an art proposal, while escape branch is explicit source. No invented weapon or combat move.",
+      "outfit": "Same older receding grey-haired man; dark charcoal long wool coat, bone linen collar, plain brown belt, ordinary iron operation key and worn brown boots. Existing lapels are too modern; retain silhouette but plain medieval closure. Key location must stay fixed.",
+      "minimal_keyframes": [
+        "Fixed closed ledger and waist-high stone shelf; same Hers releases his forearm from ledger and shifts his body weight away.",
+        "Same shelf and ledger stay motionless; Hers turns toward open side and takes first retreating step, coat follows physical movement.",
+        "Hers takes next step away; closed ledger still visibly left in its original place, no carried pages, no disappearing character or completed-escape icon."
+      ],
+      "selected_concept": true,
+      "engineReady": false,
+      "runtimeVerified": false,
+      "edit_target": "01_hers_conditional_retreat.png",
+      "edit_target_sha256": "8ca0bf12e6a7f6eba7cc1bee49aa41ae4685787da8957b452f751430a245b49c"
+    },
+    {
+      "id": "MOTION-N4-SEL-OFFERS-BLANK-DEBT-TICKET",
+      "output": "02_sel_ticket_offer.png",
+      "output_sha256": "d0d72ce2a5462046e59e7e70a57b470de691b8934c30fcd1f6ff1d6893380323",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-800335df-1a68-48b1-a50e-0ab94ec3dafd.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "sel_prompt.txt",
+      "prompt": "Use case: stylized-concept. Make ONE wide 1536x1024 pixel-art character motion concept board with exactly THREE equal panels left-to-right. Image1 is appearance/style reference ONLY. Copy ONLY Sel, the GREY-BEARDED MALE ARTISAN IN THE RIGHT HALF; exclude the woman Nell completely. Same adult man with short grey hair and grey beard, russet tunic with rolled sleeves, charcoal leather apron, brown belt with ordinary tongs attached to his left hip, brown trousers and boots. Crisp hard-edged chunky pixel clusters, restrained russet/charcoal/brown palette, opaque flat neutral grey background, no glow or soft gradient, no text. Same full-body three-quarter pose facing diagonally toward screen RIGHT, same fixed camera, ground baseline, body size and feet across all panels. Action ONLY in arm extension. ONE SAME small rectangular partly-written cream debt ticket, same shape/size/orientation held in HIS RIGHT HAND throughout. His right index finger is visibly pressed onto the SAME small lower guarantor box area on the paper in every panel; do not switch hands or shift finger to another field. A few tiny unreadable ink strokes occupy only the upper part of paper, with a clearly EMPTY recipient field. Angle paper face to camera so covered box and empty field are visible. Panel1: elbow bent, note held close to torso at waist height. Panel2: elbow begins opening, SAME note moves outward to right at waist height; finger stays over guarantor box. Panel3: right arm reaches an offered position, still HIS grip and HIS finger retaining the note; left arm remains naturally at his side. Paper never leaves his hand. No second hand touching paper, no recipient, signature, acceptance, transfer, payment, debt cancellation, pen, table, weapon or other character. Do not invent legible letters or a recipient name. Preserve one figure per panel, both full boots visible, same tool attachment and clothing throughout. This is a source-bounded investigation-opening offer, not completion of a debt-shift outcome. Three clean panel divisions, no labels or arrows. Concept keyframes, not engine-ready sprites.\n",
+      "prompt_sha256": "ec0d8835babf5ce250a615ce34d0ba46adb41c6a0abeedca2a0f2a6abaaf5322",
+      "reference": "../batch07/31_nell_sel_pair.png",
+      "reference_sha256": "e2b619f2fd6f12a22edd7ec314c2cad80c1b2858fbb275c61b93f897c9ad0354",
+      "sources": [
+        {
+          "file": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+          "location": "N4-S01 lines95–107; S62 camera guard line93",
+          "exact_requirement": "塞尔师傅将写到一半的票递来。票上没有受款人，手指却压着担保栏。",
+          "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90",
+          "verified_sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90"
+        },
+        {
+          "file": "design/04_人物/台本新增人物与知识边界.md",
+          "location": "塞尔 section lines41–45",
+          "exact_requirement": "堤外器具工坊师傅；想把旧债推给下一批人；不知道实验全貌。",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36",
+          "verified_sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "guards": "This is the offered ticket at investigation opening, not player acceptance or N4-R-shift completion. No newly written recipient name, agreement, payment, debt cancellation or new lore. Tiny non-readable ink marks can suggest unfinished writing; exact form layout is an art proposal. Keep action legible without readable text.",
+      "outfit": "Same adult man with short grey hair and grey beard, russet rolled-sleeve tunic, charcoal leather apron, brown belt with ordinary hanging tongs, brown trousers and boots.",
+      "minimal_keyframes": [
+        "Sel holds one ordinary partly-written ticket close to torso; identical paper silhouette across frames, recipient field left visibly blank.",
+        "He extends the SAME ticket outward at waist height; one finger maintains pressure over a small guarantee-field area.",
+        "Arm reaches offer position, paper still in Sel’s hand and finger still covering that same field. No recipient hand, signature or completed handoff."
+      ],
+      "selected_concept": true,
+      "engineReady": false,
+      "runtimeVerified": false
+    },
+    {
+      "id": "MOTION-BRY15-YANI-RISES-FROM-STOOL",
+      "output": "03_yani_rises_from_stool.png",
+      "output_sha256": "4bee8df635ac7c2f0d294347ee495a7cd5448ec0e501b5a79c33427f50a68ced",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-bfb27981-7124-4108-b586-6b80dd7a7653.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "yani_prompt.txt",
+      "prompt": "Use case: stylized-concept. Make ONE wide 1536x1024 pixel-art character motion concept board, exactly THREE equal panels left-to-right. Image1 is the identity, outfit, stool and style reference, not a request to repeat three seated gestures. Same adult Yani with greying brown hair, short stubble, taupe-brown short cloak clasped at shoulder, olive tunic with pale rolled cuffs, plain brown belt, grey-brown trousers fully and naturally covering both legs, worn brown boots. Same short timber stool. Crisp pixel clusters and dark contours, muted earth/olive/taupe palette, flat opaque neutral grey background, no glow or soft gradients. Full body including both boots in each panel; same fixed slightly elevated three-quarter camera, same person scale and ground baseline, ample headroom for standing. Stool is rigid and stays at IDENTICAL screen-relative position in all panels; do not redraw its design or move it. Yani faces diagonally toward screen RIGHT throughout. Panel1: neutral seated posture on stool matching first reference pose, hands resting near knees, feet planted. Panel2: deliberate restrained forward lean, hips visibly LIFTING JUST OFF stool seat, knees still bent and torso rising, both feet remain supported. Hands may press lightly on his own thighs, no assistant or aid. Panel3: Yani upright immediately in FRONT OF same stool, hips clearly raised and knees straight enough for standing; stool now visible behind him unchanged; arms relaxed, hands neutral. Stop at standing, no walking away, salute or heroic pose. Legs remain covered by same ordinary trousers in ALL frames. Do not invent or reveal any brace/prosthesis design, injury, cure, weapon, recruitment, political agreement, payment scene or additional person. This movement occurs only after actual individual receipt/payment and remaining-debt recording conditions, while present, alive and willing; the image must not imply medical recovery or agreement to return to service. Exact rising mechanics are an art proposal requiring later review. Three clean panel divisions, no text, arrows, labels or UI. Concept keyframes, not engine-ready animation.\n",
+      "prompt_sha256": "b6841ed01ed754c44d688f82e9ca8893ffd62946995f82f918059ecdef13827f",
+      "reference": "../batch01/02_yani_dialogue_poses.png",
+      "reference_sha256": "a471d3f401c4e08757342bb804967a163f2048fe87077b89ec0431dcb55e3bb3",
+      "sources": [
+        {
+          "file": "design/06_支线/城市支线/台本_CS-BRY-15_招募告示的背面.md",
+          "location": "CS-BRY-15-S3 lines81–97; especially line87",
+          "exact_requirement": "显示条件：本人实际领取及欠额记录完成；所有政治邀请另问。 / 雅尼站起不需握武器，塞芙不把空款袋翻作全班已清。",
+          "sha256": "3392fd334cb64a8b046f8e1d87e29e97468f85a7498505bf6d10202798b5043c",
+          "verified_sha256": "3392fd334cb64a8b046f8e1d87e29e97468f85a7498505bf6d10202798b5043c"
+        },
+        {
+          "file": "design/04_人物/城市人物/人物_BRY-NPC-YANI_雅尼.md",
+          "location": "身份、口吻、跨任务弧光",
+          "exact_requirement": "带着未合适义肢回城的成年退役者；不许别人搀住后就替他说话；15追索自己那一班的旧欠。",
+          "sha256": "e1d5a0e656f9c45d2ceb781d9779c2dc1178d3a25ed7bffb69817b880ade3095",
+          "verified_sha256": "e1d5a0e656f9c45d2ceb781d9779c2dc1178d3a25ed7bffb69817b880ade3095"
+        }
+      ],
+      "guards": "Only when this scene’s actual individual payment/remaining-debt record conditions hold, and character present/alive/willing. Standing is explicit source, not evidence of healing, return to service or political consent. Preserve naturally covered legs; do not invent or expose brace/prosthesis design, injuries or changed mobility. Exact rise mechanics are proposed and require later animation review.",
+      "outfit": "Same adult greying brown-haired, short-stubbled man, taupe-brown short cloak clasped at shoulder, olive tunic with pale rolled cuffs, plain brown belt, grey-brown trousers naturally covering legs, worn boots; same short timber stool.",
+      "minimal_keyframes": [
+        "Start from existing neutral seated posture on the same stool, feet and camera registered.",
+        "Torso leans forward and body begins rising from stool; use a restrained chair-rise gesture, no weapon or assisting person.",
+        "Upright immediately in front of the unchanged stool, hands neutral. Stop here; no walk-off, salute or recruitment gesture."
+      ],
+      "selected_concept": true,
+      "engineReady": false,
+      "runtimeVerified": false
+    }
+  ],
+  "runtimeVerified": false,
+  "engineReady": false,
+  "rigorousMatchAchieved": false
+}

@@ -1,0 +1,79 @@
+{
+  "reviewed_at": "2026-10-12",
+  "status": "review-only",
+  "method": "Independent actual PNG inspection at downscaled overview up to 1000px wide; compared director prompts and relevant screenplay sections. No image changes.",
+  "sources": [
+    "design/05_主线/台本/台本_N12_失踪者仍有名字.md",
+    "design/08_副本/台本/台本_D08_沉水档案井.md"
+  ],
+  "limitations": [
+    "Review concept QA only; no engine, collision, water-state, exact pixel-grid or animation validation.",
+    "Indexed files are not all visually reviewed in this pass."
+  ],
+  "viewed_files": [
+    "60_sunken_well_upper_drainage_station.png",
+    "61_sunken_refuge_doors_archive_alcove_v2.png",
+    "62_cargo_lift_permanent_return_passage.png",
+    "63_refuge_door_four_keyframes.png"
+  ],
+  "findings": [
+    {
+      "file": "60_sunken_well_upper_drainage_station.png",
+      "severity": "layout_caveat",
+      "finding": "Upper ring has two separate controls, three gauges, rear bypass, right ladder and dry connecting platform. The left doorway opens visually toward water beyond its dry threshold, so continuous dry surface-return route is not established. Clarify exterior continuation/linked room before treating this as an executable return layout. This corroborates director caveat; no hidden timer or trapped person is depicted."
+    },
+    {
+      "file": "61_sunken_refuge_doors_archive_alcove_v2.png",
+      "severity": "correction_verified_review_only",
+      "finding": "Continuous raised dry floor visibly connects left stairs, both distinct closed refuge-door thresholds and right archive alcove. Step stool stands on dry floor beneath high closed copy box; water remains below foreground edge. Dry-access correction passes. This is a local spatial concept, not tested collision, water-state transitions, rescue success or assurance that optional lower records survive every route."
+    },
+    {
+      "file": "62_cargo_lift_permanent_return_passage.png",
+      "severity": "pass",
+      "finding": "Exactly two empty open transport boxes sit on lift; independent dry permanent stairs reach an open sunlit surface doorway. Return is visually independent of lift. Rear water stays behind railing; abstract registry marks and box presence do not prove responsibility or inventory capacity."
+    },
+    {
+      "file": "63_refuge_door_four_keyframes.png",
+      "severity": "mechanical_continuity",
+      "finding": "Four phases read as closed/latched, closed/unlatched, partly open and fully open with empty dry interior. Left hinge side stays consistent, but latch shown on door in closed frames remains on right jamb after opening, and door swings outward rather than the requested inward direction. Treat as high-level storyboard only; reauthor latch attachment and hinge sweep before mechanical animation or collision use. Opening alone establishes no person rescue/consent."
+    }
+  ],
+  "overall": "Review concepts remain usable with explicit staging, clue and mechanical limitations; no automatic transaction/rescue completion inferred.",
+  "files": [
+    {
+      "file": "60_sunken_well_upper_drainage_station.png",
+      "size": [
+        1499,
+        1049
+      ],
+      "sha256": "95a54c7c986bc10475678820ce370ea060f90826618c73fc6dd189a282f46a72"
+    },
+    {
+      "file": "61_sunken_refuge_doors_archive_alcove_v2.png",
+      "size": [
+        1500,
+        1049
+      ],
+      "sha256": "946883345eda19ea11196388ddf403cb3a2b3b37f0be153b7f67a52c24a26ce4"
+    },
+    {
+      "file": "62_cargo_lift_permanent_return_passage.png",
+      "size": [
+        1499,
+        1049
+      ],
+      "sha256": "9c7fb869e8042d49fa38b316f582382683731f1997b2f632fc7eb8c76c5e9af6"
+    },
+    {
+      "file": "63_refuge_door_four_keyframes.png",
+      "size": [
+        2172,
+        724
+      ],
+      "sha256": "762b032de8b4d5278e76c82817b64cb44a3584c59276c4cfcba56281ad7fce89"
+    }
+  ],
+  "not_viewed": [
+    "61_sunken_refuge_doors_archive_alcove.png (superseded v1; selected v2 reviewed)"
+  ]
+}

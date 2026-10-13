@@ -1,0 +1,124 @@
+{
+  "batch": 71,
+  "date": "2026-10-12",
+  "status": "three_source_bounded_keyframe_concept_boards_with_production_caveats",
+  "generator": "builtin image_gen__imagegen",
+  "runtimeVerified": false,
+  "sourceAudit": "../coverage-script-action-final-pass.json",
+  "skillGuide": "https://github.com/424431185/pixel-asset-master-skills/blob/main/skills/pixel-asset-master/SKILL.md",
+  "guideUse": "Read source requirements and reference art, locked specs, sequential builtin calls, preserved originals and inspected every output. No external scripts installed or run; no claim of palette/grid validator.",
+  "sources": [
+    {
+      "file": "design/06_支线/城市支线/台本_CS-EED-01_最后一株不是最后一单.md",
+      "sha256": "2a3077737eb8ce052e6dbb1801d017309e83e1bd2ae669368cb903fdf3b68e1e",
+      "read": "S1–S3 actual correction, 35–100"
+    },
+    {
+      "file": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+      "sha256": "513c1b489b4e18ec899336fcd8da3c2ca3eaf4f7abea74cf1875232c1c64ab70",
+      "read": "98–144"
+    },
+    {
+      "file": "design/05_主线/城市篇章/台本_CM-BRY_城墙之内.md",
+      "sha256": "ec94af587bf279d282b2c97c39f8611d9b77f3b2eebcf92c4307261f6edf6c00",
+      "read": "27–61"
+    }
+  ],
+  "references": [
+    {
+      "file": "../batch24/94_eed_sujin_geli_character_review.png",
+      "sha256": "1ebd16b3c08ce1dfbdbbed064bb699c5dd3d815f7bdbc7c697282709c865a6d1",
+      "visuallyRead": true
+    },
+    {
+      "file": "../batch23/91_eed_tree_section_patrol_changehut.png",
+      "sha256": "0759859f07f3ac774857cbb9ada7a419cc5f8be95ce9af0157a92b2e7bef2953",
+      "visuallyRead": true
+    },
+    {
+      "file": "../batch08/40_evidence_timeline_table_props-v2.png",
+      "sha256": "45bc8c9109f7adbc3e55a97e089315e695bbb6362c8097305e3d84d866468f5d",
+      "visuallyRead": true
+    },
+    {
+      "file": "../batch33/126_bry_herlin_avi_osin_cast.png",
+      "sha256": "baa3a8dc7cd2fb4eeed4d3867370f30ebd1c73bbe47d6529564bcdb26df78048",
+      "visuallyRead": true
+    }
+  ],
+  "outputs": [
+    {
+      "file": "01_sujin_false_tree_tag_removal.png",
+      "sha256": "6d8a98cca759e8dbef1f10aae44a202f1f82bd53206a99fa06393b1132506280",
+      "selected": false,
+      "promptFile": "sujin_prompt.txt",
+      "prompt": "Use case: stylized-concept. Create a new source-grounded three-keyframe pixel-art storyboard, wide 1536x1024, three equally sized side-by-side panels with identical locked camera and anchors. No writing, labels, arrows or numbers. Reference image 1: ONLY the adult woman in the LEFT TWO poses is Su Jin, preserve her beige tied headscarf, dark olive long work tunic, grey cream rolled cuffs, long brown apron, belt pouch, grey brown leggings and brown boots. Do not use the red-shirt braided woman. Reference image 2 supplies muted woodland pixel material only; never alter the wounded tree or its fence into a healthy one.\nShow a close waist-up side view of Su Jin beside ONE separate HEALTHY standing tree with intact bark and a low small branch. A plain modest wooden disease tag is loosely tied by ONE removable loop of cord to that branch; it is an incorrect tag already verified as false by the story, not text on the artwork. Include one small distant distinct wounded tree behind a protective fence on the far right in every panel, unchanged. \nPanel 1: Su Jin supports the tag with one hand while the other reaches the loose cord loop still around the low branch.\nPanel 2: her same hand lifts the opened cord loop clearly OFF the same branch tip while her other hand supports the SAME tag still attached to its cord. No cutting, knife, axe or bark damage.\nPanel 3: the branch is unmistakably bare of tag and cord. Both tag and entire same cord remain in her hands away from the branch, preserved intact. No rehanging elsewhere. Fixed tree, feet and posture; only hands/cord/tag move.\nCrisp deliberate pixel clusters, restrained medieval low-magic brown/olive/grey/cream palette derived from references, hard stepped edges, clear silhouettes, no glossy painting or blur. Emphasize hands, cord continuity and original empty branch point. This is a limited voluntary correction action; no tree cure, felling, delivery, reward, forgiveness or removal of neighboring safety fence. No other people. Preserve three distinct physical stages. Neutral unobtrusive opaque background.",
+      "inputReferences": [
+        0,
+        1
+      ],
+      "original": "generated_images/exec-dcccc82e-96aa-4904-a55c-6e59777352d9.png",
+      "qa": "Final tag occluded/ambiguous; preserved as v1, v2 preferred.",
+      "width": 1536,
+      "height": 1024,
+      "format": "RGB PNG",
+      "visuallyInspected": true
+    },
+    {
+      "file": "01_sujin_false_tree_tag_removal-v2.png",
+      "sha256": "a20caf6a5c65d46824b7d6580828bcffac1b1e76538574328d28e5c057ece6a4",
+      "selected": true,
+      "promptFile": "sujin_v2_prompt.txt",
+      "prompt": "Precise-object-edit of supplied three-frame Su Jin board. Preserve all three panels, character identity and outfit, tree, background wounded fenced tree, camera, color and pixel style. Change ONLY the third/rightmost panel hand/tag region: display the SAME plain rectangular wooden tag from panels one and two fully visible in her lower supporting hand, broad face facing the viewer, below her upper hand. The same single cord must visibly run from the hole in this retained tag to the loose loop in her upper hand. Both tag and entire cord are away from the empty healthy branch. Do NOT remove or destroy tag; it is retained evidence. Keep both original tree branches unchanged and the distant wounded tree still fenced. No writing or new objects. In middle panel keep the already detached tag intact. 1536x1024, three equal columns, everything else unchanged.",
+      "editInput": "01_sujin_false_tree_tag_removal.png",
+      "original": "generated_images/exec-cc5c5062-e955-4122-998c-6c06b5fe24e4.png",
+      "qa": "Tag retained visibly, former hanging point empty; wounded neighbor remains fenced. Final hands approach a separate lower branch but cord is held free, not visibly rehung. Branch/pose pixel registration not exact.",
+      "width": 1536,
+      "height": 1024,
+      "format": "RGB PNG",
+      "visuallyInspected": true
+    },
+    {
+      "file": "02_n9_verified_timeline_placement.png",
+      "sha256": "d5d1f81f08ff9da9306e93fff2e54ef435de36c6191c3ea4af917f79d81643a2",
+      "selected": true,
+      "promptFile": "timeline_prompt.txt",
+      "prompt": "Use case: stylized-concept. Make a three-frame concept action board from the supplied existing top-down pixel-art timeline table reference. 1536x1024 landscape canvas. Three equal columns, each shows the SAME WHOLE TABLE from the SAME TOP-DOWN camera with identical geometry, objects and anchors. Precise pixel clusters, hard stepped edges, muted brown wood, parchment tan and grey, low-magic medieval props, no text, numbers, labels, arrows, readable records or new symbols.\nPreserve exactly the reference table: THREE horizontal cord rows, FOUR paper slips on top row when complete, FIVE on middle row, ZERO on bottom row at all times. Top row positions left to right: large pale stained slip; smaller irregular tan slip; square tan slip; rectangular pale slip. The last/rightmost TOP-row pale slip is the sole moving object. Middle row remains five papers unchanged. Upper right two differently colored torn summary pieces adjoining with visible irregular join on backing remain unchanged. Lower right strapped brown private book stays fully CLOSED, unmoved. All pegs and cords fixed, third cord empty. No filling unknown route.\nFrame 1: THREE existing slips remain attached on top row. At the exact rightmost top-row destination the existing wooden clip is EMPTY. ONE generic hand coming from top edge holds the missing pale rectangular slip immediately above that same empty destination. There is no second copy. Minimal beige cuff, no face or fixed player identity.\nFrame 2: SAME hand lays SAME pale slip underneath the EXISTING rightmost TOP-row clip at its original fixed date position. Hand touches and presses that clip. Four slips now on top row; five still on middle, zero below.\nFrame 3: Hand completely withdrawn; SAME pale slip remains under SAME rightmost top clip, matching original reference's completed placement. Four top, five middle, zero bottom. The same paper count across the entire world in every panel: nine route slips total including the held slip, never ten.\nOnly authorized already-verified event placement, not discovering a new event. Dates come from game text and cannot be read in this textless board. Preserve the unreliable summary's mismatch and all private-book closure. Fixed date anchors, no shifting historical events, no new evidence or rewards. Clear differentiated hold, contact, release stages. Retain generous neutral gutters.",
+      "inputReferences": [
+        2
+      ],
+      "original": "generated_images/exec-dd4148f0-56a4-48dd-a93c-dcd3b750a608.png",
+      "qa": "Three fixed top slips plus one held becomes four; five middle slips and zero lower slips throughout; closed book and paired summary remain. Small clip/paper/furniture registration drifts; tiny summary join is simplified from reference and must not be read as reliable/authenticated.",
+      "width": 1536,
+      "height": 1024,
+      "format": "RGB PNG",
+      "visuallyInspected": true
+    },
+    {
+      "file": "03_avi_one_cuff_stitch.png",
+      "sha256": "0f7c4317f4ab012ff14f0019e0bb764114374296e811b631d9465d3207fe08df",
+      "selected": true,
+      "promptFile": "avi_prompt.txt",
+      "prompt": "Use case: stylized-concept. Make one 1536x1024 wide pixel-art three-keyframe motion board, three equal side-by-side panels with locked close three-quarter waist-up camera, exactly same subject scale, cuff anchor and neutral grey background. Reference supplies character identity and palette: ONLY MIDDLE ROW adult woman AVI. Dark hair, blue grey kerchief tied at back, ochre short sleeve overdress over cream long sleeves, cream collar, brown belt and side skirt, brown small needlework pouch. Do not show either man or add anyone else.\nShow one small worn beige outer coat across her left forearm with clearly tubular SMALL SLEEVE AND OPEN CUFF, same dark old patch nearby. Make unmistakably a sleeve, not flat square cloth. Its small damaged seam has some existing stitches but a short unrepaired split remains. The rest of the coat continues down out of the close crop. A single needle and ONE continuous brown thread complete just ONE extra stitch:\nPanel 1: left hand supports the exact same sleeve cuff at a fixed point. Right hand holds the already-threaded needle at one edge of the small open repair split. Thread is slack but continuous to existing seam.\nPanel 2: right hand has pulled SAME needle outward 5cm, creating a short clearly traceable loop of thread through SAME repair point. Left hand and cloth anchored, no second thread, no floating needle.\nPanel 3: right hand draws SAME thread taut so the SAME loop tightens and adds ONE stitch joining only a tiny segment. Adjacent original tear still visibly unclosed, old patch stays old, garment not complete or new. No extra fabric, no whole-garment instant repair. Fixed left hand support and patch.\nClear hard-edged pixel clusters, medieval muted ochre/cream/brown/blue grey, restrained 3-5 shading values per material, no blur, photoreal skin, gleam, magic, labels, words, numbers, arrows or symbols. Cloth hand and thread topology should be readable at close-up. This is ordinary voluntary local mending while present, not permission for inspecting private beds or family belongings. No child, private names, domestic reunion, debt payment or reward. Preserve the same single-needle single-thread continuity.",
+      "inputReferences": [
+        3
+      ],
+      "original": "generated_images/exec-e77c554d-5192-46dd-b920-fd151c79df13.png",
+      "qa": "Recognizable tubular sleeve, old patch and slack→loop→taut thread progression; visible residual split, no complete new garment. Hand/arm support and needle count/topology across panels require production redraw review; cannot certify exactly one new counted stitch or frame registration.",
+      "width": 1536,
+      "height": 1024,
+      "format": "RGB PNG",
+      "visuallyInspected": true
+    }
+  ],
+  "guards": {
+    "sujin": "Only this independently verified false tag, with living/present Su Jin actually agreeing and executing; preview/promise not completion. Neighbor's disease and fence persist, no felling/delivery/reward or erased responsibility. Tag retained.",
+    "timeline": "Only actually completed route and verified event authorized for current review; third uninvestigated route remains blank. No new evidence, culprit finding or reward. Dates from game data/text; private book closed; summary still suspect.",
+    "avi": "Living/present voluntary CM-BRY S1 mending. One small local stitch, not garment completion; no child presence/names or private bed inspection authorization; no fees settled, family reconciliation or reward."
+  },
+  "limits": [
+    "Concept keyframes only; not native sprites or implemented interactions.",
+    "Exact palette, pixel grid, hand topology, registration, collision and runtime unverified.",
+    "No changes outside batch71, no global indexes, game/runtime or push."
+  ]
+}

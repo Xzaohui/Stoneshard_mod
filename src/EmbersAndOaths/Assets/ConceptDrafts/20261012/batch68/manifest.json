@@ -1,0 +1,147 @@
+{
+  "batch": "68",
+  "date": "2026-10-12",
+  "generation_tool": "builtin image_gen__imagegen",
+  "external_guidance_read_only": "https://raw.githubusercontent.com/424431185/pixel-asset-master-skills/main/skills/pixel-asset-master/SKILL.md",
+  "policy": "Sequential builtin generation; no third-party generation scripts. Raw PNGs copied immediately without raster edits. One Osin doorway correction; old candidate retained. No global indexes, design sources, runtime or push changes.",
+  "spec_lock_sha256": "d1baa15e7567ab8526004dd2ec1e201a0f6c50c6aee5cf9cffb7cc1e236f952c",
+  "audit": "../coverage-character-motion-third-audit.json",
+  "audit_sha256": "081acda273d20f3252ab2c7505bdef6e98a4040ee2db1ab2d0fb5a894615035c",
+  "runtimeVerified": false,
+  "engineReady": false,
+  "entries": [
+    {
+      "id": "MOTION-BRY11-SELA-BLOCKS-CART-WITH-CRATE",
+      "character": "瑟拉 / BRY-NPC-SELA",
+      "output": "01_sela_closed_box_cart_block.png",
+      "output_sha256": "01f66b64870432d151c1b48717cbea1f4e95885530e4f7a69df82cd754435117",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-2983af7d-80d6-4fa0-8f75-dd7b79183d91.png",
+      "prompt_file": "sela_prompt.txt",
+      "prompt_sha256": "5dfd94886c8d4caa8344a2b2d56defda93e25e96ca658e17f1e5010d42e60f18",
+      "prompt": "Use case: stylized-concept. Make a NEW three-keyframe finite action concept board in the exact muted medieval dense pixel-cluster illustration style of the attached Sela appearance reference. Requested 1536x1024 landscape, three equal horizontal panels left to right, full body and all props visible, same scale and fixed three-quarter camera. No captions, letters, numbers or arrows. Opaque neutral warm grey backdrop with only a small dry quay ground patch and SAME stationary EMPTY two-wheel wooden handcart in back of each panel. Leave a broad visibly empty ground strip down the RIGHT side leading from cart area to foreground shore exit in ALL frames. Sela is exactly the reference adult woman: brown practical bun/loose forelocks, short dark teal shoulder cape, oatmeal rolled sleeves, grey-brown trousers, wide brown belt with small rope coil fixed at hip, brown boots. Action uses ONE CLOSED LONG plain wooden box, chest-high length but only shin-high depth, one lid closed throughout, no contents. LEFT: she bends modestly and holds the near upper end of this box low, opposite end supported on ground, box angled diagonally just ahead of the cart. MIDDLE: she lowers and turns that SAME box crosswise directly in front of cart wheels, keeping both hands on upper edges and one end ground-supported. RIGHT: box is fully resting crosswise on dry ground across only the cart approach, BOTH hands clearly released with air gaps above box; Sela stands at box's left. Box blocks cart motion but NOT the open side path at right. Same box size, grain and closed lid; same cart scale, location, wheel positions, ground strip and viewpoint. Do not draw additional ropes or move her hip coil. No other people, no Yani, medical apparatus, braces, weapons, violence, opened lid, secrets, payment, transport completion, consent symbols or decorative inventory. A finite set-down ending in hold, not a resetting loop. Readable weight-bearing and hand contact matter more than extra detail; this is a concept board, not engine animation.",
+      "reference": "../batch01/01_sela_turnaround.png",
+      "reference_sha256": "56b6261ebf4612c6904cf034d41d0159285ddff042f52a112e1bae6dc18043e6",
+      "reference_role": "Existing original appearance/style concept, visually inspected before generation",
+      "sources": [
+        {
+          "file": "design/06_支线/城市支线/台本_CS-BRY-11_不写船名的夜泊.md",
+          "scene_id": "CS-BRY-11-S1",
+          "lines": "25–43",
+          "exact_requirement": "夜里一只普通租船把长木箱卸在侧泊棚。 / 本案未决；仅知道眼前木箱和公开告示。 / 瑟拉将箱子横放阻住推车，却留出回岸道；雅尼坐屏风后，不播放未获授权的身体近景。",
+          "sha256": "901541f5a9d97a7705069d5a7763c63b82c332d6e7e0ae14df67bba3b991f64e",
+          "verified_sha256": "901541f5a9d97a7705069d5a7763c63b82c332d6e7e0ae14df67bba3b991f64e"
+        }
+      ],
+      "outfit": "Same adult woman, brown hair in practical bun with loose front locks, dark teal short shoulder cape, oatmeal rolled-sleeve shirt, grey-brown trousers, wide brown belt, hanging small rope coil, worn brown boots. Keep belt coil fixed rather than becoming crate rope.",
+      "guards": "Only unresolved S1, Sela alive/present/willing. This blocks a pushcart, never the player or public shore escape route. Closed box remains closed; do not reveal brace, medical details, Yani body, contents or supposed military/national secret. No violent confrontation, completed transport/payment, debt cancellation or route consent. Exact box scale, hand placement and rotation are provisional art choreography; do not inherit decorative inventory or unverified collision from location concept. Single finite placement, no looping teleport reset.",
+      "frames": 3,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "pixel_color_count": 91309,
+      "qa_status": "scoped_concept_pass_with_production_caveats_pending_independent_review",
+      "visual_qa": {
+        "observed": "Closed box tilted/held low, set crosswise in front of empty cart, released. Same Sela outfit and hip coil. Broad foreground dry ground connects to right side. No Yani, body, contents or settlement.",
+        "limitations": "Decorative quay posts/ropes are generated proposals, not source inventory. Far-right bypass beyond cart partly cropped; image suggests accessible foreground/side space but does not prove a continuous shore collision route. Box/actor/ground scale registration is approximate and load/hand mechanics need production redraw."
+      }
+    },
+    {
+      "id": "MOTION-N1-MARA-STOWS-UNFINISHED-ROPE",
+      "character": "玛拉 / Mara / n1_mara",
+      "output": "02_mara_stows_rope_looks_up.png",
+      "output_sha256": "f1fcc2bcadf97f16e48902c72568dd7175c5d808e43b4047adff9e29864173e9",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-03eda035-b750-468a-b7d7-d919a59f1f95.png",
+      "prompt_file": "mara_prompt.txt",
+      "prompt_sha256": "11d40269ebb3c2e7a0e96bb1817566a19ae6fd09f8f825615e333309735688ee",
+      "prompt": "Use case: stylized-concept. Create a NEW FOUR-keyframe finite N1 encounter action concept board. Attached image is appearance/style reference ONLY: use the WOMAN AT LEFT, Mara, exclude both male figures. Requested landscape 1536x1024, four equal horizontal panels left to right, identical full-body scale and fixed front-three-quarter viewpoint, opaque neutral grey backdrop, no captions, text, arrows, extra scenery or symbols. Exact same adult woman: loosely pinned braided brown hair, rust-red neck scarf, patched ochre working overdress, pale rolled sleeves, cream apron, dark lower skirt, brown boots. Same small open wicker basket suspended securely at her left hip by a visible leather belt loop throughout, identical basket position and shape. ONE SHORT UNFINISHED ROPE HEAD, about forearm length, partly braided with clearly loose frayed strands at end, and no giant finished coil. LEFT: Mara holds this short unfinished rope directly above basket with both hands, eyes lowered. SECOND: both hands tuck that SAME rope downward into SAME basket, loose unfinished end remains recognizable at rim. THIRD: hands withdraw to rest lightly at basket rim, shoulders and boots unchanged, chin and eyes still clearly angled DOWN toward an off-canvas visitor's weapon-height, no actual visitor or weapon drawn. FOURTH: SAME hands, basket and rope end, SAME stance, but chin and eyes raised toward an off-canvas visitor's face. Make the last head-angle change visible and restrained. No duplicate rope, no disappearing basket, no floating support, no retrieval, no ongoing braiding, no seated workstation, rope clamps, repair apparatus, men, quest acceptance, trade, threat, reunion or completed rope. Preserve outfit, scale and feet registration, alter only hands then head/gaze. This is a source-bounded finite stow-and-look sequence ending before dialogue, not final engine sprites or a looping animation.",
+      "reference": "../batch05/21_n1_mara_ivo_pair.png",
+      "reference_sha256": "b0d311843e65b75f2ecf8cb488f83fbdd65fa866e041a9e8a76efb757de6d4ed",
+      "reference_role": "Existing original appearance/style concept, visually inspected before generation",
+      "sources": [
+        {
+          "file": "design/05_主线/台本/台本_N1_无钟之夜.md",
+          "scene_id": "N1-S01",
+          "lines": "91–107",
+          "exact_requirement": "下列镜头不组成自动播完的直线；互斥台词、死者答复与未经本人授权的去向必须按S62规范替换。 / 玛拉把没编完的绳头塞回篮里，先看玩家的武器，随后才抬头。",
+          "sha256": "5a51c1c89304250d26b969746cf5098f03a34bc899ce56de767169ebe128de9a",
+          "verified_sha256": "5a51c1c89304250d26b969746cf5098f03a34bc899ce56de767169ebe128de9a"
+        }
+      ],
+      "outfit": "Same adult woman with loosely pinned/braided brown hair, rust-red neck scarf, patched ochre working overdress, pale rolled sleeves and cream apron, dark lower skirt and brown boots. Use only left woman, exclude Ivo. Keep one small wicker basket and one short unfinished rope; existing appearance is proposal rather than canon.",
+      "guards": "Opening N1 encounter only under current S62 and presence guards. Not N18 braid repair and not a renewed request to fix asset74. No new completed rope, trade, binding, threat, guilt, family reunion or quest acceptance. Look direction is source-based; exact standing pose, basket support and rope geometry are art proposals. Keep basket supported consistently by belt/hand, or use one fixed low surface if chosen; never float it. Do not import the N18 seated work/rest apparatus into N1 as canonical setting. One finite stow/look sequence, no magical retrieval reset.",
+      "frames": 4,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "pixel_color_count": 120629,
+      "qa_status": "scoped_concept_pass_with_production_caveats_pending_independent_review",
+      "visual_qa": {
+        "observed": "Four frames show partly braided rope above basket, stow leaving loose unfinished end at rim, low head hold, visibly raised head/eyes. Basket remains at hip with belt support; no Ivo, N18 apparatus or completed outcome.",
+        "limitations": "Low eyes are stylized nearly closed, not a precise directed weapon-height eyeline. Hands stay close to rim; second/third transition is small. Rope shortness/fray geometry and apron shapes vary slightly; no engine registration or topology validation."
+      }
+    },
+    {
+      "id": "MOTION-CMBRY-OSIN-SETS-ABSENT-WORKER-CHAIR",
+      "character": "奥辛·锤 / BRY-NPC-OSIN",
+      "output": "03_osin_sets_empty_chair_v2.png",
+      "output_sha256": "d90712672f0999325f28d7d02b84ce53ad884f3993f651e0f56e58473594e9c9",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-e5ecb96f-c9df-4ab5-93a7-3f2f04dc12b8.png",
+      "prompt_file": "osin_prompt.txt",
+      "prompt_sha256": "0bcedd3696880a39cfdcb85773ba234ebd10685fe1a15c39578de17a578e7739",
+      "prompt": "Use case: stylized-concept. Create a NEW THREE-keyframe finite action board, requested landscape 1536x1024. Attached image is appearance/style reference ONLY; use ONLY OSIN, the broad older BALD-CROWNED MAN IN THE BOTTOM ROW. Never include upper man Herlin or middle woman. Same dark short beard and side hair, olive rolled-sleeve tunic, charcoal sleeveless work/leather vest, brown trousers, wide brown belt with UNUSED WORK GLOVES hanging at side, worn brown boots. Match muted medieval dense crisp pixel-cluster illustration. Three equal horizontal panels left to right on opaque neutral grey, no text, arrows or symbols. Same full-body scale and fixed front-three-quarter camera. Each panel shows same short workshop wall and doorway at right, door OPEN, clear passage unobstructed. OSIN moves ONE plain EMPTY wooden chair close beside the door jamb, NOT across doorway. LEFT: he stands left of chair, knees modestly flexed, his one hand grips chair back and the other holds under seat's side rail; whole chair slightly lifted, all four chair feet just off dry ground. MIDDLE: one small shifting step toward doorjamb, same hand grips, chair lowered almost to ground beside jamb with open door passage still clearly visible to chair's right. RIGHT: same chair now rests squarely on all four feet BESIDE the doorway, both hands RELEASED with visible air gaps and open relaxed fingers, Osin upright at its left. Keep chair construction/size, back slats, four legs and empty seat consistent in all frames; only slight translation and lowering. Gloves remain unused at belt throughout, hand anatomy clear. No seated person, no Herlin, phantom, hidden body or other person anywhere; no propaganda banners, evidence marks, medical details, speeches, tools in hands, votes, consent icons, payment or quest outcome. Empty chair is just an absent worker's chair placed by Osin, conveys no political endorsement or the absent person's consent. Concept keyframes only, one finite placement ending with empty seat, not a looping reset.",
+      "reference": "../batch33/126_bry_herlin_avi_osin_cast.png",
+      "reference_sha256": "baa3a8dc7cd2fb4eeed4d3867370f30ebd1c73bbe47d6529564bcdb26df78048",
+      "reference_role": "Existing original appearance/style concept, visually inspected before generation",
+      "sources": [
+        {
+          "file": "design/05_主线/城市篇章/台本_CM-BRY_城墙之内.md",
+          "scene_id": "CM-BRY-S2",
+          "lines": "29; 63–90",
+          "exact_requirement": "第二场椅子与痕迹可见，赫林此时已离工场；第三场才在旧帆村自愿接触本人，禁止两处同时生成其身体。 / 奥辛把赫林的空椅放在工场门边。安菈递来有旧磨痕的断扣；椅下泥迹已干，现场不出现躲藏者。 / 搬个空椅没人来拆。让他站这儿，我怕他先说不。",
+          "sha256": "ec94af587bf279d282b2c97c39f8611d9b77f3b2eebcf92c4307261f6edf6c00",
+          "verified_sha256": "ec94af587bf279d282b2c97c39f8611d9b77f3b2eebcf92c4307261f6edf6c00"
+        }
+      ],
+      "outfit": "Use ONLY bottom-row older broad-built bald-crowned man with dark short beard and side hair, olive rolled-sleeve tunic, charcoal sleeveless leather/work vest, brown trousers and boots, brown belt with unused work gloves at side. Do not copy upper Herlin or middle Avi.",
+      "guards": "Current CM-BRY S2 staging, Osin alive/present/willing and original chair available. Herlin has already left workshop; no duplicate Herlin, return, ghost or forced public patient display. Empty chair is Osin’s gesture, never Herlin’s consent, strike vote, compensation or completed quest. Do not add propaganda text/banners, new evidence marks, handover to player or imply all workers agree. Exact chair construction and carry mechanics are provisional; maintain one chair, dry existing floor, open doorway, consistent gloves and feet. Distinct from Milei placing a plank onto a chair: here the chair itself is moved.",
+      "frames": 3,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "pixel_color_count": 75378,
+      "qa_status": "scoped_concept_pass_with_production_caveats_pending_independent_review",
+      "visual_qa": {
+        "observed": "V2 shows empty chair lifted, lowered, grounded with hands released. Open dark doorway and dry threshold are now clearly visible to right of chair. Osin alone with unused belt gloves, no Herlin, banner or consent.",
+        "limitations": "Doorway outer right edge remains cropped, although usable opening is visible. Chair size/leg perspective drift subtly; lifted hand support and all four foot contacts need sprite production checking. Character/doorway design remains original concept."
+      },
+      "correction": {
+        "prompt_file": "osin_correction_prompt.txt",
+        "prompt_sha256": "07872edb7b4fb966ec7d5861f5a9ce33487086a064d268aa348f2301f68416af",
+        "prompt": "Edit this three-panel Osin chair action board with ONE targeted correction: make the workshop doorway visibly WIDE OPEN and unobstructed in all three panels, with a clearly visible EMPTY dark interior opening and dry floor passage at the RIGHT of the jamb and chair. Existing wooden door leaf should be swung away out of the passage, or omit the leaf while preserving the timber jamb. Zoom each whole scene out slightly ONLY as necessary so complete doorway opening fits in each panel; equal actor scale across all frames. Chair remains entirely LEFT of opening, beside jamb, never in threshold. Preserve the same older broad bald-crowned bearded man, olive rolled sleeves, charcoal vest, belt gloves, brown trousers/boots; preserve ONE same empty chair: frame1 lifted in both hands, frame2 lowering, frame3 fully grounded with hands clearly released. Keep chair consistent in size across all frames. No person or body inside door, no Herlin, no propaganda, no medical content, no text. Preserve muted dense pixel-cluster style, grey backdrop, 1536x1024 landscape, three equal panels, finite carry/lower/release sequence. This is concept art, not collision or animation validation.",
+        "reference": "03_osin_sets_empty_chair.png",
+        "reference_sha256": "064680528ff48454ea789be460ef3fd3b8966f41f07ee9f2cfa89235a390f931",
+        "reason": "Initial door leaf and cropping obscured a clear open doorway. V2 exposes dark empty passage to right of chair."
+      },
+      "retained_candidates": [
+        {
+          "output": "03_osin_sets_empty_chair.png",
+          "output_sha256": "064680528ff48454ea789be460ef3fd3b8966f41f07ee9f2cfa89235a390f931",
+          "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-cb392fe9-5515-43cf-9c91-528dc073c01e.png",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "pixel_color_count": 82070,
+          "status": "superseded_for_doorway_readability"
+        }
+      ]
+    }
+  ]
+}

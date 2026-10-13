@@ -1,0 +1,92 @@
+{
+  "batch": 79,
+  "reviewed_at": "2026-10-12T23:20:53.345365+00:00",
+  "independent": true,
+  "scope": "Exactly four images viewed: Verren small NPC sprite, Sela01 turnaround, batch79 v1 and v2. Read existing style audit. No other images or game package inspected.",
+  "reviewed_output_count": 2,
+  "raster_modified": false,
+  "overall_status": "partial_style_calibration_improvement_not_native_asset",
+  "preferredCandidate": "01_sela_sprite_calibration_v2.png",
+  "findings": [
+    "V2 visibly compresses the torso and legs relative to Sela01 and v1. Broad dark stepped contours and large shirt/cape patches improve compact shape readability. V1 still has elongated anatomy, eye whites, separated fingers and ornate rope shading.",
+    "V2 retains the brown bun, short teal cape, oatmeal rolled sleeves, grey-brown trousers, brown belt/boots and one readable rope loop. No Verren hood, beard, armor or weapon leakage is visible. Exactly one empty-handed civilian in a modest left-facing three-quarter stance.",
+    "Face and hands are abbreviated in v2; rope becomes a simple broad loop and boot buckle detail is removed. Small trouser/hair shade subdivisions and warm orange skin remain. Its prominent head/eye and clean bold design still read more cartoon-like than the tiny gritty Verren reference.",
+    "Hard block silhouettes are improved, but fine tonal variation remains inside clusters and grey backdrop. This is still a rendered pixel-style illustration, not verified flat-palette, integer-grid, nearest-neighbor or transparent sprite art. Existing producer background/color measurements support this limit and are not an official palette specification.",
+    "One public single-facing Verren reference cannot establish native dimensions, all-direction anatomy, a universal palette or game-version compatibility. Source provenance is inherited from the recorded metadata, not newly checked online or in the local game.",
+    "Prefer v2 only as this bounded calibration concept. Preserve Sela01 and v1. Stop further generation; cleanup, palette, transparency, animation and game integration remain separate production work, with no runtime or deployment claim."
+  ],
+  "sources_and_references": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/coverage-style-calibration-audit.json",
+      "sha256": "9880961d4762a83c87a716f92944d227bc7feda530604608adb379b536fc1b08",
+      "current_sha256": "9880961d4762a83c87a716f92944d227bc7feda530604608adb379b536fc1b08",
+      "current_sha_matches": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/coverage-original-reference-audit.json",
+      "sha256": "6d8b48a6d04f51f236ae8388b5c712eec3d3a314e7fee516da61d739c9d5db2e",
+      "current_sha256": "6d8b48a6d04f51f236ae8388b5c712eec3d3a314e7fee516da61d739c9d5db2e",
+      "current_sha_matches": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/metadata.json",
+      "sha256": "6873afce914df1d8f87a2328ba438d19f83b14c1a5aa7cd0e3ba7a8f1890664b",
+      "current_sha256": "6873afce914df1d8f87a2328ba438d19f83b14c1a5aa7cd0e3ba7a8f1890664b",
+      "current_sha_matches": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/verren_npc_community_wiki.png",
+      "sha256": "ce4c5f8378fc3f537e534fd808618eb1b9897be4579658978561d270330b5d49",
+      "width": 25,
+      "height": 38,
+      "mode": "RGBA",
+      "distinctStoredColors": 20,
+      "visuallyInspected": true,
+      "role": "Style and information-density reference only, never identity",
+      "sourcePage": "https://www.stoneshardwiki.com/en/people/verren/",
+      "suppliedToImagegen": true,
+      "referenceMode": "referenced_image_paths, same two original inputs in both calls",
+      "current_sha256": "ce4c5f8378fc3f537e534fd808618eb1b9897be4579658978561d270330b5d49",
+      "current_sha_matches": true
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/01_sela_turnaround.png",
+      "sha256": "56b6261ebf4612c6904cf034d41d0159285ddff042f52a112e1bae6dc18043e6",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "distinctStoredColors": 124933,
+      "visuallyInspected": true,
+      "role": "Sela original identity design only",
+      "suppliedToImagegen": true,
+      "referenceMode": "referenced_image_paths, same two original inputs in both calls",
+      "current_sha256": "56b6261ebf4612c6904cf034d41d0159285ddff042f52a112e1bae6dc18043e6",
+      "current_sha_matches": true
+    }
+  ],
+  "entries": [
+    {
+      "filename": "01_sela_sprite_calibration.png",
+      "sha256": "9706478da84231af1f9f2a3838e2ec699e7f0a3a182654cd3656a47bedaa6661",
+      "manifest_hash_matches": true,
+      "size_matches": true,
+      "prompt_file_matches": true,
+      "actual_pixels_viewed": true,
+      "engineReady": false,
+      "runtimeVerified": false
+    },
+    {
+      "filename": "01_sela_sprite_calibration_v2.png",
+      "sha256": "5b37df35503c61ba000b69c143a1c3b140cdc63b72c7afc1e1246cbb7a974413",
+      "manifest_hash_matches": true,
+      "size_matches": true,
+      "prompt_file_matches": true,
+      "actual_pixels_viewed": true,
+      "engineReady": false,
+      "runtimeVerified": false
+    }
+  ],
+  "engineReady": false,
+  "runtimeVerified": false,
+  "decision": "Keep v2 as a useful relative style-direction improvement, with partial calibration status; no cast-wide acceptance or native-ready claim."
+}

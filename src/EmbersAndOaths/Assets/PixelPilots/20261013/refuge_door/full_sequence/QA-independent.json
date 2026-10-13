@@ -1,0 +1,130 @@
+{
+  "reviewed_at": "2026-10-13T01:55:49.660936+00:00",
+  "reviewer": "independent_pixel_rigid_body_QA",
+  "pass": true,
+  "verdict": "pass_for_five_state_pixel_lock_release_and_inward_swing_proposal",
+  "script_sha256": "682e8ae2355950ff5d742d66c676c6dbfe8b8680c81c0948c0c9385f119977e5",
+  "method": [
+    "Read complete extension script and metadata; checked accepted parent files against metadata and prior independent QA.",
+    "Viewed native closed-locked frame, 12x lock engagement close-up, five-frame nearest preview and GIF initial frame; decoded all GIF frames for exact pixel and duration checks.",
+    "Reran unchanged extension script in a temporary copied tree; all 13 PNG/GIF outputs match byte for byte.",
+    "Independently composited the saved same 8x3 bolt at x56 and x61 over fixed floor/under fixed cover; retracted frame equals prior frame_00 exactly."
+  ],
+  "checks": {
+    "all_13_outputs_byte_identical_on_rerun": true,
+    "all_parent_files_unchanged": true,
+    "original_four_frames_same_as_prior_QA": true,
+    "five_frames_128x128": true,
+    "all_png_binary_alpha": true,
+    "all_png_shared_palette": true,
+    "bolt_same_8x3_translates_5px": true,
+    "retracted_reconstruction_equals_original_frame_00": true,
+    "locked_reconstruction_matches": true,
+    "housing_wall_keeper_pivot_unchanged": true,
+    "gif_frames_pixel_identical": true
+  },
+  "diff": {
+    "changed_pixels": 18,
+    "bbox_xyxy": [
+      92,
+      91,
+      100,
+      93
+    ],
+    "keeper_recess_engagement_pixels": 6,
+    "engagement_xyxy": [
+      99,
+      91,
+      100,
+      93
+    ],
+    "recess_insertion_depth_pixels": 2
+  },
+  "gif": {
+    "file": "full_sequence.gif",
+    "sha256": "6555743c81a41dff665c7aed1ebce8d68db7c4109a005c48dff28842c81f74aa",
+    "durations_ms": [
+      1000,
+      750,
+      500,
+      500,
+      1500
+    ],
+    "loop": 0,
+    "live_playback_reviewed": false
+  },
+  "source_parent_qa_sha256": "bb7e15e55d03a9cc314707fc274fc4d22ba18cc88e26103f2e455d5776381793",
+  "outputs": [
+    {
+      "file": "closed_locked.png",
+      "sha256": "f3dacc4d901e6f8762a8892a85d64fc69954b68638aaf6c044f622f0f11ebd22"
+    },
+    {
+      "file": "closed_retracted.png",
+      "sha256": "ce69aac43ec44b478259043fc2c65e39584a1e7ce38eca86e19258a64775b473"
+    },
+    {
+      "file": "full_sequence.gif",
+      "sha256": "6555743c81a41dff665c7aed1ebce8d68db7c4109a005c48dff28842c81f74aa"
+    },
+    {
+      "file": "housing_cover_local.png",
+      "sha256": "a57c627de4fcee5941bf453d78334b15c985c8ffb1fa5273600e78e639e21f81"
+    },
+    {
+      "file": "housing_floor_local.png",
+      "sha256": "e7cee35aaf72be5b7649dc6fbc0e7383212b9d9b89ec555b6eb31f1b1607764d"
+    },
+    {
+      "file": "inward_30.png",
+      "sha256": "e5da1a274823499c371f2dfbbbf6803a3aa6f8f49c813a36d43974be3d37819c"
+    },
+    {
+      "file": "inward_60.png",
+      "sha256": "3c5c90c80d135eab1931537620f5d2a29213d5d2109499b45b9f6ac1541fbb1e"
+    },
+    {
+      "file": "inward_90.png",
+      "sha256": "9ec6b586df7949d5497e7ad6927628d070f4c694dd390090ad5860c08adde420"
+    },
+    {
+      "file": "latch_engagement_nearest_12x.png",
+      "sha256": "5a143eeef2c881aa27ba9fe470652215fca91062a41d1c0b0d18bd2789ce9bd3"
+    },
+    {
+      "file": "leaf_locked_local.png",
+      "sha256": "f3fc6a09be4ff131cb9f3c8a852038e3a7c81e7c222162c215eb7c3efb531cf4"
+    },
+    {
+      "file": "preview_nearest_4x.png",
+      "sha256": "a01ea456052e6872668649556e5f217b14248ff86d0b2e355da64d4ef957e466"
+    },
+    {
+      "file": "sliding_bolt_local.png",
+      "sha256": "6b2d40e11d9366eb718017effdf24c67b4f48f1c7d06700d50b74da3a3c1c273"
+    },
+    {
+      "file": "spritesheet_5x1.png",
+      "sha256": "f3d3faac5819e70684418805bc74c12bdd4c8b4f76176a86b78d84d31b5706cf"
+    }
+  ],
+  "visual_findings": [
+    "The extended bolt visibly bridges the gap to the dark keeper recess; the retracted pose clears the keeper, then the accepted three inward-open poses follow.",
+    "The housing and frame are stable. The difference strip is limited to the sliding bolt path.",
+    "The same complete bolt is translated; its tail is partially occluded under the unchanged housing cover in the retracted state, rather than shortening the bolt geometry."
+  ],
+  "limits": [
+    "The six colored pixels inside the recess establish a 2D drawing relationship only, not verified socket depth, physical contact, tolerances or functional lock hardware.",
+    "Expected bolt engagement overlaps the keeper lip/recess region. This exception must not be generalized into a claim that all locked moving hardware has zero wall/keeper overlap. The wooden leaf geometry itself remains unchanged.",
+    "Five sampled states, with no intermediate bolt translation or continuous swept-volume validation.",
+    "GIF jumps from fully open to locked at loop reset; reverse closing/locking is not implemented.",
+    "No engine integration, collision-grid, game-scale or gameplay validation; opening/unlocking does not establish rescue, consent, survival, evidence or rewards."
+  ],
+  "runtimeVerified": false,
+  "physicalLockVerified": false,
+  "engineReady": false,
+  "temporary_rebuild_root": "/tmp/refuge-full-independent-hncgly56",
+  "writes_by_reviewer": [
+    "full_sequence/QA-independent.json"
+  ]
+}

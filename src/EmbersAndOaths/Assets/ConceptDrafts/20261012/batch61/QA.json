@@ -1,0 +1,50 @@
+{
+  "batch": "61",
+  "review_method": "Direct full-image visual review of all three generated outputs, source-text inspection and SHA256/PNG metadata checks. No rendered engine test.",
+  "accepted_scoped_concepts": [
+    "120_hig_exterior_bypass_v3.png"
+  ],
+  "unresolved": [
+    "FIX-45-HOLE-ALIGNMENT"
+  ],
+  "preferred_unaccepted_gesture_reference": "45_binding_hole_translation_v3.png",
+  "runtimeVerified": false,
+  "checks": [
+    {
+      "file": "120_hig_exterior_bypass_v3.png",
+      "sha256": "93711d32d5a15a27b239ac2186378d88fc71fc7becab3f72dbb451e84fe3417c",
+      "status": "scoped_layout_concept_pass",
+      "observations": [
+        "Continuous horizontal dry exterior walkway visible from both lateral edges, in front of closed chamber.",
+        "Three locating grooves are on lower work terrace, outside horizontal route.",
+        "Separate foreground return and right workshop foreground exit remain visible.",
+        "Right instrument retains two occupied slots and third empty; separate reference block remains.",
+        "Right panel rescaled rather than exact preserved pixels; no native collision, terrain elevations, production palette or gameplay acceptance."
+      ]
+    },
+    {
+      "file": "45_binding_hole_translation_v3.png",
+      "sha256": "9bf06c15e0549cc61b1402371a11128cf3fc9fdff40825424bedec42a81523f7",
+      "status": "partial_improvement_not_accepted",
+      "observations": [
+        "Four frames now depict overlap instead of side-by-side spread.",
+        "Three holes maintained on each exposed sheet; no private text.",
+        "A changes anchor from local left approximately138 in top panels to approximately230 in bottom-left and approximately246 in bottom-right.",
+        "A and B widths differ; early top hole rows differ about8-10px.",
+        "Final underlayer is thinly visible, but rigid geometry and physical registration are not proved."
+      ]
+    },
+    {
+      "file": "45_binding_hole_translation_v4.png",
+      "sha256": "fbe7c472d361995a40813053ed739e24956194f7f571c530e02f5516865e4eff",
+      "status": "targeted_revision_failed_precision",
+      "observations": [
+        "One targeted revision explicitly supplied fixed page coordinates and identical relative hole centers.",
+        "Same general overlap sequence retained; no private text.",
+        "A still shifts in lower frames, page widths still differ and top hole rows remain offset.",
+        "Final bottom sheet is less visible than v3, so exact two-sheet overlay remains unclear.",
+        "Do not select as accepted clue geometry; preserve failed attempt and reassess method rather than endless imagegen retry."
+      ]
+    }
+  ]
+}

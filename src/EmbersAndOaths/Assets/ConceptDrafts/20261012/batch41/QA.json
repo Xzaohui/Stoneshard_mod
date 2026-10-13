@@ -1,0 +1,185 @@
+{
+  "reviewed_at": "2026-10-12T20:55:46.111745+00:00",
+  "status": "independent-all-nine-draft-review-only",
+  "method": "Read repo AGENTS, all nine manifest entries, full current character cards, three regional drama casts and relevant adult/profession/injury/death/state passages; viewed all nine PNGs in groups of at most two. Independently recomputed file sizes, dimensions and source/reference SHA-256. No new images, narrative edits or runtime tests.",
+  "viewed_files": [
+    "156_eed_buze_ruya_daili_cast.png",
+    "157_eed_suoya_folan_cast.png",
+    "158_for_mano_ape_xijie_cast.png"
+  ],
+  "not_viewed_files": [],
+  "expected_unique_characters": 8,
+  "observed_unique_characters_in_selected_boards": 8,
+  "sources": [
+    "design/04_人物/城市人物/人物_EED-NPC-BUZE_布泽.md",
+    "design/04_人物/城市人物/人物_EED-NPC-FOLAN_佛兰.md",
+    "design/04_人物/城市人物/人物_EED-NPC-RUYA_芦雅.md",
+    "design/04_人物/城市人物/人物_EED-NPC-SUOYA_朔娅.md",
+    "design/04_人物/城市人物/人物_FOR-NPC-APE_艾珀·风.md",
+    "design/04_人物/城市人物/人物_FOR-NPC-MAN_玛诺·灯.md",
+    "design/04_人物/城市人物/人物_FOR-NPC-XIJIE_西婕.md",
+    "design/04_人物/聚落人物/人物_EED-S02-NPC_岱里.md",
+    "research/eeders-drama.json",
+    "research/forholt-drama.json"
+  ],
+  "limitations": [
+    "全九张均逐图看像素；94与152等旧参考本轮仅核哈希/来源，未重新像素复审。",
+    "一行是同一人物正背两姿；同板不证明同时在场、同意或剧情结算。158 v2重复三个人物，不增三个ID。",
+    "贝洛、朔娅、祁铎由当前角色/台词源明确成年，旧94葛黎源亦成年；其余成人呈现、性别或精确年龄若源未定，仅为外貌提案，不能由幼脸/短身比例推断未成年。",
+    "死亡、缺席、拒绝、有限权限与实际救援/实付条件优先；美术板不新增复活、伤愈、继承、售份、私史公开或复井授权。",
+    "原生像素栅格、有限调色板、动画、碰撞、锚点及游戏运行均未测试；不是可直接导入的连续转身精灵。"
+  ],
+  "findings": [
+    {
+      "file": "156_eed_buze_ruya_daili_cast.png",
+      "severity": "concept_identity_pass_with_production_limits",
+      "finding": "三行六姿为布泽、芦雅、岱里。闭册与钥匙为私人道具，不是已付订款、产权裁决、新屋交付、住户逐人同意或迁居完成。岱里钥匙偏大，正向举到胸前、背向垂下，手臂姿势不同，不能直接当连续转身帧。未画拆住梁；真实接收与自愿迁居未成立时仍不得拆梁。"
+    },
+    {
+      "file": "157_eed_suoya_folan_cast.png",
+      "severity": "prompt_drift_production_revision",
+      "finding": "两行四姿为明确成年猎户朔娅及私人债权人佛兰，无箭、拉弓、威吓互动、母亲或住址。弓两视图可见弦，违反unstrung提示，作为解除弓弦提案不通过；弓长度、握点及遮挡也需统一。佛兰外套轮廓偏方直、钱包背面遮挡不代表债已清；静态中性形象不抹既往威吓与泄露责任。"
+    },
+    {
+      "file": "158_for_mano_ape_xijie_cast.png",
+      "severity": "prompt_target_fail_superseded",
+      "finding": "三行六姿为玛诺、艾珀、西婕。原稿顶部两灯均见暖黄橙色火光，违反明确UNLIT要求，应保留为旧稿，以158 v2为熄灯目标优选。无安全认证徽章或救援结案场景；灯具本身、矿气风险、持工具不证明全井安全或可复工。"
+    }
+  ],
+  "files": [
+    {
+      "file": "156_eed_buze_ruya_daili_cast.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "bytes": 1425765,
+      "sha256": "38a991ff5b3dede1c9c7a16045b4506b966a7792d3e30fec56bb3979f8a51ca7",
+      "matches_manifest": true,
+      "independently_viewed": true,
+      "coverage": [
+        "CHAR-EED-NPC-BUZE",
+        "CHAR-EED-NPC-RUYA",
+        "CHAR-EED-S02-NPC"
+      ],
+      "expected_distinct_characters": 3,
+      "observed_distinct_characters": 3,
+      "observed_views": 6
+    },
+    {
+      "file": "157_eed_suoya_folan_cast.png",
+      "size": [
+        1246,
+        1263
+      ],
+      "mode": "RGB",
+      "bytes": 1440190,
+      "sha256": "4e617def391a954e47627c0752ab85f82e782b871e53c542c047e9c993852f98",
+      "matches_manifest": true,
+      "independently_viewed": true,
+      "coverage": [
+        "CHAR-EED-NPC-SUOYA",
+        "CHAR-EED-NPC-FOLAN"
+      ],
+      "expected_distinct_characters": 2,
+      "observed_distinct_characters": 2,
+      "observed_views": 4
+    },
+    {
+      "file": "158_for_mano_ape_xijie_cast.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "bytes": 1432528,
+      "sha256": "43bee6bd09d486c56ee409b7cad4071cf9b4c90071c532a6e728cbe151b5624d",
+      "matches_manifest": true,
+      "independently_viewed": true,
+      "coverage": [
+        "CHAR-FOR-NPC-MAN",
+        "CHAR-FOR-NPC-APE",
+        "CHAR-FOR-NPC-XIJIE"
+      ],
+      "expected_distinct_characters": 3,
+      "observed_distinct_characters": 3,
+      "observed_views": 6
+    }
+  ],
+  "source_reference_hash_checks": [
+    {
+      "file": "design/04_人物/城市人物/人物_EED-NPC-BUZE_布泽.md",
+      "type": "source_sha256",
+      "sha256": "903b2cc90bb819d4781b6d86b0c752ca5f1f25f446050f054f0397ac319f6bbd",
+      "matches": true
+    },
+    {
+      "file": "design/04_人物/城市人物/人物_EED-NPC-RUYA_芦雅.md",
+      "type": "source_sha256",
+      "sha256": "e84ba70836991a36a3b7779fdf741cdc37b65ce692e42cc648e2acddde0426d4",
+      "matches": true
+    },
+    {
+      "file": "design/04_人物/聚落人物/人物_EED-S02-NPC_岱里.md",
+      "type": "source_sha256",
+      "sha256": "cf117fbf5d5cbbbf280d2ff75a5c4a26d56354810c05db562f5b3d36420108c7",
+      "matches": true
+    },
+    {
+      "file": "research/eeders-drama.json",
+      "type": "source_sha256",
+      "sha256": "cca0114623879092471f401b3d3dbf457d25418eb8232ae9a64f4de8009a82ff",
+      "matches": true
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch24/94_eed_sujin_geli_character_review.png",
+      "type": "reference_sha256",
+      "sha256": "1ebd16b3c08ce1dfbdbbed064bb699c5dd3d815f7bdbc7c697282709c865a6d1",
+      "matches": true
+    },
+    {
+      "file": "design/04_人物/城市人物/人物_EED-NPC-SUOYA_朔娅.md",
+      "type": "source_sha256",
+      "sha256": "71b6cdb49bcddaa7171dbce93327c9e93e7ec8e7e30cf233a2cc6f78d4bb771b",
+      "matches": true
+    },
+    {
+      "file": "design/04_人物/城市人物/人物_EED-NPC-FOLAN_佛兰.md",
+      "type": "source_sha256",
+      "sha256": "97cd23c30e78cdcf1881fda3818564baace91198be92830a7e4d498270414a00",
+      "matches": true
+    },
+    {
+      "file": "design/04_人物/城市人物/人物_FOR-NPC-MAN_玛诺·灯.md",
+      "type": "source_sha256",
+      "sha256": "e018198dbc1b773a36966e9e5c09e880e359a3f779c28b296c7ac57b327b6843",
+      "matches": true
+    },
+    {
+      "file": "design/04_人物/城市人物/人物_FOR-NPC-APE_艾珀·风.md",
+      "type": "source_sha256",
+      "sha256": "f6e6dba8b713a31ad8af8e7b40a1b9ac0a4d8a7b20ad45856ee4c55d85895b15",
+      "matches": true
+    },
+    {
+      "file": "design/04_人物/城市人物/人物_FOR-NPC-XIJIE_西婕.md",
+      "type": "source_sha256",
+      "sha256": "691735d9ed9ce4f9e38d55fb557b83c61f433dcf539f913c68043e4bb8aa3720",
+      "matches": true
+    },
+    {
+      "file": "research/forholt-drama.json",
+      "type": "source_sha256",
+      "sha256": "7384bf25baff1e29bafe8073c78d56c9eca3e6479b0d9fa100e497b2d5d6b17f",
+      "matches": true
+    },
+    {
+      "file": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch25/98_for_historic_cup_limited_share_proxy.png",
+      "type": "reference_sha256",
+      "sha256": "b44767920c991e45d8345085160d8bc3c0105265c61c34952c47be9537989ae5",
+      "matches": true
+    }
+  ],
+  "overall": "批40—42共9张全看：21个唯一人物ID、42个不同人物正背姿位；158 v2另重复3人6姿，不计新增人物。旧94苏槿/葛黎沿用，没有重绘，不纳入本轮新21人。158 v2熄灯修正可优选；157弓弦与部分跨视图持侧/伤腿连续性须制作修订。"
+}

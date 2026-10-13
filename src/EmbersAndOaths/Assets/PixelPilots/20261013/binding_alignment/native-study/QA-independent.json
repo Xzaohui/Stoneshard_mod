@@ -1,0 +1,91 @@
+{
+  "independent": true,
+  "reviewed_at": "2026-10-13T01:50:27.569056+00:00",
+  "status": "experimental_limited_palette_rigid_grid_pass_with_art_limits",
+  "actual_native_sheet_and_4x_final_viewed": true,
+  "layers": [
+    {
+      "layer": "A",
+      "size": [
+        87,
+        131
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_colors": 12,
+      "raw_sha256": "bb6c6089b9444729ebe9335d824eead0b9957f6bc6dddd4f02d612d088fd6080"
+    },
+    {
+      "layer": "B",
+      "size": [
+        77,
+        131
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "visible_colors": 17,
+      "raw_sha256": "6ac856ab3b660270b5da166ce337b36b59d88f3484379ca562ea6aedd52d2880"
+    }
+  ],
+  "frames": [
+    {
+      "frame": 0,
+      "exact_independent_composition": true,
+      "visible_colors": 21,
+      "byte_identical_rebuild": true
+    },
+    {
+      "frame": 1,
+      "exact_independent_composition": true,
+      "visible_colors": 21,
+      "byte_identical_rebuild": true
+    },
+    {
+      "frame": 2,
+      "exact_independent_composition": true,
+      "visible_colors": 21,
+      "byte_identical_rebuild": true
+    },
+    {
+      "frame": 3,
+      "exact_independent_composition": true,
+      "visible_colors": 21,
+      "byte_identical_rebuild": true
+    }
+  ],
+  "shared_visible_paper_colors": 20,
+  "exact_final_holes": true,
+  "hole_bboxes": [
+    [
+      7,
+      22,
+      12,
+      26
+    ],
+    [
+      7,
+      64,
+      12,
+      69
+    ],
+    [
+      7,
+      106,
+      12,
+      111
+    ]
+  ],
+  "lower_layer_strip_width": 10,
+  "visual_findings": [
+    "At native 256 canvas and 4x nearest enlargement, three holes and the darker 10px lower-paper strip remain readable; middle-frame holes reveal A and final apertures reveal background.",
+    "The smaller study genuinely uses 20 paper colors and 21 scene colors with binary layer alpha; it preserves rigid layer geometry after the single initial resample.",
+    "It still reads as sampled paper texture rather than deliberately designed broad pixel clusters. Numerous isolated near-color flecks remain, and the palette contains several very close parchment tones. Numeric palette compliance is not an aesthetic pixel-art acceptance.",
+    "Top hole is 5x4 while the lower two are 5x5 after one-time sampling; both layers match exactly, but this is a new experimental shape, not a faithful source-resolution hole shape or verified engine grid."
+  ],
+  "engineReady": false,
+  "runtimeVerified": false
+}

@@ -1,0 +1,247 @@
+{
+  "status": "experimental-256-grid-study",
+  "engineReady": false,
+  "runtimeVerified": false,
+  "input_sha256": {
+    "layer_A.png": "e2ef3da604dcac3bdd8b5eb37442cc2bab8afa8cf1a2974e99918522709e111b",
+    "layer_B.png": "4d88a2e0504cf1d6c9f30e62339bd11a1b9457e0a26c8ccdbbb641c74f350672"
+  },
+  "canvas": [
+    256,
+    256
+  ],
+  "layer_sizes": [
+    [
+      87,
+      131
+    ],
+    [
+      77,
+      131
+    ]
+  ],
+  "sampling": "One-time nearest-neighbor layer resize. Ratios differ slightly due to rounding dimensions; shape and texture changed versus source. No per-frame scaling.",
+  "palette": "Shared 20-color paper palette via median cut; background adds at most one color; no dithering; binary alpha.",
+  "palette_rgb": [
+    [
+      202,
+      152,
+      89
+    ],
+    [
+      225,
+      178,
+      111
+    ],
+    [
+      227,
+      182,
+      115
+    ],
+    [
+      227,
+      185,
+      119
+    ],
+    [
+      228,
+      183,
+      115
+    ],
+    [
+      229,
+      185,
+      118
+    ],
+    [
+      230,
+      186,
+      119
+    ],
+    [
+      230,
+      187,
+      122
+    ],
+    [
+      231,
+      188,
+      121
+    ],
+    [
+      232,
+      189,
+      124
+    ],
+    [
+      232,
+      190,
+      125
+    ],
+    [
+      233,
+      196,
+      137
+    ],
+    [
+      237,
+      206,
+      155
+    ],
+    [
+      238,
+      208,
+      157
+    ],
+    [
+      238,
+      209,
+      159
+    ],
+    [
+      239,
+      209,
+      158
+    ],
+    [
+      239,
+      210,
+      161
+    ],
+    [
+      240,
+      211,
+      162
+    ],
+    [
+      241,
+      212,
+      164
+    ],
+    [
+      241,
+      213,
+      166
+    ]
+  ],
+  "paper_color_count": 20,
+  "B_once_correction": {
+    "fill": 0,
+    "cut": 0
+  },
+  "hole_bboxes_local": [
+    [
+      7,
+      22,
+      12,
+      26
+    ],
+    [
+      7,
+      64,
+      12,
+      69
+    ],
+    [
+      7,
+      106,
+      12,
+      111
+    ]
+  ],
+  "frames": [
+    {
+      "frame": "frame_00.png",
+      "A_position": [
+        34,
+        63
+      ],
+      "B_position": [
+        141,
+        63
+      ],
+      "B_delta": [
+        0,
+        0
+      ],
+      "layer_raw_sha256": {
+        "A": "bb6c6089b9444729ebe9335d824eead0b9957f6bc6dddd4f02d612d088fd6080",
+        "B": "6ac856ab3b660270b5da166ce337b36b59d88f3484379ca562ea6aedd52d2880"
+      },
+      "opaque_RGB_color_count": 21
+    },
+    {
+      "frame": "frame_01.png",
+      "A_position": [
+        34,
+        63
+      ],
+      "B_position": [
+        105,
+        63
+      ],
+      "B_delta": [
+        -36,
+        0
+      ],
+      "layer_raw_sha256": {
+        "A": "bb6c6089b9444729ebe9335d824eead0b9957f6bc6dddd4f02d612d088fd6080",
+        "B": "6ac856ab3b660270b5da166ce337b36b59d88f3484379ca562ea6aedd52d2880"
+      },
+      "opaque_RGB_color_count": 21
+    },
+    {
+      "frame": "frame_02.png",
+      "A_position": [
+        34,
+        63
+      ],
+      "B_position": [
+        70,
+        63
+      ],
+      "B_delta": [
+        -71,
+        0
+      ],
+      "layer_raw_sha256": {
+        "A": "bb6c6089b9444729ebe9335d824eead0b9957f6bc6dddd4f02d612d088fd6080",
+        "B": "6ac856ab3b660270b5da166ce337b36b59d88f3484379ca562ea6aedd52d2880"
+      },
+      "opaque_RGB_color_count": 21
+    },
+    {
+      "frame": "frame_03.png",
+      "A_position": [
+        34,
+        63
+      ],
+      "B_position": [
+        34,
+        63
+      ],
+      "B_delta": [
+        -107,
+        0
+      ],
+      "layer_raw_sha256": {
+        "A": "bb6c6089b9444729ebe9335d824eead0b9957f6bc6dddd4f02d612d088fd6080",
+        "B": "6ac856ab3b660270b5da166ce337b36b59d88f3484379ca562ea6aedd52d2880"
+      },
+      "opaque_RGB_color_count": 21
+    }
+  ],
+  "validation": {
+    "fixed_canvas": true,
+    "integer_translation": true,
+    "constant_A_B_layer_hashes": true,
+    "final_apertures_exact": true,
+    "underlayer_strip_nominal_px": 10,
+    "independent_compositor_exact": true
+  },
+  "limits": [
+    "Experimental pixel grid, no confirmed game target grid or animation timing.",
+    "One-time downsampling loses texture and changes edge steps; not a source-pixel-preserving artifact.",
+    "Inherited masks still contain edge coloration; no final art polish or game deployment."
+  ]
+}

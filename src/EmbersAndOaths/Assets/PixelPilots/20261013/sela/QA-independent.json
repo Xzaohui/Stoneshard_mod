@@ -1,0 +1,127 @@
+{
+  "reviewed_at": "2026-10-13T01:45:46.343133+00:00",
+  "independent": true,
+  "status": "pixel_pilot_pass_with_visual_limits_not_engine_ready",
+  "preferred_candidate": "b_48x64_idle_view01_f000.png",
+  "scope": "Viewed source batch79 v2, both final native images and final nearest-8x comparison; independently measured pixels, replayed pixel logs and reran inspected author script into /tmp/sela-independent-rebuild. Original concept files and pilot PNGs not modified.",
+  "measurements": [
+    {
+      "filename": "a_32x48_idle_view01_f000.png",
+      "sha256": "d91bee0944286b51296eee819d9c15c4f787074e145a821bd80d9b2a8c40ce60",
+      "canvas": [
+        32,
+        48
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_color_count": 20,
+      "visible_bbox": [
+        6,
+        2,
+        26,
+        46
+      ],
+      "visible_pixels": 622,
+      "foot_anchor": [
+        16,
+        45
+      ],
+      "anchor_is_canvas_datum_not_engine_origin": true,
+      "palette_subset": true,
+      "lowest_row_matches_anchor": true,
+      "edit_log_replays_exactly": true,
+      "opaque_preview_pixels_exact_nearest_8x": true,
+      "independent_rebuild_byte_identical": true,
+      "visible_edit_count": 39,
+      "actual_native_and_preview_viewed": true
+    },
+    {
+      "filename": "b_48x64_idle_view01_f000.png",
+      "sha256": "35cf8edaa010b1992abda02b0d3775044934ffca855f99ea40e24142090be0db",
+      "canvas": [
+        48,
+        64
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "visible_color_count": 20,
+      "visible_bbox": [
+        11,
+        4,
+        37,
+        62
+      ],
+      "visible_pixels": 1065,
+      "foot_anchor": [
+        24,
+        61
+      ],
+      "anchor_is_canvas_datum_not_engine_origin": true,
+      "palette_subset": true,
+      "lowest_row_matches_anchor": true,
+      "edit_log_replays_exactly": true,
+      "opaque_preview_pixels_exact_nearest_8x": true,
+      "independent_rebuild_byte_identical": true,
+      "visible_edit_count": 57,
+      "actual_native_and_preview_viewed": true
+    }
+  ],
+  "shared_palette_entries": 22,
+  "visual_findings": [
+    "B preferred for this bounded experiment: pale sleeve and shirt clusters, teal cape, separated boots and hollow rope loop remain readable at native size; A now retains a closed loop but crowds it against the right-hand silhouette and trouser edge.",
+    "Both retain the brown bun, trailing hair strand, teal shoulder cape, oatmeal sleeves, grey-brown trousers, brown boots and belt, and one rope loop. Empty hands and civilian identity remain; no armor, weapon or Verren facial features were introduced.",
+    "Both have visibly hard stepped outlines and coherent flat colors. B has more stable hand/cuff and rope-hole separation; A sacrifices facial and clothing nuance to its smaller grid.",
+    "Large head, conspicuous face and simplified adult proportions remain a stylized concept choice; neither experiment demonstrates exact Stoneshard anatomy or information density. Visual preference is not inferred from passing numeric checks.",
+    "The surviving one-pixel hair strand and narrow rope segments are legitimate details, not noise. No disconnected alpha singleton was removed by the sampler in either result; the recorded B hand-contour removal changes only one pixel below the mitten.",
+    "Foot-anchor x is a canvas alignment datum between the legs, not necessarily an opaque pixel or real engine origin. Lowest visible rows are verified at 45 and 61; origins and collision remain unknown."
+  ],
+  "failure_conditions": [
+    "Any soft alpha or unrecorded color would fail the binary-alpha/palette study.",
+    "Loss of bun, cape, rope-loop hole, adult/civilian identity, or damage to intentional narrow details would fail visual identity despite numeric compliance.",
+    "Treating these two chosen canvases or anchors as verified engine specifications would exceed the evidence.",
+    "Formal native import still requires matched-version NPC metadata, direction/state conventions and in-game standing/occlusion/click/collision verification."
+  ],
+  "engineReady": false,
+  "runtimeVerified": false,
+  "author_script_sha256": "39aa9fbbbd20e55c12ce2717864dde6fd42db0ad41cbf32868f2457c05df7cd1",
+  "C_supplement": {
+    "filename": "c_32x48_reference_budget_idle_view01_f000.png",
+    "sha256": "1f830a5686790893fea903ee7d6c42ba328f4e32a7641e4d989e86910011ab0c",
+    "canvas": [
+      32,
+      48
+    ],
+    "visible_bbox": [
+      8,
+      12,
+      23,
+      46
+    ],
+    "visible_color_count": 18,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "palette_subset": true,
+    "foot_anchor": [
+      16,
+      45
+    ],
+    "lowest_visible_y": 45,
+    "native_and_8x_viewed": true,
+    "independent_rebuild_byte_identical": true,
+    "edit_log_replay_exact": true,
+    "visual_findings": [
+      "C meets the one-reference 34px visible-height budget while approximately retaining source aspect ratio. Bun, teal cape, pale sleeves, grey-brown trousers and separated brown boots remain identifiable.",
+      "At 1x, the rope reads as a small ochre attachment; at 8x its two-pixel dark interior is visible. Rolled-cuff and rope-material detail is reduced. Bun has a narrow hair tip but face/hair clusters are more cramped.",
+      "B remains the clearest identity/readability study, aided by its substantially larger visible height. C is a fairer height-budget comparison to the single Verren reference, not an equivalent-quality or game-compatible sprite.",
+      "The numerical budget pass does not prove authentic original-game anatomy or style; keep C as an alternative, not an engine specification."
+    ],
+    "engineReady": false,
+    "runtimeVerified": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "batch": 76,
+  "date": "2026-10-12",
+  "generation_tool": "builtin image_gen__imagegen",
+  "intent": "edit",
+  "scope": "Targeted revision of batch68 Sela return-route cropping only. No global indexes, design, runtime, or push changes.",
+  "generation_calls": 1,
+  "raster_modified": false,
+  "source": {
+    "path": "design/06_支线/城市支线/台本_CS-BRY-11_不写船名的夜泊.md",
+    "sha256": "901541f5a9d97a7705069d5a7763c63b82c332d6e7e0ae14df67bba3b991f64e",
+    "scene": "CS-BRY-11-S1",
+    "exact_requirement": "瑟拉将箱子横放阻住推车，却留出回岸道；雅尼坐屏风后，不播放未获授权的身体近景。",
+    "guards": "Unresolved case; Sela alive, present and willing. Observation, questions and refusal do not settle the task. No Yani/body/contents/ownership state or consent represented."
+  },
+  "audit": {
+    "path": "../batch68/QA-independent.json",
+    "sha256": "9318907b25605e4b4e3a0b0f943825ceea586946a0b7ebf88a78c1b158d2419f",
+    "finding": "Prior image side edges cropped; uninterrupted return-to-bank route not demonstrated."
+  },
+  "reference": {
+    "path": "../batch68/01_sela_closed_box_cart_block.png",
+    "sha256": "01f66b64870432d151c1b48717cbea1f4e95885530e4f7a69df82cd754435117",
+    "role": "Edit target, visually viewed before generation; original retained unchanged.",
+    "original_prompt_path": "../batch68/sela_prompt.txt",
+    "original_prompt_sha256": "5dfd94886c8d4caa8344a2b2d56defda93e25e96ca658e17f1e5010d42e60f18"
+  },
+  "prompt_file": "sela_route_revision_prompt.txt",
+  "prompt_sha256": "81d6dbe757554525e71000443c030b92e6b567d80a48ca5ae6f259935cf212f9",
+  "prompt": "Use case: precise-object-edit. Edit the attached Sela three-frame pixel-art action concept to correct ONLY the cropped, unproven pedestrian return route by substantially widening the framing. Recompose as THREE WIDE HORIZONTAL ROW PANELS stacked vertically, requested 1536x1536; each row repeats the SAME fixed high three-quarter view of the ENTIRE small quay from its mooring at LEFT to its connected dry onshore ground at RIGHT, with generous margins on all sides. Same muted medieval dense pixel-cluster illustration style. Same one adult Sela with brown bun, dark teal short cape, oatmeal rolled sleeves, grey-brown trousers, belt rope coil and brown boots, same stationary EMPTY two-wheel handcart, same ONE CLOSED long wooden box. Do not duplicate people within a row. Each row must show water and one small EMPTY moored ordinary boat ONLY at far LEFT outside the quay retaining edge; the landing is dry stone immediately beside it. Show a broad uninterrupted dry stone pedestrian lane running from this landing ACROSS THE ENTIRE FOREGROUND BELOW the box/cart to a CLEAR junction with broad dry dirt onshore ground at the far RIGHT. BOTH sides and BOTH endpoints of this lane must be inside the panel, never cropped. Leave at least a full human body-width of visible dry paving at every point along the lane. The cart and Sela occupy the BACK HALF of the quay, the box set transversely immediately in front of the cart wheels; the box blocks only that cart approach, never the foreground pedestrian lane. No water across lane, no disconnected floating island, no ropes crossing walking surface, no raised steps or fence closing the route. Include ample visible onshore ground beyond the right end, and water edge only at left. Scene and ground geometry remain identical across all three frames. TOP ROW: Sela at cart's left holds one end of the closed box low, other end supported on ground, angled just in front of cart. MIDDLE ROW: same box lowering crosswise before wheels, both hands contacting box; lane still completely clear. BOTTOM ROW: same box entirely grounded across only cart approach, Sela upright at left with BOTH HANDS visibly released with clear air gaps; same lane clear. Keep lid closed, size and cart placement consistent. No text, labels, arrows, lines on lane, quest markers, additional crates, other people, Yani, medical body/brace details, box contents, ownership or consent symbols, transport outcome, payment, settlement. This is a wider concept revision of a finite lower-and-release action, not engine-ready animation or validated collision. Preserve source image as older draft, do not attempt a close crop.",
+  "output": "01_sela_closed_box_clear_return.png",
+  "output_sha256": "fb490884a2c03dca4d40698e3476b8bcd55d8b0a71feec6ff936527d2264c2b0",
+  "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-345f0804-b9b2-438a-affe-21f62d09868f.png",
+  "requested_size": [
+    1536,
+    1536
+  ],
+  "actual_size": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "transparent_background": false,
+  "frames": 3,
+  "layout": "Three wide horizontal rows stacked vertically",
+  "qa_status": "targeted_route_readability_improved_with_production_caveats",
+  "qa_independent": false,
+  "runtimeVerified": false,
+  "engineReady": false,
+  "rigorousMatchAchieved": false
+}

@@ -1,0 +1,50 @@
+{
+  "overall": "partial_visual_calibration_improvement_not_native_asset",
+  "preferredCandidate": "01_sela_sprite_calibration_v2.png",
+  "checks": [
+    {
+      "check": "Lower detail density and more compact silhouette than Sela01",
+      "v1": "partial",
+      "v2": "pass_for_relative_improvement",
+      "evidence": "V1 remains elongated with visible eyes/fingers and multi-loop rope detail. V2 visibly shortens legs and torso, simplifies facial marks and enlarges garment clusters; its approximate silhouette is still more cartoon-like than Verren."
+    },
+    {
+      "check": "Sela identity preserved without Verren leakage",
+      "v1": "pass",
+      "v2": "pass",
+      "evidence": "Brown bun, muted teal short cape, oatmeal rolled sleeves, brown-grey trousers, waist rope and brown boots remain; no hood, beard, weapons or copied equipment."
+    },
+    {
+      "check": "Face, hands, rope and fabric simplified",
+      "v1": "partial",
+      "v2": "pass_for_relative_improvement",
+      "evidence": "V2 reduces eyes to dark marks, hands to near-mitten masses and rope to one broad loop, with broad cape/shirt patches. Some small trouser and hair subdivisions remain."
+    },
+    {
+      "check": "Dark separation and hard pixel edges",
+      "v1": "partial",
+      "v2": "partial",
+      "evidence": "Both have strong stepped dark contours, but stored pixels include thousands of close shades rather than flat discrete color clusters. No strict pixel-grid or nearest-neighbor property is certified."
+    },
+    {
+      "check": "Flat opaque middle-grey backdrop",
+      "v1": "partial",
+      "v2": "partial",
+      "evidence": "Opaque RGB background is present, but actual corner-patch pixels vary, despite prompt demanding a uniform grey. V2 total stored RGB colors: 28857. This count covers the whole image including background and is not an official palette count."
+    },
+    {
+      "check": "One neutral civilian three-quarter standing figure, no new story state",
+      "v1": "pass",
+      "v2": "pass",
+      "evidence": "Exactly one complete empty-handed Sela, facing modestly left, no labels, scene, weapons or other actors."
+    }
+  ],
+  "limitations": [
+    "A single 25 by 38 downloaded NPC reference does not establish a native atlas size, universal anatomy, camera rule, official palette or animation spec.",
+    "V2 is a useful rendering-direction correction, not a completed Stoneshard-compatible sprite. Clean per-pixel redraw, palette decisions, transparency, animation and runtime QA remain separate.",
+    "This comparison is against Sela01 and the single Verren sample; no cast-wide visual certification.",
+    "No resizing, palette quantization, alpha removal or other raster edits were performed by code. PIL was used only to read dimensions/mode/color counts and sample background pixels.",
+    "No local game package was inspected; original-reference provenance is inherited from the existing audited metadata."
+  ],
+  "stoppingCondition": "One candidate plus one targeted correction completed. Stop here; no additional generation, cast-wide regeneration or replacement of existing selections."
+}

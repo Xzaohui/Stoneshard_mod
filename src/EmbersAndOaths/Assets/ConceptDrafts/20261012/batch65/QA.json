@@ -1,0 +1,23 @@
+{
+  "reviewed_at": "2026-10-12T22:15:56Z",
+  "method": "Actual view_image review of original batch14/67, batch59/67v3 and both batch65 outputs. SHA256 via sha256sum; PNG header dimensions via file. No manual raster modifications.",
+  "verdict": "partial_visual_improvement_continuity_failed_FIX67_still_open",
+  "actual_pixel_review": true,
+  "findings": [
+    "右滑架在两张独立图中确实大幅右移，连杆两端的分离比59四格稿可读；双图均无手，左夹持座、底板和视角总体保持。",
+    "固定左杆并未守恒：第一图由约x250至475，第二图由约x250至580；左端固定但杆明显变长。右杆第一图约x480至650，第二图约x817至1035，同样变长。坐标为1536宽图目视估计，非精密分割量测。",
+    "滑架约右移385px，而不是提示词要求440px；位移量本身不是叙事canon，但不满足此次刚体编辑约束。",
+    "销从右端储存位移至末端固定座，储存孔为空；但销座在滑架右侧，未清楚贯穿滑架与固定底座，因此不能证明锁住滑架。",
+    "第一图中央细暗缝可读为接合缝，也有轻微间隙歧义；不把它当已验证接触。",
+    "底板轮廓/左夹具目视相近但纹理有重绘，未证明逐像素不变。"
+  ],
+  "scope_limits": [
+    "N14-S02只规定绝缘夹、断开杆、锁位销和夹住→断开→固定次序；此双杆、滑架、导轨及孔位均为美术提案。",
+    "两张分别是夹持连接准备态与断开固定意图态；不替代完整三步动作，也不认定终端固定成立。",
+    "tools_ready不等于containment_ready或NE5；不写游戏状态、奖励或任务完成。",
+    "非原生精灵、非无缝动画、非真实安全操作或工程认证。"
+  ],
+  "runtimeVerified": false,
+  "native_sprite_ready": false,
+  "next_step": "保留候选为分离姿态参考；若继续须先解决恒长部件与可见贯穿锁位。不要仅凭更清楚的断口接受FIX-67。"
+}

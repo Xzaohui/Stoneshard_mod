@@ -1,0 +1,187 @@
+{
+  "status": "source_guided_designer_masked_pixel_study",
+  "source_files": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch66/03_yani_rises_from_stool.png",
+      "sha256": "4bee8df635ac7c2f0d294347ee495a7cd5448ec0e501b5a79c33427f50a68ced"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/02_yani_dialogue_poses.png",
+      "sha256": "a471d3f401c4e08757342bb804967a163f2048fe87077b89ec0431dcb55e3bb3"
+    },
+    {
+      "path": "design/06_支线/城市支线/台本_CS-BRY-15_招募告示的背面.md",
+      "sha256": "3392fd334cb64a8b046f8e1d87e29e97468f85a7498505bf6d10202798b5043c"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch66/manifest.json",
+      "sha256": "0958e643058d4bca261285209bcb5af9fa8bab2285dfb1496c339bf260a6234b"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch66/QA.json",
+      "sha256": "cef20f6e414d6e41b338d629f422a2b63a9f6d8fe75ecac27e4c16907b2d93fc"
+    }
+  ],
+  "uniform_scale": 0.04106280193236715,
+  "standing_height_budget": 34,
+  "canvas": [
+    64,
+    64
+  ],
+  "panel_source_x_offsets": [
+    0,
+    500,
+    1013
+  ],
+  "scene_anchor": {
+    "name": "fixed scene registration, not engine origin",
+    "canvas_reference": [
+      24,
+      54
+    ],
+    "source_reference_per_frame": [
+      [
+        121.7647,
+        902
+      ],
+      [
+        621.7647,
+        902
+      ],
+      [
+        1134.7647,
+        902
+      ]
+    ],
+    "definition": "x=24 is a scene reference at the fixed front stool post; y=54 is the exclusive floor edge beneath the nearest boot. All frames use x_native=19+(x_source-panel_offset)*scale, y_native=54+(y_source-902)*scale."
+  },
+  "stool_layer_sha256": "c6a2a3a999482fadfac749af09a51343c0a50784854111cd9979893893071fb8",
+  "palette_size": 24,
+  "dither": false,
+  "measurements": [
+    {
+      "lower_leg_gap_probe_clear": true,
+      "stool_aperture_probe_clear": true,
+      "frame": 0,
+      "canvas": [
+        64,
+        64
+      ],
+      "character_bbox": [
+        20,
+        28,
+        38,
+        54
+      ],
+      "character_visible_height": 26,
+      "opaque_colors": 21,
+      "foot_lowest_row": 53,
+      "binary_alpha": true,
+      "transparent_rgb_zero": true
+    },
+    {
+      "lower_leg_gap_probe_clear": true,
+      "stool_aperture_probe_clear": true,
+      "frame": 1,
+      "canvas": [
+        64,
+        64
+      ],
+      "character_bbox": [
+        22,
+        24,
+        38,
+        54
+      ],
+      "character_visible_height": 30,
+      "opaque_colors": 20,
+      "foot_lowest_row": 53,
+      "binary_alpha": true,
+      "transparent_rgb_zero": true
+    },
+    {
+      "lower_leg_gap_probe_clear": true,
+      "stool_aperture_probe_clear": true,
+      "frame": 2,
+      "canvas": [
+        64,
+        64
+      ],
+      "character_bbox": [
+        23,
+        20,
+        38,
+        54
+      ],
+      "character_visible_height": 34,
+      "opaque_colors": 21,
+      "foot_lowest_row": 53,
+      "binary_alpha": true,
+      "transparent_rgb_zero": true
+    }
+  ],
+  "translation_test": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "best_translation_iou": 0.6930379746835443,
+      "best_translation": [
+        0,
+        0
+      ],
+      "not_identical_under_translation": true
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "best_translation_iou": 0.747093023255814,
+      "best_translation": [
+        0,
+        -3
+      ],
+      "not_identical_under_translation": true
+    }
+  ],
+  "origin": null,
+  "collision": null,
+  "engineReady": false,
+  "runtimeVerified": false,
+  "dependencies": {
+    "python": "3.12.14",
+    "pillow": "12.3.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "outputs": {
+    "character_00.png": "144b8e1eccbe444bbeb2c99a6a9ce1919ecf8e98227a8783b447562e5887f459",
+    "character_00_baseline.png": "f5fb1a4ff68a8c0e706489211ad9a4e7dc409f7968ae4831822fd71b988dd39a",
+    "character_01.png": "d8e8a761fd6502bb113449cbeb97dd0568b4d75ea7ab5e59915c11959fca541c",
+    "character_01_baseline.png": "02dbad742391cf2491a3eefdcb5c00d85371bcbc07279bb62b26221ca9c28d7e",
+    "character_02.png": "82cd2ba7be71b18d6667ee15b0c31c6c8cea9466bdf920c3b23cf9c2ff8417f5",
+    "character_02_baseline.png": "8d7fdf0baa1a9efa11845bb6b6d3b042f416709c4b8db321c7ef818220e67c42",
+    "comparison.png": "6b49a4ac94196103e3f948a7c983213fe74462435a3d2c936750c0ad794a3dd5",
+    "critical_details_nearest_16x.png": "e37febdb4edc5fdc36dcbcbe1376c9e8f027943d1439765ad251d9467f39bf3a",
+    "frame_00.png": "a44298ba2d0274cbe054be7396124f3b4e3647f117af9c85028a846130f9187f",
+    "frame_00_nearest_8x.png": "5bbe55985310a31a9c40b5debb1af7d7300eb29b11e79e97730118d5841c17af",
+    "frame_01.png": "56293002112ea442aa68af4bbec228544afd59626742446fef0a0318682e716d",
+    "frame_01_nearest_8x.png": "c76fc1d5646aecad20c7faf425eb88d96ce30b589c3d9cd3d880e0ea06f98da0",
+    "frame_02.png": "ca86c9f9db88313d63d5b019db342822d1da5c9f8bd89c758e6a677a43c70505",
+    "frame_02_nearest_8x.png": "d8ade2dbc52f42b23e954950fe65105c50601e0f5ebfff208bb975d350cd2335",
+    "palette.json": "b0115562dd59b1a557621e10a266f96151fffb741739f89ad3be5b98520a9d89",
+    "pixel_edits.json": "be12d35eb8a101ecde67d9b0440de70f86d1d19eec62f97747fdfa3aeb9089f7",
+    "rise_motion.gif": "98130fdbf1e9a8965ca989827b4ad31a609a23227c6bee4c2252d7a20a1173eb",
+    "source_character_00.png": "88af8b6505b2b0ab150d6d3d4b60c4e83751116e48f0197a8b5f8b884173bd79",
+    "source_character_01.png": "37ff7de8423e2015d02c10c011f4c58cdd38b841a9a6263db1189387374ea9ea",
+    "source_character_02.png": "0dca1d737635cbc6f5646ec6aec256c1fc9f120f90528672e4bbbfd29d4dfc31",
+    "source_polygon_00.png": "675725dba5b732af0815c383840b194cd5a0800c207fa835161e1c9e59a266ba",
+    "source_polygon_01.png": "08e8e544b40637ea26ee1c4fe6bbae657fa0fa950117740c3f0342e4e5f0f627",
+    "source_polygon_02.png": "36b9e93476d0b710f9c2c9c8cc5cda8083e34371f86a33af4bd99c5052ab1fd7",
+    "spritesheet.png": "a948b0f3231978ad1584dbe6be8deb6bad77f1513b20cb0bd836ebea482c20e5",
+    "spritesheet_nearest_8x.png": "c6880539fb9a4de757f35ede913d7b57634283c452d5bb90ad59e2dc9a927a9f",
+    "stool_fixed.png": "c6a2a3a999482fadfac749af09a51343c0a50784854111cd9979893893071fb8"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-12",
+  "status": "three_verified_source_motion_gaps",
+  "scope": "Read-only source and asset audit except this new JSON; no images, design sources, global indexes or game files changed.",
+  "method": {
+    "manifests_scanned": 61,
+    "scan": "Recursive manifest text, all asset filenames and additional prompt files searched; explicit current story staging checked against S62/current city guards. Actual reference PNGs viewed individually.",
+    "actual_reference_images_viewed": 3
+  },
+  "findings": [
+    {
+      "priority": 1,
+      "id": "MOTION-BRY12-MARIS-PARTIAL-TAG-TEAR",
+      "character": "玛莉丝 / BRY-NPC-MARIS",
+      "sources": [
+        {
+          "file": "design/06_支线/城市支线/台本_CS-BRY-12_两种火候.md",
+          "scene_id": "CS-BRY-12-S2",
+          "lines": "59–75",
+          "exact_requirement": "玛莉丝将退货批次签撕开一角又停住；罗安手上的钻头与样孔可比。安菈在场才问愿否参与，不替她署名。",
+          "sha256": "ccd0b0112ef71256157edb5f7e3220587d7c5a6c261cc7f617a731a6c34d5ef8"
+        }
+      ],
+      "reference_png": "batch02/07_maris_four_views.png",
+      "verified_image_coverage": "Actual PNG has four neutral standing orientations, empty hands and no tag. Existing low-load-test keyframes are a different action. No matching partial-tag-tear action found in recursive manifest/prompt/filename scan.",
+      "outfit": "Same adult elf woman, pointed ears, dark brown long single braid, muted plum open outer tunic/coat, grey-beige front underlayer and rolled pale cuffs, brown belt with two small leather pouches and ordinary metal tools, dark boots. Keep all accessories fixed across frames; no cultural emblem or new weapon.",
+      "minimal_keyframes": [
+        "Both hands hold ONE small ordinary paper batch tag before chest/waist, one hand supporting body, the other pinching one corner.",
+        "Same hands move a small distance apart, creating a short open slit at that corner; the corner flap remains attached to the same tag.",
+        "Hands visibly stop, the same partially torn corner remains attached; no further ripping, dropped scrap, destruction or restoration."
+      ],
+      "guards": "Only this S2 after the two modification steps can be established by actual admissions or fixed hole/dismantling evidence; Maris alive, present and willing. Exact paper form and tear geometry are art proposals. No readable names, new admission beyond scene, completed return/refund/compensation, total document destruction, ethnic guilt, Anla signature or quest settlement. Do not make the paper heal on loop; a finite gesture with hold, not endlessly repeated tearing.",
+      "reference_sha256": "83cc0795d615b20a8e56d6b0a0bc42bf3f03c3f72b2c3d94fe6fada1afea82fe"
+    },
+    {
+      "priority": 2,
+      "id": "MOTION-N11-ROWEN-TURNS-MAP-OVER",
+      "character": "罗温·雾 / NPC11",
+      "sources": [
+        {
+          "file": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+          "scene_id": "N11-S01",
+          "lines": "113–125",
+          "exact_requirement": "罗温把地图翻到背面，先问玩家知不知道搬运者住在哪。",
+          "sha256": "61a27dc3370b69216d707ee4a40c13611434ce668c91a3072213a907bfa9f415"
+        }
+      ],
+      "reference_png": "batch17/56_rowen_broker_cast_v2.png",
+      "verified_image_coverage": "Actual preferred v2 PNG shows front/back/profile and one seated end pose with hands resting over blank creased reverse of map. No lift or turnover frames. Prior v1 face-up pose and v2 corrected pose are not an authored registered action sequence.",
+      "outfit": "Same middle-aged adult man, cropped salt-and-pepper hair and short beard/stubble, faded plum-brown long travel coat, charcoal scarf, dark trousers, worn brown boots and brown cross-body leather pouch. Preserve existing small table, stool, paper dimensions and folds.",
+      "minimal_keyframes": [
+        "Rowen remains seated at same table, one ordinary folded-crease map face up; only anonymous schematic lines, no addresses or identifiable geography. Hands take one edge.",
+        "Same SINGLE paper lifts and rotates through a near-vertical position over the same table; seated body, table, chair and pouch stay registered.",
+        "Map lies flat with entirely blank worn reverse upward, fold creases retained; hands return to the exact preferred-v2 seated resting position."
+      ],
+      "guards": "N11 first information-bargaining encounter only under current scene/knowledge guards, Rowen alive/present/willing. This gesture discloses no household location and commits no transaction, payment, address sale, capture or exclusive route. Keep public abstract markings on face only, reverse blank. Never substitute another map, multiply sheets or let map/desk scale drift; no completed choice or compulsory cinematic.",
+      "reference_sha256": "102d5f1682df4236a0ee2cd9b2dcb145063b111d01fb89ff595a9c36007f1181"
+    },
+    {
+      "priority": 3,
+      "id": "MOTION-BRY08-MILEI-SETS-SEAT-PLANK",
+      "character": "米蕾 / BRY-S03-NPC",
+      "sources": [
+        {
+          "file": "design/06_支线/城市支线/台本_CS-BRY-08_旧帆村的空船位.md",
+          "scene_id": "CS-BRY-08-S1",
+          "lines": "27–41",
+          "exact_requirement": "奥德握着空泊位绳，米蕾把弟弟旧席板放椅上。薇特只能谈如何留有限见证，不能替姐姐说思念。 / 没有死亡或返回证据，空位与个人遗物是不同用途。",
+          "sha256": "9af5c0a19a0193c379b03fd7d287f3483116cca41ccc4a25f4dd0ab9ac74d2bb"
+        }
+      ],
+      "reference_png": "batch34/132_bry_oder_milei_cast.png",
+      "verified_image_coverage": "Actual lower-row Milei front/back poses both hold same old seat plank vertically against body. No chair, lowering or releasing pose. Batch53 mooring props do not provide a character action sequence.",
+      "outfit": "Use ONLY lower-row woman, not upper-row Oder. Same middle-aged woman with dark hair in loose low bun, faded sea-green fringed shawl, brown long wool dress, pale simple collar and sturdy brown shoes. Same narrow old wood seat plank with worn blank face; keep silhouette, board grain and hand grip stable.",
+      "minimal_keyframes": [
+        "Milei stands next to ONE plain stable wooden chair, holding the existing old seat plank against her own side with both hands.",
+        "She brings the SAME plank down toward the seat, modest torso lean; feet and chair stay fixed, no other person touches it.",
+        "Same plank rests securely across the chair seat, hands withdraw slightly; she remains beside it. No departure, ritual or ownership handoff."
+      ],
+      "guards": "S1 only when Milei present/alive/willing and existing plank is available. Placement is not an agreed storage arrangement, mooring release, rent settlement, declaration of death, return evidence or abandonment of waiting. No brother body/ghost, funeral attributes, new belongings, cloned Oder or invented intermediary. Board orientation and simple chair design are art proposals; preserve the plank as one object distinct from ordinary chair.",
+      "reference_sha256": "86a59d97798b4eaa7c5085c1cb867cccf7565012a9c6c11806b0018ad910bc7e"
+    }
+  ],
+  "excluded": [
+    "Hers N17 retreat, Sel N4 ticket offer and Yani CS-BRY-15 rise already assigned to batch66.",
+    "No generic idle/walk/combat quota; no repeat repair of hardware67, N6 comparison, refuge door63 or rope74.",
+    "Static source poses and metaphoric movement words alone were not treated as missing motion."
+  ],
+  "limitations": "Targeted next-three source audit, not exhaustive native animation acceptance. Existing refs are appearance proposals. Intermediate mechanics proposed, explicit named actions sourced. Pixel registration, final palette, engine integration and runtime remain unverified.",
+  "runtimeVerified": false
+}

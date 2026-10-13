@@ -1,0 +1,45 @@
+{
+  "batch": 65,
+  "reviewed_at": "2026-10-12T22:18:09.141359+00:00",
+  "independent": true,
+  "scope": "Both separate original keyframe PNGs actually viewed at source resolution; source text read. Earlier image references not re-viewed in this independent pass. Producer records preserved.",
+  "reviewed_count": 2,
+  "raster_modified": false,
+  "overall_status": "action_readability_improved_rigid_continuity_failed",
+  "rigorousMatchAchieved": false,
+  "findings": [
+    "两幅原图已实际查看，按连接夹持态→断开意图态比较：右滑架右移，杆端出现明显间隙；左夹座、底板及总体视角近似保持。",
+    "固定左杆从约x250–475变为x250–580，长度约225→330；右杆从约x480–650变为x817–1035，长度约170→218。均为1536宽原图目视近似，不是精密分割量测。两杆恒长未通过。",
+    "末帧单销与右侧空孔可见，但销立于滑架右侧独立座附近，没有清楚贯穿滑架脚及固定导轨座；不能把有销解释为已可靠锁住。",
+    "初帧中央深缝可读为接缝，也可能是细小间隙；不把初帧机械接触或绝缘性能视为认证。木纹、底座局部形状及端部销孔安排重绘，未达到固定几何编辑。",
+    "N14-S02要求绝缘夹、断开杆、锁位销与夹住→断开→固定次序；双杆/滑架/导轨为美术提案。两幅状态不完整呈现三步动作，也不验证真实机械安全。",
+    "仅保留为分离姿态概念，FIX-67仍未关闭。不得写containment_ready、NE5、游戏任务完成或人员同意；tools_ready也不能由图自动提交。"
+  ],
+  "sources": [
+    {
+      "path": "design/05_主线/台本/台本_N14_可以回去的路.md",
+      "sha256": "5835682a1ffd83ecd698d47b1410d19ddb447bd6ee66f4808bd1b59d927852d4"
+    }
+  ],
+  "entries": [
+    {
+      "filename": "67_n14_connected_clamped_keyframe_v4.png",
+      "sha256": "8aef392bc99dca4f1d17176537185bfa1e9ccad69a41f378f67bae5aa56a9a88",
+      "actual_pixels_viewed": true,
+      "status": "retained_concept_not_rigid_animation",
+      "runtimeVerified": false,
+      "engineReady": false
+    },
+    {
+      "filename": "67_n14_disconnected_fixed_keyframe_v4.png",
+      "sha256": "5d1df9183d71d53aa43839c5318faaaf393e7c5ae1ba6953e43163e8b0c4df0c",
+      "actual_pixels_viewed": true,
+      "status": "retained_concept_not_rigid_animation",
+      "runtimeVerified": false,
+      "engineReady": false
+    }
+  ],
+  "runtimeVerified": false,
+  "engineReady": false,
+  "decision": "Retain both outputs and stop this bounded strategy test. Do not label fixed-geometry or engine acceptance; no additional generation requested by this review."
+}

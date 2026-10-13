@@ -1,0 +1,102 @@
+{
+  "binary_alpha": true,
+  "shared_palette": true,
+  "fixed_stool_layer": true,
+  "shared_scale": true,
+  "independent_bbox_normalization": false,
+  "measurements": [
+    {
+      "lower_leg_gap_probe_clear": true,
+      "stool_aperture_probe_clear": true,
+      "frame": 0,
+      "canvas": [
+        64,
+        64
+      ],
+      "character_bbox": [
+        20,
+        28,
+        38,
+        54
+      ],
+      "character_visible_height": 26,
+      "opaque_colors": 21,
+      "foot_lowest_row": 53,
+      "binary_alpha": true,
+      "transparent_rgb_zero": true
+    },
+    {
+      "lower_leg_gap_probe_clear": true,
+      "stool_aperture_probe_clear": true,
+      "frame": 1,
+      "canvas": [
+        64,
+        64
+      ],
+      "character_bbox": [
+        22,
+        24,
+        38,
+        54
+      ],
+      "character_visible_height": 30,
+      "opaque_colors": 20,
+      "foot_lowest_row": 53,
+      "binary_alpha": true,
+      "transparent_rgb_zero": true
+    },
+    {
+      "lower_leg_gap_probe_clear": true,
+      "stool_aperture_probe_clear": true,
+      "frame": 2,
+      "canvas": [
+        64,
+        64
+      ],
+      "character_bbox": [
+        23,
+        20,
+        38,
+        54
+      ],
+      "character_visible_height": 34,
+      "opaque_colors": 21,
+      "foot_lowest_row": 53,
+      "binary_alpha": true,
+      "transparent_rgb_zero": true
+    }
+  ],
+  "translation_test": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "best_translation_iou": 0.6930379746835443,
+      "best_translation": [
+        0,
+        0
+      ],
+      "not_identical_under_translation": true
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "best_translation_iou": 0.747093023255814,
+      "best_translation": [
+        0,
+        -3
+      ],
+      "not_identical_under_translation": true
+    }
+  ],
+  "visual_review": "See QA-visual.json for explicit post-build visual inspection; programmatic checks do not certify anatomy or style.",
+  "limitations": [
+    "Source three poses change head angle, clothing folds and limb proportions; registration cannot repair all anatomy.",
+    "Three keyframes establish readable beat only; timing, balance, weight transfer and intermediate motion unverified.",
+    "Shared stool is a native design reconstruction; character masks and pixel readability edits are not automatic accurate extraction.",
+    "No healing, service acceptance, payout, invitation consent or state transition proven."
+  ]
+}

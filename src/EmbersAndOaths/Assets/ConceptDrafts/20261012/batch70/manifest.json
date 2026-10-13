@@ -1,0 +1,129 @@
+{
+  "batch": 70,
+  "date": "2026-10-12",
+  "generation_tool": "builtin image_gen__imagegen",
+  "scope": "仅coverage-script-action-backlog最后两条，分别三帧；不混淆艾伦BRY-NPC-ELEN与伊莲NPC04。",
+  "external_guidance_read_only": "https://raw.githubusercontent.com/424431185/pixel-asset-master-skills/main/skills/pixel-asset-master/SKILL.md",
+  "guidance_use": "Existing project: reference-specific spec lock, sequential generation, readable silhouettes, stable intended anchors and honest QA; no third-party scripts installed or executed.",
+  "audit_sha256": "8499bbc3061c08f9489f087680cd5b748e761b5e061922341489eb6abce42a0d",
+  "spec_lock_sha256": "9cb8096412bf552e5030a8832cd6d387c1539eb29dbec6661c7cba340fa74619",
+  "entries": [
+    {
+      "priority": 4,
+      "id": "MOTION-BRY13-ELEN-CORRECTS-SALE-TAG",
+      "character": "艾伦 / BRY-NPC-ELEN",
+      "sources": [
+        {
+          "file": "design/06_支线/城市支线/台本_CS-BRY-13_页边的另一个名字.md",
+          "scene_id": "CS-BRY-13-S3",
+          "lines": "83–95",
+          "exact_requirement": "显示条件：所选处置实际完成，署名/寄存/交售分别可核。调度：艾伦手改卖价牌，或照样留下高价同时标明存疑。",
+          "sha256": "e51e124b3653166e01f8cfc26e721b7580021681eea5d2650449f647f1d5eff5",
+          "verified_sha256": "e51e124b3653166e01f8cfc26e721b7580021681eea5d2650449f647f1d5eff5"
+        }
+      ],
+      "reference_png": "batch03/11_elen_four_views.png",
+      "reference_sha256": "b57b00ca582f5f2e2ee9ecdc3bb7929cbc6b1f696f26949975e42f89392fed53",
+      "reference_visually_verified": true,
+      "outfit": "同一棕发低髻成年女性，米白卷袖衬衫、暗酒红裙、深灰工作围裙、棕腰带及小袋/装帧小工具、棕鞋；衣物与腰侧工具固定。",
+      "existing_coverage": "实际四向站姿双手空；另实际看过batch03/15四帧是针线装订书页，没有价牌或书写动作。清单/提示词未找到改价牌序列。",
+      "minimal_keyframes": [
+        "艾伦在固定桌边扶住自己的同一小卖价牌；另一手持一支普通笔，牌面仅抽象非可读旧墨记。",
+        "她亲手在原无证宣传处加一个可见划改和旁侧短注，牌不翻换、不撕毁；价格区保持不变以采用“高价仍在、标明存疑”分支。",
+        "笔抬离，牌留在她手下/同桌原位，旧墨记和新增更正同时可辨。"
+      ],
+      "guards": "仅本人实际同意并已主动更正无证标签的S3；未愿更正用台本问句，不强动作。优先固定“保价加存疑”一支，不能和降价两结局混播。署名、寄存、交售分别核，动作不自动出售/退款或认证原史；不揭家庭私页，不写可读名人/家名，不判旧市长悬案。墨痕只视觉化更正，不把无字图宣称信息文字已可读。",
+      "character_id": "BRY-NPC-ELEN",
+      "character_name": "艾伦",
+      "english_working_name": "Elen",
+      "output": "01_elen_retained_price_doubt_annotation.png",
+      "output_sha256": "2268204b529aa8c6d0ce8171efbf07f776ea448a6bc51119a2d142ae8cd2e664",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-0f5161f7-50ac-4fec-8c28-0adf0a651904.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "elen_prompt.txt",
+      "prompt": "Use case: stylized-concept. Make a NEW medieval pixel-art finite action concept board, exactly THREE equal horizontal panels left-to-right, requested 1536x1024 landscape. Input image is an appearance and pixel-cluster style reference only, not an edit target. Same adult bookbinder Elen, BRY-NPC-ELEN: brown hair low bun, cream rolled sleeves, burgundy skirt, charcoal apron, brown belt with fixed small bookbinding tools and pouch, brown shoes. Full body, fixed three-quarter view, consistent scale and ground line, opaque plain warm grey backdrop. A modest fixed narrow wooden desk to her RIGHT holds ONE upright small rectangular wooden sale placard with a sloping support. Placard front faces viewer enough to see its two zones: TOP zone has sparse abstract old ink marks representing unproven attribution; BOTTOM zone has two short abstract dark dashes that stay EXACTLY UNCHANGED through all three frames, representing retained price. No readable text, numerals, captions or letters anywhere. LEFT FRAME: Elen's left hand steadies left edge of placard; right hand holds one ordinary dark dip pen just above TOP zone, before correction. MIDDLE FRAME: same left hand steadies same placard; right pen visibly touches TOP zone as she draws one diagonal strike through an old top mark and a short new cluster beside it; bottom marks untouched. RIGHT FRAME: pen clearly lifted away with air gap, left hand still steadies same placard; top retains both old ink and the added diagonal plus tiny annotation cluster, bottom unchanged. Same placard dimensions, desk, hand count, clothes and viewpoint throughout. Restrained earth palette, crisp hard pixel clusters and dark readable outlines, no painterly blur, gradients or glossy effects. This is only her personally agreed retained-price/doubt-annotation branch after actual authorized disposition; no price reduction, no compelled admission. No books opened, private pages, family names, coins, transaction, refund, crowds, weapon, official emblem or historical verdict. Only the three simple physical beats, no other props or duplicated pen. Abstract marks are art placeholders, not legible prices or verified historical content.\n",
+      "prompt_sha256": "90e3b065256140679da58dc16954c8f241a1f374c606de90b5f2516e158444a2",
+      "reference_role": "Read-only appearance/style reference, visually inspected before generation",
+      "character_card": {
+        "file": "design/04_人物/城市人物/人物_BRY-NPC-ELEN_艾伦.md",
+        "sha256": "4c9ec733c87e395824d1e80aa134470feb044b2804e4d36b34cb40bb45a36c50"
+      },
+      "qa": {
+        "visual_result": "通过概念层三动作辨认：扶同牌准备、笔接触上栏、抬笔保留更正墨痕。下方两条价格占位墨线仍在；本人服装与工具一致。",
+        "limitations": [
+          "首帧笔尖已很靠近牌边，未显示严格逐像素悬停间隙。",
+          "新增划痕清晰，但短注为抽象墨块，不能辨读存疑文字；也不能凭图证明高价数值。",
+          "扶牌手与牌/桌存在微小位置变化；衣裙、像素密度和脚底未做注册、色数和原生网格验收。",
+          "无降价、出售、退款或私页披露；是否本人同意及实际处置仍由源码守卫控制。"
+        ]
+      },
+      "selected_concept": true,
+      "engineReady": false,
+      "runtimeVerified": false
+    },
+    {
+      "priority": 5,
+      "id": "MOTION-SQ01-ELAINE-POSTS-PAIRED-NOTICES",
+      "character": "伊莲·沃斯 / NPC04",
+      "sources": [
+        {
+          "file": "design/06_支线/台本/台本_SQ01_港税与自由.md",
+          "scene_id": "SQ01-S03",
+          "lines": "40–76; 149–159",
+          "exact_requirement": "伊莲将原收费公示与修订公示并排贴，不承诺全国自由贸易。",
+          "sha256": "08e6e684ce9972abf02870fb8443e09afbc8bd4d9d51f11b9fb411b0f87be9ad",
+          "verified_sha256": "08e6e684ce9972abf02870fb8443e09afbc8bd4d9d51f11b9fb411b0f87be9ad"
+        }
+      ],
+      "reference_png": "batch32/123_elaine_voss_local_agent_cast.png",
+      "reference_sha256": "cc566a19d955c71076720fccf27d52a34a0d7942c5865b69d823c177632b3d91",
+      "reference_visually_verified": true,
+      "outfit": "同一深棕发低髻成年女性，深蓝灰短肩披、米色领/袖口、褐色及膝外袍、棕腰带、斜背小皮包、绑腿棕靴。无新官徽、武器或贵族印章。",
+      "existing_coverage": "实际PNG是正背侧和桌旁开掌姿；没有张贴动作。全量清单/提示词未找到原/修订公示的伊莲连续张贴；已有空白公告/账台只能作场所。",
+      "minimal_keyframes": [
+        "原公示已经贴在固定公共板左边；伊莲持同尺寸修订公示靠近右侧空位，保留左右清晰间隙。",
+        "她将同一修订页压贴于右边，手掌沿边轻压，左侧原页不被揭下或遮盖。",
+        "双手离开，两份公示稳定并排，旧纸与新纸边沿磨损/色差仍保持。"
+      ],
+      "guards": "S61素材只在S62实际public行政复核且本案确有获准修订公开内容时使用，存活在场愿谈。绝不用于buyout私人赎回，guild亦须另有实际可公开修订事实才可扩用。发布是已落实本案记录的表现，不代替撤人身担保、付款、监督或全国自由贸易。不得公开姓名/住址/病史、未经核的收费数字；只用非可读分栏。最小3帧从原页已在板起，表现并列结果而不虚构同时瞬贴两页。",
+      "character_id": "NPC04",
+      "character_name": "伊莲·沃斯",
+      "english_working_name": "Elaine Voss",
+      "output": "02_elaine_public_paired_notices.png",
+      "output_sha256": "7edaf4aecd948193abe7d593b1e59091966d7084f389f67a3a4a34ad9ecaecfb",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-3d23b0b8-2dd5-41a8-ab75-80acb1aed519.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "elaine_prompt.txt",
+      "prompt": "Use case: stylized-concept. Create a NEW medieval pixel-art finite action concept board in EXACTLY THREE equal panels left to right, requested 1536x1024 landscape. Input image is appearance/style reference only, NOT edit target. Same adult Elaine Voss, NPC04, NOT the burgundy-skirt bookbinder: dark brown low bun, short blue-grey shoulder cape, beige collar and cuffs, brown knee-length outer coat, brown belt, single diagonal leather satchel strap and small hip bag, wrapped brown boots. Match her reference face and practical proportions. Full body in every panel, fixed three-quarter camera, same ground line and scale. Muted grey opaque blank background with ONE identical upright public wooden noticeboard behind and slightly to RIGHT of her in every panel, no extra scene or captions. A single old yellowed rectangular notice is ALREADY fixed on LEFT half of board from first frame; top corners and age-worn bottom edge clearly visible. It NEVER moves and NEVER gets covered. Same-size pale revised notice is the only moving paper. FRAME ONE: she stands to LEFT of board, holding this pale page in both hands just in front of EMPTY RIGHT half, separated clearly from old page by a wide visible strip of wood. FRAME TWO: new page lies flat on RIGHT half, she presses its upper and lower side edges with open palms to attach it. FRAME THREE: she has lowered BOTH empty hands clear of the board, both pages remain securely flat side by side at SAME HEIGHT with a wide visible wood gap. Exactly two sheets throughout, old sheet remains darker and worn, revised page lighter and cleaner, paper sizes unchanged. Each sheet has only sparse abstract horizontal ink blocks and two columns, no readable text, numbers, names, logos or seal. Crisp dense pixel clusters and clean outlines, restrained earthy palette, no smooth gradients, blur or photographic texture. This scene is ONLY for an actually selected and completed local administrative public-review branch with specific approved public revisions, while Elaine is alive, present and willing. It is NOT the private buyout or forced disclosure branch. Do not depict payment, shackles, rescues, freed crowds, universal trade, political victory, new badge, weapon, official stamp, personal names, addresses or medical information. The image only communicates physical posting and paired-sheet arrangement; abstract ink does not establish readable tariffs, agreement or legal/political outcome. No extra paper, ledger, desk, tools, banner or glowing magic.\n",
+      "prompt_sha256": "2f7bd5b65a9137c1248843bd5918a20c96f54a338f6e4197e70b1c14eb0e86f7",
+      "reference_role": "Read-only appearance/style reference, visually inspected before generation",
+      "character_card": {
+        "file": "design/04_人物/人物_伊莲·沃斯.md",
+        "sha256": "f978ab0706dd9c379cb096bc3d0ede35088b4a5abc147d1ceba05ecec1cc7314"
+      },
+      "qa": {
+        "visual_result": "通过概念层三动作辨认：持新页靠近空右侧、双掌压贴、双手放下；旧左页始终留在板上，最终两页分开并列。角色保持蓝灰披肩、褐袍和斜背袋。",
+        "limitations": [
+          "持页已有类似固定钉的墨点；紧固方法未连续描绘，不能用作实际张贴机械步骤。",
+          "持页到贴后尺寸/底缘略有变化，旧页与木板也有生成漂移；并非注册精灵。",
+          "正文只有不可读分栏横块，无法验证收费数字、日期、合法性或原修订逐字差别。",
+          "画面不证明行政复核、撤人身担保、赔付或全国自由贸易；只在实际public路线及本案确有获准公示修订时使用。"
+        ]
+      },
+      "selected_concept": true,
+      "engineReady": false,
+      "runtimeVerified": false
+    }
+  ],
+  "runtimeVerified": false,
+  "engineReady": false,
+  "changes": "Only batch70 new files. No global indexes, source scripts, runtime, embedding list or remote push."
+}

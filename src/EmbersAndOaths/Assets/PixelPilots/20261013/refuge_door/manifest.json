@@ -1,0 +1,156 @@
+{
+  "kind": "authored-native-grid-rigid-door-pixel-proposal",
+  "method": "Pillow integer pixel drawing and NumPy inverse nearest sampling; no image model; no original-game extraction. Stone/wood/iron/brass and overhead geometry referenced visually from v4; every small-grid pixel is authored.",
+  "canvas": [
+    128,
+    128
+  ],
+  "angles": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "pivot": [
+    32,
+    92
+  ],
+  "local_pivot": [
+    0,
+    4
+  ],
+  "local_tip": [
+    64,
+    4
+  ],
+  "door_centerline_length": 64,
+  "local_rgba_size": [
+    65,
+    9
+  ],
+  "room_direction": "negative screen Y / above wall",
+  "latch_state_all_frames": "retracted / unlatched",
+  "layer_order": [
+    "background",
+    "wall_frame_fixed",
+    "keeper_fixed",
+    "transformed_leaf_and_latch",
+    "hinge_fixed"
+  ],
+  "sources": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch58/63_refuge_door_geometry_v4.png",
+      "sha256": "2603df3919dd2bc990fee2b2bc7c8b9a9c3f6ca692480207ec7bba6720bc8e2c"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch58/QA-independent.json",
+      "sha256": "ae10be682fa1b97eab63686564b11c99a3afd6a626152874616e27d80bbecf8f"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N12_失踪者仍有名字.md",
+      "sha256": "899b888e97805cfd8420b35375887a3f57140ff2a2ee7d3cbf0f8a74d3b846f2"
+    },
+    {
+      "path": "design/08_副本/台本/台本_D08_沉水档案井.md",
+      "sha256": "22d28377dd53d8ca67255fc69535043937346e9404e26a4964b1cc36336f57c5"
+    }
+  ],
+  "script_sha256": "24224f43a56c8b71620df6cd251a6391a35101c873308358e7107f513842c2ce",
+  "outputs": [
+    {
+      "file": "QA_geometry_nearest_3x.png",
+      "sha256": "1a1f6840f27e96b23206d4f7f95dce51ccac802da91b51d47a8506f7d321fa92"
+    },
+    {
+      "file": "background.png",
+      "sha256": "13998e289f408a39781797ae0967b91f1d224b5ee0dc76a652b3728f239b571e"
+    },
+    {
+      "file": "door_motion.gif",
+      "sha256": "525a3c37298185ce0350efbbe44216a5c9214a7f1ae73b389b11732d6136dbcc"
+    },
+    {
+      "file": "frame_00.png",
+      "sha256": "ce69aac43ec44b478259043fc2c65e39584a1e7ce38eca86e19258a64775b473"
+    },
+    {
+      "file": "frame_01.png",
+      "sha256": "e5da1a274823499c371f2dfbbbf6803a3aa6f8f49c813a36d43974be3d37819c"
+    },
+    {
+      "file": "frame_02.png",
+      "sha256": "3c5c90c80d135eab1931537620f5d2a29213d5d2109499b45b9f6ac1541fbb1e"
+    },
+    {
+      "file": "frame_03.png",
+      "sha256": "9ec6b586df7949d5497e7ad6927628d070f4c694dd390090ad5860c08adde420"
+    },
+    {
+      "file": "hinge_fixed.png",
+      "sha256": "17ea64a400dd78955671eb7dc4c98b683778c3812715e3bd4a6e98982aa1e897"
+    },
+    {
+      "file": "keeper_fixed.png",
+      "sha256": "950bc5a9dbf41ec0e0f9eb420337d60783262468d6659f13cb87df9146c05aea"
+    },
+    {
+      "file": "latch_00.png",
+      "sha256": "247e085d319ba68d11a548a746bca68068f4dd3c89f7f3592f5aa453cd8a98c2"
+    },
+    {
+      "file": "latch_01.png",
+      "sha256": "d0a87f9fdb8f3dc3efccbe8c9bc874be8389481fccc93a0a714762d54096cc12"
+    },
+    {
+      "file": "latch_02.png",
+      "sha256": "3c1f485411b5b636b8a7e5ec7b738558964c34f74f4ce2c15048f38421f22e80"
+    },
+    {
+      "file": "latch_03.png",
+      "sha256": "648ff9f9d6b7d534b6ea8527379efdb579405131183fd1b0de4a3d7f538a0cce"
+    },
+    {
+      "file": "latch_retracted_local.png",
+      "sha256": "34c13f76e07344ef05ecd89b4e64f733f45cbb2d7ead3701d6a27c3d4aec5747"
+    },
+    {
+      "file": "leaf_and_latch_local.png",
+      "sha256": "a4e974635cc9460a1e848aa8dd59111bfc6afda4ad6610b6fbcfb5066826ad12"
+    },
+    {
+      "file": "leaf_wood_local.png",
+      "sha256": "97fda7be826f7a8d7fcbd54f00b840481b57476b2eb55fcaf0618333b1c5a27d"
+    },
+    {
+      "file": "moving_00.png",
+      "sha256": "cfb711214d26747ebf2583a60011e098e498c67b257d69abfb97571ae05ad696"
+    },
+    {
+      "file": "moving_01.png",
+      "sha256": "fd16408937b0e816b2475ff4a1658015e877db109c8b30be82b47dbfae3c6d46"
+    },
+    {
+      "file": "moving_02.png",
+      "sha256": "4dbeef658dd34e6dc82139adfd73a4798f6484e184804c15a4a260088bb9d929"
+    },
+    {
+      "file": "moving_03.png",
+      "sha256": "673d6205ffc163f37675612a728e091a11390abc897af7dddc15ed334fb80358"
+    },
+    {
+      "file": "preview_nearest_4x.png",
+      "sha256": "ad357f4c87bdcce6dd83036b07dcf012086707ff0ca01b7c432b52fd92a01097"
+    },
+    {
+      "file": "spritesheet_4x1.png",
+      "sha256": "aa2cae503adedbdb6fd3142389740aa76eabb4e8e23bdf8d284386da6f6e980a"
+    },
+    {
+      "file": "wall_frame_fixed.png",
+      "sha256": "3445d8796a45e746d4f9c437739700d642afcbe30a6175965456baf1b514bed7"
+    }
+  ],
+  "runtimeVerified": false,
+  "engineReady": false,
+  "originals_modified": false
+}

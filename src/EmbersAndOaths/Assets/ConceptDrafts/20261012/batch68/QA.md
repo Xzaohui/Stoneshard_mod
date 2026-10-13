@@ -1,0 +1,9 @@
+# Batch68 visual review
+
+Three source-bounded action concepts, 10 selected keyframes. All selected boards and the retained Osin v1 decode as 1536×1024 RGB. Raw outputs were copied unchanged from built-in imagegen. The three source documents and three appearance references match the audit SHA-256 values. Full prompts, guards, provenance and output hashes are in manifest.json.
+
+- Sela: held-low closed box, crosswise placement before stationary empty cart, then released hands read clearly. No Yani or contents. Foreground/right ground remains open; far-right cart bypass is partly cropped, so continuity to shore is a design requirement still needing layout/collision work. Generated quay posts/ropes are decorative proposals, not new canon or inventory.
+- Mara: unfinished rope moves into belt-supported basket; loose end stays at rim, low-head hold then raised gaze. No Ivo or N18 apparatus. Low eyes are stylized nearly shut, so exact weapon-height eyeline and small hand withdrawal remain production refinements. No quest acceptance is represented.
+- Osin: empty chair lift/lower/release works. First candidate obscured doorway with door leaf; preserved as v1. One targeted v2 correction exposes a clear empty dark opening and dry floor to chair's right. Outer right edge remains cropped but opening is readable. Herlin absent; empty chair supplies no consent or political endorsement.
+
+These are pixel-style illustration boards with tens of thousands of RGB colors, not palette-quantized native sprites. Camera/prop scale, contact, four-foot perspective, anatomy and pixel registration are approximate. No slicing, palette reduction, engine animation, hitboxes, navigation, runtime tests, state transitions or gameplay outcomes were implemented or validated. Independent review is still pending. Old assets, source design and global indexes remain unchanged.

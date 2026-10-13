@@ -1,0 +1,66 @@
+{
+  "batch": 65,
+  "created_at": "2026-10-12T22:15:56Z",
+  "task": "FIX-67 two separate keyframe strategy",
+  "tool": "builtin image_gen__imagegen",
+  "status": "two_outputs_complete_continuity_not_accepted",
+  "sources": [
+    {
+      "path": "design/05_主线/台本/台本_N14_可以回去的路.md",
+      "sha256": "5835682a1ffd83ecd698d47b1410d19ddb447bd6ee66f4808bd1b59d927852d4",
+      "locations": [
+        "N14-S02",
+        "S62 methods and state restrictions"
+      ],
+      "source_read": "Full exact source read before generation"
+    }
+  ],
+  "original_reviewed": {
+    "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch14/67_n14_tool_practice_four_keyframes.png",
+    "sha256": "0e98633adc9b4df69246fcecacd078892ef94797357e3caae95c6930031bf5f5"
+  },
+  "files": [
+    {
+      "filename": "67_n14_connected_clamped_keyframe_v4.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE separate close-up pixel-art keyframe of an inert fictional medieval tool practice jig, preparatory clamped CONNECTED state, not a four-panel sheet. Input image is a reference for muted worn wood/iron/ochre insulation and hard pixel-cluster art only; simplify and reframe the mechanism. Source N14-S02 requires insulated clamp, disconnect rod, locking pin and the sequence clamp/disconnect/fix; this exact device geometry is an ART PROPOSAL, not canonical engineering or safety certification. No people, no hands. Single broad wooden baseboard floating on flat warm gray background, slight elevated front view, horizontal rod axis. Fixed LEFT insulated brown jaw block tightly holds a finite iron left rod; the entire visible left rod from jaw edge to its square right tip is clearly visible. A separate equally long RIGHT iron rod touches that tip at one central seam; its entire visible length from its left tip to its RIGHT support block is visible. Right support block, its rod, and a dark iron disconnect lever with brown handle form ONE rigid sliding carriage resting on a long straight iron guide bolted to the wooden base. Guide extends a clearly visible unused travel distance to the RIGHT of the carriage, enough for later separation. Left fixed block and guide never move. Disconnect lever is mounted on and moves with this carriage, lean it diagonally upward-right. One short removable iron locking pin currently stands in a small storage socket at far lower-right corner of base, separated from guide; only ONE pin. Near right end of guide a visible empty lock hole will align with carriage after translation. Make every moving vs fixed part visually separable, do not hide rod lengths behind collars. Only one rod pair, one carriage, one guide, one pin and one insulated clamp. Keep composition small enough to leave unused travel room on right within canvas. Handmade game pixel art with restrained dark outline and large crisp clusters, dark iron gray and warm brown wood; no text, labels, arrows, electricity, glow, spark, extra tools, extra rod, gear train, tabletop legs or background scene. Landscape composition around 3:2, large enough to inspect. Both finite rod lengths must be obvious and their central tips touching. This is clamped connected preparation, no implied final safety or mission completion.",
+      "prompt_file": "67_n14_connected_clamped_keyframe_v4.png.prompt.txt",
+      "prompt_sha256": "527dccb341bd74592bef8201588027940de225e58f0e16393a5a8b4a039662a0",
+      "sha256": "8aef392bc99dca4f1d17176537185bfa1e9ccad69a41f378f67bae5aa56a9a88",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1358599,
+      "references": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch59/67_n14_fixed_hardware_practice_keyframes_v3.png",
+          "sha256": "4ad02ea67c8370e000f4bff7cc48f2806edede6050313feed5b803b5d9a40791",
+          "role": "Style and prior mechanism reference, actually viewed and passed"
+        }
+      ],
+      "generated_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-c6c31760-be96-4370-88a6-cfe733fd8756.png",
+      "visual_reviewed": true
+    },
+    {
+      "filename": "67_n14_disconnected_fixed_keyframe_v4.png",
+      "prompt": "Use case: precise-object-edit. The attached image is the SINGLE edit target: create the second separate keyframe of this SAME inert pixel-art jig after disconnecting and fixing. Preserve canvas dimensions, framing, camera, gray background, entire wooden base, every wood grain and bolt, entire LEFT brown insulated jaw at x80–280, the LEFT rod from about x250 to x475, and the fixed long iron guide and its terminal empty socket block. Do not redraw or resize those fixed elements. Change ONLY these two moving pieces: (1) Translate the WHOLE right carriage as ONE rigid assembly about 440 pixels horizontally RIGHT along its existing guide, with NO rotation, rescaling or deformation. Assembly includes the entire RIGHT rod currently x480–650, its whole support around x640–810, lever pivot and foot around x810–920, and entire diagonal handled lever. All carriage shapes and the full right rod length remain identical. The right rod's new left tip is around x920; LEFT rod right tip stays x475. Large empty horizontal gap appears solely because carriage translated; neither rod is cut, shortened, lengthened or bent. Expose the previously covered left area of guide naturally. Rightmost carriage locking foot now overlaps the fixed terminal socket block around x1320. (2) Remove the single short pin from its storage socket at far-right x1435, leaving visibly EMPTY storage hole; insert THAT SAME pin vertically through an aligned hole in the translated carriage locking foot AND the fixed terminal socket beneath it. Show the pin head seated on carriage foot, visibly blocking sliding. Do not leave a duplicate pin at storage. Keep the left clamp tightly engaged. No hands or people. No other objects or changes, no arrows or captions, no safety glow. This is an ART-PROPOSED hands-free disconnected fixed end-state for fictional N14-S02 tool practice, not canonical engineering or proof of final apparatus safety. Preserve hard pixel clusters and material colors exactly. Output ONE single keyframe, not a multi-panel comparison.",
+      "prompt_file": "67_n14_disconnected_fixed_keyframe_v4.png.prompt.txt",
+      "prompt_sha256": "9eebf403a18a9d441523e518fded39f564c9bdc4a007a33036b30899327107ec",
+      "sha256": "5d1df9183d71d53aa43839c5318faaaf393e7c5ae1ba6953e43163e8b0c4df0c",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1583580,
+      "references": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch65/67_n14_connected_clamped_keyframe_v4.png",
+          "sha256": "8aef392bc99dca4f1d17176537185bfa1e9ccad69a41f378f67bae5aa56a9a88",
+          "role": "Only edit target, actually viewed and passed"
+        }
+      ],
+      "generated_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-d7580d4d-b47e-4d22-8678-e0ea786ce13c.png",
+      "visual_reviewed": true
+    }
+  ],
+  "preservation": "Old refs unchanged; original generated outputs retained; only batch65 files created.",
+  "runtimeIntegrated": false,
+  "geometry_status": "Art proposal only; failed constant rod-length and unproven pin coupling",
+  "qa_file": "QA.json"
+}

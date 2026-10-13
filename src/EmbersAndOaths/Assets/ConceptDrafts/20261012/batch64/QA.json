@@ -1,0 +1,111 @@
+{
+  "batch": 64,
+  "actual_pixels_viewed": true,
+  "method": "tools.view_image on both originals; read-only Pillow/NumPy connected-component measurement, no raster modification.",
+  "overall_status": "improved_readability_rigid_geometry_unresolved",
+  "rigorousMatchAchieved": false,
+  "comparison": [
+    "Both images 1254x1254, despite requested 1024 square.",
+    "Adjacent frame: fixed ochre A and pale B have three holes each, all corresponding vertical rows visually aligned.",
+    "Overlap frame: paper stack stays at original left location; right half clears; lower ochre strip clearly visible at right.",
+    "A outer bounds remain approximately stable at x168..602,y313..970; local silhouette and texture not bit-identical.",
+    "Moving B right boundary appears around x536 instead of expected550; width changes approximately14px.",
+    "Visible hole centers shift 1–2px horizontally; vertical ranges remain stable.",
+    "Both pages and background exhibit regenerated texture. No exact rigid bitmap translation achieved."
+  ],
+  "measured_hole_bounds_exclusive": {
+    "adjacent": [
+      [
+        203,
+        421,
+        227,
+        445
+      ],
+      [
+        739,
+        421,
+        762,
+        445
+      ],
+      [
+        203,
+        634,
+        227,
+        657
+      ],
+      [
+        738,
+        634,
+        762,
+        657
+      ],
+      [
+        203,
+        846,
+        227,
+        869
+      ],
+      [
+        738,
+        846,
+        762,
+        869
+      ]
+    ],
+    "overlap": [
+      [
+        202,
+        421,
+        225,
+        445
+      ],
+      [
+        202,
+        634,
+        225,
+        657
+      ],
+      [
+        202,
+        846,
+        225,
+        869
+      ]
+    ]
+  },
+  "read_only_pixel_check": {
+    "lower_A_strip_region": [
+      555,
+      320,
+      598,
+      960
+    ],
+    "exact_equal_fraction": 0.005668604651162791,
+    "translated_B_region_original": [
+      710,
+      320,
+      1080,
+      960
+    ],
+    "translated_B_region_overlap": [
+      175,
+      320,
+      545,
+      960
+    ],
+    "exact_equal_fraction_B": 0.006148648648648648,
+    "interpretation": "Samples demonstrate regenerated textures, not a full registration estimator."
+  },
+  "art_qa": [
+    "No readable names, signatures, seals or identity verdict.",
+    "Sparse pixel-texture style; background contains soft tonal texture despite flat-background request. Not palette-locked game pixels.",
+    "Three-hole geometry, wider baseline and right trim are explicit production proposals, not canon."
+  ],
+  "revision_decision": "No optional revision used. Exact rigid invariance and texture drift are systemic here; preserve two-output experiment rather than add a cosmetic retry.",
+  "runtimeVerified": false,
+  "engineReady": false,
+  "outputs": {
+    "45_keyframe01_adjacent.png": "59b6461e979bc1b61828130630fe7f5f00a90f5b2c5d2504cec4ecd40f733003",
+    "45_keyframe02_overlap.png": "9d7270e80c13652d57578c0336ae40181d0afb7c71d43df6cd68a4b2d5fc166c"
+  }
+}

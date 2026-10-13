@@ -1,0 +1,181 @@
+{
+  "batch": "batch69",
+  "date": "2026-10-12",
+  "scope": "Three source-grounded guarded actions. Concept PNGs only. No global indexes, design sources, runtime, deployment or push changes.",
+  "tool": "builtin image_gen__imagegen",
+  "external_guidance": {
+    "url": "https://github.com/424431185/pixel-asset-master-skills/blob/main/skills/pixel-asset-master/SKILL.md",
+    "read_only": true,
+    "adaptation": "Reference-derived restrained palette, hard pixel clusters, locked specification and per-asset visual QA. Existing project preserved. No third-party scripts, no fresh project gates, no palette quantization or engine sprite claim."
+  },
+  "backlog": {
+    "file": "coverage-script-action-backlog.json",
+    "sha256": "8499bbc3061c08f9489f087680cd5b748e761b5e061922341489eb6abce42a0d"
+  },
+  "spec_lock_sha256": "8c7c9324babe0b6712c4bfe7f8ea82855177ca5cb5890f102c9449d3a17954ed",
+  "asset_count": 3,
+  "candidate_count": 3,
+  "keyframe_count": 10,
+  "corrections": 0,
+  "assets": [
+    {
+      "id": "MOTION-N6-SENA-CONCEALS-SPINES",
+      "character": "塞娜·里德 / NPC08",
+      "file": "sena_conceals_spines_keyframes.png",
+      "sha256": "af3d60698fccb1ea0c55d0f41206250e0157e73f1273a30f7929e84b3c65ac5b",
+      "bytes": 1742466,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "frames": 3,
+      "selected": true,
+      "candidate_version": 1,
+      "raw_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-8847f3f8-dd86-4954-be99-a45813ca4528.png",
+      "source": [
+        {
+          "file": "design/05_主线/台本/台本_N6_被封存的页码.md",
+          "scene_id": "N6-S01",
+          "lines": "112–126",
+          "exact_requirement": "塞娜用粮袋遮住书脊。远处有烧过的门框，没有正常开放的学院招牌。",
+          "sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0",
+          "verified_against_backlog": true
+        }
+      ],
+      "reference": {
+        "file": "batch09/41_sena_kaem_lyd_cast.png",
+        "sha256": "f81c39201f1fc2c4253003a8bc653d73625edf013dc8741b96a2aa9ed83f4bfa",
+        "visually_viewed": true,
+        "verified_against_backlog": true
+      },
+      "prompt_file": "sena_prompt.txt",
+      "prompt_sha256": "4e09c33aad7283d9e467f4a2e696ce817e6c6433422eeb95697d85600800a6f4",
+      "prompt_full": "Use case: stylized-concept. Create a NEW three-keyframe pixel-art action concept board for Sena concealing books with a grain sack. Reference image is character/style reference ONLY: use ONLY the left-column grey-black bob-haired adult woman with silver hair streak, blue-grey long robe, beige scarf and inner skirt/cuffs, brown belt, small crossbody leather bag, brown shoes. Do not include the man or younger woman. Landscape 1536x1024, three equal panels in one row left to right, full body, fixed front-three-quarter camera, exactly same figure scale and feet position, opaque neutral grey backdrop, restrained medieval pixel clusters and hard edges, no captions or text. Same waist-low plain wooden shelf and broad flat dry front ledge in all panels. Exactly three slim CLOSED brown books stand side by side against shelf back, their blank spines facing viewer. The book held in character reference is already one of these three shelf books, no book in her hands. ONE ordinary tied small grain sack is supported entirely on the broad front ledge at every instant, no lifting. FIRST: sack stands beside the three clearly visible book spines on the same ledge; Sena's two hands grasp sack sides. SECOND: she slides the SAME sack sideways along the ledge halfway in front of those books; books and shelf do not move. THIRD: the sack stands in front of ALL THREE spines, fully concealing them without crushing books; she releases it and hands withdraw. Shelf has enough depth that sack and books occupy separate front/back spaces. Same sack dimensions in all frames, no extra bags, no floating supports, no sack on top of books. Minimal old-mill dry floor, no fire, public names, open book pages, active academy, food exchange, new evidence or quest settlement. This is a finite conceal-and-hold moment, never an automatic reveal loop. Preserve exact outfit and prop geometry as much as possible; concept keyframes, not engine animation.",
+      "outfit": "只用左列灰黑短发成年女性。灰蓝长外袍、米色围巾和内裙/袖口、棕腰带、斜背小皮包、棕鞋；保持银灰发缕。原正面手持合书在本动作先置同一低架，不能凭空消失或复制。",
+      "guards": "N6初见、塞娜存活在场愿谈，按S62现有状态剪裁；这是藏护而非开放档案或同意公开人名。不得出现姓名、烧书、活跃学院、新证据认证、任务结算或粮食赠与。粮袋移动方式/尺寸属美术提案，不能压坏书或变成新粮源。有限一次动作后停留，不自动复位露书。",
+      "planned_minimal_frames": [
+        "同一低架上有限合书的无字书脊可见，塞娜双手扶一只放在架前固定干平台上的普通小粮袋。",
+        "她将同一粮袋沿平台移到书脊前，袋始终受平台支撑；书与架保持原位。",
+        "袋遮住书脊，手放开；其余通道与物件不变，未打开任何书。"
+      ],
+      "visual_qa": [
+        "三帧：粮袋在书侧、滑到书前、松手留置；书脊从可见变为遮蔽。衣装与单一皮包延续，未开书、未出示姓名或赠粮。",
+        "未绘远处烧过门框，本板仅抽取局部遮书动作，不替完整N6场景板。",
+        "架子及人物局部位置有像素级漂移，末帧书完全遮挡只能表现遮蔽，不能由图证明背后对象持续存在。粮袋相对书脊的遮挡深度是美术提案。"
+      ],
+      "status": "selected_concept_keyframes_with_production_limitations",
+      "runtimeVerified": false,
+      "animationVerified": false,
+      "mechanicalSafetyVerified": false
+    },
+    {
+      "id": "MOTION-BRY09-LODA-LOCKS-UNCHECKED-LEVER",
+      "character": "洛妲 / BRY-NPC-LODA",
+      "file": "loda_locks_unchecked_lever_keyframes.png",
+      "sha256": "084bd7ce9519b7ab4c59fe10bc537eda8aa58ce43b3f3dae087107d31cb1c8f1",
+      "bytes": 1858855,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "frames": 3,
+      "selected": true,
+      "candidate_version": 1,
+      "raw_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-3817836e-e2da-4a84-b6c2-6a1fcba967e0.png",
+      "source": [
+        {
+          "file": "design/06_支线/城市支线/台本_CS-BRY-09_谁关上水门.md",
+          "scene_id": "CS-BRY-09-S1",
+          "lines": "27–53",
+          "exact_requirement": "蕾娜把房门列表放在观测廊，洛妲锁住尚未核过的真闸杆，只用安全砂盘演示。",
+          "sha256": "4fe90d62a13f4d4a752b94b93240de6b44a775ad260ce52b95d9215e9fd28f81",
+          "verified_against_backlog": true
+        }
+      ],
+      "reference": {
+        "file": "batch34/131_bry_loda_rukan_risha_cast.png",
+        "sha256": "a4c772e17a9ea474d6f977f61ffa07abfb98485a3b0779ca4bd4ffcad65b8db1",
+        "visually_viewed": true,
+        "verified_against_backlog": true
+      },
+      "prompt_file": "loda_prompt.txt",
+      "prompt_sha256": "e35df7f9e150baa4abf983e0c12a5780672f62c7044e4709193ba89c5f69c3fb",
+      "prompt_full": "Use case: stylized-concept. Create a NEW three-keyframe pixel-art concept board: Loda locks an unchecked real sluice lever and withdraws hands. Attached cast is appearance/style reference ONLY; use ONLY the top-row adult woman, no other characters. Dark brown untidy short tied hair, rolled-sleeve blue-grey long work shirt, brown leather apron and belt, grey-brown trousers, brown boots. Her small belt rope coil and wooden belt tool remain separate, unchanged and unused in all frames. Landscape 1536x1024, three equal panels one horizontal row, same full-body scale, fixed front-three-quarter view, fixed feet, opaque neutral grey background, minimal dry stone walkway and low stone machinery plinth. Crisp medieval pixel clusters, muted palette, no text or labels. Same simple real iron sluice lever leans diagonally toward upper right at EXACTLY THE SAME ANGLE in every panel; its lower half is beside a stationary iron bracket bolted into the stone plinth. One existing eye on lever and one matching eye on bracket are already aligned at waist height. One palm-sized simple iron padlock with U-shaped shackle is the only changing hardware. FIRST: Loda holds open padlock with both hands next to aligned pair of eyes. SECOND: shackle passes through BOTH aligned eyes; her hands close that SAME padlock without moving lever or bracket. THIRD: same closed padlock remains attached through both eyes; both hands clearly withdrawn and lowered, same lever position and footing. Keep lock plainly visible and minimally designed, no multiplied locks, no floating lock, no chains, no shifted bracket. This is only a proposed locking precaution for an unchecked mechanism, NOT proof of flood safety or a finished repair. No moving real gate, no water or flow change, no sand-model substitution, no residents, reward or payment. Wide clear dry return walkway remains beside apparatus; lock acts only on lever, never the public exit. No new tools or badges. Finite hold-after-locking action, not looping operation. Concept frames, not mechanically validated production assets.",
+      "outfit": "只用最上排成年女性；深棕乱短束发、灰蓝卷袖长工作衫、棕皮围裙、棕腰带、灰褐裤和棕靴、腰侧小绳圈与木质工具。保持绳圈独立且不变成锁具。",
+      "guards": "仅当前S1尚未核真闸、尚未执行实作时；已实作不能回滚为未查。无水流改变、闸门打开、低屋居民试险、修复完成或支付。具体锁具结构未由台本规定，先画简单局部提案，不宣称安全机械已验；真闸与砂盘必须明确不同，不把锁具拿去阻断公共退出路。",
+      "planned_minimal_frames": [
+        "洛妲站在安全干侧，真实闸杆固定不动；双手把一个普通锁扣/锁具靠近杆座既有耳扣。",
+        "合上同一锁扣，杆与水道完全不移动；只让手和锁具改变姿态。",
+        "双手离开，锁具留杆座，杆保持原来位置；开放回高堤路径保留。"
+      ],
+      "visual_qa": [
+        "三帧：持开锁靠近、合锁、手离开；真杆斜向及底座大体固定，腰绳与木工具未变锁具。没有水流、开闸、低屋试险、修复或付款。",
+        "锁看似挂在支点旁环件，未清楚证明同时贯穿杆与固定支架两耳；可读上锁姿态不证明机构锁死，更不证明防洪安全。",
+        "本板不包含砂盘演示、房门列表或其他演员，局部干石面不等于已核完整高堤退出路。脚位、石块和比例略漂移，未注册。"
+      ],
+      "status": "selected_concept_keyframes_with_production_limitations",
+      "runtimeVerified": false,
+      "animationVerified": false,
+      "mechanicalSafetyVerified": false
+    },
+    {
+      "id": "MOTION-N5-ODA-TIES-ROPE-TO-OLD-POST",
+      "character": "欧达·苇 / NPC09",
+      "file": "oda_ties_old_post_keyframes.png",
+      "sha256": "ea29923a6d37ad630786e072d02079b25ccfcf9aa2e49edef3c25e0b2be3200e",
+      "bytes": 1663400,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "frames": 4,
+      "selected": true,
+      "candidate_version": 1,
+      "raw_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-250940c8-abf5-439c-9594-12929a06dc9c.png",
+      "source": [
+        {
+          "file": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+          "scene_id": "N5-S01",
+          "lines": "106–120",
+          "exact_requirement": "欧达将绳系到旧桩，不肯给税栈运所谓空箱。",
+          "sha256": "596f7c96981fe7acdf1b7d9386c2d54b43127d630f3c166d95f0baa028147695",
+          "verified_against_backlog": true
+        }
+      ],
+      "reference": {
+        "file": "batch08/36_oda_toman_pair.png",
+        "sha256": "c2826deab38872c15e5888d36bd0e66e1bf739533c4ac35712a890951e7e2cff",
+        "visually_viewed": true,
+        "verified_against_backlog": true
+      },
+      "prompt_file": "oda_prompt.txt",
+      "prompt_sha256": "b2dd7d06f321100b7ed319c7dfa41c7b4765693f2917aa5e0fa6df2398e92793",
+      "prompt_full": "Use case: stylized-concept. Create a NEW FOUR-keyframe pixel-art concept board showing Oda ties one rope to an old riverside post and then lets go, remaining ashore. Attached cast is appearance/style reference ONLY: use ONLY the adult woman in LEFT TWO cells, never the hooded man. Same grey-brown high-tied hair, dark olive long cloak with short shoulder layer, brown scarf, beige-brown inner skirt, brown belt and small leather pouch, brown boots. Her reference waist rope has ALREADY been removed before the first frame; NO rope coil remains on her waist in any frame. Landscape 1536x1024, four equal panels left to right, same full body size, fixed three-quarter view with hands and knot clearly visible, fixed feet, opaque neutral grey background and small identical dry riverbank patch. Crisp medieval pixel clusters, muted olive/brown/beige palette, hard edges; no captions, numbers or text. One weathered waist-high old wooden post at her right stays identical in all four panels. ONE finite tan hemp rope: its long standing section extends from the post to the right edge of EACH panel at the same angle, continuing to an unspecified off-canvas point. No boat or cargo drawn. FIRST: she holds the short free end with both hands in front of the post; the standing line is already visible extending off frame right. SECOND: that SAME rope wraps around the OUTSIDE of the post and her hands pass its short free end through a clearly visible loop. THIRD: she draws that same short end to tighten one compact simple knot on the viewer-facing post surface; continuous standing line and one short loose tail remain distinguishable. FOURTH: SAME completed knot and short tail, same standing-line direction; both hands withdrawn clearly away, she stays on the bank. Keep body, clothing, post, line thickness and ground registration unchanged, only arms/hands and small free-end loop move. Rope must never pass through solid wood, multiply, disconnect, change into chains, or have an extra waist coil. No crossing, loading, voyage, forced transport, revealed cargo, permanent route block or quest settlement. Finite tie-and-hold concept, not a loop. Knot is a visual art proposal, not a certified safe mooring method or instructional safety diagram.",
+      "outfit": "只用左两格成年女性；灰棕发高束、暗橄榄长罩衣/披肩、褐围巾、米褐内裙、腰带小皮袋、棕靴。腰边原麻绳可作同一工作绳，但从第一帧起清楚建立已取下在手的有限长度；不能腰圈仍完整又生第二条。",
+      "guards": "N5初见当前分支、欧达存活在场。系绳表现拒运当批所谓空箱，非同意承运/强迫运输、无货物揭露、不锁永久地图路。结型与手法是美术提案，不当真实系泊安全教程。不能多绳增殖、绳穿实木、后续拉伸断裂或称已认证承载；另一端仅画外延续，不擅定船载。",
+      "planned_minimal_frames": [
+        "欧达在同一干岸旧桩边，双手持同一麻绳自由端；另一段持续伸向画外同一方向。",
+        "同一绳绕过旧桩，双手将短自由端穿过可见绳环；桩、岸与绳的固定侧不动。",
+        "双手收紧同一个简单系结，保持自由端与连续主绳可辨。",
+        "双手放开、绳保持同一系结；她留在岸上，船与人物不启程。"
+      ],
+      "visual_qa": [
+        "四帧：已松绕一圈并持自由端、抬起绳端/松环、收紧、放手；主绳向画外同方向延续。第二帧不构成清晰逐步穿环教程，第三与第四帧结形/尾长略变。",
+        "首帧已绕桩，未表现从完全未绕状态的最初一圈；实际概念从系结准备开始，不能声称全部绕桩过程。",
+        "腰侧无复制绳圈，没有船、货物、起航或强运；结的穿绕拓扑在手遮挡处不完全可核，绳长、承载和系泊安全未经认证。",
+        "衣摆、脚位及地面/桩间距存在微小漂移，不是可直接播放的注册动画。"
+      ],
+      "status": "selected_concept_keyframes_with_production_limitations",
+      "runtimeVerified": false,
+      "animationVerified": false,
+      "mechanicalSafetyVerified": false
+    }
+  ],
+  "limitations": [
+    "Full-body concept boards on opaque grey backgrounds, not transparent native sprite sheets.",
+    "Requested and actual dimensions 1536x1024; no engine frame registration, palette budget validation, gameplay guard execution, collision or animation test.",
+    "Action posture readability does not prove hidden geometry, rope safety, lever locking or flood safety."
+  ],
+  "runtimeVerified": false,
+  "animationVerified": false
+}

@@ -1,0 +1,36 @@
+{
+  "audited_at": "2026-10-12T21:13:34.079436+00:00",
+  "scope": "City and satellite card-to-dedicated-review image records only; not full visual acceptance or runtime",
+  "input_file": "coverage-cast-through-batch47.json",
+  "input_sha256": "029f5b14d852efca3f6f978f5dcc2bdccc9c934dbe759ee804ce10012fc11bcb",
+  "counts": {
+    "current_cards": 156,
+    "roster_entries": 156,
+    "unique_actor_ids": 156,
+    "unique_card_sources": 156,
+    "unique_dedicated_png_paths": 68,
+    "actual_unique_png_paths": 204,
+    "independently_pixel_viewed_this_review": 6,
+    "independently_pixel_viewed_actors_this_review": 13
+  },
+  "missing_cards": [],
+  "extra_cards": [],
+  "duplicate_actor_ids": [],
+  "duplicate_card_sources": [],
+  "missing_image_paths": [],
+  "source_hash_mismatches": [],
+  "byte_identical_png_groups": [],
+  "shared_board_path_card_count_distribution": {
+    "1": 12,
+    "2": 24,
+    "3": 32
+  },
+  "findings": [
+    "156/156 current city/satellite cards have a dedicated review PNG record; all source hashes match. 68 distinct PNG paths are legitimately shared by characters on multi-person boards, not duplicate cards.",
+    "Older manifest schemas omit CHAR tags or use aliases: ALD-S02-NPC-Fenko, ALD-NPC-SORE, EED-NPC-SUJIN/GELI, CHAR-MAYA and CHAR-赫斯·白. Old batches also use root manifest/README/prompts rather than per-batch manifest. Absence of a normalized CHAR tag alone is not a missing PNG.",
+    "MAE-NPC-KAEM is explicitly the same N10 Kaem on the current card; reuse of the batch09 cast image does not create a second actor.",
+    "This audit checks coverage records and files, not every older board pixel or all historic manifest semantics. Previously unviewed boards remain unviewed for independent visual QA.",
+    "During this independent review batch48/178 appeared concurrently. Disk inventory includes it (204 PNG paths); character coverage remains through batch47 (original report snapshot 203). 178 was not pixel-reviewed here."
+  ],
+  "runtimeVerified": false
+}

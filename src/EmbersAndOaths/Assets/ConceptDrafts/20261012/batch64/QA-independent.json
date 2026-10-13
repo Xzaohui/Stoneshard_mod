@@ -1,0 +1,44 @@
+{
+  "batch": 64,
+  "reviewed_at": "2026-10-12T22:18:09.141359+00:00",
+  "independent": true,
+  "scope": "Both separate original keyframe PNGs actually viewed at source resolution; source text read. Earlier image references not re-viewed in this independent pass. Producer records preserved.",
+  "reviewed_count": 2,
+  "raster_modified": false,
+  "overall_status": "action_readability_improved_rigid_continuity_failed",
+  "rigorousMatchAchieved": false,
+  "findings": [
+    "两幅原图已实际查看：并排态两纸各三孔、对应孔行近似齐平；叠合态纸叠仍位于左侧，右侧留空，下层赭色边条可辨。",
+    "叠合动作概念可读，但移动浅纸宽度变窄，原右边约1085、左边703，平移后应止于550，实际约536；孔横向中心和纸纹亦有变化。坐标为原尺寸目视近似，非精密分割。",
+    "固定底纸外框大体稳定不等于刚体恒定；其可见边条、背景与移动纸纹均有重绘，严格同对象平移未通过。",
+    "N6-S02明确两版装订孔能对齐；三方孔、纸色、尺寸与裁边方向只是美术提案。空白纸省略“先停转运”边注，不能充当完整线索或独立收讫。",
+    "可保留为并排至叠合的简化动作意图；不能判定完整证据认证、收讫、执行、身份或责任。"
+  ],
+  "sources": [
+    {
+      "path": "design/05_主线/台本/台本_N6_被封存的页码.md",
+      "sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0"
+    }
+  ],
+  "entries": [
+    {
+      "filename": "45_keyframe01_adjacent.png",
+      "sha256": "59b6461e979bc1b61828130630fe7f5f00a90f5b2c5d2504cec4ecd40f733003",
+      "actual_pixels_viewed": true,
+      "status": "retained_concept_not_rigid_animation",
+      "runtimeVerified": false,
+      "engineReady": false
+    },
+    {
+      "filename": "45_keyframe02_overlap.png",
+      "sha256": "9d7270e80c13652d57578c0336ae40181d0afb7c71d43df6cd68a4b2d5fc166c",
+      "actual_pixels_viewed": true,
+      "status": "retained_concept_not_rigid_animation",
+      "runtimeVerified": false,
+      "engineReady": false
+    }
+  ],
+  "runtimeVerified": false,
+  "engineReady": false,
+  "decision": "Retain both outputs and stop this bounded strategy test. Do not label fixed-geometry or engine acceptance; no additional generation requested by this review."
+}

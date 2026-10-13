@@ -1,0 +1,51 @@
+{
+  "reviewed_at": "2026-10-12",
+  "status": "review-only",
+  "method": "Actual PNG visual inspection, director manifest review and relevant screenplay comparison; no image changes.",
+  "limitations": [
+    "Narrative/visual review only; no engine, collision or animation verification.",
+    "Existing grid, alpha and anchor limitations in the director manifests remain."
+  ],
+  "sources": [
+    "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+    "design/05_主线/台本/台本_N9_把证据摆上桌.md"
+  ],
+  "viewed_files": [
+    "36_oda_toman_pair.png",
+    "37_three_routes_river_ferry.png",
+    "38_broken_bridge_toll_depot.png",
+    "39_ferry_inn_public_table.png",
+    "40_evidence_timeline_table_props.png"
+  ],
+  "findings": [
+    {
+      "severity": "pass",
+      "finding": "37 has one empty tied ferry, a visible ford and broken bridge. 39 has exactly three map tokens, a river-facing window and closed private cabinet."
+    },
+    {
+      "severity": "clue_readability",
+      "file": "38_broken_bridge_toll_depot.png",
+      "finding": "The discarded crate corner is visible but three distinct clamp traces cannot be reliably read. This corroborates the director caveat; author a clue close-up before using it as the visual proof of three cargo paths."
+    },
+    {
+      "severity": "state_binding_required",
+      "file": "40_evidence_timeline_table_props.png",
+      "finding": "Three physical timeline rows are present, but the third row contains three evidence papers around a single gap. For the minimum-entry N9 state where only two routes are completed and the third route is uninvestigated, all evidence papers on that uninvestigated route must be absent. Current art is valid only as a partial-gap schematic or another explicitly supported knowledge state, not the default two-of-three investigation state."
+    },
+    {
+      "severity": "pass",
+      "finding": "40 preserves an obvious mismatched paper join and closed private folio; there are no legible names or certification stamps."
+    }
+  ],
+  "overall": "40 needs state-specific presentation before use as the default two-route-complete story diagram. Other images remain usable review concepts.",
+  "followups": [
+    {
+      "reviewed_at": "2026-10-12",
+      "file": "40_evidence_timeline_table_props-v2.png",
+      "sha256": "45bc8c9109f7adbc3e55a97e089315e695bbb6362c8097305e3d84d866468f5d",
+      "status": "correction_verified_review_only",
+      "finding": "Independent fresh visual inspection confirms the entire third timeline row has twine/pegs only, with no residual evidence slips. The top two rows retain papers, the side pasted mismatch remains visible and the private folio stays closed. This resolves the earlier minimum two-of-three investigation-state issue for this selected revision. Empty means uninvestigated, never proof of no incident. Runtime state-specific row assignment is still unverified.",
+      "source": "design/05_主线/台本/台本_N9_把证据摆上桌.md#N9-S03"
+    }
+  ]
+}

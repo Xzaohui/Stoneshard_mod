@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-12",
+  "status": "three_verified_source_motion_gaps",
+  "scope": "Read-only narrative and image audit; this JSON is the only output. No image generation, global indexes, source designs or game files changed.",
+  "method": "Read AGENTS; searched every currently available manifest recursively (61) plus initial batch PROMPTS and all registered asset filenames; inspected exactly three relevant PNGs. Cast review coverage does not prove action-keyframe coverage.",
+  "findings": [
+    {
+      "priority": 1,
+      "id": "MOTION-N17-HERS-CONDITIONAL-RETREAT",
+      "character": "赫斯·白 / NPC10",
+      "sources": [
+        {
+          "file": "design/05_主线/台本/台本_N17_残光之井.md",
+          "location": "N17-R-defection line55; N17-S02 lines141–153",
+          "exact_requirement": "赫斯没有人替他挡价后可逃或独战，账页不丢。 / 守债簿、依赖辅助装置、断开后逃走或近战。 / 赫斯死亡或逃脱都留固定债簿。",
+          "sha256": "a7154c5bc087421b566054344c0556b583d5e53d8f1f4de1d8005e0a1033526d"
+        },
+        {
+          "file": "design/04_人物/人物_赫斯·白.md",
+          "location": "失效替代",
+          "exact_requirement": "死亡/逃脱都留下固定债簿与仪式状态，不重生发奖。",
+          "sha256": "2839b577f30fdf334c4aaed4aa63f295958ec43c5a8b1c01bb07c6fa0596987c"
+        }
+      ],
+      "reference_png": "batch32/124_hers_white_debt_controller_cast.png",
+      "verified_image_coverage": "Front/back/profile and one stationary forearm-on-closed-ledger pose. No stepping, turning or retreat sequence.",
+      "outfit": "Same older receding grey-haired man; dark charcoal long wool coat, bone linen collar, plain brown belt, ordinary iron operation key and worn brown boots. Existing lapels are too modern; retain silhouette but plain medieval closure. Key location must stay fixed.",
+      "minimal_keyframes": [
+        "Fixed closed ledger and waist-high stone shelf; same Hers releases his forearm from ledger and shifts his body weight away.",
+        "Same shelf and ledger stay motionless; Hers turns toward open side and takes first retreating step, coat follows physical movement.",
+        "Hers takes next step away; closed ledger still visibly left in its original place, no carried pages, no disappearing character or completed-escape icon."
+      ],
+      "guards": "Conditional retreat branch only after apparatus is actually disconnected and branch selects fleeing; not every N17 outcome. No death, surrender, redemption, magical action, apparatus redesign or political outcome. Torso/step choreography is an art proposal, while escape branch is explicit source. No invented weapon or combat move.",
+      "reference_sha256": "2aeb144561a9f78b433c442091907caabd8cd8342e0b82cfb92968d6fe6edde0"
+    },
+    {
+      "priority": 2,
+      "id": "MOTION-N4-SEL-OFFERS-BLANK-DEBT-TICKET",
+      "character": "塞尔 / NPC-N-SEL",
+      "sources": [
+        {
+          "file": "design/05_主线/台本/台本_N4_第一张空白债票.md",
+          "location": "N4-S01 lines95–107; S62 camera guard line93",
+          "exact_requirement": "塞尔师傅将写到一半的票递来。票上没有受款人，手指却压着担保栏。",
+          "sha256": "81a1c9b68abf92bed16e469282295a00722a8f0b1edba753f03fb99b0b345b90"
+        },
+        {
+          "file": "design/04_人物/台本新增人物与知识边界.md",
+          "location": "塞尔 section lines41–45",
+          "exact_requirement": "堤外器具工坊师傅；想把旧债推给下一批人；不知道实验全貌。",
+          "sha256": "206c1698dcedbe34c09c3b1bfc56bd500319c21710ed592ff324f181cffcfe36"
+        }
+      ],
+      "reference_png": "batch07/31_nell_sel_pair.png",
+      "verified_image_coverage": "Sel appears only in right two cells as neutral front/back. No ticket in hands, no reaching/offer motion. Adjacent Nell must not be copied into new sheet.",
+      "outfit": "Same adult man with short grey hair and grey beard, russet rolled-sleeve tunic, charcoal leather apron, brown belt with ordinary hanging tongs, brown trousers and boots.",
+      "minimal_keyframes": [
+        "Sel holds one ordinary partly-written ticket close to torso; identical paper silhouette across frames, recipient field left visibly blank.",
+        "He extends the SAME ticket outward at waist height; one finger maintains pressure over a small guarantee-field area.",
+        "Arm reaches offer position, paper still in Sel’s hand and finger still covering that same field. No recipient hand, signature or completed handoff."
+      ],
+      "guards": "This is the offered ticket at investigation opening, not player acceptance or N4-R-shift completion. No newly written recipient name, agreement, payment, debt cancellation or new lore. Tiny non-readable ink marks can suggest unfinished writing; exact form layout is an art proposal. Keep action legible without readable text.",
+      "reference_sha256": "e2b619f2fd6f12a22edd7ec314c2cad80c1b2858fbb275c61b93f897c9ad0354"
+    },
+    {
+      "priority": 3,
+      "id": "MOTION-BRY15-YANI-RISES-FROM-STOOL",
+      "character": "雅尼 / BRY-NPC-YANI",
+      "sources": [
+        {
+          "file": "design/06_支线/城市支线/台本_CS-BRY-15_招募告示的背面.md",
+          "location": "CS-BRY-15-S3 lines81–97; especially line87",
+          "exact_requirement": "显示条件：本人实际领取及欠额记录完成；所有政治邀请另问。 / 雅尼站起不需握武器，塞芙不把空款袋翻作全班已清。",
+          "sha256": "3392fd334cb64a8b046f8e1d87e29e97468f85a7498505bf6d10202798b5043c"
+        },
+        {
+          "file": "design/04_人物/城市人物/人物_BRY-NPC-YANI_雅尼.md",
+          "location": "身份、口吻、跨任务弧光",
+          "exact_requirement": "带着未合适义肢回城的成年退役者；不许别人搀住后就替他说话；15追索自己那一班的旧欠。",
+          "sha256": "e1d5a0e656f9c45d2ceb781d9779c2dc1178d3a25ed7bffb69817b880ade3095"
+        }
+      ],
+      "reference_png": "batch01/02_yani_dialogue_poses.png",
+      "verified_image_coverage": "All three existing poses remain seated on same stool: resting hands, open conversational hand, stop hand. None rises or stands.",
+      "outfit": "Same adult greying brown-haired, short-stubbled man, taupe-brown short cloak clasped at shoulder, olive tunic with pale rolled cuffs, plain brown belt, grey-brown trousers naturally covering legs, worn boots; same short timber stool.",
+      "minimal_keyframes": [
+        "Start from existing neutral seated posture on the same stool, feet and camera registered.",
+        "Torso leans forward and body begins rising from stool; use a restrained chair-rise gesture, no weapon or assisting person.",
+        "Upright immediately in front of the unchanged stool, hands neutral. Stop here; no walk-off, salute or recruitment gesture."
+      ],
+      "guards": "Only when this scene’s actual individual payment/remaining-debt record conditions hold, and character present/alive/willing. Standing is explicit source, not evidence of healing, return to service or political consent. Preserve naturally covered legs; do not invent or expose brace/prosthesis design, injuries or changed mobility. Exact rise mechanics are proposed and require later animation review.",
+      "reference_sha256": "a471d3f401c4e08757342bb804967a163f2048fe87077b89ec0431dcb55e3bb3"
+    }
+  ],
+  "excluded": "No generic idle/walk quota, no new jobs/combat, no retries of mechanical67/N6/door63/braid74. Existing Moren/Enna/Mia and other authored keyframe work not duplicated.",
+  "limitations": "Targeted top-three audit, not exhaustive animation acceptance. References are appearance proposals, not canonical designs or native sprite sheets. No engine readiness/runtime claim.",
+  "runtimeVerified": false
+}

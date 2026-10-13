@@ -1,0 +1,195 @@
+{
+  "batch": 72,
+  "date": "2026-10-12",
+  "generation_tool": "builtin image_gen__imagegen",
+  "scope": "两处已核场所条件两态；只补视觉缺口，不选剧情canon或写状态。",
+  "external_guidance_read_only": "https://github.com/424431185/pixel-asset-master-skills/blob/main/skills/pixel-asset-master/SKILL.md",
+  "guidance_use": "既有项目规格、只读参考、逐图生成和诚实QA；未执行外部脚本。",
+  "audit_sha256": "e970cc7a2241537e6acbe72670d1517faf8fd5a71dbd7faa60b7da8154bdb583",
+  "spec_lock_sha256": "743968b387fcd45a9557561ced59388ca0895398cc0670ffc8acfcd13eafbaed",
+  "entries": [
+    {
+      "priority": 1,
+      "id": "ENV-BRY04-CORRECTED-NOTICE-STATION",
+      "source_state_id": "resolve_CS_BRY_04 = publicnotice",
+      "location_ids": [
+        "BRY-D01",
+        "BRY-D01-A"
+      ],
+      "sources": [
+        {
+          "path": "design/06_支线/城市支线/台本_CS-BRY-04_报纸上没有这条街.md",
+          "lines": "29–52",
+          "supports": "缺街字版、未删试印、广告版面与退款分别明确。",
+          "sha256": "b8f753944abfa9b5b042c1ad4d29b5bee36d4a07009759792a8ed1907dbf721d",
+          "verified_sha256": "b8f753944abfa9b5b042c1ad4d29b5bee36d4a07009759792a8ed1907dbf721d"
+        },
+        {
+          "path": "design/06_支线/城市支线/台本_CS-BRY-04_报纸上没有这条街.md",
+          "lines": "85–108, 115–131, 151–165",
+          "supports": "实际印贴完成才提交publicnotice；新页不删除旧删版史，实际范围不等全城知情。",
+          "sha256": "b8f753944abfa9b5b042c1ad4d29b5bee36d4a07009759792a8ed1907dbf721d",
+          "verified_sha256": "b8f753944abfa9b5b042c1ad4d29b5bee36d4a07009759792a8ed1907dbf721d"
+        },
+        {
+          "path": "design/02_世界与地图/任务空间/空间_BRY_布林.md",
+          "lines": "24–42",
+          "supports": "校版台朝街，明确交互为把漏街放回版面并核实际印数。",
+          "sha256": "75079970069d68abe38677fc58bdfa6765d25fbc88abe0d8110f6829c8c97e32",
+          "verified_sha256": "75079970069d68abe38677fc58bdfa6765d25fbc88abe0d8110f6829c8c97e32"
+        }
+      ],
+      "reference_png": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch48/178_bry_notice_proof_separate_accounts.png",
+      "existing_coverage": "178左半已有可辨空横行的字盘与旧试印，manifest明确不要填空或暗示已送。右半三筹/钱袋是独立账务，不应随印版变动。batch70伊莲双公告属于SQ01 public行政复核，不是此处纠版。",
+      "minimal_two_state_brief": [
+        "同一朝街校版台，固定镜头、木托盘、空横行、旧试印的位置；旧试印用抽象印纹而非新人物私名。先画未决缺行状态。",
+        "同一台面、同一托盘，仅将该空行补入有限字块；旁边增加一张纠正版试印/本批成页，广告区明显缩小。旧试印仍单独留存可见，不覆写、不焚毁；不得把右侧账台变成已付清或让全城挂满。"
+      ],
+      "state_and_consent_guards": [
+        "仅预览/观察不能显示已结publicnotice；纠版权限、实测街段、有限印费及广告退款来源均须成立，公告实印实贴后才是完成分支。",
+        "住户拒公开身份只写街段，不出现患者名册；生成概念可用不可读短纹表示版面，真实可读文字另由已核文本实现。",
+        "doorway路线不强占印版，不应复用纠版完成态；缺费用/权限维持原台面，保基本告警。",
+        "图只表现物理变版，不证明所有住户已获知、不抹旧错误、不重奖；印工缺席/死亡不造新认错。"
+      ],
+      "visual_acceptance": "两态关键差分是一个真实空行→同处填入字块，旧试印保留，版面/台面其余固定。文字语义须靠状态说明而非AI伪字认证。",
+      "output": "01_bry_publicnotice_conditional_type_row.png",
+      "output_sha256": "f093c9d6119f5524b1a78c874e0bd29817fa2a445e73e4db0a3f11894ea4b951",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-eefa5765-0c84-4d32-9289-f562e1ed0701.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "bry_prompt.txt",
+      "prompt": "Use case: stylized-concept. Create an original production concept board for the existing medieval low-fantasy pixel art mod, a TWO-STATE comparison of exactly the same street-facing notice typesetting station. Landscape 1536x1024, two equal panels separated by a thin neutral gutter, identical elevated 3/4 camera and scale. Reference image 1 is style and station reference: use ONLY its LEFT typesetting room, not its separate account room. Pixel-art clusters, sharp stepped silhouettes, restrained brown timber, gray stone, cream paper, charcoal metal, olive accents, diffuse daylight, no painterly blur. Frame close enough that the wooden type tray and missing row are plainly readable. In BOTH panels identical timber table, SAME tilted wooden type tray, small loose-type box, fixed stone wall and open street foreground. One original cream old proof sheet lies FLAT in a dedicated small wooden holder at the far left of the table in both panels; preserve the same original ink pattern and position without overwriting it. Its marks are abstract lines, not legible words or personal data. LEFT unresolved state: tray has rows of dark type with one very obvious EMPTY horizontal slot across the middle, exposed brown wood and no type in that row; a compact bottom advertisement block occupies three rows. RIGHT conditional corrected public-notice prototype: fill that EXACT empty middle slot with finite dark type blocks, shrink the bottom advertisement block to one row, and add ONE new corrected cream printed sheet to the RIGHT of the tray with the matching additional abstract line and smaller ad rectangle. Keep the old proof in its left holder intact. All other surroundings unchanged. No account table, coins, payment marks, banners, crowds or people. No caption, arrows, labels or legible lettering. This represents a conditional physical asset only: publicnotice requires verified affected streets, explicit printer/publication permission, actual finite print costs and ad-refund resources, actual printing and posting, and confirmation; this board itself proves none of those and never applies to the doorway alternative. No citywide-notified claim, no erased history, no game state changes. Emphasize the visually clear empty-row versus filled-row difference and the intact old proof in both states.\n",
+      "prompt_sha256": "1fd6f502c0feb4b272b5339f416c96be3ff98a6edbc8a414cd4262869319b5bd",
+      "references": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch48/178_bry_notice_proof_separate_accounts.png",
+          "sha256": "be3fc16c9a4a2629fa6b1d89e6db46d645eba44724a431733bce8051b82e7c0c",
+          "visually_verified": true,
+          "role": "read-only source/style reference"
+        }
+      ],
+      "selected_concept": true,
+      "engineReady": false,
+      "runtimeVerified": false,
+      "qa": {
+        "visual_result": "缺行→同处填入字块清楚，新成页增加，旧试印在原位保留；无账台/已付标志。",
+        "limitations": [
+          "广告区域缩小不能从抽象版面独立认证；需将来手工已核排版。",
+          "桌上成页不证明实际印贴或街段送达，publicnotice全部条件独立核；绝不用于doorway。",
+          "墨块不可读，不能证明街名、实测范围或个人同意。",
+          "相机与场所接近固定但非像素注册；原生网格、色数、切片、碰撞尚未验收。"
+        ]
+      }
+    },
+    {
+      "priority": 2,
+      "id": "ENV-DEN02-FINITE-NET-SPLIT",
+      "source_state_id": "resolve_CS_DEN_02 = b",
+      "location_ids": [
+        "DEN-D03",
+        "DEN-D03-A"
+      ],
+      "sources": [
+        {
+          "path": "design/06_支线/城市支线/台本_CS-DEN-02_渔网留下的洞.md",
+          "lines": "17–19, 29–53, 55–79",
+          "supports": "原先一张共网有既留磨毛/救人割口，各人产权和可分份先核，不重演险处。",
+          "sha256": "25fb4c5ee2b6f188c2dadf6bc594c6b3ce719cc921c67ed8dfe466b6b21bf9f7",
+          "verified_sha256": "25fb4c5ee2b6f188c2dadf6bc594c6b3ce719cc921c67ed8dfe466b6b21bf9f7"
+        },
+        {
+          "path": "design/06_支线/城市支线/台本_CS-DEN-02_渔网留下的洞.md",
+          "lines": "81–105, 127–147",
+          "supports": "真实普通工班交接，实核网份与补费，拆有限独立小网；实际处置与二次确认后才提交。",
+          "sha256": "25fb4c5ee2b6f188c2dadf6bc594c6b3ce719cc921c67ed8dfe466b6b21bf9f7",
+          "verified_sha256": "25fb4c5ee2b6f188c2dadf6bc594c6b3ce719cc921c67ed8dfe466b6b21bf9f7"
+        },
+        {
+          "path": "design/02_世界与地图/任务空间/空间_DEN_丹布里.md",
+          "lines": "68–84",
+          "supports": "架网棚朝风，网不能盖唯一通道；A晾网破口棚、B分获屋各自返街。",
+          "sha256": "d8e6c62cd67ef3531d498723c6597dc27bbd447fb56534a471c8de5d7483e0d8",
+          "verified_sha256": "d8e6c62cd67ef3531d498723c6597dc27bbd447fb56534a471c8de5d7483e0d8"
+        }
+      ],
+      "reference_png": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch54/199_den_fixed_net_damage_knot_samples.png",
+      "scene_reference_png": "design/12_美术参考/城市概念/DEN-任务场所-v2.png",
+      "existing_coverage": "199只展示旧磨、固定割口与不同补结的独立比较样，不是整张共网拆成有限产权小网。DEN场所板C已有网棚风貌，多张杂网为概念占位，不是相同网两态。190只有烟灶/有限鱼量，不能算已拆网分支。",
+      "minimal_two_state_brief": [
+        "固定镜头的小型干侧晾网棚，明确一张共网在同一低架上，有小处旧磨和原有割口；干燥绕网回路清楚，烟灶不入镜，没人持刀，没有孩子。",
+        "同一棚、同一架及地面路线；原共网已不再横向连为一张，改为少量边缘已经收束的有限独立小网，分开放置/悬挂且总网料不增加。不是一张大网后再凭空多出小网，不添加新渔获、房屋或全体和解。"
+      ],
+      "state_and_consent_guards": [
+        "确核各份所有权与可分范围、救人旧割口、真实补费/失班和合法小网可用；网主授权及新住户自选独立路线，实际交接后才显示完成。",
+        "不能为分网而重新演救人或把儿童放危险网边；不画新增刀口或现场危险拆网演示。",
+        "不从分开推强制迁居/逐客；普通采购与住房独立保留，少产旧借用和旧指认历史保留。",
+        "现有样本199原件继续保留；分网是新条件场景概念，不把旧物证修成不存在。",
+        "网份数量未定，图中有限小网数量与物理排布是美术提案，不是新增canonical库存；总量不得暗示恢复原大网效率。"
+      ],
+      "visual_acceptance": "一张连续的大轮廓→分离的小轮廓差分，保持同棚/干路，净网料不增加；不需要人物运动，也不需要重复 knot closeup。",
+      "output": "02_den_conditional_finite_separate_nets_v2.png",
+      "output_sha256": "68c60b5e007774f3d8b3c10fdedca747b8fb3f8dcb3569575b01552af35fabf1",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-ece1acc4-eb73-4172-9efc-5bc30a8a3d6f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "den_prompt.txt",
+      "prompt": "Use case: stylized-concept. Produce a TWO-STATE original pixel-art environment prototype board for a medieval coastal net shelter, landscape 1536x1024, exactly two equal panels, identical elevated three-quarter camera, same shelter and scale. Input image 1 supplies ONLY rope/net material, old fraying and historical clean-cut damage vocabulary; do not repeat its closeup composition. Input image 2 supplies ONLY panel C's weathered wind-facing timber and thatched shelter atmosphere; do not reproduce all six scenes, people, smokehouse or quantities. Muted umber timber, oat hemp rope, warm gray stone, dusty olive weeds. Sharp pixel clusters and stepped silhouettes, limited shading, no blur. Both panels show the SAME small thatched open shelter, SAME low wooden horizontal drying rack, SAME pebbled dry footpath continuously running in FRONT and around one side back to the street. Clear ground and safe headroom, no net over the path. No humans, children, blades, tools held by people, water danger, rescue reenactment, smoke/fire, fish, boats or extra buildings. LEFT unresolved state: ONE continuous modest rectangular shared net is hanging over the rack. One small worn/frayed patch near its left quarter and one existing cut-gap in its right quarter clearly distinguishable, already historical and static. RIGHT conditional divided-net state: the original one-piece net no longer exists as a continuous silhouette. Its SAME finite material is now divided into THREE modest independent smaller net sections hanging separated by very obvious empty gaps on that SAME rack, each with finished bound edges, their total visible mesh area no greater than the left panel's original. Three is an ART LAYOUT proposal only, not canonical inventory. Preserve identifiable old worn fibers on the leftmost piece and the old repaired-but-visible cut scar on the rightmost piece, never pristine replacement nets or erased evidence. No remaining large net hidden behind, no bonus coils of material, no additional nets anywhere. Shelter, rack, dry access and ground stones must stay fixed. No labels, title, words, arrows, numbers or UI. This asset only imagines CS-DEN-02 branch b after lawful ownership-share verification, net-owner authorization, the newcomer's voluntary independent choice, genuine compensation and missed-work accounting, real usable finite small nets and actual handover plus confirmation. It does not assert those conditions or any game state are fulfilled, does not imply eviction, compelled cohabitation, restored large-net efficiency, or universal reconciliation. Visually prioritize ONE continuous outline versus THREE truly disconnected smaller outlines with less or equal total mesh, historical damage retained and the exact safe dry route.\n",
+      "prompt_sha256": "3899e251e8ef873788b9a4ba8acab66d7b9a2bcba531f2642f4c59e1fdc8a496",
+      "references": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch54/199_den_fixed_net_damage_knot_samples.png",
+          "sha256": "53af97d96b751be2d5c6a413571ff620323eb1d31be383d9262871053f7b6550",
+          "visually_verified": true,
+          "role": "read-only source/style reference"
+        },
+        {
+          "path": "design/12_美术参考/城市概念/DEN-任务场所-v2.png",
+          "sha256": "b97d9eba2bd1bebfc8896930aa7e56f236156a0ee174136cb79bd367cb8f95a8",
+          "visually_verified": true,
+          "role": "read-only source/style reference"
+        }
+      ],
+      "selected_concept": true,
+      "engineReady": false,
+      "runtimeVerified": false,
+      "revisions": [
+        {
+          "output": "02_den_conditional_finite_separate_nets.png",
+          "output_sha256": "fc7ca968bba5c1dbf9b99de3b55c792c28e8c4fe7ca3cf37144ada37734aac3f",
+          "selected_concept": false,
+          "reason": "保留历史初稿；右小网仍为未补的大洞，不宜作可用有限小网结果。",
+          "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-676b678f-a586-45f8-aecb-c3befe0d3f52.png"
+        },
+        {
+          "output": "02_den_conditional_finite_separate_nets_v2.png",
+          "output_sha256": "68c60b5e007774f3d8b3c10fdedca747b8fb3f8dcb3569575b01552af35fabf1",
+          "selected_concept": true,
+          "reason": "仅定向将右态原洞补成可见深色补网疤，保留左态原洞与三份分离轮廓。",
+          "edit_target_sha256": "fc7ca968bba5c1dbf9b99de3b55c792c28e8c4fe7ca3cf37144ada37734aac3f",
+          "prompt_file": "den_edit_prompt.txt",
+          "prompt": "Use case: precise-object-edit. Edit ONLY the RIGHT PANEL of this two-state medieval pixel-art concept board. Keep all other pixels, left panel including historical open hole, shelter, rack, foreground dry path, three separate net silhouettes, gaps, dimensions, colors and sharp pixel style unchanged. In the RIGHT panel, the rightmost small independent net currently has an obvious large open oval hole. Carefully mend that one old hole with a modest visibly irregular darker hemp PATCH OF KNOTTED MESH, attached to the existing ragged rim, with a clear repaired scar around its boundary. The patch's darker knots and preserved original frayed rim must make the historical damage still readable; it must NOT become a pristine new net and must NOT remain an unusable open hole. Use minimal repair thread, no expanded net silhouette or extra net. Also bind the existing loose lower ends of the leftmost small net discreetly while retaining its old frayed scar. Do not change anything in the left panel, do not connect the three nets, no extra materials or nets, no people, blades, children, labels, arrows or words. The right panel is only a conditional prototype of lawfully divided, compensated and actually handed-over limited usable nets; it does not assert gameplay completion or erase historical evidence.\n",
+          "prompt_sha256": "36f137a076733c44cc9719a140b4cb43264448c543c464ea3d2a95cdefa77509"
+        }
+      ],
+      "qa": {
+        "visual_result": "同棚一张连续共网→三份物理分离小网，干侧回路保留；v2仅小网原洞加深色补结，原左态大洞保留。",
+        "limitations": [
+          "三份仅为美术布局提案，非canonical份数/产权/库存。",
+          "视觉总网幅未增，但不能凭图认证材料守恒或补线数量；须真实资源核算。",
+          "补网斑是保留历史的视觉提示，不能证明结构承载/合法可用；最终工程/物理规格待核。",
+          "网主授权、份额、补费/失班、新住户自选和真实交接未由图证明；无自动结案/和解/强迫居住。",
+          "原生网格、像素注册、碰撞和游戏运行未验证。"
+        ]
+      }
+    }
+  ],
+  "engineReady": false,
+  "runtimeVerified": false,
+  "changes": "仅batch72；不修改全局索引、台本、运行或远端。"
+}

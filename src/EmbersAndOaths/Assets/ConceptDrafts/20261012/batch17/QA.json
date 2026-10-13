@@ -1,0 +1,90 @@
+{
+  "reviewed_at": "2026-10-12",
+  "status": "review-only-with-failed-revision",
+  "method": "Independent actual PNG inspection, at most two images per output; checked manifest prompts against current screenplay source passages. Additional direct pixel comparisons: 74 against Mara reference, 68 against v1. No image, manifest or code edits.",
+  "sources": [
+    "design/05_主线/台本/台本_N11_关隘外的交换.md",
+    "design/05_主线/台本/台本_N12_失踪者仍有名字.md",
+    "design/05_主线/台本/台本_N15_回声不等于真相.md",
+    "design/08_副本/台本/台本_D08_沉水档案井.md"
+  ],
+  "limitations": [
+    "Concept-story and selected mechanical/layout checks only. No game, collision, native palette or sprite-animation certification.",
+    "Empty staging, unused papers and open routes do not submit quest states, consent, rescue or ending outcomes.",
+    "Inventory refresh covers all PNG files; it is not visual approval of unreviewed files."
+  ],
+  "viewed_files": [
+    "56_rowen_broker_cast_v2.png",
+    "63_refuge_door_four_keyframes_v2.png",
+    "68_n15_echo_hall_antechamber_v2.png"
+  ],
+  "findings": [
+    {
+      "file": "56_rowen_broker_cast_v2.png",
+      "severity": "targeted_fix_pass",
+      "finding": "The fourth seated view shows a blank parchment reverse with crossing fold creases and subtle texture. No geographic/address marks, writing or transaction result are visible. This resolves the targeted N11-S01 face-down-map contradiction. Other figures retain a coherent Rowen appearance; exact unchanged-pixel preservation against v1 was not claimed or tested."
+    },
+    {
+      "file": "63_refuge_door_four_keyframes_v2.png",
+      "severity": "failed_revision",
+      "finding": "The revision remains mechanically inconsistent. In closed frames the bar hardware is on the door leaf (second panel especially clear); in open frames it appears on the right stone jamb. The third panel free edge projects toward the foreground outside the threshold, while the fourth panel recedes into the room. Thus both latch-anchor continuity and inward-only swing fail. Do not promote v2 over v1 as a valid mechanism or sprite sequence. It can be retained as an unsuccessful study only; opening this prop alone would not establish N12 rescue, evacuation, consent or survival."
+    },
+    {
+      "file": "68_n15_echo_hall_antechamber_v2.png",
+      "severity": "targeted_fix_pass_with_topology_caveat",
+      "finding": "Compared directly with v1, a small side doorway/lintel is now visibly inserted at the middle of the right dividing wall, with a dry same-level floor connection to the outer corridor. Front return and rear-right corridor portal remain visible. Targeted missing-connection fix succeeds at concept scale; the opening reads narrower than the requested three tiles and is partly occluded by the oblique wall/lintel. N15-R-bypass requires not entering the echo room: this side door must remain optional, with the foreground exterior approach and off-image maintenance destination connected in final topology. The image does not prove complete bypass, collision clearance or NE5 qualification."
+    }
+  ],
+  "overall": "Prefer 56 v2 for face-down map and 68 v2 for visible side connection. 63 v2 remains an unsuccessful mechanics revision.",
+  "files": [
+    {
+      "file": "56_rowen_broker_cast_v2.png",
+      "size": [
+        2172,
+        724
+      ],
+      "bytes": 1562270,
+      "sha256": "102d5f1682df4236a0ee2cd9b2dcb145063b111d01fb89ff595a9c36007f1181"
+    },
+    {
+      "file": "63_refuge_door_four_keyframes_v2.png",
+      "size": [
+        2172,
+        724
+      ],
+      "bytes": 2211374,
+      "sha256": "a65839b9aa3c761f09bc72e9f4646a2b9e94324e8d2d428e368254a09561349e"
+    },
+    {
+      "file": "68_n15_echo_hall_antechamber_v2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 2816305,
+      "sha256": "086b2b04d1337861c71cdefc754e6707bdbeefaba4ccbc6101c9f4e1d16d6652"
+    }
+  ],
+  "source_integrity": [
+    {
+      "source": "design/05_主线/台本/台本_N11_关隘外的交换.md#N11-S01",
+      "sha256": "61a27dc3370b69216d707ee4a40c13611434ce668c91a3072213a907bfa9f415",
+      "matches_manifest": true
+    },
+    {
+      "source": "design/05_主线/台本/台本_N12_失踪者仍有名字.md#N12-R-rescue",
+      "sha256": "899b888e97805cfd8420b35375887a3f57140ff2a2ee7d3cbf0f8a74d3b846f2",
+      "matches_manifest": true
+    },
+    {
+      "source": "design/08_副本/台本/台本_D08_沉水档案井.md#D08-S02",
+      "sha256": "22d28377dd53d8ca67255fc69535043937346e9404e26a4964b1cc36336f57c5",
+      "matches_manifest": true
+    },
+    {
+      "source": "design/05_主线/台本/台本_N15_回声不等于真相.md#N15-R-bypass",
+      "sha256": "1e440963a88f7012a65b77fbe02e5a911a97ebfa23cda975058b7ab669f5ffc0",
+      "matches_manifest": true
+    }
+  ]
+}

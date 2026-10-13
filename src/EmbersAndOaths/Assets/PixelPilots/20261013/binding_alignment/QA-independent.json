@@ -1,0 +1,181 @@
+{
+  "independent": true,
+  "reviewed_at": "2026-10-13T01:47:47.795913+00:00",
+  "status": "rigid_layer_geometry_pass_not_native_pixel_sprite",
+  "scope": "Read original 64 QA and viewed both old originals, new frames 00/01/03, hole nearest-8x panel and overlap-edge nearest-2x panel. All four new full-resolution frames were independently recomposed and measured. Inspected author script and reran into separate /tmp output; no author PNG changed.",
+  "measurements": {
+    "layers": [
+      {
+        "name": "A",
+        "canvas": [
+          435,
+          657
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "visible_color_count": 8177,
+        "raw_rgba_sha256": "7e9f858c003749baa1c8b929809f2c59749198b4772694931e238be8fc8d8f24",
+        "hole_count": 3,
+        "hole_boxes": [
+          [
+            35,
+            108,
+            59,
+            132
+          ],
+          [
+            35,
+            321,
+            59,
+            345
+          ],
+          [
+            35,
+            533,
+            59,
+            557
+          ]
+        ],
+        "independent_rebuild_byte_identical": true
+      },
+      {
+        "name": "B",
+        "canvas": [
+          383,
+          657
+        ],
+        "alpha_values": [
+          0,
+          255
+        ],
+        "visible_color_count": 7687,
+        "raw_rgba_sha256": "736ba7d69f5a242831a468375f6b527e1ab28da49bb3a701350dc7e7b1b1a3bf",
+        "hole_count": 3,
+        "hole_boxes": [
+          [
+            35,
+            108,
+            59,
+            132
+          ],
+          [
+            35,
+            321,
+            59,
+            345
+          ],
+          [
+            35,
+            533,
+            59,
+            557
+          ]
+        ],
+        "independent_rebuild_byte_identical": true
+      }
+    ],
+    "frames": [
+      {
+        "frame": "frame_00.png",
+        "canvas": [
+          1254,
+          1254
+        ],
+        "alpha_values": [
+          255
+        ],
+        "visible_color_count": 15095,
+        "exact_independent_integer_composition": true,
+        "sha_matches_manifest": true,
+        "rebuild_byte_identical": true
+      },
+      {
+        "frame": "frame_01.png",
+        "canvas": [
+          1254,
+          1254
+        ],
+        "alpha_values": [
+          255
+        ],
+        "visible_color_count": 13485,
+        "exact_independent_integer_composition": true,
+        "sha_matches_manifest": true,
+        "rebuild_byte_identical": true
+      },
+      {
+        "frame": "frame_02.png",
+        "canvas": [
+          1254,
+          1254
+        ],
+        "alpha_values": [
+          255
+        ],
+        "visible_color_count": 12510,
+        "exact_independent_integer_composition": true,
+        "sha_matches_manifest": true,
+        "rebuild_byte_identical": true
+      },
+      {
+        "frame": "frame_03.png",
+        "canvas": [
+          1254,
+          1254
+        ],
+        "alpha_values": [
+          255
+        ],
+        "visible_color_count": 11577,
+        "exact_independent_integer_composition": true,
+        "sha_matches_manifest": true,
+        "rebuild_byte_identical": true
+      }
+    ],
+    "exact_final_hole_mask_match": true,
+    "hole_center_y_distances": [
+      213,
+      212
+    ],
+    "holes_cut_reveal_background": true,
+    "underlayer_nominal_strip_width": 52,
+    "underlayer_visible_opaque_pixels": 34016,
+    "underlayer_strip_exact_A_pixels": true,
+    "B_correction_opaque_pixels": 2,
+    "B_correction_transparent_pixels": 5
+  },
+  "visual_findings": [
+    "The final overlap visibly retains the pale B page on top and the ochre A strip at right. The three final apertures reveal background with no doubled sliver; intermediate B apertures correctly reveal underlying A paper.",
+    "Paper texture landmarks stay fixed within each page during integer moves; independent complete-canvas recomposition confirms rather than assumes this continuity.",
+    "Compared with regenerated batch64, this solves the rigid-object continuity defect, but the flat background and hard thin seam lose the older scene lighting. The retained dark one-pixel extraction fringe is visible at the B right edge in 2x inspection.",
+    "A contains 8177 visible RGB colors and B 7687. This is a source-resolution geometry pilot with binary masks, not limited-palette native-grid pixel art. Layer colors stay identical across frames, while frame color counts legitimately change under occlusion.",
+    "The three hole intervals are 213 then 212 pixels; they need not be equal. The same geometry is preserved in each layer and every frame.",
+    "No text, marginal warning or receipt is supplied. This proves only the art-proposed hole alignment, not full N6 evidence authenticity, identity, responsibility or in-game interaction."
+  ],
+  "correction_audit": "Independent alpha-mask comparison and rerun both give 2 newly opaque and 5 newly transparent B pixels. One-time authored geometry correction precedes animation. Producer corrected its early 4/6 report in README, code comment and producer/provenance records; images and manifest stayed unchanged.",
+  "failure_conditions": [
+    "Any future per-frame repaint, scaling, noninteger shift or layer geometry/palette change invalidates the fixed-layer result.",
+    "Any final hole-mask mismatch or loss of the distinct lower A strip fails this pilot.",
+    "Binary alpha does not itself prove clean source extraction; visible fringe remains a cleanup limit.",
+    "A runtime/engine-ready or final native pixel-art claim would be unsupported."
+  ],
+  "engineReady": false,
+  "runtimeVerified": false,
+  "author_script_sha256": "a1c994580c43c8300d1ff0af3e0362ddc1a88ef7ac2b998a5ce68b4c69e164bc",
+  "gif_preview": {
+    "canvas": [
+      1254,
+      1254
+    ],
+    "frames": 4,
+    "durations_ms": [
+      1000,
+      400,
+      400,
+      1600
+    ],
+    "lossy_shared_palette_preview": true
+  }
+}

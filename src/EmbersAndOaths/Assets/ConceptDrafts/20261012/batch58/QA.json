@@ -1,0 +1,34 @@
+{
+  "reviewed_at": "2026-10-12",
+  "method": "Actual full-PNG visual inspection using view_image, sources and previous QA read; no generated raster edits outside built-in image_gen. PNG headers and SHA256 checked without raster manipulation.",
+  "status": "targeted_original_failures_corrected_with_residual_dimensional_caveats",
+  "preferred": "63_refuge_door_geometry_v4.png",
+  "findings": [
+    {
+      "file": "63_refuge_door_geometry_v3.png",
+      "finding": "Original failures resolved at concept level: brass latch remains attached to leaf in all frames; hinge stays left and both opening frames rotate inward into upper side. New continuity failures: open leaf is visibly about one-quarter longer than closed leaf; brass housing shape/orientation changes between closed and unlatched. Unsuccessful dimensional-continuity draft, retain only as precursor to v4.",
+      "sha256": "7057626933c9b3cf2707fb8f05a31626460a7101e7ffc50594fc2bda42a464d5",
+      "size": [
+        2172,
+        724
+      ],
+      "bytes": 1273304
+    },
+    {
+      "file": "63_refuge_door_geometry_v4.png",
+      "finding": "Targeted correction visibly shortens both open leaves and changes first-panel housing to match second. Four phases now communicate closed/latched, closed/unlatched, half-open inward and fully-open inward. Same left hinge and right fixed keeper throughout; brass latch follows moving leaf and does not migrate to jamb. No people or outcomes. Remaining caveat: vertical leaf still appears somewhat longer than closed leaf, wall/hinge positions have small panel-to-panel offsets, and the plan-view brass hardware omits mechanically precise bolt/guide depth. Pass for directional/attachment concept only, not exact rigid-body animation or measured engineering.",
+      "sha256": "2603df3919dd2bc990fee2b2bc7c8b9a9c3f6ca692480207ec7bba6720bc8e2c",
+      "size": [
+        2172,
+        724
+      ],
+      "bytes": 1513869
+    }
+  ],
+  "limits": [
+    "Simplified overhead mechanism study intentionally omits prior front elevation and speaking window; it does not replace the complete door appearance reference.",
+    "No exact sprite grid, pivot coordinates, dimensional equality, collision or engine validation.",
+    "Opening a door does not prove rescue, evacuation, survival, consent, evidence preservation or a completed N12/D08 route.",
+    "No runtime edits, deployment or push. Prior outputs preserved."
+  ]
+}

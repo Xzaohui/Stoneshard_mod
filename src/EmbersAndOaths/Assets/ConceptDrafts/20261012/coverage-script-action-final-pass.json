@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-12",
+  "audited_at": "2026-10-12T22:37:25.142266+00:00",
+  "status": "three_bounded_source_action_gaps_not_global_task_completion",
+  "scope": "Read-only source and image audit except this one new JSON; no image generation, source rewrite, game edit or global index edit. Final-pass is this audit name, never a user-task completion verdict.",
+  "method": {
+    "sources": "Searched staging statements across design/台本*.md, targeted complete relevant scenes/current guards, and fixed-observation/actual-interaction entries of 33 satellite cards. Read prior action backlog and final-scope/third-motion audits; excluded all parent-assigned batches66–70 actions. This is a targeted semantic pass, not all-line/all-pixel acceptance.",
+    "metadata_files_searched": 158,
+    "metadata_scope": "Existing batch/root manifest and prompt files through batch70 at audit time; filenames and actual references crosschecked. Keyword hits inspected for actual subject, not substring presence (AVI also matches pavilion).",
+    "actual_reference_images_viewed": [
+      {
+        "file": "batch08/40_evidence_timeline_table_props-v2.png",
+        "sha256": "45bc8c9109f7adbc3e55a97e089315e695bbb6362c8097305e3d84d866468f5d"
+      },
+      {
+        "file": "batch24/94_eed_sujin_geli_character_review.png",
+        "sha256": "1ebd16b3c08ce1dfbdbbed064bb699c5dd3d815f7bdbc7c697282709c865a6d1"
+      },
+      {
+        "file": "batch33/126_bry_herlin_avi_osin_cast.png",
+        "sha256": "baa3a8dc7cd2fb4eeed4d3867370f30ebd1c73bbe47d6529564bcdb26df78048"
+      },
+      {
+        "file": "batch23/91_eed_tree_section_patrol_changehut.png",
+        "sha256": "0759859f07f3ac774857cbb9ada7a419cc5f8be95ce9af0157a92b2e7bef2953"
+      }
+    ],
+    "visual_image_count": 4
+  },
+  "findings": [
+    {
+      "priority": 1,
+      "id": "MOTION-EED01-SUJIN-REMOVES-FALSE-TREE-TAG",
+      "character": "苏槿 / EED-NPC-SUJIN",
+      "sources": [
+        {
+          "file": "design/06_支线/城市支线/台本_CS-EED-01_最后一株不是最后一单.md",
+          "lines": "41–50; 63–71; 81–97",
+          "exact_requirement": "旁边那张是我挂的。截住那家订单以后，我没敢取下来。 / 我能不外传整张图，也要把假签真撤下。 / 调度：撤健康株假签；有限病伐由专业班，或病株围护限期复核并真用登记旧料；未做工序不称已供材。",
+          "sha256": "2a3077737eb8ce052e6dbb1801d017309e83e1bd2ae669368cb903fdf3b68e1e"
+        }
+      ],
+      "reference_png": "batch24/94_eed_sujin_geli_character_review.png",
+      "secondary_reference_png": "batch23/91_eed_tree_section_patrol_changehut.png",
+      "reference_visually_verified": true,
+      "outfit": "仅94左两格同一成年女性苏槿：米褐结头巾、暗橄榄长工作衣、灰米卷袖、褐色长围裙、腰带皮袋与小木工具、灰褐裤/绑腿和棕靴。不要误用右两格红衣长辫葛黎。苏槿此动作双手空闲，不把原木弯片变成签。",
+      "existing_coverage": "94只有站姿和托木样；91是病断面与围住的有局部伤树，背景健康树未挂签。没有健康树假签的移除序列；不可将91受伤树改健康，也不可把其安全围栏拆掉。",
+      "minimal_keyframes": [
+        "同一健康树下段的独立局部近景，一枚无字普通病签用松绳可拆挂在低位小支上。苏槿一手托住原签，另一手接触原绳；树皮无新增伤。",
+        "她解开同一松绳环，从原挂点取离；签与绳始终相连且由手支撑，树和人物脚位固定。",
+        "同一原签及绳留在她手中，原挂点空；树完整站立、道路仍通，不在别树重新挂签。"
+      ],
+      "guards": "仅本株假签已实际核明、苏槿本人在场存活且真实同意承担本案撤签时表现。她的S2承诺不等S3实际完成；不因菜单预览播放。此动作只撤她本次错挂签，不全林撤界、不免除旧截单/岗方失查、不治愈邻病树、不提交病伐/旧料交付或奖励。台本未规定签材、绳结与挂点，都是最小非伤树美术提案；无字签必须靠任务文字指明此前错误标记，不能声称图独立证明健康。保留撤下签，不撕毁证据。"
+    },
+    {
+      "priority": 2,
+      "id": "MOTION-N9-PLACE-VERIFIED-TIMELINE-SLIP",
+      "character": "玩家的可替换手部；不规定玩家外貌",
+      "sources": [
+        {
+          "file": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+          "lines": "98–104; 116–144",
+          "exact_requirement": "出口与执行：仅已完成路线的资料可摆上桌，未做路线显示缺口。 / 场面调度：玩家依记录将停用、发运、领药或排水变更放在对应日期，摘要存在可直接看见的跨页拼接。 / 场面调度：未调查的那一路在时间轴上保留空格。",
+          "sha256": "513c1b489b4e18ec899336fcd8da3c2ca3eaf4f7abea74cf1875232c1c64ab70"
+        }
+      ],
+      "reference_png": "batch08/40_evidence_timeline_table_props-v2.png",
+      "reference_visually_verified": true,
+      "outfit": "只做局部手部/袖口占位参考，不新增具名NPC或固定玩家种族、性别、肤色、服饰正史。衣物如必须显示，仅少量普通米褐袖口，标为可替换制作占位；优先以同一纸片及桌面为主体。",
+      "existing_coverage": "实际40v2为固定桌面：上两条绳列有纸片，第三条完全空，右上两片拼接摘要与右下闭合册保持。仅静态道具；没有手持已核纸片到对应位置再放开的动作。其他timeline引用只是54材料风格参考。",
+      "minimal_keyframes": [
+        "沿用40v2桌面与同一镜头，固定上两行及全部日期定位；其中一个已核行的最后一个纸片位置暂空，该同一纸片已由画面边缘一只手持住。其余片数不变，第三行全空。",
+        "同一纸片平移到它已核的日期位置，手在原有固定木夹处压住纸片；不翻转、不移动日期、不改摘要两片断缘。",
+        "手离开，原纸片留在同一木夹/位置，其余片、第三空行、闭合私册和拼接摘要均不变。"
+      ],
+      "guards": "只选当前确实完成且受准用于本次复核的一个事件片；日期与路线由游戏文本/数据提供，无字图不得声称具体年月可读。不是把未知第三路填满，不从一片新增证据、确认幕后人或自动授奖。不打开闭册、不显私人姓名/病例；本次有限公开或封存复核需遵其范围。机械木夹实现为道具提案，片从第一帧手中到最后夹下始终只一份，不凭空增纸。不得移动已经排列正确的历史事实，或将被污染摘要修成可信。"
+    },
+    {
+      "priority": 3,
+      "id": "MOTION-CMBRY-AVI-MENDS-SMALL-COAT-SLEEVE",
+      "character": "阿薇 / BRY-NPC-AVI",
+      "sources": [
+        {
+          "file": "design/05_主线/城市篇章/台本_CM-BRY_城墙之内.md",
+          "lines": "27–61",
+          "exact_requirement": "调度：蕾娜拿着空房号站在共梯口。阿薇在给一件小外衣补袖，盆里还有昨日的洗水；床上生活痕仅经她许可可看。房号、住用与欠费三者冲突，不设收三份纸前置。",
+          "sha256": "ec94af587bf279d282b2c97c39f8611d9b77f3b2eebcf92c4307261f6edf6c00"
+        }
+      ],
+      "reference_png": "batch33/126_bry_herlin_avi_osin_cast.png",
+      "reference_visually_verified": true,
+      "outfit": "只用126中排同一成年女性：暗发、蓝灰后结头巾、土黄短袖罩裙、米白内长袖与领口、棕侧裙、米色裙边、棕腰带及右后侧针线小筒/包、棕鞋。图中手持米色旧布与深补块可用于小外衣面料参考，不能把整幅平布直接当已画清楚的外衣。",
+      "existing_coverage": "实际126两朝向只持同一块布，手势近静止，未见一针从松线到收紧或袖口形状；bookbinding15为不同艾伦和书页，不能替补袖。这里仅补真实针脚状态，不新增整件衣物完成任务。",
+      "minimal_keyframes": [
+        "小外衣袖口近景在阿薇左手支撑的同一旧布位置，保持可辨袖筒与既有补块。一个短修补口仍松开，右手持同一已穿线针靠其边。",
+        "右手拉出同一针，线形成可追踪短环；左手和袖口原支点固定，只有一根线。",
+        "同一线环收紧，使同一小段修补口合拢多一针；周围仍未补完，不转成崭新完整衣服。"
+      ],
+      "guards": "CM-BRY场1存活在场正常自主缝补，只取一针不可无尽增布或瞬间完工。不可推定孩子在现场或展示其姓名、家史；不由看缝补解锁床边私物/住址授权。无夫妻和解、赫林回家、补助结清、强制访查或新奖励。针法、局部破口与袖型属美术提案，非新剧情事实。此项优先度低于前两项，但源明确物体和人物，区别于任意职业待机。"
+    }
+  ],
+  "excluded": [
+    "全部父任务列明的66–70动作及前序审查已覆 boat/test/bookbinding/payment/Ena/binding holes/Moren/Mia/refuge door/N14/N18/ALD lining。",
+    "麦勒把新钥放桌、安菈递断扣、妮尔递票边：虽有源但仅物件递放，已有物/角色覆盖，本轮不为凑数扩帧。",
+    "N3公告边移灯未明演员；卫星挂停牌多为既有状态或人物历史，不额外编成当前动态。",
+    "N8分桶、D07断污流与旁路已有样桶/断流状态场所；未重复把普通专业维护泛化为玩家动作。",
+    "33卫星固定对象检索未建立独立于既有道具板的新关键动作缺口；不将支付、护理、搬家等条件结果自动改写成过场。"
+  ],
+  "limitations": "Three scoped missing motions, not certification that art is complete or that every possible gesture warrants production. Only four PNGs directly viewed; other exclusion/coverage information comes from metadata and previous audits. Native topology, grid, palette, frame registration, collision, state implementation and runtime unverified.",
+  "runtimeVerified": false
+}

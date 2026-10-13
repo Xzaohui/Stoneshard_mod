@@ -1,0 +1,43 @@
+{
+  "review_type": "producer actual pixel review, not independent acceptance",
+  "reviewed_files": [
+    {
+      "file": "frame_00.png",
+      "sha256": "ce69aac43ec44b478259043fc2c65e39584a1e7ce38eca86e19258a64775b473"
+    },
+    {
+      "file": "frame_01.png",
+      "sha256": "e5da1a274823499c371f2dfbbbf6803a3aa6f8f49c813a36d43974be3d37819c"
+    },
+    {
+      "file": "frame_02.png",
+      "sha256": "3c5c90c80d135eab1931537620f5d2a29213d5d2109499b45b9f6ac1541fbb1e"
+    },
+    {
+      "file": "frame_03.png",
+      "sha256": "9ec6b586df7949d5497e7ad6927628d070f4c694dd390090ad5860c08adde420"
+    },
+    {
+      "file": "preview_nearest_4x.png",
+      "sha256": "ad357f4c87bdcce6dd83036b07dcf012086707ff0ca01b7c432b52fd92a01097"
+    }
+  ],
+  "actual_view_image_review": true,
+  "verdict": "passes scoped rigid-layer 4-pose proposal; final art, full unlocking and engine integration unverified",
+  "findings": [
+    "At 0 degrees, leaf is already unlatched with a visible gap to fixed right keeper.",
+    "At 30 and 60 degrees the same brass latch remains at the free tip; wood and reinforcement rotate together into upper room.",
+    "At 90 degrees leaf stays attached to the same left axis and its centerline length is unchanged.",
+    "Fixed hinge wall bracket was explicitly added before final review so the pin does not float detached from left jamb.",
+    "No door/keeper or door/wall intersection is visible in the four sampled poses.",
+    "No people, rescue outcome, second passage or evidence certification are added."
+  ],
+  "deterministic_rebuild": {
+    "byte_identical": true,
+    "compared_file_count": 27,
+    "method": "hash every then-existing generated file and script; rerun builder; compare complete dictionary"
+  },
+  "runtimeVerified": false,
+  "physicalMechanismVerified": false,
+  "independent_review_pending": true
+}

@@ -1,0 +1,9 @@
+# Batch68 source-bounded river and workshop actions
+
+Three sequential built-in imagegen concept boards. Requested landscape 1536×1024; actual dimensions recorded. Existing muted medieval dense pixel-cluster illustration style. Opaque neutral grey with minimal fixed location anchors. Fixed camera and scale across each board, full bodies and action props visible, no captions. Concepts only, not engine-ready registered sprites, collision or looping animations.
+
+SELA: three frames, closed long wooden box held low at one end, lowered crosswise before stationary empty cart, then released. Same teal short cape, oatmeal rolled sleeves, grey-brown trousers, brown bun/belt/boots and fixed belt rope coil. Open side return route stays clear. No contents, braces, Yani body, consent or settlement.
+MARA: four frames, unfinished short rope above basket, tucked into basket, hands rest while looking low, then looks up. Only left woman from reference: brown pinned hair, rust scarf, patched ochre dress, pale sleeves/cream apron, dark skirt/brown boots. Basket supported consistently by belt; same unfinished end at rim. No Ivo, N18 apparatus, completed rope or quest acceptance.
+OSIN: three frames, one empty chair slightly lifted, lowered beside workshop door, then hands release. Only bottom-row broad older man: bald crown, short dark beard/side hair, olive rolled sleeves, charcoal vest, brown trousers/belt/boots, unused gloves at belt. Open doorway, dry floor. No Herlin, other people, propaganda, consent or political endorsement.
+
+Read-only external pixel-asset-master guidance adapted to existing saved project. No third-party scripts. Save raw PNGs immediately; retain prompts, source/reference/output hashes, honest visual QA. Never change globals, runtime, design sources or push. Preserve older assets and any corrected candidates.

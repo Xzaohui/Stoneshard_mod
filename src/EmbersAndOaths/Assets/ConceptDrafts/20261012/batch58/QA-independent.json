@@ -1,0 +1,69 @@
+{
+  "reviewed_at": "2026-10-12T22:04:33.810552+00:00",
+  "reviewer": "independent_visual_QA",
+  "method": "Viewed both full PNGs with view_image; read exact N12-R-rescue and D08-S02 source sections; verified PNG dimensions, output and source hashes. Producer QA preserved.",
+  "scope": "Independent action-concept review only",
+  "files": [
+    {
+      "file": "63_refuge_door_geometry_v3.png",
+      "sha256": "7057626933c9b3cf2707fb8f05a31626460a7101e7ffc50594fc2bda42a464d5",
+      "size": [
+        2172,
+        724
+      ],
+      "bytes": 1273304,
+      "source_verification": {
+        "design/05_主线/台本/台本_N12_失踪者仍有名字.md#N12-R-rescue": {
+          "sha256": "899b888e97805cfd8420b35375887a3f57140ff2a2ee7d3cbf0f8a74d3b846f2",
+          "matches_manifest": true
+        },
+        "design/08_副本/台本/台本_D08_沉水档案井.md#D08-S02": {
+          "sha256": "22d28377dd53d8ca67255fc69535043937346e9404e26a4964b1cc36336f57c5",
+          "matches_manifest": true
+        }
+      },
+      "actual_pixel_review": true,
+      "verdict": "superseded_concept",
+      "findings": [
+        "Left hinge and right keeper remain semantically fixed; latch stays on moving leaf; both opening states sweep toward the same upper room side.",
+        "V3 latch housing changes between closed states and open leaf length is substantially greater than closed.",
+        "Small panel-origin and wall offsets and schematic bolt engagement remain; this cannot be called an animation-ready sequence."
+      ]
+    },
+    {
+      "file": "63_refuge_door_geometry_v4.png",
+      "sha256": "2603df3919dd2bc990fee2b2bc7c8b9a9c3f6ca692480207ec7bba6720bc8e2c",
+      "size": [
+        2172,
+        724
+      ],
+      "bytes": 1513869,
+      "source_verification": {
+        "design/05_主线/台本/台本_N12_失踪者仍有名字.md#N12-R-rescue": {
+          "sha256": "899b888e97805cfd8420b35375887a3f57140ff2a2ee7d3cbf0f8a74d3b846f2",
+          "matches_manifest": true
+        },
+        "design/08_副本/台本/台本_D08_沉水档案井.md#D08-S02": {
+          "sha256": "22d28377dd53d8ca67255fc69535043937346e9404e26a4964b1cc36336f57c5",
+          "matches_manifest": true
+        }
+      },
+      "actual_pixel_review": true,
+      "verdict": "preferred_directional_concept_with_unresolved_rigid_body_geometry",
+      "findings": [
+        "Left hinge and right keeper remain semantically fixed; latch stays on moving leaf; both opening states sweep toward the same upper room side.",
+        "V4 housing is more consistent and open leaf shorter than v3; vertical leaf remains longer than closed leaf, so exact rigid-body continuity is unresolved.",
+        "Small panel-origin and wall offsets and schematic bolt engagement remain; this cannot be called an animation-ready sequence."
+      ]
+    }
+  ],
+  "narrative_checks": [
+    "N12-R-rescue requires actual low-gate release, willing evacuees and separate registration, not merely a door opening.",
+    "D08-S02 keeps researcher and ordinary workers distinct; single isolated mechanism is not a complete room or two-door staging reference.",
+    "No people, reunion, rescue completion, consent, survivor status or certified evidence added.",
+    "Overhead mechanism omits earlier facade and speaking window; it supplements rather than replaces full appearance reference."
+  ],
+  "runtimeVerified": false,
+  "native_sprite_ready": false,
+  "remaining_useful_work": "If continuous four-frame mechanism is retained as a deliverable, normalize fixed pivot/frame coordinates and door length, then make bolt disengagement mechanically explicit. This is a geometry correction, not a missing-native-atlas blocker."
+}

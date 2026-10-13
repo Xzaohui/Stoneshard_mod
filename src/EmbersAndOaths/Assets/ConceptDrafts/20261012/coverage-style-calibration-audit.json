@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-12",
+  "audited_at": "2026-10-12T23:16:07.481952+00:00",
+  "scope": "Read-only visual audit of newly available Verren small NPC reference and three generated character concepts. Save this audit only; no generation, global index edits, runtime changes or deployment.",
+  "decision": "One bounded standalone Sela style-calibration board is useful and nonredundant.",
+  "confidence": "High for a material visual gap in inspected examples; not an exhaustive visual audit of every generated image.",
+  "evidence_boundary": [
+    "Original-reference identity/provenance is inherited from coverage-original-reference-audit.json and references/original-characters/metadata.json, not independently revalidated online in this audit.",
+    "The community wiki sprite is a single-facing public image; its claimed version has not been checked against the local game package.",
+    "Its image dimensions describe that downloaded reference, not a required sprite cell, collision box, head-body ratio or atlas standard.",
+    "No new original atlas or local game extraction was inspected. No official global palette, camera system or animation specification can be inferred from one NPC.",
+    "Compared the Verren sprite against exactly three generated character concepts: Sela01, Yani02, and batch47 Li qui. An inspection-only nearest-neighbor enlargement of the same Verren reference was used to see its pixels."
+  ],
+  "visual_references": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/verren_npc_community_wiki.png",
+      "sha256": "ce4c5f8378fc3f537e534fd808618eb1b9897be4579658978561d270330b5d49",
+      "visually_inspected": true,
+      "role": "single original NPC visual calibration sample"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/01_sela_turnaround.png",
+      "sha256": "56b6261ebf4612c6904cf034d41d0159285ddff042f52a112e1bae6dc18043e6",
+      "visually_inspected": true,
+      "role": "existing generated concept comparison"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/02_yani_dialogue_poses.png",
+      "sha256": "a471d3f401c4e08757342bb804967a163f2048fe87077b89ec0431dcb55e3bb3",
+      "visually_inspected": true,
+      "role": "existing generated concept comparison"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch47/177_trade_liqui_cast.png",
+      "sha256": "34b9c159bd0539a0f4977d1eb3db7e7fda99c53fe51783ae85d903d9386e7dfe",
+      "visually_inspected": true,
+      "role": "existing generated concept comparison"
+    }
+  ],
+  "comparison": {
+    "silhouette_and_proportions": "Verren has a large head/hood mass relative to a compact torso and short, simple separated legs. Sela01 has a tall illustrated anatomy, long trouser legs and highly articulated hands; Yani02 has similarly detailed seated anatomy. The later Li qui cast is somewhat compact but remains a tall, richly modeled illustration. Character age, sex, clothing and pose differences prevent treating Verren’s exact proportions as a universal rule.",
+    "pixel_clusters": "Verren uses a small number of coarse stepped masses; face, beard, belt and limbs are abbreviated. Existing concepts contain numerous small texture changes, folds, hair strands, fingers and rope subdivisions. Their apparent pixel texture does not reproduce the reference’s very low information budget.",
+    "palette_and_contrast": "Verren separates pale/red-warm skin and grey beard sharply against deep brown-charcoal clothing, with discrete value steps. Existing concepts already use restrained earth/teal/olive hues, so hue family is not the primary gap. Their continuous modeled shading and cloth texture need reduction into larger value groups. No measured official palette size is asserted.",
+    "camera": "The inspected Verren facing suggests a small three-quarter figure, with unequal visible sides and feet. Sela01 is an orthographic-style front/side/back design turnaround; Yani02 is a three-quarter seated concept, not equivalent standing camera evidence. Li qui’s front/back board also establishes design more than native camera. A single modest three-quarter Sela test is more justified than claiming four exact native directions.",
+    "outline": "Verren uses strongly dark separation around the hood and body with stepped interruptions and interior dark gaps. The generated figures have comparatively fine continuous contours around richly textured modeled forms. A selective deep-dark contour and simplified internal gaps should be tested, without asserting a universal one-pixel outline thickness."
+  },
+  "why_nonredundant": [
+    "Batch01 README explicitly records that visual inputs were prior project concept boards and missing original atlases were not inspected.",
+    "Later batch47 prompts already request chunky pixels and compact proportions, but the inspected output retains detailed illustrated anatomy. Repeating that wording without a small original NPC reference would likely reproduce the same gap.",
+    "The newly available sprite supplies visual evidence of information density and small-scale shape hierarchy, which text-only style intent and previous generated references did not establish."
+  ],
+  "bounded_next_asset": {
+    "count": 1,
+    "subject": "Sela only; original design retained",
+    "format": "One standalone single-pose style-test board, neutral opaque grey background. No engine dimensions prescribed.",
+    "references_in_order": [
+      "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/verren_npc_community_wiki.png",
+      "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/01_sela_turnaround.png"
+    ],
+    "excluded_reference_inputs": "Do not use promotional art, portrait, Yani or Li qui as generation inputs; they were comparisons only. Two references are sufficient and remain below the three-reference cap.",
+    "prompt": "Create ONE standalone visual calibration board of Sela, an original adult female civilian night-ferry rental owner. Use reference 1 (the tiny Verren NPC sprite) ONLY for coarse pixel-cluster economy, compact game-sprite proportions, dark shape separation and small-scale readability. Do not copy Verren’s hood, beard, face, armor, equipment or identity. Use reference 2 (Sela’s existing turnaround) ONLY to preserve Sela’s established original design: brown hair tied into a practical bun, short muted teal cape, oatmeal rolled sleeves, grey-brown practical trousers, brown belt with a simple rope coil, worn brown boots, no weapons or insignia. Show exactly ONE complete Sela in a neutral standing pose, empty hands relaxed, looking slightly to the viewer’s left in a modest three-quarter view comparable to reference 1. Use a uniform opaque middle grey background with generous empty margin. Make a visibly coarse, compact pixel sprite enlarged cleanly for inspection: broad stepped clusters, abbreviated face and hands, short simple leg shapes, a readable teal shoulder mass, a simple rope-loop silhouette. Preserve adult character and identity. Separate face, cape, shirt and trousers with a few clear light/mid/dark masses, restrained warm skin highlights and deep brown-charcoal shadows. Use selective dark contour and hard pixel steps, no soft anti-aliasing, no gradients, no fine cloth noise, no lace-like rope detail, no detailed eyes or individually rendered fingers. Keep the body much more compact and the number of independent visual details much lower than reference 2; merely pixelating the old tall illustration is insufficient. No turnaround, no action poses, no other actors, no environment, no captions, no text, no official logos, no story outcome. This is a visual style test, not a claimed engine-ready sprite, native atlas cell, animation frame or official global style standard.",
+    "acceptance_checks": [
+      "Clearly lower detail density and more compact sprite silhouette than Sela01, rather than a simple pixel filter on the old anatomy.",
+      "Sela remains recognizable through bun, teal cape, oatmeal sleeves, grey-brown trousers, rope coil and worn boots; no Verren identity leakage.",
+      "Face and hands read through few large clusters; rope and fabric stay simple and recognizable at a small review size.",
+      "Dark/light masses remain distinct on grey; stepped edges and selective dark contour do not become a soft painted fringe.",
+      "Exactly one Sela, neutral civilian stance, no new equipment, characters, story state or official-canon claim.",
+      "If output still resembles the prior tall textured illustration, record failed calibration rather than call it native-compatible. Even a visual success remains a concept requiring separate pixel cleanup and engine QA."
+    ],
+    "stopping_condition": "Inspect this one result against the two inputs and record pass/partial/fail. Do not expand into a cast-wide regeneration program or repeat without a concrete observed correction.",
+    "preservation": "Save as a new candidate without replacing Sela01 or changing existing selections."
+  },
+  "changes": [
+    "coverage-style-calibration-audit.json"
+  ],
+  "image_generation_performed": false,
+  "runtime_changes": false,
+  "global_index_changes": false
+}

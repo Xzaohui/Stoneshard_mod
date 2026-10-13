@@ -1,0 +1,92 @@
+{
+  "batch": "61",
+  "date": "2026-10-12",
+  "generation_tool": "builtin image_gen__imagegen",
+  "external_guidance_read_only": "https://raw.githubusercontent.com/424431185/pixel-asset-master-skills/main/skills/pixel-asset-master/SKILL.md",
+  "policy": "No third-party scripts executed; no generative raster postprocessing; original references and generated versions preserved.",
+  "runtimeVerified": false,
+  "engineReady": false,
+  "entries": [
+    {
+      "id": "FIX-120-OUTER-BYPASS",
+      "output": "120_hig_exterior_bypass_v3.png",
+      "prompt": "Use case: precise-object-edit. Edit target is the supplied two-panel medieval mountain masonry pixel-art scene. Correct ONLY layout coverage of LEFT panel; keep right panel's calibration workshop, front exit, three-slot metal ruler holding two stones with third empty and separate reference block. Widen composition horizontally so left panel receives two thirds and right workshop one third. In LEFT panel show CLOSED hazardous echo chamber as a compact rear stone building with shut heavy wood door; in front of this building, OUTSIDE its walls, a continuous wide dry stone public walkway enters visibly from the LEFT EDGE and exits visibly through the RIGHT EDGE of this left panel. It must be unmistakably a LEFT-TO-RIGHT THROUGH-ROUTE around the closed chamber, not a dead-end forecourt or a path through the door. No side walls obstructing lateral route. Preserve a separate foreground return stair/path leading down toward viewer. Keep three stone locating grooves and their fixed reference markers in a small recessed work alcove near building, entirely out of the horizontal public route. Show mountain scenery beyond open lateral ends. Preserve gray cold granite, aged brown timber, crisp hand-placed pixel-like clusters, muted natural light, elevated game environment view; no arrows, labels, people, water, magical effects. This is layout concept art, not collision map. Right ruler third slot remains visibly empty. Do not fill it or make the broken instrument block public route.",
+      "reference": "originals/120_hig_fixed_grooves_missing_measure.png",
+      "source": "design/02_世界与地图/任务空间/空间_HIG_无名修院山地.md",
+      "source_anchor": "HIG-D02; 周边住户与独立生活场景",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-046fd187-edcd-4420-9341-a7755b081b1e.png",
+      "qa_status": "scoped_layout_concept_pass",
+      "qa": [
+        "Continuous horizontal dry exterior walkway visible from both lateral edges, in front of closed chamber.",
+        "Three locating grooves are on lower work terrace, outside horizontal route.",
+        "Separate foreground return and right workshop foreground exit remain visible.",
+        "Right instrument retains two occupied slots and third empty; separate reference block remains.",
+        "Right panel rescaled rather than exact preserved pixels; no native collision, terrain elevations, production palette or gameplay acceptance."
+      ],
+      "output_sha256": "93711d32d5a15a27b239ac2186378d88fc71fc7becab3f72dbb451e84fe3417c",
+      "reference_sha256": "b0f1b4ca9b1a861b25ccff5393a3df7faa893d8a8623db171f284213fbd687e5",
+      "source_sha256": "d84ea982d5f888a5c6abbfc776597922956dd2cfe85db4573e9b3dfb327cee63",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "pixel_color_count": 240743,
+      "palette_note": "Measured color count only; not palette-locked production pixels."
+    },
+    {
+      "id": "FIX-45-HOLE-ALIGNMENT",
+      "output": "45_binding_hole_translation_v3.png",
+      "prompt": "Use case: precise-object-edit. Edit target supplied 2x2 four-frame parchment comparison storyboard. Redraw ONLY the page comparison to obey physical rigid translation. Keep overall dark wooden tabletop, candle/inkpot upper left, small box upper right, blue book lower right, muted medieval pixel-art material style, four equal panels and black gutters. Camera is perfectly fixed overhead, orthographic, no perspective tilting of paper. Exactly TWO blank same-size portrait parchment sheets in every panel, no hands needed. Define two rigid master sheets A and B, width 200 relative units height 280, all page geometry NEVER changes. A (bottom fixed sheet) has square upper-right corner and tiny triangular notch at middle of right edge. B (moving top sheet) has a small cut-off upper-right corner and otherwise straight right edge. Both sheets have EXACTLY THREE identical small dark square binding holes at x=16, y=40,140,240 relative to each sheet top-left, equally spaced. The geometry is identical across all frames. A remains at same coordinates left of center across four panels. Frame1 B is entirely to right of A with 20-unit gap, perfectly parallel, matching baseline. Frame2 B slides left by 100 units and partially overlaps A, without rotating, lifting, reshaping or changing its size. Frame3 B slides farther left to offset only 35 units to right of A, still parallel and on same baseline; three A holes at its exposed left margin and B holes all visible. Frame4 B slides left the final 35 units and lies exactly over A; edges registered and all THREE holes precisely superimposed in a single left vertical column, with thin lower-layer edge and the two different right-edge details enough to show two stacked sheets. FINAL IS OVERLAP, NOT SIDE-BY-SIDE. Hole spacing stays invariant; no new holes, no shifting notches, no paper spread doubling width, no turning into book, no handwriting, no names or readable text. This is a comparison concept and no engine timing claim.",
+      "reference": "originals/45_binding_hole_comparison_keyframes-v2.png",
+      "source": "design/05_主线/台本/台本_N6_被封存的页码.md",
+      "source_anchor": "N6-S02",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-cb42060f-0912-4873-a0ae-c5aa392943e7.png",
+      "qa_status": "partial_improvement_not_accepted",
+      "qa": [
+        "Four frames now depict overlap instead of side-by-side spread.",
+        "Three holes maintained on each exposed sheet; no private text.",
+        "A changes anchor from local left approximately138 in top panels to approximately230 in bottom-left and approximately246 in bottom-right.",
+        "A and B widths differ; early top hole rows differ about8-10px.",
+        "Final underlayer is thinly visible, but rigid geometry and physical registration are not proved."
+      ],
+      "output_sha256": "9bf06c15e0549cc61b1402371a11128cf3fc9fdff40825424bedec42a81523f7",
+      "reference_sha256": "699ddaf8e3844d72c7e488062af5b31867d09e41f0410725f1fc8cb792a81d5a",
+      "source_sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "pixel_color_count": 80304,
+      "palette_note": "Measured color count only; not palette-locked production pixels."
+    },
+    {
+      "id": "FIX-45-HOLE-ALIGNMENT",
+      "output": "45_binding_hole_translation_v4.png",
+      "prompt": "Use case: precise-object-edit. Correct ONLY the rigid paper geometry in supplied four-panel comparison board, retaining all other tabletop/background/style. Current sequence properly slides one sheet over the other but changes sheet dimensions, anchor and hole coordinates. Repair with master-template consistency, not new creative composition. Each panel is 768x512 at same camera. Use exact local panel coordinates: bottom master A bounding box left=138 top=100 right=372 bottom=397, identical position across ALL FOUR panels. Moving master B same width 234 and height297, with these bounds: frame1 x=405..639 y100..397; frame2 x=255..489 y100..397; frame3 x=180..414 y100..397; frame4 x=138..372 y100..397. These are intended composition coordinates; don't draw numerals or outlines. Each master has EXACTLY 3 square binding holes (10x10) whose centers relative to page top-left are x=17 and y=55,145,235. Thus ALL six exposed hole centers share horizontal rows whenever both left margins show; frame4 three holes exactly align and show through both sheets. Bottom A fixed rough edges with small right-edge middle notch, top B straight right edge and clipped upper-right corner. Keep these unique master silhouettes unchanged in all four appearances. Never move A, never resize either sheet, never rotate paper. Final frame fully registered stack at LEFT same place where A began, not recentered. Preserve background props. Blank parchment without handwriting, no hands, no labels or arrows. Pixel-art illustration, fixed orthographic overhead. Primary correction: same geometry and hole locations throughout rigid translation.",
+      "reference": "45_binding_hole_translation_v3.png",
+      "source": "design/05_主线/台本/台本_N6_被封存的页码.md",
+      "source_anchor": "N6-S02",
+      "output_origin": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-ffcbc8e8-0fdf-4ba6-807c-0a6fe7b53abd.png",
+      "qa_status": "targeted_revision_failed_precision",
+      "qa": [
+        "One targeted revision explicitly supplied fixed page coordinates and identical relative hole centers.",
+        "Same general overlap sequence retained; no private text.",
+        "A still shifts in lower frames, page widths still differ and top hole rows remain offset.",
+        "Final bottom sheet is less visible than v3, so exact two-sheet overlay remains unclear.",
+        "Do not select as accepted clue geometry; preserve failed attempt and reassess method rather than endless imagegen retry."
+      ],
+      "output_sha256": "fbe7c472d361995a40813053ed739e24956194f7f571c530e02f5516865e4eff",
+      "reference_sha256": "9bf06c15e0549cc61b1402371a11128cf3fc9fdff40825424bedec42a81523f7",
+      "source_sha256": "2ec71ad819297169fdd6f56960dbb1e4f475ff1d15453cb9a852b6ec2f8dc4d0",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "pixel_color_count": 82688,
+      "palette_note": "Measured color count only; not palette-locked production pixels."
+    }
+  ]
+}

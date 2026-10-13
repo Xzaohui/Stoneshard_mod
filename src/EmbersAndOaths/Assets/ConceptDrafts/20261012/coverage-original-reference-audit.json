@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-12",
+  "audited_at": "2026-10-12T23:10:22.642951+00:00",
+  "scope": "Verify only original identities and appearance references for Verren and Gwynnel omitted from batch74 N13 staging. No generation, no runtime/global edits. Public images saved separately under references/; no commercial asset packs extracted.",
+  "result": "Verren reference available; Gwynnel appearance remains unresolved.",
+  "characters": [
+    {
+      "zh": "维伦",
+      "en": "Verren",
+      "mod_character_id": "NPC01",
+      "identity_confidence": "high",
+      "identity_evidence": [
+        {
+          "path": "design/01_原作基线/本地安装与证据.md",
+          "locator": "STRG15938 / Verren row explicitly labels 维伦"
+        },
+        {
+          "path": "design/04_人物/人物_维伦.md",
+          "locator": "frontmatter NPC01; original character, later events original"
+        }
+      ],
+      "appearance_status": "verified public reference, with version limitations",
+      "references": [
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/verren_portrait_wiki.png",
+          "source_page": "https://stoneshard.com/wiki/Verren",
+          "image_url": "https://stoneshard.com/wiki/images/7/70/Verren.png",
+          "context": "Official Stoneshard Wiki character-page image.",
+          "sha256": "2a87b17cf32456ab9889d6d0b17e12d55b7a05373fd883be2ef7c58eb3652036",
+          "dimensions": [
+            148,
+            200
+          ],
+          "visually_inspected": true,
+          "visual_observation": "Pixel portrait: weathered pale face, gray full beard, dark brown hood.",
+          "license_source_claim": "No image-specific license verified.",
+          "is_generated": false,
+          "usage_scope": "Reference only; exclude from generated-art counts; not packaged runtime art."
+        },
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/verren_promotional_art_wiki.jpg",
+          "source_page": "https://stoneshard.com/wiki/File:Verren_big2.jpg",
+          "image_url": "https://stoneshard.com/wiki/images/f/f3/Verren_big2.jpg",
+          "context": "Official Stoneshard Wiki file page, linked from Verren gallery.",
+          "sha256": "072892324504685df71041abc7ed8805c1b3207775073f8965e444088dd0e892",
+          "dimensions": [
+            1920,
+            1080
+          ],
+          "visually_inspected": true,
+          "visual_observation": "Illustrated Verren with bald head, gray beard, dark hooded cloak and chest armor. Not a native sprite.",
+          "license_source_claim": "File page identifies Ink Stains Games copyright and states wiki illustration is believed fair use; this is not a reusable-asset license.",
+          "is_generated": false,
+          "usage_scope": "Reference only; exclude from generated-art counts; not packaged runtime art."
+        },
+        {
+          "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/verren_npc_community_wiki.png",
+          "source_page": "https://www.stoneshardwiki.com/en/people/verren/",
+          "image_url": "https://www.stoneshardwiki.com/deploy_sprites/s_VerrenNPC_0.png",
+          "context": "Independently maintained community wiki; page explicitly labels Verren and 0.9.4.25.",
+          "sha256": "ce4c5f8378fc3f537e534fd808618eb1b9897be4579658978561d270330b5d49",
+          "dimensions": [
+            25,
+            38
+          ],
+          "visually_inspected": true,
+          "visual_observation": "Small pixel NPC with dark brown hood/cloak, pale face, gray beard, brown/gray equipment. One facing only.",
+          "license_source_claim": "No image-specific license verified.",
+          "is_generated": false,
+          "usage_scope": "Reference only; exclude from generated-art counts; not packaged runtime art."
+        }
+      ],
+      "limitations": [
+        "Official Wiki page says last edited during patch 0.9.4.6; community sprite page claims 0.9.4.25, not independently checked against local package.",
+        "One portrait, one promotional illustration, one single-facing NPC image do not establish a complete animation sheet.",
+        "Prefer small NPC sprite for silhouette and pixel proportions; promotional illustration is secondary identity support.",
+        "These references establish appearance only, not attendance, consent, X19 delegated state or story completion."
+      ]
+    },
+    {
+      "zh": "葛文涅尔",
+      "en": "Gwynnel",
+      "internal_key_spelling": "Guinnel",
+      "mod_character_id": "NPC02",
+      "identity_confidence": "high",
+      "identity_evidence": [
+        {
+          "path": "design/04_人物/人物_葛文涅尔.md",
+          "locator": "frontmatter NPC02; original character with Mod-original survival/story treatment"
+        },
+        {
+          "path": "research/local-baseline.json",
+          "locator": "evidence STRG33146 / GuinnelAnswers_MoveToCamp_desc maps to English summary Gwynnel remains missing"
+        },
+        {
+          "path": "design/01_原作基线/本地安装与证据.md",
+          "locator": "same STRG33146 / key row maps to Chinese 葛文涅尔失踪"
+        }
+      ],
+      "appearance_status": "unresolved; no verified human appearance located",
+      "image_url": null,
+      "source_pages": [
+        "https://stoneshard.com/wiki/Gwynnel%27s_Answers",
+        "https://stoneshard.com/wiki/Story_%26_Lore"
+      ],
+      "supported_finding": "Quest and lore pages establish missing alchemist identity and relationship to Verren, not an appearance. Direct Gwynnel character page returned HTTP 404. Search results for elixir, journals and fan speculation are not appearance evidence.",
+      "search_scope": [
+        "Stoneshard Gwynnel Guinnel appearance portrait",
+        "site:stoneshard.com Gwynnel portrait",
+        "site:stoneshard.com Gwynnel File:",
+        "Gwynnel portrait",
+        "Gwynnel appearance Stoneshard",
+        "Guinnel Stoneshard sprite",
+        "Stoneshard Gwynnel character sprite portrait face"
+      ],
+      "blocker": "No verified original appearance in inspected repository evidence or public sources. Search absence is not proof no original appearance exists.",
+      "smallest_user_input": "One in-game screenshot or official source link that visibly identifies Gwynnel; otherwise a separate explicit choice to develop a clearly labeled Mod-original appearance, never label it canonical.",
+      "safe_continuation": "Keep Gwynnel out of identifiable actor coverage; Verren witness staging can proceed independently only with script conditions preserved."
+    }
+  ],
+  "access_notes": [
+    "Kickstarter Verren lore URL linked by official Wiki could not be opened through web tool; not treated as inspected primary evidence.",
+    "https://www.kickstarter.com/projects/1926605606/stoneshard-open-world-roguelike-rpg-with-tactical/posts/2197004"
+  ],
+  "changed_files": [
+    "coverage-original-reference-audit.json",
+    "references/original-characters/metadata.json",
+    "references/original-characters/verren_portrait_wiki.png",
+    "references/original-characters/verren_promotional_art_wiki.jpg",
+    "references/original-characters/verren_npc_community_wiki.png"
+  ]
+}

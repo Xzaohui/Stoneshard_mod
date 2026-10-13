@@ -1,0 +1,76 @@
+{
+  "batch": 77,
+  "date": "2026-10-12",
+  "generator": "builtin image_gen__imagegen",
+  "intent": "Simplified new composition from clothing reference followed by one thread-only corrective edit",
+  "sources": [
+    {
+      "path": "design/05_主线/城市篇章/台本_CM-BRY_城墙之内.md",
+      "sha256": "ec94af587bf279d282b2c97c39f8611d9b77f3b2eebcf92c4307261f6edf6c00",
+      "locator": "场1，第35行",
+      "excerpt": "阿薇在给一件小外衣补袖"
+    },
+    {
+      "path": "research/brynn-drama.json",
+      "sha256": "bc9a0d52e24350cf9a0dae251cb46ab03e5d56a6364318b6bd2afa68c9b3a2dc",
+      "locator": "CM-BRY scene setup"
+    },
+    {
+      "path": "design/04_人物/城市人物/人物_BRY-NPC-AVI_阿薇.md",
+      "sha256": "475f39b6530f97b7df89e199e4f5909b8d7298740b038c08d7e7bba2577570d1",
+      "locator": "稳定演员ID与在场边界"
+    }
+  ],
+  "references": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch33/126_bry_herlin_avi_osin_cast.png",
+      "sha256": "baa3a8dc7cd2fb4eeed4d3867370f30ebd1c73bbe47d6529564bcdb26df78048",
+      "role": "generation clothing reference, middle row only",
+      "actualPixelsViewed": true
+    }
+  ],
+  "historicalDefect": {
+    "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch71/03_avi_one_cuff_stitch.png",
+    "sha256": "0f7c4317f4ab012ff14f0019e0bb764114374296e811b631d9465d3207fe08df",
+    "role": "old defect reviewed, NOT generation input",
+    "actualPixelsViewed": true
+  },
+  "entries": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch77/01_avi_fixed_hand_cuff_stitch.png",
+      "sha256": "dea41a1e405d0457404011b173988c50be7768d83b977cdce3746c505d69b0bb",
+      "selected": false,
+      "width": 1536,
+      "height": 1024,
+      "promptFile": "avi_prompt.txt",
+      "prompt": "Use case: stylized-concept.\nCreate a NEW simpler three-keyframe pixel-art action study using reference 1 only for the middle-row adult woman Avi's clothing colors, not its layout. The earlier bad front-view sewing sheet is deliberately NOT an input.\nCanvas 1536x1024, three equal vertical panels side by side. Identical FIXED overhead, over-the-shoulder close crop from BEHIND Avi in all panels, looking down her two arms onto the SAME sleeve in her lap. Crop out face and all other people. Bottom of each panel shows a little ochre bodice, cream sleeves emerging toward upper left and upper right. Thus anatomical LEFT arm is screen LEFT and anatomical RIGHT arm is screen RIGHT, unambiguous. No mirroring, no angle switch, no third arm. Exactly TWO HANDS PER PANEL.\nHer LEFT hand enters from LOWER LEFT, thumb upward, and PINCHES the same left edge of the beige cuff's seam at the SAME stationary coordinate through all three panels. This hand NEVER touches a needle or thread. Her RIGHT hand enters from LOWER RIGHT and holds ONE threaded silver sewing needle in all three frames. The right hand remains on screen RIGHT of the cloth seam in every panel, moving only a small distance farther right.\nAcross her lap lies one small worn beige coat sleeve, with the sleeve's tubular open cuff at upper right, its tube extending toward upper left and the coat body extending off the upper-left crop. A dark square old patch is on the sleeve left of the short split seam. Freeze all garment contours, existing stitches, folds, patch, cuff orientation and left hand. The repair point is at the rightmost end of a short visibly open seam split. Most of the short split must remain dark and open in every frame.\nFrame 1: RIGHT hand immediately right of the repair point, holding needle with silver tip inserted into edge of cloth. One continuous brown thread is slack from existing stitch to needle.\nFrame 2: SAME RIGHT hand shifts a short distance right, pulling SAME silver needle out; ONE visible loose loop of SAME brown thread lies between repair point and needle. LEFT hand stays anchored exactly.\nFrame 3: SAME RIGHT hand shifts a little farther right, SAME silver needle still in its pinch, SAME brown thread becomes a straight taut line from SAME repair point. Only one tiny end stitch is tightened; the rest of original split is STILL OPEN. No new cloth, no instant whole garment repair.\nHard-edged deliberate pixel clusters, restrained muted ochre, cream, beige, brown, blue-grey palette, flat neutral grey background, simple readable low-detail shapes. No labels, text, arrows, numbers, decorative seams, floating needle, duplicate needle, extra hands, extra arms, mirrored hands, camera changes or alternative poses.\nThis is ONLY a living present adult voluntarily mending one sleeve. No healing, no child, no private bed, no names, no implied permission, financial settlement, reconciliation or reward. Concept keyframes only.\n",
+      "original": "../generated_images/exec-0afb5e2d-116e-47a9-8085-b184c51caa06.png",
+      "actualPixelsViewed": true,
+      "runtimeVerified": false,
+      "engineReady": false,
+      "inputs": [
+        "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch33/126_bry_herlin_avi_osin_cast.png"
+      ]
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch77/01_avi_fixed_hand_cuff_stitch-v2.png",
+      "sha256": "1cc0b7a52b1996eee6c50fe1a7b0e7875855a91fa695ac26c145ba7fde1231f7",
+      "selected": true,
+      "width": 1536,
+      "height": 1024,
+      "promptFile": "avi_v2_prompt.txt",
+      "prompt": "Use case: precise-object-edit. Edit only the sewing thread in the supplied three-panel image. KEEP ALL HANDS, arms, fingers, needles, garment geometry, patch, split, camera, body and panel layout absolutely unchanged. Left hand supports and right hand operates in all frames; never swap them.\nThe actual defect is extra dangling brown thread segments. Replace only the visible brown thread paths with these clear simplified connected paths:\nLEFT PANEL: one small slack brown curve from the fixed repair point at right end of the dark split to the eye of the same silver needle in the right hand. Remove the long brown tail hanging down into the lap.\nMIDDLE PANEL: ONE continuous unbranched U-shaped slack thread path runs from that same cloth repair point down slightly then back up to the needle eye in the right hand. Remove the separate closed circular loop on the cuff. The U must be connected at both ends, not a floating shape.\nRIGHT PANEL: ONE straight TAUT brown thread runs from the fixed cloth repair point to eye of the SAME silver needle still pinched in right hand. Remove EVERY downward dangling thread segment at the cloth point. It must have no slack loop, no second brown path, no unattached ends. Preserve the visible thin silver needle and do not redraw the hand.\nThe remaining dark split MUST stay visibly open in all three frames. No new cloth closure or healing. This is one local stitch only. Pixel-art style, muted palette unchanged; no text, labels or arrows. Preserve size 1536x1024.\n",
+      "original": "../generated_images/exec-fd02ffce-4be2-4f6e-81fd-92c898ef6a82.png",
+      "actualPixelsViewed": true,
+      "runtimeVerified": false,
+      "engineReady": false,
+      "inputs": [
+        "01_avi_fixed_hand_cuff_stitch.png"
+      ]
+    }
+  ],
+  "guards": "Only living present willing Avi locally mending her small outer coat sleeve. No whole garment completion, healing, private-inspection or personal-name consent, fees, subsidies, family reconciliation or reward.",
+  "engineReady": false,
+  "runtimeVerified": false,
+  "scope": "Only batch77; no globals, design-source changes, runtime changes, deployment or push"
+}

@@ -1,0 +1,91 @@
+{
+  "batch": 79,
+  "date": "2026-10-12",
+  "status": "one_subject_two_attempts_partial_calibration_improvement",
+  "generator": "builtin image_gen__imagegen",
+  "generationMode": "Two reference-guided new generations; second call is a targeted prompt revision using the same two original inputs, not image-editing the first output.",
+  "sources": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/coverage-style-calibration-audit.json",
+      "sha256": "9880961d4762a83c87a716f92944d227bc7feda530604608adb379b536fc1b08"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/coverage-original-reference-audit.json",
+      "sha256": "6d8b48a6d04f51f236ae8388b5c712eec3d3a314e7fee516da61d739c9d5db2e"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/metadata.json",
+      "sha256": "6873afce914df1d8f87a2328ba438d19f83b14c1a5aa7cd0e3ba7a8f1890664b"
+    }
+  ],
+  "references": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/references/original-characters/verren_npc_community_wiki.png",
+      "sha256": "ce4c5f8378fc3f537e534fd808618eb1b9897be4579658978561d270330b5d49",
+      "width": 25,
+      "height": 38,
+      "mode": "RGBA",
+      "distinctStoredColors": 20,
+      "visuallyInspected": true,
+      "role": "Style and information-density reference only, never identity",
+      "sourcePage": "https://www.stoneshardwiki.com/en/people/verren/",
+      "suppliedToImagegen": true,
+      "referenceMode": "referenced_image_paths, same two original inputs in both calls"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch01/01_sela_turnaround.png",
+      "sha256": "56b6261ebf4612c6904cf034d41d0159285ddff042f52a112e1bae6dc18043e6",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "distinctStoredColors": 124933,
+      "visuallyInspected": true,
+      "role": "Sela original identity design only",
+      "suppliedToImagegen": true,
+      "referenceMode": "referenced_image_paths, same two original inputs in both calls"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/01_sela_sprite_calibration.png",
+      "sha256": "9706478da84231af1f9f2a3838e2ec699e7f0a3a182654cd3656a47bedaa6661",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGB",
+      "distinctStoredColors": 39426,
+      "visuallyInspected": true,
+      "promptFile": {
+        "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/sela_sprite_calibration_prompt.txt",
+        "sha256": "028a88c6256984dc95ff88dc850c71c572969d9c5f4aaece27e93cf7dbd29c47"
+      },
+      "fullPrompt": "Create ONE standalone visual calibration board of Sela, an original adult female civilian night-ferry rental owner. Use reference 1 (the tiny Verren NPC sprite) ONLY for coarse pixel-cluster economy, compact game-sprite proportions, dark shape separation and small-scale readability. Do not copy Verren’s hood, beard, face, armor, equipment or identity. Use reference 2 (Sela’s existing turnaround) ONLY to preserve Sela’s established original design: brown hair tied into a practical bun, short muted teal cape, oatmeal rolled sleeves, grey-brown practical trousers, brown belt with a simple rope coil, worn brown boots, no weapons or insignia. Show exactly ONE complete Sela in a neutral standing pose, empty hands relaxed, looking slightly to the viewer’s left in a modest three-quarter view comparable to reference 1. Use a uniform opaque middle grey background with generous empty margin. Make a visibly coarse, compact pixel sprite enlarged cleanly for inspection: broad stepped clusters, abbreviated face and hands, short simple leg shapes, a readable teal shoulder mass, a simple rope-loop silhouette. Preserve adult character and identity. Separate face, cape, shirt and trousers with a few clear light/mid/dark masses, restrained warm skin highlights and deep brown-charcoal shadows. Use selective dark contour and hard pixel steps, no soft anti-aliasing, no gradients, no fine cloth noise, no lace-like rope detail, no detailed eyes or individually rendered fingers. Keep the body much more compact and the number of independent visual details much lower than reference 2; merely pixelating the old tall illustration is insufficient. No turnaround, no action poses, no other actors, no environment, no captions, no text, no official logos, no story outcome. This is a visual style test, not a claimed engine-ready sprite, native atlas cell, animation frame or official global style standard.",
+      "transparentBackgroundRequested": false,
+      "selectedForCalibrationReview": false
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/01_sela_sprite_calibration_v2.png",
+      "sha256": "5b37df35503c61ba000b69c143a1c3b140cdc63b72c7afc1e1246cbb7a974413",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGB",
+      "distinctStoredColors": 28857,
+      "visuallyInspected": true,
+      "promptFile": {
+        "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/sela_sprite_calibration_revision_prompt.txt",
+        "sha256": "581475c3ca74cfffa41674154a3e91899474e19c1db69c49aed20d4668156606"
+      },
+      "fullPrompt": "Create ONE standalone visual calibration board of Sela, an original adult female civilian night-ferry rental owner. Use reference 1 (the tiny Verren NPC sprite) ONLY for coarse pixel-cluster economy, compact game-sprite proportions, dark shape separation and small-scale readability. Do not copy Verren’s hood, beard, face, armor, equipment or identity. Use reference 2 (Sela’s existing turnaround) ONLY to preserve Sela’s established original design: brown hair tied into a practical bun, short muted teal cape, oatmeal rolled sleeves, grey-brown practical trousers, brown belt with a simple rope coil, worn brown boots, no weapons or insignia. Show exactly ONE complete Sela in a neutral standing pose, empty hands relaxed, looking slightly to the viewer’s left in a modest three-quarter view comparable to reference 1. Use a uniform opaque middle grey background with generous empty margin. Make a visibly coarse, compact pixel sprite enlarged cleanly for inspection: broad stepped clusters, abbreviated face and hands, short simple leg shapes, a readable teal shoulder mass, a simple rope-loop silhouette. Preserve adult character and identity. Separate face, cape, shirt and trousers with a few clear light/mid/dark masses, restrained warm skin highlights and deep brown-charcoal shadows. Use selective dark contour and hard pixel steps, no soft anti-aliasing, no gradients, no fine cloth noise, no lace-like rope detail, no detailed eyes or individually rendered fingers. Keep the body much more compact and the number of independent visual details much lower than reference 2; merely pixelating the old tall illustration is insufficient. No turnaround, no action poses, no other actors, no environment, no captions, no text, no official logos, no story outcome. This is a visual style test, not a claimed engine-ready sprite, native atlas cell, animation frame or official global style standard.\n\nTARGETED SECOND ATTEMPT: The first attempt remained a tall illustrated person with visible eye whites, fingers, many rope segments and many tiny cloth shades. Correct that specific failure. Let reference 1 dominate the rendering economy. Do not enlarge the woman into detailed pixel illustration: invent her as an extremely small, low-information game NPC, then show those sparse chunky pixel masses large. Each eye is at most a single dark mark, each hand a single mitten-like skin cluster, the waist rope is only one plain loop, hair is three broad dark/mid/light patches with no strands. Use only a few broad patches for each garment, no mottled texture inside them. Compress the legs and torso into stubby, robust forms with a relatively prominent adult head. The sprite should have an information budget close to the tiny Verren reference, while remaining Sela. Thick obvious block steps and hard, flat color patches. Remove fine eyebrow/eyelid detail, boot buckles, folds-within-folds and tiny intermediate shading. This simplification is the only requested change; keep all Sela identity and single neutral three-quarter civilian pose requirements above. The middle grey outside her silhouette must be a truly flat single color, not a gradient or paper texture.",
+      "transparentBackgroundRequested": false,
+      "selectedForCalibrationReview": true
+    }
+  ],
+  "qa": {
+    "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch79/QA.json",
+    "sha256": "2a933d037ec50be45afc4dc0f462fe45edbb3720497cf781b9df646fad7c74f9"
+  },
+  "preservation": "Sela01 and all existing selections preserved. New preferred candidate is for this calibration batch only.",
+  "runtimeChanges": false,
+  "globalIndexChanges": false,
+  "deployment": false,
+  "push": false
+}

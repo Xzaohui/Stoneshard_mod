@@ -1,0 +1,4157 @@
+{
+  "date": "2026-10-13",
+  "scope": "S105 machine-readable condition flows for field NPCs: entry states, task gates, order branches, refusal and absence paths; projection of the registry, no new lines",
+  "vocabulary": [
+    "first_meet",
+    "night",
+    "any",
+    "task_open",
+    "task_done",
+    "order_early",
+    "order_late",
+    "refused",
+    "npc_absent"
+  ],
+  "flows": [
+    {
+      "npc": "FX-QRY",
+      "name": "德茹",
+      "task": "台本_N7_军需账上的空名",
+      "site": "rumor_abandonedQuarry1",
+      "region": "R04",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "站住。坑边不许靠近，碎石头不认人。",
+        "greeting.revisit": "又是你。坑里还是那副样子。",
+        "greeting.night": "夜里别在坑边转，回声比白天吓人。",
+        "site.arrival": "你从哪条路来的？要是西边，路上看见工头没有。",
+        "site.warning": "再往里三丈是塌方线，我拦过三个不信的。",
+        "site.refusal": "要我替你下坑探路？不行。这坑欠我的工钱还没给。",
+        "visit.before": "你要是替关卡来清账的，先去看坑边的白线，再来跟我说话。",
+        "visit.after": "账清了，坑还是这个坑。石头不会因为纸清了就自己爬上来。",
+        "visit.early": "你先来过石场，后来才去的关卡。那正好，我说的话你自己对得上。",
+        "visit.late": "关卡的事你办完了才来？行。石头的事我照旧，不问你替谁办过。",
+        "visit.proxy": "看守不在的时候，坑边只留白线；过线的人自己负责。",
+        "chat.1": "这块岩是打边城的料。城修完了，人也就散了。",
+        "chat.2": "凿子钝了能磨，人手散了磨不回来。",
+        "chat.3": "你说要买石？今天不卖，石头还没算清是谁的。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-MIL",
+      "name": "霍珥",
+      "task": "台本_SQ04_一条不卖人的路",
+      "site": "rumor_abandonedWatermill1",
+      "region": "R02",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "磨不转了，人还得吃饭。你是来磨面还是来打听水？",
+        "greeting.revisit": "又见面了。闸门还是那样，别碰。",
+        "greeting.night": "夜里水声大，出什么事都听不见。你也是来听水的？",
+        "site.arrival": "先看闸，再看我。水要是黄的，今天就别上磨台。",
+        "site.warning": "水口那圈石头是滑的，上个月有人在那摔断了腿。",
+        "site.refusal": "要我替你开闸放水？不行，闸一开，下游的账都算我头上。",
+        "visit.before": "修路的料要是从上游来，先问过我闸。别把我当关卡。",
+        "visit.after": "路修到哪一段我不管。只要闸还是这道闸，水账就还在我手里。",
+        "visit.early": "你从磨坊这边听到的话，拿去修路可以；别添一句我没说的。",
+        "visit.late": "路都修完了才来听水声？水声没变，变的是你走的路。",
+        "visit.proxy": "守磨人不在时，闸门按老规矩锁着；谁要过水，等他在。",
+        "chat.1": "磨盘空转会裂，人也一样，闲着就生事。",
+        "chat.2": "上游漂下来的东西，我不捞。捞了就得还，还不起。",
+        "chat.3": "你要是想磨面，得自己带麦子，我不替谁垫料。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CRP",
+      "name": "瑟珥",
+      "task": "台本_DT03_无人认领的墓标",
+      "site": "rumor_remoteCrypt1",
+      "region": "R03",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "别喊。里面不能喊。你……你有绳子吗？",
+        "greeting.revisit": "你回来了。我还在数，还是三个没出来。",
+        "greeting.night": "天黑前我要走。这地方夜里不归活人管。",
+        "site.arrival": "你也要下去？先记住回来的方向，别的都别记。",
+        "site.warning": "别碰墙上的白灰，沾了手会痒三天。",
+        "site.refusal": "让我带路？我连自己都带不出去。你自己看着办。",
+        "visit.before": "你要立标？先等我数完人。少一个名字，标就是错的。",
+        "visit.after": "标立起来了。三个名字里有一个是猜的，你敢不敢写上去。",
+        "visit.early": "你先把墓标的事办了才来问我？那正好，我要说的人还没说完。",
+        "visit.late": "你要是先帮我找人，再去立标，我会把顺序告诉你。现在也不晚。",
+        "visit.proxy": "同伴没回来的那个年轻人，话留在了洞口：别替他数人。",
+        "chat.1": "我们不是来偷宝的。我们是来量门的，量完就出去。",
+        "chat.2": "第二道门后面有风。有风就说明还有路。",
+        "chat.3": "我同伴说他不怕。他第一个进去的。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CAT",
+      "name": "洛珉",
+      "task": "台本_N15_回声不等于真相",
+      "site": "rumor_remoteCatacombs1",
+      "region": "R05",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "愿圣主看顾活人。这里的路只到祭坛为止。",
+        "greeting.revisit": "你回来了。灯油还是够的，人心不一定。",
+        "greeting.night": "夜里不点灯就别进。进去了也别说话。",
+        "site.arrival": "先把靴底的泥刮掉。泥带进去，路就乱了。",
+        "site.warning": "别顺着新挖的土走，那是塌方道。",
+        "site.refusal": "要我带你去看第三室？不合规矩。要祷告，我陪你。",
+        "visit.before": "你身上带着听来的话。带进来可以，别在祭坛前说。",
+        "visit.after": "回声散了，名单还在。你要再问，先把手洗干净。",
+        "visit.early": "你先来过这里，后去的别处。那回声的事，你听见的版本会多一层。",
+        "visit.late": "别处的事办完了才来？这里不问顺序，只问你是不是空着手来。",
+        "visit.proxy": "教士不在时，祭坛前的灯不点；名单不交外人。",
+        "chat.1": "坟是给活人立的规矩，不是给死人盖的房子。",
+        "chat.2": "有人把这里叫“神圣的废墟”，废墟两个字说得太轻。",
+        "chat.3": "我守的是名单，不是财宝。名单在祭坛下。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-ABY",
+      "name": "缇菈",
+      "task": "台本_D09_无名修院回声厅",
+      "site": "rumor_abbey1",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "你……你是哪边的人？城联的？还是没主的？",
+        "greeting.revisit": "你还没走。那说明外面还不算太糟。",
+        "greeting.night": "夜里我睡钟楼。你别点灯，光会招人。",
+        "site.arrival": "先站住。你身后有没有人跟着？",
+        "site.warning": "后墙那边昨天有人来过，脚印是新的。",
+        "site.refusal": "要我从钟楼上下来？不行。我在上面才看得见路。",
+        "visit.before": "回声厅的门别开。你要是非开，先把我的名字忘掉。",
+        "visit.after": "门开了又关了。你回来就好——钟楼还留着一层灰给你踩。",
+        "visit.early": "你从山下先来我这儿，再去回声厅。顺序好，人不容易乱。",
+        "visit.late": "回声厅的事办完了才来找我？我不问结果，只问你还敢不敢住钟楼。",
+        "visit.proxy": "避难的人不在钟楼上时，后墙豁口别进；进去了没人接应。",
+        "chat.1": "这修院早就没人念经了。墙还站着，是因为没人顾得上拆。",
+        "chat.2": "我有一块干面包。别问我是哪来的。",
+        "chat.3": "你要找地窖？别去。下去的人回来都不爱说话。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-SGE",
+      "name": "瓦顿",
+      "task": "台本_N1_无钟之夜",
+      "site": "rumor_siegeCamp1",
+      "region": "R01",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "别站着。蹲下说话，站着像查营的。",
+        "greeting.revisit": "又来了。锅还热着，别的都凉了。",
+        "greeting.night": "夜里这营地有味道。你闻到了吗？是焦土味。",
+        "site.arrival": "从坡上下来别跑。这营地埋着铁，崴脚。",
+        "site.warning": "东边那堆木头底下有钉子，别踩。",
+        "site.refusal": "要我带你回部队？不去。我这条命是自己捡的。",
+        "visit.before": "那晚上没钟，谁都不好过。你要问我锅的事，先把声音放低。",
+        "visit.after": "钟的事过去了。锅还在这儿，我还在烧水。别的我不管。",
+        "visit.early": "你先见过我，才去的灰堤。好，我烧的水能给你作证，只作水这一件。",
+        "visit.late": "灰堤的事完了才想起我这口锅？水是凉的，话我照说。",
+        "visit.proxy": "逃兵不在营地时，锅底朝上；别替他答话。",
+        "chat.1": "锅是我从围城时背出来的。背锅比背旗好，锅能煮饭。",
+        "chat.2": "他们打的时候，我在这边烧水。烧水也算差事。",
+        "chat.3": "你要问谁赢了？问墙。墙最清楚，也最不说话。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-LEP",
+      "name": "米洛珥",
+      "task": "台本_DT16_愿意继续治疗的人",
+      "site": "rumor_leprosy1",
+      "region": "R05",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "来送药的？还是来看的？看的话，在篱笆外看。",
+        "greeting.revisit": "你上次带的水我记着。今天不用进来。",
+        "greeting.night": "夜里别敲门。里面有睡不好的。",
+        "site.arrival": "在篱笆外站定。我不赶你，但别往里走。",
+        "site.warning": "别用院里的井水洗手，用你带的。",
+        "site.refusal": "要我开门让你看病人？不行。要送东西，放台阶上。",
+        "visit.before": "药还差两味。你要帮，就照单子放台阶上，别进来数人。",
+        "visit.after": "药到了，人还在。治疗这件事没有完成的那天，只有今天的量。",
+        "visit.early": "你先来院里，后去的城里。那正好，你知道该怎么说才不伤人。",
+        "visit.late": "城里的事忙完才来？院里的人不问先后，只问今天有没有药。",
+        "visit.proxy": "护理者不在篱笆边时，物资照旧放台阶；不许进院。",
+        "chat.1": "这里的人不是被忘掉的，是被搬远的。搬远了也叫安排。",
+        "chat.2": "油膏不够的时候，就省着涂。省不是办法，但能过冬。",
+        "chat.3": "你要是怕，就承认怕。怕的人才会洗手。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-BUR",
+      "name": "库奇",
+      "task": "台本_N12_失踪者仍有名字",
+      "site": "rumor_crawlerBurrow1",
+      "region": "R01",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "买丝？还是找人？买丝有，找人没有。",
+        "greeting.revisit": "又是你。我这钩杆还没断，说明今天运气行。",
+        "greeting.night": "天黑了洞里最热闹。你要听，站远点听。",
+        "site.arrival": "脚放轻。洞口的土会响。",
+        "site.warning": "看见新丝网别用手拨，用杆。",
+        "site.refusal": "让我替你进洞？不去。我这条腿就是替人进去换的。",
+        "visit.before": "你要找的人要是进了洞，先告诉我他穿什么。洞不认名字，认布。",
+        "visit.after": "名字对上了，人没对上。我照旧不进洞，你照旧别催我。",
+        "visit.early": "你先来的洞，后去的井。那布条的事你记得比我清。",
+        "visit.late": "井那边的事办完了才来？洞里不等人，丝也不等人。",
+        "visit.proxy": "拾荒人不在洞口时，别动他挂在杆上的绳；那是他的路。",
+        "chat.1": "丝是钱，命是命，别拿命换钱。我换过，不划算。",
+        "chat.2": "旧渠底下什么都往下淌，蛛也跟着淌。",
+        "chat.3": "有人问我怕不怕。怕，怕才活得久。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-HRP",
+      "name": "妲兰",
+      "task": "台本_D06_柏石军需地窖",
+      "site": "rumor_harpyNest1",
+      "region": "R04",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "别抬头。抬头它们就动。",
+        "greeting.revisit": "你还在这一带。绳子带了吗？",
+        "greeting.night": "夜里巢是静的。静的时候更危险。",
+        "site.arrival": "沿着我踩过的石头走，别抄近路。",
+        "site.warning": "听见扑翅别跑，蹲下。跑才追你。",
+        "site.refusal": "要我带你上崖？不带。上去了还得下来。",
+        "visit.before": "你身上有地窖的土味。先掸干净，崖上闻得出。",
+        "visit.after": "地窖的事完了，崖上的巢还在。你要再来，绳子自己带。",
+        "visit.early": "你先见的我，后下的窖。好，我说过的话你别改写。",
+        "visit.late": "窖里的事完了才上崖？崖不认迟来的人，只认站得稳的。",
+        "visit.proxy": "猎人不在崖下时，别替她数羽毛；巢自己会数。",
+        "chat.1": "羽毛值钱，是因为有人肯买。不是因为羽毛好。",
+        "chat.2": "它们记脸。你来过一次，它们就记住了。",
+        "chat.3": "我一个人来，是因为人多会吵。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-HNY",
+      "name": "忒曼",
+      "task": "台本_DT04_收割前的空地",
+      "site": "rumor_hornetHive1",
+      "region": "R03",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "站远些，你身上味道重，蜂不喜欢。",
+        "greeting.revisit": "是你。烟还够，坐吧——别坐箱边。",
+        "greeting.night": "夜里蜂归巢，人也该归。你不回村？",
+        "site.arrival": "先闻闻风。风往哪边吹，你就站哪边。",
+        "site.warning": "别拍。拍一下，整箱都出来。",
+        "site.refusal": "要我去掏亡蜂巢？不去。那巢不是蜂丢的，是人丢的。",
+        "visit.before": "空地的活计要是用火，先跟我说一声。烟一起，蜂就散。",
+        "visit.after": "空地收拾完了。蜂认得烟，也认得收拾过地的人。",
+        "visit.early": "你先来过我这儿，后去的空地。那烟的事你办得对。",
+        "visit.late": "空地的事完了才来？蜂没怪你，我怪你晚。",
+        "visit.proxy": "养蜂人不在时，蜂箱上的烟熏痕别擦；那是规矩。",
+        "chat.1": "蜂认烟不认人。人认人，也得看烟——酒桌上那点烟。",
+        "chat.2": "田荒了蜂就散。散出去就不回来，跟人一样。",
+        "chat.3": "蜜卖不出去也得收。烂在箱里，明年就没有了。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-HUT",
+      "name": "珂琳",
+      "task": "台本_DT05_驿馆的急用药",
+      "site": "rumor_hermitHut1",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "师父不在。你要抓药，把症状说清，我先记着。",
+        "greeting.revisit": "你上次问的方子，我查过书了，还是不能抓。",
+        "greeting.night": "夜里我们不接人。山路黑，你先歇门口。",
+        "site.arrival": "鞋在门槛外。药怕土。",
+        "site.warning": "别碰窗台上那罐粉，那是给牲口用的。",
+        "site.refusal": "要我替你配药带走？不行。得师父点头。",
+        "visit.before": "驿馆要药，单子先念给我。念错了，我记你一遍。",
+        "visit.after": "药送出去了。师父回来要查账，你自己说清哪味是你送走的。",
+        "visit.early": "你先来的药棚，后去的驿馆。顺序对，方子对得上。",
+        "visit.late": "驿馆的事办完了才来取药？药凉了，话还热着。",
+        "visit.proxy": "学徒不在时，药棚的门只关不锁；账本不许翻。",
+        "chat.1": "师父说，药是给认得清的人用的。认不清，就先别用。",
+        "chat.2": "这屋子一半是药，一半是规矩。规矩比药多。",
+        "chat.3": "我记错一味药，师父要罚我抄十遍。抄就抄。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-WCH",
+      "name": "索妲",
+      "task": "台本_DT09_药师指认的草",
+      "site": "rumor_witchHut1",
+      "region": "R05",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "你找错门了。这边不住人——住的是林子。",
+        "greeting.revisit": "又是你。篮子还是空的，别多想。",
+        "greeting.night": "夜里我不往那边去。你也别去。",
+        "site.arrival": "你先说你从哪来。说了我才好装没看见你。",
+        "site.warning": "别摘路边的红果子，那是她圈的地。",
+        "site.refusal": "要我带你去见她？不去。要去你自己去，别说是我指的路。",
+        "visit.before": "你要指认草，别从我这儿听名字。我说的名字，村里要记账。",
+        "visit.after": "草的事定了。她那边照旧不开门，我照旧放篮子。",
+        "visit.early": "你先见的我，后指认的草。顺序好，风不会吹错方向。",
+        "visit.late": "草指认完了才来问我？我早说过，别把我说的话当证词。",
+        "visit.proxy": "邻居不在门口时，篮子照旧放；别替她敲那扇门。",
+        "chat.1": "她给过我儿子退烧的草。这事村里人不爱听。",
+        "chat.2": "要说她害人，先说说谁家没求过她。",
+        "chat.3": "我送东西只放门口。敲不敲门，是她的规矩。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-BST",
+      "name": "恩岱",
+      "task": "台本_N11_关隘外的交换",
+      "site": "rumor_remoteBastion1",
+      "region": "R04",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "报上来意。私人来访不进门。",
+        "greeting.revisit": "还是你。门还是这道门。",
+        "greeting.night": "天黑闭门。要过夜，去墙根背风处。",
+        "site.arrival": "站到门槛外说话。门槛里面归我管。",
+        "site.warning": "东墙根别靠，去年塌过一角。",
+        "site.refusal": "要进堡看井？没有命令，不行。",
+        "visit.before": "关隘外的交换我听过风声。要进门，先报你换了什么。",
+        "visit.after": "换出去的东西收不回来。门还是不开，话可以再说。",
+        "visit.early": "你先过的关隘，后到我这门口。那正好，你的来意我信一半。",
+        "visit.late": "关隘的事完了才来？门不认先后，只认命令。",
+        "visit.proxy": "残兵不在门口时，门栓照旧挂着；替班的人不接话。",
+        "chat.1": "墙补过一次，用的是拆自己钟楼石头。",
+        "chat.2": "我在这儿不是守堡，是守一道命令。命令没来。",
+        "chat.3": "你问我值不值？值不值是别人的词。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-HOM",
+      "name": "苇珥",
+      "task": "台本_DT06_迷路者的路标",
+      "site": "rumor_homesteadAbandoned1",
+      "region": "R02",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "别抢，没什么好抢的。我翻过三遍了。",
+        "greeting.revisit": "又是你。这回我找到半把剪刀。",
+        "greeting.night": "夜里我不来。夜里的屋子会响。",
+        "site.arrival": "从西边进，东边那间的地板塌了。",
+        "site.warning": "灶台别靠，烟道里住着东西。",
+        "site.refusal": "要我陪你翻里屋？不去。里屋我留着自己翻。",
+        "visit.before": "路标立在哪我不管。别立在我翻过的屋前，那会引错人。",
+        "visit.after": "路标立起来了。迷路的人少了，荒宅的脚印多了——你还是记着这个。",
+        "visit.early": "你先来过这屋子，后立的路标。顺序对，你知道哪间地板是空的。",
+        "visit.late": "路标的事完了才来？屋子等得起，草等不起。",
+        "visit.proxy": "拾荒的人不在时，里屋别翻；她的布袋挂在门后。",
+        "chat.1": "搬走的人家不锁门。锁了也没用，锁挡不住荒。",
+        "chat.2": "我捡东西不捡信。信是别人的日子。",
+        "chat.3": "你说这屋子归谁？归草。草先来的。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-INK",
+      "name": "韦珥",
+      "task": "台本_N5_渡口的三种说法",
+      "site": "rumor_ralphSons1",
+      "region": "R02",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "住店还是打尖？先说清楚，我才好摆杯子。",
+        "greeting.revisit": "熟客了。老位置还给你留着。",
+        "greeting.night": "夜里只有冷灶。要热的，得等天亮。",
+        "site.arrival": "马拴东边桩上，别拴门口。",
+        "site.warning": "二楼西头那间别住，漏雨，被子是潮的。",
+        "site.refusal": "要我赊账？不行。欠账的客人，最后都不来了。",
+        "visit.before": "渡口的三种说法，我这儿只认一种：住店的先付账。",
+        "visit.after": "渡口的说法你听全了。店里还是那口冷灶，热的要等天亮。",
+        "visit.early": "你先住过我这儿，后去的渡口。那好，你说的话里我认得出真假。",
+        "visit.late": "渡口的事完了才来打尖？杯子还是给你摆，账还是照算。",
+        "visit.proxy": "旧仆不在柜台时，客房照旧上锁；钥匙不问来历。",
+        "chat.1": "面包和盐是店里的规矩。规矩不值钱，但能留人。",
+        "chat.2": "这店名字挂在门口，名字后面的事挂在心里。",
+        "chat.3": "你问我围城那年？那年店门没关，别的记不清。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-HNT",
+      "name": "珥兰",
+      "task": "台本_DT10_别让狼靠近夜岗",
+      "site": "rumor_grazingHG1",
+      "region": "R03",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "看脚下。",
+        "greeting.revisit": "还是你。今天别往南走，南边有陷。",
+        "greeting.night": "夜里草场是它们的。白天才是我的。",
+        "site.arrival": "跟着我踩的地方走。多一步都不行。",
+        "site.warning": "看见翻起的草皮就绕，那是新陷。",
+        "site.refusal": "要我撤陷给你让路？不撤。绕两步的事。",
+        "visit.before": "夜岗要用的陷，我按旧图摆。你改一根木桩，我就撤一片陷。",
+        "visit.after": "夜岗安生了。陷还在草里，你自己记着位置，别怪我没喊。",
+        "visit.early": "你先见的我，后去的夜岗。那旧图的事你对得上。",
+        "visit.late": "夜岗的事完了才来找我？陷不等人，狼也不等。",
+        "visit.proxy": "设陷的人不在草场时，翻起的草皮就是告示；别踩。",
+        "chat.1": "陷是木头做的，人心不是。",
+        "chat.2": "猎物多的时候，人会贪。贪了就不看脚下。",
+        "chat.3": "我不打幼的。打了明年吃什么。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-PLG",
+      "name": "蔻珥",
+      "task": "台本_N8_不会散去的热病",
+      "site": "rumor_plagueVillage1",
+      "region": "R05",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "站到上风处说话。封条没拆，门就不开。",
+        "greeting.revisit": "又是你。石灰昨天刚撒过一遍。",
+        "greeting.night": "夜里别进村。灯一亮，人就往这边看。",
+        "site.arrival": "先把手在石灰上按一下。规矩是规矩。",
+        "site.warning": "东头第二间别靠近，门轴坏了，风一吹就响。",
+        "site.refusal": "要我拆封条？不拆。拆了，责任就是我的。",
+        "visit.before": "你要查热病的事，别在村里查。我这儿只有封条。",
+        "visit.after": "热病的事过去了。封条我没拆，也不会拆。",
+        "visit.early": "你先来过村里，后去的别处。那正好，你见过封条的样子。",
+        "visit.late": "别处的事办完了才来？村子等得起，石灰等不起。",
+        "visit.proxy": "看守不在村口时，封条照旧；过线的人自己担。",
+        "chat.1": "封条是给人看的，病不看封条。",
+        "chat.2": "有人回来找东西。我只让他们在篱笆外看。",
+        "chat.3": "我不识字，但记得每间屋子的门牌。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-GHL",
+      "name": "达珥",
+      "task": "台本_N16_谁来保管余烬",
+      "site": "rumor_ghoulDen1",
+      "region": "R05",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "别往坟那边去。我说三遍，你听一遍就够。",
+        "greeting.revisit": "你还在这一带。夜里听见动静别出去。",
+        "greeting.night": "天一黑我就回家。你也该回。",
+        "site.arrival": "脚别踩新土。踩了看不出是谁踩的。",
+        "site.warning": "窖口那圈网别动，动了里面就出来。",
+        "site.refusal": "要我带路？不。我连自家门口都要绕。",
+        "visit.before": "你要收余烬，先把坟那边的话听完。听完再动手。",
+        "visit.after": "余烬归谁我不管。坟那边今晚安静，这就够了。",
+        "visit.early": "你先听我报了信，才去办的余烬事。顺序对。",
+        "visit.late": "余烬的事办完了才来？坟不问先后，只问夜里有没有人。",
+        "visit.proxy": "报信的人不在时，新土就是告示；别踩。",
+        "chat.1": "我报信是收了钱的。收钱的事，别问我向谁收。",
+        "chat.2": "翻土的声音和挖坟不一样。听得出。",
+        "chat.3": "有人说我胆小。胆小的人活得久。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-WIL",
+      "name": "摩珥",
+      "task": "台本_DT14_锈印章与假凭证",
+      "site": "rumor_rottenWillow1",
+      "region": "R05",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "喝酒先付账，打听先说明白。",
+        "greeting.revisit": "熟脸。老位置，账照旧。",
+        "greeting.night": "夜里只卖酒，不记账。记了也没人认。",
+        "site.arrival": "门口的马别拴在柱上，柱子是借的。",
+        "site.warning": "后院别去，砖底下埋着旧账。",
+        "site.refusal": "要我免你一次账？不行。免一次，往后都得免。",
+        "visit.before": "假凭证的事先跟我说一声。账板上的名字，我要划。",
+        "visit.after": "凭证的事了了。账板照旧挂着，灰照旧厚。",
+        "visit.early": "你先在酒馆听到的凭证事，后去对的章。这单我认。",
+        "visit.late": "章的事对完了才来结账？账不等人，酒也不等。",
+        "visit.proxy": "账房不在柜台时，账板不收；欠账的照旧记着。",
+        "chat.1": "账板挂久了会长灰。人不来认，灰就厚。",
+        "chat.2": "这儿换过三拨东家。账本没换过。",
+        "chat.3": "有人拿假凭证来抵账。我收过一次，就一次。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CV3",
+      "name": "俉珥",
+      "task": "台本_N9_把证据摆上桌",
+      "site": "rumor_cave3",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "别喊。洞里会传声。",
+        "greeting.revisit": "你又来了。我还在这儿，说明他们没找着。",
+        "greeting.night": "夜里我不生火。火光比人显眼。",
+        "site.arrival": "脚步轻点。洞口那圈石头会响。",
+        "site.warning": "别碰墙上的绳头，那是他们的记号。",
+        "site.refusal": "要我画洞口图？不画。画了就是我的字。",
+        "visit.before": "你要摆证据，别把我摆上去。我只说洞口的事。",
+        "visit.after": "证据摆上桌了。洞里的人换没换班，我不知道。",
+        "visit.early": "你先见过我，后去摆的证据。那我说的哪段能踩，你还记得。",
+        "visit.late": "证据的事办完了才来？洞不等结果，只等脚步声。",
+        "visit.proxy": "逃出来的人不在洞口时，绳头记号别动。",
+        "chat.1": "我是从后面爬出来的。前面那道门要口令。",
+        "chat.2": "挂钩是他们挂的，用来吊货，也吊过别的东西。",
+        "chat.3": "你要进洞，我拦不住。我只告诉你哪段能踩。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-MIN",
+      "name": "珥德",
+      "task": "台本_DT15_封存之后的巡查",
+      "site": "rumor_mine1",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "你踩的那块板子别动，下面是空的。",
+        "greeting.revisit": "又是你。支撑木我今天敲过三遍。",
+        "greeting.night": "夜里不进洞。木头响得比白天清楚。",
+        "site.arrival": "跟我踩同一排轨枕。错一步都不行。",
+        "site.warning": "听见木头吱响就退，别回头。",
+        "site.refusal": "要我陪你下深段？不去。我的腿还要留着走路。",
+        "visit.before": "你要巡查封存，先看支撑木。木头比封条实。",
+        "visit.after": "巡查做完了。木头我照旧敲，一天三遍。",
+        "visit.early": "你先下过洞，后去巡的查。那几段路你自己心里有数。",
+        "visit.late": "巡查完了才进洞？洞里不查考勤，只查脚下。",
+        "visit.proxy": "捡拾的人不在矿口时，轨枕别动；那是路标。",
+        "chat.1": "捡东西讲规矩：先看顶，再看地，最后看手。",
+        "chat.2": "矿主早走了。工具留在里面，不算他的了。",
+        "chat.3": "有人问我怕不怕塌。怕。怕就敲木头。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CV1",
+      "name": "珞珥",
+      "task": "台本_N14_可以回去的路",
+      "site": "rumor_cave1",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "你要进洞？先说回程。说不出来就别进。",
+        "greeting.revisit": "还是你。绳子带了吗？没带就在洞口等。",
+        "greeting.night": "夜里的洞比白天深。信不信由你。",
+        "site.arrival": "三步一停，听风。风停了就回头。",
+        "site.warning": "左边那条岔口别进，尽头是竖井。",
+        "site.refusal": "要我领你走全程？不走。我只带到第二处标记。",
+        "visit.before": "你要找回去的路，先从洞口数标记。别急着往里走。",
+        "visit.after": "路的事定了。洞口的风向照旧，我的标记也照旧。",
+        "visit.early": "你先问过我回程，后去办的路。顺序对，人不容易丢。",
+        "visit.late": "路的事办完了才想进洞？洞不认晚来的人，只认绳长。",
+        "visit.proxy": "向导不在洞口时，石头标记别踢；那是别人的回程。",
+        "chat.1": "洞不吓人，岔道吓人。岔道多的地方我不去。",
+        "chat.2": "我画路用石头，不用纸。纸会湿。",
+        "chat.3": "有人不听劝。他们的名字我不记。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-LOT",
+      "name": "绥珥",
+      "task": "台本_SQ03_没有王旗的面包",
+      "site": "rumor_homesteadLooted1",
+      "region": "R03",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "我不是来抢的。那口染缸是我家的。",
+        "greeting.revisit": "你又来了。我还没找到那块蓝布。",
+        "greeting.night": "夜里我不来。院子里有别人落脚。",
+        "site.arrival": "从门口进，别翻墙。翻墙的人被当成抢东西的。",
+        "site.warning": "染缸边滑，缸底结着壳。",
+        "site.refusal": "要我作证是谁抢的？不。我说了，别人就得替我担。",
+        "visit.before": "发粮的事我听说了。先问一句：宅子里的布算不算粮。",
+        "visit.after": "粮发完了。布还是布，没人认领的照旧挂着。",
+        "visit.early": "你先来过宅子，后去发的粮。那你知道这院子缺什么。",
+        "visit.late": "粮的事办完了才来？布匹不等粮车，落灰而已。",
+        "visit.proxy": "亲属不在院子里时，染缸别动；缸底有主。",
+        "chat.1": "布是我男人染的。他手艺好，脾气差。",
+        "chat.2": "抢东西的人穿得整齐。整齐的人才挑得仔细。",
+        "chat.3": "亲戚两个字，在这儿不管用。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-MAN",
+      "name": "岱珥",
+      "task": "台本_DT07_一箱不该开封的货",
+      "site": "rumor_banditRuins1",
+      "region": "R01",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "庄园不开放。你要看，就在门廊外看。",
+        "greeting.revisit": "又是你。门廊的灰我掸过两遍了。",
+        "greeting.night": "夜里有人翻窗。我不拦，我只记。",
+        "site.arrival": "门槛别踩中间，那块板子空。",
+        "site.warning": "西厢的顶快塌了，别进去找东西。",
+        "site.refusal": "要我开侧门？没钥匙。有也不开。",
+        "visit.before": "箱子的事别在门廊里说。墙薄，窗也薄。",
+        "visit.after": "箱子的事结了。侧门照旧锁着，钥匙照旧没用。",
+        "visit.early": "你先在门廊听的话，后去开的箱。哪句能信，你自己掂。",
+        "visit.late": "箱子的事完了才来？门廊不关门，灰照掸。",
+        "visit.proxy": "看守不在门廊时，钥匙串不收；来人自便，后果自担。",
+        "chat.1": "钥匙串是旧的。锁早换了。",
+        "chat.2": "换过三拨人，每拨都说自己只是路过。",
+        "chat.3": "我守的是门廊。别的塌了就塌了。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CMP",
+      "name": "珥泰",
+      "task": "台本_SQ02_被征用的冬粮",
+      "site": "rumor_camp4",
+      "region": "R04",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "来交东西还是来找人？两样都要登记。",
+        "greeting.revisit": "你又来。板子上还是那几行字。",
+        "greeting.night": "夜里营里没人。灯是我点的。",
+        "site.arrival": "先报你来做什么，我好写在板子上。",
+        "site.warning": "东边那排床架别靠，螺丝松了。",
+        "site.refusal": "要我交出登记板？不行。板子交出去，人就白走了。",
+        "visit.before": "征粮的单子我见过。要问床架的事，先报你的来意。",
+        "visit.after": "征粮的事了。板子上还是那几行，我没添。",
+        "visit.early": "你先来过空营，后去问的征粮。顺序好，话对得上。",
+        "visit.late": "征粮的事办完了才来？营不等账，账不等板子。",
+        "visit.proxy": "清点的人不在时，登记板别动；名字是自己走的。",
+        "chat.1": "空营最难清点。人走了，名字还在。",
+        "chat.2": "军旗杆座留在原地。旗早带走了。",
+        "chat.3": "我记东西，不记是非。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-TRS",
+      "name": "谟珥",
+      "task": "台本_N3_听审前的灯",
+      "site": "rumor_remoteBastion2",
+      "region": "R04",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "你也听说了？别急着下去，石头不认人。",
+        "greeting.revisit": "又是你。我今天没挖，真的。",
+        "greeting.night": "夜里崖下起风。挖东西的人最怕风。",
+        "site.arrival": "站到崖边两步外。堆石那边会滑。",
+        "site.warning": "别顺着新土走，那是别人挖的坡。",
+        "site.refusal": "要我带路下崖？不去。我等人喊，不等别人催。",
+        "visit.before": "听审前别把传言当证词。我这儿的话，你听听就行。",
+        "visit.after": "听审完了。传言还是传言，崖下还是堆石。",
+        "visit.early": "你先听我吹的牛，后去的听审。哪些能对上，你自己知道。",
+        "visit.late": "听审完了才下崖？崖不等灯，灯不等证词。",
+        "visit.proxy": "寻宝的人不在崖边时，短铲插在原地；那是他自己的记号。",
+        "chat.1": "传言这东西，越传越像真的。",
+        "chat.2": "我同伴先下去的。我在上面等他喊。",
+        "chat.3": "要真有宝，轮不到我们。轮得到的是消息。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-RLY",
+      "name": "珥薇",
+      "task": "台本_DT08_修好第二块桥板",
+      "site": "rumor_camp2",
+      "region": "R02",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "歇脚可以。锅是我的，火你自己生。",
+        "greeting.revisit": "又见面了。灰坑我扫过，能用。",
+        "greeting.night": "夜里别赶路。这边路上什么人都有。",
+        "site.arrival": "帐篷杆别插在旧灰坑上，坑底还烫。",
+        "site.warning": "南边那片草别踩，下面有旧桩。",
+        "site.refusal": "要我替你看东西？不看。丢了算谁的，说不清。",
+        "visit.before": "桥板修到哪了？我这锅还等着过河。",
+        "visit.after": "桥板修好了，绕路的人少了。灰坑照旧能用。",
+        "visit.early": "你先在我这儿歇过脚，后去修的桥。那截路你走过。",
+        "visit.late": "桥修好了才来歇脚？锅还是这口锅，火你自己生。",
+        "visit.proxy": "中继的人不在营地时，锅扣着放；别动。",
+        "chat.1": "我在两个村子之间跑。锅背久了，肩膀就记住了路。",
+        "chat.2": "有人把东西落在这儿。我不收，也不扔。",
+        "chat.3": "桥板修好以前，绕路要多走半天。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-FRM",
+      "name": "蓟珥",
+      "task": "台本_DT02_干净的井水",
+      "site": "rumor_homestead1",
+      "region": "R02",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "院门开着不代表能进。你要水，我给你舀。",
+        "greeting.revisit": "又是你。水缸还在老地方。",
+        "greeting.night": "夜里别敲院门。敲了我不开。",
+        "site.arrival": "鞋上的泥在门槛外蹭掉。",
+        "site.warning": "菜畦别踩，种子刚下。",
+        "site.refusal": "要我留你过夜？不行。屋里就我一个人。",
+        "visit.before": "井水的事你要问，先看院里的缸。缸满，说明井好。",
+        "visit.after": "井的事办完了。缸还是那口缸，水还是那样。",
+        "visit.early": "你先来过院子，后去查的井。哪口能喝，你尝过。",
+        "visit.late": "井的事查完了才来？井不问先后，只问桶干不干净。",
+        "visit.proxy": "住户不在院里时，缸盖着；水别自己舀。",
+        "chat.1": "地还在种。种得少，够吃就行。",
+        "chat.2": "搬走的人家把井填了。填井的人，心里有数。",
+        "chat.3": "我不问外面的事。问多了，睡不好。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CV2",
+      "name": "芩珥",
+      "task": "台本_DT05_驿馆的急用药",
+      "site": "rumor_cave2",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "进洞前把篓子放下。洞里的土会认草味。",
+        "greeting.revisit": "又是你。洞里那堆火是我熄的。",
+        "greeting.night": "夜里不进洞。草不怕黑，我怕。",
+        "site.arrival": "脚踩干的那半边。湿的那边滑。",
+        "site.warning": "别踢苔线，那是别人记的路。",
+        "site.refusal": "要我带你采？不。采药靠眼，不靠带路。",
+        "visit.before": "驿馆要的那味草，这个时节只有洞口阴面有。别乱采。",
+        "visit.after": "药送到了。草还长在洞里，谁要就自己来采。",
+        "visit.early": "你先来的洞口，后去的驿馆。顺序对，草不会认错。",
+        "visit.late": "驿馆的事办完了才来采草？草不等单子，只等时节。",
+        "visit.proxy": "采药的人不在洞口时，苔线别踩；那是别人的路。",
+        "chat.1": "采药讲时候。早三天是药，晚三天是草。",
+        "chat.2": "洞里歇脚就歇脚，别把火留在苔上。",
+        "chat.3": "有人问我方子。我只报草名，不报剂量。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CV4",
+      "name": "佴珥",
+      "task": "台本_DT10_别让狼靠近夜岗",
+      "site": "rumor_cave4",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "站到兽道侧面。站在道上，它先看见你。",
+        "greeting.revisit": "还是你。今天兽道没新印。",
+        "greeting.night": "夜里我守上半宿，下半宿归它。",
+        "site.arrival": "脚步压到最轻。兽道口回音大。",
+        "site.warning": "新蹭的树皮别摸，手味留得久。",
+        "site.refusal": "要我进洞赶它？不。赶了它改道，道就没了。",
+        "visit.before": "夜岗要守，先看兽道。道上没新印，才算安稳。",
+        "visit.after": "夜岗安生了。兽道还在，兽也还在，只是没过来。",
+        "visit.early": "你先见过我，后去的夜岗。那几处新蹭的树皮你还记得。",
+        "visit.late": "夜岗的事完了才来？兽道不等人，风也不等。",
+        "visit.proxy": "守望的人不在时，新蹭的树皮就是告示；别摸。",
+        "chat.1": "骨堆不是它凶，是它按点吃。",
+        "chat.2": "人比兽难守。人换班不打招呼。",
+        "chat.3": "守望不是杀。先看清楚是几头。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CV5",
+      "name": "栎珥",
+      "task": "台本_DT12_旧钟站的检修",
+      "site": "rumor_cave5",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "先伸脚试，再落脚。根洞不认人。",
+        "greeting.revisit": "又是你。枯枝我昨天捡过一轮。",
+        "greeting.night": "夜里不进来。根洞里的水夜里涨得快。",
+        "site.arrival": "从东边绕。西边根上有青苔。",
+        "site.warning": "洞底那圈水别看浅，底下是空的。",
+        "site.refusal": "要我帮你砍活枝？不砍。要柴，枯枝够你背。",
+        "visit.before": "钟站要修，用枯枝。别去砍活枝，砍了少一片荫。",
+        "visit.after": "钟站修好了。枯枝照旧落，我照旧捡。",
+        "visit.early": "你先来的根洞，后去的钟站。哪根是枯的，你分得清了。",
+        "visit.late": "钟站的事办完了才来捡柴？枯枝不等检修，落下就是落下。",
+        "visit.proxy": "拾柴的人不在时，别砍活枝；枯的够用。",
+        "chat.1": "这棵树比我爷爷老。它还记得谁砍过它。",
+        "chat.2": "拾柴只拾枯的。活的砍一根，少一片荫。",
+        "chat.3": "有人拿树说事。树不说话，人就替它说。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CV6",
+      "name": "洄珥",
+      "task": "台本_DT06_迷路者的路标",
+      "site": "rumor_cave6",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "看云再说话。云低，今天别下谷。",
+        "greeting.revisit": "又是你。冲沟又宽了一掌。",
+        "greeting.night": "夜里谷地起雾。雾里没有路，只有水声。",
+        "site.arrival": "站到沟沿上。沟底是上一场雨的路。",
+        "site.warning": "听见上游有闷响就上坡，别等水。",
+        "site.refusal": "要我带你穿谷？不。绕半天，比捞人快。",
+        "visit.before": "路标要立，先看水线。立在水线上，一场雨就没了。",
+        "visit.after": "路标立起来了。冲沟也宽了，绕行的路得重画。",
+        "visit.early": "你先问过我水线，后去立的路标。位置对得上。",
+        "visit.late": "路标的事完了才来问谷地？雾不看路标，只看水声。",
+        "visit.proxy": "行者不在谷口时，沟沿就是界线；别下沟底。",
+        "chat.1": "雨来得比人快。水线不会等你系鞋带。",
+        "chat.2": "我走谷地不图快，图看得见退路。",
+        "chat.3": "有人抄近路。近路在雨里会变成河。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-MN2",
+      "name": "锉珥",
+      "task": "台本_DT15_封存之后的巡查",
+      "site": "rumor_mine2",
+      "region": "R06",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "别踩轨心。踩两边，轨会说话。",
+        "greeting.revisit": "又是你。今天修了两节，换了一根撑。",
+        "greeting.night": "夜里不修车。木头夜里响，铁也响。",
+        "site.arrival": "先看撑，再看轨。撑弯了就别进。",
+        "site.warning": "轨心那节是空的，别当踏板。",
+        "site.refusal": "要我陪你下深段？不。车我修，命你自己带。",
+        "visit.before": "巡查要查撑。撑换过几根，我这儿有数。",
+        "visit.after": "巡查做完了。撑照旧敲，车照旧修，深段照旧不进。",
+        "visit.early": "你先下过矿，后去巡的查。哪节轨沉了你心里有数。",
+        "visit.late": "巡查完了才来修车？铁不等账，撑也不等。",
+        "visit.proxy": "修理工不在轨旁时，撑上的记号别擦；那是他的账。",
+        "chat.1": "车件坏在轨上，不坏在库里。",
+        "chat.2": "修理工只认两件事：撑得住、滑得动。",
+        "chat.3": "有人想省钱不换撑。省下来的，塌的时候一次还。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-GH2",
+      "name": "埕珥",
+      "task": "台本_N16_谁来保管余烬",
+      "site": "rumor_ghoulDen2",
+      "region": "R05",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "站远些。灯要留着，不能拿来照你。",
+        "greeting.revisit": "又是你。昨晚风从窖口出来。",
+        "greeting.night": "夜里只有一盏灯。别借，也别吹。",
+        "site.arrival": "先看上风处。烟往哪走，你往哪站。",
+        "site.warning": "别往窖口探头。里面缺氧，外面也不多。",
+        "site.refusal": "要我下去看？不。我守口，不下窖。",
+        "visit.before": "余烬的事先别在窖口谈。土新塌过，声音传得远。",
+        "visit.after": "余烬归谁我不管。窖口今晚安静，灯还亮着，这就够了。",
+        "visit.early": "你先听我守了口，才去办的余烬事。顺序对。",
+        "visit.late": "余烬的事办完了才来？窖口不问先后，只问灯灭没灭。",
+        "visit.proxy": "守夜人不在窖口时，灯留在上风处；别吹。",
+        "chat.1": "窖口要有人守。守的是别人不进，也是里面的不出来。",
+        "chat.2": "土是新塌的，别踩。踩了没人知道少了什么。",
+        "chat.3": "有人问我怕不怕。我怕的是灯灭。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CP1",
+      "name": "燧珥",
+      "task": "台本_N9_把证据摆上桌",
+      "site": "rumor_camp1",
+      "region": "R04",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "别喊。我不是他们的人。",
+        "greeting.revisit": "还是你。哨位今天换了两个人。",
+        "greeting.night": "夜里别从正坡上。绊索挂在草垫前。",
+        "site.arrival": "从侧坡下来。正坡上有眼睛。",
+        "site.warning": "别碰削尖的木桩，桩上抹过东西。",
+        "site.refusal": "要我带路进营？不。我出来一趟就够了。",
+        "visit.before": "证据要摆，别把我摆上去。我只说哨位和绊索。",
+        "visit.after": "证据摆上桌了。营里换没换人，我不知道，也不打听。",
+        "visit.early": "你先在侧坡见了我，后去摆的证据。那我说的哨位时辰，你记得。",
+        "visit.late": "证据的事完了才来？哨位不等结果，只等火。",
+        "visit.proxy": "逃散的人不在侧坡时，别从正坡上；草垫前的绊索还在。",
+        "chat.1": "我跑出来那天，草垫还是新的。",
+        "chat.2": "他们换班不按点数，按火。",
+        "chat.3": "有人把我当同伙。我不是，但我也不干净。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    },
+    {
+      "npc": "FX-CP5",
+      "name": "缶珥",
+      "task": "台本_DT13_一锅够分的热汤",
+      "site": "rumor_camp5",
+      "region": "R01",
+      "nodes": [
+        {
+          "id": "intro",
+          "when": "first_meet",
+          "lines": [
+            "greeting.first"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "night",
+          "when": "night",
+          "lines": [
+            "greeting.night"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "hub",
+          "when": "any",
+          "lines": [
+            "greeting.revisit"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "before",
+          "when": "task_open",
+          "lines": [
+            "visit.before"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "after",
+          "when": "task_done",
+          "lines": [
+            "visit.after"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "early",
+          "when": "order_early",
+          "lines": [
+            "visit.early"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "late",
+          "when": "order_late",
+          "lines": [
+            "visit.late"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "refusal",
+          "when": "refused",
+          "lines": [
+            "site.refusal"
+          ],
+          "next": "hub"
+        },
+        {
+          "id": "proxy",
+          "when": "npc_absent",
+          "lines": [
+            "visit.proxy"
+          ],
+          "next": "end",
+          "speaker": "proxy"
+        }
+      ],
+      "chats": [
+        "chat.1",
+        "chat.2",
+        "chat.3"
+      ],
+      "arrival": [
+        "site.arrival"
+      ],
+      "warning": [
+        "site.warning"
+      ],
+      "refs": {
+        "greeting.first": "名字先说清楚。写错了，饭就发错。",
+        "greeting.revisit": "又是你。今天少了两顶帐子。",
+        "greeting.night": "夜里不记账。灯一灭，字就认不出了。",
+        "site.arrival": "别踩帐绳。踩松了，夜里就倒。",
+        "site.warning": "旧灰坑还温着，别在坑上立杆。",
+        "site.refusal": "要我报名字给你看？不。名单不给外人。",
+        "visit.before": "汤要分，名单要先对。名字错了，饭就发错。",
+        "visit.after": "汤分完了。名字还在板上，少的两顶帐子也还空着。",
+        "visit.early": "你先在帐下看过名单，后去分的汤。顺序对，数得上。",
+        "visit.late": "汤分完了才来对名单？汤不等名字，名字也不等汤。",
+        "visit.proxy": "记账的人不在帐下时，木板别翻；名字是人自己的。",
+        "chat.1": "帐子可以空，名字不能空。",
+        "chat.2": "汤是分着喝的。分得清，才没人吵。",
+        "chat.3": "有人不肯报名。不报就不领，这是规矩。"
+      },
+      "guards": [
+        "说话者本人存活、在场且愿谈时才播新句",
+        "本人缺席时只有 proxy 节点可播，旁人不得代述新决定",
+        "任务已结只追加 after，不回滚旧结、不改结算",
+        "refusal 有替代出口，不取消基本安全"
+      ]
+    }
+  ]
+}

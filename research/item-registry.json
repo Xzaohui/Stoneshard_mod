@@ -1,0 +1,967 @@
+{
+  "date": "2026-10-12",
+  "status": "draft",
+  "canon": "mod-original",
+  "scope": "Mod原创物品与装备的细粒度登记：名称、来源、游戏风格描述（中英）、处置规则。描述口径参照原作样例（来源地/用途/行业视角，1-2句，≤约60字），不复制原作文本。",
+  "style_rules": [
+    "1-2句为主，最多3句；总长≤约60字；不写抽象赞美与感叹堆砌。",
+    "落在世界事实上：来源地、用途、行业惯例、谁在用；允许一处冷幽默或意外发现。",
+    "不暴露后台标识（N#/resolve/paid等）；不承诺无限供给或永久效果。",
+    "与既有NPC/任务文案同语气：短句、具体物件、生活视角；英译保持同义克制。",
+    "名称给稳定中英对照；英译供本地化参考，不逐字硬译、不冒称与原作译名对齐。",
+    "不写数值与效果承诺（价格、耐久、加成均待实机校准）；描述只谈来源、用途与处置。"
+  ],
+  "terminology_alignment": [
+    {
+      "concept": "药膏",
+      "official_cn": "疗伤药膏",
+      "official_index": 32951,
+      "mod_usage": "药瓶标纸、药单（BRY/ASH）",
+      "verdict": "match",
+      "note_cn": "通用词一致；模组不新增替代药膏的疗伤体系。",
+      "official_en": "Healing Salve",
+      "official_index_contains": 15820
+    },
+    {
+      "concept": "绷带",
+      "official_cn": "绷带",
+      "official_index": 15821,
+      "mod_usage": "布带、护腕（多处护理场景）",
+      "verdict": "related",
+      "note_cn": "官方用「绷带」；模组「布带」指更宽的包扎布，避免与官方绷带道具混同。",
+      "official_en": "Bandage",
+      "official_index_contains": 20814
+    },
+    {
+      "concept": "夹板",
+      "official_cn": "夹板",
+      "official_index": 32959,
+      "mod_usage": "支具（BRY-11）、有限支架（HIG-02）",
+      "verdict": "deliberate-divergence",
+      "note_cn": "官方「夹板」是医疗固定具；模组「支具」是长期佩戴的腿部支撑，「支架」是器械支架，三者不互换。",
+      "official_en": "Splint",
+      "official_index_contains": 15819
+    },
+    {
+      "concept": "护符",
+      "official_cn": "符文护符",
+      "official_index": 22354,
+      "mod_usage": "冷沟护符（SKO-03）",
+      "verdict": "match",
+      "note_cn": "模组护符为旧物，不附魔法效果。"
+    },
+    {
+      "concept": "钥匙",
+      "official_cn": "钥匙",
+      "official_index": 14479,
+      "mod_usage": "门钥、旧屋钥匙、交钥（OSB/ASH/HIG/KOR）",
+      "verdict": "match",
+      "note_cn": "用法一致；模组钥匙不绕过原生门锁与保存。"
+    },
+    {
+      "concept": "契据",
+      "official_cn": "契据任务",
+      "official_index": 16192,
+      "mod_usage": "工约、短单、运单（多处）",
+      "verdict": "related",
+      "note_cn": "官方「契据」指委托契约；模组「工约/短单」是雇佣与交接文书，不占契据系统。",
+      "official_en": "CONTRACTS",
+      "official_index_contains": 5919
+    },
+    {
+      "concept": "印章",
+      "official_cn": "印章戒指",
+      "official_index": 22395,
+      "mod_usage": "学徒试印、锈印章（BRY/DT14）",
+      "verdict": "related",
+      "note_cn": "官方强调身份戒指；模组用「印」指工作印鉴，不作政治身份。"
+    },
+    {
+      "concept": "口哨",
+      "official_cn": "口哨",
+      "official_index": 20016,
+      "mod_usage": "护林口哨、哨片（EED/BRY-S01）",
+      "verdict": "match",
+      "note_cn": "吹法与用途本地化，词形一致。"
+    },
+    {
+      "concept": "木炭",
+      "official_cn": "木炭",
+      "official_index": 17631,
+      "mod_usage": "炭份、炭料、炭背（SKO）",
+      "verdict": "match",
+      "note_cn": "「炭」为常用简写；不改变原炭场背景。",
+      "official_en": "Coal",
+      "official_index_contains": 17631
+    },
+    {
+      "concept": "书信",
+      "official_cn": "重要书信",
+      "official_index": 33022,
+      "mod_usage": "家书、回访信（PAS/N18）",
+      "verdict": "related",
+      "note_cn": "模组书信走原生背包与阅读流程，不冒称任务书信道具。",
+      "official_en": "Important Report",
+      "official_index_contains": 33022
+    },
+    {
+      "concept": "纪念章",
+      "official_cn": "",
+      "official_index": null,
+      "mod_usage": "仿制纪念章（RAT-02）、纪念章修工",
+      "verdict": "new",
+      "note_cn": "STRG中文段无「纪念章」命中；为模组原创物件，避免与官方勋章体系混同。"
+    },
+    {
+      "concept": "凭据/存根",
+      "official_cn": "",
+      "official_index": null,
+      "mod_usage": "凭据、存根、回执（多处）",
+      "verdict": "new",
+      "note_cn": "无官方词形命中；模组按「原件/副件」自定规则，不新增通用票据系统。"
+    },
+    {
+      "concept": "支架",
+      "official_cn": "",
+      "official_index": null,
+      "mod_usage": "有限中立支架（HIG-02）、旧量样支具",
+      "verdict": "new",
+      "note_cn": "器械词为模组原创；与官方「夹板」区分见上。"
+    },
+    {
+      "concept": "矿灯/织机/铭牌/绳索",
+      "official_cn": "",
+      "official_index": null,
+      "mod_usage": "矿灯、织机、铭牌、绳索（多处场景物）",
+      "verdict": "new",
+      "note_cn": "STRG中文段未见对应词形；按普通物件处理，若未来原版新增同名词条再复核。"
+    }
+  ],
+  "items": [
+    {
+      "id": "DOC-N2-ACCIDENT",
+      "kind": "document",
+      "name_cn": "灰堤工伤核验存根",
+      "name_en": "Ash Dike Injury Verification Stub",
+      "origin": [
+        "N2"
+      ],
+      "desc_cn": "工营办事员留的一联存根，泥印未干就被叠起。它只证明那天谁在堤上受伤，不证明人还活着。",
+      "desc_en": "A counterfoil kept by the work-camp clerk, folded while the mud stamp was still wet. It proves who was hurt on the dike that day — not that they are alive.",
+      "rules_cn": "原件交出后不留副件；补领只复核同一登记事实，不复制奖励或新授权。",
+      "rules_en": "No copy stays behind once the original is handed over; re-issuing only re-checks the same logged fact."
+    },
+    {
+      "id": "DOC-N3-NELL",
+      "kind": "document",
+      "name_cn": "妮尔封存自述",
+      "name_en": "Nell's Sealed Statement",
+      "origin": [
+        "N3"
+      ],
+      "desc_cn": "她把自己改过的栏目写成自述，封蜡上按了指印。字是她写的，责任也是；封存不等于免责。",
+      "desc_en": "She wrote down the columns she had altered and sealed it with her thumbprint. The words are hers, and so is the blame; sealing is not absolution.",
+      "rules_cn": "启封须本人到场；缺场时只由中立柜转述已登记范围，不演死者新句。",
+      "rules_en": "Unsealing needs her presence; absence lets only a neutral clerk read the logged scope."
+    },
+    {
+      "id": "DOC-N4-GUARANTEE",
+      "kind": "document",
+      "name_cn": "空白担保票背页",
+      "name_en": "Blank Guarantee Note, Reverse",
+      "origin": [
+        "N4"
+      ],
+      "desc_cn": "正面是欠额，背面是空白。肯在背面写字的人，等于把自己的名字押在了别人的债上。",
+      "desc_en": "The face carries the debt; the reverse is blank. Whoever writes there is staking their name on someone else's debt.",
+      "rules_cn": "玩家签名一旦实际登记即留痕；撤保、停追与补偿分项核，付一笔钱不自动清除担保。",
+      "rules_en": "A player signature stays on record once filed; withdrawal, stay of pursuit and compensation are checked separately."
+    },
+    {
+      "id": "DOC-N6-STOP",
+      "kind": "document",
+      "name_cn": "停止转运请求及收讫附联",
+      "name_en": "Transfer-Stop Request and Receipt Counterfoil",
+      "origin": [
+        "N6"
+      ],
+      "desc_cn": "请求联与收讫联本该一起走；有人只带了一半，说另一半在雨里丢了。两联对不上，停运就还差一步。",
+      "desc_en": "Request and counterfoil should travel together; someone brought only one half and blamed the rain. Until they match, the stop is one step short.",
+      "rules_cn": "只凭单联不结案；缺联用现场双记号复核，不补造第二份原件。",
+      "rules_en": "One half never closes the case; a missing half is verified by twin on-site marks, never fabricated."
+    },
+    {
+      "id": "DOC-N7-CASE",
+      "kind": "document",
+      "name_cn": "配对病例脱敏页",
+      "name_en": "Paired Case Record, Redacted Page",
+      "origin": [
+        "N7"
+      ],
+      "desc_cn": "两个人的疗程并排誊在一页上，姓名栏被剪掉。配对是为了比对反应，不是为了替谁证明疼痛更少。",
+      "desc_en": "Two courses of treatment sit side by side on one page, names clipped out. The pairing compares reactions — it does not rank anyone's pain.",
+      "rules_cn": "脱敏页只作范围核对；本人姓名与病史分别授权，不因治疗关系自动互通。",
+      "rules_en": "The redacted page scopes only; names and histories need separate consent."
+    },
+    {
+      "id": "DOC-N8-SAMPLE",
+      "kind": "document",
+      "name_cn": "本地排水取样标签",
+      "name_en": "Local Drainage Sample Tag",
+      "origin": [
+        "N8"
+      ],
+      "desc_cn": "标签上写着取水日期、点位和取的人。水样早就不在瓶里了，标签上的那一笔还作数。",
+      "desc_en": "The tag records date, spot and who drew it. The water is long gone; the line written on the tag still counts.",
+      "rules_cn": "标签与取样记录同核；标签单独出现不升级证据等级。",
+      "rules_en": "Tag and sampling record are checked together; a lone tag upgrades nothing."
+    },
+    {
+      "id": "DOC-N10-SUMMARY",
+      "kind": "document",
+      "name_cn": "摘要对照页",
+      "name_en": "Summary Comparison Page",
+      "origin": [
+        "N10"
+      ],
+      "desc_cn": "两版摘要并排，差的那一行用细笔改过。改笔的人以为涂掉就够了，纸背面还透得出原文。",
+      "desc_en": "Two summaries side by side, one line retouched in fine ink. The editor thought erasure sufficed; the reverse still shows the original.",
+      "rules_cn": "对页比对须两版来源均登记；不凭一页宣判全库真伪。",
+      "rules_en": "Both versions need logged provenance; one page never judges the whole archive."
+    },
+    {
+      "id": "DOC-N12-RESEARCH",
+      "kind": "document",
+      "name_cn": "葛文涅尔井中研究留稿",
+      "name_en": "Gwynnel's Well Research Draft",
+      "origin": [
+        "N12"
+      ],
+      "desc_cn": "留在井边的手稿，边角被潮气泡皱。有些页在讲方法，有些页在讲他自己；两部分不能当同一份证词。",
+      "desc_en": "A draft left by the well, edges swollen with damp. Some pages discuss method, others discuss himself; the two are not one testimony.",
+      "rules_cn": "人身与协作分开记录；死亡时固定原稿仍可核方法，不补造本人新同意。",
+      "rules_en": "Person and cooperation are recorded separately; the fixed draft outlives absence."
+    },
+    {
+      "id": "DOC-N13-LIABILITY",
+      "kind": "document",
+      "name_cn": "责任与护理分账条款",
+      "name_en": "Liability and Care Split Terms",
+      "origin": [
+        "N13"
+      ],
+      "desc_cn": "条款把赔什么、护理谁、谁签字分成三栏。私了只能填一栏，公共资格在另外两栏里。",
+      "desc_en": "The terms split compensation, care and signature into three columns. A private settlement fills one; public standing lives in the other two.",
+      "rules_cn": "私了不给公共资格；补监督须另立修订，不回写原方案。",
+      "rules_en": "Private settlement grants no public standing; late supervision needs a separate amendment."
+    },
+    {
+      "id": "DOC-N15-PROTOCOL",
+      "kind": "document",
+      "name_cn": "有限隔离操作协议",
+      "name_en": "Limited Containment Protocol",
+      "origin": [
+        "N15"
+      ],
+      "desc_cn": "协议写明了三次读数、复测间隔和谁有权喊停。纸上每一步都清楚，做起来每一步都要人守。",
+      "desc_en": "The protocol lists three readings, the re-test interval and who may call a stop. Every step is clear on paper and staffed in practice.",
+      "rules_cn": "三读数与复测实际完成才认证；回声与传闻不作协议依据。",
+      "rules_en": "Certification needs the actual three readings and re-test; echoes and rumours never count."
+    },
+    {
+      "id": "DOC-N16-CUSTODY",
+      "kind": "document",
+      "name_cn": "托管与监督回执",
+      "name_en": "Custody and Supervision Receipt",
+      "origin": [
+        "N16"
+      ],
+      "desc_cn": "回执上留了托管方与监督方的空位。空位不是谦让，是谁都要先答一遍自己肯担什么。",
+      "desc_en": "The receipt leaves blanks for custodian and supervisor. The blanks are not modesty — each side must first say what it will carry.",
+      "rules_cn": "资格按N13/N15/NE原条件独立核；资金与监督分开，不买责任。",
+      "rules_en": "Eligibility follows the original conditions; funding never buys accountability."
+    },
+    {
+      "id": "DOC-N18-REPORT",
+      "kind": "document",
+      "name_cn": "玛拉的回访信",
+      "name_en": "Mara's Follow-Up Letter",
+      "origin": [
+        "N18"
+      ],
+      "desc_cn": "信里没写结局，只写谁还没拿到答复。她说编绳的活还在继续，你不必每天回来才算数。",
+      "desc_en": "The letter holds no ending — only who still waits for an answer. The rope work continues; coming back daily is not the price of counting.",
+      "rules_cn": "回访一次登记一次；不因重读重发奖励或改变终局快照。",
+      "rules_en": "One visit, one log; rereading re-issues nothing and never reopens the snapshot."
+    },
+    {
+      "id": "BC85-DOC-11",
+      "kind": "document",
+      "name_cn": "侧泊运价摘记",
+      "name_en": "Side-Berth Freight Extract",
+      "origin": [
+        "CS-BRY-11"
+      ],
+      "desc_cn": "摘记只抄了价目和趟数，船名一栏空着。空着不是漏抄，是那晚谁也不肯把名字写上去。",
+      "desc_en": "Only prices and trips were copied; the vessel-name column stays empty. Not an oversight — nobody would write a name that night.",
+      "rules_cn": "运费与身份分开核；摘记不证明夜船原设定货物。",
+      "rules_en": "Freight and identity are checked apart; the extract never proves the original night-boat mystery."
+    },
+    {
+      "id": "BC85-DOC-12",
+      "kind": "document",
+      "name_cn": "断扣试验图",
+      "name_en": "Broken-Buckle Test Sketch",
+      "origin": [
+        "CS-BRY-12"
+      ],
+      "desc_cn": "图上画了三枚扣的孔位，中间那枚被涂改过。涂改的痕迹比孔更清楚。",
+      "desc_en": "Three buckles' holes are drawn; the middle one was altered. The alteration reads clearer than the hole.",
+      "rules_cn": "只保实测批次；族属与一张旧检单不替代当下核验。",
+      "rules_en": "Only tested batches hold; kinship and an old slip never replace present checks."
+    },
+    {
+      "id": "BC85-DOC-13",
+      "kind": "document",
+      "name_cn": "装帧方法短图",
+      "name_en": "Binding Method Short Chart",
+      "origin": [
+        "CS-BRY-13"
+      ],
+      "desc_cn": "短图画了订线的走法，页边标着‘原页’与‘后添’。标得清楚，才轮得到谈归谁。",
+      "desc_en": "The chart shows the stitching path and marks 'original' against 'added'. Only clear labels let ownership be discussed.",
+      "rules_cn": "原页链、披露权、认证权分开；沉默不视为任人补名。",
+      "rules_en": "Chain, disclosure and certification stay apart; silence never invites a fill-in."
+    },
+    {
+      "id": "BC85-DOC-14",
+      "kind": "document",
+      "name_cn": "外棚试走记号",
+      "name_en": "Outer Shed Trial-Walk Marks",
+      "origin": [
+        "CS-BRY-14"
+      ],
+      "desc_cn": "记号画到危险段就停，旁边写着‘封’。停下来也是结果，不必把它说成没办成。",
+      "desc_en": "The marks stop at the unsafe stretch, with 'sealed' beside them. Stopping is an outcome — it need not be spun as failure.",
+      "rules_cn": "封棚与试走各自记录；家属误认与原案分开，不借公告替人下结论。",
+      "rules_en": "Sealing and trial walks are logged separately; family guesses stay apart from the old case."
+    },
+    {
+      "id": "BC85-DOC-15",
+      "kind": "document",
+      "name_cn": "本班领取短单",
+      "name_en": "This-Shift Payout Slip",
+      "origin": [
+        "CS-BRY-15"
+      ],
+      "desc_cn": "短单列了首款、垫款和经手费三栏。三栏都填齐的人还没出现，但栏已经分好了。",
+      "desc_en": "The slip lists advance, float and handling fee in three columns. Nobody has filled all three yet; the columns are ready.",
+      "rules_cn": "实际领款、旧余欠、垫款与再受雇分项；不拿一份短单替人答三次。",
+      "rules_en": "Payout, arrears, float and re-hiring stay itemised; one slip never answers three questions."
+    },
+    {
+      "id": "BC85-DOC-16",
+      "kind": "document",
+      "name_cn": "分项交接短单",
+      "name_en": "Itemised Handover Slip",
+      "origin": [
+        "CS-BRY-16"
+      ],
+      "desc_cn": "每项后面都留着签字格。空格不是等谁来代签，是等本人自己决定要不要填。",
+      "desc_en": "Each item ends in a signature box. Empty boxes wait for the person concerned, not for a proxy.",
+      "rules_cn": "缺席者由记录人照读预先限定陈述；不设替身，不演全城一致祝捷。",
+      "rules_en": "Absentees get their pre-scoped statement read aloud; no stand-ins, no unanimous finale."
+    },
+    {
+      "id": "PAS-LETTER-LEVAN-ONE",
+      "kind": "document",
+      "name_cn": "列梵的家书（原件）",
+      "name_en": "Levan's Family Letter (Original)",
+      "origin": [
+        "CS-PAS-03"
+      ],
+      "desc_cn": "信纸对折过三次，边角磨白。送出之后原件不留背包，想念的人也得学着空手。",
+      "desc_en": "The sheet was folded thrice, corners worn pale. Once sent, no original stays in the pack; even the sender learns to keep empty hands.",
+      "rules_cn": "原件实际投递后离包；只有本人准副件可留，重读不推进任务。",
+      "rules_en": "The original leaves the pack on real delivery; only a permitted copy stays, and rereading advances nothing."
+    },
+    {
+      "id": "PAS-LETTER-LEVAN-COPY",
+      "kind": "document",
+      "name_cn": "列梵的家书（准副件）",
+      "name_en": "Levan's Family Letter (Permitted Copy)",
+      "origin": [
+        "CS-PAS-03"
+      ],
+      "desc_cn": "副件抄了正文，落款处标着‘经本人准许’。它可以留，但不能当原件用第二次。",
+      "desc_en": "The copy carries the text and the note 'by leave of the writer'. It may stay — it may not serve as a second original.",
+      "rules_cn": "副件仅作本人准许范围；口信路线不强制纸件，口信须真实接收人。",
+      "rules_en": "The copy covers only consented scope; the oral route forces no paper and needs a real receiver."
+    },
+    {
+      "id": "S86-KEY",
+      "kind": "document",
+      "name_cn": "妮蔻取物范围短记",
+      "name_en": "Nicole's Retrieval Scope Note",
+      "origin": [
+        "CS-ASH-01"
+      ],
+      "desc_cn": "短记写着两件物件的名字，柜底不在范围里。取物不放弃旧屋的门，这两件事从来分开。",
+      "desc_en": "Two objects are named; the cabinet bottom is out of scope. Retrieval never trades away the old room's door.",
+      "rules_cn": "限权代取须本人新授权；屋权争议另记，不凭一纸解除。",
+      "rules_en": "Proxy retrieval needs fresh leave; the housing dispute is logged apart."
+    },
+    {
+      "id": "S86-SHIFT",
+      "kind": "document",
+      "name_cn": "枯恩本次交班短记",
+      "name_en": "Kuen's Shift Handover Note",
+      "origin": [
+        "CS-ASH-02"
+      ],
+      "desc_cn": "短记只写本班到岗的人和时段。奥娅歇的是这一班，不是以后每一班都被谁代签了。",
+      "desc_en": "The note logs this shift's staff and hours. Oya rests from this one shift — not from every shift to come.",
+      "rules_cn": "逐班问、逐人签；护理不是研究许可，工时只占一次。",
+      "rules_en": "Shift by shift, person by person; care is not research consent and hours count once."
+    },
+    {
+      "id": "S86-BOWL",
+      "kind": "document",
+      "name_cn": "普通柜与观察柜短记",
+      "name_en": "Ordinary and Observation Cabinet Note",
+      "origin": [
+        "CS-ASH-03"
+      ],
+      "desc_cn": "两只柜子的钥匙挂在一起，账却各记各的。拒绝观察的人，碗里的水不会因此少一勺。",
+      "desc_en": "The two cabinets hang from one key ring, but the ledgers stay separate. Refusing observation never costs a spoon of water.",
+      "rules_cn": "观察与普通分配实际拆开；旧诱导记录留史，不认证NE或救济。",
+      "rules_en": "Observation and ordinary shares are truly split; old inducement stays on record."
+    },
+    {
+      "id": "S86-STOP",
+      "kind": "document",
+      "name_cn": "本段停牌范围短记",
+      "name_en": "Section Stop-Board Scope Note",
+      "origin": [
+        "CS-HIG-01"
+      ],
+      "desc_cn": "短记标的是本段捷径和一条外道。钱到账才谈撤牌，梁裂不裂从不看钱。",
+      "desc_en": "The note marks this shortcut and one outer path. Money is discussed only after arrival; whether the beam is cracked never consults the purse.",
+      "rules_cn": "未到账不先开；绕行保持，普通通路不成维修循环。",
+      "rules_en": "No opening before arrival; the bypass stays and no repair loop forms."
+    },
+    {
+      "id": "S86-MARK",
+      "kind": "document",
+      "name_cn": "司榆原数与补笔短记",
+      "name_en": "Siyu's Readings and Addendum Note",
+      "origin": [
+        "CS-HIG-02"
+      ],
+      "desc_cn": "原数和补笔分成两栏，补痕标了日期。修正看得见，误差才谈得上缩小。",
+      "desc_en": "Readings and addendum sit in separate columns, the retouch dated. Visible corrections are the only way error shrinks.",
+      "rules_cn": "复测只限本仪表；支架非全山安全，改表不授NE5。",
+      "rules_en": "Re-tests cover this instrument only; no mountain-wide claim, no certification by edit."
+    },
+    {
+      "id": "S86-KEYBACK",
+      "kind": "document",
+      "name_cn": "一班工约与交钥短记",
+      "name_en": "One-Shift Contract and Key-Return Note",
+      "origin": [
+        "CS-HIG-03"
+      ],
+      "desc_cn": "工约和钥匙订在一起，旧薪与新约分栏。交回钥匙的人，没有交回自己以后愿不愿意。",
+      "desc_en": "Contract and key are stapled together, old wages and new terms in separate columns. Returning a key never returns one's future willingness.",
+      "rules_cn": "只在最终冻结后触发；续约逐人问，旧欠独立结，缺交接保待办。",
+      "rules_en": "Triggers only after the freeze; renewals are asked per person and handovers stay pending when missing."
+    },
+    {
+      "id": "BRY-SEAL-APPRENTICE",
+      "kind": "keepsake",
+      "name_cn": "学徒试印",
+      "name_en": "Apprentice's Trial Seal",
+      "origin": [
+        "CS-BRY-03"
+      ],
+      "desc_cn": "出师前用的试印，刻的是师傅的字号，不是自己的。留着一枚，也说明不了谁的手艺算数。",
+      "desc_en": "A trial seal from before graduation, cut with the master's mark, not one's own. Keeping it never settles whose craft counts.",
+      "rules_cn": "署名与工钱分开核；旧案获得署名不买永久合作。",
+      "rules_en": "Signature and wages are checked apart; an old case's credit buys no permanent tie."
+    },
+    {
+      "id": "BRY-BOTTLE-LABEL",
+      "kind": "keepsake",
+      "name_cn": "药房标纸",
+      "name_en": "Apothecary Label Sheet",
+      "origin": [
+        "CS-BRY-07"
+      ],
+      "desc_cn": "本地药房自己印的标纸，墨色深浅不一。同样的方子，换一张标纸就能多卖三成。",
+      "desc_en": "Locally printed labels, ink uneven. The same recipe fetches three parts more under a different sheet.",
+      "rules_cn": "标签只证经手范围；私柜与患者用量另授权。",
+      "rules_en": "Labels prove handling scope only; cabinets and dosages need separate leave."
+    },
+    {
+      "id": "BRY-BRACE",
+      "kind": "keepsake",
+      "name_cn": "旧量样支具",
+      "name_en": "Old-Measure Brace",
+      "origin": [
+        "CS-BRY-11"
+      ],
+      "desc_cn": "按旧量样做的腿部支具，皮带扣换过两次。响的是铁片，不是秘密。",
+      "desc_en": "A leg brace built to an old measure, its buckles replaced twice. The rattle is iron — not a secret.",
+      "rules_cn": "支具无工资资格效果；隐名与费用隐瞒不是同一许可。",
+      "rules_en": "The brace carries no wage claim; anonymity and fee concealment are different permissions."
+    },
+    {
+      "id": "BRY-BUCKLE-BLOCK",
+      "kind": "keepsake",
+      "name_cn": "断扣试块",
+      "name_en": "Broken-Buckle Test Block",
+      "origin": [
+        "CS-BRY-12"
+      ],
+      "desc_cn": "从报废批次里锯下来的断扣，孔位被人改过。谁改的孔、谁省了撑，都能从这一块看出来。",
+      "desc_en": "A buckle sawn from a scrap batch, its hole altered. Who re-bored it and who skimped the brace both show on this block.",
+      "rules_cn": "只保实测批次；分责须指实物，族属不作担保。",
+      "rules_en": "Only tested batches hold; blame points at objects, never at kin."
+    },
+    {
+      "id": "BRY-EDGE-LEAF",
+      "kind": "keepsake",
+      "name_cn": "订线外添页",
+      "name_en": "Leaf Added Outside the Stitching",
+      "origin": [
+        "CS-BRY-13"
+      ],
+      "desc_cn": "订线外补上的半页，字迹比原页新。谁添的、谁准的，比内容更先要问。",
+      "desc_en": "A half leaf added outside the stitching, its hand younger than the page. Who added it and who permitted it come before what it says.",
+      "rules_cn": "原物链、披露权、认证权拆开；私页不让听席读。",
+      "rules_en": "Chain, disclosure and certification stay apart; private leaves are not read aloud."
+    },
+    {
+      "id": "BRY-PAY-SLIP",
+      "kind": "keepsake",
+      "name_cn": "扣费短单",
+      "name_en": "Deduction Slip",
+      "origin": [
+        "CS-BRY-15"
+      ],
+      "desc_cn": "先摆出来的扣费盘旁边压着这张短单，字是‘按时、公平’。读到这一行的人，多半正在被扣。",
+      "desc_en": "Pinned beside the deduction tray, the slip reads 'on time, fair'. Whoever reads it is usually the one being deducted.",
+      "rules_cn": "首款、余欠、垫款与再受雇分项；告示不代替实付。",
+      "rules_en": "Advance, arrears, float and re-hiring stay itemised; a notice never replaces payment."
+    },
+    {
+      "id": "ALD-LINING-CLOTH",
+      "kind": "keepsake",
+      "name_cn": "返修衬布",
+      "name_en": "Returned Lining Cloth",
+      "origin": [
+        "CS-ALD-01"
+      ],
+      "desc_cn": "返修衬布上的针脚比原来密，姓名绣在里侧。名字缝进去，不是缝给人看的。",
+      "desc_en": "The repaired lining carries denser stitching and a name sewn inside. The name is stitched in — not stitched for show.",
+      "rules_cn": "私存与公开分项；来源与受准核验人留限权柜。",
+      "rules_en": "Private keeping and publicity are separate; provenance stays in a limited cabinet."
+    },
+    {
+      "id": "ALD-FIT-GIFT",
+      "kind": "keepsake",
+      "name_cn": "一件太合身的礼",
+      "name_en": "A Gift That Fits Too Well",
+      "origin": [
+        "CS-ALD-03"
+      ],
+      "desc_cn": "礼甲量的是送的人想要的身形，不是收的人现在的身形。合身，有时是最轻的催促。",
+      "desc_en": "The gift armour was fitted to the shape the giver wanted, not the one the receiver has. A perfect fit can be the softest push.",
+      "rules_cn": "礼与授权分开；收礼不自动接受试用或代言。",
+      "rules_en": "Gift and mandate stay apart; accepting never auto-accepts a fitting or a testimonial."
+    },
+    {
+      "id": "ALD-EMPTY-CRATE",
+      "kind": "keepsake",
+      "name_cn": "往布林的空箱",
+      "name_en": "Empty Crate Bound for Brynn",
+      "origin": [
+        "CS-ALD-06"
+      ],
+      "desc_cn": "钉好的空箱贴着往布林的标签。箱里装什么不重要，重要的是谁来决定装什么。",
+      "desc_en": "A nailed crate wears a Brynn tag. What goes inside matters less than who decides it.",
+      "rules_cn": "空箱不冒称进口许可；内容与货主逐项核。",
+      "rules_en": "An empty crate claims no import licence; contents and owner are checked item by item."
+    },
+    {
+      "id": "ASH-BLANKET-POT",
+      "kind": "keepsake",
+      "name_cn": "毯与锅",
+      "name_en": "Blanket and Pot",
+      "origin": [
+        "CS-ASH-01"
+      ],
+      "desc_cn": "毯角缝过粗线，锅底有一圈磕痕。要取的人得先问，取物不等于把门也交出去。",
+      "desc_en": "A coarse seam on the blanket's corner, a ring of dents on the pot. Ask before taking — retrieval is not the door.",
+      "rules_cn": "只准本人列的两件；私柜不翻，旧屋共住争议另记。",
+      "rules_en": "Only the two listed items; cabinets stay shut and the old room's dispute stands apart."
+    },
+    {
+      "id": "DEN-NET-KNOT",
+      "kind": "keepsake",
+      "name_cn": "渔网断结",
+      "name_en": "Cut Net Knot",
+      "origin": [
+        "CS-DEN-02"
+      ],
+      "desc_cn": "断口是割的，不是磨断的。结打得不像本地手法，但不像不等于别人家的罪。",
+      "desc_en": "The cut is sliced, not worn. The knot is unlike local work — unlike is not another household's guilt.",
+      "rules_cn": "结法只作线索；定责须实物与经手人，不凭手法归族。",
+      "rules_en": "Knot style is a lead only; blame needs objects and handlers, never kin."
+    },
+    {
+      "id": "EED-LAST-CUTTING",
+      "kind": "keepsake",
+      "name_cn": "最后一株",
+      "name_en": "The Last Cutting",
+      "origin": [
+        "CS-EED-01"
+      ],
+      "desc_cn": "苗圃角落留下的最后一株，根上还带着原地的土。卖不卖是价钱问题，留不留是以后的问题。",
+      "desc_en": "The last cutting in the nursery's corner, local soil still on the root. Selling is about price; keeping is about next year.",
+      "rules_cn": "交易只按实量；旧出口线不因一株复活。",
+      "rules_en": "Trade follows actual stock; one cutting revives no old export line."
+    },
+    {
+      "id": "EED-OLD-BEAM",
+      "kind": "keepsake",
+      "name_cn": "沉木驿旧梁",
+      "name_en": "Sunken-Timber Post Beam",
+      "origin": [
+        "CS-EED-02"
+      ],
+      "desc_cn": "拆自旧料堆的梁木，端头有锯口。能架一段桥，架不住一句‘永远够用’。",
+      "desc_en": "A beam from the old stack, sawn at the end. It spans one bridge — never a promise of endless supply.",
+      "rules_cn": "梁数实点；已占用与在住人的不擅拆。",
+      "rules_en": "Counted beams only; occupied and inhabited pieces stay untouched."
+    },
+    {
+      "id": "EED-PATROL-WHISTLE",
+      "kind": "keepsake",
+      "name_cn": "护林口哨",
+      "name_en": "Forest-Post Whistle",
+      "origin": [
+        "CS-EED-03"
+      ],
+      "desc_cn": "护林岗的哨子，吹法和腔调是本地约好的。会吹不等于有资格巡林。",
+      "desc_en": "The post's whistle, its calls agreed locally. Blowing it well is not licence to patrol.",
+      "rules_cn": "巡段隐私与停班分别核；匿名不等于零识别风险。",
+      "rules_en": "Patrol privacy and stops are checked apart; anonymity is not zero risk."
+    },
+    {
+      "id": "FOR-RIDER-CUP",
+      "kind": "keepsake",
+      "name_cn": "旧骑卫的杯",
+      "name_en": "Old Rider's Cup",
+      "origin": [
+        "CS-FOR-01"
+      ],
+      "desc_cn": "镀层掉了一半的锡杯，杯底有骑卫队的旧刻。用它喝酒的人，多半没骑过马。",
+      "desc_en": "A tin cup half stripped of plating, an old rider's mark beneath. Most who drink from it have never sat a horse.",
+      "rules_cn": "旧骑卫与北疆石场分开；杯不证明任何现役身份。",
+      "rules_en": "Old riders stay apart from the northern quarries; the cup proves no serving rank."
+    },
+    {
+      "id": "FOR-WASH-WATER",
+      "kind": "keepsake",
+      "name_cn": "洗砂水样",
+      "name_en": "Wash-Water Sample",
+      "origin": [
+        "CS-FOR-02"
+      ],
+      "desc_cn": "瓶里沉着细砂，水色比下游清。清的是这一瓶，不是整条沟的账。",
+      "desc_en": "Fine sand settles in the bottle; the water reads clearer than downstream. One bottle is clean — not the whole trench's ledger.",
+      "rules_cn": "水样与砂账分开；领款者可不接受未来无限排放。",
+      "rules_en": "Sample and sand accounts stay apart; takers may refuse future open discharge."
+    },
+    {
+      "id": "KOR-DEPOSIT-PAINTING",
+      "kind": "keepsake",
+      "name_cn": "寄存的陌生画",
+      "name_en": "The Stranger's Stored Painting",
+      "origin": [
+        "CS-KOR-03"
+      ],
+      "desc_cn": "寄存柜里的无名画，画的是双门外的路。族史查不到，价钱却一直在涨。",
+      "desc_en": "A nameless painting in the deposit cabinet, showing the road beyond the twin doors. No family record — yet the price keeps climbing.",
+      "rules_cn": "归属未核不擅售；拒买不伪成交，不生成官方族史。",
+      "rules_en": "No sale without verified ownership; a refusal never fakes a deal or invents lineage."
+    },
+    {
+      "id": "MNS-BARREL",
+      "kind": "keepsake",
+      "name_cn": "两个名字的空桶",
+      "name_en": "Empty Barrel with Two Names",
+      "origin": [
+        "CS-MNS-01"
+      ],
+      "desc_cn": "桶底刻着两个名字，先刻的被后刻的压住一半。桶是空的，名字还各自算数。",
+      "desc_en": "Two names are cut in the base, the later half covering the first. The barrel is empty; both names still count.",
+      "rules_cn": "两名各有权利；代存与归属分开，桶不作证明。",
+      "rules_en": "Both names hold rights; custody and ownership stay apart."
+    },
+    {
+      "id": "MNS-CUTTING",
+      "kind": "keepsake",
+      "name_cn": "葡影种枝",
+      "name_en": "Grape-Shadow Cutting",
+      "origin": [
+        "CS-MNS-03"
+      ],
+      "desc_cn": "两季的枝条扎成一把，标签上的年份被人描过。地是谁的，枝才归谁剪。",
+      "desc_en": "Two seasons' cuttings tied as one, the tag's year retraced. The land decides whose shears the branch belongs to.",
+      "rules_cn": "各权利人限一季分收；失败损失真列，不改成全年预售。",
+      "rules_en": "Each holder takes one season's share; losses are listed, never sold as year-round futures."
+    },
+    {
+      "id": "OSB-GATE-KEY",
+      "kind": "keepsake",
+      "name_cn": "三篱门钥",
+      "name_en": "Three-Hedge Gate Key",
+      "origin": [
+        "CS-OSB-02"
+      ],
+      "desc_cn": "三户共用的篱门钥匙，柄上缠了三种颜色的线。谁多拿一把，别家就得问。",
+      "desc_en": "One gate key for three households, three colours of thread on its bow. An extra copy always raises a question.",
+      "rules_cn": "退出户只续一季；不以旧互助强续未来。",
+      "rules_en": "A withdrawing household renews one season only; old mutual aid never binds the future."
+    },
+    {
+      "id": "OSB-DOWRY-PAPER",
+      "kind": "keepsake",
+      "name_cn": "井与嫁妆单",
+      "name_en": "Well and Dowry Sheet",
+      "origin": [
+        "CS-OSB-03"
+      ],
+      "desc_cn": "单子上井写在嫁妆栏里，像水也能装箱带走。井在地里，谁家用水都得先问。",
+      "desc_en": "The well is listed under dowry, as if water could be crated. The well stands in the ground; anyone drawing from it still asks.",
+      "rules_cn": "井不随婚事过户；用水权逐户核，不替当事人答。",
+      "rules_en": "The well never transfers with a marriage; water rights are checked per household."
+    },
+    {
+      "id": "RAT-COPY-MEDAL",
+      "kind": "keepsake",
+      "name_cn": "仿制纪念章",
+      "name_en": "Cast Memorial Medal",
+      "origin": [
+        "CS-RAT-02"
+      ],
+      "desc_cn": "照旧章翻的模子，边缘的毛刺没修。仿的是图案，仿不出那年谁真的站在栅后。",
+      "desc_en": "Cast from the old medal, burrs left on the rim. The pattern copies — the year and the people behind the fence do not.",
+      "rules_cn": "仿章不判全部旧史；旧兽已死，不复活卖第二遍。",
+      "rules_en": "A copy judges no history; the old beast stays dead."
+    },
+    {
+      "id": "SKO-ADVANCE-SLIP",
+      "kind": "keepsake",
+      "name_cn": "预付款凭证",
+      "name_en": "Advance Payment Slip",
+      "origin": [
+        "CS-SKO-01"
+      ],
+      "desc_cn": "炭背工班领预付款时按的指印，纸角有炭黑。款到没到，看的是这一角，不是许诺。",
+      "desc_en": "The charcoal-backed crew's thumbprint, corner smudged black. Whether the advance arrived is read on this corner — not in promises.",
+      "rules_cn": "预付款实际结清到人；赎金款不折声望积分。",
+      "rules_en": "Advances settle to the person; ransom money never converts to standing points."
+    },
+    {
+      "id": "SKO-CHARM",
+      "kind": "keepsake",
+      "name_cn": "冷沟护符",
+      "name_en": "Cold Ditch Charm",
+      "origin": [
+        "CS-SKO-03"
+      ],
+      "desc_cn": "粗铜打的护身符，正面是炉纹，背面刻过名字又被磨平。旧愿不因磨平就作数。",
+      "desc_en": "A rough copper charm, forge-mark front, a name cut and smoothed on the back. Smoothing never honours an old vow.",
+      "rules_cn": "护符只作旧物；不代替赎金、许可或免责。",
+      "rules_en": "The charm is an old object only; it replaces no ransom, licence or pardon."
+    },
+    {
+      "id": "YOS-WOOL-BUNDLE",
+      "kind": "keepsake",
+      "name_cn": "冬毛最后一捆",
+      "name_en": "Last Bundle of Winter Wool",
+      "origin": [
+        "CS-YOS-01"
+      ],
+      "desc_cn": "捆绳扎了双结，标签写着‘冬底’。外售只动没占的那部分，已承诺的得先留着。",
+      "desc_en": "Double-knotted twine, the tag reading 'winter bottom'. Only unclaimed stock may be sold; promises stay aside first.",
+      "rules_cn": "已承诺底料实际保留；违约款按真实资产办，欠留欠。",
+      "rules_en": "Promised stock is truly reserved; breach sums follow real assets and debts stay debts."
+    },
+    {
+      "id": "YOS-DYE-SAMPLE",
+      "kind": "keepsake",
+      "name_cn": "水堰色样",
+      "name_en": "Weir Colour Sample",
+      "origin": [
+        "CS-YOS-03"
+      ],
+      "desc_cn": "染缸边挂的色样布，从浅到深共四块。水里的颜色进了布，堰下游的人也在看。",
+      "desc_en": "Four cloth samples hang by the vat, pale to deep. The colour entered the cloth — and the people downstream are watching.",
+      "rules_cn": "排放与颜色实际处理；素面优先权仍按实价限一匹。",
+      "rules_en": "Discharge and colour are handled for real; plain-cloth priority stays one bolt at real price."
+    },
+    {
+      "id": "PAS-ROLL-CALL",
+      "kind": "keepsake",
+      "name_cn": "两份点名册",
+      "name_en": "Two Roll-Call Lists",
+      "origin": [
+        "CS-PAS-02"
+      ],
+      "desc_cn": "军与民各有一本点名册，同一个名字两本都在。同名不证明同人，合簿会公开家庭和病史。",
+      "desc_en": "Military and civilian lists both carry one name. Same name is not same person, and merging the books exposes households and histories.",
+      "rules_cn": "两册不合并；一人一床与实给量去重。",
+      "rules_en": "The books never merge; one person, one bed, shares counted once."
+    },
+    {
+      "id": "HIG-STOP-BOARD",
+      "kind": "keepsake",
+      "name_cn": "停牌",
+      "name_en": "Stop Board",
+      "origin": [
+        "CS-HIG-01"
+      ],
+      "desc_cn": "钉在裂梁前的木牌，正面写停，背面写绕行。牌子能撤，梁不会因此接上。",
+      "desc_en": "Nailed before the cracked beam: 'stop' on the face, 'bypass' on the back. Boards come off — beams do not mend.",
+      "rules_cn": "只有实做验修与复核后撤对应停牌；未验仍停。",
+      "rules_en": "Only verified repair lifts the matching board; the rest stay."
+    },
+    {
+      "id": "HIG-BRACKET",
+      "kind": "keepsake",
+      "name_cn": "有限中立支架",
+      "name_en": "Limited Neutral Bracket",
+      "origin": [
+        "CS-HIG-02"
+      ],
+      "desc_cn": "中立匠人做的一副短支架，只保证这一处读数用。它撑得住一架表，撑不住一整座山。",
+      "desc_en": "A short bracket by a neutral smith, rated for this one reading. It holds an instrument — not a mountain.",
+      "rules_cn": "一件一次、料费不复用旧工资；差异留unknown直到可核。",
+      "rules_en": "One piece, once, never funded from old wages; differences stay unknown until checkable."
+    },
+    {
+      "id": "HIG-GAUGE-PAPER",
+      "kind": "keepsake",
+      "name_cn": "校表原纸",
+      "name_en": "Original Gauge Paper",
+      "origin": [
+        "CS-HIG-02"
+      ],
+      "desc_cn": "三刻站的原读数纸，第三格后来补过一笔。补痕看得见，误差就还在。",
+      "desc_en": "The station's original readings, a later stroke in the third cell. The retouch is visible, so the error still stands.",
+      "rules_cn": "原纸与补笔分栏；复测只限本仪表，不授NE5。",
+      "rules_en": "Original and addendum stay in separate columns; re-tests certify nothing beyond this instrument."
+    },
+    {
+      "id": "N14-BORROWED-TOOLS",
+      "kind": "tool",
+      "name_cn": "借用检修工具",
+      "name_en": "Borrowed Maintenance Tools",
+      "origin": [
+        "N14"
+      ],
+      "desc_cn": "商队借出的检修工具，编号刻在柄上。还回原处才算用过；卖掉就没有第二次。",
+      "desc_en": "Tools lent by the caravan, numbers cut into the handles. Returning them is part of using them; selling forfeits the next loan.",
+      "rules_cn": "借还闭环；不卖、不复制、不因信任免押。",
+      "rules_en": "Loan and return form a closed loop; no sale, no copies, no trust-based waivers."
+    },
+    {
+      "id": "BRY-TEST-BLOCKS",
+      "kind": "tool",
+      "name_cn": "低载固定试块",
+      "name_en": "Low-Load Fixed Test Blocks",
+      "origin": [
+        "CS-BRY-12"
+      ],
+      "desc_cn": "两块重量写死的试块，配一副低位试载架。现场能对照出来的，纸上不用猜。",
+      "desc_en": "Two blocks of fixed weight and a low test rig. What the site can compare needs no guessing on paper.",
+      "rules_cn": "试件数量固定；不是无限库存，不替代实测批次。",
+      "rules_en": "Fixed piece count; no endless stock, no substitute for tested batches."
+    },
+    {
+      "id": "ASH-CARE-STOCK",
+      "kind": "tool",
+      "name_cn": "本批护理物资清单",
+      "name_en": "This-Batch Care Stock List",
+      "origin": [
+        "CM-ASH"
+      ],
+      "desc_cn": "清单按实到人写用量，观察另开一页。碗里的水不因谁拒了签字就少一勺。",
+      "desc_en": "Usage follows actual arrivals; observation gets its own page. A withheld signature never thins the water.",
+      "rules_cn": "普通分配与观察拆开；不足缩可选批，不造免费无限物。",
+      "rules_en": "Ordinary shares and observation are split; shortages shrink optional batches, never invent free stock."
+    },
+    {
+      "id": "FOR-STOP-LEDGER",
+      "kind": "tool",
+      "name_cn": "停班簿",
+      "name_en": "Stop-Work Ledger",
+      "origin": [
+        "CM-FOR"
+      ],
+      "desc_cn": "簿子记停班时段和已核工时，页脚留着‘谁答’。工头盯不盯，都得有人在这行写字。",
+      "desc_en": "The ledger logs stops and verified hours, a 'who answers' line at the foot. Watched or not, someone signs that line.",
+      "rules_cn": "已核工时只读一次；负档不夺已发工钱。",
+      "rules_en": "Verified hours are read once; negative bands never claw back paid wages."
+    },
+    {
+      "id": "MNS-CASK-TAG",
+      "kind": "tool",
+      "name_cn": "代存酒位牌",
+      "name_en": "Cellar Rack Tag",
+      "origin": [
+        "CM-MNS"
+      ],
+      "desc_cn": "木牌上写着寄存人和入窖年份，格子里空着。牌是位置，不是产权，更不是配方。",
+      "desc_en": "A wooden tag names the keeper and the year; the rack stands empty. The tag is a place — not a title, and not a recipe.",
+      "rules_cn": "只存不可售；配方与代管另授权。",
+      "rules_en": "Storage only, no sale; recipes and custody need separate leave."
+    },
+    {
+      "id": "KOR-NIGHT-LAMP",
+      "kind": "tool",
+      "name_cn": "留灯牌",
+      "name_en": "Kept-Lamp Token",
+      "origin": [
+        "CM-KOR"
+      ],
+      "desc_cn": "留灯驿的一盏夜灯，牌上写着留给谁。宿资照收，灯不换凭据。",
+      "desc_en": "A night lamp at the inn, its token naming the keeper. Lodging still costs, and the lamp trades for no papers.",
+      "rules_cn": "一次一盏；不赊宿资、不换身份证明。",
+      "rules_en": "One lamp, once; no credit and no identity trade."
+    },
+    {
+      "id": "YOS-PLAIN-BOLT",
+      "kind": "tool",
+      "name_cn": "素面布优先匹",
+      "name_en": "Priority Plain Bolt",
+      "origin": [
+        "CM-YOS"
+      ],
+      "desc_cn": "素面的一匹布，牌上写着优先。价钱照旧，绣样另谈，卖不卖仍看织坊。",
+      "desc_en": "A plain bolt marked for priority. Same price, figure work separate, and the loom may still decline.",
+      "rules_cn": "限一匹、实价、可拒卖；不炫配方、不无限供货。",
+      "rules_en": "One bolt, real price, refusal allowed; no recipe exposure, no endless supply."
+    }
+  ],
+  "official_en_source": {
+    "game_file": "D:\\SteamLibrary\\steamapps\\common\\Stoneshard\\vanilla.win",
+    "sha256": "99965AB8E26A07C913BE4F7E4FB8D3A8D71C7A89D93D77D07B3A3C2174E19444",
+    "note": "official_index verified by exact Chinese-slot match; official_en read from the same STRG entry",
+    "probe": "research/official-term-probe.json"
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "date": "2026-10-13",
+  "scope": "S96 cross-check of Mod special locations: dungeons to regions and unique settlement tasks, continuation spaces, field NPC uniqueness",
+  "dungeons": [
+    {
+      "id": "D02",
+      "name": "旧渠检修墓室",
+      "region": "R01",
+      "main": [
+        "N2"
+      ],
+      "side": [],
+      "reward": "普通工具与材料；主线报酬只由N2结算。",
+      "route": "入口→高位泵房→降低支槽→绞盘侧间→墓龛环道→检修梯回泵房；初始入口永远可退，水变更不淹没唯一出口。",
+      "links": [
+        "副本_D02_旧渠检修墓室"
+      ]
+    },
+    {
+      "id": "D03",
+      "name": "断桥税栈",
+      "region": "R02",
+      "main": [
+        "N5"
+      ],
+      "side": [
+        "SQ04"
+      ],
+      "reward": "普通箱有限刷新；争议税银归N5/SQ04唯一结算。",
+      "route": "主路→税房谈判或桥墩浅滩→暂存院／卸货台→下堤回主路；修桥以后桥面变宽，浅滩不删除。",
+      "links": [
+        "副本_D03_断桥税栈"
+      ]
+    },
+    {
+      "id": "D04",
+      "name": "曼恩封存书库",
+      "region": "R03",
+      "main": [
+        "N6"
+      ],
+      "side": [
+        "SQ03"
+      ],
+      "reward": "普通抄写工具，唯一技术认证由N6。",
+      "route": "磨坊地表→前廊正式门或废库缺口→干区／侧柜→装卸坡返回；焚烧风险仅在明确接取的SQ03局部事件触发。",
+      "links": [
+        "副本_D04_曼恩封存书库",
+        "地点基线_曼恩"
+      ]
+    },
+    {
+      "id": "D05",
+      "name": "学院弃置试验庭",
+      "region": "R03",
+      "main": [
+        "N10"
+      ],
+      "side": [
+        "SQ06"
+      ],
+      "reward": "有限工具材料，无整套高级法术奖励。",
+      "route": "地表外围→焚毁院→印台与试验壳任意顺序→维护门回地表；主线未到可查普通外庭，封存材料固定，关键人物按N10阶段出现。",
+      "links": [
+        "副本_D05_学院弃置试验庭",
+        "地点基线_曼恩"
+      ]
+    },
+    {
+      "id": "D06",
+      "name": "柏石军需地窖",
+      "region": "R04",
+      "main": [
+        "N7"
+      ],
+      "side": [
+        "SQ02",
+        "SQ08"
+      ],
+      "reward": "普通军需材料有限；N7及支线独立一次结算，不无限领征发物。",
+      "route": "关外废损库或授权库门→装卸轴→药柜／配对器具→通行沟回关外；粮车追查属于地表SQ02，不让所有任务都来同一个柜。",
+      "links": [
+        "副本_D06_柏石军需地窖"
+      ]
+    },
+    {
+      "id": "D07",
+      "name": "灰烬疫所",
+      "region": "R05",
+      "main": [
+        "N8"
+      ],
+      "side": [
+        "SQ05"
+      ],
+      "reward": "普通护理材料，救援若另奖必须与N8总报酬校准去重。",
+      "route": "隔离营→前病房→三段可见管线→废液库→排液坡第二出口；未接受紧急救援前可以退回，不触发隐性人命倒计时。",
+      "links": [
+        "副本_D07_灰烬疫所"
+      ]
+    },
+    {
+      "id": "D08",
+      "name": "沉水档案井",
+      "region": "R05",
+      "main": [
+        "N12",
+        "N13"
+      ],
+      "side": [
+        "SQ07"
+      ],
+      "reward": "排水工具绑定借用，普通材料有限；无可刷研究者遗体特殊掉落。",
+      "route": "地表排水棚→上环→分段闸→避难门／高架档案→货运升降维护通路回地表；潮位是机关状态，不是现实时间模拟。",
+      "links": [
+        "副本_D08_沉水档案井"
+      ]
+    },
+    {
+      "id": "D09",
+      "name": "无名修院回声厅",
+      "region": "R06",
+      "main": [
+        "N15"
+      ],
+      "side": [],
+      "reward": "一次环境工具由N15结算，后续样本不重复加证据。",
+      "route": "钟站→前室→三测台可退回→验证后维护环出口→钟站；损坏测台用旁路刻线，原入口也可退。",
+      "links": [
+        "副本_D09_无名修院回声厅",
+        "晶石机制与叙事规则"
+      ]
+    },
+    {
+      "id": "D10",
+      "name": "残光之井",
+      "region": "R06",
+      "main": [
+        "N17"
+      ],
+      "side": [],
+      "reward": "N17/18统一唯一结算；本副本不追加晶石刷取。",
+      "route": "外环入口→三段战术与辅助隔离→安全台→维护出口；最后确认前可完全回钟站补证，确认后可补普通物資但不提升冻结资格。",
+      "links": [
+        "副本_D10_残光之井",
+        "人物_赫斯·白"
+      ]
+    }
+  ],
+  "brynn_spaces": [
+    {
+      "id": "BRY-X11",
+      "name": "低潮侧泊棚",
+      "city": "BRY",
+      "region": "R01"
+    },
+    {
+      "id": "BRY-X12",
+      "name": "断扣试载台",
+      "city": "BRY",
+      "region": "R01"
+    },
+    {
+      "id": "BRY-X13",
+      "name": "旧书装帧台",
+      "city": "BRY",
+      "region": "R01"
+    },
+    {
+      "id": "BRY-X14",
+      "name": "工具巷外的封板",
+      "city": "BRY",
+      "region": "R01"
+    },
+    {
+      "id": "BRY-X15",
+      "name": "旧塔支款席",
+      "city": "BRY",
+      "region": "R01"
+    },
+    {
+      "id": "BRY-X16",
+      "name": "四区小听席",
+      "city": "BRY",
+      "region": "R01"
+    }
+  ],
+  "field_npcs": [
+    {
+      "id": "FX-QRY",
+      "name": "德茹",
+      "site": "rumor_abandonedQuarry1",
+      "region": "R04"
+    },
+    {
+      "id": "FX-MIL",
+      "name": "霍珥",
+      "site": "rumor_abandonedWatermill1",
+      "region": "R02"
+    },
+    {
+      "id": "FX-CRP",
+      "name": "瑟珥",
+      "site": "rumor_remoteCrypt1",
+      "region": "R03"
+    },
+    {
+      "id": "FX-CAT",
+      "name": "洛珉",
+      "site": "rumor_remoteCatacombs1",
+      "region": "R05"
+    },
+    {
+      "id": "FX-ABY",
+      "name": "缇菈",
+      "site": "rumor_abbey1",
+      "region": "R06"
+    },
+    {
+      "id": "FX-SGE",
+      "name": "瓦顿",
+      "site": "rumor_siegeCamp1",
+      "region": "R01"
+    },
+    {
+      "id": "FX-LEP",
+      "name": "米洛珥",
+      "site": "rumor_leprosy1",
+      "region": "R05"
+    },
+    {
+      "id": "FX-BUR",
+      "name": "库奇",
+      "site": "rumor_crawlerBurrow1",
+      "region": "R01"
+    },
+    {
+      "id": "FX-HRP",
+      "name": "妲兰",
+      "site": "rumor_harpyNest1",
+      "region": "R04"
+    },
+    {
+      "id": "FX-HNY",
+      "name": "忒曼",
+      "site": "rumor_hornetHive1",
+      "region": "R03"
+    },
+    {
+      "id": "FX-HUT",
+      "name": "珂琳",
+      "site": "rumor_hermitHut1",
+      "region": "R06"
+    },
+    {
+      "id": "FX-WCH",
+      "name": "索妲",
+      "site": "rumor_witchHut1",
+      "region": "R05"
+    },
+    {
+      "id": "FX-BST",
+      "name": "恩岱",
+      "site": "rumor_remoteBastion1",
+      "region": "R04"
+    },
+    {
+      "id": "FX-HOM",
+      "name": "苇珥",
+      "site": "rumor_homesteadAbandoned1",
+      "region": "R02"
+    },
+    {
+      "id": "FX-INK",
+      "name": "韦珥",
+      "site": "rumor_ralphSons1",
+      "region": "R02"
+    },
+    {
+      "id": "FX-HNT",
+      "name": "珥兰",
+      "site": "rumor_grazingHG1",
+      "region": "R03"
+    },
+    {
+      "id": "FX-PLG",
+      "name": "蔻珥",
+      "site": "rumor_plagueVillage1",
+      "region": "R05"
+    },
+    {
+      "id": "FX-GHL",
+      "name": "达珥",
+      "site": "rumor_ghoulDen1",
+      "region": "R05"
+    },
+    {
+      "id": "FX-WIL",
+      "name": "摩珥",
+      "site": "rumor_rottenWillow1",
+      "region": "R05"
+    },
+    {
+      "id": "FX-CV3",
+      "name": "俉珥",
+      "site": "rumor_cave3",
+      "region": "R06"
+    },
+    {
+      "id": "FX-MIN",
+      "name": "珥德",
+      "site": "rumor_mine1",
+      "region": "R06"
+    },
+    {
+      "id": "FX-CV1",
+      "name": "珞珥",
+      "site": "rumor_cave1",
+      "region": "R06"
+    },
+    {
+      "id": "FX-LOT",
+      "name": "绥珥",
+      "site": "rumor_homesteadLooted1",
+      "region": "R03"
+    },
+    {
+      "id": "FX-MAN",
+      "name": "岱珥",
+      "site": "rumor_banditRuins1",
+      "region": "R01"
+    },
+    {
+      "id": "FX-CMP",
+      "name": "珥泰",
+      "site": "rumor_camp4",
+      "region": "R04"
+    },
+    {
+      "id": "FX-TRS",
+      "name": "谟珥",
+      "site": "rumor_remoteBastion2",
+      "region": "R04"
+    },
+    {
+      "id": "FX-RLY",
+      "name": "珥薇",
+      "site": "rumor_camp2",
+      "region": "R02"
+    },
+    {
+      "id": "FX-FRM",
+      "name": "蓟珥",
+      "site": "rumor_homestead1",
+      "region": "R02"
+    },
+    {
+      "id": "FX-CV2",
+      "name": "芩珥",
+      "site": "rumor_cave2",
+      "region": "R06"
+    },
+    {
+      "id": "FX-CV4",
+      "name": "佴珥",
+      "site": "rumor_cave4",
+      "region": "R06"
+    },
+    {
+      "id": "FX-CV5",
+      "name": "栎珥",
+      "site": "rumor_cave5",
+      "region": "R06"
+    },
+    {
+      "id": "FX-CV6",
+      "name": "洄珥",
+      "site": "rumor_cave6",
+      "region": "R06"
+    },
+    {
+      "id": "FX-MN2",
+      "name": "锉珥",
+      "site": "rumor_mine2",
+      "region": "R06"
+    },
+    {
+      "id": "FX-GH2",
+      "name": "埕珥",
+      "site": "rumor_ghoulDen2",
+      "region": "R05"
+    },
+    {
+      "id": "FX-CP1",
+      "name": "燧珥",
+      "site": "rumor_camp1",
+      "region": "R04"
+    },
+    {
+      "id": "FX-CP5",
+      "name": "缶珥",
+      "site": "rumor_camp5",
+      "region": "R01"
+    }
+  ],
+  "checks": {
+    "clash_person": [],
+    "clash_resident": [],
+    "duplicate_sites": {},
+    "duplicate_dungeon_names": [],
+    "multi_task_reward_owner": {}
+  }
+}

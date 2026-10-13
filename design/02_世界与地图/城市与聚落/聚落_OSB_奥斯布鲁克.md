@@ -84,3 +84,9 @@ aliases: []
 <!-- CITY-SPACES-S75:END -->
 
 粮村与纪念地域的逐角色对白、两户女儿、现时护栏和有限给付见[[奥斯布鲁克与拉滕人物演出审查]]；S83为Mod原创初稿，未导入游戏。
+
+<!-- SERVICE-REGISTRY-S90:BEGIN -->
+## 本城服务与信任（S90）
+
+本城普通有偿服务班：**修筐与量粮校准班**（Basket Repair and Measure-Calibration Desk，经办：洛珊）；范围与库存见[[城市服务班与有限库存]]，档位语义见[[城镇声望与信任系统]]，人物细描见[[人物细描与随身物]]。
+<!-- SERVICE-REGISTRY-S90:END -->

@@ -110,3 +110,9 @@ aliases: []
 
 新任务：[[台本_CS-BRY-11_不写船名的夜泊]] · [[台本_CS-BRY-12_两种火候]] · [[台本_CS-BRY-13_页边的另一个名字]] · [[台本_CS-BRY-14_地窖之外]] · [[台本_CS-BRY-15_招募告示的背面]] · [[台本_CS-BRY-16_空椅不是赞成]]
 <!-- BRYNN-CONTINUATION-S85:END -->
+
+<!-- SERVICE-REGISTRY-S90:BEGIN -->
+## 本城服务与信任（S90）
+
+本城普通有偿服务班：**小批货样核验与运单誊写班**（Small-Lot Sample Check and Waybill Desk，经办：米罗·账）；范围与库存见[[城市服务班与有限库存]]，档位语义见[[城镇声望与信任系统]]，人物细描见[[人物细描与随身物]]。
+<!-- SERVICE-REGISTRY-S90:END -->

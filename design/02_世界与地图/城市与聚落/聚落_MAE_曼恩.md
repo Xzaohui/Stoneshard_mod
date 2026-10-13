@@ -94,3 +94,9 @@ aliases: []
 <!-- CITY-SPACES-S75:END -->
 
 当前曼恩逐角色对白、共用人物与先后顺序回应见[[曼恩人物对白与去留交叉审查]]；S79为原创台本初稿，未导入游戏。
+
+<!-- SERVICE-REGISTRY-S90:BEGIN -->
+## 本城服务与信任（S90）
+
+本城普通有偿服务班：**冷窗抄本阅读与校验班**（Cold-Window Reading and Verification Desk，经办：薇榆）；范围与库存见[[城市服务班与有限库存]]，档位语义见[[城镇声望与信任系统]]，人物细描见[[人物细描与随身物]]。
+<!-- SERVICE-REGISTRY-S90:END -->

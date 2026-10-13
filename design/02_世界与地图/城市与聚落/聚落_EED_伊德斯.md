@@ -84,3 +84,9 @@ aliases: []
 <!-- CITY-SPACES-S75:END -->
 
 林地与矿区的逐角色对白、有限料款与身体边界见[[伊德斯与佛尔霍特人物演出审查]]；S82为Mod原创初稿，未导入游戏。
+
+<!-- SERVICE-REGISTRY-S90:BEGIN -->
+## 本城服务与信任（S90）
+
+本城普通有偿服务班：**旧材检尺与工班登记班**（Timber Scaling and Crew-Roster Desk，经办：奥菈·纹）；范围与库存见[[城市服务班与有限库存]]，档位语义见[[城镇声望与信任系统]]，人物细描见[[人物细描与随身物]]。
+<!-- SERVICE-REGISTRY-S90:END -->

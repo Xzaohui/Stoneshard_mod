@@ -1,0 +1,682 @@
+{
+  "date": "2026-10-13",
+  "source": "research/original-dialogue-inventory.json",
+  "scope": "S93/S98 field-NPC reading: slot coverage, per-group voice summaries, short examples with locators, npc behavior tags and scene-structure finding; scene text and npc tag text live engine-side and are not read here",
+  "slots": 72,
+  "groups": [
+    {
+      "id": "gossip",
+      "title": "通用乡谈池（无角色槽）",
+      "slots": [],
+      "summary": "乡民闲谈池：同一条由城镇条件（Osbrook/Mannshire/Denbrie/Brynn）筛用，主题是战时日常——瘟疫、饥荒、征兵、路匪、休战不可信、外迁尼斯特拉/斯卡迪亚、矮人与精灵来客、雇佣兵变多、物价与旧集市回忆。讲述结构固定为「听说一件事 → 补充细节 → 感慨」，文本用 # 分段，可整条替换；恐怖与迷信（半夜马蹄、墓穴、火女巫、中冬不祥）常作结尾。",
+      "patterns": [
+        "长句叙事，# 分三段：引子／细节／感慨",
+        "城镇限定决定可播条目，不改文本",
+        "每条约 40–90 字，多用第一人称与“我听说/我有个朋友”",
+        "迷信与传闻收尾，不给结论"
+      ],
+      "examples": [
+        {
+          "index": 29958,
+          "zh": "我听人说再过一阵子，所有男的，只要身强力壮、没有残疾，就都得入伍、上战场打仗。"
+        },
+        {
+          "index": 30010,
+          "zh": "这些日子是真苦……我印象里是从来没见过。"
+        }
+      ]
+    },
+    {
+      "id": "guard",
+      "title": "守卫与军官",
+      "slots": [
+        "captain",
+        "guard",
+        "officer"
+      ],
+      "summary": "守城人的实际恐惧：夜巡城墙外最怕（黑、安静、怀疑有土匪或哈比）、装备先给前锋、执法快而粗（偷窃即坐牢）、对矮人与法师不信任、墓穴与不死生物的恐惧远超土匪。军官短促命令式；布林卫兵会提迪·贝罗与围城旧事；奥斯布鲁克军官先盘问来意。",
+      "patterns": [
+        "挑战式短句问候（“看什么呢？”“干什么的？”）",
+        "长句只在独白式闲聊，语气粗直、少修饰",
+        "把城市名与官署（城联/王廷/前锋）挂在嘴边",
+        "对玩家雇佣兵身份既鄙视又羡慕"
+      ],
+      "examples": [
+        {
+          "index": 30002,
+          "zh": "我不怕土匪，他们是恶人，但起码还是人，那些不死的玩意儿就不是这回事了。"
+        },
+        {
+          "index": 30240,
+          "zh": "阿诺·迪·贝罗万岁！"
+        }
+      ]
+    },
+    {
+      "id": "traders",
+      "title": "商贩与钱庄",
+      "slots": [
+        "dealer",
+        "fence",
+        "grocer",
+        "loanshark",
+        "merchant",
+        "ragpicker"
+      ],
+      "summary": "生意经与提防：假冒金币要咬一口、先收钱再雇护卫、亏本也要卖、大城市诱惑多但乡下相亲、想搬去布林、女儿婚事、看人下菜（滑头过得更好）。吆喝式问候占多数；收赃人（ragpicker/fence）在烂柳语境下戒备更重；尼斯特拉与弗约商贩夹外语短句。",
+      "patterns": [
+        "吆喝短句做问候（“新鲜奶酪！”“卖水果了！”）",
+        "闲聊夹算计与自嘲，常以“这年头”开头",
+        "带一句生活常识（咬金币、雇车、防蘑菇）",
+        "外语商贩保留音译短语再切奥尔多语"
+      ],
+      "examples": [
+        {
+          "index": 30028,
+          "zh": "不论谁给你钱，第一件事，先咬一下，这年头假币泛滥。"
+        },
+        {
+          "index": 30027,
+          "zh": "我现在干的都是亏本买卖。这年头，没几个有钱的。"
+        }
+      ]
+    },
+    {
+      "id": "craftsmen",
+      "title": "匠人与作坊",
+      "slots": [
+        "baker",
+        "butcher",
+        "carpenter",
+        "miller",
+        "printer",
+        "smith",
+        "stableman",
+        "tailor",
+        "tanner"
+      ],
+      "summary": "手上活与抱怨：好铁贵、只够糊口；军械订单挤掉定制活（“别想我给你单做”）；木匠骂奥达霸道、念伊德斯木材、羡慕布鲁克酒馆生意；屠户听曼郡亲戚讲城联与摄政王妃的传言；马夫吹自己的母马。作坊问候一律问“要买还是要修”。",
+      "patterns": [
+        "问候即业务（修东西吗／要肥一点的）",
+        "闲聊=行业视角的政治与价格",
+        "对雇佣兵摆脸色但给折扣口风",
+        "短句为主，偶尔一段手艺自述"
+      ],
+      "examples": [
+        {
+          "index": 30017,
+          "zh": "我们村长，奥达，器量不大，还霸道。跟他打交道，机灵一点。"
+        },
+        {
+          "index": 30023,
+          "zh": "这年头好铁可不便宜，就算这样，我也才算勉强能挣够吃的。"
+        }
+      ]
+    },
+    {
+      "id": "tavern",
+      "title": "旅店与仆人",
+      "slots": [
+        "brewer",
+        "hostess",
+        "innkeeper",
+        "servant"
+      ],
+      "summary": "围着吧台的生活：老板催点单、抱怨人手不够；仆人知道城里的享乐地（忘忧坊）与贵族习惯，但只能远远看着；精灵绸缎是稀罕物，半夜替太太找精灵青柠。问候先问“喝啤酒还是住店”。",
+      "patterns": [
+        "服务性问候，先问需求",
+        "闲聊=内部人视角的阶层差（老爷吃剩的救了我）",
+        "对奢侈品的羡慕与距离感"
+      ],
+      "examples": [
+        {
+          "index": 29909,
+          "zh": "管他的呢，我这都忙不过来，哪有工夫管那些事儿。"
+        },
+        {
+          "index": 30285,
+          "zh": "干什么？没看见我做菜呢吗？"
+        }
+      ]
+    },
+    {
+      "id": "sailor",
+      "title": "水手与渔民",
+      "slots": [
+        "fisherman",
+        "sailor"
+      ],
+      "summary": "海员的世界：青铜群岛老王驾崩、港口要重开、迪·贝罗捞好处；接舷战与海防；回港先去忘忧坊剪头泡澡；远航地名（尼斯特拉、斯卡迪亚、尤哈拉、诺尔海姆）；海盗点火诱船撞礁的传说。渔民说今年海太静、鱼多得反常。",
+      "patterns": [
+        "地名清单是海员标志（一串异国名）",
+        "把海上规矩与陆地对比",
+        "对陆地人语气带优越与怜悯"
+      ],
+      "examples": [
+        {
+          "index": 29923,
+          "zh": "船上这碗饭吃起来可不容易。船跟船要是打起来了，谁强谁弱一眼就能看出来。"
+        },
+        {
+          "index": 30206,
+          "zh": "我跟你说啊，今年海里太平静了，平静得不大对劲。"
+        }
+      ]
+    },
+    {
+      "id": "worker",
+      "title": "码头工与杂役",
+      "slots": [
+        "delivery",
+        "worker"
+      ],
+      "summary": "城市底层经验：白天睡觉会被抓、走路打盹会栽进海里；父亲喝醉与否决定挨不挨揍；围城后全城重建的自豪；旱港听海员吹牛到想出海；琢磨自己也去当雇佣兵（“搞破坏还有钱拿”）。",
+      "patterns": [
+        "生活规矩式建议（别在码头打盹）",
+        "自述式家史与酒馆名（三口锅）",
+        "对雇佣兵又羡又酸"
+      ],
+      "examples": [
+        {
+          "index": 29932,
+          "zh": "雇佣兵，感觉我们布林这个自由城邦怎么样？是不是根本看不出来这地方半年前刚被王廷围过城？"
+        },
+        {
+          "index": 29930,
+          "zh": "大白天睡觉，谁看见都不会喜欢，到处瞎溜达还有可能坐牢。"
+        }
+      ]
+    },
+    {
+      "id": "townsfolk",
+      "title": "市民、乡民与市井",
+      "slots": [
+        "daughter",
+        "elder",
+        "herald",
+        "jester",
+        "limper",
+        "lowcrey",
+        "minstrel",
+        "mourner",
+        "newsboy",
+        "peasant",
+        "seeker",
+        "townsman",
+        "townswoman"
+      ],
+      "summary": "城里人讲三件事：钱（通胀、宝石保值、佛·诺姆斯放贷人）、雕像（埃特伯特无头像）、排外（精灵占城、“登瓦尔说得对”）。乡民问“你觉得我们熬得过去吗”；报童与传令官吆喝；小丑、吟游诗人、哭坟人各有固定动作描写。",
+      "patterns": [
+        "市民闲聊=城市八卦＋物价＋排外",
+        "哭坟/旁观类问候用动作星号描写（*她定定地盯着那个坟墓*）",
+        "乡民更短更直（“你觉得我们熬得过去吗？”）",
+        "布林排外句与精灵组对读，不能照抄进Mod"
+      ],
+      "examples": [
+        {
+          "index": 29941,
+          "zh": "铸币广场的雕像看见没有？是不是纳闷头怎么没了？"
+        },
+        {
+          "index": 30316,
+          "zh": "你觉得我们熬得过去吗？"
+        }
+      ]
+    },
+    {
+      "id": "patrician",
+      "title": "贵族与官面",
+      "slots": [
+        "emissar",
+        "intendant",
+        "official",
+        "patrician"
+      ],
+      "summary": "居高临下：先要求摘帽整衣；不谈闲话；抱怨治安（“连老楼角角落落都有当兵的看着”）；把玩家当无赖直接喊卫兵。官面（intendant/official/emissar）短促公事化，先问“什么事”。",
+      "patterns": [
+        "命令式礼仪要求",
+        "拒绝闲聊并指明“去别处问”",
+        "把玩家身份直接判成可疑（“是不是密探？”）"
+      ],
+      "examples": [
+        {
+          "index": 29937,
+          "zh": "跟我这种身份的人说话之前，先把头上戴的东西摘了，再整理整理你的衣服。"
+        },
+        {
+          "index": 29938,
+          "zh": "我可没工夫聊闲天，要是想听人闲扯，不如去骚扰市场上那些卖东西的。"
+        }
+      ]
+    },
+    {
+      "id": "guild",
+      "title": "新会匠人与学徒",
+      "slots": [
+        "apprentice",
+        "master"
+      ],
+      "summary": "布林新会（行会）之争：手艺好坏不再决定收入、按件计酬抹平差距；有人说方便有活有钱，有人嫌规矩多；学徒累到只想下班去三口锅；督工会罚钱。还夹着对精灵首饰的工艺比较（“给我材料我也能做”）。",
+      "patterns": [
+        "师徒两人合写一条，立场不同",
+        "把制度争论落在一日三餐与罚款上",
+        "问候短促（“别干扰我了，行不行？”）"
+      ],
+      "examples": [
+        {
+          "index": 30183,
+          "zh": "别干扰我了，行不行？要是让督工看见了，肯定说我偷奸耍滑、罚我钱，那我这一天就白干了。"
+        },
+        {
+          "index": 30184,
+          "zh": "我告诉你，今天下了班我就去三口锅，喝他个一醉方休。"
+        }
+      ]
+    },
+    {
+      "id": "drunkard",
+      "title": "酒鬼",
+      "slots": [
+        "drunkard"
+      ],
+      "summary": "酒鬼自成一格：问候用动作描写（“*老酒鬼身上臭气熏天，熏得你下意识地退了一步*”），台词用连字符做口齿不清（“有缘千-里来相见”），主题只有酒与胡话。布林酒鬼只剩嘿嘿笑；曼郡酒鬼还在纠结“你现在……知道了，对吧？”。",
+      "patterns": [
+        "口吃用连字符切字，不写整句错字",
+        "问候先给气味/神态动作描写",
+        "闲谈只有酒、天气与胡话"
+      ],
+      "examples": [
+        {
+          "index": 30250,
+          "zh": "有缘千-里来相见，咱们赫-喝点啥庆-应祝一下，咋样？"
+        },
+        {
+          "index": 28299,
+          "zh": "*老酒鬼身上臭气熏天，熏得你下意识地退了一步*"
+        }
+      ]
+    },
+    {
+      "id": "care",
+      "title": "药师、治疗师与巫医",
+      "slots": [
+        "alchemist",
+        "healer",
+        "herbalist",
+        "occultist",
+        "surgeon",
+        "theologist",
+        "witch"
+      ],
+      "summary": "草药变多（“土里浸透了血”）、蘑菇警告（有一家人夏天下了葬）、捕兽夹与蝮蛇提醒；治疗师想收学徒传本事；炼金术被卫兵当笑话；女巫与神秘学者说谜语式短句。",
+      "patterns": [
+        "专业建议夹在问候里（“用车前草没有？”）",
+        "警告用具体案例（谁家死了人）",
+        "神秘系用箴言短句（“循此苦旅，以达星辰”）"
+      ],
+      "examples": [
+        {
+          "index": 30020,
+          "zh": "在这个地方摘蘑菇千万小心……我认识一家人，特别爱采蘑菇，吃蘑菇……夏天刚下了葬。"
+        },
+        {
+          "index": 30021,
+          "zh": "我快干不动了……得收个徒弟，把我的本事传下去了。"
+        }
+      ]
+    },
+    {
+      "id": "military",
+      "title": "雇佣兵、匪帮与囚徒",
+      "slots": [
+        "bodyguard",
+        "bouncer",
+        "brigand",
+        "convict",
+        "mercenary",
+        "raider"
+      ],
+      "summary": "同行的冷淡与敌意：井水不犯河水、祝你好运、撞上同行真倒霉；匪帮与看守短句驱逐（“滚蛋。”“让开！”）；囚徒自嘲（“来看幸灾乐祸的吗？”）。雇佣兵之间不结盟，各接各的契据。",
+      "patterns": [
+        "问候即拒人（滚蛋／让开／在这儿寻摸什么呢）",
+        "同行识别句（“也是来找活干的？”）",
+        "匪帮按据点（烂柳）给口风"
+      ],
+      "examples": [
+        {
+          "index": 30136,
+          "zh": "看什么看？"
+        },
+        {
+          "index": 30193,
+          "zh": "我得站岗，想聊天去那边找科隆去。"
+        }
+      ]
+    },
+    {
+      "id": "church",
+      "title": "教会与学院",
+      "slots": [
+        "hierodidact",
+        "jurist",
+        "monk",
+        "pilgrim",
+        "scribe",
+        "student"
+      ],
+      "summary": "信仰与学问：教士问候带祝福（“导引圣手令你我重逢”）；朝圣者给具体忠告（进旧修院先祷告、别下地窖）；教授自报家门（“我是法学系的厄尔富特·佛·勒柯里”）；学生讲神学难、法学是女王（“凡人皆狼”）、围城后医学院缺尸体、大学文凭保衣食、曼恩与布林谁更开化。",
+      "patterns": [
+        "祝福式问候，主语是圣主/圣手",
+        "学者自报姓名与院系",
+        "把学问争论落到职业前途与尸体供给"
+      ],
+      "examples": [
+        {
+          "index": 30235,
+          "zh": "旅人，愿圣主保佑你。"
+        },
+        {
+          "index": 29946,
+          "zh": "法学是各个学科的女王，无法无以立国……“凡人皆狼”。"
+        }
+      ]
+    },
+    {
+      "id": "elves",
+      "title": "精灵组（原始复合槽）",
+      "slots": [],
+      "summary": "碧罗商馆的封闭感：贵族直接挡人（“这里是碧罗商馆，你不得入内”“走，我不说奥尔多”），守卫用音译精灵语短句再切奥尔多语，商人招呼“阿巴依'阿迈德”；也有乡愁句（“要是能回哈尊就好了”）。",
+      "patterns": [
+        "精灵语音译短句 + 奥尔多语",
+        "贵族以门第挡人，仆人阶层才肯闲聊",
+        "乡愁与看人下菜并存"
+      ],
+      "examples": [
+        {
+          "index": 30213,
+          "zh": "陌生人，这里是碧罗商馆，你不得入内。"
+        },
+        {
+          "index": 30209,
+          "zh": "唉……要是能回哈尊就好了……"
+        }
+      ]
+    },
+    {
+      "id": "field",
+      "title": "野外行当",
+      "slots": [
+        "huntress",
+        "shepherd",
+        "trapper"
+      ],
+      "summary": "靠山吃山：猎人说这一带野物变多、希望每趟都有收获；采集者报草药浆果丰收；牧羊人无聊（“天天赶这些羊，快无聊死了”）。野外问候短，多在据点（烂柳）出现。",
+      "patterns": [
+        "收获量是话题（今年多／少）",
+        "对陌生人短句（“什么事儿？”“你好。”）",
+        "把安全提醒当闲聊（捕兽夹、蝮蛇）"
+      ],
+      "examples": [
+        {
+          "index": 30287,
+          "zh": "天天赶这些羊，快无聊死了……"
+        },
+        {
+          "index": 27357,
+          "zh": "这个是维伦说的那个修道院吗？那个钟楼上看这片林子，景致肯定差不了……"
+        }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "有名字的常驻人物",
+      "slots": [
+        "darrel",
+        "fogt",
+        "idet",
+        "wigmar"
+      ],
+      "summary": "原著常驻角色（达雷尔、福格特、维格玛、伊黛特、肯里克父子等）在问候层已带完整性格：达雷尔给新会干活但话里留旧事；福格特是催货督工（“天黑之前赶不完，耶昂非得扒了我的皮”）；伊黛特用动作描写拒绝交谈；肯里克之子骂城联并护着父亲。逐场景台词属 scene 条目，未在本页展开。",
+      "patterns": [
+        "常驻人物问候即人设（督工催货／老太婆不说话）",
+        "剧情线索只给半句（“外边见过什么……算了”）",
+        "护卫家人的短句带刺"
+      ],
+      "examples": [
+        {
+          "index": 30139,
+          "zh": "给新会干活儿，苦是苦了点儿，不过这城里起码不用担心嗝屁。"
+        },
+        {
+          "index": 28532,
+          "zh": "天黑之前要是赶不完这些，耶昂非得扒了我的皮不可。别闲扯了，抓紧干活儿！"
+        }
+      ]
+    }
+  ],
+  "npc_tags": [
+    {
+      "id": "utility",
+      "title": "工具句",
+      "note": "占位句用 $1/$2 代换说话人，如“$1和$2做起了买卖。”；是系统播报，不是角色台词。",
+      "count": 4,
+      "keys": [
+        "npcFound",
+        "npcTalk",
+        "npcTrade",
+        "npc_lowhp"
+      ]
+    },
+    {
+      "id": "bands",
+      "title": "声望档行为集（守卫/乡民）",
+      "note": "原作为守卫与乡民各设 7 档（respect/amity/admiration/trueneutral/neutral/dislike/hatred）行为集；文本为空，行为在引擎侧。Mod 的[[城镇声望与信任系统]]用 −2..+2 五档，不照搬 7 档，但保留“档位改变行为而非只改价格”的原则。",
+      "count": 14,
+      "keys": [
+        "npc_guard_admiration",
+        "npc_guard_amity",
+        "npc_guard_dislike",
+        "npc_guard_hatred",
+        "npc_guard_neutral",
+        "npc_guard_respect",
+        "npc_guard_trueneutral",
+        "npc_peasant_admiration",
+        "npc_peasant_amity",
+        "npc_peasant_dislike",
+        "npc_peasant_hatred",
+        "npc_peasant_neutral",
+        "npc_peasant_respect",
+        "npc_peasant_trueneutral"
+      ]
+    },
+    {
+      "id": "crime",
+      "title": "治安反应",
+      "note": "盗窃、斗殴、杀人、报警等治安事件反应槽；说明原作把犯罪反馈也挂成标签而不是写死在每个NPC里。",
+      "count": 15,
+      "keys": [
+        "npc_crimeAlarm",
+        "npc_crimeAlarm_end",
+        "npc_crimeBrawl",
+        "npc_crimeBrawlTarget0",
+        "npc_crimeBrawlTarget1",
+        "npc_crimeBrawlTarget1_end",
+        "npc_crimeBrawl_end",
+        "npc_crimeGeneric",
+        "npc_crimeGeneric_end",
+        "npc_crimeGuard",
+        "npc_crimeGuard_end",
+        "npc_crimeKill",
+        "npc_crimeKill_end",
+        "npc_crimeTheft",
+        "npc_crimeTheft_end"
+      ]
+    },
+    {
+      "id": "state",
+      "title": "状态与天气",
+      "note": "天气（rain1–3）与状态（遇袭、噩梦、疫病）触发不同闲话；Mod 的野外人物条件回访沿用同一思路，但只按台本条件，不新做天气系统。",
+      "count": 6,
+      "keys": [
+        "npc_ambush",
+        "npc_nightmares",
+        "npc_pest",
+        "npc_rain1",
+        "npc_rain2",
+        "npc_rain3"
+      ]
+    },
+    {
+      "id": "variants",
+      "title": "收尾与转译变体",
+      "note": "多数角色与商贩都带“收尾（_end）/转译（_translated）”变体，说明原作对结束语与异国商贩双语准备了独立槽位。",
+      "count": 80,
+      "keys": [
+        "npc_ambushes_end",
+        "npc_butcher_end",
+        "npc_captain_brynn_end",
+        "npc_captain_training_end",
+        "npc_cheese_trader_end",
+        "npc_cidery_owner_end",
+        "npc_citizen_idle_end",
+        "npc_drunkard_end",
+        "npc_elder_end",
+        "npc_elf_banter_brynn_end",
+        "npc_elf_banter_brynn_tr_end",
+        "npc_elf_barker_end",
+        "npc_fish_trader_brynn_end",
+        "npc_fisher_end",
+        "npc_food_trader_end",
+        "npc_fruit_trader_brynn_end",
+        "npc_fruit_trader_end",
+        "npc_furnace_worker_end",
+        "npc_guard_admiration_end",
+        "npc_guard_amity_end",
+        "npc_guard_dislike_end",
+        "npc_guard_hatred_end",
+        "npc_guard_neutral_end",
+        "npc_guard_respect_end",
+        "npc_guard_sergeant_end",
+        "npc_guard_trueneutral_end",
+        "npc_herald_end",
+        "npc_herbalist_brynn_end",
+        "npc_herbalist_end",
+        "npc_hierophant_end",
+        "npc_lecturer_law_end",
+        "npc_lecturer_theology_end",
+        "npc_leif_intro_end",
+        "npc_lowhp_end",
+        "npc_merc_elder_end",
+        "npc_merc_intro_end",
+        "npc_merc_repair_end",
+        "npc_merc_trader_end",
+        "npc_merchant_brynn_end",
+        "npc_merchant_denbrie_end",
+        "npc_miller_end",
+        "npc_nightmares_end",
+        "npc_no_turn_end",
+        "npc_noblewoman_end",
+        "npc_notalk_end",
+        "npc_notalk_hostile_end",
+        "npc_peasant_admiration_end",
+        "npc_peasant_amity_end",
+        "npc_peasant_dislike_end",
+        "npc_peasant_end",
+        "npc_peasant_hatred_end",
+        "npc_peasant_male_end",
+        "npc_peasant_neutral_end",
+        "npc_peasant_respect_end",
+        "npc_peasant_trueneutral_end",
+        "npc_pest_end",
+        "npc_rain1_end",
+        "npc_rain2_end",
+        "npc_smith_end",
+        "npc_student_end",
+        "npc_surgeon_end",
+        "npc_tailor_end",
+        "npc_tavern_ch_banter_end",
+        "npc_tavern_gg_banter_end",
+        "npc_trader_end",
+        "npc_trader_fjall_end",
+        "npc_trader_fjall_translated",
+        "npc_trader_fjall_translated_end",
+        "npc_trader_jibey_end",
+        "npc_trader_jibey_translated",
+        "npc_trader_jibey_translated_end",
+        "npc_trader_nistra_end",
+        "npc_trader_nistra_translated",
+        "npc_trader_nistra_translated_end",
+        "npc_trader_skadia_end",
+        "npc_trader_skadia_translated",
+        "npc_trader_skadia_translated_end",
+        "npc_vegetable_trader_end",
+        "npc_wine_trader_end",
+        "npc_worker_end"
+      ]
+    },
+    {
+      "id": "role_idle",
+      "title": "角色闲话标签",
+      "note": "按角色或场所命名的闲话槽（工人、卫兵、商人、酒馆、讲学者、市民、军士、乡民等）；文本在引擎侧，说明原作把“谁说闲话”做成可挂标签的槽位。",
+      "count": 54,
+      "keys": [
+        "npc_ambushes",
+        "npc_butcher",
+        "npc_captain_brynn",
+        "npc_captain_training",
+        "npc_cheese_trader",
+        "npc_cidery_owner",
+        "npc_citizen_idle",
+        "npc_drunkard",
+        "npc_elder",
+        "npc_elf_banter_brynn",
+        "npc_elf_banter_brynn_tr",
+        "npc_elf_barker",
+        "npc_fish_trader_brynn",
+        "npc_fisher",
+        "npc_food_trader",
+        "npc_fruit_trader",
+        "npc_fruit_trader_brynn",
+        "npc_furnace_worker",
+        "npc_guard",
+        "npc_guard_sergeant",
+        "npc_herald",
+        "npc_herbalist",
+        "npc_herbalist_brynn",
+        "npc_hierophant",
+        "npc_lecturer_law",
+        "npc_lecturer_theology",
+        "npc_leif_intro",
+        "npc_merc_elder",
+        "npc_merc_intro",
+        "npc_merc_repair",
+        "npc_merc_trader",
+        "npc_merchant_brynn",
+        "npc_merchant_denbrie",
+        "npc_miller",
+        "npc_no_turn",
+        "npc_noblewoman",
+        "npc_notalk",
+        "npc_notalk_hostile",
+        "npc_peasant",
+        "npc_peasant_male",
+        "npc_smith",
+        "npc_student",
+        "npc_surgeon",
+        "npc_tailor",
+        "npc_tavern_ch_banter",
+        "npc_tavern_gg_banter",
+        "npc_trader",
+        "npc_trader_fjall",
+        "npc_trader_jibey",
+        "npc_trader_nistra",
+        "npc_trader_skadia",
+        "npc_vegetable_trader",
+        "npc_wine_trader",
+        "npc_worker"
+      ]
+    }
+  ],
+  "scene_finding": "场景族 326 条的键可枚举（scene_<角色>_<题材>，如 scene_darrel_oldcaravan），但条目槽位只含数字标记（如 20、25），文本、选项与显示条件不在字符串表内，而在引擎脚本侧。按本库边界（只做只读接口核对、不保存反编译源码），场景级逐条对读到此为止：本页给键与计数，分支与跳转需在制作阶段按实际场景核对。",
+  "unassigned": []
+}

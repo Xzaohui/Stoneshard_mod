@@ -46,6 +46,11 @@ if (Get-Process -Name ModShardLauncher -ErrorAction SilentlyContinue) { throw 'M
 if ([version]$taskReport.modVersion -ge [version]'0.3.1') {
     $taskDev = Get-Content -LiteralPath (Join-Path $taskRoot 'artifacts/dev-validation.json') -Raw | ConvertFrom-Json
     if ($taskDev.inputSha256 -ne $taskReport.outputSha256 -or @($taskDev.checks).Count -lt 59) { throw 'Developer/art checks do not match this candidate.' }
+    if ([version]$taskReport.modVersion -ge [version]'0.3.3') {
+        foreach ($taskRequired in @('dev-six-scene-native-cycle-with-n2-arrival-tags','dev-n2-cycle-preserves-first-origin','r_eao_n2_camp-art-matches-serialized-native-collision-cells','r_eao_n2_winch-art-matches-serialized-native-collision-cells','r_eao_n2_side-art-matches-serialized-native-collision-cells')) {
+            if ($taskRequired -notin $taskDev.checks) { throw ('Missing N2 scene/art check: ' + $taskRequired) }
+        }
+    }
 }
 if (!$PackageOnly -and (Get-Process -Name StoneShard -ErrorAction SilentlyContinue)) { throw 'Game is running; close it before updating data.win. No process was stopped.' }
 function Test-TaskNoLink([string]$Path) {

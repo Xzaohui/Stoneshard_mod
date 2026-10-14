@@ -12,10 +12,10 @@ public sealed class EmbersAndOathsMod : Mod
 {
     public override string Name => "余烬与誓约（开发版）";
     public override string Author => "Stoneshard_mod project";
-    public override string Version => "0.3.1";
+    public override string Version => "0.3.3";
     public override string TargetVersion => "0.9.4.25";
-    public override string ShortDesc => "无钟之夜 · HD2D开发观察模式";
-    public override string Description => "旧文书查档任务退役；无钟之夜包含现场探索、失踪者反转与两条可执行的处理路线。原存档资源保留，F8地图测试保留；大型扩展仍在开发。";
+    public override string ShortDesc => "无钟之夜＋灰堤P1 · HD2D开发观察模式";
+    public override string Description => "旧文书查档任务退役；无钟之夜包含现场探索、失踪者反转与两条可执行的处理路线；0.3.2 试点批次P1新增灰堤没有墓碑（N2）：五桩五键、两条互斥解法、拒绝出口与回访。原存档资源保留，F8地图测试保留；P2/P3与完整回归仍在开发。";
 
     public override void PatchMod()
     {
@@ -77,6 +77,7 @@ public sealed class EmbersAndOathsMod : Mod
         // Room constants must exist before compiling target/room comparisons.
         NativeRooms.Prepare();
         NightQuest.Prepare();
+        N2Quest.Prepare();
         DevTools.Prepare();
         Msl.AddObject("o_eao_d01_clerk", spriteName: "s_peasantmale_13", parentName: "o_simple_NPC", isVisible: true);
         foreach (var pair in new[] { ("o_eao_d01_entry", "o_Doors_all_small"), ("o_eao_d01_return", "o_Doors_all_small"), ("o_eao_d01_archive_door", "o_mannshireavern2floorladderup55"), ("o_eao_d01_down", "o_tavernladerdown01") })
@@ -157,6 +158,8 @@ public sealed class EmbersAndOathsMod : Mod
             SetEvent(obj, "event_inherited(); position_tag = " + NativeDocuments.Quote(marker.Item2) + ";", EventType.Create, 0);
         }
         NightQuest.Configure(SetEvent, ModFiles);
+        N2Quest.Configure(SetEvent, ModFiles);
+        N2Hd2dArt.Configure(SetEvent);
         NativeRooms.Build();
     }
 }

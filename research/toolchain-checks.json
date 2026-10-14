@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "scope": "S144 offline toolchain checks: MSL input precheck positive and negative controls, formal-environment check status, struct-regression re-runnability; read-only, no build or deployment",
   "msl_input": {
     "positive": {
@@ -26,7 +26,7 @@
     "exit_code": 1,
     "superseded": true,
     "reason": "隔离期检查：快照指向已移除的 test-env/backups/20261011-134931/formal-userdata/account.ini；AGENTS 已改为“不隔离，直接在当前路径下开发”，该检查不再是门槛。",
-    "observed": "ormal-userdata\\account.ini������Ϊ��·�������ڡ�"
+    "observed": "formal-userdata\\account.ini������Ϊ��·�������ڡ�"
   },
   "struct_regression": {
     "re_runnable": true,
@@ -35,16 +35,16 @@
       "broken": "backups/direct-20261011-155606-160/data.win",
       "broken_sha256": "67B2D55E1D3920F4B83D93A0E92360F64BD640C1C1D0C00C73DD042AA54CA6C1",
       "fixed": "artifacts/direct-data.win",
-      "fixed_sha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508"
+      "fixed_sha256": "7E965172D1CD7A4B2EC43E8CE44D1604CA36D8B53F8F55FF425D2F2FF2552852"
     },
     "harness_fixes": [
       "broken 运行改用 Continue 偏好，避免预期 stderr 终止脚本",
       "产物写入改 [IO.File]::WriteAllText（PS5.1 无 -Encoding utf8NoBOM）"
     ],
     "recorded": {
-      "date": "2026-10-13T22:35:55.0377253+08:00",
+      "date": "2026-10-14T18:39:00.2168525+08:00",
       "brokenDataSha256": "67B2D55E1D3920F4B83D93A0E92360F64BD640C1C1D0C00C73DD042AA54CA6C1",
-      "fixedDataSha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508",
+      "fixedDataSha256": "7E965172D1CD7A4B2EC43E8CE44D1604CA36D8B53F8F55FF425D2F2FF2552852",
       "brokenStructReceiverRejected": true,
       "fixedSerializedResourcePassed": true,
       "runtimeVerified": false
@@ -75,6 +75,6 @@
   },
   "gameprobe": {
     "dll_present": true,
-    "sha256": "A07D28B1B7D8760BBFC1ECACCD31E09BB3976524B2903D591FC202CEC2635883"
+    "sha256": "A7F9EA43436FC38ABA8CFDD4B0A9B7FA8F9DDC6A92949523403E2BFC7796CC5A"
   }
 }

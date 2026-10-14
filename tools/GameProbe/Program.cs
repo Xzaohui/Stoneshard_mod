@@ -254,7 +254,7 @@ if (args.Length > 1 && (args[1] == "--patch" || args[1] == "--repair-eao")) {
         foreach (var name in events.Keys) if (!originalCode.ContainsKey(name)) throw new InvalidDataException("Missing EAO repair target: " + name);
         var children = data.Code.Where(c => c.ParentEntry != null && c.ParentEntry.Name.Content.StartsWith("gml_Object_o_eao_")).ToArray();
         int helperCount = data.Functions.Count(f => f.Name.Content.StartsWith("eao_"));
-        var recognizedNight = children.Length == 87 && helperCount == 0 && data.GameObjects.Any(o=>o.Name.Content=="o_eao_n1_mara");
+        var recognizedNight = (children.Length == 87 || children.Length == 117) && helperCount == 0 && data.GameObjects.Any(o=>o.Name.Content=="o_eao_n1_mara");
         if (recognizedNight) EaoLinkage.Validate(data);
         if (!recognizedNight && !((children.Length == 7 && helperCount == 7) || (children.Length == 0 && helperCount == 0) || ((children.Length == 4 || children.Length == 5) && helperCount == 0 && children.All(c => c.ParentEntry!.Name.Content == "gml_Object_o_eao_courier_Create_0")) || (children.Length == 9 && helperCount == 0 && children.All(c => c.ParentEntry!.Name.Content is "gml_Object_o_eao_courier_Create_0" or "gml_Object_o_eao_d01_clerk_Create_0")) || (children.Length == 15 && helperCount == 0 && children.All(c => c.ParentEntry!.Name.Content is "gml_Object_o_eao_courier_Create_0" or "gml_Object_o_eao_d01_clerk_Create_0" or "gml_Object_o_eao_test_guide_Create_0")))) throw new InvalidDataException("Input is not a recognized EAO prototype layout.");
         repairCodeNames.UnionWith(originalCode.Keys.Where(name => name.StartsWith("gml_Object_o_eao_") || name.StartsWith("gml_Object_o_inv_eao_") || name.StartsWith("gml_Object_o_loot_eao_")));

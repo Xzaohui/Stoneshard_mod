@@ -54,7 +54,8 @@ for e in expect:
 check(len(re.findall(r'^\| (?:结构覆盖|说话人闭合|对白去重|链接完整|占位扫描|方法数|X边闭合) ', card, re.M)) == 7, 'seven-guard-rows')
 check(not broken, 'no-broken-links')
 check(not low, 'no-low-method-scripts')
-check(edges == refs and len(edges) == 74, 'edge-closure')
+expected = {e['id'] for e in json.loads((ROOT / 'research/story-network.json').read_text(encoding='utf-8-sig'))['edges']}
+check(edges == refs == expected, 'edge-closure')
 check(hits == len(allow['entries']), 'placeholder-allowlist-complete')
 for sec in ('## 已登记的非占位命中', '## 既有守卫（不重复登记）', '## 边界'):
     check(sec in card, 'section-' + sec)

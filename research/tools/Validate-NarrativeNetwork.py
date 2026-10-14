@@ -86,7 +86,7 @@ def scenario(name,run):
 
 check(set(tasks)==set(entries) and len(tasks)==51,'51-current-screenplays-covered')
 check(sum(len(q['routes']) for q in tasks.values())==128,'128-operational-routes')
-check(len(net['edges'])==74,'74-authored-cross-effects')
+check(len(net['edges'])==82,'82-authored-cross-effects')
 check(len(net['arcs'])==14,'14-ensemble-character-arcs')
 for qid,q in tasks.items():
     routes=q['routes']; names=[r['key'] for r in routes]

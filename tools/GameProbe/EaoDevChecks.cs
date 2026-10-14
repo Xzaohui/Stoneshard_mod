@@ -32,19 +32,40 @@ internal static class EaoDevChecks
         Require(!all.Any(c=>forbidden.Any(c.Contains)),"dev-no-quest-reward-exploration-grid-or-direct-room-writes");
         using var manifest=JsonDocument.Parse(File.ReadAllText(Path.Combine(ProjectPaths.Root(),"src/Art/hd2d_26x26_20261013/manifest.json")));
         var sources=manifest.RootElement.GetProperty("assets").EnumerateArray().ToDictionary(a=>a.GetProperty("id").GetString()!);
+        using var n2Manifest=JsonDocument.Parse(File.ReadAllText(Path.Combine(ProjectPaths.Root(),"src/Art/native-n2-hd2d-v1/manifest.json")));
+        foreach(var source in n2Manifest.RootElement.GetProperty("source_sha256").EnumerateObject()) {
+            var hash=Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(File.ReadAllBytes(Path.Combine(ProjectPaths.Root(),source.Name))));
+            Require(hash.Equals(source.Value.GetString(),StringComparison.OrdinalIgnoreCase),"n2-art-source-"+source.Name);
+        }
+        foreach(var scene in n2Manifest.RootElement.GetProperty("scenes").EnumerateArray()) {
+            var room=data.Rooms.Single(r=>r.Name.Content==scene.GetProperty("room").GetString());
+            var cells=new HashSet<(int,int)>();
+            foreach(var rect in scene.GetProperty("walkable_rectangles").EnumerateArray())
+                for(var x=rect[0].GetInt32();x<=rect[2].GetInt32();x++) for(var y=rect[1].GetInt32();y<=rect[3].GetInt32();y++) cells.Add((x,y));
+            var walls=room.GameObjects.Where(o=>o.ObjectDefinition.Name.Content=="o_hut_wall").Select(o=>((int)o.X/26,(int)o.Y/26)).ToHashSet();
+            Require(Enumerable.Range(0,40).All(x=>Enumerable.Range(0,30).All(y=>walls.Contains((x,y))!=cells.Contains((x,y)))),room.Name.Content+"-art-matches-serialized-native-collision-cells");
+        }
+        foreach(var a in n2Manifest.RootElement.GetProperty("assets").EnumerateArray()) sources.Add(a.GetProperty("id").GetString()!,a);
         var sprites=data.Sprites.Where(s=>s.Name.Content.StartsWith("s_eao_hd2d_")).ToArray();
-        Require(sprites.Length==16,"hd2d-sixteen-native-sprites");
+        Require(sprites.Length==33,"hd2d-thirty-three-native-sprites");
         foreach(var sprite in sprites){
             var id=sprite.Name.Content["s_eao_hd2d_".Length..];var source=sources[id];
             var dimensions=source.GetProperty("size").EnumerateArray().Select(v=>v.GetInt32()).ToArray();
             Require(sprite.Width==dimensions[0]&&sprite.Height==dimensions[1],id+"-dimensions");
             var origin=source.TryGetProperty("sprite_origin",out var p)?p:source.GetProperty("origin");
             Require(sprite.OriginX==origin[0].GetInt32()&&sprite.OriginY==origin[1].GetInt32(),id+"-origin");
-            var expected=File.ReadAllBytes(Path.Combine(ProjectPaths.Root(),"src/Art/hd2d_26x26_20261013",source.GetProperty("path").GetString()!));
+            var folder=id.StartsWith("r_eao_n2_")||id.StartsWith("r01_")?"src/Art/native-n2-hd2d-v1":"src/Art/hd2d_26x26_20261013";
+            var expected=File.ReadAllBytes(Path.Combine(ProjectPaths.Root(),folder,source.GetProperty("path").GetString()!));
             var actual=sprite.Textures.Single().Texture.TexturePage.TextureData.Image.ToSpan(false).ToArray();
             Require(actual.SequenceEqual(expected),id+"-embedded-png-bytes");
         }
         Require(Asm("gml_Object_o_eao_n1_floor_Draw_0").Contains("global.EAO_dev_art")&&Asm("gml_Object_o_eao_devtools_Draw_0").Contains("astar_get_cell"),"hd2d-toggle-and-live-collision-grid");
+        var n2Rooms=new[]{"r_eao_n2_camp","r_eao_n2_winch","r_eao_n2_side"}.Select(n=>data.Rooms.IndexOf(data.Rooms.Single(r=>r.Name.Content==n))).ToArray();
+        bool References(string asm,int index)=>Regex.IsMatch(asm,@"push(?:i\.e|\.i) "+index+@"\b");
+        Require(n2Rooms.All(i=>References(visit,i))&&new[]{"EAO_N2_camp_in","EAO_N2_winch_in","EAO_N2_side_in"}.All(visit.Contains),"dev-six-scene-native-cycle-with-n2-arrival-tags");
+        Require(n2Rooms.All(i=>References(alarm,i)),"dev-n2-cycle-preserves-first-origin");
+        Require(Asm("gml_Object_o_eao_n2_floor_Draw_0").Contains("global.EAO_dev_art"),"n2-floor-visual-toggle-keeps-native-fallback");
+        foreach(var id in new[]{"coffin","winch"}) Require(Asm("gml_Object_o_eao_n2_"+id+"_Draw_0").Contains("event_inherited"),"n2-"+id+"-art-keeps-native-draw-fallback");
         return checks.ToArray();
     }
 }

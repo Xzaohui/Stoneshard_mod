@@ -1,0 +1,966 @@
+{
+  "batch": "BRY-outskirts-v1",
+  "status": "locked_generation_pending",
+  "scope": "All27remaining Brynn views: three satellites with exterior/living/work zones and six continuation exterior/work spaces. R01 original camp unchanged; satellites depict additional living sections. No NPC/logic/game edits.",
+  "source_sha256": {
+    "design/02_世界与地图/任务空间/空间_BRY-X11_低潮侧泊棚.md": "99f3bdaf2384a64f87345e0a3dfd3d6f738e0f995f238f0c1ec3b519aee1ca0a",
+    "design/02_世界与地图/任务空间/空间_BRY-X12_断扣试载台.md": "43244afdb35f4cde4999b550935d502c4a23a5fa203ee6729c982b99463b09d0",
+    "design/02_世界与地图/任务空间/空间_BRY-X13_旧书装帧台.md": "6d7a1d84bb0964df59e3d2c1390970439c2b9b81c8591aca479378e111d1ac1e",
+    "design/02_世界与地图/任务空间/空间_BRY-X14_工具巷外的封板.md": "4441b257385dc7adebc23a7bf01d6bc1ca94a9be25b50d2924f0b40843552693",
+    "design/02_世界与地图/任务空间/空间_BRY-X15_旧塔支款席.md": "36fc6e84c712a1b8c71ff1be92764e1b62d9a74709df9f1b5c631c1c25f9181c",
+    "design/02_世界与地图/任务空间/空间_BRY-X16_四区小听席.md": "404f3823b167cae5c8c5f03a35efa8204bbe59681d3f1f0f35add9eb54792223",
+    "design/02_世界与地图/周边聚落/聚落_BRY-S01_灰堤工营.md": "e68b3068dc22cb7dbfd193cd4ce4d644d755cb6bdbb131601798943385f7819a",
+    "design/02_世界与地图/周边聚落/聚落_BRY-S02_盐穗小镇.md": "622f56e48191071eae9151c1ca52f27713151763a81e8130a065a5f8117eac0e",
+    "design/02_世界与地图/周边聚落/聚落_BRY-S03_旧帆村.md": "51b95ac2404754b4e8f29f81c06cffa0c9ae06fab7bd812fc3aab150783a679c",
+    "design/06_支线/城市支线/台本_CS-BRY-11_不写船名的夜泊.md": "901541f5a9d97a7705069d5a7763c63b82c332d6e7e0ae14df67bba3b991f64e",
+    "design/06_支线/城市支线/台本_CS-BRY-12_两种火候.md": "ccd0b0112ef71256157edb5f7e3220587d7c5a6c261cc7f617a731a6c34d5ef8",
+    "design/06_支线/城市支线/台本_CS-BRY-13_页边的另一个名字.md": "e51e124b3653166e01f8cfc26e721b7580021681eea5d2650449f647f1d5eff5",
+    "design/06_支线/城市支线/台本_CS-BRY-14_地窖之外.md": "42c425ba0337409fe3d529377e460202dcb952bffce2725319b870113efe3afb",
+    "design/06_支线/城市支线/台本_CS-BRY-15_招募告示的背面.md": "3392fd334cb64a8b046f8e1d87e29e97468f85a7498505bf6d10202798b5043c",
+    "design/06_支线/城市支线/台本_CS-BRY-16_空椅不是赞成.md": "34d067abb539d3cf1004fc7cbfa6f8122e7058bbaa29848748eb60efc42184b1",
+    "research/brynn-continuation.json": "f40e59b59159f9acc46fc4ad16cf8d9483adbbeb45528197de5203cdf8969cac",
+    "research/city-campaign.json": "07552f9b7a1db5e63e1002763b1121ec23130bf55d30849081ee742594a3378c",
+    "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/manifest.json": "58897354855565bfe2f8e7972daac56374f981d8d45e986acffb9357aa6e5586",
+    "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/palettes/bry_core_128.json": "beac9d7ce63b8487fdca2de8019789807bbcf717e2b6b1ecb82e305d60f749b1",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/layouts.json": "bb5e193869b76a36de71814505a5e067e7a4a8cf14394292d4d514164b0e65e5"
+  },
+  "sprites": [
+    {
+      "id": "bryo_embankment_commons",
+      "size": [
+        312,
+        234
+      ],
+      "origin": [
+        156,
+        216
+      ],
+      "architecture": true
+    },
+    {
+      "id": "bryo_raised_seed_store",
+      "size": [
+        312,
+        260
+      ],
+      "origin": [
+        156,
+        242
+      ],
+      "architecture": true
+    },
+    {
+      "id": "bryo_sail_commons",
+      "size": [
+        312,
+        234
+      ],
+      "origin": [
+        156,
+        216
+      ],
+      "architecture": true
+    },
+    {
+      "id": "bryo_side_berth_shed",
+      "size": [
+        312,
+        234
+      ],
+      "origin": [
+        156,
+        216
+      ],
+      "architecture": true
+    },
+    {
+      "id": "bryo_binding_shop",
+      "size": [
+        364,
+        234
+      ],
+      "origin": [
+        182,
+        216
+      ],
+      "architecture": true
+    },
+    {
+      "id": "bryo_sealed_outer_shed",
+      "size": [
+        364,
+        260
+      ],
+      "origin": [
+        182,
+        242
+      ],
+      "architecture": true
+    },
+    {
+      "id": "bryo_public_tower_portico",
+      "size": [
+        364,
+        260
+      ],
+      "origin": [
+        182,
+        242
+      ],
+      "architecture": true
+    },
+    {
+      "id": "bryo_small_hearing_pavilion",
+      "size": [
+        416,
+        286
+      ],
+      "origin": [
+        208,
+        268
+      ],
+      "architecture": true
+    },
+    {
+      "id": "bryo_communal_bed",
+      "size": [
+        130,
+        78
+      ],
+      "origin": [
+        65,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_common_cookstove",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_wage_tally_case",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_apprentice_stamp",
+      "size": [
+        26,
+        26
+      ],
+      "origin": [
+        13,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_patched_embankment",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_seed_bags",
+      "size": [
+        78,
+        78
+      ],
+      "origin": [
+        39,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_grain_balance",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_deposit_chits",
+      "size": [
+        52,
+        26
+      ],
+      "origin": [
+        26,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_salt_ridge_patch",
+      "size": [
+        156,
+        104
+      ],
+      "origin": [
+        78,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_dry_boat_ribs",
+      "size": [
+        208,
+        104
+      ],
+      "origin": [
+        104,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_rental_skiff",
+      "size": [
+        208,
+        104
+      ],
+      "origin": [
+        104,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_detached_support",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_public_load_scale",
+      "size": [
+        78,
+        130
+      ],
+      "origin": [
+        39,
+        117
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_blocking_crate",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_privacy_file_bag",
+      "size": [
+        52,
+        52
+      ],
+      "origin": [
+        26,
+        39
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_return_marker",
+      "size": [
+        78,
+        26
+      ],
+      "origin": [
+        39,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_low_load_frame",
+      "size": [
+        156,
+        130
+      ],
+      "origin": [
+        78,
+        117
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_separated_material_trays",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_three_test_pieces",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_detached_cracked_buckle",
+      "size": [
+        52,
+        26
+      ],
+      "origin": [
+        26,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_blank_batch_tag",
+      "size": [
+        26,
+        26
+      ],
+      "origin": [
+        13,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_trial_fence",
+      "size": [
+        156,
+        78
+      ],
+      "origin": [
+        78,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_binding_bench",
+      "size": [
+        130,
+        104
+      ],
+      "origin": [
+        65,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_original_page_tray",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_added_page_tray",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_low_archive_cabinet",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_binding_chair",
+      "size": [
+        52,
+        78
+      ],
+      "origin": [
+        26,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_binding_thread",
+      "size": [
+        52,
+        26
+      ],
+      "origin": [
+        26,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_sample_binding_page",
+      "size": [
+        52,
+        26
+      ],
+      "origin": [
+        26,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_weak_support_frame",
+      "size": [
+        130,
+        104
+      ],
+      "origin": [
+        65,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_bowed_sealed_planks",
+      "size": [
+        156,
+        78
+      ],
+      "origin": [
+        78,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_shutter_barrier",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_safe_outer_brace",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_last_note_case",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_fee_dish",
+      "size": [
+        52,
+        26
+      ],
+      "origin": [
+        26,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_ring_table",
+      "size": [
+        208,
+        156
+      ],
+      "origin": [
+        104,
+        143
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_three_column_transfer_tray",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_single_statement_case",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_counted_plank_stack",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "bryo_empty_support_storage",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ],
+      "architecture": false
+    }
+  ],
+  "reused_sprites": [
+    {
+      "id": "bry_account_witness_table",
+      "path": "assets/items/bry_account_witness_table.png",
+      "size": [
+        130,
+        78
+      ],
+      "origin": [
+        65,
+        65
+      ],
+      "foot_anchor": [
+        65,
+        65
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "afd93be0eb82f5351ebeb0982160036db47e651e4c85f3caf318f9d664f7a47c",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_account_witness_table.png",
+      "source_asset_sha256": "afd93be0eb82f5351ebeb0982160036db47e651e4c85f3caf318f9d664f7a47c"
+    },
+    {
+      "id": "bry_sealed_change_pouch",
+      "path": "assets/items/bry_sealed_change_pouch.png",
+      "size": [
+        52,
+        52
+      ],
+      "origin": [
+        26,
+        39
+      ],
+      "foot_anchor": [
+        26,
+        39
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "2acabeb20e553e82bd1cd682c72a020211182430e52bd1164a86729aa2054ffd",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_sealed_change_pouch.png",
+      "source_asset_sha256": "2acabeb20e553e82bd1cd682c72a020211182430e52bd1164a86729aa2054ffd"
+    },
+    {
+      "id": "bry_patched_rent_board",
+      "path": "assets/items/bry_patched_rent_board.png",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ],
+      "foot_anchor": [
+        39,
+        91
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "9bfadf9a4fe6f41d7a8b1f33c285d959100789b7a95057d002e3ee7b09a32639",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_patched_rent_board.png",
+      "source_asset_sha256": "9bfadf9a4fe6f41d7a8b1f33c285d959100789b7a95057d002e3ee7b09a32639"
+    },
+    {
+      "id": "bry_mooring_nail",
+      "path": "assets/items/bry_mooring_nail.png",
+      "size": [
+        26,
+        26
+      ],
+      "origin": [
+        13,
+        23
+      ],
+      "foot_anchor": [
+        13,
+        23
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "e272d2baa88181ab18d963ca6324ae12a16e2cf1c0179307305cc5710097ce56",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_mooring_nail.png",
+      "source_asset_sha256": "e272d2baa88181ab18d963ca6324ae12a16e2cf1c0179307305cc5710097ce56"
+    },
+    {
+      "id": "bry_termination_knot",
+      "path": "assets/items/bry_termination_knot.png",
+      "size": [
+        52,
+        26
+      ],
+      "origin": [
+        26,
+        23
+      ],
+      "foot_anchor": [
+        26,
+        23
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "b3e48e8f87bd5b2c8f1a5d7adf20d95f52a4a99db7be0750f72ce4ea1bb46bad",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_termination_knot.png",
+      "source_asset_sha256": "b3e48e8f87bd5b2c8f1a5d7adf20d95f52a4a99db7be0750f72ce4ea1bb46bad"
+    },
+    {
+      "id": "bry_reserved_old_seat_board",
+      "path": "assets/items/bry_reserved_old_seat_board.png",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        43
+      ],
+      "foot_anchor": [
+        39,
+        43
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "0cdd5a0d9e2c36d5170dcec0d2c9b1af05fe8405f3df615ae5c219723fac78e3",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_reserved_old_seat_board.png",
+      "source_asset_sha256": "0cdd5a0d9e2c36d5170dcec0d2c9b1af05fe8405f3df615ae5c219723fac78e3"
+    },
+    {
+      "id": "bry_blank_instruction_tag",
+      "path": "assets/items/bry_blank_instruction_tag.png",
+      "size": [
+        26,
+        26
+      ],
+      "origin": [
+        13,
+        23
+      ],
+      "foot_anchor": [
+        13,
+        23
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "8b79e65bf8a454b17831977b04fbd6bd6b73abaf3a25e72163739cb2f9310b0c",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_blank_instruction_tag.png",
+      "source_asset_sha256": "8b79e65bf8a454b17831977b04fbd6bd6b73abaf3a25e72163739cb2f9310b0c"
+    },
+    {
+      "id": "bry_paired_water_scales",
+      "path": "assets/items/bry_paired_water_scales.png",
+      "size": [
+        78,
+        130
+      ],
+      "origin": [
+        39,
+        117
+      ],
+      "foot_anchor": [
+        39,
+        117
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "dce0ad66fbeeef5e3ee210e6b6e3502113cd325de8b287ef1f2a91be9e891162",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_paired_water_scales.png",
+      "source_asset_sha256": "dce0ad66fbeeef5e3ee210e6b6e3502113cd325de8b287ef1f2a91be9e891162"
+    },
+    {
+      "id": "bry_short_meeting_table",
+      "path": "assets/items/bry_short_meeting_table.png",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "foot_anchor": [
+        52,
+        65
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "b6a987d17b7d15b5b316763a5ff9241d0d18cb7beccb6d22deed747eb2cf1c83",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_short_meeting_table.png",
+      "source_asset_sha256": "b6a987d17b7d15b5b316763a5ff9241d0d18cb7beccb6d22deed747eb2cf1c83"
+    },
+    {
+      "id": "bry_empty_tenant_bench",
+      "path": "assets/items/bry_empty_tenant_bench.png",
+      "size": [
+        104,
+        52
+      ],
+      "origin": [
+        52,
+        43
+      ],
+      "foot_anchor": [
+        52,
+        43
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "a47c3563f950339387eef600f82e004d9247a9127f2c1f2c6dddcde174363836",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_empty_tenant_bench.png",
+      "source_asset_sha256": "a47c3563f950339387eef600f82e004d9247a9127f2c1f2c6dddcde174363836"
+    },
+    {
+      "id": "bry_privacy_screen",
+      "path": "assets/items/bry_privacy_screen.png",
+      "size": [
+        78,
+        130
+      ],
+      "origin": [
+        39,
+        117
+      ],
+      "foot_anchor": [
+        39,
+        117
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": false,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "f88a977406446dba74d998a086b887d2bfe3dcc2a2680352b1c04389d374c05e",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_privacy_screen.png",
+      "source_asset_sha256": "f88a977406446dba74d998a086b887d2bfe3dcc2a2680352b1c04389d374c05e"
+    },
+    {
+      "id": "bry_berth_canopy",
+      "path": "assets/items/bry_berth_canopy.png",
+      "size": [
+        208,
+        156
+      ],
+      "origin": [
+        104,
+        140
+      ],
+      "foot_anchor": [
+        104,
+        140
+      ],
+      "role": "independent_environment_sprite",
+      "architecture": true,
+      "wall_decal": false,
+      "roof_variants_pending": false,
+      "palette": "BRY-CORE-128",
+      "sha256": "09ddaa9b143fd047046f3382db9aa68cb7ba6ab5f1b2dd7f5f33adc1f36cfeb7",
+      "collision": "No collision supplied; proposed grids separate; alpha is never collision",
+      "runtime_verified": false,
+      "roof_variants": {
+        "body": "assets/items/bry_berth_canopy__body.png",
+        "roof": "assets/items/bry_berth_canopy__roof.png"
+      },
+      "source_batch": "BRY-core-v1",
+      "source_path": "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_berth_canopy.png",
+      "source_asset_sha256": "09ddaa9b143fd047046f3382db9aa68cb7ba6ab5f1b2dd7f5f33adc1f36cfeb7"
+    }
+  ],
+  "inventory_requests": {
+    "BRY-S01__plan": "assets/backgrounds/bryo_s01__plan_overview.png",
+    "BRY-S01__exterior": "assets/backgrounds/bryo_s01_ext__environment.png",
+    "BRY-S01__interior_or_working_space": "assets/backgrounds/bryo_s01__working_overview.png",
+    "BRY-S02__plan": "assets/backgrounds/bryo_s02__plan_overview.png",
+    "BRY-S02__exterior": "assets/backgrounds/bryo_s02_ext__environment.png",
+    "BRY-S02__interior_or_working_space": "assets/backgrounds/bryo_s02__working_overview.png",
+    "BRY-S03__plan": "assets/backgrounds/bryo_s03__plan_overview.png",
+    "BRY-S03__exterior": "assets/backgrounds/bryo_s03_ext__environment.png",
+    "BRY-S03__interior_or_working_space": "assets/backgrounds/bryo_s03__working_overview.png",
+    "BRY-X11__plan": "assets/backgrounds/bryo_x11__plan_overview.png",
+    "BRY-X11__exterior": "assets/backgrounds/bryo_x11_ext__environment.png",
+    "BRY-X11__interior_or_working_space": "assets/backgrounds/bryo_x11_work__environment.png",
+    "BRY-X12__plan": "assets/backgrounds/bryo_x12__plan_overview.png",
+    "BRY-X12__exterior": "assets/backgrounds/bryo_x12_ext__environment.png",
+    "BRY-X12__interior_or_working_space": "assets/backgrounds/bryo_x12_work__environment.png",
+    "BRY-X13__plan": "assets/backgrounds/bryo_x13__plan_overview.png",
+    "BRY-X13__exterior": "assets/backgrounds/bryo_x13_ext__environment.png",
+    "BRY-X13__interior_or_working_space": "assets/backgrounds/bryo_x13_work__environment.png",
+    "BRY-X14__plan": "assets/backgrounds/bryo_x14__plan_overview.png",
+    "BRY-X14__exterior": "assets/backgrounds/bryo_x14_ext__environment.png",
+    "BRY-X14__interior_or_working_space": "assets/backgrounds/bryo_x14_work__environment.png",
+    "BRY-X15__plan": "assets/backgrounds/bryo_x15__plan_overview.png",
+    "BRY-X15__exterior": "assets/backgrounds/bryo_x15_ext__environment.png",
+    "BRY-X15__interior_or_working_space": "assets/backgrounds/bryo_x15_work__environment.png",
+    "BRY-X16__plan": "assets/backgrounds/bryo_x16__plan_overview.png",
+    "BRY-X16__exterior": "assets/backgrounds/bryo_x16_ext__environment.png",
+    "BRY-X16__interior_or_working_space": "assets/backgrounds/bryo_x16_work__environment.png"
+  },
+  "skill_commit": "33d891c421a9ad3608f5a09af97271388ca923af",
+  "runtime_verified": false
+}

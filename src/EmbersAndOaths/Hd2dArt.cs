@@ -21,7 +21,7 @@ internal static class Hd2dArt
         Add("n1_bell",78,104,39,95); Add("n1_bedding",104,78,52,60);
         Add("n1_cut_rope",26,26,13,20); Add("n1_bellhouse_exterior",312,260,167,249);
     }
-    private static void Add(string id,int w,int h,int ox,int oy)
+    internal static void Add(string id,int w,int h,int ox,int oy)
     {
         var data=DataLoader.data;
         using var input=typeof(Hd2dArt).Assembly.GetManifestResourceStream("EAO.HD2D."+id+".png") ?? throw new InvalidDataException("Missing embedded HD2D asset: "+id);

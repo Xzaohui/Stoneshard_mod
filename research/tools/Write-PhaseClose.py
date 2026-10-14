@@ -32,6 +32,7 @@ gml = len(list((ROOT / 'src/**/Codes').glob('*.gml'))) if False else len(list((R
 sml = ROOT / 'artifacts/EmbersAndOaths.sml'
 dep = json.loads((ROOT / 'artifacts/direct-deployment.json').read_text(encoding='utf-8'))
 dep['version'] = re.search(r'<Version>([^<]+)</Version>', (ROOT / 'src/EmbersAndOaths/EmbersAndOaths.csproj').read_text(encoding='utf-8')).group(1)
+runtime_evidence = sorted((ROOT / 'artifacts').glob('dev-runtime-*.json'))[-1].relative_to(ROOT).as_posix()
 pilots = json.loads((R / 'pilot-batches.json').read_text(encoding='utf-8'))
 oi = json.loads((R / 'open-items.json').read_text(encoding='utf-8'))
 status = {}
@@ -59,7 +60,7 @@ def put(rel, t):
 n = ('---\ntitle: "设计阶段收束核对"\nid: MGMT-PHASE-CLOSE-S160\ntype: review\nstatus: draft\ncanon: mod-original\n'
      'baseline: "0.9.4.25-modbranch"\nupdated: 2026-10-13\ntags: [stoneshard, S160, review, phase]\naliases: []\n---\n\n'
      '# 设计阶段收束核对\n\n'
-     '把设计阶段交付物对着当前仓库现场重算。用户已进入实际Mod开发测试；0.3.1开发观察工具与N1首批HD2D进入实机，完整扩展仍登记在 [[待办与已知缺口登记]]。开发实测见 `artifacts/dev-runtime-20261013.json`。数据 `research/phase-close.json`。\n\n'
+     f"把设计阶段交付物对着当前仓库现场重算。用户已进入实际Mod开发测试；当前部署 {dep['version']}，开发观察与场景实测范围见 `{runtime_evidence}`，完整扩展仍登记在 [[待办与已知缺口登记]]。数据 `research/phase-close.json`。\n\n"
      '## 设计阶段交付物（现场证据）\n\n| 交付物 | 证据 | 状态 |\n| --- | --- | --- |\n'
      f"| 独立设计库 | `design/` **{notes}** 篇笔记；双链与 ID 检查见 `Test-DesignVault.ps1`（本轮 {'通过' if vault_ok else '未通过'}） | 有证据 |\n"
      f"| 两份 AGENTS.md | 根与 `design/` 各一份，含 **{rules}** 个规则块（S62—S160） | 有证据 |\n"
@@ -98,7 +99,7 @@ for hp in sorted(R.glob('*note-hashes.json')):
     if touched: hp.write_text(json.dumps(h, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 rule = ('\n<!-- PHASE-CLOSE-S160:BEGIN -->\n2026-10-13 S160：设计阶段收束核对。'
         f"现场证据：{notes}篇笔记、两份AGENTS（{rules}规则块）、{validators}校验器/{checks}项检查、131台本、三张原作参照、声望中英（成对1384、可见中文单列0）、74边闭合、{gml}个GML、.sml与MSL副本同哈希、试点3批/18场景；"
-        f"历史待办共{len(oi['items'])}项；用户已授权当前安装开发测试，0.3.1开发观察已构建部署，实测证据单列，完整扩展尚未验收。"
+        f"历史待办共{len(oi['items'])}项；用户已授权当前安装开发测试，{dep['version']}已构建部署，实测证据见{runtime_evidence}，完整扩展尚未验收。"
         '入口design/11_管理/设计阶段收束核对.md；运行Validate-PhaseClose.py及既有检查。\n<!-- PHASE-CLOSE-S160:END -->\n')
 for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PHASE-CLOSE-S160:BEGIN -->.*?<!-- PHASE-CLOSE-S160:END -->\n', '', t, flags=re.S)

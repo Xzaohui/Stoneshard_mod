@@ -107,10 +107,10 @@ def put(rel, t):
     t = preserve_foreign(V, rel, t)
     p.write_text(t, encoding='utf-8'); changed.add('design/' + rel); generated['design/' + rel] = sha(p)
 n = ('---\ntitle: "事件桩映射总表"\nid: SYS-EVENT-STUBS-S118\ntype: system\nstatus: draft\ncanon: mod-original\n'
-     'baseline: "0.9.4.25-modbranch"\nupdated: 2026-10-13\ntags: [stoneshard, S118, system, implementation]\naliases: []\n---\n\n'
+     'baseline: "0.9.4.25-modbranch"\nupdated: 2026-10-14\ntags: [stoneshard, S118, system, implementation]\naliases: []\n---\n\n'
      '# 事件桩映射总表\n\n'
      f"把 [[全库条件流投影]] 与 [[野外对白条件流]] 的每个节点映射成事件桩（共 {len(stubs)} 个）：命名、触发、读写的状态键与冷却。"
-     '数据在 `research/event-stubs.json`；本表不声明真实引擎事件号——引擎号在实现阶段分配。\n\n**约定**：\n\n' + '\n'.join('- ' + c for c in out['conventions']) + '\n\n'
+     '数据在 `research/event-stubs.json`；登记投影不声明真实引擎事件号——引擎号在实现阶段分配并回写本表（见「实现回写」节）。\n\n**约定**：\n\n' + '\n'.join('- ' + c for c in out['conventions']) + '\n\n'
      '| 触发 | 桩数 |\n|---|---:|\n')
 for tname, cnt in sorted(trig_counts.items(), key=lambda x: -x[1]):
     n += f"| `{tname}` | {cnt} |\n"
@@ -121,9 +121,28 @@ for s in stubs:
     shown.add(s['trigger'])
     n += (f"| `{s['event']}` | {s['script']} | `{s['when']}` | " + ('、'.join('`' + x + '`' for x in s['reads']) or '—') +
           ' | ' + ('、'.join('`' + x + '`' for x in s['writes'][:3]) or '—') + f" | {s['cooldown']} |\n")
+# OI-02 write-back: engine event numbers assigned at implementation time.
+# Numbers follow the deterministic scheme (Write-EventNumbers.py); stub names
+# were not reordered and read/write keys are unchanged.
+IMPLEMENTED = {
+    'evt_N2_entry': 10640, 'evt_N2_hub': 10641, 'evt_N2_choice_protected': 10642,
+    'evt_N2_choice_public': 10643, 'evt_N2_refusal': 10644,
+}
+by_event = {s['event']: s for s in stubs}
+for ev in IMPLEMENTED:
+    assert ev in by_event, ev
+n += ('\n## 实现回写：引擎事件号（OI-02）\n\n'
+      '首批 [[试点批次总表]] P1（`N2 灰堤没有墓碑`）已于 2026-10-14 落地并回写引擎事件号；候选包 0.3.2 过全部离线检查（含 20 项 N2 场景检查），**未部署**（部署门槛见 [[待办与已知缺口登记]] OI-11）。\n\n'
+      '| 事件 | 引擎事件号 | 批次 | 读 | 写 | 冷却 |\n|---|---:|---|---|---|---|\n')
+for ev, num in IMPLEMENTED.items():
+    s = by_event[ev]
+    n += (f"| `{ev}` | {num} | P1（N2） | " + ('、'.join('`' + x + '`' for x in s['reads']) or '—') +
+          ' | ' + ('、'.join('`' + x + '`' for x in s['writes']) or '—') + f" | {s['cooldown']} |\n")
+n += ('号取自 [[事件号分配方案]] 的 N2 块（一桩一号、不复用）；桩名未重排，读写键与登记投影一致。实现侧差异登记：`evt_N2_refusal` 在投影中 writes 为空，实现按 [[试点实现批次N2]] 落地顺序与 [[试点批次验收场景N2]] T04 的期望写入，把 `presence_N2=refused` 写在拒绝桩上（repeatable、幂等、不回滚结算）；`evt_N2_hub` 落地为各说话人的 repeatable 入口选择器，只读不写。\n\n'
+      '其余 ' + f"{len(stubs) - len(IMPLEMENTED)}" + ' 桩在各自批次实现时逐桩回写本节。\n\n')
 n += ('\n## 与实现的关系\n\n- 引擎实现按本表建事件：读键判断、写键记录、冷却控制重复；节点台词与守卫仍以各台本与条件流为准。\n'
       '- 写键只出现在结算（`resolve_*`）、回执（`callback_*`、`receipt_*`）与授权（`consent_*`）类节点；hub 类只读不写。\n'
-      '- 未做：真实引擎事件号、触发距离与作息、存档字段名与迁移。\n\n'
+      '- 未做：其余桩的引擎事件号回写、触发距离与作息；存档字段与旧档迁移口径见 [[状态键映射总表]]（OI-03 已定稿）。\n\n'
       '## 边界\n\n- 本页是实现用桩表：不含奖励、不含数值；不改任何台本内容。\n'
       '- 桩名可重排、可合并，但读写的键与守卫语义不得改变；改动须回写本表并重跑校验。\n\n'
       '[[状态键映射总表]] · [[全库条件流投影]] · [[野外对白条件流]] · [[特殊地点阶段制作与校准规程]] · [[设计库生成与校验流程]]\n')
@@ -146,9 +165,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
     for rel in list(h):
         if rel in changed and h[rel] != generated[rel]: h[rel] = generated[rel]; touched = True
     if touched: hp.write_text(json.dumps(h, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-rule = ('\n<!-- EVENT-STUBS-S118:BEGIN -->\n2026-10-13 S118：事件桩映射（实现桥末端）。'
-        f'research/event-stubs.json 把条件流每个节点映射成事件桩（共 {len(stubs)} 个：命名/触发/读写状态键/冷却），读写键必须在状态键表内；不声明真实引擎事件号。'
-        '入口design/09_系统逻辑/事件桩映射总表.md；运行Validate-EventStubs.py及既有检查；引擎号、触发距离与存档字段仍待实现阶段。\n<!-- EVENT-STUBS-S118:END -->\n')
+rule = ('\n<!-- EVENT-STUBS-S118:BEGIN -->\n2026-10-14 S118：事件桩映射（实现桥末端）。'
+        f'research/event-stubs.json 把条件流每个节点映射成事件桩（共 {len(stubs)} 个：命名/触发/读写状态键/冷却），读写键必须在状态键表内；登记投影不声明真实引擎事件号。'
+        'OI-02 首批回写：P1（N2）五桩已于 2026-10-14 分配引擎号 10640–10644 并落进 0.3.2 候选（离线检查全过、未部署）；evt_N2_refusal 的 presence 写入差异与 evt_N2_hub 的选择器落地已在页内登记。'
+        '入口design/09_系统逻辑/事件桩映射总表.md；运行Validate-EventStubs.py及既有检查；其余桩引擎号、触发距离仍待各批次。\n<!-- EVENT-STUBS-S118:END -->\n')
 for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- EVENT-STUBS-S118:BEGIN -->.*?<!-- EVENT-STUBS-S118:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')

@@ -29,19 +29,21 @@ msl = GAME / 'msl/Mods/EmbersAndOaths.sml'
 data = GAME / 'data.win'; vanilla = GAME / 'vanilla.win'
 rec_night = json.loads((ROOT / 'artifacts/night-runtime-acceptance.json').read_text(encoding='utf-8'))
 rec_direct = json.loads((ROOT / 'artifacts/direct-deployment.json').read_text(encoding='utf-8'))
-dev_path = ROOT / 'artifacts/dev-runtime-20261013.json'
+dev_path = sorted((ROOT / 'artifacts').glob('dev-runtime-*.json'))[-1]
+dev_evidence = dev_path.relative_to(ROOT).as_posix()
 dev_run = json.loads(dev_path.read_text(encoding='utf-8')) if dev_path.exists() else {}
 version = re.search(r'<Version>([^<]+)</Version>', (ROOT / 'src/EmbersAndOaths/EmbersAndOaths.csproj').read_text(encoding='utf-8')).group(1)
+deployed_version = rec_direct.get('modVersion') or (version if sha(art) == rec_direct['packageSha256'] else '未登记')
 base = json.loads((ROOT / 'research/local-baseline.json').read_text(encoding='utf-8'))
 codes = sorted(p.relative_to(ROOT).as_posix() for p in ROOT.glob('src/**/Codes/*.gml'))
 tools = sorted(p.name for p in (ROOT / 'tools').glob('*.ps1'))
-state = dict(date='2026-10-13',
+state = dict(date=datetime.date.today().isoformat(),
              scope='S143 implementation-side snapshot: built package, deployed copy, combined data.win and vanilla backup hashed read-only; no build or deployment performed',
              artifact=info(art), msl_copy=info(msl), data_win=info(data), vanilla_win=info(vanilla),
              recorded=dict(package_sha256=rec_direct['packageSha256'], deployed_data_sha256=rec_direct['deployedDataSha256'],
-                           version=version, deployment_date=rec_direct['date'],
+                           version=deployed_version, deployment_date=rec_direct['date'],
                            runtime_verified=rec_direct['runtimeVerified']),
-             runtime_observation=dev_run,
+             runtime_observation=dev_run, runtime_evidence_path=dev_evidence,
              baseline=dict(vanilla_sha256=base['candidate_baseline']['sha256'], strg_count=base['candidate_baseline']['strg_count']),
              sources=dict(gml_codes=len(codes), codes=codes, tools=tools))
 (ROOT / 'research/impl-state.json').write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -76,14 +78,14 @@ for label, ok, text in checks:
     n += f"| {label} | {text} |\n"
 n += (f"\n部署记录（`artifacts/direct-deployment.json`）：版本 **{state['recorded']['version']}**、"
       f"部署时间 {state['recorded']['deployment_date'][:19].replace('T', ' ')}、`runtimeVerified`＝**{state['recorded']['runtime_verified']}**"
-      "（完整剧情与存读档验收未完成；本次开发工具实测逐项见 `artifacts/dev-runtime-20261013.json`，旧0.3.0记录保留）。\n\n"
+      f"（完整剧情与存读档验收未完成；开发工具与场景实测逐项见 `{dev_evidence}`，旧记录保留）。\n\n"
       '## 源码与工具\n\n'
       f"- MSL 工程：`src/EmbersAndOaths`，GML 代码 **{state['sources']['gml_codes']}** 个（含入口绘制、点击、夜间控制器、房间/对象生成与保存桥）；\n"
       f"- 构建/部署/检查脚本：{'、'.join('`' + t + '`' for t in state['sources']['tools'])}；\n"
       '- 备份：`backups/` 下按日期留档（城市稿、美术、戏剧稿等多批）。\n\n'
       '## 与本轮设计的关系\n\n'
-      f"- 当前工程 **{version}**：无钟之夜小样、可选世界格传送及开发观察工具、N1 HD2D首批素材；**不含** S62+ 的城市/对白/声望设计稿；\n"
-      '- 因此 [[实现交接总表]] 的六步与 [[待办与已知缺口登记]] 的 OI-01 需要在现有工程上**新建事件**，而不是修改旧包；\n'
+      f"- 已部署副本为 **{deployed_version}**；本地候选 **{version}**，{'**已部署，与安装副本同哈希**' if artifact_is_deployed else '**未部署**（候选较新，见 OI-11）'}。[[试点实现批次N2]] P1 的五桩五键、灰堤三景已经接线；0.3.3 增加六景巡览和 N2 HD2D 开发适配，验收范围以候选校验与上述实测记录为准；\n"
+      '- P2（CS-BRY-01 城市系统层）、P3（FX 野外层）与其余 S62+ 设计稿仍未进包；[[实现交接总表]] 六步与 OI-01 在既有工程上分批新建事件；\n'
       '- 若重建包，本页四项指纹会变，须重跑本页与校验器（守卫会报"不一致"，提示刷新）。\n\n'
       '## 边界\n\n'
       '- 本页生成器只读哈希；实际安装与备份以本页引用的部署记录为准。\n'
@@ -93,7 +95,7 @@ n += (f"\n部署记录（`artifacts/direct-deployment.json`）：版本 **{state
 put(CARD, n)
 t = (V / PLAN).read_text(encoding='utf-8-sig')
 a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'
-blk = (a + f"\n## S143实现侧现状（当前登记）\n\n[[实现侧现状核对]]：构建包与 MSL 副本同哈希（`{state['artifact']['sha256'][:16]}…`）、data.win 与部署记录一致、vanilla 与基线一致；{version} 完整验收 `runtimeVerified=false`，开发观察实测见本页证据指针；S62+ 设计稿尚未进包。\n" + z)
+blk = (a + f"\n## S143实现侧现状（当前登记）\n\n[[实现侧现状核对]]：部署记录版本 {deployed_version}、本地候选 {version}（试点P1/N2），{'候选与部署副本一致' if artifact_is_deployed else '候选较新，未部署'}；完整验收 `runtimeVerified=false`，开发观察实测见 `{dev_evidence}`；P2/P3 与其余 S62+ 设计稿尚未进包。\n" + z)
 t2 = re.sub(re.escape(a) + '.*?' + re.escape(z), lambda _: blk, t, flags=re.S) if a in t else t.rstrip() + '\n\n' + blk + '\n'
 put(PLAN, t2)
 own = ROOT / 'research/impl-state-note-hashes.json'
@@ -107,10 +109,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
     for rel in list(h):
         if rel in changed and h[rel] != generated[rel]: h[rel] = generated[rel]; touched = True
     if touched: hp.write_text(json.dumps(h, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-rule = ('\n<!-- IMPL-STATE-S143:BEGIN -->\n2026-10-13 S143：实现侧现状核对（只读哈希）。'
-        f"构建包与MSL副本同哈希、data.win与部署记录一致、vanilla与基线一致；{version}完整验收runtimeVerified=false，开发观察实测独立登记；GML代码{state['sources']['gml_codes']}个、构建/部署/检查脚本{'/'.join(t[:-4] for t in state['sources']['tools'])}；"
-        'S62—S143设计稿尚未进包，OI-01须在现有工程上新建事件。重建包后须重跑本页与校验器。'
-        '入口design/11_管理/实现侧现状核对.md；运行Validate-ImplState.py及既有检查；不构建、不部署。\n<!-- IMPL-STATE-S143:END -->\n')
+rule = ('\n<!-- IMPL-STATE-S143:BEGIN -->\n2026-10-14 S143：实现侧现状核对（只读哈希）。'
+        f"部署记录版本{deployed_version}、本地候选{version}，{'候选与安装副本同哈希、已部署' if artifact_is_deployed else '候选较新、未部署'}；N2五桩五键三景已接线，0.3.3增加六景巡览与N2 HD2D开发适配，完整验收runtimeVerified=false；实测见{dev_evidence}；GML代码{state['sources']['gml_codes']}个、构建/部署/检查脚本{'/'.join(t[:-4] for t in state['sources']['tools'])}；"
+        'P2/P3与其余S62+设计稿尚未进包。重建包后须重跑本页与校验器。'
+        '入口design/11_管理/实现侧现状核对.md；运行Validate-ImplState.py及既有检查。\n<!-- IMPL-STATE-S143:END -->\n')
 for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- IMPL-STATE-S143:BEGIN -->.*?<!-- IMPL-STATE-S143:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')

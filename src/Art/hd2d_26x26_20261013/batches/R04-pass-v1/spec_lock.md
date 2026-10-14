@@ -1,0 +1,213 @@
+# Execution Lock — R04 Royal Pass
+
+## authorization
+User continues scene work2026-10-14. Approved26cell/static HD2D/regional128colors/PNG/separate roofs persist. No NPC work.
+
+## canvas
+- base_size:26x26
+- tile_size:26x26
+- format:RGBA PNG
+- r04_inn: 1040x780
+- r04_cellar: 1040x780
+- r04_scale: 988x728
+- r04_mason: 988x728
+- r04_cart: 1092x780
+- r04_camp: 1040x780
+- r04_drug: 1040x780
+- r04_market: 1040x780
+- r04_seal: 988x728
+- r04_bypass: 1144x832
+- r04_inn_hall: 780x572
+- r04_inn_care: 624x520
+- r04_cellar_main: 1040x832
+- r04_cellar_oil: 468x416
+- r04_cellar_damaged: 572x468
+- r04_cellar_ditch: 936x416
+- materials_master:1536x1536, four768x768panels
+- architecture_master:1536x1024, six512x512slots
+- props_a_master:1536x1024, eight384x512slots
+- props_b_master:1536x1024, eight384x512slots
+- props_c_master:1536x1024, six512x512slots
+- sealed_pair_master:1536x1024, one isolated stopped assembly
+- interiors_master:1536x1024, three512x1024material panels
+- landscape_master:1536x1536, four768x768panels
+- region:1664x1248, schematic topology only
+- r04_neutral_inn: 312x260, origin [156, 242]
+- r04_store_house: 260x234, origin [130, 216]
+- r04_mason_shed: 260x208, origin [130, 190]
+- r04_windbreak: 182x156, origin [91, 140]
+- r04_drug_pavilion: 260x208, origin [130, 190]
+- r04_seal_shelter: 208x156, origin [104, 140]
+- r04_beam_scale: 156x156, origin [78, 140]
+- r04_comparison_board: 78x104, origin [39, 91]
+- r04_mason_bench: 104x78, origin [52, 65]
+- r04_cut_stones: 104x78, origin [52, 65]
+- r04_broken_cart: 182x130, origin [91, 117]
+- r04_cargo_sacks: 78x78, origin [39, 65]
+- r04_empty_drug_crate: 78x52, origin [39, 43]
+- r04_public_table: 130x78, origin [65, 65]
+- r04_drug_rack: 104x104, origin [52, 91]
+- r04_drug_cabinet: 78x104, origin [39, 91]
+- r04_case_cabinet: 52x104, origin [26, 91]
+- r04_stop_cabinet: 52x104, origin [26, 91]
+- r04_return_mail_cabinet: 52x104, origin [26, 91]
+- r04_empty_bed: 104x104, origin [52, 91]
+- r04_two_medicine_bowls: 52x26, origin [26, 23]
+- r04_sealed_pair: 260x156, origin [130, 140]
+- r04_oil_casks: 78x104, origin [39, 91]
+- r04_oil_spill: 104x52, origin [52, 43]
+- r04_seal_comparison_table: 104x78, origin [52, 65]
+- r04_drag_rope: 104x52, origin [52, 43]
+- r04_blank_notice: 52x78, origin [26, 65]
+- r04_rolled_bedding: 78x52, origin [39, 43]
+- r04_broken_rack: 104x104, origin [52, 91]
+
+## palette
+- name:PAS-R04-128
+- colors:
+  - #E2C8A2
+  - #DEC29D
+  - #DDC09B
+  - #DBBE98
+  - #D7BC97
+  - #D6B690
+  - #CAAF8A
+  - #B7A88A
+  - #B29F81
+  - #B69775
+  - #AD9575
+  - #A99577
+  - #A88D6F
+  - #A39175
+  - #9A9077
+  - #A18A6D
+  - #97896F
+  - #A87F61
+  - #9B8266
+  - #978368
+  - #967B60
+  - #90806B
+  - #907D5D
+  - #8F765C
+  - #897D6C
+  - #89795A
+  - #88745C
+  - #837963
+  - #7C7764
+  - #7E725D
+  - #836F5B
+  - #836E52
+  - #776E5B
+  - #97664D
+  - #83674F
+  - #8C5644
+  - #7C6954
+  - #7C5B46
+  - #766757
+  - #75654B
+  - #755E4B
+  - #75523F
+  - #6C655D
+  - #6D634A
+  - #6C5D4C
+  - #6A594C
+  - #6B5742
+  - #6B4E3D
+  - #615F54
+  - #5F5A4F
+  - #5E584C
+  - #615547
+  - #57554D
+  - #5E5148
+  - #5E503E
+  - #555048
+  - #4F4F4A
+  - #5A4B42
+  - #534A43
+  - #5F4939
+  - #554939
+  - #4E4A48
+  - #4F483B
+  - #484844
+  - #684336
+  - #574338
+  - #50433A
+  - #5F3D33
+  - #503D34
+  - #57342E
+  - #4A423E
+  - #4A4135
+  - #4A3B34
+  - #4A322C
+  - #444345
+  - #44423F
+  - #423E3F
+  - #444036
+  - #443C36
+  - #433937
+  - #433830
+  - #43342E
+  - #432D29
+  - #3C3D40
+  - #3C3C35
+  - #3A3837
+  - #393738
+  - #3A362F
+  - #3A3435
+  - #343337
+  - #3B332E
+  - #35332D
+  - #3A302F
+  - #362F2F
+  - #332F30
+  - #3B2E29
+  - #342E29
+  - #362A28
+  - #362423
+  - #303132
+  - #2E2E2F
+  - #2D2C2D
+  - #2E2B2B
+  - #292A2C
+  - #2D282A
+  - #2D2725
+  - #27272C
+  - #272726
+  - #2B2426
+  - #262327
+  - #2D2321
+  - #272221
+  - #242327
+  - #202126
+  - #222121
+  - #271D1F
+  - #221D20
+  - #201D20
+  - #1E1C20
+  - #1C1D21
+  - #1B1A20
+  - #1C1A1B
+  - #18191D
+  - #1B161A
+  - #16151A
+  - #171217
+  - #111218
+  - #0D0C12
+
+## style
+- sub_style:textured HD2D square-grid orthographic oblique
+- light_direction:top-left
+- lighting:static unlit base
+- materials:ochre-gray dressed stone, cold gray brick, weathered wood, earthy muddy tracks, sparse muted grass and faded fabric
+
+## per_sprite_budget
+- max_colors:128
+
+## invariants
+- D06main40x32 long unloading axis with perpendicular short cabinet corridor. Oil room is separate and optional. Grain/cart tracking remains on surface, never one universal cabinet.
+- Official door closure never removes damaged-store evidence, ditch exit, stone-mason bypass or ordinary return. Display topology is not native world coordinates.
+- Paired historic assembly consists of empty treatment bed and distinct empty carrier trough connected by stopped/sealed pipe. No experiment, patient, bodily harm, magic, light, cure or evidence certification rendered.
+- Inn care room proposes ONE empty bed and TWO medicine bowls, not a second Morlen body or new bed entitlement/capacity. Returned mail, medicine, cases and stop logs remain visually separate.
+- No NPCs/people/animals/corpses, readable texts/seals/numbers, royal crests, national flags, new kings, outcomes, burning oil or lit lamps. Blank notice/sign slots are for engine text.
+- Parent regional concept is project AI art, not official geography. No copied original commercial atlas. Floors/collision/doors remain author proposals; alpha is never collision.
+- Raw immutable, documented crop/NN normalization/exact palette/binary alpha/tile edge copying authorized.

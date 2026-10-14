@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-14",
+  "batch": "R05-basin-v1",
+  "scope": "All19view PNGs, palettes/alpha/dimensions/origins, roof reconstruction, proposed route/evidence independence and provenance; no native runtime test",
+  "production_pngs": 318,
+  "new_generated_masters": 12,
+  "independent_sprites": 40,
+  "material_tiles": 36,
+  "view_slots": 19,
+  "checks_passed": 3630,
+  "errors": [],
+  "passed": true,
+  "paths": [
+    {
+      "scene": "r05_care",
+      "walkable_cells": 570,
+      "reachable_cells": 570,
+      "exits": [
+        "road",
+        "village",
+        "shelter",
+        "hall"
+      ]
+    },
+    {
+      "scene": "r05_ward",
+      "walkable_cells": 544,
+      "reachable_cells": 544,
+      "exits": [
+        "drain",
+        "shelter",
+        "front_ward",
+        "exit_slope"
+      ]
+    },
+    {
+      "scene": "r05_well",
+      "walkable_cells": 680,
+      "reachable_cells": 680,
+      "exits": [
+        "drain",
+        "road",
+        "upper_ring",
+        "maintenance"
+      ]
+    },
+    {
+      "scene": "r05_village",
+      "walkable_cells": 602,
+      "reachable_cells": 602,
+      "exits": [
+        "care",
+        "reeds"
+      ]
+    },
+    {
+      "scene": "r05_reeds",
+      "walkable_cells": 504,
+      "reachable_cells": 504,
+      "exits": [
+        "village",
+        "drain"
+      ]
+    },
+    {
+      "scene": "r05_shelter",
+      "walkable_cells": 684,
+      "reachable_cells": 684,
+      "exits": [
+        "ward",
+        "care",
+        "room"
+      ]
+    },
+    {
+      "scene": "r05_drain",
+      "walkable_cells": 738,
+      "reachable_cells": 738,
+      "exits": [
+        "reeds",
+        "ward",
+        "well"
+      ]
+    },
+    {
+      "scene": "r05_road",
+      "walkable_cells": 876,
+      "reachable_cells": 876,
+      "exits": [
+        "care",
+        "well",
+        "R03_pending",
+        "R04_pending",
+        "R06_pending"
+      ]
+    },
+    {
+      "scene": "r05_care_hall",
+      "walkable_cells": 494,
+      "reachable_cells": 494,
+      "exits": [
+        "yard",
+        "beds"
+      ]
+    },
+    {
+      "scene": "r05_care_beds",
+      "walkable_cells": 456,
+      "reachable_cells": 456,
+      "exits": [
+        "hall"
+      ]
+    },
+    {
+      "scene": "r05_ward_main",
+      "walkable_cells": 588,
+      "reachable_cells": 588,
+      "exits": [
+        "front",
+        "waste",
+        "ritual",
+        "safe_slope"
+      ]
+    },
+    {
+      "scene": "r05_ward_waste",
+      "walkable_cells": 270,
+      "reachable_cells": 270,
+      "exits": [
+        "main",
+        "slope"
+      ]
+    },
+    {
+      "scene": "r05_ward_ritual",
+      "walkable_cells": 182,
+      "reachable_cells": 182,
+      "exits": [
+        "main"
+      ]
+    },
+    {
+      "scene": "r05_ward_exit",
+      "walkable_cells": 352,
+      "reachable_cells": 352,
+      "exits": [
+        "ward",
+        "camp_return"
+      ]
+    },
+    {
+      "scene": "r05_well_upper",
+      "walkable_cells": 548,
+      "reachable_cells": 548,
+      "exits": [
+        "surface",
+        "middle",
+        "maintenance"
+      ]
+    },
+    {
+      "scene": "r05_well_middle",
+      "walkable_cells": 548,
+      "reachable_cells": 548,
+      "exits": [
+        "upper",
+        "lower",
+        "maintenance"
+      ]
+    },
+    {
+      "scene": "r05_well_lower",
+      "walkable_cells": 548,
+      "reachable_cells": 548,
+      "exits": [
+        "middle",
+        "research_refuge",
+        "workers_refuge",
+        "maintenance"
+      ]
+    },
+    {
+      "scene": "r05_well_research_refuge",
+      "walkable_cells": 234,
+      "reachable_cells": 234,
+      "exits": [
+        "lower"
+      ]
+    },
+    {
+      "scene": "r05_well_workers_refuge",
+      "walkable_cells": 260,
+      "reachable_cells": 260,
+      "exits": [
+        "lower"
+      ]
+    },
+    {
+      "scene": "r05_well_maintenance",
+      "walkable_cells": 360,
+      "reachable_cells": 360,
+      "exits": [
+        "surface",
+        "upper",
+        "middle",
+        "lower"
+      ]
+    },
+    {
+      "scene": "r05_shelter_room",
+      "walkable_cells": 494,
+      "reachable_cells": 494,
+      "exits": [
+        "yard"
+      ]
+    }
+  ],
+  "asset_manifest_sha256": "70f96483afedeeff209c53eb0a76026a69db4d702191d53606947b44eb3728a8",
+  "runtime_verified": false,
+  "visual_review": [
+    "Three38x38well rings around nonwalkablewater, distinctrefugedoors, upperfixedcopy and separatemaintenance.",
+    "D07threeempty beds and shortcorridor, oldlivingpipes retained and newwastepipe variants separate.",
+    "Fine-floor v2replaces oversizeflagstones and reducesgravelhighlights; v1snapshot preserved.",
+    "Sixindependent buildings split roofs; no NPC/capacity/consent/quest outcome drawn."
+  ]
+}

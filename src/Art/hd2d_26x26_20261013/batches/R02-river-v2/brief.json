@@ -1,0 +1,379 @@
+{
+  "schema": 1,
+  "batch": "R02-river-v2",
+  "palette": "DEN-R02-128",
+  "scope": "Only scene art; NPC model owns people/dialogue/state events",
+  "skill_commit": "33d891c421a9ad3608f5a09af97271388ca923af",
+  "source_sha256": {
+    "research/story-regions.json": "54e8a8058d0595a854a267f14cdf0a13622d638a7b384fbabec9d44331215a91",
+    "design/02_世界与地图/区域_R02_丹布里西路与渡口.md": "563d764f7ba7bc575b739a6fd353e62368303a298cee62a9573dddf4570aaf97",
+    "design/08_副本/台本/台本_D03_断桥税栈.md": "8d34b165ff098d0d19c18f7f152eb646bf91d015db57b2c283a12c0d42bb112f",
+    "design/05_主线/台本/台本_N5_渡口的三种说法.md": "7a50b4eb2642076ee5157f6407d628cfa2cf17e0acce1ba89b5867fae28cea38",
+    "design/05_主线/台本/台本_N9_把证据摆上桌.md": "68148f5228de111e0c5c63844f46d7110a2cfc2df35361d3df919a109ab0f59b",
+    "design/05_主线/台本/台本_N18_誓约之后.md": "72ab9788b1aa201785b4b999594e58c44a188893ecff0b3e000713751dceeffd",
+    "design/06_支线/台本/台本_SQ04_一条不卖人的路.md": "1d3183a0982cc303b5e50019d18d9e73c27989056ca907fcef65a4db1b1fdeef",
+    "design/06_支线/台本/台本_SQ05_渡口与姓名.md": "b7af36ffae8b28ae99d485d9632361ce38f4c7a074a5734cd621a05382b40881",
+    "design/12_美术参考/城市概念/DEN-概念-v1.png": "91f61dc5f6ee96373880a128c9fc8b900ae1825ec9b11eb8b4a521943c964426"
+  },
+  "sprites": [
+    {
+      "id": "r02_ferry_inn",
+      "size": [
+        312,
+        260
+      ],
+      "origin": [
+        156,
+        242
+      ]
+    },
+    {
+      "id": "r02_tax_house",
+      "size": [
+        260,
+        234
+      ],
+      "origin": [
+        130,
+        216
+      ]
+    },
+    {
+      "id": "r02_filter_shelter",
+      "size": [
+        156,
+        156
+      ],
+      "origin": [
+        78,
+        140
+      ]
+    },
+    {
+      "id": "r02_repair_canopy",
+      "size": [
+        208,
+        156
+      ],
+      "origin": [
+        104,
+        140
+      ]
+    },
+    {
+      "id": "r02_inspection_shed",
+      "size": [
+        208,
+        182
+      ],
+      "origin": [
+        104,
+        166
+      ]
+    },
+    {
+      "id": "r02_bridge_pier",
+      "size": [
+        78,
+        130
+      ],
+      "origin": [
+        39,
+        117
+      ]
+    },
+    {
+      "id": "r02_public_table",
+      "size": [
+        130,
+        78
+      ],
+      "origin": [
+        65,
+        65
+      ]
+    },
+    {
+      "id": "r02_privacy_screen",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ]
+    },
+    {
+      "id": "r02_case_cabinet",
+      "size": [
+        52,
+        78
+      ],
+      "origin": [
+        26,
+        65
+      ]
+    },
+    {
+      "id": "r02_name_cabinet",
+      "size": [
+        52,
+        78
+      ],
+      "origin": [
+        26,
+        65
+      ]
+    },
+    {
+      "id": "r02_filter_rack",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ]
+    },
+    {
+      "id": "r02_sample_bucket",
+      "size": [
+        26,
+        26
+      ],
+      "origin": [
+        13,
+        23
+      ]
+    },
+    {
+      "id": "r02_mooring_post",
+      "size": [
+        52,
+        78
+      ],
+      "origin": [
+        26,
+        65
+      ]
+    },
+    {
+      "id": "r02_crate_corner",
+      "size": [
+        52,
+        52
+      ],
+      "origin": [
+        26,
+        43
+      ]
+    },
+    {
+      "id": "r02_repair_timbers",
+      "size": [
+        104,
+        52
+      ],
+      "origin": [
+        52,
+        43
+      ]
+    },
+    {
+      "id": "r02_soup_stove",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ]
+    },
+    {
+      "id": "r02_road_sign",
+      "size": [
+        52,
+        78
+      ],
+      "origin": [
+        26,
+        65
+      ]
+    },
+    {
+      "id": "r02_inspection_table",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        45
+      ]
+    }
+  ],
+  "inventory_requests": {
+    "R02__plan": "assets/backgrounds/r02_region__plan.png",
+    "R02-inn__plan": "assets/backgrounds/r02_inn_exterior__plan.png",
+    "R02-inn__exterior_or_site": "assets/backgrounds/r02_inn_exterior__environment.png",
+    "R02-well__plan": "assets/backgrounds/r02_well__plan.png",
+    "R02-well__exterior_or_site": "assets/backgrounds/r02_well__environment.png",
+    "R02-tracks__plan": "assets/backgrounds/r02_tracks__plan.png",
+    "R02-tracks__exterior_or_site": "assets/backgrounds/r02_tracks__environment.png",
+    "R02-repair__plan": "assets/backgrounds/r02_repair__plan.png",
+    "R02-repair__exterior_or_site": "assets/backgrounds/r02_repair__environment.png",
+    "R02-ford__plan": "assets/backgrounds/r02_ford__plan.png",
+    "R02-ford__exterior_or_site": "assets/backgrounds/r02_ford__environment.png",
+    "R02-fork__plan": "assets/backgrounds/r02_fork__plan.png",
+    "R02-fork__exterior_or_site": "assets/backgrounds/r02_fork__environment.png",
+    "R02-tax__plan": "assets/backgrounds/r02_tax__plan_overview.png",
+    "R02-tax__exterior_or_site": "assets/backgrounds/r02_tax_main__environment.png",
+    "R02-tax__interior_or_working_space": "assets/backgrounds/r02_tax__working_overview.png",
+    "R02-ferryold__plan": "assets/backgrounds/r02_ferryold__plan_overview.png",
+    "R02-ferryold__exterior_or_site": "assets/backgrounds/r02_ferryold__site.png"
+  },
+  "runtime_verified": false,
+  "scene_cue_contract": {
+    "path": "cue-source",
+    "master_sha256": "1814ac2213e534ee43a94163823e020dfb7121d40bc6037122d974c73efc377e",
+    "selected_sprite_ids": [
+      "r02_well_notice",
+      "r02_red_water_buckets",
+      "r02_rope_shoe_stall",
+      "r02_bridge_note"
+    ],
+    "operations": [
+      {
+        "id": "r02_well_notice",
+        "source": "raw/scene-cues-v1.png",
+        "box": [
+          1024,
+          0,
+          1536,
+          512
+        ],
+        "alpha_threshold": 128,
+        "trim_bbox": [
+          115,
+          33,
+          410,
+          468
+        ],
+        "target_canvas": [
+          52,
+          78
+        ],
+        "fitted_size": [
+          43,
+          63
+        ],
+        "offset": [
+          4,
+          2
+        ],
+        "resample": "nearest",
+        "palette": "DEN-R02-128",
+        "quantizer": "Exact nearest RGB squared distance, first palette color on ties; same as skill finalizer"
+      },
+      {
+        "id": "r02_red_water_buckets",
+        "source": "raw/scene-cues-v1.png",
+        "box": [
+          0,
+          512,
+          512,
+          1024
+        ],
+        "alpha_threshold": 128,
+        "trim_bbox": [
+          96,
+          16,
+          446,
+          461
+        ],
+        "target_canvas": [
+          78,
+          78
+        ],
+        "fitted_size": [
+          50,
+          63
+        ],
+        "offset": [
+          14,
+          2
+        ],
+        "resample": "nearest",
+        "palette": "DEN-R02-128",
+        "quantizer": "Exact nearest RGB squared distance, first palette color on ties; same as skill finalizer"
+      },
+      {
+        "id": "r02_rope_shoe_stall",
+        "source": "raw/scene-cues-v1.png",
+        "box": [
+          512,
+          512,
+          1024,
+          1024
+        ],
+        "alpha_threshold": 128,
+        "trim_bbox": [
+          9,
+          20,
+          512,
+          436
+        ],
+        "target_canvas": [
+          156,
+          156
+        ],
+        "fitted_size": [
+          152,
+          126
+        ],
+        "offset": [
+          2,
+          14
+        ],
+        "resample": "nearest",
+        "palette": "DEN-R02-128",
+        "quantizer": "Exact nearest RGB squared distance, first palette color on ties; same as skill finalizer"
+      },
+      {
+        "id": "r02_bridge_note",
+        "source": "raw/scene-cues-v1.png",
+        "box": [
+          1024,
+          512,
+          1536,
+          1024
+        ],
+        "alpha_threshold": 128,
+        "trim_bbox": [
+          0,
+          49,
+          414,
+          437
+        ],
+        "target_canvas": [
+          52,
+          52
+        ],
+        "fitted_size": [
+          20,
+          19
+        ],
+        "offset": [
+          16,
+          24
+        ],
+        "resample": "nearest",
+        "palette": "DEN-R02-128",
+        "quantizer": "Exact nearest RGB squared distance, first palette color on ties; same as skill finalizer"
+      }
+    ]
+  }
+}

@@ -75,7 +75,7 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 <!-- TOWN-REPUTATION-S87:END -->
 
 <!-- FORESHADOW-LEDGER-S87:BEGIN -->
-2026-10-12 S87：用户要求持续埋伏笔并回收。research/foreshadow-ledger.json把主线74条X边、日常16条、副本18条并入线写成闭合丝线；布林续篇15桥与城镇解锁/听闻/回执各15处成组引用；夜船货物、旧市长责任、晶石全貌、全国政体为有意留白。入口design/09_系统逻辑/伏笔与回收台账.md，运行Validate-ForeshadowLedger.py及既有检查；不新增奖励/承诺/结局资格，不部署。
+2026-10-12 S87：用户要求持续埋伏笔并回收。research/foreshadow-ledger.json把主线82条X边、日常16条、副本18条并入线写成闭合丝线；布林续篇15桥与城镇解锁/听闻/回执各15处成组引用；夜船货物、旧市长责任、晶石全貌、全国政体为有意留白。入口design/09_系统逻辑/伏笔与回收台账.md，运行Validate-ForeshadowLedger.py及既有检查；不新增奖励/承诺/结局资格，不部署。
 <!-- FORESHADOW-LEDGER-S87:END -->
 
 <!-- TIMELINE-REGISTRY-S88:BEGIN -->
@@ -174,10 +174,6 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S149：待办登记刷新至15项。新增 OI-13（重建结构回归输入：broken/fixed .win 与记录哈希不匹配）、OI-14（验证快照不得清理：11份 backups/… 为保留性检查基线）、OI-15（按既有工程新建事件：0.3.0 包不含 S62+ 设计稿）；OI-11 补基线指针。入口design/11_管理/待办与已知缺口登记.md；运行Validate-OpenItems.py及既有检查；不部署游戏包。
 <!-- OPEN-ITEMS-S149:END -->
 
-<!-- NAV-STATUS-S148:BEGIN -->
-2026-10-13 S148：三张导航页加入机检状态行。台本131篇（晶石51＋城市79＋野外1）、卫星聚落33篇、质量守卫7项；由 Validate-NavStatus.py 现场重算核对（家族计数、卫星笔记数、守卫行数），计数变化须重跑写手刷新。
-<!-- NAV-STATUS-S148:END -->
-
 <!-- CHAIN-ORDER-S150:BEGIN -->
 2026-10-13 S150：链路顺序规则“清单即保护范围”。写手把写过的笔记记入各自 *note-hashes.json；BrynnContinuation.py 汇总全部清单并在写前逐个校验哈希，手工改过受保护笔记后必须先重跑拥有该条目的写手刷新清单再跑它，否则按设计拒绝并连锁 manifest-reconciled 失败。规则见 design/11_管理/设计库生成与校验流程.md 顺序约束节；不得直接改清单数值掩盖冲突。
 <!-- CHAIN-ORDER-S150:END -->
@@ -218,10 +214,6 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S101：用户要求扩充各特殊地点。research/field-signs.json 为剩余16处地点补“迹象与观察”（观察/判定提示/危险退路），入口design/02_世界与地图/特殊地点与野外NPC/野外迹象与观察.md；44处传闻地点至此全部有落点（28人物＋16迹象）。迹象只给信息：不发奖励、不完成任务、不替代同意；判定不含数值掉落。运行Validate-FieldSigns.py及既有检查；生成点与比例仍待制作，不部署游戏包。
 <!-- FIELD-SIGNS-S101:END -->
 
-<!-- BRANCH-COVERAGE-S103:BEGIN -->
-2026-10-13 S103：按计划剩余项「对白分支」做结构审计。research/branch-coverage.json 覆盖 130 个脚本（城市73/续篇6/主线·支线·后章·副本/日常16）：多方法、逐方法先做后做、早晚回执、拒绝或缺席替代、知识守卫与中断恢复齐备，不合口径无。入口design/11_管理/对白分支覆盖审计.md；只审字段结构，不评文学、不证明运行；运行Validate-BranchCoverage.py及既有检查；不部署游戏包。
-<!-- BRANCH-COVERAGE-S103:END -->
-
 <!-- REGION-MAP-S104:BEGIN -->
 2026-10-13 S104：用户要求扩充各特殊地点。research/region-content-map.json 把8个原作世界地图区域映射到Mod地域/地点卡/野外人物，入口design/02_世界与地图/特殊地点与野外NPC/原作地图区域与Mod内容映射.md；只做映射与避让口径：不占区域、不改原作地图与任务、不新增服务；比例与生成点仍待做。运行Validate-RegionContentMap.py及既有检查；不部署游戏包。
 <!-- REGION-MAP-S104:END -->
@@ -238,14 +230,6 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S109：野外内容规则一致性审计。research/rule-audit.json 重算 14 项（无奖励/前置/重复任务字段、拒绝与缺席出口、知情边界、中英对齐、服务不新增、44地点落点），入口design/11_管理/野外内容规则一致性审计.md。只验规则与结构；运行、数值与生成点见制作规程。运行Validate-RuleAudit.py及既有检查；不部署游戏包。
 <!-- RULE-AUDIT-S109:END -->
 
-<!-- CORPUS-FLOWS-S113:BEGIN -->
-2026-10-13 S113：全库条件流投影（实现桥）。research/corpus-flows.json 把 130 个脚本（城市73/续篇6/主线·支线·后章·副本/日常16）投影成固定词表条件图，refs 逐条回指源原句、notes 载守卫与例外；入口design/11_管理/全库条件流投影.md。投影不新写台词、不含奖励/结算字段、不改台本；运行Validate-CorpusFlows.py及既有检查；引擎触发与部署仍待实现阶段。
-<!-- CORPUS-FLOWS-S113:END -->
-
-<!-- STATE-KEYS-S114:BEGIN -->
-2026-10-13 S114：状态键映射（实现桥）。research/state-keys.json 由源确定性推导 1393 个实现用状态键（encounter/resolve/callback/consent/paid/order/presence＋329 个跨任务回执）；键名 ID 中 `-` 换 `_`，resolve 结算前 none、结算后唯一取值，回执只记已播。入口design/09_系统逻辑/状态键映射总表.md；条件流 when 的映射见页内。不迁移旧存档、不含奖励语义；运行Validate-StateKeys.py及既有检查；不部署游戏包。
-<!-- STATE-KEYS-S114:END -->
-
 <!-- AMBIENT-GOSSIP-S115:BEGIN -->
 2026-10-13 S115：地区闲谈池（原创，中英对照）。research/ambient-gossip.json 六地域 30 条，条件词表 any/night/band:+1/band:-1/after:<台本>；只谈本区生活与旧事，不发奖励、不推进任务、不写状态键。入口design/02_世界与地图/特殊地点与野外NPC/地区闲谈池.md；运行Validate-AmbientGossip.py、Validate-DialogueDistinctiveness.py及既有检查；触发与配音待实现。
 <!-- AMBIENT-GOSSIP-S115:END -->
@@ -258,17 +242,9 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S117：声望档街头反应（原创，中英对照）。research/band-gossip.json 十五城镇与六地域各2条冷/热档口气（band:-1 / band:+2）共 42 条；只写口气与场面，不承诺服务、不发物品、不给情报，且与柜台台词不重复。入口design/02_世界与地图/特殊地点与野外NPC/声望档街头反应.md；运行Validate-BandGossip.py、Validate-DialogueDistinctiveness.py及既有检查；触发与配音待实现。
 <!-- BAND-GOSSIP-S117:END -->
 
-<!-- EVENT-STUBS-S118:BEGIN -->
-2026-10-13 S118：事件桩映射（实现桥末端）。research/event-stubs.json 把条件流每个节点映射成事件桩（共 1807 个：命名/触发/读写状态键/冷却），读写键必须在状态键表内；不声明真实引擎事件号。入口design/09_系统逻辑/事件桩映射总表.md；运行Validate-EventStubs.py及既有检查；引擎号、触发距离与存档字段仍待实现阶段。
-<!-- EVENT-STUBS-S118:END -->
-
 <!-- BILINGUAL-COVERAGE-S120:BEGIN -->
 2026-10-13 S120：中英对照覆盖报告。research/bilingual-coverage.json 逐登记重算：用户可见文本 1384 组成对、中文单语 0 条（目标0）；内部散文中文先行不计缺口；英文均为Mod原创。入口design/11_管理/中英对照覆盖报告.md；运行Validate-BilingualCoverage.py及既有检查；不部署游戏包。
 <!-- BILINGUAL-COVERAGE-S120:END -->
-
-<!-- KEY-NAMES-S123:BEGIN -->
-2026-10-13 S123：键名口径对账。research/key-naming-reconciliation.json 把S62旧族级字段名映射到S114按脚本/按路线键；[[状态键映射总表]]为唯一权威，旧名只作阅读别名、不双写；两篇旧文加提示块。入口design/09_系统逻辑/键名口径对账.md；运行Validate-KeyNaming.py及既有检查；引擎字段与旧档迁移仍待实现。
-<!-- KEY-NAMES-S123:END -->
 
 <!-- INTERIOR-AMBIENT-S124:BEGIN -->
 2026-10-13 S124：副本与日常氛围句（原创，中英对照）。research/interior-ambient.json 9副本×3现场观察＋16日常×2周边口气共 59 条；不推进任务、不写状态键、不揭未核真相，after 只改未来口气。入口design/02_世界与地图/特殊地点与野外NPC/副本与日常氛围句.md；运行Validate-InteriorAmbient.py、Validate-DialogueDistinctiveness.py及既有检查；触发与配音待实现。
@@ -301,18 +277,6 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 <!-- REP-REF-S135:BEGIN -->
 2026-10-13 S135：原作声誉档位与地方状态参照（只读探针）。10信息流（村落/阵营/全域+界面）、20来源（任务/贸易/犯罪等，均带[声誉%rep_amount%]）、20档位（特殊任务/特色商品/赏金预付/库存±10..50%/交易±5..30%/本地公敌）、两档通缉、15地方状态；对照口径：地方信任与原版声望分开、信任档只改范围与便利、不照搬数值、不写地方状态修正、不改通缉。入口design/01_原作基线/原作声誉档位与地方状态参照.md；片段≤46字。运行Validate-ReputationReference.py及既有检查；不部署游戏包。
 <!-- REP-REF-S135:END -->
-
-<!-- DIALOGUE-COVERAGE-S137:BEGIN -->
-2026-10-13 S137：逐角色稿完成度核对（结构重算）。131篇台本逐篇核对对话树/场次节、场次标记、说话人行数与版本标记：130篇有对话节（例外为野外人物对白卡格式）；城市稿ASH/HIG各3篇已于S86深化、布林续篇六篇各有场1—3，当前待深化0篇；旧「各四篇/8篇待深化」保留为S84/S85历史记录，计划页旧句改为指向本页。入口design/11_管理/逐角色稿完成度核对.md；运行Validate-DialogueCoverage.py及既有检查；不部署游戏包。
-<!-- DIALOGUE-COVERAGE-S137:END -->
-
-<!-- SPEAKER-CLOSURE-S138:BEGIN -->
-2026-10-13 S138：说话人与人物卡闭合核对。逐行取说话人 232 位全部归类（玩家/人物卡精确/前缀/提及/通用称谓/标记），未闭合 0 位；白名单research/speaker-allowlist.json（通用称谓与标记不建卡）；新增说话人未列入白名单时校验报错。入口design/11_管理/说话人与人物卡闭合核对.md；运行Validate-SpeakerClosure.py及既有检查；不部署游戏包。
-<!-- SPEAKER-CLOSURE-S138:END -->
-
-<!-- DIALOGUE-DISTINCT-S139:BEGIN -->
-2026-10-13 S139：对白去重与独特性核对（整句完全匹配）。逐行抽取2717行、去重2699条；完全重复18组，全部为主章—副本配对（同一人物跨N/D，有意一致），待复核0组。新增重复不属配对时校验报错，须改写或登记理由。入口design/11_管理/对白去重与独特性核对.md；运行Validate-DialogueDistinctiveness.py及既有检查；不部署游戏包。
-<!-- DIALOGUE-DISTINCT-S139:END -->
 
 <!-- RX-HEADERS-S141:BEGIN -->
 2026-10-13 S141：R/X头部补齐。城市稿79篇中14篇原有R/X头、65篇带派生块（仅用脚本内既有方法小节、resolve_/paid_键与回访名，不新增设定、不改既有文字，逐篇比对保证只增块）。N/SQ/DT/D另用「可执行解法＋本任务影响的后事」与-R-键名，不在本次范围。入口design/11_管理/R-X头部补齐记录.md；运行Validate-RXHeaders.py及既有检查；不部署游戏包。
@@ -350,17 +314,9 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S162：结构回归输入复核。GameProbe --assert-eao-struct-access 复跑：direct-data.win 通过（可作fixed输入）、repeat-data.win 属另一失败模式（Courier InvalidDataException）、vanilla-0.2.0.win 通过；仅缺故意损坏的broken输入，OI-13已更新。入口design/11_管理/工具链离线自检记录.md；运行Validate-ToolchainChecks.py及既有检查；不构建、不部署。
 <!-- TOOLCHAIN-S162:END -->
 
-<!-- EVT-NUM-S163:BEGIN -->
-2026-10-13 S163：事件号分配方案。1,807桩按家族基址（N10000/SQ20000/DT30000/D40000/CS50000/CM60000/FX70000）＋脚本64对齐块确定性预分配，一桩一号不复用，退役不转号；引擎号实现时分配并回写事件桩映射总表；纸面方案，原生事件号空间未读取。入口design/11_管理/事件号分配方案.md；运行Validate-EventNumbers.py及既有检查。
-<!-- EVT-NUM-S163:END -->
-
 <!-- NAV-BLOCK-S164:BEGIN -->
 2026-10-13 S164：设计总览导航块扩容至S125—S163。按四组（清点与交接/原作参照/质量守卫/实现准备）列28个入口，含三批试点、引擎键、N1键语义与事件号方案；Validate-NavBlock.py 断言目标笔记全部存在且链接解析。只改导航与生成模板。
 <!-- NAV-BLOCK-S164:END -->
-
-<!-- OPEN-ITEMS-S133:BEGIN -->
-2026-10-13 S133：待办与已知缺口登记。research/open-items.json 汇总 12 项（实现5/制作3/实机3/设计可选1/口径1），标明负责方、前置与证据；设计总览补最新入口块。入口design/11_管理/待办与已知缺口登记.md；只汇总不改门槛。运行Validate-OpenItems.py及既有检查；不部署游戏包。
-<!-- OPEN-ITEMS-S133:END -->
 
 <!-- TOOLCHAIN-S166:BEGIN -->
 2026-10-13 S166：结构回归关闭（OI-13）。broken输入取自backups/direct-20261011-155606-160/data.win（67B2D55E…），fixed改用当前构建artifacts/direct-data.win（4D863960…，旧fixed文件已不满足更严linkage检查）；复跑通过、记录已按今日重写。修好两处工具缺陷（预期stderr终止脚本→局部Continue；utf8NoBOM→WriteAllText，兼容PS5.1）；待办登记15→14项。入口design/11_管理/工具链离线自检记录.md；运行Validate-ToolchainChecks.py及既有检查；不构建、不部署。
@@ -378,10 +334,6 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S170：本地构建（未部署）。tools/Build-Mod.ps1（无 -Deploy）跑通：新包 FF5D90F7…、新候选 direct-data.win 2F669A1C…，输入当前组合（定向修复）；重复补丁拒绝/非EAO原代码未改/链接通过/原身份保留；四套离线套件执行；runtimeVerified=false。本地候选≠已部署副本（旧3B3EF27A…）——实现侧现状页如实报告"候选较新，部署待放行（OI-11）"；未部署、未改游戏目录。入口design/11_管理/构建前置核对.md；运行Validate-ImplState.py与Validate-BuildReadiness.py及既有检查。
 <!-- BUILD-RUN-S170:END -->
 
-<!-- HOOK-MAP-S171:BEGIN -->
-2026-10-13 S171：触发器接线点映射（只读）。1807桩的8种触发逐一接到小样原生钩子（characterDataMap/__dialogue_flow_data/instance_create_depth/event_user/scr_quest_get_complete），附证据行号与口径；实现轮照此接线并逐桩回写；不改源码、不构建、不部署。入口design/11_管理/触发器接线点映射.md；运行Validate-HookMapping.py及既有检查。
-<!-- HOOK-MAP-S171:END -->
-
 <!-- REF-GAMES-S172:BEGIN -->
 2026-10-13 S172：参考游戏对照页守卫。Validate-ReferenceGames.py 断言四款点名游戏（BG3/DOS1/DOS2/Drova）各有机制行与教训、取舍映射表覆盖四款并回链设计页、引用全部为URL、保持外部研究与未验证边界。入口design/11_管理/参考游戏叙事与声望机制对照.md；只读守卫，未改页面。
 <!-- REF-GAMES-S172:END -->
@@ -398,10 +350,6 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S176：文本注入与本地化口径（只读提取）。证据：__dialogue_flow_data+npc_lines_map以json_parse注入（NativeDialogue.cs:114/130）、语言槽索引0=EN/1=CN（global.language==3取CN，:129）、文书走NativeDocuments原语；不改STRG、不依赖外部文件。本Mod台本对白2717行等将走同一机制；未接线、未构建、未部署。入口design/11_管理/文本注入与本地化口径.md；运行Validate-TextInjection.py及既有检查。
 <!-- TEXT-INJECT-S176:END -->
 
-<!-- NARRATIVE-DEPTH-S177:BEGIN -->
-2026-10-13 S177：网状叙事深度审计（只读计算）。按BG3/DOS经验量化反应性：条件节点/先后槽/缺席槽/路线/入出向X边/说话人；城市稿73/73有early+absent；缺口：无先后槽57篇、无缺席槽57篇、无入向边102篇、无出向边81篇、节点≤4共16篇；附三条优化提案。入口design/11_管理/网状叙事深度审计.md；运行Validate-NarrativeDepth.py及既有检查；不改内容。
-<!-- NARRATIVE-DEPTH-S177:END -->
-
 <!-- BASELINE-REG-S146:BEGIN -->
 2026-10-13 S146：验证快照依赖登记。工具源码中 11 份 backups/… 快照（城市/戏剧类保留性检查的“变更前”基线）逐份登记大小/哈希/用途，另 1 条为非依赖说明；缺任一份对应校验器无法运行，改动或替换由 Validate-PreservationBaselines.py 报错。入口design/11_管理/验证快照依赖登记.md；不复制、不修改、不删除备份。
 <!-- BASELINE-REG-S146:END -->
@@ -410,46 +358,98 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S145：第五轮全链复跑演练。主库按生成链顺序重跑写手：通过54、需素材跳过6、失败0；重跑后65校验器与Test-DesignVault全通过。最小副本（design/research/tools/src）重跑同序：写手46通过/8中止（缺backups与artifacts输入，下游保留守卫按设计连锁）、校验器49通过/16失败（戏剧城市类读backups、美术类读素材、计数页读已中止写手结果）。结论：主库链路自洽、顺序敏感、环境依赖已清点；未声明整树字节一致。入口design/11_管理/全链复跑演练S145.md；不构建、不部署。
 <!-- REPLAY-S145:END -->
 
+<!-- ROLLBACK-S174:BEGIN -->
+2026-10-13 S174：部署与回滚运行手册。部署五步（退出→构建验收→备份与替换→记录→部署后核对）与回滚六步（定位备份集→校验→还原data.win→还原设置与旧包→复核→留痕）按脚本实际行为写成；当前备份集 direct-20261013-155030-418 哈希已核对；不保证无损卸载、用户数据不动。本轮未执行部署或回滚。入口design/11_管理/部署与回滚运行手册.md；运行Validate-RollbackRunbook.py及既有检查。
+<!-- ROLLBACK-S174:END -->
+
+<!-- REG-COVERAGE-S152:BEGIN -->
+2026-10-13 S152：登记文件覆盖分类。research/ 下 127 份登记按覆盖方式分类：校验器直接 92、间接 24、工具产物 5、调查记录 4、共享输入 2；未归类 0。新增活输入须进前两类，工具产物须由已登记工具生成，调查记录须被设计页引用；出现未归类即报错。入口design/11_管理/登记文件覆盖分类.md；运行Validate-RegistryCoverage.py及既有检查。
+<!-- REG-COVERAGE-S152:END -->
+
+<!-- OPEN-ITEMS-S133:BEGIN -->
+2026-10-13 S133：待办与已知缺口登记。research/open-items.json 汇总 12 项（实现5/制作3/实机3/设计可选1/口径1），标明负责方、前置与证据；设计总览补最新入口块。入口design/11_管理/待办与已知缺口登记.md；只汇总不改门槛。运行Validate-OpenItems.py及既有检查；不部署游戏包。
+<!-- OPEN-ITEMS-S133:END -->
+
+<!-- KEY-NAMES-S123:BEGIN -->
+2026-10-13 S123：键名口径对账。research/key-naming-reconciliation.json 把S62旧族级字段名映射到S114按脚本/按路线键；[[状态键映射总表]]为唯一权威，旧名只作阅读别名、不双写；两篇旧文加提示块。入口design/09_系统逻辑/键名口径对账.md；运行Validate-KeyNaming.py及既有检查；引擎字段与旧档迁移仍待实现。
+<!-- KEY-NAMES-S123:END -->
+
+<!-- BRANCH-COVERAGE-S103:BEGIN -->
+2026-10-13 S103：按计划剩余项「对白分支」做结构审计。research/branch-coverage.json 覆盖 130 个脚本（城市73/续篇6/主线·支线·后章·副本/日常16）：多方法、逐方法先做后做、早晚回执、拒绝或缺席替代、知识守卫与中断恢复齐备，不合口径无。入口design/11_管理/对白分支覆盖审计.md；只审字段结构，不评文学、不证明运行；运行Validate-BranchCoverage.py及既有检查；不部署游戏包。
+<!-- BRANCH-COVERAGE-S103:END -->
+
+<!-- CORPUS-FLOWS-S113:BEGIN -->
+2026-10-13 S113：全库条件流投影（实现桥）。research/corpus-flows.json 把 130 个脚本（城市73/续篇6/主线·支线·后章·副本/日常16）投影成固定词表条件图，refs 逐条回指源原句、notes 载守卫与例外；入口design/11_管理/全库条件流投影.md。投影不新写台词、不含奖励/结算字段、不改台本；运行Validate-CorpusFlows.py及既有检查；引擎触发与部署仍待实现阶段。
+<!-- CORPUS-FLOWS-S113:END -->
+
+<!-- STATE-KEYS-S114:BEGIN -->
+2026-10-13 S114：状态键映射（实现桥）。research/state-keys.json 由源确定性推导 1393 个实现用状态键（encounter/resolve/callback/consent/paid/order/presence＋329 个跨任务回执）；键名 ID 中 `-` 换 `_`，resolve 结算前 none、结算后唯一取值，回执只记已播。入口design/09_系统逻辑/状态键映射总表.md；条件流 when 的映射见页内。不迁移旧存档、不含奖励语义；运行Validate-StateKeys.py及既有检查；不部署游戏包。
+<!-- STATE-KEYS-S114:END -->
+
+<!-- EVENT-STUBS-S118:BEGIN -->
+2026-10-14 S118：事件桩映射（实现桥末端）。research/event-stubs.json 把条件流每个节点映射成事件桩（共 1807 个：命名/触发/读写状态键/冷却），读写键必须在状态键表内；登记投影不声明真实引擎事件号。OI-02 首批回写：P1（N2）五桩已于 2026-10-14 分配引擎号 10640–10644 并落进 0.3.2 候选（离线检查全过、未部署）；evt_N2_refusal 的 presence 写入差异与 evt_N2_hub 的选择器落地已在页内登记。入口design/09_系统逻辑/事件桩映射总表.md；运行Validate-EventStubs.py及既有检查；其余桩引擎号、触发距离仍待各批次。
+<!-- EVENT-STUBS-S118:END -->
+
+<!-- NARRATIVE-DEPTH-S177:BEGIN -->
+2026-10-13 S177：网状叙事深度审计（只读计算）。按BG3/DOS经验量化反应性：条件节点/先后槽/缺席槽/路线/入出向X边/说话人；城市稿73/73有early+absent；缺口：无先后槽57篇、无缺席槽57篇、无入向边102篇；附三条优化提案。入口design/11_管理/网状叙事深度审计.md；运行Validate-NarrativeDepth.py及既有检查；不改内容。
+<!-- NARRATIVE-DEPTH-S177:END -->
+
+<!-- TOOLCHAIN-S144:BEGIN -->
+2026-10-13 S144：工具链离线自检（只读）。Test-MslInput 正对照通过（vanilla.win：34189代码条目/9663对象/1067房间，无已知MSL/EAO标记）、负对照按预期拒绝（组合data.win）；Check-FormalEnvironment属隔离期已停用（快照指向已移除备份）；结构回归输入不在库中暂不可复跑；GameProbe已构建。入口design/11_管理/工具链离线自检记录.md；运行Validate-ToolchainChecks.py及既有检查；不构建、不部署。
+<!-- TOOLCHAIN-S144:END -->
+
+<!-- FIELD-STAGE-S102:BEGIN -->
+2026-10-13 S102：特殊地点与野外NPC阶段收口。入口design/11_管理/特殊地点与野外NPC阶段验收记录.md：清点8区域/44地点/13类型、阅读72槽/17组+npc行为槽与场景族结论、28名野外人物（392条含条件回访）、44地点卡、16迹象、12文书、Mod交叉核对与伏笔台账引用组FS-33..36；剩余经济数值、比例与生成点、运行验证、英文稿与逐地点交互脚本。运行Validate-FieldStage.py及既有检查；不部署游戏包。
+<!-- FIELD-STAGE-S102:END -->
+
+<!-- DIALOGUE-COVERAGE-S137:BEGIN -->
+2026-10-13 S137：逐角色稿完成度核对（结构重算）。131篇台本逐篇核对对话树/场次节、场次标记、说话人行数与版本标记：130篇有对话节（例外为野外人物对白卡格式）；城市稿ASH/HIG各3篇已于S86深化、布林续篇六篇各有场1—3，当前待深化0篇；旧「各四篇/8篇待深化」保留为S84/S85历史记录，计划页旧句改为指向本页。入口design/11_管理/逐角色稿完成度核对.md；运行Validate-DialogueCoverage.py及既有检查；不部署游戏包。
+<!-- DIALOGUE-COVERAGE-S137:END -->
+
+<!-- SPEAKER-CLOSURE-S138:BEGIN -->
+2026-10-13 S138：说话人与人物卡闭合核对。逐行取说话人 232 位全部归类（玩家/人物卡精确/前缀/提及/通用称谓/标记），未闭合 0 位；白名单research/speaker-allowlist.json（通用称谓与标记不建卡）；新增说话人未列入白名单时校验报错。入口design/11_管理/说话人与人物卡闭合核对.md；运行Validate-SpeakerClosure.py及既有检查；不部署游戏包。
+<!-- SPEAKER-CLOSURE-S138:END -->
+
+<!-- DIALOGUE-DISTINCT-S139:BEGIN -->
+2026-10-13 S139：对白去重与独特性核对（整句完全匹配）。逐行抽取2734行、去重2716条；完全重复18组，全部为主章—副本配对（同一人物跨N/D，有意一致），待复核0组。新增重复不属配对时校验报错，须改写或登记理由。入口design/11_管理/对白去重与独特性核对.md；运行Validate-DialogueDistinctiveness.py及既有检查；不部署游戏包。
+<!-- DIALOGUE-DISTINCT-S139:END -->
+
+<!-- QUALITY-GUARDS-S140:BEGIN -->
+2026-10-13 S140：质量守卫总表与两项新守卫。链接完整：13590条双链、未解析0（行内代码段除外）；占位扫描：命中5处且全部登记于research/placeholder-allowlist.json；连同S137结构覆盖、S138说话人闭合、S139对白去重共五项守卫。入口design/11_管理/质量守卫总表.md；运行Validate-LinkIntegrity.py与Validate-PlaceholderScan.py及既有检查；不部署游戏包。
+<!-- QUALITY-GUARDS-S140:END -->
+
+<!-- IMPL-HANDOFF-S122:BEGIN -->
+2026-10-13 S122：实现交接总表。research/impl-handoff.json 列输入清单 18 项、实现顺序 6 步（含每步验收）、不变门槛与尚未确定项；入口design/11_管理/实现交接总表.md；计数取自实时校验报告。不新增设计内容；运行Validate-ImplHandoff.py及既有检查；实现与运行验证仍待进行，不部署游戏包。
+<!-- IMPL-HANDOFF-S122:END -->
+
+<!-- NAV-STATUS-S148:BEGIN -->
+2026-10-13 S148：三张导航页加入机检状态行。台本131篇（晶石51＋城市79＋野外1）、卫星聚落33篇、质量守卫7项；由 Validate-NavStatus.py 现场重算核对（家族计数、卫星笔记数、守卫行数），计数变化须重跑写手刷新。
+<!-- NAV-STATUS-S148:END -->
+
+<!-- HOOK-MAP-S171:BEGIN -->
+2026-10-13 S171：触发器接线点映射（只读）。1807桩的8种触发逐一接到小样原生钩子（characterDataMap/__dialogue_flow_data/instance_create_depth/event_user/scr_quest_get_complete），附证据行号与口径；实现轮照此接线并逐桩回写；不改源码、不构建、不部署。入口design/11_管理/触发器接线点映射.md；运行Validate-HookMapping.py及既有检查。
+<!-- HOOK-MAP-S171:END -->
+
+<!-- N1-KEYS-S161:BEGIN -->
+2026-10-13 S161：N1小样键语义与迁移建议（只读扫描）。扫描EAO_N1_*共24处用法：EAO_N1_stage无任何写入点（静态结论，运行时未验证）；建议入口门槛改挂encountered_N1、解法用resolve_N1、stage仅作旧档读取垫片；origin族语义清楚可保留。供OI-03决策；不改源码、不改存档、不部署。入口design/11_管理/N1小样键语义与迁移建议.md；运行Validate-N1Keys.py及既有检查。
+<!-- N1-KEYS-S161:END -->
+
+<!-- ENGINE-KEYS-S155:BEGIN -->
+2026-10-14 S155：引擎键名前缀与遗留键登记。口径＝引擎键 `EAO_`＋登记键名；扫描已实现GML得38个EAO_键（0.3.0期遗留33＋N2试点5），映射登记键5个（N2试点，2026-10-14 P1落地）；OI-03口径定稿：旧字段不迁移、缺键按none/false/present、同脚本不双写（见状态键映射总表）。只读扫描，不改源码与存档。入口design/11_管理/引擎键名前缀与遗留键登记.md；运行Validate-EngineKeys.py及既有检查。
+<!-- ENGINE-KEYS-S155:END -->
+
+<!-- EVT-NUM-S163:BEGIN -->
+2026-10-13 S163：事件号分配方案。1,807桩按家族基址（N10000/SQ20000/DT30000/D40000/CS50000/CM60000/FX70000）＋脚本64对齐块确定性预分配，一桩一号不复用，退役不转号；引擎号实现时分配并回写事件桩映射总表；纸面方案，原生事件号空间未读取。入口design/11_管理/事件号分配方案.md；运行Validate-EventNumbers.py及既有检查。
+<!-- EVT-NUM-S163:END -->
+
 <!-- IMPL-STATE-S143:BEGIN -->
-2026-10-13 S143：实现侧现状核对（只读哈希）。构建包与MSL副本同哈希、data.win与部署记录一致、vanilla与基线一致；0.3.1完整验收runtimeVerified=false，开发观察实测独立登记；GML代码28个、构建/部署/检查脚本Build-Mod/Check-FormalEnvironment/Deploy-Mod/Prepare-TestEnvironment/Test-EaoStructRegression/Test-MslInput；S62—S143设计稿尚未进包，OI-01须在现有工程上新建事件。重建包后须重跑本页与校验器。入口design/11_管理/实现侧现状核对.md；运行Validate-ImplState.py及既有检查；不构建、不部署。
+2026-10-14 S143：实现侧现状核对（只读哈希）。部署记录版本0.3.3、本地候选0.3.3，候选与安装副本同哈希、已部署；N2五桩五键三景已接线，0.3.3增加六景巡览与N2 HD2D开发适配，完整验收runtimeVerified=false；实测见artifacts/dev-runtime-20261014.json；GML代码33个、构建/部署/检查脚本Build-Mod/Check-FormalEnvironment/Deploy-Mod/Prepare-TestEnvironment/Start-Hd2dPreview/Test-EaoStructRegression/Test-MslInput；P2/P3与其余S62+设计稿尚未进包。重建包后须重跑本页与校验器。入口design/11_管理/实现侧现状核对.md；运行Validate-ImplState.py及既有检查。
 <!-- IMPL-STATE-S143:END -->
 
 <!-- BUILD-READY-S168:BEGIN -->
 2026-10-13 S168：构建前置核对（只读，不构建）。dotnet 10.0.401、构建脚本解析 errors=0、NuGet包 3/3 就位、MSL程序集 4/4 就位；构建会重写 .sml 与 direct-data.win，构建轮须一并重跑实现侧现状与收束核对页。入口design/11_管理/构建前置核对.md；运行Validate-BuildReadiness.py及既有检查。
 <!-- BUILD-READY-S168:END -->
 
-<!-- TOOLCHAIN-S144:BEGIN -->
-2026-10-13 S144：工具链离线自检（只读）。Test-MslInput 正对照通过（vanilla.win：34189代码条目/9663对象/1067房间，无已知MSL/EAO标记）、负对照按预期拒绝（组合data.win）；Check-FormalEnvironment属隔离期已停用（快照指向已移除备份）；结构回归输入不在库中暂不可复跑；GameProbe已构建。入口design/11_管理/工具链离线自检记录.md；运行Validate-ToolchainChecks.py及既有检查；不构建、不部署。
-<!-- TOOLCHAIN-S144:END -->
-
-<!-- N1-KEYS-S161:BEGIN -->
-2026-10-13 S161：N1小样键语义与迁移建议（只读扫描）。扫描EAO_N1_*共22处用法：EAO_N1_stage无任何写入点（静态结论，运行时未验证）；建议入口门槛改挂encountered_N1、解法用resolve_N1、stage仅作旧档读取垫片；origin族语义清楚可保留。供OI-03决策；不改源码、不改存档、不部署。入口design/11_管理/N1小样键语义与迁移建议.md；运行Validate-N1Keys.py及既有检查。
-<!-- N1-KEYS-S161:END -->
-
-<!-- ROLLBACK-S174:BEGIN -->
-2026-10-13 S174：部署与回滚运行手册。部署五步（退出→构建验收→备份与替换→记录→部署后核对）与回滚六步（定位备份集→校验→还原data.win→还原设置与旧包→复核→留痕）按脚本实际行为写成；当前备份集 direct-20261013-155030-418 哈希已核对；不保证无损卸载、用户数据不动。本轮未执行部署或回滚。入口design/11_管理/部署与回滚运行手册.md；运行Validate-RollbackRunbook.py及既有检查。
-<!-- ROLLBACK-S174:END -->
-
-<!-- ENGINE-KEYS-S155:BEGIN -->
-2026-10-13 S155：引擎键名前缀与遗留键登记。口径＝引擎键 `EAO_`＋登记键名；扫描已实现GML得33个EAO_键，全部为0.3.0期遗留（测试传送/N1小样/旧任务），映射登记键0个；小样EAO_N1_stage与登记resolve_N1须二选一（属OI-03）。只读扫描，不改源码与存档。入口design/11_管理/引擎键名前缀与遗留键登记.md；运行Validate-EngineKeys.py及既有检查。
-<!-- ENGINE-KEYS-S155:END -->
-
-<!-- REG-COVERAGE-S152:BEGIN -->
-2026-10-13 S152：登记文件覆盖分类。research/ 下 127 份登记按覆盖方式分类：校验器直接 92、间接 24、工具产物 5、调查记录 4、共享输入 2；未归类 0。新增活输入须进前两类，工具产物须由已登记工具生成，调查记录须被设计页引用；出现未归类即报错。入口design/11_管理/登记文件覆盖分类.md；运行Validate-RegistryCoverage.py及既有检查。
-<!-- REG-COVERAGE-S152:END -->
-
 <!-- PHASE-CLOSE-S160:BEGIN -->
-2026-10-13 S160：设计阶段收束核对。现场证据：649篇笔记、两份AGENTS（208规则块）、90校验器/134948项检查、131台本、三张原作参照、声望中英（成对1384、可见中文单列0）、74边闭合、28个GML、.sml与MSL副本同哈希、试点3批/18场景；历史待办共14项；用户已授权当前安装开发测试，0.3.1开发观察已构建部署，实测证据单列，完整扩展尚未验收。入口design/11_管理/设计阶段收束核对.md；运行Validate-PhaseClose.py及既有检查。
+2026-10-13 S160：设计阶段收束核对。现场证据：649篇笔记、两份AGENTS（208规则块）、90校验器/135274项检查、131台本、三张原作参照、声望中英（成对1384、可见中文单列0）、74边闭合、33个GML、.sml与MSL副本同哈希、试点3批/18场景；历史待办共14项；用户已授权当前安装开发测试，0.3.3已构建部署，实测证据见artifacts/dev-runtime-20261014.json，完整扩展尚未验收。入口design/11_管理/设计阶段收束核对.md；运行Validate-PhaseClose.py及既有检查。
 <!-- PHASE-CLOSE-S160:END -->
-
-<!-- FIELD-STAGE-S102:BEGIN -->
-2026-10-13 S102：特殊地点与野外NPC阶段收口。入口design/11_管理/特殊地点与野外NPC阶段验收记录.md：清点8区域/44地点/13类型、阅读72槽/17组+npc行为槽与场景族结论、28名野外人物（392条含条件回访）、44地点卡、16迹象、12文书、Mod交叉核对与伏笔台账引用组FS-33..36；剩余经济数值、比例与生成点、运行验证、英文稿与逐地点交互脚本。运行Validate-FieldStage.py及既有检查；不部署游戏包。
-<!-- FIELD-STAGE-S102:END -->
-
-<!-- IMPL-HANDOFF-S122:BEGIN -->
-2026-10-13 S122：实现交接总表。research/impl-handoff.json 列输入清单 18 项、实现顺序 6 步（含每步验收）、不变门槛与尚未确定项；入口design/11_管理/实现交接总表.md；计数取自实时校验报告。不新增设计内容；运行Validate-ImplHandoff.py及既有检查；实现与运行验证仍待进行，不部署游戏包。
-<!-- IMPL-HANDOFF-S122:END -->
-
-<!-- QUALITY-GUARDS-S140:BEGIN -->
-2026-10-13 S140：质量守卫总表与两项新守卫。链接完整：13548条双链、未解析0（行内代码段除外）；占位扫描：命中5处且全部登记于research/placeholder-allowlist.json；连同S137结构覆盖、S138说话人闭合、S139对白去重共五项守卫。入口design/11_管理/质量守卫总表.md；运行Validate-LinkIntegrity.py与Validate-PlaceholderScan.py及既有检查；不部署游戏包。
-<!-- QUALITY-GUARDS-S140:END -->

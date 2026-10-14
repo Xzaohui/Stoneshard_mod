@@ -92,7 +92,8 @@ if run:
     n += f"| 检查 | 重复补丁拒绝 {'是' if run['checks']['duplicatePatchRefused'] else '否'}、非 EAO 原代码未改 {'是' if run['checks']['originalCodeUnchangedExceptEao'] else '否'}、EAO 函数链接 {'通过' if run['checks']['eaoFunctionLinkageChecked'] else '未通过'}、原身份保留 {'是' if run['checks']['originalIdentityPreserved'] else '否'} |\n"
     n += f"| 离线套件 | {'、'.join(run['suites'])} 全跑；`runtimeVerified={str(run['checks']['runtimeVerified']).lower()}` |\n"
     n += f"| 与已部署副本 | {'一致' if run['deployed']['msl_copy_matches_candidate'] else '**不一致**：本地候选较新，部署待放行（OI-11）'}（已部署 `{run['deployed']['package_sha256'][:16]}…`） |\n\n"
-    n += ('说明：当前候选已部署，安装副本与候选哈希一致；开发观察实测见 `artifacts/dev-runtime-20261013.json`。\n\n' if run['deployed_this_run'] else '说明：当前候选未部署；候选包与候选补丁都落在 `artifacts/`。\n\n')
+    latest_runtime = sorted((ROOT / 'artifacts').glob('dev-runtime-*.json'))[-1].relative_to(ROOT).as_posix()
+    n += (f'说明：当前候选已部署，安装副本与候选哈希一致；开发观察实测见 `{latest_runtime}`。\n\n' if run['deployed_this_run'] else '说明：当前候选未部署；候选包与候选补丁都落在 `artifacts/`。\n\n')
 n += ('## 边界\n\n'
       '- **构建会改写指纹**：`artifacts/EmbersAndOaths.sml` 与 `direct-data.win` 每次构建都会变，[[实现侧现状核对]] 与 [[设计阶段收束核对]] 记录的指纹须随构建重跑刷新。\n'
       '- 本页只核对前置；构建成功与否仍以实际运行为准（`runtimeVerified` 不因此变为 true）。\n'

@@ -1,0 +1,10 @@
+# r01_winch_shed
+
+- Category: items
+- Size: 208x182
+- Origin: [104, 165]
+- Colors used: 83 from BRY-R01-128
+- Animation: none
+- Design notes: independent_environment_sprite
+- Variants: full/body/roof architecture parts share the same canvas and origin.
+- Runtime: pending native integration; NPC content belongs to the other model.

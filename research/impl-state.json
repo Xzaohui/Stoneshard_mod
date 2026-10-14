@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "scope": "S143 implementation-side snapshot: built package, deployed copy, combined data.win and vanilla backup hashed read-only; no build or deployment performed",
   "artifact": {
     "path": "C:/Users/83912/DeskBox/我的桌面/project/Stoneshard_mod/artifacts/EmbersAndOaths.sml",
-    "bytes": 5411670,
-    "sha256": "172C58F1B209D189CE36DF21E2AADC5234BCC5DA444077A57A88B42F275A0D91",
-    "mtime": "2026-10-13 15:46"
+    "bytes": 9085863,
+    "sha256": "D8D904FF2B6385C4F0A5389B526F0A0B7807463D00911A33266A44BD399815BD",
+    "mtime": "2026-10-14 20:51"
   },
   "msl_copy": {
     "path": "D:/SteamLibrary/steamapps/common/Stoneshard/msl/Mods/EmbersAndOaths.sml",
-    "bytes": 5411670,
-    "sha256": "172C58F1B209D189CE36DF21E2AADC5234BCC5DA444077A57A88B42F275A0D91",
-    "mtime": "2026-10-13 15:46"
+    "bytes": 9085863,
+    "sha256": "D8D904FF2B6385C4F0A5389B526F0A0B7807463D00911A33266A44BD399815BD",
+    "mtime": "2026-10-14 20:51"
   },
   "data_win": {
     "path": "D:/SteamLibrary/steamapps/common/Stoneshard/data.win",
-    "bytes": 163950416,
-    "sha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508",
-    "mtime": "2026-10-13 15:47"
+    "bytes": 168080352,
+    "sha256": "6814FCD70CAE5165F27B74CD93B4D7549C2921ECDDEC3D6537830C9C4742FDFB",
+    "mtime": "2026-10-14 20:53"
   },
   "vanilla_win": {
     "path": "D:/SteamLibrary/steamapps/common/Stoneshard/vanilla.win",
@@ -26,469 +26,310 @@
     "mtime": "2026-10-03 20:58"
   },
   "recorded": {
-    "package_sha256": "172C58F1B209D189CE36DF21E2AADC5234BCC5DA444077A57A88B42F275A0D91",
-    "deployed_data_sha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508",
-    "version": "0.3.1",
-    "deployment_date": "2026-10-13T15:50:31.9603700+08:00",
+    "package_sha256": "D8D904FF2B6385C4F0A5389B526F0A0B7807463D00911A33266A44BD399815BD",
+    "deployed_data_sha256": "6814FCD70CAE5165F27B74CD93B4D7549C2921ECDDEC3D6537830C9C4742FDFB",
+    "version": "0.3.3",
+    "deployment_date": "2026-10-14T20:54:55.8196865+08:00",
     "runtime_verified": false
   },
   "runtime_observation": {
-    "date": "2026-10-13",
-    "modVersion": "0.3.1",
-    "scope": "现有安装中的开发观察工具与N1首批HD2D实机测试；不代替完整剧情、全部地图与存读档回归验收",
+    "date": "2026-10-14T21:09:57.486169",
+    "modVersion": "0.3.3",
+    "scope": "现有安装的场景视觉与开发观察实机检查；非完整剧情/存读档验收",
     "runtimeVerified": false,
+    "sceneVisualSmokeTest": true,
     "environment": {
-      "game": "D:/SteamLibrary/steamapps/common/Stoneshard",
-      "branch": "modbranch",
+      "game": "D:\\SteamLibrary\\steamapps\\common\\Stoneshard",
       "gameVersionObserved": "0.9.4.25-vm",
-      "msl": "0.13.2.0",
+      "launch": "Steam UI",
+      "control": "computer-use / sky",
       "resolution": [
         2560,
         1440
-      ],
-      "launch": "Steam UI",
-      "control": "computer-use / sky"
+      ]
     },
     "candidates": [
       {
-        "id": "R1",
-        "dataSha256": "83C2046EB46261AD482E252F8962E87C2EE3970A5678DA3EA4103216062E2C51",
-        "packageSha256": "C5C1B2A3271D3E5B8DEEF44A5DA73A90B2841580F0746E23E5C0595954294793",
-        "backup": "backups/direct-20261013-141927-297",
-        "result": "开雾、格网、三场景与素材切换通过；面板不可见，Shift返程未成功"
-      },
-      {
-        "id": "R2",
-        "dataSha256": "7A48075B932413F014A403E43F9FE18A21B363E0FEDAFDB1548D75C273D29AB8",
-        "packageSha256": "1A89559DD1958E545B03403B530537AE65D0DA1D6DF0E6E75D930ED1730F27F1",
-        "backup": "backups/direct-20261013-145337-305",
-        "result": "读回R1钟屋临时保存；发现未接任务时铺盖对话无独立出口，正常关闭程序"
-      },
-      {
-        "id": "R3",
-        "dataSha256": "DAF007AAFE8BF597B6248EEF918466149D0B18CD7173B18717E0B11959597F31",
-        "packageSha256": "50D16F80FD3CC9645739C3ADD895BE0F0D44AFA260AFF915DCE3082D506FC95E",
-        "backup": "backups/direct-20261013-150617-232",
-        "result": "地图揭雾可恢复，F8当前世界格重载，战斗中F11拒绝；面板仍未显示"
-      },
-      {
-        "id": "R4",
-        "dataSha256": "260586E2714392EE4D59715BDCC515C52E25E28401D2311D51CA62F66752196B",
-        "packageSha256": "779FF707BCFE2BC5A6E0A94A0D52CFBE4CAF9404245D5CC36482FB174AE180BB",
-        "backup": "backups/direct-20261013-152348-621",
-        "result": "Shift+F11回到营地出发位置；新增铺盖退出选项实测关闭，原生保存返程位置"
-      },
-      {
-        "id": "R5",
-        "dataSha256": "155DCE2C45E7FC0CF9F29495646B9BF12438FB0D380FE9A77A0A3519243AC1B8",
-        "packageSha256": "6522E4701671776C843C42104A25A15A2DAF5AD2A6F4C972C61EF06C13CC074D",
-        "backup": "backups/direct-20261013-154120-403",
-        "result": "读回营地，面板/开雾/格网/外观样件可见；房间边界外面板会被遮挡，追加位置限界修复"
-      },
-      {
-        "id": "R6",
-        "dataSha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508",
-        "packageSha256": "172C58F1B209D189CE36DF21E2AADC5234BCC5DA444077A57A88B42F275A0D91",
-        "result": "载入营地默认关闭；F6面板可见；F11依次岸院、钟屋、暗渠，等待转场后面板持续显示；岸院外观样件在边界内可见。 Shift+F11从岸院返回营地，观察模式自动关闭；暗渠的一次自动组合键输入按普通F11循环至岸院，组合键短脉冲识别仍有限制。",
-        "backup": "backups/direct-20261013-155030-418"
+        "id": "N2-HD2D-v1",
+        "dataSha256": "6814FCD70CAE5165F27B74CD93B4D7549C2921ECDDEC3D6537830C9C4742FDFB",
+        "packageSha256": "D8D904FF2B6385C4F0A5389B526F0A0B7807463D00911A33266A44BD399815BD",
+        "backup": "C:\\Users\\83912\\DeskBox\\我的桌面\\project\\Stoneshard_mod\\backups\\direct-20261014-205454-109"
       }
     ],
     "observations": [
       {
-        "id": "default-off",
-        "candidate": "R1,R5",
+        "id": "version-and-default-off",
         "status": "observed-pass",
-        "detail": "载入角色后观察面板、格网默认关闭；F6开启。",
         "evidence": [
-          1,
-          20,
-          21
-        ]
-      },
-      {
-        "id": "local-fog",
-        "candidate": "R1,R3,R5",
-        "status": "observed-pass",
-        "detail": "F7显示局部雾层遮挡的地表；返程重建角色数据后雾层恢复。",
-        "evidence": [
-          3,
-          11,
-          20,
-          22
-        ]
-      },
-      {
-        "id": "world-fog",
-        "candidate": "R3",
-        "status": "observed-pass",
-        "detail": "在原生世界地图按F7显示纸雾下地形，再次按F7恢复；此为显示测试，未声称探索记录改变。",
-        "evidence": [
-          12,
-          13
-        ]
-      },
-      {
-        "id": "world-teleport",
-        "candidate": "R3",
-        "status": "observed-pass-limited",
-        "detail": "F8开启后左键当前世界格，地图关闭并通过原生转场在营地重载，落点可通行；敌人随后警觉。未在本轮遍历跨世界格组合。",
-        "evidence": [
-          14
-        ]
-      },
-      {
-        "id": "combat-gate",
-        "candidate": "R3",
-        "status": "observed-pass",
-        "detail": "营地敌人警觉后重新F6/F9开启以确认工具启用，F11两次均保持原地；截图15时开发模式关闭，不作为通过证据。",
-        "evidence": [
-          16
-        ]
-      },
-      {
-        "id": "grid",
-        "candidate": "R1,R3,R5",
-        "status": "observed-pass",
-        "detail": "F9绿/红格与角色附近原生寻路格对应显示，再按关闭；未写碰撞网格。",
-        "evidence": [
-          2,
-          16,
-          23
-        ]
-      },
-      {
-        "id": "scene-tour",
-        "candidate": "R1,R4,R5,R6",
-        "status": "observed-pass",
-        "detail": "F11进入岸院、钟屋、暗渠；暗渠实际走动；Shift+F11从岸院与钟屋回到地表原位置。",
-        "evidence": [
-          4,
-          6,
-          7,
           8,
-          17,
-          25,
-          26,
-          27,
-          28
-        ]
+          9
+        ],
+        "detail": "载入现有角色时默认关闭，F6显示 EAO DEV 0.3.3。"
       },
       {
-        "id": "art-toggle",
-        "candidate": "R1,R4",
+        "id": "six-native-scenes",
         "status": "observed-pass",
-        "detail": "F10新图/原底图切换可见；此为显示装配预览，铺盖热点偏移仍待修复。",
         "evidence": [
-          4,
-          5,
-          6,
-          18
-        ]
+          10,
+          12,
+          13,
+          14,
+          21,
+          25
+        ],
+        "detail": "从野外沿F11依次进入N1岸院/钟屋/暗渠与N2雇工棚/塌堤/侧间；全程原生落点。"
       },
       {
-        "id": "clue-exit",
-        "candidate": "R4",
+        "id": "n2-grid",
         "status": "observed-pass",
-        "detail": "未接N1时打开铺盖对话，新增‘先离开这里’可关闭，不再困于查看分支。断绳同类出口经图结构检查，但未单独实机点选。",
+        "evidence": [
+          15,
+          21
+        ],
+        "detail": "F9读取实际原生网格，地板与阻挡区分开。"
+      },
+      {
+        "id": "native-single-cell-movement",
+        "status": "observed-pass",
+        "evidence": [
+          15,
+          18
+        ],
+        "detail": "雇工棚从7,22实际移动到8,22；未与NPC或道具互动。"
+      },
+      {
+        "id": "n2-hd2d-toggle",
+        "status": "observed-pass",
         "evidence": [
           18,
-          19
-        ]
+          19,
+          20
+        ],
+        "detail": "F10关闭后显示原有占位地板，再开启恢复绘制；站位与格网不变。"
       },
       {
-        "id": "save-load",
-        "candidate": "R1,R2,R4,R5,R6",
-        "status": "observed-pass-limited",
-        "detail": "原生保存退出后可读回钟屋与地表营地；不是全任务分支/长期存读档回归。",
+        "id": "n2-building-specimens",
+        "status": "observed-pass",
+        "evidence": [
+          14,
+          22,
+          25
+        ],
+        "detail": "三张建筑外观观察样件可见，尚非实际出入口。"
+      },
+      {
+        "id": "return-from-n2",
+        "status": "observed-pass",
         "evidence": [
           9,
-          20,
-          29
-        ]
-      },
-      {
-        "id": "final-panel-boundary",
-        "candidate": "R6",
-        "status": "observed-pass",
-        "detail": "最终包中F6开启，面板原点限制在房间范围；三房间转场完成后持续可见，岸院外观样件显示。",
-        "evidence": [
           25,
           26,
           27
-        ]
+        ],
+        "detail": "Shift+F11从旧渠侧间返回r_field，首次出发局部格37,23、世界格27,15一致，观察自动关闭。"
       },
       {
-        "id": "return-chord-input",
-        "candidate": "R6",
-        "status": "observed-pass-limited",
-        "detail": "从暗渠发送Shift+F11一次只循环到岸院；在岸院重发组合键后回到营地原位置。键盘短脉冲是否跨游戏帧丢失Shift尚未确认，不能称组合键每次均稳定。",
+        "id": "fog-restore",
+        "status": "observed-pass",
         "evidence": [
           27,
-          28
-        ]
+          28,
+          29
+        ],
+        "detail": "F7野外揭雾可见；F6关闭后恢复原迷雾。"
+      },
+      {
+        "id": "final-pause",
+        "status": "observed-pass",
+        "evidence": [
+          30
+        ],
+        "detail": "留在原出发位置的暂停菜单，开发模式关闭。"
       }
     ],
-    "saveHandling": {
-      "firstRun": "使用当时主菜单继续游戏的玛息尔角色，起点布林海关附近；原生保存退出于钟屋。之后继续读回钟屋并遇到已修复的退出问题。",
-      "laterRuns": "从游戏加载界面选择玛息尔(1)的营地自动存档2（界面日期2026/10/11 1:53:17）做开发测试。后续正常保存地表返程位置，并通过继续游戏读回。",
-      "operations": "游戏原生转场/移动/对话/保存会产生角色与地点状态、时间和正常恢复变化；未手动改写、删除或还原存档。未发测试金币或推进N1任务。",
-      "backups": "每次部署前备份data.win、MSL设置、旧.sml及完整用户数据；部署报告的userFilesUnchanged仅表示部署期间，不表示整个实机游玩期间存档不变。"
+    "offlineSuites": {
+      "document-action-validation": 43,
+      "room-validation": 8,
+      "test-teleport-validation": 5,
+      "story-validation": 40,
+      "dev-validation": 136
     },
-    "limitations": [
-      "未完成N1两种结局与奖励/长期存读档全流程。",
-      "F8本轮只实测当前世界格重载，不能据此宣称所有跨格目标均通过。",
-      "HD2D铺盖图与原点击范围偏移，检查时F10切回原图。",
-      "建筑外观为观察样件，未接入岸院占地、入口与碰撞。",
-      "全部地区的地图/建筑/室内美术仍未完成。",
-      "开发模式重建角色数据后会关闭，需再次F6；F8是独立开关。",
-      "F8验证可走落点，不保证该世界格无敌人。",
-      "自动化的Shift+F11短组合键有一次被识别为普通F11；建议先按住Shift再按F11，仍需人工持续按键复核。"
-    ],
-    "finalState": {
-      "status": "normal-save-and-exit",
-      "candidate": "R6",
-      "character": "玛息尔(1)",
-      "location": "营地地表原出发位置；r_field, world 27,15, cell 37,23",
-      "health": "76/77",
-      "energy": "100/100",
-      "effectCounterObserved": 1127,
-      "developerMode": "off after return",
-      "mapTeleport": "default off in R6; no F8 toggle in final process",
-      "save": "原生保存并退出到标题后，以Alt+F4正常关闭游戏",
-      "evidence": [
-        28,
-        29
-      ]
+    "offlineTotal": 232,
+    "assetValidation": {
+      "check_count": 3675,
+      "assets": 17,
+      "scenes": 3,
+      "passed": true,
+      "runtime_verified": false
     },
     "screenshots": [
       {
         "id": 1,
-        "path": "artifacts/dev-runtime-20261013/01-loaded-default-off.png",
-        "bytes": 457581,
-        "sha256": "CA532AC91A9E40425C0197A773FC443C18E3235C2767BDFB09A41581B7249F9B",
-        "candidate": "R1"
+        "path": "artifacts/runtime-20261014/01-game-launch.png",
+        "sha256": "cd62939c28699e2d82f55bc73371886204e0768b26075ed415dc007ac420e04a"
       },
       {
         "id": 2,
-        "path": "artifacts/dev-runtime-20261013/02-grid-first-build.png",
-        "bytes": 557146,
-        "sha256": "28FF8D6C3AF76339A2AD6555AD98BA839A70F62810757E0C162B8FA557717ABA",
-        "candidate": "R1"
+        "path": "artifacts/runtime-20261014/02-main-menu.png",
+        "sha256": "43be1edc5588620a59ac2910d0a2a7a550023972bdf1be8b15ef424cfdcaabc2"
       },
       {
         "id": 3,
-        "path": "artifacts/dev-runtime-20261013/03-local-reveal-first-build.png",
-        "bytes": 640223,
-        "sha256": "0A28D03E0E1B96FA85A1CB416165F27C10661273FFA5062F3BBD71675E507E46",
-        "candidate": "R1"
+        "path": "artifacts/runtime-20261014/03-menu-ready.png",
+        "sha256": "060c62b505ce290179c5559c80b6d6db6465dcc2d60c6a65000e9db3f65d8c53"
       },
       {
         "id": 4,
-        "path": "artifacts/dev-runtime-20261013/04-yard-hd2d-first-build.png",
-        "bytes": 500086,
-        "sha256": "E9C42B20AA62D08D5E358F756BCAC1B4ECAAEA4048BA7367730F8AA0E3A1E63A",
-        "candidate": "R1"
+        "path": "artifacts/runtime-20261014/04-main-menu.png",
+        "sha256": "d53d561707121447ba81a35ee6b992f4f7d7cb1e4033a583644d0d7bf107c09f"
       },
       {
         "id": 5,
-        "path": "artifacts/dev-runtime-20261013/05-yard-base-toggle.png",
-        "bytes": 268768,
-        "sha256": "693ED3E4E6575598D12A2374E9D6568D331035EB707BD704787FB48D21007E23",
-        "candidate": "R1"
+        "path": "artifacts/runtime-20261014/05-save-selection.png",
+        "sha256": "d109e4d4385d929e43415e60b31e4e532993537fb635d64eb38a3749c4405810"
       },
       {
         "id": 6,
-        "path": "artifacts/dev-runtime-20261013/06-house-hd2d.png",
-        "bytes": 422929,
-        "sha256": "F9A605E015AB4CAE9490B89233FD6FCB6CA75A4E74DBCC5A4097DBFC520A935B",
-        "candidate": "R1"
+        "path": "artifacts/runtime-20261014/06-character-loading.png",
+        "sha256": "6eab9ba275bd8db1f64ec9ae61ec8718840407ab9c0237a8ea7c23464b4e4a2c"
       },
       {
         "id": 7,
-        "path": "artifacts/dev-runtime-20261013/07-drain-hd2d.png",
-        "bytes": 381939,
-        "sha256": "409008B3DD792FD55801187E52618F1026E3053C70246AF4294D408DBA251208",
-        "candidate": "R1"
+        "path": "artifacts/runtime-20261014/07-loaded-state.png",
+        "sha256": "9e1ca2d85b045a38711b48e02661c3ff1c1a042d3a81fbb06ccc673fa9b857a0"
       },
       {
         "id": 8,
-        "path": "artifacts/dev-runtime-20261013/08-drain-movement.png",
-        "bytes": 389947,
-        "sha256": "E9B5AB00A51075C2D0C8EB62EEDA836F93CA500DA27EC8D47F15F1908F6AD036",
-        "candidate": "R1"
+        "path": "artifacts/runtime-20261014/08-loaded-character.png",
+        "sha256": "5d8f0c3c433a64d9744a10bc4581d101b2692a0860d0cb9f62a0f28dee829710"
       },
       {
         "id": 9,
-        "path": "artifacts/dev-runtime-20261013/09-old-panel-missing-clue-open.png",
-        "bytes": 186007,
-        "sha256": "AC187334A93347C5F287B43D1C0F0BF5C8048DEE7566BD420FBC767F3F4DF481",
-        "candidate": "R2"
+        "path": "artifacts/runtime-20261014/09-developer-mode.png",
+        "sha256": "4d30f70a69132c0a0d453857fea8832ffdb98b901d8a1b1f295891474aa2fbda"
       },
       {
         "id": 10,
-        "path": "artifacts/dev-runtime-20261013/10-clue-before-quest-loop.png",
-        "bytes": 186422,
-        "sha256": "8AD190DF7FDA607F27C2AF72831DC5AA3F993DD57E4370F17318A9A96658D240",
-        "candidate": "R2"
+        "path": "artifacts/runtime-20261014/10-n1-yard.png",
+        "sha256": "50f6a5b2bf8476ac5c6635e560cf80812818db5b0f7ad82e9a4c6c5b3f0ab9ed"
       },
       {
         "id": 11,
-        "path": "artifacts/dev-runtime-20261013/11-local-reveal-third-build.png",
-        "bytes": 479856,
-        "sha256": "FD6DFEEA4533FDC3AE6355E416110E70493538FE1ACA91D606E9EAF74EADB111",
-        "candidate": "R3"
+        "path": "artifacts/runtime-20261014/11-fog-reveal.png",
+        "sha256": "0a2c12005db01208f63347cd09b8df404b8adaf2680c48c430b84d8c0869c854"
       },
       {
         "id": 12,
-        "path": "artifacts/dev-runtime-20261013/12-map-fog-default.png",
-        "bytes": 282632,
-        "sha256": "FEED2E5C197723B2FE0863278A44A9CB794A8C38AF141ADF0DA2F6DBB0B4F7AC",
-        "candidate": "R3"
+        "path": "artifacts/runtime-20261014/12-n1-bellhouse.png",
+        "sha256": "2790a8996939e59dc066fc3e25b5a7e6a360bff1f185394d095c95f59672492e"
       },
       {
         "id": 13,
-        "path": "artifacts/dev-runtime-20261013/13-map-reveal-on.png",
-        "bytes": 312642,
-        "sha256": "A2747AA9DE358A34DBD547D6F3C0840C03A38ED023C32C8D788B311F34BBDEA5",
-        "candidate": "R3"
+        "path": "artifacts/runtime-20261014/13-n1-underpass.png",
+        "sha256": "16d0ef9f92c15dcd118294df6b3496963fa8690fdd2152eb05c0882a1ce6e4ec"
       },
       {
         "id": 14,
-        "path": "artifacts/dev-runtime-20261013/14-world-current-tile-reload.png",
-        "bytes": 363091,
-        "sha256": "A670AF942D74B79A8007BB22AE38E28C72B27900E3387C795501B507A681AC2D",
-        "candidate": "R3"
+        "path": "artifacts/runtime-20261014/14-n2-camp-hd2d.png",
+        "sha256": "f16f386bd3d208a5b1bf3b52a17c5a6b6f2090feb776eb828d565f8503698973"
       },
       {
         "id": 15,
-        "path": "artifacts/dev-runtime-20261013/15-combat-dev-off-inconclusive.png",
-        "bytes": 363320,
-        "sha256": "884D00F6A12D550C9DAFCFDCC079BF3AFB56DF1772509581F39E82EF41592C18",
-        "candidate": "R3"
+        "path": "artifacts/runtime-20261014/15-n2-camp-grid.png",
+        "sha256": "313ba4ee0f8c0244727600ac2a5e4a4ec7b54e57abf6c6ad7d832bfd919a0d85"
       },
       {
         "id": 16,
-        "path": "artifacts/dev-runtime-20261013/16-combat-enabled-visit-blocked.png",
-        "bytes": 494801,
-        "sha256": "F82A4881CD094A45A6A1FE63DB341D00DFA1A6C40D2B03C14F30204DCD245B57",
-        "candidate": "R3"
+        "path": "artifacts/runtime-20261014/16-n2-camp-walk.png",
+        "sha256": "d52cf859c7a20c2ac32e5aa006b0076c40e674619330e27cd05eb37654c0c160"
       },
       {
         "id": 17,
-        "path": "artifacts/dev-runtime-20261013/17-shift-return-to-camp.png",
-        "bytes": 374459,
-        "sha256": "B1A8EBA90C72B583FCF1F95A511F52A8EA876099ECDC3DDFF70328C9764093C3",
-        "candidate": "R4"
+        "path": "artifacts/runtime-20261014/17-n2-camp-step.png",
+        "sha256": "b794d296163de056e504a413973d4669c91cebbe4b76a76859d3c838f01c5579"
       },
       {
         "id": 18,
-        "path": "artifacts/dev-runtime-20261013/18-clue-exit-choice.png",
-        "bytes": 186122,
-        "sha256": "78B36B834246AAA50640908D3892C294BFEBE3B09B742273AA8A787D85369C92",
-        "candidate": "R4"
+        "path": "artifacts/runtime-20261014/18-n2-camp-movement.png",
+        "sha256": "4368bbbb2dced5a62dced557cc4056e7743cd7dd66a32dabcfd15303eb62fc7e"
       },
       {
         "id": 19,
-        "path": "artifacts/dev-runtime-20261013/19-clue-exit-closed.png",
-        "bytes": 205789,
-        "sha256": "0A5E1AC8EF25D3C6BA4138DF9785956A1F70F8C9A0CFF522BE1DC40FE6071F6E",
-        "candidate": "R4"
+        "path": "artifacts/runtime-20261014/19-n2-camp-native-fallback.png",
+        "sha256": "34f46817cefff52adf922fb2e16c3f427c50863e3b4b1167fdd06c10f88389db"
       },
       {
         "id": 20,
-        "path": "artifacts/dev-runtime-20261013/20-fifth-reloaded-default-off.png",
-        "bytes": 366667,
-        "sha256": "67B2F56BEC9F4E2090E05EFD0AA2A1EAF96FC41670BEBCD91C165A3C69CACBF9",
-        "candidate": "R5"
+        "path": "artifacts/runtime-20261014/20-n2-camp-hd2d-restored.png",
+        "sha256": "d415beed7dcb783abbc043bdc4e7a186c23fee472a8781f11b785d7a2e2a9408"
       },
       {
         "id": 21,
-        "path": "artifacts/dev-runtime-20261013/21-fifth-panel-visible.png",
-        "bytes": 383028,
-        "sha256": "4A5A2C5B558A71DCFD19AF7581220BBC2362DDD0E421C7715EC72683B59D6116",
-        "candidate": "R5"
+        "path": "artifacts/runtime-20261014/21-n2-winch-grid.png",
+        "sha256": "d2a0ff6035cda98b0ebd2904b6b62b063f6a679db4dc0d86068044492cbd802e"
       },
       {
         "id": 22,
-        "path": "artifacts/dev-runtime-20261013/22-fifth-local-reveal-on.png",
-        "bytes": 490184,
-        "sha256": "441FA31BAD6E384845604D273B2136F5B4FFB55C9F485D2865BC6E771E2C732C",
-        "candidate": "R5"
+        "path": "artifacts/runtime-20261014/22-n2-winch-hd2d.png",
+        "sha256": "f719e16edfa93890df65eac08d9c0ee7b2145797e47127ca823182354df43d78"
       },
       {
         "id": 23,
-        "path": "artifacts/dev-runtime-20261013/23-fifth-grid-on.png",
-        "bytes": 616068,
-        "sha256": "348FF80B6163E294786E25C358002F21E036A810BB01D9F27FC1203DB6EB404D",
-        "candidate": "R5"
+        "path": "artifacts/runtime-20261014/23-n2-winch-wide.png",
+        "sha256": "1a5c3d18975a7dd61f9c0fd8a7116a3825d5103f12ddbb9e0d80021b3dec568f"
       },
       {
         "id": 24,
-        "path": "artifacts/dev-runtime-20261013/24-fifth-yard-exterior-sample.png",
-        "bytes": 577556,
-        "sha256": "A32CB48BFF014677198FA6EC1FEFD9D334A51FC92925DC5B62E4216CC7992EB2",
-        "candidate": "R5"
+        "path": "artifacts/runtime-20261014/24-n2-winch-path.png",
+        "sha256": "b03c7970a1af31ac8faa8195457338ec4f36c4b562091816ac119cd95c4da5bd"
       },
       {
         "id": 25,
-        "path": "artifacts/dev-runtime-20261013/25-final-yard-panel-bounded.png",
-        "bytes": 434324,
-        "sha256": "7D7323AA73EC7856098EEECBE3E3B2891BA9B00C4E81DD8E17B899F4DCB03695",
-        "candidate": "R6"
+        "path": "artifacts/runtime-20261014/25-n2-side-hd2d.png",
+        "sha256": "498b15506f5bcc7deb2c3983f4372317e403e3882a43bf11c541926911ba69fc"
       },
       {
         "id": 26,
-        "path": "artifacts/dev-runtime-20261013/26-final-house.png",
-        "bytes": 344592,
-        "sha256": "F3518CF181CB68F8402FF73AAEA5E4FFD746A2D58E4963DFEF2E9EB38AF7648C",
-        "candidate": "R6"
+        "path": "artifacts/runtime-20261014/26-return-from-n2.png",
+        "sha256": "2c22ddc4849d1a6c6f7fe05062c602a11b8b7eb378b87c77400ca1da9a92da05"
       },
       {
         "id": 27,
-        "path": "artifacts/dev-runtime-20261013/27-final-drain.png",
-        "bytes": 322703,
-        "sha256": "CE4D841C8D8AA800F55D72F72B583A35EF7A8B860648F933B7C995B49EF48752",
-        "candidate": "R6"
+        "path": "artifacts/runtime-20261014/27-return-origin-coordinates.png",
+        "sha256": "141a620afa2e029c018e682f83fd212e04137741cc01900d9ab22dd90ac9c96f"
       },
       {
         "id": 28,
-        "path": "artifacts/dev-runtime-20261013/28-final-return-default-off.png",
-        "bytes": 377204,
-        "sha256": "3487803F9CD79DC296DD2E8CF1356F07A640A003BCBA308554057DBBBC6B161C",
-        "candidate": "R6"
+        "path": "artifacts/runtime-20261014/28-field-fog-reveal.png",
+        "sha256": "c1ba30fe0c28db85a00a481393d6007dbde38dd8a41835c4296ecc2fdebb6bb6"
       },
       {
         "id": 29,
-        "path": "artifacts/dev-runtime-20261013/29-final-saved-title.png",
-        "bytes": 149111,
-        "sha256": "79C77890935AF6645C4D32C15F76A71F36083A3024278C6371D9722AA6B39B4A",
-        "candidate": "R6"
+        "path": "artifacts/runtime-20261014/29-dev-off-fog-restored.png",
+        "sha256": "fa36348f99f39209043e0a3538a8db4405130b24e59ac37521f9870742709337"
+      },
+      {
+        "id": 30,
+        "path": "artifacts/runtime-20261014/30-final-paused.png",
+        "sha256": "91d4718a8245326f85cacf60ef51d2d29bbbdf7e945e8949d651132d72c02d76"
       }
     ],
-    "deployedCandidate": "R6",
-    "offlineValidation": {
-      "candidateDataSha256": "9391282700DA0A5C17B4E409099874C78AD9407E1BB3EEEAD87A42D248E02508",
-      "compiledActions": 43,
-      "rooms": 8,
-      "worldTeleport": 5,
-      "story": 21,
-      "developerToolsAndArt": 59,
-      "total": 136,
-      "scope": "编译事件行为替身、结构、GML连接与纹理字节/尺寸/原点检查；非游戏运行证明",
-      "reports": [
-        "artifacts/direct-validation.json",
-        "artifacts/dev-validation.json"
-      ]
-    },
-    "deploymentRecord": "artifacts/direct-deployment.json",
-    "finalizedAt": "2026-10-13"
+    "limitations": [
+      "本轮没有执行N2对白、两条结算路线、道具点击和全部原生门回归。",
+      "F8地图测试传送本轮未重新执行，保留原有实现及离线检查。",
+      "建筑外观在观察卡展示；正式建筑落位、完整遮挡与室内陈设仍待开发。",
+      "部分自动鼠标短脉冲未被游戏采样；相邻格移动通过延长按压的短拖动观察到，较长绞盘支路寻路未执行成功，不宣称通过。",
+      "完整世界地图、全部745美术视图及长期存读档兼容尚未验收。"
+    ],
+    "finalState": "游戏运行中，原地暂停，观察关闭；未强制结束程序，未恢复或直接修改角色存档。"
   },
+  "runtime_evidence_path": "artifacts/dev-runtime-20261014.json",
   "baseline": {
     "vanilla_sha256": "99965AB8E26A07C913BE4F7E4FB8D3A8D71C7A89D93D77D07B3A3C2174E19444",
     "strg_count": 122200
   },
   "sources": {
-    "gml_codes": 28,
+    "gml_codes": 33,
     "codes": [
       "src/EmbersAndOaths/Codes/annex_entry_draw.gml",
       "src/EmbersAndOaths/Codes/annex_entry_gate.gml",
@@ -508,6 +349,11 @@
       "src/EmbersAndOaths/Codes/dev_step.gml",
       "src/EmbersAndOaths/Codes/dev_toggle.gml",
       "src/EmbersAndOaths/Codes/dev_visit.gml",
+      "src/EmbersAndOaths/Codes/n2_choice_protected.gml",
+      "src/EmbersAndOaths/Codes/n2_choice_public.gml",
+      "src/EmbersAndOaths/Codes/n2_entry.gml",
+      "src/EmbersAndOaths/Codes/n2_hub.gml",
+      "src/EmbersAndOaths/Codes/n2_refusal.gml",
       "src/EmbersAndOaths/Codes/night_controller_step.gml",
       "src/EmbersAndOaths/Codes/night_door_draw.gml",
       "src/EmbersAndOaths/Codes/night_entry_alarm.gml",
@@ -524,6 +370,7 @@
       "Check-FormalEnvironment.ps1",
       "Deploy-Mod.ps1",
       "Prepare-TestEnvironment.ps1",
+      "Start-Hd2dPreview.ps1",
       "Test-EaoStructRegression.ps1",
       "Test-MslInput.ps1"
     ]

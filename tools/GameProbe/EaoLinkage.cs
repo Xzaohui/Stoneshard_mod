@@ -13,7 +13,9 @@ internal static class EaoLinkage
         var callbacks = data.Code.Where(c => c.ParentEntry != null && c.ParentEntry.Name.Content.Contains("o_eao_")).ToArray();
         var night = data.GameObjects.Any(o=>o.Name.Content=="o_eao_n1_mara");
         var nightParents=new[]{"mara","tor","ivo","rhea","rope","cots"}.Select(n=>"gml_Object_o_eao_n1_"+n+"_Create_0").ToArray();
-        if (callbacks.Length != (night ? 87 : 9) || callbacks.Count(c => c.ParentEntry!.Name.Content == "gml_Object_o_eao_courier_Create_0") != 5 || callbacks.Count(c => c.ParentEntry!.Name.Content == "gml_Object_o_eao_d01_clerk_Create_0") != 4 || callbacks.Any(c => !c.Name.Content.StartsWith("gml_Script_anon_")) || (night && nightParents.Any(n=>callbacks.Count(c=>c.ParentEntry!.Name.Content==n)!=13)))
+        var n2 = data.GameObjects.Any(o=>o.Name.Content=="o_eao_n2_aina");
+        var n2Parents=new[]{"aina","watcher","nara","coffin","winch"}.Select(n=>"gml_Object_o_eao_n2_"+n+"_Create_0").ToArray();
+        if (callbacks.Length != (night ? 87 : 9) + (n2 ? 30 : 0) || callbacks.Count(c => c.ParentEntry!.Name.Content == "gml_Object_o_eao_courier_Create_0") != 5 || callbacks.Count(c => c.ParentEntry!.Name.Content == "gml_Object_o_eao_d01_clerk_Create_0") != 4 || callbacks.Any(c => !c.Name.Content.StartsWith("gml_Script_anon_")) || (night && nightParents.Any(n=>callbacks.Count(c=>c.ParentEntry!.Name.Content==n)!=13)) || (n2 && n2Parents.Any(n=>callbacks.Count(c=>c.ParentEntry!.Name.Content==n)!=6)))
             throw new InvalidDataException("Unexpected EAO callback layout: " + callbacks.Length + " entries: " + string.Join(", ", callbacks.Select(c => c.Name.Content)));
         foreach (var callback in callbacks) {
             if (!data.Scripts.Any(s => s.Code == callback) || !data.Functions.Any(f => f.Name.Content == callback.Name.Content))

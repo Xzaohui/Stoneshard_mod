@@ -60,7 +60,7 @@ for t in threads:
         check(t['guard_cn'] in doc and all(x in doc for x in t['backed_by']), t['id'] + '-mechanism-rendered')
     if t['bucket'] == 'deliberate_open':
         check(t['rationale_cn'] in doc, t['id'] + '-rationale-rendered')
-check('74条，全部由丝线背书覆盖' in doc, 'doc-states-74-coverage')
+check(f'{len(edges)}条，全部由丝线背书覆盖' in doc, 'doc-states-x-coverage')
 for name in ['系统逻辑索引', '任务台本总索引', '布林续篇任务与伏笔回收总表']:
     p = next(V.rglob(name + '.md'))
     check('FORESHADOW-LEDGER-S87:BEGIN' in p.read_text(encoding='utf-8'), name + '-s87-block')

@@ -1,0 +1,368 @@
+{
+  "schema": 1,
+  "version": "native-n2-hd2d-v1",
+  "native_cell_size": 26,
+  "scope": "Developer F10 visual overlay; existing N2 geometry, NPCs and interaction unchanged",
+  "source_sha256": {
+    "src/EmbersAndOaths/N2Quest.cs": "9cf6e9b98440bd2051650fe8625b1d31cd13cdddd60a4c49e1def0649f6bc4fa",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_camp__floor.png": "d76559244be0b511b4ed72f198f50e6b6bb91fab198696b7ccb4d91a6dc19fac",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_camp__backing.png": "23589737005c4b2a7a9c713cb1d1908b0e735f3d6ee4ff489ce6d3a48a693bcf",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_camp__structure.png": "7bc9d5164cfdcfaed75826f15390777233c154066199703f2a0bf99454dc0711",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_camp__foreground.png": "216ef9dbf04a778be90fcf2fffddfd6975b0def9865bada22445e72c6e19f590",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_canal_pump__floor.png": "b3e7d9ba3c882fa4e0c7b9b4d6bfaf9a345609bd1dcdbd34856ca66f4ab4382d",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_canal_pump__backing.png": "1c863e1ade22afae88b77d95df4f024d06d1c8dba0026649ab2eb9a1cd795ce3",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_canal_pump__structure.png": "37ec977bcb076cb317304e2286ccdc204f1d6a3d267624e7d3b5c2bfc52e51f8",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_canal_pump__foreground.png": "b9e82500f1173696ba5054d2fa7ecc59c13e7c6f4d60d15b261c873eef0e42b2",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_canal_tomb__floor.png": "3172c1d54c85d4bbe9fcea538c5a4e6d19d8c7f3f140486676d2a9bfddff44c7",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_canal_tomb__backing.png": "600fc0fa662f03bda5d724a7dc40200c9eac52201544c11d304d239912d31be2",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_canal_tomb__structure.png": "1c5a8791e42d1841e604ba1a77044a772fb57cf6cce2ad1d4fe55108f9983c9e",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_canal_tomb__foreground.png": "2e9d510cfe277d89df2081b32f7dce23c4ca6bae98546daf389227e6e74f1a05",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_coffin_coat.png": "0054c63a45d33b8d0b05a9f1e39c7aa740535f8ac6ff20c6494dd01bff4c565c",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_winch_socket.png": "b6a96d51f7c70bd2c6fcc18131963e3c4063ce3d88b98dc4d12cb10622a5f90e",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_worker_shed.png": "5d51c75542d14f6a31668b95cbbdd4f8fa89c552cc7913a027b697aa1964b73a",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_winch_shed.png": "42e047860e79c5f25d16fc256f0f2723680f0a2d01ca37a49aa011b6336ba5a0",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_canal_entry.png": "e9c6a323126974da614b31c7dd38e275130bd82f6f6c6c4a484af6462448f742"
+  },
+  "scenes": [
+    {
+      "room": "r_eao_n2_camp",
+      "walkable_rectangles": [
+        [
+          5,
+          7,
+          17,
+          24
+        ],
+        [
+          17,
+          16,
+          28,
+          22
+        ],
+        [
+          28,
+          9,
+          35,
+          20
+        ]
+      ],
+      "cells": 402,
+      "material_source": "r01_camp",
+      "material_crop_cells": [
+        5,
+        10,
+        17,
+        18
+      ]
+    },
+    {
+      "room": "r_eao_n2_winch",
+      "walkable_rectangles": [
+        [
+          4,
+          20,
+          34,
+          25
+        ],
+        [
+          10,
+          8,
+          16,
+          20
+        ],
+        [
+          22,
+          5,
+          27,
+          19
+        ]
+      ],
+      "cells": 360,
+      "material_source": "r01_canal_pump",
+      "material_crop_cells": [
+        4,
+        4,
+        16,
+        10
+      ]
+    },
+    {
+      "room": "r_eao_n2_side",
+      "walkable_rectangles": [
+        [
+          7,
+          18,
+          32,
+          25
+        ],
+        [
+          10,
+          6,
+          28,
+          18
+        ]
+      ],
+      "cells": 436,
+      "material_source": "r01_canal_tomb",
+      "material_crop_cells": [
+        12,
+        10,
+        24,
+        18
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "r_eao_n2_camp__backing",
+      "path": "assets/r_eao_n2_camp__backing.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "23589737005c4b2a7a9c713cb1d1908b0e735f3d6ee4ff489ce6d3a48a693bcf",
+      "role": "backing",
+      "room": "r_eao_n2_camp"
+    },
+    {
+      "id": "r_eao_n2_camp__floor",
+      "path": "assets/r_eao_n2_camp__floor.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "10e2e59d6bd3cbf89a01e0f6cd09e2f48bc022e996e0dff1b87194422fc916b4",
+      "role": "floor",
+      "room": "r_eao_n2_camp"
+    },
+    {
+      "id": "r_eao_n2_camp__structure",
+      "path": "assets/r_eao_n2_camp__structure.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "c10d53fa79e44596c7be2e731baed719fd72c0e78e5a2fbe3989c4a228cb160d",
+      "role": "structure",
+      "room": "r_eao_n2_camp"
+    },
+    {
+      "id": "r_eao_n2_camp__foreground",
+      "path": "assets/r_eao_n2_camp__foreground.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "3533ea6bcf739086d361051dd3e3b948b19908c2f56dee5bfcbad2874ae851b2",
+      "role": "foreground",
+      "room": "r_eao_n2_camp"
+    },
+    {
+      "id": "r_eao_n2_winch__backing",
+      "path": "assets/r_eao_n2_winch__backing.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "64ef2451289a5eb16f1785ade115bbf332b3a80a7a7da29c5a5eb58dcfae868a",
+      "role": "backing",
+      "room": "r_eao_n2_winch"
+    },
+    {
+      "id": "r_eao_n2_winch__floor",
+      "path": "assets/r_eao_n2_winch__floor.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "29ffcc7dcefe7d509a8e1946a3d723e69388512552d9638daf4b31efe54d7b9d",
+      "role": "floor",
+      "room": "r_eao_n2_winch"
+    },
+    {
+      "id": "r_eao_n2_winch__structure",
+      "path": "assets/r_eao_n2_winch__structure.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "bbb7ce389443b69a1e1ff7b7ad1d6ecebd4d42d8e710bf0c8bbb6e7f9d90a2ae",
+      "role": "structure",
+      "room": "r_eao_n2_winch"
+    },
+    {
+      "id": "r_eao_n2_winch__foreground",
+      "path": "assets/r_eao_n2_winch__foreground.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "3533ea6bcf739086d361051dd3e3b948b19908c2f56dee5bfcbad2874ae851b2",
+      "role": "foreground",
+      "room": "r_eao_n2_winch"
+    },
+    {
+      "id": "r_eao_n2_side__backing",
+      "path": "assets/r_eao_n2_side__backing.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "274e669fbcc6fc196b925c5ddf209acfb12e60f5a2681ae015e6880943539657",
+      "role": "backing",
+      "room": "r_eao_n2_side"
+    },
+    {
+      "id": "r_eao_n2_side__floor",
+      "path": "assets/r_eao_n2_side__floor.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "1ccab9de6cf9c449fc7c16cfe0bcc8dd3ce00961daf85a18b18930289290ccb4",
+      "role": "floor",
+      "room": "r_eao_n2_side"
+    },
+    {
+      "id": "r_eao_n2_side__structure",
+      "path": "assets/r_eao_n2_side__structure.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "6c217cededc6921cdf8ffee0dab188bab8dd85bb628008598b301abfc92ce9ed",
+      "role": "structure",
+      "room": "r_eao_n2_side"
+    },
+    {
+      "id": "r_eao_n2_side__foreground",
+      "path": "assets/r_eao_n2_side__foreground.png",
+      "size": [
+        1040,
+        780
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sha256": "3533ea6bcf739086d361051dd3e3b948b19908c2f56dee5bfcbad2874ae851b2",
+      "role": "foreground",
+      "room": "r_eao_n2_side"
+    },
+    {
+      "id": "r01_coffin_coat",
+      "path": "assets/r01_coffin_coat.png",
+      "size": [
+        52,
+        78
+      ],
+      "origin": [
+        26,
+        65
+      ],
+      "sha256": "0054c63a45d33b8d0b05a9f1e39c7aa740535f8ac6ff20c6494dd01bff4c565c",
+      "role": "released_sprite_reuse"
+    },
+    {
+      "id": "r01_winch_socket",
+      "path": "assets/r01_winch_socket.png",
+      "size": [
+        52,
+        52
+      ],
+      "origin": [
+        26,
+        43
+      ],
+      "sha256": "b6a96d51f7c70bd2c6fcc18131963e3c4063ce3d88b98dc4d12cb10622a5f90e",
+      "role": "released_sprite_reuse"
+    },
+    {
+      "id": "r01_worker_shed",
+      "path": "assets/r01_worker_shed.png",
+      "size": [
+        260,
+        208
+      ],
+      "origin": [
+        130,
+        190
+      ],
+      "sha256": "5d51c75542d14f6a31668b95cbbdd4f8fa89c552cc7913a027b697aa1964b73a",
+      "role": "released_sprite_reuse"
+    },
+    {
+      "id": "r01_winch_shed",
+      "path": "assets/r01_winch_shed.png",
+      "size": [
+        208,
+        182
+      ],
+      "origin": [
+        104,
+        165
+      ],
+      "sha256": "42e047860e79c5f25d16fc256f0f2723680f0a2d01ca37a49aa011b6336ba5a0",
+      "role": "released_sprite_reuse"
+    },
+    {
+      "id": "r01_canal_entry",
+      "path": "assets/r01_canal_entry.png",
+      "size": [
+        260,
+        234
+      ],
+      "origin": [
+        130,
+        216
+      ],
+      "sha256": "e9c6a323126974da614b31c7dd38e275130bd82f6f6c6c4a484af6462448f742",
+      "role": "released_sprite_reuse"
+    }
+  ],
+  "runtime_verified": false
+}

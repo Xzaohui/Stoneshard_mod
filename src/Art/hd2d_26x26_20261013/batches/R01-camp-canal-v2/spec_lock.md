@@ -1,0 +1,178 @@
+# Execution Lock — R01 Scene Art
+
+## authorization
+Existing HD2D style/six-parameter confirmation remains in force. Current user assigns scene drawing only; NPC files and behavior are outside this batch.
+
+## canvas
+- base_size: 26x26
+- tile_size: 26x26
+- format: RGBA PNG
+- generation_master: preserve original image, then nearest-neighbor normalization to the following declared production canvases
+- r01_camp: 1040x780
+- r01_canal_pump: 1352x884
+- r01_canal_tomb: 936x728
+- architecture_master: 1536x1024, 3 isolated structures in a row on transparent background; no scene floor
+- props_master: 1536x1024, 3x2 isolated objects on transparent background
+- utility_master: 1024x1024, isolated ladder and jug on transparent background
+- r01_worker_shed: 260x208, origin [130, 190], transparent, single frame
+- r01_winch_shed: 208x182, origin [104, 165], transparent, single frame
+- r01_canal_entry: 260x234, origin [130, 216], transparent, single frame
+- r01_coffin_coat: 52x78, origin [26, 65], transparent, single frame
+- r01_winch_socket: 52x52, origin [26, 43], transparent, single frame
+- r01_sluice_wheel: 52x78, origin [26, 65], transparent, single frame
+- r01_maintenance_ladder: 26x78, origin [13, 65], transparent, single frame
+- r01_shelter_bedroll: 52x52, origin [26, 43], transparent, single frame
+- r01_water_jug: 26x26, origin [13, 23], transparent, single frame
+
+## palette
+- name: BRY-R01-128
+- colors:
+  - #DBCAA2
+  - #D1BD98
+  - #CBB792
+  - #C9AE84
+  - #B7AD8F
+  - #C0A177
+  - #B39F7D
+  - #AC9E7F
+  - #9D9C8C
+  - #BA9065
+  - #AD916D
+  - #A9906E
+  - #A39277
+  - #A38A68
+  - #9C8D76
+  - #9C8868
+  - #94886E
+  - #858B82
+  - #AF7855
+  - #9B7C5C
+  - #938067
+  - #937456
+  - #8C7F69
+  - #8B7965
+  - #8B7355
+  - #837766
+  - #827556
+  - #806C56
+  - #78715A
+  - #776A56
+  - #696E5D
+  - #975E45
+  - #875C43
+  - #7F6249
+  - #7F533D
+  - #776251
+  - #785C42
+  - #77503C
+  - #6F6153
+  - #6F5E44
+  - #6F5340
+  - #6F4B38
+  - #676053
+  - #665A4E
+  - #65564C
+  - #666040
+  - #655740
+  - #655041
+  - #64493B
+  - #654834
+  - #5A5A52
+  - #5B583C
+  - #595141
+  - #584D40
+  - #564943
+  - #56473E
+  - #584736
+  - #42575C
+  - #3D4D4E
+  - #3E4947
+  - #43463F
+  - #2E454D
+  - #693E31
+  - #5D3D31
+  - #593C31
+  - #534035
+  - #53362C
+  - #4B403A
+  - #4A3A36
+  - #4C3C2F
+  - #4B322B
+  - #433E3B
+  - #433B36
+  - #433C32
+  - #413633
+  - #413C2C
+  - #42352C
+  - #40312F
+  - #41302A
+  - #412F25
+  - #402824
+  - #304045
+  - #373333
+  - #38372B
+  - #36312B
+  - #342E2E
+  - #352D2A
+  - #342D25
+  - #322A2B
+  - #342924
+  - #312627
+  - #322520
+  - #302221
+  - #301D1D
+  - #2A4049
+  - #293E46
+  - #263D45
+  - #273C43
+  - #263A45
+  - #253942
+  - #223741
+  - #24393E
+  - #22353E
+  - #24353A
+  - #1F343D
+  - #1F323B
+  - #1E2E38
+  - #272A29
+  - #272527
+  - #272521
+  - #192A33
+  - #272226
+  - #272122
+  - #28211D
+  - #1F2123
+  - #241D22
+  - #241C1E
+  - #241B19
+  - #1E1B1F
+  - #171B20
+  - #1B1A19
+  - #1F1619
+  - #191619
+  - #161519
+  - #181115
+  - #0F1218
+  - #0F0E10
+  - #08070B
+
+## style
+- sub_style: textured HD-2D, square-grid orthographic oblique, consistent with previous Stoneshard Mod concept
+- materials: salt-grey limestone, brown timber, dull russet shingles, wet brick, desaturated teal water
+- light_direction: top-left
+- pixel_edges: hard readable clusters, no blurred gradients or antialiasing after export
+- no_purple: no visible crystal or purple glow in N2/D02
+- lighting: no baked moving flame or screen-space bloom; engine lights separately
+
+## per_sprite_budget
+- max_colors: 128
+
+## invariants
+- layouts.json is a new art geometry proposal; D02 canvas cell counts follow the current screenplay. It is not native collision proof.
+- Every production floor alpha must equal its explicit walkable mask. Buildings have independent occupancy metadata; no collision inferred from sprite alpha.
+- Keep the high pump hall, two channels, dry route, initial retreat and return ladder. Never paint the sole return as flooded.
+- Empty coffin contains only an old coat, no body; winch socket shows removed axle. No selected N2/D02 outcome baked in.
+- Living side room stays separate from the tomb. No characters, faces, dialogue, handwriting, readable notices, logos or UI.
+- No copied commercial texture atlas. References are existing Mod concepts.
+- Single-frame assets; no unspecified animation.
+- Raw generated masters are immutable; palette quantization, binary-alpha, documented crops, nearest-neighbor export and code-native geometry masks are authorized post-processing.

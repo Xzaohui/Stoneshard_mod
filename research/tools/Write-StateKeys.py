@@ -97,7 +97,7 @@ def put(rel, t):
     t = preserve_foreign(V, rel, t)
     p.write_text(t, encoding='utf-8'); changed.add('design/' + rel); generated['design/' + rel] = sha(p)
 n = ('---\ntitle: "状态键映射总表"\nid: SYS-STATE-KEYS-S114\ntype: system\nstatus: draft\ncanon: mod-original\n'
-     'baseline: "0.9.4.25-modbranch"\nupdated: 2026-10-13\ntags: [stoneshard, S114, system, state]\naliases: []\n---\n\n'
+     'baseline: "0.9.4.25-modbranch"\nupdated: 2026-10-14\ntags: [stoneshard, S114, system, state]\naliases: []\n---\n\n'
      '# 状态键映射总表\n\n'
      '把全库脚本与回执映射成实现用状态键（共 '
      f"{len(keys)} 个）。键名与取值由源文件确定性推导，见 `research/state-keys.json`；本页给出约定、族计数与逐项清单。\n\n"
@@ -120,11 +120,17 @@ for x in keys:
         n += f"| `{x['key']}` | {m.group(1)} | {m.group(2)} | {m.group(3)}；{m.group(4)} |\n"
     else:
         n += f"| `{x['key']}` | {x['note']} | — | — |\n"
-n += ('\n## 与条件流的对应\n\n'
+n += ('\n## 旧档迁移与缺键口径（OI-03 定稿，2026-10-14）\n\n'
+      '- **引擎键名＝`EAO_`＋登记键名**（[[引擎键名前缀与遗留键登记]]）：`encountered_N2` → `EAO_encountered_N2`。首批 [[试点批次总表]] P1（N2）五键已按此落地进 0.3.2 候选。\n'
+      '- **取值存储**：枚举类（`resolve_*`、`presence_*`）存字符串；二值类（`encountered_*`/`callback_*`/`consent_*`/`paid_*`/`order_*` 的真假键）存整数 1＝真。\n'
+      '- **缺键读取口径**：`resolve_*` 缺省 `none`（未结算，读档后仍为 none，见 [[试点批次验收场景N2]] T06）；二值类缺省假；`presence_*` 缺省 `present`。读取从不回写、不构成"已知"授权。\n'
+      '- **旧字段不自动迁移**：N1 小样键（`EAO_N1_*`）、旧任务键（`EAO_MQ0*`）、测试传送与开发观察键原样保留，只读不重映射；N1 重制时按 [[N1小样键语义与迁移建议]] 改挂登记键，此前不动。\n'
+      '- **同一脚本不得双写**：N1 小样完整保留样例键至重制；N2 起一律登记键（见 [[键名口径对账]]）。两套键并存于同一存档是允许的（不同脚本族），同一脚本内不允许。\n\n'
+      '## 与条件流的对应\n\n'
       '- `first_meet` ⇔ `encountered_* = false`；`task_done` ⇔ `resolve_* != none`；`route(<key>)` ⇔ `resolve_* == <key>`。\n'
       '- `order_early/late` ⇔ `order_*`；`refused`/`npc_absent` ⇔ `presence_*`；回执播放 ⇔ `callback_*`。\n'
       '- 条件图（[[全库条件流投影]]）的 `when` 不直接写引擎键，由本页给出映射。\n\n'
-      '## 边界\n\n- 本页只给键名、取值与语义；未做引擎侧读写、存档迁移与冲突消解。\n'
+      '## 边界\n\n- 本页只给键名、取值与语义；OI-03 口径已定稿并经 P1 五键离线落地，实机读档验证随 [[待办与已知缺口登记]] OI-10。\n'
       '- 旧字段与旧存档不自动迁移；投影不等于真实存档变化。\n'
       '- 键不含奖励、金币与库存语义；结算仍归各台本唯一所有者。\n\n'
       '[[当前任务依赖与状态字典]] · [[全库条件流投影]] · [[对白分支覆盖审计]] · [[任务台本总索引]] · [[设计库生成与校验流程]]\n')

@@ -18,8 +18,9 @@ for r in reg['keys']:
         check(r['files'] == sorted(live[r['key']]), 'files-' + r['key'])
     check(r['cls'] != 'unclassified', 'classified-' + r['key'])
 check(reg['unclassified'] == [], 'no-unclassified')
-check(sum(1 for r in reg['keys'] if r['mapped_to_registry']) == 0, 'zero-mapped')
-check(reg['classes'].get('test-teleport', 0) >= 15 and reg['classes'].get('sample-N1', 0) >= 5, 'class-shape')
+mapped={r['key'] for r in reg['keys'] if r['mapped_to_registry']}
+check(mapped == {r['key'] for r in reg['keys'] if r['cls'].startswith('pilot-N2')}, 'mapped-exactly-pilot-keys')
+check(reg['classes'].get('test-teleport', 0) >= 15 and reg['classes'].get('sample-N1', 0) >= 5 and reg['classes'].get('pilot-N2', 0) >= 4, 'class-shape')
 card = (V / '11_管理/引擎键名前缀与遗留键登记.md').read_text(encoding='utf-8')
 stems = {p.stem for p in V.rglob('*.md')}
 for sec in ('## 口径', '## 已实现的 `EAO_` 键（扫描 `src/EmbersAndOaths/Codes/*.gml`）', '## 与 N1 小样的冲突（须在实现时决定）', '## 边界'):

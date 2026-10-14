@@ -15,9 +15,9 @@ PLAN = '11_管理/特殊地点与野外NPC对白扩展计划.md'
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def read(p): return json.loads((ROOT / p).read_text(encoding='utf-8-sig'))
 ITEMS = [
- dict(id='OI-01', area='引擎实现', what='按 [[实现交接总表]] 六步建事件：状态键落库、事件桩、台词接线、服务班与声望、野外人物与文书迹象、闲谈池；首批执行见 [[试点批次总表]]（P1→P2→P3）。', owner='实现', prereq='无（设计侧已就绪）', status='open', evidence='research/event-stubs.json · research/state-keys.json'),
- dict(id='OI-02', area='引擎实现', what='分配真实引擎事件号并回写 [[事件桩映射总表]]；桩名可重排但读写键不得变。', owner='实现', prereq='OI-01', status='open', evidence='research/event-stubs.json'),
- dict(id='OI-03', area='引擎实现', what='存档字段命名与旧档迁移策略；旧字段不自动迁移，缺键按 none 处理。', owner='实现', prereq='OI-01', status='open', evidence='[[状态键映射总表]]'),
+ dict(id='OI-01', area='引擎实现', what='按 [[实现交接总表]] 六步建事件：状态键落库、事件桩、台词接线、服务班与声望、野外人物与文书迹象、闲谈池；首批执行见 [[试点批次总表]]（P1→P2→P3）。', owner='实现', prereq='无（设计侧已就绪）', status='open', evidence='research/event-stubs.json · research/state-keys.json · [[试点批次总表]]（2026-10-14：P1/N2 已落地，五桩五键三景两解法拒绝回访，0.3.2 候选过全部离线检查，未部署；P2/P3 待做）'),
+ dict(id='OI-02', area='引擎实现', what='分配真实引擎事件号并回写 [[事件桩映射总表]]；桩名可重排但读写键不得变。', owner='实现', prereq='OI-01', status='open', evidence='research/event-stubs.json · [[事件桩映射总表]]（2026-10-14：P1 五桩已回写 10640–10644；其余 1,802 桩待各批次）'),
+ dict(id='OI-03', area='引擎实现', what='存档字段命名与旧档迁移策略；旧字段不自动迁移，缺键按 none 处理。', owner='实现', prereq='OI-01', status='open', evidence='[[状态键映射总表]]（2026-10-14：OI-03 口径定稿并经 P1 五键离线落地；实机读档验证随 OI-10）'),
  dict(id='OI-04', area='引擎实现', what='触发距离、作息与生成点；按 [[特殊地点阶段制作与校准规程]] 的“引擎侧触发”节记录。', owner='实现', prereq='OI-01', status='open', evidence='research/production-protocol.json'),
  dict(id='OI-05', area='实机校准', what='经济数值采样：每城服务班实付/实收、材料价带、任务报酬区间；未采样不写数字。', owner='实机', prereq='OI-01', status='open', evidence='research/production-protocol.json'),
  dict(id='OI-06', area='制作', what='比例平面与碰撞：按地点卡“入口与安全回程”锚点测量入口坐标、可行走边界与尺寸。', owner='制作', prereq='OI-01', status='open', evidence='[[特殊地点设计卡总表]]'),
@@ -28,7 +28,7 @@ ITEMS = [
  dict(id='OI-11', area='交付', what='部署与回滚：候选包 SHA 与检查匹配后部署；更新前备份 data.win、MSL 设置、旧包与用户数据。基线指纹见 [[实现侧现状核对]]。', owner='实现', prereq='OI-01, OI-10', status='blocked', evidence='AGENTS.md 门槛 · [[实现侧现状核对]]'),
  dict(id='OI-12', area='内容', what='新增氛围句只在新增地点/聚落/派系时进行；氛围层冻结于 S129 尺度。', owner='设计', prereq='无', status='policy', evidence='[[氛围层总览与冻结建议]]'),
  dict(id='OI-14', area='验证', what='验证快照不得清理：11 份 `backups/…` 是保留性检查的“变更前”基线，缺失则对应校验器无法运行。', owner='实现', prereq='无', status='policy', evidence='[[验证快照依赖登记]]'),
- dict(id='OI-15', area='引擎实现', what='按 [[实现侧现状核对]] 的基线在既有工程上新建事件：现有 0.3.0 包不含 S62+ 设计稿，GML 代码 20 个、构建/部署脚本齐备。', owner='实现', prereq='无', status='open', evidence='[[实现侧现状核对]] · [[实现交接总表]]'),
+ dict(id='OI-15', area='引擎实现', what='按 [[实现侧现状核对]] 的基线在既有工程上新建事件：现有 0.3.0 包不含 S62+ 设计稿，GML 代码 20 个、构建/部署脚本齐备。', owner='实现', prereq='无', status='open', evidence='[[实现侧现状核对]] · [[实现交接总表]]（2026-10-14：已在 0.3.1 工程定向更新出 0.3.2 候选，含 N2 五桩；未部署）'),
 ]
 stems = {p.stem for p in V.rglob('*.md')}
 for x in ITEMS:

@@ -1,0 +1,194 @@
+# Execution Lock — R02 River
+
+## authorization
+Continued by user2026-10-13; approved26-cell static HD2D workflow and reference-derived128 regional colors continue. NPC work belongs to another model.
+
+## canvas
+- base_size: 26x26
+- tile_size: 26x26
+- format: RGBA PNG
+- r02_inn_exterior: 1040x780
+- r02_inn_common: 832x676
+- r02_well: 1040x780
+- r02_tracks: 1092x780
+- r02_repair: 1092x780
+- r02_ford: 1092x780
+- r02_fork: 1040x780
+- r02_tax_main: 1092x832
+- r02_tax_yard: 780x572
+- r02_tax_office: 624x468
+- materials_master: 1536x1536, four768x768texture panels
+- architecture_master: 1536x1024, six512x512slots
+- props_master: 2048x1536, twelve512x512slots
+- interiors_master: 1536x1024, two768x1024panels
+- r02_region: 1664x1248 schematic, not a native world map
+- r02_crate_corner_detail: 208x208, inspection artwork only
+- r02_ferry_inn: 312x260, origin [156, 242], transparent static frame
+- r02_tax_house: 260x234, origin [130, 216], transparent static frame
+- r02_filter_shelter: 156x156, origin [78, 140], transparent static frame
+- r02_repair_canopy: 208x156, origin [104, 140], transparent static frame
+- r02_inspection_shed: 208x182, origin [104, 166], transparent static frame
+- r02_bridge_pier: 78x130, origin [39, 117], transparent static frame
+- r02_public_table: 130x78, origin [65, 65], transparent static frame
+- r02_privacy_screen: 78x104, origin [39, 91], transparent static frame
+- r02_case_cabinet: 52x78, origin [26, 65], transparent static frame
+- r02_name_cabinet: 52x78, origin [26, 65], transparent static frame
+- r02_filter_rack: 104x104, origin [52, 91], transparent static frame
+- r02_sample_bucket: 26x26, origin [13, 23], transparent static frame
+- r02_mooring_post: 52x78, origin [26, 65], transparent static frame
+- r02_crate_corner: 52x52, origin [26, 43], transparent static frame
+- r02_repair_timbers: 104x52, origin [52, 43], transparent static frame
+- r02_soup_stove: 78x104, origin [39, 91], transparent static frame
+- r02_road_sign: 52x78, origin [26, 65], transparent static frame
+- r02_inspection_table: 78x52, origin [39, 45], transparent static frame
+
+## palette
+- name: DEN-R02-128
+- colors:
+  - #DFDCC9
+  - #E5D1AD
+  - #E2CEA9
+  - #E1C8A0
+  - #DEC498
+  - #CBC4AC
+  - #D6B98E
+  - #C5AF8A
+  - #BBA989
+  - #A2AFAB
+  - #C19E77
+  - #B59C7A
+  - #B19978
+  - #AE9676
+  - #A8967B
+  - #A8936C
+  - #959684
+  - #B28866
+  - #A58A6B
+  - #A18869
+  - #9E8869
+  - #9D8061
+  - #98866C
+  - #988559
+  - #977C5E
+  - #8F826C
+  - #8E7A63
+  - #8E7E54
+  - #8D7659
+  - #847D60
+  - #847557
+  - #7B7B67
+  - #697D81
+  - #99694E
+  - #896D52
+  - #856C51
+  - #806E58
+  - #7F6D48
+  - #7F6149
+  - #786A57
+  - #776A43
+  - #776048
+  - #775741
+  - #6F695B
+  - #6E604F
+  - #6E663F
+  - #6D5D40
+  - #6D5845
+  - #6C573B
+  - #6C503D
+  - #5F6666
+  - #635F41
+  - #615945
+  - #605541
+  - #5F5044
+  - #604F3E
+  - #5E4F36
+  - #50656C
+  - #4D5C5F
+  - #525346
+  - #425860
+  - #3E5159
+  - #524D3D
+  - #3D4D52
+  - #684636
+  - #5D4536
+  - #594436
+  - #53483D
+  - #534732
+  - #533F34
+  - #533C2D
+  - #4C473F
+  - #4B4239
+  - #4C452F
+  - #4B3C31
+  - #3A484F
+  - #32454D
+  - #414341
+  - #3B3C3E
+  - #43432F
+  - #413D2F
+  - #41392E
+  - #38392D
+  - #4F332A
+  - #45322A
+  - #41312A
+  - #3D342C
+  - #3D2B26
+  - #39322E
+  - #393024
+  - #392823
+  - #343332
+  - #332E2C
+  - #343024
+  - #332927
+  - #332720
+  - #32201E
+  - #2C3F48
+  - #293A41
+  - #27363C
+  - #2C2F2D
+  - #222F37
+  - #2B2927
+  - #23292C
+  - #292628
+  - #2A2522
+  - #29251D
+  - #1F2528
+  - #282123
+  - #212024
+  - #28201E
+  - #221F1E
+  - #261F19
+  - #1E1F20
+  - #181E22
+  - #23191B
+  - #1D191B
+  - #211715
+  - #1A181C
+  - #191615
+  - #14171C
+  - #141615
+  - #181214
+  - #121115
+  - #130D11
+  - #0E0D12
+  - #090B10
+  - #050408
+
+## style
+- sub_style: textured HD-2D, square-grid orthographic oblique
+- materials: pale limestone, damp green grass, muddy ruts, brown timber, dark blue/teal river
+- light_direction: top-left
+- lighting: static unlit base, dynamic sources separate
+
+## per_sprite_budget
+- max_colors: 128
+
+## invariants
+- D03 main42x32 and yard30x22 cells; diagonal bridge with broken span, persistent fixed ford and return route. Repair adds bridge cells and never removes ford.
+- Basic pedestrian paths stay open independently of toll or story outcome; no native world coordinates are claimed.
+- Inn public table and private names/case cabinets separated; no personal details or invented hotel bed capacity.
+- Well has three fixed sample points and separate anonymous-case/name cabinets. Filtering does not depict completed cure or consent.
+- Ruts/clamp traces indicate inspectable shapes only, not certified evidence or a selected narrative route.
+- No NPCs, people, dialogue, monsters, corpses, readable text, labels, UI, flames, glow or story completion baked into scenery.
+- Floor masks and occupancy explicit; alpha is never collision. Roofs and foreground separate.
+- Raw masters immutable; documented crops, nearest-neighbor normalization, exact palette, binary alpha and tile-edge copying are authorized production postprocessing.

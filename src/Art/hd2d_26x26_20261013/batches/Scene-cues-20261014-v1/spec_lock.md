@@ -1,0 +1,291 @@
+# Execution Lock — Scene Cue Synchronization
+
+## authorization
+User continues scene work2026-10-14. Approved26-cell static HD2D and128colors per regional sprite continue. Shared master combines only existing BRY/DEN palettes.
+
+## canvas
+- base_size:26x26
+- format:RGBA PNG
+- cue_master:1536x1024, six512x512slots
+- r01_ash_threshold: 104x52, origin [52, 43]
+- r01_tool_stub: 78x52, origin [39, 43]
+- r02_well_notice: 52x78, origin [26, 65]
+- r02_red_water_buckets: 78x78, origin [39, 65]
+- r02_rope_shoe_stall: 156x156, origin [78, 140]
+- r02_bridge_note: 52x52, origin [26, 43]
+
+## palette
+- name:SCENE-CUES-SHARED
+- colors:
+  - #DBCAA2
+  - #D1BD98
+  - #CBB792
+  - #C9AE84
+  - #B7AD8F
+  - #C0A177
+  - #B39F7D
+  - #AC9E7F
+  - #9D9C8C
+  - #BA9065
+  - #AD916D
+  - #A9906E
+  - #A39277
+  - #A38A68
+  - #9C8D76
+  - #9C8868
+  - #94886E
+  - #858B82
+  - #AF7855
+  - #9B7C5C
+  - #938067
+  - #937456
+  - #8C7F69
+  - #8B7965
+  - #8B7355
+  - #837766
+  - #827556
+  - #806C56
+  - #78715A
+  - #776A56
+  - #696E5D
+  - #975E45
+  - #875C43
+  - #7F6249
+  - #7F533D
+  - #776251
+  - #785C42
+  - #77503C
+  - #6F6153
+  - #6F5E44
+  - #6F5340
+  - #6F4B38
+  - #676053
+  - #665A4E
+  - #65564C
+  - #666040
+  - #655740
+  - #655041
+  - #64493B
+  - #654834
+  - #5A5A52
+  - #5B583C
+  - #595141
+  - #584D40
+  - #564943
+  - #56473E
+  - #584736
+  - #42575C
+  - #3D4D4E
+  - #3E4947
+  - #43463F
+  - #2E454D
+  - #693E31
+  - #5D3D31
+  - #593C31
+  - #534035
+  - #53362C
+  - #4B403A
+  - #4A3A36
+  - #4C3C2F
+  - #4B322B
+  - #433E3B
+  - #433B36
+  - #433C32
+  - #413633
+  - #413C2C
+  - #42352C
+  - #40312F
+  - #41302A
+  - #412F25
+  - #402824
+  - #304045
+  - #373333
+  - #38372B
+  - #36312B
+  - #342E2E
+  - #352D2A
+  - #342D25
+  - #322A2B
+  - #342924
+  - #312627
+  - #322520
+  - #302221
+  - #301D1D
+  - #2A4049
+  - #293E46
+  - #263D45
+  - #273C43
+  - #263A45
+  - #253942
+  - #223741
+  - #24393E
+  - #22353E
+  - #24353A
+  - #1F343D
+  - #1F323B
+  - #1E2E38
+  - #272A29
+  - #272527
+  - #272521
+  - #192A33
+  - #272226
+  - #272122
+  - #28211D
+  - #1F2123
+  - #241D22
+  - #241C1E
+  - #241B19
+  - #1E1B1F
+  - #171B20
+  - #1B1A19
+  - #1F1619
+  - #191619
+  - #161519
+  - #181115
+  - #0F1218
+  - #0F0E10
+  - #08070B
+  - #DFDCC9
+  - #E5D1AD
+  - #E2CEA9
+  - #E1C8A0
+  - #DEC498
+  - #CBC4AC
+  - #D6B98E
+  - #C5AF8A
+  - #BBA989
+  - #A2AFAB
+  - #C19E77
+  - #B59C7A
+  - #B19978
+  - #AE9676
+  - #A8967B
+  - #A8936C
+  - #959684
+  - #B28866
+  - #A58A6B
+  - #A18869
+  - #9E8869
+  - #9D8061
+  - #98866C
+  - #988559
+  - #977C5E
+  - #8F826C
+  - #8E7A63
+  - #8E7E54
+  - #8D7659
+  - #847D60
+  - #847557
+  - #7B7B67
+  - #697D81
+  - #99694E
+  - #896D52
+  - #856C51
+  - #806E58
+  - #7F6D48
+  - #7F6149
+  - #786A57
+  - #776A43
+  - #776048
+  - #775741
+  - #6F695B
+  - #6E604F
+  - #6E663F
+  - #6D5D40
+  - #6D5845
+  - #6C573B
+  - #6C503D
+  - #5F6666
+  - #635F41
+  - #615945
+  - #605541
+  - #5F5044
+  - #604F3E
+  - #5E4F36
+  - #50656C
+  - #4D5C5F
+  - #525346
+  - #425860
+  - #3E5159
+  - #524D3D
+  - #3D4D52
+  - #684636
+  - #5D4536
+  - #594436
+  - #53483D
+  - #534732
+  - #533F34
+  - #533C2D
+  - #4C473F
+  - #4B4239
+  - #4C452F
+  - #4B3C31
+  - #3A484F
+  - #32454D
+  - #414341
+  - #3B3C3E
+  - #43432F
+  - #413D2F
+  - #41392E
+  - #38392D
+  - #4F332A
+  - #45322A
+  - #41312A
+  - #3D342C
+  - #3D2B26
+  - #39322E
+  - #393024
+  - #392823
+  - #343332
+  - #332E2C
+  - #343024
+  - #332927
+  - #332720
+  - #32201E
+  - #2C3F48
+  - #293A41
+  - #27363C
+  - #2C2F2D
+  - #222F37
+  - #2B2927
+  - #23292C
+  - #292628
+  - #2A2522
+  - #29251D
+  - #1F2528
+  - #282123
+  - #212024
+  - #28201E
+  - #221F1E
+  - #261F19
+  - #1E1F20
+  - #181E22
+  - #23191B
+  - #1D191B
+  - #211715
+  - #1A181C
+  - #191615
+  - #14171C
+  - #141615
+  - #181214
+  - #121115
+  - #130D11
+  - #0E0D12
+  - #090B10
+  - #050408
+
+## style
+- sub_style:textured HD-2D, square-grid orthographic oblique
+- light_direction:top-left
+- lighting:static unlit base
+
+## per_sprite_budget
+- max_colors:128
+
+## invariants
+- Six separate complete silhouettes, genuine transparency, no people/children/NPCs/ghosts, no readable writing or baked conclusions.
+- Red water bucket pair represents exactly TWO buckets; no drinkability/cure/crime verdict.
+- Rope shoes: pair of small half-woven sandals hanging on a modest rope-work stall, no owner drawn; conditional/off by default.
+- Bridge note: blank paper with visible nail, no new sign post; overlays existing sign only at the specified refusal return visit, never commits or clears harm.
+- Ash mark is ordinary threshold ash, not a magical rune or undead effect. Stub/agency seal only a trace, not completed certification.
+- Raw immutable; documented crop,NN resize,exact regional palette and binary-alpha production postprocessing approved.

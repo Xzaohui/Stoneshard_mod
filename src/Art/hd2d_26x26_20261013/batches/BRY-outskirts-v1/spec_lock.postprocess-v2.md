@@ -1,0 +1,223 @@
+# Spec Lock
+
+## contract
+- base_size:26x26
+- output:static RGBA PNG, binaryalpha, nearest
+- palette:BRY-CORE-128
+- architecture_master:1536x1024, eight separately isolated384x512slots
+- props_master:1536x1024,eight separately isolated384x512slots
+- landscape_master:1536x1536,four768squarepanels
+
+## sprite_dimensions
+- bryo_embankment_commons: 312x234,origin[156, 216]
+- bryo_raised_seed_store: 312x260,origin[156, 242]
+- bryo_sail_commons: 312x234,origin[156, 216]
+- bryo_side_berth_shed: 312x234,origin[156, 216]
+- bryo_binding_shop: 364x234,origin[182, 216]
+- bryo_sealed_outer_shed: 364x260,origin[182, 242]
+- bryo_public_tower_portico: 364x260,origin[182, 242]
+- bryo_small_hearing_pavilion: 416x286,origin[208, 268]
+- bryo_communal_bed: 130x78,origin[65, 65]
+- bryo_common_cookstove: 78x104,origin[39, 91]
+- bryo_wage_tally_case: 104x78,origin[52, 65]
+- bryo_apprentice_stamp: 26x26,origin[13, 23]
+- bryo_patched_embankment: 104x78,origin[52, 65]
+- bryo_seed_bags: 78x78,origin[39, 65]
+- bryo_grain_balance: 104x104,origin[52, 91]
+- bryo_deposit_chits: 52x26,origin[26, 23]
+- bryo_salt_ridge_patch: 156x104,origin[78, 91]
+- bryo_dry_boat_ribs: 208x104,origin[104, 91]
+- bryo_rental_skiff: 208x104,origin[104, 91]
+- bryo_detached_support: 78x104,origin[39, 91]
+- bryo_public_load_scale: 78x130,origin[39, 117]
+- bryo_blocking_crate: 104x78,origin[52, 65]
+- bryo_privacy_file_bag: 52x52,origin[26, 39]
+- bryo_return_marker: 78x26,origin[39, 23]
+- bryo_low_load_frame: 156x130,origin[78, 117]
+- bryo_separated_material_trays: 104x78,origin[52, 65]
+- bryo_three_test_pieces: 78x52,origin[39, 43]
+- bryo_detached_cracked_buckle: 52x26,origin[26, 23]
+- bryo_blank_batch_tag: 26x26,origin[13, 23]
+- bryo_trial_fence: 156x78,origin[78, 65]
+- bryo_binding_bench: 130x104,origin[65, 91]
+- bryo_original_page_tray: 78x52,origin[39, 43]
+- bryo_added_page_tray: 78x52,origin[39, 43]
+- bryo_low_archive_cabinet: 104x104,origin[52, 91]
+- bryo_binding_chair: 52x78,origin[26, 65]
+- bryo_binding_thread: 52x26,origin[26, 23]
+- bryo_sample_binding_page: 52x26,origin[26, 23]
+- bryo_weak_support_frame: 130x104,origin[65, 91]
+- bryo_bowed_sealed_planks: 156x78,origin[78, 65]
+- bryo_shutter_barrier: 104x78,origin[52, 65]
+- bryo_safe_outer_brace: 104x104,origin[52, 91]
+- bryo_last_note_case: 78x52,origin[39, 43]
+- bryo_fee_dish: 52x26,origin[26, 23]
+- bryo_ring_table: 208x156,origin[104, 143]
+- bryo_three_column_transfer_tray: 104x78,origin[52, 65]
+- bryo_single_statement_case: 78x52,origin[39, 43]
+- bryo_counted_plank_stack: 104x78,origin[52, 65]
+- bryo_empty_support_storage: 104x104,origin[52, 91]
+- bry_account_witness_table: 130x78,origin[65, 65]
+- bry_sealed_change_pouch: 52x52,origin[26, 39]
+- bry_patched_rent_board: 78x104,origin[39, 91]
+- bry_mooring_nail: 26x26,origin[13, 23]
+- bry_termination_knot: 52x26,origin[26, 23]
+- bry_reserved_old_seat_board: 78x52,origin[39, 43]
+- bry_blank_instruction_tag: 26x26,origin[13, 23]
+- bry_paired_water_scales: 78x130,origin[39, 117]
+- bry_short_meeting_table: 104x78,origin[52, 65]
+- bry_empty_tenant_bench: 104x52,origin[52, 43]
+- bry_privacy_screen: 78x130,origin[39, 117]
+
+## palette
+- colors:
+  - #DBCAA2
+  - #D1BD98
+  - #CBB792
+  - #C9AE84
+  - #B7AD8F
+  - #C0A177
+  - #B39F7D
+  - #AC9E7F
+  - #9D9C8C
+  - #BA9065
+  - #AD916D
+  - #A9906E
+  - #A39277
+  - #A38A68
+  - #9C8D76
+  - #9C8868
+  - #94886E
+  - #858B82
+  - #AF7855
+  - #9B7C5C
+  - #938067
+  - #937456
+  - #8C7F69
+  - #8B7965
+  - #8B7355
+  - #837766
+  - #827556
+  - #806C56
+  - #78715A
+  - #776A56
+  - #696E5D
+  - #975E45
+  - #875C43
+  - #7F6249
+  - #7F533D
+  - #776251
+  - #785C42
+  - #77503C
+  - #6F6153
+  - #6F5E44
+  - #6F5340
+  - #6F4B38
+  - #676053
+  - #665A4E
+  - #65564C
+  - #666040
+  - #655740
+  - #655041
+  - #64493B
+  - #654834
+  - #5A5A52
+  - #5B583C
+  - #595141
+  - #584D40
+  - #564943
+  - #56473E
+  - #584736
+  - #42575C
+  - #3D4D4E
+  - #3E4947
+  - #43463F
+  - #2E454D
+  - #693E31
+  - #5D3D31
+  - #593C31
+  - #534035
+  - #53362C
+  - #4B403A
+  - #4A3A36
+  - #4C3C2F
+  - #4B322B
+  - #433E3B
+  - #433B36
+  - #433C32
+  - #413633
+  - #413C2C
+  - #42352C
+  - #40312F
+  - #41302A
+  - #412F25
+  - #402824
+  - #304045
+  - #373333
+  - #38372B
+  - #36312B
+  - #342E2E
+  - #352D2A
+  - #342D25
+  - #322A2B
+  - #342924
+  - #312627
+  - #322520
+  - #302221
+  - #301D1D
+  - #2A4049
+  - #293E46
+  - #263D45
+  - #273C43
+  - #263A45
+  - #253942
+  - #223741
+  - #24393E
+  - #22353E
+  - #24353A
+  - #1F343D
+  - #1F323B
+  - #1E2E38
+  - #272A29
+  - #272527
+  - #272521
+  - #192A33
+  - #272226
+  - #272122
+  - #28211D
+  - #1F2123
+  - #241D22
+  - #241C1E
+  - #241B19
+  - #1E1B1F
+  - #171B20
+  - #1B1A19
+  - #1F1619
+  - #191619
+  - #161519
+  - #181115
+  - #0F1218
+  - #0F0E10
+  - #08070B
+
+## style
+- texturedHD2Dsquaregridorthographicoblique
+- top-leftneutralUNLITbase,no beams/fire/glow/dynamiccastshadow
+
+## invariants
+- All27remainingBRYviews remain scope; three satellites/S01R01camp livingextension,not duplicateoriginal yard,three finiteTWO-bedlivingrooms andoneordinaryserviceeach. No unlimitedbeds/grain/stock.
+- X11 SINGLEreturnentrance,ONErentalboat sharedext/detail entity,ONEdetachedsupportset; publicwaiting/loadscale vsprivacy screen,sealedhistorybag; blockingcrate leaveswalkreturn,no confirmeddeparture ordisclosedhealth. Boatwateranchor isnotplayerwalkable.
+- X12 two materialbatches/three testtypes,lowloadframe,detachedfracture; fencedtrial separatedfrompublicalley; no bribes/requiredskills/unlimitedgold.
+- X13 separatehistoricpage/addedpage trays,coveredfamilylabels,one restorationseat,blankmethodsample; no university/vanillaprintshopaccessclaim.
+- X14 originalouterwork-shed andretreatboundary,unsafeplanks/weakframe vsfixedsafeedge support; no originalcellar/ladder/enemies/ghost/forcedfight/repairoutcome.
+- X15 sealedcurrentbatchmoney,expensesdish andprivateclaimseat separated; publicnoticeblank; no wholewagecleared/military/Bern/armory permission.
+- X16 ONEringtable/FIVEemptychairs andperipherybenches; separateindividualsidetable andthreecolumnarrival/authorization/transfer tray; emptyseats arenotconsent,no actorsubstitutes/city-governmentclaim.
+- OldboatribsDRYonshore,retainednameboard/mooringpin/emptyberth independent; no missingpersondeath/returnjudgment. SaltfieldLOW,seedstoreHIGH anddryweighinghighpath; actualwaterdamage/seedownership/futureharvest engine-owned.
+- All readable labels,names,numbers,batchcounts,money/tariffs,permissions/outcomes actorengine-owned,blankfaces. No people/animals/corpses/fire/magiclight.Naturaltexturesmodestpixelclusters.
+- Motheroutputs immutable,recordprompt/input/outputhash+actualsize; approvedcrop/NN/palette/binaryalpha/roofmasks keepfull silhouette andexactproductioncanvas/origin; do not editraws.
+
+## per_sprite_budget
+- max_colors:128
+
+## format_revision
+Original generationlock archived byte-for-byte as spec_lock.generation-v1.md. Only PAM-compatible canvas heading and explicit alreadyapproved128color budget added. Dimensions/palette/style/scope unchanged.

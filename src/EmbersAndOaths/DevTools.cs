@@ -9,6 +9,7 @@ internal static class DevTools
     internal static void Prepare()
     {
         Hd2dArt.Ensure();
+        N2Hd2dArt.Ensure();
         Msl.AddObject("o_eao_devtools",isVisible:true,isPersistent:true);
         var portal=Msl.AddObject("o_eao_dev_portal",parentName:"o_Doors_all_small",isVisible:false);
         portal.ParentId=Msl.GetObject("o_Doors_all_small");portal.Sprite=Msl.GetObject("o_Doors_all_small").Sprite;
@@ -27,7 +28,7 @@ internal static class DevTools
         set(dev,files.GetCode("dev_visit.gml"),EventType.KeyPress,122);
         // Use the same world draw pass as the verified grid; the installed game's
         // GUI passes did not display this independent observer during runtime tests.
-        set(dev,Hd2dArt.DrawForeground()+files.GetCode("dev_draw_gui.gml")+files.GetCode("dev_draw_world.gml"),EventType.Draw,0);
+        set(dev,Hd2dArt.DrawForeground()+N2Hd2dArt.DrawForeground()+files.GetCode("dev_draw_gui.gml")+files.GetCode("dev_draw_world.gml"),EventType.Draw,0);
         set(dev,"// Observer now draws in the world pass.",EventType.Draw,64);
         set(dev,"// Observer now draws in the world pass.",EventType.Draw,(uint)EventSubtypeDraw.DrawGUIEnd);
         var portal=Msl.GetObject("o_eao_dev_portal");

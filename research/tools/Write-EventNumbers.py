@@ -89,7 +89,7 @@ put(CARD, n)
 sp = (V / STUBS_PAGE).read_text(encoding='utf-8')
 if '事件号分配方案' not in sp:
     sp = sp.rstrip() + '\n\n<!-- EVT-NUM-S163:BEGIN -->\n[[事件号分配方案]]：1,807 桩的家族基址＋64 对齐块预分配（一桩一号、不复用）；实现时回写本表。\n<!-- EVT-NUM-S163:END -->\n'
-    put(STUBS_PAGE, sp)
+put(STUBS_PAGE, sp)
 t = (V / PLAN).read_text(encoding='utf-8-sig')
 a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'
 blk = (a + f"\n## S163事件号分配方案（当前登记）\n\n[[事件号分配方案]]：{len(alloc)} 桩按家族基址（N/SQ/DT/D/CS/CM/FX）＋64 对齐块确定性预分配，一桩一号不复用；引擎号实现时回写。\n" + z)

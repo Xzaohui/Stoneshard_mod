@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-14",
+  "batch": "R04-pass-v1",
+  "scope": "All22view PNGs, palettes/alpha/dimensions/origins, roof reconstruction, proposed route/evidence independence and provenance; no native runtime test",
+  "production_pngs": 226,
+  "new_generated_masters": 11,
+  "independent_sprites": 29,
+  "material_tiles": 36,
+  "view_slots": 22,
+  "checks_passed": 2795,
+  "errors": [],
+  "passed": true,
+  "paths": [
+    {
+      "scene": "r04_inn",
+      "walkable_cells": 809,
+      "reachable_cells": 809,
+      "exits": [
+        "mason",
+        "scale",
+        "market",
+        "drug",
+        "hall"
+      ]
+    },
+    {
+      "scene": "r04_cellar",
+      "walkable_cells": 748,
+      "reachable_cells": 748,
+      "exits": [
+        "scale",
+        "seal",
+        "authorized_cellar",
+        "damaged_store",
+        "ditch_return"
+      ]
+    },
+    {
+      "scene": "r04_scale",
+      "walkable_cells": 690,
+      "reachable_cells": 690,
+      "exits": [
+        "inn",
+        "cellar",
+        "ditch_outside"
+      ]
+    },
+    {
+      "scene": "r04_mason",
+      "walkable_cells": 694,
+      "reachable_cells": 694,
+      "exits": [
+        "bypass",
+        "inn"
+      ]
+    },
+    {
+      "scene": "r04_cart",
+      "walkable_cells": 832,
+      "reachable_cells": 832,
+      "exits": [
+        "drug",
+        "camp"
+      ]
+    },
+    {
+      "scene": "r04_camp",
+      "walkable_cells": 757,
+      "reachable_cells": 757,
+      "exits": [
+        "cart",
+        "bypass"
+      ]
+    },
+    {
+      "scene": "r04_drug",
+      "walkable_cells": 796,
+      "reachable_cells": 796,
+      "exits": [
+        "inn",
+        "cart",
+        "basin_pending"
+      ]
+    },
+    {
+      "scene": "r04_market",
+      "walkable_cells": 789,
+      "reachable_cells": 789,
+      "exits": [
+        "seal",
+        "inn"
+      ]
+    },
+    {
+      "scene": "r04_seal",
+      "walkable_cells": 705,
+      "reachable_cells": 705,
+      "exits": [
+        "cellar",
+        "market"
+      ]
+    },
+    {
+      "scene": "r04_bypass",
+      "walkable_cells": 880,
+      "reachable_cells": 880,
+      "exits": [
+        "mason",
+        "camp",
+        "R02_pending",
+        "R03_pending",
+        "R05_pending"
+      ]
+    },
+    {
+      "scene": "r04_inn_hall",
+      "walkable_cells": 442,
+      "reachable_cells": 442,
+      "exits": [
+        "yard",
+        "care",
+        "rear"
+      ]
+    },
+    {
+      "scene": "r04_inn_care",
+      "walkable_cells": 300,
+      "reachable_cells": 300,
+      "exits": [
+        "hall"
+      ]
+    },
+    {
+      "scene": "r04_cellar_main",
+      "walkable_cells": 622,
+      "reachable_cells": 622,
+      "exits": [
+        "authorized_yard",
+        "damaged_store",
+        "ditch",
+        "oil_room"
+      ]
+    },
+    {
+      "scene": "r04_cellar_oil",
+      "walkable_cells": 154,
+      "reachable_cells": 154,
+      "exits": [
+        "main"
+      ]
+    },
+    {
+      "scene": "r04_cellar_damaged",
+      "walkable_cells": 234,
+      "reachable_cells": 234,
+      "exits": [
+        "yard",
+        "main"
+      ]
+    },
+    {
+      "scene": "r04_cellar_ditch",
+      "walkable_cells": 288,
+      "reachable_cells": 288,
+      "exits": [
+        "scale",
+        "main",
+        "yard"
+      ]
+    }
+  ],
+  "asset_manifest_sha256": "4a491be350a6e507bdbd6693241ffd838fb55a8e0280302ef80650c21ed60579",
+  "runtime_verified": false,
+  "visual_review": [
+    "Medicine cabinet v2 has12blank drawers, one empty care bed and exactly two medicine bowls; no inventory/cure claim.",
+    "Stopped treatment bed and empty carrier trough remain distinct; no patient drawn.",
+    "Material v2 reduces oversized paving features; v1snapshot retained.",
+    "Six roofs use explicit source polygons and unchanged silhouette canvases."
+  ],
+  "roof_variant_metadata_checks": [
+    "resolved-roof-variant-metadata-r04_neutral_inn",
+    "resolved-roof-variant-metadata-r04_store_house",
+    "resolved-roof-variant-metadata-r04_mason_shed",
+    "resolved-roof-variant-metadata-r04_windbreak",
+    "resolved-roof-variant-metadata-r04_drug_pavilion",
+    "resolved-roof-variant-metadata-r04_seal_shelter"
+  ],
+  "metadata_note": "Six variant paths resolved against the already verified unchanged PNG hashes; no images or geometry modified"
+}

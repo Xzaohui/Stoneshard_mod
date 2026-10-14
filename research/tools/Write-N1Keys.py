@@ -62,7 +62,7 @@ eng = (V / ENGINE).read_text(encoding='utf-8')
 if 'N1小样键语义与迁移建议' not in eng:
     eng = eng.replace('- 这条属于 [[待办与已知缺口登记]] 的 OI-03（存档字段命名与旧档迁移），实现轮第一件事。',
                       '- 这条属于 [[待办与已知缺口登记]] 的 OI-03（存档字段命名与旧档迁移），实现轮第一件事；证据与迁移建议见 [[N1小样键语义与迁移建议]]。', 1)
-    put(ENGINE, eng)
+put(ENGINE, eng)
 t = (V / PLAN).read_text(encoding='utf-8-sig')
 a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'
 blk = (a + f"\n## S161 N1小样键语义（当前登记）\n\n[[N1小样键语义与迁移建议]]：逐行扫描 `EAO_N1_*`（{len(rows)} 处用法）——**`EAO_N1_stage` 无任何写入点**（静态结论），入口门槛改挂登记键 `encountered_N1`、解法用 `resolve_N1`、`stage` 仅作旧档读取垫片；供 OI-03 决策。\n" + z)

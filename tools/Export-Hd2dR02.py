@@ -168,7 +168,8 @@ def main():
         H.save(q,ident,role='two_scene_contact_sheet_1_to_1_not_single_room')
     icons=Image.new('RGBA',(1664,1248));mapping={'R02-inn':'r02_ferry_inn','R02-well':'r02_filter_shelter','R02-tax':'r02_tax_house','R02-repair':'r02_repair_canopy','R02-ford':'r02_road_sign','R02-fork':'r02_road_sign','R02-tracks':'r02_crate_corner'}
     for key,ident in mapping.items():
-        im=H.asset(ident,'items');q=im.resize((im.width//2,im.height//2),Image.Resampling.NEAREST);x,y=r['art_anchor_pixels'][key];icons.alpha_composite(q,(x-q.width//2,y+40-specs[ident]['origin'][1]//2))
+        im=H.asset(ident,'items');scale=min(156/im.width,130/im.height);q=im.resize((round(im.width*scale),round(im.height*scale)),Image.Resampling.NEAREST);x,y=r['art_anchor_pixels'][key];icons.alpha_composite(q,(x-q.width//2,y+40-round(specs[ident]['origin'][1]*scale)))
+        H.OPS.append(dict(operation='regional_schematic_icon_normalization',node=key,source_sprite=ident,size=list(q.size),sampling='nearest',note='Map readability only, not relative room scale'))
     x,y=r['art_anchor_pixels']['R02-ferryold'];q=H.asset('r02_ferry_map_icon','ui');icons.alpha_composite(q,(x-q.width//2,y+40-121))
     H.save(icons,'r02_region__nodes',role='schematic_icons_not_room_scale');q=H.asset('r02_region__terrain');q.alpha_composite(icons);H.save(q,'r02_region__plan',role='regional_connectivity_schematic_not_official_geography');q.save(P/'previews/r02_region.png');H.write('region-layout.json',r)
     atlas=Image.new('RGBA',(936,1560));frames=[]

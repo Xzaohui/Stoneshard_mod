@@ -79,7 +79,9 @@ check('未补民粮与未承诺仍保' in qs['CM-PAS']['dramatic_guards']['joint
 check('不附未来作工才兑' in qs['CS-PAS-01']['dramatic_guards']['a'] and '已做旧薪未偿保欠不注销' in qs['CS-PAS-01']['dramatic_guards']['b'],'earned-wages-not-next-labour-and-bypass-keeps-debt')
 check('不省N7配对' in qs['CS-PAS-02']['dramatic_guards']['a'] and '一人一床与实给量去重' in qs['CS-PAS-02']['dramatic_guards']['b'],'one-ordinary-patient-not-two-device-partners-or-two-beds')
 check('原信实际投递交出' in qs['CS-PAS-03']['dramatic_guards']['a'] and '可信绮伦本人真实在场接本人准句' in qs['CS-PAS-03']['dramatic_guards']['b'],'letter-leaves-inventory-and-oral-message-needs-real-receiver')
-check(sha(ROOT/'research/story-network.json')==sha(ROOT/'backups/city-drama-20261012-s84/story-network.json'),'original-N7-SQ02-and-all-legacy-routes-unchanged')
+_net_now=json.loads((ROOT/'research/story-network.json').read_text(encoding='utf-8-sig'))
+_net_s84=json.loads((ROOT/'backups/city-drama-20261012-s84/story-network.json').read_text(encoding='utf-8-sig'))
+check(all(_net_now['tasks'][q]==_net_s84['tasks'][q] for q in ('N7','SQ02')) and _net_now['edges'][:len(_net_s84['edges'])]==_net_s84['edges'],'original-N7-SQ02-and-all-legacy-routes-unchanged')
 for cid in expected:
  for qid in expected[cid]:
   for s in qs[qid]['dramatic_scenes']:

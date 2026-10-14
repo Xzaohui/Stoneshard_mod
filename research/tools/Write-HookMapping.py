@@ -78,7 +78,7 @@ put(CARD, n)
 sp = (V / STUBS_PAGE).read_text(encoding='utf-8')
 if '触发器接线点映射' not in sp:
     sp = sp.rstrip() + '\n\n<!-- HOOK-MAP-S171:BEGIN -->\n[[触发器接线点映射]]：八种触发接到小样可核对的原生钩子（对象创建／对白流登记／键读写／原生前置），供实现轮照此接线。\n<!-- HOOK-MAP-S171:END -->\n'
-    put(STUBS_PAGE, sp)
+put(STUBS_PAGE, sp)
 t = (V / PLAN).read_text(encoding='utf-8-sig')
 a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'
 blk = (a + f"\n## S171触发器接线点映射（当前登记）\n\n[[触发器接线点映射]]：{len(stubs)} 桩的 **{len(counts)} 种触发**逐一接到小样原生钩子（`characterDataMap`／`__dialogue_flow_data`／`instance_create_depth`／`event_user`／`scr_quest_get_complete`），附证据行号与口径。\n" + z)

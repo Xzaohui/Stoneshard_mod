@@ -51,7 +51,7 @@ put_here = V / DOC
 put_here.write_text(t, encoding='utf-8')
 changed = {'design/' + DOC}; generated = {'design/' + DOC: sha(put_here)}
 
-summary = '## S87全局伏笔与回收台账（当前登记）\n\n[[伏笔与回收台账]]。主线74条X边、日常16条与副本18条并入线全部由丝线背书闭合；布林续篇15桥、城镇受托解锁/听闻/回执各15处成组引用；夜船货物、旧市长责任、晶石全貌与全国政体列为有意留白。校验脚本不替代文学与运行验证。'
+summary = f'## S87全局伏笔与回收台账（当前登记）\n\n[[伏笔与回收台账]]。主线{len(edges)}条X边、日常16条与副本18条并入线全部由丝线背书闭合；布林续篇15桥、城镇受托解锁/听闻/回执各15处成组引用；夜船货物、旧市长责任、晶石全貌与全国政体列为有意留白。校验脚本不替代文学与运行验证。'
 for name in ['系统逻辑索引', '任务台本总索引', '布林续篇任务与伏笔回收总表']:
     p = next(V.rglob(name + '.md'))
     rel = p.relative_to(V).as_posix()
@@ -66,7 +66,7 @@ for p, h in manifests.items():
         p.write_text(json.dumps(h, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 HP.write_text(json.dumps(generated, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-rule = '2026-10-12 S87：用户要求持续埋伏笔并回收。research/foreshadow-ledger.json把主线74条X边、日常16条、副本18条并入线写成闭合丝线；布林续篇15桥与城镇解锁/听闻/回执各15处成组引用；夜船货物、旧市长责任、晶石全貌、全国政体为有意留白。入口design/09_系统逻辑/伏笔与回收台账.md，运行Validate-ForeshadowLedger.py及既有检查；不新增奖励/承诺/结局资格，不部署。'
+rule = f'2026-10-12 S87：用户要求持续埋伏笔并回收。research/foreshadow-ledger.json把主线{len(edges)}条X边、日常16条、副本18条并入线写成闭合丝线；布林续篇15桥与城镇解锁/听闻/回执各15处成组引用；夜船货物、旧市长责任、晶石全貌、全国政体为有意留白。入口design/09_系统逻辑/伏笔与回收台账.md，运行Validate-ForeshadowLedger.py及既有检查；不新增奖励/承诺/结局资格，不部署。'
 for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md', ROOT / 'README.md']:
     body = p.read_text(encoding='utf-8-sig')
     a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'; n = a + '\n' + rule + '\n' + z

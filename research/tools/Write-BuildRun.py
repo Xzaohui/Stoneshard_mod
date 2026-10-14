@@ -22,7 +22,7 @@ sml, cand = art / 'EmbersAndOaths.sml', art / 'direct-data.win'
 val = json.loads((art / 'direct-validation.json').read_text(encoding='utf-8-sig'))
 dep = json.loads((art / 'direct-deployment.json').read_text(encoding='utf-8-sig'))
 msl = Path('D:/SteamLibrary/steamapps/common/Stoneshard/msl/Mods/EmbersAndOaths.sml')
-run = dict(date='2026-10-13',
+run = dict(date=datetime.date.today().isoformat(),
            scope='Local build snapshot from current combination; deployed relationship verified by hashes. Runtime observations are recorded separately.',
            command='tools/Build-Mod.ps1（不带 -Deploy）',
            built_at=dict(package=mtime(sml), candidate=mtime(cand)),

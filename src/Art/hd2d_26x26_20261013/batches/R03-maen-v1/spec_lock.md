@@ -1,0 +1,207 @@
+# Execution Lock — R03 Maen
+
+## authorization
+User continues all scene work on2026-10-14. Previously confirmed26-cell static HD2D,128 regional palette, native PNG import and separate roofs continue. No NPC work.
+
+## canvas
+- base_size: 26x26
+- tile_size: 26x26
+- format: RGBA PNG
+- r03_mill: 1040x780
+- r03_ration: 988x728
+- r03_library: 1040x780
+- r03_court: 1144x884
+- r03_road: 1092x780
+- r03_depot: 1040x780
+- r03_hide: 1040x780
+- r03_burnt: 1040x780
+- r03_field: 1092x780
+- r03_watch: 1040x780
+- r03_scribe: 988x728
+- r03_border: 1092x780
+- r03_mill_common: 780x624
+- r03_ration_hall: 728x572
+- r03_library_store: 936x780
+- r03_court_print_room: 624x468
+- r03_court_shell_room: 676x572
+- r03_scribe_room: 676x520
+- materials_master: 1536x1536, four768x768panels
+- architecture_master: 1536x1024, six512x512slots
+- props_a_master: 1536x1024, eight384x512slots
+- props_b_master: 1536x1024, eight384x512slots
+- interiors_master: 1536x1024, three512x1024panels
+- landscape_master: 1536x1536, four768x768panels
+- r03_region: 1664x1248, schematic only
+- r03_library__plan_overview: 1040x1586, two1:1scene plans
+- r03_court__working_overview: 1300x598, two1:1interiors
+- r03_mill_house: 312x338, origin [156, 320], transparent static sprite
+- r03_granary: 260x234, origin [130, 216], transparent static sprite
+- r03_low_library: 312x234, origin [156, 216], transparent static sprite
+- r03_scribe_shed: 208x182, origin [104, 166], transparent static sprite
+- r03_burned_frame: 156x182, origin [78, 166], transparent static sprite
+- r03_watch_shelter: 156x156, origin [78, 140], transparent static sprite
+- r03_book_grain_stack: 78x78, origin [39, 65], transparent static sprite
+- r03_technical_cabinet: 52x104, origin [26, 91], transparent static sprite
+- r03_name_cabinet: 52x104, origin [26, 91], transparent static sprite
+- r03_stop_cabinet: 52x104, origin [26, 91], transparent static sprite
+- r03_copy_table: 130x78, origin [65, 65], transparent static sprite
+- r03_seal_press: 78x104, origin [39, 91], transparent static sprite
+- r03_empty_shell: 130x104, origin [65, 91], transparent static sprite
+- r03_feed_lever: 52x78, origin [26, 65], transparent static sprite
+- r03_grain_sacks: 78x78, origin [39, 65], transparent static sprite
+- r03_water_barrel: 52x78, origin [26, 65], transparent static sprite
+- r03_bedroll: 78x52, origin [39, 43], transparent static sprite
+- r03_public_table: 130x78, origin [65, 65], transparent static sprite
+- r03_care_chair: 52x78, origin [26, 65], transparent static sprite
+- r03_cold_brazier: 52x78, origin [26, 65], transparent static sprite
+- r03_blank_waypost: 52x78, origin [26, 65], transparent static sprite
+- r03_drain_trough: 104x52, origin [52, 43], transparent static sprite
+
+## palette
+- name: MAE-R03-128
+- colors:
+  - #DBE4F0
+  - #D2D9E5
+  - #D5D5D7
+  - #EAD1B0
+  - #CAD1DE
+  - #E7CEAE
+  - #E6CDAA
+  - #C3CDDF
+  - #E3CAA8
+  - #BEC9DD
+  - #BFC1C8
+  - #B5C1D5
+  - #B1BED3
+  - #DEC3A0
+  - #C2B2A0
+  - #AABBD9
+  - #A9B7CD
+  - #A2AFC5
+  - #BCA389
+  - #B1A08E
+  - #AB9C8D
+  - #A3A09E
+  - #A3907F
+  - #99A5BD
+  - #9A9A98
+  - #988F88
+  - #9A8977
+  - #8E9DB5
+  - #8E9192
+  - #8E8885
+  - #8F867A
+  - #8292A7
+  - #7F8995
+  - #7E858E
+  - #987A62
+  - #8D7A6B
+  - #897A6D
+  - #85776D
+  - #807D7D
+  - #80776C
+  - #7F695A
+  - #757D86
+  - #71747B
+  - #76746A
+  - #746D67
+  - #726761
+  - #746453
+  - #715B4E
+  - #725542
+  - #68717A
+  - #676A6A
+  - #5E6C78
+  - #606569
+  - #63625F
+  - #57616A
+  - #605C5D
+  - #635B4D
+  - #545B62
+  - #4B5A67
+  - #5F5452
+  - #535458
+  - #605346
+  - #4B5460
+  - #4B5253
+  - #42525F
+  - #674C3F
+  - #5D4C43
+  - #614337
+  - #574B46
+  - #58473C
+  - #573F37
+  - #4F4948
+  - #50443B
+  - #4F3E38
+  - #4F3831
+  - #444C58
+  - #454B4E
+  - #45444A
+  - #46443E
+  - #463D3B
+  - #44393A
+  - #453835
+  - #463630
+  - #43302D
+  - #3B4755
+  - #39424D
+  - #363E4B
+  - #3A4340
+  - #383D3F
+  - #353942
+  - #393739
+  - #393633
+  - #363137
+  - #373031
+  - #3B2F2C
+  - #342E2C
+  - #352A2A
+  - #332525
+  - #2B3C4B
+  - #2B353F
+  - #2B3239
+  - #23313C
+  - #282E39
+  - #2A2D2F
+  - #202D38
+  - #2A2A30
+  - #2B2929
+  - #1F2933
+  - #25252F
+  - #292529
+  - #222329
+  - #2B2324
+  - #242224
+  - #1C2430
+  - #1C2227
+  - #15222E
+  - #231E23
+  - #1D1D24
+  - #211B1D
+  - #1A1B23
+  - #141C28
+  - #131A20
+  - #18161C
+  - #12151F
+  - #131118
+  - #0D1420
+  - #0C1219
+  - #090C14
+
+## style
+- sub_style: textured HD-2D, square-grid orthographic oblique
+- light_direction: top-left
+- lighting: unlit static base; dynamic fire separate
+- materials: cold gray stone, wet dark wood, faded blue cloth, muted earth and sparse frost at nonwalkable edges
+
+## per_sprite_budget
+- max_colors: 128
+
+## invariants
+- D04store36x30 cells with front porch, dry grain zone, three separate cabinets and waste annex. Formal front permission cannot remove the alternate waste entrance or unloading return.
+- D05court44x34, open center and four asymmetric annexes with differing floor/window directions. Outer return stays accessible with central demonstration closed or feed unavailable.
+- Mill limited bedding proposal=2, not a paid service/runtime claim. Two neutral technical copy sites at mill/ration; identity stays in separate cabinets.
+- Extra care chair conditional and off by default. No consent/NE certification, cure, faction control, transport or burned-record outcome baked into images.
+- No people,NPCs,wolves,corpses,readable text,UI,flags,flames,light glows,active spell machines or tropical vegetation. No thriving open academy.
+- Floors/occupancy explicit; alpha is never collision. Roofs/foreground separate. Raw masters immutable. Crop/NN normalization/exact palette/binary alpha/tile edge copy are authorized postprocessing.

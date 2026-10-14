@@ -1,0 +1,234 @@
+# Execution Lock — R05 Ash Basin
+
+## authorization
+User continues all scene art2026-10-14. Approved26cell/static orthographic HD2D/regional128colors/PNG/separate roof standards persist. No NPC generation or game writes.
+
+## canvas
+- base_size:26x26
+- tile_size:26x26
+- format:RGBA PNG
+- r05_care: 1040x780
+- r05_ward: 1092x780
+- r05_well: 1092x832
+- r05_village: 988x728
+- r05_reeds: 1092x780
+- r05_shelter: 988x780
+- r05_drain: 1144x832
+- r05_road: 1144x832
+- r05_care_hall: 780x624
+- r05_care_beds: 728x624
+- r05_ward_main: 1196x884
+- r05_ward_waste: 572x520
+- r05_ward_ritual: 468x468
+- r05_ward_exit: 832x520
+- r05_well_upper: 988x988
+- r05_well_middle: 988x988
+- r05_well_lower: 988x988
+- r05_well_research_refuge: 572x468
+- r05_well_workers_refuge: 624x468
+- r05_well_maintenance: 728x520
+- r05_shelter_room: 780x624
+- materials_master:1536x1536, four768x768panels
+- architecture_master:1536x1024, six512x512slots
+- props_a_master:1536x1024, eight384x512slots
+- props_b_master:1536x1024, eight384x512slots
+- props_c_master:1536x1024, eight384x512slots
+- props_d_master:1536x1024, eight384x512slots
+- props_e_master:1536x1024, two independent objects
+- water_master:1536x1024, three512x1024panels
+- interiors_master:1536x1024, three512x1024panels
+- landscape_master:1536x1536, four768x768panels
+- region:1664x1248, schematic only
+- ward_overviews:1742x1482, four1:1segments
+- well_overviews:2002x2002, three1:1levels plus two refuges and maintenance; not one room
+- r05_care_lodge: 312x234, origin [156, 216]
+- r05_ward_house: 312x208, origin [156, 190]
+- r05_well_drain_shed: 260x208, origin [130, 190]
+- r05_filter_well: 156x156, origin [78, 140]
+- r05_voluntary_hut: 260x234, origin [130, 216]
+- r05_high_archive_shed: 182x156, origin [91, 140]
+- r05_water_bucket_pair: 78x78, origin [39, 65]
+- r05_warning_board: 78x104, origin [39, 91]
+- r05_public_table: 130x78, origin [65, 65]
+- r05_water_gauge: 52x104, origin [26, 91]
+- r05_reed_cluster: 104x78, origin [52, 65]
+- r05_sample_bucket: 26x26, origin [13, 23]
+- r05_herb_bundle: 52x26, origin [26, 23]
+- r05_filter_rack: 104x104, origin [52, 91]
+- r05_medicine_cabinet: 78x104, origin [39, 91]
+- r05_case_cabinet: 52x104, origin [26, 91]
+- r05_name_cabinet: 52x104, origin [26, 91]
+- r05_inspection_table: 130x78, origin [65, 65]
+- r05_closed_sample_tray: 52x26, origin [26, 23]
+- r05_empty_care_bed: 104x104, origin [52, 91]
+- r05_privacy_curtain: 78x130, origin [39, 117]
+- r05_schedule_board: 78x104, origin [39, 91]
+- r05_old_living_pipe: 156x52, origin [78, 43]
+- r05_new_waste_pipe: 156x52, origin [78, 43]
+- r05_new_waste_pipe_capped: 156x52, origin [78, 43]
+- r05_valve_closed: 52x78, origin [26, 65]
+- r05_clamp_pair: 78x52, origin [39, 43]
+- r05_low_gate: 78x104, origin [39, 91]
+- r05_bypass_wheel: 52x78, origin [26, 65]
+- r05_lift_platform: 156x130, origin [78, 117]
+- r05_high_record_cabinet: 52x104, origin [26, 91]
+- r05_optional_parameter_shelf: 104x104, origin [52, 91]
+- r05_research_refuge_door: 78x130, origin [39, 117]
+- r05_workers_refuge_door: 78x130, origin [39, 117]
+- r05_maintenance_ladder: 26x104, origin [13, 91]
+- r05_empty_crate: 78x52, origin [39, 43]
+- r05_sitting_bench: 104x52, origin [52, 43]
+- r05_waste_casks: 78x104, origin [39, 91]
+- r05_foam_decal: 104x52, origin [52, 43]
+- r05_inactive_basin: 104x104, origin [52, 91]
+
+## palette
+- name:ASH-R05-128
+- colors:
+  - #D7C1A1
+  - #D1B797
+  - #CEB393
+  - #CCAF8F
+  - #C5AD8E
+  - #C6A989
+  - #C2A586
+  - #BDA182
+  - #ABA185
+  - #AC9374
+  - #9E8D73
+  - #988F79
+  - #97846B
+  - #908B74
+  - #8F836E
+  - #85866B
+  - #887F67
+  - #91785C
+  - #89765E
+  - #857863
+  - #846E56
+  - #7D7568
+  - #7D7552
+  - #7C6C5B
+  - #7C694B
+  - #737163
+  - #737249
+  - #72685A
+  - #72674A
+  - #686C5B
+  - #676C43
+  - #6A654E
+  - #60654B
+  - #7B5E47
+  - #735D48
+  - #6F5C48
+  - #6A604C
+  - #6A5543
+  - #645E51
+  - #635E40
+  - #635644
+  - #634D3D
+  - #5B5E4E
+  - #5B574B
+  - #5B5E3C
+  - #5A573C
+  - #5A5346
+  - #5A4C42
+  - #5A4E38
+  - #515952
+  - #52573B
+  - #515145
+  - #505037
+  - #475558
+  - #485448
+  - #45504C
+  - #444E49
+  - #4D4B44
+  - #4E4A3D
+  - #504B34
+  - #494A33
+  - #414B4E
+  - #3B4A4F
+  - #414A3C
+  - #5B4335
+  - #534236
+  - #4F4235
+  - #4A433A
+  - #4A402F
+  - #44453F
+  - #444436
+  - #433E38
+  - #43432F
+  - #433C2E
+  - #3B4442
+  - #344347
+  - #3B3D3A
+  - #313D3F
+  - #3E412F
+  - #38402F
+  - #393C2E
+  - #383A2E
+  - #49352B
+  - #41342C
+  - #3D372E
+  - #3D2F28
+  - #383632
+  - #383529
+  - #382D27
+  - #323632
+  - #31322F
+  - #323527
+  - #313027
+  - #312D2B
+  - #312C24
+  - #312622
+  - #2B3737
+  - #29322E
+  - #29302C
+  - #282E2A
+  - #2A2C27
+  - #242B28
+  - #292827
+  - #292721
+  - #242724
+  - #1E2726
+  - #282423
+  - #272022
+  - #222223
+  - #27211D
+  - #21211D
+  - #1E2122
+  - #1E201B
+  - #192020
+  - #231B1B
+  - #1E1B1B
+  - #1C1A1B
+  - #1A1A1D
+  - #191917
+  - #16191B
+  - #11181B
+  - #141816
+  - #171416
+  - #121316
+  - #130F12
+  - #0D1216
+  - #0C1011
+  - #090A0E
+
+## style
+- sub_style:textured HD2D square-grid orthographic oblique
+- light_direction:top-left
+- lighting:static unlit base, no glow/fire effects
+- materials:cold reeds, gray water, damp muted stone, old timber, worn pale cloth, modest warm medicine wood; no tropical swamp
+
+## per_sprite_budget
+- max_colors:128
+
+## invariants
+- D07front46x34short horizontal corridor with separately curtained empty bed areas; later waste wing and small crowded ritual room are separate proposals. No grand universal apparatus.
+- D08THREE independent38x38well ring rooms around nonwalkable central water pit; researcher and workers have DIFFERENT refuge doors/destinations. Fixed safe copy is upper/high; optional parameters separate. Maintenance exit always present.
+- Safe camp highground/water/basic care and ordinary returns do not require entering the final story area or accepting experiments, relocation or rescue challenge.
+- Red/white bucket glyphs, foam, warning boards and engine dialogue together identify water hazards; color alone insufficient. No global plague explanation, automatic damage or cure.
+- Pipe disconnect and water-level switches are illustration-only, off by default; never commit quest/consent/rescue/death/risk time/reward or native collision. Retain living-water line and return.
+- Empty beds: camp2,ward3,shelter1 are finite ART PLACEMENT proposals only, not actual service capacity, patient count or entitlement. Case/name cabinets distinct, no identity/address/numbers readable.
+- No NPCs/people/animals/corpses, sunlight gradients, active machines, human-connected samples, religious/royal claims, spell beams, lit fires or outcome labels. Inactive small basin neutral.
+- All raw masters immutable; crop/NN normalization/128palette/binary alpha/roof masks/tile edge sharing authorized. Production dimensions/origins exact even if AI raw spacing differs. Alpha is never collision.

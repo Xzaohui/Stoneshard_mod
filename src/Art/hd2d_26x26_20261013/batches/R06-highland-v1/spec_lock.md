@@ -1,0 +1,227 @@
+# Execution Lock — R06 Highlands
+
+## authorization
+User continues all scene art2026-10-14. Approved26cell/static orthographic HD2D/regional128colors/PNG/separate roof standards persist. No NPC/game writes.
+
+## canvas
+- base_size:26x26
+- tile_size:26x26
+- format:RGBA PNG
+- r06_station: 1040x832
+- r06_echo: 1144x832
+- r06_residual: 1196x884
+- r06_sign: 988x728
+- r06_shed: 988x780
+- r06_trial: 1040x780
+- r06_table: 1040x780
+- r06_seal: 1092x780
+- r06_drain: 1092x780
+- r06_slope: 1144x832
+- r06_station_hall: 832x676
+- r06_shed_room: 780x624
+- r06_table_hall: 780x624
+- r06_echo_front: 1092x780
+- r06_echo_maintenance: 1092x728
+- r06_residual_main: 1248x1040
+- r06_residual_safe: 624x572
+- r06_residual_maintenance: 988x624
+- materials_master:1536x1536, four768x768panels
+- architecture_master:1536x1024, six512x512slots
+- props_a_master:1536x1024, eight384x512slots
+- props_b_master:1536x1024, eight384x512slots
+- props_c_master:1536x1024, eight384x512slots
+- props_d_master:1536x1024, eight384x512slots
+- interiors_master:1536x1024, three512x1024panels
+- landscape_master:1536x1536, four768x768panels
+- region:1664x1248, schematic only
+- echo_overviews:1092x1534, two1:1segments
+- residual_overviews:2262x1690, three1:1segments
+- hand_pixel_icons:26x26,origin13,13;static neutral engine glyphs,not state indicators
+- r06_bell_station: 312x260, origin [156, 242]
+- r06_echo_gatehouse: 312x234, origin [156, 216]
+- r06_residual_well_house: 312x234, origin [156, 216]
+- r06_maintenance_shed: 260x208, origin [130, 190]
+- r06_trial_canopy: 260x182, origin [130, 164]
+- r06_station_table_canopy: 260x182, origin [130, 164]
+- r06_bell_frame: 104x182, origin [52, 169]
+- r06_return_board: 78x104, origin [39, 91]
+- r06_maintenance_diagram: 130x104, origin [65, 91]
+- r06_tool_rack: 104x104, origin [52, 91]
+- r06_public_table: 156x104, origin [78, 91]
+- r06_sealed_sample_tray: 78x52, origin [39, 43]
+- r06_ordinary_material_crate: 78x78, origin [39, 65]
+- r06_unlit_lantern: 26x52, origin [13, 39]
+- r06_cooling_gauge: 78x104, origin [39, 91]
+- r06_return_valve: 78x104, origin [39, 91]
+- r06_residual_gauge: 78x104, origin [39, 91]
+- r06_medium_niche: 104x130, origin [52, 117]
+- r06_bypass_ruler: 104x52, origin [52, 43]
+- r06_remote_lock: 78x78, origin [39, 65]
+- r06_closed_discard_tank: 104x104, origin [52, 91]
+- r06_empty_isolation_table: 130x104, origin [65, 91]
+- r06_empty_carrier_trough: 156x156, origin [78, 140]
+- r06_ledger_table: 130x104, origin [65, 91]
+- r06_aux_coupling: 104x78, origin [52, 65]
+- r06_aux_coupling_capped: 104x78, origin [52, 65]
+- r06_safe_confirmation_table: 130x104, origin [65, 91]
+- r06_neutral_receipt_cabinet: 52x104, origin [26, 91]
+- r06_blank_seal_plate: 52x52, origin [26, 39]
+- r06_warning_marker: 52x78, origin [26, 65]
+- r06_empty_bench: 104x52, origin [52, 43]
+- r06_rope_pulley: 78x104, origin [39, 91]
+- r06_cargo_crate: 104x78, origin [52, 65]
+- r06_wear_bolt_pair: 52x26, origin [26, 23]
+- r06_maintenance_valve: 78x78, origin [39, 65]
+- r06_waste_casks: 78x104, origin [39, 91]
+- r06_line_of_sight_pier: 78x130, origin [39, 117]
+- r06_high_record_cabinet: 52x104, origin [26, 91]
+
+## palette
+- name:HIG-R06-128
+- colors:
+  - #BCB5B0
+  - #AEAAAD
+  - #AEA39B
+  - #9BA0AD
+  - #A59480
+  - #959598
+  - #8D93A3
+  - #8B8F94
+  - #9A8571
+  - #918273
+  - #8B857F
+  - #8C7E6D
+  - #818693
+  - #787E8D
+  - #818077
+  - #7F7A72
+  - #8D7460
+  - #857364
+  - #817264
+  - #7C746D
+  - #7C6B5A
+  - #757576
+  - #756E6A
+  - #766C5B
+  - #756557
+  - #6E7482
+  - #666C7A
+  - #6D6D64
+  - #6A6861
+  - #676566
+  - #5E6470
+  - #696455
+  - #725C4C
+  - #695A4E
+  - #645E54
+  - #645347
+  - #5E5E5F
+  - #5F5B4D
+  - #5E5046
+  - #575D67
+  - #55575F
+  - #57594E
+  - #56544D
+  - #555150
+  - #564D45
+  - #56493C
+  - #4F565D
+  - #4E5255
+  - #4D5051
+  - #4D4E50
+  - #4D4D43
+  - #474D52
+  - #4B4A4C
+  - #4C493F
+  - #45494C
+  - #454649
+  - #464544
+  - #4C443A
+  - #44443A
+  - #3F444D
+  - #3F433F
+  - #513D36
+  - #493C35
+  - #453B36
+  - #413F3C
+  - #413631
+  - #3D3F44
+  - #3D3E39
+  - #3D3532
+  - #393E49
+  - #3A3D41
+  - #383B43
+  - #393D39
+  - #383A3A
+  - #37383D
+  - #383733
+  - #383330
+  - #382C2A
+  - #34393D
+  - #33373D
+  - #333634
+  - #31353B
+  - #323433
+  - #2F323A
+  - #2F3236
+  - #2F3135
+  - #30312F
+  - #2E2E33
+  - #302D2B
+  - #302A29
+  - #2F2524
+  - #2A2F32
+  - #292C33
+  - #292C2B
+  - #282B31
+  - #282A29
+  - #262830
+  - #26282D
+  - #26272B
+  - #22272D
+  - #262726
+  - #22242C
+  - #222328
+  - #232327
+  - #272222
+  - #212222
+  - #1E2128
+  - #1D2122
+  - #1E1E24
+  - #201D20
+  - #201C1D
+  - #1B1D23
+  - #181B22
+  - #191B1D
+  - #19181E
+  - #1A1719
+  - #14171C
+  - #151519
+  - #141216
+  - #0F1015
+  - #6B5691
+  - #4A396A
+  - #3D2D58
+  - #302744
+  - #2A1F3E
+  - #211B31
+  - #1E1531
+  - #151125
+
+## style
+- sub_style:textured HD2D square-grid orthographic oblique
+- light_direction:top-left
+- lighting:static unlit base,no baked glow/fire/sun rays
+- materials:cold wind-scoured gray stone,old slate and timber,muted low shrubs;violet only limited sealed medium/danger glyphs
+
+## per_sprite_budget
+- max_colors:128
+
+## invariants
+- D09asymmetric42x30front room,THREE different mechanical measurements:cooling,returnvalve,residualresponse. Clear neutral safety white line;medium in small high-wall niche. Exterior maintenance ring permits remote repeated mechanical check without entering echo. No copied prologue monastery.
+- D10exact48x40inner/outer double ring;emptycarrier trough on central axis,ledger table to one side,three STAGGEREDauxiliary couplings. Maintenance ring wide and connected to bypass native line-of-sight;carrier rescue reservation distinct from boss reservation.
+- Safe station supplies/neutral discussion/ordinaryreturn before and afterconfirmation;final physicaloperations separate from consent/politicalsnapshot. No new rest-bed capacity/infiniteinventory.
+- Coupling disconnect and warningrange switches illustration-only,offbydefault,no floor/collision/time/quest/reward/endingfreeze changes. No acceptedreadings/NE5certificate/consent/survival drawn. Originalmedium not a second originalcrystal.
+- Threegauges distinct,blank readings/numbers. Emptycarrier trough no human,straps,bed pillow,corpse or magicallaser. Samplesneverconnected topeople. Blank budget/debt/identitylabels engine-owned.
+- Primarymechanism enginecontrols require8separatehandpixel26glyphs; no scene pixels as state machine. Unlitlantern separate,no flame. No NPCs/animals,banners,crests/religiousfinaltruth/readableletters or numbers.
+- All raw masters immutable;documentactualreturned dimensions,crop/NNnormalization/128palette/binaryalpha/roofmask/tileedgesharing. Production sizes/origins exact,alpha never collision.

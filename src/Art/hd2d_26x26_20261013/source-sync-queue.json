@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-14",
+  "scope": "Scene sources only; no NPC text/logic edits",
+  "comparison": "Current source versus exported source fingerprints; git diff consulted as supporting context, not asserted identical to the old exported source snapshot",
+  "changed_sources": 0,
+  "records": [],
+  "original_art_preserved": true,
+  "runtime_verified": false,
+  "audited_active_batches": [
+    "BRY-core-v1",
+    "BRY-outskirts-v1",
+    "N1",
+    "R01-camp-canal-v2",
+    "R01-streets-v1",
+    "R02-river-v2",
+    "R03-maen-v1",
+    "R04-pass-v1",
+    "R05-basin-v1",
+    "R06-highland-v1"
+  ],
+  "historical_snapshots_with_drift": 5,
+  "historical_records": [
+    {
+      "batch": "R01-camp-canal-v1",
+      "source": "design/05_主线/台本/台本_N2_灰堤没有墓碑.md",
+      "export_source_sha256": "3fe6821ccb534c6a888e581dcb75e8b2111ea435bd64a4da0b7d8efdc56c22c3",
+      "current_source_sha256": "fad151f8fd95fe95a6fec939a24c06d448ec2648d6dec771220847f47c118301",
+      "status": "needs_scene_art_sync",
+      "review": {
+        "scene_batch": "R01-camp-canal-v1",
+        "locator": [
+          "N2-S01",
+          "N2-S02"
+        ],
+        "required_art": [
+          "雇工棚门槛灰圈",
+          "轴座下压着的借据存根与小印"
+        ],
+        "boundaries": [
+          "灰圈不生成亡者",
+          "借据关联不自动认证采购链"
+        ],
+        "impact": "New observable props are absent in current art; existing empty coffin/jacket/shaft/return geometry remains usable."
+      }
+    },
+    {
+      "batch": "R02-river-v1",
+      "source": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+      "export_source_sha256": "83b227451dabc58fcecc00223a4039fa9ee3d2885f817720d217fc6e952c898c",
+      "current_source_sha256": "7a50b4eb2642076ee5157f6407d628cfa2cf17e0acce1ba89b5867fae28cea38",
+      "status": "needs_scene_art_sync",
+      "review": {
+        "scene_batch": "R02-river-v1",
+        "locator": [
+          "N5-S02"
+        ],
+        "required_art": [
+          "税栈墙根新漆井牌",
+          "井牌下两只红桶与运水绳结"
+        ],
+        "boundaries": [
+          "观察线索不预写污染结论",
+          "保持基础浅滩"
+        ],
+        "impact": "Add independent sign/two-bucket cue; do not regenerate NPCs or close the ford."
+      }
+    },
+    {
+      "batch": "R02-river-v1",
+      "source": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+      "export_source_sha256": "42c1cbcf13cd1426f99dd972cfa77efdb722c8aa7395df995af8d01de8c5f0db",
+      "current_source_sha256": "68148f5228de111e0c5c63844f46d7110a2cfc2df35361d3df919a109ab0f59b",
+      "status": "needs_reviewed_source_revalidation",
+      "review": {
+        "scene_batch": "R02-river-v1",
+        "locator": [
+          "X75",
+          "X76",
+          "N9-S03"
+        ],
+        "required_art": [],
+        "boundaries": [
+          "公开编号、日期及跨页对照由引擎文字/物件状态绘制"
+        ],
+        "impact": "Current public table/river windows/separated cabinets fit the current text; no new raster prop identified."
+      }
+    },
+    {
+      "batch": "R02-river-v1",
+      "source": "design/05_主线/台本/台本_N18_誓约之后.md",
+      "export_source_sha256": "09242daae24168da91c629e230e6a621ecf87e40b3be0d20b22d25c9fa4585a8",
+      "current_source_sha256": "72ab9788b1aa201785b4b999594e58c44a188893ecff0b3e000713751dceeffd",
+      "status": "needs_scene_art_sync",
+      "review": {
+        "scene_batch": "R02-river-v1",
+        "locator": [
+          "N18-S01"
+        ],
+        "required_art": [
+          "摊边一双编到一半的小绳鞋"
+        ],
+        "boundaries": [
+          "只作有条件回访细节",
+          "不替家属表态"
+        ],
+        "impact": "Add a versioned conditional return-visit prop, off by default; no child/NPC image."
+      }
+    },
+    {
+      "batch": "R02-river-v1",
+      "source": "design/06_支线/台本/台本_SQ04_一条不卖人的路.md",
+      "export_source_sha256": "c29d96b038baaa3754ac76bffb264f0b45d4766bcf29c13f6911b67a6f0b4838",
+      "current_source_sha256": "1d3183a0982cc303b5e50019d18d9e73c27989056ca907fcef65a4db1b1fdeef",
+      "status": "needs_scene_art_sync",
+      "review": {
+        "scene_batch": "R02-river-v1",
+        "locator": [
+          "SQ04-S03"
+        ],
+        "required_art": [
+          "钉在桥头木牌上的字条底图"
+        ],
+        "boundaries": [
+          "拒绝强运且对应回访时才显示",
+          "不清旧伤害记录",
+          "仍保留浅滩"
+        ],
+        "impact": "Add a conditional blank note layer; readable writing and actual conditions belong to the engine."
+      }
+    }
+  ],
+  "historical_note": "Superseded v1 snapshots are preserved and excluded from the active work queue; their old source hashes are never rewritten"
+}

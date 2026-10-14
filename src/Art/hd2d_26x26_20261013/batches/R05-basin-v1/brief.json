@@ -1,0 +1,524 @@
+{
+  "batch": "R05-basin-v1",
+  "status": "locked_pending_generation",
+  "scope": "Eight R05locations, three distinct well levels and other interior/exit segments; scene art only",
+  "source_sha256": {
+    "research/story-regions.json": "54e8a8058d0595a854a267f14cdf0a13622d638a7b384fbabec9d44331215a91",
+    "design/02_世界与地图/区域_R05_灰烬湿地与疫村.md": "992ce65ab2976551b209e4dd602d0513113e6541a9078e2186f0f524509fa98c",
+    "design/05_主线/台本/台本_N8_不会散去的热病.md": "860beaa106318c51e8f0277ad5c8cb06e22aa861c0937865baf5d5a673a55afe",
+    "design/05_主线/台本/台本_N12_失踪者仍有名字.md": "3a92222db41e58be5b778088eaa37a6a6eca3fb27982bdda1c5aef002ac2d773",
+    "design/05_主线/台本/台本_N13_答案的代价.md": "9a269a5874d76cc08354627ce2b1f6451cb3ff658167bd4b791374beb58a9bfe",
+    "design/06_支线/台本/台本_SQ05_渡口与姓名.md": "b7af36ffae8b28ae99d485d9632361ce38f4c7a074a5734cd621a05382b40881",
+    "design/06_支线/台本/台本_SQ07_药不是赎罪券.md": "90f8af2c8b662fa4b0a4f4547161b12dff5a2800dab3e2fc72348530b5434353",
+    "design/07_日常任务/台本/台本_DT02_干净的井水.md": "1d8d3f4cf601d11a5db45b16ed916678861f8d5130d464223dd46d8468b52f5d",
+    "design/07_日常任务/台本/台本_DT09_药师指认的草.md": "e97416f8b52961564f2a95ea7ce51b8c0b6922f12c84be248b51bea7617bcbaa",
+    "design/07_日常任务/台本/台本_DT16_愿意继续治疗的人.md": "a526ddb617b1c2a2f939a8ba1419e8b9d2844e029cea5267a0773a241913aa4b",
+    "design/08_副本/台本/台本_D07_灰烬疫所.md": "0e489ff8f4ecb13dee10667e38bb08af50bed82a9e20d03f6840212d2942cec3",
+    "design/08_副本/台本/台本_D08_沉水档案井.md": "161d476b2f4cfe2e8e17bf66aab83e682cc3f9b370f7db5509e5c8260bc90eef"
+  },
+  "sprites": [
+    {
+      "id": "r05_care_lodge",
+      "size": [
+        312,
+        234
+      ],
+      "origin": [
+        156,
+        216
+      ],
+      "architecture": true
+    },
+    {
+      "id": "r05_ward_house",
+      "size": [
+        312,
+        208
+      ],
+      "origin": [
+        156,
+        190
+      ],
+      "architecture": true
+    },
+    {
+      "id": "r05_well_drain_shed",
+      "size": [
+        260,
+        208
+      ],
+      "origin": [
+        130,
+        190
+      ],
+      "architecture": true
+    },
+    {
+      "id": "r05_filter_well",
+      "size": [
+        156,
+        156
+      ],
+      "origin": [
+        78,
+        140
+      ],
+      "architecture": true
+    },
+    {
+      "id": "r05_voluntary_hut",
+      "size": [
+        260,
+        234
+      ],
+      "origin": [
+        130,
+        216
+      ],
+      "architecture": true
+    },
+    {
+      "id": "r05_high_archive_shed",
+      "size": [
+        182,
+        156
+      ],
+      "origin": [
+        91,
+        140
+      ],
+      "architecture": true
+    },
+    {
+      "id": "r05_water_bucket_pair",
+      "size": [
+        78,
+        78
+      ],
+      "origin": [
+        39,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_warning_board",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_public_table",
+      "size": [
+        130,
+        78
+      ],
+      "origin": [
+        65,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_water_gauge",
+      "size": [
+        52,
+        104
+      ],
+      "origin": [
+        26,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_reed_cluster",
+      "size": [
+        104,
+        78
+      ],
+      "origin": [
+        52,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_sample_bucket",
+      "size": [
+        26,
+        26
+      ],
+      "origin": [
+        13,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_herb_bundle",
+      "size": [
+        52,
+        26
+      ],
+      "origin": [
+        26,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_filter_rack",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_medicine_cabinet",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_case_cabinet",
+      "size": [
+        52,
+        104
+      ],
+      "origin": [
+        26,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_name_cabinet",
+      "size": [
+        52,
+        104
+      ],
+      "origin": [
+        26,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_inspection_table",
+      "size": [
+        130,
+        78
+      ],
+      "origin": [
+        65,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_closed_sample_tray",
+      "size": [
+        52,
+        26
+      ],
+      "origin": [
+        26,
+        23
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_empty_care_bed",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_privacy_curtain",
+      "size": [
+        78,
+        130
+      ],
+      "origin": [
+        39,
+        117
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_schedule_board",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_old_living_pipe",
+      "size": [
+        156,
+        52
+      ],
+      "origin": [
+        78,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_new_waste_pipe",
+      "size": [
+        156,
+        52
+      ],
+      "origin": [
+        78,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_new_waste_pipe_capped",
+      "size": [
+        156,
+        52
+      ],
+      "origin": [
+        78,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_valve_closed",
+      "size": [
+        52,
+        78
+      ],
+      "origin": [
+        26,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_clamp_pair",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_low_gate",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_bypass_wheel",
+      "size": [
+        52,
+        78
+      ],
+      "origin": [
+        26,
+        65
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_lift_platform",
+      "size": [
+        156,
+        130
+      ],
+      "origin": [
+        78,
+        117
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_high_record_cabinet",
+      "size": [
+        52,
+        104
+      ],
+      "origin": [
+        26,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_optional_parameter_shelf",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_research_refuge_door",
+      "size": [
+        78,
+        130
+      ],
+      "origin": [
+        39,
+        117
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_workers_refuge_door",
+      "size": [
+        78,
+        130
+      ],
+      "origin": [
+        39,
+        117
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_maintenance_ladder",
+      "size": [
+        26,
+        104
+      ],
+      "origin": [
+        13,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_empty_crate",
+      "size": [
+        78,
+        52
+      ],
+      "origin": [
+        39,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_sitting_bench",
+      "size": [
+        104,
+        52
+      ],
+      "origin": [
+        52,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_waste_casks",
+      "size": [
+        78,
+        104
+      ],
+      "origin": [
+        39,
+        91
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_foam_decal",
+      "size": [
+        104,
+        52
+      ],
+      "origin": [
+        52,
+        43
+      ],
+      "architecture": false
+    },
+    {
+      "id": "r05_inactive_basin",
+      "size": [
+        104,
+        104
+      ],
+      "origin": [
+        52,
+        91
+      ],
+      "architecture": false
+    }
+  ],
+  "inventory_requests": {
+    "R05__plan": "assets/backgrounds/r05_region__plan.png",
+    "R05-road__plan": "assets/backgrounds/r05_road__plan.png",
+    "R05-road__exterior_or_site": "assets/backgrounds/r05_road__environment.png",
+    "R05-care__plan": "assets/backgrounds/r05_care__plan.png",
+    "R05-care__exterior_or_site": "assets/backgrounds/r05_care__environment.png",
+    "R05-village__plan": "assets/backgrounds/r05_village__plan.png",
+    "R05-village__exterior_or_site": "assets/backgrounds/r05_village__environment.png",
+    "R05-reeds__plan": "assets/backgrounds/r05_reeds__plan.png",
+    "R05-reeds__exterior_or_site": "assets/backgrounds/r05_reeds__environment.png",
+    "R05-drain__plan": "assets/backgrounds/r05_drain__plan.png",
+    "R05-drain__exterior_or_site": "assets/backgrounds/r05_drain__environment.png",
+    "R05-ward__plan": "assets/backgrounds/r05_ward__plan_overview.png",
+    "R05-ward__exterior_or_site": "assets/backgrounds/r05_ward__environment.png",
+    "R05-shelter__plan": "assets/backgrounds/r05_shelter__plan.png",
+    "R05-shelter__exterior_or_site": "assets/backgrounds/r05_shelter__environment.png",
+    "R05-well__plan": "assets/backgrounds/r05_well__plan_overview.png",
+    "R05-well__exterior_or_site": "assets/backgrounds/r05_well__environment.png",
+    "R05-ward__interior_or_working_space": "assets/backgrounds/r05_ward__working_overview.png",
+    "R05-well__interior_or_working_space": "assets/backgrounds/r05_well__working_overview.png"
+  },
+  "skill_commit": "33d891c421a9ad3608f5a09af97271388ca923af",
+  "runtime_verified": false
+}

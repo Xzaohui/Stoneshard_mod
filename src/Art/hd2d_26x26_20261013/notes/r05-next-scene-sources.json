@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-14",
+  "status": "source_review_next_generation_not_started",
+  "records": [
+    {
+      "id": "R05",
+      "name_zh": "灰烬湿地与疫村",
+      "family": "story_region",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "note": "design/02_世界与地图/区域_R05_灰烬湿地与疫村.md",
+      "theme": "门开以后，生活仍要有人照料",
+      "visual": "冷苇、灰水、低棚、红白水桶牌与稀疏暖药柜；危险水的色差不能是唯一提示，要有泡沫、木牌和对白。",
+      "layout": "岸堤曲折短视线与清楚高地；D07短横廊病房、D08纵向井环对比。隔离营就在可退安全高地，不能让补给穿过最终故事战区。",
+      "art": "原创过滤井、水桶牌、床隔帘、旧新管卡、三层井壁装饰；寒地苇草优先本地参考，图片不承担水位模拟或碰撞。",
+      "boundary": "仅本地原创仿疫；不解释全国瘟疫、教会奇迹或官方灵魂学。病例命名、试验剂不冒充原版灵药。",
+      "safe_return": "退役路与高地回营保持；疫所排液坡、井维护升降口分别第二出口；拒绝迁居不删回程。",
+      "edges": [
+        [
+          "road",
+          "care"
+        ],
+        [
+          "care",
+          "village"
+        ],
+        [
+          "village",
+          "reeds"
+        ],
+        [
+          "reeds",
+          "drain"
+        ],
+        [
+          "drain",
+          "ward"
+        ],
+        [
+          "ward",
+          "shelter"
+        ],
+        [
+          "shelter",
+          "care"
+        ],
+        [
+          "drain",
+          "well"
+        ],
+        [
+          "well",
+          "road"
+        ]
+      ],
+      "entry": "road"
+    },
+    {
+      "id": "R05-care",
+      "name_zh": "隔离营",
+      "family": "story_node",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan",
+        "exterior_or_site"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "parent": "R05",
+      "kind": "服务",
+      "purpose": "普通床、水、药、N13责任核验",
+      "interior_review": "Read corresponding screenplay/dungeon before defining roof, floors and doors; outdoor nodes need no invented room."
+    },
+    {
+      "id": "R05-ward",
+      "name_zh": "灰烬疫所",
+      "family": "story_node",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan",
+        "exterior_or_site",
+        "interior_or_working_space"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "parent": "R05",
+      "kind": "副本",
+      "purpose": "D07、N8本地试验污染",
+      "interior_review": "Read corresponding screenplay/dungeon before defining roof, floors and doors; outdoor nodes need no invented room."
+    },
+    {
+      "id": "R05-well",
+      "name_zh": "沉水档案井",
+      "family": "story_node",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan",
+        "exterior_or_site",
+        "interior_or_working_space"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "parent": "R05",
+      "kind": "副本",
+      "purpose": "D08、N12找人与N13固定替代记录",
+      "interior_review": "Read corresponding screenplay/dungeon before defining roof, floors and doors; outdoor nodes need no invented room."
+    },
+    {
+      "id": "R05-village",
+      "name_zh": "安息村井",
+      "family": "story_node",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan",
+        "exterior_or_site"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "parent": "R05",
+      "kind": "探索",
+      "purpose": "生活用水与DT02维护",
+      "interior_review": "Read corresponding screenplay/dungeon before defining roof, floors and doors; outdoor nodes need no invented room."
+    },
+    {
+      "id": "R05-reeds",
+      "name_zh": "芦苇取样岸",
+      "family": "story_node",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan",
+        "exterior_or_site"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "parent": "R05",
+      "kind": "探索",
+      "purpose": "SQ05水路及DT09普通采点",
+      "interior_review": "Read corresponding screenplay/dungeon before defining roof, floors and doors; outdoor nodes need no invented room."
+    },
+    {
+      "id": "R05-shelter",
+      "name_zh": "自愿安置棚",
+      "family": "story_node",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan",
+        "exterior_or_site"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "parent": "R05",
+      "kind": "探索",
+      "purpose": "匿名、拒迁、护理分开",
+      "interior_review": "Read corresponding screenplay/dungeon before defining roof, floors and doors; outdoor nodes need no invented room."
+    },
+    {
+      "id": "R05-drain",
+      "name_zh": "废排水堤",
+      "family": "story_node",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan",
+        "exterior_or_site"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "parent": "R05",
+      "kind": "探索",
+      "purpose": "旧排水与新管线的时间对比",
+      "interior_review": "Read corresponding screenplay/dungeon before defining roof, floors and doors; outdoor nodes need no invented room."
+    },
+    {
+      "id": "R05-road",
+      "name_zh": "山脚退役路",
+      "family": "story_node",
+      "source": "research/story-regions.json",
+      "requested_views": [
+        "plan",
+        "exterior_or_site"
+      ],
+      "status": "inventoried_not_drawn",
+      "runtime_verified": false,
+      "parent": "R05",
+      "kind": "连接",
+      "purpose": "接R03/R04及R06，保留回程",
+      "interior_review": "Read corresponding screenplay/dungeon before defining roof, floors and doors; outdoor nodes need no invented room."
+    }
+  ],
+  "runtime_verified": false
+}

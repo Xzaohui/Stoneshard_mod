@@ -120,6 +120,24 @@
       "note": "N1 小样键（stage、origin 坐标与 dev_visit 场景标记）；与登记键 resolve_N1/encountered_N1 不是同一套"
     },
     {
+      "key": "EAO_callback_N2_protected",
+      "cls": "pilot-N2",
+      "files": [
+        "n2_choice_protected.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "N2 试点批次键（S153/S154）：口径 EAO_＋登记键名，映射 encountered_N2/resolve_N2/callback"
+    },
+    {
+      "key": "EAO_callback_N2_public",
+      "cls": "pilot-N2",
+      "files": [
+        "n2_choice_public.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "N2 试点批次键（S153/S154）：口径 EAO_＋登记键名，映射 encountered_N2/resolve_N2/callback"
+    },
+    {
       "key": "EAO_dev_visible_owned",
       "cls": "dev-tool",
       "files": [
@@ -130,6 +148,25 @@
       "note": "开发观察工具键（F6/F7/F9/F10/F11 迷雾/格网/素材/场景/返回）"
     },
     {
+      "key": "EAO_encountered_N2",
+      "cls": "pilot-N2",
+      "files": [
+        "n2_entry.gml",
+        "n2_hub.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "N2 试点批次键（S153/S154）：口径 EAO_＋登记键名，映射 encountered_N2/resolve_N2/callback"
+    },
+    {
+      "key": "EAO_presence_N2",
+      "cls": "pilot-N2",
+      "files": [
+        "n2_refusal.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "N2 试点批次键（S153/S154）：口径 EAO_＋登记键名，映射 encountered_N2/resolve_N2/callback"
+    },
+    {
       "key": "EAO_read_eao_copy",
       "cls": "legacy-item",
       "files": [
@@ -137,6 +174,17 @@
       ],
       "mapped_to_registry": false,
       "note": "0.3.0 期抄本阅读标记"
+    },
+    {
+      "key": "EAO_resolve_N2",
+      "cls": "pilot-N2",
+      "files": [
+        "n2_choice_protected.gml",
+        "n2_choice_public.gml",
+        "n2_refusal.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "N2 试点批次键（S153/S154）：口径 EAO_＋登记键名，映射 encountered_N2/resolve_N2/callback"
     },
     {
       "key": "EAO_test_map_arrival",
@@ -341,6 +389,7 @@
     "legacy-flag": 1,
     "legacy-quest": 2,
     "sample-N1": 9,
+    "pilot-N2": 5,
     "dev-tool": 1,
     "legacy-item": 1,
     "test-teleport": 19

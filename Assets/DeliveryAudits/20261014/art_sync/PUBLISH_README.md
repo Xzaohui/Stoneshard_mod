@@ -17,14 +17,19 @@
 
 只读复核命令：`python Assets/DeliveryAudits/20261014/art_sync/verify_publish.py`。脚本逐项检查素材大小、SHA-256、单文件上限及ZIP CRC。它不是视觉QA、文学验收、构建或游戏实测。
 
-## 发布状态
+## 发布结果
 
-截至本说明写入时，前三组本地提交已建立：
+四组素材提交均已按顺序普通快进推送到 https://github.com/Xzaohui/Stoneshard_mod 的 main：
 
 1. `c297501265fd283f99f4607b6c579eebef05a1ba`：人物概念、表情与修复源档。
-2. `24de4f6`：职业动作、补缺与摇头小样。
-3. `8d391d0`：敌人与场景选稿、失败稿及制作源档。
+2. `24de4f66b97b6992c797bb6be39735fd4d181d6f`：职业动作、补缺与摇头小样。
+3. `8d391d0596a51ebab01ac4e15d156eb4fca321eb`：敌人与场景选稿、失败稿及制作源档。
+4. `6a72ccd9207b85e215470248c0d29c906fc92b17`：156份最终源包、素材汇总与发布审计。
 
-普通HTTPS push因当前命令行缺少GitHub登录凭据未完成；只读远端核验仍为基线86f630c。GitHub连接器能读取且报告当前账号具有仓库push权限，但不等于命令行Git已经认证。未强推、未改远端权限、未创建新密钥。后续成功发布须以远端refs/heads/main实查为准，不能从本地commit推断远端已更新。当前没有本批远端提交的CI结果，不能声称CI通过。
+每批完成后均用远端refs/heads/main核实相应SHA。2026-10-14 18:14 UTC核实第四批远端SHA等于本地HEAD，全部素材归档完成。本说明随后作为单独的小型审计更新提交，不改变任何已冻结素材。
 
-为避免大批Git pack超过服务端限制，恢复认证后应按本地提交顺序逐个普通快进推送，而非一次发送整个增量。最终审计提交包含156份源包与本目录文件。
+最初命令行缺少认证，官方设备流程经用户当次授权后完成。云环境home只读，凭据按授权保存在仓库外可写配置目录，并使用命令级credential helper；未读取、记录、提交任何凭据或设备码，未改系统权限、远端权限或强推。
+
+第四批SHA的GitHub核验：Actions workflow runs=0、check runs=0、status contexts=0；combined status返回pending是没有任何状态上下文，不代表有实际运行中的CI。不能声称CI通过，本次也未构建或部署游戏。详见PUBLISH_RESULT.json。
+
+剩余本地变更仅为两份research校验报告的换行变化和9份output临时文件，均未提交且未删除。33份排除ZIP继续留本地。

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "reviewer": "review_second_enemy_continuations",
+  "reviewed_utc": "2026-10-14T04:26:41.353132+00:00",
+  "result": "pass_independent_keypose_concept",
+  "version": "v1",
+  "actual_views": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_continuation_v1/bell_outward_swing/raw/hushed_bell_cultist_bell_outward_swing_v1_raw_imagegen.png",
+      "sha256": "2fed75bcf0fc57f1eb4e2b4e9e79f20a579365ab8757b3d7f4fbcecf523a8408",
+      "bytes": 875963,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:26:41.353132+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_continuation_v1/bell_outward_swing/hushed_bell_cultist_bell_outward_swing_v1_transparent.png",
+      "sha256": "a9991e140a06129c397e89b46cb7aee615809da5f5785c30804746ef45cc73e5",
+      "bytes": 758615,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:26:41.353132+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_continuation_v1/bell_outward_swing/review/candidate_v1_light.png",
+      "sha256": "e7fcf72f15a8f33cd152398fb9be9adeb30a7d8dc10b5993cb04ba4340cd27c2",
+      "bytes": 661408,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:26:41.353132+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_continuation_v1/bell_outward_swing/review/candidate_v1_dark.png",
+      "sha256": "541475eb7194dc2b4ec3ed3c0a5dcfd6abefcf49c7b6e1c575528211ee24ca6d",
+      "bytes": 658879,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:26:41.353132+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_continuation_v1/bell_outward_swing/review/adjacent_light_dark_v1.png",
+      "sha256": "22d896959fb6d18bb5b250f53e85219f9ebae10332e9d1fbf93a359b2489cc09",
+      "bytes": 523512,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:26:41.353132+00:00"
+    }
+  ],
+  "findings": [
+    "idle_style_v2成熟低帽脸、粗簇紧凑短身、灰膝袍、左肩至右腰斜带及短裤靴保留，未回退旧长身母图。",
+    "肩肘向外展开，手在胸腹外侧，完整单铃体斜向下；与旧脸侧高提raise和低垂收铃settle形成第三种明确外摆端点。",
+    "左前靴张开接重、右后靴稳定支撑，胸肩轻转与外伸手臂协调。袖口—腕—握拳—木柄—铃肩连续，另一手仍空手；无多铃或多铃舌。",
+    "浅深实际RGBA合成边缘可读，铃与脸、袍、腿分开，完整头靴与道具留余量；未见需要重画的可见硬错。",
+    "候选进行了alpha128阈值和64px四边扩画布，已记录且raw保留；不能将候选描述为可见RGBA逐像素完全未改。"
+  ],
+  "hard_errors": [],
+  "revision_required": false,
+  "review_scope": "单张新增动作关键阶段的身份、动作链、支撑与握持可读性及真实RGBA合成；不是连续动画/精确锚点/装备runtime验收。",
+  "complete_animation_verified": false,
+  "gif_created": false,
+  "frame_anchors_verified": false,
+  "equipment_runtime_verified": false,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "technical": {
+    "actual_prompt_matches_arguments": true,
+    "tool_return_decoded_raw_sha_match": true,
+    "raw_sha256": "2fed75bcf0fc57f1eb4e2b4e9e79f20a579365ab8757b3d7f4fbcecf523a8408",
+    "selected_sha256": "a9991e140a06129c397e89b46cb7aee615809da5f5785c30804746ef45cc73e5",
+    "raw_size": [
+      1118,
+      1407
+    ],
+    "candidate_size": [
+      1246,
+      1535
+    ],
+    "postprocess": "alpha threshold 128 and 64-pixel padding recorded; raw retained",
+    "zero_alpha_hidden_rgb_not_visible_failure": true
+  }
+}

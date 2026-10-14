@@ -1,0 +1,187 @@
+{
+  "id": "003",
+  "concept_id": "EAO-CONCEPT-ENEMY-003",
+  "role": "canal_tomb_restless",
+  "working_name": "渠墓腐尸",
+  "status": "planned_not_executed",
+  "mother": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png",
+    "sha256": "c41f8a32d88a67ffb90f184f893ae299f41730a7e5d955575c7325066ef44426",
+    "label": "已选静态母图，仅身份与形体锚点",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "actually_viewed": true,
+    "view_method": "view_image: selected original transparent PNG, full figure",
+    "viewed_on": "2026-10-14",
+    "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png"
+  },
+  "existing_selected_poses": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+      "sha256": "61d3a4ca0ec7d763d89e220869645c24397021a2b3092fb90a847d7243c0f28b",
+      "label": "拖步前行",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+        "sha256": "61d3a4ca0ec7d763d89e220869645c24397021a2b3092fb90a847d7243c0f28b"
+      },
+      "pose_id": "drag_step"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+      "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34",
+      "label": "缓慢伸臂",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+        "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34"
+      },
+      "pose_id": "slow_reach"
+    }
+  ],
+  "selection_evidence": {
+    "idle_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/independent_QA.json",
+      "sha256": "1d8420c1f4c10e3beb3bdd307549ea3076ea02f0d357884ec74f0f474b3dd10c"
+    },
+    "action_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/independent_action_QA.json",
+      "sha256": "0e7f92542fdc400133bb30ba1c6b9df9075129a21219c29f1dc3de266eb1bfc4"
+    },
+    "catalog": {
+      "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+      "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+    }
+  },
+  "current_execution": {
+    "generation_calls": 0,
+    "raw_outputs": [],
+    "selected_output": null,
+    "hard_error_revisions_used": 0
+  },
+  "future_budget": {
+    "first_drafts": 1,
+    "maximum_hard_error_revisions": 1,
+    "per_role_selected_new_keyposes_maximum": 1,
+    "hard_error_revision_requires_recorded_specific_failure": true,
+    "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+  },
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "continuous_animation_verified": false,
+  "proposed_keypose": {
+    "pose_id": "reach_clasp_end",
+    "label": "前压扣抓末端",
+    "missing_stage": "出手末端／支撑转移",
+    "count": 1,
+    "status": "planned_not_executed"
+  },
+  "visual_observations_from_actual_views": [
+    "拖步是两臂低摆、前脚着地、后趾拖地。",
+    "缓慢伸臂已把画面左手抬到胸下，但肘仍明显弯、手掌松张；没有收拢空抓的出手末端。"
+  ],
+  "gap_reason": "现有步态和慢伸属于接近与探出，缺同一条伸臂进一步送到可控末端、手指扣拢且前脚确实接重。选择出手末端而非第三张双臂低垂姿势。",
+  "proposed_sequence_only_not_verified": [
+    "drag_step",
+    "slow_reach",
+    "reach_clasp_end"
+  ],
+  "adjacent_reference_roles": [
+    {
+      "input": 1,
+      "relationship": "已选直接前序候选；连续性尚未验证",
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+      "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34"
+    },
+    {
+      "input": 2,
+      "relationship": "更早拖步上下文，不强行设为扣抓后的下一帧",
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+      "sha256": "61d3a4ca0ec7d763d89e220869645c24397021a2b3092fb90a847d7243c0f28b"
+    },
+    {
+      "input": 3,
+      "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png",
+      "sha256": "c41f8a32d88a67ffb90f184f893ae299f41730a7e5d955575c7325066ef44426"
+    }
+  ],
+  "new_pose_body_mechanics": "沿slow_reach同一画面左臂，将肩向左前再送少许、肘角更开但留弯；手掌在原胸下高度，手指从松张收拢成一个未完全合死的空抓轮廓，不拿任何东西。头仍歪垂，肩胯有迟滞；画面右臂继续低垂且与躯干分开。前足全掌受重，后足脚趾接地、脚跟轻抬，脚距不跨大步。",
+  "support_and_contact": "体重经前髋—前膝—前足真实支撑；后脚趾保留接触点。伸手握空，只做空抓，不接触任何受害者或武器。",
+  "invariants": [
+    "同一瘦斜C塌肩身形、灰黄残皮、稀疏暗发、歪头暗眼窝与松下颌；仍有皮肉，不换纯骷髅。",
+    "旧麻无袖残衣/棕破裤/右腰绳结/泥绑腿与裸趾全部保留，不加新伤口和鲜血。",
+    "两臂两腿完整，只有原画面左臂执行扣抓；无第二条同时平举僵尸臂。"
+  ],
+  "must_differ_from_existing": "比slow_reach更开的肘角、更前的肩和扣拢手指，加上前足明确接重；不能仅靠改几根手指交付。",
+  "proposed_anchor_policy": {
+    "facing": "screen-left mild three-quarter; no mirror",
+    "scale_and_camera_primary_reference": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+      "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34"
+    },
+    "support_or_float_anchor": "体重经前髋—前膝—前足真实支撑；后脚趾保留接触点。伸手握空，只做空抓，不接触任何受害者或武器。",
+    "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+    "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+  },
+  "acceptance_checks": [
+    "同一伸臂的肩—肘—腕连续；臂长与头体尺度不增长。",
+    "至少同时看到肘打开、指扣拢、前足接重三项区别；与drag_step低摆双臂不混。",
+    "后趾与前脚接地位置可读、全身留边；皮肉体积和旧衣身份仍在。"
+  ],
+  "hard_failure_conditions": [
+    "新增长爪、纯白骨手臂、额外手臂、僵直锁肘或胳膊伸长。",
+    "扣抓依赖新增对象/病人/血肉，或画成扑咬。",
+    "只是slow_reach重画，支撑和伸臂差别不可读。"
+  ],
+  "continuity_still_to_verify": [
+    "该新帧之后尚缺回收，不能由drag_step强行闭环。",
+    "旧drag_step与slow_reach脚距和尺度不同，接续需要重新配准审查，未做动画。"
+  ],
+  "planned_generation": {
+    "status": "not_executed",
+    "tool_intended": "builtin image_gen",
+    "transparent_background": true,
+    "reference_order": [
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+        "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+        "sha256": "61d3a4ca0ec7d763d89e220869645c24397021a2b3092fb90a847d7243c0f28b",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png",
+        "sha256": "c41f8a32d88a67ffb90f184f893ae299f41730a7e5d955575c7325066ef44426",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png"
+      }
+    ],
+    "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：003 渠墓腐尸。\n新关键姿势：前压扣抓末端，阶段为出手末端／支撑转移。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png。\n\n具体动作：沿slow_reach同一画面左臂，将肩向左前再送少许、肘角更开但留弯；手掌在原胸下高度，手指从松张收拢成一个未完全合死的空抓轮廓，不拿任何东西。头仍歪垂，肩胯有迟滞；画面右臂继续低垂且与躯干分开。前足全掌受重，后足脚趾接地、脚跟轻抬，脚距不跨大步。\n支撑与接触：体重经前髋—前膝—前足真实支撑；后脚趾保留接触点。伸手握空，只做空抓，不接触任何受害者或武器。\n身份/道具不可变：同一瘦斜C塌肩身形、灰黄残皮、稀疏暗发、歪头暗眼窝与松下颌；仍有皮肉，不换纯骷髅。 旧麻无袖残衣/棕破裤/右腰绳结/泥绑腿与裸趾全部保留，不加新伤口和鲜血。 两臂两腿完整，只有原画面左臂执行扣抓；无第二条同时平举僵尸臂。\n与既有姿势必须不同：比slow_reach更开的肘角、更前的肩和扣拢手指，加上前足明确接重；不能仅靠改几根手指交付。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+    "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/003_reach_clasp_end_prompt_v1_not_executed.txt",
+    "prompt_text_sha256": "a475c6e61e5df2e88d99dc041140e98f8d57f23a8eb2f07743a20ea46769409f",
+    "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_continuation_v1/reach_clasp_end",
+    "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+  }
+}

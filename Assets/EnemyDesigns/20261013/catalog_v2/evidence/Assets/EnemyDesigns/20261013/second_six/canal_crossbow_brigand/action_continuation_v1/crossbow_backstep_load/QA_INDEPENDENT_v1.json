@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "reviewer": "review_second_enemy_continuations",
+  "reviewed_utc": "2026-10-14T04:25:35.178748+00:00",
+  "result": "needs_one_hard_error_revision",
+  "version": "v1",
+  "actual_views": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_continuation_v1/crossbow_backstep_load/raw/canal_crossbow_brigand_crossbow_backstep_load_v1_raw_imagegen.png",
+      "sha256": "dfeeeaa4d9083dca38341836891a52ac6cefd992265324c7cd75fcacc3c30fd6",
+      "bytes": 963918,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:25:35.178748+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_continuation_v1/crossbow_backstep_load/canal_crossbow_brigand_crossbow_backstep_load_v1_transparent.png",
+      "sha256": "52a41bf9bbe103902c277709d49e1402a71a55813b0e1d978497c0a9cc526ae0",
+      "bytes": 940847,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:25:35.178748+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_continuation_v1/crossbow_backstep_load/qa/v1_light.png",
+      "sha256": "c4a107ad5418cb6ca0be97cd9fe1c301ba7cbce201ce4858d615883ee7ce4ac4",
+      "bytes": 800385,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:25:35.178748+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_continuation_v1/crossbow_backstep_load/qa/v1_dark.png",
+      "sha256": "4f12f5738a8e00cf4c8cd54e720d93ce07d9cb1f38e1ce8144830b02bc76db46",
+      "bytes": 746529,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:25:35.178748+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_continuation_v1/crossbow_backstep_load/qa/v1_neighbor_board.png",
+      "sha256": "df47fed91a6a0b0116b631687a9da2a862dfde22c3245016fc1893623079f116",
+      "bytes": 629489,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:25:35.178748+00:00"
+    }
+  ],
+  "findings": [
+    "身份、斗帽、胸护、右腰矢袋、双靴和完整横弩连续。双手仍分别前托后握，未见新增弦、踏环装填或脚踩踏环。",
+    "新稿低姿较明显，但相邻看更像母图加深的宽站前倾；左前靴仍整底强支撑，右后膝未接住后坐髋部，髋、两膝与前脚没有协同读成撤步换重心。",
+    "透明浅深底可读，未见武器与身体明显裁切，alpha与可见RGBA保持raw；缺陷是动作核心而非隐藏RGB或细小美观变化。"
+  ],
+  "hard_errors": [
+    "pose_core: backstep rear-weight transfer not readable; forward boot remains fully loaded and hip lacks posterior support shift"
+  ],
+  "revision_required": true,
+  "review_scope": "单张新增动作关键阶段的身份、动作链、支撑与握持可读性及真实RGBA合成；不是连续动画/精确锚点/装备runtime验收。",
+  "complete_animation_verified": false,
+  "gif_created": false,
+  "frame_anchors_verified": false,
+  "equipment_runtime_verified": false,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "technical": {
+    "raw_sha256": "dfeeeaa4d9083dca38341836891a52ac6cefd992265324c7cd75fcacc3c30fd6",
+    "selected_sha256": "52a41bf9bbe103902c277709d49e1402a71a55813b0e1d978497c0a9cc526ae0",
+    "size": [
+      1118,
+      1407
+    ],
+    "mode": "RGBA",
+    "alpha_identical_to_raw": true,
+    "visible_rgba_identical_to_raw": true,
+    "zero_alpha_hidden_rgb_not_visible_failure": true,
+    "candidate_manifest_hashes_passed": 9,
+    "actual_prompt_matches_arguments": true,
+    "tool_return_decoded_raw_sha_match": true
+  }
+}

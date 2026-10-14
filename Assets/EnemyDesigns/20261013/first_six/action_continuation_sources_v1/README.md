@@ -1,0 +1,7 @@
+# 首六敌人动作补缺：规划来源
+
+此目录属于未执行的六张关键姿势规划。没有调用生图，没有生成新的动作PNG、GIF或ZIP。files/下PNG均为已交付Mod原创选稿的逐字节来源副本，不是新作品；其余文件为本次规划核过的历史证据。planned_prompts/为未来拟用的完整提示词，未执行。
+
+source_manifest.json列出原路径、快照路径与SHA；existing_manifest_hash_checks.json记录原冻结manifest的只读验证。历史selected=false/pending字段、001原后握要求与实际前握替案差别、004旧undefined提示词与补充原文本、005弃用v1均不得覆盖。以本brief明确的已选图片及SHA为新规划输入。
+
+仅为单帧概念规划。动作连续性、公共锚点、道具尺度、原生像素网格、帧序与运行验证未通过；不得宣称三张是完整循环。

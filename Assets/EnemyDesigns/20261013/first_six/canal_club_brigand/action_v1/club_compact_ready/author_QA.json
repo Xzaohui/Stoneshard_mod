@@ -1,0 +1,65 @@
+{
+  "pose_id": "club_compact_ready",
+  "author_conclusion": "pass",
+  "independent_review": "pending",
+  "selected": false,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "first_drafts": 1,
+  "hard_error_revisions": 0,
+  "scope": "独立关键姿势概念，不是连续动画/帧序/游戏精灵或运行验收",
+  "inspected": [
+    "source static anchor",
+    "raw image",
+    "actual RGBA composited light board",
+    "actual RGBA composited dark board"
+  ],
+  "checks": {
+    "identity": "同成年方颌宽鼻厚胡、后梳短乱发与矮壮比例；动作表情更集中。",
+    "sidedness": "右肩皮肩护、右腰绳结小袋、左下摆锈红补丁均未换边。",
+    "grip": "H1（锚图屏幕左持械手）仍单手持棍；H2平衡，未换手。",
+    "weapon": "一根短粗木棍、单灰铁箍、圆钝头完整；握至头轴长约0.30人物H附近，非精确分割测量。",
+    "anatomy": "双臂双腿完整，肩肘腕弯曲自然，双脚承重；无拖影/受害者。",
+    "pose": "抬棍到左肩外前，棍尖左上且离脸清楚。",
+    "alpha": "真实RGBA透明；已合成浅深背景查看，无可见大面积底色或真实彩色晕圈。原始隐藏RGB不作为晕圈结论。",
+    "extent": "武器与双靴均完整，实际可见轮廓有留白。低alpha残点范围不代表身体截断。"
+  },
+  "differences": [
+    "比静态部分像素簇更细、轮廓更深；未借动作重做服装结构。",
+    "预备姿露出握拳下的短柄余段，非长柄武器。"
+  ],
+  "alpha_audit": {
+    "raw_size": [
+      1215,
+      1295
+    ],
+    "raw_alpha_bbox": [
+      17,
+      9,
+      1185,
+      1295
+    ],
+    "transparent_size": [
+      1215,
+      1295
+    ],
+    "transparent_alpha_bbox": [
+      93,
+      43,
+      1117,
+      1262
+    ],
+    "zero_alpha_pixels": 970784,
+    "partial_alpha_pixels": 601495,
+    "edge_alpha_max": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    },
+    "cleanup": "Only RGBA zeroing where original alpha <= 3; alpha > 3 unchanged. No body painting, limb compositing, scaling, cropping or mirroring.",
+    "cleanup_changed_pixels": 18499,
+    "raw_sha256": "77ccc7e4c6f67fa0a977d94eb9551bd75211ac65ba6e637f29f7bb724ad0f073",
+    "transparent_sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185"
+  }
+}

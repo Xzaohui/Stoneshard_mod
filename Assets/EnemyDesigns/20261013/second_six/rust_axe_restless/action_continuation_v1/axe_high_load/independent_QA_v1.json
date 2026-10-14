@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "reviewer": "review_second_enemy_continuations",
+  "reviewed_utc": "2026-10-14T04:28:47.546765+00:00",
+  "result": "pass_independent_keypose_concept",
+  "version": "v1",
+  "actual_views": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_continuation_v1/axe_high_load/rust_axe_restless_axe_high_load_raw_v1.png",
+      "sha256": "c8e53d7315af291b24d36579fa0759eb77e3d51a5b783339e02fc0567a32f851",
+      "bytes": 954601,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.546765+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_continuation_v1/axe_high_load/rust_axe_restless_axe_high_load_transparent.png",
+      "sha256": "4a6ad0a7eff870a09ef46c15e5deed034f262af9d88ed393aa25fc532830b5f3",
+      "bytes": 969713,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.546765+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_continuation_v1/axe_high_load/preview_light_v1.png",
+      "sha256": "c386aed0f10cacc594a82695da0f4332333fcc729de1c8ee84911d4fff6c2f14",
+      "bytes": 809604,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.546765+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_continuation_v1/axe_high_load/preview_dark_v1.png",
+      "sha256": "9fe72fa585b42cca21dacbfe90128da8883ef9dc162a88be52c0b728d50f0a35",
+      "bytes": 747165,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.546765+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_continuation_v1/axe_high_load/adjacent_light_dark_zh.png",
+      "sha256": "de4d89dcb44189d4c53389d8a69c351dee946a66d7148f928232b332f6225095",
+      "bytes": 966968,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.546765+00:00"
+    }
+  ],
+  "findings": [
+    "沿idle_style_v2粗簇紧凑肉体和缺甲，未退回旧长腹细纹；两手沿同一长木柄分开包握，腕肘肩连接能解释。",
+    "双肘举起、巨斧提升至盔顶上方外空，与肩外axe_set及低位axe_recover形成明确第三轮廓，不是整体平移/缩放。",
+    "前膝较屈、后腿斜撑，髋仍在两足基底内；后脚接重方向比高位承载轮廓保守，但整体可支撑，不是必须改画的硬错。",
+    "完整斧刃、柄尾、头盔和双足都在画幅内，斧不压头/穿脸，两手始终在柄上；浅深真实RGBA无可见背景块。"
+  ],
+  "hard_errors": [],
+  "revision_required": false,
+  "review_scope": "单张新增动作关键阶段的身份、动作链、支撑与握持可读性及真实RGBA合成；不是连续动画/精确锚点/装备runtime验收。",
+  "complete_animation_verified": false,
+  "gif_created": false,
+  "frame_anchors_verified": false,
+  "equipment_runtime_verified": false,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "technical": {
+    "actual_prompt_matches_arguments": true,
+    "tool_return_decoded_raw_sha_match": true,
+    "manifest_sha_bytes_checks_passed": 53,
+    "postprocess": "48-pixel transparent padding only; original RGBA identical inside padding",
+    "padded_rgba_equal_raw": true,
+    "zero_alpha_hidden_rgb_not_visible_failure": true
+  }
+}

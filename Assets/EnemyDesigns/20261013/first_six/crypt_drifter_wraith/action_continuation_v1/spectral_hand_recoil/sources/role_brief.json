@@ -1,0 +1,189 @@
+{
+  "id": "004",
+  "concept_id": "EAO-CONCEPT-ENEMY-004",
+  "role": "crypt_drifter_wraith",
+  "working_name": "墓龛游魂",
+  "status": "planned_not_executed",
+  "mother": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png",
+    "sha256": "403e4a4dfe2aa04ce216176587ad17a584a74c2692bd306d1067d7acd0e9523c",
+    "label": "已选静态母图，仅身份与形体锚点",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "actually_viewed": true,
+    "view_method": "view_image: selected original transparent PNG, full figure",
+    "viewed_on": "2026-10-14",
+    "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png"
+  },
+  "existing_selected_poses": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+      "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3",
+      "label": "向前漂移",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+        "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3"
+      },
+      "pose_id": "forward_drift"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+      "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8",
+      "label": "幽影探手",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+        "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8"
+      },
+      "pose_id": "spectral_reach"
+    }
+  ],
+  "selection_evidence": {
+    "idle_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/independent_QA.json",
+      "sha256": "b27264ac57f7b81c64ac5d22edd38c71097b6369753e3a40e5b06d711c5551de"
+    },
+    "action_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/independent_action_QA.json",
+      "sha256": "6f7fd4b478a7aac023fa1c0b4ad6e50d376fd6ade07a3e553b8dc1a1c008c29a"
+    },
+    "catalog": {
+      "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+      "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+    }
+  },
+  "current_execution": {
+    "generation_calls": 0,
+    "raw_outputs": [],
+    "selected_output": null,
+    "hard_error_revisions_used": 0
+  },
+  "future_budget": {
+    "first_drafts": 1,
+    "maximum_hard_error_revisions": 1,
+    "per_role_selected_new_keyposes_maximum": 1,
+    "hard_error_revision_requires_recorded_specific_failure": true,
+    "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+  },
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "continuous_animation_verified": false,
+  "proposed_keypose": {
+    "pose_id": "spectral_hand_recoil",
+    "label": "探手回束",
+    "missing_stage": "收势／漂浮制动",
+    "count": 1,
+    "status": "planned_not_executed"
+  },
+  "visual_observations_from_actual_views": [
+    "前漂为上身左倾、低手、尾束向右后扬。",
+    "幽影探手较直立，唯一露手向左胸下伸出，尾束较向下；还没有肘回折和漂浮制动姿态。"
+  ],
+  "gap_reason": "新帧补探手回收：单手退到下胸前并下弯，胸兜稍后收，尾束仍有滞后弧。它既不是低手前漂，也不是母图腰侧松垂。",
+  "proposed_sequence_only_not_verified": [
+    "forward_drift",
+    "spectral_reach",
+    "spectral_hand_recoil",
+    "idle（未来静止回归参考）"
+  ],
+  "adjacent_reference_roles": [
+    {
+      "input": 1,
+      "relationship": "已选直接前序候选；连续性尚未验证",
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+      "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8"
+    },
+    {
+      "input": 2,
+      "relationship": "更早漂移上下文，不能当新帧的即时下一帧",
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+      "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3"
+    },
+    {
+      "input": 3,
+      "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png",
+      "sha256": "403e4a4dfe2aa04ce216176587ad17a584a74c2692bd306d1067d7acd0e9523c"
+    }
+  ],
+  "new_pose_body_mechanics": "同一唯一露出的画面左手从spectral_reach向下胸前撤回，肘明显折起且袖口连接可见，掌根靠近胸边但保留一道负空间；弯曲手指朝下、不遮脸。兜帽与胸腔小幅向后回正，头仍向左；两长一短主尾束从上袍连续垂出，中下段留轻微向右的滞后弧，较前漂收窄但不并成实心裙筒。",
+  "support_and_contact": "此角色没有脚和地面支撑；只检查胸袍到尾束连续、露手到袖口连续、漂浮体态可信。不得为了统一站立锚点增脚、腿、靴、地板或落地影。",
+  "invariants": [
+    "同一深灰青尖兜帽、冷青窄颅面、暗眼窝、层叠短肩披；仅一只露手，另一手一直藏起。",
+    "两长一短碎尾、透明孔洞与小碎片保留；真实半透明不能阈值清成硬裙。",
+    "无武器、法球、符文、链条，不绑定任何死者身份或回声真魂。"
+  ],
+  "must_differ_from_existing": "回折肘与靠胸但分离的手、向后回正的胸、滞后尾弧同时可读；不得只把旧图整体反向旋转或平移。",
+  "proposed_anchor_policy": {
+    "facing": "screen-left mild three-quarter; no mirror",
+    "scale_and_camera_primary_reference": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+      "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8"
+    },
+    "support_or_float_anchor": "此角色没有脚和地面支撑；只检查胸袍到尾束连续、露手到袖口连续、漂浮体态可信。不得为了统一站立锚点增脚、腿、靴、地板或落地影。",
+    "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+    "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+  },
+  "acceptance_checks": [
+    "仅一露手，肘袖连接可追踪，手不黏在胸面或遮脸。",
+    "无实体下肢；尾束根部、两长一短关系和透明缝隙成立。",
+    "浅深背景实看半透明材料、碎片完整留边；低手漂移与高伸手都能与新收势区分。"
+  ],
+  "hard_failure_conditions": [
+    "出现脚/靴/两条实腿、实心裙底、第二只露手。",
+    "为强调收势把碎尾画成地面烟雾、光圈、法球或泛白大晕。",
+    "与静态母图仅平移/旋转，缺折肘和制动尾弧。"
+  ],
+  "continuity_still_to_verify": [
+    "目前没有统一浮空origin或尾尖锚点，尾尖不应当作脚底锚点。",
+    "旧两张prompt文本归档曾写undefined，完整原调用已在addendum；本计划照实保留原错和补充证据。",
+    "漂移、探手、回束的时间和尾部连续性仍需验证，不承诺透明运行实现。"
+  ],
+  "planned_generation": {
+    "status": "not_executed",
+    "tool_intended": "builtin image_gen",
+    "transparent_background": true,
+    "reference_order": [
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+        "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+        "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png",
+        "sha256": "403e4a4dfe2aa04ce216176587ad17a584a74c2692bd306d1067d7acd0e9523c",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png"
+      }
+    ],
+    "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：004 墓龛游魂。\n新关键姿势：探手回束，阶段为收势／漂浮制动。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png。\n\n具体动作：同一唯一露出的画面左手从spectral_reach向下胸前撤回，肘明显折起且袖口连接可见，掌根靠近胸边但保留一道负空间；弯曲手指朝下、不遮脸。兜帽与胸腔小幅向后回正，头仍向左；两长一短主尾束从上袍连续垂出，中下段留轻微向右的滞后弧，较前漂收窄但不并成实心裙筒。\n支撑与接触：此角色没有脚和地面支撑；只检查胸袍到尾束连续、露手到袖口连续、漂浮体态可信。不得为了统一站立锚点增脚、腿、靴、地板或落地影。\n身份/道具不可变：同一深灰青尖兜帽、冷青窄颅面、暗眼窝、层叠短肩披；仅一只露手，另一手一直藏起。 两长一短碎尾、透明孔洞与小碎片保留；真实半透明不能阈值清成硬裙。 无武器、法球、符文、链条，不绑定任何死者身份或回声真魂。\n与既有姿势必须不同：回折肘与靠胸但分离的手、向后回正的胸、滞后尾弧同时可读；不得只把旧图整体反向旋转或平移。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+    "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/004_spectral_hand_recoil_prompt_v1_not_executed.txt",
+    "prompt_text_sha256": "ff495dc2f56072e1ed160ec7a227b1cf12b028c935b0f02a49c2cbe5b9143609",
+    "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_continuation_v1/spectral_hand_recoil",
+    "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+  }
+}

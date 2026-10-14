@@ -1,0 +1,126 @@
+{
+  "manifest_sha256": "fa8008219ca9cb29f3b60dbbdac7a6f32ec0fecc9059dbb7d51950ba85751001",
+  "manifest_files_verified": 33,
+  "manifest_mismatches": [],
+  "poses": [
+    {
+      "pose": "forward_drift",
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+      "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3",
+      "raw_sha256": "c7fbd14a769455bd7dff96a608b420729c155670578bbbad094a6cafed99e609",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_unchanged": true,
+      "rgba_above_alpha_1_unchanged": true,
+      "alpha_zero_pixels": 942247,
+      "alpha_bbox_above_16": [
+        47,
+        75,
+        1005,
+        1505
+      ],
+      "result": "pass",
+      "hard_errors": [],
+      "actual_view": [
+        "transparent_full",
+        "review_light_512",
+        "review_dark_512"
+      ],
+      "budget": {
+        "first_drafts": 1,
+        "hard_error_revisions": 0
+      },
+      "prompt_evidence": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/prompt_evidence_addendum.json",
+        "sha256": "99188561641591a091fcb78b196b1df23185ee520edbeab5cb26bdacc2b0e340",
+        "exact_prompt_present": true,
+        "restoration_source": {
+          "session_store_key": "drift_prompt",
+          "generation_call_cell": "6",
+          "tool": "image_gen__imagegen"
+        },
+        "original_error_preserved": true,
+        "provenance_limit": "作者确认同一session store取回；独审未直接访问作者store。"
+      }
+    },
+    {
+      "pose": "spectral_reach",
+      "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+      "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8",
+      "raw_sha256": "7a215775257463c660846a25f6873af250bbef19f54505039521e226a1483533",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_unchanged": true,
+      "rgba_above_alpha_1_unchanged": true,
+      "alpha_zero_pixels": 926408,
+      "alpha_bbox_above_16": [
+        54,
+        21,
+        962,
+        1502
+      ],
+      "result": "pass",
+      "hard_errors": [],
+      "actual_view": [
+        "transparent_full",
+        "review_light_512",
+        "review_dark_512"
+      ],
+      "budget": {
+        "first_drafts": 1,
+        "hard_error_revisions": 0
+      },
+      "prompt_evidence": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/prompt_evidence_addendum.json",
+        "sha256": "de1b1a58c26b8796b078c53f647506b8e4820768030e246fd76154803119c5ea",
+        "exact_prompt_present": true,
+        "restoration_source": {
+          "session_store_key": "spectral_prompt",
+          "generation_call_cell": "7",
+          "tool": "image_gen__imagegen"
+        },
+        "original_error_preserved": true,
+        "provenance_limit": "作者确认同一session store取回；独审未直接访问作者store。"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "reviewer": "independent_review_monster_action_keyposes",
+  "reviewed_utc": "2026-10-13T19:35:29.702478+00:00",
+  "result": "concept_pass",
+  "anchor": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png",
+    "sha256": "403e4a4dfe2aa04ce216176587ad17a584a74c2692bd306d1067d7acd0e9523c",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_bbox": [
+      183,
+      18,
+      894,
+      1514
+    ],
+    "actually_viewed": true,
+    "viewed_utc": "2026-10-13T19:28:36.727677+00:00"
+  },
+  "anchor_sha_verified": true,
+  "anchor_actually_viewed": true,
+  "first_drafts": 2,
+  "hard_error_revisions": 0,
+  "continuous_animation": false,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "notes": [
+    "深灰青兜帽、冷青狭长颅面、短层肩披与单露手身份一致；无脚、无第二露手、无武器。",
+    "前漂上身前倾/低手、后扬尾束与探手较直上身/抬手/下落尾束差别明确；主要尾束连袍，碎片与透明孔洞合理变化不返工。",
+    "实际view透明全图和两姿浅深512最近邻合成，无可见背景污染。alpha逐字节不变、alpha>1所有RGBA保持，尾束半透明未阈值硬切。",
+    "两份冻结prompt_v1.txt原为undefined，未改。作者从生成完成后的同一session store恢复完整原调用文本至prompt_evidence_addendum.json，非重新编造。独审已读全文及参数、核对引用锚图和SHA；无法跨agent直接复读session store，来源恢复声明由作者提供。"
+  ]
+}

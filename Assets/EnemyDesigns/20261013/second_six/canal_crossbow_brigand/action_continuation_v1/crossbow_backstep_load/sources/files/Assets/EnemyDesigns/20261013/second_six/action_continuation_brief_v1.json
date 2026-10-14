@@ -1,0 +1,1546 @@
+{
+  "schema_version": 1,
+  "title": "第二组六敌人各一动作补缺规划 v1",
+  "created_utc": "2026-10-14T04:16:48.532445+00:00",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "status": "planned_not_executed_pending_independent_review",
+  "scope": {
+    "concept_ids": [
+      "EAO-CONCEPT-ENEMY-007",
+      "EAO-CONCEPT-ENEMY-008",
+      "EAO-CONCEPT-ENEMY-009",
+      "EAO-CONCEPT-ENEMY-010",
+      "EAO-CONCEPT-ENEMY-011",
+      "EAO-CONCEPT-ENEMY-012"
+    ],
+    "new_keypose_concepts_planned": 6,
+    "new_images_generated": 0,
+    "animation_frames_produced": 0,
+    "changes": "Only this new brief and its new source-snapshot directory. No old brief, image, QA, selected status, story, runtime, Git commit or upload changed."
+  },
+  "evidence_policy": {
+    "current_task_actual_view": "All six selected mothers plus twelve selected old action images individually opened and inspected with view_image; Sela G and Mia v2 also individually viewed. See actual_view_log.json.",
+    "original_game_boundary": "No original game full animation was newly viewed; public-source facts are inherited, attributed historical notes only, not current-version or timing proof. No new runtime claims.",
+    "source_authority": [
+      "Latest selected FINAL_STATUS and matching image SHA",
+      "Historical independent review and candidate manifest, interpreted with their recorded freeze scope",
+      "action_pilot_second_six_brief_v2 and style supersession for 009/012",
+      "Actual visible selected images for current posture and prop continuity"
+    ],
+    "visual_judgment": "Judge overall action, support and continuous limb/prop topology first. Use whole-subject and head/torso-normalized comparison, not whole-canvas box or weapon-inclusive scale. A numerical anchor/grip point, small cloth change or tiny clapper position is not an automatic failure. Requirements below each have a visible function; no inherited first-batch single-point hard gate.",
+    "alpha_rule": "Inspect actual RGBA composites on light and dark. Hidden RGB at alpha=0 is invisible and cannot prove a visible glow. Do not threshold away genuine spectral contours or re-generate because alpha>0 bbox alone hits an edge. Body/prop crop must be visually established.",
+    "claims_limits": [
+      "Key-stage concepts only; adding this one to two old poses does not establish a continuous three-frame cycle.",
+      "Pivot/anchor coordinates, timings, sprite grid, collision, layered equipment and engine integration are unverified.",
+      "Working enemy names are reversible original art labels, not confirmed canon faction membership or identified deceased persons."
+    ]
+  },
+  "execution_limits": {
+    "generation_authorized_now": false,
+    "generation_started": false,
+    "start_condition": "Parent must arrange independent planning review and explicitly release generation afterward; this planning task does not generate.",
+    "first_drafts_per_item": 1,
+    "hard_error_revisions_per_item_max": 1,
+    "revision_scope": "Only documented identity, anatomy, topology, support/pose-core readability, material prop mismatch, crop or visible transparency hard error. One optional revision after an exact cause is identified; cosmetic preference is not a reason.",
+    "after_budget": "If still failing, mark needs_review and stop that item; do not silently count it selected or launch another candidate.",
+    "safety_block": "If generation or another action is safety-blocked, stop and report exact action/target/reason. Do not paraphrase prompts, change tools or alter route to evade that block.",
+    "not_performed": [
+      "image generation",
+      "old source changes",
+      "Git commit or upload",
+      "runtime editing or deployment"
+    ],
+    "expected_future_review": "Author and independent actual-view review of mother, both old poses, new full pose and reduced light/dark composites before selection. Compare core action first, then grips/support and technical integrity."
+  },
+  "source_manifest": {
+    "path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/source_manifest.json",
+    "sha256": "042f6b3458af78ef9b18d7a7c4c4e66102c8a4782f8eb2869d4c887d49145710"
+  },
+  "existing_selection_validation": {
+    "path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/existing_selection_validation.json",
+    "sha256": "252fd917062fc1d218b5665c8dcaa178130ace0f536c9271dcc187e772a7a409",
+    "selected_image_checks_passed": 18
+  },
+  "rules_and_history_read": [
+    {
+      "source_path": "AGENTS.md",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/AGENTS.md",
+      "sha256": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+      "bytes": 68775,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/reference/20261013/production_brief_second_six.json",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/reference/20261013/production_brief_second_six.json",
+      "sha256": "665197ae3942c885c0094ffd9c4071b76cc050804e3322bb248db706e5f703b7",
+      "bytes": 32933,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/reference/20261013/sources_second_six.json",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/reference/20261013/sources_second_six.json",
+      "sha256": "cc1ff3936d9591893c6ed28b0b82638bebd281bdbdce9903d4c316172c0e2984",
+      "bytes": 20803,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/reference/20261013/action_pilot_second_six_brief.json",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/reference/20261013/action_pilot_second_six_brief.json",
+      "sha256": "a501410949ad4edbb6a607a47b690ca5e53762eb6f76b4a806a1a348ce40cd8c",
+      "bytes": 35461,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/reference/20261013/action_pilot_second_six_brief_v2.json",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/reference/20261013/action_pilot_second_six_brief_v2.json",
+      "sha256": "88bf150f4deeee01a08e0bf537d9c8855a28ffbb174fd2fa0534f389c24a0f9a",
+      "bytes": 39649,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/reference/20261013/action_pilot_second_six_brief_supersession.json",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/reference/20261013/action_pilot_second_six_brief_supersession.json",
+      "sha256": "366296ce48c65291ef89ea510e28d31e8701de0df509e67280e03ed65777f89c",
+      "bytes": 1990,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/20261013/second_six/ROOT_STYLE_REVIEW.json",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/ROOT_STYLE_REVIEW.json",
+      "sha256": "6f1f6f2da8c873745281917dfafbe8bd457bbb8770aa9ced5f69703130914b19",
+      "bytes": 1304,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/20261013/second_six/INDEX.md",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/INDEX.md",
+      "sha256": "53c0410863a8494ba9498daf906346b9c4fc32fae7d05c273366b670d9ad6c99",
+      "bytes": 2901,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+      "bytes": 6187,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_continuation_v1/sources/pixel_asset_master_SKILL.md",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_continuation_v1/sources/pixel_asset_master_SKILL.md",
+      "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08",
+      "bytes": 16285,
+      "role": "read_planning_rule_or_historical_reference"
+    },
+    {
+      "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/spec_lock.md",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/spec_lock.md",
+      "sha256": "4fbf6fda2b57ab085da048deac52d279899e94be603428c569ba4bf3eacabb63",
+      "bytes": 1461,
+      "role": "read_planning_rule_or_historical_reference"
+    }
+  ],
+  "style_comparisons": [
+    {
+      "source_path": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+      "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a",
+      "bytes": 540102,
+      "role": "style_comparison_only",
+      "size": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        0,
+        16,
+        1023,
+        1389
+      ],
+      "current_planner_visual_inspection": {
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-14T04:11:02Z",
+        "scope": "Actual individual full image viewed in this planning task; not an identity or fixed-ratio template."
+      }
+    },
+    {
+      "source_path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+      "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd",
+      "bytes": 614716,
+      "role": "style_comparison_only",
+      "size": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        33,
+        32,
+        1082,
+        1375
+      ],
+      "current_planner_visual_inspection": {
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-14T04:11:02Z",
+        "scope": "Actual individual full image viewed in this planning task; not an identity or fixed-ratio template."
+      }
+    }
+  ],
+  "items": [
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-007",
+      "slug": "border_roundshield_rebel",
+      "working_name": "边地圆盾手",
+      "pose_id": "axe_forward_cut",
+      "label": "短斧前送斜劈",
+      "status": "planned_not_executed_pending_independent_review",
+      "phase": "攻击释放中后段，向空处斜下送斧",
+      "generation_started": false,
+      "generation_calls": 0,
+      "first_draft_budget": 1,
+      "hard_error_revision_budget": 1,
+      "selected": false,
+      "source_images": [
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/border_roundshield_rebel_idle_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/border_roundshield_rebel_idle_transparent.png",
+          "sha256": "190a5a27537840219bbd41a9844414cef1d4c31f7e241e49e12ce6161f38aa6b",
+          "bytes": 781640,
+          "role": "selected_mother",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            144,
+            93,
+            911,
+            1363
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:08:31Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "selected_static",
+          "observation": "母图双靴站稳，短斧手低垂，圆盾在画面右胸腹侧。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/FINAL_STATUS.json",
+            "sha256": "946a1a2c6dc692ea614d53a985a9a22783d49c34395ca08bc3cebba98acce526",
+            "bytes": 701,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/manifest.json",
+            "sha256": "b0c2bd9b0ab82ec103e2f7307ec1fa29518a90556f0251f596e722a7f733a9d9",
+            "bytes": 2528,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/QA_INDEPENDENT.json",
+            "sha256": "f9cb26d72f1652d5f34d9d761cce8e19dd012eb1656e2ddce0e492bcf752c9a6",
+            "bytes": 1323,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_static_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/border_roundshield_rebel_shield_brace_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/border_roundshield_rebel_shield_brace_transparent.png",
+          "sha256": "46549111d867c5d1c530b83349cef62dbbe8336a2cb4ba20509e8a61c6b59b53",
+          "bytes": 805950,
+          "role": "selected_existing_action",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            114,
+            132,
+            1039,
+            1335
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:08:31Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "shield_brace",
+          "observation": "shield_brace是宽步沉身、盾高斧低；斧臂仍沿身体向下。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/FINAL_STATUS.json",
+            "sha256": "3bdb8ba75c22188a2874b80209e3d8d32dc6b2ceae276917711ab226e6c5539a",
+            "bytes": 716,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/manifest.json",
+            "sha256": "ba5e483d90cfb62ef459935989b621a975548a704f8c1138acbda9e73a45399b",
+            "bytes": 2928,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/QA_INDEPENDENT.json",
+            "sha256": "0a026208b556ce906177e59e41ff60b45f702db0effa33435f291cc8edc0f710",
+            "bytes": 2277,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/border_roundshield_rebel_shield_recover_axe_ready_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/border_roundshield_rebel_shield_recover_axe_ready_transparent.png",
+          "sha256": "ff42b66254196fa9b45bdf0002c7b5de85323e765f68e048a773f962dc92e975",
+          "bytes": 836664,
+          "role": "selected_existing_action",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            32,
+            96,
+            954,
+            1361
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:08:31Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "shield_recover_axe_ready",
+          "observation": "shield_recover_axe_ready直身收步，短斧在左肩外上斜，斧肘仍明显弯。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/FINAL_STATUS.json",
+            "sha256": "5433b304b2c3495328e4ed1171b18d4bec247289dc80a5c46b94060267d3b56f",
+            "bytes": 728,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/manifest.json",
+            "sha256": "6d4d544515383e7faac76e37dd94f6b1ed7976c1bd60729a89151bed78844661",
+            "bytes": 2986,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/QA_INDEPENDENT.json",
+            "sha256": "8a56f5f7dfec9ef0e447f6ec6ce8bcf78d4395af839d999e218b31b4d5c0c6b0",
+            "bytes": 2733,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        }
+      ],
+      "identity_lock": {
+        "face_body": "浓眉、棕乱短发、近侧灰鬓和完整灰黑短胡、宽颧方颌暖肤成年男性；紧凑结实体格，不改幼脸或修长身。",
+        "clothing": "旧蓝灰短肩巾、灰褐菱格绗缝背心、米灰卷袖；画面右肩单铁肩甲，暗皮腰带方扣、褐裤、米色绑腿与双褐靴。",
+        "props_grip": "画面右侧盾臂支撑一面木圆盾，另一侧手持短单刃斧；圆盾竖木板、深边框、中央铁脐，斧为普通短柄铁头。盾背接臂可遮挡但不可悬空，斧刃不穿盾腿。",
+        "scale_lock": "盾直径约覆盖胸下至大腿上部的体量，不能膨成长盾；短斧明显短于躯干加腿的身体长度，保持单手短斧级别和原斧头/柄比例。"
+      },
+      "gap_reason": "三图都有持斧但没有把肩、斧肘和前脚一起向空处送出的攻击释放轮廓。新增前送斜劈，不能把旧举盾低斧仅加深蹲后改名为攻击。",
+      "conceptual_neighbors": {
+        "nearest_old_pose": "shield_recover_axe_ready",
+        "comparison_or_possible_settle_pose": "shield_brace",
+        "relationship": "从收盾提斧的预备关系出发，补斧臂向前下送出的释放阶段；可向举盾防线重新收回。旧两图并非已证实的前后逐帧，不承诺直接连接或闭环。",
+        "contiguous_frames_verified": false
+      },
+      "pose_mechanics": {
+        "line_of_action": "面向画面左的轻三分之四保持，胸肩向左前转送，髋随之偏向前脚，头仍可见；不是只把斧贴图旋转。",
+        "arms_and_grips": "延续画面左斧臂、右盾臂。斧手前送至胸下外前，肘展开但不锁死；短柄由拳斜向左下，斧头降到腰腹高度的空处，握拳后仍见短柄尾。盾收在近侧胸肋，前臂与盾背联系能解释。",
+        "support_and_contacts": "画面左靴为前承重点，整底落在同一想象支撑平面，左膝屈向脚尖；右靴留后方，前掌至脚跟自然支撑形成宽基底。胸髋的前送由腿承接，不前倾到必然扑倒。武器、盾均不撑地。",
+        "negative_space": "斧手和斧头在盾外左侧，斧刃不切进前腿；斧臂与身体形成明确前送空隙。脸在盾顶之上。",
+        "readability_priority": "前送的肩肘链、前脚承重和向下斜切的短斧共同读成一阶段；不要求某一个像素坐标或盾脐点严格对齐。"
+      },
+      "pass_conditions": [
+        "缩小到约原图四分之一、按头躯干尺度对照时，能读出斧臂前送而非旧brace的低垂斧。",
+        "左前承重与胸肩前转相互支持；单手握短斧、另一臂连盾，不为伸远而拉长手臂或斧柄。",
+        "完整灰鬓成熟脸、蓝灰肩巾、绗缝背心、右肩铁甲、圆盾和两靴保留。"
+      ],
+      "hard_fail_conditions": [
+        "仅复制brace宽蹲和低斧，身体/斧肘未前送，核心缺口仍未补。",
+        "斧头或斧臂穿盾/腿、斧换手、无支撑的极端前倒，或短斧变长柄巨斧。"
+      ],
+      "risk_notes": [
+        "攻击尾段容易退化成已有低斧护挡，须优先检验整个前送动势。",
+        "盾遮住斧肘并不自动失败，只有肩肘腕连线无法解释才是硬错。"
+      ],
+      "canon_exclusions": [
+        "不画公议纹章、王旗、既定阵营制服或处决场面。",
+        "不把救济成员、玛娅或全部灰军画为敌人。"
+      ],
+      "planned_prompt": {
+        "status": "not_executed",
+        "text": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：浓眉、棕乱短发、近侧灰鬓和完整灰黑短胡、宽颧方颌暖肤成年男性；紧凑结实体格，不改幼脸或修长身。 旧蓝灰短肩巾、灰褐菱格绗缝背心、米灰卷袖；画面右肩单铁肩甲，暗皮腰带方扣、褐裤、米色绑腿与双褐靴。 画面右侧盾臂支撑一面木圆盾，另一侧手持短单刃斧；圆盾竖木板、深边框、中央铁脐，斧为普通短柄铁头。盾背接臂可遮挡但不可悬空，斧刃不穿盾腿。 盾直径约覆盖胸下至大腿上部的体量，不能膨成长盾；短斧明显短于躯干加腿的身体长度，保持单手短斧级别和原斧头/柄比例。\n\n将此角色画成短斧前送斜劈的一个清晰关键阶段：从第三张收盾提斧预备向画面左前斜下释放，斧臂从肩向左前送出，拳在胸下外前、肘近伸但不过伸；同一短柄向左下延续，斧头在腰腹高度的左侧空处，刃与腿、盾分开。上身随斧臂转送，画面左前靴整底承重、膝自然弯，右后靴稳定形成基底。圆盾由原盾臂收在右侧胸肋，脸仍在盾上方。动作重点是肩肘前送和重量移到前脚，绝不是第二张沉身举盾低垂斧的再版。没有对手或接触目标。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+        "file": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/planned_prompts/007_axe_forward_cut_prompt_v1_NOT_EXECUTED.txt",
+        "sha256": "17c4ab9637ef7d71e2abad56df15a9b9fc68b84cec2600265424ec4bcdaaa442",
+        "sha256_scope": "UTF-8 prompt file including final newline"
+      },
+      "planned_tool_call": {
+        "tool": "image_gen.imagegen",
+        "executed": false,
+        "arguments": {
+          "prompt": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：浓眉、棕乱短发、近侧灰鬓和完整灰黑短胡、宽颧方颌暖肤成年男性；紧凑结实体格，不改幼脸或修长身。 旧蓝灰短肩巾、灰褐菱格绗缝背心、米灰卷袖；画面右肩单铁肩甲，暗皮腰带方扣、褐裤、米色绑腿与双褐靴。 画面右侧盾臂支撑一面木圆盾，另一侧手持短单刃斧；圆盾竖木板、深边框、中央铁脐，斧为普通短柄铁头。盾背接臂可遮挡但不可悬空，斧刃不穿盾腿。 盾直径约覆盖胸下至大腿上部的体量，不能膨成长盾；短斧明显短于躯干加腿的身体长度，保持单手短斧级别和原斧头/柄比例。\n\n将此角色画成短斧前送斜劈的一个清晰关键阶段：从第三张收盾提斧预备向画面左前斜下释放，斧臂从肩向左前送出，拳在胸下外前、肘近伸但不过伸；同一短柄向左下延续，斧头在腰腹高度的左侧空处，刃与腿、盾分开。上身随斧臂转送，画面左前靴整底承重、膝自然弯，右后靴稳定形成基底。圆盾由原盾臂收在右侧胸肋，脸仍在盾上方。动作重点是肩肘前送和重量移到前脚，绝不是第二张沉身举盾低垂斧的再版。没有对手或接触目标。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+          "referenced_image_paths": [
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/idle_v1/border_roundshield_rebel_idle_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_brace/border_roundshield_rebel_shield_brace_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_v1/shield_recover_axe_ready/border_roundshield_rebel_shield_recover_axe_ready_transparent.png"
+          ],
+          "transparent_background": true
+        },
+        "reference_order": [
+          "selected_mother",
+          "shield_brace",
+          "shield_recover_axe_ready"
+        ],
+        "must_reverify_snapshot_sha_and_view_each_reference_before_execution": true
+      },
+      "planned_output_directory": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_continuation_v1/axe_forward_cut",
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-008",
+      "slug": "canal_crossbow_brigand",
+      "working_name": "旧渠伏弩手",
+      "pose_id": "crossbow_backstep_load",
+      "label": "低姿撤步换重心",
+      "status": "planned_not_executed_pending_independent_review",
+      "phase": "持弩移位的后脚接重阶段，不表示发射或装填",
+      "generation_started": false,
+      "generation_calls": 0,
+      "first_draft_budget": 1,
+      "hard_error_revision_budget": 1,
+      "selected": false,
+      "source_images": [
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/canal_crossbow_brigand_idle_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/canal_crossbow_brigand_idle_transparent.png",
+          "sha256": "a615d087abea5cc5e585964d571e4bcdc00c67e5c6651a87a0690e496853c78e",
+          "bytes": 843597,
+          "role": "selected_mother",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            110,
+            122,
+            1050,
+            1356
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:08:49Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "selected_static",
+          "observation": "母图双手前托后握，弩床斜向左下，膝轻屈。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/FINAL_STATUS.json",
+            "sha256": "c4dfedeab9a31c43007e9caa0adced9100972f910d339034911e441562e9e3b1",
+            "bytes": 699,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/manifest.json",
+            "sha256": "daa09f97d70d0829cbe21cdca9633477c3acf357a7afb9612f9c4db977f1914e",
+            "bytes": 2422,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/QA_INDEPENDENT.json",
+            "sha256": "ef60ca18792f7a6b89933c880c2cf1ad1fe26f7e04b7c35817f5e168ae1cbc94",
+            "bytes": 1323,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_static_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/canal_crossbow_brigand_crossbow_aim_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/canal_crossbow_brigand_crossbow_aim_transparent.png",
+          "sha256": "0a3ac9f03468a0caaa516cb9a96181e2365da463ae6c9ab8d53dc3b6f9fa21d7",
+          "bytes": 704545,
+          "role": "selected_existing_action",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            67,
+            249,
+            1050,
+            1285
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:08:49Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "crossbow_aim",
+          "observation": "crossbow_aim双脚展开，高平弩贴近肩胸，头低顺床瞄准。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/FINAL_STATUS.json",
+            "sha256": "1ba622185dfb376c2f1d380e44c16d5cb8d4a8e1757a17722a54176c1dc9462c",
+            "bytes": 714,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/manifest.json",
+            "sha256": "59bf33beb39bb9558815349525e53100db1d83292cd5a4709f104489a31fe2c0",
+            "bytes": 3574,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/QA_INDEPENDENT.json",
+            "sha256": "d3101012d281a60a8a4f6f2d5f57c768d571ea7052d36f297677bdfaf4cfe399",
+            "bytes": 2704,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/canal_crossbow_brigand_crossbow_low_ready_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/canal_crossbow_brigand_crossbow_low_ready_transparent.png",
+          "sha256": "d144ddb2febe950ee918d317791c27a5c8aed96e883ed0d6a74b6e3dee53d127",
+          "bytes": 865049,
+          "role": "selected_existing_action",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            142,
+            96,
+            939,
+            1349
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:08:49Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "crossbow_low_ready",
+          "observation": "crossbow_low_ready较直身、脚收近，弩床压向左下；并没有低姿撤离中的前后脚负重差。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/FINAL_STATUS.json",
+            "sha256": "bf5946781fa4dd87b5d972c18280604e6db7ffea6d39ab8f001bd86d04769f10",
+            "bytes": 720,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/manifest.json",
+            "sha256": "c8d1ae213e8deaa022886308c1fabf3345788c18cee7975115b06cf5b08797f0",
+            "bytes": 2943,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/QA_INDEPENDENT.json",
+            "sha256": "484de8989869a0bb22a6817bfb55fb8849f65b982d09b01da03eb8d498a57c82",
+            "bytes": 2318,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        }
+      ],
+      "identity_lock": {
+        "face_body": "棕短兜帽内成年长鼻窄颧脸、浓眉深短胡，警觉侧眼；较007窄瘦、双膝轻弯。",
+        "clothing": "土褐肩短兜帽、褐皮胸护和斜扣带、破灰短衣束袖、深护腕、灰褐裤、米绑腿与褐靴；画面右腰单短矢袋与少量浅羽。",
+        "props_grip": "一具木横弩，灰铁横弓、棕纵床、单根弦、前端踏环；两手分开前托后握，手掌托在床下不长在弦上。弦两侧可因透视成为可见分段，但不得增加第二根弦或第二组弓臂。",
+        "scale_lock": "同一具较宽横弩；横翼宽与上身相当并外伸，纵床长于前臂，不缩成手弩或放大成弩炮。保持身体相对弩尺寸，不用整图框比率评审。"
+      },
+      "gap_reason": "已有的是高位瞄准与直立低持，缺少保持器具控制同时撤开站位的承重阶段。新增低姿后坐与前脚卸重，不使用未经证实的弦、扳机、踏环操作或装填细节来制造差异。",
+      "conceptual_neighbors": {
+        "nearest_old_pose": "crossbow_low_ready",
+        "comparison_or_possible_settle_pose": "crossbow_aim",
+        "relationship": "以low_ready为最近持握邻帧，提出撤步接重后重新找瞄准站位的动作空隙；aim只用于对照识别。此图不暗示此前射击或此后完成装填。",
+        "contiguous_frames_verified": false
+      },
+      "pose_mechanics": {
+        "line_of_action": "仍朝左三分之四，髋向画面右后方下沉，躯干小幅前倾抵消后坐，头不贴弩床；高低与后移均来自关节。",
+        "arms_and_grips": "原前手托弩床下、后手握床后段，双手不离开原功能握区。双肘屈收将弩靠近下胸腹外侧，弩前仍向左下，与膝留空间。整具弩刚体随手臂移动。",
+        "support_and_contacts": "画面右后靴整底为主要承重点，膝明显屈且髋在其上方附近；左前靴卸重、跟抬而前掌轻触同一想象平面。脚不交叉、不跪地；前脚仍有接触不被画成双脚悬空跳步。",
+        "crossbow_state_boundary": "仅沿low_ready选稿可见弩的横弓、纵床、单弦与踏环拓扑；无拉弦、脚踩踏环、取矢、放矢、松弦或发射箭。单弦透视分段不算第二弦，遮挡处不发明机构。",
+        "negative_space": "弩前踏环/弓翼与前膝、靴不相碰，脸与弩床分开；手掌不跨到弦上。",
+        "readability_priority": "首看应是低姿撤步接重，弩依旧完整可控；不能只画相同直立low_ready而改眼神。"
+      },
+      "pass_conditions": [
+        "髋后下沉、右后膝承重、左前跟抬三者协同，明显不同于旧aim宽站或旧low_ready收脚直身。",
+        "握点分开且仍在床上，弩种类体量及单弦关系保留，不新增装填推断。",
+        "披帽、皮胸护、灰短衣、右腰单矢袋、绑腿双靴仍一致。"
+      ],
+      "hard_fail_conditions": [
+        "把旧低持弩原姿缩小、平移或只弯一点膝，撤步关系无法辨读。",
+        "为了接重画交叉双腿、弩翼穿膝或脚踏踏环；前托后握变摸弦，或弦态/矢状态被擅改。"
+      ],
+      "risk_notes": [
+        "浅角度撤步容易只像普通蹲姿，必须从髋、两膝、脚跟和持弩回收一起判断。",
+        "该阶段可读性比机械装填更可靠，但不能据此声称原版已有此闪避技能。"
+      ],
+      "canon_exclusions": [
+        "不把维修工、普通搬运者或侧间住户变成强盗。",
+        "不照抄R09高阶重甲及战后个人经历；不增加任务身份。"
+      ],
+      "planned_prompt": {
+        "status": "not_executed",
+        "text": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：棕短兜帽内成年长鼻窄颧脸、浓眉深短胡，警觉侧眼；较007窄瘦、双膝轻弯。 土褐肩短兜帽、褐皮胸护和斜扣带、破灰短衣束袖、深护腕、灰褐裤、米绑腿与褐靴；画面右腰单短矢袋与少量浅羽。 一具木横弩，灰铁横弓、棕纵床、单根弦、前端踏环；两手分开前托后握，手掌托在床下不长在弦上。弦两侧可因透视成为可见分段，但不得增加第二根弦或第二组弓臂。 同一具较宽横弩；横翼宽与上身相当并外伸，纵床长于前臂，不缩成手弩或放大成弩炮。保持身体相对弩尺寸，不用整图框比率评审。\n\n新增一个低姿撤步接重阶段，不画发射或装填。保持角色朝画面左三分之四，髋明确向画面右后下沉；右后靴整底承重，右膝明显屈，左前靴卸重且脚跟抬起、前掌轻触想象支撑平面。身体为保持平衡略向前收，头抬离弩床。两手始终在原来的前托床下与后握床段，双肘收弯，把同一具横弩收近胸腹外侧，前端仍左下斜并与膝留开。保留第二张瞄准图和第三张低持图中同一弩的双轴、单弦、踏环及体量；机构维持原可见关系，不增加箭，不拉弦、不踩踏环、不抓矢袋。新意由后坐接重、前脚跟抬与身体低姿共同产生，不能成为直立low_ready换表情。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+        "file": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/planned_prompts/008_crossbow_backstep_load_prompt_v1_NOT_EXECUTED.txt",
+        "sha256": "72942524314278643685de16f416f0932d47abd8bb2bd6451afbbd4a23890f82",
+        "sha256_scope": "UTF-8 prompt file including final newline"
+      },
+      "planned_tool_call": {
+        "tool": "image_gen.imagegen",
+        "executed": false,
+        "arguments": {
+          "prompt": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：棕短兜帽内成年长鼻窄颧脸、浓眉深短胡，警觉侧眼；较007窄瘦、双膝轻弯。 土褐肩短兜帽、褐皮胸护和斜扣带、破灰短衣束袖、深护腕、灰褐裤、米绑腿与褐靴；画面右腰单短矢袋与少量浅羽。 一具木横弩，灰铁横弓、棕纵床、单根弦、前端踏环；两手分开前托后握，手掌托在床下不长在弦上。弦两侧可因透视成为可见分段，但不得增加第二根弦或第二组弓臂。 同一具较宽横弩；横翼宽与上身相当并外伸，纵床长于前臂，不缩成手弩或放大成弩炮。保持身体相对弩尺寸，不用整图框比率评审。\n\n新增一个低姿撤步接重阶段，不画发射或装填。保持角色朝画面左三分之四，髋明确向画面右后下沉；右后靴整底承重，右膝明显屈，左前靴卸重且脚跟抬起、前掌轻触想象支撑平面。身体为保持平衡略向前收，头抬离弩床。两手始终在原来的前托床下与后握床段，双肘收弯，把同一具横弩收近胸腹外侧，前端仍左下斜并与膝留开。保留第二张瞄准图和第三张低持图中同一弩的双轴、单弦、踏环及体量；机构维持原可见关系，不增加箭，不拉弦、不踩踏环、不抓矢袋。新意由后坐接重、前脚跟抬与身体低姿共同产生，不能成为直立low_ready换表情。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+          "referenced_image_paths": [
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/idle_v1/canal_crossbow_brigand_idle_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_aim/canal_crossbow_brigand_crossbow_aim_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_v1/crossbow_low_ready/canal_crossbow_brigand_crossbow_low_ready_transparent.png"
+          ],
+          "transparent_background": true
+        },
+        "reference_order": [
+          "selected_mother",
+          "crossbow_aim",
+          "crossbow_low_ready"
+        ],
+        "must_reverify_snapshot_sha_and_view_each_reference_before_execution": true
+      },
+      "planned_output_directory": "Assets/EnemyDesigns/20261013/second_six/canal_crossbow_brigand/action_continuation_v1/crossbow_backstep_load",
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-009",
+      "slug": "rust_axe_restless",
+      "working_name": "锈甲斧亡卒",
+      "pose_id": "axe_high_load",
+      "label": "双手斧高位蓄劈",
+      "status": "planned_not_executed_pending_independent_review",
+      "phase": "重斧举高、后脚接重的释放前蓄势",
+      "generation_started": false,
+      "generation_calls": 0,
+      "first_draft_budget": 1,
+      "hard_error_revision_budget": 1,
+      "selected": false,
+      "source_images": [
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/rust_axe_restless_idle_style_v2_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/rust_axe_restless_idle_style_v2_transparent.png",
+          "sha256": "a44f7cd3b39e3dad91249f537cacde17f52a5cf81d24a5c9ab9a86c090d5422c",
+          "bytes": 993113,
+          "role": "selected_mother",
+          "size": [
+            1164,
+            1351
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            0,
+            15,
+            1146,
+            1351
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:06Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "selected_static",
+          "observation": "新idle_style_v2为粗簇短胸腹、肉脸肉腿，双手低横握长斧。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/FINAL_STATUS.json",
+            "sha256": "68930a486039df04bc95d5e80fbea4326b5c3283e1f68536b72026d8f9a439b5",
+            "bytes": 1321,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/manifest.json",
+            "sha256": "fc73e4d9f262bac5db2d0390f394dc7a596c2f5b0c4a2a4b794c5595b289456c",
+            "bytes": 3679,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/QA_INDEPENDENT.json",
+            "sha256": "bdee9fa840de70fae6d70c2274cb05ed43aea81eec748581be26c1c54d7a10f0",
+            "bytes": 1815,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_static_concept_after_root_style_approval"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/rust_axe_restless_axe_set_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/rust_axe_restless_axe_set_transparent.png",
+          "sha256": "19feeac63aebbb630f3b778a18b3c7872efad48eb2bf336f714b199e12b0e36c",
+          "bytes": 961366,
+          "role": "selected_existing_action",
+          "size": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            49,
+            41,
+            1205,
+            1209
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:06Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "axe_set",
+          "observation": "axe_set的斧头在左肩外，最高接近盔顶，近头端手约胸肩高，另一手在腰附近。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/FINAL_STATUS.json",
+            "sha256": "694d97590ff80d37983995ddab8800ff774fc23b7da47a2b4a18ab5c22a31b09",
+            "bytes": 1330,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/manifest.json",
+            "sha256": "7eb6895c84473624a76e42756ab958500fa91d32112026d57e25cb0c663abb63",
+            "bytes": 3994,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/QA_INDEPENDENT.json",
+            "sha256": "e371fa5751ecd8803b49446de161e019747ca00f288df2178912497c1c9be99d",
+            "bytes": 4405,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/rust_axe_restless_axe_recover_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/rust_axe_restless_axe_recover_transparent.png",
+          "sha256": "a844e62d6c22f0ee03091e21dbe6625b039177a7eb355d6c2600666bbca6410b",
+          "bytes": 986424,
+          "role": "selected_existing_action",
+          "size": [
+            1254,
+            1254
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            62,
+            55,
+            1233,
+            1202
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:06Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "axe_recover",
+          "observation": "axe_recover斧头在左下足旁，柄近水平，双手低收，躯体前压。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/FINAL_STATUS.json",
+            "sha256": "7b419b6b6933fafb44e67135bbd21a4edb6617924cff1e35075e96818905a322",
+            "bytes": 1346,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/manifest.json",
+            "sha256": "986a8cff90ccc399dd9ce33f8e87ba2fa4a0689c1810548164432e45fab8af5c",
+            "bytes": 4083,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/QA_INDEPENDENT.json",
+            "sha256": "5e73a3808b61d8aafe6679c6fe49352fc78ba5a7501ef3b65914ebed2b83b574",
+            "bytes": 4525,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        }
+      ],
+      "identity_lock": {
+        "face_body": "新锚粗簇灰蜡肉脸、深眼窝、松张口与浅黄齿、露耳颈，锈裂盔仍有大缺损；塌肩前倾、缩短胸腹的紧凑亡卒。肉脸和肉腿仍清楚，不退回旧高频写实噪纹或换纯骷髅。",
+        "clothing": "新锚大块锈褐/铁灰裂甲、画面左叠片肩护、画面右破赭布露肩；旧皮带与粗簇碎布裙、护腕膝片、裹踝残靴和露趾实体足。少量原有暗伤痕保留，不加新血。",
+        "props_grip": "一柄巨大锈铁单侧宽刃长柄斧，斧头缺损/小凹口、长木杆和尾端金属箍；两手握住同一连续柄段，腕掌可信。原图画面左手靠头端，画面右手靠尾端，按自然持斧延续不另立H1前后规则。",
+        "scale_lock": "长斧横跨躯干并伸出两侧，斧头为明显宽重级别；不缩成007单手斧或增加双刃。完整斧头及柄尾留边，可扩画布。 尺度只对新idle_style_v2身体归一化，不沿用旧idle_v1长身作比例标准。",
+        "style_lock": "低魔中世纪组织性大块像素簇、硬边有限色阶，锈斑为稀疏成组块面；沿新锚紧凑体块，动作变化不恢复旧长腹或细密自然主义。"
+      },
+      "gap_reason": "现有set还只是肩外准备，recover已回到低收；没有双肘举高、长斧重心抬到盔顶以上而身体向后脚蓄住的强蓄势轮廓。新增高位承载，不把已有肩外set仅旋转几度。",
+      "conceptual_neighbors": {
+        "nearest_old_pose": "axe_set",
+        "comparison_or_possible_settle_pose": "axe_recover",
+        "relationship": "最近邻帧是axe_set，补更高的蓄劈准备；axe_recover作为未来下行后可能回收状态的对照，不声称中间挥落已被绘出。",
+        "contiguous_frames_verified": false
+      },
+      "pose_mechanics": {
+        "line_of_action": "保留亡卒塌肩和紧凑胸腹，胸廓微转、髋回到后脚上方；抬臂不变成活人士兵挺胸军姿或拉长腰身。",
+        "arms_and_grips": "沿原图画面左侧近头端手、右侧近柄尾手的分工；双手均提高，近头端手至额侧上方，后手至上胸侧，双肘共同举起支撑。长柄从左上斧头连到右下柄尾，双拳分开且腕向可解释；允许自然握距小调，不颠倒承载顺序。",
+        "support_and_contacts": "画面右后足整底承载更多，右膝屈、髋在两足基底之内；左前残靴/露趾足仍接触平面做平衡。两足分开，重斧不以头盔或肩甲硬托，不能单手悬举。",
+        "prop_path": "整个斧头高于盔顶且偏左外空，宽刃、长柄和尾箍仍同一尺寸级别；柄不穿脸，斧头不靠裁切显示高度。",
+        "readability_priority": "高斧、大幅双肘上提、后脚接重形成统一的蓄势；斧高于盔是易读证据，不以一个像素高度差替代动作。"
+      },
+      "pass_conditions": [
+        "与axe_set并排能明确看见双手上提和重斧过盔高位，而非沿旧肩外姿微调。",
+        "两手一柄、腕肘肩承载闭合，后脚支撑成立，完整斧刃与尾箍留边。",
+        "保留idle_style_v2粗簇紧凑肉体和缺损甲，绝不回退旧idle_v1的长腹密纹。"
+      ],
+      "hard_fail_conditions": [
+        "一手离柄、柄折断/穿头、斧头缩成007短斧，或两臂不可能承载高位。",
+        "只提高斧头贴图、手臂/重心基本照抄axe_set，或者以裁切掩盖斧头与柄尾。"
+      ],
+      "risk_notes": [
+        "高举巨斧的画幅需求较大，要扩画幅留完整性，不压短斧柄。",
+        "头端手和尾端手的拓扑应保留，但允许正常透视遮挡及自然握距，不立超出可见证据的单点刚性规则。"
+      ],
+      "canon_exclusions": [
+        "不把普通病人画成亡卒，不采用现代尸袋/防护服。",
+        "不写明是已死剧情NPC、事故死者身份或某军团历史。"
+      ],
+      "planned_prompt": {
+        "status": "not_executed",
+        "text": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：新锚粗簇灰蜡肉脸、深眼窝、松张口与浅黄齿、露耳颈，锈裂盔仍有大缺损；塌肩前倾、缩短胸腹的紧凑亡卒。肉脸和肉腿仍清楚，不退回旧高频写实噪纹或换纯骷髅。 新锚大块锈褐/铁灰裂甲、画面左叠片肩护、画面右破赭布露肩；旧皮带与粗簇碎布裙、护腕膝片、裹踝残靴和露趾实体足。少量原有暗伤痕保留，不加新血。 一柄巨大锈铁单侧宽刃长柄斧，斧头缺损/小凹口、长木杆和尾端金属箍；两手握住同一连续柄段，腕掌可信。原图画面左手靠头端，画面右手靠尾端，按自然持斧延续不另立H1前后规则。 长斧横跨躯干并伸出两侧，斧头为明显宽重级别；不缩成007单手斧或增加双刃。完整斧头及柄尾留边，可扩画布。 尺度只对新idle_style_v2身体归一化，不沿用旧idle_v1长身作比例标准。 低魔中世纪组织性大块像素簇、硬边有限色阶，锈斑为稀疏成组块面；沿新锚紧凑体块，动作变化不恢复旧长腹或细密自然主义。\n\n基于新的idle_style_v2锈甲斧亡卒，画一个双手斧高位蓄劈关键阶段。两只手连同双肘都从第二张肩外axe_set进一步抬起：原靠斧头的画面左侧手提高至额侧上方，原靠柄尾的画面右侧手提高至上胸侧，双手依旧分开握同一连续长柄。宽重斧头完整处于盔顶上方的画面左外空，柄向右下延续至清楚尾箍，斧与脸留空。胸廓微转但维持塌重亡卒体态，髋向右后足接重，右后膝屈、双足仍稳触想象平面。真实变化是高位双臂承载和后脚蓄重，不能只把原axe_set的斧贴图抬高。保留新锚粗簇短胸腹、灰蜡肉脸和肉腿、缺盔裂甲、左叠肩甲与右破赭布，不能变纯骨骷髅或修长写实士兵。不要向任何对象挥砍；不添加新伤或飞溅。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+        "file": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/planned_prompts/009_axe_high_load_prompt_v1_NOT_EXECUTED.txt",
+        "sha256": "2d4eaccdf97953791630485ff82455f9c0d4137f1b91fb7888b52e0d81a96b86",
+        "sha256_scope": "UTF-8 prompt file including final newline"
+      },
+      "planned_tool_call": {
+        "tool": "image_gen.imagegen",
+        "executed": false,
+        "arguments": {
+          "prompt": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：新锚粗簇灰蜡肉脸、深眼窝、松张口与浅黄齿、露耳颈，锈裂盔仍有大缺损；塌肩前倾、缩短胸腹的紧凑亡卒。肉脸和肉腿仍清楚，不退回旧高频写实噪纹或换纯骷髅。 新锚大块锈褐/铁灰裂甲、画面左叠片肩护、画面右破赭布露肩；旧皮带与粗簇碎布裙、护腕膝片、裹踝残靴和露趾实体足。少量原有暗伤痕保留，不加新血。 一柄巨大锈铁单侧宽刃长柄斧，斧头缺损/小凹口、长木杆和尾端金属箍；两手握住同一连续柄段，腕掌可信。原图画面左手靠头端，画面右手靠尾端，按自然持斧延续不另立H1前后规则。 长斧横跨躯干并伸出两侧，斧头为明显宽重级别；不缩成007单手斧或增加双刃。完整斧头及柄尾留边，可扩画布。 尺度只对新idle_style_v2身体归一化，不沿用旧idle_v1长身作比例标准。 低魔中世纪组织性大块像素簇、硬边有限色阶，锈斑为稀疏成组块面；沿新锚紧凑体块，动作变化不恢复旧长腹或细密自然主义。\n\n基于新的idle_style_v2锈甲斧亡卒，画一个双手斧高位蓄劈关键阶段。两只手连同双肘都从第二张肩外axe_set进一步抬起：原靠斧头的画面左侧手提高至额侧上方，原靠柄尾的画面右侧手提高至上胸侧，双手依旧分开握同一连续长柄。宽重斧头完整处于盔顶上方的画面左外空，柄向右下延续至清楚尾箍，斧与脸留空。胸廓微转但维持塌重亡卒体态，髋向右后足接重，右后膝屈、双足仍稳触想象平面。真实变化是高位双臂承载和后脚蓄重，不能只把原axe_set的斧贴图抬高。保留新锚粗簇短胸腹、灰蜡肉脸和肉腿、缺盔裂甲、左叠肩甲与右破赭布，不能变纯骨骷髅或修长写实士兵。不要向任何对象挥砍；不添加新伤或飞溅。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+          "referenced_image_paths": [
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/idle_style_v2/rust_axe_restless_idle_style_v2_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_set/rust_axe_restless_axe_set_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_v1/axe_recover/rust_axe_restless_axe_recover_transparent.png"
+          ],
+          "transparent_background": true
+        },
+        "reference_order": [
+          "selected_mother",
+          "axe_set",
+          "axe_recover"
+        ],
+        "must_reverify_snapshot_sha_and_view_each_reference_before_execution": true
+      },
+      "planned_output_directory": "Assets/EnemyDesigns/20261013/second_six/rust_axe_restless/action_continuation_v1/axe_high_load",
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-010",
+      "slug": "broken_shield_wraith",
+      "working_name": "残盾哨影",
+      "pose_id": "spectral_sword_retract",
+      "label": "探剑后屈肘回收",
+      "status": "planned_not_executed_pending_independent_review",
+      "phase": "探出之后的收剑与悬浮后撤阶段",
+      "generation_started": false,
+      "generation_calls": 0,
+      "first_draft_budget": 1,
+      "hard_error_revision_budget": 1,
+      "selected": false,
+      "source_images": [
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/broken_shield_wraith_idle_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/broken_shield_wraith_idle_transparent.png",
+          "sha256": "2dac8c246f71138e5bcd3d0023871fc275866d4e71d4a287f1c9956a0b731f4e",
+          "bytes": 872786,
+          "role": "selected_mother",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            0,
+            26,
+            1005,
+            1536
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:23Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "selected_static",
+          "observation": "母图剑低斜左下、盾在右胸侧，下面两条短钝幽尾分离。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/FINAL_STATUS.json",
+            "sha256": "07a862661f2138ea091daf17b56eabe58b6d974de5b0277e5de7ce01f0595290",
+            "bytes": 1035,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/manifest.json",
+            "sha256": "f1fdf8a976da952943fed4a15d109ccc9256f49ddb81480555cc3e1d19467781",
+            "bytes": 4112,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/QA_INDEPENDENT.json",
+            "sha256": "0e767d8bf588dca8179f3b715828fb656798d4439f2e55fd68a120fc5f5ef240",
+            "bytes": 1563,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_static_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/broken_shield_wraith_spectral_shield_guard_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/broken_shield_wraith_spectral_shield_guard_transparent.png",
+          "sha256": "c2d706105eab3ea49edbede7fd9906a18b18b964826e630b2b82bb937c15d370",
+          "bytes": 931670,
+          "role": "selected_existing_action",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            42,
+            167,
+            980,
+            1283
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:23Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "spectral_shield_guard",
+          "observation": "选中guard首稿仍是低剑，盾较贴胸前，变化保守。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/FINAL_STATUS.json",
+            "sha256": "fb2c0406f73712158116355e0dc332c57dc603c810247319c33c1df3124df577",
+            "bytes": 1525,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/manifest.json",
+            "sha256": "431584d18334a74baaec8a44e31e91a6047f8757e62658a648a141faff53c054",
+            "bytes": 4903,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/QA_INDEPENDENT.json",
+            "sha256": "580a78b09f9bd884fb03f8a129505f83d4d745875ce2e0b8d98ef45d1b24535b",
+            "bytes": 5911,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/broken_shield_wraith_spectral_sword_probe_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/broken_shield_wraith_spectral_sword_probe_transparent.png",
+          "sha256": "90ae912ec97b193b5831f13164163f918e75e6a2c2f552c209ef860bcdf1c5c5",
+          "bytes": 830991,
+          "role": "selected_existing_action",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            106,
+            77,
+            1395,
+            972
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:23Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "spectral_sword_probe",
+          "observation": "选中probe首稿是左臂外伸与近水平探剑，盾收近侧；不是后生成的未选revision。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/FINAL_STATUS.json",
+            "sha256": "a70bdcd2616c11f2a7759aa1e219d66d128d460934f29995f3a8877b6d0d5e53",
+            "bytes": 1521,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/manifest.json",
+            "sha256": "999804212bb2ce8747e7d7c167bd34142e60820f47e476a51279bf0d0ea9b0b0",
+            "bytes": 4878,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/QA_INDEPENDENT.json",
+            "sha256": "8c0e048a954327c635ed459eeb683e15b1fb481c96894e3a832b1b39ccb98dc2",
+            "bytes": 5843,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        }
+      ],
+      "identity_lock": {
+        "face_body": "冷蓝灰面腔和清楚颧鼻、暗眼窝，破盔低顶；宽肩倒梯形幽体，不变暖肉或命名死者肖像。",
+        "clothing": "同色冷蓝灰盔、肩甲、胸前碎布与层叠袍；腰下两条短钝碎尾，中间透空，绝无靴足、腿部承重或拖地长袍。",
+        "props_grip": "画面右持一面大缺口窄长尖底盾影，原大缺口在盾外上侧，裂面保留组织；另一侧一把短直剑，剑身护手柄与拳连续。盾后前臂接合可解释，不把盾当第三臂。",
+        "scale_lock": "长盾近于肩至短尾末端的大体量，剑为单手直剑且比盾短；不缩成007圆盾、不把剑变长枪。双尾锁选定v2短长度级别，尾碎簇可自然变化。"
+      },
+      "gap_reason": "旧两姿都没有把探出的剑臂折回胸肋、剑尖抬到左上外空的回收轮廓。新增回收配合胸廓后倾和短尾轻微反向滞留，不能仅把probe整体向右平移。",
+      "conceptual_neighbors": {
+        "nearest_old_pose": "spectral_sword_probe",
+        "comparison_or_possible_settle_pose": "spectral_shield_guard",
+        "relationship": "以已选probe首稿为最近动作邻帧；收剑后可回到guard的低剑防线，但新图与旧两图仍只是分离的关键阶段概念。",
+        "contiguous_frames_verified": false
+      },
+      "pose_mechanics": {
+        "line_of_action": "脸仍朝左三分之四；胸廓从前探转为小幅向右后收，肩与腰关系改变而不是整图位移。",
+        "arms_and_grips": "原画面左剑臂肘折回身旁，剑拳回到左侧胸肋，短直剑由拳指向左上外空，与脸留缝；原右盾臂保持盾背连接，长盾仍护近侧胸腹。剑柄、拳、护手、剑身链连续。",
+        "support_and_contacts": "无脚、无地面接触。两条短钝分叉尾由同一个腰下幽体相连，尾端可轻向左滞留而胸肩向右收；保持选中母图的短尾级别及中间透空，不画长飘带、第三尾或实体落地腿。",
+        "negative_space": "回收剑仍在身体左外侧，斜上剑身不得穿过脸/盔/盾；盾的外上缺口和尖底保持可辨。",
+        "readability_priority": "折肘、举剑回收、胸廓后收共同读阶段；尾的轻偏只辅助，不以加光雾或大幅尾旋转制造动作。"
+      },
+      "pass_conditions": [
+        "可见probe伸肘到新稿折肘的明确功能变化，剑从平探转为胸侧斜上回收。",
+        "冷色成熟面腔、破盔肩甲、同一缺口长盾及短直剑一致；两短尾自然接腰且无落地足。",
+        "真实alpha浅深底合成可读；透明像素的隐藏RGB不作为可见光晕证据。"
+      ],
+      "hard_fail_conditions": [
+        "仍画低剑guard，或只将probe整体平移，回收核心不存在。",
+        "回收剑穿脸/盾、变长剑或掉握；增脚或第三尾、两尾变扫地长袍。"
+      ],
+      "risk_notes": [
+        "剑抬回胸侧可能和脸/盾挤在一起，要保留有视觉意义的空隙，不强求所有边完全分离。",
+        "010历史多余revision未选，不能因文件更新时间新就替代正选首稿；alpha=0隐藏RGB不得再触发返工。"
+      ],
+      "canon_exclusions": [
+        "不把D09回声改成新亡者签名、认证或复活剧情。",
+        "不画达兰弟弟或任何已死命名人物的形象；不复制原版骑士全套。"
+      ],
+      "planned_prompt": {
+        "status": "not_executed",
+        "text": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：冷蓝灰面腔和清楚颧鼻、暗眼窝，破盔低顶；宽肩倒梯形幽体，不变暖肉或命名死者肖像。 同色冷蓝灰盔、肩甲、胸前碎布与层叠袍；腰下两条短钝碎尾，中间透空，绝无靴足、腿部承重或拖地长袍。 画面右持一面大缺口窄长尖底盾影，原大缺口在盾外上侧，裂面保留组织；另一侧一把短直剑，剑身护手柄与拳连续。盾后前臂接合可解释，不把盾当第三臂。 长盾近于肩至短尾末端的大体量，剑为单手直剑且比盾短；不缩成007圆盾、不把剑变长枪。双尾锁选定v2短长度级别，尾碎簇可自然变化。\n\n只沿母图和已选的两张首稿动作制作一个探剑后屈肘回收阶段，不参考未选revision。角色仍朝左三分之四，原画面左持剑肘明显折回身旁，剑拳从第三张水平探出回到左侧胸肋；同一短直剑斜向左上外空，护手与握拳连续、剑不穿脸。胸肩稍向右后收，原右侧缺口长盾仍贴近胸腹护身并由盾后臂支撑。腰下只保留两条短钝分叉幽尾，尾端可略向左滞留，与后收胸廓形成小幅方向差；两尾之间透明，绝无腿靴或地面支撑。新姿必须由折肘收剑和胸廓后收读出，不能重画第二张低剑guard，也不能平移第三张probe。保留冷蓝灰同色幽体，无光束、光墙、烟云、粒子或拖影。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+        "file": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/planned_prompts/010_spectral_sword_retract_prompt_v1_NOT_EXECUTED.txt",
+        "sha256": "87dcdbc89ddc85a67d9e41db2877bab6f41dceb6296d59b506b6a0193350a1fc",
+        "sha256_scope": "UTF-8 prompt file including final newline"
+      },
+      "planned_tool_call": {
+        "tool": "image_gen.imagegen",
+        "executed": false,
+        "arguments": {
+          "prompt": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：冷蓝灰面腔和清楚颧鼻、暗眼窝，破盔低顶；宽肩倒梯形幽体，不变暖肉或命名死者肖像。 同色冷蓝灰盔、肩甲、胸前碎布与层叠袍；腰下两条短钝碎尾，中间透空，绝无靴足、腿部承重或拖地长袍。 画面右持一面大缺口窄长尖底盾影，原大缺口在盾外上侧，裂面保留组织；另一侧一把短直剑，剑身护手柄与拳连续。盾后前臂接合可解释，不把盾当第三臂。 长盾近于肩至短尾末端的大体量，剑为单手直剑且比盾短；不缩成007圆盾、不把剑变长枪。双尾锁选定v2短长度级别，尾碎簇可自然变化。\n\n只沿母图和已选的两张首稿动作制作一个探剑后屈肘回收阶段，不参考未选revision。角色仍朝左三分之四，原画面左持剑肘明显折回身旁，剑拳从第三张水平探出回到左侧胸肋；同一短直剑斜向左上外空，护手与握拳连续、剑不穿脸。胸肩稍向右后收，原右侧缺口长盾仍贴近胸腹护身并由盾后臂支撑。腰下只保留两条短钝分叉幽尾，尾端可略向左滞留，与后收胸廓形成小幅方向差；两尾之间透明，绝无腿靴或地面支撑。新姿必须由折肘收剑和胸廓后收读出，不能重画第二张低剑guard，也不能平移第三张probe。保留冷蓝灰同色幽体，无光束、光墙、烟云、粒子或拖影。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+          "referenced_image_paths": [
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/idle_v1/broken_shield_wraith_idle_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_shield_guard/broken_shield_wraith_spectral_shield_guard_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_v1/spectral_sword_probe/broken_shield_wraith_spectral_sword_probe_transparent.png"
+          ],
+          "transparent_background": true
+        },
+        "reference_order": [
+          "selected_mother",
+          "spectral_shield_guard",
+          "spectral_sword_probe"
+        ],
+        "must_reverify_snapshot_sha_and_view_each_reference_before_execution": true
+      },
+      "planned_output_directory": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_continuation_v1/spectral_sword_retract",
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-011",
+      "slug": "swollen_throat_bloodkin",
+      "working_name": "膨喉血徒",
+      "pose_id": "throat_forward_release",
+      "label": "喉胸前送释放",
+      "status": "planned_not_executed_pending_independent_review",
+      "phase": "蓄势后的身体前送关键阶段，口前空白无投射物",
+      "generation_started": false,
+      "generation_calls": 0,
+      "first_draft_budget": 1,
+      "hard_error_revision_budget": 1,
+      "selected": false,
+      "source_images": [
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/swollen_throat_bloodkin_idle_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/swollen_throat_bloodkin_idle_transparent.png",
+          "sha256": "bb2e84f97529ae03ee96fa8dd1e9ed8f76b059905e595846cad6882598711949",
+          "bytes": 1148241,
+          "role": "selected_mother",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            215,
+            66,
+            877,
+            1493
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:39Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "selected_static",
+          "observation": "母图喉胸形成竖长椭圆，头抬、短臂垂腹侧。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/FINAL_STATUS.json",
+            "sha256": "394fad60c08659619d18f103f02067559d023e2909a7c4ac39515ef4ebbd81a0",
+            "bytes": 1246,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/manifest.json",
+            "sha256": "365842565295a8ffb4a52986aec0d25e8c2dad262794aabb39bcc0d75747f016",
+            "bytes": 2579,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/QA_INDEPENDENT.json",
+            "sha256": "fb48b99ece8a057e1df2458c95043f08ce185f85043a9bfe3930bbb3cb90499a",
+            "bytes": 1379,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_static_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/swollen_throat_bloodkin_throat_gather_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/swollen_throat_bloodkin_throat_gather_transparent.png",
+          "sha256": "9cb8b57838d64ec9a9b29127feb7729fe48639c7814a1faf7c31c4e9cecc8169",
+          "bytes": 1190383,
+          "role": "selected_existing_action",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            151,
+            77,
+            927,
+            1483
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:39Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "throat_gather",
+          "observation": "throat_gather胸喉更高、双臂屈收腹侧，双足展开。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/FINAL_STATUS.json",
+            "sha256": "c2e8c96dba055abd58bf2a7a324cfecf5e950ed8252cde186dbf7385237292b9",
+            "bytes": 1267,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/manifest.json",
+            "sha256": "18d9437a10c5bfbd284f5087686e8310d06bbe4cf9b2587e40c83f2d1ef10ae2",
+            "bytes": 2121,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/QA_INDEPENDENT.json",
+            "sha256": "a1961efceee83f890948cf4abc5518cfd97507db1d1ab1225954d9f25e71574c",
+            "bytes": 2826,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/swollen_throat_bloodkin_throat_lower_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/swollen_throat_bloodkin_throat_lower_transparent.png",
+          "sha256": "56233a39417e8e945a83d70b99e78240678a84c2eeaaa6691809f9d28feaff46",
+          "bytes": 1163213,
+          "role": "selected_existing_action",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            27,
+            196,
+            994,
+            1395
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:39Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "throat_lower",
+          "observation": "throat_lower屈膝很低但头仍抬，上臂下放外展；喉胸仍多为竖直大体块。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/FINAL_STATUS.json",
+            "sha256": "70645f18ed9621dfe6226946d3a1edacb893ffd636bbbdb4765fa9fb4dc3bfa4",
+            "bytes": 1265,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/manifest.json",
+            "sha256": "4e000cbce380eff49510ca7d01475eb2d2e0990fbb1e7990ca02947a5ce3b711",
+            "bytes": 2115,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/QA_INDEPENDENT.json",
+            "sha256": "b2192f9f72434ce34955e70c19a8c7c8df9fbbb67f55bcdca11005f004b192fa",
+            "bytes": 2821,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        }
+      ],
+      "identity_lock": {
+        "face_body": "灰紫褐非人皮肉、窄暗红眼、短尖耳和一颗露短牙；硕大椭圆喉胸从下颌延伸至腹上，头仍独立清楚；两短厚臂与双短弯腿，不能改普通胖人或首组长臂大背峰。",
+        "clothing": "画面右肩到腰一片炭褐破布，腰下撕裂布遮盖；皮肉上的钝皱与暗鳞状块保留主要分布，不逐点锁纹。",
+        "props_grip": "无武器无容器；双手短指、双趾爪足，不新增长舌/口器/触手/第三臂。",
+        "scale_lock": "喉胸是最大前方体块，短臂长度及小头相对体块关系沿锚；蓄势允许小幅组织压伸，不无限充气、不硬套人类头身比例。"
+      },
+      "gap_reason": "已有一高一低两个储备姿，但没有把喉胸整体向左前送、使头与前肩越向前方而腿承接的释放方向。新增整体前送，不依赖张嘴/眼神，也不画喷吐效果。",
+      "conceptual_neighbors": {
+        "nearest_old_pose": "throat_gather",
+        "comparison_or_possible_settle_pose": "throat_lower",
+        "relationship": "gather为最近蓄势邻帧，新图拟表达其后向空处释放的身体阶段；lower为低身回稳的对照。不是在补验已发生的喷吐、命中或技能机制。",
+        "contiguous_frames_verified": false
+      },
+      "pose_mechanics": {
+        "line_of_action": "从后收竖立改为髋、胸、头共同指向左前的斜线；头下颌略收且跟随喉胸前送，不能保持旧抬头蹲姿。脖颈不单独拉成长管。",
+        "arms_and_grips": "双短厚臂仍连接同侧肩；一臂略后收、一臂外下平衡，手不着地、不变长爪，不让双臂覆盖喉胸主轮廓。",
+        "support_and_contacts": "画面左前爪足整掌着地承担前送重心，左膝弯；右后足前掌仍接触、跟可轻卸重。髋不冲出两足可支持范围，胸大体块由腿接住，无跪地或四足化。",
+        "organ_shape": "喉胸仍为单个连续的大椭圆体，随躯干前倾和小幅回缩改变方向，不能夸张瘪袋或充气增倍。原小头完整、短尖耳与原短牙保留；嘴可自然小张但口内简单无新器官。",
+        "negative_space": "口前完全空白，不画液体、血、气雾、射线、音波、目标或受害者；前手不遮头脸。",
+        "readability_priority": "即使遮住嘴部，新稿也应靠头胸前送、单侧接重与双短臂平衡看出阶段；表情不是主要差异。"
+      },
+      "pass_conditions": [
+        "与旧lower相比不是同一深蹲：头胸明显前送、前腿接重，整体力线转向左前。",
+        "只有两短臂、两短腿和原喉胸体块，原非人脸与右肩破布身份保持。",
+        "口前无喷吐物，重心与接触清楚，未以怪异肌体/口器增生替代动作。"
+      ],
+      "hard_fail_conditions": [
+        "只张嘴而旧gather或lower姿势照搬；释放方向在缩小后无法读出。",
+        "头或颈拉长、喉胸倍增/崩塌、额外舌/嘴/触手、手撑地成四足，或新增血液投射。"
+      ],
+      "risk_notes": [
+        "无投射特效时释放最易与前倾蹲混淆，必须检查从支撑足到喉胸/头的整体送出。",
+        "生物体块只做有限姿态压缩，不声称真实生理或任何原版技能。"
+      ],
+      "canon_exclusions": [
+        "不以肥胖、残障、真实疾病等同邪恶；不画患者转化过程。",
+        "不继承Saggul技能数值、猩红瘟疫病因或全国传播结论；不绑定任何患者姓名。"
+      ],
+      "planned_prompt": {
+        "status": "not_executed",
+        "text": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：灰紫褐非人皮肉、窄暗红眼、短尖耳和一颗露短牙；硕大椭圆喉胸从下颌延伸至腹上，头仍独立清楚；两短厚臂与双短弯腿，不能改普通胖人或首组长臂大背峰。 画面右肩到腰一片炭褐破布，腰下撕裂布遮盖；皮肉上的钝皱与暗鳞状块保留主要分布，不逐点锁纹。 无武器无容器；双手短指、双趾爪足，不新增长舌/口器/触手/第三臂。 喉胸是最大前方体块，短臂长度及小头相对体块关系沿锚；蓄势允许小幅组织压伸，不无限充气、不硬套人类头身比例。\n\n新增喉胸前送释放的一个身体关键阶段，口前必须空白，没有任何喷出物。原非人怪物从第二张抬喉蓄势向画面左前送出头与胸，整个喉胸椭圆随躯干倾向左前，头下颌略收并跟随前送，而不是第三张抬头低蹲的重复。画面左前爪足整掌接重、左膝自然屈，右后足前掌仍触想象支撑平面、脚跟可轻卸重；髋随前腿接住重量。双短厚臂一侧稍后收、另一侧外下平衡，两手均离地。单个硕大喉胸只有限回缩、不倍增也不瘪塌，头与短颈不被拉长。可轻张原口但不是靠嘴表情表现动作，原短牙和耳保留。保留灰紫褐非人皮肉、主要暗鳞状簇、原右肩与腰下破布，只有两臂两腿，不增舌、额外嘴或触手。无受害者、血液、飞沫、气雾或法术特效。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+        "file": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/planned_prompts/011_throat_forward_release_prompt_v1_NOT_EXECUTED.txt",
+        "sha256": "e30cf6d5390592dbc6ad8796a920d27b131c231c2aa08b738c046350f8f49ec7",
+        "sha256_scope": "UTF-8 prompt file including final newline"
+      },
+      "planned_tool_call": {
+        "tool": "image_gen.imagegen",
+        "executed": false,
+        "arguments": {
+          "prompt": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：灰紫褐非人皮肉、窄暗红眼、短尖耳和一颗露短牙；硕大椭圆喉胸从下颌延伸至腹上，头仍独立清楚；两短厚臂与双短弯腿，不能改普通胖人或首组长臂大背峰。 画面右肩到腰一片炭褐破布，腰下撕裂布遮盖；皮肉上的钝皱与暗鳞状块保留主要分布，不逐点锁纹。 无武器无容器；双手短指、双趾爪足，不新增长舌/口器/触手/第三臂。 喉胸是最大前方体块，短臂长度及小头相对体块关系沿锚；蓄势允许小幅组织压伸，不无限充气、不硬套人类头身比例。\n\n新增喉胸前送释放的一个身体关键阶段，口前必须空白，没有任何喷出物。原非人怪物从第二张抬喉蓄势向画面左前送出头与胸，整个喉胸椭圆随躯干倾向左前，头下颌略收并跟随前送，而不是第三张抬头低蹲的重复。画面左前爪足整掌接重、左膝自然屈，右后足前掌仍触想象支撑平面、脚跟可轻卸重；髋随前腿接住重量。双短厚臂一侧稍后收、另一侧外下平衡，两手均离地。单个硕大喉胸只有限回缩、不倍增也不瘪塌，头与短颈不被拉长。可轻张原口但不是靠嘴表情表现动作，原短牙和耳保留。保留灰紫褐非人皮肉、主要暗鳞状簇、原右肩与腰下破布，只有两臂两腿，不增舌、额外嘴或触手。无受害者、血液、飞沫、气雾或法术特效。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+          "referenced_image_paths": [
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/idle_v1/swollen_throat_bloodkin_idle_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_gather/swollen_throat_bloodkin_throat_gather_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_v1/throat_lower/swollen_throat_bloodkin_throat_lower_transparent.png"
+          ],
+          "transparent_background": true
+        },
+        "reference_order": [
+          "selected_mother",
+          "throat_gather",
+          "throat_lower"
+        ],
+        "must_reverify_snapshot_sha_and_view_each_reference_before_execution": true
+      },
+      "planned_output_directory": "Assets/EnemyDesigns/20261013/second_six/swollen_throat_bloodkin/action_continuation_v1/throat_forward_release",
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-012",
+      "slug": "hushed_bell_cultist",
+      "working_name": "缄声执铃者",
+      "pose_id": "bell_outward_swing",
+      "label": "手铃外摆端点",
+      "status": "planned_not_executed_pending_independent_review",
+      "phase": "提铃与低收之间的外摆释放端点",
+      "generation_started": false,
+      "generation_calls": 0,
+      "first_draft_budget": 1,
+      "hard_error_revision_budget": 1,
+      "selected": false,
+      "source_images": [
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/hushed_bell_cultist_style_v2_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/hushed_bell_cultist_style_v2_transparent.png",
+          "sha256": "1814c1e1a3155fd7c2be0bbb65e818de4b78f4eda5ae3cf43d8acb53b5660875",
+          "bytes": 766344,
+          "role": "selected_mother",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            242,
+            93,
+            899,
+            1385
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:56Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "selected_static",
+          "observation": "新idle_style_v2低帽成熟脸、粗簇短袍，铃在画面左手低垂。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/FINAL_STATUS.json",
+            "sha256": "66a03aa1cdf0418d91ef1a2d02db94c78d70e44fe9323b81ea56375ac0a0deef",
+            "bytes": 1508,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/manifest.json",
+            "sha256": "18558a84e9e60acbc09eea52f01a427c152d85211384bbb620ce900f369dbea7",
+            "bytes": 1930,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/QA_INDEPENDENT.json",
+            "sha256": "b73aa5163aa03a546b5b40d62bb57170c20cd933e4f8e3a15e037d397892c78a",
+            "bytes": 1856,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_static_concept_after_root_style_approval"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/hushed_bell_cultist_bell_raise_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/hushed_bell_cultist_bell_raise_transparent.png",
+          "sha256": "2245766b41de1dba8f1a208f2c72526cb38e0e3d31a053686eac9a3071f74241",
+          "bytes": 680346,
+          "role": "selected_existing_action",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            84,
+            91,
+            912,
+            1357
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:56Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "bell_raise",
+          "observation": "bell_raise持铃肘弯、手在脸侧外方，铃悬在胸旁，铃口大体朝下。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/FINAL_STATUS.json",
+            "sha256": "7a4f7c11a3eb59ecd67b38e9dcd0437c918d4af227cb76a3d3e2abfdddff1eee",
+            "bytes": 1252,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/manifest.json",
+            "sha256": "03ea835b7a5e83550c45f52409d9cf1f24ce82472485d422e05818f845b7ce4e",
+            "bytes": 2102,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/QA_INDEPENDENT.json",
+            "sha256": "de52d936b7f47c58d589a0835a17d2cdf1b47709d629ba79e9a025422242799d",
+            "bytes": 2871,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        },
+        {
+          "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/hushed_bell_cultist_bell_settle_transparent.png",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/hushed_bell_cultist_bell_settle_transparent.png",
+          "sha256": "b72e487652f8bd59c065577fdfedaeed57443e77918400a3a0d7cb3587313798",
+          "bytes": 687963,
+          "role": "selected_existing_action",
+          "size": [
+            1118,
+            1407
+          ],
+          "mode": "RGBA",
+          "alpha_bbox": [
+            230,
+            100,
+            877,
+            1361
+          ],
+          "current_planner_visual_inspection": {
+            "actually_viewed": true,
+            "viewed_utc": "2026-10-14T04:09:56Z",
+            "scope": "Actual individual selected transparent PNG opened with view_image during this planning task; entire subject inspected."
+          },
+          "pose_id": "bell_settle",
+          "observation": "bell_settle同手低收近腰腿、站步稍撤，另一空手在带扣附近。",
+          "selection_authority": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/FINAL_STATUS.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/FINAL_STATUS.json",
+            "sha256": "3407fd55a594e0a03010680c26b5beabeec28ad866864c0ec3ce046db874484a",
+            "bytes": 1256,
+            "role": "final_selection_authority"
+          },
+          "candidate_manifest": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/manifest.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/manifest.json",
+            "sha256": "afdf4006c0c94991e69cbd6dea17b5bd395cca2a32d22ea5126e434a0d7e41cc",
+            "bytes": 2110,
+            "role": "frozen_or_final_candidate_manifest"
+          },
+          "independent_review": {
+            "source_path": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/QA_INDEPENDENT.json",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/QA_INDEPENDENT.json",
+            "sha256": "8f06046879ab57bb819ac79f211b05473bdc8e2ff281961323eca982292e6bd6",
+            "bytes": 2878,
+            "role": "historical_independent_review"
+          },
+          "historical_independent_result": "pass_independent_keypose_concept"
+        }
+      ],
+      "identity_lock": {
+        "face_body": "新锚低炭灰圆帽、额际短棕卷发、成熟方窄颌与浓眉长鼻、闭嘴侧眼；头较大而胸腹腿紧凑，仍是成年脸。不得回退旧012约7头身修长自然主义，也不幼化；近似风格对齐而非精确1:1.5。",
+        "clothing": "炭灰圆领宽袖膝袍、浅领口，污白斜肩带由画面左肩至右腰结/短穗，棕皮带方扣、短棕裤与双旧靴；保留新锚简洁大块衣褶，避免细密布料噪点。",
+        "props_grip": "原画面左手持一只暗铜铃，木柄/握拳/钟肩/钟口内单铃舌连续；另一手在胸腹斜带附近，可自然移位但不新增书卷。",
+        "scale_lock": "铜钟体约半前臂长度级别、完整柄使总长增加；保持小手铃，不缩成挂坠或变大香炉/链球。钟口向下或自然小倾，不以复制第二铃表达摇动。 尺度只对新idle_style_v2身体归一化，不沿用旧idle_v1长身作比例标准。",
+        "style_lock": "沿新锚粗簇、成熟大头短身与有限明暗色阶，和007/008相邻观看时应属于同系列；不强迫所有成人完全同一模板。"
+      },
+      "gap_reason": "已有提起与落低，但没有把持铃臂主动向外展开、铃体随手腕小倾的摆动端点。新增外展前臂与身体接重，而不是再提高/降低同一竖直持铃姿。",
+      "conceptual_neighbors": {
+        "nearest_old_pose": "bell_raise",
+        "comparison_or_possible_settle_pose": "bell_settle",
+        "relationship": "以bell_raise为最近邻帧，提出向左外摆后可收向bell_settle的关键端点；没有验证声响、铃舌碰撞、帧序或连续动画。",
+        "contiguous_frames_verified": false
+      },
+      "pose_mechanics": {
+        "line_of_action": "胸廓稍向持铃侧转，左前脚接重、另一脚后稳，肩线跟随外摆但头仍朝左三分之四。",
+        "arms_and_grips": "原画面左手继续包握同一木柄，肩肘向外展开，手位于身体左侧、胸腹之间；肘比raise明显展开但不锁死。铃柄与手腕同向自然斜转，钟体在手的左下外侧，钟口斜下，原单铃舌可自然偏而不增殖。空手在右胸腹斜带附近，不触铃。",
+        "support_and_contacts": "画面左前靴整底落地、膝微屈接住侧前重量；右后靴同样稳触平面，站距略开而非settle收步。不需要跨步夸张扭腰或双脚腾空。",
+        "negative_space": "持铃手腕必须从袖口连续伸出，铃与袍、脸、膝有清楚空隙，完整木柄和钟体同一轴系，不将手铃改为链坠。",
+        "readability_priority": "外展的肩肘链、斜下钟体和前脚接重一起读成外摆端点；单独改变铃口几个像素或微表情不算新动作。"
+      },
+      "pass_conditions": [
+        "与raise弯肘高提、settle低垂收铃形成第三种明确外伸姿，整个手臂与铃的轮廓在缩小后仍可读。",
+        "袖口—腕—握拳—木柄—钟肩连续，单手小铃体量不漂移；另一手保持空手。",
+        "沿idle_style_v2大头短身与成熟五官，不回退旧长身；低帽、污白左肩至右腰斜带和双靴一致。"
+      ],
+      "hard_fail_conditions": [
+        "重画高提或低收，只换眼神/铃口倾角；外摆没有肩肘与承重变化。",
+        "铃改手/脱柄/增加链条、复制第二铃或铃舌，或袖口断腕，钟体粘脸腿。"
+      ],
+      "risk_notes": [
+        "外摆容易被画成拿铃当武器前刺，应读作自然单手摆动端点，手腕不过折。",
+        "铃舌的精确碰壁时刻没有参考，不把它规定成单点接触硬门槛，也不以声波代替动作。"
+      ],
+      "canon_exclusions": [
+        "不把圣会、钟站维护者或护理者普遍画成邪教徒。",
+        "不新增召魂、献祭、治愈承诺或D09声源答案；工作名不意味着舌头被割。"
+      ],
+      "planned_prompt": {
+        "status": "not_executed",
+        "text": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：新锚低炭灰圆帽、额际短棕卷发、成熟方窄颌与浓眉长鼻、闭嘴侧眼；头较大而胸腹腿紧凑，仍是成年脸。不得回退旧012约7头身修长自然主义，也不幼化；近似风格对齐而非精确1:1.5。 炭灰圆领宽袖膝袍、浅领口，污白斜肩带由画面左肩至右腰结/短穗，棕皮带方扣、短棕裤与双旧靴；保留新锚简洁大块衣褶，避免细密布料噪点。 原画面左手持一只暗铜铃，木柄/握拳/钟肩/钟口内单铃舌连续；另一手在胸腹斜带附近，可自然移位但不新增书卷。 铜钟体约半前臂长度级别、完整柄使总长增加；保持小手铃，不缩成挂坠或变大香炉/链球。钟口向下或自然小倾，不以复制第二铃表达摇动。 尺度只对新idle_style_v2身体归一化，不沿用旧idle_v1长身作比例标准。 沿新锚粗簇、成熟大头短身与有限明暗色阶，和007/008相邻观看时应属于同系列；不强迫所有成人完全同一模板。\n\n基于新的idle_style_v2缄声执铃者，画同一手铃向左外摆的清晰端点。原画面左持铃手始终包握同一木柄，肩肘主动向画面左外展开，肘比第二张bell_raise明显展开但不锁死，手在胸腹之间的外侧，不能仍举在脸旁。手腕自然小幅斜转，木柄与同一钟肩连续，钟体位于手的左下外空，铃口斜向下，只有原单铃舌。胸廓微随持铃侧转，左前靴整底接重、膝稍屈，右后靴稳住且站距略开；另一只空手仍在右胸腹斜带附近。动作必须靠外展肩肘、斜下铃体和脚下接重一起读成外摆端点，不是第三张低收姿或第二张高提姿的微调。保留成熟脸、低圆帽、粗簇紧凑短身、灰膝袍、左肩至右腰污白斜带和双靴。铃不碰人、不触衣腿，不画声波、残影、法阵或召唤物。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+        "file": "Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/planned_prompts/012_bell_outward_swing_prompt_v1_NOT_EXECUTED.txt",
+        "sha256": "823f8027afb2a9edc968686f3f9ace3a0c04f5b452e9904167dc6e217f21b377",
+        "sha256_scope": "UTF-8 prompt file including final newline"
+      },
+      "planned_tool_call": {
+        "tool": "image_gen.imagegen",
+        "executed": false,
+        "arguments": {
+          "prompt": "生成一张完整单角色的原创低魔中世纪像素美术动作关键阶段概念，原生透明背景。参考1是当前唯一选中母图，用于身份、衣具、道具、身体比例和像素组织；参考2、3是当前已选的两张旧动作，用于理解阶段与避免重复，不是拼图模板。保持同一角色朝左轻三分之四，不镜像、不换手或换装备，不复制第二角色。脸、头顶、手、脚或短幽尾、所有道具末端完整留透明余量，按动作需要扩展画幅，不能靠压缩身体或缩短武器塞进画布。保持有组织的像素簇和有限色阶，不加摄影级微纹、不以模糊或滤镜掩盖问题。\n\n角色身份与装备保持：新锚低炭灰圆帽、额际短棕卷发、成熟方窄颌与浓眉长鼻、闭嘴侧眼；头较大而胸腹腿紧凑，仍是成年脸。不得回退旧012约7头身修长自然主义，也不幼化；近似风格对齐而非精确1:1.5。 炭灰圆领宽袖膝袍、浅领口，污白斜肩带由画面左肩至右腰结/短穗，棕皮带方扣、短棕裤与双旧靴；保留新锚简洁大块衣褶，避免细密布料噪点。 原画面左手持一只暗铜铃，木柄/握拳/钟肩/钟口内单铃舌连续；另一手在胸腹斜带附近，可自然移位但不新增书卷。 铜钟体约半前臂长度级别、完整柄使总长增加；保持小手铃，不缩成挂坠或变大香炉/链球。钟口向下或自然小倾，不以复制第二铃表达摇动。 尺度只对新idle_style_v2身体归一化，不沿用旧idle_v1长身作比例标准。 沿新锚粗簇、成熟大头短身与有限明暗色阶，和007/008相邻观看时应属于同系列；不强迫所有成人完全同一模板。\n\n基于新的idle_style_v2缄声执铃者，画同一手铃向左外摆的清晰端点。原画面左持铃手始终包握同一木柄，肩肘主动向画面左外展开，肘比第二张bell_raise明显展开但不锁死，手在胸腹之间的外侧，不能仍举在脸旁。手腕自然小幅斜转，木柄与同一钟肩连续，钟体位于手的左下外空，铃口斜向下，只有原单铃舌。胸廓微随持铃侧转，左前靴整底接重、膝稍屈，右后靴稳住且站距略开；另一只空手仍在右胸腹斜带附近。动作必须靠外展肩肘、斜下铃体和脚下接重一起读成外摆端点，不是第三张低收姿或第二张高提姿的微调。保留成熟脸、低圆帽、粗簇紧凑短身、灰膝袍、左肩至右腰污白斜带和双靴。铃不碰人、不触衣腿，不画声波、残影、法阵或召唤物。\n\n这是一张新的可读关键阶段，不是连续三帧循环、游戏内动画或装备绑定证明。单独重画真实姿态，不将参考整体平移、旋转、缩放，也不以微表情作为主要变化。没有环境、地面投影、文字、边框、受害者、碰撞命中、血液飞溅、魔法粒子、速度线或拖影。衣褶和像素小差异允许自然发生；优先保证整体动作、支撑、肢体连接和道具握持可读，不追求逐像素复制。",
+          "referenced_image_paths": [
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/idle_style_v2/hushed_bell_cultist_style_v2_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_raise/hushed_bell_cultist_bell_raise_transparent.png",
+            "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/EnemyDesigns/20261013/second_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_v1/bell_settle/hushed_bell_cultist_bell_settle_transparent.png"
+          ],
+          "transparent_background": true
+        },
+        "reference_order": [
+          "selected_mother",
+          "bell_raise",
+          "bell_settle"
+        ],
+        "must_reverify_snapshot_sha_and_view_each_reference_before_execution": true
+      },
+      "planned_output_directory": "Assets/EnemyDesigns/20261013/second_six/hushed_bell_cultist/action_continuation_v1/bell_outward_swing",
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false
+    }
+  ],
+  "remaining_after_this_plan": [
+    "Independent planning review and parent generation start are pending.",
+    "All six first drafts remain unexecuted; no output image, selection or delivery claim is made.",
+    "Any future animation continuity, anchors, equipment compatibility or runtime acceptance requires separate actual evidence."
+  ]
+}

@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T19:02:25.559361+00:00",
+  "asset_batch": "20261013",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "status": "production_briefs_ready_waiting_for_parent_explicit_generation_start",
+  "execution_gate": {
+    "generation_authorized_now": false,
+    "condition": "新剧情人物阶段收尾完成后，主任务明确启动本批，才能调用生图；此JSON仅为可绘brief，不是开工指令。",
+    "concept_count": 6,
+    "images_per_concept": 1,
+    "animation_frames_now": 0,
+    "new_story_outcomes": 0
+  },
+  "scope": "六种原创敌人美术代表，每类首轮仅一张全身静态待机概念。分组服务视觉生产，不是原版六大阵营，不加入运行包。",
+  "source_integrity": {
+    "method": "当前工作树文件逐一SHA-256；snapshot_head只是仓库基线，未提交文件另由内容哈希锁定。",
+    "research_manifest": {
+      "path": "Assets/EnemyDesigns/reference/20261013/sources.json",
+      "sha256": "27e979ae74c13331b54f6d88c2a773ec178ac82fdabcc1a6b6ac17dae8e00f58"
+    },
+    "matrix": {
+      "path": "Assets/EnemyDesigns/reference/20261013/README.md",
+      "sha256": "26d565dfdc20fd81da211a7545e2d769eff6107821dc0ff1063c9c1b91f9d395"
+    },
+    "project_sources": {
+      "F03": {
+        "path": "design/03_势力/势力_灰色军团地方公议.md",
+        "sha256": "ec8f96058a5f51393645bbf0d8fe5655ea8f0291e83da86146e0d68ffdd3a70c"
+      },
+      "F07": {
+        "path": "design/03_势力/势力_苍白债契.md",
+        "sha256": "97c0e31ffee8d3a753b5ebf0006c4536a1776ccefe73ce9b344672482408f98a"
+      },
+      "IDES": {
+        "path": "design/01_原作基线/地点基线_伊德斯.md",
+        "sha256": "8d1a0dbe7ca15ae3a57d22710e8169d04c971edfce94060b1a76362c1f2953c9"
+      },
+      "LORE": {
+        "path": "design/01_原作基线/世界背景与译名.md",
+        "sha256": "c12cd11e887fc24a5a1cd0c1b49f04cdfaf10d3d8e1bcb162e557a8e4ab8d4e8"
+      },
+      "D02": {
+        "path": "design/08_副本/台本/台本_D02_旧渠检修墓室.md",
+        "sha256": "22d8186672dc7b30c6a229c3051e2a991cd0696e7568b36b104fe7b1b1f469d2"
+      },
+      "D07": {
+        "path": "design/08_副本/台本/台本_D07_灰烬疫所.md",
+        "sha256": "0e489ff8f4ecb13dee10667e38bb08af50bed82a9e20d03f6840212d2942cec3"
+      },
+      "D09": {
+        "path": "design/08_副本/台本/台本_D09_无名修院回声厅.md",
+        "sha256": "69918d9571a64835ce3ca1c36ec080b1a764e8376568a73a63d209430075811e"
+      },
+      "BRY14": {
+        "path": "design/06_支线/城市支线/台本_CS-BRY-14_地窖之外.md",
+        "sha256": "42c425ba0337409fe3d529377e460202dcb952bffce2725319b870113efe3afb"
+      }
+    }
+  },
+  "style": {
+    "direction": "低魔中世纪；粗而组织清楚的像素簇、少色阶、硬轮廓、有限高光；完整单体透明背景、轻三分之四视角、不画角色卡字/边框/多视图/环境。",
+    "style_sources": [
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+        "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+      },
+      {
+        "path": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+        "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a"
+      },
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+        "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+      }
+    ],
+    "style_reference_visual_inspection": {
+      "date_utc": "2026-10-13",
+      "viewed": [
+        "Sela G raw",
+        "Mia 1:1.5 v2 raw"
+      ],
+      "observed": "Sela G为清楚大簇眉眼鼻面与衣物色块；Mia是紧凑完整成年单体。只借像素簇和可读组织，不复制脸、微笑、发型、服装或全员固定头身比。"
+    },
+    "proportions": "人类保留成熟、短颈、自然肩线、紧凑身材；腐尸靠扭曲与塌肩，幽灵靠无足尾形，吸血异化靠低宽长臂，禁止六个角色共用人类美脸模板。",
+    "palette_note": "颜色为描述性可逆提案，没有从原版提取固定色表。",
+    "artist_reference_gate": "绘制者调用生图前实际查看相关原版公开参考及批准风格图；来源URL与本轮已看证据如下。GIF本轮只核第0帧，不把其余帧当已看。"
+  },
+  "verified_public_references": [
+    {
+      "id": "R01",
+      "name": "Rebel",
+      "source_kind": "community_wiki_secondary",
+      "source_page": "https://stoneshard.com/wiki/Rebel",
+      "image_url": "https://stoneshard.com/wiki/images/e/e3/Rebel.png",
+      "source_date_or_label": "2026-10-13 read; page labels 0.9.1.0 / data 0.9.4.14",
+      "retrieved_at": "2026-10-13",
+      "dimensions": [
+        37,
+        33
+      ],
+      "sha256_at_retrieval": "f36375411e937ea7baf45721be6800f930331d217cdab365314734267d85a2ac",
+      "visually_inspected": true,
+      "inspection_scope": "whole static image",
+      "visual_observation": "紧凑人形、长叉、褐衣、露头；wiki阵营字段Brigand，不作政治阵营独立证据",
+      "original_game_artwork": true,
+      "is_generated": false,
+      "runtime_asset": false,
+      "installed_version_match_verified": false,
+      "persisted_in_repository": false
+    },
+    {
+      "id": "R02",
+      "name": "Goon (Club)",
+      "source_kind": "community_wiki_secondary",
+      "source_page": "https://stoneshard.com/wiki/Goon_(Club)",
+      "image_url": "https://stoneshard.com/wiki/images/a/ae/Goon_%28Club%29.png",
+      "source_date_or_label": "2026-10-13 read",
+      "retrieved_at": "2026-10-13",
+      "dimensions": [
+        26,
+        33
+      ],
+      "sha256_at_retrieval": "b4568b043e1d5033dc3be86162a34dc68e865a302f0ddad677a3e5524ea7b07b",
+      "visually_inspected": true,
+      "inspection_scope": "whole static image",
+      "visual_observation": "褐灰交叠布衣、短棍、明亮肤色、胡须脸；正常人类比例参考",
+      "original_game_artwork": true,
+      "is_generated": false,
+      "runtime_asset": false,
+      "installed_version_match_verified": false,
+      "persisted_in_repository": false
+    },
+    {
+      "id": "R03",
+      "name": "The Restless Dead demonstration",
+      "source_kind": "official_developer_steam",
+      "source_page": "https://store.steampowered.com/news/posts/?appids=625960&enddate=1601569953&feed=steam_community_announcements",
+      "image_url": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/28578038/2a94e1f5fe9094c449a22fd6cec384a0b87b279e.gif",
+      "source_date_or_label": "2020-09 developer post",
+      "retrieved_at": "2026-10-13",
+      "dimensions": [
+        660,
+        330
+      ],
+      "sha256_at_retrieval": "03210fe83265aa90286f4e8dbbbff84fe702e138ab45633bf9fc1418c20e63c6",
+      "visually_inspected": true,
+      "inspection_scope": "frame 0 only",
+      "visual_observation": "只看第0帧：保留肉体的灰褐亡者、伸臂与弯曲姿态；未核完整攻击/复活动画",
+      "original_game_artwork": true,
+      "is_generated": false,
+      "runtime_asset": false,
+      "installed_version_match_verified": false,
+      "persisted_in_repository": false
+    },
+    {
+      "id": "R04",
+      "name": "Mixed Undead lineup",
+      "source_kind": "official_developer_steam",
+      "source_page": "https://store.steampowered.com/news/posts/?appids=625960&enddate=1701797492&feed=steam_community_announcements",
+      "image_url": "https://clan.akamai.steamstatic.com/images/28578038/650c35657891c9309a72809e7ef16638baece399.png",
+      "source_date_or_label": "2023-08-24 Current Progress",
+      "retrieved_at": "2026-10-13",
+      "dimensions": [
+        952,
+        143
+      ],
+      "sha256_at_retrieval": "71bd68b80a81fa460bab3d33ded4edf8a602bb5262cdf844e5168d62ce4eb305",
+      "visually_inspected": true,
+      "inspection_scope": "whole static image",
+      "visual_observation": "混合亡灵参考：最右三名腐化士兵为破铁盔、暗脸、残布甲、长柄武器；不能把整图视为僵尸",
+      "original_game_artwork": true,
+      "is_generated": false,
+      "runtime_asset": false,
+      "installed_version_match_verified": false,
+      "persisted_in_repository": false
+    },
+    {
+      "id": "R05",
+      "name": "Six Wraiths lineup",
+      "source_kind": "official_developer_steam",
+      "source_page": "https://store.steampowered.com/news/posts/?appids=625960&enddate=1701797492&feed=steam_community_announcements",
+      "image_url": "https://clan.akamai.steamstatic.com/images/28578038/36f7778d9dce7866d18c1a83124a2bdaf26710d6.png",
+      "source_date_or_label": "2023-08-24 Current Progress",
+      "retrieved_at": "2026-10-13",
+      "dimensions": [
+        791,
+        190
+      ],
+      "sha256_at_retrieval": "6ac367df4e24793871204377cc64eb447615cce3af4e39d4b8c2644fd0f891ff",
+      "visually_inspected": true,
+      "inspection_scope": "whole static image",
+      "visual_observation": "冷青色阶、职业头具与武器、暗眼窝、向下分叉的碎袍烟尾；无实脚但透明机制未验证",
+      "original_game_artwork": true,
+      "is_generated": false,
+      "runtime_asset": false,
+      "installed_version_match_verified": false,
+      "persisted_in_repository": false
+    },
+    {
+      "id": "R06",
+      "name": "New Proselytes lineup",
+      "source_kind": "official_developer_steam",
+      "source_page": "https://store.steampowered.com/news/posts/?appids=625960&enddate=1656523016&feed=steam_community_announcements",
+      "image_url": "https://clan.fastly.steamstatic.com/images/28578038/7bb35e1aa647abd653c762680c2fe124a6c01ac0.png",
+      "source_date_or_label": "2022-06-12 New Proselytes",
+      "retrieved_at": "2026-10-13",
+      "dimensions": [
+        978,
+        174
+      ],
+      "sha256_at_retrieval": "7200c9c8dff7b85e6169fbc8c3df357e01eaf57b08e9eed541bded1acaca8e45",
+      "visually_inspected": true,
+      "inspection_scope": "whole static image",
+      "visual_observation": "多种异化轮廓、灰紫肉、宽肩或长臂、长舌、暗红细节与少量残袍；官方正文称vampire cult",
+      "original_game_artwork": true,
+      "is_generated": false,
+      "runtime_asset": false,
+      "installed_version_match_verified": false,
+      "persisted_in_repository": false
+    },
+    {
+      "id": "R07",
+      "name": "Proselyte humanoid demonstration",
+      "source_kind": "official_developer_steam",
+      "source_page": "https://store.steampowered.com/news/posts/?appgroupname=Stoneshard&appids=625960&enddate=1774544408&feed=steam_community_announcements",
+      "image_url": "https://clan.fastly.steamstatic.com/images/28578038/15c5a70f428119ec5ec9ede285a877053f94347b.gif",
+      "source_date_or_label": "2025-12-29 Current Progress",
+      "retrieved_at": "2026-10-13",
+      "dimensions": [
+        640,
+        300
+      ],
+      "sha256_at_retrieval": "30dc3adb2b68afd2d2080bfb6f6bc896d85e87f35fa3d871b3455b1c46d0cfcf",
+      "visually_inspected": true,
+      "inspection_scope": "frame 0 only",
+      "visual_observation": "只看第0帧：人形兜帽/布袍、低头颈、小块血色；具体角色身份不由此单帧断言",
+      "original_game_artwork": true,
+      "is_generated": false,
+      "runtime_asset": false,
+      "installed_version_match_verified": false,
+      "persisted_in_repository": false
+    },
+    {
+      "id": "R08",
+      "name": "Proselyte monstrous demonstration",
+      "source_kind": "official_developer_steam",
+      "source_page": "https://store.steampowered.com/news/posts/?appgroupname=Stoneshard&appids=625960&enddate=1774544408&feed=steam_community_announcements",
+      "image_url": "https://clan.fastly.steamstatic.com/images/28578038/0ae75b781e90db512731c300a3505a77f1333a0f.gif",
+      "source_date_or_label": "2025-12-29 Current Progress",
+      "retrieved_at": "2026-10-13",
+      "dimensions": [
+        640,
+        300
+      ],
+      "sha256_at_retrieval": "297b667ade4e937facfaf8ea6b510326336fe24c2fbc4fb95269fd59dc4a7f13",
+      "visually_inspected": true,
+      "inspection_scope": "frame 0 only",
+      "visual_observation": "只看第0帧：相对玩家明显更大的肉体异化者、宽阔不规则暗红轮廓；未核完整形变时序",
+      "original_game_artwork": true,
+      "is_generated": false,
+      "runtime_asset": false,
+      "installed_version_match_verified": false,
+      "persisted_in_repository": false
+    }
+  ],
+  "global_exclusions": [
+    "不宣称原版素材导出、帧表、part/mask/origin匹配",
+    "不使用八头身写实、圆滑3D、油画笔触、满屏柔焦辉光",
+    "不强制所有敌人对称、同表情或同脸；不使用六人拼图代替单体交付",
+    "不覆盖既有人物、动作、交付回执或原参考",
+    "不画任务奖励、结案、死亡角色回归或阵营全境结论"
+  ],
+  "concepts": [
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-001",
+      "category": "叛军",
+      "working_name": "边地长矛手",
+      "name_status": "可逆美术工作名，非新增剧情角色或原版兵种名",
+      "status": "brief_ready_generation_not_started",
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/",
+      "planned_raw_image": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_idle_raw_imagegen.png",
+      "reference_ids": [
+        "R01",
+        "R02"
+      ],
+      "project_source_keys": [
+        "F03",
+        "IDES"
+      ],
+      "vanilla_evidence": [
+        "R01社区wiki的Rebel属于Brigand；该图只能支持人形尺度、粗布与长兵器，不支持政治叛军统一制服。"
+      ],
+      "existing_project_canon": [
+        "F03是原创地方粮食协调与救济团体，不自动代表全境，不自动敌对；伊德斯基线支持战后叛军控制与供应扰动。"
+      ],
+      "original_proposal": {
+        "silhouette": "六人中最直立、较窄的I形成年轮廓；紧凑躯干与短颈、较平肩线；竖长矛打破头顶，半披肩止于腰，不做长袍。",
+        "palette": {
+          "base": [
+            "灰褐",
+            "旧亚麻米灰"
+          ],
+          "secondary": [
+            "暗橄榄",
+            "旧铁灰"
+          ],
+          "accent": "一条灰蓝小补布，非官方阵营徽记；不发光"
+        },
+        "clothing_and_surface_layers": [
+          "粗亚麻内衫→无袖旧绗缝护衣→单侧短披肩；布绑腿、旧皮靴；袖口磨损但非乞丐碎衣"
+        ],
+        "props": [
+          "仅一支朴素铁尖长矛，完整枪尖/木杆/尾端；无军旗、无盾、无文书"
+        ],
+        "face_and_emotion": "成年人，方下颌、粗眉、短胡茬；视线警惕但非狂笑或嗜杀；肤色温灰，眼睛自然暗色。",
+        "static_idle_pose": "轻三分之四朝画面左，双脚落地分开；近镜手持竖矛，矛杆离脸一掌宽，杆尾点地；另一手松垂，胸口无遮挡。",
+        "future_action_direction_not_in_this_delivery": [
+          "后续可研究矛尖小幅压低戒备、受击后撤、持矛转身；当前只一帧待机"
+        ]
+      },
+      "must_not_infer_or_draw": [
+        "不画灰色军团公议制服/官方纹章",
+        "不把地方公议成员或玛娅变成敌人",
+        "不增加处决、抢粮或交战剧情"
+      ],
+      "unresolved_reversible_choices": [
+        "未来具体敌对身份、所属地点、阵营归属未定",
+        "发型、灰蓝补布、武器型号均为可逆概念"
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-002",
+      "category": "强盗",
+      "working_name": "旧渠劫道者",
+      "name_status": "可逆美术工作名，非新增剧情角色或原版兵种名",
+      "status": "brief_ready_generation_not_started",
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/",
+      "planned_raw_image": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_idle_raw_imagegen.png",
+      "reference_ids": [
+        "R02",
+        "R01"
+      ],
+      "project_source_keys": [
+        "D02"
+      ],
+      "vanilla_evidence": [
+        "R02 Goon是紧凑人形、粗布叠层、短棍；不是全套皮甲忍者。"
+      ],
+      "existing_project_canon": [
+        "D02少量盗匪占检修间；墓龛亡者战区与纳拉非敌对侧间分开；战斗不自动完成任务。"
+      ],
+      "original_proposal": {
+        "silhouette": "六人中最矮壮、上宽下稳的梯形正常人体；头微探、单肩较高；肘部外展形成较宽手臂负空间，与直立长矛手明显不同。",
+        "palette": {
+          "base": [
+            "烟褐",
+            "灰赭"
+          ],
+          "secondary": [
+            "暗皮棕",
+            "炭灰"
+          ],
+          "accent": "少量铁锈红补丁；无血色光效"
+        },
+        "clothing_and_surface_layers": [
+          "粗布短衣→不对称旧皮肩护→低系腰绳；短下摆、粗裤、不同磨损程度的皮靴；不加现代扣具"
+        ],
+        "props": [
+          "一支低垂短木棍，粗端只有一圈旧铁箍；腰侧一个小软布袋，无抢来的首级/珠宝/现代匕首"
+        ],
+        "face_and_emotion": "成年宽脸、扁鼻、浓重下眼睑、乱短胡；嘴角紧绷、眯眼估量距离，危险来自身体戒备而非卡通恶笑。",
+        "static_idle_pose": "轻三分之四朝画面左，重心略后，双膝微弯；持棍手垂在外侧，棍头不触地不挡腿；空手半握停腰侧。",
+        "future_action_direction_not_in_this_delivery": [
+          "后续短棍抬肩预备、横挥后回收、惊退；不在首图画攻击轨迹"
+        ]
+      },
+      "must_not_infer_or_draw": [
+        "不把无辜搬运者画作匪徒",
+        "不画蒙面刺客或豪华掠夺者套装",
+        "不新增绑架场面或任务完成标志"
+      ],
+      "unresolved_reversible_choices": [
+        "不是已命名首领；D02用途只是候选",
+        "补丁、胡须与短棍是可逆外观"
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-003",
+      "category": "僵尸",
+      "working_name": "渠墓腐尸",
+      "name_status": "可逆美术工作名，非新增剧情角色或原版兵种名",
+      "status": "brief_ready_generation_not_started",
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/",
+      "planned_raw_image": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_raw_imagegen.png",
+      "reference_ids": [
+        "R03",
+        "R04"
+      ],
+      "project_source_keys": [
+        "D02",
+        "D07"
+      ],
+      "vanilla_evidence": [
+        "R03官方Restless保留肉体并有塌肩伸臂；R04为混合亡灵陈列图，不可整图叫僵尸。"
+      ],
+      "existing_project_canon": [
+        "D02亡者仅在明确墓龛战区；D07普通病人默认非敌对，不能由病态皮肤直接推成僵尸。"
+      ],
+      "original_proposal": {
+        "silhouette": "扭曲斜C形、左肩下坠、头偏一侧；仍可读成人骨架但双臂不等高；拖后脚与弯膝形成非对称站姿。不是骷髅的轻细骨架。",
+        "palette": {
+          "base": [
+            "灰橄榄死皮",
+            "湿土褐"
+          ],
+          "secondary": [
+            "旧麻灰",
+            "黑褐阴影"
+          ],
+          "accent": "少量干暗红破损，不用鲜红喷血"
+        },
+        "clothing_and_surface_layers": [
+          "保留大面积干瘪皮肉与小块斑驳组织；无袖残工作罩衣→破下摆→泥污绑腿；腐朽集中脸颊、前臂、袖边，不把全身画成白骨"
+        ],
+        "props": [
+          "空手，不拿新武器；腰侧一小段断麻绳仅作旧衣物残留，无病人腕牌、护理器具"
+        ],
+        "face_and_emotion": "塌陷一侧脸颊、暗眼窝、松垂下颌、灰色薄唇；无漂亮红唇、大睫毛、温柔眉眼。面部迟钝空茫，腐朽不是人类微笑。",
+        "static_idle_pose": "略偏三分之四，前脚平落、后脚拖步但仍与地面接触；一臂低垂另一臂稍抬，手指屈曲；单幅静止，无扑咬对象。",
+        "future_action_direction_not_in_this_delivery": [
+          "后续肩胯不同步拖步、慢速伸抓、受击塌肩、倒地；复活机制待后续实现核验"
+        ]
+      },
+      "must_not_infer_or_draw": [
+        "不复制D07病人或既有NPC面貌",
+        "不画干净白骨骷髅",
+        "不加临终剧情、身份揭示或已死NPC姓名"
+      ],
+      "unresolved_reversible_choices": [
+        "来源与生前身份未定，暂不落具体墓主",
+        "肤色与破衣样式可逆；不预设毒、传染或复活能力"
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-004",
+      "category": "幽灵",
+      "working_name": "墓龛游魂",
+      "name_status": "可逆美术工作名，非新增剧情角色或原版兵种名",
+      "status": "brief_ready_generation_not_started",
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/",
+      "planned_raw_image": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_raw_imagegen.png",
+      "reference_ids": [
+        "R05"
+      ],
+      "project_source_keys": [
+        "D09",
+        "BRY14"
+      ],
+      "vanilla_evidence": [
+        "R05官方Wraith陈列保留兜帽/武器职业形、暗眼窝与冷青碎尾，无落地靴；图不证明运行时alpha实现。"
+      ],
+      "existing_project_canon": [
+        "D09回声仅有来源的感知干扰，无死者明确签名；CS-BRY-14禁止把弟弟幽灵搬进场景。"
+      ],
+      "original_proposal": {
+        "silhouette": "窄上宽下的破伞形罩袍；肩线几乎水平、头略埋；下半身分两长一短的碎烟尾，尾端之间留透明缺口，完全不露实脚。",
+        "palette": {
+          "base": [
+            "深灰青",
+            "黯蓝绿"
+          ],
+          "secondary": [
+            "灰冷青"
+          ],
+          "accent": "仅额边与手背用浅青小簇提亮，不做白色全身光晕"
+        },
+        "clothing_and_surface_layers": [
+          "朽旧兜帽与短肩披仍有布料折角；胸部暗层向下渐碎成硬边烟尾；用大块像素簇表达消散，不用柔焦雾球"
+        ],
+        "props": [
+          "不持武器，单只骨感手从披衣伸出；无钥匙、签名书、灵魂锁链或墓主信物"
+        ],
+        "face_and_emotion": "深暗眼窝与窄颅面残影，眉鼻结构只留简化冷色棱面；空茫、无直视式卖萌，无可识别死者脸。",
+        "static_idle_pose": "轻三分之四朝画面左，双肩安静，伸手只比腰稍高；漂浮下缘完整，透明背景不带墓地/大烟雾/阴影地板。",
+        "future_action_direction_not_in_this_delivery": [
+          "后续微幅上下漂移、手伸展、尾部离散与重聚；本轮不承诺透明渲染、穿墙或召唤能力"
+        ]
+      },
+      "must_not_infer_or_draw": [
+        "不把D09回声视为真魂",
+        "不画CS-BRY-14弟弟或任何既有死者面貌",
+        "不发出证明事实的文字或遗言"
+      ],
+      "unresolved_reversible_choices": [
+        "具体出现地点、历史、与回声关系均未定",
+        "冷青色阶与尾形为可逆概念，不预设魔法机制"
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-005",
+      "category": "吸血鬼",
+      "working_name": "饥血潜行体",
+      "name_status": "可逆美术工作名，非新增剧情角色或原版兵种名",
+      "status": "brief_ready_generation_not_started",
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/",
+      "planned_raw_image": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/blood_hunger_mutant_idle_raw_imagegen.png",
+      "reference_ids": [
+        "R06",
+        "R08"
+      ],
+      "project_source_keys": [
+        "F07",
+        "D07"
+      ],
+      "vanilla_evidence": [
+        "官方称Proselytes为vampire cult；2025官方说明由人形信徒向兽性异化发展。R06有长臂、驼背和异化口颌；R08只核首帧宽阔肉体形，不复制该整身。"
+      ],
+      "existing_project_canon": [
+        "苍白债契不等于全部吸血教派；D07仅确认少量明确异化载体，未确定它们一定是吸血鬼。"
+      ],
+      "original_proposal": {
+        "silhouette": "六者中最宽低的倒三角掠食轮廓；肩背拱起、颈缩入、前臂显著长于普通人；短弯腿撑住，不跪、不四足动物化。",
+        "palette": {
+          "base": [
+            "灰紫干皮",
+            "暗肉褐"
+          ],
+          "secondary": [
+            "炭褐残布",
+            "灰骨色爪"
+          ],
+          "accent": "口边一点暗红，禁鲜红通体和霓虹红眼"
+        },
+        "clothing_and_surface_layers": [
+          "皮肉保留干燥粗糙的大色簇；单侧肩背筋肉略隆、肋部瘦收；腰臀与上腿有足够残旧衣布，非裸露性感体；不布满装饰甲"
+        ],
+        "props": [
+          "不用外加武器，长手爪是主轮廓；腰间只保留简单断布结，无原版独特圣物或贵族披风"
+        ],
+        "face_and_emotion": "突出的窄颌、外露两枚不对称长齿、后折短耳、细暗眼缝；饥饿紧绷，嘴微开但无长舌舞动、喷血或受害者。怪物颅脸不能套Sela/Mia美脸。",
+        "static_idle_pose": "三分之四朝画面左，低伏但四肢完整可见；两手一前一后停在膝侧，不贴地，不遮脸；单体静态侦听姿。",
+        "future_action_direction_not_in_this_delivery": [
+          "后续压低重心、两步跃扑预备、爪挥后收、受击缩颈；吸血/变身/血池机制全部未定"
+        ]
+      },
+      "must_not_infer_or_draw": [
+        "不称独立于Proselytes的原版阵营",
+        "不把D07普通病人变怪",
+        "不把本图认作已确定债契载体或命名首领",
+        "不复制官方长舌/巨腹/圣帽整套角色"
+      ],
+      "unresolved_reversible_choices": [
+        "暂为吸血异化美术代表，阵营与剧情身份不定",
+        "短耳、长齿、残布颜色和肌肉结构可逆"
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-006",
+      "category": "邪教",
+      "working_name": "债契仪式看守",
+      "name_status": "可逆美术工作名，非新增剧情角色或原版兵种名",
+      "status": "brief_ready_generation_not_started",
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/",
+      "planned_raw_image": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_raw_imagegen.png",
+      "reference_ids": [
+        "R06",
+        "R07"
+      ],
+      "project_source_keys": [
+        "F07",
+        "D07",
+        "D09",
+        "LORE"
+      ],
+      "vanilla_evidence": [
+        "Proselytes人形仪式端与兽性端是同源风格；R07首帧有兜帽/粗袍与小面积血色，不证明所有邪教徒固定黑袍。"
+      ],
+      "existing_project_canon": [
+        "F07为原创敌对救赎组织；D07有有限债契看守、D09有有限仪式护卫；圣会整体不能被等同邪教。"
+      ],
+      "original_proposal": {
+        "silhouette": "高窄而封闭的钟形袍身，平缓垂肩；头戴短兜帽、脸下部露出；前臂向内靠而不交叉，比强盗更克制，比幽灵更有重量且有双靴。",
+        "palette": {
+          "base": [
+            "污白亚麻",
+            "深褐内衣"
+          ],
+          "secondary": [
+            "暗铁灰",
+            "旧皮棕"
+          ],
+          "accent": "局部深酒红缝线，不用现代十字/官方教会标志"
+        },
+        "clothing_and_surface_layers": [
+          "灰褐内衫→短链甲/小护胸局部一层→污白开衩罩袍；旧皮腰带，袖口束带，实靴；无医生白大褂剪裁或现代翻领"
+        ],
+        "props": [
+          "一根腰至肩高短杆具，顶端小钝钩，不做巨大死神镰刀；另一手空握；无写字账簿、治疗针管或已签契约"
+        ],
+        "face_and_emotion": "成年人瘦长脸、眉骨压低、嘴抿紧，下眼睑疲倦但注视明确；无祥和慈善微笑；肤色灰暖而非尸绿，保持活人读法。",
+        "static_idle_pose": "轻三分之四朝画面左，身体直而非军姿；杆具垂直在身体外侧，杆尾近地；两脚可见，袍摆完整，暗红缝线仅一小段。",
+        "future_action_direction_not_in_this_delivery": [
+          "后续握杆横拦、侧步守门、低头执仪与撤步；当前不画施法、献祭、病人或许诺治愈"
+        ]
+      },
+      "must_not_infer_or_draw": [
+        "不把全部圣会、普通护理者画成邪教",
+        "不等同所有Proselytes",
+        "不创作新仪式结算、牺牲、治疗或债约签订场景",
+        "不照搬赫斯·白的人物肖像"
+      ],
+      "unresolved_reversible_choices": [
+        "可作为债契看守候选，但具体编制/身份不锁定",
+        "污白外披、钝钩与缝线均可逆；不确立新纹章或教义"
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    }
+  ],
+  "review_checklist": [
+    "六张分别对应六种剪影：直立窄矛、矮壮短棍、斜C腐尸、破伞烟尾、低宽长臂、窄钟形袍",
+    "原生观感缩小仍分辨脸/口颌、持物、双脚或幽尾；不要求锁定35px或既有比例数字",
+    "人类脸有不同结构与情绪，怪物脸不套人类美颜；腐尸保留肉体、幽灵无实体靴",
+    "矛尖/棍头/爪/兜帽/脚/烟尾完整不裁切；手和道具连接合理，无重复肢体",
+    "透明背景实际验alpha；概念PNG尺寸与SHA记录，保存原始生成输出、prompt、manifest",
+    "看图与独审后才可标selected；当前全部unproduced，不计完成/交付",
+    "后续动作只是研究方向，不能宣称动画制作、装备适配或runtime通过"
+  ]
+}

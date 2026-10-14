@@ -1,0 +1,65 @@
+{
+  "pose_id": "club_controlled_recover",
+  "author_conclusion": "pass",
+  "independent_review": "pending",
+  "selected": false,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "first_drafts": 1,
+  "hard_error_revisions": 0,
+  "scope": "独立关键姿势概念，不是连续动画/帧序/游戏精灵或运行验收",
+  "inspected": [
+    "source static anchor",
+    "raw image",
+    "actual RGBA composited light board",
+    "actual RGBA composited dark board"
+  ],
+  "checks": {
+    "identity": "同成年方颌宽鼻厚胡、后梳短乱发与矮壮比例；动作表情更集中。",
+    "sidedness": "右肩皮肩护、右腰绳结小袋、左下摆锈红补丁均未换边。",
+    "grip": "H1（锚图屏幕左持械手）仍单手持棍；H2平衡，未换手。",
+    "weapon": "一根短粗木棍、单灰铁箍、圆钝头完整；握至头轴长约0.30人物H附近，非精确分割测量。",
+    "anatomy": "双臂双腿完整，肩肘腕弯曲自然，双脚承重；无拖影/受害者。",
+    "pose": "持棍肘回收向内、手在腰前，棍头在前膝外上方；相比预备有明显高低差，身体轻前倾。",
+    "alpha": "真实RGBA透明；已合成浅深背景查看，无可见大面积底色或真实彩色晕圈。原始隐藏RGB不作为晕圈结论。",
+    "extent": "武器与双靴均完整，实际可见轮廓有留白。低alpha残点范围不代表身体截断。"
+  },
+  "differences": [
+    "右肩护可见铆钉比静态更多，仍同侧同皮肩护结构；记录为小件细节漂移。",
+    "回收棍头与前膝外侧可读，但属于独立定格而非已验证运动轨迹。"
+  ],
+  "alpha_audit": {
+    "raw_size": [
+      1215,
+      1295
+    ],
+    "raw_alpha_bbox": [
+      25,
+      21,
+      1199,
+      1261
+    ],
+    "transparent_size": [
+      1215,
+      1295
+    ],
+    "transparent_alpha_bbox": [
+      162,
+      51,
+      1174,
+      1254
+    ],
+    "zero_alpha_pixels": 973732,
+    "partial_alpha_pixels": 598757,
+    "edge_alpha_max": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    },
+    "cleanup": "Only RGBA zeroing where original alpha <= 3; alpha > 3 unchanged. No body painting, limb compositing, scaling, cropping or mirroring.",
+    "cleanup_changed_pixels": 19483,
+    "raw_sha256": "7b608a2943de0e06ee0ca14300f3c5ca8dcba3ebb1f90d3b6059139847830ccb",
+    "transparent_sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241"
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T19:18:00Z",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "status": "brief_only_waiting_for_explicit_generation_start",
+  "generation_authorized_now": false,
+  "scope": "仅001长矛手与002短棍强盗，各2张新的独立关键姿势概念，共4张。其他四类不扩展。静态源图只读、不重画、不重新筛选、不改剧情。",
+  "parent_static_qa_note": "收到任务时首六仍在最终独审；本brief用当前最终transparent内容SHA锁锚，不冒称独审已经通过。主任务如换静态锚，必须先停动作生产并更新锚。",
+  "source_brief": {
+    "path": "Assets/EnemyDesigns/reference/20261013/production_brief_first_six.json",
+    "sha256": "61b6afdf16c3b81eed4f00dfc8bb43fdc1c179949ed7058115a29c4f6c8f528f"
+  },
+  "source_matrix": {
+    "path": "Assets/EnemyDesigns/reference/20261013/README.md",
+    "sha256": "26d565dfdc20fd81da211a7545e2d769eff6107821dc0ff1063c9c1b91f9d395"
+  },
+  "public_reference_inspection": {
+    "references": [
+      {
+        "id": "R01",
+        "name": "Rebel",
+        "source_kind": "community_wiki_secondary",
+        "source_page": "https://stoneshard.com/wiki/Rebel",
+        "image_url": "https://stoneshard.com/wiki/images/e/e3/Rebel.png",
+        "source_date_or_label": "2026-10-13 read; page labels 0.9.1.0 / data 0.9.4.14",
+        "retrieved_at": "2026-10-13",
+        "dimensions": [
+          37,
+          33
+        ],
+        "sha256_at_retrieval": "f36375411e937ea7baf45721be6800f930331d217cdab365314734267d85a2ac",
+        "visually_inspected": true,
+        "inspection_scope": "whole static image",
+        "visual_observation": "紧凑人形、长叉、褐衣、露头；wiki阵营字段Brigand，不作政治阵营独立证据",
+        "original_game_artwork": true,
+        "is_generated": false,
+        "runtime_asset": false,
+        "installed_version_match_verified": false,
+        "persisted_in_repository": false
+      },
+      {
+        "id": "R02",
+        "name": "Goon (Club)",
+        "source_kind": "community_wiki_secondary",
+        "source_page": "https://stoneshard.com/wiki/Goon_(Club)",
+        "image_url": "https://stoneshard.com/wiki/images/a/ae/Goon_%28Club%29.png",
+        "source_date_or_label": "2026-10-13 read",
+        "retrieved_at": "2026-10-13",
+        "dimensions": [
+          26,
+          33
+        ],
+        "sha256_at_retrieval": "b4568b043e1d5033dc3be86162a34dc68e865a302f0ddad677a3e5524ea7b07b",
+        "visually_inspected": true,
+        "inspection_scope": "whole static image",
+        "visual_observation": "褐灰交叠布衣、短棍、明亮肤色、胡须脸；正常人类比例参考",
+        "original_game_artwork": true,
+        "is_generated": false,
+        "runtime_asset": false,
+        "installed_version_match_verified": false,
+        "persisted_in_repository": false
+      }
+    ],
+    "checked_this_round_utc": "2026-10-13T19:16:38Z",
+    "checked_local_views": [
+      "/tmp/stoneshard_refs/rebel_4x.png",
+      "/tmp/stoneshard_refs/goon_4x.png"
+    ],
+    "scope": "再次实际看两张静态原版公开图；只借粗衣、紧凑人形与可读武器，不能声称看过长矛或短棍攻击完整帧序。姿势方案是原创解剖/握持提案，不是临摹已证实动画。"
+  },
+  "shared_execution_rules": {
+    "source_before_generation": "绘制者必须实际view当前SHA匹配transparent；若原文件已变则暂停并报主任务。生成参考使用单体母图，不能用带字审核板替代。",
+    "style": "按各自静态锚延续成年脸、体型、粗簇组织与低魔中世纪材质；001更粗簇、002略细但有组织，不借动作重做整体风格。单体真实透明背景，完整武器和双脚，画布可横向扩展以容长矛，不强塞回竖图。",
+    "pose_coordinates": "屏幕朝左固定；服饰左右以锚图画面侧为准。H1/H2以锚图手身份追踪，不把新姿出现的屏幕位置当作换手理由。",
+    "scale_check": "审核板可统一按人物头躯干尺度等比nearest对齐，不按整图包含武器的外接框强缩放；不能非等比拉伸身体或武器补救。",
+    "not_allowed": [
+      "受害者、第二角色、血、命中伤口、击杀文字、伤害数字、任务奖励/结算",
+      "火光魔法、速度线、拖影代替实际姿势",
+      "骨架绑定、脚本绘制身体、拼接裁切肢体、镜像原图假装新动作",
+      "覆盖静态母图、manifest、冻结来源、旧QA",
+      "未获新授权扩展其他四类或新增动作"
+    ],
+    "revision_budget": "每姿势1首稿，最多1次明确硬错修订；保留raw与修订raw。偏好性小差异不进入循环；预算后仍硬错则标needs_review并报告，不继续扩画。",
+    "non_animation_claim": "只交4张独立关键姿势研究；不提供无依据的帧率、帧序、连续性、碰撞、装备合成或运行通过承诺。"
+  },
+  "characters": [
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-001",
+      "slug": "border_spear_rebel",
+      "anchor": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png",
+        "sha256": "31f837ac09a3d1f6c93ab771156f1cfc0e78c458f8f97ad4607e8685cfc63121",
+        "size": [
+          1024,
+          1536
+        ],
+        "alpha_bbox": [
+          210,
+          10,
+          865,
+          1527
+        ],
+        "visually_inspected_utc": "2026-10-13T19:16:21Z",
+        "scope": "整个最终透明母图；非浅深底审核板、非已淘汰raw"
+      },
+      "static_records": [
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/manifest.json",
+          "sha256": "23103c1926eaf75b73608df5fd7db7962e6629267f2bda4c2254a95f816d6b6b"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/concept_brief.json",
+          "sha256": "68a7e544562130ffb55df9f4f08a9bc766ff4025252bc556ae3c6d0ce0f3df3c"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/reference_inspection.json",
+          "sha256": "cefb5a1161b00eb74ce247a6151850f8336400e7da740b434ba97a28732bb011"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/author_QA.json",
+          "sha256": "a83c064e40b972853a10e2eba5ece074dd203ea35bc019c248ae36844f4f2fc0"
+        }
+      ],
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/",
+      "generation_status": "not_started",
+      "pose_count": 2,
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "identity_lock": {
+        "orientation": "同静态轻三分之四朝画面左；不得水平翻转。头、躯干和视线整体仍朝左，不做背面。",
+        "face": "原静态浓深眉、棕乱短发、完整短胡、方颌成年男性；仅把警惕调整为专注，保留鼻/眼/耳位置关系。",
+        "clothing": "米白袖与V形领内衫、灰褐分片绗缝护衣、画面右侧橄榄短披肩及灰色圆扣、右下摆灰蓝补布、腰带方扣、褐裤、米灰绑腿、褐靴。披肩与补布不能换边。",
+        "hands": "H1定义为静态画面左侧握矛的原持械手，按当前正/侧面约定为角色右手；H2为静态画面右侧空手。H1始终是主握手，不换成H2独持。新姿可让H2加扶矛杆，这是姿势变化而非换手。",
+        "weapon": "一支同样叶形灰铁枪头、枪颈金棕包带、棕木杆、金棕尾箍和短灰铁尾镦的完整长矛；不能换叉、戟、短矛或多枪尖。",
+        "weapon_scale": "以静态人物发顶至靴底身高H对照：整矛可见长约1.20H；这是目测/图上纵向近似，不是原版规格。新姿保留同一物理长度，侧向仅轻微透视，不允许大幅纵深缩短。枪头/杆粗/尾镦比例照母图。",
+        "reference_landmarks_approx_pixels": {
+          "body_crown_y": 280,
+          "body_sole_y": 1520,
+          "spear_tip_y": 10,
+          "spear_butt_y": 1490
+        },
+        "landmark_precision_note": "用于缩放后视觉复核的人工近似锚；不是脚本测量出的精确部件分割。"
+      },
+      "poses": [
+        {
+          "pose_id": "spear_ready",
+          "stage": "预备",
+          "output_raw": "border_spear_rebel_spear_ready_raw_imagegen.png",
+          "description": "从竖矛切为稳定双手中位戒备。枪尖朝画面左上约10–15度，枪杆在下胸至上腹前方，离脸和颈有明确空隙。H1主握靠后、在本侧腰前；H2辅助握前段，双手沿杆分开约一肩宽。两肘微弯不锁死；前脚朝左，后脚稍开，膝轻屈、躯干不深扭。",
+          "readability": "全矛侧向展开、枪尖—前手—后手—尾镦顺序清楚；手掌围杆而非杆穿手腕；两只手不得互相遮成一团。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1
+        },
+        {
+          "pose_id": "spear_short_thrust",
+          "stage": "短直刺伸展定格",
+          "output_raw": "border_spear_rebel_spear_short_thrust_raw_imagegen.png",
+          "description": "保持同握位和同样朝左的矛轴，前臂沿轴送出一次克制的短直刺。前膝小幅弯、后腿支撑、后脚跟不夸张抬；H1仍后握、H2仍前扶，手间距与预备近似，双腕不反折，肘仍留微曲。胸腰只轻移，不用跨步飞扑、空中攻击或极端躯干扭转。",
+          "readability": "相对预备必须看见矛与双手前送、前肘更开、重量向前的变化；不得只改变表情。矛仍是同一根连续直杆，枪尖朝左而非朝镜头。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1
+        }
+      ],
+      "specific_hard_errors": [
+        "任何一端被裁",
+        "H1/H2交换为另一只手独持",
+        "两手贴成一掌/多手/手腕穿杆",
+        "枪头与杆脱开或杆突然弯曲",
+        "矛长被缩水为约一身以内且无可信轻透视解释",
+        "披肩、圆扣、补布左右翻转",
+        "脚底失去承重或深度劈叉"
+      ],
+      "future_only": "本两图是两个独立关键姿势，不包含收枪回程、插值、中间帧、击中、受击目标或动作时间。"
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-002",
+      "slug": "canal_club_brigand",
+      "anchor": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png",
+        "sha256": "9683b1a41ba261800702c45617ed6fd2b737b54caf24a1c89010d3f5ce81cceb",
+        "size": [
+          1214,
+          1295
+        ],
+        "alpha_bbox": [
+          62,
+          27,
+          1099,
+          1265
+        ],
+        "visually_inspected_utc": "2026-10-13T19:16:21Z",
+        "scope": "整个最终透明母图；非浅深底审核板、非已淘汰raw"
+      },
+      "static_records": [
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/manifest.json",
+          "sha256": "c89e73d0b39e2ddad4118c1df9895dc9d377356a18baa191ba2a6fb14c8c575d"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/concept_brief.json",
+          "sha256": "ee7caec01c791b79212f841a2971d980298f91731daa2bbb8a178a63dc046986"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/reference_inspection.json",
+          "sha256": "cefb5a1161b00eb74ce247a6151850f8336400e7da740b434ba97a28732bb011"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/author_QA.json",
+          "sha256": "df0e5a14e59b9f56e23a3790fe2bc83fd9e15b4a2e7d7e0f1d55bd43bc300a2a"
+        }
+      ],
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/",
+      "generation_status": "not_started",
+      "pose_count": 2,
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "identity_lock": {
+        "orientation": "同静态轻三分之四朝画面左，不水平翻转，不转为背影。",
+        "face": "保持宽颧/方下颌、粗眉压眼、宽鼻、厚深胡须和后梳乱短发；专注紧绷，不变年轻俊脸或夸张狂笑。",
+        "clothing": "土褐交叠短衣、深灰内袖、卷起浅褐袖边、画面右肩三层旧皮肩护、右腰绳结和小米灰布袋、画面左下摆暗锈红补丁、灰褐裤、褐绑腿靴。全部饰物与肩护不换边。",
+        "hands": "H1是静态画面左侧持棍手，按本图约定为角色右手；H2是画面右侧空手。两姿都由H1单手持棍，H2作平衡，不抢棍、不复制棍。",
+        "weapon": "沿用短粗木棍，末端略膨，一圈灰铁箍位于粗端附近，细握柄与圆钝头完整；不增加钉、刃、第二圈箍或链。",
+        "weapon_scale": "静态手至粗棍头的可见轴长目测约0.30H（H为发顶至靴底）；被手握住的短柄余段无法从图精确测定，不新增长柄。新姿避免正对镜头的强透视，保留同棍体长粗比和单箍位置。",
+        "reference_landmarks_approx_pixels": {
+          "body_crown_y": 27,
+          "body_sole_y": 1260,
+          "grip_center_xy": [
+            330,
+            735
+          ],
+          "club_head_center_xy": [
+            110,
+            956
+          ]
+        },
+        "landmark_precision_note": "人工近似定位，仅为可见武器比例检查，不声称隐藏握柄长度或原生像素尺寸。"
+      },
+      "poses": [
+        {
+          "pose_id": "club_compact_ready",
+          "stage": "紧凑预备",
+          "output_raw": "canal_club_brigand_club_compact_ready_raw_imagegen.png",
+          "description": "H1持棍从低垂抬到本侧肩外前方，肘弯约直角、上臂不高过肩。棍头朝画面左上、与脸隔开，棍身大体处于画面平面，不从脑后穿出。H2半握停在胸下本侧作为平衡，不挡脸。保留矮壮宽站距、双膝轻屈、两脚完整着地。",
+          "readability": "持械腕—握柄—铁箍—钝棍头连成清楚斜线；棍头不穿耳/头发/肩，明显区别静态低棍姿。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1
+        },
+        {
+          "pose_id": "club_controlled_recover",
+          "stage": "受控下挥后的回收定格",
+          "output_raw": "canal_club_brigand_club_controlled_recover_raw_imagegen.png",
+          "description": "想象一次不接触任何目标的短下挥已经停住，H1把棍收回身体前左侧，棍头停在前膝外上方且不触地；肘向内回收，手在下腹至腰前。躯干只有轻度前倾，后腿仍支撑；H2降回本侧肋下以平衡。头仍朝左看，不低到胡须遮没脖子。",
+          "readability": "与预备有明显高低位置和肘部开合差异；同棍全长可见，手仍同一侧，不能用旋转整张静态图或加拖影冒充回收。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1
+        }
+      ],
+      "specific_hard_errors": [
+        "肩护/腰袋/红补丁换边",
+        "主持手改为H2",
+        "木棍变长柄锤/铁棒/狼牙棒",
+        "多棍/多个铁箍/浮空柄",
+        "抬手穿头/肘反折/多手指团块导致握持不可读",
+        "单幅出现两条运动残影假肢",
+        "回收姿棍穿裤腿或脚底悬浮"
+      ],
+      "future_only": "两图是预备与回收姿势研究，故意没有击中峰值帧；不是完整挥击循环，不能据此制作连续GIF并宣称连贯动画。"
+    }
+  ],
+  "independent_review_rubric": [
+    {
+      "id": "A1",
+      "criterion": "先核SHA和实际view：动作与对应静态锚对照；人物脸型/胡发/体型属于同一人，不是另一个演员。",
+      "severity": "身份改变为硬错"
+    },
+    {
+      "id": "A2",
+      "criterion": "逐侧对照肩披/肩护/扣/腰袋/补丁/绑腿/靴；没有镜像、换衣、无故丢件。",
+      "severity": "明显换边/换装为硬错；微小像素簇变化记录为差异"
+    },
+    {
+      "id": "A3",
+      "criterion": "按H1/H2追踪持械手；武器数量、枪头/尾镦或单铁箍与锚一致；整个轴连续，掌腕与握柄接触可信。",
+      "severity": "主手交换、多武器、穿腕、断杆、武器换型为硬错"
+    },
+    {
+      "id": "A4",
+      "criterion": "按人物H归一化比较武器长度；长矛约1.20H、短棍可见段约0.30H仅作目测参考，结合轻透视判断；不可缩水或膨胀到另一武器级别。",
+      "severity": "明显尺度漂移为硬错；不凭单一像素百分比自动否决"
+    },
+    {
+      "id": "A5",
+      "criterion": "两臂各一、肩肘腕自然；双腿形成稳定支撑，无肩关节逆折、穿身体或飘脚；手可简化但握持轮廓清楚。",
+      "severity": "解剖/支撑明显不成立为硬错"
+    },
+    {
+      "id": "A6",
+      "criterion": "两个姿势在矛/棍位置、肘角和重心上实质不同；不是静态原图微修表情，且不要求二图已构成连贯动作。",
+      "severity": "姿势未变化为不达交付"
+    },
+    {
+      "id": "A7",
+      "criterion": "透明母图实际alpha检查，浅深底均view；头/武器两端/手/脚完整，不出现黑底、白边、残文字或地面布景。",
+      "severity": "裁切或污染主体为硬错"
+    },
+    {
+      "id": "A8",
+      "criterion": "每张记录独立结论pass/needs_review、raw/transparent SHA与尺寸、使用的参考、首稿及修订次数；不能自动给selected或runtimePassed。",
+      "severity": "缺证据为待审"
+    }
+  ]
+}

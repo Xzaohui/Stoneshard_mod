@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-13T20:37:30.062101+00:00",
+  "status": "ready_for_parent_to_start_generation; pending_user_aesthetic_choice",
+  "scope": "仅SQ05/R02-well与SQ08/R04-camp，各一张新场景风格试稿；本brief不生图，不扩展其余候选。",
+  "user_direction_as_forwarded_by_parent": "像素风参照紫色晶石，实际落地暂不管，继续画新地点场景。紫色晶石指Stoneshard美术方向，不要求场内放紫色水晶。",
+  "approval_boundary": "旧299场景未查得用户批准的整场景style锚；本轮基于实际视觉观察提出统一风格，待用户审美选择，不能称已对齐认可、原生合格或游戏地图。",
+  "sources_manifest": "first_two_scene_pilot_sources.json",
+  "shared_style": {
+    "camera": "固定俯斜视/近正交，稳定平行轴线，可看见物件顶部与立面；不做夸张等距菱形透视或电影镜头。",
+    "pixel_language": "清晰粗像素簇、阶梯边、有限大色块；场景原始生图质量仍须实看，写了pixel-art不等于通过。",
+    "palette": "低饱和褐木、灰石、土褐、少量暗橄榄草；岸井暗蓝河水，棚内中性干燥土色。",
+    "density": "主地标清晰，约三分之一安静地面/水面留白作为美术目标；通路连续，不逐砖逐叶密绘。",
+    "excluded": [
+      "人物/怪物",
+      "剧情结局或证据认证",
+      "UI/可读文字/数字标注/格线",
+      "巨幅过密写实纹理",
+      "直接复刻原作整图",
+      "自行添加紫晶、魔法仪表或皇家纹章"
+    ],
+    "background": "opaque; transparent_background=false; no alpha production needed"
+  },
+  "generation_contract": {
+    "per_scene_initial_images": 1,
+    "maximum_hard_error_revisions_per_scene": 1,
+    "preferred_aspect_ratio": "3:2 horizontal",
+    "allowed_alternative": "16:9 horizontal if the actual tool provides it",
+    "resolution": "按实际工具支持生成；请求横图不等于工具有尺寸参数。记录真实文件宽高、格式与SHA；不得虚报2K或原生像素尺度。",
+    "reference_inputs": "默认全新文本生图，不上传临时原作截图；旧27/58也不作直接输入，避免继承密纹理。",
+    "prompt_record": "planned_initial_prompt仅计划；执行前将实际完整传入文本与工具参数原样保存为prompt_v1.txt及generation_manifest.json。若修改计划，保留planned和actual两份。",
+    "raw_policy": "raw输出完整保存，记录源工具路径、真实尺寸、字节数和SHA；不得只保留缩图/放大版。预览若另做则明标派生，不覆盖raw。",
+    "revision_policy": "首稿实际view后仅对硬错修订最多一次。硬错包括错景/地标缺失、取样点非3、闭柜开门泄文、人物怪物、严重透视漂移/照片质感、路被挡、可读UI文字；审美偏好差异留给用户，不无限润色。保存v1、修订真实prompt与raw v2、选择理由。",
+    "final_status": "即便QA无硬错，仍是待用户审美选择的风格试稿；不声称自动通过用户认可。"
+  },
+  "qa_checklist": [
+    "分别实际view原始图与缩小观看；记录可见范围与问题。",
+    "两景镜头/像素簇/调色/密度是否一致，是否仍是过密插画。",
+    "SQ05三个岸边点能一眼数清；单井/过滤架与两关闭分柜可辨，回程不入水。",
+    "SQ08干燥会谈位与出画回程清晰；一闭合文书袋无可读内容；不误成卸药棚。",
+    "无人物怪物，无剧情结果，无水质认证、无家属地址/身份公开。",
+    "真实尺寸/SHA/实际prompt/raw可追溯；非透明场景不进行alpha处理。"
+  ],
+  "scenes": [
+    {
+      "id": "SCENE-GAP-SQ05-R02-WELL",
+      "node": "R02-well",
+      "name": "渡民岸井：备用井与三点取样岸",
+      "source_ids": [
+        [
+          "SCRIPT-SQ05",
+          "SQ05-S01",
+          "SQ05-S03",
+          "SQ05-R-move",
+          "SQ05-R-stay",
+          "SQ05-R-dispersed"
+        ],
+        [
+          "MAP-R02",
+          "R02-well"
+        ]
+      ],
+      "source_grounded_facts": [
+        {
+          "fact": "SQ05-S01备用井、岸边三个固定取样点、借用水桶；三点用于画水路。",
+          "source": "design/06_支线/台本/台本_SQ05_渡口与姓名.md",
+          "locator": "SQ05-S01"
+        },
+        {
+          "fact": "SQ05-S03过滤井与匿名编号/姓名对照分柜保存。",
+          "source": "design/06_支线/台本/台本_SQ05_渡口与姓名.md",
+          "locator": "SQ05-S03"
+        },
+        {
+          "fact": "R02-well为渡民岸井；有客店/旧渡口功能通路。",
+          "source": "design/02_世界与地图/区域_R02_丹布里西路与渡口.md",
+          "locator": "功能节点与通路"
+        }
+      ],
+      "reversible_art_proposals": [
+        "井居干岸偏左、河岸偏右、三点沿弯岸展开、两柜后侧小棚、左下回程，仅本图构图方向。",
+        "将S01与S03空间职责压缩进一个概念镜头；不声称两个阶段同时发生、不定备用井和过滤井的正式工程同一性。单井+独立过滤架为简洁试稿提案。",
+        "以两只关闭柜体可视化分柜原则；精确柜数/柜门/材料及运行权限未定。"
+      ],
+      "narrative_guards": [
+        "默认空景，不画米娅已上船、已迁居或欧达必然在场。",
+        "取样标记不认证水质；过滤架不是工程/医学安全结论。",
+        "不画维修完成、协议签订、relief/ferry获得或全员同意。"
+      ],
+      "planned_initial_prompt": "Create one original horizontal 3:2 pixel-art environment style-study image, an unoccupied low-magic medieval place. Use a fixed elevated three-quarter view, nearly orthographic, no dramatic perspective, no horizon or cinematic depth of field. Use deliberately clear chunky pixel clusters, crisp stepped contours and modest grouped shading; each material should read through a few broad muted tones before texture. Restrained weathered brown wood, grey stone, earthy ground and sparse dull olive grass. Keep generous readable ground and uninterrupted paths, with roughly one third of the composition quiet open ground or water. The main landmarks must remain immediately legible at a reduced viewing size. Do not fill every surface with grain, speckles, photoreal microtexture or painterly scratches. No smooth realistic rendering, 3D render, soft antialiasing, blur, glow, modern equipment, characters, creatures, UI, captions, readable writing, numbers, arrows or overlaid grid. Opaque complete scene, no alpha, no collage, no split panels. This is a visual proposal for an original place, not a playable map and not a reproduction of a specific Stoneshard screenshot. Show a modest riverside backup well and a river sampling bank. Place a single grey stone well on the dry bank slightly left of center, a simple rope-and-bucket lift, and a small ordinary timber filtering rack nearby. Along the visible shallow curved river edge on the right arrange exactly THREE clearly separate modest sampling positions, each with one plain ordinary borrowing bucket resting on a small reachable dry patch. All three must be individually countable and linked by the same broad dry bank path; they are sampling positions, not three wells, not medical tubes, and do not certify water purity. Use dark subdued blue water and a few pale shallow-bank stones. Near the rear dry return side, under one very small plain lean-to, show exactly two distinct CLOSED plain wooden cabinets separated by a small gap: one for anonymous sample/number records and one for private identity correspondence. Communicate separation only through their separate bodies and position, never readable labels or names, and do not show documents inside. Leave a clear open return path leading out of the lower-left edge; it must not terminate at the water or a fence. Buildings stay small, no whole village, no ship boarding, no crowds, no completed repair celebration, no signed agreement, no tickets or visual success indicators. Bucket handles are simple and readable. Left/right placement is only an art proposal; no map compass or world coordinates.",
+      "actual_submitted_prompt": null,
+      "generation_status": "not_started_by_this_brief",
+      "planned_relative_output_dir": "sq05_r02_well_pilot_v1",
+      "actual_output_dimensions": null,
+      "runtime_ready": false
+    },
+    {
+      "id": "SCENE-GAP-SQ08-R04-CAMP",
+      "node": "R04-camp",
+      "name": "退役营地避风棚",
+      "source_ids": [
+        [
+          "SCRIPT-SQ08",
+          "SQ08-S02",
+          "SQ08-R-anonymous",
+          "SQ08-R-surrender",
+          "SQ08-R-relocate"
+        ],
+        [
+          "MAP-R04",
+          "R04-camp"
+        ]
+      ],
+      "source_grounded_facts": [
+        {
+          "fact": "SQ08-S02场所为退役营地避风棚；本人同意优先，死亡时日记为条件替代。",
+          "source": "design/06_支线/台本/台本_SQ08_逃兵的家书.md",
+          "locator": "SQ08-S02与S62路线"
+        },
+        {
+          "fact": "R04-camp负责本人同意、家书、死者日记；有安全退回驿馆线。",
+          "source": "design/02_世界与地图/区域_R04_王廷关隘与边城.md",
+          "locator": "功能节点与通路；回程及敌对替代"
+        }
+      ],
+      "reversible_art_proposals": [
+        "低木棚位于左上、背侧粗布挡风；两个空坐位与小桌仅会谈空间提案。",
+        "干燥会谈位、右下出画回程、单个闭合文书袋只是构图/保管道具提案，不规定比例或官方方位。",
+        "回程指向画外驿馆方向的概念可读性，不擅自新增营地到驿馆的直接世界边。"
+      ],
+      "narrative_guards": [
+        "默认空景，不预放艾伦、罗温、守军或新怪物。",
+        "不画投降、捆绑、迁走、团聚、死亡通知或寄信完成。",
+        "日记与活人副联是条件替代，不画双份可刷证据，不露家属地址。"
+      ],
+      "planned_initial_prompt": "Create one original horizontal 3:2 pixel-art environment style-study image, an unoccupied low-magic medieval place. Use a fixed elevated three-quarter view, nearly orthographic, no dramatic perspective, no horizon or cinematic depth of field. Use deliberately clear chunky pixel clusters, crisp stepped contours and modest grouped shading; each material should read through a few broad muted tones before texture. Restrained weathered brown wood, grey stone, earthy ground and sparse dull olive grass. Keep generous readable ground and uninterrupted paths, with roughly one third of the composition quiet open ground or water. The main landmarks must remain immediately legible at a reduced viewing size. Do not fill every surface with grain, speckles, photoreal microtexture or painterly scratches. No smooth realistic rendering, 3D render, soft antialiasing, blur, glow, modern equipment, characters, creatures, UI, captions, readable writing, numbers, arrows or overlaid grid. Opaque complete scene, no alpha, no collage, no split panels. This is a visual proposal for an original place, not a playable map and not a reproduction of a specific Stoneshard screenshot. Show a small windbreak shelter at the edge of a retired camp, modest and civilian in scale, without a military parade ground. Place the low timber lean-to toward the upper-left half, backed by a short rough grey-stone edge and coarse faded taupe cloth that blocks wind on the back and one side. Keep the front and one side open so the interior reads clearly. Beneath it show a dry quiet conversation area: two simple empty sitting places spaced apart, one modest low table, ample clear ground between them. On a small protected shelf show ONE closed plain canvas document pouch only, its contents completely hidden and unreadable; it is only a possible storage prop, not proof that a diary and a live witness document both exist. A broad uncluttered earthen return footpath runs from the open side of the shelter through the center toward the lower-right frame edge, continuing visibly out of view toward an offscreen waystation. Do not draw the waystation or invent a direct world-coordinate link. Sparse dull grass and a few weathered stones frame, never block, the route. No people, guards, monsters, weapons display, royal flags, triumph banners, imprisonment, restraints, corpses, farewell scene, family reunion, delivered letters or open documents. Nothing implies surrender, relocation, death or consent. Do not substitute an unloading or medicine warehouse: no medicine racks, cargo stacks or hauling ruts.",
+      "actual_submitted_prompt": null,
+      "generation_status": "not_started_by_this_brief",
+      "planned_relative_output_dir": "sq08_r04_camp_pilot_v1",
+      "actual_output_dimensions": null,
+      "runtime_ready": false
+    }
+  ],
+  "implementation_deferred": [
+    "地图瓦片和切层",
+    "碰撞、走格和26像素格适配",
+    "原点/遮挡/地图门与转场",
+    "游戏和任务状态实现"
+  ],
+  "changed_files_policy": "仅新增本brief和来源JSON，不更改台本、卡、全局索引或游戏文件，不git提交。"
+}

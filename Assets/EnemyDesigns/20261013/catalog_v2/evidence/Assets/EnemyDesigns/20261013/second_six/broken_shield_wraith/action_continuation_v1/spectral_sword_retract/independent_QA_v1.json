@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "reviewer": "review_second_enemy_continuations",
+  "reviewed_utc": "2026-10-14T04:28:47.553835+00:00",
+  "result": "pass_independent_keypose_concept",
+  "version": "v1",
+  "actual_views": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_continuation_v1/spectral_sword_retract/broken_shield_wraith_spectral_sword_retract_raw_v1.png",
+      "sha256": "07d699b64bf0bf6d7b8ca53baa8cf7e42ef0569b14487f5cbdce3ef1c2f34776",
+      "bytes": 1039059,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.553835+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_continuation_v1/spectral_sword_retract/broken_shield_wraith_spectral_sword_retract_transparent.png",
+      "sha256": "0688f33d648ef74cb3994cec40e9bbf582d85f8d1d5cb3d4d31e84de2e5b8ec9",
+      "bytes": 1030415,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.553835+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_continuation_v1/spectral_sword_retract/preview_light_v1.png",
+      "sha256": "a51601dc257798faee66a124cf51d20d7e0e81631e01ab3c152902e0ba41f67a",
+      "bytes": 867580,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.553835+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_continuation_v1/spectral_sword_retract/preview_dark_v1.png",
+      "sha256": "b1e5690f7f708b32ae3d885fbfc470131be99bf58149217c9173dfbb362bdced",
+      "bytes": 821520,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.553835+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/broken_shield_wraith/action_continuation_v1/spectral_sword_retract/adjacent_light_dark_zh.png",
+      "sha256": "a2313116b9c49412573b54a1f2246ae02cbce6e4c5e83db887e1044854fb06b7",
+      "bytes": 1326786,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:28:47.553835+00:00"
+    }
+  ],
+  "findings": [
+    "原冷蓝灰脸、盔甲、同缺口尖底长盾和单手直剑保持；剑柄—拳—护手—剑身连续，剑与脸盾留有空隙。",
+    "探剑伸臂改为明显折肘回收，拳靠胸侧、剑斜向左上；胸肩后收较保守，但关节折叠和武器方向变化足以读出回收阶段，非旧低剑guard。",
+    "两短分叉幽尾从同一腰下幽体连续延伸，中间透空，无实体足、第三尾或扫地长袍。",
+    "真实浅深合成保留原光谱边缘与幽尾，不用alpha0隐藏RGB推断可见光圈，无需额外返工。"
+  ],
+  "hard_errors": [],
+  "revision_required": false,
+  "review_scope": "单张新增动作关键阶段的身份、动作链、支撑与握持可读性及真实RGBA合成；不是连续动画/精确锚点/装备runtime验收。",
+  "complete_animation_verified": false,
+  "gif_created": false,
+  "frame_anchors_verified": false,
+  "equipment_runtime_verified": false,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "technical": {
+    "actual_prompt_matches_arguments": true,
+    "tool_return_decoded_raw_sha_match": true,
+    "manifest_sha_bytes_checks_passed": 56,
+    "postprocess": "48-pixel transparent padding only; original RGBA identical inside padding",
+    "padded_rgba_equal_raw": true,
+    "zero_alpha_hidden_rgb_not_visible_failure": true
+  }
+}

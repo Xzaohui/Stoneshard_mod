@@ -1,0 +1,94 @@
+{
+  "concept_id": "EAO-CONCEPT-ENEMY-001",
+  "slug": "border_spear_rebel",
+  "anchor": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png",
+    "sha256": "31f837ac09a3d1f6c93ab771156f1cfc0e78c458f8f97ad4607e8685cfc63121",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_bbox": [
+      210,
+      10,
+      865,
+      1527
+    ],
+    "visually_inspected_utc": "2026-10-13T19:16:21Z",
+    "scope": "整个最终透明母图；非浅深底审核板、非已淘汰raw"
+  },
+  "static_records": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/manifest.json",
+      "sha256": "23103c1926eaf75b73608df5fd7db7962e6629267f2bda4c2254a95f816d6b6b"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/concept_brief.json",
+      "sha256": "68a7e544562130ffb55df9f4f08a9bc766ff4025252bc556ae3c6d0ce0f3df3c"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/reference_inspection.json",
+      "sha256": "cefb5a1161b00eb74ce247a6151850f8336400e7da740b434ba97a28732bb011"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/author_QA.json",
+      "sha256": "a83c064e40b972853a10e2eba5ece074dd203ea35bc019c248ae36844f4f2fc0"
+    }
+  ],
+  "output_directory": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/",
+  "generation_status": "not_started",
+  "pose_count": 2,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "identity_lock": {
+    "orientation": "同静态轻三分之四朝画面左；不得水平翻转。头、躯干和视线整体仍朝左，不做背面。",
+    "face": "原静态浓深眉、棕乱短发、完整短胡、方颌成年男性；仅把警惕调整为专注，保留鼻/眼/耳位置关系。",
+    "clothing": "米白袖与V形领内衫、灰褐分片绗缝护衣、画面右侧橄榄短披肩及灰色圆扣、右下摆灰蓝补布、腰带方扣、褐裤、米灰绑腿、褐靴。披肩与补布不能换边。",
+    "hands": "H1定义为静态画面左侧握矛的原持械手，按当前正/侧面约定为角色右手；H2为静态画面右侧空手。H1始终是主握手，不换成H2独持。新姿可让H2加扶矛杆，这是姿势变化而非换手。",
+    "weapon": "一支同样叶形灰铁枪头、枪颈金棕包带、棕木杆、金棕尾箍和短灰铁尾镦的完整长矛；不能换叉、戟、短矛或多枪尖。",
+    "weapon_scale": "以静态人物发顶至靴底身高H对照：整矛可见长约1.20H；这是目测/图上纵向近似，不是原版规格。新姿保留同一物理长度，侧向仅轻微透视，不允许大幅纵深缩短。枪头/杆粗/尾镦比例照母图。",
+    "reference_landmarks_approx_pixels": {
+      "body_crown_y": 280,
+      "body_sole_y": 1520,
+      "spear_tip_y": 10,
+      "spear_butt_y": 1490
+    },
+    "landmark_precision_note": "用于缩放后视觉复核的人工近似锚；不是脚本测量出的精确部件分割。"
+  },
+  "poses": [
+    {
+      "pose_id": "spear_ready",
+      "stage": "预备",
+      "output_raw": "border_spear_rebel_spear_ready_raw_imagegen.png",
+      "description": "从竖矛切为稳定双手中位戒备。枪尖朝画面左上约10–15度，枪杆在下胸至上腹前方，离脸和颈有明确空隙。H1主握靠后、在本侧腰前；H2辅助握前段，双手沿杆分开约一肩宽。两肘微弯不锁死；前脚朝左，后脚稍开，膝轻屈、躯干不深扭。",
+      "readability": "全矛侧向展开、枪尖—前手—后手—尾镦顺序清楚；手掌围杆而非杆穿手腕；两只手不得互相遮成一团。",
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/",
+      "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_raw_imagegen.png",
+      "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+      "max_first_drafts": 1,
+      "max_hard_error_revisions": 1
+    },
+    {
+      "pose_id": "spear_short_thrust",
+      "stage": "短直刺伸展定格",
+      "output_raw": "border_spear_rebel_spear_short_thrust_raw_imagegen.png",
+      "description": "保持同握位和同样朝左的矛轴，前臂沿轴送出一次克制的短直刺。前膝小幅弯、后腿支撑、后脚跟不夸张抬；H1仍后握、H2仍前扶，手间距与预备近似，双腕不反折，肘仍留微曲。胸腰只轻移，不用跨步飞扑、空中攻击或极端躯干扭转。",
+      "readability": "相对预备必须看见矛与双手前送、前肘更开、重量向前的变化；不得只改变表情。矛仍是同一根连续直杆，枪尖朝左而非朝镜头。",
+      "output_directory": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/",
+      "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_raw_imagegen.png",
+      "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+      "max_first_drafts": 1,
+      "max_hard_error_revisions": 1
+    }
+  ],
+  "specific_hard_errors": [
+    "任何一端被裁",
+    "H1/H2交换为另一只手独持",
+    "两手贴成一掌/多手/手腕穿杆",
+    "枪头与杆脱开或杆突然弯曲",
+    "矛长被缩水为约一身以内且无可信轻透视解释",
+    "披肩、圆扣、补布左右翻转",
+    "脚底失去承重或深度劈叉"
+  ],
+  "future_only": "本两图是两个独立关键姿势，不包含收枪回程、插值、中间帧、击中、受击目标或动作时间。"
+}

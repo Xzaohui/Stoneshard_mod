@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "asset_batch": "20261013",
+  "local_date_note": "UTC日期2026-10-13，用户UTC+8日期已2026-10-14，资源目录延续20261013批。",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "historical_roster": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "sha256": "6af5b2e027def4ecab0a36b34739dc1a168a78d5c527ece98180e6460897325a"
+  },
+  "master": {
+    "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+    "sha256": "1ef69891ce678f6d8aef940cd03578261b4f27a8ec99a17ba80a34898d30ba22"
+  },
+  "scope": "最新远端九提交新增原创角色概念计划；不更新原roster、MASTER、图像或交付回执。",
+  "style": {
+    "direction": "成熟大头短身、短颈自然肩线、紧凑成年体态、可读五官与人物自己的情绪；低魔中世纪材质、组织清晰像素簇；完整单人透明全身概念。",
+    "style_source": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    "references": [
+      {
+        "path": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+        "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a"
+      },
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+        "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+      }
+    ],
+    "reference_use": "Sela G仅参考成熟美感和脸部情绪；Mia 1:1.5只为单人已认可比例案例，不机械套全员，不复制脸、发型和衣装。",
+    "guardrails": [
+      "先实际看参考，再生图；原始图不可做裁切假装完成",
+      "与下述最新剧情卡冲突时以最新卡/台本为准；服色和未设定发型可提出可逆设计",
+      "没有治疗、付款、续约、宽恕或调查结案图示；不将道具文字当真实承诺",
+      "新目录输出，不覆盖167旧锚/旧receipt；新图先标待独审，不自动通过",
+      "概念不代表目标游戏原部件、身型、帧表、装备兼容或运行通过"
+    ],
+    "age_guard": "成熟感仅用于卡定成年者；其他角色按原年龄，不把17–18岁的FX-HUT画中年。未成年正常完整职业服饰，不性感化。"
+  },
+  "independence_note": "新文件；首批四人brief、历史roster/MASTER/receipt不变。先按真实图片独审，后才记交付。",
+  "created_utc": "2026-10-13T18:22:53.696063+00:00",
+  "batch": "tenth_four",
+  "characters": [
+    {
+      "canonical_id": "FX-WCH",
+      "name": "索妲",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-WCH_索妲.md",
+        "sha256": "2605d2abd9b7ae74c9e85cb67b75c66a27a4814e0e67f3bb18eeb7528f456600"
+      },
+      "card_details": {
+        "工作": "女巫的邻居，常在 `rumor_witchHut1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "体貌与随身": "四十多岁的农妇，挎着一只空篮，围巾裹到下巴；说到女巫就先看林子方向。",
+        "口吻": "压低声音，句子绕弯；拒绝替人传话时改说家常。",
+        "知情边界": "女巫什么时候收东西；村里人夜里绕哪条路走。不替女巫许诺什么；不替村里人定罪。"
+      },
+      "story_links": [
+        "区域_R05_灰烬湿地与疫村",
+        "台本_FX_野外人物对白",
+        "台本_DT09_药师指认的草",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R05_灰烬湿地与疫村",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "女巫的邻居",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-WCH",
+        "site": "rumor_witchHut1",
+        "region": "R05",
+        "look": "四十多岁的农妇，挎着一只空篮，围巾裹到下巴；说到女巫就先看林子方向。",
+        "voice": "压低声音，句子绕弯；拒绝替人传话时改说家常。",
+        "knows": [
+          "女巫什么时候收东西",
+          "村里人夜里绕哪条路走"
+        ],
+        "not_knows": [
+          "不替女巫许诺什么",
+          "不替村里人定罪"
+        ],
+        "visits": {
+          "task": "台本_DT09_药师指认的草",
+          "before": [
+            "你要指认草，别从我这儿听名字。我说的名字，村里要记账。"
+          ],
+          "after": [
+            "草的事定了。她那边照旧不开门，我照旧放篮子。"
+          ],
+          "early": [
+            "你先见的我，后指认的草。顺序好，风不会吹错方向。"
+          ],
+          "late": [
+            "草指认完了才来问我？我早说过，别把我说的话当证词。"
+          ],
+          "proxy": [
+            "邻居不在门口时，篮子照旧放；别替她敲那扇门。"
+          ]
+        },
+        "first_greeting": "你找错门了。这边不住人——住的是林子。",
+        "refusal": "要我带你去见她？不去。要去你自己去，别说是我指的路。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "suoda",
+        "age_and_identity": "四十多岁的农妇；女巫的邻居。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "四十多岁的农妇，挎着一只空篮，围巾裹到下巴；说到女巫就先看林子方向。",
+        "body_and_silhouette": "四十多岁农妇、空篮、围巾包至下巴；不是女巫本人。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：宽面成熟眉眼、眼瞟画外林子、嘴在巾上方只轻开，压声但不阴谋脸。",
+        "costume": "卡定衣装优先：四十多岁的农妇，挎着一只空篮，围巾裹到下巴；说到女巫就先看林子方向。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "枯紫围巾、土灰衣、浅旧藤篮。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "一臂挎空篮、另一手靠近围巾边，不掩住全脸，站姿微侧。",
+        "source_voice": "压低声音，句子绕弯；拒绝替人传话时改说家常。",
+        "required_visible_props": [
+          "空篮",
+          "围到下巴的围巾"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不画法杖/魔法/巫帽或替女巫承诺、村民定罪；篮确实空。",
+        "knowledge_limits": {
+          "knows": [
+            "女巫什么时候收东西",
+            "村里人夜里绕哪条路走"
+          ],
+          "not_knows": [
+            "不替女巫许诺什么",
+            "不替村里人定罪"
+          ],
+          "current_refusal": "要我带你去见她？不去。要去你自己去，别说是我指的路。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT09_药师指认的草.md",
+          "sha256": "e97416f8b52961564f2a95ea7ce51b8c0b6922f12c84be248b51bea7617bcbaa"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-HUT",
+      "name": "珂琳",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-HUT_珂琳.md",
+        "sha256": "ecedc5bb6a4ccd3c2fc4ec3b3aeeb2c649e583ff61e832bffd049ff3e7ea843b"
+      },
+      "card_details": {
+        "工作": "药师的学徒，常在 `rumor_hermitHut1` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "体貌与随身": "十七八岁的姑娘，围裙上缝着草药袋，手指有切药的细口子；说话先看师父的椅子。",
+        "口吻": "规矩、认真，学师父的口气；说到“师父不在”就重复一遍。",
+        "知情边界": "哪些药草晾在哪面墙；师父留下的规矩。不替师父看病开方；不动师父的账本。"
+      },
+      "story_links": [
+        "区域_R06_无名修院山地",
+        "台本_FX_野外人物对白",
+        "台本_DT05_驿馆的急用药",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R06_无名修院山地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "药师的学徒",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-HUT",
+        "site": "rumor_hermitHut1",
+        "region": "R06",
+        "look": "十七八岁的姑娘，围裙上缝着草药袋，手指有切药的细口子；说话先看师父的椅子。",
+        "voice": "规矩、认真，学师父的口气；说到“师父不在”就重复一遍。",
+        "knows": [
+          "哪些药草晾在哪面墙",
+          "师父留下的规矩"
+        ],
+        "not_knows": [
+          "不替师父看病开方",
+          "不动师父的账本"
+        ],
+        "visits": {
+          "task": "台本_DT05_驿馆的急用药",
+          "before": [
+            "驿馆要药，单子先念给我。念错了，我记你一遍。"
+          ],
+          "after": [
+            "药送出去了。师父回来要查账，你自己说清哪味是你送走的。"
+          ],
+          "early": [
+            "你先来的药棚，后去的驿馆。顺序对，方子对得上。"
+          ],
+          "late": [
+            "驿馆的事办完了才来取药？药凉了，话还热着。"
+          ],
+          "proxy": [
+            "学徒不在时，药棚的门只关不锁；账本不许翻。"
+          ]
+        },
+        "first_greeting": "师父不在。你要抓药，把症状说清，我先记着。",
+        "refusal": "要我替你配药带走？不行。得师父点头。"
+      },
+      "age_policy": "按现卡真实年龄；17–18岁人物保青年年龄与正常完整职业服饰，不自动成年化。",
+      "production_brief": {
+        "working_slug": "kelin",
+        "age_and_identity": "十七八岁的姑娘；药师的学徒。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "十七八岁的姑娘，围裙上缝着草药袋，手指有切药的细口子；说话先看师父的椅子。",
+        "body_and_silhouette": "十七至十八岁姑娘、药师学徒，保真实青年年龄；正常完整职业衣装，不套中年或幼童脸。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：青年柔和下颌、认真直眉、好奇但守规矩的眼睛，嘴轻启学师父说话；发辫为可逆提案。",
+        "costume": "卡定衣装优先：十七八岁的姑娘，围裙上缝着草药袋，手指有切药的细口子；说话先看师父的椅子。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "米灰粗布衫、暗草绿围裙、棕鞋。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "站稳，一手碰围裙上草药袋、另一手放松；视线瞟向画外师父椅子，未自行配药。",
+        "source_voice": "规矩、认真，学师父的口气；说到“师父不在”就重复一遍。",
+        "required_visible_props": [
+          "缝草药袋的围裙",
+          "手指极轻微已闭合切药痕，可不夸张细画"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不性感化、不裸露、不画血/新伤；不拿师父账本、不擅开处方或代师答应。",
+        "knowledge_limits": {
+          "knows": [
+            "哪些药草晾在哪面墙",
+            "师父留下的规矩"
+          ],
+          "not_knows": [
+            "不替师父看病开方",
+            "不动师父的账本"
+          ],
+          "current_refusal": "要我替你配药带走？不行。得师父点头。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "age_guard": "17–18岁，可能未成年；正常完整工作服、非性感、非成人化，不用成熟中年面部模板。",
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT05_驿馆的急用药.md",
+          "sha256": "975b36ef49c623c4a34accd32b67b28bd9e9e53aff6362dff4e0de8bcfa253ea"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-FRM",
+      "name": "蓟珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-FRM_蓟珥.md",
+        "sha256": "7c22bfa2d44acf4dcea2e44f0f8da5b06483a1fe4798031e553c083974f1d83c"
+      },
+      "card_details": {
+        "工作": "安静农宅住户，常在 `rumor_homestead1` 一带。地域见 [[区域_R02_丹布里西路与渡口]]。",
+        "体貌与随身": "五十来岁的男人，袖口卷起，指甲缝里是土；说话前先看一眼院门。",
+        "口吻": "寡言，答话常比问题短；提水井才多说两句。",
+        "知情边界": "院里哪口井还出水；邻村谁家搬走了。不替邻村作保；不说自家存粮。"
+      },
+      "story_links": [
+        "区域_R02_丹布里西路与渡口",
+        "台本_FX_野外人物对白",
+        "台本_DT02_干净的井水",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R02_丹布里西路与渡口",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "安静农宅住户",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-FRM",
+        "site": "rumor_homestead1",
+        "region": "R02",
+        "look": "五十来岁的男人，袖口卷起，指甲缝里是土；说话前先看一眼院门。",
+        "voice": "寡言，答话常比问题短；提水井才多说两句。",
+        "knows": [
+          "院里哪口井还出水",
+          "邻村谁家搬走了"
+        ],
+        "not_knows": [
+          "不替邻村作保",
+          "不说自家存粮"
+        ],
+        "visits": {
+          "task": "台本_DT02_干净的井水",
+          "before": [
+            "井水的事你要问，先看院里的缸。缸满，说明井好。"
+          ],
+          "after": [
+            "井的事办完了。缸还是那口缸，水还是那样。"
+          ],
+          "early": [
+            "你先来过院子，后去查的井。哪口能喝，你尝过。"
+          ],
+          "late": [
+            "井的事查完了才来？井不问先后，只问桶干不干净。"
+          ],
+          "proxy": [
+            "住户不在院里时，缸盖着；水别自己舀。"
+          ]
+        },
+        "first_greeting": "院门开着不代表能进。你要水，我给你舀。",
+        "refusal": "要我留你过夜？不行。屋里就我一个人。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "jier",
+        "age_and_identity": "五十来岁的男人；安静农宅住户。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "五十来岁的男人，袖口卷起，指甲缝里是土；说话前先看一眼院门。",
+        "body_and_silhouette": "五十来岁男人、卷袖、土指甲；无必需大工具，靠安静紧凑农人轮廓。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：宽额与风霜颧面、眉微收、目光先看院门方向，嘴只小开答短句。",
+        "costume": "卡定衣装优先：五十来岁的男人，袖口卷起，指甲缝里是土；说话前先看一眼院门。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "旧灰蓝粗衫、褐裤、深泥鞋。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "一手轻搓另一手指上的土，手放腰前不遮脸；双脚稳站像停下活计。",
+        "source_voice": "寡言，答话常比问题短；提水井才多说两句。",
+        "required_visible_props": [
+          "卷起袖口",
+          "指甲少量泥土"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不添加锄头账簿粮袋填满构图；不画提供住宿、暴露存粮或替邻村作保。",
+        "knowledge_limits": {
+          "knows": [
+            "院里哪口井还出水",
+            "邻村谁家搬走了"
+          ],
+          "not_knows": [
+            "不替邻村作保",
+            "不说自家存粮"
+          ],
+          "current_refusal": "要我留你过夜？不行。屋里就我一个人。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT02_干净的井水.md",
+          "sha256": "1d8d3f4cf601d11a5db45b16ed916678861f8d5130d464223dd46d8468b52f5d"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-LOT",
+      "name": "绥珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-LOT_绥珥.md",
+        "sha256": "cbbc691c7ec3456de776e2bdfa4a7cb992bf22490539c6d9ae1c59fc67b4a671"
+      },
+      "card_details": {
+        "工作": "裁缝宅子亲属，常在 `rumor_homesteadLooted1` 一带。地域见 [[区域_R03_曼恩边地]]。",
+        "体貌与随身": "四十来岁的妇人，围巾结得紧，手里攥着半截布尺；说话时先看院子里的染缸。",
+        "口吻": "先解释自己为什么来，再谈东西；被怀疑就沉默。",
+        "知情边界": "哪几匹布是自家的；抢东西的人往哪边走的。不认领别人家的东西；不替宅子新主人说话。"
+      },
+      "story_links": [
+        "区域_R03_曼恩边地",
+        "台本_FX_野外人物对白",
+        "台本_SQ03_没有王旗的面包",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R03_曼恩边地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "裁缝宅子亲属",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-LOT",
+        "site": "rumor_homesteadLooted1",
+        "region": "R03",
+        "look": "四十来岁的妇人，围巾结得紧，手里攥着半截布尺；说话时先看院子里的染缸。",
+        "voice": "先解释自己为什么来，再谈东西；被怀疑就沉默。",
+        "knows": [
+          "哪几匹布是自家的",
+          "抢东西的人往哪边走的"
+        ],
+        "not_knows": [
+          "不认领别人家的东西",
+          "不替宅子新主人说话"
+        ],
+        "visits": {
+          "task": "台本_SQ03_没有王旗的面包",
+          "before": [
+            "发粮的事我听说了。先问一句：宅子里的布算不算粮。"
+          ],
+          "after": [
+            "粮发完了。布还是布，没人认领的照旧挂着。"
+          ],
+          "early": [
+            "你先来过宅子，后去发的粮。那你知道这院子缺什么。"
+          ],
+          "late": [
+            "粮的事办完了才来？布匹不等粮车，落灰而已。"
+          ],
+          "proxy": [
+            "亲属不在院子里时，染缸别动；缸底有主。"
+          ]
+        },
+        "first_greeting": "我不是来抢的。那口染缸是我家的。",
+        "refusal": "要我作证是谁抢的？不。我说了，别人就得替我担。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "suier_lot",
+        "age_and_identity": "四十来岁的妇人；裁缝宅子亲属。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "四十来岁的妇人，围巾结得紧，手里攥着半截布尺；说话时先看院子里的染缸。",
+        "body_and_silhouette": "四十来岁妇人、紧系围巾、手攥半截布尺；不同于空篮索妲。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：稍尖但成熟下颌、忧虑眉、眼看侧边染缸方向、嘴半开又停。",
+        "costume": "卡定衣装优先：四十来岁的妇人，围巾结得紧，手里攥着半截布尺；说话时先看院子里的染缸。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "暗蓝灰围巾、旧陶褐衣、米麻布尺。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "双脚稳，一手握半截布尺在胸腹前，另一手轻托握尺手腕；不举尺指责。",
+        "source_voice": "先解释自己为什么来，再谈东西；被怀疑就沉默。",
+        "required_visible_props": [
+          "紧结围巾",
+          "半截软布尺"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不画新主人产权/抢夺现场或已作证；不添加缝纫机、现代卷尺壳。",
+        "knowledge_limits": {
+          "knows": [
+            "哪几匹布是自家的",
+            "抢东西的人往哪边走的"
+          ],
+          "not_knows": [
+            "不认领别人家的东西",
+            "不替宅子新主人说话"
+          ],
+          "current_refusal": "要我作证是谁抢的？不。我说了，别人就得替我担。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/06_支线/台本/台本_SQ03_没有王旗的面包.md",
+          "sha256": "aa90cf25f8c4570170fb600ac8f3f6c5fa32e22a7f1d50402c0db5056479adfa"
+        }
+      ],
+      "source_reverified": true
+    }
+  ]
+}

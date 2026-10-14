@@ -1,0 +1,3 @@
+from pathlib import Path
+import json,sys,datetime
+stem=sys.argv[1];observations=sys.argv[2:];e=Path('Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_actions_independent_details');p=e/(stem+'_byte_audit.json');j=json.loads(p.read_text());assert not j['failures'];j['status']='PASS_INDEPENDENT_VISUAL_AND_BYTE_REVIEW';j['actual_visual_review']={'reviewed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'raw_actual_viewed':True,'raw_and_selected_true_light_dark_composites_actual_viewed':True,'observations':observations,'hard_errors':[],'revision_required':False,'alpha0_hidden_rgb_is_not_a_visual_failure':True};p.write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n');print(stem,'PASS')

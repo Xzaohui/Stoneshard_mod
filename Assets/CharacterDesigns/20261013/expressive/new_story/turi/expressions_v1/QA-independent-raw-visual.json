@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent third-character-expression reviewer",
+  "reviewed_utc": "2026-10-13T20:59:21.116354+00:00",
+  "status": "pass_with_nonblocking_notes",
+  "character": "turi",
+  "method": "tools.view_image逐张实际查看母图raw/transparent、表情raw/selected与最终中文浅深双图板；Pillow/NumPy只读核RGBA/alpha/SHA。",
+  "mother_images_actually_viewed": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_v2_raw_imagegen.png",
+      "sha256": "a7e51617b0bc129bf7dc9406e0e316244e148418fd97184837c270ee003d08e2"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png",
+      "sha256": "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695"
+    }
+  ],
+  "expression_images_and_boards_actually_viewed": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/raw/turi_E1_consider_load_initial.png",
+      "sha256": "324a03fc493278d8a97c54dad8517e4c74f4d1eda700bf325ebb8ed57eda8c78"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/selected/turi_E1_consider_load_transparent.png",
+      "sha256": "7577a0e3d092533227e411517abd4286824bee23e27dc17a4b4d339a48b55f59"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/raw/turi_E2_hold_the_boundary_initial.png",
+      "sha256": "98ea8dfdc82c57498c34913c175c75cf6a3a987f32acef84789d97c9baafe045"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/selected/turi_E2_hold_the_boundary_transparent.png",
+      "sha256": "e0add5c58ff3696b8e298b63dd75eea8e197fa519a5c2904077db78cad08b304"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/review/turi_expressions_light.png",
+      "sha256": "aef9efd9b787bedf5816462a529be4cf8cc7a21430e68a591710fb4f76f8bf92"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/review/turi_expressions_dark.png",
+      "sha256": "0ef25363d71b69dcf7b869c0641c4940b950cc3062adc97cf27c49f7dc485860"
+    }
+  ],
+  "expressions": [
+    {
+      "key": "turi_E1_consider_load",
+      "status": "pass_with_nonblocking_notes",
+      "face": "闭唇、视线略低、内眉聚拢，审慎衡量可读；与母图开口说明不同。",
+      "identity_props": "灰鬓短须、窄成年脸、暗绿短披、扎袖、厚护腿保留；袋簿画面左、锤正面偏左、量角器画面右，未取用或换侧。",
+      "body_hands": "同一成年紧凑比例，双脚支撑、双手完整，接触/遮挡合理；无新增物件或关键截断。",
+      "boundary": "仅在听取范围信息，不表示已验、已修、已付、已接受续班或路段可开。",
+      "raw": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/raw/turi_E1_consider_load_initial.png",
+        "sha256": "324a03fc493278d8a97c54dad8517e4c74f4d1eda700bf325ebb8ed57eda8c78"
+      },
+      "selected": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/selected/turi_E1_consider_load_transparent.png",
+        "sha256": "7577a0e3d092533227e411517abd4286824bee23e27dc17a4b4d339a48b55f59"
+      },
+      "prompt": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/prompts/turi_E1_consider_load_initial.txt",
+        "sha256": "f11d465d20c6a4dc543ee685150f14aab4b18a6a4d369e96ae225ee3a2490832"
+      },
+      "prompt_exact_matches_logged_call": true,
+      "input_sha256_verified": true,
+      "raw_selected_RGBA_identical": true,
+      "size": [
+        1118,
+        1407
+      ],
+      "alpha_zero_pixels": 1019760,
+      "alpha_partial_pixels": 551994,
+      "alpha_bbox": [
+        56,
+        30,
+        1100,
+        1367
+      ],
+      "alpha_gt8_bbox": [
+        276,
+        33,
+        980,
+        1361
+      ],
+      "canvas_edge_alpha_max": 0,
+      "canvas_edge_nonzero_pixels": 0,
+      "alpha_assessment": "浅深RGBA合成无可见背景、棋盘或光晕；极低alpha=1的边缘散点不等于角色被截断，不以隐藏RGB判背景。",
+      "blocking_issues": []
+    },
+    {
+      "key": "turi_E2_hold_the_boundary",
+      "status": "pass_with_nonblocking_notes",
+      "face": "开口短句、目光向人且眉压较稳；脸部差异克制但与E1闭口有真实区别，小止掌为辅助而非唯一变化。",
+      "identity_props": "灰鬓短须、窄成年脸、暗绿短披、扎袖、厚护腿保留；袋簿画面左、锤正面偏左、量角器画面右，未取用或换侧。",
+      "body_hands": "同一成年紧凑比例，双脚支撑、双手完整，接触/遮挡合理；无新增物件或关键截断。",
+      "boundary": "不画真的绳梁或玩家，不预设危险消除、已检查结论、撤牌或全山保证。",
+      "raw": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/raw/turi_E2_hold_the_boundary_initial.png",
+        "sha256": "98ea8dfdc82c57498c34913c175c75cf6a3a987f32acef84789d97c9baafe045"
+      },
+      "selected": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/selected/turi_E2_hold_the_boundary_transparent.png",
+        "sha256": "e0add5c58ff3696b8e298b63dd75eea8e197fa519a5c2904077db78cad08b304"
+      },
+      "prompt": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/prompts/turi_E2_hold_the_boundary_initial.txt",
+        "sha256": "0b20cb9a746eb6a21a59bd50df86af296bfeeaa8db3b70264b4f6d4a27f6f32d"
+      },
+      "prompt_exact_matches_logged_call": true,
+      "input_sha256_verified": true,
+      "raw_selected_RGBA_identical": true,
+      "size": [
+        1118,
+        1407
+      ],
+      "alpha_zero_pixels": 1023911,
+      "alpha_partial_pixels": 547391,
+      "alpha_bbox": [
+        48,
+        21,
+        1104,
+        1383
+      ],
+      "alpha_gt8_bbox": [
+        251,
+        41,
+        1019,
+        1356
+      ],
+      "canvas_edge_alpha_max": 0,
+      "canvas_edge_nonzero_pixels": 0,
+      "alpha_assessment": "浅深RGBA合成无可见背景、棋盘或光晕；极低alpha=1的边缘散点不等于角色被截断，不以隐藏RGB判背景。",
+      "blocking_issues": []
+    }
+  ],
+  "nonblocking_style_note": "外缘深描边比母图略显整齐、局部像素簇重排；仍是同一紧凑成年比例和粗像素概念，非硬错。",
+  "revision_requested": false,
+  "scope": "独立概念视觉审查，不是用户认可、连续动画或游戏运行验收。"
+}

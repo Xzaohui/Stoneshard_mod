@@ -1,0 +1,41 @@
+{
+  "calls": [
+    {
+      "revision": 1,
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "prompt_v1.txt",
+      "transparent_background": true,
+      "actual_reference_images": [],
+      "raw": "anni_v1_raw_imagegen.png",
+      "selected": false
+    },
+    {
+      "revision": 2,
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "prompt_v2.txt",
+      "transparent_background": true,
+      "actual_reference_images": [
+        "anni_v1_raw_imagegen.png",
+        "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+        "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+      ],
+      "raw": "anni_v2_raw_imagegen.png",
+      "selected": true,
+      "revision_reason": "First raw too tall and finely textured; apparent background glow in raw preview. Definitive appearance issue: detail and proportion. Raw alpha preview alone not used as proof of background failure."
+    }
+  ],
+  "export": "export_assets.py",
+  "allowed_operations": [
+    "alpha <= 8 clear to zero",
+    "uniform nearest-neighbor display layout",
+    "Chinese board typography outside character"
+  ],
+  "disallowed_operations_not_performed": [
+    "script face/body drawing",
+    "nonuniform stretching",
+    "cropping raw",
+    "quantization",
+    "image replacement of historical characters"
+  ],
+  "final_freeze": "manifest.json freezes production files; subsequent independent review/FINAL_STATUS does not mutate these files."
+}

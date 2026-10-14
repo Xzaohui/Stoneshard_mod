@@ -1,0 +1,116 @@
+{
+  "character": "wuer",
+  "pose_version": "wuer_A2_half_crouch_right_thigh_support_v1",
+  "reviewed_utc": "2026-10-14T07:25:12.063379+00:00",
+  "verdict": "pass",
+  "files": [
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A2_half_crouch_right_thigh_support_v1_technical_QA.json",
+      "bytes": 1159,
+      "sha256": "01c58ad519295fabf7a00459db8ba9eee74fa10d07073d76311d9f2d3e44216c"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A2_half_crouch_right_thigh_support_v1_light.png",
+      "bytes": 578748,
+      "sha256": "19230d1226a45a8e008e8c99665278bf2f6f8972a0f51a51a8ad2793a7fe3a9c"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A2_half_crouch_right_thigh_support_v1_dark.png",
+      "bytes": 550763,
+      "sha256": "b6f1c5c1a798d703132a932c94d87fe3966ac9b4dd5dc8849922d87df4e1260c"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A2_half_crouch_right_thigh_support_v1_transparent.png",
+      "bytes": 672190,
+      "sha256": "0d524d601ce4f3a348a4bf80e410be8620d7b18b48b887bb06554e9b385f5775"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/raw/wuer_A2_half_crouch_right_thigh_support_v1_tool_return.json",
+      "bytes": 1018838,
+      "sha256": "4bf1394ae042aeb340d7488f12fad8f41ad93c2de50392e325576f0cc5e3c75b"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/raw/wuer_A2_half_crouch_right_thigh_support_v1_raw.png",
+      "bytes": 763731,
+      "sha256": "75d6c9879af40296549addce1004b442e90acb374de7cfa77bc7402cb84f9e90"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/prompts/wuer_A2_half_crouch_right_thigh_support_v1_tool_args.json",
+      "bytes": 2603,
+      "sha256": "8b25f11a07b4c39879f6a0029ff96d1b1b17a79c7fae783af3495c5dd701ae01"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/prompts/wuer_A2_half_crouch_right_thigh_support_v1.txt",
+      "bytes": 2364,
+      "sha256": "757b087ea9cc78c408bb3c78e759d632e58144551c8d8dfec7d98a51f331faf6"
+    }
+  ],
+  "checks": {
+    "raw_matches_decoded_complete_tool_result": true,
+    "decoded_images": 1,
+    "prompt_matches_parameters": true,
+    "source_prompt_saved_before_raw": true,
+    "transparent_requested": true,
+    "raw_and_selected_same_dimensions": true,
+    "raw_mode": "RGBA",
+    "selected_mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "canvas": [
+      1118,
+      1407
+    ],
+    "body_alpha_gt8_bytes_unchanged": true,
+    "all_changed_pixels_raw_alpha_le8": true,
+    "transparent_background_clear": true,
+    "light_dark_composites": [
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A2_half_crouch_right_thigh_support_v1_light.png",
+        "background_rgba": [
+          242,
+          236,
+          220,
+          255
+        ],
+        "matches_true_composite": true
+      },
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A2_half_crouch_right_thigh_support_v1_dark.png",
+        "background_rgba": [
+          31,
+          36,
+          44,
+          255
+        ],
+        "matches_true_composite": true
+      }
+    ],
+    "first_prompt_matches_frozen_brief": true,
+    "provenance_file_present": false,
+    "provenance_all_file_and_reference_hashes_match": true,
+    "provenance_errors": [],
+    "submitted_reference_files_exist": true,
+    "submitted_reference_includes_sha_verified_mother": true
+  },
+  "visual_review": {
+    "actual_viewed": [
+      "raw",
+      "selected_transparent",
+      "true_light_composite",
+      "true_dark_composite"
+    ],
+    "findings": [
+      "raw、透明、真浅深4图均实际查看。",
+      "双膝有明显弯曲，髋部降低、两腿分开，双靴脚底支撑成立；并非只转头或轻弯腰。",
+      "右掌落在画左本人右大腿膝上灰裤处；左手画右低垂不撑地，原短截状指端保留，肩肘腕无增肢。",
+      "原脸朝画左、发色与土褐衣装保留，完整头脚可见，无新物或战斗环境。"
+    ],
+    "required_revision": null,
+    "nonissues": [
+      "屈膝后腿部视觉压缩是姿势变化，无证据表明发生人体硬缩放或身份幼化。"
+    ],
+    "remaining_revisions": 0
+  }
+}

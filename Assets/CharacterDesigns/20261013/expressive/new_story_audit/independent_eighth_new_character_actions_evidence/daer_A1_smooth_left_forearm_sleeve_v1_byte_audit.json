@@ -1,0 +1,115 @@
+{
+  "character": "daer",
+  "pose_version": "daer_A1_smooth_left_forearm_sleeve_v1",
+  "reviewed_utc": "2026-10-14T07:27:15.162316+00:00",
+  "verdict": "hard_error_revision_needed",
+  "files": [
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/review/daer_A1_smooth_left_forearm_sleeve_v1_light_inspect.png",
+      "bytes": 582790,
+      "sha256": "e50c1d2cb4b1363bc47973718340cc24f012cc781369c843fc252b06df05b5e8"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/review/daer_A1_smooth_left_forearm_sleeve_v1_dark_inspect.png",
+      "bytes": 560502,
+      "sha256": "ea6bb30504f6338465d35d5bd6e2603d407693697e34ecdc23f5562f460ac462"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/review/daer_A1_smooth_left_forearm_sleeve_v1_transparent.png",
+      "bytes": 681421,
+      "sha256": "3b796bf27df4d48dd03c6b57fe03308371c30568f1bb8d7d4868136e931cb181"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/raw/daer_A1_smooth_left_forearm_sleeve_v1_raw_imagegen.png",
+      "bytes": 756010,
+      "sha256": "1ccc34d05a37b43488277d5e06e0113051f15ecb104aa43e0a6a960e704d9a5a"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/raw/daer_A1_smooth_left_forearm_sleeve_v1_tool_return.json",
+      "bytes": 1008546,
+      "sha256": "b72629603f9bf76db36320e5988e4fe7d7a6f7c0f2e0f5243d4efef1ef730c9c"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/prompts/daer_A1_smooth_left_forearm_sleeve_v1_parameters.json",
+      "bytes": 2570,
+      "sha256": "6f47d0d771502d7e3f1c24d1fa5a2cebb56e06834ee815d8a1d048aa894064f8"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/prompts/daer_A1_smooth_left_forearm_sleeve_v1.txt",
+      "bytes": 2331,
+      "sha256": "8ee894d9c65ea56e32a319a1c7c767c763ec64b0d8699ae50c0dee2aa0fe91fa"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/qa/daer_A1_smooth_left_forearm_sleeve_v1_technical.json",
+      "bytes": 1269,
+      "sha256": "b23981ef6d60902dcd33b3c30dbab22e92e724dc574f47d418fadb82a1a6810f"
+    }
+  ],
+  "checks": {
+    "raw_matches_decoded_complete_tool_result": true,
+    "decoded_images": 1,
+    "prompt_matches_parameters": true,
+    "source_prompt_saved_before_raw": true,
+    "transparent_requested": true,
+    "raw_and_selected_same_dimensions": true,
+    "raw_mode": "RGBA",
+    "selected_mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "canvas": [
+      1118,
+      1407
+    ],
+    "body_alpha_gt8_bytes_unchanged": true,
+    "all_changed_pixels_raw_alpha_le8": true,
+    "transparent_background_clear": true,
+    "light_dark_composites": [
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/review/daer_A1_smooth_left_forearm_sleeve_v1_light_inspect.png",
+        "background_rgba": [
+          238,
+          232,
+          217,
+          255
+        ],
+        "matches_true_composite": true
+      },
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1/review/daer_A1_smooth_left_forearm_sleeve_v1_dark_inspect.png",
+        "background_rgba": [
+          37,
+          40,
+          45,
+          255
+        ],
+        "matches_true_composite": true
+      }
+    ],
+    "first_prompt_matches_frozen_brief": true,
+    "provenance_file_present": false,
+    "provenance_all_file_and_reference_hashes_match": true,
+    "provenance_errors": [],
+    "submitted_reference_files_exist": true,
+    "submitted_reference_includes_sha_verified_mother": true
+  },
+  "visual_review": {
+    "actual_viewed": [
+      "raw",
+      "selected_transparent",
+      "true_light_composite",
+      "true_dark_composite"
+    ],
+    "findings": [
+      "raw、透明、真浅深4图均实际查看，原实参与payload/raw/源SHA闭合。",
+      "确定侧别硬错：人物右臂从画左伸出，人物左掌从画右跨来贴右袖；与目标右掌贴左前臂袖面相反。",
+      "脸朝画左、空袋画右正确，故不可整图镜像解决。"
+    ],
+    "required_revision": "只修双臂分工：左前臂从画右起始伸出，右掌从画左越腹贴左前臂灰绿布面，双手分离、袖口扎带完整；保脸朝画左、袋画右、原衣装比例与透明。",
+    "nonissues": [
+      "成熟脸、完整身体、空袋、扎袖与真实透明无独立硬错。"
+    ],
+    "remaining_revisions": 1
+  }
+}

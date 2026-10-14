@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。",
+    "planned_selected_images": 8
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者与独审实际view每张原图及最终透明/浅深板，逐图核母图SHA、身份、面部情绪、手势、道具侧别和剧情边界；manifest绑定选稿SHA。板上不加剧情已完成标签。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "prompt_archive_contract": {
+    "status": "planned_prompts_not_executed",
+    "rule": "本文件prompt_text是完整拟用首稿，不冒称已执行prompt。生产时将真实发送的逐字prompt、引用路径与输入SHA、工具参数、时间、输出路径/SHA、首稿或硬错revision1及选废原因写入prompts/与generation-log.json；若改措辞必须存实际版本，不用本brief替代真实调用存档。",
+    "max_calls_per_expression": 2,
+    "revision_rule": "仅一次明确硬错定向修订；实际修订全文及纠错目标须保存，失败则报告，不偷偷增加第三稿。"
+  },
+  "created_utc": "2026-10-14T01:22:56.339088+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "第六批四名新剧情人物各两种独立面部情绪，共8张未来全身概念。本轮仅规划并新增本brief及来源快照，不生图、不上传、不git、不改旧文件。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/sixth_four_production_brief.json",
+    "sha256": "e6481d39899a41a2e8dc1cb83140985263249212653f672c27add8cd0fb3fc52"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_sixth_four_20261013.json",
+    "sha256": "be4913c7a1ca16aeddbef9df928df3ad74fac44e6327ba65bf62e0d023b33691"
+  },
+  "format_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_expression_brief.json",
+    "sha256": "b0f8633eabdc4808066d7b48e394ecbd4cda602417a09fb230c16a5dace4b11c"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "shared_locks": [
+    "每张以该人物selected_raw及最终透明版为唯一身份/服装/比例母图，单人完整全身；各人按实际母图保留紧凑成年比例、体型、朝向、站姿或坐姿，不统一数字。",
+    "保留个人年龄、面型、鼻唇、发型、眉眼基础形状与肤色；情绪主要靠眉眼嘴协调变化，不能只复制母图表情换手势，不能幼化或套同一笑脸。",
+    "服装层次、配色、磨损、补丁、道具数量与侧别沿母图，画面左右和人物左右同时标注；不得整体镜像。合理小动作遮挡与细褶变化可接受。",
+    "珥薇锅在画面右低放；埕珥坐低凳、灯在画面左、两毯分层；苇珥画面左手持探路棍、画面右手握袋带；缶珥坐稳合板置膝、炭笔在画面右袖口。",
+    "面部清楚且有组织的粗像素簇，不硬缩35px、不量化掩盖五官，不机械卡眉角、眼像素数或统一头身比。保留完整头发、双手、鞋、坐具与道具留边。",
+    "本批动作只作微调，不全套开掌劝停，不为追求多样性添加指人、举棍、递板、拿灯或大幅身体动作。",
+    "卡定/台本事实优先；8个情绪与微手势均为可逆美术演出，不回写人物卡、任务状态或身份。两图不是顺序结局，本人在场存活愿谈且有有限见闻才适用。",
+    "不自动赋予DT08/DT06/DT13/N16路线结果，不画付款、修桥完成、汤已分完、查阅授权、强制归返、遗物认领、疾病康复、政治支持或终局冻结。",
+    "苇珥weier=FX-HOM；韦珥weier_ink=FX-INK，严格分人。苇珥英文错位槽不用作本批依据。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "FX-RLY",
+      "slug": "erwei",
+      "name": "珥薇",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-RLY_珥薇.md",
+        "sha256": "8325cde9523ed87504bb9e3005cc275b81203efe22dc6ccbf2558453733f0dca"
+      },
+      "card_matches_sixth_four_brief": true,
+      "age_identity_lock": "四十来岁的成年妇人、荒废营地中继人；不新增旅店老板、保管人、引路人或掌勺救济者身份。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erwei/concept_v1/erwei_v1_raw_imagegen.png",
+          "sha256": "7235f0ed07d3c258b275650391dcb0c8bcd19a654bf06fd41c744f80ae7358a0"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erwei/concept_v1/erwei_transparent.png",
+          "sha256": "a296e556ea2a731e416e74eb0776aaf0bd72384cd452d2cf41cc4105c77f5e50"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erwei/concept_v1/manifest.json",
+          "sha256": "f71a500fcb60161676ced067611f9eea4c0554ca038c7e8f4995d64df16ec630"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐张查看4个raw与4个transparent；珥薇/埕珥另查看已有浅深底展示板核正常RGBA合成。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 20,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "荒废营地中继人，常在 `rumor_camp2` 一带。地域见 [[区域_R02_丹布里西路与渡口]]。",
+        "四十来岁的妇人，背着一口旧锅，围裙上缝着补丁；说话时先把锅放下。",
+        "热络但谨慎；一谈钱就换成短句。",
+        "哪口灰坑还能用；过路的人一般走哪条路。不替过路人保管东西；不问别人去哪儿。"
+      ],
+      "observed_mother_image": "栗棕低盘发夹灰白发缕，额侧长发束、圆实下颌，眉一高一平，眼看画面左，嘴微张带热络笑意。苔绿上衣、米灰大围裙，画面左下赭红补丁与右上苔绿补丁；深棕裙和棕鞋。人物左手（画面右）低垂轻触单口旧铁锅耳，锅在同侧鞋外落低；人物右手（画面左）原本掌心朝上闲谈。",
+      "fixed_prop_sides": [
+        "单口黑褐旧铁锅始终在人物左侧（画面右）鞋外低放，与鞋轮廓分开；人物左手可轻触原锅耳，不提起、不换侧、不增加汤、火或物品。",
+        "人物右手（画面左）为空手，可自然松收在围裙腰边；两块围裙补丁、腰带结、卷袖与原裙鞋保留。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug及中文名扫描PNG，外部副本逐SHA核对；Assets下每个ZIP只读检查成员；weier_ink/FX-INK韦珥另身份排除。",
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/sixth_four_delivery_v1/新增剧情人物_珥薇埕珥源包.zip",
+            "sha256": "dbdf54297ec14cad77f2972e633d2681ef5e7e4cbd42094c93d33647b673e6cb",
+            "member_count": 49,
+            "matching_members": 21,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "erwei_E1_familiar_road_wry_smile",
+          "label_zh": "谈路莞尔",
+          "scene_proposal": "闲谈背锅往返两村，想到肩膀仿佛记住路时的一点自嘲温和。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L858、L867；口吻与闲谈1"
+          },
+          "face_changes": "原本一高一平的眉放松，双眼轻收而仍张开可读，目光从侧面交谈略向上偏；嘴从开口谈笑收为克制的闭唇浅笑，一侧唇角略高。成年热络里有一点自嘲，不是大笑或甜美少女笑。",
+          "minimal_gesture": "头略侧倾但保持画面左朝向；右手（画面左）从掌心向上的谈话位自然落至围裙腰侧松曲，左手仍轻触低放锅耳；原双脚站稳。",
+          "difference_from_static_and_pair": "母图开口侧看变为闭唇浅笑与松眉略抬眼；E2是笑意收尽、下压眉与直视。",
+          "condition_and_limit": "只表演日常谈路的轻松片刻，不表示桥已修好、已过河、收到钱、承诺领路或同意看管行李。",
+          "output_stem": "erwei_E1_familiar_road_wry_smile",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：珥薇（FX-RLY，erwei）。四十来岁的成年妇人、荒废营地中继人；不新增旅店老板、保管人、引路人或掌勺救济者身份。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；坐姿人物保持坐姿。不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。保持母图纵向完整画布与合理留边，不截头发、双手、双鞋、坐具或随身物。\n母图观察：栗棕低盘发夹灰白发缕，额侧长发束、圆实下颌，眉一高一平，眼看画面左，嘴微张带热络笑意。苔绿上衣、米灰大围裙，画面左下赭红补丁与右上苔绿补丁；深棕裙和棕鞋。人物左手（画面右）低垂轻触单口旧铁锅耳，锅在同侧鞋外落低；人物右手（画面左）原本掌心朝上闲谈。\n固定侧别与道具：单口黑褐旧铁锅始终在人物左侧（画面右）鞋外低放，与鞋轮廓分开；人物左手可轻触原锅耳，不提起、不换侧、不增加汤、火或物品。 人物右手（画面左）为空手，可自然松收在围裙腰边；两块围裙补丁、腰带结、卷袖与原裙鞋保留。\n本张可逆表情提案：谈路莞尔。闲谈背锅往返两村，想到肩膀仿佛记住路时的一点自嘲温和。\n脸部：原本一高一平的眉放松，双眼轻收而仍张开可读，目光从侧面交谈略向上偏；嘴从开口谈笑收为克制的闭唇浅笑，一侧唇角略高。成年热络里有一点自嘲，不是大笑或甜美少女笑。\n最小手势：头略侧倾但保持画面左朝向；右手（画面左）从掌心向上的谈话位自然落至围裙腰侧松曲，左手仍轻触低放锅耳；原双脚站稳。\n必须形成可读区别：母图开口侧看变为闭唇浅笑与松眉略抬眼；E2是笑意收尽、下压眉与直视。\n剧情边界：只表演日常谈路的轻松片刻，不表示桥已修好、已过河、收到钱、承诺领路或同意看管行李。\n本人存活、在场、愿谈且有相应见闻才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币或新账簿；道具轮廓完整可读。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "erwei_E2_cautious_no_custody",
+          "label_zh": "敛笑拒托",
+          "scene_proposal": "对方请她替过路人看东西，她收起笑意，短句说清自己的界限。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L858、L860、L868、L872；口吻、边界、闲谈2与拒绝"
+          },
+          "face_changes": "眉头略靠拢、眉尾放平，眼神稳稳盯住画面左的交谈者；嘴闭合成平短线，嘴角不再上扬，下颌轻收。是谨慎认真，不怒吼、不嫌弃或夸张瞪眼。",
+          "minimal_gesture": "右手（画面左）指尖轻搭自己的围裙腰边、其余手指自然收曲；左手仍轻触原锅耳，锅落低不动，身体和鞋位稳定；不作开掌拦人。",
+          "difference_from_static_and_pair": "比母图与E1都更平眉、定眼、闭口且无笑意；拒绝靠面部和短促姿态成立，不靠大幅伸手。",
+          "condition_and_limit": "不接行李、不交换钱、不拉别人衣袖；不把拒绝画成仇恨、永久断交或得到托管授权，不展示DT08任一路线结果。",
+          "output_stem": "erwei_E2_cautious_no_custody",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：珥薇（FX-RLY，erwei）。四十来岁的成年妇人、荒废营地中继人；不新增旅店老板、保管人、引路人或掌勺救济者身份。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；坐姿人物保持坐姿。不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。保持母图纵向完整画布与合理留边，不截头发、双手、双鞋、坐具或随身物。\n母图观察：栗棕低盘发夹灰白发缕，额侧长发束、圆实下颌，眉一高一平，眼看画面左，嘴微张带热络笑意。苔绿上衣、米灰大围裙，画面左下赭红补丁与右上苔绿补丁；深棕裙和棕鞋。人物左手（画面右）低垂轻触单口旧铁锅耳，锅在同侧鞋外落低；人物右手（画面左）原本掌心朝上闲谈。\n固定侧别与道具：单口黑褐旧铁锅始终在人物左侧（画面右）鞋外低放，与鞋轮廓分开；人物左手可轻触原锅耳，不提起、不换侧、不增加汤、火或物品。 人物右手（画面左）为空手，可自然松收在围裙腰边；两块围裙补丁、腰带结、卷袖与原裙鞋保留。\n本张可逆表情提案：敛笑拒托。对方请她替过路人看东西，她收起笑意，短句说清自己的界限。\n脸部：眉头略靠拢、眉尾放平，眼神稳稳盯住画面左的交谈者；嘴闭合成平短线，嘴角不再上扬，下颌轻收。是谨慎认真，不怒吼、不嫌弃或夸张瞪眼。\n最小手势：右手（画面左）指尖轻搭自己的围裙腰边、其余手指自然收曲；左手仍轻触原锅耳，锅落低不动，身体和鞋位稳定；不作开掌拦人。\n必须形成可读区别：比母图与E1都更平眉、定眼、闭口且无笑意；拒绝靠面部和短促姿态成立，不靠大幅伸手。\n剧情边界：不接行李、不交换钱、不拉别人衣袖；不把拒绝画成仇恨、永久断交或得到托管授权，不展示DT08任一路线结果。\n本人存活、在场、愿谈且有相应见闻才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币或新账簿；道具轮廓完整可读。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-GH2",
+      "slug": "chenger",
+      "name": "埕珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-GH2_埕珥.md",
+        "sha256": "8cad51d1edb341f917a35af6fd1356f62336411198b656c9f15fb921cf0841cc"
+      },
+      "card_matches_sixth_four_brief": true,
+      "age_identity_lock": "五十来岁的成年男人、窖口守夜人；保留坐姿，不新增病患、伤者、遗物保管人或余烬托管者身份。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/chenger/concept_v1/chenger_v1_raw_imagegen.png",
+          "sha256": "f6e747b81315de75f61790d01cb90a3ed5fcd15daccbe1fea18df576d4f0ba09"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/chenger/concept_v1/chenger_transparent.png",
+          "sha256": "4a3b2d1025ada11ebfa776ffc8524f6d41417a2e70ea203190cfbe9993e0a8d2"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/chenger/concept_v1/manifest.json",
+          "sha256": "e5d11f30c2907f330187e37ea9d6530ba289044901d7f7446490d3ee8787ce01"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐张查看4个raw与4个transparent；珥薇/埕珥另查看已有浅深底展示板核正常RGBA合成。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 20,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "窖口守夜人，常在 `rumor_ghoulDen2` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "五十来岁的男人，披着两层旧毯，手里提一盏罩灯；坐下前先把灯放在上风处。",
+        "低声，句子短，先说灯再谈事；被问细节就摇头。",
+        "窖口夜里什么时候起风；哪段土是新塌的。不说窖里有什么；不替死者家属认领遗物。"
+      ],
+      "observed_mother_image": "灰褐短发与明显灰鬓，干净无须的棱角下颌、长鼻、粗平眉，眼向画面左，嘴小幅微开低声说话。灰蓝外旧毯和褐米内旧毯清楚分层，棕裤棕靴；稳坐低木凳，双手各落本侧膝。唯一旧金属罩灯在人物右侧（画面左）脚外，灯内小暖焰，凳腿与双足完整。",
+      "fixed_prop_sides": [
+        "两层旧短毯必须可辨：灰蓝在外、褐米在内，原褶皱和长度关系保留，不变长袍或伤者裹身绷带。",
+        "唯一罩灯始终置于人物右侧（画面左）脚外，与鞋留间隔；灯内小暖焰保持，不熄灭、不外泄大光晕、不借给他人。低凳与双脚完整保留，双手分别落原左右膝。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug及中文名扫描PNG，外部副本逐SHA核对；Assets下每个ZIP只读检查成员；weier_ink/FX-INK韦珥另身份排除。",
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/sixth_four_delivery_v1/新增剧情人物_珥薇埕珥源包.zip",
+            "sha256": "dbdf54297ec14cad77f2972e633d2681ef5e7e4cbd42094c93d33647b673e6cb",
+            "member_count": 49,
+            "matching_members": 21,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "chenger_E1_lampwatch_unease",
+          "label_zh": "顾灯忧警",
+          "scene_proposal": "谈到自己真正怕的是灯灭时，低头看一眼仍亮着的罩灯，忧虑含在眉眼里。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1082、L1093；口吻与闲谈3"
+          },
+          "face_changes": "内眉微提并轻聚，眼皮略抬、目光移向画面左下的既有罩灯，嘴微分成很小的停顿，唇角稍沉。是压住的担忧和警醒，不惊恐变脸、哭泣或昏睡。",
+          "minimal_gesture": "头向原灯方向轻低；双手保持分别搭膝，指尖仅略收，双脚不移；坐稳、两层毯与灯位置不变。",
+          "difference_from_static_and_pair": "母图平直侧看低声说话，改为聚眉低看灯的忧虑；E2抬眼闭口、眉压平而坚定。",
+          "condition_and_limit": "灯仍亮着，只表现怕它熄灭的心情；不画真实熄灯、窖内事件、怪物逃出、疾病或已经解除危险。",
+          "output_stem": "chenger_E1_lampwatch_unease",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：埕珥（FX-GH2，chenger）。五十来岁的成年男人、窖口守夜人；保留坐姿，不新增病患、伤者、遗物保管人或余烬托管者身份。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；坐姿人物保持坐姿。不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。保持母图纵向完整画布与合理留边，不截头发、双手、双鞋、坐具或随身物。\n母图观察：灰褐短发与明显灰鬓，干净无须的棱角下颌、长鼻、粗平眉，眼向画面左，嘴小幅微开低声说话。灰蓝外旧毯和褐米内旧毯清楚分层，棕裤棕靴；稳坐低木凳，双手各落本侧膝。唯一旧金属罩灯在人物右侧（画面左）脚外，灯内小暖焰，凳腿与双足完整。\n固定侧别与道具：两层旧短毯必须可辨：灰蓝在外、褐米在内，原褶皱和长度关系保留，不变长袍或伤者裹身绷带。 唯一罩灯始终置于人物右侧（画面左）脚外，与鞋留间隔；灯内小暖焰保持，不熄灭、不外泄大光晕、不借给他人。低凳与双脚完整保留，双手分别落原左右膝。\n本张可逆表情提案：顾灯忧警。谈到自己真正怕的是灯灭时，低头看一眼仍亮着的罩灯，忧虑含在眉眼里。\n脸部：内眉微提并轻聚，眼皮略抬、目光移向画面左下的既有罩灯，嘴微分成很小的停顿，唇角稍沉。是压住的担忧和警醒，不惊恐变脸、哭泣或昏睡。\n最小手势：头向原灯方向轻低；双手保持分别搭膝，指尖仅略收，双脚不移；坐稳、两层毯与灯位置不变。\n必须形成可读区别：母图平直侧看低声说话，改为聚眉低看灯的忧虑；E2抬眼闭口、眉压平而坚定。\n剧情边界：灯仍亮着，只表现怕它熄灭的心情；不画真实熄灯、窖内事件、怪物逃出、疾病或已经解除危险。\n本人存活、在场、愿谈且有相应见闻才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币或新账簿；道具轮廓完整可读。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "chenger_E2_keep_mouth_not_descend",
+          "label_zh": "守口不下",
+          "scene_proposal": "对方要求他下窖查看，他轻微摇首后的停顿，低声但明确地拒绝。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1082、L1084、L1096；口吻、边界与拒绝"
+          },
+          "face_changes": "眉从忧虑内提改为平压略聚，眼神抬回画面左交谈者并稍收窄，嘴紧闭为短实线，下颌轻收；低声坚定，不凶狠瞪人。",
+          "minimal_gesture": "头在原朝向内略偏一点，表现一次轻摇头之后的静止，不画运动残影；双手仍各自落膝，凳上身体稳定，不起身、不开掌劝停。",
+          "difference_from_static_and_pair": "与母图微张嘴区分为闭唇拒绝；与E1低看灯不同，抬眼看人，眉眼更稳。",
+          "condition_and_limit": "只守窖口、不下窖、不交出罩灯，不认领遗物；N16完成不赋予余烬归属、终局冻结、政治授权或新身份。",
+          "output_stem": "chenger_E2_keep_mouth_not_descend",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：埕珥（FX-GH2，chenger）。五十来岁的成年男人、窖口守夜人；保留坐姿，不新增病患、伤者、遗物保管人或余烬托管者身份。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；坐姿人物保持坐姿。不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。保持母图纵向完整画布与合理留边，不截头发、双手、双鞋、坐具或随身物。\n母图观察：灰褐短发与明显灰鬓，干净无须的棱角下颌、长鼻、粗平眉，眼向画面左，嘴小幅微开低声说话。灰蓝外旧毯和褐米内旧毯清楚分层，棕裤棕靴；稳坐低木凳，双手各落本侧膝。唯一旧金属罩灯在人物右侧（画面左）脚外，灯内小暖焰，凳腿与双足完整。\n固定侧别与道具：两层旧短毯必须可辨：灰蓝在外、褐米在内，原褶皱和长度关系保留，不变长袍或伤者裹身绷带。 唯一罩灯始终置于人物右侧（画面左）脚外，与鞋留间隔；灯内小暖焰保持，不熄灭、不外泄大光晕、不借给他人。低凳与双脚完整保留，双手分别落原左右膝。\n本张可逆表情提案：守口不下。对方要求他下窖查看，他轻微摇首后的停顿，低声但明确地拒绝。\n脸部：眉从忧虑内提改为平压略聚，眼神抬回画面左交谈者并稍收窄，嘴紧闭为短实线，下颌轻收；低声坚定，不凶狠瞪人。\n最小手势：头在原朝向内略偏一点，表现一次轻摇头之后的静止，不画运动残影；双手仍各自落膝，凳上身体稳定，不起身、不开掌劝停。\n必须形成可读区别：与母图微张嘴区分为闭唇拒绝；与E1低看灯不同，抬眼看人，眉眼更稳。\n剧情边界：只守窖口、不下窖、不交出罩灯，不认领遗物；N16完成不赋予余烬归属、终局冻结、政治授权或新身份。\n本人存活、在场、愿谈且有相应见闻才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币或新账簿；道具轮廓完整可读。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-HOM",
+      "slug": "weier",
+      "name": "苇珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-HOM_苇珥.md",
+        "sha256": "1766c607e2967b2c1536ab5b72ae22e1517c68c594c0bb8f3918ed4b390fbc24"
+      },
+      "card_matches_sixth_four_brief": true,
+      "age_identity_lock": "五十来岁的成年妇人、荒宅拾荒妇；稳定ID FX-HOM，slug weier，绝非FX-INK韦珥/weier_ink。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier/concept_v1/weier_v1_raw_imagegen.png",
+          "sha256": "99a94caa802a9a7a1be88eda266a8c00f99ed46773a231148685993679846979"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier/concept_v1/weier_transparent.png",
+          "sha256": "b67fa479803acafc6bc232ef4de149170212d95dce2af7f285471820b35e78c8"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier/concept_v1/manifest.json",
+          "sha256": "f92e347794c03bf9d698b5ce32245a37b22bc6e3773a3c4476fd48d88f3fa4d5"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐张查看4个raw与4个transparent；珥薇/埕珥另查看已有浅深底展示板核正常RGBA合成。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 23,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "荒宅拾荒妇，常在 `rumor_homesteadAbandoned1` 一带。地域见 [[区域_R02_丹布里西路与渡口]]。",
+        "五十来岁的妇人，背着布袋，手里拎一根探路的短棍；走路时脚尖先落地。",
+        "自嘲式，先说“别抢，没什么好抢的”；提到原主就沉默半拍。",
+        "哪间屋子的地板还结实；原主家搬走的大致日子。不替原主认领房屋；不拿别人家的名字说事。"
+      ],
+      "observed_mother_image": "褐灰发夹灰白鬓发，褪灰紫头巾向画面右后方结起，颊部细纹、瘦韧但不消瘦丑化的脸，微挑眉与闭唇自嘲浅笑，眼向画面左。暗褐长衣、浅灰袖口和腰布，棕鞋；麻色大布袋在人物左肩背后（画面右），人物左手（画面右）握袋带，右手（画面左）持短探路木棍向地，画面左脚略向前探。",
+      "fixed_prop_sides": [
+        "人物右手（画面左）持原短探路木棍，棍端仍触地；不改为武器、拐杖伤情标志或路标。",
+        "人物左手（画面右）握原袋带，麻色布袋留原背侧；头巾结、发缕、衣袖腰布和前探脚保持。双手均有用途，不新增空手手势、信、房契、剪刀或钥匙。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug及中文名扫描PNG，外部副本逐SHA核对；Assets下每个ZIP只读检查成员；weier_ink/FX-INK韦珥另身份排除。",
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/sixth_four_delivery_v1/新增剧情人物_苇珥缶珥源包.zip",
+            "sha256": "2647bf7ffee3218b8b5801913ab9d2979659a93e45a7ccae89ca20f8f86fbddb",
+            "member_count": 55,
+            "matching_members": 24,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 4,
+        "excluded_other_identity_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_v1_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_dark_board.png"
+        ],
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "weier_E1_owner_memory_halfbeat",
+          "label_zh": "念主沉默",
+          "scene_proposal": "谈到搬走的原主人与不捡别人的信，原先自嘲的笑收住，停半拍。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L442、L444、L451—452；口吻、边界与闲谈1—2（仅中文）"
+          },
+          "face_changes": "内眉稍抬并轻轻靠拢，眼皮低垂、视线向画面左下，原自嘲上扬嘴角落平，嘴轻闭。是克制的停顿与有所顾虑，不演悲痛失亲或流泪。",
+          "minimal_gesture": "下颌略低，仍保持原母图轻侧朝画面左的角度；握袋带和持棍的双手不换位，棍触地，原轻前探姿态稳定。",
+          "difference_from_static_and_pair": "母图挑眉浅笑改为低眼闭口、嘴角落平；E2眼睛抬起集中看近处，眉下压、嘴略开作警告。",
+          "condition_and_limit": "只引用她对原主的有限见闻与不碰信件的界限，不断言原主死亡、亲属关系、所有权或认领房屋，不展示信件内容。",
+          "output_stem": "weier_E1_owner_memory_halfbeat",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：苇珥（FX-HOM，weier）。五十来岁的成年妇人、荒宅拾荒妇；稳定ID FX-HOM，slug weier，绝非FX-INK韦珥/weier_ink。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；坐姿人物保持坐姿。不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。保持母图纵向完整画布与合理留边，不截头发、双手、双鞋、坐具或随身物。\n母图观察：褐灰发夹灰白鬓发，褪灰紫头巾向画面右后方结起，颊部细纹、瘦韧但不消瘦丑化的脸，微挑眉与闭唇自嘲浅笑，眼向画面左。暗褐长衣、浅灰袖口和腰布，棕鞋；麻色大布袋在人物左肩背后（画面右），人物左手（画面右）握袋带，右手（画面左）持短探路木棍向地，画面左脚略向前探。\n固定侧别与道具：人物右手（画面左）持原短探路木棍，棍端仍触地；不改为武器、拐杖伤情标志或路标。 人物左手（画面右）握原袋带，麻色布袋留原背侧；头巾结、发缕、衣袖腰布和前探脚保持。双手均有用途，不新增空手手势、信、房契、剪刀或钥匙。\n本张可逆表情提案：念主沉默。谈到搬走的原主人与不捡别人的信，原先自嘲的笑收住，停半拍。\n脸部：内眉稍抬并轻轻靠拢，眼皮低垂、视线向画面左下，原自嘲上扬嘴角落平，嘴轻闭。是克制的停顿与有所顾虑，不演悲痛失亲或流泪。\n最小手势：下颌略低，仍保持原母图轻侧朝画面左的角度；握袋带和持棍的双手不换位，棍触地，原轻前探姿态稳定。\n必须形成可读区别：母图挑眉浅笑改为低眼闭口、嘴角落平；E2眼睛抬起集中看近处，眉下压、嘴略开作警告。\n剧情边界：只引用她对原主的有限见闻与不碰信件的界限，不断言原主死亡、亲属关系、所有权或认领房屋，不展示信件内容。\n本人存活、在场、愿谈且有相应见闻才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币或新账簿；道具轮廓完整可读。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "weier_E2_watch_unsound_floor",
+          "label_zh": "察地警惕",
+          "scene_proposal": "提醒来人东侧地板已经塌了时，留神对方脚下，认真发出短促提醒。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L444、L454；知情边界与到场中文，英文不采用"
+          },
+          "face_changes": "眉稍下压聚拢，双眼比E1更抬起且聚焦画面左前方近处，嘴从母图闭唇笑转成短促说话的微开形，唇角平直。警觉有经验，不惊叫、嘲笑或露齿。",
+          "minimal_gesture": "头轻抬并向原朝向的低处关注，不跨步、不蹲下；右手继续把短棍稳稳落地，左手握袋带、背袋位置不变，不举棍指人。",
+          "difference_from_static_and_pair": "母图松眉浅笑变为收眉、定眼与微开警告口形；与E1的沉默低眼区别清楚，面型和年龄仍是同一人。",
+          "condition_and_limit": "只表现她已知地板风险，不画坍塌正在发生、受伤、陪玩家搜屋、保证安全或路线任务完成；只用中文到场槽，避开串错的英文染缸警告。",
+          "output_stem": "weier_E2_watch_unsound_floor",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：苇珥（FX-HOM，weier）。五十来岁的成年妇人、荒宅拾荒妇；稳定ID FX-HOM，slug weier，绝非FX-INK韦珥/weier_ink。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；坐姿人物保持坐姿。不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。保持母图纵向完整画布与合理留边，不截头发、双手、双鞋、坐具或随身物。\n母图观察：褐灰发夹灰白鬓发，褪灰紫头巾向画面右后方结起，颊部细纹、瘦韧但不消瘦丑化的脸，微挑眉与闭唇自嘲浅笑，眼向画面左。暗褐长衣、浅灰袖口和腰布，棕鞋；麻色大布袋在人物左肩背后（画面右），人物左手（画面右）握袋带，右手（画面左）持短探路木棍向地，画面左脚略向前探。\n固定侧别与道具：人物右手（画面左）持原短探路木棍，棍端仍触地；不改为武器、拐杖伤情标志或路标。 人物左手（画面右）握原袋带，麻色布袋留原背侧；头巾结、发缕、衣袖腰布和前探脚保持。双手均有用途，不新增空手手势、信、房契、剪刀或钥匙。\n本张可逆表情提案：察地警惕。提醒来人东侧地板已经塌了时，留神对方脚下，认真发出短促提醒。\n脸部：眉稍下压聚拢，双眼比E1更抬起且聚焦画面左前方近处，嘴从母图闭唇笑转成短促说话的微开形，唇角平直。警觉有经验，不惊叫、嘲笑或露齿。\n最小手势：头轻抬并向原朝向的低处关注，不跨步、不蹲下；右手继续把短棍稳稳落地，左手握袋带、背袋位置不变，不举棍指人。\n必须形成可读区别：母图松眉浅笑变为收眉、定眼与微开警告口形；与E1的沉默低眼区别清楚，面型和年龄仍是同一人。\n剧情边界：只表现她已知地板风险，不画坍塌正在发生、受伤、陪玩家搜屋、保证安全或路线任务完成；只用中文到场槽，避开串错的英文染缸警告。\n本人存活、在场、愿谈且有相应见闻才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币或新账簿；道具轮廓完整可读。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-CP5",
+      "slug": "fouer",
+      "name": "缶珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CP5_缶珥.md",
+        "sha256": "ae1cf7038590aa82daafae8ece807327e7341b9e8448e4a5a5c379d439f90274"
+      },
+      "card_matches_sixth_four_brief": true,
+      "age_identity_lock": "四十来岁的成年女人、帐下的记账人；保持木凳坐姿，不变成站立记录员、掌勺人、担保人或官方救济裁定者。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fouer/concept_v1/fouer_v1_raw_imagegen.png",
+          "sha256": "0477b1cf01e3cb31d6d148c7afdd8cc77edf1b72c95b0e837e7a5211474e8124"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fouer/concept_v1/fouer_transparent.png",
+          "sha256": "a0275fd323822c0327619fa785dac6b78219d76088c2fe38e718bd83c4d9155a"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fouer/concept_v1/manifest.json",
+          "sha256": "aa5c0ca49228a4d212c3e3c4b12561a1851c1feda3b0da44a454528909c6ed91"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐张查看4个raw与4个transparent；珥薇/埕珥另查看已有浅深底展示板核正常RGBA合成。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 23,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "帐下的记账人，常在 `rumor_camp5` 一带。地域见 [[区域_R01_布林外港与旧渠]]。",
+        "四十来岁的女人，膝盖上垫着木板当桌，袖口插着一截炭笔；说话前先把木板合上。",
+        "像念账一样说话；被问人数就先数一遍。",
+        "哪几顶帐子还有人；谁欠过谁一碗汤。不替任何人担保；不把名单给外人。"
+      ],
+      "observed_mother_image": "深褐低盘发与灰白鬓缕，额侧散发、宽实成年脸，眉略收，眼向画面左，嘴微开问话。暗靛蓝长裙配麻灰内衣和宽袖，细棕腰带、棕鞋；稳坐低木凳，合拢的木板平放双膝，双手分别按两侧边，人物左袖口（画面右）插一截深色炭笔。板朝外为无字木面，凳子露在画面右。",
+      "fixed_prop_sides": [
+        "合拢木板始终平放膝上，不翻开、不递出、不转成朝外展示名单；两手分别保持在原左右板边，允许指尖小幅收紧。",
+        "唯一短炭笔留人物左袖口（画面右），不取出作新登记；木凳、双鞋、裙边全保留，板面无可读字、名单或盖章。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug及中文名扫描PNG，外部副本逐SHA核对；Assets下每个ZIP只读检查成员；weier_ink/FX-INK韦珥另身份排除。",
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/sixth_four_delivery_v1/新增剧情人物_苇珥缶珥源包.zip",
+            "sha256": "2647bf7ffee3218b8b5801913ab9d2979659a93e45a7ccae89ca20f8f86fbddb",
+            "member_count": 55,
+            "matching_members": 24,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "fouer_E1_quiet_mental_count",
+          "label_zh": "凝神默数",
+          "scene_proposal": "被问帐下人数时，她先在心里重数一遍再答，不打开木板给对方看。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1144、L1146、L1148；体貌、口吻与有限知情"
+          },
+          "face_changes": "两眉轻聚成专注而非严厉的角度，眼皮略低，目光从侧看人移到左下近处，嘴微拢成很小的默数口形、唇角放松。五官呈专注思量，不做呆滞或眯眼嫌弃。",
+          "minimal_gesture": "头轻低，双手仍按合拢板边，其中画面左的右手指尖仅轻搭板缘；坐姿和板的方向完全稳定，不翻板、不用手指比出明确人数。",
+          "difference_from_static_and_pair": "母图抬眼侧问改为低眼聚神、较小的默数口形；E2抬眼看人且闭唇、眉更平硬。",
+          "condition_and_limit": "只是她回答前的思考动作，不提供具体人数、不新增或删去名字、不表示已经核完名单、发完汤、获得查阅授权或改变领食资格。",
+          "output_stem": "fouer_E1_quiet_mental_count",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：缶珥（FX-CP5，fouer）。四十来岁的成年女人、帐下的记账人；保持木凳坐姿，不变成站立记录员、掌勺人、担保人或官方救济裁定者。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；坐姿人物保持坐姿。不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。保持母图纵向完整画布与合理留边，不截头发、双手、双鞋、坐具或随身物。\n母图观察：深褐低盘发与灰白鬓缕，额侧散发、宽实成年脸，眉略收，眼向画面左，嘴微开问话。暗靛蓝长裙配麻灰内衣和宽袖，细棕腰带、棕鞋；稳坐低木凳，合拢的木板平放双膝，双手分别按两侧边，人物左袖口（画面右）插一截深色炭笔。板朝外为无字木面，凳子露在画面右。\n固定侧别与道具：合拢木板始终平放膝上，不翻开、不递出、不转成朝外展示名单；两手分别保持在原左右板边，允许指尖小幅收紧。 唯一短炭笔留人物左袖口（画面右），不取出作新登记；木凳、双鞋、裙边全保留，板面无可读字、名单或盖章。\n本张可逆表情提案：凝神默数。被问帐下人数时，她先在心里重数一遍再答，不打开木板给对方看。\n脸部：两眉轻聚成专注而非严厉的角度，眼皮略低，目光从侧看人移到左下近处，嘴微拢成很小的默数口形、唇角放松。五官呈专注思量，不做呆滞或眯眼嫌弃。\n最小手势：头轻低，双手仍按合拢板边，其中画面左的右手指尖仅轻搭板缘；坐姿和板的方向完全稳定，不翻板、不用手指比出明确人数。\n必须形成可读区别：母图抬眼侧问改为低眼聚神、较小的默数口形；E2抬眼看人且闭唇、眉更平硬。\n剧情边界：只是她回答前的思考动作，不提供具体人数、不新增或删去名字、不表示已经核完名单、发完汤、获得查阅授权或改变领食资格。\n本人存活、在场、愿谈且有相应见闻才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币或新账簿；道具轮廓完整可读。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "fouer_E2_closed_board_privacy",
+          "label_zh": "闭板守密",
+          "scene_proposal": "对方要求把名字报给外人，她看住对方，守住合拢木板与名单边界。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1148、L1160、L1170；不越界、拒绝与缺席物件边界"
+          },
+          "face_changes": "眉压平、内侧略收，眼睛抬回画面左对方，目光直接稳定，嘴由微开收为平直紧闭短线。是认真守密，不威胁、不瞪眼或侮辱来人。",
+          "minimal_gesture": "下颌微收，双手指尖在原板边轻收，合拢木板仍平放自己膝上；不上举、不遮脸、不递板，左袖口炭笔继续露出。",
+          "difference_from_static_and_pair": "母图问话的微开嘴改为明确闭唇、压眉定眼；与E1低眼默数区分，不只换手势。",
+          "condition_and_limit": "不把名单给外人、不替任何人担保；拒绝查阅不等于拒绝给饭，不演实名或信仰门槛，不表示DT13完成，也不替两顶空帐认定死亡或归返。",
+          "output_stem": "fouer_E2_closed_board_privacy",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：缶珥（FX-CP5，fouer）。四十来岁的成年女人、帐下的记账人；保持木凳坐姿，不变成站立记录员、掌勺人、担保人或官方救济裁定者。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；坐姿人物保持坐姿。不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。保持母图纵向完整画布与合理留边，不截头发、双手、双鞋、坐具或随身物。\n母图观察：深褐低盘发与灰白鬓缕，额侧散发、宽实成年脸，眉略收，眼向画面左，嘴微开问话。暗靛蓝长裙配麻灰内衣和宽袖，细棕腰带、棕鞋；稳坐低木凳，合拢的木板平放双膝，双手分别按两侧边，人物左袖口（画面右）插一截深色炭笔。板朝外为无字木面，凳子露在画面右。\n固定侧别与道具：合拢木板始终平放膝上，不翻开、不递出、不转成朝外展示名单；两手分别保持在原左右板边，允许指尖小幅收紧。 唯一短炭笔留人物左袖口（画面右），不取出作新登记；木凳、双鞋、裙边全保留，板面无可读字、名单或盖章。\n本张可逆表情提案：闭板守密。对方要求把名字报给外人，她看住对方，守住合拢木板与名单边界。\n脸部：眉压平、内侧略收，眼睛抬回画面左对方，目光直接稳定，嘴由微开收为平直紧闭短线。是认真守密，不威胁、不瞪眼或侮辱来人。\n最小手势：下颌微收，双手指尖在原板边轻收，合拢木板仍平放自己膝上；不上举、不遮脸、不递板，左袖口炭笔继续露出。\n必须形成可读区别：母图问话的微开嘴改为明确闭唇、压眉定眼；与E1低眼默数区分，不只换手势。\n剧情边界：不把名单给外人、不替任何人担保；拒绝查阅不等于拒绝给饭，不演实名或信仰门槛，不表示DT13完成，也不替两顶空帐认定死亡或归返。\n本人存活、在场、愿谈且有相应见闻才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币或新账簿；道具轮廓完整可读。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    }
+  ],
+  "source_notes": "旧manifest冻结状态早于独审，以独审delivery_binding终审为历史结论，并现场复核四个manifest全部86条与raw/transparent/manifest三联SHA。透明文件均为真实RGBA；珥薇/埕珥直接透明预览的显示差异不当作背景或缺人硬错，另以已有浅深板核正常合成。本轮只规划，不运行生成流水线，不改旧图或旧QA。",
+  "source_conflicts": [
+    {
+      "character": "erwei",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT08_修好第二块桥板.md",
+          "sha256": "5e6df9cbf184c9c7994f8df7c89d07c0c91bc6c6088d19e8ea9ee005a0cf1c99"
+        }
+      ],
+      "locator": "FX L879—881任务完成后/先做/后做；DT08 L46、L58（DT08-R-detour）",
+      "conflict": "FX后续槽将桥板修好视为统一结果，但DT08现行detour明确桥暂不修、改浅滩运输。",
+      "disposition": "不改历史对白；本批只用日常谈路与拒绝保管，避用任务完成回访，不绘过桥、维修完成或付款。"
+    },
+    {
+      "character": "weier",
+      "sources": [
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        }
+      ],
+      "locator": "field-npc-dialogue.json npcs[id=FX-HOM].english 的 site.arrival/warning/refusal 与 visit.*；FX L454—456、L462—466英文字段",
+      "conflict": "中文是荒宅西侧入口、塌地板、烟道、保留里屋与DT06路标；对应英文转成翻墙/染缸/作证抢掠/放粮/染布院，与本中文角色语义不一致。",
+      "disposition": "本批英文槽完全不作为表情或身份来源；只用当前中文卡、中文口吻/闲谈/到场，并保留两语冲突快照，不顺手修对白。"
+    },
+    {
+      "character": "fouer",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/04_人物/野外人物/人物_FX-CP5_缶珥.md",
+          "sha256": "ae1cf7038590aa82daafae8ece807327e7341b9e8448e4a5a5c379d439f90274"
+        }
+      ],
+      "locator": "FX L1148、L1160与L1168",
+      "conflict": "卡与拒绝明确名单不给外人，但先做槽泛称玩家在帐下看过名单，缺查阅授权说明。",
+      "disposition": "两图木板全程合拢、不可读、不递出；只演默数和守密，不采用“看过名单”的回访作已授权证据。"
+    }
+  ],
+  "source_cautions": [
+    {
+      "character": "chenger",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N16_谁来保管余烬.md",
+          "sha256": "c40d4a31ea24f63229ddcaa3316cc518e8a414b59a787f68bb7048536e2eaeab"
+        }
+      ],
+      "locator": "FX L1103—1105任务完成/先后槽；N16 L97及N16-S03",
+      "note": "FX口语说余烬的事办完，只能作有限回访语境；N16本身只写意向，N17安全桌确认才冻结。两表情只用灯与守口，不授予窖内知识、遗物认领或余烬托管身份。"
+    },
+    {
+      "character": "weier",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT06_迷路者的路标.md",
+          "sha256": "8483bf78879e414aa620b1db83d1a17b99b6b3fb72c6870d5e27812cd7ebf7ff"
+        }
+      ],
+      "locator": "FX L462—466；DT06 L45—46及DT06-S02-L01",
+      "note": "DT06是旅人自主与有限合约事件；路标不等于公开住址或强制归返。荒宅脚印/路标完成的泛回访不用作本批状态依据，探路短棍不得画成引路/追捕/认领授权。"
+    },
+    {
+      "character": "fouer",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT13_一锅够分的热汤.md",
+          "sha256": "4404134d1c92c4b6f18ec1fa2827338c0f521c3bf74dfbafc28bad3d8b275e9b"
+        }
+      ],
+      "locator": "FX L1157；DT13 L45—46；角色地域R01与关联任务地域R02",
+      "note": "“不报名不领”不能被美术扩张成DT13通用实名或信仰门槛；DT13现行按家庭编号、自愿仪式或中立分食点。地域关联不代表她本人是DT13掌勺人、已到现场或知道所有分食结果。"
+    },
+    {
+      "character": "all",
+      "sources": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+          "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+        }
+      ],
+      "locator": "当前制作优先级与两张认可参考",
+      "note": "概念spec_lock中的约2.5头身为旧首稿制作提示；本轮继承每人实际母图，不重设比例。缶珥与埕珥完整坐姿必须保留；表情不证明受伤、康复或游戏兼容。"
+    },
+    {
+      "character": "weier",
+      "sources": [
+        {
+          "path": "design/04_人物/野外人物/人物_FX-INK_韦珥.md",
+          "sha256": "8560eb2122f5f61cd1e1fd616b82ff25b6c5848713fd1058e28cd651ab95bfa3"
+        },
+        {
+          "path": "design/04_人物/野外人物/人物_FX-HOM_苇珥.md",
+          "sha256": "1766c607e2967b2c1536ab5b72ae22e1517c68c594c0bb8f3918ed4b390fbc24"
+        }
+      ],
+      "locator": "各卡稳定ID与工作",
+      "note": "苇珥FX-HOM是荒宅拾荒妇；韦珥FX-INK是拉尔夫记旅馆旧仆，目录weier_ink。仅同音近名，不可借用其母图、衣装、职业、对白。"
+    }
+  ],
+  "source_snapshot_index": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/sixth_four_expression_sources/source_index.json",
+    "sha256": "c5d87b35eff287759d1bf831bbdfdbb6cd6cd098e10c08a67de958efd2ee4a47"
+  },
+  "validation": {
+    "source_cards": 4,
+    "viewed_final_raw_images": 4,
+    "viewed_final_transparent_images": 4,
+    "additional_existing_light_dark_boards_viewed": 4,
+    "raw_transparent_manifest_hash_triples_verified": 4,
+    "manifest_entries_verified": 86,
+    "planned_expressions": 8,
+    "complete_prompt_texts": 8,
+    "actual_generation_calls": 0,
+    "source_snapshots": 43,
+    "existing_expressions_found": 0,
+    "source_snapshot_readback_verified": true,
+    "scope_note": "只新增本JSON与专用来源快照目录；不修改design/、旧图、旧QA、旧roster或游戏包。",
+    "direct_path_sha_references_readback_verified": 135,
+    "unique_path_sha_targets_readback_verified": 89,
+    "readback_verified_utc": "2026-10-14T01:24:11.406302+00:00"
+  }
+}

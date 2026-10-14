@@ -1,0 +1,115 @@
+{
+  "character": "kuqi",
+  "pose_version": "kuqi_A2_support_hanging_rope_coil_v1",
+  "reviewed_utc": "2026-10-14T07:28:47.385357+00:00",
+  "verdict": "pass",
+  "files": [
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/review/kuqi_A2_support_hanging_rope_coil_v1_light.png",
+      "bytes": 708522,
+      "sha256": "6e2c1f72178214b1ea1cde174d9c34a2078da8ab64d0ac2fb7d70492a69c8224"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/review/kuqi_A2_support_hanging_rope_coil_v1_dark.png",
+      "bytes": 675373,
+      "sha256": "80939b731239910f523b3e55ecb5384a26b119c7038cc994becbfbb498b0ab14"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/review/kuqi_A2_support_hanging_rope_coil_v1_transparent.png",
+      "bytes": 830032,
+      "sha256": "67f11163e455b06320de18b1628590e1e37000c165a168c96ed2787ce4af5940"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/review/kuqi_A2_support_hanging_rope_coil_v1_technical_QA.json",
+      "bytes": 1142,
+      "sha256": "b95a5880420b31fcbccb7902bbd2e0a53081d8241f04da3995e77c00c95ac5c2"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/raw/kuqi_A2_support_hanging_rope_coil_v1_raw.png",
+      "bytes": 887427,
+      "sha256": "b583f7a5856def84a128a84db5f4b9acecc3608a6fca39992bb1ed570eac36d3"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/raw/kuqi_A2_support_hanging_rope_coil_v1_tool_return.json",
+      "bytes": 1183766,
+      "sha256": "c73e1891feefd78b928e7bd1380c99c974745c18e193fafa71624cd176f9b8ce"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/prompts/kuqi_A2_support_hanging_rope_coil_v1.txt",
+      "bytes": 2531,
+      "sha256": "7d7fe16fb6dc1eabf92bdae2ffe7093e5a42c3160edf6b4792c159b3f96de168"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/prompts/kuqi_A2_support_hanging_rope_coil_v1_tool_args.json",
+      "bytes": 2770,
+      "sha256": "0ace3ace0b9794a0b31a73013311773cc0a8ca289293bfd66f41fc36c5e92271"
+    }
+  ],
+  "checks": {
+    "raw_matches_decoded_complete_tool_result": true,
+    "decoded_images": 1,
+    "prompt_matches_parameters": true,
+    "source_prompt_saved_before_raw": true,
+    "transparent_requested": true,
+    "raw_and_selected_same_dimensions": true,
+    "raw_mode": "RGBA",
+    "selected_mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "canvas": [
+      1118,
+      1407
+    ],
+    "body_alpha_gt8_bytes_unchanged": true,
+    "all_changed_pixels_raw_alpha_le8": true,
+    "transparent_background_clear": true,
+    "light_dark_composites": [
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/review/kuqi_A2_support_hanging_rope_coil_v1_light.png",
+        "background_rgba": [
+          242,
+          236,
+          220,
+          255
+        ],
+        "matches_true_composite": true
+      },
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/kuqi/noncombat_basics_v1/review/kuqi_A2_support_hanging_rope_coil_v1_dark.png",
+        "background_rgba": [
+          31,
+          36,
+          44,
+          255
+        ],
+        "matches_true_composite": true
+      }
+    ],
+    "first_prompt_matches_frozen_brief": true,
+    "provenance_file_present": false,
+    "provenance_all_file_and_reference_hashes_match": true,
+    "provenance_errors": [],
+    "submitted_reference_files_exist": true,
+    "submitted_reference_includes_sha_verified_mother": true
+  },
+  "visual_review": {
+    "actual_viewed": [
+      "raw",
+      "selected_transparent",
+      "true_light_composite",
+      "true_dark_composite"
+    ],
+    "findings": [
+      "raw、透明、真浅深4图均实际查看。",
+      "左掌在画右整圈绳底外侧向上托，掌主体可见且接触宽；原腰挂关系和绳卷孔保留，没有取下成为手提绳圈。",
+      "右臂画左下垂，区别母图与A1；原钩杆仍唯一、画左上至右下完整背载；灰鬓成年脸、土黄原衣、双靴保留。"
+    ],
+    "required_revision": null,
+    "nonissues": [
+      "衣褶和绳卷细小间距变化不构成物件更换或新增任务事实。"
+    ],
+    "remaining_revisions": 0
+  }
+}

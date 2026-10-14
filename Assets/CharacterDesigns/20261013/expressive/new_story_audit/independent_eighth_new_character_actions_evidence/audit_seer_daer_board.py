@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,hashlib,datetime
+from PIL import Image
+import numpy as np
+r=Path('/workspace/scratch/5ed8df2c5d81/Stoneshard_mod');a=r/'Assets/CharacterDesigns/20261013/expressive/new_story_audit';d=r/'Assets/CharacterActions/20261013/new_story/eighth_noncombat_seer_daer_delivery_v1';p=d/'瑟珥_达珥_母图动作浅深对照.png';lp=d/'board_layout.json';j=json.loads(lp.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();fp=lambda p:{'path':str(p.relative_to(r)),'bytes':p.stat().st_size,'sha256':sha(p)};im=Image.open(p).convert('RGBA');cells=[];errors=[]
+for row in j['layout']:
+ sp=r/row['source'];s=Image.open(sp).convert('RGBA');xy=row['position'];wh=row['display_size'];act=im.crop((xy[0],xy[1],xy[0]+wh[0],xy[1]+wh[1]));bg=act.getpixel((0,0));expected=Image.alpha_composite(Image.new('RGBA',tuple(wh),bg),s.resize(tuple(wh),Image.Resampling.NEAREST));checks={'source_sha_matches':sha(sp)==row['sha256'],'source_dimensions_match':list(s.size)==row['source_size'],'whole_source_nearest_true_alpha':bool(np.array_equal(np.array(expected),np.array(act))),'uniform_scale':abs(wh[0]/s.width-wh[1]/s.height)<1/min(s.size)}
+ if not all(checks.values()):errors.append([row['source'],checks])
+ cells.append({'source':row['source'],'sha256':sha(sp),'display_size':wh,'position':xy,'background_rgba':bg,'checks':checks})
+out={'reviewed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'group':'seer_daer','verdict':'pass' if not errors else 'fail','board':fp(p),'layout':fp(lp),'actual_viewed':True,'cells':cells,'visual_findings':['中文母图/动作标签清楚；浅深12格均为完整画布真实alpha合成、等比nearest，头发手脚原绳与袋均完整可见。','Seer两个新动作与旧E1无关，母图明确作为参考。Daer A1格正确使用唯一修订通过稿，失败首稿不作合格展示。','仅静态可逆概念，无连续动画、任务或runtime声称。'],'errors':errors};op=a/'independent_eighth_new_character_actions_seer_daer_board_gate_20261014.json';op.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'gate':fp(op),'verdict':out['verdict'],'cells':len(cells),'errors':errors},ensure_ascii=False));assert not errors

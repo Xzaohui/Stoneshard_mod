@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "asset_batch": "20261013",
+  "local_date_note": "UTC日期2026-10-13，用户UTC+8日期已2026-10-14，资源目录延续20261013批。",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "historical_roster": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "sha256": "6af5b2e027def4ecab0a36b34739dc1a168a78d5c527ece98180e6460897325a"
+  },
+  "master": {
+    "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+    "sha256": "1ef69891ce678f6d8aef940cd03578261b4f27a8ec99a17ba80a34898d30ba22"
+  },
+  "scope": "最新远端九提交新增原创角色概念计划；不更新原roster、MASTER、图像或交付回执。",
+  "style": {
+    "direction": "成熟大头短身、短颈自然肩线、紧凑成年体态、可读五官与人物自己的情绪；低魔中世纪材质、组织清晰像素簇；完整单人透明全身概念。",
+    "style_source": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    "references": [
+      {
+        "path": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+        "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a"
+      },
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+        "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+      }
+    ],
+    "reference_use": "Sela G仅参考成熟美感和脸部情绪；Mia 1:1.5只为单人已认可比例案例，不机械套全员，不复制脸、发型和衣装。",
+    "guardrails": [
+      "先实际看参考，再生图；原始图不可做裁切假装完成",
+      "与下述最新剧情卡冲突时以最新卡/台本为准；服色和未设定发型可提出可逆设计",
+      "没有治疗、付款、续约、宽恕或调查结案图示；不将道具文字当真实承诺",
+      "新目录输出，不覆盖167旧锚/旧receipt；新图先标待独审，不自动通过",
+      "概念不代表目标游戏原部件、身型、帧表、装备兼容或运行通过"
+    ],
+    "age_guard": "成熟感仅用于卡定成年者；其他角色按原年龄，不把17–18岁的FX-HUT画中年。未成年正常完整职业服饰，不性感化。"
+  },
+  "independence_note": "新文件；首批四人brief、历史roster/MASTER/receipt不变。先按真实图片独审，后才记交付。",
+  "created_utc": "2026-10-13T18:22:53.685683+00:00",
+  "batch": "fifth_four",
+  "characters": [
+    {
+      "canonical_id": "FX-BST",
+      "name": "恩岱",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-BST_恩岱.md",
+        "sha256": "cc81a5e3ff572cf507505c8fb4eff73b46c08fa007560838c4ba34ce18f4d6ae"
+      },
+      "card_details": {
+        "工作": "老城堡残兵，常在 `rumor_remoteBastion1` 一带。地域见 [[区域_R04_王廷关隘与边城]]。",
+        "体貌与随身": "五十来岁的男人，披着补过三次的旧披风，甲片擦得发亮；说话前先摸一摸门栓。",
+        "口吻": "像报岗一样说话，短句带停顿；拒绝时用“没有命令”。",
+        "知情边界": "城堡哪面墙是后补的；井里还剩多少水。不知道王廷的调令；不替任何人开门。"
+      },
+      "story_links": [
+        "区域_R04_王廷关隘与边城",
+        "台本_FX_野外人物对白",
+        "台本_N11_关隘外的交换",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R04_王廷关隘与边城",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "老城堡残兵",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-BST",
+        "site": "rumor_remoteBastion1",
+        "region": "R04",
+        "look": "五十来岁的男人，披着补过三次的旧披风，甲片擦得发亮；说话前先摸一摸门栓。",
+        "voice": "像报岗一样说话，短句带停顿；拒绝时用“没有命令”。",
+        "knows": [
+          "城堡哪面墙是后补的",
+          "井里还剩多少水"
+        ],
+        "not_knows": [
+          "不知道王廷的调令",
+          "不替任何人开门"
+        ],
+        "visits": {
+          "task": "台本_N11_关隘外的交换",
+          "before": [
+            "关隘外的交换我听过风声。要进门，先报你换了什么。"
+          ],
+          "after": [
+            "换出去的东西收不回来。门还是不开，话可以再说。"
+          ],
+          "early": [
+            "你先过的关隘，后到我这门口。那正好，你的来意我信一半。"
+          ],
+          "late": [
+            "关隘的事完了才来？门不认先后，只认命令。"
+          ],
+          "proxy": [
+            "残兵不在门口时，门栓照旧挂着；替班的人不接话。"
+          ]
+        },
+        "first_greeting": "报上来意。私人来访不进门。",
+        "refusal": "要进堡看井？没有命令，不行。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "endai",
+        "age_and_identity": "五十来岁的男人；老城堡残兵。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "五十来岁的男人，披着补过三次的旧披风，甲片擦得发亮；说话前先摸一摸门栓。",
+        "body_and_silhouette": "补过三次旧披风与发亮残甲片；五十来岁男人，老岗哨而非将领。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：方脸、灰短须、厚眉平压，盯着来人、嘴轻启作短促报岗。",
+        "costume": "卡定衣装优先：五十来岁的男人，披着补过三次的旧披风，甲片擦得发亮；说话前先摸一摸门栓。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "深灰披风、暗赭补丁、少量擦亮钢灰甲片。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "一手靠身体轻握披风边，一手准备摸门栓的收敛手势；无门也成立。",
+        "source_voice": "像报岗一样说话，短句带停顿；拒绝时用“没有命令”。",
+        "required_visible_props": [
+          "旧披风三处可辨补片",
+          "保养发亮的甲片"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不加王廷新徽、重型全甲或钥匙权限，不主动开堡门。",
+        "knowledge_limits": {
+          "knows": [
+            "城堡哪面墙是后补的",
+            "井里还剩多少水"
+          ],
+          "not_knows": [
+            "不知道王廷的调令",
+            "不替任何人开门"
+          ],
+          "current_refusal": "要进堡看井？没有命令，不行。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+          "sha256": "8915bb1a1d10716fd12d1795ead8b62db49cd2317b0bafa58af2728217784a63"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-SGE",
+      "name": "瓦顿",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-SGE_瓦顿.md",
+        "sha256": "133a684d79ffe82ec9b64e75c5064926125f166f796a0324421b2297fd6ef494"
+      },
+      "card_details": {
+        "工作": "围城营地逃兵，常在 `rumor_siegeCamp1` 一带。地域见 [[区域_R01_布林外港与旧渠]]。",
+        "体貌与随身": "二十多岁的男人，甲片只剩半边，锅铲插在腰间；胡子刚长出来，说话时习惯蹲着。",
+        "口吻": "先笑后说话，笑得干；谈到部队就改成短句。",
+        "知情边界": "营地哪口井还能打水；围城时哪段墙被砸开过。不说自己原来的番号；不替任何一边评功过。"
+      },
+      "story_links": [
+        "区域_R01_布林外港与旧渠",
+        "台本_FX_野外人物对白",
+        "台本_N1_无钟之夜",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R01_布林外港与旧渠",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "围城营地逃兵",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-SGE",
+        "site": "rumor_siegeCamp1",
+        "region": "R01",
+        "look": "二十多岁的男人，甲片只剩半边，锅铲插在腰间；胡子刚长出来，说话时习惯蹲着。",
+        "voice": "先笑后说话，笑得干；谈到部队就改成短句。",
+        "knows": [
+          "营地哪口井还能打水",
+          "围城时哪段墙被砸开过"
+        ],
+        "not_knows": [
+          "不说自己原来的番号",
+          "不替任何一边评功过"
+        ],
+        "visits": {
+          "task": "台本_N1_无钟之夜",
+          "before": [
+            "那晚上没钟，谁都不好过。你要问我锅的事，先把声音放低。"
+          ],
+          "after": [
+            "钟的事过去了。锅还在这儿，我还在烧水。别的我不管。"
+          ],
+          "early": [
+            "你先见过我，才去的灰堤。好，我烧的水能给你作证，只作水这一件。"
+          ],
+          "late": [
+            "灰堤的事完了才想起我这口锅？水是凉的，话我照说。"
+          ],
+          "proxy": [
+            "逃兵不在营地时，锅底朝上；别替他答话。"
+          ]
+        },
+        "first_greeting": "别站着。蹲下说话，站着像查营的。",
+        "refusal": "要我带你回部队？不去。我这条命是自己捡的。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "wadun",
+        "age_and_identity": "二十多岁的男人；围城营地逃兵。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "二十多岁的男人，甲片只剩半边，锅铲插在腰间；胡子刚长出来，说话时习惯蹲着。",
+        "body_and_silhouette": "二十多岁男人，半边残甲、稚短胡茬、腰插锅铲；保持习惯蹲姿双脚脚掌/前掌支撑。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：年轻成年宽额、嘴边薄胡茬、眼睛戒备而嘴角干笑，不画未成年。",
+        "costume": "卡定衣装优先：二十多岁的男人，甲片只剩半边，锅铲插在腰间；胡子刚长出来，说话时习惯蹲着。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "灰褐军布、失配铁灰半甲、旧木锅铲柄。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "稳定低蹲，手肘轻放膝，手张开放松；锅铲固定腰旁可辨，不像刀。",
+        "source_voice": "先笑后说话，笑得干；谈到部队就改成短句。",
+        "required_visible_props": [
+          "仅半边残甲",
+          "腰侧锅铲"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不增满套军衔/战旗，不画回部队服从新命令或消灭敌人。",
+        "knowledge_limits": {
+          "knows": [
+            "营地哪口井还能打水",
+            "围城时哪段墙被砸开过"
+          ],
+          "not_knows": [
+            "不说自己原来的番号",
+            "不替任何一边评功过"
+          ],
+          "current_refusal": "要我带你回部队？不去。我这条命是自己捡的。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N1_无钟之夜.md",
+          "sha256": "ed09f88be8fe4618f819d636ad161b7be48b3dcc009bec4dfdc5d8942488c9b9"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-CMP",
+      "name": "珥泰",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CMP_珥泰.md",
+        "sha256": "9394c336c2b5c7303601fd46d28be83e0f48a6736924bfac6224fae450fefa97"
+      },
+      "card_details": {
+        "工作": "兵营清点人，常在 `rumor_camp4` 一带。地域见 [[区域_R04_王廷关隘与边城]]。",
+        "体貌与随身": "三十来岁的男人，穿着不合身的旧军衣，手里一块点名的木板；说话时用笔杆敲板。",
+        "口吻": "照单念名字的腔调；被问军务就摇头。",
+        "知情边界": "床架被拆走几副；军旗杆座还在哪。不评军务与调令；不认领遗落装备。"
+      },
+      "story_links": [
+        "区域_R04_王廷关隘与边城",
+        "台本_FX_野外人物对白",
+        "台本_SQ02_被征用的冬粮",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R04_王廷关隘与边城",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "兵营清点人",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CMP",
+        "site": "rumor_camp4",
+        "region": "R04",
+        "look": "三十来岁的男人，穿着不合身的旧军衣，手里一块点名的木板；说话时用笔杆敲板。",
+        "voice": "照单念名字的腔调；被问军务就摇头。",
+        "knows": [
+          "床架被拆走几副",
+          "军旗杆座还在哪"
+        ],
+        "not_knows": [
+          "不评军务与调令",
+          "不认领遗落装备"
+        ],
+        "visits": {
+          "task": "台本_SQ02_被征用的冬粮",
+          "before": [
+            "征粮的单子我见过。要问床架的事，先报你的来意。"
+          ],
+          "after": [
+            "征粮的事了。板子上还是那几行，我没添。"
+          ],
+          "early": [
+            "你先来过空营，后去问的征粮。顺序好，话对得上。"
+          ],
+          "late": [
+            "征粮的事办完了才来？营不等账，账不等板子。"
+          ],
+          "proxy": [
+            "清点的人不在时，登记板别动；名字是自己走的。"
+          ]
+        },
+        "first_greeting": "来交东西还是来找人？两样都要登记。",
+        "refusal": "要我交出登记板？不行。板子交出去，人就白走了。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "ertai",
+        "age_and_identity": "三十来岁的男人；兵营清点人。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "三十来岁的男人，穿着不合身的旧军衣，手里一块点名的木板；说话时用笔杆敲板。",
+        "body_and_silhouette": "三十来岁男人，不合身旧军衣与木点名板形成瘦身大衣轮廓。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：稍长脸、短直发、下眼睑疲倦，眉抬一下再摇头的解释表情。",
+        "costume": "卡定衣装优先：三十来岁的男人，穿着不合身的旧军衣，手里一块点名的木板；说话时用笔杆敲板。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "旧灰军衣、洗淡米内衫、木褐板。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "一手抓点名板下缘靠躯干，另一手用笔杆轻点板边，未展示名单正文。",
+        "source_voice": "照单念名字的腔调；被问军务就摇头。",
+        "required_visible_props": [
+          "不合身旧军衣",
+          "点名木板",
+          "简单笔杆"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不添加可读人员名单，不把登记板交出，不升级军务指挥官。",
+        "knowledge_limits": {
+          "knows": [
+            "床架被拆走几副",
+            "军旗杆座还在哪"
+          ],
+          "not_knows": [
+            "不评军务与调令",
+            "不认领遗落装备"
+          ],
+          "current_refusal": "要我交出登记板？不行。板子交出去，人就白走了。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/06_支线/台本/台本_SQ02_被征用的冬粮.md",
+          "sha256": "63b7003cd83cda98e2d1d68333396808a90a211fca094f20106bfee4ee5abe0b"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-CP1",
+      "name": "燧珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CP1_燧珥.md",
+        "sha256": "4117021d341542e271dcb824ac4dd1b3a5e2e178b05fc911879449907aba1d43"
+      },
+      "card_details": {
+        "工作": "营地边缘的逃散者，常在 `rumor_camp1` 一带。地域见 [[区域_R04_王廷关隘与边城]]。",
+        "体貌与随身": "三十来岁的男人，衣领被扯开过，靴子只剩一只半；说话时背对着营地。",
+        "口吻": "先说“我不是他们的人”，再回答问题；听到哨声就停。",
+        "知情边界": "哨位草垫换班的时辰；哪条坡上不了。不说同伴是谁；不替营里任何人传话。"
+      },
+      "story_links": [
+        "区域_R04_王廷关隘与边城",
+        "台本_FX_野外人物对白",
+        "台本_N9_把证据摆上桌",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R04_王廷关隘与边城",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "营地边缘的逃散者",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CP1",
+        "site": "rumor_camp1",
+        "region": "R04",
+        "look": "三十来岁的男人，衣领被扯开过，靴子只剩一只半；说话时背对着营地。",
+        "voice": "先说“我不是他们的人”，再回答问题；听到哨声就停。",
+        "knows": [
+          "哨位草垫换班的时辰",
+          "哪条坡上不了"
+        ],
+        "not_knows": [
+          "不说同伴是谁",
+          "不替营里任何人传话"
+        ],
+        "visits": {
+          "task": "台本_N9_把证据摆上桌",
+          "before": [
+            "证据要摆，别把我摆上去。我只说哨位和绊索。"
+          ],
+          "after": [
+            "证据摆上桌了。营里换没换人，我不知道，也不打听。"
+          ],
+          "early": [
+            "你先在侧坡见了我，后去摆的证据。那我说的哨位时辰，你记得。"
+          ],
+          "late": [
+            "证据的事完了才来？哨位不等结果，只等火。"
+          ],
+          "proxy": [
+            "逃散的人不在侧坡时，别从正坡上；草垫前的绊索还在。"
+          ]
+        },
+        "first_greeting": "别喊。我不是他们的人。",
+        "refusal": "要我带路进营？不。我出来一趟就够了。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "suier",
+        "age_and_identity": "三十来岁的男人；营地边缘的逃散者。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "三十来岁的男人，衣领被扯开过，靴子只剩一只半；说话时背对着营地。",
+        "body_and_silhouette": "三十来岁男人，曾撕开的衣领已维持遮蔽、仅一只半完好靴；双足完整。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：偏窄下颌、紧张内眉、眼睛侧听、嘴开一线急着澄清；不加新伤。",
+        "costume": "卡定衣装优先：三十来岁的男人，衣领被扯开过，靴子只剩一只半；说话时背对着营地。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "退色棕灰上衣、暗麻裤、失修靴。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "三分之四站姿背向画外营地方向，一手护住衣领边，另一手低抬拒绝。",
+        "source_voice": "先说“我不是他们的人”，再回答问题；听到哨声就停。",
+        "required_visible_props": [
+          "旧撕扯衣领痕迹",
+          "一只完整靴另一只磨破靴"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不裸露胸部、不画断脚或正在受袭，不替营地传话/带路。",
+        "knowledge_limits": {
+          "knows": [
+            "哨位草垫换班的时辰",
+            "哪条坡上不了"
+          ],
+          "not_knows": [
+            "不说同伴是谁",
+            "不替营里任何人传话"
+          ],
+          "current_refusal": "要我带路进营？不。我出来一趟就够了。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+          "sha256": "42c1cbcf13cd1426f99dd972cfa77efdb722c8aa7395df995af8d01de8c5f0db"
+        }
+      ],
+      "source_reverified": true
+    }
+  ]
+}

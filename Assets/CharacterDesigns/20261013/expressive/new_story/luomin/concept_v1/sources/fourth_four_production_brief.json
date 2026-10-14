@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "asset_batch": "20261013",
+  "local_date_note": "UTC日期2026-10-13，用户UTC+8日期已2026-10-14，资源目录延续20261013批。",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "historical_roster": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "sha256": "6af5b2e027def4ecab0a36b34739dc1a168a78d5c527ece98180e6460897325a"
+  },
+  "master": {
+    "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+    "sha256": "1ef69891ce678f6d8aef940cd03578261b4f27a8ec99a17ba80a34898d30ba22"
+  },
+  "scope": "最新远端九提交新增原创角色概念计划；不更新原roster、MASTER、图像或交付回执。",
+  "style": {
+    "direction": "成熟大头短身、短颈自然肩线、紧凑成年体态、可读五官与人物自己的情绪；低魔中世纪材质、组织清晰像素簇；完整单人透明全身概念。",
+    "style_source": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    "references": [
+      {
+        "path": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+        "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a"
+      },
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+        "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+      }
+    ],
+    "reference_use": "Sela G仅参考成熟美感和脸部情绪；Mia 1:1.5只为单人已认可比例案例，不机械套全员，不复制脸、发型和衣装。",
+    "guardrails": [
+      "先实际看参考，再生图；原始图不可做裁切假装完成",
+      "与下述最新剧情卡冲突时以最新卡/台本为准；服色和未设定发型可提出可逆设计",
+      "没有治疗、付款、续约、宽恕或调查结案图示；不将道具文字当真实承诺",
+      "新目录输出，不覆盖167旧锚/旧receipt；新图先标待独审，不自动通过",
+      "概念不代表目标游戏原部件、身型、帧表、装备兼容或运行通过"
+    ],
+    "age_guard": "成熟感仅用于卡定成年者；其他角色按原年龄，不把17–18岁的FX-HUT画中年。未成年正常完整职业服饰，不性感化。"
+  },
+  "independence_note": "新文件；首批四人brief、历史roster/MASTER/receipt不变。先按真实图片独审，后才记交付。",
+  "created_utc": "2026-10-13T18:22:53.683670+00:00",
+  "batch": "fourth_four",
+  "characters": [
+    {
+      "canonical_id": "FX-CAT",
+      "name": "洛珉",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CAT_洛珉.md",
+        "sha256": "83e4c012254264ef736c07bb9bea72d0f9c3d90ca6998d79246aba8867fcdc26"
+      },
+      "card_details": {
+        "工作": "废墟守墓教士，常在 `rumor_remoteCatacombs1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "体貌与随身": "四十多岁的教士，袍角结着泥，手上提一盏常备的油灯；说话前习惯先把灯放在地上。",
+        "口吻": "平稳，句尾带祝福；拒绝时不说重话，只说“不合规矩”。",
+        "知情边界": "哪些墓室已经塌了；哪几处是后来人挖开的。不知道盗掘者的去向；不替任何家族宣告墓主身份。"
+      },
+      "story_links": [
+        "区域_R05_灰烬湿地与疫村",
+        "台本_FX_野外人物对白",
+        "台本_N15_回声不等于真相",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R05_灰烬湿地与疫村",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "废墟守墓教士",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CAT",
+        "site": "rumor_remoteCatacombs1",
+        "region": "R05",
+        "look": "四十多岁的教士，袍角结着泥，手上提一盏常备的油灯；说话前习惯先把灯放在地上。",
+        "voice": "平稳，句尾带祝福；拒绝时不说重话，只说“不合规矩”。",
+        "knows": [
+          "哪些墓室已经塌了",
+          "哪几处是后来人挖开的"
+        ],
+        "not_knows": [
+          "不知道盗掘者的去向",
+          "不替任何家族宣告墓主身份"
+        ],
+        "visits": {
+          "task": "台本_N15_回声不等于真相",
+          "before": [
+            "你身上带着听来的话。带进来可以，别在祭坛前说。"
+          ],
+          "after": [
+            "回声散了，名单还在。你要再问，先把手洗干净。"
+          ],
+          "early": [
+            "你先来过这里，后去的别处。那回声的事，你听见的版本会多一层。"
+          ],
+          "late": [
+            "别处的事办完了才来？这里不问顺序，只问你是不是空着手来。"
+          ],
+          "proxy": [
+            "教士不在时，祭坛前的灯不点；名单不交外人。"
+          ]
+        },
+        "first_greeting": "愿圣主看顾活人。这里的路只到祭坛为止。",
+        "refusal": "要我带你去看第三室？不合规矩。要祷告，我陪你。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "luomin",
+        "age_and_identity": "四十多岁的教士；废墟守墓教士。当前源不明确性别，按中性成年可逆概念；不由名字、职业或文件slug推断canon性别。",
+        "literal_source_look": "四十多岁的教士，袍角结着泥，手上提一盏常备的油灯；说话前习惯先把灯放在地上。",
+        "body_and_silhouette": "泥袍垂直轮廓与一盏落地油灯；四十多岁，性别未明，采用中性成年外观提案。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：瘦长脸、轻灰鬓、平展眉、温和但不退让的闭口转轻启。",
+        "costume": "卡定衣装优先：四十多岁的教士，袍角结着泥，手上提一盏常备的油灯；说话前习惯先把灯放在地上。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "灰棕袍、褪暗蓝披、暖黄小油灯。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "站稳，油灯放脚侧而非拿灯做审判；一手轻覆腹侧，一手小幅开放示意。",
+        "source_voice": "平稳，句尾带祝福；拒绝时不说重话，只说“不合规矩”。",
+        "required_visible_props": [
+          "泥痕袍角",
+          "普通油灯"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不加圣徽具体教派、权杖或法术；不替家族定墓主，不带去第三室。",
+        "knowledge_limits": {
+          "knows": [
+            "哪些墓室已经塌了",
+            "哪几处是后来人挖开的"
+          ],
+          "not_knows": [
+            "不知道盗掘者的去向",
+            "不替任何家族宣告墓主身份"
+          ],
+          "current_refusal": "要我带你去看第三室？不合规矩。要祷告，我陪你。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。",
+          "性别未明，未冻结；保持中性外观即可生产原创概念，不凭名字定性别。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N15_回声不等于真相.md",
+          "sha256": "95bf370ffe72d6bf8512eff7d36cf62b5e42cbc3c878c32c9a885b3385fe4c68"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-ABY",
+      "name": "缇菈",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-ABY_缇菈.md",
+        "sha256": "fc362a053272610a1422f9e743c423bc7dafe607d08b85b88dceda3dd42af837"
+      },
+      "card_details": {
+        "工作": "修院避难者，常在 `rumor_abbey1` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "体貌与随身": "三十多岁的妇人，披着两层旧披巾，脚上只剩一只完整的鞋；总在钟楼阴影里站着。",
+        "口吻": "轻声，句子常说到一半；被问来历时先问“你是哪边的人”。",
+        "知情边界": "钟楼哪一级台阶是空的；修院后墙哪个洞能过人。不说自己从哪个村来；不替修院解释旧事。"
+      },
+      "story_links": [
+        "区域_R06_无名修院山地",
+        "台本_FX_野外人物对白",
+        "台本_D09_无名修院回声厅",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R06_无名修院山地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "修院避难者",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-ABY",
+        "site": "rumor_abbey1",
+        "region": "R06",
+        "look": "三十多岁的妇人，披着两层旧披巾，脚上只剩一只完整的鞋；总在钟楼阴影里站着。",
+        "voice": "轻声，句子常说到一半；被问来历时先问“你是哪边的人”。",
+        "knows": [
+          "钟楼哪一级台阶是空的",
+          "修院后墙哪个洞能过人"
+        ],
+        "not_knows": [
+          "不说自己从哪个村来",
+          "不替修院解释旧事"
+        ],
+        "visits": {
+          "task": "台本_D09_无名修院回声厅",
+          "before": [
+            "回声厅的门别开。你要是非开，先把我的名字忘掉。"
+          ],
+          "after": [
+            "门开了又关了。你回来就好——钟楼还留着一层灰给你踩。"
+          ],
+          "early": [
+            "你从山下先来我这儿，再去回声厅。顺序好，人不容易乱。"
+          ],
+          "late": [
+            "回声厅的事办完了才来找我？我不问结果，只问你还敢不敢住钟楼。"
+          ],
+          "proxy": [
+            "避难的人不在钟楼上时，后墙豁口别进；进去了没人接应。"
+          ]
+        },
+        "first_greeting": "你……你是哪边的人？城联的？还是没主的？",
+        "refusal": "要我从钟楼上下来？不行。我在上面才看得见路。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "tila",
+        "age_and_identity": "三十多岁的妇人；修院避难者。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "三十多岁的妇人，披着两层旧披巾，脚上只剩一只完整的鞋；总在钟楼阴影里站着。",
+        "body_and_silhouette": "两层旧披巾围出收肩形；三十多岁妇人，一只完整鞋、另一只磨破鞋提案，不画断足。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：窄脸与警觉侧目，眉上提、嘴只开一点像话说半句；乱发收在披巾内可逆。",
+        "costume": "卡定衣装优先：三十多岁的妇人，披着两层旧披巾，脚上只剩一只完整的鞋；总在钟楼阴影里站着。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "旧灰蓝外巾、枯紫内巾、土褐下装。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "站姿重心稳，双手扣披巾边缘；看向来人侧边，不站在危险高空。",
+        "source_voice": "轻声，句子常说到一半；被问来历时先问“你是哪边的人”。",
+        "required_visible_props": [
+          "两层旧披巾",
+          "仅一只完整鞋，另一足鞋破而肢体完整"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "钟楼背景非必需，不画下楼/弃守位置、交代来历或获救终局。",
+        "knowledge_limits": {
+          "knows": [
+            "钟楼哪一级台阶是空的",
+            "修院后墙哪个洞能过人"
+          ],
+          "not_knows": [
+            "不说自己从哪个村来",
+            "不替修院解释旧事"
+          ],
+          "current_refusal": "要我从钟楼上下来？不行。我在上面才看得见路。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/08_副本/台本/台本_D09_无名修院回声厅.md",
+          "sha256": "69918d9571a64835ce3ca1c36ec080b1a764e8376568a73a63d209430075811e"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-LEP",
+      "name": "米洛珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-LEP_米洛珥.md",
+        "sha256": "6b3b78cf0f60f7e9f319c158d482dd8a199a44af07cdc05101573f07fa364dda"
+      },
+      "card_details": {
+        "工作": "麻风院护理者，常在 `rumor_leprosy1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "体貌与随身": "四十来岁的男子，袖口用麻绳扎紧，随身带一小罐油膏；进门先洗手，再说话。",
+        "口吻": "缓慢、克制；说到病人时把声音放低，说到“外人”时站直。",
+        "知情边界": "哪间屋子还在用药；送药的路哪段会积水。不报病人姓名；不替城里人判断该不该放人进来。"
+      },
+      "story_links": [
+        "区域_R05_灰烬湿地与疫村",
+        "台本_FX_野外人物对白",
+        "台本_DT16_愿意继续治疗的人",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R05_灰烬湿地与疫村",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "麻风院护理者",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-LEP",
+        "site": "rumor_leprosy1",
+        "region": "R05",
+        "look": "四十来岁的男子，袖口用麻绳扎紧，随身带一小罐油膏；进门先洗手，再说话。",
+        "voice": "缓慢、克制；说到病人时把声音放低，说到“外人”时站直。",
+        "knows": [
+          "哪间屋子还在用药",
+          "送药的路哪段会积水"
+        ],
+        "not_knows": [
+          "不报病人姓名",
+          "不替城里人判断该不该放人进来"
+        ],
+        "visits": {
+          "task": "台本_DT16_愿意继续治疗的人",
+          "before": [
+            "药还差两味。你要帮，就照单子放台阶上，别进来数人。"
+          ],
+          "after": [
+            "药到了，人还在。治疗这件事没有完成的那天，只有今天的量。"
+          ],
+          "early": [
+            "你先来院里，后去的城里。那正好，你知道该怎么说才不伤人。"
+          ],
+          "late": [
+            "城里的事忙完才来？院里的人不问先后，只问今天有没有药。"
+          ],
+          "proxy": [
+            "护理者不在篱笆边时，物资照旧放台阶；不许进院。"
+          ]
+        },
+        "first_greeting": "来送药的？还是来看的？看的话，在篱笆外看。",
+        "refusal": "要我开门让你看病人？不行。要送东西，放台阶上。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "miloer",
+        "age_and_identity": "四十来岁的男子；麻风院护理者。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "四十来岁的男子，袖口用麻绳扎紧，随身带一小罐油膏；进门先洗手，再说话。",
+        "body_and_silhouette": "扎袖麻绳与小油膏罐；四十来岁男子，普通护理劳动者，双脚站稳。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：厚下颌、短深须提案、低眉专注眼神；讨论外人时认真而非恐怖医师。",
+        "costume": "卡定衣装优先：四十来岁的男子，袖口用麻绳扎紧，随身带一小罐油膏；进门先洗手，再说话。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "未漂白麻衫、灰绿围腰、深棕鞋。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "一手拿封好的小陶油膏罐靠腰，另一手低幅平掌示意放东西；不触碰患者。",
+        "source_voice": "缓慢、克制；说到病人时把声音放低，说到“外人”时站直。",
+        "required_visible_props": [
+          "麻绳扎袖口",
+          "小罐油膏"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不加口罩瘟医鸟嘴/现代医疗设备，不展示患者或准许外人进门。",
+        "knowledge_limits": {
+          "knows": [
+            "哪间屋子还在用药",
+            "送药的路哪段会积水"
+          ],
+          "not_knows": [
+            "不报病人姓名",
+            "不替城里人判断该不该放人进来"
+          ],
+          "current_refusal": "要我开门让你看病人？不行。要送东西，放台阶上。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT16_愿意继续治疗的人.md",
+          "sha256": "a526ddb617b1c2a2f939a8ba1419e8b9d2844e029cea5267a0773a241913aa4b"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-PLG",
+      "name": "蔻珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-PLG_蔻珥.md",
+        "sha256": "3f9362f9ccb7c29542e7bf0520b139aa7fcc9461f818824749a57c606e55c1b4"
+      },
+      "card_details": {
+        "工作": "疫村看守，常在 `rumor_plagueVillage1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "体貌与随身": "四十多岁的妇人，裹着双层头巾，手边总有一桶石灰；说话前先看风向。",
+        "口吻": "平直、不带情绪；劝人离开时把话说得像登记。",
+        "知情边界": "封条是哪一年贴的；哪几间屋子还锁着。不替村民认领遗物；不判断病还在不在。"
+      },
+      "story_links": [
+        "区域_R05_灰烬湿地与疫村",
+        "台本_FX_野外人物对白",
+        "台本_N8_不会散去的热病",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R05_灰烬湿地与疫村",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "疫村看守",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-PLG",
+        "site": "rumor_plagueVillage1",
+        "region": "R05",
+        "look": "四十多岁的妇人，裹着双层头巾，手边总有一桶石灰；说话前先看风向。",
+        "voice": "平直、不带情绪；劝人离开时把话说得像登记。",
+        "knows": [
+          "封条是哪一年贴的",
+          "哪几间屋子还锁着"
+        ],
+        "not_knows": [
+          "不替村民认领遗物",
+          "不判断病还在不在"
+        ],
+        "visits": {
+          "task": "台本_N8_不会散去的热病",
+          "before": [
+            "你要查热病的事，别在村里查。我这儿只有封条。"
+          ],
+          "after": [
+            "热病的事过去了。封条我没拆，也不会拆。"
+          ],
+          "early": [
+            "你先来过村里，后去的别处。那正好，你见过封条的样子。"
+          ],
+          "late": [
+            "别处的事办完了才来？村子等得起，石灰等不起。"
+          ],
+          "proxy": [
+            "看守不在村口时，封条照旧；过线的人自己担。"
+          ]
+        },
+        "first_greeting": "站到上风处说话。封条没拆，门就不开。",
+        "refusal": "要我拆封条？不拆。拆了，责任就是我的。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "kouer",
+        "age_and_identity": "四十多岁的妇人；疫村看守。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "四十多岁的妇人，裹着双层头巾，手边总有一桶石灰；说话前先看风向。",
+        "body_and_silhouette": "双层头巾与脚边一桶石灰；四十多岁妇人，硬挺但不军事化的短身。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：方圆脸、平直眉、侧眼看风向，嘴轻启如平直登记；头巾下不需发饰。",
+        "costume": "卡定衣装优先：四十多岁的妇人，裹着双层头巾，手边总有一桶石灰；说话前先看风向。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "灰米双巾、暗褐褂、木桶白灰。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "站稳双手轻搭木桶提把，不扬灰；视线越过来人向一侧。",
+        "source_voice": "平直、不带情绪；劝人离开时把话说得像登记。",
+        "required_visible_props": [
+          "双层头巾",
+          "普通木桶内少量石灰"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "石灰不画成烟雾攻击；不拆封条、不判断疫情已清除、不认领遗物。",
+        "knowledge_limits": {
+          "knows": [
+            "封条是哪一年贴的",
+            "哪几间屋子还锁着"
+          ],
+          "not_knows": [
+            "不替村民认领遗物",
+            "不判断病还在不在"
+          ],
+          "current_refusal": "要我拆封条？不拆。拆了，责任就是我的。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N8_不会散去的热病.md",
+          "sha256": "860beaa106318c51e8f0277ad5c8cb06e22aa861c0937865baf5d5a673a55afe"
+        }
+      ],
+      "source_reverified": true
+    }
+  ]
+}

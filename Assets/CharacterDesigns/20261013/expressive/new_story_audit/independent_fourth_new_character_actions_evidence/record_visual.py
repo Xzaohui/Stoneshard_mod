@@ -1,0 +1,4 @@
+from pathlib import Path
+import json,sys
+A=Path('Assets/CharacterDesigns/20261013/expressive/new_story_audit');key,verdict,note=sys.argv[1:4];r=json.loads((A/'independent_fourth_new_character_actions_evidence'/f'{key}_byte_audit.json').read_text());r.update(verdict=verdict,visual_note=note,actual_viewed=['raw','transparent','true_rgba_light','true_rgba_dark','mother_at_plan_gate'],revision_requested=verdict=='hard_error_revision')
+p=A/'independent_fourth_new_character_actions_20261014.json';j=json.loads(p.read_text());j['pose_reviews']=[x for x in j['pose_reviews'] if x['pose_version']!=key]+[r];j['selected_pose_count']=sum(x['verdict']=='pass' for x in j['pose_reviews']);j['status']='generation_and_visual_review_in_progress';p.write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n');print(key,verdict)

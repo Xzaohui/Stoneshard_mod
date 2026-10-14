@@ -1,0 +1,65 @@
+{
+  "audit_status": "pass_selection_130_images_with_two_excluded_expression_gaps_and_documented_nonblocking_historical_provenance_limitations",
+  "counts": {
+    "characters": 44,
+    "base_images": 44,
+    "qualified_expressions": 86,
+    "selected_images": 130,
+    "expression_packages": 22
+  },
+  "verification_summary": {
+    "all_130_current_asset_sha256_match_frozen_selection": true,
+    "all_86_expression_sha256_match_delivery_manifest_and_receipt": true,
+    "all_86_expressions_present_byte_identically_in_receipted_source_archives": true,
+    "all_44_expression_manifests_and_statuses_bound_to_delivered_package": true,
+    "all_44_concept_mothers_match_expression_binding_and_concept_selection": true,
+    "all_44_mothers_sha256_present_in_original_delivery_receipts": true,
+    "unique_asset_paths": 130,
+    "unique_asset_sha256": 130,
+    "archive_count_verified": 44,
+    "unresolved_selection_ambiguities": 0,
+    "evidence_json_pointers_verified": 684,
+    "referenced_files_sha256_reverified": 529
+  },
+  "uncertainties": [
+    {
+      "slug": "endai",
+      "type": "historical_call_provenance_gap",
+      "blocking_selection": false,
+      "issue": "历史原始图和既存提示词已恢复，但精确生图调用参数不可用；本次仅以冻结清单/实际图SHA/独审/已发送附件证明选稿，不声明补齐历史调用。",
+      "value": "recovered_raw_and_preexisting_prompt_historical_call_arguments_unavailable",
+      "evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/manifest.json",
+        "sha256": "0cddf0ea9089e74bb4a8762324b5c801caf46460713658da9a931d743ab89d04",
+        "json_pointer": "/provenance_status"
+      }
+    },
+    {
+      "slug": "ertai",
+      "type": "historical_call_provenance_gap",
+      "blocking_selection": false,
+      "issue": "历史原始图和既存提示词已恢复，但精确生图调用参数不可用；本次仅以冻结清单/实际图SHA/独审/已发送附件证明选稿，不声明补齐历史调用。",
+      "value": "recovered_raw_and_preexisting_prompt_historical_call_arguments_unavailable",
+      "evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/manifest.json",
+        "sha256": "291d79e2788f8d3de5da14df3249622cb1f85680eea790129affe67fe25fe333",
+        "json_pointer": "/provenance_status"
+      }
+    },
+    {
+      "slug": "suier",
+      "type": "historical_call_provenance_gap",
+      "blocking_selection": false,
+      "issue": "历史原始图和既存提示词已恢复，但精确生图调用参数不可用；本次仅以冻结清单/实际图SHA/独审/已发送附件证明选稿，不声明补齐历史调用。",
+      "value": "recovered_raw_and_preexisting_prompt_historical_call_arguments_unavailable",
+      "evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/manifest.json",
+        "sha256": "9ce006084bc6d4647e276b0785f0cced65078fbf13db94299f2a77eedc12e870",
+        "json_pointer": "/provenance_status"
+      }
+    }
+  ],
+  "resolved_schema_difference_count": 4,
+  "output": "Assets/CharacterDesigns/20261013/expressive/new_story/catalog_v1/source_audit/selection_audit.json",
+  "sha256": "d45e2e03b4b696600e0216ca3ee2830a303192e26569ec854ede4da1344f2838"
+}

@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "asset_batch": "20261013",
+  "local_date_note": "UTC日期2026-10-13，用户UTC+8日期已2026-10-14，资源目录延续20261013批。",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "historical_roster": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "sha256": "6af5b2e027def4ecab0a36b34739dc1a168a78d5c527ece98180e6460897325a"
+  },
+  "master": {
+    "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+    "sha256": "1ef69891ce678f6d8aef940cd03578261b4f27a8ec99a17ba80a34898d30ba22"
+  },
+  "scope": "最新远端九提交新增原创角色概念计划；不更新原roster、MASTER、图像或交付回执。",
+  "style": {
+    "direction": "成熟大头短身、短颈自然肩线、紧凑成年体态、可读五官与人物自己的情绪；低魔中世纪材质、组织清晰像素簇；完整单人透明全身概念。",
+    "style_source": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    "references": [
+      {
+        "path": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+        "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a"
+      },
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+        "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+      }
+    ],
+    "reference_use": "Sela G仅参考成熟美感和脸部情绪；Mia 1:1.5只为单人已认可比例案例，不机械套全员，不复制脸、发型和衣装。",
+    "guardrails": [
+      "先实际看参考，再生图；原始图不可做裁切假装完成",
+      "与下述最新剧情卡冲突时以最新卡/台本为准；服色和未设定发型可提出可逆设计",
+      "没有治疗、付款、续约、宽恕或调查结案图示；不将道具文字当真实承诺",
+      "新目录输出，不覆盖167旧锚/旧receipt；新图先标待独审，不自动通过",
+      "概念不代表目标游戏原部件、身型、帧表、装备兼容或运行通过"
+    ],
+    "age_guard": "成熟感仅用于卡定成年者；其他角色按原年龄，不把17–18岁的FX-HUT画中年。未成年正常完整职业服饰，不性感化。"
+  },
+  "independence_note": "新文件；首批四人brief、历史roster/MASTER/receipt不变。先按真实图片独审，后才记交付。",
+  "created_utc": "2026-10-13T18:22:53.691458+00:00",
+  "batch": "eighth_four",
+  "characters": [
+    {
+      "canonical_id": "FX-CRP",
+      "name": "瑟珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CRP_瑟珥.md",
+        "sha256": "ff39dbf5c33aa501ad4057087f179bb54c7b6acbd91f31bd091bd34bce75db06"
+      },
+      "card_details": {
+        "工作": "陵墓盗掘幸存者，常在 `rumor_remoteCrypt1` 一带。地域见 [[区域_R03_曼恩边地]]。",
+        "体貌与随身": "二十多岁的年轻人，衣服上全是灰，右手一直攥着一截断绳；说话时先看出口。",
+        "口吻": "语速快，句子短，怕回声；说到同伴就停下来数手指。",
+        "知情边界": "墓道第二道门的方向；同伴最后一次出声的位置。不知道墓里埋的是谁；不替死者家属认领遗物。"
+      },
+      "story_links": [
+        "区域_R03_曼恩边地",
+        "台本_FX_野外人物对白",
+        "台本_DT03_无人认领的墓标",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R03_曼恩边地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "陵墓盗掘幸存者",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CRP",
+        "site": "rumor_remoteCrypt1",
+        "region": "R03",
+        "look": "二十多岁的年轻人，衣服上全是灰，右手一直攥着一截断绳；说话时先看出口。",
+        "voice": "语速快，句子短，怕回声；说到同伴就停下来数手指。",
+        "knows": [
+          "墓道第二道门的方向",
+          "同伴最后一次出声的位置"
+        ],
+        "not_knows": [
+          "不知道墓里埋的是谁",
+          "不替死者家属认领遗物"
+        ],
+        "visits": {
+          "task": "台本_DT03_无人认领的墓标",
+          "before": [
+            "你要立标？先等我数完人。少一个名字，标就是错的。"
+          ],
+          "after": [
+            "标立起来了。三个名字里有一个是猜的，你敢不敢写上去。"
+          ],
+          "early": [
+            "你先把墓标的事办了才来问我？那正好，我要说的人还没说完。"
+          ],
+          "late": [
+            "你要是先帮我找人，再去立标，我会把顺序告诉你。现在也不晚。"
+          ],
+          "proxy": [
+            "同伴没回来的那个年轻人，话留在了洞口：别替他数人。"
+          ]
+        },
+        "first_greeting": "别喊。里面不能喊。你……你有绳子吗？",
+        "refusal": "让我带路？我连自己都带不出去。你自己看着办。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "seer",
+        "age_and_identity": "二十多岁的年轻人；陵墓盗掘幸存者。当前源不明确性别，按中性成年可逆概念；不由名字、职业或文件slug推断canon性别。",
+        "literal_source_look": "二十多岁的年轻人，衣服上全是灰，右手一直攥着一截断绳；说话时先看出口。",
+        "body_and_silhouette": "二十多岁年轻人，性别未明，中性成年提案；灰尘衣与右手断绳为首要线索。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：细长脸、内眉上挑、视线扫向出口、嘴半开像短促低语；不画恐怖巨眼。",
+        "costume": "卡定衣装优先：二十多岁的年轻人，衣服上全是灰，右手一直攥着一截断绳；说话时先看出口。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "灰麻褂、暗褐裤、脏白断绳。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "稍侧身站稳，右手握断绳贴腰，左手微张似默数；不添加墓室背景。",
+        "source_voice": "语速快，句子短，怕回声；说到同伴就停下来数手指。",
+        "required_visible_props": [
+          "衣上灰尘",
+          "右手攥一截断绳"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不画亡灵化、腐败尸体或替死者认领身份；性别、伤情未定不强加。",
+        "knowledge_limits": {
+          "knows": [
+            "墓道第二道门的方向",
+            "同伴最后一次出声的位置"
+          ],
+          "not_knows": [
+            "不知道墓里埋的是谁",
+            "不替死者家属认领遗物"
+          ],
+          "current_refusal": "让我带路？我连自己都带不出去。你自己看着办。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。",
+          "性别未明，未冻结；保持中性外观即可生产原创概念，不凭名字定性别。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/seer/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT03_无人认领的墓标.md",
+          "sha256": "babdb30fffc6f07ecc1f2c92cd8703a760f211e3c5e5c027ce099ff5022647a0"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-GHL",
+      "name": "达珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-GHL_达珥.md",
+        "sha256": "67dad2a0b24899cb9d59bdf2f20cedef52ff06b107b12a72b0865ebbf0351325"
+      },
+      "card_details": {
+        "工作": "食尸鬼巢穴报信人，常在 `rumor_ghoulDen1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "体貌与随身": "三十来岁的男人，袖口扎紧，背着一只空布袋；说话时不停搓手。",
+        "口吻": "低声、急促，句子重复一半；说到夜里就停下来听。",
+        "知情边界": "坟地被翻过的位置；哪条路夜里不能走。不替死者的家人作证；不说自己看见过什么。"
+      },
+      "story_links": [
+        "区域_R05_灰烬湿地与疫村",
+        "台本_FX_野外人物对白",
+        "台本_N16_谁来保管余烬",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R05_灰烬湿地与疫村",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "食尸鬼巢穴报信人",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-GHL",
+        "site": "rumor_ghoulDen1",
+        "region": "R05",
+        "look": "三十来岁的男人，袖口扎紧，背着一只空布袋；说话时不停搓手。",
+        "voice": "低声、急促，句子重复一半；说到夜里就停下来听。",
+        "knows": [
+          "坟地被翻过的位置",
+          "哪条路夜里不能走"
+        ],
+        "not_knows": [
+          "不替死者的家人作证",
+          "不说自己看见过什么"
+        ],
+        "visits": {
+          "task": "台本_N16_谁来保管余烬",
+          "before": [
+            "你要收余烬，先把坟那边的话听完。听完再动手。"
+          ],
+          "after": [
+            "余烬归谁我不管。坟那边今晚安静，这就够了。"
+          ],
+          "early": [
+            "你先听我报了信，才去办的余烬事。顺序对。"
+          ],
+          "late": [
+            "余烬的事办完了才来？坟不问先后，只问夜里有没有人。"
+          ],
+          "proxy": [
+            "报信的人不在时，新土就是告示；别踩。"
+          ]
+        },
+        "first_greeting": "别往坟那边去。我说三遍，你听一遍就够。",
+        "refusal": "要我带路？不。我连自家门口都要绕。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "daer",
+        "age_and_identity": "三十来岁的男人；食尸鬼巢穴报信人。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "三十来岁的男人，袖口扎紧，背着一只空布袋；说话时不停搓手。",
+        "body_and_silhouette": "三十来岁男子、扎袖、背空布袋；布袋瘪薄，不变装满尸物。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：短方脸、眉间紧促、嘴轻开重复半句、眼睛侧听；轻胡茬提案。",
+        "costume": "卡定衣装优先：三十来岁的男人，袖口扎紧，背着一只空布袋；说话时不停搓手。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "灰绿粗衫、深棕扎袖绳、灰麻空袋。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "站稳、双手在胸腹前轻搓，十指关系清楚；面向来人但耳朵像在听远处。",
+        "source_voice": "低声、急促，句子重复一半；说到夜里就停下来听。",
+        "required_visible_props": [
+          "扎紧袖口",
+          "瘪的空布袋"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不画食尸鬼怪物化、死者物品/残肢、不表示已看到特定内幕或替家属作证。",
+        "knowledge_limits": {
+          "knows": [
+            "坟地被翻过的位置",
+            "哪条路夜里不能走"
+          ],
+          "not_knows": [
+            "不替死者的家人作证",
+            "不说自己看见过什么"
+          ],
+          "current_refusal": "要我带路？不。我连自家门口都要绕。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N16_谁来保管余烬.md",
+          "sha256": "c40d4a31ea24f63229ddcaa3316cc518e8a414b59a787f68bb7048536e2eaeab"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-CV3",
+      "name": "俉珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV3_俉珥.md",
+        "sha256": "91c55957900f39805e4e360320c01ae490ce6800af8cac5355f538acd8a9be4e"
+      },
+      "card_details": {
+        "工作": "三刀会窝点逃出者，常在 `rumor_cave3` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "体貌与随身": "二十多岁的年轻人，左手少了半截指头，衣服上还留着洞口的灰；说话时背贴着石壁。",
+        "口吻": "半句半句地讲，怕被听见；被问名字就换成“他们都叫我那个”。",
+        "知情边界": "洞里哪段挂钩能踩；帮派几时换班。不说窝点里还有谁；不替帮派传话。"
+      },
+      "story_links": [
+        "区域_R06_无名修院山地",
+        "台本_FX_野外人物对白",
+        "台本_N9_把证据摆上桌",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R06_无名修院山地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "三刀会窝点逃出者",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CV3",
+        "site": "rumor_cave3",
+        "region": "R06",
+        "look": "二十多岁的年轻人，左手少了半截指头，衣服上还留着洞口的灰；说话时背贴着石壁。",
+        "voice": "半句半句地讲，怕被听见；被问名字就换成“他们都叫我那个”。",
+        "knows": [
+          "洞里哪段挂钩能踩",
+          "帮派几时换班"
+        ],
+        "not_knows": [
+          "不说窝点里还有谁",
+          "不替帮派传话"
+        ],
+        "visits": {
+          "task": "台本_N9_把证据摆上桌",
+          "before": [
+            "你要摆证据，别把我摆上去。我只说洞口的事。"
+          ],
+          "after": [
+            "证据摆上桌了。洞里的人换没换班，我不知道。"
+          ],
+          "early": [
+            "你先见过我，后去摆的证据。那我说的哪段能踩，你还记得。"
+          ],
+          "late": [
+            "证据的事办完了才来？洞不等结果，只等脚步声。"
+          ],
+          "proxy": [
+            "逃出来的人不在洞口时，绳头记号别动。"
+          ]
+        },
+        "first_greeting": "别喊。洞里会传声。",
+        "refusal": "要我画洞口图？不画。画了就是我的字。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "wuer",
+        "age_and_identity": "二十多岁的年轻人；三刀会窝点逃出者。当前源不明确性别，按中性成年可逆概念；不由名字、职业或文件slug推断canon性别。",
+        "literal_source_look": "二十多岁的年轻人，左手少了半截指头，衣服上还留着洞口的灰；说话时背贴着石壁。",
+        "body_and_silhouette": "二十多岁年轻人，性别未明，中性成年提案；左手一根手指少半截，具体哪根未指定。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：短下颌、眼睛偏侧、紧眉与小幅开口，压低声音但有清楚人的表情。",
+        "costume": "卡定衣装优先：二十多岁的年轻人，左手少了半截指头，衣服上还留着洞口的灰；说话时背贴着石壁。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "灰尘暗赭褂、烟灰裤、旧棕鞋。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "站姿肩背略收像靠墙，身体自己平衡；左手低放可见旧缺指，右手靠胸，不画实际石壁遮身。",
+        "source_voice": "半句半句地讲，怕被听见；被问名字就换成“他们都叫我那个”。",
+        "required_visible_props": [
+          "衣上洞口灰尘",
+          "左手一根手指部分缺失的陈旧状态，无血无新伤"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "具体缺哪指为待定细节，不能写成已确认食指/小指；不增加断掌、帮派徽或洞口图。",
+        "knowledge_limits": {
+          "knows": [
+            "洞里哪段挂钩能踩",
+            "帮派几时换班"
+          ],
+          "not_knows": [
+            "不说窝点里还有谁",
+            "不替帮派传话"
+          ],
+          "current_refusal": "要我画洞口图？不画。画了就是我的字。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。",
+          "性别未明，未冻结；保持中性外观即可生产原创概念，不凭名字定性别。",
+          "卡只写左手少半截指头，未写哪一指；如图中必须明确，作为本轮可逆提案记录，不反写成既定故事。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/wuer/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+          "sha256": "42c1cbcf13cd1426f99dd972cfa77efdb722c8aa7395df995af8d01de8c5f0db"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-BUR",
+      "name": "库奇",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-BUR_库奇.md",
+        "sha256": "66391998925579faad5ab197deb045a84b46e268294298358ed1e0e280464dd7"
+      },
+      "card_details": {
+        "工作": "蛛洞拾荒人，常在 `rumor_crawlerBurrow1` 一带。地域见 [[区域_R01_布林外港与旧渠]]。",
+        "体貌与随身": "瘦小的中年人，背着缠满布条的钩杆，腰上挂一圈旧绳；手指关节全是旧咬痕。",
+        "口吻": "快、碎、爱插笑话；一提到洞里就立刻改口认真。",
+        "知情边界": "洞口什么时候起风；哪种丝能卖钱，哪种一碰就断。不替人进洞取东西；不知道洞里到底有几窝。"
+      },
+      "story_links": [
+        "区域_R01_布林外港与旧渠",
+        "台本_FX_野外人物对白",
+        "台本_N12_失踪者仍有名字",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R01_布林外港与旧渠",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "蛛洞拾荒人",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-BUR",
+        "site": "rumor_crawlerBurrow1",
+        "region": "R01",
+        "look": "瘦小的中年人，背着缠满布条的钩杆，腰上挂一圈旧绳；手指关节全是旧咬痕。",
+        "voice": "快、碎、爱插笑话；一提到洞里就立刻改口认真。",
+        "knows": [
+          "洞口什么时候起风",
+          "哪种丝能卖钱，哪种一碰就断"
+        ],
+        "not_knows": [
+          "不替人进洞取东西",
+          "不知道洞里到底有几窝"
+        ],
+        "visits": {
+          "task": "台本_N12_失踪者仍有名字",
+          "before": [
+            "你要找的人要是进了洞，先告诉我他穿什么。洞不认名字，认布。"
+          ],
+          "after": [
+            "名字对上了，人没对上。我照旧不进洞，你照旧别催我。"
+          ],
+          "early": [
+            "你先来的洞，后去的井。那布条的事你记得比我清。"
+          ],
+          "late": [
+            "井那边的事办完了才来？洞里不等人，丝也不等人。"
+          ],
+          "proxy": [
+            "拾荒人不在洞口时，别动他挂在杆上的绳；那是他的路。"
+          ]
+        },
+        "first_greeting": "买丝？还是找人？买丝有，找人没有。",
+        "refusal": "让我替你进洞？不去。我这条腿就是替人进去换的。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "kuqi",
+        "age_and_identity": "瘦小的中年人；蛛洞拾荒人。当前源不明确性别，按中性成年可逆概念；不由名字、职业或文件slug推断canon性别。",
+        "literal_source_look": "瘦小的中年人，背着缠满布条的钩杆，腰上挂一圈旧绳；手指关节全是旧咬痕。",
+        "body_and_silhouette": "瘦小中年人，性别未明，中性成年提案；背布条缠钩杆、腰圈旧绳、手指关节陈旧咬痕。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：瘦颊、灵动微挑眉、嘴角插笑话后收正，不能像地精怪物。",
+        "costume": "卡定衣装优先：瘦小的中年人，背着缠满布条的钩杆，腰上挂一圈旧绳；手指关节全是旧咬痕。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "旧土黄短褂、灰褐裤、褪布条钩杆。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "站稳略侧身，一手轻护腰绳另一手小幅说话；钩杆固定背侧向上完整。",
+        "source_voice": "快、碎、爱插笑话；一提到洞里就立刻改口认真。",
+        "required_visible_props": [
+          "缠布条钩杆",
+          "腰圈旧绳",
+          "关节轻微旧咬痕"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "台词提腿经历不等于已定瘸腿/截肢；不擅加义肢或绷带新伤，不替人入洞。",
+        "knowledge_limits": {
+          "knows": [
+            "洞口什么时候起风",
+            "哪种丝能卖钱，哪种一碰就断"
+          ],
+          "not_knows": [
+            "不替人进洞取东西",
+            "不知道洞里到底有几窝"
+          ],
+          "current_refusal": "让我替你进洞？不去。我这条腿就是替人进去换的。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。",
+          "性别未明，未冻结；保持中性外观即可生产原创概念，不凭名字定性别。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/kuqi/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N12_失踪者仍有名字.md",
+          "sha256": "f21d018deee928278a87eab7ed23592f6e5ba2991ac2a7c6509396cc1df0bfb4"
+        }
+      ],
+      "source_reverified": true
+    }
+  ]
+}

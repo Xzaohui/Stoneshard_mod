@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent audit_gap_repair_art",
+  "reviewed_utc": "2026-10-14T12:45:06.576550+00:00",
+  "author_freeze_confirmed_utc": "2026-10-14T12:43:56Z",
+  "status": "pass_visual_design_concept_only",
+  "character": "恩岱 FX-BST",
+  "asset": "E2 无令不允 gap_repair_v2",
+  "hard_errors": [],
+  "revision_required": false,
+  "visual_checks": {
+    "actual_viewed": [
+      "../concept_v1/endai_v1_raw_imagegen.png",
+      "../concept_v1/endai_transparent.png",
+      "raw/E2_initial.png",
+      "selected/endai_E2_no_order_no_entry_transparent.png",
+      "review/endai_mother_E2_light.png",
+      "review/endai_mother_E2_dark.png"
+    ],
+    "single_complete_person": "pass：一名完整人物，发梢、左右手、披风及双靴均完整留边，无副人或脸部插图。",
+    "identity_proportion": "pass：灰后梳发、短须、方厚下颌与成熟年龄感继承；大头、短颈、紧凑躯干及短腿同母图，无旧失败稿的小头长肢。",
+    "costume": "pass：画面左肩、左下摆、右下摆共三处赭补片清楚；深灰披风、棕旧衣、局部胸腹腕甲及绑带靴保留，无全套重甲或新徽。",
+    "expression": "pass：眉压平并收紧，凝视画面右，母图露出齿缝的开口改为闭口坚决拒绝；没有怒吼或放行暗示。口线隐于胡须但闭口形态可读。",
+    "pose": "pass：画面右手仍握腹前披风，左侧手低伸。旧prompt提议腰侧低收并非本轮必需；作者已明确披露保持母图手位以锁定比例，此变化不损害无令不允意图。",
+    "pixel_style": "pass at concept scale：粗像素簇与阶梯边缘一致；不等于原生网格验证。",
+    "background_edges": "pass：浅深底均轮廓清楚，最终无可见背景、柔光或截肢。raw低alpha外晕经许可清理消失。"
+  },
+  "technical_checks": {
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_bbox": [
+      76,
+      109,
+      996,
+      1511
+    ],
+    "raw_sha256": "b3759cdd9b604523eaf6bbd3a933e09c5bf62069ce78c047df47bf4193546766",
+    "selected_sha256": "495317264bf920ffea482fcd13b7da4174f4af8673072f81e98e92f2eef1a1c3",
+    "full_return_payload_sha256": "7a05e2c2f9629835c4699a7d910a479a816f759bb4794cda26661b283e3ef5a5",
+    "payload_decodes_exact_raw": true,
+    "generated_original_matches_raw": true,
+    "only_alpha_le8_and_hidden_RGB_cleanup": true,
+    "alpha_above8_RGBA_unchanged": true,
+    "hidden_RGB_pixels": 0,
+    "saved_prompt_matches_params": true,
+    "reference_matches_mother": true,
+    "prompt_params_mtime_precedes_payload": true,
+    "prestorage_evidence_limit": "预存先后以存档mtime与作者确认支持；独审未旁观原工具调用。",
+    "manifest_entries_checked": 28,
+    "manifest_hash_failures": [],
+    "source_entries_checked": 13,
+    "source_live_and_snapshot_hash_failures": []
+  },
+  "audited_hashes": {
+    "FINAL.md": "2cd0c64b852125296c90662a024ff4d58853aed8c4bfc9daac37d37a6f776db0",
+    "manifest.json": "59a4ca6bea5e807fb30b438b398bf11bcf00ca9a4f4c3294cf42bdf9e9d1a428",
+    "prompts/E2_initial.txt": "ca6d513b5dbc240ceec631f91a7bb243e7519da5504375fc322ef3864cb9aafa",
+    "prompts/E2_initial_params.json": "d961533eff9d8e9cc9669346830c5c98fc14f6c0530cb130e03a98325e48d75f",
+    "sources/source_manifest.json": "5231854d2d4bed3db348cac4612977b4b7cc967d56aeab055ed18a1ffc4127c5",
+    "sources/mother.png": "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8",
+    "review/endai_mother_E2_light.png": "fdcf5d7b506182e678c5478e0a993b4d86bb03331910965d7245d2e9816deb72",
+    "review/endai_mother_E2_dark.png": "109dde489a48f6bda0a91cf5e11c17902fae96615ae80d154abade465dc97172"
+  },
+  "scope_limits": [
+    "仅视觉设计稿验收，不代表用户美感认可。",
+    "未验证native grid、装备兼容、锚点、遮罩、连续动画或游戏运行。",
+    "独审只写本INDEPENDENT_QA.json；未修改作者FINAL、选稿、源包、旧稿或Git。"
+  ],
+  "user_acceptance_claimed": false,
+  "runtime_verified": false,
+  "native_grid_verified": false,
+  "continuous_animation_verified": false
+}

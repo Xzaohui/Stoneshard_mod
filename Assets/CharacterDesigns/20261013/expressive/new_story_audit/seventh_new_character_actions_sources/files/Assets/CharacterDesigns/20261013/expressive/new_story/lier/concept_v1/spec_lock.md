@@ -1,0 +1,1 @@
+当前合同：仅原创单人透明全身概念。直接粗像素簇，成熟大头短身按卡年龄，完整道具。以character_brief.json及当前STYLE_DIRECTION为准；旧35px和强制统一比例停用。builtin imagegen transparent true；首稿及至多一次硬错修订。仅清理alpha≤8及隐藏RGB，等比nearest排版，不能脚本画人。目标游戏适配unknown。

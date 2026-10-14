@@ -1,0 +1,56 @@
+{
+  "reviewer": "draw_daier_moertrs_expressions / author",
+  "reviewed_utc": "2026-10-14T03:07:37.726470+00:00",
+  "scope": "author_visual_and_source_QA_only; independent_review_separate",
+  "actual_view_methods": [
+    "母图raw+transparent分别view_image",
+    "4张本批raw与selected分别view_image",
+    "各角色浅底/深底中文板分别view_image",
+    "raw真正RGBA浅深合成板view_image，未把alpha0隐藏RGB认作可见缺陷",
+    "delivery中文浅深合板view_image"
+  ],
+  "mother_inputs": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v2_raw_imagegen.png",
+      "sha256": "fe036b6b160d952f3bca7e5cd49e4a4a579c02c03edfdb331c090cc7ca2bc3f6"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png",
+      "sha256": "45f9ca7a50f6201e4d363d8a7a521fe20da81d5eb242a4e393151b7cf4a68793"
+    }
+  ],
+  "source_snapshot_hashes_match_current_files": true,
+  "results": [
+    {
+      "expression": "moer_trs_E1_animated_rumour_telling",
+      "label_zh": "传言兴起",
+      "raw": "raw/moer_trs_E1_animated_rumour_telling_v1_raw_imagegen.png",
+      "raw_sha256": "c266f5b8a5fde28d7267074ee46e9de039fb6897390a64df2be16edf8eb3311b",
+      "selected": "selected/moer_trs_E1_animated_rumour_telling_transparent.png",
+      "selected_sha256": "f1d61b7027d08b0c3824c32d13deb8c9986846f1f4f1c96e8c4a3a1ce6e5581f",
+      "actual_raw_and_selected_viewed": true,
+      "pass": true,
+      "tool_return_full_and_decoded_match": true
+    },
+    {
+      "expression": "moer_trs_E2_uneasy_companion_question",
+      "label_zh": "问伴心虚",
+      "raw": "raw/moer_trs_E2_uneasy_companion_question_v1_raw_imagegen.png",
+      "raw_sha256": "62efb9525a5e8f5c8ee43c07bf146e74f0c414fe5e6207b381f3626d7d1f5b71",
+      "selected": "selected/moer_trs_E2_uneasy_companion_question_transparent.png",
+      "selected_sha256": "dd55b079904b5e61b7bdca9b2595ae63e11e772d10c759f4d1685b981cfeb2a3",
+      "actual_raw_and_selected_viewed": true,
+      "pass": true,
+      "tool_return_full_and_decoded_match": true
+    }
+  ],
+  "observations_zh": "E1眉较抬、开口讲述；E2眉内收、视线低移、紧闭口无笑意。保留二十多岁中性成年外观、赭黄衣与崖灰、右肩后D形铲把及左髋后刃，胸腹无横轴；不引入同伴下落或听审结果。",
+  "hard_errors_found": [],
+  "revisions_used": 0,
+  "alpha_cleanup": "阈值128，仅alpha清理并归零alpha0隐藏RGB；可见RGB保持；不脚本绘制身体或缩放选稿",
+  "board_scaling": "1118×1407到559×704的半尺寸最近邻排板（高度奇数四舍五入）；不拉伸身体部位。",
+  "runtime_verified": false,
+  "continuous_animation_verified": false,
+  "native_grid_verified": false,
+  "equipment_compatibility_verified": false
+}

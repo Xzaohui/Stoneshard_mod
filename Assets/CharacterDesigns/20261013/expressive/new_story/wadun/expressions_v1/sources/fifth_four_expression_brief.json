@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。",
+    "planned_selected_images": 8
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者与独审实际view每张原图及最终透明/浅深板，逐图核母图SHA、身份、面部情绪、手势、道具侧别和剧情边界；manifest绑定选稿SHA。板上不加剧情已完成标签。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "prompt_archive_contract": {
+    "status": "planned_prompts_not_executed",
+    "rule": "本文件prompt_text是完整拟用首稿，不冒称已执行prompt。生产时将真实发送的逐字prompt、引用路径与输入SHA、工具参数、时间、输出路径/SHA、首稿或硬错revision1及选废原因写入prompts/与generation-log.json；若改措辞必须存实际版本，不用本brief替代真实调用存档。",
+    "max_calls_per_expression": 2,
+    "revision_rule": "仅一次明确硬错定向修订；实际修订全文及纠错目标须保存，失败则报告，不偷偷增加第三稿。"
+  },
+  "created_utc": "2026-10-13T21:14:38.683288+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "第五批四名新剧情人物各两种独立面部情绪，共8张未来全身概念。本轮只新增brief及专用来源快照，不生图、不上传、不git、不改旧文件。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_production_brief.json",
+    "sha256": "077fbe1d6087bb17d0bd23a3ae326827c5688390b4e026e8e38a488b431b34db"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fifth_four_20261013.json",
+    "sha256": "d9d9d201a2d2ff9a7879b5bc66dfa20b7377086d4e53addd2cd36084bb2274e3"
+  },
+  "format_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_four_expression_brief.json",
+    "sha256": "711ecdfec1f5efefc7a536bd441e3533303b18a1ae2ee392308e586fe1727b96"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "shared_locks": [
+    "每张以该人物selected_raw及最终透明版为唯一身份/服装/比例母图；单人完整全身，头发、双手和鞋完整留边，原有紧凑成年比例、体型和朝向不重设。",
+    "保留本人的年龄、面型、鼻型、发型、眉眼基础形状与肤色；情绪靠眉眼口的协调变化，可有轻微头手变化；不能统一成同一张甜笑脸。",
+    "服装层次、配色、磨损、口袋、道具数量和侧别沿母图；画面左右与人物左右同时标注，禁止整体镜像。合理动作造成的遮挡和细小褶皱变化可接受。",
+    "透明单人全身像素概念，面部清楚且好看；不机械卡眉毛角度、眼睛像素数、绝对头身比或原像素位置，不用缩图掩盖脸和人体问题。",
+    "卡定/台本事实优先；本轮表情、手势、微笑与疲倦均为可逆美术演出提案，不回写角色卡或任务状态。",
+    "每人严格继承自己的实际母图比例，不把四人拉到同一头身比；成人不可幼化，表情可读且与母图/配对图区别，不能夸张变脸。",
+    "表情优先由眉眼嘴协调变化，保留个体持物与站姿；不把所有严肃情绪统一为开掌劝停，不为多样性硬加笑、怒或大动作。",
+    "八幅为独立可逆表情美术提案，非顺序结局；本人存活、在场、愿谈且具备相应见闻才适用。不自动赋予N11/N1/SQ02/N9的路线、任务完成、付款、康复、赦免、关系或新身份。",
+    "suier燧珥=FX-CP1，suier_lot绥珥=FX-LOT，严格分人、分母图，不能混用女性围巾布尺形象。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "FX-BST",
+      "slug": "endai",
+      "name": "恩岱",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-BST_恩岱.md",
+        "sha256": "cc81a5e3ff572cf507505c8fb4eff73b46c08fa007560838c4ba34ce18f4d6ae"
+      },
+      "card_matches_fifth_four_brief": true,
+      "age_identity_lock": "五十来岁的成年男性、老城堡残兵；不升任将领，不获得王廷调令或开门权限。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_v1_raw_imagegen.png",
+          "sha256": "919e88473c2db45221178c5f2e0bd1703052950c585155df3af4f498ab0b356d"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_transparent.png",
+          "sha256": "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/manifest.json",
+          "sha256": "7fa3b2e15fa8331a8d8dd7674abf6c37f787fb16970513d44cb8bcb84c6d4f1c"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张实际查看4个raw与4个transparent完整PNG。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "老城堡残兵，常在 `rumor_remoteBastion1` 一带。地域见 [[区域_R04_王廷关隘与边城]]。",
+        "五十来岁的男人，披着补过三次的旧披风，甲片擦得发亮；说话前先摸一摸门栓。",
+        "像报岗一样说话，短句带停顿；拒绝时用“没有命令”。",
+        "城堡哪面墙是后补的；井里还剩多少水。不知道王廷的调令；不替任何人开门。"
+      ],
+      "observed_mother_image": "灰黑后梳短发与灰短须、方厚下颌、粗眉，目光向画面右、嘴微开报岗。深灰披风有三处赭补片，棕色旧衣、钢灰发亮局部甲、束带棕靴；人物左手（画面右）在腹前握披风边，右手（画面左）低伸曲指。",
+      "fixed_prop_sides": [
+        "左手（画面右）继续握原披风边；右手（画面左）保留有甲护腕，可收至腰侧松曲，不作开掌拦人。",
+        "三处赭补片、胸腹及腕部局部甲片原位保留，不变成全套甲；无门栓、钥匙、军旗或新徽。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug及中文名扫描，PNG副本逐SHA对照；交付ZIP只读检查成员。suier_lot为不同身份排除。",
+        "duplicate_mother_reference_count": 2,
+        "duplicate_mother_references": [
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/sources/endai_transparent.png",
+            "sha256": "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/sources/endai_transparent.png",
+            "sha256": "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8"
+          }
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_delivery_v1/新增剧情人物_恩岱瓦顿源包.zip",
+            "sha256": "54f73cd4851206641518261835275afbb8b1239c886c4d6aa67f23e7abd3476e",
+            "member_count": 49,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "endai_E1_quiet_waiting_reflection",
+          "label_zh": "迟令沉思",
+          "scene_proposal": "谈起守着一道尚未到来的命令时，报岗式短句间的沉默。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L410、L420—421；口吻与闲谈2—3"
+          },
+          "face_changes": "内眉稍向中间上提，眼皮轻垂、目光向原朝向的低处，嘴由微开改为闭合且唇角微沉；是克制沉思而非崩溃。",
+          "minimal_gesture": "头轻低、左手握披风不动，右手从原低伸位收至腰侧松曲，双脚承重不变。",
+          "difference_from_static_and_pair": "母图直视开口改低眼闭嘴；与E2抬眼平压眉的坚决不同。",
+          "condition_and_limit": "只表现等待与思量，不宣布命令抵达、撤岗、投诚、放弃职守或获得新身份。",
+          "output_stem": "endai_E1_quiet_waiting_reflection",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：恩岱（FX-BST）。五十来岁的成年男性、老城堡残兵；不升任将领，不获得王廷调令或开门权限。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化、不套同一笑脸、不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：灰黑后梳短发与灰短须、方厚下颌、粗眉，目光向画面右、嘴微开报岗。深灰披风有三处赭补片，棕色旧衣、钢灰发亮局部甲、束带棕靴；人物左手（画面右）在腹前握披风边，右手（画面左）低伸曲指。\n固定侧别与道具：左手（画面右）继续握原披风边；右手（画面左）保留有甲护腕，可收至腰侧松曲，不作开掌拦人。 三处赭补片、胸腹及腕部局部甲片原位保留，不变成全套甲；无门栓、钥匙、军旗或新徽。\n本张可逆表情提案：迟令沉思。谈起守着一道尚未到来的命令时，报岗式短句间的沉默。\n脸部：内眉稍向中间上提，眼皮轻垂、目光向原朝向的低处，嘴由微开改为闭合且唇角微沉；是克制沉思而非崩溃。\n最小手势：头轻低、左手握披风不动，右手从原低伸位收至腰侧松曲，双脚承重不变。\n必须形成可读区别：母图直视开口改低眼闭嘴；与E2抬眼平压眉的坚决不同。\n剧情边界：只表现等待与思量，不宣布命令抵达、撤岗、投诚、放弃职守或获得新身份。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、任务成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "endai_E2_no_order_no_entry",
+          "label_zh": "无令不允",
+          "scene_proposal": "对方要求进堡看井，他短促拒绝后保持警醒。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L412、L424；知情边界与拒绝"
+          },
+          "face_changes": "厚眉压平并略收向中间，目光稳定看住画面右的交谈者，嘴闭紧为坚实短线；不怒吼、不瞪大眼。",
+          "minimal_gesture": "下颌微收，身体自然立稳；左手握原披风边，右手低收在腰侧，手指放松不握武器。",
+          "difference_from_static_and_pair": "比母图开口更紧抿嘴且目光集中；E1低眼沉思，E2抬眼坚决。",
+          "condition_and_limit": "没有命令便不进堡，不画开门或放行，不把玩家N11任一路线当作王廷通行令。",
+          "output_stem": "endai_E2_no_order_no_entry",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：恩岱（FX-BST）。五十来岁的成年男性、老城堡残兵；不升任将领，不获得王廷调令或开门权限。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化、不套同一笑脸、不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：灰黑后梳短发与灰短须、方厚下颌、粗眉，目光向画面右、嘴微开报岗。深灰披风有三处赭补片，棕色旧衣、钢灰发亮局部甲、束带棕靴；人物左手（画面右）在腹前握披风边，右手（画面左）低伸曲指。\n固定侧别与道具：左手（画面右）继续握原披风边；右手（画面左）保留有甲护腕，可收至腰侧松曲，不作开掌拦人。 三处赭补片、胸腹及腕部局部甲片原位保留，不变成全套甲；无门栓、钥匙、军旗或新徽。\n本张可逆表情提案：无令不允。对方要求进堡看井，他短促拒绝后保持警醒。\n脸部：厚眉压平并略收向中间，目光稳定看住画面右的交谈者，嘴闭紧为坚实短线；不怒吼、不瞪大眼。\n最小手势：下颌微收，身体自然立稳；左手握原披风边，右手低收在腰侧，手指放松不握武器。\n必须形成可读区别：比母图开口更紧抿嘴且目光集中；E1低眼沉思，E2抬眼坚决。\n剧情边界：没有命令便不进堡，不画开门或放行，不把玩家N11任一路线当作王廷通行令。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、任务成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-SGE",
+      "slug": "wadun",
+      "name": "瓦顿",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-SGE_瓦顿.md",
+        "sha256": "133a684d79ffe82ec9b64e75c5064926125f166f796a0324421b2297fd6ef494"
+      },
+      "card_matches_fifth_four_brief": true,
+      "age_identity_lock": "二十多岁成年男性、围城营地逃兵；保持初生短胡茬和年轻成年面貌，不幼化或擅加军衔。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_v1_raw_imagegen.png",
+          "sha256": "3317d07c583d3b5170e6d5612e23d7189000c0ac426595c46f54aa2bb745060c"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_transparent.png",
+          "sha256": "221c3e4a6b8c06e00603943fc58c94722513f401e0b08dde5a1859fcdcb670d9"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/manifest.json",
+          "sha256": "bd5caff568fffa294af7b8bc16d02720cc47a30983967b8f8ccc1bc2cc9abeaa"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张实际查看4个raw与4个transparent完整PNG。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "围城营地逃兵，常在 `rumor_siegeCamp1` 一带。地域见 [[区域_R01_布林外港与旧渠]]。",
+        "二十多岁的男人，甲片只剩半边，锅铲插在腰间；胡子刚长出来，说话时习惯蹲着。",
+        "先笑后说话，笑得干；谈到部队就改成短句。",
+        "营地哪口井还能打水；围城时哪段墙被砸开过。不说自己原来的番号；不替任何一边评功过。"
+      ],
+      "observed_mother_image": "棕色蓬短发、年轻成年宽额、薄胡茬；母图眉稍提、半垂眼向画面右、嘴边勉强小笑。灰米旧军衣、棕裤靴，残甲集中人物右侧（画面左），人物左腰（画面右）插宽头木锅铲；低蹲双膝打开，双肘近膝，双手松垂。",
+      "fixed_prop_sides": [
+        "残甲保留人物右侧（画面左），左腰（画面右）宽头木锅铲留在束带内，不取出或变刀。",
+        "保持原低蹲、双足稳定支撑及各自腿手长度，双肘近膝、手松垂；不站起、不敬礼、不添锅或旗。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug及中文名扫描，PNG副本逐SHA对照；交付ZIP只读检查成员。suier_lot为不同身份排除。",
+        "duplicate_mother_reference_count": 2,
+        "duplicate_mother_references": [
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/sources/wadun_transparent.png",
+            "sha256": "221c3e4a6b8c06e00603943fc58c94722513f401e0b08dde5a1859fcdcb670d9"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/sources/wadun_transparent.png",
+            "sha256": "221c3e4a6b8c06e00603943fc58c94722513f401e0b08dde5a1859fcdcb670d9"
+          }
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_delivery_v1/新增剧情人物_恩岱瓦顿源包.zip",
+            "sha256": "54f73cd4851206641518261835275afbb8b1239c886c4d6aa67f23e7abd3476e",
+            "member_count": 49,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "wadun_E1_dry_chuckle_about_pot",
+          "label_zh": "低声干笑",
+          "scene_proposal": "说起背锅比背旗有用，先发出一点干巴巴的笑再说话。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L186、L195—196；口吻与闲谈1—2"
+          },
+          "face_changes": "眉梢略松而内眉留一点迟疑，眼皮轻收但眼神仍警觉，嘴小幅张开、一侧唇角略高，呈短促干笑；不用整齐白牙或放大笑口。",
+          "minimal_gesture": "下颌轻前点，肩只略放松；双肘仍近膝，两手原位松垂，锅铲不动。",
+          "difference_from_static_and_pair": "母图闭嘴小笑转为可读的小幅开口干笑；与E2完全敛笑、平压眉清楚不同。",
+          "condition_and_limit": "干笑不是庆功，不评任何阵营胜负，不画回部队或治愈创伤；只是日常说锅，不生成做饭服务承诺。",
+          "output_stem": "wadun_E1_dry_chuckle_about_pot",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：瓦顿（FX-SGE）。二十多岁成年男性、围城营地逃兵；保持初生短胡茬和年轻成年面貌，不幼化或擅加军衔。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化、不套同一笑脸、不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：棕色蓬短发、年轻成年宽额、薄胡茬；母图眉稍提、半垂眼向画面右、嘴边勉强小笑。灰米旧军衣、棕裤靴，残甲集中人物右侧（画面左），人物左腰（画面右）插宽头木锅铲；低蹲双膝打开，双肘近膝，双手松垂。\n固定侧别与道具：残甲保留人物右侧（画面左），左腰（画面右）宽头木锅铲留在束带内，不取出或变刀。 保持原低蹲、双足稳定支撑及各自腿手长度，双肘近膝、手松垂；不站起、不敬礼、不添锅或旗。\n本张可逆表情提案：低声干笑。说起背锅比背旗有用，先发出一点干巴巴的笑再说话。\n脸部：眉梢略松而内眉留一点迟疑，眼皮轻收但眼神仍警觉，嘴小幅张开、一侧唇角略高，呈短促干笑；不用整齐白牙或放大笑口。\n最小手势：下颌轻前点，肩只略放松；双肘仍近膝，两手原位松垂，锅铲不动。\n必须形成可读区别：母图闭嘴小笑转为可读的小幅开口干笑；与E2完全敛笑、平压眉清楚不同。\n剧情边界：干笑不是庆功，不评任何阵营胜负，不画回部队或治愈创伤；只是日常说锅，不生成做饭服务承诺。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、任务成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "wadun_E2_smile_fades_refuse_return",
+          "label_zh": "敛笑不归",
+          "scene_proposal": "被问是否愿带人回部队，笑意收起，简短拒绝。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L186、L188、L200；谈部队改短句与拒绝"
+          },
+          "face_changes": "双眉从母图微提改为低平微拢，眼睛抬向画面右的对方，唇角放平并紧合；坚定中保留防备，不咬牙怒吼。",
+          "minimal_gesture": "下巴轻收，保持低蹲和双肘近膝，手指轻曲自然停着，不开掌劝退也不攥拳。",
+          "difference_from_static_and_pair": "母图轻笑消失；与E1松眉小开口干笑形成眉眼口三处变化。",
+          "condition_and_limit": "不回部队、不带路，不披露原番号、不替两边评功过；不因N1结案推定他获赦或安全。",
+          "output_stem": "wadun_E2_smile_fades_refuse_return",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：瓦顿（FX-SGE）。二十多岁成年男性、围城营地逃兵；保持初生短胡茬和年轻成年面貌，不幼化或擅加军衔。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化、不套同一笑脸、不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：棕色蓬短发、年轻成年宽额、薄胡茬；母图眉稍提、半垂眼向画面右、嘴边勉强小笑。灰米旧军衣、棕裤靴，残甲集中人物右侧（画面左），人物左腰（画面右）插宽头木锅铲；低蹲双膝打开，双肘近膝，双手松垂。\n固定侧别与道具：残甲保留人物右侧（画面左），左腰（画面右）宽头木锅铲留在束带内，不取出或变刀。 保持原低蹲、双足稳定支撑及各自腿手长度，双肘近膝、手松垂；不站起、不敬礼、不添锅或旗。\n本张可逆表情提案：敛笑不归。被问是否愿带人回部队，笑意收起，简短拒绝。\n脸部：双眉从母图微提改为低平微拢，眼睛抬向画面右的对方，唇角放平并紧合；坚定中保留防备，不咬牙怒吼。\n最小手势：下巴轻收，保持低蹲和双肘近膝，手指轻曲自然停着，不开掌劝退也不攥拳。\n必须形成可读区别：母图轻笑消失；与E1松眉小开口干笑形成眉眼口三处变化。\n剧情边界：不回部队、不带路，不披露原番号、不替两边评功过；不因N1结案推定他获赦或安全。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、任务成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-CMP",
+      "slug": "ertai",
+      "name": "珥泰",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CMP_珥泰.md",
+        "sha256": "9394c336c2b5c7303601fd46d28be83e0f48a6736924bfac6224fae450fefa97"
+      },
+      "card_matches_fifth_four_brief": true,
+      "age_identity_lock": "三十来岁成年男性、兵营清点人；不升级为军官或征粮裁决者，不成为登记板以外文书的所有人。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_v1_raw_imagegen.png",
+          "sha256": "3193e5e413e86c4afa88f3c018bbb0066a36ec76332c18cc0d56cb881f39bb39"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_transparent.png",
+          "sha256": "e41580f2b6787a2a468d685abae8b390d42d9cd8d78090017699ee12c571de29"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/manifest.json",
+          "sha256": "29b1ca231a874c95bbc290c1f79c28f553616f875420cc0e254bdf2aa883c618"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张实际查看4个raw与4个transparent完整PNG。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "兵营清点人，常在 `rumor_camp4` 一带。地域见 [[区域_R04_王廷关隘与边城]]。",
+        "三十来岁的男人，穿着不合身的旧军衣，手里一块点名的木板；说话时用笔杆敲板。",
+        "照单念名字的腔调；被问军务就摇头。",
+        "床架被拆走几副；军旗杆座还在哪。不评军务与调令；不认领遗落装备。"
+      ],
+      "observed_mother_image": "深棕偏长侧分发、短须、稍长成年脸，下眼睑疲倦、内眉微抬，母图侧看画面右且小幅开口。宽大灰旧军衣、米白领袖与下摆、棕腰带裤靴；人物左手（画面右）抱木点名板贴躯干，右手（画面左）握细笔杆近板边。",
+      "fixed_prop_sides": [
+        "左手（画面右）始终抓同一木点名板下缘贴身；右手（画面左）持同一细笔杆，笔只在原板边附近，不添新笔或换手。",
+        "木板不加可读名单、印章或任务勾号；不交板、不盖章、不登记新的承诺。宽大旧军衣的袖口和不合身轮廓保留。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug及中文名扫描，PNG副本逐SHA对照；交付ZIP只读检查成员。suier_lot为不同身份排除。",
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_delivery_v1/新增剧情人物_珥泰燧珥源包.zip",
+            "sha256": "e96de4347008658a38ee2cc45c55d69d290a61ebae11d8d6048ad826c89f1c1f",
+            "member_count": 39,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "ertai_E1_quiet_inventory_weight",
+          "label_zh": "对板思量",
+          "scene_proposal": "念到空营里留下的名字时，望向原点名板短暂停顿。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L794、L803；照单口吻与闲谈1"
+          },
+          "face_changes": "内眉轻拢并稍抬、目光下落到板上，上眼皮更低，嘴自然合起、唇角轻沉；疲倦中有一瞬沉思。",
+          "minimal_gesture": "头微低，右手笔杆停在板边，左手保持抱板位置，肩足不挪。",
+          "difference_from_static_and_pair": "母图看人开口改为看板闭唇；与E2侧偏头、平眉避答区别明显。",
+          "condition_and_limit": "只表现现有名字与空营的感触，不推断谁死亡、失踪、获救或去向；不增删名单、不认领装备。",
+          "output_stem": "ertai_E1_quiet_inventory_weight",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：珥泰（FX-CMP）。三十来岁成年男性、兵营清点人；不升级为军官或征粮裁决者，不成为登记板以外文书的所有人。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化、不套同一笑脸、不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：深棕偏长侧分发、短须、稍长成年脸，下眼睑疲倦、内眉微抬，母图侧看画面右且小幅开口。宽大灰旧军衣、米白领袖与下摆、棕腰带裤靴；人物左手（画面右）抱木点名板贴躯干，右手（画面左）握细笔杆近板边。\n固定侧别与道具：左手（画面右）始终抓同一木点名板下缘贴身；右手（画面左）持同一细笔杆，笔只在原板边附近，不添新笔或换手。 木板不加可读名单、印章或任务勾号；不交板、不盖章、不登记新的承诺。宽大旧军衣的袖口和不合身轮廓保留。\n本张可逆表情提案：对板思量。念到空营里留下的名字时，望向原点名板短暂停顿。\n脸部：内眉轻拢并稍抬、目光下落到板上，上眼皮更低，嘴自然合起、唇角轻沉；疲倦中有一瞬沉思。\n最小手势：头微低，右手笔杆停在板边，左手保持抱板位置，肩足不挪。\n必须形成可读区别：母图看人开口改为看板闭唇；与E2侧偏头、平眉避答区别明显。\n剧情边界：只表现现有名字与空营的感触，不推断谁死亡、失踪、获救或去向；不增删名单、不认领装备。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、任务成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "ertai_E2_reserved_shake_no_military",
+          "label_zh": "摇头避军务",
+          "scene_proposal": "被问军务与调令时，小幅摇头的一个静止瞬间，收住回答。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L794、L796、L805；口吻、知情边界与闲谈3"
+          },
+          "face_changes": "眉由母图内提改为较平且轻压，视线稍避开对方而仍可见双眼，嘴合成短直线，显出保留与不愿评断；不鄙笑或生气。",
+          "minimal_gesture": "头沿原朝向小幅偏转表示摇头瞬间、不要变背脸；双手持板与笔不变，不摆出指挥或停手掌。",
+          "difference_from_static_and_pair": "母图略抬眉开口解释改平眉闭口回避；E1低眼看板且唇角沉，E2看侧方嘴线平。",
+          "condition_and_limit": "不评军务与调令、不裁断征粮是非；SQ02完成与否都不能给他发令权，不画监督签署或交出木板。",
+          "output_stem": "ertai_E2_reserved_shake_no_military",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：珥泰（FX-CMP）。三十来岁成年男性、兵营清点人；不升级为军官或征粮裁决者，不成为登记板以外文书的所有人。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化、不套同一笑脸、不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：深棕偏长侧分发、短须、稍长成年脸，下眼睑疲倦、内眉微抬，母图侧看画面右且小幅开口。宽大灰旧军衣、米白领袖与下摆、棕腰带裤靴；人物左手（画面右）抱木点名板贴躯干，右手（画面左）握细笔杆近板边。\n固定侧别与道具：左手（画面右）始终抓同一木点名板下缘贴身；右手（画面左）持同一细笔杆，笔只在原板边附近，不添新笔或换手。 木板不加可读名单、印章或任务勾号；不交板、不盖章、不登记新的承诺。宽大旧军衣的袖口和不合身轮廓保留。\n本张可逆表情提案：摇头避军务。被问军务与调令时，小幅摇头的一个静止瞬间，收住回答。\n脸部：眉由母图内提改为较平且轻压，视线稍避开对方而仍可见双眼，嘴合成短直线，显出保留与不愿评断；不鄙笑或生气。\n最小手势：头沿原朝向小幅偏转表示摇头瞬间、不要变背脸；双手持板与笔不变，不摆出指挥或停手掌。\n必须形成可读区别：母图略抬眉开口解释改平眉闭口回避；E1低眼看板且唇角沉，E2看侧方嘴线平。\n剧情边界：不评军务与调令、不裁断征粮是非；SQ02完成与否都不能给他发令权，不画监督签署或交出木板。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、任务成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-CP1",
+      "slug": "suier",
+      "name": "燧珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CP1_燧珥.md",
+        "sha256": "4117021d341542e271dcb824ac4dd1b3a5e2e178b05fc911879449907aba1d43"
+      },
+      "card_matches_fifth_four_brief": true,
+      "age_identity_lock": "三十来岁成年男性、营地边缘的逃散者燧珥（FX-CP1）；绝不是裁缝宅子亲属绥珥（FX-LOT、suier_lot）。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_v1_raw_imagegen.png",
+          "sha256": "304e566ce1126c93c75b41481ae8c672b90e59969b17a5af2d533245d5009f2c"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_transparent.png",
+          "sha256": "74b89bd1eca88ce53d6e676d046b694d607969f656302dbee86384cb35ae6c70"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/manifest.json",
+          "sha256": "06fad34b72cf3003161db2c217436545249d62e2ee1612343b17952c37a1a78c"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张实际查看4个raw与4个transparent完整PNG。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "营地边缘的逃散者，常在 `rumor_camp1` 一带。地域见 [[区域_R04_王廷关隘与边城]]。",
+        "三十来岁的男人，衣领被扯开过，靴子只剩一只半；说话时背对着营地。",
+        "先说“我不是他们的人”，再回答问题；听到哨声就停。",
+        "哨位草垫换班的时辰；哪条坡上不了。不说同伴是谁；不替营里任何人传话。"
+      ],
+      "observed_mother_image": "深棕凌乱短发、窄成年下颌和短胡茬；身体略侧转、头回看画面左，母图内眉紧张、半垂眼、嘴开着急于澄清。灰褐撕旧领外衣仍有米白内衫遮胸、棕束带裤；人物左手（画面右）抓衣领，右手（画面左）低开掌。右脚（画面左）破半靴、布包前足露趾，左脚（画面右）完整高靴，双足完整。",
+      "fixed_prop_sides": [
+        "左手（画面右）保持抓护衣领和内衫遮胸，右手（画面左）从开掌收至身体旁自然曲指；不添新道具。",
+        "右脚（画面左）破半靴与包布、左脚（画面右）完整靴不换侧；没有断足或新伤，不把包布消失画作康复。身体仍背向画外营地，不能转为进营。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug及中文名扫描，PNG副本逐SHA对照；交付ZIP只读检查成员。suier_lot为不同身份排除。",
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_delivery_v1/新增剧情人物_珥泰燧珥源包.zip",
+            "sha256": "e96de4347008658a38ee2cc45c55d69d290a61ebae11d8d6048ad826c89f1c1f",
+            "member_count": 39,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 23,
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "suier_E1_whistle_silent_alert",
+          "label_zh": "闻哨噤声",
+          "scene_proposal": "听到画外哨声，话语忽然停住，注意力集中在侧方。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1114；听到哨声就停"
+          },
+          "face_changes": "双眉稍抬且内眉紧拢，眼睑由半垂改为适度睁起、视线警醒地转向画面左侧，嘴由开口立刻闭紧；克制警觉，不画夸张惊恐大眼。",
+          "minimal_gesture": "头在母图朝向轻偏听声，肩轻收；左手仍护领，右手低收自然曲指，脚位不变，不抬掌或奔跑。",
+          "difference_from_static_and_pair": "从母图开口澄清变闭口、抬眼警听；与E2低眼自省区别。",
+          "condition_and_limit": "只回应可听到的哨声，不宣布敌人来袭或认出吹哨者；不新增哨子、营地、声波特效，不带路或传话。",
+          "output_stem": "suier_E1_whistle_silent_alert",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：燧珥（FX-CP1）。三十来岁成年男性、营地边缘的逃散者燧珥（FX-CP1）；绝不是裁缝宅子亲属绥珥（FX-LOT、suier_lot）。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化、不套同一笑脸、不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：深棕凌乱短发、窄成年下颌和短胡茬；身体略侧转、头回看画面左，母图内眉紧张、半垂眼、嘴开着急于澄清。灰褐撕旧领外衣仍有米白内衫遮胸、棕束带裤；人物左手（画面右）抓衣领，右手（画面左）低开掌。右脚（画面左）破半靴、布包前足露趾，左脚（画面右）完整高靴，双足完整。\n固定侧别与道具：左手（画面右）保持抓护衣领和内衫遮胸，右手（画面左）从开掌收至身体旁自然曲指；不添新道具。 右脚（画面左）破半靴与包布、左脚（画面右）完整靴不换侧；没有断足或新伤，不把包布消失画作康复。身体仍背向画外营地，不能转为进营。\n本张可逆表情提案：闻哨噤声。听到画外哨声，话语忽然停住，注意力集中在侧方。\n脸部：双眉稍抬且内眉紧拢，眼睑由半垂改为适度睁起、视线警醒地转向画面左侧，嘴由开口立刻闭紧；克制警觉，不画夸张惊恐大眼。\n最小手势：头在母图朝向轻偏听声，肩轻收；左手仍护领，右手低收自然曲指，脚位不变，不抬掌或奔跑。\n必须形成可读区别：从母图开口澄清变闭口、抬眼警听；与E2低眼自省区别。\n剧情边界：只回应可听到的哨声，不宣布敌人来袭或认出吹哨者；不新增哨子、营地、声波特效，不带路或传话。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、任务成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "suier_E2_uneasy_self_reflection",
+          "label_zh": "低眼自省",
+          "scene_proposal": "说到有人把自己当同伙、又承认自己也不干净后，略避开目光。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1125；闲谈3"
+          },
+          "face_changes": "内眉向中间上提、眼神下垂稍离开对方，嘴轻合且一侧唇角微沉，呈不安和难于启齿；不流泪、不甜笑。",
+          "minimal_gesture": "头微低但保留原三分之四朝向，左手仍护衣领，右手低放松曲，身体足部原位。",
+          "difference_from_static_and_pair": "母图抬眼开口澄清改低眼合口；E1目光睁起警听，E2目光低落自省。",
+          "condition_and_limit": "只是他原句的可逆演出，不裁定具体罪行、不认定营地成员身份、不揭同伴，不表达获赦、悔改完成或与玩家建立信任。",
+          "output_stem": "suier_E2_uneasy_self_reflection",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：燧珥（FX-CP1）。三十来岁成年男性、营地边缘的逃散者燧珥（FX-CP1）；绝不是裁缝宅子亲属绥珥（FX-LOT、suier_lot）。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化、不套同一笑脸、不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：深棕凌乱短发、窄成年下颌和短胡茬；身体略侧转、头回看画面左，母图内眉紧张、半垂眼、嘴开着急于澄清。灰褐撕旧领外衣仍有米白内衫遮胸、棕束带裤；人物左手（画面右）抓衣领，右手（画面左）低开掌。右脚（画面左）破半靴、布包前足露趾，左脚（画面右）完整高靴，双足完整。\n固定侧别与道具：左手（画面右）保持抓护衣领和内衫遮胸，右手（画面左）从开掌收至身体旁自然曲指；不添新道具。 右脚（画面左）破半靴与包布、左脚（画面右）完整靴不换侧；没有断足或新伤，不把包布消失画作康复。身体仍背向画外营地，不能转为进营。\n本张可逆表情提案：低眼自省。说到有人把自己当同伙、又承认自己也不干净后，略避开目光。\n脸部：内眉向中间上提、眼神下垂稍离开对方，嘴轻合且一侧唇角微沉，呈不安和难于启齿；不流泪、不甜笑。\n最小手势：头微低但保留原三分之四朝向，左手仍护衣领，右手低放松曲，身体足部原位。\n必须形成可读区别：母图抬眼开口澄清改低眼合口；E1目光睁起警听，E2目光低落自省。\n剧情边界：只是他原句的可逆演出，不裁定具体罪行、不认定营地成员身份、不揭同伴，不表达获赦、悔改完成或与玩家建立信任。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、任务成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    }
+  ],
+  "source_notes": "旧manifest冻结状态早于独审，采用独审delivery_binding终审并重新核SHA。tools/vendor为空，不安装；本轮读取已有技能快照，仅规划、不执行生产流水线或生成。所有表情为可逆美术提案，不改卡、对白、旧图或旧QA。",
+  "source_conflicts": [
+    {
+      "character": "endai",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+          "sha256": "8915bb1a1d10716fd12d1795ead8b62db49cd2317b0bafa58af2728217784a63"
+        }
+      ],
+      "locator": "FX L430—431；N11现行S62可执行解法N11-R-trace/pay/surrender",
+      "conflict": "FX进行中问换了什么、完成后泛说换出去的东西收不回来；N11现行trace路线明确可不交易、不交人。若把FX完成后统一套全路线，会虚构交易。",
+      "disposition": "记录但不修改来源；本批仅用日常闲谈及拒绝，不用任务回访，不绘交换、开门、获令或关系改善。"
+    }
+  ],
+  "source_cautions": [
+    {
+      "character": "wadun",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N1_无钟之夜.md",
+          "sha256": "ed09f88be8fe4618f819d636ad161b7be48b3dcc009bec4dfdc5d8942488c9b9"
+        }
+      ],
+      "locator": "FX L202、L208—209；N1任务定位、N1-S05-L04、后续N2",
+      "note": "关联标N1，但先后槽谈去灰堤/灰堤的事完了；N1主事件在渡口，灰堤方向为后续N2。来源有跨任务时序歧义，不据此认定任务状态；本批避开回访槽，仅用日常口吻与拒绝。"
+    },
+    {
+      "character": "endai",
+      "source": {
+        "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+        "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+      },
+      "locator": "L412、L424、L430",
+      "note": "进行中“要进门，先报…”只可当来意询问，不构成放行保证；卡与拒绝明确无命令不开门。"
+    },
+    {
+      "character": "ertai",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/06_支线/台本/台本_SQ02_被征用的冬粮.md",
+          "sha256": "63b7003cd83cda98e2d1d68333396808a90a211fca094f20106bfee4ee5abe0b"
+        }
+      ],
+      "locator": "FX L803、L815；SQ02现行方法与结案边界",
+      "note": "空营名字仍在不等于人员死亡；征粮的事了不等于全部赔付或取得监督承诺。本批不采用任务完成演出。"
+    },
+    {
+      "character": "suier",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+          "sha256": "42c1cbcf13cd1426f99dd972cfa77efdb722c8aa7395df995af8d01de8c5f0db"
+        }
+      ],
+      "locator": "FX L1125、L1135；N9目标与解法",
+      "note": "“我也不干净”不提供具体罪行事实；N9结案不证明营地换人、他获赦或安全，不从表情创造认罪/新身份/关系。"
+    },
+    {
+      "character": "suier",
+      "source": {
+        "path": "design/04_人物/野外人物/人物_FX-LOT_绥珥.md",
+        "sha256": "cbbc691c7ec3456de776e2bdfa4a7cb992bf22490539c6d9ae1c59fc67b4a671"
+      },
+      "locator": "角色ID及工作体貌",
+      "note": "FX-LOT绥珥是四十来岁女性、裁缝宅子亲属，使用suier_lot；与本批FX-CP1燧珥三十来岁男性逃散者完全分开。"
+    }
+  ],
+  "source_snapshot_index": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_expression_sources/source_index.json",
+    "sha256": "351eba8ebf2dc47f9df59e4aff7f4750118190cdc31ad2b43a5351e6dbc958b2"
+  },
+  "validation": {
+    "source_cards": 4,
+    "viewed_final_raw_images": 4,
+    "viewed_final_transparent_images": 4,
+    "raw_transparent_manifest_hash_triples_verified": 4,
+    "planned_expressions": 8,
+    "actual_generation_calls": 0,
+    "source_snapshots": 34,
+    "existing_expressions_found": 0,
+    "scope_note": "仅新增本JSON和专用来源快照目录；不修改design/、旧图、旧QA、roster或游戏包。"
+  }
+}

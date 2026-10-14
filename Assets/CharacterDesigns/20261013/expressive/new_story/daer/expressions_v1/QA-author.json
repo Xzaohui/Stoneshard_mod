@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "character": "daer",
+  "name": "达珥",
+  "checked_utc": "2026-10-14T02:23:48.374454+00:00",
+  "status": "ready_for_independent_review",
+  "production_method": "builtin image_gen with own raw and transparent references; prompts saved before each call",
+  "mother_images_actually_viewed": true,
+  "source_anchor": {
+    "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1",
+    "selected_raw": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/daer_v1_raw_imagegen.png",
+      "sha256": "f079d212f16bb3229e59366954192e74f92a755eadcf31626aae411cf8585d17"
+    },
+    "transparent": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/daer_transparent.png",
+      "sha256": "8852643e1b657bc1bc36704bfb8a955579e8a4f494872ca097d0a14f856b1b93"
+    },
+    "manifest": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/manifest.json",
+      "sha256": "a8e68c58521920905eb6c40ebacf14b293fb76d7c8cb302c1bf833fc78750dbb"
+    },
+    "actual_raw_and_transparent_viewed": true,
+    "view_method": "2026-10-14本任务tools.view_image逐张实际查看4个raw与4个transparent；未以历史QA代替本轮看图。",
+    "hashes_verified_against_manifest_and_final_independent_qa": true,
+    "manifest_entries_reverified": 21,
+    "existing_review_status": "final_clean_and_presentation_pass",
+    "canvas_mode_verified": "1118×1407 RGBA"
+  },
+  "expression_count_requested": 2,
+  "raw_outputs": 2,
+  "author_selected_count": 2,
+  "results": [
+    {
+      "status": "author_pass_pending_independent",
+      "finding": "警醒側視与紧闭口形成停声留意；眉仍有戒心，双手胸腹前相触。胡茬方颌、年龄、两袖扎绳和画面右左肩空袋保留。未指定听到何人，也未演任务结果。",
+      "selected": true,
+      "expression_id": "E1",
+      "label_zh": "噤声侧听",
+      "raw_path": "raw/daer_E1_hushed_listening_v1_raw_imagegen.png",
+      "raw_sha256": "e8e171cce0f90794159069e2db91870a65820facbff4323a7b3d7727c78e42e0",
+      "dimensions": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "zero_pixels": 1002468,
+        "opaque_pixels": 1827,
+        "partial_pixels": 568731,
+        "bbox": [
+          33,
+          19,
+          1094,
+          1383
+        ],
+        "boundary_touches": false
+      },
+      "author_actual_view": [
+        "raw",
+        "light_rgba_composite",
+        "dark_rgba_composite"
+      ],
+      "transparency_finding": "浅深RGBA合成后轮廓干净；原alpha0处隐藏RGB不判作污边。未对原图抠色、量化或改形。",
+      "selected_path": "selected/daer_E1_hushed_listening_transparent.png",
+      "selected_sha256": "e8e171cce0f90794159069e2db91870a65820facbff4323a7b3d7727c78e42e0"
+    },
+    {
+      "status": "author_pass_pending_independent",
+      "finding": "半垂眼、非对称眉与克制歪嘴笑形成干涩自嘲；不是大笑或脱险。双手维持搓手接触、灰绿衣和瘪薄布袋侧别正确。生成画布1070×1470，保留原始画布，无脚本身体拉伸。",
+      "selected": true,
+      "expression_id": "E2",
+      "label_zh": "自嘲认怯",
+      "raw_path": "raw/daer_E2_wry_acceptance_of_timidity_v1_raw_imagegen.png",
+      "raw_sha256": "d9e7e73a6d292ea85cce0bf5e39611a24a33a3b37126776d3103f3c762dac6fa",
+      "dimensions": [
+        1070,
+        1470
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "zero_pixels": 971791,
+        "opaque_pixels": 2499,
+        "partial_pixels": 598610,
+        "bbox": [
+          41,
+          33,
+          1023,
+          1470
+        ],
+        "boundary_touches": true
+      },
+      "author_actual_view": [
+        "raw",
+        "light_rgba_composite",
+        "dark_rgba_composite"
+      ],
+      "transparency_finding": "浅深RGBA合成后轮廓干净；原alpha0处隐藏RGB不判作污边。未对原图抠色、量化或改形。",
+      "selected_path": "selected/daer_E2_wry_acceptance_of_timidity_transparent.png",
+      "selected_sha256": "d9e7e73a6d292ea85cce0bf5e39611a24a33a3b37126776d3103f3c762dac6fa"
+    }
+  ],
+  "limitations": [
+    "非游戏原生像素网格/part/frame/mask/origin规格",
+    "没有装备兼容、连续动画或runtime验证",
+    "本角色未明设定不由美术补定，图像不证明任务结果"
+  ],
+  "postprocess": "Selected PNGs are byte-identical raw copies with generated alpha preserved. Only review presentation uses equal-aspect nearest scaling and RGBA compositing; no source-image edits."
+}

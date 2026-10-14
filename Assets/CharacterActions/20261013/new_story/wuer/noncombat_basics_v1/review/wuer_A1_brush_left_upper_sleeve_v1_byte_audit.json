@@ -1,0 +1,116 @@
+{
+  "character": "wuer",
+  "pose_version": "wuer_A1_brush_left_upper_sleeve_v1",
+  "reviewed_utc": "2026-10-14T07:24:30.225389+00:00",
+  "verdict": "pass",
+  "files": [
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A1_brush_left_upper_sleeve_v1_light.png",
+      "bytes": 499306,
+      "sha256": "620b0da057a5a0e0d347abc18a84d26626d6cec4c85184a832b156942ee1ab97"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A1_brush_left_upper_sleeve_v1_dark.png",
+      "bytes": 479103,
+      "sha256": "a8a08a30450b3dc662349ffd4d25a3175f5e9ee710f09b8fff0f259f55675226"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A1_brush_left_upper_sleeve_v1_transparent.png",
+      "bytes": 579086,
+      "sha256": "04fe73d61abf92913021110a48838c43321aa61edf8f663655d3787df9032a15"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A1_brush_left_upper_sleeve_v1_technical_QA.json",
+      "bytes": 1134,
+      "sha256": "bb73051c2deb7aaa1cb9f6f5874ed6db003aa5168188f9e90dbafbfa0b5736b9"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/raw/wuer_A1_brush_left_upper_sleeve_v1_tool_return.json",
+      "bytes": 882002,
+      "sha256": "aa29dfd189c2d721a813905061eb8396ca408f5d80fefcffa76591c9105679e8"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/raw/wuer_A1_brush_left_upper_sleeve_v1_raw.png",
+      "bytes": 661102,
+      "sha256": "e61c1c54c2b6709d77d9055b614e811d3cf3aeed1775d4c2d5da41586bc97a6c"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/prompts/wuer_A1_brush_left_upper_sleeve_v1_tool_args.json",
+      "bytes": 2486,
+      "sha256": "fd9f122607b7a41e460adc7d306732a01727175777fc4bdc5a05155b41471cb3"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/prompts/wuer_A1_brush_left_upper_sleeve_v1.txt",
+      "bytes": 2247,
+      "sha256": "db2cb851de6b8a1efc64b5dda81c705dda4f3931405eadc2d536830a0e016198"
+    }
+  ],
+  "checks": {
+    "raw_matches_decoded_complete_tool_result": true,
+    "decoded_images": 1,
+    "prompt_matches_parameters": true,
+    "source_prompt_saved_before_raw": true,
+    "transparent_requested": true,
+    "raw_and_selected_same_dimensions": true,
+    "raw_mode": "RGBA",
+    "selected_mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "canvas": [
+      1118,
+      1407
+    ],
+    "body_alpha_gt8_bytes_unchanged": true,
+    "all_changed_pixels_raw_alpha_le8": true,
+    "transparent_background_clear": true,
+    "light_dark_composites": [
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A1_brush_left_upper_sleeve_v1_light.png",
+        "background_rgba": [
+          242,
+          236,
+          220,
+          255
+        ],
+        "matches_true_composite": true
+      },
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/wuer/noncombat_basics_v1/review/wuer_A1_brush_left_upper_sleeve_v1_dark.png",
+        "background_rgba": [
+          31,
+          36,
+          44,
+          255
+        ],
+        "matches_true_composite": true
+      }
+    ],
+    "first_prompt_matches_frozen_brief": true,
+    "provenance_file_present": false,
+    "provenance_all_file_and_reference_hashes_match": true,
+    "provenance_errors": [],
+    "submitted_reference_files_exist": true,
+    "submitted_reference_includes_sha_verified_mother": true
+  },
+  "visual_review": {
+    "actual_viewed": [
+      "raw",
+      "selected_transparent",
+      "true_light_composite",
+      "true_dark_composite"
+    ],
+    "findings": [
+      "已实际查看raw、透明及真实浅深底4项。",
+      "右前臂跨上胸，右掌贴到画右肩下左上袖位置，明显离开母图中央衣襟；左臂低垂、原短截状指端轮廓仍在画右可见。",
+      "原脸朝画左、灰发簇土褐服装、双靴完整且支撑自然；无第三手、道具或环境添加。"
+    ],
+    "required_revision": null,
+    "nonissues": [
+      "像素指组抽象程度有轻微差异，未构成左手明显补齐或新伤的证据；不具体认定哪根手指。",
+      "缺独立provenance文件不是缺原始证据，实参与payload/raw/参考SHA已验证。"
+    ],
+    "remaining_revisions": 0
+  }
+}

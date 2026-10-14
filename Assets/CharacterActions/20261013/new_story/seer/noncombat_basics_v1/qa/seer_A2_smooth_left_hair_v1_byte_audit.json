@@ -1,0 +1,115 @@
+{
+  "character": "seer",
+  "pose_version": "seer_A2_smooth_left_hair_v1",
+  "reviewed_utc": "2026-10-14T07:25:12.426416+00:00",
+  "verdict": "pass",
+  "files": [
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A2_smooth_left_hair_v1_transparent.png",
+      "bytes": 622501,
+      "sha256": "8e43304c80d92a95fc83a64b6112266865a72a56c51716ccede2dce0f8a10616"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A2_smooth_left_hair_v1_light_inspect.png",
+      "bytes": 530723,
+      "sha256": "30ee4cd3e5ba84bda66af41afb8e16139253f9ebeb812b2dca2975bfab20a757"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A2_smooth_left_hair_v1_dark_inspect.png",
+      "bytes": 506977,
+      "sha256": "8488e10dbb4d18cd1aaedbe5f51293283b3f58e6f40cd32c4f1610b935d76e5e"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/raw/seer_A2_smooth_left_hair_v1_tool_return.json",
+      "bytes": 927814,
+      "sha256": "2f1af4091aa69ccf1fa848b6522485080846d765b79e642273d39a78a64516ac"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/raw/seer_A2_smooth_left_hair_v1_raw_imagegen.png",
+      "bytes": 695461,
+      "sha256": "f890641ec9374c04c181e57fde920b626721bc6f6e35a1e23312719d410bd986"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/prompts/seer_A2_smooth_left_hair_v1.txt",
+      "bytes": 2240,
+      "sha256": "e83cd0bbda242cb50e53c740a09a318c516b37aa9a89f85bf15c1bb33e31a616"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/prompts/seer_A2_smooth_left_hair_v1_parameters.json",
+      "bytes": 2479,
+      "sha256": "dbfc285b281439ca3c678797ce523201a86725ad2df14a69ad30c70aa55cdd58"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/qa/seer_A2_smooth_left_hair_v1_technical.json",
+      "bytes": 1219,
+      "sha256": "bf6ef7de55826a343192f288974954b229700de2fe3b8c07b11a7ed9351eca5b"
+    }
+  ],
+  "checks": {
+    "raw_matches_decoded_complete_tool_result": true,
+    "decoded_images": 1,
+    "prompt_matches_parameters": true,
+    "source_prompt_saved_before_raw": true,
+    "transparent_requested": true,
+    "raw_and_selected_same_dimensions": true,
+    "raw_mode": "RGBA",
+    "selected_mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "canvas": [
+      1118,
+      1407
+    ],
+    "body_alpha_gt8_bytes_unchanged": true,
+    "all_changed_pixels_raw_alpha_le8": true,
+    "transparent_background_clear": true,
+    "light_dark_composites": [
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A2_smooth_left_hair_v1_light_inspect.png",
+        "background_rgba": [
+          238,
+          232,
+          217,
+          255
+        ],
+        "matches_true_composite": true
+      },
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A2_smooth_left_hair_v1_dark_inspect.png",
+        "background_rgba": [
+          37,
+          40,
+          45,
+          255
+        ],
+        "matches_true_composite": true
+      }
+    ],
+    "first_prompt_matches_frozen_brief": true,
+    "provenance_file_present": false,
+    "provenance_all_file_and_reference_hashes_match": true,
+    "provenance_errors": [],
+    "submitted_reference_files_exist": true,
+    "submitted_reference_includes_sha_verified_mother": true
+  },
+  "visual_review": {
+    "actual_viewed": [
+      "raw",
+      "selected_transparent",
+      "true_light_composite",
+      "true_dark_composite"
+    ],
+    "findings": [
+      "raw、透明、真浅深4图均实际查看。",
+      "本左手画右高抬，掌指轻贴原侧上发簇，肩肘腕衔接成立、未遮脸，区别于A1低位衣摆动作。",
+      "原右手画左握绳双尾完整，成熟面孔朝画左，灰斑衣装、双腿双靴与稳定支撑保留；四周无裁切、无新增场景或剧情指代。"
+    ],
+    "required_revision": null,
+    "nonissues": [
+      "发簇局部变化和自然指组弯曲符合触发动作，不是身份硬错；不演旧E1默数。"
+    ],
+    "remaining_revisions": 0
+  }
+}

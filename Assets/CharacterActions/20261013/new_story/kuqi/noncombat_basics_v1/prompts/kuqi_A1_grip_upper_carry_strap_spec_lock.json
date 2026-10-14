@@ -1,0 +1,72 @@
+{
+  "key": "kuqi_A1_grip_upper_carry_strap",
+  "title_zh": "右手握稳肩前钩杆背带",
+  "status": "planned_not_generated",
+  "output_count": 1,
+  "kind": "independent_full_body_noncombat_keypose",
+  "evidence": [
+    {
+      "source_id": "kuqi_card",
+      "locator": "体貌与随身",
+      "line_start": 17,
+      "quote": "背着缠满布条的钩杆"
+    },
+    {
+      "source_id": "field_dialogue",
+      "locator": "FX-BUR／复访",
+      "line_start": 257,
+      "quote": "我这钩杆还没断，说明今天运气行。"
+    }
+  ],
+  "art_inference": "源卡和对白只支持本人身份、随身物、习惯及边界；具体手臂路径、理发/拂衣/扶带/半蹲/托卷是本轮可逆美术提案，台本未记载已经发生。",
+  "start_pose_description_only": "从母图右手在画面左胸腹外侧张指的站姿开始。",
+  "pose": "两靴分开站稳。右臂从母图外侧谈话手势收回，右肘在画面左胸侧外开，右手在自己右肩前、锁骨下握住原宽棕斜背带，掌指绕带形成明显抓握；右手位置高于胸前原金属带环，带环仍可见。左手继续在画面右腰旁扶原绳卷上部。原钩杆始终固定斜背，铁钩画面左上、杆尾画面右下，杆与背带方向不变。脸保持画面右朝向，神态自然。",
+  "end_pose_description_only": "右手可松开背带，钩杆仍固定在背上。",
+  "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+  "visible_stage_target": "右手从外张姿收回肩前，清楚握住原斜背带上段，右肘侧出；左手仍扶腰绳。",
+  "pose_specific_sidedness": "右手画面左肩前握原带上段；左手画面右腰旁原绳卷上部；钩杆不换侧。",
+  "contact_and_support_checks": [
+    "原带穿过握手上下连续，不新加肩带。",
+    "右手不握木杆或钩头，杆仍背载。",
+    "原铁钩、杆尾、腰绳卷和双靴完整入画。"
+  ],
+  "prop_state_and_retention": [
+    "唯一缠旧布条的钩杆持续斜背，铁钩在画面左上、杆尾在画面右下，两端完整，原宽棕背带保持画面左肩到画面右腰方向。原一圈旧绳持续挂人物左侧（画面右）腰旁，不展开、不换侧。保留手部母图既有浅痕和原双腿双靴；左右手只按本张专属位置。"
+  ],
+  "difference_from_mother_expression_and_batch": "母图/E1右手外张，E2右手近腰，本张右手收回到肩前高位抓带。与达珥A2同属扶带但原物、侧别和另一手状态不同，不声称全库首次。",
+  "risk_level": "medium_pose_and_contact",
+  "new_contact_prop": null,
+  "new_story_fact": false,
+  "sequence_required": false,
+  "animation_claim": false,
+  "generation_budget": {
+    "initial": 1,
+    "max_hard_error_revisions": 1,
+    "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+    "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+    "safety_blocked": "立即停止该动作，记录tool返回；不重试、不换工具、不改写规避。"
+  },
+  "review_status": "planning_author_checked; independent_plan_review_pending",
+  "reference_image_paths": [
+    "Assets/CharacterDesigns/20261013/expressive/new_story/kuqi/concept_v1/kuqi_transparent.png"
+  ],
+  "reference_sha256": [
+    "e5bf6ee30e5b566e3a7ff513bb3e225ee0b07fa8e4a0469ac14c8bc6d2e0a529"
+  ],
+  "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图紧凑而成熟的成年身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：库奇 FX-BUR。瘦小的中年成年外观；深灰褐短发带灰鬓、颊纹和眼下浅纹、母图独有脸型，脸仍朝画面右。旧土黄色短褂、浅麻领边翻袖、灰褐裤和棕靴保持。\n固定衣装与原物件：唯一缠旧布条的钩杆持续斜背，铁钩在画面左上、杆尾在画面右下，两端完整，原宽棕背带保持画面左肩到画面右腰方向。原一圈旧绳持续挂人物左侧（画面右）腰旁，不展开、不换侧。保留手部母图既有浅痕和原双腿双靴；左右手只按本张专属位置。\n本张动作：右手握稳肩前钩杆背带。两靴分开站稳。右臂从母图外侧谈话手势收回，右肘在画面左胸侧外开，右手在自己右肩前、锁骨下握住原宽棕斜背带，掌指绕带形成明显抓握；右手位置高于胸前原金属带环，带环仍可见。左手继续在画面右腰旁扶原绳卷上部。原钩杆始终固定斜背，铁钩画面左上、杆尾画面右下，杆与背带方向不变。脸保持画面右朝向，神态自然。\n本张侧别：右手画面左肩前握原带上段；左手画面右腰旁原绳卷上部；钩杆不换侧。\n必须明显可见：右手从外张姿收回肩前，清楚握住原斜背带上段，右肘侧出；左手仍扶腰绳。\n接触与支撑：原带穿过握手上下连续，不新加肩带。；右手不握木杆或钩头，杆仍背载。；原铁钩、杆尾、腰绳卷和双靴完整入画。。\n",
+  "prompt_sha256": "b8c1d00bc7bc739b273c5e4e807d679b1c2bff659a92d8bc929a206e511afab4",
+  "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/kuqi_A1_grip_upper_carry_strap_prompt.txt",
+  "negative_constraints": [
+    "只整理原背带或托稳腰上原绳卷，钩杆不拔出、不杵地，不加蛛网或取物场景。",
+    "不显示进洞、救人、货物成交、腿已恢复或N12结果；瘦小是成年体型，不幼化。",
+    "钩杆始终背载，不能因换手位把它画成手杖或第二件工具。",
+    "A2托的是整圈绳卷底缘，不操作绳尾/微小挂点，不把附着腰上的绳卷画成完全离身。"
+  ],
+  "existing_asset_check": {
+    "own_action_directory_count": 0,
+    "prior_action_found": false,
+    "expression_board_actually_viewed": true,
+    "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/action_tree_scan.json",
+    "semantic_comparison": "母图/E1右手外张，E2右手近腰，本张右手收回到肩前高位抓带。与达珥A2同属扶带但原物、侧别和另一手状态不同，不声称全库首次。"
+  }
+}

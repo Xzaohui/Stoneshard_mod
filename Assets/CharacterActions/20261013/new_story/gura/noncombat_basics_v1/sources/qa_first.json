@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-13T18:12:57.994910+00:00",
+  "scope": "首批新剧情角色实际原图独审，仅概念视觉验收。",
+  "sources_read": [
+    "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_four_production_brief.json",
+    "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "design/04_人物/城市人物/人物_ASH-NPC-ANNI_安妮.md",
+    "design/04_人物/城市人物/人物_HIG-NPC-GURA_古菈.md",
+    "design/04_人物/野外人物/人物_FX-QRY_德茹.md",
+    "design/04_人物/野外人物/人物_FX-MIL_霍珥.md"
+  ],
+  "reference_images_actually_viewed": [
+    "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+    "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+  ],
+  "review_method": "对照卡和批准参考，实际view每张原图；Pillow只读核验尺寸/alpha/SHA，不生成或改动图像。以人物身份、年龄、表情、完整性和像素概念风格为准，不以同一头身数字卡全部人物。",
+  "limitations": [
+    "不声明原生像素网格、原版部件、帧表、装备兼容或运行通过。",
+    "不替角色作出治疗、工约续签、付款或调查结案承诺。",
+    "不修改作者manifest、旧roster、图像或历史QA。"
+  ],
+  "results": [
+    {
+      "slug": "anni",
+      "id": "ASH-NPC-ANNI",
+      "name": "安妮",
+      "face": "二十多岁成年女性读感；抬眉、睁眼和轻启嘴形成坦诚解释，面貌未复制参考。",
+      "body": "大头、短颈、完整紧凑成年站姿；身体相对Mia参考更长，但不呈细长成人比例或幼童体态。",
+      "identity": "低髻、米灰素褂、收袖扣带、绿束腰、口袋内布带与收好的剪刀、腰侧木牌及手中小簿可读。手背清洗细纹不突出，属低分辨细节限制，无反向设定。",
+      "gesture": "一手托簿、另一手指向当前记号，接触和遮挡合理；没有承诺下一班、治疗或研究授权字样。",
+      "status": "concept_visual_pass",
+      "blocking_issues": [],
+      "artifact": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_v2_raw_imagegen.png",
+      "sha256": "6491e469ecb2241826121bc633b8e7a242921f4feaba5232f7c288c239415ab9",
+      "evidence": {
+        "actual_image_viewed": true,
+        "mode": "RGBA",
+        "size": [
+          1118,
+          1407
+        ],
+        "alpha_zero_pixels": 1049205,
+        "alpha_255_pixels": 1672,
+        "alpha_partial_pixels": 522149,
+        "alpha_nonzero_bbox": [
+          31,
+          43,
+          1104,
+          1394
+        ],
+        "alpha_128_bbox": [
+          265,
+          101,
+          930,
+          1390
+        ],
+        "alpha_note": "真实透明背景；主体主要alpha253，接近不透明；低alpha边缘杂点扩大非零边框，未见主体截断。"
+      },
+      "pixel_style": "可辨块状轮廓和组织明确的像素簇；细节比Sela G更密，不是无像素组织的平滑插画。未测定或声称原生网格。",
+      "delivery_binding": {
+        "status": "final_clean_and_presentation_pass",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/manifest.json",
+        "manifest_sha256": "7e48460bdcb789318cdbda94b0b8a5c56fed6b7f742231b849723d428666d13b",
+        "manifest_entries_verified": 26,
+        "manifest_mismatches": [],
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_transparent.png",
+        "transparent_sha256": "0111ebebbac68e2f49558a66264e902da534b388e6a1ce0d76f4cf0b1e9bb659",
+        "raw_alpha_gt8_rgba_preserved_exactly": true,
+        "canvas_size_unchanged": true,
+        "alpha_lte8_cleared_only": true,
+        "visual_check": "实际查看透明clean及light/dark两张展示。人物、文字和完整轮廓清晰，无新增硬错或错误选稿。",
+        "presentations": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_展示_light.png",
+            "sha256": "2ef2f798581047f4fdcfbb8c05e4b51209025f8ec744ca240ea9cae38f936764",
+            "actual_image_viewed": true
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_展示_dark.png",
+            "sha256": "5932726714c9a6f20ebf657127666b433b1bd5f8d51f065ccad9d837e5f783be",
+            "actual_image_viewed": true
+          }
+        ]
+      }
+    },
+    {
+      "slug": "gura",
+      "id": "HIG-NPC-GURA",
+      "name": "古菈",
+      "face": "三十多岁成年女性读感；紧实嘴角与略收眉形成核对短单的认真神情。",
+      "body": "短颈、结实肩臂与大头紧凑站姿，双脚支撑完整；前脚承重倾向可读但不夸张。",
+      "identity": "厚灰褂、绑带旧护膝、棕肩袋内短撬棍、本人手中短单；不是修女或战士，手部仅劳作色块，不渲染新伤。",
+      "gesture": "双手持单并指示条目合理，短单没有可读长期誓约或已续约内容，撬棍收纳不作武器。",
+      "status": "concept_visual_pass",
+      "blocking_issues": [],
+      "artifact": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_v1_raw_imagegen.png",
+      "sha256": "0934e8d402693db8835f75f42d7777bb9f23577e645e82cc4d39a0048547d0fb",
+      "evidence": {
+        "actual_image_viewed": true,
+        "mode": "RGBA",
+        "size": [
+          1145,
+          1374
+        ],
+        "alpha_zero_pixels": 980333,
+        "alpha_255_pixels": 1656,
+        "alpha_partial_pixels": 591241,
+        "alpha_nonzero_bbox": [
+          0,
+          0,
+          1113,
+          1374
+        ],
+        "alpha_128_bbox": [
+          243,
+          8,
+          919,
+          1366
+        ],
+        "alpha_note": "真实透明背景；主体主要alpha253，接近不透明；低alpha边缘杂点扩大非零边框，未见主体截断。"
+      },
+      "pixel_style": "可辨块状轮廓和组织明确的像素簇；细节比Sela G更密，不是无像素组织的平滑插画。未测定或声称原生网格。",
+      "delivery_binding": {
+        "status": "final_clean_and_presentation_pass",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/manifest.json",
+        "manifest_sha256": "c894cf2844ddfa23a6230fca49f63b5ac2c3d6fe99d1394550b92b0e7f262ee3",
+        "manifest_entries_verified": 22,
+        "manifest_mismatches": [],
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_transparent.png",
+        "transparent_sha256": "7feeb5c4a3fe495d9ae9aad5c74319ffe6c0f2eb46b946ac02ca5b50eb982942",
+        "raw_alpha_gt8_rgba_preserved_exactly": true,
+        "canvas_size_unchanged": true,
+        "alpha_lte8_cleared_only": true,
+        "visual_check": "实际查看透明clean及light/dark两张展示。人物、文字和完整轮廓清晰，无新增硬错或错误选稿。",
+        "presentations": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_展示_light.png",
+            "sha256": "6ca99a3a74a992bc78584be979689de1e12ddc106269f9713f8495d817ed1ec2",
+            "actual_image_viewed": true
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_展示_dark.png",
+            "sha256": "defc959daf05baaad8ab17a8424b9f7bddc773bc949529795d3a426afafaa1b6",
+            "actual_image_viewed": true
+          }
+        ]
+      }
+    },
+    {
+      "slug": "deru",
+      "id": "FX-QRY",
+      "name": "德茹",
+      "face": "灰白发、厚重下颌和熟龄面貌可读约五十岁；沉眉和张嘴短句表情清楚。年龄细纹偏简略但未读为年轻人。",
+      "body": "结实石工体态、粗手、短颈、大头和紧凑成年站姿；人物右肩（画面左侧）略低于另一肩。",
+      "identity": "粗布灰衣、暗赭劳作围裙及围裙所别钝头凿子明确，无巨锤或军事身份道具。",
+      "gesture": "伸出的手向下/侧提示安全边界，另一手靠近围裙，合理手位不判作畸形；无已下坑探路/欠薪偿付画面。",
+      "status": "concept_visual_pass",
+      "blocking_issues": [],
+      "artifact": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_v2_raw_imagegen.png",
+      "sha256": "0dfc9b5caa66f636ca853b76c9a1a46c597862c64d59d2b2fbe0372e2b21c8e3",
+      "evidence": {
+        "actual_image_viewed": true,
+        "mode": "RGBA",
+        "size": [
+          1118,
+          1407
+        ],
+        "alpha_zero_pixels": 927495,
+        "alpha_255_pixels": 3386,
+        "alpha_partial_pixels": 642145,
+        "alpha_nonzero_bbox": [
+          0,
+          23,
+          1098,
+          1407
+        ],
+        "alpha_128_bbox": [
+          153,
+          36,
+          937,
+          1396
+        ],
+        "alpha_note": "真实透明背景；主体主要alpha253，接近不透明；低alpha边缘杂点扩大非零边框，未见主体截断。"
+      },
+      "pixel_style": "可辨块状轮廓和组织明确的像素簇；细节比Sela G更密，不是无像素组织的平滑插画。未测定或声称原生网格。",
+      "delivery_binding": {
+        "status": "final_clean_and_presentation_pass",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/manifest.json",
+        "manifest_sha256": "b565f01233f28ed2be272a2c646f93443fb489cbd818b9e9486dbc6a88b06041",
+        "manifest_entries_verified": 21,
+        "manifest_mismatches": [],
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_transparent.png",
+        "transparent_sha256": "9a335a68915943a6c2c01b8aa30c6a49248b3a5c3e837d39076b6c3c57ec5f8c",
+        "raw_alpha_gt8_rgba_preserved_exactly": true,
+        "all_rgb_preserved_exactly": true,
+        "canvas_size_unchanged": true,
+        "alpha_lte8_cleared_only": true,
+        "visual_check": "实际查看透明clean及light/dark两张展示。人物和完整轮廓清晰，无新增硬错或错误选稿。",
+        "presentations": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_light_board.png",
+            "sha256": "2955d26138930c1c48c4018fc127cfd6755ce9d54ccb1b3b14c7c68f5968c9f6",
+            "actual_image_viewed": true
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_dark_board.png",
+            "sha256": "0a3f4c0826e4b26959e9fdf6c492a541fa47f7ac4297585a6aaff87f25aeebc8",
+            "actual_image_viewed": true
+          }
+        ]
+      }
+    },
+    {
+      "slug": "hoer",
+      "id": "FX-MIL",
+      "name": "霍珥",
+      "status": "concept_visual_pass",
+      "blocking_issues": [],
+      "artifact": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_v1_raw_imagegen.png",
+      "sha256": "2e978cb06e5e71dc342946d2ff2255ae32716afb47ca67be8d95aa7ac365f189",
+      "face": "三十来岁成年男子的粗眉、短须与结实脸型；侧目、凝眉和半开嘴读为谨慎问话。",
+      "body": "大头、自然短颈、结实成年肩臂与紧凑站姿，完整双脚着地。",
+      "identity": "低饱和蓝灰粗布工作衣、袖至肘、棕腰围与旧靴；虎口有劳作色块，未把一般纹理硬说成医学伤痕。左耳后区域受耳廓和发际遮挡，旧疤不能由此图单独确认，不声称细节已验证。合理遮挡不构成反向设定，不因此阻塞。",
+      "gesture": "一手平掌提示不要动闸，另一手自然侧落，手指组合无明显额外手指；不握闸轮、不开闸、无额外账簿或作证文字。",
+      "pixel_style": "可辨块状轮廓与有组织的像素簇，脸、手和服饰可读；不声称原生网格。",
+      "evidence": {
+        "actual_image_viewed": true,
+        "mode": "RGBA",
+        "size": [
+          1049,
+          1499
+        ],
+        "alpha_zero_pixels": 865577,
+        "alpha_255_pixels": 2164,
+        "alpha_partial_pixels": 704710,
+        "alpha_nonzero_bbox": [
+          43,
+          14,
+          1046,
+          1489
+        ],
+        "alpha_128_bbox": [
+          69,
+          17,
+          932,
+          1486
+        ],
+        "alpha_note": "真实透明通道，主体完整；不是背景预览图冒充透明。"
+      },
+      "delivery_binding": {
+        "status": "final_clean_and_presentation_pass",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/manifest.json",
+        "manifest_sha256": "c26ea63a2e8133810284a7408b06d735b59173e1fa4074c74b013bc352b9ec64",
+        "manifest_entries_verified": 19,
+        "manifest_mismatches": [],
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_transparent.png",
+        "transparent_sha256": "2ad7fad3d48561ccefe04f1363c0f382d7eb8f4393cfa5acd9d8c62147680718",
+        "raw_alpha_gt8_rgba_preserved_exactly": true,
+        "all_rgb_preserved_exactly": true,
+        "canvas_size_unchanged": true,
+        "alpha_lte8_cleared_only": true,
+        "visual_check": "实际查看透明clean及light/dark两张展示。人物和完整轮廓清晰，无新增硬错或错误选稿。",
+        "presentations": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_light_board.png",
+            "sha256": "d57da4c168ce703c878090d2fd9c8b45d2c201d5612b0b0aff214f5a4b5a7780",
+            "actual_image_viewed": true
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_dark_board.png",
+            "sha256": "30e0d29bca66437527e0ae987184dfa3b234ebb58b095c406604b6763f8cbb43",
+            "actual_image_viewed": true
+          }
+        ]
+      }
+    }
+  ],
+  "pending": [],
+  "delivery_binding_status": "all_four_final_clean_and_presentation_pass",
+  "final_review_utc": "2026-10-13T18:14:26.990682+00:00"
+}

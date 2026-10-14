@@ -1,0 +1,1 @@
+共享四姿态浅深板只是比较图，每列上下两格是同一动作，不是新增八帧或连续动画。build_board.py的原执行位置为second_noncombat_deru_hoer_delivery_v1；重建整板须将两个人物完整树都放回原目录，使用同级交付脚本。

@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "asset_batch": "20261013",
+  "local_date_note": "UTC日期2026-10-13，用户UTC+8日期已2026-10-14，资源目录延续20261013批。",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "historical_roster": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "sha256": "6af5b2e027def4ecab0a36b34739dc1a168a78d5c527ece98180e6460897325a"
+  },
+  "master": {
+    "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+    "sha256": "1ef69891ce678f6d8aef940cd03578261b4f27a8ec99a17ba80a34898d30ba22"
+  },
+  "scope": "最新远端九提交新增原创角色概念计划；不更新原roster、MASTER、图像或交付回执。",
+  "style": {
+    "direction": "成熟大头短身、短颈自然肩线、紧凑成年体态、可读五官与人物自己的情绪；低魔中世纪材质、组织清晰像素簇；完整单人透明全身概念。",
+    "style_source": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    "references": [
+      {
+        "path": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+        "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a"
+      },
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+        "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+      }
+    ],
+    "reference_use": "Sela G仅参考成熟美感和脸部情绪；Mia 1:1.5只为单人已认可比例案例，不机械套全员，不复制脸、发型和衣装。",
+    "guardrails": [
+      "先实际看参考，再生图；原始图不可做裁切假装完成",
+      "与下述最新剧情卡冲突时以最新卡/台本为准；服色和未设定发型可提出可逆设计",
+      "没有治疗、付款、续约、宽恕或调查结案图示；不将道具文字当真实承诺",
+      "新目录输出，不覆盖167旧锚/旧receipt；新图先标待独审，不自动通过",
+      "概念不代表目标游戏原部件、身型、帧表、装备兼容或运行通过"
+    ],
+    "age_guard": "成熟感仅用于卡定成年者；其他角色按原年龄，不把17–18岁的FX-HUT画中年。未成年正常完整职业服饰，不性感化。"
+  },
+  "independence_note": "新文件；首批四人brief、历史roster/MASTER/receipt不变。先按真实图片独审，后才记交付。",
+  "created_utc": "2026-10-13T18:22:53.689592+00:00",
+  "batch": "seventh_four",
+  "characters": [
+    {
+      "canonical_id": "FX-CV1",
+      "name": "珞珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV1_珞珥.md",
+        "sha256": "e2904942fd56174bfb840f6d97c8262669dfb9fa56c43fe2d8ddd6fb25d29689"
+      },
+      "card_details": {
+        "工作": "洞穴向导，常在 `rumor_cave1` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "体貌与随身": "三十多岁的女子，背着两卷麻绳，靴子补过；说话前先用指节敲墙。",
+        "口吻": "只讲判断，不讲故事；被夸就摆手。",
+        "知情边界": "洞口起风的时段；哪段路能原路退回。不替人进洞取物；不担保洞里安全。"
+      },
+      "story_links": [
+        "区域_R06_无名修院山地",
+        "台本_FX_野外人物对白",
+        "台本_N14_可以回去的路",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R06_无名修院山地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "洞穴向导",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CV1",
+        "site": "rumor_cave1",
+        "region": "R06",
+        "look": "三十多岁的女子，背着两卷麻绳，靴子补过；说话前先用指节敲墙。",
+        "voice": "只讲判断，不讲故事；被夸就摆手。",
+        "knows": [
+          "洞口起风的时段",
+          "哪段路能原路退回"
+        ],
+        "not_knows": [
+          "不替人进洞取物",
+          "不担保洞里安全"
+        ],
+        "visits": {
+          "task": "台本_N14_可以回去的路",
+          "before": [
+            "你要找回去的路，先从洞口数标记。别急着往里走。"
+          ],
+          "after": [
+            "路的事定了。洞口的风向照旧，我的标记也照旧。"
+          ],
+          "early": [
+            "你先问过我回程，后去办的路。顺序对，人不容易丢。"
+          ],
+          "late": [
+            "路的事办完了才想进洞？洞不认晚来的人，只认绳长。"
+          ],
+          "proxy": [
+            "向导不在洞口时，石头标记别踢；那是别人的回程。"
+          ]
+        },
+        "first_greeting": "你要进洞？先说回程。说不出来就别进。",
+        "refusal": "要我领你走全程？不走。我只带到第二处标记。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "luoer",
+        "age_and_identity": "三十多岁的女子；洞穴向导。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "三十多岁的女子，背着两卷麻绳，靴子补过；说话前先用指节敲墙。",
+        "body_and_silhouette": "三十多岁女子、背两卷麻绳、补过靴；绳卷成不同层，不吞没手臂。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：宽额窄下颌、笔直眉、专注而克制眼神，嘴微启只说判断。",
+        "costume": "卡定衣装优先：三十多岁的女子，背着两卷麻绳，靴子补过；说话前先用指节敲墙。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "暗铁蓝短褂、泥褐裤、枯黄麻绳。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "站姿稳，一手护背绳带、另一手曲指略抬似准备敲墙；无需造洞壁。",
+        "source_voice": "只讲判断，不讲故事；被夸就摆手。",
+        "required_visible_props": [
+          "两卷麻绳",
+          "补靴"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不加地图大全或账册，不画护送全洞、保证安全、替取物。",
+        "knowledge_limits": {
+          "knows": [
+            "洞口起风的时段",
+            "哪段路能原路退回"
+          ],
+          "not_knows": [
+            "不替人进洞取物",
+            "不担保洞里安全"
+          ],
+          "current_refusal": "要我领你走全程？不走。我只带到第二处标记。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N14_可以回去的路.md",
+          "sha256": "ec4013ee9ff097d4a51b5eb143f49bc820d28f0d2453c3224d5b0c03af24ac84"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-CV2",
+      "name": "芩珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV2_芩珥.md",
+        "sha256": "c68893d07a0c22a410957f4c656d44f04e0a34772bcd964e17b02ee2a8308ea5"
+      },
+      "card_details": {
+        "工作": "采药歇脚者，常在 `rumor_cave2` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "体貌与随身": "四十来岁的女人，背篓里垫着旧布，手指有草汁染出的褐痕；进洞前先把篓子放下。",
+        "口吻": "说话慢，先报草名再谈别的；被催就停下来闻一闻。",
+        "知情边界": "浅洞哪个角落干燥；哪几味草这个时节还有。不替药师开方；不说自己采的草卖给谁。"
+      },
+      "story_links": [
+        "区域_R06_无名修院山地",
+        "台本_FX_野外人物对白",
+        "台本_DT05_驿馆的急用药",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R06_无名修院山地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "采药歇脚者",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CV2",
+        "site": "rumor_cave2",
+        "region": "R06",
+        "look": "四十来岁的女人，背篓里垫着旧布，手指有草汁染出的褐痕；进洞前先把篓子放下。",
+        "voice": "说话慢，先报草名再谈别的；被催就停下来闻一闻。",
+        "knows": [
+          "浅洞哪个角落干燥",
+          "哪几味草这个时节还有"
+        ],
+        "not_knows": [
+          "不替药师开方",
+          "不说自己采的草卖给谁"
+        ],
+        "visits": {
+          "task": "台本_DT05_驿馆的急用药",
+          "before": [
+            "驿馆要的那味草，这个时节只有洞口阴面有。别乱采。"
+          ],
+          "after": [
+            "药送到了。草还长在洞里，谁要就自己来采。"
+          ],
+          "early": [
+            "你先来的洞口，后去的驿馆。顺序对，草不会认错。"
+          ],
+          "late": [
+            "驿馆的事办完了才来采草？草不等单子，只等时节。"
+          ],
+          "proxy": [
+            "采药的人不在洞口时，苔线别踩；那是别人的路。"
+          ]
+        },
+        "first_greeting": "进洞前把篓子放下。洞里的土会认草味。",
+        "refusal": "要我带你采？不。采药靠眼，不靠带路。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "qiner",
+        "age_and_identity": "四十来岁的女人；采药歇脚者。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "四十来岁的女人，背篓里垫着旧布，手指有草汁染出的褐痕；进洞前先把篓子放下。",
+        "body_and_silhouette": "四十来岁女人，内垫旧布背篓与草汁褐染手指；无伤口化草汁。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：圆颧面、眼皮轻垂、眉松但认真，嘴稍开像先报草名，朴素发巾提案。",
+        "costume": "卡定衣装优先：四十来岁的女人，背篓里垫着旧布，手指有草汁染出的褐痕；进洞前先把篓子放下。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "枯绿外褂、浅麻篓垫、土褐裙裤。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "背篓放脚侧，双手轻停在篓沿；一个小草束可选用于闻辨但不必拿。",
+        "source_voice": "说话慢，先报草名再谈别的；被催就停下来闻一闻。",
+        "required_visible_props": [
+          "垫旧布背篓",
+          "手指淡褐草汁染痕"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "少量普通草叶是职业可逆提案，不画毒剂/新处方/已售客户身份。",
+        "knowledge_limits": {
+          "knows": [
+            "浅洞哪个角落干燥",
+            "哪几味草这个时节还有"
+          ],
+          "not_knows": [
+            "不替药师开方",
+            "不说自己采的草卖给谁"
+          ],
+          "current_refusal": "要我带你采？不。采药靠眼，不靠带路。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT05_驿馆的急用药.md",
+          "sha256": "975b36ef49c623c4a34accd32b67b28bd9e9e53aff6362dff4e0de8bcfa253ea"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-CV5",
+      "name": "栎珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV5_栎珥.md",
+        "sha256": "cfd9ba0a62ebcea123de720f94947c8a7f8b27b8b9020b8396830ca181541c56"
+      },
+      "card_details": {
+        "工作": "拾柴人，常在 `rumor_cave5` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "体貌与随身": "五十来岁的男人，肩上担着两根旧绳，裤脚用麻绳扎紧；走到根洞前先伸脚试地。",
+        "口吻": "带笑，爱说树的年纪；谈到水就收起笑。",
+        "知情边界": "老梣树哪根枝是枯的；根洞里积水的深浅。不替村里认领林界；不卖树。"
+      },
+      "story_links": [
+        "区域_R06_无名修院山地",
+        "台本_FX_野外人物对白",
+        "台本_DT12_旧钟站的检修",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R06_无名修院山地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "拾柴人",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CV5",
+        "site": "rumor_cave5",
+        "region": "R06",
+        "look": "五十来岁的男人，肩上担着两根旧绳，裤脚用麻绳扎紧；走到根洞前先伸脚试地。",
+        "voice": "带笑，爱说树的年纪；谈到水就收起笑。",
+        "knows": [
+          "老梣树哪根枝是枯的",
+          "根洞里积水的深浅"
+        ],
+        "not_knows": [
+          "不替村里认领林界",
+          "不卖树"
+        ],
+        "visits": {
+          "task": "台本_DT12_旧钟站的检修",
+          "before": [
+            "钟站要修，用枯枝。别去砍活枝，砍了少一片荫。"
+          ],
+          "after": [
+            "钟站修好了。枯枝照旧落，我照旧捡。"
+          ],
+          "early": [
+            "你先来的根洞，后去的钟站。哪根是枯的，你分得清了。"
+          ],
+          "late": [
+            "钟站的事办完了才来捡柴？枯枝不等检修，落下就是落下。"
+          ],
+          "proxy": [
+            "拾柴的人不在时，别砍活枝；枯的够用。"
+          ]
+        },
+        "first_greeting": "先伸脚试，再落脚。根洞不认人。",
+        "refusal": "要我帮你砍活枝？不砍。要柴，枯枝够你背。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "lier",
+        "age_and_identity": "五十来岁的男人；拾柴人。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "五十来岁的男人，肩上担着两根旧绳，裤脚用麻绳扎紧；走到根洞前先伸脚试地。",
+        "body_and_silhouette": "五十来岁男人、肩搭两根旧绳、麻绳扎裤脚；区别CV1双卷背绳。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：长脸宽眉、眼角轻纹、温和半笑，说水时嘴收住；灰短发提案。",
+        "costume": "卡定衣装优先：五十来岁的男人，肩上担着两根旧绳，裤脚用麻绳扎紧；走到根洞前先伸脚试地。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "苔灰褂、褐裤、暗旧麻绳。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "脚轻探前方但后脚稳承重，一手扶肩上两根旧绳，另一手低指地面。",
+        "source_voice": "带笑，爱说树的年纪；谈到水就收起笑。",
+        "required_visible_props": [
+          "肩上两根旧绳",
+          "麻绳扎裤脚"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不加砍树斧、活枝战利品或林地契约，不画卖树/认林界。",
+        "knowledge_limits": {
+          "knows": [
+            "老梣树哪根枝是枯的",
+            "根洞里积水的深浅"
+          ],
+          "not_knows": [
+            "不替村里认领林界",
+            "不卖树"
+          ],
+          "current_refusal": "要我帮你砍活枝？不砍。要柴，枯枝够你背。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT12_旧钟站的检修.md",
+          "sha256": "a1356effc63c5e7f548d9a9111f3cf66a710570b23d1a07d26a34d4040ebdded"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-CV6",
+      "name": "洄珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV6_洄珥.md",
+        "sha256": "7dc135dd6d0aa0b46f0ea8117ff1b0b73b66f32530e34ea783051f2967ed23b6"
+      },
+      "card_details": {
+        "工作": "谷地行者，常在 `rumor_cave6` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "体貌与随身": "二十多岁的女人，靴子外裹着草绳，背着一根探路的长杆；说话前先看云。",
+        "口吻": "看天说话，句子跟着风走；被问路就报水线不报方向。",
+        "知情边界": "谷地哪条沟是新冲的；雨从哪边来。不担保谷地通行；不带人抄近路。"
+      },
+      "story_links": [
+        "区域_R06_无名修院山地",
+        "台本_FX_野外人物对白",
+        "台本_DT06_迷路者的路标",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R06_无名修院山地",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "谷地行者",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CV6",
+        "site": "rumor_cave6",
+        "region": "R06",
+        "look": "二十多岁的女人，靴子外裹着草绳，背着一根探路的长杆；说话前先看云。",
+        "voice": "看天说话，句子跟着风走；被问路就报水线不报方向。",
+        "knows": [
+          "谷地哪条沟是新冲的",
+          "雨从哪边来"
+        ],
+        "not_knows": [
+          "不担保谷地通行",
+          "不带人抄近路"
+        ],
+        "visits": {
+          "task": "台本_DT06_迷路者的路标",
+          "before": [
+            "路标要立，先看水线。立在水线上，一场雨就没了。"
+          ],
+          "after": [
+            "路标立起来了。冲沟也宽了，绕行的路得重画。"
+          ],
+          "early": [
+            "你先问过我水线，后去立的路标。位置对得上。"
+          ],
+          "late": [
+            "路标的事完了才来问谷地？雾不看路标，只看水声。"
+          ],
+          "proxy": [
+            "行者不在谷口时，沟沿就是界线；别下沟底。"
+          ]
+        },
+        "first_greeting": "看云再说话。云低，今天别下谷。",
+        "refusal": "要我带你穿谷？不。绕半天，比捞人快。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "huier",
+        "age_and_identity": "二十多岁的女人；谷地行者。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "二十多岁的女人，靴子外裹着草绳，背着一根探路的长杆；说话前先看云。",
+        "body_and_silhouette": "二十多岁成年女人、草绳裹靴、背一根长探路杆；长杆上端完整留白。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：年轻成年略宽颧面、顺风发梢提案、抬眼看云、眉开而嘴认真解释。",
+        "costume": "卡定衣装优先：二十多岁的女人，靴子外裹着草绳，背着一根探路的长杆；说话前先看云。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "退色青灰衣、棕背带、草黄靴绳。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "直立略仰头，一手扶杆背带、另一手低幅示意水线，杆收在背不挥舞。",
+        "source_voice": "看天说话，句子跟着风走；被问路就报水线不报方向。",
+        "required_visible_props": [
+          "草绳裹靴",
+          "一根长探路杆"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "不画保证通谷、抄近路或漂浮飞行；杆和双脚完整入画。",
+        "knowledge_limits": {
+          "knows": [
+            "谷地哪条沟是新冲的",
+            "雨从哪边来"
+          ],
+          "not_knows": [
+            "不担保谷地通行",
+            "不带人抄近路"
+          ],
+          "current_refusal": "要我带你穿谷？不。绕半天，比捞人快。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT06_迷路者的路标.md",
+          "sha256": "8483bf78879e414aa620b1db83d1a17b99b6b3fb72c6870d5e27812cd7ebf7ff"
+        }
+      ],
+      "source_reverified": true
+    }
+  ]
+}

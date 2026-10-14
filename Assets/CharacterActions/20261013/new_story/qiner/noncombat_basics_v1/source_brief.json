@@ -1,0 +1,214 @@
+{
+  "slug": "qiner",
+  "canonical_id": "FX-CV2",
+  "name": "芩珥",
+  "status": "existing_reviewed_character_new_actions_planned",
+  "selection_status": "selected_no_prior_own_actions_detected",
+  "current_card": {
+    "path": "design/04_人物/野外人物/人物_FX-CV2_芩珥.md",
+    "sha256": "c68893d07a0c22a410957f4c656d44f04e0a34772bcd964e17b02ee2a8308ea5"
+  },
+  "source_card_hash_matches_roster44": true,
+  "source_ids": [
+    "qiner_card",
+    "qiner_mother_manifest",
+    "qiner_mother_spec",
+    "qiner_mother_raw",
+    "qiner_mother_transparent",
+    "qiner_expression_manifest",
+    "qiner_expression_qa",
+    "qiner_expression_raw_qa",
+    "qiner_expression_final_status",
+    "qiner_expressions_view",
+    "qiner_mother_brief",
+    "field_dialogue",
+    "field_dialogue_registry",
+    "seventh_mother_qa",
+    "seventh_expression_final_qa"
+  ],
+  "mother_image": {
+    "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_v1_raw_imagegen.png",
+    "raw_sha256": "427c7f31a38a139917236875b80c71e6d3bc18fd309ccb750acadd667f8ba66e",
+    "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_transparent.png",
+    "transparent_sha256": "690e448af9ebbd854128b19b012c3b76761ab7eaf5b3c4cb23607a2e077ebcb3",
+    "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/manifest.json",
+    "manifest_sha256": "dbef100c33e166cfee4867caee11395a1ad023113656d774b87cfa9663f6d268",
+    "independent_qa_source_id": "seventh_mother_qa",
+    "independent_qa_selected_status": "final_clean_and_presentation_pass",
+    "actual_visual_observation": "实际看过raw、透明与E1/E2浅色板：人物朝画面左，唯一大藤背篓落在人物右脚外（画面左），篓口到大腿/低腰之间，旧米白布垫外翻并盖住前沿，棕色背带垂在篓前。普通绿草叶在布上方，右手（画面左）在篓口左中部、左手（画面右）搭近身右沿。母图和两表情均未拿起一枝；E1只是低头慢闻、两手仍在篓口。",
+    "fixed_sides": "唯一原藤背篓保持人物右侧脚外（画面左）落地，体积/织纹不改；棕背带仍垂在原篓前，不另背第二篓。原米白旧布仍垫在同一篓内且向前沿外翻；原普通草叶总量保持，手中/篓内具体位置只按本张动作。头巾、长裙、袖里、棕鞋和指尖浅褐草汁痕保留。",
+    "raw_and_transparent_actually_viewed": true,
+    "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/expressions_v1/review/qiner_light_board_zh.png"
+  },
+  "duplicate_check": {
+    "own_action_directory_count": 0,
+    "own_action_semantic_match_found": false,
+    "existing_expressions_actually_compared": true,
+    "interpretation": "只将本人新身体接点/肢体改变计动作；既有表情、风格参考副本和类似日常动作大类不重计，不声称全库首次。"
+  },
+  "story_boundaries": [
+    "只暂取自己篓内已有普通草枝查看或整理自己的旧衬布，不采新草、不递交药物、不服用或调配。",
+    "不写草种、剂量、疗效、买家身份，不表示DT05送药完成或承担药师开方。"
+  ],
+  "risks": [
+    "原草仅限原篓已有普通内容，不额外复制第二束；不要求凭图识别真实植物品种。",
+    "旧衬布保持完整内外连续，整理动作不抽空、撕裂衬布或把褐色染痕画成伤。"
+  ],
+  "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/qiner/noncombat_basics_v1",
+  "plans": [
+    {
+      "key": "qiner_A1_raise_existing_sprig",
+      "title_zh": "右手提起篓内原草枝",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "qiner_card",
+          "locator": "口吻",
+          "line_start": 19,
+          "quote": "说话慢，先报草名再谈别的"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-CV2／闲谈3",
+          "line_start": 933,
+          "quote": "有人问我方子。我只报草名，不报剂量。"
+        }
+      ],
+      "art_inference": "源卡/中文台词支持身份、原物件和边界；具体肘位、支撑、阶段与接触是可逆美术演出提案，不是已发生的台本结果、医学建议或原生动画规格。",
+      "start_pose_description_only": "母图的背篓落地，右手在草叶旁，左手搭近身篓沿。",
+      "pose": "身体从母图俯篓姿势略直起，双脚仍稳站在原篓旁。左手（画面右）继续搭稳靠近自己的右侧篓沿。右肘在画面左弯起，右手握住原篓内已有的一小枝普通草的茎，把这一枝抬到自己低胸前、篓口上方；叶簇与篓内剩余草之间有明显空隙，枝叶低于下巴、不靠嘴。眼看这枝草，表情平常。不是新增一束大草，不是递给画外人。",
+      "end_pose_description_only": "同一枝可放回原篓，不改变草的总量与用途，不表示采集/配方完成。",
+      "transition_scope": "起止仅文字，每张只生成pose描述的一帧。A1/A2无默认先后关系，不制作过渡、GIF或完整动画。",
+      "visible_stage_target": "右手和一小枝真实离开篓口到低胸，左手仍接落地篓沿；可辨草枝茎、手指与剩余草叶。",
+      "pose_specific_sidedness": "右手画面左拿本人原草枝；左手画面右在靠身体的篓沿。篓保持人物右侧（画面左）落地。",
+      "contact_and_support_checks": [
+        "右指组握住单枝茎，不是空手悬停或叶片黏在掌面。",
+        "草枝到胸前且与篓内叶簇分离，手和枝不遮整张脸。",
+        "左手接篓沿、篓底和双脚仍稳定，背带垂在原篓前。"
+      ],
+      "prop_state_and_retention": [
+        "只是移出原内容的一小枝，剩余草仍在原米白衬布上；没有第二束或第二篓。",
+        "衬布、藤编、背带与指尖草汁痕都保留。"
+      ],
+      "difference_from_mother_expression_and_batch": "E1缓息闻草只有头眼变化、双手仍停篓沿；本姿右臂抬起并使原枝与篓明确分离，不将旧表情改名。也不同于握工具自检，图不识别草种或剂量。",
+      "risk_level": "medium_contact_and_pose",
+      "extra_pose_constraints": [
+        "本张右手持单枝、不按衬布；草低于下巴不入口，无新草束、花束、药瓶或处方。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+        "after_failed_revision": "首稿及唯一修订完整保留，仍失败标缺项；不得第三稿、脚本修人体或借另一动作名重试。",
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_transparent.png"
+      ],
+      "reference_sha256": [
+        "690e448af9ebbd854128b19b012c3b76761ab7eaf5b3c4cb23607a2e077ebcb3"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、实际体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗全身基础动作关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体与有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；所有左右均按人物自身解剖侧，并按本张注明的画面侧核对。必须有下述真实手臂、躯干、腿部或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚及全部原物件，四周有透明余量。一人一个瞬间，纯alpha透明背景，无背景、地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不用脚本绘人体、拼接旋转肢体、插值、拉伸或强量化修错。只画本张动作，不画起止/过渡帧。无魔法、战斗、治疗、伤情变化、任务完成、授权、付款、认领或新剧情结果。\n人物：芩珥 FX-CV2，四十来岁的成年女人、采药歇脚者；浅土黄头巾、深棕灰鬓短卷发、缓和成熟面容，橄榄褐长上衣、米白袖里、深褐长裙、旧棕鞋；指尖草汁淡褐染痕是原特征。\n固定衣装与原物件：唯一原藤背篓保持人物右侧脚外（画面左）落地，体积/织纹不改；棕背带仍垂在原篓前，不另背第二篓。原米白旧布仍垫在同一篓内且向前沿外翻；原普通草叶总量保持，手中/篓内具体位置只按本张动作。头巾、长裙、袖里、棕鞋和指尖浅褐草汁痕保留。\n本张专属手位与侧别：右手画面左拿本人原草枝；左手画面右在靠身体的篓沿。篓保持人物右侧（画面左）落地。\n本张动作：右手提起篓内原草枝。身体从母图俯篓姿势略直起，双脚仍稳站在原篓旁。左手（画面右）继续搭稳靠近自己的右侧篓沿。右肘在画面左弯起，右手握住原篓内已有的一小枝普通草的茎，把这一枝抬到自己低胸前、篓口上方；叶簇与篓内剩余草之间有明显空隙，枝叶低于下巴、不靠嘴。眼看这枝草，表情平常。不是新增一束大草，不是递给画外人。\n可见阶段目标：右手和一小枝真实离开篓口到低胸，左手仍接落地篓沿；可辨草枝茎、手指与剩余草叶。\n接触与支撑：右指组握住单枝茎，不是空手悬停或叶片黏在掌面。；草枝到胸前且与篓内叶簇分离，手和枝不遮整张脸。；左手接篓沿、篓底和双脚仍稳定，背带垂在原篓前。\n物件保留：只是移出原内容的一小枝，剩余草仍在原米白衬布上；没有第二束或第二篓。；衬布、藤编、背带与指尖草汁痕都保留。\n剧情边界：只暂取自己篓内已有普通草枝查看或整理自己的旧衬布，不采新草、不递交药物、不服用或调配。；不写草种、剂量、疗效、买家身份，不表示DT05送药完成或承担药师开方。\n硬约束：原草仅限原篓已有普通内容，不额外复制第二束；不要求凭图识别真实植物品种。；旧衬布保持完整内外连续，整理动作不抽空、撕裂衬布或把褐色染痕画成伤。；本张右手持单枝、不按衬布；草低于下巴不入口，无新草束、花束、药瓶或处方。\n",
+      "prompt_sha256": "59dfa940321ca6aec4c386baa0d4ef87f0cc2f6f0cb8ed7e217491b8caafa362",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_new_character_actions_sources/qiner_A1_raise_existing_sprig_prompt.txt",
+      "negative_constraints": [
+        "原草仅限原篓已有普通内容，不额外复制第二束；不要求凭图识别真实植物品种。",
+        "旧衬布保持完整内外连续，整理动作不抽空、撕裂衬布或把褐色染痕画成伤。",
+        "本张右手持单枝、不按衬布；草低于下巴不入口，无新草束、花束、药瓶或处方。",
+        "只暂取自己篓内已有普通草枝查看或整理自己的旧衬布，不采新草、不递交药物、不服用或调配。",
+        "不写草种、剂量、疗效、买家身份，不表示DT05送药完成或承担药师开方。"
+      ],
+      "existing_asset_check": {
+        "own_existing_action_directory_count": 0,
+        "matching_prior_generated_action_found": false,
+        "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_new_character_actions_sources/action_tree_scan.json",
+        "existing_expression_comparison_actually_viewed": true,
+        "author_semantic_conclusion": "E1缓息闻草只有头眼变化、双手仍停篓沿；本姿右臂抬起并使原枝与篓明确分离，不将旧表情改名。也不同于握工具自检，图不识别草种或剂量。"
+      }
+    },
+    {
+      "key": "qiner_A2_smooth_basket_lining_front",
+      "title_zh": "前俯按平篓沿旧布",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "qiner_card",
+          "locator": "体貌与随身",
+          "line_start": 17,
+          "quote": "背篓里垫着旧布"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-CV2／初次见面",
+          "line_start": 928,
+          "quote": "进洞前把篓子放下。洞里的土会认草味。"
+        }
+      ],
+      "art_inference": "源卡/中文台词支持身份、原物件和边界；具体肘位、支撑、阶段与接触是可逆美术演出提案，不是已发生的台本结果、医学建议或原生动画规格。",
+      "start_pose_description_only": "独立回到原落地篓、全部草在篓内、两手在篓沿的母图关系。",
+      "pose": "双脚原位站稳，膝微屈，身体从髋部向自己右侧的原背篓（画面左）明显前俯。左手（画面右）仍扶住近身右侧篓沿。右臂（画面左）沿篓前向下伸，右掌和并拢指组平贴在原米白衬布向前沿外翻的中央宽布面上，手指顺布向下，按平一道皱褶；手落到篓沿下方，明显低于原来搭在草叶旁的手位。旧布仍垫在篓里并外翻，不抽出、不盖住全部草。眼向下看自己的手，脸平静。",
+      "end_pose_description_only": "右手可移回篓沿；衬布仍是原布，篓中草未取出、不增加包装成品。",
+      "transition_scope": "起止仅文字，每张只生成pose描述的一帧。A1/A2无默认先后关系，不制作过渡、GIF或完整动画。",
+      "visible_stage_target": "右手移到篓前外翻旧布并压住布面、躯干前俯；左手留近身篓沿、草全部留篓内。",
+      "pose_specific_sidedness": "右掌画面左下方贴篓前中央白布；左手画面右稳近身篓沿。篓仍位于人物右脚外（画面左）。",
+      "contact_and_support_checks": [
+        "右掌与外翻白布有面接触和局部布折，不能只是双手继续搭篓口。",
+        "白布从篓内经边沿连续外翻，右手不穿入藤编或草叶。",
+        "篓底不离地，双脚完整稳定，身体只轻前俯不趴在篓上。"
+      ],
+      "prop_state_and_retention": [
+        "所有原草仍在篓内；旧布仍一块，不能变新围裙或布包。",
+        "保留原垂背带、篓织纹与两鞋，正常前臂遮挡不删物。"
+      ],
+      "difference_from_mother_expression_and_batch": "母图/E1/E2双手均在上沿；本张右掌落到低于边沿的外翻布面且躯干前俯，不再是低头闻草。与珥薇按围裙同属整理布，但布是落地篓衬且手/篓/身体关系不同。",
+      "risk_level": "medium_contact_and_pose",
+      "extra_pose_constraints": [
+        "本张不取草、不拿草枝；右手只按篓前外翻旧布，篓不可被提起。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+        "after_failed_revision": "首稿及唯一修订完整保留，仍失败标缺项；不得第三稿、脚本修人体或借另一动作名重试。",
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_transparent.png"
+      ],
+      "reference_sha256": [
+        "690e448af9ebbd854128b19b012c3b76761ab7eaf5b3c4cb23607a2e077ebcb3"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、实际体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗全身基础动作关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体与有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；所有左右均按人物自身解剖侧，并按本张注明的画面侧核对。必须有下述真实手臂、躯干、腿部或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚及全部原物件，四周有透明余量。一人一个瞬间，纯alpha透明背景，无背景、地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不用脚本绘人体、拼接旋转肢体、插值、拉伸或强量化修错。只画本张动作，不画起止/过渡帧。无魔法、战斗、治疗、伤情变化、任务完成、授权、付款、认领或新剧情结果。\n人物：芩珥 FX-CV2，四十来岁的成年女人、采药歇脚者；浅土黄头巾、深棕灰鬓短卷发、缓和成熟面容，橄榄褐长上衣、米白袖里、深褐长裙、旧棕鞋；指尖草汁淡褐染痕是原特征。\n固定衣装与原物件：唯一原藤背篓保持人物右侧脚外（画面左）落地，体积/织纹不改；棕背带仍垂在原篓前，不另背第二篓。原米白旧布仍垫在同一篓内且向前沿外翻；原普通草叶总量保持，手中/篓内具体位置只按本张动作。头巾、长裙、袖里、棕鞋和指尖浅褐草汁痕保留。\n本张专属手位与侧别：右掌画面左下方贴篓前中央白布；左手画面右稳近身篓沿。篓仍位于人物右脚外（画面左）。\n本张动作：前俯按平篓沿旧布。双脚原位站稳，膝微屈，身体从髋部向自己右侧的原背篓（画面左）明显前俯。左手（画面右）仍扶住近身右侧篓沿。右臂（画面左）沿篓前向下伸，右掌和并拢指组平贴在原米白衬布向前沿外翻的中央宽布面上，手指顺布向下，按平一道皱褶；手落到篓沿下方，明显低于原来搭在草叶旁的手位。旧布仍垫在篓里并外翻，不抽出、不盖住全部草。眼向下看自己的手，脸平静。\n可见阶段目标：右手移到篓前外翻旧布并压住布面、躯干前俯；左手留近身篓沿、草全部留篓内。\n接触与支撑：右掌与外翻白布有面接触和局部布折，不能只是双手继续搭篓口。；白布从篓内经边沿连续外翻，右手不穿入藤编或草叶。；篓底不离地，双脚完整稳定，身体只轻前俯不趴在篓上。\n物件保留：所有原草仍在篓内；旧布仍一块，不能变新围裙或布包。；保留原垂背带、篓织纹与两鞋，正常前臂遮挡不删物。\n剧情边界：只暂取自己篓内已有普通草枝查看或整理自己的旧衬布，不采新草、不递交药物、不服用或调配。；不写草种、剂量、疗效、买家身份，不表示DT05送药完成或承担药师开方。\n硬约束：原草仅限原篓已有普通内容，不额外复制第二束；不要求凭图识别真实植物品种。；旧衬布保持完整内外连续，整理动作不抽空、撕裂衬布或把褐色染痕画成伤。；本张不取草、不拿草枝；右手只按篓前外翻旧布，篓不可被提起。\n",
+      "prompt_sha256": "0ad59f4603d4f400de11882b15df3f4094713fd5647a395fb562d9751c6caf8f",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_new_character_actions_sources/qiner_A2_smooth_basket_lining_front_prompt.txt",
+      "negative_constraints": [
+        "原草仅限原篓已有普通内容，不额外复制第二束；不要求凭图识别真实植物品种。",
+        "旧衬布保持完整内外连续，整理动作不抽空、撕裂衬布或把褐色染痕画成伤。",
+        "本张不取草、不拿草枝；右手只按篓前外翻旧布，篓不可被提起。",
+        "只暂取自己篓内已有普通草枝查看或整理自己的旧衬布，不采新草、不递交药物、不服用或调配。",
+        "不写草种、剂量、疗效、买家身份，不表示DT05送药完成或承担药师开方。"
+      ],
+      "existing_asset_check": {
+        "own_existing_action_directory_count": 0,
+        "matching_prior_generated_action_found": false,
+        "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_new_character_actions_sources/action_tree_scan.json",
+        "existing_expression_comparison_actually_viewed": true,
+        "author_semantic_conclusion": "母图/E1/E2双手均在上沿；本张右掌落到低于边沿的外翻布面且躯干前俯，不再是低头闻草。与珥薇按围裙同属整理布，但布是落地篓衬且手/篓/身体关系不同。"
+      }
+    }
+  ]
+}

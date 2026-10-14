@@ -1,0 +1,15 @@
+from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont
+import numpy as np,json,hashlib,sys
+D=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).parent
+font=ImageFont.truetype('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',24)
+report=[]
+for rp in sorted((D/'raw').glob('*_raw.png')):
+ im=Image.open(rp).convert('RGBA'); a=np.array(im); low=a[:,:,3]<=8; a[low]=0
+ selected=Image.fromarray(a);sp=D/'candidate_previews'/rp.name.replace('_raw','_transparent'); selected.save(sp)
+ b=selected.getbbox();r={'raw':str(rp.relative_to(D)),'selected':str(sp.relative_to(D)),'raw_sha256':hashlib.sha256(rp.read_bytes()).hexdigest(),'selected_sha256':hashlib.sha256(sp.read_bytes()).hexdigest(),'size':im.size,'bbox':b,'alpha_zero':int((a[:,:,3]==0).sum()),'alpha_partial':int(((a[:,:,3]>0)&(a[:,:,3]<255)).sum()),'hidden_rgb_nonzero':int(((a[:,:,:3]!=0).any(2)&(a[:,:,3]==0)).sum()),'cleanup':'Only alpha<=8 cleared to RGBA(0,0,0,0); no other image pixels modified'};report.append(r)
+ # correctly alpha-composite, never drop alpha before compositing
+ for mode,color,fg in [('light',(239,235,222,255),(30,30,30,255)),('dark',(37,43,49,255),(240,240,240,255))]:
+  board=Image.new('RGBA',(900,1050),color); v=selected.crop(b);v.thumbnail((830,910),Image.Resampling.NEAREST);board.alpha_composite(v,((900-v.width)//2,85+(910-v.height)//2));draw=ImageDraw.Draw(board);draw.text((20,15),rp.stem,fill=fg,font=font);draw.text((20,1010),'独立静态关键姿态 · 非连续动画 · 未运行验证',fill=fg,font=font);board.convert('RGB').save(D/'review'/f'{rp.stem}_{mode}.png')
+(D/'QA'/'alpha_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+print(json.dumps(report,ensure_ascii=False))

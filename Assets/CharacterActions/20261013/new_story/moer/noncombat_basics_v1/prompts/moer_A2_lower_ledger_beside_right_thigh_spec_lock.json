@@ -1,0 +1,72 @@
+{
+  "key": "moer_A2_lower_ledger_beside_right_thigh",
+  "title_zh": "右手垂板身侧暂歇",
+  "status": "planned_not_generated",
+  "output_count": 1,
+  "kind": "independent_full_body_noncombat_keypose",
+  "evidence": [
+    {
+      "source_id": "moer_card",
+      "locator": "体貌与随身",
+      "line_start": 17,
+      "quote": "指节发黄，账板不离手"
+    },
+    {
+      "source_id": "field_dialogue",
+      "locator": "FX-WIL／知情边界",
+      "line_start": 604,
+      "quote": "不说酒馆东家的去向"
+    }
+  ],
+  "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+  "start_pose_description_only": "独立从母图右手托腹前板、左食指在板边开始。",
+  "pose": "双鞋原样分站、躯干直立。人物右臂从画面左腹前降到本人右腿外侧，右手稳抓同一木账板的上侧边，手指自然绕过板厚，让板以近竖直方向低垂在画面左的右大腿外旁；板上端约腰下、下端保持高于鞋顶且不触地，原板尺寸不变、抽象刻划面仍朝外可见。人物左手完全离开板，左臂自然下垂在画面右身侧、手掌放松，手与板不再相接。头脸朝画面左，神态平常。",
+  "end_pose_description_only": "右手可重新把板抬回腹前，左掌再扶；板全程不离本人右手。",
+  "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+  "visible_stage_target": "木板明显降到画面左大腿外侧并近竖直，右臂向下，左手离板在另一侧自然下垂，腹前不再横有账板。",
+  "pose_specific_sidedness": "仍由母图画面左的本人右手独持板，板低在画面左本人右腿外；左手低在画面右，不换手、不把板移到左腿旁。",
+  "contact_and_support_checks": [
+    "右手包住原板上侧边，板由该手支撑而不悬空，仍只有一板。",
+    "左手已离板且独立可见，不残留原板缘食指；板和腿之间有清楚外缘。",
+    "原板完整未缩小，离地、双鞋完整可见；没有放下、丢弃或递板结果。"
+  ],
+  "prop_state_and_retention": [
+    "保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。"
+  ],
+  "difference_from_mother_expression_and_batch": "母图/旧表情板横斜在腹前且两手靠板；本张同一右手低垂板到腿外、左手放下，明显区别于胸前抬板和改脸。",
+  "risk_level": "medium_pose_and_contact",
+  "new_contact_prop": null,
+  "new_story_fact": false,
+  "sequence_required": false,
+  "animation_claim": false,
+  "generation_budget": {
+    "initial": 1,
+    "max_hard_error_revisions": 1,
+    "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+    "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+    "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+  },
+  "review_status": "planning_author_checked; independent_plan_review_pending",
+  "reference_image_paths": [
+    "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png"
+  ],
+  "reference_sha256": [
+    "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e"
+  ],
+  "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：摩珥 FX-WIL。四十来岁的酒馆男账房，深褐蓬松后梳短发、无须成熟窄面、脸朝画面左。深褐短褂、暗绿开领内衫、米麻袖口、褐裤与深棕鞋完整保留。只用摩珥FX-WIL/moer，不是背铲的谟珥FX-TRS/moer_trs。\n固定衣装与原物件：保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。\n本张动作：右手垂板身侧暂歇。双鞋原样分站、躯干直立。人物右臂从画面左腹前降到本人右腿外侧，右手稳抓同一木账板的上侧边，手指自然绕过板厚，让板以近竖直方向低垂在画面左的右大腿外旁；板上端约腰下、下端保持高于鞋顶且不触地，原板尺寸不变、抽象刻划面仍朝外可见。人物左手完全离开板，左臂自然下垂在画面右身侧、手掌放松，手与板不再相接。头脸朝画面左，神态平常。\n本张侧别：仍由母图画面左的本人右手独持板，板低在画面左本人右腿外；左手低在画面右，不换手、不把板移到左腿旁。\n必须明显可见：木板明显降到画面左大腿外侧并近竖直，右臂向下，左手离板在另一侧自然下垂，腹前不再横有账板。\n接触与支撑：右手包住原板上侧边，板由该手支撑而不悬空，仍只有一板。；左手已离板且独立可见，不残留原板缘食指；板和腿之间有清楚外缘。；原板完整未缩小，离地、双鞋完整可见；没有放下、丢弃或递板结果。。\n",
+  "prompt_sha256": "35200eb2ef2f336ddcb5ff37492f4dcbdfedc6caad93d5e2604760dce5a2f803",
+  "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/moer_A2_lower_ledger_beside_right_thigh_prompt.txt",
+  "negative_constraints": [
+    "只调换本人账板的持放高度，板不离手、不挂墙、不交给他人、不擦写/划名、不免账收债、不认证假凭证、不画DT14结果。",
+    "摩珥moer/FX-WIL与谟珥moer_trs/FX-TRS严格分人；不借短铲、赭黄外衣、崖灰、年龄或同伴对白。",
+    "举板要大幅改变前臂与板高度，不只抬头；垂板以同一右手抓稳上侧边，手与板接触可读。",
+    "板不能挡脸或双脚，抽象刻划不升级成文字账目；另一手不能一边托板一边放下。"
+  ],
+  "existing_asset_check": {
+    "own_action_directory_count": 0,
+    "prior_action_found": false,
+    "expression_board_actually_viewed": true,
+    "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+    "semantic_comparison": "母图/旧表情板横斜在腹前且两手靠板；本张同一右手低垂板到腿外、左手放下，明显区别于胸前抬板和改脸。"
+  }
+}

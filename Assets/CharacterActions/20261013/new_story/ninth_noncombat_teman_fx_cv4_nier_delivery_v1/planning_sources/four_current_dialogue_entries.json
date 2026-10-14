@@ -1,0 +1,364 @@
+{
+  "source": {
+    "path": "research/field-npc-dialogue.json",
+    "bytes": 132451,
+    "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+    "source_id": "field_dialogue_registry",
+    "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/ninth_new_character_actions_sources/files/research/field-npc-dialogue.json"
+  },
+  "locator": "npcs filtered by exact canonical ID",
+  "entries": [
+    {
+      "id": "FX-HRP",
+      "name": "妲兰",
+      "role": "哈比巢下猎人",
+      "site": "rumor_harpyNest1",
+      "region": "R04",
+      "look": "三十出头的女子，肩背箭囊，脸上有一道从眉到尾的旧痕；说话时手一直搭在弓弦上。",
+      "voice": "低、稳、只讲事实；被夸就皱眉。",
+      "knows": [
+        "巢的换羽时节",
+        "崖壁哪条缝能挂绳"
+      ],
+      "not_knows": [
+        "不替关隘清剿定日子",
+        "不说自己为谁打猎"
+      ],
+      "greetings": [
+        [
+          "first",
+          "别抬头。抬头它们就动。"
+        ],
+        [
+          "revisit",
+          "你还在这一带。绳子带了吗？"
+        ],
+        [
+          "night",
+          "夜里巢是静的。静的时候更危险。"
+        ]
+      ],
+      "chats": [
+        "羽毛值钱，是因为有人肯买。不是因为羽毛好。",
+        "它们记脸。你来过一次，它们就记住了。",
+        "我一个人来，是因为人多会吵。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "沿着我踩过的石头走，别抄近路。"
+        ],
+        [
+          "warning",
+          "听见扑翅别跑，蹲下。跑才追你。"
+        ],
+        [
+          "refusal",
+          "要我带你上崖？不带。上去了还得下来。"
+        ]
+      ],
+      "links": [
+        "区域_R04_王廷关隘与边城",
+        "空间_PAS_柏石关与关外聚落"
+      ],
+      "visits": {
+        "task": "台本_D06_柏石军需地窖",
+        "before": [
+          "你身上有地窖的土味。先掸干净，崖上闻得出。"
+        ],
+        "after": [
+          "地窖的事完了，崖上的巢还在。你要再来，绳子自己带。"
+        ],
+        "early": [
+          "你先见的我，后下的窖。好，我说过的话你别改写。"
+        ],
+        "late": [
+          "窖里的事完了才上崖？崖不认迟来的人，只认站得稳的。"
+        ],
+        "proxy": [
+          "猎人不在崖下时，别替她数羽毛；巢自己会数。"
+        ]
+      },
+      "english": {
+        "greet.first": "Don't look up. Look up and they move.",
+        "greet.revisit": "Still in these parts. Did you bring rope?",
+        "greet.night": "The nest is quiet at night. Quiet is worse.",
+        "chat.1": "Feathers fetch a price because someone pays it, not because they're fine.",
+        "chat.2": "They remember faces. Come once and you're remembered.",
+        "chat.3": "I hunt alone because a crowd makes noise.",
+        "site.arrival": "Follow the stones I stepped on. No shortcuts.",
+        "site.warning": "Wings behind you - crouch, don't run. Running is what they chase.",
+        "site.refusal": "Take you up the cliff? No. Up is easy; down is the problem.",
+        "visit.before": "You smell of the cellar. Brush it off; the cliff can smell it.",
+        "visit.after": "The cellar business is done; the nest is still there. Come again and bring your own rope.",
+        "visit.early": "You met me before going down to the cellar. Good - don't rewrite what I said.",
+        "visit.late": "The cellar first, the cliff second? Cliffs don't welcome latecomers; they test feet.",
+        "visit.proxy": "Whenever the hunter is gone, don't count her feathers. The nest counts its own."
+      }
+    },
+    {
+      "id": "FX-HNY",
+      "name": "忒曼",
+      "role": "养蜂人",
+      "site": "rumor_hornetHive1",
+      "region": "R03",
+      "look": "五十来岁的男人，罩着补过的网面罩，臂上套着旧皮袖；身上总有股烟味。",
+      "voice": "絮絮叨叨，爱打比方说蜂；谈到亡蜂巢就收起笑。",
+      "knows": [
+        "蜂群什么时候搬走",
+        "哪片田今年没人种"
+      ],
+      "not_knows": [
+        "不替村里认领蜂箱",
+        "不猜别人家的事"
+      ],
+      "greetings": [
+        [
+          "first",
+          "站远些，你身上味道重，蜂不喜欢。"
+        ],
+        [
+          "revisit",
+          "是你。烟还够，坐吧——别坐箱边。"
+        ],
+        [
+          "night",
+          "夜里蜂归巢，人也该归。你不回村？"
+        ]
+      ],
+      "chats": [
+        "蜂认烟不认人。人认人，也得看烟——酒桌上那点烟。",
+        "田荒了蜂就散。散出去就不回来，跟人一样。",
+        "蜜卖不出去也得收。烂在箱里，明年就没有了。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "先闻闻风。风往哪边吹，你就站哪边。"
+        ],
+        [
+          "warning",
+          "别拍。拍一下，整箱都出来。"
+        ],
+        [
+          "refusal",
+          "要我去掏亡蜂巢？不去。那巢不是蜂丢的，是人丢的。"
+        ]
+      ],
+      "links": [
+        "区域_R03_曼恩边地",
+        "聚落_OSB_奥斯布鲁克"
+      ],
+      "visits": {
+        "task": "台本_DT04_收割前的空地",
+        "before": [
+          "空地的活计要是用火，先跟我说一声。烟一起，蜂就散。"
+        ],
+        "after": [
+          "空地收拾完了。蜂认得烟，也认得收拾过地的人。"
+        ],
+        "early": [
+          "你先来过我这儿，后去的空地。那烟的事你办得对。"
+        ],
+        "late": [
+          "空地的事完了才来？蜂没怪你，我怪你晚。"
+        ],
+        "proxy": [
+          "养蜂人不在时，蜂箱上的烟熏痕别擦；那是规矩。"
+        ]
+      },
+      "english": {
+        "greet.first": "Stand back; you carry a strong scent and the bees dislike it.",
+        "greet.revisit": "It's you. Smoke's still enough - sit, but not by the boxes.",
+        "greet.night": "Bees go home at night; so should people. Not going back to the village?",
+        "chat.1": "Bees know smoke, not faces. People know faces - and smoke too, the kind at a tavern table.",
+        "chat.2": "When fields go fallow the swarm scatters. Scattered means gone, same as people.",
+        "chat.3": "Honey that won't sell still gets taken in. Left rotting in the box, there's none next year.",
+        "site.arrival": "Smell the wind first. Stand on the side it blows toward.",
+        "site.warning": "Don't swat. One swat brings out the whole box.",
+        "site.refusal": "Rob the dead hive for you? No. That hive wasn't lost by bees; it was lost by people.",
+        "visit.before": "If the clearing work needs fire, tell me first. One smoke and the bees scatter.",
+        "visit.after": "The clearing's done. Bees know smoke, and they know who tidied the ground.",
+        "visit.early": "You came to me first, the clearing after. You handled the smoke right.",
+        "visit.late": "The clearing's finished and now you remember me? The bees forgive you. I don't.",
+        "visit.proxy": "If the beekeeper has gone, don't wipe the smoke marks off the hives. That's the rule."
+      }
+    },
+    {
+      "id": "FX-HNT",
+      "name": "珥兰",
+      "role": "猎场设陷者",
+      "site": "rumor_grazingHG1",
+      "region": "R03",
+      "look": "三十多岁的女子，腿绑皮护，腰后插着三根削尖的木桩；走路几乎不出声。",
+      "voice": "几乎不说整句，先说“看脚下”；聊到猎物才多说两句。",
+      "knows": [
+        "哪片草场今年空着",
+        "自己下的陷在哪几处"
+      ],
+      "not_knows": [
+        "不替牧场主看牲口",
+        "不说自己卖给谁"
+      ],
+      "greetings": [
+        [
+          "first",
+          "看脚下。"
+        ],
+        [
+          "revisit",
+          "还是你。今天别往南走，南边有陷。"
+        ],
+        [
+          "night",
+          "夜里草场是它们的。白天才是我的。"
+        ]
+      ],
+      "chats": [
+        "陷是木头做的，人心不是。",
+        "猎物多的时候，人会贪。贪了就不看脚下。",
+        "我不打幼的。打了明年吃什么。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "跟着我踩的地方走。多一步都不行。"
+        ],
+        [
+          "warning",
+          "看见翻起的草皮就绕，那是新陷。"
+        ],
+        [
+          "refusal",
+          "要我撤陷给你让路？不撤。绕两步的事。"
+        ]
+      ],
+      "links": [
+        "区域_R03_曼恩边地",
+        "聚落_OSB-S01_麦根庄"
+      ],
+      "visits": {
+        "task": "台本_DT10_别让狼靠近夜岗",
+        "before": [
+          "夜岗要用的陷，我按旧图摆。你改一根木桩，我就撤一片陷。"
+        ],
+        "after": [
+          "夜岗安生了。陷还在草里，你自己记着位置，别怪我没喊。"
+        ],
+        "early": [
+          "你先见的我，后去的夜岗。那旧图的事你对得上。"
+        ],
+        "late": [
+          "夜岗的事完了才来找我？陷不等人，狼也不等。"
+        ],
+        "proxy": [
+          "设陷的人不在草场时，翻起的草皮就是告示；别踩。"
+        ]
+      },
+      "english": {
+        "greet.first": "Watch your feet.",
+        "greet.revisit": "Still you. Don't go south today; snares to the south.",
+        "greet.night": "The meadow is theirs at night. The day is mine.",
+        "chat.1": "Snares are made of wood. People aren't.",
+        "chat.2": "When game is plenty, people get greedy. Greedy people stop watching their feet.",
+        "chat.3": "I don't take the young. Take them and what do we eat next year?",
+        "site.arrival": "Step where I stepped. Not one pace more.",
+        "site.warning": "Turned turf means a new snare. Walk around it.",
+        "site.refusal": "Pull my snares to clear your way? No. Two steps around it is all it takes.",
+        "visit.before": "Snares for the night watch go by the old map. Move one stake and I pull a whole line.",
+        "visit.after": "The night watch is quiet. The snares are still in the grass; remember where, and don't blame me for silence.",
+        "visit.early": "You met me before the night watch. The old map will line up for you.",
+        "visit.late": "The night watch is done and only now the snares? Snares keep their own time; so do wolves.",
+        "visit.proxy": "Were the trapper gone from the meadow, turned turf is the notice. Don't step on it."
+      }
+    },
+    {
+      "id": "FX-CV4",
+      "name": "佴珥",
+      "role": "兽道守望者",
+      "site": "rumor_cave4",
+      "region": "R06",
+      "look": "三十多岁的男人，身上披着带毛的旧褂，腰后插一根削尖的短棍；说话时看兽道不看人。",
+      "voice": "短句，先报兽的行踪再答问题；被夸就摆手。",
+      "knows": [
+        "兽道口什么时候换班",
+        "哪段树皮是新蹭的"
+      ],
+      "not_knows": [
+        "不替猎人认领兽皮",
+        "不承诺清剿"
+      ],
+      "greetings": [
+        [
+          "first",
+          "站到兽道侧面。站在道上，它先看见你。"
+        ],
+        [
+          "revisit",
+          "还是你。今天兽道没新印。"
+        ],
+        [
+          "night",
+          "夜里我守上半宿，下半宿归它。"
+        ]
+      ],
+      "chats": [
+        "骨堆不是它凶，是它按点吃。",
+        "人比兽难守。人换班不打招呼。",
+        "守望不是杀。先看清楚是几头。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "脚步压到最轻。兽道口回音大。"
+        ],
+        [
+          "warning",
+          "新蹭的树皮别摸，手味留得久。"
+        ],
+        [
+          "refusal",
+          "要我进洞赶它？不。赶了它改道，道就没了。"
+        ]
+      ],
+      "links": [
+        "区域_R06_无名修院山地",
+        "台本_DT10_别让狼靠近夜岗"
+      ],
+      "visits": {
+        "task": "台本_DT10_别让狼靠近夜岗",
+        "before": [
+          "夜岗要守，先看兽道。道上没新印，才算安稳。"
+        ],
+        "after": [
+          "夜岗安生了。兽道还在，兽也还在，只是没过来。"
+        ],
+        "early": [
+          "你先见过我，后去的夜岗。那几处新蹭的树皮你还记得。"
+        ],
+        "late": [
+          "夜岗的事完了才来？兽道不等人，风也不等。"
+        ],
+        "proxy": [
+          "守望的人不在时，新蹭的树皮就是告示；别摸。"
+        ]
+      },
+      "english": {
+        "greet.first": "Stand off the trail. Stand on it and it sees you first.",
+        "greet.revisit": "Still you. No fresh prints on the trail today.",
+        "greet.night": "I keep the first half of the night; the second half is its.",
+        "chat.1": "The bone pile isn't cruelty; it eats on schedule.",
+        "chat.2": "People are harder to watch than beasts. They change shifts without telling you.",
+        "chat.3": "Watching isn't killing. First count how many heads.",
+        "site.arrival": "Keep your steps as light as you can. The trail head carries sound.",
+        "site.warning": "Don't touch freshly rubbed bark. Hand smell lingers.",
+        "site.refusal": "Drive it out of the cave? No. Drive it out and it changes trails, and the trail is gone.",
+        "visit.before": "To hold the night watch, read the trail first. No fresh prints means a quiet night.",
+        "visit.after": "The night watch is quiet. The trail is still there, and so is the beast; it just didn't come.",
+        "visit.early": "Your first call was here, the night watch second. You still recall those rubbed trunks.",
+        "visit.late": "The watch behind you, the trail now? Neither trail nor wind waits.",
+        "visit.proxy": "When the watcher is away, freshly rubbed bark is the notice. Don't touch it."
+      }
+    }
+  ]
+}

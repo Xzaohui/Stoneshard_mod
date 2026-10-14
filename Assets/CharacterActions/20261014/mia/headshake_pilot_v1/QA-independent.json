@@ -1,0 +1,312 @@
+{
+  "reviewer": "independent audit agent",
+  "reviewed_at_utc": "2026-10-14T13:07:20Z",
+  "sequence_status": "INCOMPLETE_K3_FAILED_FIXED_FEET",
+  "concept_direction_readability": "K0原朝向→K1近左侧→K2较正面反向成立；K3两版头面回转及辫尾右拖可读为收势候选，但脚稳失败，不能作为完成序列。",
+  "complete_loop": false,
+  "runtime_verified": false,
+  "count": {
+    "requested_new_stages": 3,
+    "reused_mother": 1,
+    "generation_attempts": 5,
+    "accepted_new_concept_frames": 2,
+    "rejected_attempts": 3,
+    "unfilled_stages": [
+      "K3"
+    ],
+    "revision_attempts": {
+      "K1": 0,
+      "K2": 1,
+      "K3": 1
+    }
+  },
+  "visual_review": {
+    "inspected": "批准母图原尺寸；全部5次新稿原尺寸；K0/K1v1/K2v2/K3v1浅深底统一板；K2v1及K3v2独立浅深底；鞋局部对照。",
+    "identity": "通过候选K1v1/K2v2保留同一成年米娅脸型、短鼻、棕单低辫、暗青披肩、米白裙、软低鞋及同叠灰米毯。未见新扣子/腰带/靴或职业改变。",
+    "ratio": "目测头冠至肤色下颏约480–495px、剩余身体约735–750px，约1:1.5；这是视觉近似，非标注锚点精确检验。",
+    "held_object": "各候选双手连续托同一叠毯；细小轮廓/褶皱重绘存在，无换物/悬空手硬错。",
+    "camera_body": "相同1118×1407画布、未镜像躯干、无全身缩放假转头；肩/衣褶/裙轮廓及足部有重绘漂移，不是像素固定身体。",
+    "alpha": "实际浅深底未见大面积背景残块；raw保留半透明细碎边缘/离散alpha，未做游戏像素规范终验。"
+  },
+  "frames": {
+    "K0": {
+      "status": "REUSED_APPROVED_MOTHER",
+      "new": false
+    },
+    "K1_v1": {
+      "status": "ACCEPTED_SPARSE_CONCEPT_WITH_DRIFT",
+      "reason": "远眼遮挡、鼻/面颊轮廓与颈部朝向一起变化，真近侧转；鞋长139/126→140/126，间距77不变，足底约+3px。不是精确像素锁定。"
+    },
+    "K2_v1": {
+      "status": "REJECTED",
+      "reason": "单辫移到画面左肩，发分与可见耳换边，头发疑似镜像；同人序列连续性硬错。"
+    },
+    "K2_v2": {
+      "status": "ACCEPTED_SPARSE_CONCEPT_WITH_DRIFT",
+      "reason": "单辫恢复右后方；双颊/远眼展开与鼻位置变化构成K1反向真转头。鞋长139/128、间距76，落脚+2px、横向约+5–6px，属轻微重绘偏差。"
+    },
+    "K3_v1": {
+      "status": "REJECTED_FIXED_FEET",
+      "reason": "头回近原角度且辫尾右拖，不是K0复制；但左鞋139→130px，右126→123px，鞋间77→88px，左后跟收进一个绘制像素簇。"
+    },
+    "K3_v2": {
+      "status": "REJECTED_FIXED_FEET_BUDGET_EXHAUSTED",
+      "reason": "保留头辫收势，但左鞋x401–544宽144，右x634–757宽124，间距89，底1334；相较母图双鞋位置/鞋长/鞋距仍失稳，唯一硬修订未修好。不得继续生图。"
+    }
+  },
+  "measurement_method": "足部ROI y1275:1360；左x350:580，右x590:800；alpha>128且max(RGB)<140暗鞋像素的半开包围框。y上界为ROI裁切，不代表鞋顶；宽与间距为该截面近似，已与可视鞋尖/鞋跟局部对照。不是实机或骨骼锚点检测。",
+  "shoe_measurements": {
+    "4_mia_ratio_1_to_1_5_v2_raw_imagegen.png": {
+      "left_dark_shoe_bbox": [
+        409,
+        1275,
+        548,
+        1328
+      ],
+      "right_dark_shoe_bbox": [
+        625,
+        1275,
+        751,
+        1328
+      ],
+      "widths": [
+        139,
+        126
+      ],
+      "interfoot_gap": 77
+    },
+    "K1_v1.png": {
+      "left_dark_shoe_bbox": [
+        412,
+        1275,
+        552,
+        1331
+      ],
+      "right_dark_shoe_bbox": [
+        629,
+        1275,
+        755,
+        1331
+      ],
+      "widths": [
+        140,
+        126
+      ],
+      "interfoot_gap": 77
+    },
+    "K2_v1.png": {
+      "left_dark_shoe_bbox": [
+        407,
+        1275,
+        543,
+        1329
+      ],
+      "right_dark_shoe_bbox": [
+        628,
+        1275,
+        752,
+        1330
+      ],
+      "widths": [
+        136,
+        124
+      ],
+      "interfoot_gap": 85
+    },
+    "K2_v2.png": {
+      "left_dark_shoe_bbox": [
+        415,
+        1275,
+        554,
+        1330
+      ],
+      "right_dark_shoe_bbox": [
+        630,
+        1275,
+        758,
+        1330
+      ],
+      "widths": [
+        139,
+        128
+      ],
+      "interfoot_gap": 76
+    },
+    "K3_v1.png": {
+      "left_dark_shoe_bbox": [
+        412,
+        1275,
+        542,
+        1331
+      ],
+      "right_dark_shoe_bbox": [
+        630,
+        1275,
+        753,
+        1331
+      ],
+      "widths": [
+        130,
+        123
+      ],
+      "interfoot_gap": 88
+    },
+    "K3_v2.png": {
+      "left_dark_shoe_bbox": [
+        401,
+        1275,
+        545,
+        1334
+      ],
+      "right_dark_shoe_bbox": [
+        634,
+        1275,
+        758,
+        1334
+      ],
+      "widths": [
+        144,
+        124
+      ],
+      "interfoot_gap": 89
+    }
+  },
+  "provenance": [
+    {
+      "raw": "raw/K1_v1.png",
+      "sha256": "df8ae11d10b8fd0a27faf85567d5cc9151e04b30090fae8599f6ae77d3a6f963",
+      "payload_matches_raw": true,
+      "params_keys": [
+        "prompt",
+        "referenced_image_paths",
+        "transparent_background"
+      ],
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+      ],
+      "prompt_exact": true,
+      "prompt_equal_ignoring_final_newline": true,
+      "params_saved_before_return": true,
+      "size": [
+        1118,
+        1407
+      ]
+    },
+    {
+      "raw": "raw/K2_v1.png",
+      "sha256": "9581c3368ee3c23de6e7c979daaba0562fe0f32fdb2150cff09f38df1b4f6cb3",
+      "payload_matches_raw": true,
+      "params_keys": [
+        "prompt",
+        "referenced_image_paths",
+        "transparent_background"
+      ],
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+      ],
+      "prompt_exact": true,
+      "prompt_equal_ignoring_final_newline": true,
+      "params_saved_before_return": true,
+      "size": [
+        1118,
+        1407
+      ]
+    },
+    {
+      "raw": "raw/K2_v2.png",
+      "sha256": "0b185fafc092bcdf5bd2441c142f5310e59d29c8abb3c2e8f9407f843524db69",
+      "payload_matches_raw": true,
+      "params_keys": [
+        "prompt",
+        "referenced_image_paths",
+        "transparent_background"
+      ],
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+      ],
+      "prompt_exact": false,
+      "prompt_equal_ignoring_final_newline": true,
+      "params_saved_before_return": true,
+      "size": [
+        1118,
+        1407
+      ]
+    },
+    {
+      "raw": "raw/K3_v1.png",
+      "sha256": "b3f84b31c79df866bf5a01e825bbac4461ddfe8e1eb81a6962bd541583e926fe",
+      "payload_matches_raw": true,
+      "params_keys": [
+        "prompt",
+        "referenced_image_paths",
+        "transparent_background"
+      ],
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+      ],
+      "prompt_exact": true,
+      "prompt_equal_ignoring_final_newline": true,
+      "params_saved_before_return": true,
+      "size": [
+        1118,
+        1407
+      ]
+    },
+    {
+      "raw": "raw/K3_v2.png",
+      "sha256": "0f387a9887ab10f1f1594b00a03e7493b6f02725a1adf3ddaa8a86f79598fa43",
+      "payload_matches_raw": true,
+      "params_keys": [
+        "prompt",
+        "referenced_image_paths",
+        "transparent_background"
+      ],
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterActions/20261014/mia/headshake_pilot_v1/raw/K3_v1.png",
+        "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+      ],
+      "prompt_exact": false,
+      "prompt_equal_ignoring_final_newline": true,
+      "params_saved_before_return": true,
+      "size": [
+        1118,
+        1407
+      ]
+    }
+  ],
+  "parameter_evidence_limits": "params/txt为作者侧预存记录，mtime早于returns仅为文件系统佐证。作者声明实际调用由其对象直接传image_gen__imagegen，CALL_RECORD记录链路；返回仅含image_url/output_hint，没有服务端参数回显，独审未获得服务端调用追踪。payload与raw逐字节独立核验全部通过。",
+  "source_hash_verification": [
+    {
+      "source": "AGENTS.md",
+      "matches_snapshot": true,
+      "current_matches": true
+    },
+    {
+      "source": "design/AGENTS.md",
+      "matches_snapshot": true,
+      "current_matches": true
+    },
+    {
+      "source": "design/04_人物/城市人物/人物_NPC-MIA_米娅.md",
+      "matches_snapshot": true,
+      "current_matches": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+      "matches_snapshot": true,
+      "current_matches": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+      "matches_snapshot": true,
+      "current_matches": true
+    }
+  ],
+  "delivery_requirement": "正式4格K3标缺项；只交付K1v1/K2v2为接收新姿态。K2v1/K3v1/K3v2失败原稿留来源档，不算合格。不得宣称完整摇头序列/完整循环/游戏内通过。",
+  "scope": "独审仅新增QA及independent_audit展示辅助；未改作者源图、FINAL、ZIP，未生图、上传或Git。"
+}

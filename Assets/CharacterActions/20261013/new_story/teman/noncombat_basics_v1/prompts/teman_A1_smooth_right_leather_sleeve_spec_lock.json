@@ -1,0 +1,72 @@
+{
+  "key": "teman_A1_smooth_right_leather_sleeve",
+  "title_zh": "左掌轻理右侧皮袖",
+  "status": "planned_not_generated",
+  "output_count": 1,
+  "kind": "independent_full_body_noncombat_keypose",
+  "evidence": [
+    {
+      "source_id": "teman_card",
+      "locator": "体貌与随身",
+      "line_start": 17,
+      "quote": "臂上套着旧皮袖"
+    },
+    {
+      "source_id": "field_dialogue",
+      "locator": "FX-HNY／警告，仅限制不是拍打驱蜂",
+      "line_start": 327,
+      "quote": "别拍。拍一下，整箱都出来。"
+    }
+  ],
+  "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体理披/拂衣/抚护片/理袖/扶帽/拢襟/舒展是本轮可逆美术提案，台本未记载这些动作已经发生。",
+  "start_pose_description_only": "从母图右手前张、左手腹前的站姿开始。",
+  "pose": "两靴分开站稳。右上臂在画面左稍向前，右肘微弯，右前臂斜向下伸，右手自然松弛朝下，不再张掌比喻。左手从原腹前移出，左前臂横过下胸，左掌平贴本人右前臂外侧、腕上方的一大片灰褐皮袖，停在缓缓抚平皮面的瞬间。两只手清楚分开，左手接皮袖而不是握右手；原皮袖依然套好，腕口浅麻边与原绑结不变。头脸朝画面左，网面罩全程放下，原帽和补丁保持，神态平常。",
+  "end_pose_description_only": "左手可离开右皮袖，双臂放回身侧，皮袖不更换。",
+  "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+  "visible_stage_target": "左前臂横身、左掌广面贴右皮袖，右臂低伸且右手松垂；明确打破母图谈话张掌轮廓。",
+  "pose_specific_sidedness": "左手从画面右横到画面左的本人右皮袖；右臂在画面左前下方。",
+  "contact_and_support_checks": [
+    "左掌贴宽皮袖表面，两手不相握，皮袖仍连于右臂。",
+    "不解小结、不拆袖、不画拍打或飞虫。",
+    "网罩原样下垂，双靴原位着地，左右皮袖均完整。"
+  ],
+  "prop_state_and_retention": [
+    "原米麻帽与补网面罩始终戴好，网罩仍放下围脸，帽/网边补丁和网后五官保留；不掀罩、不摘帽、不遮脸。两臂原灰褐旧皮袖均保留，人物左皮袖（画面右）的原补缝与外侧绑结保持，不拆结、不增加手套。赭衣、腰带和双靴保持；双手仅按本张动作改变。"
+  ],
+  "difference_from_mother_expression_and_batch": "母图及旧表达是右掌开放/低垂、左手近腰，本张左手跨身接右皮袖、右臂低伸，目标是衣装动作而非情绪切换。",
+  "risk_level": "medium_pose_and_contact",
+  "new_contact_prop": null,
+  "new_story_fact": false,
+  "sequence_required": false,
+  "animation_claim": false,
+  "generation_budget": {
+    "initial": 1,
+    "max_hard_error_revisions": 1,
+    "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+    "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+    "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+  },
+  "review_status": "planning_author_checked; independent_plan_review_pending",
+  "reference_image_paths": [
+    "Assets/CharacterDesigns/20261013/expressive/new_story/teman/concept_v1/teman_transparent.png"
+  ],
+  "reference_sha256": [
+    "29728fdd89ba2bd7f062ab64a5881170778a9660a5ee3b0be2935f24ffd1b282"
+  ],
+  "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图紧凑而成熟的成年身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：忒曼 FX-HNY。五十来岁的成年男人；灰发灰须、原宽鼻和成熟脸，脸仍朝画面左。米麻宽沿帽和补过的网面罩、赭黄粗布褂、棕腰带、双臂厚旧皮袖、深裤和棕靴保持。网后原五官可读。\n固定衣装与原物件：原米麻帽与补网面罩始终戴好，网罩仍放下围脸，帽/网边补丁和网后五官保留；不掀罩、不摘帽、不遮脸。两臂原灰褐旧皮袖均保留，人物左皮袖（画面右）的原补缝与外侧绑结保持，不拆结、不增加手套。赭衣、腰带和双靴保持；双手仅按本张动作改变。\n本张动作：左掌轻理右侧皮袖。两靴分开站稳。右上臂在画面左稍向前，右肘微弯，右前臂斜向下伸，右手自然松弛朝下，不再张掌比喻。左手从原腹前移出，左前臂横过下胸，左掌平贴本人右前臂外侧、腕上方的一大片灰褐皮袖，停在缓缓抚平皮面的瞬间。两只手清楚分开，左手接皮袖而不是握右手；原皮袖依然套好，腕口浅麻边与原绑结不变。头脸朝画面左，网面罩全程放下，原帽和补丁保持，神态平常。\n本张侧别：左手从画面右横到画面左的本人右皮袖；右臂在画面左前下方。\n必须明显可见：左前臂横身、左掌广面贴右皮袖，右臂低伸且右手松垂；明确打破母图谈话张掌轮廓。\n接触与支撑：左掌贴宽皮袖表面，两手不相握，皮袖仍连于右臂。；不解小结、不拆袖、不画拍打或飞虫。；网罩原样下垂，双靴原位着地，左右皮袖均完整。。\n",
+  "prompt_sha256": "0478c438586043d546def41e6331ccae2d74cbd907759841b7696fb0ee1b9d8c",
+  "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/ninth_new_character_actions_sources/teman_A1_smooth_right_leather_sleeve_prompt.txt",
+  "negative_constraints": [
+    "只整理本人原皮袖或扶稳原帽冠，不驱蜂、不拍蜂、不取蜜、不掏巢。",
+    "烟味不绘成烟、火或吸烟工具；不加蜂群/蜂箱，不认领蜂箱、不显示DT04结案。",
+    "网面罩不能为了手位抬起或消失，帽冠接触在外部大面积帽面，脸前网不受拉。",
+    "理袖接触在宽皮袖外面，不要求微小袖结开合；原两袖不能融合成一个肢体。"
+  ],
+  "existing_asset_check": {
+    "own_action_directory_count": 0,
+    "prior_action_found": false,
+    "expression_board_actually_viewed": true,
+    "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/ninth_new_character_actions_sources/action_tree_scan.json",
+    "semantic_comparison": "母图及旧表达是右掌开放/低垂、左手近腰，本张左手跨身接右皮袖、右臂低伸，目标是衣装动作而非情绪切换。"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "slug": "sune",
+  "canonical_id": "ASH-NPC-SUNE",
+  "name": "苏奈",
+  "status": "selected_planned_not_generated",
+  "selection_status": "requested_candidate_kept",
+  "source_card_hash_matches_roster44": true,
+  "source_ids": [
+    "sune_card",
+    "sune_mother_manifest",
+    "sune_mother_spec",
+    "sune_expression_manifest",
+    "sune_expression_qa"
+  ],
+  "mother_image": {
+    "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/sune/concept_v1/sune_v1_raw_imagegen.png",
+    "raw_sha256": "706ff08f411b4088bed973295341e896cc3caf45b1be7dd6e2c6ca3720050bd9",
+    "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/sune/concept_v1/sune_transparent.png",
+    "transparent_sha256": "16d05f7c04d67d9599a5536cd30003009be790e1936987bcd4538a6bb5547a35",
+    "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/sune/concept_v1/manifest.json",
+    "manifest_sha256": "c5b22d5ab2bc0e8f59cb52a218b594c34c8dfc2313ad89c6ada3cda8fb4d1c1c",
+    "independent_qa_source_id": "mother_qa",
+    "actual_visual_observation": "母图左手（画面右）抱竖向两空栏木板，右手（画面左）摊掌；两支短炭笔同在右前腰笔插（画面左）。E1右手垂下、E2右手停腹前，均未取笔或将木板转向。",
+    "fixed_sides": "原木记录板由人物左手（画面右）持，双炭笔笔插位于人物右前腰（画面左）。A1只右手操作原两笔之一；A2两笔都留原笔插，双手转同一木板。",
+    "raw_and_transparent_actually_viewed": true,
+    "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/sune/expressions_v1/review/sune_expressions_light.png"
+  },
+  "duplicate_check": {
+    "own_existing_branches": [
+      "concept_v1",
+      "expressions_v1"
+    ],
+    "own_action_directories_found": [],
+    "existing_expressions_actually_viewed": true,
+    "do_not_recount": [
+      "母图与表情小手势",
+      "sources内复用图",
+      "重复展示板/源ZIP成员",
+      "只有表情或头姿的变化"
+    ]
+  },
+  "story_boundaries": [
+    "手里有笔不等于获许可：笔尖不触木板、纸或人体，不画书写/数据/签名；普通物资与观察资格不捆绑。",
+    "A1/A2只整理自有器物，不表示开始或停止本批、删改旧记录、得到谅解或得到患者许可。",
+    "保持原两空栏/简单分隔线；无可读姓名、数字、病情、普通/观察字样或新栏目。"
+  ],
+  "risks": [
+    "两笔数量须始终恰好2；A1一笔半入插、一笔已收；不能在笔插再留两支并加手中第三支。",
+    "A2板背母图未见，只允许同色朴素木板背的可逆推断，不加背夹、夹纸器、扣、图案或新页。"
+  ],
+  "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/sune/noncombat_basics_v1",
+  "plans": [
+    {
+      "key": "sune_A1_reseat_charcoal_in_slot",
+      "title_zh": "把一支炭笔收回原笔插",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "sune_card",
+          "locator": "衣着与磨损",
+          "line_start": 38,
+          "quote": "口袋缝着笔插"
+        },
+        {
+          "source_id": "sune_card",
+          "locator": "随身物",
+          "line_start": 40,
+          "quote": "记录板与两支炭笔"
+        },
+        {
+          "source_id": "sune_card",
+          "locator": "举止",
+          "line_start": 42,
+          "quote": "问数之前先问许可"
+        }
+      ],
+      "art_inference": "源文只支持人物、物件与边界；本具体手位、物件朝向和重心是可逆日常动作提案，不冒充台本已发生的事件或医学建议。",
+      "start_pose_description_only": "左手按母图贴身抱木板；右手仅为整理而从原笔插轻提一支炭笔，另一支留插，未书写。",
+      "pose": "右肘收回腰边，右拇指与食指明确捏住一支原短炭笔上端，将它竖直向下重新插回人物右前腰的原笔插，停在半支入插、指尖仍接触笔身的瞬间；另一支原炭笔已在旁边完整收妥，两支数量可辨。左臂继续贴身抱住竖直两空栏木板，板不向外展示，笔尖与板至少有一掌宽间隔。头略低看笔插接点，双脚原位站稳。",
+      "end_pose_description_only": "松开右指后两支炭笔都可回笔插；未画松手帧，不表示曾记录任何人的数据。",
+      "transition_scope": "起止只是文字供以后制作参考；本轮只计划pose描述的一张独立静态关键姿态，未制作起止帧、过渡或连续循环。A1/A2不构成默认先后顺序。",
+      "contact_and_support_checks": [
+        "右拇指/食指接一支笔上段，笔下段真实进入原插口而非刺进罩衫",
+        "另一支笔留插，总数2；不把笔画成羽毛笔、现代笔帽或长刀",
+        "左掌与前臂支撑木板下/侧缘，双足承重居中，不增加桌面"
+      ],
+      "prop_state_and_retention": [
+        "单木板两栏仍为空，除分隔线无任何书写",
+        "原右侧笔插与两支笔保持形状、侧别；不挪到左腰"
+      ],
+      "difference_from_mother_expression_and_batch": "本人E2只有空手停腰，本姿手与炭笔/插口有清楚操作接点和一进一留的物件状态；不同于旧翻簿、签字或摊掌。",
+      "risk_level": "medium_high_small_prop",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/sune/concept_v1/sune_transparent.png"
+      ],
+      "reference_sha256": [
+        "16d05f7c04d67d9599a5536cd30003009be790e1936987bcd4538a6bb5547a35"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一人物身份、脸型、年龄、比例、衣装、配色及已有器物造型锚，用内置imagegen重新绘制一张独立非战斗全身动作关键姿态。保留母图成熟大头、短自然颈、紧凑成年身体与有组织的粗像素簇，不幼化、不拉成长身、不统一四人的脸。不镜像；下文左右均为人物自身解剖侧，并附画面侧。必须有真实手臂、身体或原道具接触变化，不能只改表情、低头或平移母图。完整头发、双手、双脚和全部保留器物，四周留透明边距。单人、单个瞬间、纯alpha透明背景，无背景、地板、投影、光晕、文字、数字、图标、边框、UI、第二个人、箭头、残影或多格。所有原物件只保一件，取出后原位置不再复制同件。不用脚本绘制人体、旋转肢体、插值、拉伸、拼接或强量化修错。没有动作结果、治疗、康复、付款、授权、所有权转移、任务结案或新剧情事实。\n人物：二十多岁成年女性记录员；灰棕低短辫、窄长成年脸、退色暗李紫罩衫、米麻系绳袖、深褐腰带和工作鞋。\n原侧别与锚定：原木记录板由人物左手（画面右）持，双炭笔笔插位于人物右前腰（画面左）。A1只右手操作原两笔之一；A2两笔都留原笔插，双手转同一木板。\n本张动作：把一支炭笔收回原笔插。右肘收回腰边，右拇指与食指明确捏住一支原短炭笔上端，将它竖直向下重新插回人物右前腰的原笔插，停在半支入插、指尖仍接触笔身的瞬间；另一支原炭笔已在旁边完整收妥，两支数量可辨。左臂继续贴身抱住竖直两空栏木板，板不向外展示，笔尖与板至少有一掌宽间隔。头略低看笔插接点，双脚原位站稳。\n接触与重心：右拇指/食指接一支笔上段，笔下段真实进入原插口而非刺进罩衫；另一支笔留插，总数2；不把笔画成羽毛笔、现代笔帽或长刀；左掌与前臂支撑木板下/侧缘，双足承重居中，不增加桌面。\n物件保留：单木板两栏仍为空，除分隔线无任何书写；原右侧笔插与两支笔保持形状、侧别；不挪到左腰。\n剧情边界：手里有笔不等于获许可：笔尖不触木板、纸或人体，不画书写/数据/签名；普通物资与观察资格不捆绑。；A1/A2只整理自有器物，不表示开始或停止本批、删改旧记录、得到谅解或得到患者许可。；保持原两空栏/简单分隔线；无可读姓名、数字、病情、普通/观察字样或新栏目。。\n硬约束：两笔数量须始终恰好2；A1一笔半入插、一笔已收；不能在笔插再留两支并加手中第三支。；A2板背母图未见，只允许同色朴素木板背的可逆推断，不加背夹、夹纸器、扣、图案或新页。。只画上述一个瞬间，不画文字说明的起止姿态。",
+      "prompt_sha256": "4ff2bc251be7d3dd99d351b691ef1074118938411b826a2215b9a81a52454276",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_new_character_actions_sources/sune_A1_reseat_charcoal_in_slot_prompt.txt",
+      "negative_constraints": [
+        "两笔数量须始终恰好2；A1一笔半入插、一笔已收；不能在笔插再留两支并加手中第三支。",
+        "A2板背母图未见，只允许同色朴素木板背的可逆推断，不加背夹、夹纸器、扣、图案或新页。",
+        "手里有笔不等于获许可：笔尖不触木板、纸或人体，不画书写/数据/签名；普通物资与观察资格不捆绑。",
+        "A1/A2只整理自有器物，不表示开始或停止本批、删改旧记录、得到谅解或得到患者许可。",
+        "保持原两空栏/简单分隔线；无可读姓名、数字、病情、普通/观察字样或新栏目。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "明确可定位的人体/接触/道具数目侧别/身份等硬错；不是无止境美感迭代",
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending"
+    },
+    {
+      "key": "sune_A2_turn_board_inward_carry",
+      "title_zh": "双手转板横收在腹前",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "sune_card",
+          "locator": "随身物",
+          "line_start": 40,
+          "quote": "记录板与两支炭笔"
+        },
+        {
+          "source_id": "care03",
+          "locator": "CS-ASH-03-S3-scope",
+          "line_start": 94,
+          "quote": "未准的空着，不能拿旧表复制本人一句愿。"
+        }
+      ],
+      "art_inference": "源文只支持人物、物件与边界；本具体手位、物件朝向和重心是可逆日常动作提案，不冒充台本已发生的事件或医学建议。",
+      "start_pose_description_only": "两支炭笔全在原右前腰笔插；左手抱竖板，右手收回去接木板的另一短边。",
+      "pose": "双手真实握住同一木记录板左右两端，把原竖板转成横向，贴在自己下腹前；板长边近水平，原有两栏正面朝自己且略朝上，外侧仅见同色朴素木背与上缘极窄空白正面。左掌（画面右）托住右侧短边下缘，右掌（画面左）握左侧短边，双肘自然低垂略向外，板与身体间留可读的小间隙，不能像没有手的悬空板。头看向板的上缘，肩部自然跟随，双脚稳站。",
+      "end_pose_description_only": "仍以双手自行持板，之后可回竖向收身；未作交板、关账、删记录或收工结案。",
+      "transition_scope": "起止只是文字供以后制作参考；本轮只计划pose描述的一张独立静态关键姿态，未制作起止帧、过渡或连续循环。A1/A2不构成默认先后顺序。",
+      "contact_and_support_checks": [
+        "两手分置同一刚性木板两端，下缘受支撑，手腕不反折",
+        "板只旋转方向而不折叠、不变成书本/卷纸/两板；尺寸厚度沿母图",
+        "双笔仍各一支在右前腰原插口，不能消失或出现在手里"
+      ],
+      "prop_state_and_retention": [
+        "保留同一朴素单木板和两支短炭笔，无新页、夹具、袋或桌",
+        "板背未审造型只按同色平整木面作最小可逆推断；不补可读文字"
+      ],
+      "difference_from_mother_expression_and_batch": "本人母图/表情都是单手竖抱；本姿双臂变位、板由竖转横且正面向内。与Anni/Nisha翻簿及Gura折单不同，不加纸页工序。",
+      "risk_level": "medium",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/sune/concept_v1/sune_transparent.png"
+      ],
+      "reference_sha256": [
+        "16d05f7c04d67d9599a5536cd30003009be790e1936987bcd4538a6bb5547a35"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一人物身份、脸型、年龄、比例、衣装、配色及已有器物造型锚，用内置imagegen重新绘制一张独立非战斗全身动作关键姿态。保留母图成熟大头、短自然颈、紧凑成年身体与有组织的粗像素簇，不幼化、不拉成长身、不统一四人的脸。不镜像；下文左右均为人物自身解剖侧，并附画面侧。必须有真实手臂、身体或原道具接触变化，不能只改表情、低头或平移母图。完整头发、双手、双脚和全部保留器物，四周留透明边距。单人、单个瞬间、纯alpha透明背景，无背景、地板、投影、光晕、文字、数字、图标、边框、UI、第二个人、箭头、残影或多格。所有原物件只保一件，取出后原位置不再复制同件。不用脚本绘制人体、旋转肢体、插值、拉伸、拼接或强量化修错。没有动作结果、治疗、康复、付款、授权、所有权转移、任务结案或新剧情事实。\n人物：二十多岁成年女性记录员；灰棕低短辫、窄长成年脸、退色暗李紫罩衫、米麻系绳袖、深褐腰带和工作鞋。\n原侧别与锚定：原木记录板由人物左手（画面右）持，双炭笔笔插位于人物右前腰（画面左）。A1只右手操作原两笔之一；A2两笔都留原笔插，双手转同一木板。\n本张动作：双手转板横收在腹前。双手真实握住同一木记录板左右两端，把原竖板转成横向，贴在自己下腹前；板长边近水平，原有两栏正面朝自己且略朝上，外侧仅见同色朴素木背与上缘极窄空白正面。左掌（画面右）托住右侧短边下缘，右掌（画面左）握左侧短边，双肘自然低垂略向外，板与身体间留可读的小间隙，不能像没有手的悬空板。头看向板的上缘，肩部自然跟随，双脚稳站。\n接触与重心：两手分置同一刚性木板两端，下缘受支撑，手腕不反折；板只旋转方向而不折叠、不变成书本/卷纸/两板；尺寸厚度沿母图；双笔仍各一支在右前腰原插口，不能消失或出现在手里。\n物件保留：保留同一朴素单木板和两支短炭笔，无新页、夹具、袋或桌；板背未审造型只按同色平整木面作最小可逆推断；不补可读文字。\n剧情边界：手里有笔不等于获许可：笔尖不触木板、纸或人体，不画书写/数据/签名；普通物资与观察资格不捆绑。；A1/A2只整理自有器物，不表示开始或停止本批、删改旧记录、得到谅解或得到患者许可。；保持原两空栏/简单分隔线；无可读姓名、数字、病情、普通/观察字样或新栏目。。\n硬约束：两笔数量须始终恰好2；A1一笔半入插、一笔已收；不能在笔插再留两支并加手中第三支。；A2板背母图未见，只允许同色朴素木板背的可逆推断，不加背夹、夹纸器、扣、图案或新页。。只画上述一个瞬间，不画文字说明的起止姿态。",
+      "prompt_sha256": "a91b81fe7a97e1b2d74c0499ff6b105c3d730e81c87001e280106b07533ba0f8",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_new_character_actions_sources/sune_A2_turn_board_inward_carry_prompt.txt",
+      "negative_constraints": [
+        "两笔数量须始终恰好2；A1一笔半入插、一笔已收；不能在笔插再留两支并加手中第三支。",
+        "A2板背母图未见，只允许同色朴素木板背的可逆推断，不加背夹、夹纸器、扣、图案或新页。",
+        "手里有笔不等于获许可：笔尖不触木板、纸或人体，不画书写/数据/签名；普通物资与观察资格不捆绑。",
+        "A1/A2只整理自有器物，不表示开始或停止本批、删改旧记录、得到谅解或得到患者许可。",
+        "保持原两空栏/简单分隔线；无可读姓名、数字、病情、普通/观察字样或新栏目。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "明确可定位的人体/接触/道具数目侧别/身份等硬错；不是无止境美感迭代",
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending"
+    }
+  ]
+}

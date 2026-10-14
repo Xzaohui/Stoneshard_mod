@@ -1,0 +1,1482 @@
+{
+  "schema_version": 3,
+  "created_utc": "2026-10-14T04:54:40.947190+00:00",
+  "status": "planning_complete_not_generated",
+  "purpose": "第四批4名既有新剧情NPC的8个独立非战斗基础动作，仅有限规划；独立计划门审前不得开画。",
+  "scope": {
+    "selected_characters": 4,
+    "planned_new_independent_fullbody_keyposes": 8,
+    "generated_images": 0,
+    "revision_images": 0,
+    "new_characters": 0,
+    "full_animation": false,
+    "gif_planned": false,
+    "equipment_or_engine_work": false,
+    "git_or_upload_performed": false,
+    "changed_existing_assets": false
+  },
+  "requested_candidates": [
+    "erde",
+    "tila",
+    "miloer",
+    "kouer"
+  ],
+  "substitutions": [],
+  "selection_order_evidence": {
+    "source_id": "production_sequence",
+    "reason": "44人原始JSON按地域/FX稳定ID排序，并非生产先后；按已归档remaining_36_batch_sequence的第3批和第4批实际制作顺序，剔除已做动作的图里、维菈、锉珥、洛珉，下一4名未覆盖恰为珥德、缇菈、米洛珥、蔻珥。",
+    "excluded_covered": [
+      "anni",
+      "gura",
+      "deru",
+      "hoer",
+      "turi",
+      "vila",
+      "cuoer",
+      "luomin"
+    ],
+    "excluded_current_third_batch": [
+      "kuen",
+      "sune",
+      "tian",
+      "lein"
+    ],
+    "not_closing_old_missing_actions": [
+      "turi_A1_low_hold_inspection_hammer",
+      "cuoer_A1_test_pliers_travel"
+    ]
+  },
+  "global_boundaries": [
+    "只规划各2张独立全身关键姿態，无表情补稿、额外人物、连续动画或游戏落地。",
+    "每姿首稿1张，最多一次明确硬错修订；修后仍失败保缺项。",
+    "内置imagegen才可绘人体；计划本身未调用。独立门审是下一环，非本计划已完成。",
+    "当前母图比例/衣装/道具优先，旧长身或统一头身数字不复活。",
+    "朴素低魔中世纪，保守日常姿态和原物件轻操作，不产生新剧情结果或医疗演示。",
+    "不改冻结旧图、manifest、QA、剧情卡、全局索引、游戏/存档、Git或上传。",
+    "图片与文字原证据分别保留；具体动作推断不写回角色canon。",
+    "归档pixel skill包含流程，但最新STYLE_DIRECTION允许继续概念；归档references/executor-pixel.md不存在，本轮没有假称已读或执行生成阶段。"
+  ],
+  "source_sha_snapshots": [
+    {
+      "source_id": "root_agents",
+      "path": "AGENTS.md",
+      "bytes": 68775,
+      "sha256": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+      "role": "root_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/AGENTS.md"
+    },
+    {
+      "source_id": "design_agents",
+      "path": "design/AGENTS.md",
+      "bytes": 64250,
+      "sha256": "302d9d3ef38f2fe27a28cf8cb672ed5cf3b33d5493603588d4dbc22a9932b37e",
+      "role": "design_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/AGENTS.md"
+    },
+    {
+      "source_id": "pixel_asset_skill",
+      "path": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+      "bytes": 16285,
+      "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08",
+      "role": "pixel_asset_skill",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md"
+    },
+    {
+      "source_id": "style_direction",
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "bytes": 6187,
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+      "role": "style_direction",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md"
+    },
+    {
+      "source_id": "roster44",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json",
+      "bytes": 142768,
+      "sha256": "39023b5f3db9980e063b8e57e9bc3cfe3786304f7aef22767c78e10afd631992",
+      "role": "roster44",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json"
+    },
+    {
+      "source_id": "production_sequence",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json",
+      "bytes": 14959,
+      "sha256": "c6e0c04098664bc991ebc62a37cc833b6ae084ff4295fd060d41b15525bf1662",
+      "role": "production_sequence",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json"
+    },
+    {
+      "source_id": "third_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_four_production_brief.json",
+      "bytes": 24022,
+      "sha256": "003f474a235a37ac0f96e4afbaec32b6249bf6d341378e602e811c5a8d9bf144",
+      "role": "third_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_four_production_brief.json"
+    },
+    {
+      "source_id": "fourth_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_four_production_brief.json",
+      "bytes": 29499,
+      "sha256": "ee431d0113c43ca84d06d8b5c9655e3aa33f962f116f3eaeac67f8ab7aa416d2",
+      "role": "fourth_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_four_production_brief.json"
+    },
+    {
+      "source_id": "third_mother_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_third_four_20261013.json",
+      "bytes": 16192,
+      "sha256": "1035661926eab047adc4aac950582a6f924f42146aacfee2148206bb1cb267d4",
+      "role": "third_mother_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_third_four_20261013.json"
+    },
+    {
+      "source_id": "fourth_mother_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fourth_four_20261013.json",
+      "bytes": 13880,
+      "sha256": "c49da19d1acd1f65f8ca9de36c9bfef59d011c59a886eedfe336d16a5842b917",
+      "role": "fourth_mother_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fourth_four_20261013.json"
+    },
+    {
+      "source_id": "third_expression_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_four_expression_brief.json",
+      "bytes": 47837,
+      "sha256": "524073ce12f47a57494064ab071227492012a0cbbe2d60b2f116eee00e128ba0",
+      "role": "third_expression_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_four_expression_brief.json"
+    },
+    {
+      "source_id": "fourth_expression_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_four_expression_brief.json",
+      "bytes": 60975,
+      "sha256": "711ecdfec1f5efefc7a536bd441e3533303b18a1ae2ee392308e586fe1727b96",
+      "role": "fourth_expression_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_four_expression_brief.json"
+    },
+    {
+      "source_id": "action_coverage",
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "bytes": 26364,
+      "sha256": "61ed5cd1846ef3017b4b1c72cb5a63432aa22a4c9d151d5b789f586245f498bb",
+      "role": "action_coverage",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterActions/20261013/ACTION_COVERAGE.md"
+    },
+    {
+      "source_id": "master_supplements",
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "bytes": 26988,
+      "sha256": "99fb786c7d83aa9f44e3c96a78fb83f3dac5dc42e7732602736e06ed9716dc59",
+      "role": "master_supplements",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md"
+    },
+    {
+      "source_id": "action_delivery_index",
+      "path": "Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md",
+      "bytes": 5272,
+      "sha256": "211a83812c555736a6baa97fe001c13d581eb8313787b5e3022199f9d0d7762d",
+      "role": "action_delivery_index",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md"
+    },
+    {
+      "source_id": "first_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_brief.json",
+      "bytes": 63732,
+      "sha256": "4c7d2a9fbcc5a7efddd873261c4ae29030d84fcabf0908d066d6e6561e1f4b7b",
+      "role": "first_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "second_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_brief.json",
+      "bytes": 95763,
+      "sha256": "5b8eb607728878267082f133e4c10908b94e055ec25ae62be0ecaaabf9e7659e",
+      "role": "second_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "third_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_new_character_actions_brief.json",
+      "bytes": 106354,
+      "sha256": "a2086f4b93f8886772d5c75b2c4a27bd4aadbd6af6a74e226600d8eaea5033e6",
+      "role": "third_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "field_dialogue",
+      "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+      "bytes": 105635,
+      "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+      "role": "field_dialogue",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md"
+    },
+    {
+      "source_id": "field_dialogue_registry",
+      "path": "research/field-npc-dialogue.json",
+      "bytes": 132451,
+      "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+      "role": "field_dialogue_registry",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/research/field-npc-dialogue.json"
+    },
+    {
+      "source_id": "DT15",
+      "path": "design/07_日常任务/台本/台本_DT15_封存之后的巡查.md",
+      "bytes": 8800,
+      "sha256": "4eae608bf053eb02e6d0a7242a46510fa602f3309c05245f0c5a4bb6aeedda4a",
+      "role": "DT15",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/07_日常任务/台本/台本_DT15_封存之后的巡查.md"
+    },
+    {
+      "source_id": "DT16",
+      "path": "design/07_日常任务/台本/台本_DT16_愿意继续治疗的人.md",
+      "bytes": 8454,
+      "sha256": "a526ddb617b1c2a2f939a8ba1419e8b9d2844e029cea5267a0773a241913aa4b",
+      "role": "DT16",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/07_日常任务/台本/台本_DT16_愿意继续治疗的人.md"
+    },
+    {
+      "source_id": "D09",
+      "path": "design/08_副本/台本/台本_D09_无名修院回声厅.md",
+      "bytes": 8711,
+      "sha256": "69918d9571a64835ce3ca1c36ec080b1a764e8376568a73a63d209430075811e",
+      "role": "D09",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/08_副本/台本/台本_D09_无名修院回声厅.md"
+    },
+    {
+      "source_id": "N8",
+      "path": "design/05_主线/台本/台本_N8_不会散去的热病.md",
+      "bytes": 11800,
+      "sha256": "860beaa106318c51e8f0277ad5c8cb06e22aa861c0937865baf5d5a673a55afe",
+      "role": "N8",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/05_主线/台本/台本_N8_不会散去的热病.md"
+    },
+    {
+      "source_id": "erde_card",
+      "path": "design/04_人物/野外人物/人物_FX-MIN_珥德.md",
+      "bytes": 1039,
+      "sha256": "a32f6f2284dbc2199f69cee66d101192e16f608ee0d06e6160b2d292ff7f3547",
+      "role": "erde_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-MIN_珥德.md"
+    },
+    {
+      "source_id": "erde_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/manifest.json",
+      "bytes": 3722,
+      "sha256": "22509b6b68aa0a15042b06e6f6cf16a76c4fc3e14a148d16c471bea470c3251b",
+      "role": "erde_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "erde_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/spec_lock.md",
+      "bytes": 500,
+      "sha256": "ca67b1aaab48fbf1a4e45afca4d7bce10973ec5a6cb1b6a3ba618fa0b49108ab",
+      "role": "erde_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "erde_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/character_brief.json",
+      "bytes": 5092,
+      "sha256": "a5dc1b286161cfbf0424792164bbc5eda02f6056e37c5463ec1de22a330d3263",
+      "role": "erde_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "erde_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/manifest.json",
+      "bytes": 5094,
+      "sha256": "842ff8bf801344453bb99e2dae5c847d79b4adde30e347d64af58d539009e786",
+      "role": "erde_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "erde_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/QA-independent.json",
+      "bytes": 2316,
+      "sha256": "1236dc3aae0cff690ebaa25f854580f67eee04e5d63cd4493a7300ad739c3a26",
+      "role": "erde_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "erde_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 6736,
+      "sha256": "d837213ae5d163f830b759c38248c3c5cf67412abf1c7eb1e3578b59570f8e5e",
+      "role": "erde_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "erde_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_v2_raw_imagegen.png",
+      "bytes": 982392,
+      "sha256": "c48a90b3749828534b843b12434756f467924c8728bfc202f36d7c9da245bb27",
+      "role": "erde_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_v2_raw_imagegen.png"
+    },
+    {
+      "source_id": "erde_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_transparent.png",
+      "bytes": 852824,
+      "sha256": "05b12de343a1a7360e688f480dc75023fbd4a1fbd6b133065a9b6dce92c387ca",
+      "role": "erde_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_transparent.png"
+    },
+    {
+      "source_id": "erde_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/review/erde_expressions_light_board.png",
+      "bytes": 1555807,
+      "sha256": "0825b34b5307fd4ce0de44a2f84bd31d065f965dd057219c846cb512501ca656",
+      "role": "erde_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/review/erde_expressions_light_board.png"
+    },
+    {
+      "source_id": "tila_card",
+      "path": "design/04_人物/野外人物/人物_FX-ABY_缇菈.md",
+      "bytes": 1087,
+      "sha256": "fc362a053272610a1422f9e743c423bc7dafe607d08b85b88dceda3dd42af837",
+      "role": "tila_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-ABY_缇菈.md"
+    },
+    {
+      "source_id": "tila_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/manifest.json",
+      "bytes": 3466,
+      "sha256": "2593545f4670c35390977b8d3044c9fb853338ee55e3fbf7c50bc67fe067321e",
+      "role": "tila_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "tila_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/spec_lock.md",
+      "bytes": 2535,
+      "sha256": "768fecc6eaf768f059c32f1099c38ce8877b8c25cc2d611b08cd26b9de255bfe",
+      "role": "tila_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "tila_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/character_brief.json",
+      "bytes": 6244,
+      "sha256": "56c643e8d5d089a315471ca64cf47db78878b79a76474d190ceffeb83d5772d9",
+      "role": "tila_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "tila_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/manifest.json",
+      "bytes": 6195,
+      "sha256": "252ae76cd6a54bade98d74206df347bf1004839a73ef00b16678ffc8d0e1fcfd",
+      "role": "tila_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "tila_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/QA-independent.json",
+      "bytes": 3120,
+      "sha256": "020e18a902fe9d59d6b0315b0974080d40de700439cc95b24fd09614aefcdefb",
+      "role": "tila_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "tila_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 1784,
+      "sha256": "b84b10cee88a17c5a851e9c0894fb9a262b1be6bb3ab42e1a0d5975c0b211f22",
+      "role": "tila_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "tila_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_v1_raw_imagegen.png",
+      "bytes": 788695,
+      "sha256": "7fb8a1831263031eec17c24ac021388623447e249ae3a978c35368723f972682",
+      "role": "tila_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "tila_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_transparent.png",
+      "bytes": 688130,
+      "sha256": "f9d1d52f41ee716f749525cc7ad7915a24535121ff877bcf417b8b6e7cbbe173",
+      "role": "tila_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_transparent.png"
+    },
+    {
+      "source_id": "tila_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/review/tila_expressions_light.png",
+      "bytes": 1170664,
+      "sha256": "eb8d211e91011e74f09e231655319ea1c5d18d87c67705d691400c10cd36811b",
+      "role": "tila_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/review/tila_expressions_light.png"
+    },
+    {
+      "source_id": "miloer_card",
+      "path": "design/04_人物/野外人物/人物_FX-LEP_米洛珥.md",
+      "bytes": 1102,
+      "sha256": "6b3b78cf0f60f7e9f319c158d482dd8a199a44af07cdc05101573f07fa364dda",
+      "role": "miloer_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-LEP_米洛珥.md"
+    },
+    {
+      "source_id": "miloer_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/manifest.json",
+      "bytes": 3439,
+      "sha256": "37862a490a93abaeb2aeb75f2a10bfd9d53039886239708774e0c5ba7c54c646",
+      "role": "miloer_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "miloer_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/spec_lock.md",
+      "bytes": 2763,
+      "sha256": "da7c81cbb0878817179ae07d20d245c81ec8b6b07aec3da6f5b24e46ba9fd519",
+      "role": "miloer_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "miloer_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/character_brief.json",
+      "bytes": 6222,
+      "sha256": "90047bf4b19491e214c54275c55d25a03c5343d16d9d936b746ef85892ce99fc",
+      "role": "miloer_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "miloer_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/manifest.json",
+      "bytes": 3641,
+      "sha256": "d949369860491fa188cba1dc321c3e16f1d438d6b55c263a0215d3027886133d",
+      "role": "miloer_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "miloer_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/QA-independent.json",
+      "bytes": 3450,
+      "sha256": "e97599e40001599a6bdcaf7d2e278a273c64cc67cee1c004285622d4bebc05ba",
+      "role": "miloer_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "miloer_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 1908,
+      "sha256": "e96129faef4220d653b91adf0ebd42a33515cb29f1ff9443fea5b8971912022c",
+      "role": "miloer_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "miloer_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_v1_raw_imagegen.png",
+      "bytes": 791332,
+      "sha256": "669f8424bd7b5b99f822edd12f9da19c48186887df0c3677ce2877251506396f",
+      "role": "miloer_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "miloer_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_transparent.png",
+      "bytes": 707136,
+      "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275",
+      "role": "miloer_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_transparent.png"
+    },
+    {
+      "source_id": "miloer_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/review/miloer_expressions_light_zh.png",
+      "bytes": 713807,
+      "sha256": "bcc09a348ff5307b9f3b57c21076ea90b53e0450496b604818b7cc7ad08dacc0",
+      "role": "miloer_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/review/miloer_expressions_light_zh.png"
+    },
+    {
+      "source_id": "kouer_card",
+      "path": "design/04_人物/野外人物/人物_FX-PLG_蔻珥.md",
+      "bytes": 1049,
+      "sha256": "3f9362f9ccb7c29542e7bf0520b139aa7fcc9461f818824749a57c606e55c1b4",
+      "role": "kouer_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-PLG_蔻珥.md"
+    },
+    {
+      "source_id": "kouer_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/manifest.json",
+      "bytes": 3426,
+      "sha256": "72529a2d05f1073c4b627c1d0f767fceee5264a159cc506157487d7d4bcfe8e8",
+      "role": "kouer_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "kouer_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/spec_lock.md",
+      "bytes": 2683,
+      "sha256": "bb6574869701294f3fd3da1ee1e2c6af31435e1e4f5891ae18eb6fa5307bd9e0",
+      "role": "kouer_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "kouer_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/character_brief.json",
+      "bytes": 5946,
+      "sha256": "9a573691ec017c7af5e8780de56ed38b21eaaf6ff60e551563edc90148401cc5",
+      "role": "kouer_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "kouer_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/manifest.json",
+      "bytes": 3612,
+      "sha256": "46ecac5a1b73b8a31dcf715578a5f9191755eacdb9bfee8c74adf1a9e5ee75ab",
+      "role": "kouer_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "kouer_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/QA-independent.json",
+      "bytes": 3767,
+      "sha256": "5c1b49913b267aa84f377516ac51f38b6fbbb4da9694d9b26622cd2417875cb7",
+      "role": "kouer_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "kouer_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 3462,
+      "sha256": "8c5391d1b28aba7813b32697c4f48a9b2aab1fc1773b9cce6bc227471e30e89d",
+      "role": "kouer_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "kouer_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_v1_raw_imagegen.png",
+      "bytes": 771964,
+      "sha256": "b58f27d1de28aaeab1f14a003633587680edeb7012127e804593d147ffdb183e",
+      "role": "kouer_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "kouer_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_transparent.png",
+      "bytes": 695743,
+      "sha256": "30b2b6ec4a29139a8520b5de382cd93e3cb002a9d94241a0502698a79e385500",
+      "role": "kouer_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_transparent.png"
+    },
+    {
+      "source_id": "kouer_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/review/kouer_expressions_light_zh.png",
+      "bytes": 695747,
+      "sha256": "ea38c4ea5a37c95167b41f96aa08b8c42e1ec1261a96375f4591bb93cae170c8",
+      "role": "kouer_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/review/kouer_expressions_light_zh.png"
+    }
+  ],
+  "coverage_audit": {
+    "read_indexes": [
+      "action_coverage",
+      "master_supplements",
+      "action_delivery_index",
+      "first_actions_brief",
+      "second_actions_brief",
+      "third_actions_brief",
+      "production_sequence"
+    ],
+    "scan_manifest": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+    "scan_manifest_sha256": "9d4a66cb0c4d9bfd3cf57d1441758d9ff47c0b0c734f0b1ad1e4a24a9a730487",
+    "action_tree_file_count": 2522,
+    "metadata_scanned_count": 1274,
+    "zip_scanned_count": 51,
+    "zip_members_enumerated_count": 2155,
+    "zip_text_members_read_count": 1213,
+    "zip_read_errors": [],
+    "candidate_raw_text_hits": 36,
+    "candidate_non_source_raw_text_hits": 15,
+    "candidate_zip_text_or_path_hits": 61,
+    "candidate_semantic_action_assets_found": 0,
+    "candidate_own_action_directories_found": 0,
+    "semantic_review": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/semantic_dedup_review.json",
+    "semantic_review_sha256": "49e61a7af4f35e2a1026059c0f0f62232ab981f4149e45c413c6ed936e8451cd",
+    "absence_scope": "仅本地Assets/CharacterActions全树、其51个ZIP文本元数据及四人new_story分支。没有遍看全库图像，也不声称外部电脑/云源不存在。",
+    "index_freshness_note": "动作交付索引已刷新到第三批12人22张通过姿态；树扫描取早先本轮时点，第三批目录明确排除，不据历史索引断言第三批无产物。",
+    "all_four_raw_and_transparent_viewed": true,
+    "all_four_expression_boards_viewed": true
+  },
+  "characters": [
+    {
+      "slug": "erde",
+      "canonical_id": "FX-MIN",
+      "name": "珥德",
+      "status": "selected_planned_not_generated",
+      "selection_status": "kept_next_uncovered_character_in_prior_production_sequence",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-MIN_珥德.md",
+        "sha256": "a32f6f2284dbc2199f69cee66d101192e16f608ee0d06e6160b2d292ff7f3547"
+      },
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "erde_card",
+        "erde_mother_manifest",
+        "erde_mother_spec",
+        "erde_mother_brief",
+        "erde_expression_manifest",
+        "erde_expression_qa",
+        "field_dialogue",
+        "third_mother_qa"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_v2_raw_imagegen.png",
+        "raw_sha256": "c48a90b3749828534b843b12434756f467924c8728bfc202f36d7c9da245bb27",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_transparent.png",
+        "transparent_sha256": "05b12de343a1a7360e688f480dc75023fbd4a1fbd6b133065a9b6dce92c387ca",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/manifest.json",
+        "manifest_sha256": "22509b6b68aa0a15042b06e6f6cf16a76c4fc3e14a148d16c471bea470c3251b",
+        "independent_qa_source_id": "third_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "已逐张查看v2 raw与transparent：灰棕乱短发、灰须、褐卷袖短褂、灰裤、双膝棕皮垫。背篓在背后向画面左大幅露出，内有同一弧形旧轮片及有孔深色金属残件；人物右手（画面左）抓右肩带，左手（画面右）抬指节。E1右手仍扶带、左手收胸前；E2左掌外抬拒绝，没有手托篓底或按膝垫。",
+        "fixed_sides": "背篓始终背在背后，主要露出人物右侧（画面左）；不镜像篓中弧形旧轮片、金属残件。两个肩带沿原肩胸连接，皮垫分别在两膝原侧。A1右手去托原篓底、左手握原左肩带；A2右手握原右肩带、左手按自己左膝垫（画面右）。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/expressions_v1/review/erde_expressions_light_board.png"
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "own_action_directories_found": [],
+        "existing_expressions_actually_viewed": true,
+        "do_not_recount": [
+          "母图",
+          "本人2张表情及小手势",
+          "sources内复用图",
+          "重复展示板及ZIP源成员",
+          "只有眉眼嘴或头姿差别"
+        ]
+      },
+      "story_boundaries": [
+        "只做自己的负重与护垫整理，不敲击新支撑木、不进矿洞或深段",
+        "不移走或新拾矿车残件、不替矿主认领工具、不暗示巡查通过、修复或危险已解除",
+        "背篓原肩带持续承重，禁止卸篓、跪地、跌倒、夸张扭腰或表演腿伤"
+      ],
+      "risks": [
+        "背篓是母图同一藤篓，不改背包；轮片和有孔残件保留相同数量、形状与相对排布",
+        "两只膝垫都保留绑缚，不解开绑带、不增加现代扣件",
+        "仅A1：托篓的手必须可见并接触篓底外侧，不能穿腰或穿藤篓"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/erde/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "erde_A1_support_basket_bottom",
+          "title_zh": "侧手托稳背篓",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "erde_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "背篓里全是矿车残件"
+            },
+            {
+              "source_id": "erde_card",
+              "locator": "知情边界",
+              "line_start": 21,
+              "quote": "不替矿主认领工具；不下最深那段。"
+            }
+          ],
+          "art_inference": "源卡支持人物、衣装、随身物及边界；本具体手位、轻微转体和原物件接触是可逆日常演出提案，不冒充台本已发生事件、医疗建议或原生动画规格。",
+          "start_pose_description_only": "双脚保持母图间距站稳，背篓仍背着；手从母图扶带与举指位置改为一手扶带、一手托篓。",
+          "pose": "上身向前小幅倾约十度以承受原背篓重量。左手（画面右）在左胸前牢握原左肩带，肘弯贴近肋侧；右手（画面左）松开原右肩带，沿右腰外侧向后下方伸，掌心向上托住同一背篓露在右髋后方的下缘。右手手背与指组在篓底外侧完整可见，形成清楚的托举接点。篓体仍贴背、双肩带仍挂在肩上，只轻托稳住，不把篓提离背部；双膝轻松微屈、两靴全掌落在原位置。",
+          "end_pose_description_only": "右手可松开篓底回肩带，左手可放松；文字不代表本轮另画回位帧。",
+          "transition_scope": "起止仅文字；本轮只计划pose中一张独立静态关键姿态。A1/A2不构成默认先后顺序，不制作过渡、GIF或完整循环。",
+          "contact_and_support_checks": [
+            "左手抓原左肩带，右掌与篓底外侧有真实接触，右肘不穿腰",
+            "两肩带连续连篓，篓体贴背不悬空；双足全掌原位支撑",
+            "身体前倾幅度温和，背篓和肩胸同步，没有肩带凭空加长"
+          ],
+          "prop_state_and_retention": [
+            "篓、轮片、金属残件均保留原数与排布",
+            "双膝皮垫、腰带与靴完整；不新增手持工具"
+          ],
+          "difference_from_mother_expression_and_batch": "本人母图和E1/E2的右手均在胸前肩带；本姿右手降到髋后托篓底、左手改握左带且上身承重，不能以E1的收手近似替代。",
+          "risk_level": "medium_contact",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量或侧别、裁切与透明硬错；不作无限审美迭代。",
+            "after_failed_revision": "保留所有原稿并标缺项；不得加第三稿或转脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_transparent.png"
+          ],
+          "reference_sha256": [
+            "05b12de343a1a7360e688f480dc75023fbd4a1fbd6b133065a9b6dce92c387ca"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色及原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持原图成熟大头、自然短颈、紧凑成年身体和有组织的粗像素簇；不幼化、不拉成长身、不统一角色面孔。禁止镜像；左右均按人物自己的解剖侧，并附画面侧。必须画出下述真实手臂、身体或道具接触变化，不能只改表情或头姿。完整头发、双手、双脚及所有原物件，四周透明边距。只画一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减，不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述仅为制作说明，不画多格或额外帧。没有任务完成、授权、付款、治疗、治愈、认领或新剧情结果。\n人物：珥德 / FX-MIN。五十来岁成年男性矿洞捡拾者，灰棕短乱发与灰须、褐卷袖短褂、灰裤、棕靴和双膝旧皮垫；不是锉珥FX-MN2，不加小钳或锉。\n侧别与原物件锁：背篓始终背在背后，主要露出人物右侧（画面左）；不镜像篓中弧形旧轮片、金属残件。两个肩带沿原肩胸连接，皮垫分别在两膝原侧。A1右手去托原篓底、左手握原左肩带；A2右手握原右肩带、左手按自己左膝垫（画面右）。\n本张动作：侧手托稳背篓。上身向前小幅倾约十度以承受原背篓重量。左手（画面右）在左胸前牢握原左肩带，肘弯贴近肋侧；右手（画面左）松开原右肩带，沿右腰外侧向后下方伸，掌心向上托住同一背篓露在右髋后方的下缘。右手手背与指组在篓底外侧完整可见，形成清楚的托举接点。篓体仍贴背、双肩带仍挂在肩上，只轻托稳住，不把篓提离背部；双膝轻松微屈、两靴全掌落在原位置。\n接触与支撑：左手抓原左肩带，右掌与篓底外侧有真实接触，右肘不穿腰；两肩带连续连篓，篓体贴背不悬空；双足全掌原位支撑；身体前倾幅度温和，背篓和肩胸同步，没有肩带凭空加长。\n物件保留：篓、轮片、金属残件均保留原数与排布；双膝皮垫、腰带与靴完整；不新增手持工具。\n剧情边界：只做自己的负重与护垫整理，不敲击新支撑木、不进矿洞或深段；不移走或新拾矿车残件、不替矿主认领工具、不暗示巡查通过、修复或危险已解除；背篓原肩带持续承重，禁止卸篓、跪地、跌倒、夸张扭腰或表演腿伤。\n硬约束：背篓是母图同一藤篓，不改背包；轮片和有孔残件保留相同数量、形状与相对排布；两只膝垫都保留绑缚，不解开绑带、不增加现代扣件；仅A1：托篓的手必须可见并接触篓底外侧，不能穿腰或穿藤篓。",
+          "prompt_sha256": "ad7e9c497155592ed994f8123c3ef334f31da066460e6122effc90bc046db699",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/erde_A1_support_basket_bottom_prompt.txt",
+          "negative_constraints": [
+            "背篓是母图同一藤篓，不改背包；轮片和有孔残件保留相同数量、形状与相对排布",
+            "两只膝垫都保留绑缚，不解开绑带、不增加现代扣件",
+            "仅A1：托篓的手必须可见并接触篓底外侧，不能穿腰或穿藤篓",
+            "只做自己的负重与护垫整理，不敲击新支撑木、不进矿洞或深段",
+            "不移走或新拾矿车残件、不替矿主认领工具、不暗示巡查通过、修复或危险已解除",
+            "背篓原肩带持续承重，禁止卸篓、跪地、跌倒、夸张扭腰或表演腿伤"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "未发现该角色已有此动作；他人的近似衣物或持物动作单独注明，不冒称全库从未出现同类人类动作。"
+          }
+        },
+        {
+          "key": "erde_A2_press_left_kneepad",
+          "title_zh": "俯身按稳左膝皮垫",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "erde_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "膝盖绑着皮垫"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-MIN／拒绝",
+              "line_start": 680,
+              "quote": "我的腿还要留着走路。"
+            }
+          ],
+          "art_inference": "源卡支持人物、衣装、随身物及边界；本具体手位、轻微转体和原物件接触是可逆日常演出提案，不冒充台本已发生事件、医疗建议或原生动画规格。",
+          "start_pose_description_only": "仍背原背篓，右手握原右肩带；左手从举指位置放下靠近左大腿。",
+          "pose": "双脚保持原站位、脚掌贴地，双膝轻屈而不下蹲到底，上身从髋部温和前倾。右手（画面左）牢握右胸前的原右肩带，稳住背篓；左手（画面右）落到自己左膝的棕色皮垫，掌根轻按皮垫上缘，指组沿皮面自然弯曲。左臂从左袖口连续伸到左膝，掌心真实压着皮垫而非悬在裤前。背篓贴背，头只略随上身看向膝部，双膝都不触地。",
+          "end_pose_description_only": "松开膝垫后可直身；不画完成绑扎、换垫或修复。",
+          "transition_scope": "起止仅文字；本轮只计划pose中一张独立静态关键姿态。A1/A2不构成默认先后顺序，不制作过渡、GIF或完整循环。",
+          "contact_and_support_checks": [
+            "左掌在本人左膝垫上，右手在本人右肩带；不得交叉换侧",
+            "两脚全掌落地，膝不跪地，背篓重心仍位于双足支撑范围",
+            "皮垫只是被压稳，原绑带扣合数量不变"
+          ],
+          "prop_state_and_retention": [
+            "同一背篓与全部残件不取出、不消失",
+            "左右两膝原皮垫仍在，不画新伤或护理工具"
+          ],
+          "difference_from_mother_expression_and_batch": "本人没有按膝垫旧图；不同于霍珥双手稳膝听水、蕾因蹲按小腿绑带，本姿是一手护背篓、一手按左膝皮垫的浅前倾。",
+          "risk_level": "medium_contact",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量或侧别、裁切与透明硬错；不作无限审美迭代。",
+            "after_failed_revision": "保留所有原稿并标缺项；不得加第三稿或转脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_transparent.png"
+          ],
+          "reference_sha256": [
+            "05b12de343a1a7360e688f480dc75023fbd4a1fbd6b133065a9b6dce92c387ca"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色及原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持原图成熟大头、自然短颈、紧凑成年身体和有组织的粗像素簇；不幼化、不拉成长身、不统一角色面孔。禁止镜像；左右均按人物自己的解剖侧，并附画面侧。必须画出下述真实手臂、身体或道具接触变化，不能只改表情或头姿。完整头发、双手、双脚及所有原物件，四周透明边距。只画一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减，不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述仅为制作说明，不画多格或额外帧。没有任务完成、授权、付款、治疗、治愈、认领或新剧情结果。\n人物：珥德 / FX-MIN。五十来岁成年男性矿洞捡拾者，灰棕短乱发与灰须、褐卷袖短褂、灰裤、棕靴和双膝旧皮垫；不是锉珥FX-MN2，不加小钳或锉。\n侧别与原物件锁：背篓始终背在背后，主要露出人物右侧（画面左）；不镜像篓中弧形旧轮片、金属残件。两个肩带沿原肩胸连接，皮垫分别在两膝原侧。A1右手去托原篓底、左手握原左肩带；A2右手握原右肩带、左手按自己左膝垫（画面右）。\n本张动作：俯身按稳左膝皮垫。双脚保持原站位、脚掌贴地，双膝轻屈而不下蹲到底，上身从髋部温和前倾。右手（画面左）牢握右胸前的原右肩带，稳住背篓；左手（画面右）落到自己左膝的棕色皮垫，掌根轻按皮垫上缘，指组沿皮面自然弯曲。左臂从左袖口连续伸到左膝，掌心真实压着皮垫而非悬在裤前。背篓贴背，头只略随上身看向膝部，双膝都不触地。\n接触与支撑：左掌在本人左膝垫上，右手在本人右肩带；不得交叉换侧；两脚全掌落地，膝不跪地，背篓重心仍位于双足支撑范围；皮垫只是被压稳，原绑带扣合数量不变。\n物件保留：同一背篓与全部残件不取出、不消失；左右两膝原皮垫仍在，不画新伤或护理工具。\n剧情边界：只做自己的负重与护垫整理，不敲击新支撑木、不进矿洞或深段；不移走或新拾矿车残件、不替矿主认领工具、不暗示巡查通过、修复或危险已解除；背篓原肩带持续承重，禁止卸篓、跪地、跌倒、夸张扭腰或表演腿伤。\n硬约束：背篓是母图同一藤篓，不改背包；轮片和有孔残件保留相同数量、形状与相对排布；两只膝垫都保留绑缚，不解开绑带、不增加现代扣件；A2右手只能握原右肩带，左掌只能按自己左膝垫；不要同时托篓底。。",
+          "prompt_sha256": "e1acaf43c0bf4b97562fbb3e7f25aaadeb0213b2e8bafa694f902336da187b72",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/erde_A2_press_left_kneepad_prompt.txt",
+          "negative_constraints": [
+            "背篓是母图同一藤篓，不改背包；轮片和有孔残件保留相同数量、形状与相对排布",
+            "两只膝垫都保留绑缚，不解开绑带、不增加现代扣件",
+            "A2右手只能握原右肩带，左掌只能按自己左膝垫；不要同时托篓底。",
+            "只做自己的负重与护垫整理，不敲击新支撑木、不进矿洞或深段",
+            "不移走或新拾矿车残件、不替矿主认领工具、不暗示巡查通过、修复或危险已解除",
+            "背篓原肩带持续承重，禁止卸篓、跪地、跌倒、夸张扭腰或表演腿伤"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "未发现该角色已有此动作；他人的近似衣物或持物动作单独注明，不冒称全库从未出现同类人类动作。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tila",
+      "canonical_id": "FX-ABY",
+      "name": "缇菈",
+      "status": "selected_planned_not_generated",
+      "selection_status": "kept_next_uncovered_character_in_prior_production_sequence",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-ABY_缇菈.md",
+        "sha256": "fc362a053272610a1422f9e743c423bc7dafe607d08b85b88dceda3dd42af837"
+      },
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "tila_card",
+        "tila_mother_manifest",
+        "tila_mother_spec",
+        "tila_mother_brief",
+        "tila_expression_manifest",
+        "tila_expression_qa",
+        "field_dialogue",
+        "fourth_mother_qa"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_v1_raw_imagegen.png",
+        "raw_sha256": "7fb8a1831263031eec17c24ac021388623447e249ae3a978c35368723f972682",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_transparent.png",
+        "transparent_sha256": "f9d1d52f41ee716f749525cc7ad7915a24535121ff877bcf417b8b6e7cbbe173",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/manifest.json",
+        "manifest_sha256": "2593545f4670c35390977b8d3044c9fb853338ee55e3fbf7c50bc67fe067321e",
+        "independent_qa_source_id": "fourth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "已逐张查看raw与transparent：灰蓝外披巾覆肩及头后，枯紫内披巾在脸侧和胸前，两层清楚；褐色旧长裙和米白裙边。母图双手在胸前扣巾。人物右足（画面左）完整棕鞋，左足（画面右）鞋前破口露趾，脚完整。E1/E2仍双手扣巾、双足站立，主要眉眼嘴改变。",
+        "fixed_sides": "右足（画面左）完整鞋，左足（画面右）破鞋露普通脚趾，绝不交换、补好或画断足。外披巾灰蓝、内披巾枯紫，始终恰好两层。A1右手（画面左）触自己右侧灰蓝兜边、左手胸前守内巾；A2右手胸前守外巾、左手提自己左侧褐裙边。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/expressions_v1/review/tila_expressions_light.png"
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "own_action_directories_found": [],
+        "existing_expressions_actually_viewed": true,
+        "do_not_recount": [
+          "母图",
+          "本人2张表情及小手势",
+          "sources内复用图",
+          "重复展示板及ZIP源成员",
+          "只有眉眼嘴或头姿差别"
+        ]
+      },
+      "story_boundaries": [
+        "只在原地整理自己的衣物；不走动、下楼、离开钟楼、逃亡成功或接受救助",
+        "不说来村、不替修院解释旧事，不画回声厅开门、任务完成、灯光或护符",
+        "破鞋露趾是衣物状态，脚部完整，无新伤、治疗或自动修鞋"
+      ],
+      "risks": [
+        "恰好两层旧披巾，外灰蓝内枯紫，不能变成第三条围巾",
+        "完整鞋在人物右足、破鞋在人物左足，双足都要完整可见",
+        "操作的是原衣物相连的边缘，不抽出独立布条、不脱衣"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/tila/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "tila_A1_reseat_outer_hood_edge",
+          "title_zh": "抬手扶稳外披巾兜边",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "tila_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "披着两层旧披巾"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-ABY／拒绝",
+              "line_start": 168,
+              "quote": "我在上面才看得见路。"
+            }
+          ],
+          "art_inference": "源卡支持人物、衣装、随身物及边界；本具体手位、轻微转体和原物件接触是可逆日常演出提案，不冒充台本已发生事件、医疗建议或原生动画规格。",
+          "start_pose_description_only": "两手原在胸前扣巾，双足原位；右手松开胸前外巾边并向自己的右额侧抬。",
+          "pose": "右肘（画面左）明显弯起、离开躯干，右手伸到自己右侧太阳穴外方，拇指与并拢指组捏住灰蓝外披巾的原兜边，轻轻向后上方扶稳，让抓点附近出现清楚但小幅的受力折褶。手不碰眼睛、不横遮脸。左手（画面右）仍在下胸前扣住枯紫内披巾前缘，内巾和外巾保持分层、仍覆盖头后及双肩。头和躯干保持原朝向，双脚不动。",
+          "end_pose_description_only": "右手可沿同一外巾边回到胸前；不画脱下兜帽或换一条新巾。",
+          "transition_scope": "起止仅文字；本轮只计划pose中一张独立静态关键姿态。A1/A2不构成默认先后顺序，不制作过渡、GIF或完整循环。",
+          "contact_and_support_checks": [
+            "右指组确实捏灰蓝外兜边，不能只举空手或捏头发",
+            "左手仍抓枯紫内巾，双手与两袖连续；脸和两层布边都能辨认",
+            "两脚原位全掌接地，左破鞋仍露趾"
+          ],
+          "prop_state_and_retention": [
+            "同一灰蓝外巾与枯紫内巾都留在身上，褐裙和鞋不变",
+            "不新增灯、面包、武器或救助符号"
+          ],
+          "difference_from_mother_expression_and_batch": "本人母图及两表情双手均在胸前，本姿右前臂抬到太阳穴并有真实兜边接点；与枯恩胸前合披肩不同。",
+          "risk_level": "medium_contact",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量或侧别、裁切与透明硬错；不作无限审美迭代。",
+            "after_failed_revision": "保留所有原稿并标缺项；不得加第三稿或转脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_transparent.png"
+          ],
+          "reference_sha256": [
+            "f9d1d52f41ee716f749525cc7ad7915a24535121ff877bcf417b8b6e7cbbe173"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色及原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持原图成熟大头、自然短颈、紧凑成年身体和有组织的粗像素簇；不幼化、不拉成长身、不统一角色面孔。禁止镜像；左右均按人物自己的解剖侧，并附画面侧。必须画出下述真实手臂、身体或道具接触变化，不能只改表情或头姿。完整头发、双手、双脚及所有原物件，四周透明边距。只画一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减，不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述仅为制作说明，不画多格或额外帧。没有任务完成、授权、付款、治疗、治愈、认领或新剧情结果。\n人物：缇菈 / FX-ABY。三十多岁成年修院避难女性，窄脸、深棕乱发、灰蓝外巾与枯紫内巾、旧褐长裙和米白裙边，保持母图紧凑成年身体。\n侧别与原物件锁：右足（画面左）完整鞋，左足（画面右）破鞋露普通脚趾，绝不交换、补好或画断足。外披巾灰蓝、内披巾枯紫，始终恰好两层。A1右手（画面左）触自己右侧灰蓝兜边、左手胸前守内巾；A2右手胸前守外巾、左手提自己左侧褐裙边。\n本张动作：抬手扶稳外披巾兜边。右肘（画面左）明显弯起、离开躯干，右手伸到自己右侧太阳穴外方，拇指与并拢指组捏住灰蓝外披巾的原兜边，轻轻向后上方扶稳，让抓点附近出现清楚但小幅的受力折褶。手不碰眼睛、不横遮脸。左手（画面右）仍在下胸前扣住枯紫内披巾前缘，内巾和外巾保持分层、仍覆盖头后及双肩。头和躯干保持原朝向，双脚不动。\n接触与支撑：右指组确实捏灰蓝外兜边，不能只举空手或捏头发；左手仍抓枯紫内巾，双手与两袖连续；脸和两层布边都能辨认；两脚原位全掌接地，左破鞋仍露趾。\n物件保留：同一灰蓝外巾与枯紫内巾都留在身上，褐裙和鞋不变；不新增灯、面包、武器或救助符号。\n剧情边界：只在原地整理自己的衣物；不走动、下楼、离开钟楼、逃亡成功或接受救助；不说来村、不替修院解释旧事，不画回声厅开门、任务完成、灯光或护符；破鞋露趾是衣物状态，脚部完整，无新伤、治疗或自动修鞋。\n硬约束：恰好两层旧披巾，外灰蓝内枯紫，不能变成第三条围巾；完整鞋在人物右足、破鞋在人物左足，双足都要完整可见；操作的是原衣物相连的边缘，不抽出独立布条、不脱衣。",
+          "prompt_sha256": "1ce6c7087386e6f48f1c3a58a134d36277254430b476cef8e31801679e39532e",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/tila_A1_reseat_outer_hood_edge_prompt.txt",
+          "negative_constraints": [
+            "恰好两层旧披巾，外灰蓝内枯紫，不能变成第三条围巾",
+            "完整鞋在人物右足、破鞋在人物左足，双足都要完整可见",
+            "操作的是原衣物相连的边缘，不抽出独立布条、不脱衣",
+            "只在原地整理自己的衣物；不走动、下楼、离开钟楼、逃亡成功或接受救助",
+            "不说来村、不替修院解释旧事，不画回声厅开门、任务完成、灯光或护符",
+            "破鞋露趾是衣物状态，脚部完整，无新伤、治疗或自动修鞋"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "未发现该角色已有此动作；他人的近似衣物或持物动作单独注明，不冒称全库从未出现同类人类动作。"
+          }
+        },
+        {
+          "key": "tila_A2_gather_left_skirt_hem",
+          "title_zh": "轻拢左侧裙边看破鞋",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "tila_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "脚上只剩一只完整的鞋"
+            },
+            {
+              "source_id": "tila_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "总在钟楼阴影里站着。"
+            }
+          ],
+          "art_inference": "源卡支持人物、衣装、随身物及边界；本具体手位、轻微转体和原物件接触是可逆日常演出提案，不冒充台本已发生事件、医疗建议或原生动画规格。",
+          "start_pose_description_only": "双足原位，右手仍扣外披巾；左手从胸前下移到本人左大腿外侧。",
+          "pose": "右手（画面左）仍在胸前握灰蓝外披巾边。左手（画面右）在左大腿外侧捏住原褐色长裙一小撮相连布料，向上轻提，仅使左侧裙边离左鞋面略高，保持膝部遮盖、米白内裙仍可见。上身从髋部略前倾，视线顺着左手看向原破鞋；两脚保持原位置，双脚仍完整落地，主要重心略靠穿完整鞋的右脚但不抬左脚。裙布由左手到裙腰、裙摆连续，露趾破口更清楚但没有被手触碰。",
+          "end_pose_description_only": "松开布料可让裙边自然落回；不写下楼、迈步或修鞋后状态。",
+          "transition_scope": "起止仅文字；本轮只计划pose中一张独立静态关键姿态。A1/A2不构成默认先后顺序，不制作过渡、GIF或完整循环。",
+          "contact_and_support_checks": [
+            "左手只捏褐裙外层，不把内巾尾认成裙边",
+            "被提的是原长裙相连布料，膝部仍遮盖，不能变短裙或另添一块布",
+            "两鞋原侧完整可见，两脚都落地；左足不画离地抬腿"
+          ],
+          "prop_state_and_retention": [
+            "右完整鞋与左露趾破鞋保持原损耗，不新增补丁、伤口或工具",
+            "灰蓝外巾与枯紫内巾仍覆头肩胸，紫巾尾仍自然垂下"
+          ],
+          "difference_from_mother_expression_and_batch": "本人既有图无手接裙边或轻俯身；不同于德茹双手拢围裙低蹲，本姿一手留巾、一手提自己的裙侧且两足站稳。",
+          "risk_level": "medium_foot_and_layer_visibility",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量或侧别、裁切与透明硬错；不作无限审美迭代。",
+            "after_failed_revision": "保留所有原稿并标缺项；不得加第三稿或转脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_transparent.png"
+          ],
+          "reference_sha256": [
+            "f9d1d52f41ee716f749525cc7ad7915a24535121ff877bcf417b8b6e7cbbe173"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色及原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持原图成熟大头、自然短颈、紧凑成年身体和有组织的粗像素簇；不幼化、不拉成长身、不统一角色面孔。禁止镜像；左右均按人物自己的解剖侧，并附画面侧。必须画出下述真实手臂、身体或道具接触变化，不能只改表情或头姿。完整头发、双手、双脚及所有原物件，四周透明边距。只画一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减，不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述仅为制作说明，不画多格或额外帧。没有任务完成、授权、付款、治疗、治愈、认领或新剧情结果。\n人物：缇菈 / FX-ABY。三十多岁成年修院避难女性，窄脸、深棕乱发、灰蓝外巾与枯紫内巾、旧褐长裙和米白裙边，保持母图紧凑成年身体。\n侧别与原物件锁：右足（画面左）完整鞋，左足（画面右）破鞋露普通脚趾，绝不交换、补好或画断足。外披巾灰蓝、内披巾枯紫，始终恰好两层。A1右手（画面左）触自己右侧灰蓝兜边、左手胸前守内巾；A2右手胸前守外巾、左手提自己左侧褐裙边。\n本张动作：轻拢左侧裙边看破鞋。右手（画面左）仍在胸前握灰蓝外披巾边。左手（画面右）在左大腿外侧捏住原褐色长裙一小撮相连布料，向上轻提，仅使左侧裙边离左鞋面略高，保持膝部遮盖、米白内裙仍可见。上身从髋部略前倾，视线顺着左手看向原破鞋；两脚保持原位置，双脚仍完整落地，主要重心略靠穿完整鞋的右脚但不抬左脚。裙布由左手到裙腰、裙摆连续，露趾破口更清楚但没有被手触碰。\n接触与支撑：左手只捏褐裙外层，不把内巾尾认成裙边；被提的是原长裙相连布料，膝部仍遮盖，不能变短裙或另添一块布；两鞋原侧完整可见，两脚都落地；左足不画离地抬腿。\n物件保留：右完整鞋与左露趾破鞋保持原损耗，不新增补丁、伤口或工具；灰蓝外巾与枯紫内巾仍覆头肩胸，紫巾尾仍自然垂下。\n剧情边界：只在原地整理自己的衣物；不走动、下楼、离开钟楼、逃亡成功或接受救助；不说来村、不替修院解释旧事，不画回声厅开门、任务完成、灯光或护符；破鞋露趾是衣物状态，脚部完整，无新伤、治疗或自动修鞋。\n硬约束：恰好两层旧披巾，外灰蓝内枯紫，不能变成第三条围巾；完整鞋在人物右足、破鞋在人物左足，双足都要完整可见；操作的是原衣物相连的边缘，不抽出独立布条、不脱衣。",
+          "prompt_sha256": "c4a1c015267ff1f92571cdfd633a6bfa1a7d577dfbaa5498b5f7f92eead3e72d",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/tila_A2_gather_left_skirt_hem_prompt.txt",
+          "negative_constraints": [
+            "恰好两层旧披巾，外灰蓝内枯紫，不能变成第三条围巾",
+            "完整鞋在人物右足、破鞋在人物左足，双足都要完整可见",
+            "操作的是原衣物相连的边缘，不抽出独立布条、不脱衣",
+            "只在原地整理自己的衣物；不走动、下楼、离开钟楼、逃亡成功或接受救助",
+            "不说来村、不替修院解释旧事，不画回声厅开门、任务完成、灯光或护符",
+            "破鞋露趾是衣物状态，脚部完整，无新伤、治疗或自动修鞋"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "未发现该角色已有此动作；他人的近似衣物或持物动作单独注明，不冒称全库从未出现同类人类动作。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "miloer",
+      "canonical_id": "FX-LEP",
+      "name": "米洛珥",
+      "status": "selected_planned_not_generated",
+      "selection_status": "kept_next_uncovered_character_in_prior_production_sequence",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-LEP_米洛珥.md",
+        "sha256": "6b3b78cf0f60f7e9f319c158d482dd8a199a44af07cdc05101573f07fa364dda"
+      },
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "miloer_card",
+        "miloer_mother_manifest",
+        "miloer_mother_spec",
+        "miloer_mother_brief",
+        "miloer_expression_manifest",
+        "miloer_expression_qa",
+        "field_dialogue",
+        "fourth_mother_qa"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_v1_raw_imagegen.png",
+        "raw_sha256": "669f8424bd7b5b99f822edd12f9da19c48186887df0c3677ce2877251506396f",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_transparent.png",
+        "transparent_sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/manifest.json",
+        "manifest_sha256": "37862a490a93abaeb2aeb75f2a10bfd9d53039886239708774e0c5ba7c54c646",
+        "independent_qa_source_id": "fourth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "已逐张查看raw与transparent：四十来岁成年男子，厚下颌、深棕发夹灰鬓及短须，米麻衫双袖有麻绳结，灰绿围裙。左手（画面右）托红棕小陶罐，浅棕圆盖及颈部绳结完整；右手（画面左）向下展开。E1/E2右臂下垂、左手仍托罐，没有右手碰盖或跨身理左袖的接触。",
+        "fixed_sides": "同一小陶油膏罐固定由左掌（画面右）承托，原盖与颈绳结始终封合；不得开盖或换成现代旋盖瓶。双袖麻绳结各留本侧。A1右指组触盖顶；A2右手跨到左袖布褶、不得穿过持罐左腕或陶罐。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/expressions_v1/review/miloer_expressions_light_zh.png"
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "own_action_directories_found": [],
+        "existing_expressions_actually_viewed": true,
+        "do_not_recount": [
+          "母图",
+          "本人2张表情及小手势",
+          "sources内复用图",
+          "重复展示板及ZIP源成员",
+          "只有眉眼嘴或头姿差别"
+        ]
+      },
+      "story_boundaries": [
+        "只整理封罐或自己的袖口，不取油膏、不涂抹、不触患者、不展示任何医疗操作或疗效",
+        "不新增洗手盆或井水，不把洗手前后、患者同意、继续治疗或舒适护理结果画成事实",
+        "不报病人姓名、不让外人进门，不加患者、名单、瘟医面具或现代医疗器械"
+      ],
+      "risks": [
+        "同一罐始终左手托底，盖与颈部绳结不脱离、数量不增加",
+        "两袖麻绳结仍系紧，不拉开、解结或添一根绳",
+        "右手不能穿罐、穿左手，也不能因遮挡删去一只手或多生指组"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/miloer/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "miloer_A1_touch_closed_jar_lid",
+          "title_zh": "托罐轻按原盖",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "miloer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "随身带一小罐油膏"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-LEP／任务完成后边界",
+              "line_start": 239,
+              "quote": "治疗这件事没有完成的那天，只有今天的量。"
+            }
+          ],
+          "art_inference": "源卡支持人物、衣装、随身物及边界；本具体手位、轻微转体和原物件接触是可逆日常演出提案，不冒充台本已发生事件、医疗建议或原生动画规格。",
+          "start_pose_description_only": "左掌仍托着原封罐，右手从低幅下掌位置收回靠近罐顶。",
+          "pose": "左肘（画面右）保持弯曲，左掌从下托住同一小陶罐，罐移到左下胸前以看清原盖。右臂（画面左）弯向身体中线，右手拇指留在盖侧，另外并拢的指腹轻压原浅棕圆盖上面，形成看得清的盖顶接点。罐体保持竖直、盖完全贴合原罐口、颈绳结保持原样；两手分工清楚，一手托底、一手轻按盖。头略看自己的手，双足原位站稳。",
+          "end_pose_description_only": "右手可松开盖顶；没有开罐、取药或重新封装的前后结果。",
+          "transition_scope": "起止仅文字；本轮只计划pose中一张独立静态关键姿态。A1/A2不构成默认先后顺序，不制作过渡、GIF或完整循环。",
+          "contact_and_support_checks": [
+            "左掌托底、右指腹在盖顶，两个手腕与各自袖口连续",
+            "盖和罐口间不出现开口或露膏，颈绳原结不断",
+            "双脚落地、两肘不高过肩，罐不悬浮不翻倒"
+          ],
+          "prop_state_and_retention": [
+            "一只原红棕陶罐、一片原盖、一条原颈绳；没有复制到腰侧的第二罐",
+            "两袖绑绳与围裙全保留"
+          ],
+          "difference_from_mother_expression_and_batch": "本人母图与两表情都只有左手持罐；本姿右手新增盖顶接触，左右肘均弯到胸腹前，区别简单换表情。",
+          "risk_level": "medium_contact",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量或侧别、裁切与透明硬错；不作无限审美迭代。",
+            "after_failed_revision": "保留所有原稿并标缺项；不得加第三稿或转脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_transparent.png"
+          ],
+          "reference_sha256": [
+            "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色及原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持原图成熟大头、自然短颈、紧凑成年身体和有组织的粗像素簇；不幼化、不拉成长身、不统一角色面孔。禁止镜像；左右均按人物自己的解剖侧，并附画面侧。必须画出下述真实手臂、身体或道具接触变化，不能只改表情或头姿。完整头发、双手、双脚及所有原物件，四周透明边距。只画一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减，不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述仅为制作说明，不画多格或额外帧。没有任务完成、授权、付款、治疗、治愈、认领或新剧情结果。\n人物：米洛珥 / FX-LEP。四十来岁成年男性麻风院护理者，厚下颌、深棕灰鬓头发与短须、未漂白麻衫、两袖麻绳结、灰绿围裙、棕裤靴。\n侧别与原物件锁：同一小陶油膏罐固定由左掌（画面右）承托，原盖与颈绳结始终封合；不得开盖或换成现代旋盖瓶。双袖麻绳结各留本侧。A1右指组触盖顶；A2右手跨到左袖布褶、不得穿过持罐左腕或陶罐。\n本张动作：托罐轻按原盖。左肘（画面右）保持弯曲，左掌从下托住同一小陶罐，罐移到左下胸前以看清原盖。右臂（画面左）弯向身体中线，右手拇指留在盖侧，另外并拢的指腹轻压原浅棕圆盖上面，形成看得清的盖顶接点。罐体保持竖直、盖完全贴合原罐口、颈绳结保持原样；两手分工清楚，一手托底、一手轻按盖。头略看自己的手，双足原位站稳。\n接触与支撑：左掌托底、右指腹在盖顶，两个手腕与各自袖口连续；盖和罐口间不出现开口或露膏，颈绳原结不断；双脚落地、两肘不高过肩，罐不悬浮不翻倒。\n物件保留：一只原红棕陶罐、一片原盖、一条原颈绳；没有复制到腰侧的第二罐；两袖绑绳与围裙全保留。\n剧情边界：只整理封罐或自己的袖口，不取油膏、不涂抹、不触患者、不展示任何医疗操作或疗效；不新增洗手盆或井水，不把洗手前后、患者同意、继续治疗或舒适护理结果画成事实；不报病人姓名、不让外人进门，不加患者、名单、瘟医面具或现代医疗器械。\n硬约束：同一罐始终左手托底，盖与颈部绳结不脱离、数量不增加；两袖麻绳结仍系紧，不拉开、解结或添一根绳；右手不能穿罐、穿左手，也不能因遮挡删去一只手或多生指组。",
+          "prompt_sha256": "6e7da27b88047d1936d58fe14de0c2ba0af9fd34515eddf149e729a7449ff1ac",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/miloer_A1_touch_closed_jar_lid_prompt.txt",
+          "negative_constraints": [
+            "同一罐始终左手托底，盖与颈部绳结不脱离、数量不增加",
+            "两袖麻绳结仍系紧，不拉开、解结或添一根绳",
+            "右手不能穿罐、穿左手，也不能因遮挡删去一只手或多生指组",
+            "只整理封罐或自己的袖口，不取油膏、不涂抹、不触患者、不展示任何医疗操作或疗效",
+            "不新增洗手盆或井水，不把洗手前后、患者同意、继续治疗或舒适护理结果画成事实",
+            "不报病人姓名、不让外人进门，不加患者、名单、瘟医面具或现代医疗器械"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "未发现该角色已有此动作；他人的近似衣物或持物动作单独注明，不冒称全库从未出现同类人类动作。"
+          }
+        },
+        {
+          "key": "miloer_A2_smooth_left_tied_cuff",
+          "title_zh": "持罐按平左袖褶",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "miloer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "袖口用麻绳扎紧"
+            },
+            {
+              "source_id": "miloer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "随身带一小罐油膏"
+            }
+          ],
+          "art_inference": "源卡支持人物、衣装、随身物及边界；本具体手位、轻微转体和原物件接触是可逆日常演出提案，不冒充台本已发生事件、医疗建议或原生动画规格。",
+          "start_pose_description_only": "左掌托原封罐，左前臂稍向身体前方伸出，为扎袖口外侧留出可见空间。",
+          "pose": "左肘（画面右）弯曲，左前臂近水平向前，左掌向上稳定托住同一竖直封罐，罐保持在左腹前并略离衣身。右手（画面左）从腹前横伸到左袖口外侧，右掌与并拢指组轻压左袖原麻绳结下方的米白布褶，让褶边贴回左腕上方。右手接触的是布料，不抓绳尾、不解绳结、不触陶罐。右前臂从腹前横过但不穿过左腕，两袖原绳结仍可读，头只略低看手，双脚原位站稳。",
+          "end_pose_description_only": "右手可回到右侧，左袖结仍旧闭合；不新增完成洗手或准备诊疗的含义。",
+          "transition_scope": "起止仅文字；本轮只计划pose中一张独立静态关键姿态。A1/A2不构成默认先后顺序，不制作过渡、GIF或完整循环。",
+          "contact_and_support_checks": [
+            "左手持续托底，罐和盖不倾斜；右手在左袖外侧而非压罐",
+            "左袖绳结上方仍清楚，右指组只按结下方布褶，不把结变成散绳",
+            "双手与袖口解剖连续，前臂交叠有清楚前后关系，不生第三手"
+          ],
+          "prop_state_and_retention": [
+            "原封罐、盖和颈绳不动用；左手不能空手",
+            "双袖各一原麻绳结，右袖结也保留可见线索"
+          ],
+          "difference_from_mother_expression_and_batch": "本人无理左袖动作。全库已有安妮扣袖带和奥辛理袖，但这里是左手持续托原封罐、右手跨身按左袖布褶，不重做他人图或冒计旧动作。",
+          "risk_level": "medium_cross_arm_contact",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量或侧别、裁切与透明硬错；不作无限审美迭代。",
+            "after_failed_revision": "保留所有原稿并标缺项；不得加第三稿或转脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_transparent.png"
+          ],
+          "reference_sha256": [
+            "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色及原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持原图成熟大头、自然短颈、紧凑成年身体和有组织的粗像素簇；不幼化、不拉成长身、不统一角色面孔。禁止镜像；左右均按人物自己的解剖侧，并附画面侧。必须画出下述真实手臂、身体或道具接触变化，不能只改表情或头姿。完整头发、双手、双脚及所有原物件，四周透明边距。只画一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减，不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述仅为制作说明，不画多格或额外帧。没有任务完成、授权、付款、治疗、治愈、认领或新剧情结果。\n人物：米洛珥 / FX-LEP。四十来岁成年男性麻风院护理者，厚下颌、深棕灰鬓头发与短须、未漂白麻衫、两袖麻绳结、灰绿围裙、棕裤靴。\n侧别与原物件锁：同一小陶油膏罐固定由左掌（画面右）承托，原盖与颈绳结始终封合；不得开盖或换成现代旋盖瓶。双袖麻绳结各留本侧。A1右指组触盖顶；A2右手跨到左袖布褶、不得穿过持罐左腕或陶罐。\n本张动作：持罐按平左袖褶。左肘（画面右）弯曲，左前臂近水平向前，左掌向上稳定托住同一竖直封罐，罐保持在左腹前并略离衣身。右手（画面左）从腹前横伸到左袖口外侧，右掌与并拢指组轻压左袖原麻绳结下方的米白布褶，让褶边贴回左腕上方。右手接触的是布料，不抓绳尾、不解绳结、不触陶罐。右前臂从腹前横过但不穿过左腕，两袖原绳结仍可读，头只略低看手，双脚原位站稳。\n接触与支撑：左手持续托底，罐和盖不倾斜；右手在左袖外侧而非压罐；左袖绳结上方仍清楚，右指组只按结下方布褶，不把结变成散绳；双手与袖口解剖连续，前臂交叠有清楚前后关系，不生第三手。\n物件保留：原封罐、盖和颈绳不动用；左手不能空手；双袖各一原麻绳结，右袖结也保留可见线索。\n剧情边界：只整理封罐或自己的袖口，不取油膏、不涂抹、不触患者、不展示任何医疗操作或疗效；不新增洗手盆或井水，不把洗手前后、患者同意、继续治疗或舒适护理结果画成事实；不报病人姓名、不让外人进门，不加患者、名单、瘟医面具或现代医疗器械。\n硬约束：同一罐始终左手托底，盖与颈部绳结不脱离、数量不增加；两袖麻绳结仍系紧，不拉开、解结或添一根绳；右手不能穿罐、穿左手，也不能因遮挡删去一只手或多生指组。",
+          "prompt_sha256": "1dbdb60ea6430f1d27434894fdad173bd08e6524ea68c2b2586670f2ada681fc",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/miloer_A2_smooth_left_tied_cuff_prompt.txt",
+          "negative_constraints": [
+            "同一罐始终左手托底，盖与颈部绳结不脱离、数量不增加",
+            "两袖麻绳结仍系紧，不拉开、解结或添一根绳",
+            "右手不能穿罐、穿左手，也不能因遮挡删去一只手或多生指组",
+            "只整理封罐或自己的袖口，不取油膏、不涂抹、不触患者、不展示任何医疗操作或疗效",
+            "不新增洗手盆或井水，不把洗手前后、患者同意、继续治疗或舒适护理结果画成事实",
+            "不报病人姓名、不让外人进门，不加患者、名单、瘟医面具或现代医疗器械"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "未发现该角色已有此动作；他人的近似衣物或持物动作单独注明，不冒称全库从未出现同类人类动作。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kouer",
+      "canonical_id": "FX-PLG",
+      "name": "蔻珥",
+      "status": "selected_planned_not_generated",
+      "selection_status": "kept_next_uncovered_character_in_prior_production_sequence",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-PLG_蔻珥.md",
+        "sha256": "3f9362f9ccb7c29542e7bf0520b139aa7fcc9461f818824749a57c606e55c1b4"
+      },
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "kouer_card",
+        "kouer_mother_manifest",
+        "kouer_mother_spec",
+        "kouer_mother_brief",
+        "kouer_expression_manifest",
+        "kouer_expression_qa",
+        "field_dialogue",
+        "fourth_mother_qa"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_v1_raw_imagegen.png",
+        "raw_sha256": "b58f27d1de28aaeab1f14a003633587680edeb7012127e804593d147ffdb183e",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_transparent.png",
+        "transparent_sha256": "30b2b6ec4a29139a8520b5de382cd93e3cb002a9d94241a0502698a79e385500",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/manifest.json",
+        "manifest_sha256": "72529a2d05f1073c4b627c1d0f767fceee5264a159cc506157487d7d4bcfe8e8",
+        "independent_qa_source_id": "fourth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "已逐张查看raw与transparent：灰蓝外头巾与米白内头巾、暗褐长衣、米白袖裙边和棕鞋。单个木桶在身前偏人物右侧（画面左）落地，两手并排握弧形提把顶段。桶内原白石灰小堆和两道铁箍清楚；E1/E2仍同样两手搭把、桶底落地，仅脸部变化。",
+        "fixed_sides": "桶始终是母图那一个，位于身前偏人物右侧（画面左）；两道铁箍、弧形原提把与内部白石灰堆保持。A1双手各握原把顶段并排上提；A2右手（画面左）握原把顶部，左手（画面右）触桶口外缘，绝不碰石灰。双头巾外灰蓝内米白，不镜像。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/expressions_v1/review/kouer_expressions_light_zh.png"
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "own_action_directories_found": [],
+        "existing_expressions_actually_viewed": true,
+        "do_not_recount": [
+          "母图",
+          "本人2张表情及小手势",
+          "sources内复用图",
+          "重复展示板及ZIP源成员",
+          "只有眉眼嘴或头姿差别"
+        ]
+      },
+      "story_boundaries": [
+        "只做普通木桶的低位握持与稳放，不撒灰、按手入灰、吹扬石灰或展示防疫功效",
+        "不拆封条、开门、认领遗物、判断病还在不在，绝不表现疫病清除或任务结案",
+        "石灰为静止普通物料，不成为烟雾、攻击、咒术；不加封条、钥匙、勺子或第二桶"
+      ],
+      "risks": [
+        "桶内石灰始终保持原量原堆形，不洒落，不让手碰白灰",
+        "弧形提把两端始终接在原桶耳，不折断、不压成绳把、不添加新铰链结构",
+        "桶、手和衣裙应有清楚遮挡，不让桶与双鞋互穿；双层头巾完整"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/kouer/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "kouer_A1_low_lift_lime_bucket",
+          "title_zh": "双手低提原木桶",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "kouer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "手边总有一桶石灰"
+            },
+            {
+              "source_id": "kouer_card",
+              "locator": "知情边界",
+              "line_start": 21,
+              "quote": "不判断病还在不在。"
+            }
+          ],
+          "art_inference": "源卡支持人物、衣装、随身物及边界；本具体手位、轻微转体和原物件接触是可逆日常演出提案，不冒充台本已发生事件、医疗建议或原生动画规格。",
+          "start_pose_description_only": "桶原在两脚前偏右的位置，双手并排握原把顶段，双足稳定。",
+          "pose": "双手仍并排握同一弧形提把顶部，两肘从原下垂姿略弯，将原桶整体平稳提起一小段。桶仍在身前偏人物右侧（画面左），竖直不倾斜，桶底离双鞋共同落地基线约半个鞋面高度，留出清楚透明间隙，不挪到膝上或胸前。双臂与肩部有自然向上的提力关系，肩平、躯干站直，双脚原位全掌着地。原灰堆保持静止不扬起，面部保持克制日常神情。",
+          "end_pose_description_only": "可原位放回；本姿不补走路、倒灰或完成清理的后续画面。",
+          "transition_scope": "起止仅文字；本轮只计划pose中一张独立静态关键姿态。A1/A2不构成默认先后顺序，不制作过渡、GIF或完整循环。",
+          "contact_and_support_checks": [
+            "双手真正握同一把顶部、指组包住把，原把两端接桶耳",
+            "桶底与原足底基线间有可见间隙，不能仍落地冒称提起，也不能漂浮脱手",
+            "双脚全掌原位，桶不歪、石灰不离桶"
+          ],
+          "prop_state_and_retention": [
+            "原木桶、弧形提把、两道铁箍及原石灰量都保留",
+            "两层头巾和裙摆保持完整；不新增移动工具"
+          ],
+          "difference_from_mother_expression_and_batch": "本人所有既有图桶底落地、双臂自然下垂；本姿新增真实低位提桶、弯肘和离地间隙。与洛珉提油灯不同，不添加光火。",
+          "risk_level": "medium_contact",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量或侧别、裁切与透明硬错；不作无限审美迭代。",
+            "after_failed_revision": "保留所有原稿并标缺项；不得加第三稿或转脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_transparent.png"
+          ],
+          "reference_sha256": [
+            "30b2b6ec4a29139a8520b5de382cd93e3cb002a9d94241a0502698a79e385500"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色及原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持原图成熟大头、自然短颈、紧凑成年身体和有组织的粗像素簇；不幼化、不拉成长身、不统一角色面孔。禁止镜像；左右均按人物自己的解剖侧，并附画面侧。必须画出下述真实手臂、身体或道具接触变化，不能只改表情或头姿。完整头发、双手、双脚及所有原物件，四周透明边距。只画一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减，不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述仅为制作说明，不画多格或额外帧。没有任务完成、授权、付款、治疗、治愈、认领或新剧情结果。\n人物：蔻珥 / FX-PLG。四十多岁成年女性疫村看守，方圆脸、平直眉、灰蓝与米白双头巾、暗褐长衣、米白袖边裙边和棕鞋，表情平静。\n侧别与原物件锁：桶始终是母图那一个，位于身前偏人物右侧（画面左）；两道铁箍、弧形原提把与内部白石灰堆保持。A1双手各握原把顶段并排上提；A2右手（画面左）握原把顶部，左手（画面右）触桶口外缘，绝不碰石灰。双头巾外灰蓝内米白，不镜像。\n本张动作：双手低提原木桶。双手仍并排握同一弧形提把顶部，两肘从原下垂姿略弯，将原桶整体平稳提起一小段。桶仍在身前偏人物右侧（画面左），竖直不倾斜，桶底离双鞋共同落地基线约半个鞋面高度，留出清楚透明间隙，不挪到膝上或胸前。双臂与肩部有自然向上的提力关系，肩平、躯干站直，双脚原位全掌着地。原灰堆保持静止不扬起，面部保持克制日常神情。\n接触与支撑：双手真正握同一把顶部、指组包住把，原把两端接桶耳；桶底与原足底基线间有可见间隙，不能仍落地冒称提起，也不能漂浮脱手；双脚全掌原位，桶不歪、石灰不离桶。\n物件保留：原木桶、弧形提把、两道铁箍及原石灰量都保留；两层头巾和裙摆保持完整；不新增移动工具。\n剧情边界：只做普通木桶的低位握持与稳放，不撒灰、按手入灰、吹扬石灰或展示防疫功效；不拆封条、开门、认领遗物、判断病还在不在，绝不表现疫病清除或任务结案；石灰为静止普通物料，不成为烟雾、攻击、咒术；不加封条、钥匙、勺子或第二桶。\n硬约束：桶内石灰始终保持原量原堆形，不洒落，不让手碰白灰；弧形提把两端始终接在原桶耳，不折断、不压成绳把、不添加新铰链结构；桶、手和衣裙应有清楚遮挡，不让桶与双鞋互穿；双层头巾完整。",
+          "prompt_sha256": "33c3f0bf370e2fa1d77621dc4d3f7ab2e01d5955bcfe29dbb0bdbfc76cde130d",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/kouer_A1_low_lift_lime_bucket_prompt.txt",
+          "negative_constraints": [
+            "桶内石灰始终保持原量原堆形，不洒落，不让手碰白灰",
+            "弧形提把两端始终接在原桶耳，不折断、不压成绳把、不添加新铰链结构",
+            "桶、手和衣裙应有清楚遮挡，不让桶与双鞋互穿；双层头巾完整",
+            "只做普通木桶的低位握持与稳放，不撒灰、按手入灰、吹扬石灰或展示防疫功效",
+            "不拆封条、开门、认领遗物、判断病还在不在，绝不表现疫病清除或任务结案",
+            "石灰为静止普通物料，不成为烟雾、攻击、咒术；不加封条、钥匙、勺子或第二桶"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "未发现该角色已有此动作；他人的近似衣物或持物动作单独注明，不冒称全库从未出现同类人类动作。"
+          }
+        },
+        {
+          "key": "kouer_A2_grounded_bucket_rim_steady",
+          "title_zh": "俯身扶稳落地桶沿",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "kouer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "手边总有一桶石灰"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-PLG／任务完成后边界",
+              "line_start": 559,
+              "quote": "封条我没拆，也不会拆。"
+            }
+          ],
+          "art_inference": "源卡支持人物、衣装、随身物及边界；本具体手位、轻微转体和原物件接触是可逆日常演出提案，不冒充台本已发生事件、医疗建议或原生动画规格。",
+          "start_pose_description_only": "原木桶保持母图落地位置与竖直朝向；由双手握把改为一手握把、一手扶外桶沿。",
+          "pose": "原桶底完全落在母图的隐含地面基线、位置不移，人物双膝小幅弯曲并从髋部温和前倾。右手（画面左）仍握同一弧形提把顶部，手腕顺着把自然下垂；左手（画面右）松开把，向下伸至桶口画面右侧的外缘，掌根贴外侧木桶沿，指组向外下方弯在桶壁上。左手及指尖始终留在桶口外面，不伸进白灰、不压灰堆。两臂高度与接点清楚不同，桶靠自身底面承重，双脚原位稳定，头略随上身看桶沿。",
+          "end_pose_description_only": "左手可离开桶外缘、躯干回直；不画撒灰、抹灰或处理疫区的完成动作。",
+          "transition_scope": "起止仅文字；本轮只计划pose中一张独立静态关键姿态。A1/A2不构成默认先后顺序，不制作过渡、GIF或完整循环。",
+          "contact_and_support_checks": [
+            "桶底贴原隐含地面，右手握把顶、左掌扶外木缘，接点分离可读",
+            "左指组全部在桶口外缘外侧，不接触白灰；不能用灰堆托住手",
+            "双脚全掌原位、双膝不触地；桶体竖直，提把两端仍接原桶耳"
+          ],
+          "prop_state_and_retention": [
+            "同桶同灰、桶体不变形，不出现第二把或第三只手",
+            "原衣裙、双头巾和两鞋全保留，不加地板、封条或场景"
+          ],
+          "difference_from_mother_expression_and_batch": "本人母图及表情都是站直双手同把；本姿真实俯身且左手新增桶口外缘接触，区别A1双手离地提桶。",
+          "risk_level": "medium_bucket_and_hand_contact",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量或侧别、裁切与透明硬错；不作无限审美迭代。",
+            "after_failed_revision": "保留所有原稿并标缺项；不得加第三稿或转脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_transparent.png"
+          ],
+          "reference_sha256": [
+            "30b2b6ec4a29139a8520b5de382cd93e3cb002a9d94241a0502698a79e385500"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色及原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持原图成熟大头、自然短颈、紧凑成年身体和有组织的粗像素簇；不幼化、不拉成长身、不统一角色面孔。禁止镜像；左右均按人物自己的解剖侧，并附画面侧。必须画出下述真实手臂、身体或道具接触变化，不能只改表情或头姿。完整头发、双手、双脚及所有原物件，四周透明边距。只画一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减，不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述仅为制作说明，不画多格或额外帧。没有任务完成、授权、付款、治疗、治愈、认领或新剧情结果。\n人物：蔻珥 / FX-PLG。四十多岁成年女性疫村看守，方圆脸、平直眉、灰蓝与米白双头巾、暗褐长衣、米白袖边裙边和棕鞋，表情平静。\n侧别与原物件锁：桶始终是母图那一个，位于身前偏人物右侧（画面左）；两道铁箍、弧形原提把与内部白石灰堆保持。A1双手各握原把顶段并排上提；A2右手（画面左）握原把顶部，左手（画面右）触桶口外缘，绝不碰石灰。双头巾外灰蓝内米白，不镜像。\n本张动作：俯身扶稳落地桶沿。原桶底完全落在母图的隐含地面基线、位置不移，人物双膝小幅弯曲并从髋部温和前倾。右手（画面左）仍握同一弧形提把顶部，手腕顺着把自然下垂；左手（画面右）松开把，向下伸至桶口画面右侧的外缘，掌根贴外侧木桶沿，指组向外下方弯在桶壁上。左手及指尖始终留在桶口外面，不伸进白灰、不压灰堆。两臂高度与接点清楚不同，桶靠自身底面承重，双脚原位稳定，头略随上身看桶沿。\n接触与支撑：桶底贴原隐含地面，右手握把顶、左掌扶外木缘，接点分离可读；左指组全部在桶口外缘外侧，不接触白灰；不能用灰堆托住手；双脚全掌原位、双膝不触地；桶体竖直，提把两端仍接原桶耳。\n物件保留：同桶同灰、桶体不变形，不出现第二把或第三只手；原衣裙、双头巾和两鞋全保留，不加地板、封条或场景。\n剧情边界：只做普通木桶的低位握持与稳放，不撒灰、按手入灰、吹扬石灰或展示防疫功效；不拆封条、开门、认领遗物、判断病还在不在，绝不表现疫病清除或任务结案；石灰为静止普通物料，不成为烟雾、攻击、咒术；不加封条、钥匙、勺子或第二桶。\n硬约束：桶内石灰始终保持原量原堆形，不洒落，不让手碰白灰；弧形提把两端始终接在原桶耳，不折断、不压成绳把、不添加新铰链结构；桶、手和衣裙应有清楚遮挡，不让桶与双鞋互穿；双层头巾完整。",
+          "prompt_sha256": "da476474762b20acd95e631208e2361cddb82a0b42f8fda925c3a2175ed2c3c1",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/kouer_A2_grounded_bucket_rim_steady_prompt.txt",
+          "negative_constraints": [
+            "桶内石灰始终保持原量原堆形，不洒落，不让手碰白灰",
+            "弧形提把两端始终接在原桶耳，不折断、不压成绳把、不添加新铰链结构",
+            "桶、手和衣裙应有清楚遮挡，不让桶与双鞋互穿；双层头巾完整",
+            "只做普通木桶的低位握持与稳放，不撒灰、按手入灰、吹扬石灰或展示防疫功效",
+            "不拆封条、开门、认领遗物、判断病还在不在，绝不表现疫病清除或任务结案",
+            "石灰为静止普通物料，不成为烟雾、攻击、咒术；不加封条、钥匙、勺子或第二桶"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "未发现该角色已有此动作；他人的近似衣物或持物动作单独注明，不冒称全库从未出现同类人类动作。"
+          }
+        }
+      ]
+    }
+  ],
+  "future_acceptance_checks": [
+    "独立计划门审先核8姿证据、目标、侧别与预算，通过后才能派图。",
+    "未来每张raw/transparent/浅深展示都须实际view，不能仅按alpha或文件数计数。",
+    "珥德A1右掌接篓底且左手扶左带，A2左掌按左膝垫右手扶右带，篓中残件及双垫不漂移。",
+    "缇菈A1右手接外灰蓝兜边、左手仍守内紫巾；A2左手拢裙，右完整鞋/左破鞋和完整足部保留。",
+    "米洛珥两姿左手始终托同一封罐；A1右指压盖不打开，A2右手压左袖布褶且双结仍紧。",
+    "蔻珥A1桶真有少量离地间隙，A2桶真落地且左手在外桶沿；石灰不增减、不扬起、不接触皮肤。",
+    "独审看得见的真实身体/接触差异才计新增动作，不能把旧表情或小手势重计。",
+    "失败首稿及唯一修订均保留；未过可缺项，不自增第三稿、不补GIF、不改原生规格。"
+  ],
+  "verification": {
+    "json_parse": true,
+    "plan_count": 8,
+    "characters_in_roster44": true,
+    "all_evidence_quotes_found_in_current_sources": true,
+    "all_four_anchor_hashes_match_manifest_and_independent_qa": true,
+    "four_mothers_raw_and_transparent_actually_viewed": true,
+    "four_expression_boards_actually_viewed": true,
+    "copied_source_hashes_verified": true,
+    "all_original_source_hashes_still_match": true,
+    "prompt_files_sha_verified": true,
+    "generated_images": 0,
+    "validation_scope": "新增计划结构、逐字引文/行号、源路径/SHA及原字节快照、动作树和ZIP文本去重。未改剧情，未声称全库文学或游戏运行验收。"
+  },
+  "source_snapshot_manifest": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_sources/SNAPSHOT_MANIFEST.json",
+    "sha256": "68ad4cf160b5736713e3b814586e3a88bdfde0490fbfa0b28ffdd82cd6aa0018"
+  },
+  "independent_plan_review_status": "pending_not_generated"
+}

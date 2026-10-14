@@ -1,0 +1,14 @@
+{
+  "status": "history_only_not_delivery",
+  "superseded": [
+    "PREFLIGHT_PACKAGE_MANIFEST.json",
+    "PREFLIGHT_V2_PACKAGE_MANIFEST.json",
+    "FINAL_PACKAGE_MANIFEST.json"
+  ],
+  "final_delivery_manifest": "FINAL_FROZEN_PACKAGE_MANIFEST.json",
+  "notes": [
+    "preflight v1 omitted three nested source metadata files from each character manifest; complete source ZIPs still included every file. V2 corrected manifest exclusion to root only.",
+    "First freeze attempt stopped before any character write because code expected uppercase PASS while reviewer returned lowercase pass. Final-named package snapshot accidentally ran after this assert and contains the prefreeze tree; it is historical only, never delivered.",
+    "Case-normalized explicit PASS check succeeded; FINAL_FROZEN_PACKAGE_MANIFEST.json lists the only final source ZIPs and final character frozen trees. No images, payloads, source files, or previous package records were deleted."
+  ]
+}

@@ -1,0 +1,1460 @@
+{
+  "schema_version": 4,
+  "created_utc": "2026-10-14T08:31:18.289165+00:00",
+  "status": "planning_complete_not_generated",
+  "purpose": "第十批4名已有新剧情NPC各2张独立非战斗全身基础动作；仅规划，先独立计划门审再由父线程派工。",
+  "scope": {
+    "selected_characters": 4,
+    "planned_new_independent_fullbody_keyposes": 8,
+    "generated_images": 0,
+    "revision_images": 0,
+    "new_characters": 0,
+    "full_animation": false,
+    "gif_planned": false,
+    "equipment_or_engine_work": false,
+    "git_or_upload_performed": false,
+    "changed_existing_assets": false
+  },
+  "requested_candidates": [
+    "suoda",
+    "kelin",
+    "jier",
+    "suier_lot"
+  ],
+  "substitutions": [],
+  "selection_order_evidence": {
+    "source_id": "production_sequence",
+    "reason": "沿原第10批既有人物索妲FX-WCH、珂琳FX-HUT、蓟珥FX-FRM、绥珥FX-LOT，四人都有已审母图与各2表情；本人此前无基础动作。",
+    "prior_frozen_action_characters": [
+      "anni",
+      "chenger",
+      "cuoer",
+      "daer",
+      "dalan",
+      "deru",
+      "endai",
+      "erde",
+      "erlan",
+      "ertai",
+      "erwei",
+      "fouer",
+      "fx_cv4_nier",
+      "gura",
+      "hoer",
+      "huier",
+      "kouer",
+      "kuen",
+      "kuqi",
+      "lein",
+      "lier",
+      "luoer",
+      "luomin",
+      "miloer",
+      "qiner",
+      "seer",
+      "suier",
+      "sune",
+      "teman",
+      "tian",
+      "tila",
+      "turi",
+      "vila",
+      "wadun",
+      "weier",
+      "wuer"
+    ],
+    "prior_frozen_qualified_poses": 68,
+    "production_independent_pass_count": {
+      "groups": 18,
+      "characters": 36,
+      "qualified_poses": 68
+    },
+    "accepted_delivery_count": {
+      "groups": 17,
+      "characters": 34,
+      "qualified_poses": 64
+    },
+    "uncertain_delivery": {
+      "group": "seer_daer",
+      "characters": 2,
+      "qualified_poses": 4,
+      "attachments": 8,
+      "status": "uncertain_not_retried",
+      "source_id": "eighth_seer_daer_delivery_attempt"
+    },
+    "old_missing_actions_not_retried": [
+      "turi_A1",
+      "cuoer_A1",
+      "weier_A1",
+      "lier_A1"
+    ],
+    "index_status_at_final_freeze": "已按第9回执更新后的ACTION_DELIVERY_INDEX.md冻结：制作与独审完成18个交付包、36位既有人物、68张合格静态姿态；已确认发送请求accepted为17组、34人、64姿。瑟珥／达珥8附件保存Library，但发送结果uncertain，无accepted消息ID，未重试、不计accepted。第9两组妲兰／珥兰9附件、忒曼／佴珥8附件分别accepted。所有accepted也不证明送达或阅读。4张旧缺项图里A1、锉珥A1、苇珥A1、栎珥A1保留。本第十批8姿仅计划，未加入上述制作或发送数字。ACTION_COVERAGE及MASTER_SUPPLEMENT为旧范围总览，不替代新系列交付索引。"
+  },
+  "global_boundaries": [
+    "仅4名既有人物各2独立全身基础动作；0新增人物、0旧表情补稿、0完整动画。",
+    "每姿1首稿，最多1真实明确硬错修订；失败保缺项，不改名重做。安全block停动作，不重试、不改写规避、不换工具。",
+    "本轮不调用imagegen；独立计划门审先于绘制，作者自查不能替独审。",
+    "朴素低魔中世纪日常自理/舒展；全部可逆美术提案，不新增环境、新工具、付款、授权或剧情结果。",
+    "按母图真实年龄和实际紧凑比例、原衣装道具；不统一1:1/1:1.5，不回用旧长身/失败稿。",
+    "逐姿prompt独立，公共字段只锁身份和物件，不混A1/A2互斥手位，不引用另一动作作母图。",
+    "目标以大面积衣物/原物掌位与肘膝轮廓验收；不以几像素刻度、针脚或衣结接点作为新目标。",
+    "珂琳17–18岁保普通完整工作服，不幼化或成年化；绥珥suier_lot/FX-LOT不混燧珥suier/FX-CP1。",
+    "不改冻结母图/表情/其manifest和QA、角色卡、既有交付索引、游戏或存档；不Git、不上传。",
+    "根/设计AGENTS相关段、归档pixel skill及STYLE_DIRECTION已读；旧spec只为历史来源，当前已审母图与最新要求优先，本计划不跨入生成。"
+  ],
+  "safety_history": {
+    "current_four_expressions": "4人各2表情已有独立通过记录；本批不补旧表情或其他人物旧缺项。",
+    "per_action_stop": "新动作若被安全阻断就停止该动作并报告，不能换名称/措辞/工具继续同一内容。"
+  },
+  "source_sha_snapshots": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 68775,
+      "sha256": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+      "source_id": "root_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/AGENTS.md"
+    },
+    {
+      "path": "design/AGENTS.md",
+      "bytes": 64250,
+      "sha256": "302d9d3ef38f2fe27a28cf8cb672ed5cf3b33d5493603588d4dbc22a9932b37e",
+      "source_id": "design_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/AGENTS.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+      "bytes": 16285,
+      "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08",
+      "source_id": "archived_pixel_skill",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "bytes": 6187,
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+      "source_id": "style_direction",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md",
+      "bytes": 21248,
+      "sha256": "5de42dcf3a7cf07fa1fc554bf22585feac62dcf24c4eda3a39ac461b3018ba37",
+      "source_id": "action_delivery_index",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "bytes": 26364,
+      "sha256": "61ed5cd1846ef3017b4b1c72cb5a63432aa22a4c9d151d5b789f586245f498bb",
+      "source_id": "action_coverage",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterActions/20261013/ACTION_COVERAGE.md"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "bytes": 26988,
+      "sha256": "99fb786c7d83aa9f44e3c96a78fb83f3dac5dc42e7732602736e06ed9716dc59",
+      "source_id": "master_supplements",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md"
+    },
+    {
+      "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+      "bytes": 105635,
+      "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+      "source_id": "field_dialogue",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md"
+    },
+    {
+      "path": "research/field-npc-dialogue.json",
+      "bytes": 132451,
+      "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+      "source_id": "field_dialogue_registry",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/research/field-npc-dialogue.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json",
+      "bytes": 142768,
+      "sha256": "39023b5f3db9980e063b8e57e9bc3cfe3786304f7aef22767c78e10afd631992",
+      "source_id": "roster44",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json",
+      "bytes": 14959,
+      "sha256": "c6e0c04098664bc991ebc62a37cc833b6ae084ff4295fd060d41b15525bf1662",
+      "source_id": "production_sequence",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_tenth_four_20261013.json",
+      "bytes": 12826,
+      "sha256": "4b90d38a449ab8e35dd5b521c4b75780455144286a8e738ea4198a0a0006184d",
+      "source_id": "tenth_mother_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_tenth_four_20261013.json"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/eighth_noncombat_seer_daer_delivery_v1/DELIVERY_ATTEMPT.json",
+      "bytes": 14714,
+      "sha256": "a51b5c6a9f251a494b6831cec548c0027d965e7d6018f9efab6f621a50fddad3",
+      "source_id": "eighth_seer_daer_delivery_attempt",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/eighth_noncombat_seer_daer_delivery_v1/DELIVERY_ATTEMPT.json"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/ninth_noncombat_dalan_erlan_delivery_v1/DELIVERY_RECEIPT.json",
+      "bytes": 16291,
+      "sha256": "955516e2c4c399bbd7eeb0f5e65100c272c5ec363a80b88b2751629880a40590",
+      "source_id": "ninth_dalan_erlan_delivery_receipt",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/ninth_noncombat_dalan_erlan_delivery_v1/DELIVERY_RECEIPT.json"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/ninth_noncombat_teman_fx_cv4_nier_delivery_v1/DELIVERY_RECEIPT.json",
+      "bytes": 14140,
+      "sha256": "bf8f6ee6a9a6db22dcdc23688855d0244377f2b63b94befbc54082f3a5f7e387",
+      "source_id": "ninth_teman_nier_delivery_receipt",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/ninth_noncombat_teman_fx_cv4_nier_delivery_v1/DELIVERY_RECEIPT.json"
+    },
+    {
+      "path": "design/04_人物/野外人物/人物_FX-WCH_索妲.md",
+      "bytes": 1061,
+      "sha256": "2605d2abd9b7ae74c9e85cb67b75c66a27a4814e0e67f3bb18eeb7528f456600",
+      "source_id": "suoda_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-WCH_索妲.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_v1_raw_imagegen.png",
+      "bytes": 908245,
+      "sha256": "280de0ea4f6c85f3c7c06b4cfa04e9d000b89f3c0514d914c96ee6989e426e1c",
+      "source_id": "suoda_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_v1_raw_imagegen.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_transparent.png",
+      "bytes": 788446,
+      "sha256": "a6d11e5f13a5515a2ac71066a7b26959ba27aed0b7889e807499f00a083a2953",
+      "source_id": "suoda_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_transparent.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/manifest.json",
+      "bytes": 3989,
+      "sha256": "1c03c93d41df1b8ad73a77ffae6292f6e18c441c99f296bfc2bde3bff8012700",
+      "source_id": "suoda_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/spec_lock.md",
+      "bytes": 2386,
+      "sha256": "39e06f0b1aa68aecd6ec8e49ffb665a40bee038bca4e5a197b994aa69212d3a6",
+      "source_id": "suoda_mother_spec_historical",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/spec_lock.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/review/suoda_expressions_review_zh_light.png",
+      "bytes": 671470,
+      "sha256": "0108ede4c27ed7e08ca7e047d0380d981c74ef75a24ade121f1c7057f56daf47",
+      "source_id": "suoda_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/review/suoda_expressions_review_zh_light.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/manifest.json",
+      "bytes": 12354,
+      "sha256": "fb2c4bfcb9d5f0f763995f075c6310a0920188100b6410eba583110e656550e0",
+      "source_id": "suoda_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/FINAL_STATUS.json",
+      "bytes": 7003,
+      "sha256": "b4579da9f97a90ca4564b5f9e615d13a2ab4e05e117f4d6101fbef8fed6ed51d",
+      "source_id": "suoda_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/QA-independent.json",
+      "bytes": 16508,
+      "sha256": "d2b6d0980a0ce3a77ab9d23f1f0f257337c7440a9a1fd0bfe28cc0f907323098",
+      "source_id": "suoda_expression_independent_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/QA-independent.json"
+    },
+    {
+      "path": "design/07_日常任务/台本/台本_DT09_药师指认的草.md",
+      "bytes": 8484,
+      "sha256": "e97416f8b52961564f2a95ea7ce51b8c0b6922f12c84be248b51bea7617bcbaa",
+      "source_id": "DT09",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/07_日常任务/台本/台本_DT09_药师指认的草.md"
+    },
+    {
+      "path": "design/04_人物/野外人物/人物_FX-HUT_珂琳.md",
+      "bytes": 1071,
+      "sha256": "ecedc5bb6a4ccd3c2fc4ec3b3aeeb2c649e583ff61e832bffd049ff3e7ea843b",
+      "source_id": "kelin_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-HUT_珂琳.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_v1_raw_imagegen.png",
+      "bytes": 728334,
+      "sha256": "71d609e7fa7471d5bf64dd818320aefdde9c8dbee5542c19859406687bde0152",
+      "source_id": "kelin_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_v1_raw_imagegen.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png",
+      "bytes": 649965,
+      "sha256": "57e00e9c4581e95b8bfc078deede4c4effd28533798719bf0e1a1440ccffade9",
+      "source_id": "kelin_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/manifest.json",
+      "bytes": 3989,
+      "sha256": "c646abe3617acb930397ff4b7dbf452246e1a23c52f4a0892d12a5c088ecfa88",
+      "source_id": "kelin_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/spec_lock.md",
+      "bytes": 2657,
+      "sha256": "1ad4684e6d3578d3359c01321d1405aff20243cae2844db5266287e674fe4f88",
+      "source_id": "kelin_mother_spec_historical",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/spec_lock.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/review/kelin_expressions_review_zh_light.png",
+      "bytes": 521192,
+      "sha256": "38d0221a04fe52a075759630cd2b4254049a4802d6f802a71d0b402b9dc681e7",
+      "source_id": "kelin_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/review/kelin_expressions_review_zh_light.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/manifest.json",
+      "bytes": 12302,
+      "sha256": "f1c9a6d6802bd0f1568068400dac71ce9681c3d80e6739a977929399f199f3f0",
+      "source_id": "kelin_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/FINAL_STATUS.json",
+      "bytes": 6967,
+      "sha256": "a210469c89ecdcc384377f23cdeee7205bb5806c6daf1d7f2004fd874e2af277",
+      "source_id": "kelin_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/QA-independent.json",
+      "bytes": 16668,
+      "sha256": "4f31500e82de9ff352d0a9e9120bd9aaed0b03f2464dbfdd5abb3dd55ae8e903",
+      "source_id": "kelin_expression_independent_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/QA-independent.json"
+    },
+    {
+      "path": "design/07_日常任务/台本/台本_DT05_驿馆的急用药.md",
+      "bytes": 8314,
+      "sha256": "975b36ef49c623c4a34accd32b67b28bd9e9e53aff6362dff4e0de8bcfa253ea",
+      "source_id": "DT05",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/07_日常任务/台本/台本_DT05_驿馆的急用药.md"
+    },
+    {
+      "path": "design/04_人物/野外人物/人物_FX-FRM_蓟珥.md",
+      "bytes": 1029,
+      "sha256": "7c22bfa2d44acf4dcea2e44f0f8da5b06483a1fe4798031e553c083974f1d83c",
+      "source_id": "jier_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-FRM_蓟珥.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_v1_raw_imagegen.png",
+      "bytes": 787214,
+      "sha256": "fecdbec699445ea31d17cffc6371814c620145d1e29304a91a1600554e12e3a5",
+      "source_id": "jier_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_v1_raw_imagegen.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_transparent.png",
+      "bytes": 705436,
+      "sha256": "47c591b61400237112425f97f213b3663531eae495465c37bc067fbf1290d239",
+      "source_id": "jier_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_transparent.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/manifest.json",
+      "bytes": 3796,
+      "sha256": "a73663227af6d4cd6ec2f318353d9bd794158ca5d9e3b8227a52ae92199f13b4",
+      "source_id": "jier_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/spec_lock.md",
+      "bytes": 2214,
+      "sha256": "869b9cf76ba8e3f1246bea74893c020831aeb6597eb7ad2ce4b5a22f7755e0de",
+      "source_id": "jier_mother_spec_historical",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/spec_lock.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/review/jier_expressions_light.png",
+      "bytes": 497877,
+      "sha256": "ee8302c91637696a766fb746d21560e502d236a4786e0fb84e2e7552492bbee1",
+      "source_id": "jier_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/review/jier_expressions_light.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/manifest.json",
+      "bytes": 9976,
+      "sha256": "39ed2d0b3073e3aacf8912cfd0a7e6d5b57f196dcc2f2bcadfd7d7c4bfb33e50",
+      "source_id": "jier_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/FINAL_STATUS.json",
+      "bytes": 5970,
+      "sha256": "33bd674d0c32d5278c8156d445bc71c37a1e985e9ceb923d9ebc31711b0e963b",
+      "source_id": "jier_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/QA-independent.json",
+      "bytes": 16527,
+      "sha256": "11ca37690010c83b4687898b6e75fdb7aeabe2895b0531203ccff7f712d25a43",
+      "source_id": "jier_expression_independent_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/QA-independent.json"
+    },
+    {
+      "path": "design/07_日常任务/台本/台本_DT02_干净的井水.md",
+      "bytes": 8731,
+      "sha256": "1d8d3f4cf601d11a5db45b16ed916678861f8d5130d464223dd46d8468b52f5d",
+      "source_id": "DT02",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/07_日常任务/台本/台本_DT02_干净的井水.md"
+    },
+    {
+      "path": "design/04_人物/野外人物/人物_FX-LOT_绥珥.md",
+      "bytes": 1065,
+      "sha256": "cbbc691c7ec3456de776e2bdfa4a7cb992bf22490539c6d9ae1c59fc67b4a671",
+      "source_id": "suier_lot_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-LOT_绥珥.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_v1_raw_imagegen.png",
+      "bytes": 714258,
+      "sha256": "1e6fafb4253d8d8fe1870303f22fa98c3545c2fe00b77b37c26ff29f772802de",
+      "source_id": "suier_lot_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_v1_raw_imagegen.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_transparent.png",
+      "bytes": 638522,
+      "sha256": "3983d4b3de284ebe2e48c818f5d587d68051fef615d1d27f4506523038400d25",
+      "source_id": "suier_lot_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_transparent.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/manifest.json",
+      "bytes": 3843,
+      "sha256": "50a0e2c672474077e3501d0a414c9a374ede11cc95745a98ff890e415a44f8b9",
+      "source_id": "suier_lot_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/spec_lock.md",
+      "bytes": 2477,
+      "sha256": "91e656bc8c32d342c40ed5b9aeee2348950ec0746d154903d5efbcd5da864641",
+      "source_id": "suier_lot_mother_spec_historical",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/spec_lock.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/review/suier_lot_expressions_light.png",
+      "bytes": 447472,
+      "sha256": "71bb12a4846574b9add3e090b2ad4f870949b5c6ff7b25fb1caa0f2a407be6d3",
+      "source_id": "suier_lot_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/review/suier_lot_expressions_light.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/manifest.json",
+      "bytes": 10184,
+      "sha256": "b02823c2b0141e4c61c9aa2c1b5039ce8f27b8f3eaa1964a659f5ba6b727ecfc",
+      "source_id": "suier_lot_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/FINAL_STATUS.json",
+      "bytes": 6040,
+      "sha256": "e6bad2ee1be4e9fd716b02c87ced30422916f754265718cca42f89afd25e83ad",
+      "source_id": "suier_lot_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/QA-independent.json",
+      "bytes": 16818,
+      "sha256": "b3e8071bb5364f9cb9caf0ba2ac8f86721e3246caf5b6ddd24105b808e55e261",
+      "source_id": "suier_lot_expression_independent_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/QA-independent.json"
+    },
+    {
+      "path": "design/06_支线/台本/台本_SQ03_没有王旗的面包.md",
+      "bytes": 12613,
+      "sha256": "aa90cf25f8c4570170fb600ac8f3f6c5fa32e22a7f1d50402c0db5056479adfa",
+      "source_id": "SQ03",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/06_支线/台本/台本_SQ03_没有王旗的面包.md"
+    }
+  ],
+  "coverage_audit": {
+    "read_indexes": [
+      "action_coverage",
+      "master_supplements",
+      "action_delivery_index",
+      "production_sequence"
+    ],
+    "scan_manifest": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+    "scan_manifest_sha256": "c26ab0f88ccaac7f46f9253a6c7b4809c360d5a3d0f0e469a9cb9be6b593ef00",
+    "action_tree_file_count": 4336,
+    "zip_scanned_count": 246,
+    "zip_members_enumerated_count": 10714,
+    "candidate_semantic_action_assets_found": 0,
+    "candidate_own_action_directories_found": 0,
+    "semantic_review": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/semantic_dedup_review.json",
+    "semantic_review_sha256": "eae3cb2774003f1642bb5ce659548c3355109248b4c4749aed0719872eaf44f9",
+    "absence_scope": "本地CharacterActions全树路径、文字与图像SHA；仓库全部ZIP逐个打开枚举成员，对命中精确slug/中文名/ID的成员读取并哈希；不解压、不改资产、不读Git对象。",
+    "index_freshness_note": "已按第9回执更新后的ACTION_DELIVERY_INDEX.md冻结：制作与独审完成18个交付包、36位既有人物、68张合格静态姿态；已确认发送请求accepted为17组、34人、64姿。瑟珥／达珥8附件保存Library，但发送结果uncertain，无accepted消息ID，未重试、不计accepted。第9两组妲兰／珥兰9附件、忒曼／佴珥8附件分别accepted。所有accepted也不证明送达或阅读。4张旧缺项图里A1、锉珥A1、苇珥A1、栎珥A1保留。本第十批8姿仅计划，未加入上述制作或发送数字。ACTION_COVERAGE及MASTER_SUPPLEMENT为旧范围总览，不替代新系列交付索引。",
+    "all_four_raw_and_transparent_viewed": true,
+    "all_four_expression_boards_viewed": true,
+    "image_view_log": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/image_view_log.json",
+    "image_view_log_sha256": "ad70397e4df514dc479bb148ebc520930fc6ca70fe491a0270a5753f180c80a7"
+  },
+  "author_handoff": {
+    "requires_independent_plan_gate": true,
+    "authors": [
+      {
+        "group": "suoda_kelin",
+        "slugs": [
+          "suoda",
+          "kelin"
+        ],
+        "planned_poses": 4,
+        "focus": "索妲左手持续握原空篮把手，双手托篮与头上扶巾分开。珂琳17–18岁保持普通完整工作服；理袖与双手扶腰不动缝在围裙画面右前的药袋和干叶。",
+        "handoff_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/suoda_kelin_author_handoff.txt",
+        "handoff_sha256": "77312e963b97bd59c9279975cd2d45b0324f3c7a187f5c173a1a1d20da656c23"
+      },
+      {
+        "group": "jier_suier_lot",
+        "slugs": [
+          "jier",
+          "suier_lot"
+        ],
+        "planned_poses": 4,
+        "focus": "蓟珥原卷袖/指端土迹保留，双臂侧下舒肩与半蹲扶膝区分。绥珥严格使用suier_lot/FX-LOT；右手始终在画面左腹前握半截软尺上端，左手托尺与拂围裙各自独立。",
+        "handoff_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/jier_suier_lot_author_handoff.txt",
+        "handoff_sha256": "32db08980e89bebc20eab25079eb30ffab76c909b9e0ce6c4392d92aee138b74"
+      }
+    ],
+    "generation_not_authorized_by_this_file_alone": true
+  },
+  "characters": [
+    {
+      "slug": "suoda",
+      "canonical_id": "FX-WCH",
+      "name": "索妲",
+      "status": "planned_not_generated",
+      "selection_status": "requested_candidate_retained_no_substitution",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-WCH_索妲.md",
+        "bytes": 1061,
+        "sha256": "2605d2abd9b7ae74c9e85cb67b75c66a27a4814e0e67f3bb18eeb7528f456600",
+        "source_id": "suoda_card",
+        "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-WCH_索妲.md"
+      },
+      "source_ids": [
+        "suoda_card",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "DT09",
+        "suoda_mother_raw",
+        "suoda_mother_transparent",
+        "suoda_mother_manifest",
+        "suoda_expression_final_status",
+        "suoda_expressions_view"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_v1_raw_imagegen.png",
+        "raw_sha256": "280de0ea4f6c85f3c7c06b4cfa04e9d000b89f3c0514d914c96ee6989e426e1c",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_transparent.png",
+        "transparent_sha256": "a6d11e5f13a5515a2ac71066a7b26959ba27aed0b7889e807499f00a083a2953",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/manifest.json",
+        "manifest_sha256": "1c03c93d41df1b8ad73a77ffae6292f6e18c441c99f296bfc2bde3bff8012700",
+        "independent_qa_source_id": "tenth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "本任务分别实际查看raw、透明母图与旧表情浅板：四十多岁农妇，宽面灰鬓，枯紫头巾包头贴到下巴下方。土灰长袖长裙、棕围裙。人物右手在画面左上胸触巾边，左手在画面右握唯一空藤篮弧形把手，篮垂在右侧腰腿旁。两表情分别岔开家常和正色反问，身体/持篮手位基本沿母图。",
+        "fixed_sides": "唯一原空藤篮保持母图编织、尺寸与完整弧形把手；左手（画面右）仍握原把手，不换手、不把篮移到画面左。篮内始终空、无新增内容；右手仅按本张动作移动。枯紫头巾保持包头并贴到下巴下方，不揭开、不遮口鼻、不松结；双鞋完整。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/review/suoda_expressions_review_zh_light.png"
+      },
+      "existing_expressions": {
+        "status": "final_clean_and_presentation_pass",
+        "qualified_count": 2,
+        "not_action_coverage": true
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "只是原空篮的自持调整或扶本人原头巾，不递篮、不放到门口、不引路、不摘果、不送药、不新增女巫/村民承诺或DT09结果。",
+        "仍是女巫的邻居，不能变为女巫；不加法杖、巫帽、魔法、证词或定罪。"
+      ],
+      "risks": [
+        "篮口、空篮内部与原把手需清楚，双手只有两个；举篮不可变成向画外递物。",
+        "扶巾用宽掌贴头顶外面，不抠小结、不让头巾脱落；脸和双脚不能被裁。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/suoda/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "suoda_A1_lift_and_support_empty_basket",
+          "title_zh": "双手托起原空篮",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "suoda_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "挎着一只空篮"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-WCH／复访，只约束空篮",
+              "line_start": 385,
+              "quote": "又是你。篮子还是空的，别多想。"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图一手巾边、左手提空篮的站姿开始。",
+          "pose": "两脚分开稳站，左肘在画面右明显弯起，左手仍握原空篮把手的同一处，将篮从腿侧提到自己腰前偏画面右的位置。右手完全离开胸前巾边，右前臂从画面左横过腹前，右掌朝上、广面托住同一篮子的底部。篮仍贴近自己，不向画外递出；篮身直立、篮口可见且内部确实空，把手完整连在篮身。头脸仍朝画面左，嘴轻合，表情平常。",
+          "end_pose_description_only": "右掌可离篮底，左手将原空篮自然放低；不放到地面或交给他人。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "左肘明显弯起、空篮整体升到腰前，右前臂横腹且右掌清楚托篮底；原触巾右手不再留在胸前。",
+          "pose_specific_sidedness": "左手在画面右握把手，右手从画面左横到篮底；篮保持画面右半侧，不镜像换手。",
+          "contact_and_support_checks": [
+            "右掌广面贴篮底而不穿入篮内，把手与篮身连属正常。",
+            "左手唯一原握柄、右手唯一托底，两手不融合也不出现第三手。",
+            "篮口和空腔可读，双靴全掌支撑，篮身不穿衣或裁断。"
+          ],
+          "prop_state_and_retention": [
+            "唯一原空藤篮保持母图编织、尺寸与完整弧形把手；左手（画面右）仍握原把手，不换手、不把篮移到画面左。篮内始终空、无新增内容；右手仅按本张动作移动。枯紫头巾保持包头并贴到下巴下方，不揭开、不遮口鼻、不松结；双鞋完整。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧E1/E2右手在胸前巾边且篮低垂，本张双前臂同时改变、篮升高并由右掌托底；不是表情复画。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_transparent.png"
+          ],
+          "reference_sha256": [
+            "a6d11e5f13a5515a2ac71066a7b26959ba27aed0b7889e807499f00a083a2953"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：索妲 FX-WCH。四十多岁的农妇，女巫的邻居；本人宽面、灰鬓和深褐碎发，脸朝画面左。原枯紫头巾包头、贴至下巴下方且嘴脸可见，土灰长袖长裙、棕围裙和深棕闭口鞋完整保留。\n固定衣装与原物件：唯一原空藤篮保持母图编织、尺寸与完整弧形把手；左手（画面右）仍握原把手，不换手、不把篮移到画面左。篮内始终空、无新增内容；右手仅按本张动作移动。枯紫头巾保持包头并贴到下巴下方，不揭开、不遮口鼻、不松结；双鞋完整。\n本张动作：双手托起原空篮。两脚分开稳站，左肘在画面右明显弯起，左手仍握原空篮把手的同一处，将篮从腿侧提到自己腰前偏画面右的位置。右手完全离开胸前巾边，右前臂从画面左横过腹前，右掌朝上、广面托住同一篮子的底部。篮仍贴近自己，不向画外递出；篮身直立、篮口可见且内部确实空，把手完整连在篮身。头脸仍朝画面左，嘴轻合，表情平常。\n本张侧别：左手在画面右握把手，右手从画面左横到篮底；篮保持画面右半侧，不镜像换手。\n必须明显可见：左肘明显弯起、空篮整体升到腰前，右前臂横腹且右掌清楚托篮底；原触巾右手不再留在胸前。\n接触与支撑：右掌广面贴篮底而不穿入篮内，把手与篮身连属正常。；左手唯一原握柄、右手唯一托底，两手不融合也不出现第三手。；篮口和空腔可读，双靴全掌支撑，篮身不穿衣或裁断。。\n",
+          "prompt_sha256": "9dd678401b99c0fceb705fcdd27716e905eb556abd24708ba3f5028041ccc9b5",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/suoda_A1_lift_and_support_empty_basket_prompt.txt",
+          "negative_constraints": [
+            "只是原空篮的自持调整或扶本人原头巾，不递篮、不放到门口、不引路、不摘果、不送药、不新增女巫/村民承诺或DT09结果。",
+            "仍是女巫的邻居，不能变为女巫；不加法杖、巫帽、魔法、证词或定罪。",
+            "篮口、空篮内部与原把手需清楚，双手只有两个；举篮不可变成向画外递物。",
+            "扶巾用宽掌贴头顶外面，不抠小结、不让头巾脱落；脸和双脚不能被裁。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧E1/E2右手在胸前巾边且篮低垂，本张双前臂同时改变、篮升高并由右掌托底；不是表情复画。"
+          }
+        },
+        {
+          "key": "suoda_A2_steady_headscarf_crown",
+          "title_zh": "右掌轻扶头巾顶",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "suoda_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "围巾裹到下巴"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-WCH／知情边界",
+              "line_start": 380,
+              "quote": "不替女巫许诺什么"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图右手轻触胸前巾边、左手提篮开始。",
+          "pose": "双脚原样分开站稳，左手在画面右握原篮把手，唯一空篮自然垂在原腰腿旁。右手完全离开胸前巾边，右肘向画面左外抬，右前臂斜向上，右掌自然并拢平贴头顶画面左上方枯紫头巾的外表面，停在轻扶头巾的一瞬。手掌位于头顶外缘，不遮眉眼，不掀开或牵拉巾布；头巾仍包头贴下巴。头脸保持母图朝向、表情平常。",
+          "end_pose_description_only": "右掌可从巾顶自然放下；头巾始终戴好，篮仍由左手原握。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "右肘高抬、右掌到头顶外缘接触巾面，篮仍低垂；与胸前原手位以及双手托篮的低位姿态有大轮廓差异。",
+          "pose_specific_sidedness": "右手在画面左上触本人的巾顶；左手画面右低提原空篮。",
+          "contact_and_support_checks": [
+            "宽掌贴头巾顶外面，不抓小结、不穿头、不遮脸。",
+            "右手已离原胸前接点，不新增第三手；头巾覆盖和下巴边界保持。",
+            "空篮低垂完整、把手未换手，身体不拉长、不踮脚。"
+          ],
+          "prop_state_and_retention": [
+            "唯一原空藤篮保持母图编织、尺寸与完整弧形把手；左手（画面右）仍握原把手，不换手、不把篮移到画面左。篮内始终空、无新增内容；右手仅按本张动作移动。枯紫头巾保持包头并贴到下巴下方，不揭开、不遮口鼻、不松结；双鞋完整。"
+          ],
+          "difference_from_mother_expression_and_batch": "旧母图/表情都没有高于头部的手位；本张是头上扶巾，不重复巾边轻触或篮底托持。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_transparent.png"
+          ],
+          "reference_sha256": [
+            "a6d11e5f13a5515a2ac71066a7b26959ba27aed0b7889e807499f00a083a2953"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：索妲 FX-WCH。四十多岁的农妇，女巫的邻居；本人宽面、灰鬓和深褐碎发，脸朝画面左。原枯紫头巾包头、贴至下巴下方且嘴脸可见，土灰长袖长裙、棕围裙和深棕闭口鞋完整保留。\n固定衣装与原物件：唯一原空藤篮保持母图编织、尺寸与完整弧形把手；左手（画面右）仍握原把手，不换手、不把篮移到画面左。篮内始终空、无新增内容；右手仅按本张动作移动。枯紫头巾保持包头并贴到下巴下方，不揭开、不遮口鼻、不松结；双鞋完整。\n本张动作：右掌轻扶头巾顶。双脚原样分开站稳，左手在画面右握原篮把手，唯一空篮自然垂在原腰腿旁。右手完全离开胸前巾边，右肘向画面左外抬，右前臂斜向上，右掌自然并拢平贴头顶画面左上方枯紫头巾的外表面，停在轻扶头巾的一瞬。手掌位于头顶外缘，不遮眉眼，不掀开或牵拉巾布；头巾仍包头贴下巴。头脸保持母图朝向、表情平常。\n本张侧别：右手在画面左上触本人的巾顶；左手画面右低提原空篮。\n必须明显可见：右肘高抬、右掌到头顶外缘接触巾面，篮仍低垂；与胸前原手位以及双手托篮的低位姿态有大轮廓差异。\n接触与支撑：宽掌贴头巾顶外面，不抓小结、不穿头、不遮脸。；右手已离原胸前接点，不新增第三手；头巾覆盖和下巴边界保持。；空篮低垂完整、把手未换手，身体不拉长、不踮脚。。\n",
+          "prompt_sha256": "dcf8e1cfecba9d30e143fe9e3fb775a6de4816df378e60dd5a3fa014d90c3af4",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/suoda_A2_steady_headscarf_crown_prompt.txt",
+          "negative_constraints": [
+            "只是原空篮的自持调整或扶本人原头巾，不递篮、不放到门口、不引路、不摘果、不送药、不新增女巫/村民承诺或DT09结果。",
+            "仍是女巫的邻居，不能变为女巫；不加法杖、巫帽、魔法、证词或定罪。",
+            "篮口、空篮内部与原把手需清楚，双手只有两个；举篮不可变成向画外递物。",
+            "扶巾用宽掌贴头顶外面，不抠小结、不让头巾脱落；脸和双脚不能被裁。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "旧母图/表情都没有高于头部的手位；本张是头上扶巾，不重复巾边轻触或篮底托持。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kelin",
+      "canonical_id": "FX-HUT",
+      "name": "珂琳",
+      "status": "planned_not_generated",
+      "selection_status": "requested_candidate_retained_no_substitution",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-HUT_珂琳.md",
+        "bytes": 1071,
+        "sha256": "ecedc5bb6a4ccd3c2fc4ec3b3aeeb2c649e583ff61e832bffd049ff3e7ea843b",
+        "source_id": "kelin_card",
+        "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-HUT_珂琳.md"
+      },
+      "source_ids": [
+        "kelin_card",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "DT05",
+        "kelin_mother_raw",
+        "kelin_mother_transparent",
+        "kelin_mother_manifest",
+        "kelin_expression_final_status",
+        "kelin_expressions_view"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_v1_raw_imagegen.png",
+        "raw_sha256": "71d609e7fa7471d5bf64dd818320aefdde9c8dbee5542c19859406687bde0152",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png",
+        "transparent_sha256": "57e00e9c4581e95b8bfc078deede4c4effd28533798719bf0e1a1440ccffade9",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/manifest.json",
+        "manifest_sha256": "c646abe3617acb930397ff4b7dbf452246e1a23c52f4a0892d12a5c088ecfa88",
+        "independent_qa_source_id": "tenth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "本任务分别实际查看raw、透明母图与旧表情浅板：17–18岁年轻学徒，铜棕发辫在画面右肩后，米麻长袖衫、草绿围裙、棕腰带、灰褐长裙。唯一棕色草药袋缝在围裙画面右前，口露原干叶；人物左手在画面右触袋边，右手在画面左低垂。旧表情是规矩苦笑和认真拒配，未有横胸理袖或双手扶腰。",
+        "fixed_sides": "唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/review/kelin_expressions_review_zh_light.png"
+      },
+      "existing_expressions": {
+        "status": "final_clean_and_presentation_pass",
+        "qualified_count": 2,
+        "not_action_coverage": true
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "17–18岁真实青年年龄，不幼化、不自动成年化；保持普通完整职业衣装，日常无性感姿态、裸露或成人化身形。",
+        "只理自己的袖布或扶本人衣装侧腰暂歇，不取药、不配药、不持处方账本、不代师承诺、不画DT05完成。",
+        "沿用母图手指，细切痕不显著不是本轮硬错；不新增血、新伤、疼痛或已治愈结果。"
+      ],
+      "risks": [
+        "抬手不能把草药袋摘下来，腰带/袋/辫侧别不换；不把另一动作的手位粘进同一prompt。",
+        "扶腰只接衣服侧面，双肘外开自然，不挺胸摆胯、不收紧服装；横胸理袖不拉下领口。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/kelin/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "kelin_A1_smooth_left_upper_sleeve",
+          "title_zh": "右掌横胸理左上袖",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "kelin_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "十七八岁的姑娘"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-HUT／知情边界",
+              "line_start": 348,
+              "quote": "不替师父看病开方"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图左手在袋边、右手低垂的站姿开始。",
+          "pose": "双鞋自然分开站稳，躯干直立。右手从画面左的低垂位置抬起，右肘向画面左稍外开，右前臂横过胸前，右掌和自然并拢指组平贴本人左肩下方的米麻上袖宽布面，停在顺平上袖的一瞬。左臂从袋边自然落到画面右身侧，左手清楚可见且离开药袋。原衣领、长袖、围裙与长裙仍完整宽松，草药袋缝在原画面右前，干叶未取。头脸朝画面左，神态平常。",
+          "end_pose_description_only": "右掌可离袖放下，两臂自然归位；药袋与药草未动。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "整条右前臂横胸、宽掌落在对侧上袖；左手已从袋边放低，明确改变两臂轮廓。",
+          "pose_specific_sidedness": "右手由画面左横过胸前到画面右的本人左上袖；左手在画面右腿外低垂，辫和药袋仍画面右。",
+          "contact_and_support_checks": [
+            "右掌广面贴肩下袖布，不抓衣领、不拉下袖子、不碰发辫。",
+            "左手在原药袋外清楚低垂，没有摘袋或暗中握药。",
+            "17–18岁本人脸与体态保留，工作服完整，双鞋全掌稳站。"
+          ],
+          "prop_state_and_retention": [
+            "唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧苦笑拒配都为一手袋边一手低垂，本张横胸贴袖并放低另一手，不能只改变情绪。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png"
+          ],
+          "reference_sha256": [
+            "57e00e9c4581e95b8bfc078deede4c4effd28533798719bf0e1a1440ccffade9"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：珂琳 FX-HUT。十七至十八岁的药师学徒，保持本人年轻脸与母图实际紧凑比例，可能未成年；铜棕发与画面右肩后唯一发辫，脸朝画面左。米麻高领长袖衫、暗草绿全长围裙、棕腰带、灰褐长裙、棕闭口鞋均为原完整宽松普通工作服。\n固定衣装与原物件：唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。\n本张动作：右掌横胸理左上袖。双鞋自然分开站稳，躯干直立。右手从画面左的低垂位置抬起，右肘向画面左稍外开，右前臂横过胸前，右掌和自然并拢指组平贴本人左肩下方的米麻上袖宽布面，停在顺平上袖的一瞬。左臂从袋边自然落到画面右身侧，左手清楚可见且离开药袋。原衣领、长袖、围裙与长裙仍完整宽松，草药袋缝在原画面右前，干叶未取。头脸朝画面左，神态平常。\n本张侧别：右手由画面左横过胸前到画面右的本人左上袖；左手在画面右腿外低垂，辫和药袋仍画面右。\n必须明显可见：整条右前臂横胸、宽掌落在对侧上袖；左手已从袋边放低，明确改变两臂轮廓。\n接触与支撑：右掌广面贴肩下袖布，不抓衣领、不拉下袖子、不碰发辫。；左手在原药袋外清楚低垂，没有摘袋或暗中握药。；17–18岁本人脸与体态保留，工作服完整，双鞋全掌稳站。。\n",
+          "prompt_sha256": "b96f1855660da3d4b1f16667c2c7805ead4c0b0be0ec2d2c69fde73edf07c32c",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/kelin_A1_smooth_left_upper_sleeve_prompt.txt",
+          "negative_constraints": [
+            "17–18岁真实青年年龄，不幼化、不自动成年化；保持普通完整职业衣装，日常无性感姿态、裸露或成人化身形。",
+            "只理自己的袖布或扶本人衣装侧腰暂歇，不取药、不配药、不持处方账本、不代师承诺、不画DT05完成。",
+            "沿用母图手指，细切痕不显著不是本轮硬错；不新增血、新伤、疼痛或已治愈结果。",
+            "抬手不能把草药袋摘下来，腰带/袋/辫侧别不换；不把另一动作的手位粘进同一prompt。",
+            "扶腰只接衣服侧面，双肘外开自然，不挺胸摆胯、不收紧服装；横胸理袖不拉下领口。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧苦笑拒配都为一手袋边一手低垂，本张横胸贴袖并放低另一手，不能只改变情绪。"
+          }
+        },
+        {
+          "key": "kelin_A2_rest_hands_on_clothed_waist",
+          "title_zh": "双手扶腰片刻暂歇",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "kelin_card",
+              "locator": "体貌与随身，只保原收纳",
+              "line_start": 17,
+              "quote": "围裙上缝着草药袋"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-HUT／拒绝，只限制不自行配药",
+              "line_start": 360,
+              "quote": "要我替你配药带走？不行。得师父点头。"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图一手袋边、一手低垂的站姿开始。",
+          "pose": "双鞋约与肩同宽稳站，重心居中，躯干自然直立。右手从画面左低垂处抬起、左手从画面右药袋边离开，两掌各自平贴本人同侧腰边的原衣布，位于棕腰带两端侧面附近；两肘自然向外打开，左右前臂形成可辨的两个斜角。左掌处在药袋上方的侧面衣布，不压袋、不伸入袋口；原药袋、少量干叶和缝线仍完整可见。双手不交叉、不抓腰带结，衣服不收紧，姿态是普通工作间隙扶腰暂歇。头脸朝画面左、神态平常，不挺胸摆胯。",
+          "end_pose_description_only": "双掌可松开侧腰、双臂自然落下；没有休息恢复数值或工作完成结果。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "两手分别接触衣装两侧腰面、两肘同时外开，原药袋无人触碰；轮廓区别于单臂横胸和原母图。",
+          "pose_specific_sidedness": "右掌画面左贴本人右腰衣布，左掌画面右贴本人左腰侧衣布；左掌在袋的上方外侧，袋仍缝于画面右前。",
+          "contact_and_support_checks": [
+            "每掌只贴本人同侧衣布，两手可见、两肘各有合理连接。",
+            "左手不遮袋口和干叶、不把袋挤到背后；腰带原样不解。",
+            "高领长袖、完整围裙长裙与鞋保持普通宽松，肩髋自然、双脚平稳。"
+          ],
+          "prop_state_and_retention": [
+            "唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。"
+          ],
+          "difference_from_mother_expression_and_batch": "旧母图/表情一手袋边一手低垂，本张双肘外开双掌侧腰；与横胸理袖不同，是独立暂歇姿态。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png"
+          ],
+          "reference_sha256": [
+            "57e00e9c4581e95b8bfc078deede4c4effd28533798719bf0e1a1440ccffade9"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：珂琳 FX-HUT。十七至十八岁的药师学徒，保持本人年轻脸与母图实际紧凑比例，可能未成年；铜棕发与画面右肩后唯一发辫，脸朝画面左。米麻高领长袖衫、暗草绿全长围裙、棕腰带、灰褐长裙、棕闭口鞋均为原完整宽松普通工作服。\n固定衣装与原物件：唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。\n本张动作：双手扶腰片刻暂歇。双鞋约与肩同宽稳站，重心居中，躯干自然直立。右手从画面左低垂处抬起、左手从画面右药袋边离开，两掌各自平贴本人同侧腰边的原衣布，位于棕腰带两端侧面附近；两肘自然向外打开，左右前臂形成可辨的两个斜角。左掌处在药袋上方的侧面衣布，不压袋、不伸入袋口；原药袋、少量干叶和缝线仍完整可见。双手不交叉、不抓腰带结，衣服不收紧，姿态是普通工作间隙扶腰暂歇。头脸朝画面左、神态平常，不挺胸摆胯。\n本张侧别：右掌画面左贴本人右腰衣布，左掌画面右贴本人左腰侧衣布；左掌在袋的上方外侧，袋仍缝于画面右前。\n必须明显可见：两手分别接触衣装两侧腰面、两肘同时外开，原药袋无人触碰；轮廓区别于单臂横胸和原母图。\n接触与支撑：每掌只贴本人同侧衣布，两手可见、两肘各有合理连接。；左手不遮袋口和干叶、不把袋挤到背后；腰带原样不解。；高领长袖、完整围裙长裙与鞋保持普通宽松，肩髋自然、双脚平稳。。\n",
+          "prompt_sha256": "27aad33cd9950869f319289dcb913a888a7f81152f709129ed4befa749cc9fbf",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/kelin_A2_rest_hands_on_clothed_waist_prompt.txt",
+          "negative_constraints": [
+            "17–18岁真实青年年龄，不幼化、不自动成年化；保持普通完整职业衣装，日常无性感姿态、裸露或成人化身形。",
+            "只理自己的袖布或扶本人衣装侧腰暂歇，不取药、不配药、不持处方账本、不代师承诺、不画DT05完成。",
+            "沿用母图手指，细切痕不显著不是本轮硬错；不新增血、新伤、疼痛或已治愈结果。",
+            "抬手不能把草药袋摘下来，腰带/袋/辫侧别不换；不把另一动作的手位粘进同一prompt。",
+            "扶腰只接衣服侧面，双肘外开自然，不挺胸摆胯、不收紧服装；横胸理袖不拉下领口。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "旧母图/表情一手袋边一手低垂，本张双肘外开双掌侧腰；与横胸理袖不同，是独立暂歇姿态。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jier",
+      "canonical_id": "FX-FRM",
+      "name": "蓟珥",
+      "status": "planned_not_generated",
+      "selection_status": "requested_candidate_retained_no_substitution",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-FRM_蓟珥.md",
+        "bytes": 1029,
+        "sha256": "7c22bfa2d44acf4dcea2e44f0f8da5b06483a1fe4798031e553c083974f1d83c",
+        "source_id": "jier_card",
+        "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-FRM_蓟珥.md"
+      },
+      "source_ids": [
+        "jier_card",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "DT02",
+        "jier_mother_raw",
+        "jier_mother_transparent",
+        "jier_mother_manifest",
+        "jier_expression_final_status",
+        "jier_expressions_view"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_v1_raw_imagegen.png",
+        "raw_sha256": "fecdbec699445ea31d17cffc6371814c620145d1e29304a91a1600554e12e3a5",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_transparent.png",
+        "transparent_sha256": "47c591b61400237112425f97f213b3663531eae495465c37bc067fbf1290d239",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/manifest.json",
+        "manifest_sha256": "a73663227af6d4cd6ec2f318353d9bd794158ca5d9e3b8227a52ae92199f13b4",
+        "independent_qa_source_id": "tenth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "本任务分别实际查看raw、透明母图与旧表情浅板：五十来岁男性农人，灰发灰须、灰蓝粗衫、两袖卷起，棕腰带褐裤、深棕绑腿鞋靴。双手在腰前，人物右手画面左略高，左手画面右略低，正在轻搓手指；有少量土色但不作逐甲缝复原声明。旧谈井专注/闭口谢客保留腰前手位，未见两臂展开或半蹲双掌扶膝。",
+        "fixed_sides": "没有手持物，不添加工具、桶碗、粮袋或家具。母图两只袖口继续卷在原高度，米麻袖缘、腰带和双靴保留；指端原少量土迹仍是土，不改成血、不宣称洗净。灰发灰须与真实五十来岁脸保持；双手按本张动作移动。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/review/jier_expressions_light.png"
+      },
+      "existing_expressions": {
+        "status": "final_clean_and_presentation_pass",
+        "qualified_count": 2,
+        "not_action_coverage": true
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "普通舒肩或短暂半蹲自理姿态，不增加疲病、受伤、康复或体能恢复设定。",
+        "不舀水、不引人入院、不留宿、不认证井水、不暴露存粮、不替邻村作保、不画DT02配给结果。"
+      ],
+      "risks": [
+        "展开双臂不能变招手、拦路、拥抱或施法；动作以整臂轮廓而非改脸判断。",
+        "半蹲要明显降髋屈膝、两掌分别贴两腿裤面，双靴平稳支撑，不跪地、不画跌倒。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/jier/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "jier_A1_open_arms_low_shoulder_stretch",
+          "title_zh": "双臂侧下舒肩",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "jier_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "五十来岁的男人，袖口卷起"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-FRM／闲谈1，仅支持普通劳作背景",
+              "line_start": 899,
+              "quote": "地还在种。种得少，够吃就行。"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图双手腰前轻搓手指开始。",
+          "pose": "双靴自然分站、全掌着地，躯干维持原长度自然直立。双手从原腰前搓指位置完全分开，两上臂向身体两侧展开，双肘轻弯，两前臂斜向侧下伸展，让两只放松的手分别远离左右腰线、落在下胸至腰部高度。右臂延伸到画面左外侧，左臂延伸到画面右外侧；手掌自然朝内下，指组松弛，不指人、不握拳。两肩轻舒展、头脸朝画面左，表情平常。原两只卷袖和指端少量土色保留。",
+          "end_pose_description_only": "双臂可自然收回放下；不把舒展解释为体能恢复或劳作完成。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "两条手臂同时离开身前向侧下展开，两手各远离躯干侧线至少一个掌宽，形成明显宽轮廓；不是只分开几根手指。",
+          "pose_specific_sidedness": "人物右臂向画面左、左臂向画面右舒展；不镜像面向，左右靴保持各自原侧。",
+          "contact_and_support_checks": [
+            "双肩肘腕连贯，两手分离可见，原卷袖随手臂但不滑脱。",
+            "没有接触他人或空气中的物体，不绘招手、拦路、施法或残影。",
+            "身体不拉长、不后仰失衡，双靴支撑完整，指端土色不变成飞尘。"
+          ],
+          "prop_state_and_retention": [
+            "没有手持物，不添加工具、桶碗、粮袋或家具。母图两只袖口继续卷在原高度，米麻袖缘、腰带和双靴保留；指端原少量土迹仍是土，不改成血、不宣称洗净。灰发灰须与真实五十来岁脸保持；双手按本张动作移动。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/表情两手腰前相近，本张整臂左右展开；与双掌扶膝的低位半蹲在手位、支撑和轮廓上均不同。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_transparent.png"
+          ],
+          "reference_sha256": [
+            "47c591b61400237112425f97f213b3663531eae495465c37bc067fbf1290d239"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：蓟珥 FX-FRM。五十来岁的农宅男性住户，母图灰棕短发、灰须、宽额与方实成熟脸，脸朝画面左。旧灰蓝粗衫、米麻领边与两只原卷袖、棕腰带、褐裤和深棕绑腿鞋靴完整保留。\n固定衣装与原物件：没有手持物，不添加工具、桶碗、粮袋或家具。母图两只袖口继续卷在原高度，米麻袖缘、腰带和双靴保留；指端原少量土迹仍是土，不改成血、不宣称洗净。灰发灰须与真实五十来岁脸保持；双手按本张动作移动。\n本张动作：双臂侧下舒肩。双靴自然分站、全掌着地，躯干维持原长度自然直立。双手从原腰前搓指位置完全分开，两上臂向身体两侧展开，双肘轻弯，两前臂斜向侧下伸展，让两只放松的手分别远离左右腰线、落在下胸至腰部高度。右臂延伸到画面左外侧，左臂延伸到画面右外侧；手掌自然朝内下，指组松弛，不指人、不握拳。两肩轻舒展、头脸朝画面左，表情平常。原两只卷袖和指端少量土色保留。\n本张侧别：人物右臂向画面左、左臂向画面右舒展；不镜像面向，左右靴保持各自原侧。\n必须明显可见：两条手臂同时离开身前向侧下展开，两手各远离躯干侧线至少一个掌宽，形成明显宽轮廓；不是只分开几根手指。\n接触与支撑：双肩肘腕连贯，两手分离可见，原卷袖随手臂但不滑脱。；没有接触他人或空气中的物体，不绘招手、拦路、施法或残影。；身体不拉长、不后仰失衡，双靴支撑完整，指端土色不变成飞尘。。\n",
+          "prompt_sha256": "cede895d2f7e2e99f6beef35e6f0a4b3e9ef252df78147acdd38a7c432f56cb8",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/jier_A1_open_arms_low_shoulder_stretch_prompt.txt",
+          "negative_constraints": [
+            "普通舒肩或短暂半蹲自理姿态，不增加疲病、受伤、康复或体能恢复设定。",
+            "不舀水、不引人入院、不留宿、不认证井水、不暴露存粮、不替邻村作保、不画DT02配给结果。",
+            "展开双臂不能变招手、拦路、拥抱或施法；动作以整臂轮廓而非改脸判断。",
+            "半蹲要明显降髋屈膝、两掌分别贴两腿裤面，双靴平稳支撑，不跪地、不画跌倒。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/表情两手腰前相近，本张整臂左右展开；与双掌扶膝的低位半蹲在手位、支撑和轮廓上均不同。"
+          }
+        },
+        {
+          "key": "jier_A2_half_crouch_palms_on_knees",
+          "title_zh": "半蹲双掌扶膝",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "jier_card",
+              "locator": "体貌与随身，仅保原土迹",
+              "line_start": 17,
+              "quote": "指甲缝里是土"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-FRM／知情边界",
+              "line_start": 892,
+              "quote": "不说自家存粮"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图双手在腰前、双腿站直的姿势开始。",
+          "pose": "双靴分开到稳定站距，双膝明显弯曲，髋部向后下方沉为浅半蹲，躯干从髋部轻前倾。双手不再搓指，右掌平贴本人右腿膝盖上方的褐色裤面，左掌平贴本人左腿膝盖上方的褐色裤面，两手左右分开、双肘各向侧边稍开。手掌是宽面轻扶，不抓绑腿或小扣；原裤、两卷袖和双靴保持。头随躯干降低但仍朝画面左，眉眼平常，不表现疼痛或跌倒。",
+          "end_pose_description_only": "双掌可离膝、两腿自然伸直回站姿；没有新增伤病或休息结算。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "明显降髋屈双膝，双掌各自落在一条腿的膝上裤面，两手不再腰前相搓。",
+          "pose_specific_sidedness": "右掌画面左贴本人右膝上裤面，左掌画面右贴本人左膝上裤面；两脚各在同侧支撑。",
+          "contact_and_support_checks": [
+            "双膝真实弯曲、髋位降低，不只缩短整个人或只弯脖子。",
+            "两掌各贴一腿裤面，手腿之间接触清楚，原绑腿和鞋完整。",
+            "双靴全掌着地、重心在两脚间，不跪、不坐地、不加座具。"
+          ],
+          "prop_state_and_retention": [
+            "没有手持物，不添加工具、桶碗、粮袋或家具。母图两只袖口继续卷在原高度，米麻袖缘、腰带和双靴保留；指端原少量土迹仍是土，不改成血、不宣称洗净。灰发灰须与真实五十来岁脸保持；双手按本张动作移动。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情为直立腰前搓指，本张双膝弯曲、双掌低到两腿；不是谈井或谢客的表情变体。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_transparent.png"
+          ],
+          "reference_sha256": [
+            "47c591b61400237112425f97f213b3663531eae495465c37bc067fbf1290d239"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：蓟珥 FX-FRM。五十来岁的农宅男性住户，母图灰棕短发、灰须、宽额与方实成熟脸，脸朝画面左。旧灰蓝粗衫、米麻领边与两只原卷袖、棕腰带、褐裤和深棕绑腿鞋靴完整保留。\n固定衣装与原物件：没有手持物，不添加工具、桶碗、粮袋或家具。母图两只袖口继续卷在原高度，米麻袖缘、腰带和双靴保留；指端原少量土迹仍是土，不改成血、不宣称洗净。灰发灰须与真实五十来岁脸保持；双手按本张动作移动。\n本张动作：半蹲双掌扶膝。双靴分开到稳定站距，双膝明显弯曲，髋部向后下方沉为浅半蹲，躯干从髋部轻前倾。双手不再搓指，右掌平贴本人右腿膝盖上方的褐色裤面，左掌平贴本人左腿膝盖上方的褐色裤面，两手左右分开、双肘各向侧边稍开。手掌是宽面轻扶，不抓绑腿或小扣；原裤、两卷袖和双靴保持。头随躯干降低但仍朝画面左，眉眼平常，不表现疼痛或跌倒。\n本张侧别：右掌画面左贴本人右膝上裤面，左掌画面右贴本人左膝上裤面；两脚各在同侧支撑。\n必须明显可见：明显降髋屈双膝，双掌各自落在一条腿的膝上裤面，两手不再腰前相搓。\n接触与支撑：双膝真实弯曲、髋位降低，不只缩短整个人或只弯脖子。；两掌各贴一腿裤面，手腿之间接触清楚，原绑腿和鞋完整。；双靴全掌着地、重心在两脚间，不跪、不坐地、不加座具。。\n",
+          "prompt_sha256": "fa2ca095f23b1db5c2beb384a9f49960238fda57c8c4bdc54a5c1f5adfed4f7c",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/jier_A2_half_crouch_palms_on_knees_prompt.txt",
+          "negative_constraints": [
+            "普通舒肩或短暂半蹲自理姿态，不增加疲病、受伤、康复或体能恢复设定。",
+            "不舀水、不引人入院、不留宿、不认证井水、不暴露存粮、不替邻村作保、不画DT02配给结果。",
+            "展开双臂不能变招手、拦路、拥抱或施法；动作以整臂轮廓而非改脸判断。",
+            "半蹲要明显降髋屈膝、两掌分别贴两腿裤面，双靴平稳支撑，不跪地、不画跌倒。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情为直立腰前搓指，本张双膝弯曲、双掌低到两腿；不是谈井或谢客的表情变体。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "suier_lot",
+      "canonical_id": "FX-LOT",
+      "name": "绥珥",
+      "status": "planned_not_generated",
+      "selection_status": "requested_candidate_retained_no_substitution",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-LOT_绥珥.md",
+        "bytes": 1065,
+        "sha256": "cbbc691c7ec3456de776e2bdfa4a7cb992bf22490539c6d9ae1c59fc67b4a671",
+        "source_id": "suier_lot_card",
+        "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-LOT_绥珥.md"
+      },
+      "source_ids": [
+        "suier_lot_card",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "SQ03",
+        "suier_lot_mother_raw",
+        "suier_lot_mother_transparent",
+        "suier_lot_mother_manifest",
+        "suier_lot_expression_final_status",
+        "suier_lot_expressions_view"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_v1_raw_imagegen.png",
+        "raw_sha256": "1e6fafb4253d8d8fe1870303f22fa98c3545c2fe00b77b37c26ff29f772802de",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_transparent.png",
+        "transparent_sha256": "3983d4b3de284ebe2e48c818f5d587d68051fef615d1d27f4506523038400d25",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/manifest.json",
+        "manifest_sha256": "50a0e2c672474077e3501d0a414c9a374ede11cc95745a98ff890e415a44f8b9",
+        "independent_qa_source_id": "tenth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "本任务分别实际查看raw、透明母图与旧表情浅板：四十来岁妇人、棕发画面右低髻、蓝灰颈巾紧结、陶褐长袖长裙与米麻围裙。人物右手（画面左）在腹前握唯一半截软布尺上端，左手（画面右）托右手腕；软尺沿画面右下垂弯，原暗色间隔线和毛边断端可见。旧说起手艺/受疑缄默未改变双手腕前的原轮廓。",
+        "fixed_sides": "唯一原半截软布尺的上端始终由人物右手（画面左）握住，右手留在腹前，不换手、不新增第二尺。保留母图原长度、宽度、暗色间隔线和毛边断端；左手仅按本张动作移动。尺只自然软弯，不伸长、不补齐、不拉成硬尺、不变现代卷尺；围巾仍紧结，发髻仍在画面右，衣装原样。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/review/suier_lot_expressions_light.png"
+      },
+      "existing_expressions": {
+        "status": "final_clean_and_presentation_pass",
+        "qualified_count": 2,
+        "not_action_coverage": true
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "只托理本人手中半截软布尺或抚本人围裙，不测量布匹、染缸或他人，不作交付、领取、修复或产权裁决。",
+        "不作证、不认领他人财物、不替新主人说话、不确定丈夫去向，不画SQ03完成。",
+        "绥珥suier_lot/FX-LOT与燧珥suier/FX-CP1严格分人；不能引用燧珥母图或动作。"
+      ],
+      "risks": [
+        "A1左掌接的是软尺下段宽面，右手仍握原上端；毛边断端要外露，不靠微小刻度读数作目标。",
+        "A2左掌与布尺之间留清楚空隙，不能一手既托腕又抚围裙；尺仍保持原软弯和长度。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/suier_lot/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "suier_lot_A1_support_half_cloth_tape",
+          "title_zh": "双手托理半截布尺",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "suier_lot_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "手里攥着半截布尺"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-LOT／知情边界",
+              "line_start": 732,
+              "quote": "不认领别人家的东西"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图右手握尺上端、左手托右腕的站姿开始。",
+          "pose": "双鞋稳站，右手仍在画面左的腹前握住原半截软布尺上端，握物手不换侧。左手从托右手腕的位置向画面右外移，左肘稍外开、左前臂展开，左掌朝上托住同一半截软布尺下半段的宽布面，让尺在两手之间自然形成一个浅软弧。毛边断端从左掌外侧短短垂出、保持可见；原尺长度不增加、不绷直、不修补。两手之间有清楚距离，动作是自己托理原物，不伸向画外、不测量任何东西。头脸仍朝画面左、表情平常。",
+          "end_pose_description_only": "左掌可离开布尺下段，原半截尺自然垂回；右手全程仍握上端。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "左前臂向画面右明显展开、左掌托尺下段，双手分开，软尺形成可见浅弧且断端外露；不能仍托原右腕。",
+          "pose_specific_sidedness": "人物右手画面左保持握上端；左手移到画面右托下段，尺仍从画面左腹前通向画面右，不换手。",
+          "contact_and_support_checks": [
+            "仍只有一条原半截尺，两手只接这一条，上端与毛边断端均可追踪。",
+            "左掌托宽布面，毛边短端在掌外可见，不把尺拉长或拉成硬直线。",
+            "右手不变成双手各持一条尺，围巾紧结原样、双脚稳定。"
+          ],
+          "prop_state_and_retention": [
+            "唯一原半截软布尺的上端始终由人物右手（画面左）握住，右手留在腹前，不换手、不新增第二尺。保留母图原长度、宽度、暗色间隔线和毛边断端；左手仅按本张动作移动。尺只自然软弯，不伸长、不补齐、不拉成硬尺、不变现代卷尺；围巾仍紧结，发髻仍在画面右，衣装原样。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情左手只是托右腕、尺自由垂下，本张左手移开托尺下段并形成浅弧；是物件操作而非脸部微调。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_transparent.png"
+          ],
+          "reference_sha256": [
+            "3983d4b3de284ebe2e48c818f5d587d68051fef615d1d27f4506523038400d25"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：绥珥 FX-LOT。四十来岁的成熟妇人，裁缝宅子亲属；母图棕发、画面右低髻、成熟略尖下颌，脸朝画面左。暗蓝灰围巾在颈前紧结，陶褐长袖长裙、米麻围裙和深棕闭口鞋完整保留。只用绥珥 FX-LOT / suier_lot，不是燧珥 FX-CP1 / suier。\n固定衣装与原物件：唯一原半截软布尺的上端始终由人物右手（画面左）握住，右手留在腹前，不换手、不新增第二尺。保留母图原长度、宽度、暗色间隔线和毛边断端；左手仅按本张动作移动。尺只自然软弯，不伸长、不补齐、不拉成硬尺、不变现代卷尺；围巾仍紧结，发髻仍在画面右，衣装原样。\n本张动作：双手托理半截布尺。双鞋稳站，右手仍在画面左的腹前握住原半截软布尺上端，握物手不换侧。左手从托右手腕的位置向画面右外移，左肘稍外开、左前臂展开，左掌朝上托住同一半截软布尺下半段的宽布面，让尺在两手之间自然形成一个浅软弧。毛边断端从左掌外侧短短垂出、保持可见；原尺长度不增加、不绷直、不修补。两手之间有清楚距离，动作是自己托理原物，不伸向画外、不测量任何东西。头脸仍朝画面左、表情平常。\n本张侧别：人物右手画面左保持握上端；左手移到画面右托下段，尺仍从画面左腹前通向画面右，不换手。\n必须明显可见：左前臂向画面右明显展开、左掌托尺下段，双手分开，软尺形成可见浅弧且断端外露；不能仍托原右腕。\n接触与支撑：仍只有一条原半截尺，两手只接这一条，上端与毛边断端均可追踪。；左掌托宽布面，毛边短端在掌外可见，不把尺拉长或拉成硬直线。；右手不变成双手各持一条尺，围巾紧结原样、双脚稳定。。\n",
+          "prompt_sha256": "d794ebba9551695734f599af79b228aa3cd49615cc117218d29e1be3839a3cae",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/suier_lot_A1_support_half_cloth_tape_prompt.txt",
+          "negative_constraints": [
+            "只托理本人手中半截软布尺或抚本人围裙，不测量布匹、染缸或他人，不作交付、领取、修复或产权裁决。",
+            "不作证、不认领他人财物、不替新主人说话、不确定丈夫去向，不画SQ03完成。",
+            "绥珥suier_lot/FX-LOT与燧珥suier/FX-CP1严格分人；不能引用燧珥母图或动作。",
+            "A1左掌接的是软尺下段宽面，右手仍握原上端；毛边断端要外露，不靠微小刻度读数作目标。",
+            "A2左掌与布尺之间留清楚空隙，不能一手既托腕又抚围裙；尺仍保持原软弯和长度。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情左手只是托右腕、尺自由垂下，本张左手移开托尺下段并形成浅弧；是物件操作而非脸部微调。"
+          }
+        },
+        {
+          "key": "suier_lot_A2_smooth_left_apron_panel",
+          "title_zh": "左掌下拂围裙",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "suier_lot_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "四十来岁的妇人，围巾结得紧"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-LOT／知情边界",
+              "line_start": 732,
+              "quote": "不替宅子新主人说话"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图右手握尺、左手托右腕的站姿开始。",
+          "pose": "双鞋分开稳站，躯干从髋部轻向前倾。右手仍在画面左腹前握原半截软布尺上端，尺按母图软弯向画面右下自然垂着、长度不变。左手完全离开原托右腕的位置，左臂向下伸，左掌自然并拢，平贴本人左腿膝上高度、米麻围裙画面右侧靠外的一大片布面，停在向下顺平围裙的一瞬。左掌与尺的毛边断端之间留清楚空隙，不同时托尺；围裙只轻折不掀高，长裙和鞋完整。头脸朝画面左、神态平常，紧结围巾不动。",
+          "end_pose_description_only": "左掌可离开围裙放回身侧；布尺和衣装没有修补或交付结果。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "左臂明确低伸到膝上外侧围裙，左掌贴宽布面，躯干轻前倾；原右手仍腹前持尺。",
+          "pose_specific_sidedness": "右手在画面左腹前握尺上端，尺仍向画面右下软垂；左掌在画面右更低更外侧的本人左腿前围裙，二者不接触。",
+          "contact_and_support_checks": [
+            "左掌贴围裙宽面，不抓尺、不托右腕、不掀裙，不能留下第三手。",
+            "原半截尺保持一条、原长度及毛边断端，并与左掌有可读空隙。",
+            "身体前倾由双脚支撑，围巾仍紧结，头发和双鞋完整。"
+          ],
+          "prop_state_and_retention": [
+            "唯一原半截软布尺的上端始终由人物右手（画面左）握住，右手留在腹前，不换手、不新增第二尺。保留母图原长度、宽度、暗色间隔线和毛边断端；左手仅按本张动作移动。尺只自然软弯，不伸长、不补齐、不拉成硬尺、不变现代卷尺；围巾仍紧结，发髻仍在画面右，衣装原样。"
+          ],
+          "difference_from_mother_expression_and_batch": "旧母图/表情左手在腹前托右腕；本张左手低到膝上围裙并轻前倾，与双手托尺的展开手位区别明确。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_transparent.png"
+          ],
+          "reference_sha256": [
+            "3983d4b3de284ebe2e48c818f5d587d68051fef615d1d27f4506523038400d25"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：绥珥 FX-LOT。四十来岁的成熟妇人，裁缝宅子亲属；母图棕发、画面右低髻、成熟略尖下颌，脸朝画面左。暗蓝灰围巾在颈前紧结，陶褐长袖长裙、米麻围裙和深棕闭口鞋完整保留。只用绥珥 FX-LOT / suier_lot，不是燧珥 FX-CP1 / suier。\n固定衣装与原物件：唯一原半截软布尺的上端始终由人物右手（画面左）握住，右手留在腹前，不换手、不新增第二尺。保留母图原长度、宽度、暗色间隔线和毛边断端；左手仅按本张动作移动。尺只自然软弯，不伸长、不补齐、不拉成硬尺、不变现代卷尺；围巾仍紧结，发髻仍在画面右，衣装原样。\n本张动作：左掌下拂围裙。双鞋分开稳站，躯干从髋部轻向前倾。右手仍在画面左腹前握原半截软布尺上端，尺按母图软弯向画面右下自然垂着、长度不变。左手完全离开原托右腕的位置，左臂向下伸，左掌自然并拢，平贴本人左腿膝上高度、米麻围裙画面右侧靠外的一大片布面，停在向下顺平围裙的一瞬。左掌与尺的毛边断端之间留清楚空隙，不同时托尺；围裙只轻折不掀高，长裙和鞋完整。头脸朝画面左、神态平常，紧结围巾不动。\n本张侧别：右手在画面左腹前握尺上端，尺仍向画面右下软垂；左掌在画面右更低更外侧的本人左腿前围裙，二者不接触。\n必须明显可见：左臂明确低伸到膝上外侧围裙，左掌贴宽布面，躯干轻前倾；原右手仍腹前持尺。\n接触与支撑：左掌贴围裙宽面，不抓尺、不托右腕、不掀裙，不能留下第三手。；原半截尺保持一条、原长度及毛边断端，并与左掌有可读空隙。；身体前倾由双脚支撑，围巾仍紧结，头发和双鞋完整。。\n",
+          "prompt_sha256": "818ee8e3128fcc0f204c239aa8620d658b244eb246673c77f60f73532179c2d3",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/suier_lot_A2_smooth_left_apron_panel_prompt.txt",
+          "negative_constraints": [
+            "只托理本人手中半截软布尺或抚本人围裙，不测量布匹、染缸或他人，不作交付、领取、修复或产权裁决。",
+            "不作证、不认领他人财物、不替新主人说话、不确定丈夫去向，不画SQ03完成。",
+            "绥珥suier_lot/FX-LOT与燧珥suier/FX-CP1严格分人；不能引用燧珥母图或动作。",
+            "A1左掌接的是软尺下段宽面，右手仍握原上端；毛边断端要外露，不靠微小刻度读数作目标。",
+            "A2左掌与布尺之间留清楚空隙，不能一手既托腕又抚围裙；尺仍保持原软弯和长度。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "旧母图/表情左手在腹前托右腕；本张左手低到膝上围裙并轻前倾，与双手托尺的展开手位区别明确。"
+          }
+        }
+      ]
+    }
+  ],
+  "future_acceptance_checks": [
+    "第9发送状态已按实际accepted/uncertain分别刷新快照；由独立计划门审核身份、源引文、可见目标、接触与逐字prompt，通过后才派图。",
+    "左肘明显弯起、空篮整体升到腰前，右前臂横腹且右掌清楚托篮底；原触巾右手不再留在胸前。",
+    "右肘高抬、右掌到头顶外缘接触巾面，篮仍低垂；与胸前原手位以及双手托篮的低位姿态有大轮廓差异。",
+    "整条右前臂横胸、宽掌落在对侧上袖；左手已从袋边放低，明确改变两臂轮廓。",
+    "两手分别接触衣装两侧腰面、两肘同时外开，原药袋无人触碰；轮廓区别于单臂横胸和原母图。",
+    "两条手臂同时离开身前向侧下展开，两手各远离躯干侧线至少一个掌宽，形成明显宽轮廓；不是只分开几根手指。",
+    "明显降髋屈双膝，双掌各自落在一条腿的膝上裤面，两手不再腰前相搓。",
+    "左前臂向画面右明显展开、左掌托尺下段，双手分开，软尺形成可见浅弧且断端外露；不能仍托原右腕。",
+    "左臂明确低伸到膝上外侧围裙，左掌贴宽布面，躯干轻前倾；原右手仍腹前持尺。",
+    "每姿raw、透明、浅深展示分别实际看图；失败留缺项，禁止脚本修人体或第三稿。"
+  ],
+  "verification": {
+    "json_parse": true,
+    "plan_count": 8,
+    "all_evidence_quotes_found_in_current_sources": true,
+    "all_four_anchor_hashes_match_manifest_and_independent_qa": true,
+    "anchor_checks": [
+      {
+        "character": "suoda",
+        "all_manifest_entries_verified": true,
+        "manifest_entry_count": 21,
+        "raw_matches_independent_qa": true,
+        "transparent_matches_independent_qa": true
+      },
+      {
+        "character": "kelin",
+        "all_manifest_entries_verified": true,
+        "manifest_entry_count": 21,
+        "raw_matches_independent_qa": true,
+        "transparent_matches_independent_qa": true
+      },
+      {
+        "character": "jier",
+        "all_manifest_entries_verified": true,
+        "manifest_entry_count": 21,
+        "raw_matches_independent_qa": true,
+        "transparent_matches_independent_qa": true
+      },
+      {
+        "character": "suier_lot",
+        "all_manifest_entries_verified": true,
+        "manifest_entry_count": 21,
+        "raw_matches_independent_qa": true,
+        "transparent_matches_independent_qa": true
+      }
+    ],
+    "four_mothers_raw_and_transparent_actually_viewed": true,
+    "four_expression_boards_actually_viewed": true,
+    "copied_source_hashes_verified": true,
+    "all_original_source_hashes_still_match": true,
+    "prompt_files_sha_verified": true,
+    "all_prompts_single_pose_only": true,
+    "generated_images": 0,
+    "validation_scope": "计划结构、逐字引文行号、相关完整源快照SHA、实际view与动作树/ZIP去重；不改剧情，不作动画或游戏验收。"
+  },
+  "index_refresh": {
+    "ninth_actual_outcomes_in_current_index": true,
+    "ninth_receipt_checks": [
+      {
+        "source_id": "ninth_dalan_erlan_delivery_receipt",
+        "status": "sent_accepted_not_read",
+        "message_id": "Sentinel_6b2a3debfd908191b37d891e7b3eae15",
+        "attachment_count": 9,
+        "qualified_poses": 4
+      },
+      {
+        "source_id": "ninth_teman_nier_delivery_receipt",
+        "status": "sent_accepted_not_read",
+        "message_id": "Sentinel_2290145c2df08191bce9fd1edf60e12f",
+        "attachment_count": 8,
+        "qualified_poses": 4
+      }
+    ],
+    "all_prior_sends_accepted": false,
+    "uncertain_send_blocks_new_planning_or_generation": false,
+    "final_snapshot_ready": true,
+    "read_utc": "2026-10-14T08:31:18.296724+00:00",
+    "requires_refresh_before_generation": false
+  },
+  "independent_plan_review_status": "pending; review_tenth_character_actions assigned separately; no generation before exact brief SHA gate",
+  "source_snapshot_manifest": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/SNAPSHOT_MANIFEST.json",
+    "sha256": "9e037c69f7bddc16684f30a2bda9e1ca994a0f378a82a49cee8e8f835b838e72"
+  }
+}

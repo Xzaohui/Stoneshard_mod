@@ -1,0 +1,72 @@
+{
+  "key": "wuer_A2_half_crouch_right_thigh_support",
+  "title_zh": "屈膝半蹲右掌扶腿",
+  "status": "planned_not_generated",
+  "output_count": 1,
+  "kind": "independent_full_body_noncombat_keypose",
+  "evidence": [
+    {
+      "source_id": "wuer_card",
+      "locator": "体貌与随身",
+      "line_start": 17,
+      "quote": "二十多岁的年轻人"
+    },
+    {
+      "source_id": "field_dialogue",
+      "locator": "FX-CV3／到场，仅支持轻稳体态，不绘洞口场景",
+      "line_start": 646,
+      "quote": "脚步轻点。洞口那圈石头会响。"
+    }
+  ],
+  "art_inference": "源卡和对白只支持本人身份、随身物、习惯及边界；具体手臂路径、理发/拂衣/扶带/半蹲/托卷是本轮可逆美术提案，台本未记载已经发生。",
+  "start_pose_description_only": "独立从母图站姿起势，双靴不需跨步。",
+  "pose": "身体在原朝向上明显降低为日常半蹲，两膝都弯曲，臀部向后下方沉，躯干从髋部略前倾，双靴分开且全掌平稳落地。右手离开胸襟，右掌平贴自己右大腿前侧、膝盖上方的灰裤布面，作为轻扶的接触；右肘自然向画面左侧外开。左臂轻垂在左腿外，左手在画面右低位可见，原指端形态保持，不撑地。头随身体整体降低而仍朝画面左，脸平静；不跪地、不伏地。",
+  "end_pose_description_only": "可双腿自然伸直回站姿；不表示走路能力、恢复或剧情结果。",
+  "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+  "visible_stage_target": "全身高度和髋部明显下降，两膝弯、右掌贴右大腿，双靴着地；不能只微微弯腰。",
+  "pose_specific_sidedness": "右掌在画面左侧的本人右大腿膝上布面，左手画面右腿外低垂；双靴不换侧。",
+  "contact_and_support_checks": [
+    "双靴全掌稳定，重心落在两脚之间，膝关节自然弯曲。",
+    "右掌广面贴大腿裤料，左手不撑地，不把半蹲做成跪地。",
+    "上身头肩比例跟随原母图，不能缩短腿或压扁身体伪装半蹲。"
+  ],
+  "prop_state_and_retention": [
+    "不新增手持物。左手（画面右）沿用母图已有短截状指端轮廓、保持低位可见，不加长、不补齐、不改变具体指端，不另定哪一指。原灰斑衣装、腰带与双靴不变。右手及双腿只按本张动作改变。"
+  ],
+  "difference_from_mother_expression_and_batch": "母图/旧两表情均直立，新姿真实屈膝降髋并让右掌落在腿上，属于身体动作；与A1站姿横胸理袖清楚不同。",
+  "risk_level": "medium_pose_and_contact",
+  "new_contact_prop": null,
+  "new_story_fact": false,
+  "sequence_required": false,
+  "animation_claim": false,
+  "generation_budget": {
+    "initial": 1,
+    "max_hard_error_revisions": 1,
+    "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+    "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+    "safety_blocked": "立即停止该动作，记录tool返回；不重试、不换工具、不改写规避。"
+  },
+  "review_status": "planning_author_checked; independent_plan_review_pending",
+  "reference_image_paths": [
+    "Assets/CharacterDesigns/20261013/expressive/new_story/wuer/concept_v1/wuer_transparent.png"
+  ],
+  "reference_sha256": [
+    "4986a8fa2c16efe0663a8efc7fba903db96dceda46d9afe5c6c7cf8186787155"
+  ],
+  "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图紧凑而成熟的成年身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：俉珥 FX-CV3。二十多岁的中性成年外观；深灰褐蓬短发带浅灰发簇、瘦颊、母图眉眼，脸仍朝画面左。土褐系带短褂、浅袖里、腰带、灰褐裤和棕靴保留。\n固定衣装与原物件：不新增手持物。左手（画面右）沿用母图已有短截状指端轮廓、保持低位可见，不加长、不补齐、不改变具体指端，不另定哪一指。原灰斑衣装、腰带与双靴不变。右手及双腿只按本张动作改变。\n本张动作：屈膝半蹲右掌扶腿。身体在原朝向上明显降低为日常半蹲，两膝都弯曲，臀部向后下方沉，躯干从髋部略前倾，双靴分开且全掌平稳落地。右手离开胸襟，右掌平贴自己右大腿前侧、膝盖上方的灰裤布面，作为轻扶的接触；右肘自然向画面左侧外开。左臂轻垂在左腿外，左手在画面右低位可见，原指端形态保持，不撑地。头随身体整体降低而仍朝画面左，脸平静；不跪地、不伏地。\n本张侧别：右掌在画面左侧的本人右大腿膝上布面，左手画面右腿外低垂；双靴不换侧。\n必须明显可见：全身高度和髋部明显下降，两膝弯、右掌贴右大腿，双靴着地；不能只微微弯腰。\n接触与支撑：双靴全掌稳定，重心落在两脚之间，膝关节自然弯曲。；右掌广面贴大腿裤料，左手不撑地，不把半蹲做成跪地。；上身头肩比例跟随原母图，不能缩短腿或压扁身体伪装半蹲。。\n",
+  "prompt_sha256": "757b087ea9cc78c408bb3c78e759d632e58144551c8d8dfec7d98a51f331faf6",
+  "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/wuer_A2_half_crouch_right_thigh_support_prompt.txt",
+  "negative_constraints": [
+    "仅整理本人衣物和普通屈膝姿态，不演原问名回避/低声指点。",
+    "不新增墙、绳头记号、口令、帮派传话、地图或N9作证结案；不把短暂姿势推成身体状态变化。",
+    "母图粗像素只支持既有指端形态，不沿用旧spec对小指的具体指定。",
+    "半蹲必须双靴平稳支撑，左手无需负重，不能画成跪地、爬行或战斗防御。"
+  ],
+  "existing_asset_check": {
+    "own_action_directory_count": 0,
+    "prior_action_found": false,
+    "expression_board_actually_viewed": true,
+    "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/action_tree_scan.json",
+    "semantic_comparison": "母图/旧两表情均直立，新姿真实屈膝降髋并让右掌落在腿上，属于身体动作；与A1站姿横胸理袖清楚不同。"
+  }
+}

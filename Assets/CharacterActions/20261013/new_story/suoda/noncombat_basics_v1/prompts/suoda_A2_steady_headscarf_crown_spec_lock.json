@@ -1,0 +1,72 @@
+{
+  "key": "suoda_A2_steady_headscarf_crown",
+  "title_zh": "右掌轻扶头巾顶",
+  "status": "planned_not_generated",
+  "output_count": 1,
+  "kind": "independent_full_body_noncombat_keypose",
+  "evidence": [
+    {
+      "source_id": "suoda_card",
+      "locator": "体貌与随身",
+      "line_start": 17,
+      "quote": "围巾裹到下巴"
+    },
+    {
+      "source_id": "field_dialogue",
+      "locator": "FX-WCH／知情边界",
+      "line_start": 380,
+      "quote": "不替女巫许诺什么"
+    }
+  ],
+  "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+  "start_pose_description_only": "独立从母图右手轻触胸前巾边、左手提篮开始。",
+  "pose": "双脚原样分开站稳，左手在画面右握原篮把手，唯一空篮自然垂在原腰腿旁。右手完全离开胸前巾边，右肘向画面左外抬，右前臂斜向上，右掌自然并拢平贴头顶画面左上方枯紫头巾的外表面，停在轻扶头巾的一瞬。手掌位于头顶外缘，不遮眉眼，不掀开或牵拉巾布；头巾仍包头贴下巴。头脸保持母图朝向、表情平常。",
+  "end_pose_description_only": "右掌可从巾顶自然放下；头巾始终戴好，篮仍由左手原握。",
+  "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+  "visible_stage_target": "右肘高抬、右掌到头顶外缘接触巾面，篮仍低垂；与胸前原手位以及双手托篮的低位姿态有大轮廓差异。",
+  "pose_specific_sidedness": "右手在画面左上触本人的巾顶；左手画面右低提原空篮。",
+  "contact_and_support_checks": [
+    "宽掌贴头巾顶外面，不抓小结、不穿头、不遮脸。",
+    "右手已离原胸前接点，不新增第三手；头巾覆盖和下巴边界保持。",
+    "空篮低垂完整、把手未换手，身体不拉长、不踮脚。"
+  ],
+  "prop_state_and_retention": [
+    "唯一原空藤篮保持母图编织、尺寸与完整弧形把手；左手（画面右）仍握原把手，不换手、不把篮移到画面左。篮内始终空、无新增内容；右手仅按本张动作移动。枯紫头巾保持包头并贴到下巴下方，不揭开、不遮口鼻、不松结；双鞋完整。"
+  ],
+  "difference_from_mother_expression_and_batch": "旧母图/表情都没有高于头部的手位；本张是头上扶巾，不重复巾边轻触或篮底托持。",
+  "risk_level": "medium_pose_and_contact",
+  "new_contact_prop": null,
+  "new_story_fact": false,
+  "sequence_required": false,
+  "animation_claim": false,
+  "generation_budget": {
+    "initial": 1,
+    "max_hard_error_revisions": 1,
+    "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+    "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+    "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+  },
+  "review_status": "planning_author_checked; independent_plan_review_pending",
+  "reference_image_paths": [
+    "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_transparent.png"
+  ],
+  "reference_sha256": [
+    "a6d11e5f13a5515a2ac71066a7b26959ba27aed0b7889e807499f00a083a2953"
+  ],
+  "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：索妲 FX-WCH。四十多岁的农妇，女巫的邻居；本人宽面、灰鬓和深褐碎发，脸朝画面左。原枯紫头巾包头、贴至下巴下方且嘴脸可见，土灰长袖长裙、棕围裙和深棕闭口鞋完整保留。\n固定衣装与原物件：唯一原空藤篮保持母图编织、尺寸与完整弧形把手；左手（画面右）仍握原把手，不换手、不把篮移到画面左。篮内始终空、无新增内容；右手仅按本张动作移动。枯紫头巾保持包头并贴到下巴下方，不揭开、不遮口鼻、不松结；双鞋完整。\n本张动作：右掌轻扶头巾顶。双脚原样分开站稳，左手在画面右握原篮把手，唯一空篮自然垂在原腰腿旁。右手完全离开胸前巾边，右肘向画面左外抬，右前臂斜向上，右掌自然并拢平贴头顶画面左上方枯紫头巾的外表面，停在轻扶头巾的一瞬。手掌位于头顶外缘，不遮眉眼，不掀开或牵拉巾布；头巾仍包头贴下巴。头脸保持母图朝向、表情平常。\n本张侧别：右手在画面左上触本人的巾顶；左手画面右低提原空篮。\n必须明显可见：右肘高抬、右掌到头顶外缘接触巾面，篮仍低垂；与胸前原手位以及双手托篮的低位姿态有大轮廓差异。\n接触与支撑：宽掌贴头巾顶外面，不抓小结、不穿头、不遮脸。；右手已离原胸前接点，不新增第三手；头巾覆盖和下巴边界保持。；空篮低垂完整、把手未换手，身体不拉长、不踮脚。。\n",
+  "prompt_sha256": "dcf8e1cfecba9d30e143fe9e3fb775a6de4816df378e60dd5a3fa014d90c3af4",
+  "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/suoda_A2_steady_headscarf_crown_prompt.txt",
+  "negative_constraints": [
+    "只是原空篮的自持调整或扶本人原头巾，不递篮、不放到门口、不引路、不摘果、不送药、不新增女巫/村民承诺或DT09结果。",
+    "仍是女巫的邻居，不能变为女巫；不加法杖、巫帽、魔法、证词或定罪。",
+    "篮口、空篮内部与原把手需清楚，双手只有两个；举篮不可变成向画外递物。",
+    "扶巾用宽掌贴头顶外面，不抠小结、不让头巾脱落；脸和双脚不能被裁。"
+  ],
+  "existing_asset_check": {
+    "own_action_directory_count": 0,
+    "prior_action_found": false,
+    "expression_board_actually_viewed": true,
+    "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+    "semantic_comparison": "旧母图/表情都没有高于头部的手位；本张是头上扶巾，不重复巾边轻触或篮底托持。"
+  }
+}

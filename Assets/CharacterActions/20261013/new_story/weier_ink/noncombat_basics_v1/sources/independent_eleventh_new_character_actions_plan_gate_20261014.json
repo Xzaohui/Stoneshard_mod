@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-14T09:05:24.898770+00:00",
+  "reviewer": "review_eleventh_character_actions",
+  "verdict": "PASS_ELEVENTH_NEW_CHARACTER_ACTIONS_PLAN_GATE",
+  "frozen_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_brief.json",
+    "bytes": 124399,
+    "sha256": "3988be2e7e6da94b75ffc5df2b830559cd46c6687ed436f9038b073dd9272259"
+  },
+  "source_snapshot_manifest": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/SNAPSHOT_MANIFEST.json",
+    "sha256": "cea0a137b4f6c5e4c6491e6dd31bed7afc992e13e2cdbfdc9883b427aee0634d"
+  },
+  "source_and_prompt_byte_audit": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_actions_independent_details/plan_source_byte_audit.json",
+    "bytes": 7515,
+    "sha256": "af6e8e32d882576a616ba9022cc0d5bfc320e792f46854483e8b8b04c4ffe27e"
+  },
+  "checks_passed": 591,
+  "source_files_verified": 55,
+  "old_source_files_baselined": 335,
+  "existing_action_tree_baseline_files": 4642,
+  "independent_prior_action_scan": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_actions_independent_details/independent_prior_action_scan.json",
+    "bytes": 76960,
+    "sha256": "95aa83e60cd5fe6aebae7a9c2a5168242d95e7b8f3e6fcda3bf302195ce02ed1"
+  },
+  "actual_visual_baseline": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_actions_independent_details/baseline_visual_observations.json",
+    "bytes": 6503,
+    "sha256": "3882c6efe7a0b9b2118a7d8d85e580f94382aa0424e0c6b12c02e8095b24ddbc"
+  },
+  "production_count_at_gate": {
+    "groups": 20,
+    "characters": 40,
+    "qualified_poses": 76
+  },
+  "accepted_count_at_gate": {
+    "groups": 18,
+    "characters": 36,
+    "qualified_poses": 68
+  },
+  "uncertain_groups_excluded_from_accepted": [
+    "seer_daer",
+    "suoda_kelin"
+  ],
+  "scope": {
+    "existing_characters": 4,
+    "new_planned_static_keyposes": 8,
+    "generated_at_gate": 0,
+    "new_character_identities": 0,
+    "animation_or_runtime_verified": false
+  },
+  "visual_and_semantic_findings": [
+    "独立逐张view四人raw母图、透明母图和表情浅深板共16张；当前卡/对白、身份、年龄、真实头身比例、衣装、原物数量与侧别吻合。",
+    "韦珥左手画面右持原空杯，托杯与右掌下拂围裙分别独立，钥匙始终人物左腰画面右；修正生成前裸右侧歧义。",
+    "摩珥右手画面左持唯一木账板，胸前双掌托板与身侧垂板改变肘腕轮廓；保留板实际大小厚度，不能只改脸。",
+    "岱珥双掌顺平外套前片与双臂侧下舒肩都解除原左手搭右袖，钥匙和补片保留；不认领庄园、不开门。",
+    "谟珥只用已审v2背铲，左手画面右握柄，刃在画面左髋后；右掌低扶膝与高按发顶分别独立。源卡不冻结性别，裤膝崖灰不能改成新增补丁。",
+    "8份实际prompt逐字绑定独立txt及SHA，16引文与当前指定行逐字吻合；实际prompt没有另姿互斥手位。",
+    "独立全Assets扫描4494PNG/256ZIP，四人命中均为旧concept/expression/来源副本；CharacterActions本人动作PNG和ZIP成员零命中。",
+    "第11为44人物基础动作第一轮最后4人；旧4缺项及两组uncertain保持，不追加无关姿态。"
+  ],
+  "author_entry_conditions": [
+    "只用本门审SHA绑定brief的逐姿prompt；勿把跨姿negative_constraints/risks整段追加到实参。",
+    "每次调用前保存逐字prompt、完整真实参数、母图SHA与调用时间；完整返回可解码匹配raw。",
+    "首稿后逐稿独审；每姿最多1真实硬错修订，非偏好重画；安全block立即停，不换词/工具/账户绕过。",
+    "raw/selected分别真浅深底实际view；低alpha清理不能修人体或道具。alpha0隐藏RGB和微美感不算硬错。",
+    "作者独占FINAL/manifest，独审只写audit/evidence；最终板逐格等比最近邻完整合成、ZIP CRC/全成员bytes SHA、全源和失败稿保留，每ZIP<18MiB。",
+    "最终封包独审前不计本批完成；制作与accepted永远分列。"
+  ],
+  "hard_errors": [],
+  "pre_generation_text_corrections_resolved": true,
+  "source_preservation": "No frozen mother/expression/card/script/game/Git/user-upload mutations by reviewer."
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/review_second_new_character_actions",
+  "reviewed_utc": "2026-10-14T03:36:51.870466+00:00",
+  "character": "turi",
+  "status": "partial_acceptance_one_A2_one_A1_failed_budget_exhausted",
+  "scope": "Static independent noncombat keyposes, no animation/runtime/story-state completion. Author solely owns manifest/FINAL_STATUS; final packaging QA remains external after freeze.",
+  "accepted_count": 1,
+  "missing_count": 1,
+  "selected_key": "turi_A2_turn_angle_gauge",
+  "generation_calls": 4,
+  "initial_calls": 2,
+  "hard_error_revisions": 2,
+  "safety_blocked": false,
+  "no_further_generation": true,
+  "records": [
+    {
+      "key": "turi_A1_low_hold_inspection_hammer",
+      "version": 1,
+      "decision": "hard_error_revision_requested",
+      "selected": false,
+      "raw": "raw/turi_A1_low_hold_inspection_hammer_v1_raw.png",
+      "raw_sha256": "b44bc1a2557f53e5230e052221492386479ce43371e0dd531233bddc03df8d6e",
+      "transparent_candidate": "candidate_previews/turi_A1_low_hold_inspection_hammer_v1_transparent.png",
+      "transparent_sha256": "827e2d69bef8fff7f4801b14d66f5312b829b5986bb215529d5c449f661dd9c9",
+      "actual_raw_transparent_light_dark_viewed": true,
+      "alpha_le8_clearing_exactly_reproduced": true,
+      "hard_errors": [
+        "Hammer held horizontally before thigh, metal head vertical over trousers rather than low outside right thigh with horizontal head and visible trouser gap.",
+        "Reduced head and elongated body versus mother."
+      ]
+    },
+    {
+      "key": "turi_A1_low_hold_inspection_hammer",
+      "version": 2,
+      "decision": "not_accepted_revision_budget_exhausted",
+      "selected": false,
+      "raw": "raw/turi_A1_low_hold_inspection_hammer_v2_raw.png",
+      "raw_sha256": "2bd9ea7d81b526944b9d8cf91a6cb68478a702d1c838a0b775be33a16ff2195d",
+      "transparent_candidate": "candidate_previews/turi_A1_low_hold_inspection_hammer_v2_transparent.png",
+      "transparent_sha256": "692489de95f96d2c8e0c0dc1645114e187879641dc8c5daa3c282341b66b294a",
+      "actual_raw_transparent_light_dark_viewed": true,
+      "alpha_le8_clearing_exactly_reproduced": true,
+      "hard_errors": [
+        "Hammer head still vertical over trouser silhouette; original required horizontal head low outside thigh with visible separation remains unmet."
+      ]
+    },
+    {
+      "key": "turi_A2_turn_angle_gauge",
+      "version": 1,
+      "decision": "hard_error_revision_requested",
+      "selected": false,
+      "raw": "raw/turi_A2_turn_angle_gauge_v1_raw.png",
+      "raw_sha256": "9b3940c67c33ba434403851ec58a18e2ee0338a444f4e36ceab56516c1e54ac7",
+      "transparent_candidate": "candidate_previews/turi_A2_turn_angle_gauge_v1_transparent.png",
+      "transparent_sha256": "120bc6ec75202fea107ae21de66b1ff341f9a55f3ba9ea7e51896c799d2060e2",
+      "actual_raw_transparent_light_dark_viewed": true,
+      "alpha_le8_clearing_exactly_reproduced": true,
+      "hard_errors": [
+        "Gauge and hands raised to chest/lower-jaw level rather than near-belly support and gentle turn.",
+        "Head visibly reduced relative to elongated legs/body versus mother."
+      ]
+    },
+    {
+      "key": "turi_A2_turn_angle_gauge",
+      "version": 2,
+      "decision": "accepted_visual_and_provenance",
+      "selected": true,
+      "raw": "raw/turi_A2_turn_angle_gauge_v2_raw.png",
+      "raw_sha256": "500e77b2f3255832bc8b7e45f117ad7ca6e8845f57cb0b525a3e17b991ef221b",
+      "transparent_candidate": "candidate_previews/turi_A2_turn_angle_gauge_v2_transparent.png",
+      "transparent_sha256": "076352b77bbd0651bf97effe511af7ebec4653c58992b269822ae1dfe4d86e52",
+      "actual_raw_transparent_light_dark_viewed": true,
+      "alpha_le8_clearing_exactly_reproduced": true,
+      "hard_errors": []
+    }
+  ],
+  "alpha_note": "Only alpha<=8 cleared; original raw preserved. Zero-alpha hidden RGB glow excluded from background pollution. Actual light/dark compositing inspected."
+}

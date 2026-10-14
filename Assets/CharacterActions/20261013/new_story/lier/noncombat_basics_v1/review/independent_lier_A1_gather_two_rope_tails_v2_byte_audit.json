@@ -1,0 +1,117 @@
+{
+  "character": "lier",
+  "pose_version": "lier_A1_gather_two_rope_tails_v2",
+  "reviewed_utc": "2026-10-14T06:41:51.092392+00:00",
+  "verdict": "failed_after_only_revision_explicit_missing",
+  "files": [
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/review/lier_A1_gather_two_rope_tails_v2_dark.png",
+      "bytes": 595098,
+      "sha256": "444a0b258c7716e27be98ba3404eb170346247e6582a72a6a4eab210e031ed7c"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/review/lier_A1_gather_two_rope_tails_v2_light.png",
+      "bytes": 621164,
+      "sha256": "685468fb2d50b19916de636f4ad817ec28b038843b60e0e110992721ae05a677"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/review/lier_A1_gather_two_rope_tails_v2_byte_audit.json",
+      "bytes": 1470,
+      "sha256": "00ea39b28474da3ac2dc60e77616c8cddcd42b3e7155ee70b88a774be89604be"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/raw/lier_A1_gather_two_rope_tails_v2_tool_return.json",
+      "bytes": 1037278,
+      "sha256": "30172fc7424c46acb073c1a04061679f9385ff541b7bce29721b521af23781cc"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/raw/lier_A1_gather_two_rope_tails_v2_provenance.json",
+      "bytes": 1309,
+      "sha256": "11aa05d284aab79614dc7daf8e9e1ccffdcd4dd09ad5f6a43ed24a31f953451f"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/raw/lier_A1_gather_two_rope_tails_v2_raw.png",
+      "bytes": 777560,
+      "sha256": "f49d271dcec0bb5c7eb48d205a82cb05eb0f79b7692c7791a06a172213f78c6f"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/exports/lier_A1_gather_two_rope_tails_v2_transparent.png",
+      "bytes": 723997,
+      "sha256": "5dfdd13d339632814111df8b000826df8a6be9ff701bb10dc8e54990310a3b23"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/prompts/lier_A1_gather_two_rope_tails_v2_parameters.json",
+      "bytes": 4124,
+      "sha256": "6797f4a0b547f9a0699e26cdd52012b8ef1f2cd50be29bbddcf231da64e03ede"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/prompts/lier_A1_gather_two_rope_tails_v2.txt",
+      "bytes": 3881,
+      "sha256": "5e0f7a21a29881012055d0aedf0cac6a79a29bc3576de3d5e9180f33cdaef951"
+    }
+  ],
+  "checks": {
+    "raw_matches_decoded_complete_tool_result": true,
+    "decoded_images": 1,
+    "prompt_matches_parameters": true,
+    "source_prompt_saved_before_raw": true,
+    "transparent_requested": true,
+    "raw_and_selected_same_dimensions": true,
+    "raw_mode": "RGBA",
+    "selected_mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "canvas": [
+      1118,
+      1407
+    ],
+    "body_alpha_gt8_bytes_unchanged": true,
+    "all_changed_pixels_raw_alpha_le8": true,
+    "transparent_background_clear": true,
+    "light_dark_composites": [
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/review/lier_A1_gather_two_rope_tails_v2_dark.png",
+        "background_rgba": [
+          33,
+          37,
+          41,
+          255
+        ],
+        "matches_true_composite": true
+      },
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/lier/noncombat_basics_v1/review/lier_A1_gather_two_rope_tails_v2_light.png",
+        "background_rgba": [
+          239,
+          234,
+          221,
+          255
+        ],
+        "matches_true_composite": true
+      }
+    ],
+    "provenance_file_present": true,
+    "provenance_all_file_and_reference_hashes_match": true,
+    "provenance_errors": [],
+    "submitted_reference_files_exist": true,
+    "submitted_reference_includes_sha_verified_mother": true
+  },
+  "visual_review": {
+    "actual_viewed": [
+      "raw",
+      "selected_transparent",
+      "true_light_composite",
+      "true_dark_composite"
+    ],
+    "findings": [
+      "The second screen-right knot and tassel still hangs outside the right palm/fingertips; only the first tail is cupped.",
+      "Required simultaneous gathering of both original tails into the same palm was not achieved by the sole revision.",
+      "Both attempts remain valid provenance records but neither qualifies as selected A1 pose. A2 passes independently."
+    ],
+    "required_revision": "None allowed. Mark A1 missing; retain both raw images, complete tool-return payloads, prompts, arguments, alpha exports and reviews in full source package. Do not include either attempt as selected pose or successful board cell.",
+    "nonissues": [],
+    "remaining_revisions": 0
+  }
+}

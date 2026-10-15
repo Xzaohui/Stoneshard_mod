@@ -2,6 +2,10 @@
 
 本文件收存原 README.md 与根 AGENTS.md 中的逐轮迭代记录，按日期与 S 编号从新到旧排列，正文逐字保留。`<!-- 标识:BEGIN/END -->` 标记块由 research/tools 下的写手脚本维护（重跑时整块替换并追加到文末），对应校验器在本文件中核对；当前状态与使用说明见 [README](README.md)，协作规则见 [AGENTS.md](AGENTS.md)。
 
+## 2026-10-15
+
+- 合并入 main（小辉）：`scene-fixes-035`（0.3.5 场景修复与绘图第一至四批美术：bellhouse/underpass 墙体与地面、n2site 地砖与建筑接地阴影、采石场三/四层、winch/side 外圈纹理、camp 棺材交互回退、manifest 哈希更新）与 `story-s200-s202`（剧情 S200—S203 结构优化：重边 HX01—HX41、终局互斥、阵营利益冲突、城市主线回流、日常变体、弧光分型与对白润色；HX01-26 引擎键登记，待代码复核）。两次 --no-ff 合并均无冲突；`linux-build-035` 无独立提交。Write-StateKeys.py 改为写 CHANGELOG.md。Validate-ReadmeClaims 通过；Validate-*.py 68 通过/36 失败，失败集与合并前一致（新增 Validate-HeavyEdges 通过）。
+
 ## 2026-10-14
 
 <!-- ENGINE-KEYS-S155:BEGIN -->

@@ -157,10 +157,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- STATE-KEYS-S114:BEGIN -->\n2026-10-13 S114：状态键映射（实现桥）。'
         f'research/state-keys.json 由源确定性推导 {len(keys)} 个实现用状态键（encounter/resolve/callback/consent/paid/order/presence＋{fam_counts.get("receipt", 0)} 个跨任务回执）；键名 ID 中 `-` 换 `_`，resolve 结算前 none、结算后唯一取值，回执只记已播。'
         '入口design/09_系统逻辑/状态键映射总表.md；条件流 when 的映射见页内。不迁移旧存档、不含奖励语义；运行Validate-StateKeys.py及既有检查；不部署游戏包。\n<!-- STATE-KEYS-S114:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- STATE-KEYS-S114:BEGIN -->.*?<!-- STATE-KEYS-S114:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- STATE-KEYS-S114:BEGIN -->.*?<!-- STATE-KEYS-S114:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/09_系统逻辑/状态键映射总表.md', '入口 [状态键映射总表](design/09_系统逻辑/状态键映射总表.md)'), encoding='utf-8')
 print(json.dumps(dict(keys=len(keys), families=fam_counts), ensure_ascii=False))

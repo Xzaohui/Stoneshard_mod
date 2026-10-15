@@ -12,7 +12,10 @@ namespace EmbersAndOaths;
 
 internal static class Hd2dArt
 {
-    internal const string Active="variable_global_exists(\"EAO_dev_enabled\") && global.EAO_dev_enabled && global.EAO_dev_art";
+    // N1 artwork is the ordinary scene renderer. F10 remains a diagnostic
+    // fallback while observation is enabled; quarry keeps its existing gate.
+    internal const string Active=N2Hd2dArt.Active;
+    internal const string ObserverActive="variable_global_exists(\"EAO_dev_enabled\") && global.EAO_dev_enabled && global.EAO_dev_art";
     internal static string Sprite(string id)=>"s_eao_hd2d_"+id;
     internal static void Ensure()
     {
@@ -38,12 +41,13 @@ internal static class Hd2dArt
         sprite=Msl.CreateSpriteNoCollisionMasks(Sprite(id),new MarginData(0,h-1,0,w-1),new OriginData(ox,oy),new BoundingData<uint>((uint)w,(uint)h));
         sprite.Textures.Add(new UndertaleSprite.TextureEntry{Texture=item});data.Sprites.Add(sprite);
     }
-    internal static string DrawFloor()
+    internal static string DrawFloor(bool includeDoorways=false)
     {
         var code=new StringBuilder("if ("+Active+") {\n");
         foreach(var room in NightRooms.Shapes.Keys){
             code.AppendLine("if (room == "+room+") {");
             foreach(var layer in new[]{"backing","floor","structure"})code.AppendLine("draw_sprite("+Sprite(room+"__"+layer)+",0,0,0);");
+            if(includeDoorways)code.Append(N1DoorwayArt.DrawStamps(room));
             code.AppendLine("exit; }");
         }
         return code.AppendLine("}").ToString();

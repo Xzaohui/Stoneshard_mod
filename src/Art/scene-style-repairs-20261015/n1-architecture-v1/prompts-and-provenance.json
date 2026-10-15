@@ -1,0 +1,21 @@
+{
+  "version": "0.3.14",
+  "mode": "built-in image_gen",
+  "wood": {
+    "prompt": "Use case: stylized-concept. Asset type: ORIGINAL 2D pixel game modular interior north-wall panel, to integrate into this project's 26-pixel tile medieval RPG. Input image 1 is a STYLE REFERENCE ONLY: the prior original project stone-wall atlas. Input image 2 is a STYLE AND SCALE REFERENCE ONLY: the current bellhouse preview. Generate a NEW wooden bellhouse interior wall, NOT a room, NOT a floor, NOT a UI mockup. One long continuous horizontal wall panel, straight-on south-facing cutaway wall seen from the slightly overhead orthographic camera used in classic top-down pixel RPGs. Dark weathered oak vertical boarding, modest heavy vertical posts at intervals and restrained diagonal timber bracing, a low rough fieldstone footing, and a narrow visible top beam. Overall silhouette a long shallow rectangle about 6 times wider than tall, resting on one straight horizontal baseline. The wall face should be about twice a standing 26-pixel-grid character's height when exported to a panel 312 pixels wide and 52 pixels high. Render with deliberate crisp pixel clusters and limited muted brown, olive gray, charcoal palette, quiet low-contrast grain and worn edges, no photorealism or smooth painterly gradients. Texture details small enough to remain coherent after nearest-neighbor reduction. Uniform diffuse light from upper left; no glow, no cast shadow outside the object. No doors, windows, arches, holes, furniture, props, text, labels, border or watermark. Entire wall visible, centered with generous TRANSPARENT padding, genuine transparent background; nothing behind it. No perspective convergence, no isometric diagonal walls, no floor slab. The result is a production source for a nonwalkable boundary, not a finished level.",
+    "raw": "raw/bellhouse-oak-wall-v1.png",
+    "references": [
+      "original project R01 generated stone-wall atlas: style only",
+      "0.3.13 bellhouse preview: style and scale only"
+    ]
+  },
+  "stone": {
+    "prompt": "Use case: stylized-concept. Asset type: ORIGINAL pixel RPG modular north-wall panel for a medieval ferry drain. Input image 1 (the project's original R01 stone-wall atlas) is a STYLE REFERENCE ONLY. Input image 2 (the new oak bellhouse wall) is a CAMERA, SCALE and SILHOUETTE REFERENCE ONLY. Generate one NEW long shallow stone masonry wall panel, about 6 times wider than tall, straight horizontal baseline, south-facing cutaway wall from a slightly overhead orthographic top-down game camera, no perspective convergence. The panel must be a closed solid wall with NO arch or doorway: broad low courses of weathered gray-olive fieldstone, modest thicker stone piers at sparse intervals, a narrow coping cap with a hint of top surface, dark damp mortar and subtle localized moss at the base. No enormous blocks, no engraved ornaments, no fantasy glowing runes. Deliberate crisp pixel clusters, quiet material detail, limited desaturated gray/olive/brown charcoal palette, slightly dark to match a modest dungeon wall next to 26-pixel grid characters. It will be exported as 312 pixels wide by 52 pixels tall, so structural shapes must read at that size. Upper left diffuse illumination, no glow, no shadow outside the silhouette. Entire isolated panel visible, centered with transparent padding on every side, genuinely TRANSPARENT background. No floor slab, no water, rubble, candles, props, furniture, doors, windows, arch gaps, text, labels, border, UI or watermark. This is a usable production wall source, not a complete environment painting.",
+    "raw": "raw/drain-masonry-wall-v1.png",
+    "references": [
+      "original project R01 generated stone-wall atlas: style only",
+      "generated bellhouse-oak-wall-v1: camera scale silhouette only"
+    ]
+  },
+  "scope": "Original production wall sources; no commercial atlas copied. Exact geometry comes from NightRooms. Runtime acceptance is separate."
+}

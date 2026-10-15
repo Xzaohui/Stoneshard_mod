@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "version": "0.3.14",
+  "tile": 26,
+  "size": [1040, 780],
+  "panel_size": [312, 52],
+  "materials": {
+    "wood": {"raw": "raw/bellhouse-oak-wall-v1.png", "crop": [97, 177, 2074, 524], "side_width": 9},
+    "stone": {"raw": "raw/drain-masonry-wall-v1.png", "crop": [66, 248, 2103, 452], "side_width": 9}
+  },
+  "scenes": [
+    {"room": "r_eao_n1_bellhouse", "material": "wood", "stone_from_column": 26, "north_height": 52, "front_height": 13},
+    {"room": "r_eao_n1_underpass", "material": "stone", "backing_color": "#101010", "north_height": 52, "front_height": 13}
+  ],
+  "constraints": "Original 0.3.13 floors and masks unchanged. Walls occupy only serialized native blocked cells. No new props, interactions, actors, collisions, doors, lights, story, rewards or save code. Continuous panel used as structural wall modules; no floor repetition."
+}

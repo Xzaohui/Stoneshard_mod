@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "size": [1040, 780],
+  "tile": 26,
+  "materials": {"stone": "quay-stone-continuous-v2.png", "wood": "bellhouse-wood-continuous-v2.png"},
+  "sampling": "whole panel, nearest, no repeat or mirror",
+  "scenes": [
+    {"room":"r_eao_n1_yard","material":"stone","north_wall_height":13,"south_wall_height":13},
+    {"room":"r_eao_n1_bellhouse","material":"wood","north_wall_height":26,"south_wall_height":13,"stone_corridor":[26,16,35,19]},
+    {"room":"r_eao_n1_underpass","material":"stone","north_wall_height":26,"south_wall_height":13}
+  ],
+  "constraints": "NightRooms remains the only geometry authority; no collision, door, NPC, light, story, reward or save changes. Existing generated boundary strips are cropped only outside the exact walkable mask. N1 rendering becomes active by default; quarry retains its observer gate."
+}

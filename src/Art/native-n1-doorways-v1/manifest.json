@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "batch": "N1-doorways-v1",
+  "status": "exported-runtime-unverified",
+  "native_cell_size": 26,
+  "source_sha256": {
+    "src/Art/hd2d_26x26_20261013/palettes/den_n1_128.json": "f7aa3bf1a070544f81c19dc2d55c609a3061fa66b42c27d64ec911371179ce24",
+    "src/Art/native-n1-doorways-v1/raw/causeway-steps-v1.png": "4d3114b34499c52c9f096b2d93d7e01cf5f28ca5ef41ae74c47d4ec098cc9a56",
+    "src/Art/native-n1-doorways-v1/raw/bell-threshold-v1.png": "a2f5d405e46d13ecc1473107903ae9a385703225e53fb8d82d93a75396f1f13a",
+    "src/Art/native-n1-doorways-v1/raw/drain-steps-v1.png": "c1e48e7d03e9095a2a604089db2990a92e12510f11e3b2ea324082971c61b2a3"
+  },
+  "assets": [
+    {
+      "id": "n1_causeway_steps",
+      "path": "assets/n1_causeway_steps.png",
+      "size": [
+        52,
+        39
+      ],
+      "origin": [
+        26,
+        26
+      ],
+      "alpha_bbox": [
+        0,
+        11,
+        52,
+        39
+      ],
+      "role": "doorway_floor_stamp",
+      "palette": "DEN-N1-128",
+      "sha256": "12849f9fe2e68ed3cb151d7e2fa313869bc594fd0b1714d9e9ba9bf412fafde0"
+    },
+    {
+      "id": "n1_bell_threshold",
+      "path": "assets/n1_bell_threshold.png",
+      "size": [
+        52,
+        39
+      ],
+      "origin": [
+        26,
+        26
+      ],
+      "alpha_bbox": [
+        0,
+        9,
+        52,
+        39
+      ],
+      "role": "doorway_floor_stamp",
+      "palette": "DEN-N1-128",
+      "sha256": "44bc3ff07d6a47d9412f19437342dd699d5cd05f7a7c2cf4e213724190616858"
+    },
+    {
+      "id": "n1_drain_steps",
+      "path": "assets/n1_drain_steps.png",
+      "size": [
+        52,
+        39
+      ],
+      "origin": [
+        26,
+        26
+      ],
+      "alpha_bbox": [
+        0,
+        5,
+        52,
+        39
+      ],
+      "role": "doorway_floor_stamp",
+      "palette": "DEN-N1-128",
+      "sha256": "118071764f59cc11ebb8e9d0113b2bb2f1b98536528174461dab1276b687fdac"
+    }
+  ],
+  "doors": [
+    {
+      "room": "r_eao_n1_yard",
+      "object": "o_eao_n1_home",
+      "cell": [
+        7,
+        24
+      ],
+      "art": "n1_causeway_steps"
+    },
+    {
+      "room": "r_eao_n1_yard",
+      "object": "o_eao_n1_to_bell",
+      "cell": [
+        32,
+        9
+      ],
+      "art": "n1_bell_threshold"
+    },
+    {
+      "room": "r_eao_n1_bellhouse",
+      "object": "o_eao_n1_to_yard",
+      "cell": [
+        7,
+        22
+      ],
+      "art": "n1_bell_threshold"
+    },
+    {
+      "room": "r_eao_n1_bellhouse",
+      "object": "o_eao_n1_to_drain",
+      "cell": [
+        34,
+        17
+      ],
+      "art": "n1_drain_steps"
+    },
+    {
+      "room": "r_eao_n1_underpass",
+      "object": "o_eao_n1_to_house",
+      "cell": [
+        6,
+        22
+      ],
+      "art": "n1_drain_steps"
+    }
+  ]
+}

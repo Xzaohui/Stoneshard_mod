@@ -18,6 +18,7 @@ internal static class FieldQuest
 {
     internal const string Quarry = "r_eao_fx_quarry";
     internal const int Columns = 40, Rows = 30, Tile = 26;
+    internal const int ArrivalX = 8, ArrivalY = 11;
     // Inclusive native grid cells; the sole source of floors, collisions and
     // exported layout checks, exactly like the N1/N2 scenes.
     internal static readonly Dictionary<string, (int, int, int, int)[]> Shapes = new() {
@@ -51,7 +52,16 @@ internal static class FieldQuest
     internal static void BuildRooms()
     {
         foreach (var name in Shapes.Keys) {
-            var r = Msl.GetRoom(name); if (r.GameObjects.Count != 0) continue;
+            var r = Msl.GetRoom(name);
+            if (r.GameObjects.Count != 0) {
+                // Repair the owned prototype room too; rebuilding only empty
+                // rooms leaves an installed arrival on top of the return door.
+                foreach (var instance in r.GameObjects.Where(i => i.ObjectDefinition.Name.Content is "o_eao_fx_start_in" or "o_abstract_player")) {
+                    instance.X = ArrivalX * Tile + 13;
+                    instance.Y = ArrivalY * Tile + 13;
+                }
+                continue;
+            }
             var source = Msl.GetRoom("r_DockStore1floor");
             foreach (var id in new[] { "o_controller", "o_dialog_controller", "o_generationController" }) {
                 var original = source.GameObjects.Single(i => i.ObjectDefinition.Name.Content == id);
@@ -67,8 +77,8 @@ internal static class FieldQuest
             Add(r, "o_eao_fx_sign", 31, 10);
             Add(r, "o_candle03", 9, 10); Add(r, "o_candlefire", 9, 10);
             Add(r, "o_candle03", 29, 12); Add(r, "o_candlefire", 29, 12);
-            Add(r, "o_eao_fx_start_in", 6, 10, "Controllers");
-            Add(r, "o_abstract_player", 6, 10, "Controllers");
+            Add(r, "o_eao_fx_start_in", ArrivalX, ArrivalY, "Controllers");
+            Add(r, "o_abstract_player", ArrivalX, ArrivalY, "Controllers");
         }
     }
     internal static void Ensure()
@@ -77,10 +87,10 @@ internal static class FieldQuest
             Hd2dArt.Add("r_eao_fx_quarry__" + layer, 1040, 780, 0, 0);
     }
     internal static string DrawForeground() =>
-        "if (" + Hd2dArt.Active + ") { if (room == " + Quarry + ") draw_sprite(" + Hd2dArt.Sprite(Quarry + "__foreground") + ",0,0,0); }\n";
+        "if (" + Hd2dArt.ObserverActive + ") { if (room == " + Quarry + ") draw_sprite(" + Hd2dArt.Sprite(Quarry + "__foreground") + ",0,0,0); }\n";
     internal static string FloorDraw()
     {
-        var code = new StringBuilder("if (" + Hd2dArt.Active + ") { if (room == " + Quarry + ") { draw_sprite(" + Hd2dArt.Sprite(Quarry + "__backing") + ",0,0,0); draw_sprite(" + Hd2dArt.Sprite(Quarry + "__floor") + ",0,0,0); draw_sprite(" + Hd2dArt.Sprite(Quarry + "__structure") + ",0,0,0); exit; } }\n");
+        var code = new StringBuilder("if (" + Hd2dArt.ObserverActive + ") { if (room == " + Quarry + ") { draw_sprite(" + Hd2dArt.Sprite(Quarry + "__backing") + ",0,0,0); draw_sprite(" + Hd2dArt.Sprite(Quarry + "__floor") + ",0,0,0); draw_sprite(" + Hd2dArt.Sprite(Quarry + "__structure") + ",0,0,0); exit; } }\n");
         code.Append("var _c = draw_get_color(); var _a = draw_get_alpha(); draw_set_alpha(1); draw_set_color(make_color_rgb(19,21,20)); draw_rectangle(0,0,room_width,room_height,false);\n");
         var cells = Cells();
         code.AppendLine("if (room == " + Quarry + ") {");

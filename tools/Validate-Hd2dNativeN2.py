@@ -16,6 +16,8 @@ for a in m['assets']:
     check(sha(p)==a['sha256'],a['id']+':sha')
     check(list(im.size)==a['size'],a['id']+':size')
     check(set(im.getchannel('A').tobytes())<={0,255},a['id']+':binary-alpha')
+    if a.get('style_repair'):
+        check(all(px[3] or px[:3]==(0,0,0) for px in im.get_flattened_data()),a['id']+':transparent-rgb-zero')
 for s in m['scenes']:
     cells={(x,y) for a,b,c,d in s['walkable_rectangles'] for x in range(a,c+1) for y in range(b,d+1)}
     alpha=Image.open(P/'assets'/(s['room']+'__floor.png')).convert('RGBA').getchannel('A')
@@ -26,6 +28,17 @@ for s in m['scenes']:
     for layer in ['structure','foreground']:
         a=Image.open(P/'assets'/(s['room']+'__'+layer+'.png')).getchannel('A')
         check(all(a.crop((x*26,y*26,x*26+26,y*26+26)).getextrema()==(0,0) for x,y in cells),s['room']+':'+layer+'-outside-floor')
+if m.get('style_repair'):
+    layout=json.loads((P/'interior-style-layout.json').read_text(encoding='utf8'))
+    for spec in layout['scenes']:
+        scene=next(s for s in m['scenes'] if s['room']==spec['room'])
+        check(scene['door_anchors']==spec['doors'],spec['room']+':doorway-contract')
+        check(scene['backing_style']==spec['backing'],spec['room']+':backing-contract')
+        if spec['backing']=='cutaway-dark':
+            backing=Image.open(P/'assets'/(spec['room']+'__backing.png')).convert('RGBA')
+            check(len(set(backing.get_flattened_data()))==1,spec['room']+':cutaway-outside-has-no-boulder-mosaic')
+    sprite=next(a for a in m['assets'] if a['id']=='r01_doorway_open')
+    check(sprite['size']==[52,65] and sprite['origin']==[26,52],'doorway-foot-at-cell-bottom')
 report=dict(check_count=len(checks),assets=len(m['assets']),scenes=len(m['scenes']),passed=True,runtime_verified=False)
-(ROOT/'artifacts/native-n2-art-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+(ROOT/'artifacts/native-n2-art-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8',newline='\n')
 print(json.dumps(report))

@@ -12,7 +12,7 @@ public sealed class EmbersAndOathsMod : Mod
 {
     public override string Name => "余烬与誓约（开发版）";
     public override string Author => "Stoneshard_mod project";
-    public override string Version => "0.3.5";
+    public override string Version => "0.3.14";
     public override string TargetVersion => "0.9.4.25";
     public override string ShortDesc => "无钟之夜＋灰堤＋布林试点 · HD2D开发观察模式";
     public override string Description => "旧文书查档任务退役；无钟之夜包含现场探索、失踪者反转与两条可执行的处理路线；灰堤没有墓碑（N2）五桩五键与HD2D素材；0.3.4 试点批次P2/P3：布林租约案CS-BRY-01（十四桩十键、服务班SVC-BRY、信任档与分池闲谈）与野外层FX-QRY（石场看守存在性四态、只读文书、观察迹象、地区池）。原存档资源保留，F8地图测试保留；0.3.5 新增灰堤外院、三处原生建筑门与室内陈设；完整回归仍在开发。";
@@ -82,6 +82,7 @@ public sealed class EmbersAndOathsMod : Mod
         FieldQuest.Prepare();
         SceneAssembly.Prepare();
         DevTools.Prepare();
+        N1DoorwayArt.Ensure();
         Msl.AddObject("o_eao_d01_clerk", spriteName: "s_peasantmale_13", parentName: "o_simple_NPC", isVisible: true);
         foreach (var pair in new[] { ("o_eao_d01_entry", "o_Doors_all_small"), ("o_eao_d01_return", "o_Doors_all_small"), ("o_eao_d01_archive_door", "o_mannshireavern2floorladderup55"), ("o_eao_d01_down", "o_tavernladerdown01") })
             Msl.AddObject(pair.Item1, parentName: pair.Item2, isVisible: true).Sprite = Msl.GetObject(pair.Item2).Sprite;
@@ -164,8 +165,10 @@ public sealed class EmbersAndOathsMod : Mod
         N2Quest.Configure(SetEvent, ModFiles);
         CityQuest.Configure(SetEvent, ModFiles);
         FieldQuest.Configure(SetEvent, ModFiles);
-        N2Hd2dArt.Configure(SetEvent);
+        N2Hd2dArt.Configure(SetEvent, ModFiles);
         SceneAssembly.Configure(SetEvent, ModFiles);
+        N2Hd2dArt.ConfigureDoorwayMasks();
+        N1DoorwayArt.Configure(SetEvent, ModFiles);
         // F4 cycles the dev-only Brynn trust-band override while F6 is on.
         SetEvent(controller, ModFiles.GetCode("cs_trust_toggle.gml"), EventType.KeyPress, 115);
         NativeRooms.Build();

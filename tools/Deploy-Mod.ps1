@@ -57,6 +57,58 @@ if ([version]$taskReport.modVersion -ge [version]'0.3.5') {
         if ($taskRequired -notin $taskDev.checks) { throw ('Missing native scene assembly check: ' + $taskRequired) }
     }
 }
+if ([version]$taskReport.modVersion -ge [version]'0.3.6') {
+    foreach ($taskRequired in @('dev-panel-localized-chinese-and-english','scene-door-art-aligns-native-origin-and-retains-highlight','scene-quarry-arrival-clear-of-return-door-with-four-walkable-neighbors')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing 0.3.6 scene/observer check: ' + $taskRequired) }
+    }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.7') {
+    foreach ($taskRequired in @('scene-door-centred-interaction-anchor-reuses-native-pixels-o_eao_site_winch_back','scene-door-centred-interaction-anchor-reuses-native-pixels-o_eao_site_canal_back','scene-door-centred-interaction-anchor-reuses-native-pixels-o_eao_site_door_winch')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing 0.3.7 native door anchor check: ' + $taskRequired) }
+    }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.8') {
+    $taskArtCountCheck=if([version]$taskReport.modVersion -ge [version]'0.3.12'){'hd2d-fifty-one-native-sprites'}else{'hd2d-forty-eight-native-sprites'}
+    foreach ($taskRequired in @($taskArtCountCheck,'n2-seven-doorway-stamps-below-characters','n2-doorway-native-interaction-and-contextual-label-o_eao_site_winch_back','n2-doorway-stamp-in-floor-pass-o_eao_site_canal_back')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing 0.3.8 interior style check: ' + $taskRequired) }
+    }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.9') {
+    foreach ($taskRequired in @('n2-architectural-stamps-use-background-depth','n2-winch-whole-basin-water-contract','n2-bedroll-floor-depth-and-sprite-camp_bedroll_a','n2-bedroll-floor-depth-and-sprite-side_bedroll')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing 0.3.9 basin/cloth check: ' + $taskRequired) }
+    }
+    $taskWater = Get-Content -LiteralPath (Join-Path $taskRoot 'artifacts/n2-water-style-validation.json') -Raw | ConvertFrom-Json
+    $taskWaterManifest = (Get-FileHash -LiteralPath (Join-Path $taskRoot 'src/Art/native-n2-hd2d-v1/manifest.json') -Algorithm SHA256).Hash
+    if (!$taskWater.passed -or $taskWater.manifestSha256 -ne $taskWaterManifest) { throw 'Basin pixels do not match the checked art manifest.' }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.10') {
+    foreach ($taskRequired in @('n2-doorway-hit-rectangle-matches-opaque-art-bounds','n2-doorway-hit-shares-art-with-clickable-right-flap','n2-doorway-hit-keeps-native-grid-and-input-o_eao_site_winch_back','n2-doorway-hit-keeps-native-grid-and-input-o_eao_site_canal_back')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing 0.3.10 doorway hit check: ' + $taskRequired) }
+    }
+    if (@($taskDev.checks | Where-Object { $_ -like 'n2-doorway-hit-keeps-native-grid-and-input-*' }).Count -ne 7) { throw 'All seven N2 doorway masks must be checked.' }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.12') {
+    if (@($taskDev.checks | Where-Object { $_ -like 'n1-doorway-keeps-native-grid-lock-and-input-*' }).Count -ne 5 -or
+        @($taskDev.checks | Where-Object { $_ -like 'n1-doorway-hit-matches-embedded-opaque-bounds-*' }).Count -ne 3 -or
+        'n1-doorway-art-below-player-floor-depth' -notin $taskDev.checks) { throw 'N1 doorway art/input checks do not match all five doors.' }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.13') {
+    foreach ($taskN1Room in @('r_eao_n1_yard','r_eao_n1_bellhouse','r_eao_n1_underpass')) {
+        foreach ($taskN1Layer in @('floor','structure','foreground')) {
+            $taskRequired = 'n1-surface-embedded-' + $taskN1Layer + '-matches-native-collision-' + $taskN1Room
+            if ($taskRequired -notin $taskDev.checks) { throw ('Missing N1 surface/collision check: ' + $taskRequired) }
+        }
+    }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.14') {
+    foreach ($taskN1Room in @('r_eao_n1_yard','r_eao_n1_bellhouse','r_eao_n1_underpass')) {
+        $taskRequired = 'n1-architecture-floor-preserved-' + $taskN1Room
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing unchanged N1 floor check: ' + $taskRequired) }
+    }
+    foreach ($taskRequired in @('n1-architecture-two-tile-north-walls-r_eao_n1_bellhouse','n1-architecture-two-tile-north-walls-r_eao_n1_underpass','n1-architecture-drain-backing-flat-no-old-water-fragments')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing N1 architecture check: ' + $taskRequired) }
+    }
+}
 if (!$PackageOnly -and (Get-Process -Name StoneShard -ErrorAction SilentlyContinue)) { throw 'Game is running; close it before updating data.win. No process was stopped.' }
 function Test-TaskNoLink([string]$Path) {
     $taskAbsolute = [IO.Path]::GetFullPath($Path)

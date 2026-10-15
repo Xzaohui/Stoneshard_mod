@@ -4,7 +4,7 @@
     <UseWPF>true</UseWPF>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>0.3.5</Version>
+    <Version>0.3.14</Version>
     <AssemblyName>EmbersAndOaths</AssemblyName>
     <MslDir Condition="'$(MslDir)' == ''">D:\SteamLibrary\steamapps\common\Stoneshard\msl</MslDir>
     <NuGetAudit>false</NuGetAudit>
@@ -15,6 +15,8 @@
     <EmbeddedResource Include="../Art/native-n2-hd2d-v1/assets/*.png" LogicalName="EAO.HD2D.%(Filename)%(Extension)" />
     <EmbeddedResource Include="../Art/native-n2-built-v1/assets/*.png" LogicalName="EAO.HD2D.%(Filename)%(Extension)" />
     <EmbeddedResource Include="../Art/native-n2-built-v1/layout.json" LogicalName="EAO.SceneAssembly.json" />
+    <EmbeddedResource Include="../Art/native-n1-doorways-v1/assets/*.png" LogicalName="EAO.HD2D.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="../Art/native-n1-doorways-v1/manifest.json" LogicalName="EAO.N1Doorways.json" />
     <PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
     <Reference Include="ModShardLauncher"><HintPath>$(MslDir)\ModShardLauncher.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="UndertaleModLib"><HintPath>$(MslDir)\UndertaleModLib.dll</HintPath><Private>false</Private></Reference>

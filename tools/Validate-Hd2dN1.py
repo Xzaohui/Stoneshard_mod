@@ -72,7 +72,7 @@ def main():
     failed=[c for c in checks if not c['passed']]
     report=dict(date='2026-10-13',passed=not failed,check_count=len(checks),failed_count=len(failed),
                 checks=checks,scope='PNG integrity, alpha, palette, native geometry, origins and connectivity; not runtime or literary acceptance')
-    (P/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (P/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({'passed':report['passed'],'checks':len(checks),'failures':failed},ensure_ascii=False))
     return 1 if failed else 0
 

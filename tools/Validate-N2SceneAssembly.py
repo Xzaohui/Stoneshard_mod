@@ -25,6 +25,15 @@ def main():
         require(list(im.size)==a['size'],a['id']+':size')
         require(set(im.getchannel('A').get_flattened_data())<={0,255},a['id']+':binary-alpha')
         require({tuple(c[:3]) for c in im.get_flattened_data() if c[3]}<=palette,a['id']+':palette')
+        if 'apron_from_row' in a:
+            require(im.getchannel('A').crop((0,a['apron_from_row'],im.width,im.height)).getbbox() is None,a['id']+':baked-apron-removed')
+            require(im.getchannel('A').getbbox()==tuple(a['body_bbox']),a['id']+':body-bounds-preserved')
+            require(all(c==(0,0,0,0) for c in im.get_flattened_data() if c[3]==0),a['id']+':transparent-rgb-zero')
+        if a.get('role')=='generated_floor_cloth':
+            bbox=im.getchannel('A').getbbox()
+            require(bbox is not None and 14<=bbox[2]-bbox[0]<=24 and 40<=bbox[3]-bbox[1]<=44,a['id']+':narrow-flat-sleeping-mat-scale')
+            require(list(bbox)==a['body_bbox'] and a['origin']==[26,43],a['id']+':same-native-anchor')
+            require(all(c==(0,0,0,0) for c in im.get_flattened_data() if c[3]==0),a['id']+':transparent-rgb-zero')
     cells={(x,y) for a,b,c,d in layout['walkable_rectangles'] for x in range(a,c+1) for y in range(b,d+1)}
     for b in layout['buildings']:
         a,b,c,d=b['blocked'];cells-={(x,y) for x in range(a,c+1) for y in range(b,d+1)}

@@ -36,6 +36,7 @@ internal static class SceneAssembly
     }
     internal static void Prepare()
     {
+        SceneDoorAnchor.Ensure();
         if (!DataLoader.data.Rooms.Any(r=>r.Name.Content==Sites)) {
             var source=Msl.GetRoom("r_DockStore1floor");var room=NativeRooms.Copy(source);
             room.Name=DataLoader.data.Strings.MakeString(Sites);room.Caption=DataLoader.data.Strings.MakeString(S(Layout,"title"));
@@ -81,9 +82,11 @@ internal static class SceneAssembly
     internal static void Configure(Action<UndertaleGameObject,string,EventType,uint> set,ModFile files)
     {
         void Door(string name,string target,string tag,string cn,string en,bool facade=false) {
-            var obj=Msl.GetObject(name);obj.ParentId=Msl.GetObject("o_Doors_all_small");obj.Sprite=obj.ParentId.Sprite;obj.Visible=true;
+            var obj=Msl.GetObject(name);obj.ParentId=Msl.GetObject("o_Doors_all_small");obj.Sprite=SceneDoorAnchor.Ensure();obj.Visible=true;
             set(obj,"event_inherited(); target = "+target+"; position_tag = "+NativeDocuments.Quote(tag)+"; is_lock=false; is_crime_door=false; is_quest=false; dungeon_level_incr=0; name=global.language==3 ? "+NativeDocuments.Quote(cn)+" : "+NativeDocuments.Quote(en)+"; scr_locationRoomEntityInitSavable(id,false);",EventType.Create,0);
-            set(obj,facade ? files.GetCode("site_door_draw.gml") : files.GetCode("night_door_draw.gml"),EventType.Draw,0);
+            var interior = N2Hd2dArt.Doorways.Any(d=>d.Object==name);
+            set(obj,files.GetCode(facade ? "site_door_draw.gml" : interior ? "n2_door_draw.gml" : "night_door_draw.gml"),EventType.Draw,0);
+            if (facade) set(obj,files.GetCode("site_door_draw_end.gml"),EventType.Draw,(uint)EventSubtypeDraw.DrawEnd);
         }
         void Marker(string name,string tag) {
             var obj=Msl.GetObject(name);obj.ParentId=Msl.GetObject("o_position_starter");obj.Visible=false;

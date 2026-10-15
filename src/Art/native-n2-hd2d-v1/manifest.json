@@ -2,7 +2,7 @@
   "schema": 1,
   "version": "native-n2-hd2d-v1",
   "native_cell_size": 26,
-  "scope": "Developer F10 visual overlay; existing N2 geometry, NPCs and interaction unchanged",
+  "scope": "Current N2 visual layers; unchanged collision/actor/quest geometry, generated materials and doorway stamps below actors",
   "source_sha256": {
     "src/EmbersAndOaths/N2Quest.cs": "9cf6e9b98440bd2051650fe8625b1d31cd13cdddd60a4c49e1def0649f6bc4fa",
     "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/backgrounds/r01_camp__floor.png": "d76559244be0b511b4ed72f198f50e6b6bb91fab198696b7ccb4d91a6dc19fac",
@@ -21,7 +21,15 @@
     "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_winch_socket.png": "b6a96d51f7c70bd2c6fcc18131963e3c4063ce3d88b98dc4d12cb10622a5f90e",
     "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_worker_shed.png": "5d51c75542d14f6a31668b95cbbdd4f8fa89c552cc7913a027b697aa1964b73a",
     "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_winch_shed.png": "42e047860e79c5f25d16fc256f0f2723680f0a2d01ca37a49aa011b6336ba5a0",
-    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_canal_entry.png": "e9c6a323126974da614b31c7dd38e275130bd82f6f6c6c4a484af6462448f742"
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/assets/items/r01_canal_entry.png": "e9c6a323126974da614b31c7dd38e275130bd82f6f6c6c4a484af6462448f742",
+    "src/Art/hd2d_26x26_20261013/batches/R01-camp-canal-v2/palettes/bry_r01_128.json": "974d11287e3f00ca5a9adbcd3ca5a669cb32a00cf921c980dc67e6043da4eccd",
+    "src/Art/scene-style-repairs-20261015/raw/interiors/wood-floor.png": "1601698b6a060441213f78583a63e5b06f3c528db2ddc8ca774bb593b765b4a3",
+    "src/Art/scene-style-repairs-20261015/raw/interiors/stone-floor.png": "24e8a3aa3a70ef22a119e07a9080cab577083f60901bf9751bd781b4781cf273",
+    "src/Art/scene-style-repairs-20261015/raw/forecourt-earth-v2.png": "fcbfa5fc1f00e7838e2cb1661446d55430e2c942632cde57f0276b48ebab83c3",
+    "src/Art/native-n2-hd2d-v1/interior-style-layout.json": "8e0b202aba04ed14d5d688764d924eff42e61ac11440ef66571eef5d142973b3",
+    "src/Art/scene-style-repairs-20261015/raw/interiors/doorway.png": "875eaf69056fd7e2c619fca86fb43b031120161c276d17b9004ba7a251885811",
+    "src/Art/scene-style-repairs-20261015/raw/interiors/drain-basin-v1.png": "f1ec969cf70a4a1feb56d2bf5a3c5a063ecd30941c57982ec80b5d56ec0bc63c",
+    "src/Art/scene-style-repairs-20261015/raw/interiors/bedroll-topdown-v1.png": "7f4f79a7e166c1bf89e0d04adb0cdd6962bda91555c9df43d67ad5469066df4c"
   },
   "scenes": [
     {
@@ -47,12 +55,27 @@
         ]
       ],
       "cells": 402,
-      "material_source": "r01_camp",
-      "material_crop_cells": [
-        5,
-        10,
-        17,
-        18
+      "material_source": "wood-floor",
+      "material_period": [
+        364,
+        273
+      ],
+      "backing_style": "cutaway-dark",
+      "door_anchors": [
+        {
+          "object": "o_eao_n2_home",
+          "cell": [
+            7,
+            24
+          ]
+        },
+        {
+          "object": "o_eao_n2_to_winch",
+          "cell": [
+            33,
+            11
+          ]
+        }
       ]
     },
     {
@@ -78,12 +101,56 @@
         ]
       ],
       "cells": 360,
-      "material_source": "r01_canal_pump",
-      "material_crop_cells": [
-        4,
-        4,
-        16,
-        10
+      "material_source": "stone-floor",
+      "material_period": [
+        364,
+        273
+      ],
+      "backing_style": "earth-and-drain",
+      "door_anchors": [
+        {
+          "object": "o_eao_n2_camp_back",
+          "cell": [
+            12,
+            24
+          ]
+        },
+        {
+          "object": "o_eao_n2_to_side",
+          "cell": [
+            25,
+            7
+          ]
+        },
+        {
+          "object": "o_eao_site_winch_back",
+          "cell": [
+            31,
+            23
+          ]
+        }
+      ],
+      "water_source": "src/Art/scene-style-repairs-20261015/raw/interiors/drain-basin-v1.png",
+      "water_sampling": "whole-basin",
+      "water_rectangles": [
+        [
+          5,
+          9,
+          8,
+          18
+        ],
+        [
+          17,
+          9,
+          21,
+          18
+        ],
+        [
+          28,
+          9,
+          32,
+          18
+        ]
       ]
     },
     {
@@ -103,12 +170,27 @@
         ]
       ],
       "cells": 436,
-      "material_source": "r01_canal_tomb",
-      "material_crop_cells": [
-        12,
-        10,
-        24,
-        18
+      "material_source": "stone-floor",
+      "material_period": [
+        364,
+        273
+      ],
+      "backing_style": "cutaway-dark",
+      "door_anchors": [
+        {
+          "object": "o_eao_n2_side_back",
+          "cell": [
+            29,
+            21
+          ]
+        },
+        {
+          "object": "o_eao_site_canal_back",
+          "cell": [
+            8,
+            22
+          ]
+        }
       ]
     }
   ],
@@ -124,9 +206,10 @@
         0,
         0
       ],
-      "sha256": "5ca34f3b71492422012b9a26351e8523f5cd53e98b15b1e5e74c3a978f11cba2",
+      "sha256": "1bd13c9cb262de4cade17c7db4844ebf7acfa1f4c0dfb65ffda12c7c4e85b22b",
       "role": "backing",
-      "room": "r_eao_n2_camp"
+      "room": "r_eao_n2_camp",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_camp__floor",
@@ -139,9 +222,10 @@
         0,
         0
       ],
-      "sha256": "10e2e59d6bd3cbf89a01e0f6cd09e2f48bc022e996e0dff1b87194422fc916b4",
+      "sha256": "9ec108001a15a6f3829f51ed931c8dfac4e2ebac5fcc9e7c6fc85f4b2c7a9ba4",
       "role": "floor",
-      "room": "r_eao_n2_camp"
+      "room": "r_eao_n2_camp",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_camp__structure",
@@ -154,9 +238,10 @@
         0,
         0
       ],
-      "sha256": "c10d53fa79e44596c7be2e731baed719fd72c0e78e5a2fbe3989c4a228cb160d",
+      "sha256": "de1f20badc294e75a30cb37b82b9d708c0886cc87bdd3cb6a5e3ffacd6a4211c",
       "role": "structure",
-      "room": "r_eao_n2_camp"
+      "room": "r_eao_n2_camp",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_camp__foreground",
@@ -169,9 +254,10 @@
         0,
         0
       ],
-      "sha256": "3533ea6bcf739086d361051dd3e3b948b19908c2f56dee5bfcbad2874ae851b2",
+      "sha256": "80318d09358a9a77a16020fcf2a476b43c01711e64d7684578168c90c2733055",
       "role": "foreground",
-      "room": "r_eao_n2_camp"
+      "room": "r_eao_n2_camp",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_winch__backing",
@@ -184,9 +270,10 @@
         0,
         0
       ],
-      "sha256": "35c1d2636116c74e40c9a45907e65432b646d251b4e472788d0d80c44696cf9c",
+      "sha256": "fd74d870bdedf5adf835a73f0e83883374533f00c6c9ab1e99cfaccbf32130f7",
       "role": "backing",
-      "room": "r_eao_n2_winch"
+      "room": "r_eao_n2_winch",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_winch__floor",
@@ -199,9 +286,10 @@
         0,
         0
       ],
-      "sha256": "29ffcc7dcefe7d509a8e1946a3d723e69388512552d9638daf4b31efe54d7b9d",
+      "sha256": "715f527bef917247356f3a37f41884f7a9793f1a7a38cc20b4250a5dd1ae2e52",
       "role": "floor",
-      "room": "r_eao_n2_winch"
+      "room": "r_eao_n2_winch",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_winch__structure",
@@ -214,9 +302,10 @@
         0,
         0
       ],
-      "sha256": "bbb7ce389443b69a1e1ff7b7ad1d6ecebd4d42d8e710bf0c8bbb6e7f9d90a2ae",
+      "sha256": "204346e03acda351aa4c582d89c7fa6568fe6c10d852d9d0af24f43e2c03eb36",
       "role": "structure",
-      "room": "r_eao_n2_winch"
+      "room": "r_eao_n2_winch",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_winch__foreground",
@@ -229,9 +318,10 @@
         0,
         0
       ],
-      "sha256": "3533ea6bcf739086d361051dd3e3b948b19908c2f56dee5bfcbad2874ae851b2",
+      "sha256": "dba2ec061fa936bd756adb93af3d3fd0a4449788f3324e0a4ae855e4c97732f8",
       "role": "foreground",
-      "room": "r_eao_n2_winch"
+      "room": "r_eao_n2_winch",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_side__backing",
@@ -244,9 +334,10 @@
         0,
         0
       ],
-      "sha256": "d500e528f873ec5b3bd53d2633e8016b556c88ec6812920ee0d97451b304d068",
+      "sha256": "1bd13c9cb262de4cade17c7db4844ebf7acfa1f4c0dfb65ffda12c7c4e85b22b",
       "role": "backing",
-      "room": "r_eao_n2_side"
+      "room": "r_eao_n2_side",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_side__floor",
@@ -259,9 +350,10 @@
         0,
         0
       ],
-      "sha256": "1ccab9de6cf9c449fc7c16cfe0bcc8dd3ce00961daf85a18b18930289290ccb4",
+      "sha256": "72486b4a0f1309cb579e2fc8cf93461aefa438264a351e3666238c196a574e49",
       "role": "floor",
-      "room": "r_eao_n2_side"
+      "room": "r_eao_n2_side",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_side__structure",
@@ -274,9 +366,10 @@
         0,
         0
       ],
-      "sha256": "6c217cededc6921cdf8ffee0dab188bab8dd85bb628008598b301abfc92ce9ed",
+      "sha256": "b01af3a27fb913feca9776413ac14dbd9d2c6d7520a8abe79a5b95fac4681981",
       "role": "structure",
-      "room": "r_eao_n2_side"
+      "room": "r_eao_n2_side",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r_eao_n2_side__foreground",
@@ -289,9 +382,10 @@
         0,
         0
       ],
-      "sha256": "3533ea6bcf739086d361051dd3e3b948b19908c2f56dee5bfcbad2874ae851b2",
+      "sha256": "85e229dcc8bd5e24eca862f38bf8b2c3563187a550daae2fa883d3c25e00194e",
       "role": "foreground",
-      "room": "r_eao_n2_side"
+      "room": "r_eao_n2_side",
+      "style_repair": "0.3.9"
     },
     {
       "id": "r01_coffin_coat",
@@ -362,7 +456,23 @@
       ],
       "sha256": "8fcf519d0cf484ed6ac63ace52d10225fef37940985c16f9ec8f9dbfb139006a",
       "role": "released_sprite_reuse"
+    },
+    {
+      "id": "r01_doorway_open",
+      "path": "assets/r01_doorway_open.png",
+      "size": [
+        52,
+        65
+      ],
+      "origin": [
+        26,
+        52
+      ],
+      "role": "doorway_floor_stamp",
+      "sha256": "9c3587752909c4fe369fb3e6c4651d3bd99c47e150c1209e8ecf23d12c64002b",
+      "style_repair": "0.3.9"
     }
   ],
-  "runtime_verified": false
+  "runtime_verified": false,
+  "style_repair": "0.3.9"
 }

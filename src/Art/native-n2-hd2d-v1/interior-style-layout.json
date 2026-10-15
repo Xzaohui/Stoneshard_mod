@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "tile": 26,
+  "size": [1040,780],
+  "material_period": [364,273],
+  "repair_version": "0.3.9",
+  "water_source": "src/Art/scene-style-repairs-20261015/raw/interiors/drain-basin-v1.png",
+  "water_sampling": "whole-basin",
+  "bedroll_source": "src/Art/scene-style-repairs-20261015/raw/interiors/bedroll-topdown-v1.png",
+  "door_sprite": {"id":"r01_doorway_open","size":[52,65],"origin":[26,52]},
+  "scenes": [
+    {"room":"r_eao_n2_camp","material":"wood-floor","backing":"cutaway-dark","north_wall_height":26,"south_wall_height":13,"doors":[{"object":"o_eao_n2_home","cell":[7,24]},{"object":"o_eao_n2_to_winch","cell":[33,11]}]},
+    {"room":"r_eao_n2_winch","material":"stone-floor","backing":"earth-and-drain","north_wall_height":13,"south_wall_height":6,"water_rectangles":[[5,9,8,18],[17,9,21,18],[28,9,32,18]],"doors":[{"object":"o_eao_n2_camp_back","cell":[12,24]},{"object":"o_eao_n2_to_side","cell":[25,7]},{"object":"o_eao_site_winch_back","cell":[31,23]}]},
+    {"room":"r_eao_n2_side","material":"stone-floor","backing":"cutaway-dark","north_wall_height":26,"south_wall_height":13,"doors":[{"object":"o_eao_n2_side_back","cell":[29,21]},{"object":"o_eao_site_canal_back","cell":[8,22]}]}
+  ],
+  "notes":"Visual assembly only. N2Quest.cs owns walkable cells; existing serialized door anchors are checked against these stamps. No actor, quest, collision, arrival or save edits. Doorway stamps render in the floor pass below characters. 0.3.9 replaces repeated water patches with a whole basin inside unchanged nonwalkable rectangles and replaces the existing floor-cloth sprite without adding props."
+}

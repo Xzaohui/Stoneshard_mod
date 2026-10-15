@@ -34,7 +34,10 @@ internal static class EaoSceneAssembly
         void Door(string name,string room,string tag) {
             var obj=data.GameObjects.Single(o=>o.Name.Content==name);var code=asm("gml_Object_"+name+"_Create_0");
             var target=data.Rooms.IndexOf(data.Rooms.Single(r=>r.Name.Content==room));
-            Require(obj.ParentId?.Name.Content=="o_Doors_all_small"&&obj.Sprite==obj.ParentId.Sprite&&obj.Events[(int)EventType.Mouse].Count==0&&obj.Events[(int)EventType.Other].Count==0&&Regex.IsMatch(code,@"push(?:i\.e|\.i) "+target+@"\s+pop\.v\.i self.target")&&code.Contains(tag)&&code.Contains("scr_locationRoomEntityInitSavable"),"scene-native-door-target-and-tag-"+name);
+            var sprite=obj.Sprite;
+            Require(obj.ParentId?.Name.Content=="o_Doors_all_small"&&sprite?.Name.Content=="s_eao_scene_door_anchor"&&obj.Events[(int)EventType.Mouse].Count==0&&obj.Events[(int)EventType.Other].Count==0&&Regex.IsMatch(code,@"push(?:i\.e|\.i) "+target+@"\s+pop\.v\.i self.target")&&code.Contains(tag)&&code.Contains("scr_locationRoomEntityInitSavable"),"scene-native-door-target-and-tag-"+name);
+            var native=obj.ParentId!.Sprite;
+            Require(sprite!.OriginX==sprite.Width/2&&sprite.OriginY==sprite.Height/2&&sprite.Width==native.Width&&sprite.Height==native.Height&&sprite.Textures.Count==native.Textures.Count&&sprite.Textures.Zip(native.Textures).All(p=>p.First.Texture==p.Second.Texture)&&sprite.CollisionMasks.Count==native.CollisionMasks.Count&&sprite.CollisionMasks.Zip(native.CollisionMasks).All(p=>p.First.Data.SequenceEqual(p.Second.Data)),"scene-door-centred-interaction-anchor-reuses-native-pixels-"+name);
         }
         foreach(var b in layout.GetProperty("buildings").EnumerateArray()) {
             var id=b.GetProperty("id").GetString()!;

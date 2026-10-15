@@ -58,6 +58,18 @@ if (args.Length == 0) {
 using var stream = File.OpenRead(args[0]);
 var data = UndertaleIO.Read(stream);
 Console.WriteLine($"Loaded: {data.Code.Count} code entries, {data.GameObjects.Count} objects, {data.Rooms.Count} rooms.");
+if (args.Length > 1 && args[1] == "--sprite-shape") {
+    foreach (var name in args.Skip(2)) {
+        var sprite = data.Sprites.Single(s => s.Name.Content == name);
+        var values = sprite.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance)
+            .Where(p => p.CanRead && p.GetIndexParameters().Length == 0)
+            .Select(p => (p.Name, Value:p.GetValue(sprite)))
+            .Where(p => p.Value != null && (p.Value.GetType().IsPrimitive || p.Value.GetType().IsEnum))
+            .ToDictionary(p => p.Name, p => p.Value);
+        Console.WriteLine(JsonSerializer.Serialize(new { name, values, masks=sprite.CollisionMasks.Select(m => new { bytes=m.Data.Length, nonzeroBytes=m.Data.Count(b => b != 0) }) }));
+    }
+    return;
+}
 if (args.Length > 1 && args[1] == "--room-summary") {
     foreach (var name in args.Skip(2)) {
         var room = data.Rooms.Single(r => r.Name.Content == name);

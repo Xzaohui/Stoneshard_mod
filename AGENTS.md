@@ -16,6 +16,7 @@
 
 - 只提交自己的路径：`git add -- <路径>` / `git commit -- <路径>`；不用 `git add -A`、`git commit -a`。
 - 不 stash、reset、checkout 或删除别人未提交的文件；工作树里出现不明改动先问小辉。
+- 并行开发必须使用稀疏工作树 `/workspace/projects/wt-code`、`wt-story`、`wt-art`（见 `docs/roadmap/WORKTREE.md`）；新建时用 `git worktree add --no-checkout` 再 `sparse-checkout`，禁止再为非绘图任务复制完整 `Assets/`。
 - 不在主工作树切换分支；并行分支用 `git worktree add`（如 `/workspace/projects/Stoneshard_mod-<用途>`），用完移除。
 - `src/`、`tools/` 实现批次照旧先在 `WORK-CLAIMS.md` 领批（见下文「并行会话领批」）。
 - 同一时间只开一个 Steam/游戏实例；测试完正常退出，再交给下一个助手。

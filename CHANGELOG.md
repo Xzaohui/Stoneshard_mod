@@ -4,6 +4,7 @@
 
 ## 2026-10-16
 
+- 建立稀疏工作树方案（小辉）：`wt-code` / `wt-story` / `wt-art`，文档见 `docs/roadmap/WORKTREE.md`；AGENTS 共用规则要求并行开发只用稀疏检出。
 - 合并入 main（小辉）：`story-s204-s205`（S204 新对白通读与权威名册、S205 块外润色）与 `code/c1-a3`（含 `story-hxfix` HX01-26 键审查修复、A3 开发小修、art/stage0 外院/采石场复测修正、状态助手与图中图审查）。冲突仅在 research 生成哈希类 JSON：代码侧校验哈希取 code/c1-a3，剧情侧 story-generated/structure-opt 取 story-s204。`code/map-plan` 暂留（大地图方案撰写中）。
 
 ## 2026-10-15

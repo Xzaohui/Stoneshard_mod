@@ -41,8 +41,10 @@ internal static class N2Hd2dArt
     internal static void Configure(Action<UndertaleGameObject,string,EventType,uint> set)
     {
         set(Msl.GetObject("o_eao_n2_floor"),DrawFloor()+N2Quest.FloorDraw(),EventType.Draw,0);
-        // Coffin uses the HD2D coat in both modes so its perspective no longer flips with F10.
-        set(Msl.GetObject("o_eao_n2_coffin"),"draw_sprite("+Hd2dArt.Sprite("r01_coffin_coat")+",0,x,y);",EventType.Draw,0);
+        // Coffin uses the HD2D coat in both modes so its perspective no longer flips with F10;
+        // the fallback still goes through the native draw (outline/interaction) with the coat sprite.
+        var coat=Hd2dArt.Sprite("r01_coffin_coat");
+        set(Msl.GetObject("o_eao_n2_coffin"),"if ("+Active+") { draw_sprite("+coat+",0,x,y); } else { var _eao_s = sprite_index; sprite_index = "+coat+"; event_inherited(); sprite_index = _eao_s; }",EventType.Draw,0);
         set(Msl.GetObject("o_eao_n2_winch"),"if ("+Active+") { draw_sprite("+Hd2dArt.Sprite("r01_winch_socket")+",0,x,y); } else { event_inherited(); }",EventType.Draw,0);
     }
 }

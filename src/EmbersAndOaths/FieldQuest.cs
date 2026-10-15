@@ -147,15 +147,16 @@ internal static class FieldQuest
     private const string VisitPick =
         "eao_fx_visit_pick = function() {\n" +
         "var _seen = variable_global_exists(\"EAO_fx_qry_seen\") && global.EAO_fx_qry_seen;\n" +
-        "if (ds_map_exists(global.characterDataMap, \"EAO_resolve_N7\")) {\n" +
-        "    if (ds_map_find_value(global.characterDataMap, \"EAO_resolve_N7\") != \"none\") return _seen ? 3 : 1;\n" +
-        "    return _seen ? 2 : 0;\n" +
-        "}\n" +
-        "return 4;\n};\n";
+        "var _r = \"none\";\n" +
+        "if (ds_map_exists(global.characterDataMap, \"EAO_resolve_N7\")) _r = ds_map_find_value(global.characterDataMap, \"EAO_resolve_N7\");\n" +
+        "if (_r != \"none\") return _seen ? 3 : 1;\n" +
+        "return _seen ? 2 : 0;\n};\n";
     private const string RegionPick =
         "eao_fx_region_pick = function() {\n" +
         "if (variable_global_exists(\"timeDataMap\") && is_real(global.timeDataMap) && ds_exists(global.timeDataMap, ds_type_map)) { var _h = ds_map_find_value(global.timeDataMap, \"hours\"); if (_h >= 21 || _h < 5) return 2; }\n" +
-        "if (ds_map_exists(global.characterDataMap, \"EAO_resolve_N7\") && ds_map_find_value(global.characterDataMap, \"EAO_resolve_N7\") != \"none\") return 3;\n" +
+        "var _r = \"none\";\n" +
+        "if (ds_map_exists(global.characterDataMap, \"EAO_resolve_N7\")) _r = ds_map_find_value(global.characterDataMap, \"EAO_resolve_N7\");\n" +
+        "if (_r != \"none\") return 3;\n" +
         "if (!variable_global_exists(\"EAO_fx_region_cursor\")) global.EAO_fx_region_cursor = 0;\n" +
         "global.EAO_fx_region_cursor = 1 - global.EAO_fx_region_cursor;\n" +
         "return global.EAO_fx_region_cursor;\n};\n";
@@ -228,6 +229,7 @@ internal static class FieldQuest
     internal static void Configure(Action<UndertaleGameObject, string, EventType, uint> set, ModFile files)
     {
         var stubs = string.Concat(new[] {
+            files.GetCode("eao_state_helpers.gml"),
             files.GetCode("fx_qry_intro.gml"), files.GetCode("fx_qry_night.gml"), files.GetCode("fx_qry_hub.gml"),
             files.GetCode("fx_qry_before.gml"), files.GetCode("fx_qry_after.gml"), files.GetCode("fx_qry_early.gml"),
             files.GetCode("fx_qry_late.gml"), files.GetCode("fx_qry_refusal.gml"), files.GetCode("fx_qry_proxy.gml"),

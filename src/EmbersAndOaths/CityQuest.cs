@@ -201,7 +201,7 @@ internal static class CityQuest
             files.GetCode("cs_bry_01_feedback_3_early.gml"), files.GetCode("cs_bry_01_feedback_3_late.gml"),
             files.GetCode("cs_bry_01_refusal.gml"), files.GetCode("cs_bry_01_absent.gml"),
             files.GetCode("cs_bry_01_before_city.gml"), files.GetCode("cs_bry_01_after_city.gml"),
-            files.GetCode("cs_system_helpers.gml")
+            files.GetCode("eao_state_helpers.gml"), files.GetCode("cs_system_helpers.gml")
         });
         var npcs = new[] {
             ("cs_pelan", "租客佩兰", "Pelan the tenant", "s_peasantfemale_06", "s_peasantfemale_06P", PelanResume() + PelanFlow()),

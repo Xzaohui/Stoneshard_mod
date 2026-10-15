@@ -10,6 +10,52 @@ def resolve_keys(net):
     return {k for e in net['heavy_edges'] for k in e['when'] if k.startswith('resolve_')} | {
         'resolve_'+p['task'].replace('-','_') for e in net['heavy_edges'] for p in e['sources']}
 
+# Logical S62 resolve labels remain in the design model; the engine projection
+# uses a separate namespace for the twelve incompatible route vocabularies.
+ROUTE_TASKS = ('N3','N4','N5','N6','N7','N8','N16','N17','SQ01','SQ02','SQ03','SQ08')
+def engine_name(name):
+    return 'route_' + name[8:] if name.startswith('resolve_') and name[8:] in ROUTE_TASKS else name
+
+def state_value(value):
+    return str(value).lower() if isinstance(value, bool) else value
+
+def condition_map(condition):
+    return {engine_name(k): [state_value(v) for v in vs] for k, vs in condition.items()}
+
+def support_stubs(net):
+    """Executed choices only; these do not play legacy callbacks or give rewards."""
+    out = []
+    def add(task, node, sets, when=None, rule='实际处置并确认后提交；预览、关闭、人物守卫失败不写'):
+        out.append(dict(event=f'evt_{task}_{node}', script=task, node=node,
+                        trigger='on_route_selected', when=when or {},
+                        reads=sorted((when or {}).keys()), writes=list(sets), sets=sets,
+                        cooldown='once', engine_event=None, rule=rule))
+    for task in ROUTE_TASKS:
+        for route in net['tasks'][task]['routes']:
+            add(task, 'route_'+route['key'], {'route_'+task: route['key']},
+                rule='S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback')
+    # Legacy choice stubs only play callbacks. Explicit settlement producers
+    # supply values read by HX without changing those historical stubs.
+    requested={}
+    for edge in net['heavy_edges']:
+        for name,values in edge['when'].items():
+            if name.startswith('resolve_') and name[8:] not in ROUTE_TASKS:
+                requested.setdefault(name,set()).update(values)
+    for name,values in sorted(requested.items()):
+        for value in sorted(values):
+            add(name[8:], 'settle_'+value, {name:value},
+                rule='对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算')
+    for name, definition in net['heavy_edge_registry']['variables'].items():
+        for task in definition['writer_tasks']:
+            for value in definition['write_values']:
+                when = {'custody_intent': [value]} if name == 'custody_signed' else {}
+                add(task, name+'_'+str(value).lower(), {name: state_value(value)}, when,
+                    definition['commit']+'；仅本节点实际执行对应处置后写入；'+definition['update_mode'])
+    for value in ('false','true'):
+        add('N12', 'toman_personnel_'+value, {'toman_personnel':value},
+            rule='N12 实际交人写 true；实际拒交写 false；须本人在场、存活且授权，不由预览或回执代写')
+    return out
+
 def project(net, base_keys=()):
     variables = net['heavy_edge_registry']['variables']
     effects, stubs, keys = [], [], {}
@@ -57,6 +103,20 @@ def project(net, base_keys=()):
                               rule=('源实际结算后交付有限回执' if phase == 'receipt' else
                                     '只重评未来参数；人物守卫失败走固定物证/基础出口' if phase == 'evaluate' else
                                     '仅实际源处置提交历史后果；不以回执或预览提交')))
+    for task in ROUTE_TASKS:
+        key('resolve_'+task, ['none']+[r['key'] for r in net['tasks'][task]['routes']], 'none', task)
+    for item in keys.values():
+        item['key'] = engine_name(item['key'])
+        item['engine_key'] = 'EAO_' + item['key']
+        item['values'] = [state_value(v) for v in item['values']]
+        item['default'] = state_value(item['default'])
+        if item['key'].startswith('route_'): item['kind'] = 'route'
+    for stub, effect in zip(stubs, [e for e in effects for _ in range(3)]):
+        stub['when'] = condition_map(stub['when'])
+        stub['reads'] = sorted(engine_name(k) for k in stub['reads'])
+        stub['writes'] = [engine_name(k) for k in stub['writes']]
+        stub['sets'] = ({'receipt_'+stub['script']: 'true'} if stub['node'] == 'receipt' else
+                        {engine_name(k): state_value(v) for k,v in effect['writes'].items()} if stub['node'] == 'commit' else {})
     return effects, stubs, sorted(keys.values(), key=lambda x: x['key'])
 
 

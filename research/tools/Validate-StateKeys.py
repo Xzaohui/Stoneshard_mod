@@ -1,7 +1,6 @@
 """Validate the S114 state-key map by recomputing keys from the sources."""
 from pathlib import Path
 import json, hashlib, re
-from HeavyEdges import resolve_keys
 ROOT = Path(__file__).resolve().parents[2]; V = ROOT / 'design'
 def read(p): return json.loads((ROOT / p).read_text(encoding='utf-8-sig'))
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -51,13 +50,6 @@ for n in fx['npcs']:
     add(f'presence_{k(n["id"])}', 'presence', n['id'], ['present', 'absent', 'dead', 'refused'])
 for e in model['effects']: add(f'receipt_{k(e["id"])}', 'receipt', e['id'], ['false', 'true'])
 for e in cont['effects']: add(f'receipt_{k(e["id"])}', 'receipt', e['id'], ['false', 'true'])
-# Current S62 operational routes supersede the historical choices vocabulary.
-network=read('research/story-network.json')
-for sid, task in network['tasks'].items():
-    name='resolve_'+k(sid)
-    if name in expect and name in resolve_keys(network):
-        kind, script, _ = expect[name]
-        expect[name]=(kind,script,['none']+[r['key'] for r in task['routes']])
 check(set(keys) == set(expect), 'keys-match-sources')
 for key, (kind, script, values) in expect.items():
     item = keys.get(key)
@@ -68,6 +60,10 @@ for key, (kind, script, values) in expect.items():
     check(not re.search(r'reward|gold|price|coin', key), key + '-no-reward-word')
 check(len([x for x in keys.values() if x['kind'] == 'receipt']) == len(model['effects']) + len(cont['effects']), 'receipt-count-matches-effects')
 check(sk['families'] == {'encounter': 130, 'resolve': 130, 'callback': 247, 'consent': 167, 'paid': 167, 'presence': 150, 'order': 73, 'receipt': 329}, 'family-counts')
+for item in sk['keys'] + sk['heavy_edge_keys']:
+    if not all(isinstance(v, str) for v in item['values']): errors.append(item['key']+'-string-values')
+    if 'default' in item:
+        if not isinstance(item['default'], str): errors.append(item['key']+'-string-default')
 # every corpus flow has a resolve key and encounter key
 for f in cf['flows']:
     check(f'encountered_{k(f["id"])}' in keys, f['id'] + '-encounter-key')
@@ -94,7 +90,7 @@ for p in sorted((ROOT / 'research').glob('*note-hashes.json')):
     if not isinstance(m, dict) or not all(isinstance(v, str) for v in m.values()): continue
     for rel, exp in m.items(): check((ROOT / rel).exists() and sha(ROOT / rel) == exp, rel + '-manifest-reconciled')
 report = dict(date='2026-10-13', scope='S114 state keys: recomputed key set, formats, values, receipt count, flow linkage, rendering and chain; not engine read/write or save migration',
-              keys=len(keys), receipts=len(receipts), checks_passed=len(checks), errors=errors, passed=not errors, runtimeVerified=False)
+              keys=len(keys), receipts=len(receipts), string_type_entries=len(sk['keys'])+len(sk['heavy_edge_keys']), checks_passed=len(checks), errors=errors, passed=not errors, runtimeVerified=False)
 (ROOT / 'research/state-keys-validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(json.dumps(report, ensure_ascii=False))
 raise SystemExit(0 if report['passed'] else 1)

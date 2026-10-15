@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "actor_id": "OSB-NPC-YADUO",
+  "name": "雅铎",
+  "date": "2026-10-15",
+  "selected_portrait": null,
+  "selected_sha256": null,
+  "status": "pending_revision_not_approved_frozen",
+  "generation_calls": 1,
+  "max_imagegen_calls": 2,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "old_assets_preserved": true,
+  "method": "Built-in imagegen substantive redraw; entire-canvas isotropic NEAREST fit, alpha threshold 128 and <=32 visible-color MAXCOVERAGE/no-dither export are derived candidates, not native authored pixel final. No geometry or facial redrawing by script.",
+  "color_budget_note": "Temporary working ceiling, not native pixel art approval.",
+  "source_manifest": "sources/source_manifest.json",
+  "spec_lock": "spec_lock.md",
+  "reproduction": [
+    "python derive_portrait.py portrait_v1",
+    "python finalize_manifest.py portrait_v1 pending_revision_not_approved_frozen"
+  ],
+  "assets": [
+    {
+      "version": "portrait_v1",
+      "raw": {
+        "path": "raw/portrait_v1_raw_imagegen.png",
+        "sha256": "ace68756e6badc529be4a145339c2b5629643ab1d92ce0c8bd61435fd189ecfe",
+        "dimensions": [
+          1079,
+          1458
+        ],
+        "byte_identical_to_full_tool_return": true
+      },
+      "candidate": {
+        "path": "candidates/portrait_v1_74x100_candidate.png",
+        "sha256": "7f9ef71834435c2213f9d6a449562b4cb0a26760e3af51d52ebdc566e2e4f66e",
+        "dimensions": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 32,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          4,
+          8,
+          72,
+          96
+        ],
+        "partial_alpha_pixels": 0,
+        "palette_by_frequency": [
+          {
+            "rgb": [
+              249,
+              162,
+              105
+            ],
+            "count": 861
+          },
+          {
+            "rgb": [
+              29,
+              12,
+              13
+            ],
+            "count": 675
+          },
+          {
+            "rgb": [
+              54,
+              30,
+              27
+            ],
+            "count": 471
+          },
+          {
+            "rgb": [
+              82,
+              47,
+              36
+            ],
+            "count": 435
+          },
+          {
+            "rgb": [
+              126,
+              75,
+              57
+            ],
+            "count": 327
+          },
+          {
+            "rgb": [
+              30,
+              44,
+              82
+            ],
+            "count": 191
+          },
+          {
+            "rgb": [
+              96,
+              56,
+              43
+            ],
+            "count": 153
+          },
+          {
+            "rgb": [
+              16,
+              35,
+              66
+            ],
+            "count": 135
+          },
+          {
+            "rgb": [
+              114,
+              56,
+              42
+            ],
+            "count": 130
+          },
+          {
+            "rgb": [
+              191,
+              103,
+              64
+            ],
+            "count": 95
+          },
+          {
+            "rgb": [
+              233,
+              143,
+              85
+            ],
+            "count": 93
+          },
+          {
+            "rgb": [
+              217,
+              145,
+              97
+            ],
+            "count": 81
+          },
+          {
+            "rgb": [
+              235,
+              152,
+              100
+            ],
+            "count": 65
+          },
+          {
+            "rgb": [
+              204,
+              126,
+              87
+            ],
+            "count": 60
+          },
+          {
+            "rgb": [
+              214,
+              114,
+              74
+            ],
+            "count": 56
+          },
+          {
+            "rgb": [
+              0,
+              0,
+              0
+            ],
+            "count": 50
+          },
+          {
+            "rgb": [
+              155,
+              76,
+              54
+            ],
+            "count": 40
+          },
+          {
+            "rgb": [
+              137,
+              65,
+              44
+            ],
+            "count": 34
+          },
+          {
+            "rgb": [
+              251,
+              186,
+              125
+            ],
+            "count": 32
+          },
+          {
+            "rgb": [
+              9,
+              23,
+              51
+            ],
+            "count": 29
+          },
+          {
+            "rgb": [
+              39,
+              54,
+              93
+            ],
+            "count": 27
+          },
+          {
+            "rgb": [
+              2,
+              7,
+              29
+            ],
+            "count": 26
+          },
+          {
+            "rgb": [
+              172,
+              90,
+              59
+            ],
+            "count": 21
+          },
+          {
+            "rgb": [
+              236,
+              171,
+              116
+            ],
+            "count": 15
+          },
+          {
+            "rgb": [
+              249,
+              242,
+              231
+            ],
+            "count": 13
+          },
+          {
+            "rgb": [
+              182,
+              115,
+              76
+            ],
+            "count": 11
+          },
+          {
+            "rgb": [
+              34,
+              39,
+              65
+            ],
+            "count": 11
+          },
+          {
+            "rgb": [
+              155,
+              92,
+              63
+            ],
+            "count": 6
+          },
+          {
+            "rgb": [
+              204,
+              194,
+              180
+            ],
+            "count": 4
+          },
+          {
+            "rgb": [
+              193,
+              178,
+              164
+            ],
+            "count": 1
+          },
+          {
+            "rgb": [
+              82,
+              69,
+              63
+            ],
+            "count": 1
+          },
+          {
+            "rgb": [
+              116,
+              93,
+              82
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "method": {
+        "substantive_imagegen_redraw": true,
+        "native_pixel_authored": false,
+        "resize": "isotropic fit entire canvas with NEAREST, integer-rounded output dimensions; no crop or geometric redrawing",
+        "scale": 0.0685820203892493,
+        "fit_box": [
+          74,
+          100
+        ],
+        "same_raw_technical_inset": false,
+        "resized_dimensions": [
+          74,
+          100
+        ],
+        "alpha_threshold": 128,
+        "palette": "MAXCOVERAGE <=32 visible colors, no dithering",
+        "transparent_rgb": "zero",
+        "technical_export_only": true
+      },
+      "checks": {
+        "dimensions": true,
+        "color_budget": true,
+        "binary_alpha": true,
+        "full_tool_return_matches_raw": true
+      },
+      "environment": {
+        "python": "3.12.14",
+        "pillow": "12.3.0"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1712,
+      "sha256": "a373a03e23b64322215e731178ed5c9b331719050fea615b6de047342d1047a6"
+    },
+    {
+      "path": "candidates/portrait_v1_74x100_candidate.png",
+      "bytes": 5380,
+      "sha256": "7f9ef71834435c2213f9d6a449562b4cb0a26760e3af51d52ebdc566e2e4f66e"
+    },
+    {
+      "path": "derive_portrait.py",
+      "bytes": 3731,
+      "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4"
+    },
+    {
+      "path": "finalize_manifest.py",
+      "bytes": 2459,
+      "sha256": "aca084d9d5d7a9c9ed494a14fe65e551e88c7d96fcc73c40ae08e92cf4ceed28"
+    },
+    {
+      "path": "previews/portrait_v1_1x.png",
+      "bytes": 5380,
+      "sha256": "7f9ef71834435c2213f9d6a449562b4cb0a26760e3af51d52ebdc566e2e4f66e"
+    },
+    {
+      "path": "previews/portrait_v1_1x_backgrounds.png",
+      "bytes": 7104,
+      "sha256": "ff48a1c3dc0ced8ce6c2abb4769f9b2ac6275af567041ede5f217c30632eb108"
+    },
+    {
+      "path": "previews/portrait_v1_4x_backgrounds.png",
+      "bytes": 12633,
+      "sha256": "104759cbeaede2cf6e166c1f271472e34d1240edb190c42c681839b8874b7d7d"
+    },
+    {
+      "path": "previews/portrait_v1_8x.png",
+      "bytes": 12061,
+      "sha256": "46aab7e33237a7824f68b698ac712821701ebe320da49ee04e5469c772a50522"
+    },
+    {
+      "path": "prompts/portrait_v1.json",
+      "bytes": 3279,
+      "sha256": "b2e89ed144a64ebea28dbc9f53aebc1bb84c49d370283e979262f7b2542bbc30"
+    },
+    {
+      "path": "prompts/portrait_v1.txt",
+      "bytes": 2435,
+      "sha256": "1ab328e75a9b39b546ce484886a06170ef881e7a3b87d377904ce34e050916a5"
+    },
+    {
+      "path": "qa/author_v1_review.json",
+      "bytes": 1289,
+      "sha256": "7ef89dcb2a91d74dcdbbad499511d4cfb3ea175c3c6de9c3fc0a53477d25759a"
+    },
+    {
+      "path": "qa/freeze_status.json",
+      "bytes": 715,
+      "sha256": "b6214af73daae0166825057d31f918f71cc0b08697426a7202c0026e0472d333"
+    },
+    {
+      "path": "qa/independent_initial_feedback.json",
+      "bytes": 874,
+      "sha256": "e06bb03678e37f937f31e84ced7daa9847ecabed45429b57b4ae633b2cef25d4"
+    },
+    {
+      "path": "qa/portrait_v1_metrics.json",
+      "bytes": 4899,
+      "sha256": "1e55056c2ad984b60ab55c21be7a43dbe05b7e0cedace6140c69bcbf4aef1668"
+    },
+    {
+      "path": "qa/source_hash_recheck.json",
+      "bytes": 3808,
+      "sha256": "93480fb62693fe360be308ff293cdc64928aee4e90f7e60bafa6dabf09bc5036"
+    },
+    {
+      "path": "raw/portrait_v1_raw_imagegen.png",
+      "bytes": 1028954,
+      "sha256": "ace68756e6badc529be4a145339c2b5629643ab1d92ce0c8bd61435fd189ecfe"
+    },
+    {
+      "path": "sources/AGENTS.md",
+      "bytes": 12714,
+      "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4"
+    },
+    {
+      "path": "sources/character_card.md",
+      "bytes": 2052,
+      "sha256": "124859170f75d472d3e5d293215f01ffc55526d5a3069d63da2567a15b4e64c4"
+    },
+    {
+      "path": "sources/identity_reference.png",
+      "bytes": 578106,
+      "sha256": "60dbd00939a699b1a6ac12f01d4b42ea221a0723eb24efe49bf249b764b84189"
+    },
+    {
+      "path": "sources/iwo_style_reference.png",
+      "bytes": 8032,
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb"
+    },
+    {
+      "path": "sources/leiya_style_reference.png",
+      "bytes": 4895,
+      "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f"
+    },
+    {
+      "path": "sources/mara_style_reference.png",
+      "bytes": 9411,
+      "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd"
+    },
+    {
+      "path": "sources/master_QA.json",
+      "bytes": 1099,
+      "sha256": "36699d252bf354ad933c1ed928a32c9156e0975d87b9d4fe7d72cece3ad66ff9"
+    },
+    {
+      "path": "sources/master_manifest.json",
+      "bytes": 2899,
+      "sha256": "1f9c69f4c0a5074a4b2bd464202611226fe74758ab413eff8ee1f5d19905721d"
+    },
+    {
+      "path": "sources/roster_entry.json",
+      "bytes": 4226,
+      "sha256": "97eb7104dc6265e74828f1a3030772ae2cc70e2f8735a2bbac7b38ec10bd2b84"
+    },
+    {
+      "path": "sources/source_manifest.json",
+      "bytes": 4164,
+      "sha256": "479daa4a35ec84db380edd6a40ea88e09b2ac04b3fa89f62e9bffaff5663df6a"
+    },
+    {
+      "path": "sources/story_1.md",
+      "bytes": 74205,
+      "sha256": "a6a75160713defa2b61b37ab7d0c2f6d677c29ddc9ed2af5894714bc500fc1df"
+    },
+    {
+      "path": "sources/story_2.md",
+      "bytes": 7917,
+      "sha256": "076997d77d6ae1ed367d67cb153f085018ac30cfd46e268b771b290d8ab71e8c"
+    },
+    {
+      "path": "sources/story_3.md",
+      "bytes": 16403,
+      "sha256": "9c48987a2c146bd9a6b4cab3be96be60acc173f7d70ce587e481594e48c5c788"
+    },
+    {
+      "path": "sources/tore_style_reference.png",
+      "bytes": 8438,
+      "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1"
+    },
+    {
+      "path": "spec_lock.md",
+      "bytes": 1484,
+      "sha256": "19f4913700603ab8fca5b59dea327341a33eb6188f14f3dac87467c2818c188e"
+    },
+    {
+      "path": "tool_returns/portrait_v1.json",
+      "bytes": 1372470,
+      "sha256": "9ec26bd88a3a3c334dfe0eb2630da3c881a862d940377969a3444aa2330de873"
+    }
+  ],
+  "provisional_candidate": "candidates/portrait_v1_74x100_candidate.png",
+  "provisional_candidate_sha256": "7f9ef71834435c2213f9d6a449562b4cb0a26760e3af51d52ebdc566e2e4f66e",
+  "delivery_eligible": false,
+  "independent_review_status": "initial_review_requires_revision; v2 not executed due to freeze"
+}

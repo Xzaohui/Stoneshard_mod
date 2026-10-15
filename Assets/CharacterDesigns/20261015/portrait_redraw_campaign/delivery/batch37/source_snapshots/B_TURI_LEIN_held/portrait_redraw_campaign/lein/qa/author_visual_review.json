@@ -1,0 +1,78 @@
+{
+  "version": "portrait_v2",
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T14:14:02.947527+00:00",
+  "actually_viewed": [
+    "raw/portrait_v2_raw_imagegen.png",
+    "previews/portrait_v2_1x_backgrounds.png",
+    "previews/portrait_v2_4x_backgrounds.png",
+    "previews/portrait_v2_inset_4x_backgrounds.png"
+  ],
+  "identity_hard_conflict": false,
+  "source_identity_retained": true,
+  "improvements": [
+    "眼白面积与亮度降低，仍存在浅色小块。",
+    "颈领显著缩短，鼻颧骨更大块，成熟年龄可辨。"
+  ],
+  "remaining_limitations": [
+    "眉线更平但仍带戒备，帽/发体量偏大。",
+    "v2原raw最右列alpha最大47；alpha≥128边界像素为0，alpha≥16接边69像素（y769–847），alpha≥5接边108像素。近不透明主体到倒数第2列，但外缘缺真实透明余量，不能独立确认外层发廓完整。该证据不等于身份错误，也不能概括为全不透明主体裁断。inset仅增加技术画布空隙，不能恢复或证明源轮廓完整。",
+    "v1虽完整但大亮眼、忧眉、长颈未过风格，故不交付任何选稿。"
+  ],
+  "raw_edge_diagnostics": {
+    "dimensions": [
+      1086,
+      1449
+    ],
+    "alpha_bbox_by_threshold": {
+      "1": [
+        0,
+        0,
+        1086,
+        1439
+      ],
+      "5": [
+        15,
+        126,
+        1086,
+        1362
+      ],
+      "64": [
+        16,
+        127,
+        1085,
+        1359
+      ],
+      "128": [
+        16,
+        127,
+        1085,
+        1359
+      ],
+      "250": [
+        17,
+        128,
+        1084,
+        1358
+      ]
+    },
+    "right_edge_alpha_max": 47,
+    "right_edge_counts": {
+      "alpha_ge_5": 108,
+      "alpha_ge_16": 69,
+      "alpha_ge_128": 0
+    },
+    "alpha_ge_16_right_edge_y_range": [
+      769,
+      847
+    ]
+  },
+  "technical_inset": "Entire raw canvas isotropically fit in72×98 within74×100, then quantized; no geometric reshaping or pixel-face drawing",
+  "status": "held_source_contour_margin_and_style",
+  "successful_imagegen_calls": 2,
+  "max_successful_imagegen_calls": 2,
+  "no_third_generation": true,
+  "native_pixel_approved": false,
+  "runtime_verified": false,
+  "independent_decision_accepted": true
+}

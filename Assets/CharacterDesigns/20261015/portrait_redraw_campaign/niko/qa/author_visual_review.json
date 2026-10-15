@@ -1,0 +1,48 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T13:56:51.742957+00:00",
+  "actor_id": "ASH-S01-NPC",
+  "selected": null,
+  "selected_sha256": null,
+  "status": "held_composition_scale_and_eye_sclera",
+  "actually_viewed": [
+    "current identity master",
+    "four core style references",
+    "v1 and v2 raw",
+    "v1 and v2 1x/4x three-background previews"
+  ],
+  "identity_findings": [
+    "宽颊圆鼻、灰棕发/蓝巾、深蓝厚衫/棕自缝毯边保留；减轻额纹口周纹后可读三十多岁。",
+    "粗缝线仅在毯领边出现，不代表整张自缝毯或全身装具完成。"
+  ],
+  "limitations": [
+    "最终held：不进入通过肖像画廊；selected=null，v2只保留待用证据。",
+    "小暗眼白改善有限，眼白仍较四核心风格目标明亮。",
+    "头巾或头发束仍有细碎/平行走向，未达到严格逐像素原生标准。",
+    "v2生成raw接近方形，整图等比缩入74×100导致上下留白偏多，脸占高仍偏小。",
+    "保留raw完整轮廓与真实透明余量；不拉伸、不脚本改脸、不用padding掩盖裁断。",
+    "<=32色为临时技术预算，不是原生美术批准；没有游戏集成或运行验收。"
+  ],
+  "source_margin_report": "qa/portrait_v2_raw_margin.json",
+  "technical_checks": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "generation_calls": 2,
+  "max_imagegen_calls": 2,
+  "generation_budget_closed": true,
+  "old_assets_preserved": true,
+  "native_pixel_approved": false,
+  "native_authored": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "decision": "held_composition_scale_and_eye_sclera",
+  "held_evidence": "candidates/portrait_v2_74x100_candidate.png",
+  "held_evidence_sha256": "84732e020d9654934861e86b406672e9b799615747d6770f2728ca9c52f7a588",
+  "delivery_eligible": false,
+  "independent_review": "../independent_qa/batch36/niko_final_visual_review.json",
+  "gate_comparison_board": "../independent_qa/batch36/comparison_with_held_gate_4x_NN.png",
+  "final_gate_reason": "一致门槛复核：目标头领主体仅74px高，脸焦点偏小且显著浅眼白仍在，与已held案例同级；相对v1改善不等于过门槛。"
+}

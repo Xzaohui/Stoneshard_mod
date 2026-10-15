@@ -1,0 +1,25 @@
+{
+  "reviewer": "audit_campaign_twentyseventh_batch",
+  "received_utc": "2026-10-15T12:31:32.741489+00:00",
+  "evidence_type": "Direct independent reviewer collaboration message",
+  "verbatim_feedback": "终审：Sefin v2 held_source_clipping，selected=null、delivery_eligible=false。已放大核右边y809–820共12个alpha>=128像素（最高251），深色发尖轮廓横穿到画布边，实际源真裁断，候选NN看似留边不能修复；v1风格未关也不替回。Tanser v2_inset可选，SHA bae249098163e729dbfc8b63a194ede2d06a2b34bc47b210cec88d1a655a87b2；面部扩大、短颈小暗眼、胡茬并块与旧缝痕改善，保40岁上下克制警觉。注意坦瑟源右y717–729还有低alpha5–21羽边触边（alpha>=16有3像素），我已灰底放大证实实心发尖在边前闭合、alpha>=128真实余量10像素；须把此低透明羽边记作限制，不能说所有alpha都留边。请补最终manifest/全SHA后通知，无再生图。",
+  "status": "held_source_clipping",
+  "reviewed_version": "portrait_v2",
+  "selected_portrait": null,
+  "selected_sha256": null,
+  "held_evidence": "candidates/portrait_v2_74x100_candidate.png",
+  "held_evidence_sha256": "84098c2068d8de4888d4aebe00f7244e29a9b3501cd8ab6168b09e1ba4783a76",
+  "deliverable_approved": false,
+  "delivery_eligible": false,
+  "reason": "Source hair tip is genuinely clipped at right edge; NN blank margin cannot repair it. V1 style remained unresolved and is not selected as fallback.",
+  "limitations": [
+    "源右边y809–820有12个alpha>=128像素，最高251；深色发尖穿至边界，独立实看判定真裁断。",
+    "v2虽风格改善，NN候选看似留边也不能修复缺发；不选v1替代。",
+    "每人2次生图已用尽，停止；不得进入通过画廊。",
+    "74×100、≤32临时色、二值alpha和等比NEAREST containment为技术派生候选，不是原生像素批准。",
+    "未替换母图、人物卡、代码或冻结索引，未导入游戏、未实机验证、未提交推送。"
+  ],
+  "no_more_generation": true,
+  "native_pixel_approved": false,
+  "runtime_verified": false
+}

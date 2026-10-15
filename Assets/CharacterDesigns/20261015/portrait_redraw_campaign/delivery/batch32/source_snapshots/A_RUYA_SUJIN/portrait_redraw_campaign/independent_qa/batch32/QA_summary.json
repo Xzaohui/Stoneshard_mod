@@ -1,0 +1,194 @@
+{
+  "batch": 32,
+  "checked_utc": "2026-10-15T13:19:30.094107+00:00",
+  "consolidated_feedback_rounds_per_person": 1,
+  "successful_generations_per_person": {
+    "ruya": 2,
+    "sujin": 2,
+    "suoya": 2,
+    "ousha": 2
+  },
+  "third_generation_allowed": false,
+  "characters": [
+    {
+      "slug": "ruya",
+      "status": "candidate_with_limitations",
+      "delivery_eligible": true,
+      "selected_path": "ruya/candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "6d1ac8737309fcc958086a2208817372d2129bd93c1207a691037d6bba61844b",
+      "held_evidence_path": null,
+      "held_evidence_sha256": null,
+      "limitations": [
+        "原始左右实体透明余量13/25px，仍较紧；74×100主体bbox(1,5,72,96)，窄边留存。",
+        "头发及脸部仍有少量细碎量化色块，非原生逐像素人工终稿。",
+        "NN等比包含与32色量化为技术派生；未获用户审美终审，未集成或实机验证。"
+      ],
+      "author_manifest_sha256": "1673d45f3aceaf5ae747066c252640f8d33f66cca5793e1c04f8a2b3a487762b",
+      "author_manifest_file_count": 45,
+      "manifest_hashes_all_match": true,
+      "manifest_missing_files": [],
+      "sha256sums_entries": 46,
+      "sha256sums_all_match": true,
+      "sha256sums_missing_files": [],
+      "all_author_source_hashes_match": true,
+      "raws_equal_full_returns": true,
+      "all_derivatives_byte_reproduce": true,
+      "all_derivatives_format_pass": true,
+      "all_integer_NN_previews_reproduce": true,
+      "all_present_author_style_reference_enlargements_NN_reproduce": true,
+      "author_style_reference_enlargement_count": 0,
+      "all_prompts_exact_and_transparent": true,
+      "derivative_count": 2,
+      "raw_count": 2,
+      "successful_tool_returns": 2,
+      "raw_count_matches_successful_tool_returns": true,
+      "preflight_rejections_without_image": [
+        {
+          "path": "tool_returns/portrait_v2_validation_error.json",
+          "has_generated_image": false,
+          "sha256": "cc76723117d7b553fae44d89cfaedf76c5e56ecb5ae27b26eb05bb8b96b9bc91",
+          "error": "referenced_image_paths must contain at most 5 paths"
+        }
+      ]
+    },
+    {
+      "slug": "sujin",
+      "status": "candidate_with_limitations",
+      "delivery_eligible": true,
+      "selected_path": "sujin/candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "5b196320ec4770973ba897c659e8bd35dbd187ace3449859373988d6e5127e08",
+      "held_evidence_path": null,
+      "held_evidence_sha256": null,
+      "limitations": [
+        "原始左右实体透明余量10/18px，仍较紧；74×100主体bbox(1,7,73,89)，窄边留存。",
+        "头巾体量偏大，裸颈仍略显长；作为带限制候选保留，不继续第三次生成。",
+        "NN等比包含与32色量化为技术派生；未获用户审美终审，未集成或实机验证。"
+      ],
+      "author_manifest_sha256": "3a107ec0eb35fc0166ea526f7ff1f48088a92d2ae7c44d5bf3f10a6a7e8b3f55",
+      "author_manifest_file_count": 44,
+      "manifest_hashes_all_match": true,
+      "manifest_missing_files": [],
+      "sha256sums_entries": 45,
+      "sha256sums_all_match": true,
+      "sha256sums_missing_files": [],
+      "all_author_source_hashes_match": true,
+      "raws_equal_full_returns": true,
+      "all_derivatives_byte_reproduce": true,
+      "all_derivatives_format_pass": true,
+      "all_integer_NN_previews_reproduce": true,
+      "all_present_author_style_reference_enlargements_NN_reproduce": true,
+      "author_style_reference_enlargement_count": 0,
+      "all_prompts_exact_and_transparent": true,
+      "derivative_count": 2,
+      "raw_count": 2,
+      "successful_tool_returns": 2,
+      "raw_count_matches_successful_tool_returns": true,
+      "preflight_rejections_without_image": [
+        {
+          "path": "tool_returns/portrait_v2_validation_error.json",
+          "has_generated_image": false,
+          "sha256": "cc76723117d7b553fae44d89cfaedf76c5e56ecb5ae27b26eb05bb8b96b9bc91",
+          "error": "referenced_image_paths must contain at most 5 paths"
+        }
+      ]
+    },
+    {
+      "slug": "suoya",
+      "status": "candidate_with_limitations",
+      "delivery_eligible": true,
+      "selected_path": "suoya/candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "5e73bc68655674b727afb39acdfa107bab7ecf92dc3c03fe69c954b106444437",
+      "held_evidence_path": null,
+      "held_evidence_sha256": null,
+      "limitations": [
+        "原始左右实体透明余量13/11px，仍较紧；74×100主体bbox(1,3,73,97)，不是源真裁断。",
+        "眼白仍可更收敛，头发体量偏大；full优先脸部占比，已有inset只作未选技术派生。",
+        "NN等比包含与32色量化为技术派生；未获用户审美终审，未集成或实机验证。"
+      ],
+      "author_manifest_sha256": "cc91d886e590a96b0c8ea8948448cc723bf1d6d48506b8e45e75e8752df8aadc",
+      "author_manifest_file_count": 55,
+      "manifest_hashes_all_match": true,
+      "manifest_missing_files": [],
+      "sha256sums_entries": 56,
+      "sha256sums_all_match": true,
+      "sha256sums_missing_files": [],
+      "all_author_source_hashes_match": true,
+      "raws_equal_full_returns": true,
+      "all_derivatives_byte_reproduce": true,
+      "all_derivatives_format_pass": true,
+      "all_integer_NN_previews_reproduce": true,
+      "all_present_author_style_reference_enlargements_NN_reproduce": true,
+      "author_style_reference_enlargement_count": 0,
+      "all_prompts_exact_and_transparent": true,
+      "derivative_count": 3,
+      "raw_count": 2,
+      "successful_tool_returns": 2,
+      "raw_count_matches_successful_tool_returns": true,
+      "preflight_rejections_without_image": [
+        {
+          "path": "tool_returns/portrait_v2_input_validation_error.json",
+          "has_generated_image": false,
+          "sha256": "6852944bdc1dbd80e513319269261e30eea2b88a76d893c97be9d78ae128a0e0",
+          "error": "referenced_image_paths must contain at most 5 paths"
+        }
+      ]
+    },
+    {
+      "slug": "ousha",
+      "status": "held_style_not_deliverable",
+      "delivery_eligible": false,
+      "selected_path": null,
+      "selected_sha256": null,
+      "held_evidence_path": "ousha/candidates/portrait_v2_74x100_candidate.png",
+      "held_evidence_sha256": "80cdadb272f181747fb6eca76f24e46d79c2f88bd74fabdf47b21188052c7251",
+      "limitations": [
+        "核心风格未通过：两眼大亮白、偏卡通眼型与细长裸颈；不能因技术格式通过或大脸构图改善而列为可交付选稿。",
+        "原始左右实体透明余量17/13px、底18px，轮廓完整但余量紧；full bbox(1,9,73,99)，inset不修复风格。",
+        "selected为空、delivery_eligible=false；full v2和inset均只留研究审阅证据，不进入选稿交付清单。",
+        "NN等比包含与32色量化为技术派生；未获用户审美终审，未集成或实机验证。"
+      ],
+      "author_manifest_sha256": "7bebbe5a4355e93d64d0c8d1e559929f51bf15371e8cabe4a6b7851d86121a10",
+      "author_manifest_file_count": 54,
+      "manifest_hashes_all_match": true,
+      "manifest_missing_files": [],
+      "sha256sums_entries": 55,
+      "sha256sums_all_match": true,
+      "sha256sums_missing_files": [],
+      "all_author_source_hashes_match": true,
+      "raws_equal_full_returns": true,
+      "all_derivatives_byte_reproduce": true,
+      "all_derivatives_format_pass": true,
+      "all_integer_NN_previews_reproduce": true,
+      "all_present_author_style_reference_enlargements_NN_reproduce": true,
+      "author_style_reference_enlargement_count": 0,
+      "all_prompts_exact_and_transparent": true,
+      "derivative_count": 3,
+      "raw_count": 2,
+      "successful_tool_returns": 2,
+      "raw_count_matches_successful_tool_returns": true,
+      "preflight_rejections_without_image": []
+    }
+  ],
+  "delivery_include": [
+    {
+      "slug": "ruya",
+      "path": "ruya/candidates/portrait_v2_74x100_candidate.png",
+      "sha256": "6d1ac8737309fcc958086a2208817372d2129bd93c1207a691037d6bba61844b"
+    },
+    {
+      "slug": "sujin",
+      "path": "sujin/candidates/portrait_v2_74x100_candidate.png",
+      "sha256": "5b196320ec4770973ba897c659e8bd35dbd187ace3449859373988d6e5127e08"
+    },
+    {
+      "slug": "suoya",
+      "path": "suoya/candidates/portrait_v2_74x100_candidate.png",
+      "sha256": "5e73bc68655674b727afb39acdfa107bab7ecf92dc3c03fe69c954b106444437"
+    }
+  ],
+  "source_clipping_policy": "Assess actual raw silhouette and multilevel alpha boundaries. Target-grid edge contact with real source margin is not source clipping; inset never repairs genuinely cut source hair/ears. Each final visual review records its own evidence.",
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

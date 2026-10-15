@@ -1,0 +1,15 @@
+{
+  "actor_id": "EED-NPC-GELI",
+  "reviewed_utc": "2026-10-15T13:07:00.315425+00:00",
+  "method": "Actual inspection of identity, four style references, both generated raw images, 1x multi-background and nearest-neighbor 8x technical candidates.",
+  "independent_consolidated_feedback": "小暗眼白、短颈窄领；弱化惊惧眉心竖皱；保二十多岁学徒专注略无奈；整条辫/发耳在源图留真实余量。v1源右4px是真实余量，NN贴边不等于真实裁断。",
+  "revision_response": "v2面部仍成年可读、衣色正确，但小暗眼/短颈目标未充分达成；重要回退：源辫尾alpha128真实触底，右侧仅2px，inset不能补回源缺失。v1源底17px/右4px有真实余量，提供v1_inset仅供比较；最终选或hold由独立QA决定。",
+  "generation_success_count": 2,
+  "remaining_imagegen_calls": 0,
+  "third_generation_prohibited": true,
+  "status": "held_not_delivery_eligible",
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "technical_export_warning": "Full/inset are isotropic NEAREST whole-canvas sampling, alpha128 and <=32-color MAXCOVERAGE quantization only; inset cannot repair genuine source clipping.",
+  "independent_decision": "明确held，不回退v1充作完成。v2辫尾真实截底，alpha≥128底边36px接触（x1012–1047）、raw高1458；inset仅把截断尾巴缩进，不能补齐。v1源完整但亮大眼白/长颈未达集中修订目标。selected=null，delivery_eligible=false，保留v1/v2/inset为证据，无第三次。"
+}

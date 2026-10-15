@@ -1,0 +1,26 @@
+{
+  "reviewer": "audit_campaign_eighth_batch",
+  "reviewed_date": "2026-10-15",
+  "decision": "selected_candidate_with_limitations",
+  "selected_portrait": "candidates/portrait_v2_maxcoverage_74x100_candidate.png",
+  "selected_sha256": "68aa2e58e34899fdf72b3f5e2fdf1b236ccbc0bd6c94197206905de858df12c3",
+  "rationale": "v2 tightens neck and collar; Roan has less pointed and more horizontally skeptical brow. MAXCOVERAGE retains Rena forest-green collar and Roan eye/clothing color layers better than MEDIANCUT.",
+  "limitations": [
+    "Not a runtime-integrated or runtime-tested portrait.",
+    "The 74x100 image is a nearest-neighbor/quantized derivative of high-resolution imagegen, not a native-pixel final.",
+    "Exactly two generation calls used: initial v1 and one necessary v2. No further generation.",
+    "Eye-white blocks remain brighter than requested.",
+    "Some fine beard/hair texture remains rather than only broad unified clusters.",
+    "Right silhouette has only one pixel of transparent clearance."
+  ],
+  "review_reports": [
+    "../independent_qa/batch08/FINAL_REVIEW.md",
+    "../independent_qa/batch08/FINAL_SELECTION.json",
+    "../independent_qa/batch08/frozen_technical_audit.json",
+    "../independent_qa/batch08/frozen_verification.json"
+  ],
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "generation_calls": 2,
+  "additional_generation_allowed_this_batch": false
+}

@@ -1,0 +1,148 @@
+{
+  "batch": 36,
+  "slug": "tian",
+  "checked_utc": "2026-10-15T14:01:26.052805+00:00",
+  "status": "pass_with_limitations",
+  "delivery_eligible": true,
+  "selected_path": "tian/candidates/portrait_v2_containment_74x100_candidate.png",
+  "selected_sha256": "91fde91cb6aa223215a21ba7c134798635f8151ffdffb80f3afc83b1922ad090",
+  "identity_age_clothing": "30多岁缺觉的成年姐姐；棕低髻碎发、窄面、眼下影，陶红厚衫与灰麻围裙带保持。勉强温和而非坏笑/夺屋恶人。",
+  "improvement_from_v1": "眼裂较v1收窄，鼻颧更有体块，裸颈显著缩短，领口收紧。",
+  "source_boundary_visual_decision": "源实际外轮廓完整且弯回，1079×1458画布alpha128 bbox[36,170,1072,1395]，alpha>=5 bbox[33,168,1077,1397]，均无边界触点；仅极低alpha噪点。普通导出触右边是NN采样，不是源裁断。最终bbox[4,13,72,93]。",
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        4,
+        1079,
+        1419
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 1,
+        "right": 59
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": [
+          4,
+          4
+        ],
+        "right": [
+          645,
+          703
+        ]
+      }
+    },
+    "5": {
+      "bbox": [
+        33,
+        168,
+        1077,
+        1397
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        35,
+        170,
+        1072,
+        1395
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        36,
+        170,
+        1072,
+        1395
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        37,
+        174,
+        1069,
+        1387
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "candidate_bbox": [
+    4,
+    13,
+    72,
+    93
+  ],
+  "actual_views": [
+    "identity master",
+    "four core style comparison at 4x NN",
+    "full v1 and v2 raws",
+    "v1 and selected v2 three-background 4x NN",
+    "selected v2 three-background at actual 1x"
+  ],
+  "limitations": [
+    "脸部NN/量化仍有碎色，发束细分与偏亮眼白残余。",
+    "原raw右发束余量极紧：alpha128仅7px，alpha>=5仅2px；源完整但不应描述为源余量宽裕。",
+    "70×96整画布containment给目标网格2px右余量，仅修目标贴边；未补回、绘制或推断源外头发。",
+    "仅NN技术派生候选；非原生逐像素终稿，未集成游戏或实机验证。"
+  ],
+  "single_first_pass_feedback_rounds": 1,
+  "successful_image_generations": 2,
+  "third_generation_allowed": false,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "same_scale_gate_comparison": "comparison_with_held_gate_4x_NN.png",
+  "same_scale_gate_reason": "At fixed 4x without normalization, Sune/Tian have more vertical face mass from forehead through nose/cheek to jaw than the held heads, with a narrow collar and reduced neck. Their 86/80px silhouettes are not by themselves a pass: the visibly taller facial block and changed slit-like eye shape distinguish them. Bright sclera and hair-line residues remain explicit candidate limitations, consistent with accepted Taya/Tina, not native-final approval."
+}

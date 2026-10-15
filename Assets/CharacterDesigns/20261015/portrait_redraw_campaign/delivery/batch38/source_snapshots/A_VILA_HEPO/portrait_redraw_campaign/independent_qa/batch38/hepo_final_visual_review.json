@@ -1,0 +1,153 @@
+{
+  "slug": "hepo",
+  "checked_utc": "2026-10-15T14:22:04.446086+00:00",
+  "status": "accepted_with_notes_as_NN_derived_candidate",
+  "delivery_eligible": true,
+  "selected_path": "hepo/candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "a95180b96ffa8cdae43fdfa4b4b42e0bb5d338fdc00b2c71ce7e08894df088be",
+  "reviewed_raw": "hepo/raw/portrait_v2_raw_imagegen.png",
+  "reviewed_raw_sha256": "7d5220b046fc7a5b674e4cbc523f8a865905d86eb31ace33b58cbdb5b30d80b9",
+  "identity_and_age_costume": "40多岁粗红风吹肤色、棕乱发短浓胡、圆大鼻、宽颧、绿短披/赭厚衣成立；温和忧虑仍愿听旅人归来",
+  "visual_comparison": "V2眼白面积减小、上视惊惶缓和；面鼻块更集中，脸相对占比略增；保个人风乱发与温和沉重表情",
+  "boundary_assessment": "右边最大alpha=5，alpha>=5仅6边点；alpha>=16四边零接触。3x源边浅深合成明确主发束黑轮廓在源内闭合，最右3px仅微弱alpha羽化/噪点，不是切去一束发。full NN右/底贴边是采样，inset可安全留目标网格余量，不声称raw每个alpha阈值完全透明。",
+  "raw_multilevel_alpha": {
+    "1": {
+      "bbox": [
+        0,
+        10,
+        1079,
+        1458
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 54,
+        "left": 65,
+        "right": 118
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": [
+          679,
+          740
+        ],
+        "left": [
+          692,
+          1181
+        ],
+        "right": [
+          484,
+          1157
+        ]
+      }
+    },
+    "5": {
+      "bbox": [
+        7,
+        12,
+        1079,
+        1452
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 6
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": [
+          588,
+          612
+        ]
+      }
+    },
+    "16": {
+      "bbox": [
+        9,
+        12,
+        1076,
+        1452
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        9,
+        12,
+        1075,
+        1452
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        10,
+        41,
+        1073,
+        1451
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "candidate_bbox": [
+    2,
+    2,
+    73,
+    98
+  ],
+  "technical_candidate_valid_and_byte_reproduced": true,
+  "actual_views": [
+    "historical identity mother and four core references",
+    "full v1 and v2 raw",
+    "1x three-background previews",
+    "4x integer-nearest three-background previews",
+    "3x source-right-edge light/dark alpha composite"
+  ],
+  "limitations": [
+    "白眼仍偏浅，绿披及下颈占比仍略大于核心；仅有注记NN派生候选。",
+    "源右边只留很窄的主要轮廓余量，边缘alpha5噪点仍记录；不把inset说成裁断修复。",
+    "未逐像素原生绘制，未集成或实机验收。"
+  ],
+  "consolidated_feedback_rounds": 1,
+  "successful_generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

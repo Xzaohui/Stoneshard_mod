@@ -1,0 +1,1363 @@
+{
+  "schema_version": 1,
+  "actor_id": "BRY-NPC-MALER",
+  "name": "麦勒",
+  "date": "2026-10-15",
+  "selected_portrait": "candidates/portrait_v1_maxcoverage_74x100_candidate.png",
+  "selected_sha256": "cf121c74bdb20d919f966bd46cec266fbed040f8672c305bba4a12e914f52ac3",
+  "status": "independent_visual_pass_candidate_awaiting_batch_hash_audit",
+  "generation_calls": 1,
+  "max_attempts": 2,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "independent_qa": "../independent_qa/batch07/FINAL_SELECTION.json",
+  "independent_technical_audit": "../independent_qa/batch07/technical_audit.json",
+  "independent_feedback_record": "qa/independent_feedback_record.json",
+  "independent_final_artifacts_pending_at_freeze": true,
+  "old_assets_preserved": true,
+  "method": "Built-in imagegen substantive redraw. Entire-canvas NEAREST resize, binary alpha threshold 128 and no-dither 32-color quantization are explicitly derived candidates, not native authored pixel finals. No geometry redrawn by script.",
+  "color_budget_note": "At most 32 visible RGB colors is a temporary working ceiling, not proof of native pixel art.",
+  "source_manifest": "sources/source_manifest.json",
+  "spec_lock": "spec_lock.md",
+  "reproduction": [
+    "python derive_portrait.py",
+    "python export_maxcoverage.py portrait_v1",
+    "python finalize_manifest.py portrait_v1_maxcoverage"
+  ],
+  "assets": [
+    {
+      "raw": {
+        "path": "raw/portrait_v1_raw_imagegen.png",
+        "sha256": "d367a37494a05a6d5238cbc5059727a0732f5845945dcdbce4577ca0cdfa3564",
+        "size": [
+          1079,
+          1458
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 46938,
+        "alpha_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255
+        ],
+        "binary_alpha": false,
+        "alpha_bbox": [
+          0,
+          0,
+          1079,
+          1458
+        ],
+        "visible_pixels": 1278626,
+        "partial_alpha_pixels": 1277250,
+        "palette_by_frequency": null
+      },
+      "target": {
+        "path": "candidates/portrait_v1_maxcoverage_74x100_candidate.png",
+        "sha256": "cf121c74bdb20d919f966bd46cec266fbed040f8672c305bba4a12e914f52ac3",
+        "size": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 32,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "binary_alpha": true,
+        "alpha_bbox": [
+          0,
+          0,
+          74,
+          100
+        ],
+        "visible_pixels": 5938,
+        "partial_alpha_pixels": 0,
+        "palette_by_frequency": [
+          {
+            "rgb": [
+              29,
+              18,
+              23
+            ],
+            "pixels": 1078
+          },
+          {
+            "rgb": [
+              58,
+              49,
+              50
+            ],
+            "pixels": 1065
+          },
+          {
+            "rgb": [
+              246,
+              168,
+              111
+            ],
+            "pixels": 543
+          },
+          {
+            "rgb": [
+              78,
+              66,
+              63
+            ],
+            "pixels": 471
+          },
+          {
+            "rgb": [
+              237,
+              148,
+              93
+            ],
+            "pixels": 367
+          },
+          {
+            "rgb": [
+              108,
+              80,
+              67
+            ],
+            "pixels": 314
+          },
+          {
+            "rgb": [
+              55,
+              26,
+              32
+            ],
+            "pixels": 277
+          },
+          {
+            "rgb": [
+              124,
+              100,
+              91
+            ],
+            "pixels": 270
+          },
+          {
+            "rgb": [
+              170,
+              144,
+              131
+            ],
+            "pixels": 251
+          },
+          {
+            "rgb": [
+              214,
+              131,
+              87
+            ],
+            "pixels": 246
+          },
+          {
+            "rgb": [
+              83,
+              43,
+              52
+            ],
+            "pixels": 185
+          },
+          {
+            "rgb": [
+              196,
+              112,
+              80
+            ],
+            "pixels": 173
+          },
+          {
+            "rgb": [
+              71,
+              39,
+              34
+            ],
+            "pixels": 113
+          },
+          {
+            "rgb": [
+              150,
+              121,
+              108
+            ],
+            "pixels": 110
+          },
+          {
+            "rgb": [
+              163,
+              88,
+              64
+            ],
+            "pixels": 109
+          },
+          {
+            "rgb": [
+              164,
+              133,
+              116
+            ],
+            "pixels": 80
+          },
+          {
+            "rgb": [
+              183,
+              92,
+              67
+            ],
+            "pixels": 68
+          },
+          {
+            "rgb": [
+              149,
+              75,
+              56
+            ],
+            "pixels": 45
+          },
+          {
+            "rgb": [
+              255,
+              185,
+              131
+            ],
+            "pixels": 40
+          },
+          {
+            "rgb": [
+              147,
+              97,
+              55
+            ],
+            "pixels": 28
+          },
+          {
+            "rgb": [
+              129,
+              64,
+              48
+            ],
+            "pixels": 21
+          },
+          {
+            "rgb": [
+              106,
+              69,
+              43
+            ],
+            "pixels": 16
+          },
+          {
+            "rgb": [
+              9,
+              1,
+              11
+            ],
+            "pixels": 14
+          },
+          {
+            "rgb": [
+              88,
+              55,
+              29
+            ],
+            "pixels": 12
+          },
+          {
+            "rgb": [
+              227,
+              192,
+              160
+            ],
+            "pixels": 8
+          },
+          {
+            "rgb": [
+              133,
+              83,
+              70
+            ],
+            "pixels": 7
+          },
+          {
+            "rgb": [
+              160,
+              104,
+              81
+            ],
+            "pixels": 7
+          },
+          {
+            "rgb": [
+              250,
+              228,
+              201
+            ],
+            "pixels": 6
+          },
+          {
+            "rgb": [
+              184,
+              156,
+              140
+            ],
+            "pixels": 5
+          },
+          {
+            "rgb": [
+              248,
+              217,
+              182
+            ],
+            "pixels": 5
+          },
+          {
+            "rgb": [
+              209,
+              167,
+              135
+            ],
+            "pixels": 3
+          },
+          {
+            "rgb": [
+              187,
+              133,
+              96
+            ],
+            "pixels": 1
+          }
+        ]
+      },
+      "raw_equals_full_tool_return": true,
+      "native_target_generation": false,
+      "derivation": {
+        "resize": "Pillow NEAREST entire canvas",
+        "crop": null,
+        "alpha_threshold": 128,
+        "quantization": "Pillow MAXCOVERAGE from opaque sampled RGB, 32 colors, no dithering",
+        "transparent_rgb": "zeroed for alpha 0",
+        "character_geometry_redrawn_by_script": false
+      },
+      "checks": {
+        "dimensions": true,
+        "binary_alpha": true,
+        "visible_color_budget": true
+      },
+      "same_raw_technical_variant": true,
+      "additional_imagegen_call": false
+    },
+    {
+      "raw": {
+        "path": "raw/portrait_v1_raw_imagegen.png",
+        "sha256": "d367a37494a05a6d5238cbc5059727a0732f5845945dcdbce4577ca0cdfa3564",
+        "size": [
+          1079,
+          1458
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 46938,
+        "alpha_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255
+        ],
+        "binary_alpha": false,
+        "alpha_bbox": [
+          0,
+          0,
+          1079,
+          1458
+        ],
+        "visible_pixels": 1278626,
+        "partial_alpha_pixels": 1277250,
+        "palette_by_frequency": null
+      },
+      "target": {
+        "path": "candidates/portrait_v1_74x100_candidate.png",
+        "sha256": "bc896bf58d757182ff0e9c2cc350c7747a232359c6334a8216b59c4a3ef7bfd7",
+        "size": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 32,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "binary_alpha": true,
+        "alpha_bbox": [
+          0,
+          0,
+          74,
+          100
+        ],
+        "visible_pixels": 5938,
+        "partial_alpha_pixels": 0,
+        "palette_by_frequency": [
+          {
+            "rgb": [
+              27,
+              16,
+              21
+            ],
+            "pixels": 546
+          },
+          {
+            "rgb": [
+              168,
+              140,
+              124
+            ],
+            "pixels": 288
+          },
+          {
+            "rgb": [
+              58,
+              48,
+              48
+            ],
+            "pixels": 276
+          },
+          {
+            "rgb": [
+              251,
+              177,
+              120
+            ],
+            "pixels": 275
+          },
+          {
+            "rgb": [
+              66,
+              47,
+              45
+            ],
+            "pixels": 272
+          },
+          {
+            "rgb": [
+              59,
+              45,
+              44
+            ],
+            "pixels": 271
+          },
+          {
+            "rgb": [
+              229,
+              146,
+              100
+            ],
+            "pixels": 266
+          },
+          {
+            "rgb": [
+              120,
+              93,
+              85
+            ],
+            "pixels": 260
+          },
+          {
+            "rgb": [
+              221,
+              138,
+              94
+            ],
+            "pixels": 260
+          },
+          {
+            "rgb": [
+              76,
+              58,
+              54
+            ],
+            "pixels": 247
+          },
+          {
+            "rgb": [
+              249,
+              172,
+              116
+            ],
+            "pixels": 236
+          },
+          {
+            "rgb": [
+              200,
+              116,
+              82
+            ],
+            "pixels": 230
+          },
+          {
+            "rgb": [
+              57,
+              37,
+              37
+            ],
+            "pixels": 218
+          },
+          {
+            "rgb": [
+              95,
+              72,
+              64
+            ],
+            "pixels": 213
+          },
+          {
+            "rgb": [
+              155,
+              84,
+              61
+            ],
+            "pixels": 189
+          },
+          {
+            "rgb": [
+              83,
+              69,
+              63
+            ],
+            "pixels": 186
+          },
+          {
+            "rgb": [
+              61,
+              52,
+              51
+            ],
+            "pixels": 181
+          },
+          {
+            "rgb": [
+              145,
+              115,
+              102
+            ],
+            "pixels": 180
+          },
+          {
+            "rgb": [
+              24,
+              13,
+              17
+            ],
+            "pixels": 167
+          },
+          {
+            "rgb": [
+              50,
+              28,
+              32
+            ],
+            "pixels": 166
+          },
+          {
+            "rgb": [
+              69,
+              54,
+              52
+            ],
+            "pixels": 143
+          },
+          {
+            "rgb": [
+              105,
+              81,
+              72
+            ],
+            "pixels": 139
+          },
+          {
+            "rgb": [
+              35,
+              21,
+              25
+            ],
+            "pixels": 107
+          },
+          {
+            "rgb": [
+              31,
+              19,
+              24
+            ],
+            "pixels": 106
+          },
+          {
+            "rgb": [
+              31,
+              18,
+              23
+            ],
+            "pixels": 92
+          },
+          {
+            "rgb": [
+              84,
+              56,
+              54
+            ],
+            "pixels": 89
+          },
+          {
+            "rgb": [
+              29,
+              17,
+              22
+            ],
+            "pixels": 79
+          },
+          {
+            "rgb": [
+              228,
+              153,
+              108
+            ],
+            "pixels": 76
+          },
+          {
+            "rgb": [
+              159,
+              101,
+              79
+            ],
+            "pixels": 59
+          },
+          {
+            "rgb": [
+              183,
+              143,
+              122
+            ],
+            "pixels": 48
+          },
+          {
+            "rgb": [
+              251,
+              176,
+              119
+            ],
+            "pixels": 41
+          },
+          {
+            "rgb": [
+              251,
+              182,
+              127
+            ],
+            "pixels": 32
+          }
+        ]
+      },
+      "raw_equals_full_tool_return": true,
+      "native_target_generation": false,
+      "derivation": {
+        "resize": "Pillow NEAREST entire canvas",
+        "crop": null,
+        "alpha_threshold": 128,
+        "quantization": "Pillow MEDIANCUT from opaque sampled RGB, 32 colors, no dithering",
+        "transparent_rgb": "zeroed for alpha 0",
+        "character_geometry_redrawn_by_script": false
+      },
+      "checks": {
+        "dimensions": true,
+        "binary_alpha": true,
+        "visible_color_budget": true
+      }
+    }
+  ],
+  "selected_metrics": "qa/portrait_v1_maxcoverage_metrics.json",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "0f8ef1dfeaec37d70850ab8bdb9c7d568666168a0b629f55edb4b45bdf117b79",
+      "bytes": 1865
+    },
+    {
+      "path": "candidates/portrait_v1_74x100_candidate.png",
+      "sha256": "bc896bf58d757182ff0e9c2cc350c7747a232359c6334a8216b59c4a3ef7bfd7",
+      "bytes": 10719
+    },
+    {
+      "path": "candidates/portrait_v1_maxcoverage_74x100_candidate.png",
+      "sha256": "cf121c74bdb20d919f966bd46cec266fbed040f8672c305bba4a12e914f52ac3",
+      "bytes": 7727
+    },
+    {
+      "path": "derive_portrait.py",
+      "sha256": "14ddd13c69c6492775c281f24dffffc56824033b614da2ef964fe31edb05959c",
+      "bytes": 3506
+    },
+    {
+      "path": "export_maxcoverage.py",
+      "sha256": "fda59b04cfe14c68475eb6a485a1b5f4c6447e859b9bf3ccb3022aec1a402bea",
+      "bytes": 2774
+    },
+    {
+      "path": "finalize_manifest.py",
+      "sha256": "b0631b8f71930e6e542c65992d5edd5244835ba70e795b66847428d8f27185d5",
+      "bytes": 2565
+    },
+    {
+      "path": "previews/portrait_v1_1x_8x.png",
+      "sha256": "630c547b516ff42a490169b12478430407daa4c8b7a6454702a23a3532eee392",
+      "bytes": 83985
+    },
+    {
+      "path": "previews/portrait_v1_8x.png",
+      "sha256": "29b6e5f9bf124d7e129d1b6a8c190d0f649436ab792d92fcf25dd2c4903241b6",
+      "bytes": 20765
+    },
+    {
+      "path": "previews/portrait_v1_maxcoverage_1x_8x.png",
+      "sha256": "3a7aae3ba782dc71bd915e405773dce1ccb8e7523cc1bbb8bd697090f7805846",
+      "bytes": 77081
+    },
+    {
+      "path": "previews/portrait_v1_maxcoverage_8x.png",
+      "sha256": "43bdbedab1359fa19bf1efef6a602fd12298f316909333261d7acbbfff64d906",
+      "bytes": 16491
+    },
+    {
+      "path": "prompts/portrait_v1.json",
+      "sha256": "63cc9616042e6a06d25ef8b55c65a5d7c90634a9f356d1062bf4a237af57f02a",
+      "bytes": 3633
+    },
+    {
+      "path": "qa/independent_feedback_record.json",
+      "sha256": "ae68a22c49ab6ae143035ee1512fd54eef4c15170df48a77de9b4b2d4b6fb5d2",
+      "bytes": 872
+    },
+    {
+      "path": "qa/portrait_v1_maxcoverage_metrics.json",
+      "sha256": "6708c80f5c0d59bdc628740d7521dfacd78a8b840d94f54d96f288fd7a52beed",
+      "bytes": 7707
+    },
+    {
+      "path": "qa/portrait_v1_metrics.json",
+      "sha256": "ca2421ef542061ee7d5ef610a9f4587f995b6442cc45acc7cfa4da0b8055c753",
+      "bytes": 7621
+    },
+    {
+      "path": "qa/reproducibility_and_source_integrity.json",
+      "sha256": "2271170d117cec89ee5072d918530d5fdb8b2588a56bb70b4cdb380f94ebc79c",
+      "bytes": 5782
+    },
+    {
+      "path": "qa/visual_self_review.json",
+      "sha256": "f90d5748c0083b066a0c1bd867c78cda156c99f4d743333cddd8b3215772e156",
+      "bytes": 1284
+    },
+    {
+      "path": "raw/portrait_v1_raw_imagegen.png",
+      "sha256": "d367a37494a05a6d5238cbc5059727a0732f5845945dcdbce4577ca0cdfa3564",
+      "bytes": 1418023
+    },
+    {
+      "path": "sources/AGENTS.md",
+      "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4",
+      "bytes": 12714
+    },
+    {
+      "path": "sources/character_card_1.md",
+      "sha256": "2410d888d14e357643af3db492eecf6f99dee35fe3a169a0f3add7270104e811",
+      "bytes": 2332
+    },
+    {
+      "path": "sources/identity_QA_independent.json",
+      "sha256": "083b4db9d9891749664a6b40c287772c542f82b69175a04bd37cf276337c6b36",
+      "bytes": 2065
+    },
+    {
+      "path": "sources/identity_manifest_1.json",
+      "sha256": "0b0efab73c16bd29816a04bfe44b021b3db02d5c039b3320bc626d6000c09998",
+      "bytes": 2595
+    },
+    {
+      "path": "sources/identity_reference.png",
+      "sha256": "8d9045028a06d98c0d4e464f509ad3e323e514bdbed02a142a924bc881628091",
+      "bytes": 749238
+    },
+    {
+      "path": "sources/iwo_style_inspected_preview.png",
+      "sha256": "980db792fdf4b97613977ea93fa8bd9bdf2034b1dec0b2b7ec09c45c7b0f7ddf",
+      "bytes": 28088
+    },
+    {
+      "path": "sources/iwo_style_reference.png",
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb",
+      "bytes": 8032
+    },
+    {
+      "path": "sources/leiya_style_inspected_preview.png",
+      "sha256": "bd124945c8930f12cdbca713eef94b63683310379afbf415f96c3b8f0e161fe0",
+      "bytes": 11827
+    },
+    {
+      "path": "sources/leiya_style_reference.png",
+      "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f",
+      "bytes": 4895
+    },
+    {
+      "path": "sources/mara_style_inspected_preview.png",
+      "sha256": "6c8ff8ebd350f792f0c68583dec0831b627000476e8ff2b4c2a78ce41c814db6",
+      "bytes": 19048
+    },
+    {
+      "path": "sources/mara_style_reference.png",
+      "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd",
+      "bytes": 9411
+    },
+    {
+      "path": "sources/roster_entry.json",
+      "sha256": "88a8560be765e97650285296500e41d6dfbd838b1d003e5d64b247b7c7e9ae47",
+      "bytes": 5166
+    },
+    {
+      "path": "sources/source_manifest.json",
+      "sha256": "99684b67fffd8fdd91cc6e3ef9d534c8bf073c22f7bf529afaa72d63a360bc08",
+      "bytes": 5663
+    },
+    {
+      "path": "sources/story_constraints_1.md",
+      "sha256": "40f351db827e34b93a1210236a72acbbc30ffd0b213643f6a8fd88845de422c5",
+      "bytes": 17086
+    },
+    {
+      "path": "sources/tore_style_inspected_preview.png",
+      "sha256": "4163e415fd570848e8f6d759db7fe99e8ae9f942f79d96af83e03e2b93a5cf85",
+      "bytes": 17035
+    },
+    {
+      "path": "sources/tore_style_reference.png",
+      "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1",
+      "bytes": 8438
+    },
+    {
+      "path": "spec_lock.md",
+      "sha256": "f04a1ff8c6fee2862421c84113b17708c5316ccc52a1b67713cc286cabca9850",
+      "bytes": 1144
+    },
+    {
+      "path": "tool_returns/portrait_v1.json",
+      "sha256": "9a8de26c78f3b7faad642a3090a97d3ae76e5793eb166cf7ec0eb80c32bf18a7",
+      "bytes": 1891230
+    }
+  ]
+}

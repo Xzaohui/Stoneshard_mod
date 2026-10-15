@@ -1,0 +1,29 @@
+from pathlib import Path
+import json, hashlib, datetime
+OUT=Path(__file__).resolve().parent; CAMP=OUT.parent.parent
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+load=lambda p:json.loads(p.read_text())
+tech=load(OUT/'final_technical_audit.json')
+assert tech['all_technical_checks_complete'], tech['hard_errors']+tech['pending']
+now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+notes={
+'vit':{'name':'薇特·灰','identity':'五十多岁女性、灰短发、强壮硬颊与锐利目光；没有重加无来源脸疤。','improvement':'v2加重连接的眼下/颧骨/嘴角年龄面，缩短裸颈，眼白压暗，较v1更符合50多岁。','limitations':['仍有少量平行发亮条和单像素过渡。','左右安全边仅1逻辑像素，当前四边透明，无实体裁切已证据。']},
+'wolen':{'name':'沃伦','identity':'约50岁男性；退发线、花白两瓣八字须、裸下巴和方脸匹配，按所选裸头母版。','improvement':'v2双内眉较平、眼白暗小、胡须块较整，颈明显压短；与悲忧式同脸和厚全须工匠区分。','limitations':['发须仍有平行亮条，额纹及脸部层次仍是量化派生。','左右安全边仅1逻辑像素；不宣称手工原生像素终稿。']},
+'yani':{'name':'雅尼','identity':'latest_card_alignment_v1成年30多岁男子；深棕发、灰棕短须、旧下巴疤、疲惫自主侧视。头像不展示腿，不暗示康复。','improvement':'v2半垂上睑、偏平不对称眉、短紧嘴替代v1惊疑忧眉；肤色小块中断下巴须缘可辨旧疤。最终MC留边版减弱亮白眼块。','limitations':['整raw等比fit到72×97，居中(1,1)置74×100透明画布；未裁切、补画或恢复图外信息。','原图实体边距小于1逻辑像素；最外左右列无alpha≥128实体，不能据此断定raw已裁发梢，也不独证所有原轮廓完整。','MEDIANCUT减少亮眼白，同时使橄榄窄领趋暖、脸须层次较平；细发簇残留。','当前卡首段义肢与细描支具仍有历史冲突，头像不涉及，不改卡、不声称治愈。']},
+'rukan':{'name':'鲁坎','identity':'40多岁风磨灰堤领班；方宽脸、灰棕短发全须，清醒审视；棕背心粗布窄领采用当前卡方向。','improvement':'v2压短裸颈和白衫V领，脸部占幅明显提升；最终MC留边版收暗亮白眼块。','limitations':['整raw等比fit到72×97，居中(1,1)置74×100透明画布；未裁切、补画或恢复图外信息。','原图实体边距小于1逻辑像素；最外左右列无alpha≥128实体，不能据此断定raw已裁发梢，也不独证所有原轮廓完整。','MC使浅布领偏暖近肤色，脸须层次略平；灰发量和发须细簇仍有候选风格备注。']}}
+rows=[]
+for slug in ['vit','wolen','yani','rukan']:
+ actor=tech['actors'][slug]; manifest=load(CAMP/slug/'manifest.json');selected=actor['manifest']['selected']
+ candidate=next(c for c in actor['candidates'] if c['path']==selected)
+ rows.append({'slug':slug,'name':notes[slug]['name'],'actor_id':manifest['actor_id'],'selected_candidate':f'{slug}/{selected}','selected_sha256':candidate['sha256'],'production_manifest_sha256':actor['manifest']['sha256'],'decision':'candidate_usable_with_limitations','colors':candidate['visible_rgb_colors'],'size':candidate['size'],'alpha_values':candidate['alpha_values'],'alpha_bbox':candidate['alpha_bbox'],'four_frame_edges_transparent':not any(candidate['border_max_alpha'].values()),'independent_pixel_and_png_byte_reproduction':candidate['pixel_reproduction_pass'] and candidate['png_byte_identical'],'generation_calls':len(actor['raw_integrity']),'visual_review':notes[slug],'native_pixel_approved':False,'runtime_verified':False})
+selection={'schema_version':1,'batch':'batch10','frozen_at_utc':now,'scope':'Four dialogue portrait candidates; old assets and cards untouched.','characters':rows,'technical_audit':'final_technical_audit.json','technical_audit_sha256':sha(OUT/'final_technical_audit.json'),'comparison':'final_selected_comparison.png','comparison_sha256':sha(OUT/'final_selected_comparison.png'),'further_generation_requested':False,'native_authored':False,'native_pixel_approved':False,'runtime_integrated':False,'runtime_verified':False}
+(OUT/'final_selection.json').write_text(json.dumps(selection,ensure_ascii=False,indent=2)+'\n')
+qa={'schema_version':1,'batch':'batch10','frozen_at_utc':now,'gate':'pass_candidate_delivery_with_recorded_limitations','candidate_delivery_pass':True,'native_pixel_approval':False,'runtime_approval':False,'all_available_technical_checks_pass':True,'all_technical_checks_complete':True,'hard_errors':[],'pending':[],'source_records_checked':sum(len(a['sources']) for a in tech['actors'].values()),'raw_tool_payload_byte_checks':sum(len(a['raw_integrity']) for a in tech['actors'].values()),'candidate_exports_independently_reproduced':sum(len(a['candidates']) for a in tech['actors'].values()),'selection_path':'final_selection.json','selection_sha256':sha(OUT/'final_selection.json'),'technical_audit_path':'final_technical_audit.json','technical_audit_sha256':sha(OUT/'final_technical_audit.json'),'visual_method':'Actually viewed all four current cards, selected identity masters, core anchors, v1/v2 1x dark/gray/light and enlarged NN previews; Yani/Rukan raw edge diagnostics and MC/MAX containment comparison; final combined board viewed.','characters':rows,'qualification':'Candidate delivery only. 74x100, palette and alpha checks are not native pixel craftsmanship or runtime acceptance. Earlier audit files are in-progress snapshots and may show expected production-finalization gaps; only this final gate and frozen final technical audit are authoritative.'}
+(OUT/'FINAL_QA.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2)+'\n')
+lines=['# Batch10 独立 QA 冻结结论','','结论：四位候选可交付，带下列限制；不是原生逐像素终稿、用户终审或入游戏验收。',f'冻结：{now}','','源原件/快照/SHA、原始工具返回字节、独立机械导出、manifest与SHA256SUMS全通过。每位仅初稿+一次必要修订。','Yani/Rukan留边是等比NN技术variant，不是第3次生图；原v2与其他量化版保留。','']
+for row in rows:
+ info=row['visual_review'];lines += [f"## {row['name']} / {row['slug']}",f"选择：`{row['selected_candidate']}`",f"SHA256：`{row['selected_sha256']}`",info['identity'],info['improvement']]+['- '+x for x in info['limitations']]+['']
+lines += ['## 技术边界','','- 47条来源记录、8份imagegen原始返回、16份机械导出逐一核验。','- 所有最终PNG为74×100、31/32临时色、alpha仅0/255，四边透明。','- 最终文件索引见final_selection.json，完整核验见final_technical_audit.json。','- 阶段性审查文件包含作者尚在写入时的缺项，不是最终冻结失败。','- 审查只写本independent_qa/batch10目录，未改源卡、生产素材、旧母版或代码，未生图、commit或push。']
+(OUT/'FINAL_REVIEW.md').write_text('\n'.join(lines)+'\n')
+(OUT/'SHA256SUMS.txt').write_text(''.join(f'{sha(p)}  {p.name}\n' for p in sorted(OUT.iterdir()) if p.is_file() and p.name!='SHA256SUMS.txt'))
+print(json.dumps({'gate':qa['gate'],'characters':[{'slug':r['slug'],'selected_candidate':r['selected_candidate'],'selected_sha256':r['selected_sha256']} for r in rows],'source_records':qa['source_records_checked'],'raw_checks':qa['raw_tool_payload_byte_checks'],'exports':qa['candidate_exports_independently_reproduced']},ensure_ascii=False,indent=2))

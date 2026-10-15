@@ -1,0 +1,110 @@
+{
+  "batch": 24,
+  "lock_type": "final_independent_selected_sha_lock",
+  "characters": [
+    {
+      "identity": "栗色低辫、成熟长脸、单眉挑起偏侧自信笑，绿外赭内保持；符合三十多岁有限采购人。",
+      "improvement": "比v1脸更大、裸颈缩短、发束合并；浅眼白更小，表情有机敏辨识。",
+      "limitations": [
+        "浅米白眼点仍可见，尚非四核心同等小暗眼控制。",
+        "发量偏满、若干发束仍有碎格。"
+      ],
+      "gate": "pass_with_limits",
+      "slug": "liqui",
+      "status": "candidate_with_limits",
+      "selected_path": "liqui/candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "b2b799491040e3edf06720bd87cd96db4b9f1bad5f340ac7b989c9657cffae90",
+      "selected_raw_path": "liqui/raw/portrait_v2_raw_imagegen.png",
+      "selected_raw_sha256": "fb56d0e9aafb330b4271560695266192938cb87b5d267975d0882dbb4614869c",
+      "successful_generations": 2,
+      "consolidated_feedback_rounds": 1,
+      "third_generation_allowed": false,
+      "delivery_eligible": true,
+      "native_pixel_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "identity": "v2撤掉灰须带，暖棕细短茬与显著蒸黄头发使年龄回到20多岁；保宽钝鼻与蓝绿圆领/棕围裙带。",
+      "improvement": "当前卡年龄与发色优先旧母图被落实；与昂朵50岁对比清晰。",
+      "limitations": [
+        "眼白仍较亮。",
+        "额发及少量胡茬仍偏碎格，眉仍略忧。"
+      ],
+      "gate": "pass_with_limits",
+      "slug": "arlo",
+      "status": "candidate_with_limits",
+      "selected_path": "arlo/candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "534ab44e6cd93eb7d1d9b5ebe638d97e378f4f2c0a116027ebec76e02c853d84",
+      "selected_raw_path": "arlo/raw/portrait_v2_raw_imagegen.png",
+      "selected_raw_sha256": "c7b25bcb3bb8cc4afcaf59b3b0c44ea5ae2cd2566ec77f49debd63aea2d9dbde",
+      "successful_generations": 2,
+      "consolidated_feedback_rounds": 1,
+      "third_generation_allowed": false,
+      "delivery_eligible": true,
+      "native_pixel_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "identity": "三十多岁深眼窝、大鼻颧骨、栗发束髻，白围巾灰披肩紫棕领与家属自持身份保持。",
+      "improvement": "v2比v1短颈窄领，去大胸像，但源构图近方形且侧髻很宽。",
+      "limitations": [
+        "v2标准74×100 alpha bbox[3,16,74,85]，上下明显空白；头领仅69px高，脸占比未接近四核心。",
+        "右边源轮廓虽闭合，真余量仅7px，NN后触右边；不称已证实真实裁边。",
+        "两眼浅白块仍显著，面部也偏忧愁，未满足小暗眼要求。"
+      ],
+      "gate": "held_composition_scale_and_eye_sclera",
+      "source_clipping_confirmed": false,
+      "safe_transparent_trim_assessment": {
+        "alpha128_bbox_size": [
+          1159,
+          1137
+        ],
+        "maximum_height_at_74px_width": 73,
+        "conclusion": "仅裁透明空白而全保侧髻，等比fit最多约73px高，有限改善仍达不到核心头领占幅；不伸缩、不画补、不用padding假称补轮廓。"
+      },
+      "slug": "hure",
+      "status": "held_composition_scale_and_eye_sclera",
+      "successful_generations": 2,
+      "consolidated_feedback_rounds": 1,
+      "third_generation_allowed": false,
+      "delivery_eligible": false,
+      "native_pixel_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false,
+      "held_evidence_path": "hure/candidates/portrait_v2_74x100_candidate.png",
+      "held_evidence_sha256": "497f9a849278b3c88bb1ce5c2f9e337934d6c35cd22d5dae90817369bcb625b0",
+      "held_raw_evidence_path": "hure/raw/portrait_v2_raw_imagegen.png",
+      "held_raw_evidence_sha256": "6a458c965c603c6ce777cf05f2383f194dd1d45cc63546f8b0c3a1058fd0bf5b",
+      "selected_path": null,
+      "selected_sha256": null
+    },
+    {
+      "identity": "五十岁上下成年男性，盐棕发灰鬓、小髭轻短须，成熟窄矩形脸，橄榄衣黄褐围裙与领口放大镜夹；性别按已核母图/旧现卡/母prompt裁定。",
+      "improvement": "v2裸颈显著缩短，脸更集中，小暗眼与完整发耳真留边成立。",
+      "limitations": [
+        "拧眉和下压嘴仍偏严肃，未充分达到母图平静专注的普通检查者。",
+        "发须仍有零碎块，脸上有少量小色块。"
+      ],
+      "gate": "pass_with_limits",
+      "slug": "ondo",
+      "status": "candidate_with_limits",
+      "selected_path": "ondo/candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "c05334edfd54a2938e2e04afb448d34c35e8f625d89611e504f54615e19a6a2a",
+      "selected_raw_path": "ondo/raw/portrait_v2_raw_imagegen.png",
+      "selected_raw_sha256": "73991e84fffd537eb2a4877d6c048d9f792b82e7f07a85cd71c32c6255821e8a",
+      "successful_generations": 2,
+      "consolidated_feedback_rounds": 1,
+      "third_generation_allowed": false,
+      "delivery_eligible": true,
+      "native_pixel_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "eligible_count": 3,
+  "held_count": 1,
+  "scope": "NN-derived portrait candidates only; not native pixel final or in-game verification.",
+  "frozen_utc": "2026-10-15T11:59:00.193379+00:00"
+}

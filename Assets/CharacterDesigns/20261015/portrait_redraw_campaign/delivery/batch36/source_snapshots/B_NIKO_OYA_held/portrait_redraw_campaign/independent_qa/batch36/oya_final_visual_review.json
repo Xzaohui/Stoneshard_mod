@@ -1,0 +1,155 @@
+{
+  "batch": 36,
+  "slug": "oya",
+  "checked_utc": "2026-10-15T14:01:26.053602+00:00",
+  "status": "held_composition_scale_and_eye_sclera",
+  "delivery_eligible": false,
+  "selected_path": null,
+  "selected_sha256": null,
+  "identity_age_clothing": "30多岁疲惫陪护者，棕低髻布绳、窄颧长鼻、压抑紧唇和眼下阴影；梅衣、棕黄披及灰围裙领边保留。非怨妇或治好疲劳结局。",
+  "improvement_from_v1": "颈与领口缩短，脸部鼻颧大块更清楚，髻右侧真实余量改善。",
+  "source_boundary_visual_decision": "源alpha128 bbox[90,52,1202,1252]，左右真余量90/26px；alpha>=5四边无触边。头顶、低髻与外露耳完整，最终bbox[5,14,72,86]。",
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        35,
+        1207,
+        1261
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 46,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": [
+          706,
+          807
+        ],
+        "right": null
+      }
+    },
+    "5": {
+      "bbox": [
+        89,
+        51,
+        1205,
+        1255
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        89,
+        51,
+        1203,
+        1253
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        90,
+        52,
+        1202,
+        1252
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        93,
+        57,
+        1195,
+        1251
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "candidate_bbox": [
+    5,
+    14,
+    72,
+    86
+  ],
+  "actual_views": [
+    "identity master",
+    "four core style comparison at 4x NN",
+    "full v1 and v2 raws",
+    "v1 and selected v2 three-background 4x NN",
+    "selected v2 three-background at actual 1x"
+  ],
+  "limitations": [
+    "眼白依然偏亮，平行发束偏多，尚非四核心同等粗簇精修。",
+    "1228×1281近方raw整幅等比派生造成上下较空，目标脸占高偏小。",
+    "源右余量26px约1.6逻辑像素，完整但较紧。",
+    "灰围裙仅领口边，未验收全身围裙、卷袖或随身物。",
+    "仅NN技术派生候选；非原生逐像素终稿，未集成游戏或实机验证。"
+  ],
+  "single_first_pass_feedback_rounds": 1,
+  "successful_image_generations": 2,
+  "third_generation_allowed": false,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "same_scale_gate_comparison": "comparison_with_held_gate_4x_NN.png",
+  "gate": "held_composition_scale_and_eye_sclera",
+  "held_evidence_path": "oya/candidates/portrait_v2_74x100_candidate.png",
+  "held_evidence_sha256": "2ce259d0b712ab6848fcca0222f7112d5e6086c89ef88277744d0183463bacc9",
+  "source_clipping_confirmed": false,
+  "correction_of_provisional_pass": "Initial relative-to-v1 improvement assessment was too permissive. Same-scale comparison with the earlier held Hure/Xiyou/Meibei establishes the same unresolved composition/eye-sclera gate. No extra generation or new revision feedback was requested.",
+  "hold_reasons": [
+    "头领实际仅74px（妮蔻）或72px（奥娅）高；同尺度接近已held呼蕾69px、溪悠/梅蓓78px，显著低于核心94–100px。",
+    "裸颈和领口已收短，但近方raw和横向头巾/侧髻使可见脸仍小；与同尺度已通过塔雅/缇娜以及本批苏奈/缇安相比，脸焦点不足。",
+    "浅色眼白块仍显著；不能仅凭颈领改善或身份成立解除同类gate。"
+  ]
+}

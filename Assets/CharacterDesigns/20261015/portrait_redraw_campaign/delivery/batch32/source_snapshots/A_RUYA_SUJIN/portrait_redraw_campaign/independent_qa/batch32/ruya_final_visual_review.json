@@ -1,0 +1,160 @@
+{
+  "slug": "ruya",
+  "reviewer": "independent_qa",
+  "checked_utc": "2026-10-15T13:18:13.549281+00:00",
+  "status": "candidate_with_limitations",
+  "delivery_eligible": true,
+  "selected_path": "ruya/candidates/portrait_v2_74x100_candidate.png",
+  "selected_sha256": "6d1ac8737309fcc958086a2208817372d2129bd93c1207a691037d6bba61844b",
+  "held_evidence_path": null,
+  "held_evidence_sha256": null,
+  "visual_assessment": "实际查看v2 raw、74×100三背景1x及8xNN；暗棕长辫、暖肤、紧眉警觉闭嘴和深蓝外褂领保住三十多岁有限采购经手者。小眼白由大片亮白收为小暗块，眼眶与大鼻颧更硬，面部占比增大，颈明显缩短，窄领下收。与苏槿头巾宽脸的50岁身份可区分。",
+  "limitations": [
+    "原始左右实体透明余量13/25px，仍较紧；74×100主体bbox(1,5,72,96)，窄边留存。",
+    "头发及脸部仍有少量细碎量化色块，非原生逐像素人工终稿。",
+    "NN等比包含与32色量化为技术派生；未获用户审美终审，未集成或实机验证。"
+  ],
+  "raw_path": "ruya/raw/portrait_v2_raw_imagegen.png",
+  "raw_sha256": "370192dfddcf0b67156b4a150c158c7fb6ba437ae04c3a968d1d591ddcdafe46",
+  "raw_dimensions": [
+    1079,
+    1458
+  ],
+  "raw_subject_bbox_alpha_ge128": [
+    13,
+    68,
+    1054,
+    1404
+  ],
+  "raw_real_margin_px": {
+    "left": 13,
+    "top": 68,
+    "right": 25,
+    "bottom": 54
+  },
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        18,
+        1061,
+        1458
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 53,
+        "left": 67,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": [
+          315,
+          1029
+        ],
+        "left": [
+          209,
+          571
+        ],
+        "right": null
+      }
+    },
+    "5": {
+      "bbox": [
+        12,
+        67,
+        1055,
+        1405
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        12,
+        67,
+        1054,
+        1405
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        13,
+        68,
+        1054,
+        1404
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        19,
+        77,
+        1052,
+        1401
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "raw_true_silhouette_clipping": false,
+  "boundary_judgment": "实际原图轮廓完整，alpha>=5四边均无实体接触。alpha1孤立残余不是头发/耳的真裁断。边距紧记录限制，未通过padding或inset掩盖。",
+  "viewed": [
+    "identity mother",
+    "four core style references",
+    "portrait_v1 raw and NN",
+    "portrait_v2 raw",
+    "portrait_v2 1x three backgrounds",
+    "portrait_v2 8x exact NN"
+  ],
+  "feedback_rounds": 1,
+  "successful_image_generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

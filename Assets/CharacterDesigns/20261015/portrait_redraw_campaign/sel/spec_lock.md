@@ -1,0 +1,16 @@
+# Identity lock
+
+NPC-N-SEL / 塞尔 / Sel
+
+Authority: sources/character_card.md, updated 2026-10-13. Independent card beats older consolidated references.
+
+Subject: Sel (塞尔, NPC-N-SEL), a workshop proprietor and local intermediary concerning workshop debt notes, around fifty years old. Retain his mature sturdy rectangular face, thick dark slightly uneven brows, substantial broad angular nose, square heavy cheekbones, broad jaw, dark brown eyes and SHORT SALT-AND-PEPPER beard and moustache. Hair is cropped and slightly wavy, grey at both temples with broad grey locks and a more receding/open forehead than Tor. His grey beard is a compact connected mass along the jaw and chin, short and coarse, not long or bushy; skin below the lower lip and closed mouth remain visible. Age is visible in short forehead creases, under-eye bags and worked cheek planes. His attitude is tired, calculating before explaining, with brows drawn in only mildly and a hesitant compressed closed mouth. He is concerned for workers and equipment, not a cold-blooded creditor, villain, snarling warrior or noble hero. Distinguish him from Tor by square broader face, greyer short beard and hair, older forehead and heavier nose.
+Costume visible only at bottom: a worn charcoal work-apron neck strap and small upper apron edge over a dull rusty-red work shirt with plain medieval slit/round collar. No pointed modern shirt collar or lapels. Shoulders naturally curl forward a little from years carrying furnace equipment, kept tight at frame bottom. Ordinary worker wear, not armor. No tools, account ruler, blank debt-note folder or props in this tight portrait; do not imply a debt has been signed, settled or forgiven.
+
+
+Framing: EXTREME CLOSE HEAD portrait, crown within a few logical pixels of the top, cheeks dominate the middle width, chin near the bottom. The face and hair occupy almost all the height. Show only the top of the collar and very short shoulder ends for costume identification, no chest, arms, hands or props. Three-quarter head angle turned slightly toward viewer-left, eye contact to the listener near viewer-left.
+Style: Strong warm near-black silhouette outline, firm angular nose bridge and nostril wing, visible cheekbone and adult jaw planes. Broad contiguous matte pixel clusters, purposeful stair steps, only a few flat shadow/highlight tones per material. Low saturation earth palette. Dark eyes naturally small and deep set, muted tiny eye-white slivers, no bright white eye blocks or pupil sparkles. Hair in 4-6 large connected masses, no thin hair strands, bright specks, long thin diagonals, stipple or texture noise. At most 32 visible colors for this temporary batch. No gradients, blur, antialiasing, dithering, glossy highlights or painterly microdetail.
+True transparent alpha outside the silhouette. Single character, single portrait. No text, captions, watermark, panels, frame, decorative background, book, paper, pen, tool, weapon, hand or scene. Do not copy another reference's face, hair or costume.
+
+
+Production: built-in imagegen substantive painting, preserved raw output, whole-canvas nearest-neighbor reduction and non-dithered <=32-color quantization; binary alpha threshold 128. This is not native authored pixel art or game-integrated/runtime-verified content. Initial plus at most one necessary imagegen revision.

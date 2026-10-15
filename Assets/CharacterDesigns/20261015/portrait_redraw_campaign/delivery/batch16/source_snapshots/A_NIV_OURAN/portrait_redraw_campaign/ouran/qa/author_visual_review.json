@@ -1,0 +1,37 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T10:42:45.045419+00:00",
+  "actor_id": "MAE-NPC-OURAN",
+  "selected_version": "portrait_v2_inset",
+  "selected_sha256": "a522f895617a4fe50f7fa853dbf5826771ea7d4c42a69fadf2ca0500481134b2",
+  "decision": "selected_candidate_with_limitations",
+  "actual_views": [
+    "raw imagegen v1 and v2",
+    "derived v1 8x",
+    "derived v2 inset 8x",
+    "derived v2 inset 4x dark/gray/light background sheet"
+  ],
+  "identity_check": "Age, sex, identity hair and collar colors retained against current card and inspected historical master. No substantive contradiction.",
+  "technical": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "improvements": [
+    "Mouth is more closed and flatter; eyes narrower with reduced bright sclera.",
+    "Connected beard planes retain forties age cues.",
+    "Whole-canvas inset preserves crown, ear and collar boundaries without cropping."
+  ],
+  "limitations": [
+    "Raised inner-brow tension remains visible despite requested cautious squint.",
+    "Crown still occupies substantial height; face size did not reach ideal target.",
+    "Hair retains gray parallel subdivisions."
+  ],
+  "method_boundary": "Imagegen is the only substantive drawing. Isotropic entire-canvas NEAREST fit, alpha threshold and no-dither <=32-color quantization are disclosed technical derivatives, not native hand-authored pixel art.",
+  "imagegen_calls": 2,
+  "further_generation": "stopped at agreed first draft plus one necessary revision limit",
+  "runtime_integrated": false,
+  "native_pixel_approved": false,
+  "independent_review_status": "Independent reviewer accepted portrait_v2_inset for candidate freeze, with retained aesthetic limitations."
+}

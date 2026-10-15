@@ -1,0 +1,158 @@
+{
+  "batch": 36,
+  "slug": "niko",
+  "checked_utc": "2026-10-15T14:01:26.053201+00:00",
+  "status": "held_composition_scale_and_eye_sclera",
+  "delivery_eligible": false,
+  "selected_path": null,
+  "selected_sha256": null,
+  "identity_age_clothing": "最新30多岁患者要求优先。去额纹与部分口周线后不再明确读成老年；蓝巾灰棕发、宽颊圆鼻、苍白且自主戒备，暗蓝厚衫与棕毯领边保留。",
+  "improvement_from_v1": "相对v1减皱，颈与棕V领缩短，面部大块简化，脸本身比例增大。",
+  "source_boundary_visual_decision": "源alpha128 bbox[102,50,1167,1248]；左右真余量102/43px，alpha>=5四边无触边，头巾尾和外露耳完整。最终bbox[6,13,71,87]，未裁切/拉伸/脚本补脸。",
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        17,
+        1192,
+        1300
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 15,
+        "left": 75,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": [
+          348,
+          362
+        ],
+        "left": [
+          535,
+          1036
+        ],
+        "right": null
+      }
+    },
+    "5": {
+      "bbox": [
+        101,
+        48,
+        1170,
+        1250
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        102,
+        50,
+        1168,
+        1249
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        102,
+        50,
+        1167,
+        1248
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        106,
+        51,
+        1166,
+        1247
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "candidate_bbox": [
+    6,
+    13,
+    71,
+    87
+  ],
+  "actual_views": [
+    "identity master",
+    "four core style comparison at 4x NN",
+    "full v1 and v2 raws",
+    "v1 and selected v2 three-background 4x NN",
+    "selected v2 three-background at actual 1x"
+  ],
+  "limitations": [
+    "灰棕发和成熟颊形仍可能读龄偏熟；年龄按最新卡，不将灰发自动解释为老年。",
+    "眼白仍稍亮；头巾/发束细线残余。",
+    "1210×1300近方raw整幅等比派生使上下留空较多，目标脸占高小于四核心。",
+    "自缝毯角只在窄领边表达，粗缝细节在1x不明确；不代表全身衣装或随身物验收。",
+    "仅NN技术派生候选；非原生逐像素终稿，未集成游戏或实机验证。"
+  ],
+  "single_first_pass_feedback_rounds": 1,
+  "successful_image_generations": 2,
+  "third_generation_allowed": false,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "same_scale_gate_comparison": "comparison_with_held_gate_4x_NN.png",
+  "gate": "held_composition_scale_and_eye_sclera",
+  "held_evidence_path": "niko/candidates/portrait_v2_74x100_candidate.png",
+  "held_evidence_sha256": "84732e020d9654934861e86b406672e9b799615747d6770f2728ca9c52f7a588",
+  "source_clipping_confirmed": false,
+  "correction_of_provisional_pass": "Initial relative-to-v1 improvement assessment was too permissive. Same-scale comparison with the earlier held Hure/Xiyou/Meibei establishes the same unresolved composition/eye-sclera gate. No extra generation or new revision feedback was requested.",
+  "hold_reasons": [
+    "头领实际仅74px（妮蔻）或72px（奥娅）高；同尺度接近已held呼蕾69px、溪悠/梅蓓78px，显著低于核心94–100px。",
+    "裸颈和领口已收短，但近方raw和横向头巾/侧髻使可见脸仍小；与同尺度已通过塔雅/缇娜以及本批苏奈/缇安相比，脸焦点不足。",
+    "浅色眼白块仍显著；不能仅凭颈领改善或身份成立解除同类gate。"
+  ]
+}

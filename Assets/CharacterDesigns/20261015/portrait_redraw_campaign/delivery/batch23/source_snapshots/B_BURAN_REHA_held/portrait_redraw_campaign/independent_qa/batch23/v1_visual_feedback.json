@@ -1,0 +1,49 @@
+{
+  "scope": "Each actor gets one consolidated initial visual feedback; maximum 2 successful images; no third call. Native pixel and runtime claims prohibited.",
+  "saler": {
+    "version": "portrait_v1",
+    "sha256": "04c0b3a0e1fef77ca018b9b6bde509f1ec075269487ff7b135678ffe8c0c9e0a",
+    "decision": "one_final_substantive_revision",
+    "identity": "约40岁松面深笑纹、棕发薄须、暗梅帽/外衣与黄褐衫成立。最新卡补帽与年龄优先于旧母图。",
+    "issues": [
+      "裸颈仍偏长，收短并贴近窄领，脸可稍增大",
+      "缩暗眼白；内眉稍平、保克制礼貌不对称半笑，避免忧伤模板脸"
+    ],
+    "raw_silhouette": "Alpha>5 bbox [74,104,1024,1352]; genuine complete hat/hair/ear margin; no crop repair needed."
+  },
+  "wenno": {
+    "version": "portrait_v1",
+    "sha256": "dfa7be5a3c3f8b3a999c57b472f682e0f963be8c8aa0d52e233d84c7ac695de3",
+    "decision": "one_final_substantive_revision",
+    "identity": "约50岁净面、沙棕夹灰短发、蓝工衣成立。最新年龄优先于旧母图年轻外观。",
+    "issues": [
+      "明显偏长裸颈收短，领口贴近下颌，避免扩大胸肩",
+      "缩暗眼白，保冷静专注；下沿1–2个沉重蓝灰布折块提示湿布披肩"
+    ],
+    "raw_silhouette": "Alpha>5 bbox [45,91,1059,1411]; genuine complete hair/ear margin; no crop repair needed."
+  },
+  "buran": {
+    "version": "portrait_v1_inset",
+    "sha256": "061e1618077ed4f7cee67c2cf5b4db7cbabbd35e874be2beab9c9890f1ffba55",
+    "decision": "one_final_substantive_revision",
+    "identity": "40多岁炭份保管人；暗帽棕工装赭衫灰棕须成立。",
+    "issues": [
+      "明显长颈与宽肩胸，收短颈并仅留窄领、放大脸",
+      "眉须真正稀疏断续，不能保粗黑忧眉；保厚实宽鼻、克制斟酌闭口",
+      "眼白收暗收窄；发须更大连通色块"
+    ],
+    "raw_silhouette": "Alpha>5 bbox [26,100,1068,1434], complete but near right edge; improve actual margin in redraw."
+  },
+  "reha": {
+    "version": "portrait_v1_inset",
+    "sha256": "8b655d6b6c36fd3bd73754ef4686eacd1f9dd8088fac52acf73fcda4ad5fe622",
+    "decision": "one_final_substantive_revision",
+    "identity": "50多岁归来者父亲；银灰发须、棕外绿内成立。",
+    "issues": [
+      "明显苦情内抬眉需转为较平稳、缓慢审视；发须合为大片卷与鬓须",
+      "裸颈长、肩宽，改短颈窄领",
+      "原raw右缘alpha最大26、A>5触右边，需v2真实构图留≥2–3逻辑px，不能用inset/padding证明补回完整发尖"
+    ],
+    "raw_silhouette": "Alpha>5 bbox [33,70,1079,1441]; canvas1079x1458; alpha128 bbox [35,72,1078,1439]. Right edge max alpha26. Genuine full hair safety margin not demonstrated; v1 held."
+  }
+}

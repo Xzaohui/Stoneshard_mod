@@ -1,0 +1,72 @@
+{
+  "batch": 28,
+  "review_method": "Independently read current cards/roster/mother QA; actually viewed four core references, four identity masters and each v1 raw and 8x NN. Technical edge statistics independently calculated.",
+  "feedback_rounds_per_person": 1,
+  "each_v2_is_last_successful_generation": true,
+  "reviews": {
+    "viko": {
+      "v1_identity": "短暗bob，20多岁偏白，蓝灰衣米白毯，年轻自主而警醒。",
+      "revision": "眼白宽亮眼框大；颈偏长/肩毯多。唯一v2改小暗眼弱眼白，短颈大脸窄领，并大发块。",
+      "raw_border_opaque": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "source_bbox_ge128": [
+        35,
+        113,
+        1064,
+        1422
+      ]
+    },
+    "ile": {
+      "v1_identity": "40上下，灰缕、棕头巾木夹、苔绿衣与锈围裙、疲惫善意。",
+      "revision": "源右41实心像素触边y617—657为真实头巾裁断，v2必须生成源完整重画并留真实透明余量，禁止padding掩盖；同步缩暗眼/短颈大脸/合并头巾和灰发色块。",
+      "raw_border_opaque": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 41
+      },
+      "source_bbox_ge128": [
+        32,
+        136,
+        1079,
+        1313
+      ]
+    },
+    "harlen": {
+      "v1_identity": "三十多岁方向成立，宽厚鼻颊和沉思迟疑、赭衫棕围裙。按最新卡烟熏黄发更新历史灰发灰须老相。",
+      "revision": "右眼白大片过亮；发须细碎灰点仍偏灰，合并暗烟黄褐/温赭棕大块；颈缩短脸扩大，保非老者。源右余量12px偏紧，v2生成源留约4%真余量。",
+      "raw_border_opaque": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "source_bbox_ge128": [
+        48,
+        100,
+        1067,
+        1427
+      ]
+    },
+    "belo": {
+      "v1_identity": "二十多岁黑短发无须、石板灰开衩领、专注自信成年箍桶学徒。",
+      "revision": "发冠过高尖束散，压蓬高并大发块；眼白缩窄暗化，颈明显缩短，底部窄领。源右余量11px偏紧，v2生成源留约4%真余量。",
+      "raw_border_opaque": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "source_bbox_ge128": [
+        23,
+        68,
+        1068,
+        1440
+      ]
+    }
+  }
+}

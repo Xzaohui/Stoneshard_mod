@@ -1,0 +1,114 @@
+{
+  "snapshot_utc": "2026-10-15T08:07:30Z",
+  "summary": {
+    "unique_traced_identities": 217,
+    "historical_roster_unique_identities": 172,
+    "later_new_identities": 44,
+    "current_S200_increment": 1,
+    "current_personnel_md_files": 222,
+    "not_person_identity_files": 5,
+    "unmatched_character_cards": 0,
+    "status_counts": {
+      "completed_portrait_candidate": 4,
+      "assigned_in_progress": 7,
+      "ready_for_identity_preflight": 199,
+      "blocked_reference_verification": 3,
+      "blocked_source_conflict": 1,
+      "blocked_missing_master": 1,
+      "blocked_safety": 1,
+      "needs_scope_review": 1
+    },
+    "verified_existing_identity_masters": 212,
+    "missing_master_ids": [
+      "NPC01",
+      "NPC-S200-KANWO",
+      "NPC02",
+      "NPC03",
+      "ALD-NPC-VIAN"
+    ],
+    "master_hash_mismatch_ids": [],
+    "identities_with_source_hash_drift_from_historical_record": 167,
+    "planned_future_batches": 50,
+    "future_unassigned_identities_excluding_locked_batch_02": 197,
+    "completed_current_portrait_candidates": 4,
+    "runtime_integrated_portraits": 0
+  },
+  "alias_collisions": [],
+  "unmatched_character_cards": [],
+  "excluded_nonindividual_cards": [
+    {
+      "path": "design/04_人物/人物_玛拉与伊沃.md",
+      "exists": true,
+      "sha256": "9d91f8bd53376a9bd55ed1131a29d0a48ebaeb9befb3697fa1f982780ca2f83e",
+      "bytes": 3477,
+      "frontmatter_id": "CHAR-N1",
+      "type": "character",
+      "title": "人物_玛拉与伊沃",
+      "reason": "four-person opening group card, not a fifth identity"
+    },
+    {
+      "path": "design/04_人物/人物与动机.md",
+      "exists": true,
+      "sha256": "68322cf9b577e77bd5d65b7ec51cf8697ebc7114232899953cce28ecd0b5e77a",
+      "bytes": 3128,
+      "frontmatter_id": "NPC-000",
+      "type": "index",
+      "title": "人物与动机",
+      "reason": "index/system/roster/arc file, not an individual"
+    },
+    {
+      "path": "design/04_人物/人物弧光与关系转折.md",
+      "exists": true,
+      "sha256": "3b63254032267f4749177836e4bec759a4767b8de7701f2efb06a8d568e2c56c",
+      "bytes": 39362,
+      "frontmatter_id": "CHAR-NARRATIVE-ARCS",
+      "type": "character-system",
+      "title": "人物弧光与关系转折",
+      "reason": "index/system/roster/arc file, not an individual"
+    },
+    {
+      "path": "design/04_人物/人物细描与随身物.md",
+      "exists": true,
+      "sha256": "a6a75160713defa2b61b37ab7d0c2f6d677c29ddc9ed2af5894714bc500fc1df",
+      "bytes": 74205,
+      "frontmatter_id": "SYS-NPC-DETAIL-S89",
+      "type": "system",
+      "title": "人物细描与随身物",
+      "reason": "index/system/roster/arc file, not an individual"
+    },
+    {
+      "path": "design/04_人物/台本新增人物与知识边界.md",
+      "exists": true,
+      "sha256": "a1591d5533a55ba349e700ceb4ef4d56519a762a302bb81a3cc9ec1ce46434bb",
+      "bytes": 6500,
+      "frontmatter_id": "NPC-SCRIPT-CAST",
+      "type": "character-roster",
+      "title": "台本新增人物与知识边界",
+      "reason": "index/system/roster/arc file, not an individual"
+    }
+  ],
+  "same_name_distinct_people": [
+    {
+      "name": "艾伦",
+      "ids": [
+        "NPC-N-AREN",
+        "BRY-NPC-ELEN"
+      ]
+    },
+    {
+      "name": "艾娜",
+      "ids": [
+        "NPC-N-ENA",
+        "MAE-S03-NPC"
+      ]
+    }
+  ],
+  "checks": {
+    "unique_canonical_ids": true,
+    "no_alias_collisions": true,
+    "all_current_character_cards_accounted": true,
+    "all_selected_master_hashes_match": true,
+    "all_selected_portrait_paths_exist": true
+  },
+  "limitation": "Metadata/file/hash reconciliation only, not new visual review or card conflict resolution for every person."
+}

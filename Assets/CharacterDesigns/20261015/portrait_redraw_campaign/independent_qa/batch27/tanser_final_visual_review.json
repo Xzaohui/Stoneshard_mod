@@ -1,0 +1,152 @@
+{
+  "slug": "tanser",
+  "status": "conditional_technical_candidate",
+  "delivery_eligible": true,
+  "selected_path": "tanser/candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "bae249098163e729dbfc8b63a194ede2d06a2b34bc47b210cec88d1a655a87b2",
+  "held_evidence_path": null,
+  "held_evidence_sha256": null,
+  "visual_assessment": "40岁上下成年驻点工的棕乱发、胡茬、厚棕褂与眉间旧缝痕保留；v2脸显著扩大、颈收短、领只窄边，小暗眼白和胡茬并块修订有效。克制警觉而非呻吟求原谅，不强塞腿杖。实看源右发尖实体闭合，alpha>=128轮廓有10源像素余量；低透明外羽边alpha5–21触边已独立放大核实，并非实心发尖被切。全画布72×98 inset只统一技术安全边距，不补画。",
+  "limitations": [
+    "源右低alpha5–21羽边触边（alpha>=16三像素），不能声称所有alpha都完整留边；实心发尖闭合且有10像素真边距。",
+    "眉间旧缝痕在74×100化为少量明暗像素，微细结构不等于原生逐像素精修。",
+    "发量略多但脸/短颈目标成立；仅条件技术候选，未集成或实机验收。"
+  ],
+  "actual_visual_review": [
+    "identity master",
+    "four core reference portraits",
+    "v1 raw and 8x",
+    "v2 raw and 8x",
+    "4x raw right-edge gray-background crop",
+    "v2 inset 1x and 8x and 4x three backgrounds"
+  ],
+  "raw_framing": {
+    "raw_path": "tanser/raw/portrait_v2_raw_imagegen.png",
+    "sha256": "2ce4d5a46006b56fab205d4760922022a9a0c1d598b84d0b91571dc85bcc5be0",
+    "size": [
+      1079,
+      1458
+    ],
+    "alpha_threshold_boundaries": {
+      "1": {
+        "bbox": [
+          0,
+          22,
+          1079,
+          1434
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 78,
+          "right": 65
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": [
+            96,
+            976
+          ],
+          "right": [
+            476,
+            736
+          ]
+        }
+      },
+      "5": {
+        "bbox": [
+          14,
+          79,
+          1079,
+          1393
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 13
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": null,
+          "right": [
+            717,
+            729
+          ]
+        }
+      },
+      "16": {
+        "bbox": [
+          16,
+          79,
+          1079,
+          1391
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 3
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": null,
+          "right": [
+            718,
+            720
+          ]
+        }
+      },
+      "128": {
+        "bbox": [
+          16,
+          80,
+          1069,
+          1391
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": null,
+          "right": null
+        }
+      },
+      "255": {
+        "bbox": [
+          17,
+          89,
+          1068,
+          1389
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": null,
+          "right": null
+        }
+      }
+    }
+  },
+  "successful_generations": 2,
+  "feedback_rounds": 1,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

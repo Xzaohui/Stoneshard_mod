@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "scope": "Deterministic technical export only; image generation itself is not claimed deterministic.",
+  "checks": [
+    {
+      "version": "portrait_v1",
+      "command": "python derive_portrait.py portrait_v1",
+      "before_sha256": "80c63ad2f51e0b711f31de6de08ed21ed33b667745b7bd19a5cbf0170bc4de6b",
+      "after_sha256": "80c63ad2f51e0b711f31de6de08ed21ed33b667745b7bd19a5cbf0170bc4de6b",
+      "byte_identical": true,
+      "stdout": "{\"version\": \"portrait_v1\", \"candidate\": \"candidates/portrait_v1_74x100_candidate.png\", \"sha\": \"80c63ad2f51e0b711f31de6de08ed21ed33b667745b7bd19a5cbf0170bc4de6b\", \"raw_dimensions\": [1079, 1458], \"colors\": 32, \"alpha\": [0, 255], \"bbox\": [2, 5, 73, 97], \"checks\": {\"dimensions\": true, \"color_budget\": true, \"binary_alpha\": true, \"full_tool_return_matches_raw\": true}}",
+      "exit_code": 0
+    },
+    {
+      "version": "portrait_v2",
+      "command": "python derive_portrait.py portrait_v2",
+      "before_sha256": "e084b4fc8a5914c9617f5b8781e5cc71cf2448139be99d86df71ebcba437fbc1",
+      "after_sha256": "e084b4fc8a5914c9617f5b8781e5cc71cf2448139be99d86df71ebcba437fbc1",
+      "byte_identical": true,
+      "stdout": "{\"version\": \"portrait_v2\", \"candidate\": \"candidates/portrait_v2_74x100_candidate.png\", \"sha\": \"e084b4fc8a5914c9617f5b8781e5cc71cf2448139be99d86df71ebcba437fbc1\", \"raw_dimensions\": [1079, 1458], \"colors\": 32, \"alpha\": [0, 255], \"bbox\": [2, 8, 73, 97], \"checks\": {\"dimensions\": true, \"color_budget\": true, \"binary_alpha\": true, \"full_tool_return_matches_raw\": true}}",
+      "exit_code": 0
+    }
+  ]
+}

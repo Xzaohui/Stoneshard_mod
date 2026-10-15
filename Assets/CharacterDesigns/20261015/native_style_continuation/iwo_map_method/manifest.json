@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-15",
+  "character": "Ivo / NPC-N-IVO / n1_ivo",
+  "operation": {
+    "input": "raw/map_method_v1_raw_imagegen.png",
+    "output": "derived/map_method_v1_fixed_grid_35x44_experimental.png",
+    "full_canvas_recovery": true,
+    "crop": false,
+    "fit": false,
+    "grid": [
+      35,
+      44
+    ],
+    "color_quantization": "Pillow MEDIANCUT to 20 colors, no dither, whole RGB canvas",
+    "alpha_threshold_before_recovery": 128,
+    "representative_per_cell": "Most frequent quantized label (including transparency) in central half-width/half-height rectangle. Ties: lowest label. One output pixel per fixed cell.",
+    "transparent_rgb": "zero",
+    "manual_character_pixel_edits": false,
+    "generation": "Built-in imagegen, one initial experiment, no revisions",
+    "native_reference_usage": "Read-only grid/style/proportion reference; not edit target. Edit target was our own previous failed sprite."
+  },
+  "native_qualified": false,
+  "files": [
+    {
+      "path": "QA.json",
+      "bytes": 4658,
+      "sha256": "9f574f45cca67961776c88cb8e515308faf45281b484c50004af39feff98c034"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3502,
+      "sha256": "6eb150eda9ded30d1c4f244cb4f958cbb1d272929af32db313834e3a504d7171"
+    },
+    {
+      "path": "derived/map_method_v1_fixed_grid_35x44_experimental.png",
+      "bytes": 1393,
+      "sha256": "c002ef54baee0c547cbfbbab1cbea0b2094c829499234b08abfb6abe5e025fdd"
+    },
+    {
+      "path": "grid_cells.json",
+      "bytes": 363166,
+      "sha256": "530e43f4c856bc500abd413dfe44a29ff4c100778e0e65af812e0cb1bc56bbb2"
+    },
+    {
+      "path": "prompts/map_method_v1.txt",
+      "bytes": 2846,
+      "sha256": "e222fa5bb1e17501d2bbf48af372004fa00fa6882912c0e48fd21744d7527310"
+    },
+    {
+      "path": "raw/map_method_v1_raw_imagegen.png",
+      "bytes": 553935,
+      "sha256": "0a34bfa77bd498ed45ce0c0068cb5f1e03a0e2ce12a1a51540c5001a53222492"
+    },
+    {
+      "path": "recover_and_check.py",
+      "bytes": 7095,
+      "sha256": "4ef2e96f58df0e4502c4a59c9044c55a88225f75cf3e406aa3244613a1666967"
+    },
+    {
+      "path": "review/native_old_new_1x_12x.png",
+      "bytes": 25064,
+      "sha256": "062fec5a7aa66b94bab05323cf72a4b4da991f0370a9946c7aa822afb3b1424a"
+    },
+    {
+      "path": "review/raw_view.png",
+      "bytes": 200633,
+      "sha256": "badbd995d91a0f4fbfe8184a26ae72e1fabe922684c7b4fc935fa18865236b9b"
+    },
+    {
+      "path": "sources/iwo_failed_35x44_edit_target_32x.png",
+      "bytes": 12013,
+      "sha256": "8352995f038e6708fb2e43a9c36521f481f81192b8507ff0bf2e134e566afcf3"
+    },
+    {
+      "path": "sources/source_manifest.json",
+      "bytes": 1307,
+      "sha256": "33a4c022e0889d2bf0eec8827956ab51c7c2f316a57edc2b26594fa7f6712de9"
+    },
+    {
+      "path": "spec_lock.md",
+      "bytes": 1646,
+      "sha256": "1912eb9255abce47de9c5250bb7a459597321c542801c29a7ad73aadc89c4e32"
+    },
+    {
+      "path": "tool_returns/map_method_v1.json",
+      "bytes": 3982,
+      "sha256": "3619472be4e024ef1d27a9cc9e775b315601682b1c3a80936e8e78107aed60ec"
+    }
+  ]
+}

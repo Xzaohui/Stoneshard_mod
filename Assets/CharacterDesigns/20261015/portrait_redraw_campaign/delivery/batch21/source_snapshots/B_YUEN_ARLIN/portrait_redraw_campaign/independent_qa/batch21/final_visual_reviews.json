@@ -1,0 +1,107 @@
+{
+  "reviewer": "independent_QA_batch21",
+  "reviewed_utc": "2026-10-15T11:33:28.476098+00:00",
+  "third_generation_permitted": false,
+  "native_pixel_approved": false,
+  "runtime_verified": false,
+  "actors": {
+    "tafei": {
+      "status": "pass_derived_candidate_with_notes",
+      "selected": "candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a",
+      "actually_viewed": [
+        "identity master",
+        "current card",
+        "historical master QA",
+        "four core styles",
+        "raw v1 and v2",
+        "1x and 4x light gray dark composites"
+      ],
+      "visual_findings": [
+        "宽颊圆鼻、八字胡清下巴、低帽灰鬓和褪蓝灰领吻合；40多岁成熟旅人可辨。",
+        "担忧眉与小张嘴保留，眼白相较v1缩小变暗；裸颈和领口明显收短。",
+        "原raw右边实质轮廓在x1077结束，x1078透明；4x局部显示暗外轮廓闭合，未见内层发帽被截断。"
+      ],
+      "limitations": [
+        "原raw右侧仅1源像素透明留边，余量极紧；full NN候选采样到右画框，所选72×98 containment仅是技术导出留边，不能声称修复源图裁切。",
+        "发须和帽褶仍有平行条带；小眼白残余偏亮，但明显好于v1。"
+      ],
+      "source_semantic_clipping_detected": false,
+      "needs_third_generation": false
+    },
+    "xielan": {
+      "status": "pass_derived_candidate_with_notes",
+      "selected": "candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "81c343d0fce4935936d320bc9ca7d401c25806055fdf9a7134a35952d2a27143",
+      "actually_viewed": [
+        "identity master",
+        "current card",
+        "historical master QA",
+        "four core styles",
+        "raw v1 and v2",
+        "1x and 4x light gray dark composites"
+      ],
+      "visual_findings": [
+        "约50岁长窄脸、直鼻、灰短胡、深蓝衣棕披边及素签符合母图和现卡。",
+        "小暗侧眼、闭口和减弱的眉间沟形成审慎购画人，与塔斐担忧解释不同。",
+        "发耳和实质alpha边界完整留边，未见源裁切。"
+      ],
+      "limitations": [
+        "灰发和短胡仍保留一些重复条带、细碎像素；表情仍略严肃。",
+        "底部只1候选像素透明留边，构图余量偏紧。"
+      ],
+      "source_semantic_clipping_detected": false,
+      "needs_third_generation": false
+    },
+    "yuen": {
+      "status": "pass_derived_candidate_with_notes",
+      "selected": "candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313",
+      "actually_viewed": [
+        "identity master",
+        "current card",
+        "historical master QA",
+        "four core styles",
+        "raw v1 and v2",
+        "1x and 4x dark gray light composites",
+        "full and inset technical alternatives"
+      ],
+      "visual_findings": [
+        "约60岁男性养育长辈，退发际全白发、短白胡、长垂鼻、低眼睑和抬内眉保持母图身份。",
+        "白发白胡已合并成大块，窄梅紫围巾在1x恢复，与棕外衣边能区分；短颈比例改善。",
+        "欲言又止的难过表情成立，不呈抢夺或亲缘裁决；源发耳完整留边，inset仅同源技术containment。"
+      ],
+      "limitations": [
+        "额眉皱纹线仍稍多，白发仍有少量连续条带；眼白保留小亮块。",
+        "原raw右侧余量15源像素，selected inset提供更稳候选留边，不是源图修复。"
+      ],
+      "source_semantic_clipping_detected": false,
+      "needs_third_generation": false
+    },
+    "arlin": {
+      "status": "pass_derived_candidate_with_notes",
+      "selected": "candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79",
+      "actually_viewed": [
+        "identity master",
+        "current card",
+        "historical master QA",
+        "four core styles",
+        "raw v1 and v2",
+        "1x and 4x dark gray light composites",
+        "full and inset technical alternatives"
+      ],
+      "visual_findings": [
+        "40多岁宽圆鼻厚颊、深短发短圆胡、左眉旧疤（画面右眉）与橄榄衣旧围裙带保持现卡身份。",
+        "明显缩短裸颈、领口变薄；微张嘴和不对称担忧眉呈尴尬关切，与榭兰闭口侧察和尤恩老年迟疑不同。",
+        "眼白相对v1缩窄；selected inset比full版更好保留褐发胡须色，原raw发耳和下缘完整留边。"
+      ],
+      "limitations": [
+        "小眼白仍比四核心略亮；深发仍为条状大分组，少量暗色合并仍存在。",
+        "full版本把部分褐发胡须合成橄榄调，selected inset已明显减轻；32色压缩的细微色差损失保留为限制。"
+      ],
+      "source_semantic_clipping_detected": false,
+      "needs_third_generation": false
+    }
+  }
+}

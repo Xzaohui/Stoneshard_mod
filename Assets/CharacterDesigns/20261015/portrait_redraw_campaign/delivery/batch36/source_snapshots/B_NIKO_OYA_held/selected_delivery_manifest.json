@@ -1,0 +1,170 @@
+{
+  "batch": "36",
+  "date": "2026-10-15",
+  "qualified_candidate_count": 2,
+  "held_count": 2,
+  "characters": [
+    {
+      "actor": "sune",
+      "name": "苏奈",
+      "source": "sune/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "e441f49870d3d5c0365c566cc52bed8c5102a8570a2fe1e19e039f855b483386",
+      "delivery_file": "SUNE_苏奈_74x100_candidate.png",
+      "delivery_sha256": "e441f49870d3d5c0365c566cc52bed8c5102a8570a2fe1e19e039f855b483386",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "sune/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "眼白偏亮、发线偏细；仅选 V2 inset 候选",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "tian",
+      "name": "缇安",
+      "source": "tian/candidates/portrait_v2_containment_74x100_candidate.png",
+      "source_sha256": "91fde91cb6aa223215a21ba7c134798635f8151ffdffb80f3afc83b1922ad090",
+      "delivery_file": "TIAN_缇安_74x100_candidate.png",
+      "delivery_sha256": "91fde91cb6aa223215a21ba7c134798635f8151ffdffb80f3afc83b1922ad090",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_containment",
+      "derivation_metrics": "tian/qa/portrait_v2_containment_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "源右发余量紧；仅选 70×96 containment",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "held": [
+    {
+      "slug": "niko",
+      "name": "妮蔻",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "ad82e895c9407070b3138af54daecf59a5b777d9ba51ea6203f60b69260509af",
+      "production_SHA256SUMS_sha256": "e6b81e864c09e587ecef1f92dbe53f4e2c075f092fca9367f3c9e12136759447",
+      "decision": "held_composition_scale_and_eye_sclera",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": true,
+      "residual": [
+        "灰棕发和成熟颊形仍可能读龄偏熟；年龄按最新卡，不将灰发自动解释为老年。",
+        "眼白仍稍亮；头巾/发束细线残余。",
+        "1210×1300近方raw整幅等比派生使上下留空较多，目标脸占高小于四核心。",
+        "自缝毯角只在窄领边表达，粗缝细节在1x不明确；不代表全身衣装或随身物验收。",
+        "仅NN技术派生候选；非原生逐像素终稿，未集成游戏或实机验证。"
+      ],
+      "held_evidence_portrait": "niko/candidates/portrait_v2_74x100_candidate.png",
+      "held_evidence_sha256": "84732e020d9654934861e86b406672e9b799615747d6770f2728ca9c52f7a588",
+      "historical_fallback_approved": false,
+      "source_clipping_confirmed": false,
+      "hold_gate": "held_composition_scale_and_eye_sclera"
+    },
+    {
+      "slug": "oya",
+      "name": "奥娅",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "6b2e9a1b8f9849caefdf1b2dda6131c29ec7f9906ad03a9355bca48d085d98ef",
+      "production_SHA256SUMS_sha256": "1d84d0d2acb516d631c85171de5f17ab4db4990b41db9c9405172ef7e58ae8de",
+      "decision": "held_composition_scale_and_eye_sclera",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": true,
+      "residual": [
+        "眼白依然偏亮，平行发束偏多，尚非四核心同等粗簇精修。",
+        "1228×1281近方raw整幅等比派生造成上下较空，目标脸占高偏小。",
+        "源右余量26px约1.6逻辑像素，完整但较紧。",
+        "灰围裙仅领口边，未验收全身围裙、卷袖或随身物。",
+        "仅NN技术派生候选；非原生逐像素终稿，未集成游戏或实机验证。"
+      ],
+      "held_evidence_portrait": "oya/candidates/portrait_v2_74x100_candidate.png",
+      "held_evidence_sha256": "2ce259d0b712ab6848fcca0222f7112d5e6086c89ef88277744d0183463bacc9",
+      "historical_fallback_approved": false,
+      "source_clipping_confirmed": false,
+      "hold_gate": "held_composition_scale_and_eye_sclera"
+    }
+  ],
+  "board": {
+    "file": "batch36_两人头像总览_1x_4x.png",
+    "sha256": "866cfdca1b278bb170c7b3474d167f5edffd6b1a4b6b662f0a9cbf5091ad9464",
+    "dimensions": [
+      680,
+      1432
+    ],
+    "portrait_checks": [
+      {
+        "actor": "sune",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "sune",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "tian",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "tian",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false,
+    "held_portrait_not_displayed": true
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded. All four generated production folders, including held niko and oya evidence, are retained; held is not counted as success."
+}

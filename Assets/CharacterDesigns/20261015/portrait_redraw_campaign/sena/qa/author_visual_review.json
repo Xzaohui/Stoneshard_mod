@@ -1,0 +1,37 @@
+{
+  "reviewer": "author self-review, not independent QA",
+  "reviewed_utc": "2026-10-15T08:11:00Z",
+  "candidate": "candidates/portrait_v1_74x100_candidate.png",
+  "actually_viewed": [
+    "raw/portrait_v1_raw_imagegen.png",
+    "candidates/portrait_v1_74x100_candidate.png",
+    "previews/portrait_v1_1x_8x.png"
+  ],
+  "visual": {
+    "age_identity": "按当前城市卡约50岁，旧母版偏年轻问题已用眼下/颧骨/口周成熟结构纠正；未做夸张老人化。",
+    "framing": "头部近框，底部围巾面积偏多，脸占比小于紧脸锚点。",
+    "face_planes": "鼻翼、鼻梁与颧骨大块阴影清楚；成年女性独立脸型、抿嘴侧望与思索疲惫可读。",
+    "eyes": "自然窄眼轮廓，但眼白仍略宽，可由独立QA衡量是否需唯一修订。",
+    "hair_costume": "灰黑短发、银色额发、深蓝罩衣与米围巾保持；没复制Sela身份。",
+    "outcome": "ready_for_independent_qa; one image revision remains"
+  },
+  "mechanical_checks": "See qa/portrait_v1_metrics.json; exact dimensions/color budget/alpha passes do not establish aesthetic approval.",
+  "not_claimed": [
+    "native per-pixel authored at 74x100",
+    "runtime integrated",
+    "runtime verified",
+    "final user acceptance"
+  ],
+  "v2": {
+    "reviewed_utc": "2026-10-15T08:18:30Z",
+    "candidate": "candidates/portrait_v2_74x100_candidate.png",
+    "actually_viewed": [
+      "raw/portrait_v2_raw_imagegen.png",
+      "candidates/portrait_v2_74x100_candidate.png",
+      "previews/portrait_v2_1x_8x.png"
+    ],
+    "changes": "脸放大，颈显著缩短，围巾压缩，口角/鼻唇/眼下少量成熟面转折更清楚；保短灰黑发单银额发、蓝衣米围巾和沉静侧望。",
+    "residual_notes": "围巾仍约底部16px，少数眼白亮面还存在；独立QA待判，不再继续生成。",
+    "generation_budget_used": 2
+  }
+}

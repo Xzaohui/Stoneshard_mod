@@ -1,0 +1,68 @@
+{
+  "saler": {
+    "status": "pass_concept_with_notes",
+    "version": "portrait_v2",
+    "visual_pass": true,
+    "selected_sha256": "4ff3a2b9c0185b31dcc25f80bdf9f25a4ae24759ea6471a9af897b5e435f5c99",
+    "observations": [
+      "40岁松面笑纹、棕发薄须、梅帽兑筹缝记、梅外/黄褐里成立；最新卡外观更新优先。",
+      "v2大脸与短颈改善，颌下仅窄领；警觉侧目和克制半笑可辨。",
+      "实际看raw与1×/8×浅深灰背景：完整帽顶、棕发和耳无切边；A>5 bbox[41,98,1049,1354]，源四边最高alpha1。"
+    ],
+    "residual_limitations": [
+      "眼白仍偏亮，不能说小暗眼风格已全验收。",
+      "内眉仍略上抬，但没有丢失礼貌半笑。",
+      "帽发占幅仍较大、局部发丝与皱纹较碎。"
+    ]
+  },
+  "wenno": {
+    "status": "pass_concept_with_notes",
+    "version": "portrait_v2_containment",
+    "visual_pass": true,
+    "selected_sha256": "fce8e52d5a59497c631c65b208c11ab6642b42018940a4919d57bf1619f380e2",
+    "observations": [
+      "50岁净面、沙棕夹灰发与蓝/米白衣色保持；臂部烫伤未迁到脸上。",
+      "v2裸颈收短、窄领贴下颌，蓝灰沉重布折提示湿布披肩；神情冷静专注而有轻微紧眉。",
+      "实际看raw、1×/8×与三背景，头发耳完整；A>5 bbox[30,91,1074,1393]/1079×1458，右发尖仍有真实5px高分辨率余量。",
+      "70×96完整画布等比NEAREST containment居中至74×100，未裁切、补画或修形。"
+    ],
+    "residual_limitations": [
+      "右发尖真实余量仅5px高分辨率像素，窄；containment增加目标画布余量不等于生成扩边。",
+      "眼白仍有亮簇，发丝及局部皱纹偏碎。",
+      "和四核心相比，头发仍较复杂；只接受带限制的技术候选。"
+    ]
+  },
+  "buran": {
+    "status": "pass_concept_with_notes",
+    "version": "portrait_v2_inset",
+    "visual_pass": true,
+    "selected_sha256": "0cd388f2397e5ec024dd3ca0b155314b689bb1f179f722b88fae4bfe3c4a6763",
+    "observations": [
+      "40多岁炭份保管人，厚实脸宽鼻、灰棕短须、暗帽/棕厚工装赭内衫成立。",
+      "v2短颈、窄领、大脸及发须连通色块明显改善；眉变薄断续但仍有斟酌忧意。",
+      "实际看raw、1×/8×三背景，帽发耳完整；A>5 bbox[39,96,1068,1448]/1078×1459，右10px/底11px真实余量，源四边max alpha1。"
+    ],
+    "residual_limitations": [
+      "眼白仍偏亮；内眉残余忧意。",
+      "眉虽变薄断续，炉火烤稀疏的辨识仍有限。",
+      "帽发占幅偏大；源右10px和底11px高分辨率余量窄。"
+    ]
+  },
+  "reha": {
+    "status": "held_source_clipping",
+    "version": "portrait_v2_inset",
+    "visual_pass": false,
+    "selected_sha256": "f00a999d4e4fad8774b45061f8b696cfd6168d79fefc81c62a5d4d9da20b5e6c",
+    "observations": [
+      "50多岁父亲、银灰发须、棕旧外套和绿内衫成立。",
+      "v2较初稿颈短、窄领、大块发须改善；仍保较强内抬忧眉和亮眼白。",
+      "实际看raw右发卷撞画布截断；完整源头发留边失败。候选inset虽外有空白，不能补回缺失的源发尖。"
+    ],
+    "residual_limitations": [
+      "眼白偏亮且忧眉模板感仍较强。",
+      "原raw左右余量不均，右发卷已真实裁切，不能列入可交候选。",
+      "v1右发边也未达到完整安全留边，不能回选冒充通过；两次已用完，不第三次。"
+    ],
+    "blocker": "Raw1078×1459最右列x1077有16个alpha>=128像素，y531–546，最高alpha254；A>5 bbox[9,79,1078,1446]与A>=128 bbox[9,81,1078,1445]均到右边界。见reha_v2_right_edge_evidence.png与reha_v2_edge_pixels.json。"
+  }
+}

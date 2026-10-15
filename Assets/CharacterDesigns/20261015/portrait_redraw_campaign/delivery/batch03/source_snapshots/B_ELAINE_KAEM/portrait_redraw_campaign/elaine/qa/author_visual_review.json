@@ -1,0 +1,50 @@
+{
+  "reviewer": "author_visual_review",
+  "character": "elaine",
+  "actually_viewed": [
+    "sources/identity_reference.png",
+    "sources/mara_style_reference.png",
+    "sources/iwo_style_reference.png",
+    "sources/leiya_style_reference.png",
+    "sources/tore_style_reference.png",
+    "raw/portrait_v1_raw_imagegen.png",
+    "previews/portrait_v1_1x_8x.png",
+    "previews/portrait_v1_maxcoverage_1x_8x.png",
+    "raw/portrait_v2_raw_imagegen.png",
+    "previews/portrait_v2_1x_8x.png"
+  ],
+  "visual_findings": [
+    "当前卡40多岁女性地方代理成立；低髻和深蓝/深褐衣领承接母版，方颧、厚鼻翼与闭唇有辨识度。",
+    "眉毛内端未上扬成Mara式担忧眉，凝视偏平稳审视；嘴角较严肃，属于有保留的地方办事官，不是国家领袖。",
+    "脸部平面较广，鼻、颧骨、下巴读形明确；前额到下颏区域占主要视觉，仍保留短颈和衣领，未塞入手与道具。",
+    "费目牌与账页位于紧脸裁切以外，不擅自替换为勋章官印。",
+    "MEDIANCUT保大块肤面较好，但眼白与米领被映射得偏暖；MAXCOVERAGE恢复米色分离但脸部微差转换为更多碎阶梯。"
+  ],
+  "initial_recommendation": "v1 MEDIANCUT had better grouped planes than MAXCOVERAGE; independent review requested a single crop/cluster refinement.",
+  "required_regeneration_found_by_author": false,
+  "generation_calls": 2,
+  "remaining_revision_budget": 0,
+  "not_verified": [
+    "native one-pixel authored asset",
+    "runtime integration",
+    "engine compatibility",
+    "user final approval"
+  ],
+  "method_disclosure": "Substantive built-in imagegen drawing, followed by explicit NN resizing and 32-color quantization. Does not constitute native pixel-by-pixel completion.",
+  "v2_review": {
+    "selected_by_author": "candidates/portrait_v2_74x100_candidate.png",
+    "generation_calls": 2,
+    "remaining_revision_budget": 0,
+    "reason": [
+      "Shorter visible neck, collar raised, larger face; identity and card age remain stable.",
+      "No new accessories or story conclusions.",
+      "Both output candidates are 74x100 RGBA, 32 visible RGB colors, binary alpha."
+    ],
+    "character_notes": [
+      "伊莲：下颏明显下降、肩宽退为底部边条；成熟方颧厚鼻低髻保留，眼白变小且不是Mara忧眉。",
+      "MEDIANCUT保留连贯肤面，米领仍偏暖，但1x可辨；未宣称手绘原生像素。"
+    ]
+  },
+  "independent_review": "pass_concept_candidate_with_notes",
+  "final_selected": "candidates/portrait_v2_74x100_candidate.png"
+}

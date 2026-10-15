@@ -1,0 +1,212 @@
+{
+  "status": "pass",
+  "sources": [
+    {
+      "source": "AGENTS.md",
+      "copy": "sources/AGENTS.md",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "design/04_人物/城市人物/人物_BRY-NPC-MARIS_玛莉丝.md",
+      "copy": "sources/character_card_1.md",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261013/expressive/maris/maris_raw_imagegen_v2.png",
+      "copy": "sources/identity_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261013/expressive/maris/QA-independent.json",
+      "copy": "sources/identity_QA_independent.json",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261013/expressive/maris/manifest.json",
+      "copy": "sources/identity_manifest_1.json",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "design/06_支线/城市支线/台本_CS-BRY-12_两种火候.md",
+      "copy": "sources/story_constraints_1.md",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "design/06_支线/城市支线/台本_CS-BRY-16_空椅不是赞成.md",
+      "copy": "sources/story_constraints_2.md",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_pilot/mara/assets/portrait_v2_74x100.png",
+      "copy": "sources/mara_style_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_pilot/iwo/candidates/portrait_v1_74x100_candidate.png",
+      "copy": "sources/iwo_style_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_continuation/leiya/candidates/portrait_v2_maxcoverage_74x100_candidate.png",
+      "copy": "sources/leiya_style_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_continuation/tore/candidates/portrait_v1_74x100_candidate.png",
+      "copy": "sources/tore_style_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_pilot/mara/previews/portrait_v2_8x.png",
+      "copy": "sources/mara_style_inspected_preview.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_pilot/iwo/review/portrait_v1_1x_8x.png",
+      "copy": "sources/iwo_style_inspected_preview.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_continuation/leiya/previews/portrait_v2_maxcoverage_8x.png",
+      "copy": "sources/leiya_style_inspected_preview.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_continuation/tore/previews/portrait_v1_8x.png",
+      "copy": "sources/tore_style_inspected_preview.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    }
+  ],
+  "raw_tool_byte_checks": [
+    {
+      "version": "portrait_v1",
+      "raw_sha256": "9285ace60bd166b691c5431e4ad0789ac1dde5f29f41a99c62a60cb8b29836cd",
+      "tool_data_sha256": "9285ace60bd166b691c5431e4ad0789ac1dde5f29f41a99c62a60cb8b29836cd",
+      "raw_equals_tool_bytes": true
+    },
+    {
+      "version": "portrait_v2",
+      "raw_sha256": "b77ddbe6c9b63c962b4d30702b35446fa7dbcd70217a261a5568427eb331ba15",
+      "tool_data_sha256": "b77ddbe6c9b63c962b4d30702b35446fa7dbcd70217a261a5568427eb331ba15",
+      "raw_equals_tool_bytes": true
+    }
+  ],
+  "commands": [
+    [
+      "python",
+      "derive_portrait.py"
+    ],
+    [
+      "python",
+      "export_maxcoverage.py",
+      "portrait_v1"
+    ],
+    [
+      "python",
+      "export_maxcoverage.py",
+      "portrait_v2"
+    ]
+  ],
+  "reproduction": "Executed in an independently named temporary copy; all PNG raw/candidates/previews byte-identical. Preview title now comes from immutable roster slug, independent of directory name. No source images drawn or edited by script.",
+  "outputs": [
+    {
+      "path": "candidates/portrait_v1_74x100_candidate.png",
+      "sha256": "56eb6eee4e4b0d9475ceac08107ebad8839265be7294e799f24cd95a228f802b",
+      "reproduced_sha256": "56eb6eee4e4b0d9475ceac08107ebad8839265be7294e799f24cd95a228f802b",
+      "byte_identical": true
+    },
+    {
+      "path": "candidates/portrait_v1_maxcoverage_74x100_candidate.png",
+      "sha256": "119f767ce7bdba4edc1e74b903741e36da75310a4a4d276682fe7bfe81b8c729",
+      "reproduced_sha256": "119f767ce7bdba4edc1e74b903741e36da75310a4a4d276682fe7bfe81b8c729",
+      "byte_identical": true
+    },
+    {
+      "path": "candidates/portrait_v2_74x100_candidate.png",
+      "sha256": "9703e4b5d1783d4d4d3b551b9dee48903e0d0fab297a19c973e3d3420bdffec6",
+      "reproduced_sha256": "9703e4b5d1783d4d4d3b551b9dee48903e0d0fab297a19c973e3d3420bdffec6",
+      "byte_identical": true
+    },
+    {
+      "path": "candidates/portrait_v2_maxcoverage_74x100_candidate.png",
+      "sha256": "41cc2ec1ce6fcf93ceabcfe3eae90ca281198044760cf30e129ed966ef055d36",
+      "reproduced_sha256": "41cc2ec1ce6fcf93ceabcfe3eae90ca281198044760cf30e129ed966ef055d36",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v1_1x_8x.png",
+      "sha256": "77bcce55196eddb2d2cf73f7906adecaba6a4800d28f8076f0f3bc3175bb5abd",
+      "reproduced_sha256": "77bcce55196eddb2d2cf73f7906adecaba6a4800d28f8076f0f3bc3175bb5abd",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v1_8x.png",
+      "sha256": "b657c170568a4dffe606a320ddfce79d4b969cc52a9fef86ed7306d833a81f29",
+      "reproduced_sha256": "b657c170568a4dffe606a320ddfce79d4b969cc52a9fef86ed7306d833a81f29",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v1_maxcoverage_1x_8x.png",
+      "sha256": "18c80a5c7ca817f165824e86f1b948e26195626f7364584c433904f84355e779",
+      "reproduced_sha256": "18c80a5c7ca817f165824e86f1b948e26195626f7364584c433904f84355e779",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v1_maxcoverage_8x.png",
+      "sha256": "ed6ea7a293bad29b948abb624541ce9d16a5dc5354f85473c2575e2a2f79e97c",
+      "reproduced_sha256": "ed6ea7a293bad29b948abb624541ce9d16a5dc5354f85473c2575e2a2f79e97c",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v2_1x_8x.png",
+      "sha256": "0015aed1891415ac5cea292197b62786ffde870dc27c41d739413e7ea97142d3",
+      "reproduced_sha256": "0015aed1891415ac5cea292197b62786ffde870dc27c41d739413e7ea97142d3",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v2_8x.png",
+      "sha256": "63fb2f5574c11d7a601f5325fbdd5c1f0d42868d2a2bedc5a221f44fadc0653d",
+      "reproduced_sha256": "63fb2f5574c11d7a601f5325fbdd5c1f0d42868d2a2bedc5a221f44fadc0653d",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v2_maxcoverage_1x_8x.png",
+      "sha256": "35a1e1eddbc83de0fbe01b319b92d6445945016477961e583f31b1d806b0a70f",
+      "reproduced_sha256": "35a1e1eddbc83de0fbe01b319b92d6445945016477961e583f31b1d806b0a70f",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v2_maxcoverage_8x.png",
+      "sha256": "b200b459765d8d39583597e4ada8b9c22c09e7fedb6baa3928b8163e5516a994",
+      "reproduced_sha256": "b200b459765d8d39583597e4ada8b9c22c09e7fedb6baa3928b8163e5516a994",
+      "byte_identical": true
+    },
+    {
+      "path": "raw/portrait_v1_raw_imagegen.png",
+      "sha256": "9285ace60bd166b691c5431e4ad0789ac1dde5f29f41a99c62a60cb8b29836cd",
+      "reproduced_sha256": "9285ace60bd166b691c5431e4ad0789ac1dde5f29f41a99c62a60cb8b29836cd",
+      "byte_identical": true
+    },
+    {
+      "path": "raw/portrait_v2_raw_imagegen.png",
+      "sha256": "b77ddbe6c9b63c962b4d30702b35446fa7dbcd70217a261a5568427eb331ba15",
+      "reproduced_sha256": "b77ddbe6c9b63c962b4d30702b35446fa7dbcd70217a261a5568427eb331ba15",
+      "byte_identical": true
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "held_source_clipping_and_style",
+  "generation_calls": 2,
+  "max_calls": 2,
+  "no_third_generation": true,
+  "actually_viewed": [
+    "raw/portrait_v1_raw_imagegen.png",
+    "raw/portrait_v2_raw_imagegen.png",
+    "previews/portrait_v1_1x.png",
+    "previews/portrait_v2_1x.png",
+    "previews/portrait_v1_8x.png",
+    "previews/portrait_v2_8x.png"
+  ],
+  "findings": [
+    "v2较v1眼口略收、脸略增，但颈/衣与发量仍偏多，眼白和发丝简化未充分达标。",
+    "艾蕾20岁成年人自主表情、卡蕾40多岁担忧及衣色保留。",
+    "v2源余量变差：艾蕾右1源px；卡蕾右侧实心触边。不能靠NN缩小加边修复原图截断。"
+  ],
+  "source_edge_audit": "qa/raw_edge_audit.json",
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "selected_portrait": null,
+  "final_decision": "无合格选稿。v2头巾外缘（非巾尾）在右边y606–687连续82个实体像素触边，v1风格未过；接受独立暂挂，不再生图。"
+}

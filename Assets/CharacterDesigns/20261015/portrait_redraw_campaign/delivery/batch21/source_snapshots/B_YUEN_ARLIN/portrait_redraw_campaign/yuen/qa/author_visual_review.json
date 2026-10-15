@@ -1,0 +1,41 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T11:33:07.315753+00:00",
+  "actor_id": "KOR-NPC-YUEN",
+  "selected_version": "portrait_v2_inset",
+  "selected_sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313",
+  "decision": "selected_candidate_with_limitations",
+  "actual_views": [
+    "identity mother and four core references",
+    "v1 and v2 raw",
+    "v1 and v2 8x",
+    "v1 and v2 1x three backgrounds",
+    "v2 inset 4x three backgrounds"
+  ],
+  "identity_check": "Current card, mother image and historical mother QA reconciled without hard conflict.",
+  "technical": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "improvements": [
+    "White hair and beard now use larger, less striped connected planes.",
+    "Plum-purple scarf is visibly distinct from brown outerwear at 1x after quantization.",
+    "Neck is shorter and eyes reduced/darkened while hesitant elder identity remains.",
+    "Technical whole-canvas inset preserves full crown, ears and garment margin."
+  ],
+  "limitations": [
+    "Forehead wrinkles and a few hair divisions remain more illustrative than ideal native pixel economy.",
+    "Raised inner brows and downturned mouth remain prominent, consistent with historical mother but less varied than an ideal expression library.",
+    "Tiny old pin is reduced to a few subdued pixels in the 74x100 derivative.",
+    "Small light sclera areas remain despite darker-eye revision."
+  ],
+  "method_boundary": "Only imagegen performs substantive drawing. Isotropic full-canvas NN scaling, binary alpha and <=32-color quantization are technical derivatives, not native final pixel art. No scripted facial edits.",
+  "imagegen_successful_calls": 2,
+  "validation_rejection_note": "One attempted revision payload with six reference paths was rejected before generation; retried using v1 plus four core style refs, exactly five. Full rejected payload retained.",
+  "further_generation": "Stopped after initial draft and one necessary revision; no third generation.",
+  "runtime_integrated": false,
+  "native_pixel_approved": false,
+  "independent_review_status": "Accepted with notes by /root/audit_campaign_twentyfirst_batch; selected SHA frozen."
+}

@@ -1,0 +1,189 @@
+{
+  "batch": "23",
+  "date": "2026-10-15",
+  "qualified_candidate_count": 3,
+  "held_count": 1,
+  "characters": [
+    {
+      "actor": "yur",
+      "name": "尤尔",
+      "source": "yur/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "5351b9dceaa6738ddbbaa175cf6a68a50c39ac20ead3e86500ec52f3ae8fccc6",
+      "delivery_file": "YUR_尤尔_74x100_candidate.png",
+      "delivery_sha256": "5351b9dceaa6738ddbbaa175cf6a68a50c39ac20ead3e86500ec52f3ae8fccc6",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "yur/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "小眼点仍偏亮；胡茬碎格与少量裸颈仍在",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "bevi",
+      "name": "蓓薇",
+      "source": "bevi/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "f5f8bf6a6adc4cdf6d7baff77fffe03895affd3980c9224f6445e487feaf378b",
+      "delivery_file": "BEVI_蓓薇_74x100_candidate.png",
+      "delivery_sha256": "f5f8bf6a6adc4cdf6d7baff77fffe03895affd3980c9224f6445e487feaf378b",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "bevi/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "发帽偏满、眼点略亮；脸量与短颈仍有限",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "ele",
+      "name": "艾蕾",
+      "source": "ele/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "f0814e54d8b13e363a89496df7eda9b8a9f27d14db1b3570b853f15999dba64c",
+      "delivery_file": "ELE_艾蕾_74x100_candidate.png",
+      "delivery_sha256": "f0814e54d8b13e363a89496df7eda9b8a9f27d14db1b3570b853f15999dba64c",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "ele/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "原图右侧仅 1px 实心外余量；眼点偏亮、颈略长",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "held": [
+    {
+      "slug": "kare",
+      "name": "卡蕾·棚",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "8aaf35bb30a258c30471204a1f7fc71e3bd6c7c086a63d708b39ebb6b1a8654a",
+      "production_SHA256SUMS_sha256": "cfa798d3eeab126ffbe36ff6d9cf3cd460a2408d9422c305d1ee61f2d48bafc2",
+      "decision": "held_source_clipping_and_style",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": false,
+      "residual": [
+        "v2原始1079×1458画布右侧x1078、y606–687连续82个alpha≥128实体像素，头巾真实源留边失败；灰底实看确认，不是仅NN贴边。",
+        "v2眼白与微启嘴亮牙仍显，颈领尚多。",
+        "v1虽无源实体触边，却保留明显亮眼白与长颈宽领，不能为交付数回退。"
+      ],
+      "held_evidence_portrait": "kare/candidates/portrait_v2_74x100_candidate.png",
+      "held_evidence_sha256": "c4e4e2a516d297ee4d4a2e665875a636dd7f8cc0ffb4e0fdf35dc103c843c1c5",
+      "historical_fallback_approved": false
+    }
+  ],
+  "board": {
+    "file": "batch26_三人头像总览_1x_4x.png",
+    "sha256": "0b27aac2cd25a678d1b331098529b674165763f8dfe0700b6d96d2b5689895ca",
+    "dimensions": [
+      680,
+      1898
+    ],
+    "portrait_checks": [
+      {
+        "actor": "yur",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "yur",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "bevi",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "bevi",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ele",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1258,
+          161,
+          1358
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ele",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1101,
+          624,
+          1501
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false,
+    "held_portrait_not_displayed": true
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded. All four generated production folders, including held kare evidence, are retained; held is not counted as success."
+}

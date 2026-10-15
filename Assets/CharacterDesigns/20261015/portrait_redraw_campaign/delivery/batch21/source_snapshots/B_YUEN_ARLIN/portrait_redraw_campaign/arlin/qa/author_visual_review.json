@@ -1,0 +1,41 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T11:33:07.475702+00:00",
+  "actor_id": "KOR-S01-NPC",
+  "selected_version": "portrait_v2_inset",
+  "selected_sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79",
+  "decision": "selected_candidate_with_limitations",
+  "actual_views": [
+    "identity mother and four core references",
+    "v1 and v2 raw",
+    "v1 and v2 8x",
+    "v1 and v2 1x three backgrounds",
+    "v2 inset 4x three backgrounds"
+  ],
+  "identity_check": "Current card, mother image and historical mother QA reconciled without hard conflict.",
+  "technical": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "improvements": [
+    "Much shorter bare neck, with collar and apron straps confined near the bottom.",
+    "Eyes are narrower with reduced bright sclera; broad round nose and thick cheeks remain.",
+    "Beard is now broad connected masses rather than repeated whisker texture.",
+    "Anatomical left eyebrow scar remains on viewer right.",
+    "Technical whole-canvas inset preserves hair and ear contour with margins."
+  ],
+  "limitations": [
+    "Some parallel broad hair subdivisions remain.",
+    "Muted light sclera and inner-brow worry remain more visible than ideal minimal-eye design.",
+    "Full export showed olive merging in hair/beard. Selected inset reduces this, though some dark-color merging remains; unquantized raw is retained."
+  ],
+  "method_boundary": "Only imagegen performs substantive drawing. Isotropic full-canvas NN scaling, binary alpha and <=32-color quantization are technical derivatives, not native final pixel art. No scripted facial edits.",
+  "imagegen_successful_calls": 2,
+  "validation_rejection_note": "One attempted revision payload with six reference paths was rejected before generation; retried using v1 plus four core style refs, exactly five. Full rejected payload retained.",
+  "further_generation": "Stopped after initial draft and one necessary revision; no third generation.",
+  "runtime_integrated": false,
+  "native_pixel_approved": false,
+  "independent_review_status": "Accepted with notes by /root/audit_campaign_twentyfirst_batch; selected SHA frozen."
+}

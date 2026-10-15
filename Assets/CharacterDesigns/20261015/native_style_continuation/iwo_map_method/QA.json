@@ -1,0 +1,142 @@
+{
+  "operation": {
+    "input": "raw/map_method_v1_raw_imagegen.png",
+    "output": "derived/map_method_v1_fixed_grid_35x44_experimental.png",
+    "full_canvas_recovery": true,
+    "crop": false,
+    "fit": false,
+    "grid": [
+      35,
+      44
+    ],
+    "color_quantization": "Pillow MEDIANCUT to 20 colors, no dither, whole RGB canvas",
+    "alpha_threshold_before_recovery": 128,
+    "representative_per_cell": "Most frequent quantized label (including transparency) in central half-width/half-height rectangle. Ties: lowest label. One output pixel per fixed cell.",
+    "transparent_rgb": "zero",
+    "manual_character_pixel_edits": false,
+    "generation": "Built-in imagegen, one initial experiment, no revisions",
+    "native_reference_usage": "Read-only grid/style/proportion reference; not edit target. Edit target was our own previous failed sprite."
+  },
+  "grid_gate_definition": {
+    "center_dominance_mean_min": 0.9,
+    "center_dominance_p10_min": 0.8,
+    "full_cell_dominance_mean_min": 0.8,
+    "scope": "Diagnostic coarse-grid rejection criterion, not proof of artistic quality. Quantization can hide color variance. Must also inspect raw, face clusters and 1x image."
+  },
+  "grid_results": {
+    "native_control": {
+      "raw_size": [
+        1120,
+        1408
+      ],
+      "fixed_grid": [
+        35,
+        44
+      ],
+      "source_cell_width": 32.0,
+      "source_cell_height": 32.0,
+      "active_center_cells": 474,
+      "center_dominance_mean": 1.0,
+      "center_dominance_p10": 1.0,
+      "full_cell_dominance_mean": 1.0,
+      "grid_consistency_gate": true
+    },
+    "previous_failed_raw_control": {
+      "raw_size": [
+        1118,
+        1407
+      ],
+      "fixed_grid": [
+        35,
+        44
+      ],
+      "source_cell_width": 31.942857142857143,
+      "source_cell_height": 31.977272727272727,
+      "active_center_cells": 558,
+      "center_dominance_mean": 0.6440716911764706,
+      "center_dominance_p10": 0.3203125,
+      "full_cell_dominance_mean": 0.524595396686033,
+      "grid_consistency_gate": false
+    },
+    "experiment_v1": {
+      "raw_size": [
+        1070,
+        1470
+      ],
+      "fixed_grid": [
+        35,
+        44
+      ],
+      "source_cell_width": 30.571428571428573,
+      "source_cell_height": 33.40909090909091,
+      "active_center_cells": 491,
+      "center_dominance_mean": 0.7067327475097702,
+      "center_dominance_p10": 0.3627450980392157,
+      "full_cell_dominance_mean": 0.580063610634571,
+      "grid_consistency_gate": false
+    }
+  },
+  "images": [
+    {
+      "path": "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/native_style_continuation/iwo_map_method/raw/map_method_v1_raw_imagegen.png",
+      "sha256": "0a34bfa77bd498ed45ce0c0068cb5f1e03a0e2ce12a1a51540c5001a53222492",
+      "size": [
+        1070,
+        1470
+      ],
+      "visible_bbox": [
+        33,
+        61,
+        1046,
+        1470
+      ],
+      "visible_size": [
+        1013,
+        1409
+      ],
+      "alpha_ge128_bbox": [
+        233,
+        195,
+        848,
+        1342
+      ],
+      "visible_rgb_colors": 21968,
+      "alpha_levels": 256,
+      "binary_alpha": false,
+      "transparent_nonzero_rgb": 146
+    },
+    {
+      "path": "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/native_style_continuation/iwo_map_method/derived/map_method_v1_fixed_grid_35x44_experimental.png",
+      "sha256": "c002ef54baee0c547cbfbbab1cbea0b2094c829499234b08abfb6abe5e025fdd",
+      "size": [
+        35,
+        44
+      ],
+      "visible_bbox": [
+        8,
+        6,
+        28,
+        40
+      ],
+      "visible_size": [
+        20,
+        34
+      ],
+      "alpha_ge128_bbox": [
+        8,
+        6,
+        28,
+        40
+      ],
+      "visible_rgb_colors": 15,
+      "alpha_levels": 2,
+      "binary_alpha": true,
+      "transparent_nonzero_rgb": 0
+    }
+  ],
+  "visual_grade": "fail; producer and independent visual QA agree",
+  "independent_visual_qa": "Auditor viewed raw and 1x/12x comparison. Eyes remain vertical dark columns joined to brow/hair; jaw and collar are congested. Fixed-cell mode is reproducible resampling, not recovered native design. No defensible targeted revision identified. Separate auditor measurement/report follows in audit directory.",
+  "producer_visual_review": "Face dark-column severity is reduced and visible size is 20x34, but raw does not maintain the requested 35x44 grid. Fixed-grid extraction changes pixel clusters; vertical eyes and lower-face/collar congestion remain. Not a native-qualified map sprite.",
+  "native_qualified": false,
+  "runtime_integrated": false
+}

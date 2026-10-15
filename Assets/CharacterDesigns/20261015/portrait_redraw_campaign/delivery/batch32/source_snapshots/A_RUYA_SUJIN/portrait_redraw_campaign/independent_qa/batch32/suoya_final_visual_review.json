@@ -1,0 +1,165 @@
+{
+  "slug": "suoya",
+  "reviewer": "independent_qa",
+  "checked_utc": "2026-10-15T13:18:13.551162+00:00",
+  "status": "candidate_with_limitations",
+  "delivery_eligible": true,
+  "selected_path": "suoya/candidates/portrait_v2_74x100_candidate.png",
+  "selected_sha256": "5e73bc68655674b727afb39acdfa107bab7ecf92dc3c03fe69c954b106444437",
+  "held_evidence_path": null,
+  "held_evidence_sha256": null,
+  "visual_assessment": "实际查看v2 raw、full/inset的三背景1x及8xNN；选择full保大脸。面部下半与鼻颧更有体块，颈与衣领明显收紧。棕发、三十多岁风雪纹、本人左眉断口（画面右侧眉外段）、棕猎衣暗橄榄领和闭嘴警惕身份成立；不将母图旧风格研究未通过改写为已通过。",
+  "limitations": [
+    "原始左右实体透明余量13/11px，仍较紧；74×100主体bbox(1,3,73,97)，不是源真裁断。",
+    "眼白仍可更收敛，头发体量偏大；full优先脸部占比，已有inset只作未选技术派生。",
+    "NN等比包含与32色量化为技术派生；未获用户审美终审，未集成或实机验证。"
+  ],
+  "raw_path": "suoya/raw/portrait_v2_raw_imagegen.png",
+  "raw_sha256": "873d7a4bd05d2c4a37ee3a3491d3bd764576f6c1025f29bd19b9ff76dd09a640",
+  "raw_dimensions": [
+    1079,
+    1458
+  ],
+  "raw_subject_bbox_alpha_ge128": [
+    13,
+    45,
+    1068,
+    1411
+  ],
+  "raw_real_margin_px": {
+    "left": 13,
+    "top": 45,
+    "right": 11,
+    "bottom": 47
+  },
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        39,
+        1079,
+        1458
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 8,
+        "left": 26,
+        "right": 34
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": [
+          218,
+          227
+        ],
+        "left": [
+          506,
+          1253
+        ],
+        "right": [
+          483,
+          622
+        ]
+      }
+    },
+    "5": {
+      "bbox": [
+        10,
+        44,
+        1070,
+        1411
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        12,
+        44,
+        1068,
+        1411
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        13,
+        45,
+        1068,
+        1411
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        22,
+        47,
+        1067,
+        1410
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "raw_true_silhouette_clipping": false,
+  "boundary_judgment": "实际原图轮廓完整，alpha>=5四边均无实体接触。alpha1孤立残余不是头发/耳的真裁断。边距紧记录限制，未通过padding或inset掩盖。",
+  "viewed": [
+    "identity mother",
+    "four core style references",
+    "portrait_v1 raw and NN",
+    "portrait_v2 raw",
+    "portrait_v2 1x three backgrounds",
+    "portrait_v2 8x exact NN",
+    "portrait_v2_inset 1x three backgrounds",
+    "portrait_v2_inset 8x exact NN"
+  ],
+  "feedback_rounds": 1,
+  "successful_image_generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

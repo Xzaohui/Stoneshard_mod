@@ -1,0 +1,14 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "successful_outputs": 2,
+  "successful_calls": [
+    "prompts/portrait_v1.json",
+    "prompts/portrait_v2.json"
+  ],
+  "preflight_validation_rejection": {
+    "args": "prompts/portrait_v2_preflight_rejected.json",
+    "response": "tool_returns/portrait_v2_preflight_rejected.json",
+    "generated_image": false
+  },
+  "stop": "at most one initial + one necessary revision; now locked without further generation"
+}

@@ -1,0 +1,28 @@
+{
+  "reviewed_utc": "2026-10-15T12:47:44.824131+00:00",
+  "reviewer": "author",
+  "method": "Actually viewed both generated raws, final 1x/8x derived images, original identity master and four core portraits; metrics are supplementary.",
+  "decision": "selected_candidate_with_limitations",
+  "selected": "candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "b6e1a7a2ccf76396953d4434fd9f412324b093c558e15b168660faec7c0bef38",
+  "identity_match": true,
+  "age_reading": "woman in her thirties, calm mature appraising expression",
+  "current_card_appearance_aligned": true,
+  "improvements_vs_v1": [
+    "Eyes reduced in size and brightness; black wing-like eyelid effect reduced.",
+    "Exposed neck and garment area reduced; nose/cheekbone connected planes strengthened.",
+    "Protective thick apron reduced to upper edge; plain nursing robe remains visible."
+  ],
+  "limitations": [
+    "Original raw left hair margin is only 5 pixels at alpha>=128 (below one target logical pixel), though visible silhouette is not actually cut; same-raw inset only adds target-grid containment margin, does not repair or prove generous source margin.",
+    "Cream scarf and hair still occupy a large share of the frame; eyes retain some tan brightness and the neck is shorter but not as compressed as the four core portraits."
+  ],
+  "source_cut_status": "No visible alpha>=5 silhouette pixels touch the source borders. Extremely low alpha edge artifacts are thresholded away.",
+  "technical_containment_note": "72x98 isotropic NN fit inside 74x100 from same v2 raw, no crop and no drawing edits, selected to avoid v2 x=0 sampling contact.",
+  "generation_calls": 2,
+  "maximum_calls": 2,
+  "further_imagegen_allowed": false,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_verified": false
+}

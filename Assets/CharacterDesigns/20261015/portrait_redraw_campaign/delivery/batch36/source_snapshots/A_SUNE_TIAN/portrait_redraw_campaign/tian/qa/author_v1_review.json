@@ -1,0 +1,34 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T13:46:37.653878+00:00",
+  "actor_id": "ASH-NPC-TIAN",
+  "version": "portrait_v1",
+  "sha256": "d90166b025c791299c01610ee0550ba4282a1fb9f8951d902244084f6043e98c",
+  "decision": "awaiting_independent_qa_before_single_revision",
+  "actual_views": [
+    "identity master",
+    "Mara v2",
+    "Iwo v1",
+    "Leiya v2 maxcoverage",
+    "Tore v1",
+    "v1 generated raw",
+    "v1 8x NEAREST",
+    "v1 1x dark/gray/light sheet"
+  ],
+  "identity": "No current-card/master contradiction. Adult age range and face/hair/collar identity retained; original narrative has no new completion or consent claims.",
+  "issues": [
+    "Eye whites are still too bright and tall against four-core standard.",
+    "Neck remains visibly longer than requested 3–5 target pixels.",
+    "Hair has too many parallel divisions, and face planes can be more decisive.",
+    "Right edge has only one target pixel of transparent breathing room; restore without truncating hair."
+  ],
+  "technical_checks": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "generation_calls": 1,
+  "max_calls": 2,
+  "method_boundary": "Only imagegen draws substantive content. Isotropic full-canvas NEAREST, binary alpha and <=32-color no-dither export are technical derivatives, not native pixel finals."
+}

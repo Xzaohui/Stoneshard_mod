@@ -1,0 +1,207 @@
+{
+  "raws": [
+    {
+      "version": "portrait_v1",
+      "dimensions": [
+        1079,
+        1458
+      ],
+      "sha256": "0ca0e912f2c98c4e918916958b51ecf097f7eaac5c66ff21ef02daa3165b92a3",
+      "thresholds": [
+        {
+          "alpha_gte": 1,
+          "bbox": [
+            0,
+            7,
+            1079,
+            1458
+          ],
+          "margins_ltrb": [
+            0,
+            7,
+            0,
+            0
+          ],
+          "edge_pixel_counts": {
+            "top": 0,
+            "bottom": 29,
+            "left": 132,
+            "right": 149
+          }
+        },
+        {
+          "alpha_gte": 6,
+          "bbox": [
+            7,
+            65,
+            1076,
+            1440
+          ],
+          "margins_ltrb": [
+            7,
+            65,
+            3,
+            18
+          ],
+          "edge_pixel_counts": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+          }
+        },
+        {
+          "alpha_gte": 128,
+          "bbox": [
+            9,
+            67,
+            1073,
+            1439
+          ],
+          "margins_ltrb": [
+            9,
+            67,
+            6,
+            19
+          ],
+          "edge_pixel_counts": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+          }
+        },
+        {
+          "alpha_gte": 254,
+          "bbox": [
+            10,
+            80,
+            1072,
+            1438
+          ],
+          "margins_ltrb": [
+            10,
+            80,
+            7,
+            20
+          ],
+          "edge_pixel_counts": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+          }
+        }
+      ]
+    },
+    {
+      "version": "portrait_v2",
+      "dimensions": [
+        1079,
+        1458
+      ],
+      "sha256": "7aaa61e52b0c8f181e85e606c0cacffbf503ffaae48d0b0c088e446fab705df4",
+      "thresholds": [
+        {
+          "alpha_gte": 1,
+          "bbox": [
+            0,
+            70,
+            1079,
+            1430
+          ],
+          "margins_ltrb": [
+            0,
+            70,
+            0,
+            28
+          ],
+          "edge_pixel_counts": {
+            "top": 0,
+            "bottom": 0,
+            "left": 54,
+            "right": 240
+          }
+        },
+        {
+          "alpha_gte": 6,
+          "bbox": [
+            9,
+            189,
+            1079,
+            1430
+          ],
+          "margins_ltrb": [
+            9,
+            189,
+            0,
+            28
+          ],
+          "edge_pixel_counts": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 67
+          }
+        },
+        {
+          "alpha_gte": 128,
+          "bbox": [
+            12,
+            191,
+            1079,
+            1427
+          ],
+          "margins_ltrb": [
+            12,
+            191,
+            0,
+            31
+          ],
+          "edge_pixel_counts": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 65
+          }
+        },
+        {
+          "alpha_gte": 254,
+          "bbox": [
+            17,
+            193,
+            1079,
+            1426
+          ],
+          "margins_ltrb": [
+            17,
+            193,
+            0,
+            32
+          ],
+          "edge_pixel_counts": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 2
+          }
+        }
+      ]
+    }
+  ],
+  "method": "Full raw canvas fit, no alpha-bbox cropping or geometry repair. Generated low-alpha edge traces are thresholded at 128; transparent border added by aspect-preserving contain does not reconstruct any absent source geometry.",
+  "visual": "Independent actual view and edge audit found v2 right hair mass is clipped at source edge: x=1078, y=989–1053 contains 65 contiguous opaque/near-opaque pixels. Candidate added transparent margins do not prove a complete source silhouette. v1 opaque silhouette is contained but long neck/worried brows remain. No further generation authorized within 2-call budget.",
+  "native_authored": false,
+  "source_edge_clipping": {
+    "portrait_v1": false,
+    "portrait_v2": true,
+    "v2_edge": "right",
+    "v2_x": 1078,
+    "v2_y_inclusive": [
+      989,
+      1053
+    ],
+    "v2_contiguous_pixels": 65,
+    "fixed_by_nn_containment": false
+  }
+}

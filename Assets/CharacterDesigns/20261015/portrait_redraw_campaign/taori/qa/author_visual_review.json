@@ -1,0 +1,25 @@
+{
+  "version": "portrait_v2",
+  "reviewed_raw": true,
+  "reviewed_1x_and_integer_8x": true,
+  "compared_four_cores": true,
+  "identity_current_card_match": true,
+  "author_decision": "select_v2_containment_after_independent_qa",
+  "improvements": [
+    "肤色改为灰玫瑰/淡象牙色而非健康偏橙；疲惫半垂眼与克制微启嘴成立。",
+    "脖颈和毯肩明显压缩，脸占比增大，发耳未被裁切。",
+    "大块头发比v1更安静，旧毯与灰紫粗布仍与其他人衣色区分。"
+  ],
+  "remaining_notes": [
+    "眼白比v1暗小，仍不是提示词要求的严格单像素；眉内端仍轻微上挑、鼻面稍柔，保留为候选风格备注。",
+    "紧脸头像不显示实际吊臂与手，领口带状结构不能作受伤侧或护理机制证据。"
+  ],
+  "limitations": [
+    "Imagegen raw is high-resolution generated artwork; 74x100 is explicitly a NEAREST + quantization derivative, not native pixel hand-authoring.",
+    "32-color ceiling is temporary. Native palette ramps and per-pixel production cleanup remain unapproved.",
+    "No runtime integration, user acceptance, or game verification claimed."
+  ],
+  "selected_technical_variant": "portrait_v2_containment",
+  "containment_review": "Actually viewed 1x/8x containment. Entire raw resized NEAREST 72x98, pasted (1,1) on transparent 74x100 before same alpha128/32-color derivation. Full face remains large and whole; right hair no longer touches frame. No imagegen retry, crop, geometry repaint, or manual pixel edit.",
+  "independent_decision": "candidate_with_notes"
+}

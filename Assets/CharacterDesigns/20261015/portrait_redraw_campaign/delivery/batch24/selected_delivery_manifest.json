@@ -1,0 +1,191 @@
+{
+  "batch": "24",
+  "date": "2026-10-15",
+  "qualified_candidate_count": 3,
+  "held_count": 1,
+  "characters": [
+    {
+      "actor": "liqui",
+      "name": "莉葵",
+      "source": "liqui/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "b2b799491040e3edf06720bd87cd96db4b9f1bad5f340ac7b989c9657cffae90",
+      "delivery_file": "LIQUI_莉葵_74x100_candidate.png",
+      "delivery_sha256": "b2b799491040e3edf06720bd87cd96db4b9f1bad5f340ac7b989c9657cffae90",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "liqui/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "浅眼白仍可见；发量偏满，发束仍有碎格",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "arlo",
+      "name": "阿洛",
+      "source": "arlo/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "534ab44e6cd93eb7d1d9b5ebe638d97e378f4f2c0a116027ebec76e02c853d84",
+      "delivery_file": "ARLO_阿洛_74x100_candidate.png",
+      "delivery_sha256": "534ab44e6cd93eb7d1d9b5ebe638d97e378f4f2c0a116027ebec76e02c853d84",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "arlo/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "亮眼白、额发与胡茬偏碎；眉略忧",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "ondo",
+      "name": "昂朵",
+      "source": "ondo/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "c05334edfd54a2938e2e04afb448d34c35e8f625d89611e504f54615e19a6a2a",
+      "delivery_file": "ONDO_昂朵_74x100_candidate.png",
+      "delivery_sha256": "c05334edfd54a2938e2e04afb448d34c35e8f625d89611e504f54615e19a6a2a",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "ondo/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "拧眉压嘴偏严肃；发须仍有零碎块",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "held": [
+    {
+      "slug": "hure",
+      "name": "呼蕾",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "be1a4666367c03aaf41d7f4f4d23fe2b9841c8e2a9046f69c9f5df099fd40bdf",
+      "production_SHA256SUMS_sha256": "a667b05cafa23683e378914c79065d9ee0c56059745d41988566aef4b1b572f2",
+      "decision": "held_composition_scale_and_eye_sclera",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": true,
+      "residual": [
+        "v2标准74×100 alpha bbox[3,16,74,85]，上下明显空白；头领仅69px高，脸占比未接近四核心。",
+        "右边源轮廓虽闭合，真余量仅7px，NN后触右边；不称已证实真实裁边。",
+        "两眼浅白块仍显著，面部也偏忧愁，未满足小暗眼要求。"
+      ],
+      "held_evidence_portrait": "hure/candidates/portrait_v2_74x100_candidate.png",
+      "held_evidence_sha256": "497f9a849278b3c88bb1ce5c2f9e337934d6c35cd22d5dae90817369bcb625b0",
+      "historical_fallback_approved": false,
+      "source_clipping_confirmed": false,
+      "hold_gate": "composition_scale_and_eye_sclera"
+    }
+  ],
+  "board": {
+    "file": "batch24_三人头像总览_1x_4x.png",
+    "sha256": "30842354cdd6ccab5de68852472d06d2f1ca09e293909eaf2e93de0cb703b2c0",
+    "dimensions": [
+      680,
+      1898
+    ],
+    "portrait_checks": [
+      {
+        "actor": "liqui",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "liqui",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "arlo",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "arlo",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ondo",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1258,
+          161,
+          1358
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ondo",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1101,
+          624,
+          1501
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false,
+    "held_portrait_not_displayed": true
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded. All four generated production folders, including held hure evidence, are retained; held is not counted as success."
+}

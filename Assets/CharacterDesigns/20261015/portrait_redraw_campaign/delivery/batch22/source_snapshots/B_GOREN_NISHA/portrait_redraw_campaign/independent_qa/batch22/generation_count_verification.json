@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-15T11:37:04.574085+00:00",
+  "goren_rejected_prompt": "goren/prompts/portrait_v2_rejected_six_references.json",
+  "goren_rejected_prompt_sha256": "42f4ff76c6527675330edf77336bc2fd96c33f40de2635680e44378c74d810b9",
+  "rejected_reference_count": 6,
+  "validation_return": {
+    "error": "`referenced_image_paths` must contain at most 5 paths",
+    "image_generated": false,
+    "validation_only": true
+  },
+  "validation_return_sha256": "5b3bb34e9a22a0fc3541baddad4460265e3b4883b75a625da399289eeb8f2745",
+  "no_image_payload": true,
+  "explanation": "六参照请求在工具参数预检被拒，无生成图；后续五参照同一v2成功。不作为第三份生图，但保留调用记录。",
+  "successful_images": [
+    {
+      "actor": "madi",
+      "successful_image_returns": 2,
+      "two_image_limit_pass": true
+    },
+    {
+      "actor": "boh",
+      "successful_image_returns": 2,
+      "two_image_limit_pass": true
+    },
+    {
+      "actor": "goren",
+      "successful_image_returns": 2,
+      "two_image_limit_pass": true
+    },
+    {
+      "actor": "nisha",
+      "successful_image_returns": 2,
+      "two_image_limit_pass": true
+    }
+  ],
+  "pass": true
+}

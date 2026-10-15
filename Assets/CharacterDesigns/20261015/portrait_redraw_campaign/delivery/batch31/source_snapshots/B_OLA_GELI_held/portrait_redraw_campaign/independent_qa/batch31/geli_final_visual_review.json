@@ -1,0 +1,26 @@
+{
+  "status": "held_source_braid_clipping_and_style_incomplete",
+  "delivery_eligible": false,
+  "selected_path": null,
+  "selected_sha256": null,
+  "held_evidence_path": "geli/candidates/portrait_v2_74x100_candidate.png",
+  "held_evidence_sha256": "72213ea23c3c5760e481f31c37c31585fd98750991e435e3fde9840ead786ae9",
+  "visual_assessment": "已实际查看v1/v2原raw和NN导出；v2发辫尾继续伸至画布底部后被切断，没有自然完整收尖。颈胸仍长、眼白仍偏亮，集中反馈未有效完成。v1源完整但未过本轮亮大眼白/长颈风格门槛，不因v2失败而回退称完成。",
+  "source_clipping": "v2画布1079x1458，alpha>=128 bbox(32,87,1077,1458)，底边36px接触x1012..1047；alpha>=5仍38px触底。可见轮廓与像素共同证明真实辫尾截断，不是NN贴边或有意肩胸断幅。",
+  "target_margin": "v2 full bbox(2,6,74,100)；v2 inset bbox(3,7,73,98)只把原截断尾巴缩入画布，不能修复。v1 raw右4px/底17px为真实余量，与v2真裁断分开记录。",
+  "limitations": [
+    "v1、v2及所有inset仅保留审查证据，均排除已选交付列表。",
+    "已用两份成功生图，禁止第三次；不以padding、脚本补发或回退未达标旧稿伪造通过。",
+    "未有合格的本批候选，不代表角色身份或旧母版不可用；未做原生逐像素或实机验收。"
+  ],
+  "batch": 31,
+  "slug": "geli",
+  "checked_utc": "2026-10-15T13:11:29.010743+00:00",
+  "feedback_rounds": 1,
+  "successful_generation_limit": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

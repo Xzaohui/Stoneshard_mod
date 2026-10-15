@@ -1,0 +1,41 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T12:06:38.745145+00:00",
+  "actor_id": "YOS-NPC-TIN",
+  "selected_version": "portrait_v2_inset",
+  "selected_sha256": "b7dbbb3ff16e4380311e33757d69c5ecfeaf7e8c7e5418688591cc9a8a379d40",
+  "decision": "selected_candidate_with_limitations",
+  "actual_views": [
+    "identity master",
+    "four core style portraits",
+    "raw imagegen v1 and v2",
+    "derived v1 and v2 inset 8x",
+    "derived v1 and v2 inset 1x dark/gray/light background sheets"
+  ],
+  "identity_check": "最新卡二十多岁成人徒弟兼移居染工；旧母图棕辫、方下颌、蓝旧罩衣可兼容。虎牙仅笑时有，闭嘴中性肖像不强露齿。",
+  "technical": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "improvements": [
+    "Neck and collar are shorter in v2 than v1; stronger contiguous nose and cheekbone planes.",
+    "Age contrast remains clear: mature 50-ish master and young adult dyer.",
+    "Whole-canvas inset produces all-side transparent export margin without cropping or changing facial geometry."
+  ],
+  "limitations": [
+    "Pale sclera remains too prominent versus four-core ideal; no claim that requested dark slit eyes were fully achieved.",
+    "Hair retains more parallel highlighted strips than the desired three to four broad masses.",
+    "Face ratio and neck still do not literally meet prompt target coordinates.",
+    "Source right margin is11 raw pixels; braid complete but close to edge before inset."
+  ],
+  "method_boundary": "Imagegen supplies all substantive drawing. Whole-canvas isotropic NEAREST fit, alpha threshold128 and MAXCOVERAGE <=32-color no-dither quantization are disclosed technical derivatives, not native hand-authored pixel art. Inset does not reconstruct clipped source contours.",
+  "imagegen_successful_outputs": 2,
+  "validation_rejected_attempts": 1,
+  "validation_rejection": "Six reference paths exceeded tool maximum5; no image returned; corrected same v2 request to five references. Exact attempted arguments and failure preserved.",
+  "further_generation": "stopped at agreed first draft plus one necessary successful revision",
+  "runtime_integrated": false,
+  "native_pixel_approved": false,
+  "independent_review_status": "Independent reviewer selected v2 inset for candidate freeze, with stated visual limitations."
+}

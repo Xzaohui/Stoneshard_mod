@@ -1,0 +1,153 @@
+{
+  "status": "pass",
+  "sources": [
+    {
+      "source": "AGENTS.md",
+      "copy": "sources/AGENTS.md",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "design/04_人物/城市人物/人物_BRY-NPC-MALER_麦勒.md",
+      "copy": "sources/character_card_1.md",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261013/expressive/maler/maler_raw_imagegen.png",
+      "copy": "sources/identity_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261013/expressive/maler/QA-independent.json",
+      "copy": "sources/identity_QA_independent.json",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261013/expressive/maler/manifest.json",
+      "copy": "sources/identity_manifest_1.json",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "design/06_支线/城市支线/台本_CS-BRY-01_一年之后.md",
+      "copy": "sources/story_constraints_1.md",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_pilot/mara/assets/portrait_v2_74x100.png",
+      "copy": "sources/mara_style_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_pilot/iwo/candidates/portrait_v1_74x100_candidate.png",
+      "copy": "sources/iwo_style_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_continuation/leiya/candidates/portrait_v2_maxcoverage_74x100_candidate.png",
+      "copy": "sources/leiya_style_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_continuation/tore/candidates/portrait_v1_74x100_candidate.png",
+      "copy": "sources/tore_style_reference.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_pilot/mara/previews/portrait_v2_8x.png",
+      "copy": "sources/mara_style_inspected_preview.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_pilot/iwo/review/portrait_v1_1x_8x.png",
+      "copy": "sources/iwo_style_inspected_preview.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_continuation/leiya/previews/portrait_v2_maxcoverage_8x.png",
+      "copy": "sources/leiya_style_inspected_preview.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    },
+    {
+      "source": "Assets/CharacterDesigns/20261015/native_style_continuation/tore/previews/portrait_v1_8x.png",
+      "copy": "sources/tore_style_inspected_preview.png",
+      "source_unchanged": true,
+      "copy_exact": true
+    }
+  ],
+  "raw_tool_byte_checks": [
+    {
+      "version": "portrait_v1",
+      "raw_sha256": "d367a37494a05a6d5238cbc5059727a0732f5845945dcdbce4577ca0cdfa3564",
+      "tool_data_sha256": "d367a37494a05a6d5238cbc5059727a0732f5845945dcdbce4577ca0cdfa3564",
+      "raw_equals_tool_bytes": true
+    }
+  ],
+  "commands": [
+    [
+      "python",
+      "derive_portrait.py"
+    ],
+    [
+      "python",
+      "export_maxcoverage.py",
+      "portrait_v1"
+    ]
+  ],
+  "reproduction": "Executed in an independently named temporary copy; all PNG raw/candidates/previews byte-identical. Preview title now comes from immutable roster slug, independent of directory name. No source images drawn or edited by script.",
+  "outputs": [
+    {
+      "path": "candidates/portrait_v1_74x100_candidate.png",
+      "sha256": "bc896bf58d757182ff0e9c2cc350c7747a232359c6334a8216b59c4a3ef7bfd7",
+      "reproduced_sha256": "bc896bf58d757182ff0e9c2cc350c7747a232359c6334a8216b59c4a3ef7bfd7",
+      "byte_identical": true
+    },
+    {
+      "path": "candidates/portrait_v1_maxcoverage_74x100_candidate.png",
+      "sha256": "cf121c74bdb20d919f966bd46cec266fbed040f8672c305bba4a12e914f52ac3",
+      "reproduced_sha256": "cf121c74bdb20d919f966bd46cec266fbed040f8672c305bba4a12e914f52ac3",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v1_1x_8x.png",
+      "sha256": "630c547b516ff42a490169b12478430407daa4c8b7a6454702a23a3532eee392",
+      "reproduced_sha256": "630c547b516ff42a490169b12478430407daa4c8b7a6454702a23a3532eee392",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v1_8x.png",
+      "sha256": "29b6e5f9bf124d7e129d1b6a8c190d0f649436ab792d92fcf25dd2c4903241b6",
+      "reproduced_sha256": "29b6e5f9bf124d7e129d1b6a8c190d0f649436ab792d92fcf25dd2c4903241b6",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v1_maxcoverage_1x_8x.png",
+      "sha256": "3a7aae3ba782dc71bd915e405773dce1ccb8e7523cc1bbb8bd697090f7805846",
+      "reproduced_sha256": "3a7aae3ba782dc71bd915e405773dce1ccb8e7523cc1bbb8bd697090f7805846",
+      "byte_identical": true
+    },
+    {
+      "path": "previews/portrait_v1_maxcoverage_8x.png",
+      "sha256": "43bdbedab1359fa19bf1efef6a602fd12298f316909333261d7acbbfff64d906",
+      "reproduced_sha256": "43bdbedab1359fa19bf1efef6a602fd12298f316909333261d7acbbfff64d906",
+      "byte_identical": true
+    },
+    {
+      "path": "raw/portrait_v1_raw_imagegen.png",
+      "sha256": "d367a37494a05a6d5238cbc5059727a0732f5845945dcdbce4577ca0cdfa3564",
+      "reproduced_sha256": "d367a37494a05a6d5238cbc5059727a0732f5845945dcdbce4577ca0cdfa3564",
+      "byte_identical": true
+    }
+  ]
+}

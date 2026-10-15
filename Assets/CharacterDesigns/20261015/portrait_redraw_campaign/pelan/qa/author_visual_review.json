@@ -1,0 +1,51 @@
+{
+  "reviewer": "portrait redraw author",
+  "reviewed_at_utc": "2026-10-15T09:25:36.368871+00:00",
+  "basis": "Actually viewed current card and story, old selected master, four core styles, both full raw outputs, both 1x and 8x nearest-neighbor outputs.",
+  "v1": {
+    "reviewed_at_utc": "2026-10-15T09:18:41.292779+00:00",
+    "reviewer": "portrait redraw author",
+    "viewed": [
+      "current character card",
+      "linked current story constraints",
+      "historical selected master",
+      "historical independent QA",
+      "four core accepted style anchors",
+      "v1 full raw",
+      "v1 1x and integer 8x target"
+    ],
+    "version": "portrait_v1",
+    "decision": "targeted_revision_proposed",
+    "details": {
+      "identity": "五十岁上下女性住客；成熟面部，棕发髻、闭嘴自持；灰褐衫与浅灰褐挺领按新卡，非旧苔绿。",
+      "expression": "直眉与不屈闭嘴可辨，但内眉拧紧略显忧愁。",
+      "framing": "脸部主导、短颈窄领；alpha bbox为[1,7,73,95]，发型两侧距边仅1px。",
+      "needs_revision": [
+        "两侧发型安全边过窄",
+        "头发和鬓发细条偏多",
+        "亮眼白",
+        "眉间拧紧略显忧愁"
+      ],
+      "proposed_target": "保留五十岁女性与发髻身份；两侧留3-4像素，不缩脸，收拢发髻/发容积，降低眼白并压平内眉，鬓发合为块面。"
+    },
+    "native_pixel_final_approved": false,
+    "runtime_verified": false
+  },
+  "v2": {
+    "decision": "candidate_pending_independent_selection",
+    "identity": "五十上下女性住客、棕发髻和灰褐挺领保留，成熟眼睑/鼻唇面可辨。",
+    "improvements": [
+      "内眉压平，嘴口趋于平闭，自持比v1明确",
+      "两侧发容积收紧与鬓发并块，完整耳/髻留内",
+      "近眼眼白较v1变暗，成年面部保持"
+    ],
+    "residuals": [
+      "少量发束仍为细长条，未完全归并为4-6块",
+      "眼白仍偏浅但未到v1强对比",
+      "口角仍略向下，气质严肃而非温和"
+    ],
+    "author_preference": "portrait_v2"
+  },
+  "native_pixel_final_approved": false,
+  "runtime_verified": false
+}

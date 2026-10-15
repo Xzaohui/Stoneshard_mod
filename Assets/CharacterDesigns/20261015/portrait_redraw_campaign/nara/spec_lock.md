@@ -1,0 +1,10 @@
+# 纳拉 / NPC-N-NARA / portrait identity lock
+
+Authority: design/04_人物/人物_纳拉.md (2026-10-13).
+
+Input image roles: Image 1 is Nara's old full-body identity reference; preserve the dark rust work shirt, short brown hair, short beard and guarded character, but replace chibi eyes and anatomy with an adult portrait. Image 2 is Iwo's approved coarse-pixel style reference only; do not copy his cap, stubble pattern or narrow face. Image 3 is Tore's approved blocky mature portrait reference only; do not copy his face or dark brown collar.
+Subject: Nara (NPC-N-NARA), a living male winch repairer around forty, worn and sturdy, with a right-leg old injury that remains outside this face crop. Broad stocky adult face, slightly broad flattened nose with strong nostril wings, squared cheek planes, broad lower jaw covered in short dark-brown beard and compact mustache. Brown eyes under thick low brows look slightly toward viewer-left as if checking an exit; tired horizontal eyes, firm closed mouth, contained pain and reluctance to return to the work camp. Mature face, not a threatening villain, heroic warrior, corpse or elderly man.
+Costume and hair invariants: thick short untidy brown hair constructed as four or five large jagged clumps, no flowing long hair or many parallel grooves. Short close beard in two or three broad connected masses, no strand texture. At bottom edge, a narrow sliver of faded dark-rust repairer's short jacket and a tiny leather tool-harness edge, simple and worn. Tools and belt need not be forced into this tight portrait crop.
+Story constraints: Nara is alive; his right-leg old injury persists off frame. Do not add amputation, prosthesis, resurrection, wound display, recovery celebration, return-to-work consent or public testimony outcome. No cap, armor, swords, new scar, medals, text or props.
+
+74x100 candidate; at most v1 and one targeted imagegen revision. Temporary 32-color ceiling and binary alpha apply to derived output only. Raw preserved. Nearest-neighbor palette quantization is a mechanical derivative, not native per-pixel authorship. No code, cards, old art, runtime integration or deployment changes.

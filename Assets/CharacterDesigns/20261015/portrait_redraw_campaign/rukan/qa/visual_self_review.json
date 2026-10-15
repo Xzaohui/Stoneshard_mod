@@ -1,0 +1,32 @@
+{
+  "status": "independent_visual_pass_candidate_with_disclosed_limitations",
+  "actual_view": [
+    "selected identity master",
+    "four approved portrait references",
+    "v1 and v2 raw",
+    "v1/v2 ordinary MEDIANCUT and MAXCOVERAGE previews",
+    "v2 aspect-fit containment MAXCOVERAGE and MEDIANCUT at 1x and 8x on three backgrounds"
+  ],
+  "selected": "candidates/portrait_v2_containment_mediancut_74x100_candidate.png",
+  "selected_sha256": "e25a3fb0d5ab70112eed7ec22df953896a52713c44351dcbc102c9af02576e0b",
+  "identity_and_expression": "四十多岁成年男性，风磨粗皮、方宽脸和短灰棕全须，沉着计数/观察感成立；短颈窄领已压缩，棕背心/粗布衫以最新卡为准。",
+  "limitations": [
+    "MEDIANCUT降低亮白眼块，但面部和灰须层次偏平，窄领衣色向暖肤色合并。",
+    "raw不透明阈值实体没有触最外左右列，但侧边距不足1目标逻辑像素；原轮廓完整性不能独立证明，不能据此断言raw已裁发梢。",
+    "containment按原比例fit进72×98，实际72×97，居中(1,1)置入74×100；只新增透明画布边，不补画或恢复内容。",
+    "发须仍有较细小色块；31色/尺寸/alpha合格不等于native pixel authorship或用户审美终审。"
+  ],
+  "technical": {
+    "dimensions": true,
+    "binary_alpha": true,
+    "visible_color_budget": true,
+    "all_four_canvas_borders_fully_transparent": true
+  },
+  "generation_calls": 2,
+  "further_generation_or_technical_variants": false,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "user_accepted": false
+}

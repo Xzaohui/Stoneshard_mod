@@ -1,0 +1,1445 @@
+{
+  "schema_version": 1,
+  "batch": 21,
+  "frozen_utc": "2026-10-15T11:34:42.611410+00:00",
+  "status": "four_derived_candidates_pass_with_notes",
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "production_asset_replacement": false,
+  "third_imagegen_permitted": false,
+  "read_only_production_inputs": true,
+  "write_scope": "independent_qa/batch21",
+  "actors": {
+    "tafei": {
+      "id": "KOR-NPC-TAFEI",
+      "name": "塔斐",
+      "status": "pass_derived_candidate_with_notes",
+      "selected_portrait": "tafei/candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a",
+      "selected_raw_sha256": "5caf435923c1c078dab7f6a2cd047679723acd1b9a63bfbed6a821339cc8e67f",
+      "author_manifest": "tafei/manifest.json",
+      "author_manifest_sha256": "534ba56a96a28aecdb4107cb7751810af9d6649b6a468bf1cbeaaf575ce86f01",
+      "successful_imagegen_payloads": 2,
+      "technical_candidate_exports": 3,
+      "nongenerating_tool_records": [
+        {
+          "path": "tool_returns/portrait_v2_rejected_params_error.json",
+          "sha256": "5cd2de156d138df1f748c9eaf931ce70fd3dd31f343425481fa49d09dcaf315b",
+          "record": {
+            "error": "referenced_image_paths must contain at most 5 paths",
+            "stage": "parameter validation before generation",
+            "image_generated": false,
+            "correction": "Remove the redundant identity-master input; previously inspected master remains evidence. Keep v1 edit target and all four style references."
+          },
+          "rejected_prompt": "prompts/portrait_v2_rejected_params.json",
+          "rejected_reference_count": 6,
+          "note": "Author-preserved parameter-validation rejection; no image payload. Successful image returns counted separately."
+        }
+      ],
+      "raw_selected_four_borders_clear_at_alpha128": true,
+      "identity_reconciliation": "现卡40多岁、低帽檐与早白鬓角优先旧裸头棕鬓母图；保留宽颊圆鼻、浅棕八字胡清下巴、褪蓝行脚衣与灰披边、担忧解释。无身份冲突。",
+      "limitations": [
+        "原raw右侧仅1源像素透明留边，余量极紧；full NN候选采样到右画框，所选72×98 containment仅是技术导出留边，不能声称修复源图裁切。",
+        "发须和帽褶仍有平行条带；小眼白残余偏亮，但明显好于v1。"
+      ],
+      "source_recheck": [
+        {
+          "path": "design/04_人物/城市人物/人物_KOR-NPC-TAFEI_塔斐.md",
+          "sha256": "9a2f8b3012519ad38d0ccb5ba9324265f0b3fcb78169c872a81ff25de59dcbc2",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/tafei/tafei_raw_imagegen.png",
+          "sha256": "0610819f2159c9a7d8f06b0b3d00aa0639d8ace404567fe8f319ba0d2faf441e",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/tafei/QA-independent.json",
+          "sha256": "8a3fa1a6f0a3a678be3b0668602732715ee57e6d03c15cb0b73001ac3d0508c8",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/tafei/manifest.json",
+          "sha256": "ac29740d9703ad0fb860491436e7fda5878bcb52753bb7c45d20cab46496bd09",
+          "unchanged_from_preflight": true
+        }
+      ],
+      "candidate_specification": {
+        "sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a",
+        "bytes": 5755,
+        "size": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 32,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "partial_alpha_pixels": 0,
+        "alpha_bbox": [
+          3,
+          9,
+          73,
+          94
+        ],
+        "visible_pixels": 4761,
+        "opaque_frame_edge_pixels": {
+          "left": [],
+          "right": [],
+          "top": [],
+          "bottom": []
+        },
+        "transparent_rgb_zero": true,
+        "path": "candidates/portrait_v2_inset_74x100_candidate.png",
+        "independently_matching_methods": [
+          {
+            "quantize": "MAXCOVERAGE",
+            "geometry": "72x98-containment"
+          }
+        ],
+        "pixel_reproduction_pass": true,
+        "technical_containment_padding": true,
+        "specification_pass": true,
+        "reproduced_sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a",
+        "png_byte_identical": true,
+        "preview_exists": true,
+        "preview_exact_8x_nearest_neighbor": true
+      }
+    },
+    "xielan": {
+      "id": "KOR-NPC-XIELAN",
+      "name": "榭兰",
+      "status": "pass_derived_candidate_with_notes",
+      "selected_portrait": "xielan/candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "81c343d0fce4935936d320bc9ca7d401c25806055fdf9a7134a35952d2a27143",
+      "selected_raw_sha256": "69d0330dd0117b48293665ae51553997020c5b4e60e22d354aca1374cf935a15",
+      "author_manifest": "xielan/manifest.json",
+      "author_manifest_sha256": "6db2678ccc36fc90c8f5d452b91d91fdbf46b46017babd8053f978f3b08ba3b8",
+      "successful_imagegen_payloads": 2,
+      "technical_candidate_exports": 2,
+      "nongenerating_tool_records": [
+        {
+          "path": "tool_returns/portrait_v2_rejected_params_error.json",
+          "sha256": "5cd2de156d138df1f748c9eaf931ce70fd3dd31f343425481fa49d09dcaf315b",
+          "record": {
+            "error": "referenced_image_paths must contain at most 5 paths",
+            "stage": "parameter validation before generation",
+            "image_generated": false,
+            "correction": "Remove the redundant identity-master input; previously inspected master remains evidence. Keep v1 edit target and all four style references."
+          },
+          "rejected_prompt": "prompts/portrait_v2_rejected_params.json",
+          "rejected_reference_count": 6,
+          "note": "Author-preserved parameter-validation rejection; no image payload. Successful image returns counted separately."
+        }
+      ],
+      "raw_selected_four_borders_clear_at_alpha128": true,
+      "identity_reconciliation": "约50岁男性购画人，长窄脸、直鼻、灰短胡、深蓝衣与窄朴素棕披边；现卡素签允许补。审慎侧目，不画贵族或怒相。无身份冲突。",
+      "limitations": [
+        "灰发和短胡仍保留一些重复条带、细碎像素；表情仍略严肃。",
+        "底部只1候选像素透明留边，构图余量偏紧。"
+      ],
+      "source_recheck": [
+        {
+          "path": "design/04_人物/城市人物/人物_KOR-NPC-XIELAN_榭兰.md",
+          "sha256": "8fd6adbbab44f55f1f38518261874626275402c08f58fd5b7cf7b22301d58769",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/xielan/xielan_raw_imagegen.png",
+          "sha256": "f3bdf275ecd443557c3f10459fedb8426ee9fab80e3c2e7148e846c62a5a9bd1",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/xielan/QA-independent.json",
+          "sha256": "38e4ff66a4b5a9fc8ed1a5e599f631f5daa047afc5300419be6340fcd3829c9c",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/xielan/manifest.json",
+          "sha256": "d3b6ad75b81eac48e828dea831b149a5a3f6dc528e84f64dfd0c15ffdf804d45",
+          "unchanged_from_preflight": true
+        }
+      ],
+      "candidate_specification": {
+        "sha256": "81c343d0fce4935936d320bc9ca7d401c25806055fdf9a7134a35952d2a27143",
+        "bytes": 5841,
+        "size": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 32,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "partial_alpha_pixels": 0,
+        "alpha_bbox": [
+          2,
+          4,
+          73,
+          99
+        ],
+        "visible_pixels": 5253,
+        "opaque_frame_edge_pixels": {
+          "left": [],
+          "right": [],
+          "top": [],
+          "bottom": []
+        },
+        "transparent_rgb_zero": true,
+        "path": "candidates/portrait_v2_74x100_candidate.png",
+        "independently_matching_methods": [
+          {
+            "quantize": "MAXCOVERAGE",
+            "geometry": "74x100-direct-nearest"
+          },
+          {
+            "quantize": "MAXCOVERAGE",
+            "geometry": "74x100-isotropic-fit"
+          }
+        ],
+        "pixel_reproduction_pass": true,
+        "technical_containment_padding": false,
+        "specification_pass": true,
+        "reproduced_sha256": "81c343d0fce4935936d320bc9ca7d401c25806055fdf9a7134a35952d2a27143",
+        "png_byte_identical": true,
+        "preview_exists": true,
+        "preview_exact_8x_nearest_neighbor": true
+      }
+    },
+    "yuen": {
+      "id": "KOR-NPC-YUEN",
+      "name": "尤恩",
+      "status": "pass_derived_candidate_with_notes",
+      "selected_portrait": "yuen/candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313",
+      "selected_raw_sha256": "06196a0bdb499dc30d6b29813a5695c4f69f9358834569e18cfb34fe462c5ba9",
+      "author_manifest": "yuen/manifest.json",
+      "author_manifest_sha256": "e7ed91bb1f05f6ac1567b84039a8f1d290da764463672bb58026cbecba912d93",
+      "successful_imagegen_payloads": 2,
+      "technical_candidate_exports": 3,
+      "nongenerating_tool_records": [
+        {
+          "path": "tool_returns/portrait_v2_validation_error.json",
+          "sha256": "e4e53b42d7cff15e564ba5f6435085ac4119e5da37adc04b743ab390d344694d",
+          "record": {
+            "status": "rejected_before_generation",
+            "error": "referenced_image_paths must contain at most 5 paths",
+            "arguments": {
+              "prompt": "Use case: identity-preserve, style-transfer.\nThis is the ONE targeted revision of a medieval game dialogue portrait. Image 1 is the v1 portrait to revise. Image 2 is the original full-body identity master, for identity only. Images 3–6 are the four approved low-resolution style references, for coarse pixel construction only.\nRequested changes: Keep the sixty-year-old receding all-white hair, short connected white moustache/beard, long drooping nose, narrow old cheeks, low eyelids and subtly raised inner brows of this hesitant elder. Change the white hair and beard into just a few broad, unified flat shapes with gray shadows: no repeated strips, streaks, whiskers, or isolated dot highlights. Make the eyes darker and smaller. Preserve PLUM PURPLE as a clearly distinct muted plum patch in the NARROW scarf/collar, noticeably different from the brown outerwear even at 32 colors; only modestly increase plum saturation, do not expand the clothing area. Keep the tiny old pin. Shorten the exposed neck so the chin is immediately above the narrow scarf. Expression remains thoughtful hurt and hesitation, not generic cheerful elder or hostile frown.\nKeep identity, age, hairline, nose/cheek shape, direction and facial attitude. Redraw substantively with stronger low-resolution economy, not merely upscale or recolor.\nComposition: one VERY LARGE head, near-front gentle three-quarter facing viewer left. Entire hair crown and all ear contours intact. Allow at least 3 logical transparent pixels on ALL sides of the RAW image, including below the collar. Logical 74x100 canvas: crown starts at y=3; forehead/face should occupy most of canvas; chin/beard around y=87–89; short neck and narrow garment edge end by y=96. Reduce extra hair bulk rather than shrinking the face. No shoulder silhouette or bust.\nDraw directly in chunky hard-edged small-grid pixel shapes with broad continuous skin planes, limited to 32 flat muted earthy colors. Prefer one deliberate large shadow shape to many separated micro-clusters. NO smooth gradients, blurry shading, antialiasing, dithering, fine texture, strand lines, dotted highlights or big white eye blocks. Transparent background only. No props, tools, hands, scenery, text, borders, watermark. One portrait.",
+              "transparent_background": true,
+              "referenced_image_paths": [
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/yuen/raw/portrait_v1_raw_imagegen.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/yuen/sources/identity_reference.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/yuen/sources/mara_style_reference.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/yuen/sources/leiya_style_reference.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/yuen/sources/iwo_style_reference.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/yuen/sources/tore_style_reference.png"
+              ]
+            }
+          }
+        }
+      ],
+      "raw_selected_four_borders_clear_at_alpha128": true,
+      "identity_reconciliation": "现卡约60岁全白发、旧式长褂、童年围巾与旧徽优先旧母图灰白发/无围巾；保退发际、长下垂鼻、白短胡及梅色衣棕外衣。难过停顿而非抢孩子的长辈。",
+      "limitations": [
+        "额眉皱纹线仍稍多，白发仍有少量连续条带；眼白保留小亮块。",
+        "原raw右侧余量15源像素，selected inset提供更稳候选留边，不是源图修复。"
+      ],
+      "source_recheck": [
+        {
+          "path": "design/04_人物/城市人物/人物_KOR-NPC-YUEN_尤恩.md",
+          "sha256": "d213503045e0d5ebe72ec67305990c1b218300362105ce90456e1f5e1947f312",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/yuen/yuen_raw_imagegen.png",
+          "sha256": "b2e8518c1ffbae8674b33b1ac917e48d074b6b1b3c0a35e22971f0f88f2e42e3",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/yuen/QA-independent.json",
+          "sha256": "c853c70c62a64c36f1386ed1b537f6f07eb653ae3eec39af6c4491f945b1c32f",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/yuen/manifest.json",
+          "sha256": "af0723d48c7e5f3d7faea81b7aef290c19db01342bb556ca7612e21f8333dc72",
+          "unchanged_from_preflight": true
+        }
+      ],
+      "candidate_specification": {
+        "sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313",
+        "bytes": 6364,
+        "size": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 32,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "partial_alpha_pixels": 0,
+        "alpha_bbox": [
+          3,
+          5,
+          72,
+          96
+        ],
+        "visible_pixels": 4797,
+        "opaque_frame_edge_pixels": {
+          "left": [],
+          "right": [],
+          "top": [],
+          "bottom": []
+        },
+        "transparent_rgb_zero": true,
+        "path": "candidates/portrait_v2_inset_74x100_candidate.png",
+        "independently_matching_methods": [
+          {
+            "quantize": "MAXCOVERAGE",
+            "geometry": "72x98-containment"
+          }
+        ],
+        "pixel_reproduction_pass": true,
+        "technical_containment_padding": true,
+        "specification_pass": true,
+        "reproduced_sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313",
+        "png_byte_identical": true,
+        "preview_exists": true,
+        "preview_exact_8x_nearest_neighbor": true
+      }
+    },
+    "arlin": {
+      "id": "KOR-S01-NPC",
+      "name": "阿霖",
+      "status": "pass_derived_candidate_with_notes",
+      "selected_portrait": "arlin/candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79",
+      "selected_raw_sha256": "700341f9f4f9070cc6e90d233f3842fa10b33e815982e9fb64077dc630f4d3bb",
+      "author_manifest": "arlin/manifest.json",
+      "author_manifest_sha256": "8f1e0f97f1bd5ea75ddd39ad43194955c9b702c4a0c694346086e692114b0351",
+      "successful_imagegen_payloads": 2,
+      "technical_candidate_exports": 3,
+      "nongenerating_tool_records": [
+        {
+          "path": "tool_returns/portrait_v2_validation_error.json",
+          "sha256": "e10fababcc21e7c4ecab714968d391f5007c242e917fe301aa93d6f7330671e2",
+          "record": {
+            "status": "rejected_before_generation",
+            "error": "referenced_image_paths must contain at most 5 paths",
+            "arguments": {
+              "prompt": "Use case: identity-preserve, style-transfer.\nThis is the ONE targeted revision of a medieval game dialogue portrait. Image 1 is the v1 portrait to revise. Image 2 is the original full-body identity master, for identity only. Images 3–6 are the four approved low-resolution style references, for coarse pixel construction only.\nRequested changes: Keep the broad round nose, thick cheeks, sturdy forties head, short very dark hair and rounded short dark beard. Keep the anatomically LEFT eyebrow scar visibly crossing the VIEWER-RIGHT brow. Scar must remain there at logical 1x; do not mirror it or turn it into a new wound. Keep uneasy concern and attentive listening. Critically remove the large bright white eye rectangles: each eye becomes a narrow dark squint, with at most a tiny muted tan horizontal sclera sliver. Simplify hair and beard into 3–4 broad joined flat masses, eliminate stripe texture and whisker speckling. MUCH SHORTER EXPOSED NECK: extend the large face/beard down to around logical y=88, with only 2–3 logical rows of skin visible beneath the beard, then an olive collar and tan apron-strap tips confined to the bottom 6–7 logical rows. No chest or wide bare neck.\nKeep identity, age, hairline, nose/cheek shape, direction and facial attitude. Redraw substantively with stronger low-resolution economy, not merely upscale or recolor.\nComposition: one VERY LARGE head, near-front gentle three-quarter facing viewer left. Entire hair crown and all ear contours intact. Allow at least 3 logical transparent pixels on ALL sides of the RAW image, including below the collar. Logical 74x100 canvas: crown starts at y=3; forehead/face should occupy most of canvas; chin/beard around y=87–89; short neck and narrow garment edge end by y=96. Reduce extra hair bulk rather than shrinking the face. No shoulder silhouette or bust.\nDraw directly in chunky hard-edged small-grid pixel shapes with broad continuous skin planes, limited to 32 flat muted earthy colors. Prefer one deliberate large shadow shape to many separated micro-clusters. NO smooth gradients, blurry shading, antialiasing, dithering, fine texture, strand lines, dotted highlights or big white eye blocks. Transparent background only. No props, tools, hands, scenery, text, borders, watermark. One portrait.",
+              "transparent_background": true,
+              "referenced_image_paths": [
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/arlin/raw/portrait_v1_raw_imagegen.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/arlin/sources/identity_reference.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/arlin/sources/mara_style_reference.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/arlin/sources/leiya_style_reference.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/arlin/sources/iwo_style_reference.png",
+                "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/arlin/sources/tore_style_reference.png"
+              ]
+            }
+          }
+        }
+      ],
+      "raw_selected_four_borders_clear_at_alpha128": true,
+      "identity_reconciliation": "现卡40多岁修门人，左眉旧疤优先旧无清晰眉疤母图；保宽鼻厚颊、深短发短圆黑胡、橄榄衣旧围裙。应记录角色解剖左眉对应画面侧，不混左右。尴尬关切不呈威吓。",
+      "limitations": [
+        "小眼白仍比四核心略亮；深发仍为条状大分组，少量暗色合并仍存在。",
+        "full版本把部分褐发胡须合成橄榄调，selected inset已明显减轻；32色压缩的细微色差损失保留为限制。"
+      ],
+      "source_recheck": [
+        {
+          "path": "design/04_人物/聚落人物/人物_KOR-S01-NPC_阿霖.md",
+          "sha256": "3ab2ee3c7f4e523eabc982363c93a038b4548109df9f04e2e23716be5f572230",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/arlin/arlin_raw_imagegen.png",
+          "sha256": "ac19c108870791ae40da5a6a2283f500591addc6fbb2aeebc6c52451d40ad139",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/arlin/QA-independent.json",
+          "sha256": "6bc8b094c4e5cfdd361713dcd6fa40114e040b8756e26691d7f8d6a798c9a263",
+          "unchanged_from_preflight": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/arlin/manifest.json",
+          "sha256": "6392bf833dfa7b5c5b7a7f5de16297282deba96991e7b4ff7438dcb52c0063c4",
+          "unchanged_from_preflight": true
+        }
+      ],
+      "candidate_specification": {
+        "sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79",
+        "bytes": 5149,
+        "size": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "visible_rgb_colors": 32,
+        "alpha_values": [
+          0,
+          255
+        ],
+        "partial_alpha_pixels": 0,
+        "alpha_bbox": [
+          3,
+          6,
+          72,
+          96
+        ],
+        "visible_pixels": 5142,
+        "opaque_frame_edge_pixels": {
+          "left": [],
+          "right": [],
+          "top": [],
+          "bottom": []
+        },
+        "transparent_rgb_zero": true,
+        "path": "candidates/portrait_v2_inset_74x100_candidate.png",
+        "independently_matching_methods": [
+          {
+            "quantize": "MAXCOVERAGE",
+            "geometry": "72x98-containment"
+          }
+        ],
+        "pixel_reproduction_pass": true,
+        "technical_containment_padding": true,
+        "specification_pass": true,
+        "reproduced_sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79",
+        "png_byte_identical": true,
+        "preview_exists": true,
+        "preview_exact_8x_nearest_neighbor": true
+      }
+    }
+  },
+  "evidence": {
+    "technical_audit": "final_technical_audit.json",
+    "script_byte_replay": "final_derivation_replay.json",
+    "source_preflight": "preflight_source_checks.json",
+    "concentrated_feedback": "v1_visual_feedback.json",
+    "visual_reviews": "final_visual_reviews.json",
+    "tafei_source_edge_detail": "tafei_v2_right_source_edge_4x.png"
+  },
+  "delivery_inventory": [
+    {
+      "path": "tafei/README.md",
+      "bytes": 1453,
+      "sha256": "1f1353cd3de340a32f3a36ed6a9f41a08e1a9bd53b1a33fafcb0e56cd190c7fb"
+    },
+    {
+      "path": "tafei/SHA256SUMS",
+      "bytes": 4924,
+      "sha256": "a011ce66c5aa29aed8ec6ca9b2accb90e5cad052bb0b02187510f0d181cd6e5d"
+    },
+    {
+      "path": "tafei/candidates/portrait_v1_74x100_candidate.png",
+      "bytes": 6419,
+      "sha256": "3e07ba64cf3537a3b6028e69841c39224c338d3e01f72aba6fe7948b6b3431f1"
+    },
+    {
+      "path": "tafei/candidates/portrait_v2_74x100_candidate.png",
+      "bytes": 5655,
+      "sha256": "9d06886f64ac975bc0a78bc99806fee0f78506d9d200e93c1f5254dfb6fe965c"
+    },
+    {
+      "path": "tafei/candidates/portrait_v2_inset_74x100_candidate.png",
+      "bytes": 5755,
+      "sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a"
+    },
+    {
+      "path": "tafei/derive_portrait.py",
+      "bytes": 3731,
+      "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4"
+    },
+    {
+      "path": "tafei/finalize_manifest.py",
+      "bytes": 2060,
+      "sha256": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3"
+    },
+    {
+      "path": "tafei/manifest.json",
+      "bytes": 27988,
+      "sha256": "534ba56a96a28aecdb4107cb7751810af9d6649b6a468bf1cbeaaf575ce86f01"
+    },
+    {
+      "path": "tafei/previews/portrait_v1_1x.png",
+      "bytes": 6419,
+      "sha256": "3e07ba64cf3537a3b6028e69841c39224c338d3e01f72aba6fe7948b6b3431f1"
+    },
+    {
+      "path": "tafei/previews/portrait_v1_1x_backgrounds.png",
+      "bytes": 8274,
+      "sha256": "f689f9ea6ff9332ea822d6a23013a476960a0c51b67abf00b1a8a115278f3055"
+    },
+    {
+      "path": "tafei/previews/portrait_v1_4x_backgrounds.png",
+      "bytes": 14678,
+      "sha256": "0ec8d131855ac2d641351f0e791ba5bed2b7272d8f2ff1886c2ecee751d42119"
+    },
+    {
+      "path": "tafei/previews/portrait_v1_8x.png",
+      "bytes": 13965,
+      "sha256": "7715ef04e79ad6a11ef05a18644202fc8bf5083f8072601f583c7e5d3fbe71ef"
+    },
+    {
+      "path": "tafei/previews/portrait_v2_1x.png",
+      "bytes": 5655,
+      "sha256": "9d06886f64ac975bc0a78bc99806fee0f78506d9d200e93c1f5254dfb6fe965c"
+    },
+    {
+      "path": "tafei/previews/portrait_v2_1x_backgrounds.png",
+      "bytes": 7394,
+      "sha256": "1c8013818cb9d1428fee80cfb1068cee49fbcfb9dd7d3d5f9b014fa5bdd38ea0"
+    },
+    {
+      "path": "tafei/previews/portrait_v2_4x_backgrounds.png",
+      "bytes": 13386,
+      "sha256": "e7e1bef18e2f8192b1a55497bf12cc8d79af8313994921f76e59dfc98c83aac7"
+    },
+    {
+      "path": "tafei/previews/portrait_v2_8x.png",
+      "bytes": 12742,
+      "sha256": "96a6c872819ac0da20a7ac24a18ff1198d1584138c31a7ea3f17aa92fb669c45"
+    },
+    {
+      "path": "tafei/previews/portrait_v2_inset_1x.png",
+      "bytes": 5755,
+      "sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a"
+    },
+    {
+      "path": "tafei/previews/portrait_v2_inset_1x_backgrounds.png",
+      "bytes": 7378,
+      "sha256": "c4645a811cc4cafdf40a80dc9a3884f028c98a9a358a0dd6ad2609c7c64c3e54"
+    },
+    {
+      "path": "tafei/previews/portrait_v2_inset_4x_backgrounds.png",
+      "bytes": 13355,
+      "sha256": "6faf559f602ef95320fc84e6a8ead1c8afa41fdf6fcf81dce991ba9c45c38235"
+    },
+    {
+      "path": "tafei/previews/portrait_v2_inset_8x.png",
+      "bytes": 12731,
+      "sha256": "b15f0ec9dabe888f4528c0662c9545adf645d23b065f5da8b5d4c806c4da5cf2"
+    },
+    {
+      "path": "tafei/prompts/portrait_v1.json",
+      "bytes": 3706,
+      "sha256": "6a719202cda8690680a17fa20d8fa8e3f298a1c912827d93f187a1015f248b47"
+    },
+    {
+      "path": "tafei/prompts/portrait_v1.txt",
+      "bytes": 2860,
+      "sha256": "735cab809956ae2401bd7498227edd617d6be87d3e19af606d171e917657f429"
+    },
+    {
+      "path": "tafei/prompts/portrait_v2.json",
+      "bytes": 3307,
+      "sha256": "3c88cc123cb69d2b23bad1395622a0994b7954764fb07789688a3600dfe3dd90"
+    },
+    {
+      "path": "tafei/prompts/portrait_v2.txt",
+      "bytes": 2461,
+      "sha256": "9cb565147d9f9cf4ac07b7191d256e5cdbfd9a24ef5d7486065fc8fe8928cd01"
+    },
+    {
+      "path": "tafei/prompts/portrait_v2_rejected_params.json",
+      "bytes": 3416,
+      "sha256": "56e21cfe3ac5734ebb97ca073f69981507c49b243c21249a0b10f34582ee79ff"
+    },
+    {
+      "path": "tafei/qa/author_v1_review.json",
+      "bytes": 1801,
+      "sha256": "c11c66f01e32de2f7c832704d4851c99838459db7f80ca023db78ecc6003effa"
+    },
+    {
+      "path": "tafei/qa/author_visual_review.json",
+      "bytes": 1775,
+      "sha256": "62ef21988e758f1ce1c9aa69da5d0f372ecd4e00b04725e2e9149320ac0f6623"
+    },
+    {
+      "path": "tafei/qa/independent_review_acceptance.json",
+      "bytes": 1090,
+      "sha256": "00d13d1b46958f4ba39dc1f17a94c424753b511b66f9ec9e82e9a4c0551ff3e5"
+    },
+    {
+      "path": "tafei/qa/independent_v1_feedback.json",
+      "bytes": 619,
+      "sha256": "593d8cab9b66b3ae57477baaf1b81595c2f9c15886a140035eab966868ce8e9f"
+    },
+    {
+      "path": "tafei/qa/portrait_v1_metrics.json",
+      "bytes": 4909,
+      "sha256": "11711299712ca9a069fa3cecb296ce9b6639cbf8af994a429d9ce072c2badbb4"
+    },
+    {
+      "path": "tafei/qa/portrait_v2_inset_metrics.json",
+      "bytes": 4918,
+      "sha256": "3ad643aeeee4bf857504fc868cff578c7c3d2b05ce6a5477d00bfce0aad96311"
+    },
+    {
+      "path": "tafei/qa/portrait_v2_metrics.json",
+      "bytes": 4907,
+      "sha256": "8d3e977a17d4982020334f1f3f5afea58bbc2143c67e55318734e378af97437a"
+    },
+    {
+      "path": "tafei/qa/source_hash_recheck.json",
+      "bytes": 4553,
+      "sha256": "b1d32bb1eb5f65a67ea7a13d10245d39899aba983a371587dab7b61da9b102a4"
+    },
+    {
+      "path": "tafei/raw/portrait_v1_raw_imagegen.png",
+      "bytes": 1261332,
+      "sha256": "21def25736d8bba46c2e6bc6d163361c91ab444d8ae9e62f5b9640e164074041"
+    },
+    {
+      "path": "tafei/raw/portrait_v2_raw_imagegen.png",
+      "bytes": 1207806,
+      "sha256": "5caf435923c1c078dab7f6a2cd047679723acd1b9a63bfbed6a821339cc8e67f"
+    },
+    {
+      "path": "tafei/sources/AGENTS.md",
+      "bytes": 12714,
+      "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4"
+    },
+    {
+      "path": "tafei/sources/character_card.md",
+      "bytes": 2058,
+      "sha256": "9a2f8b3012519ad38d0ccb5ba9324265f0b3fcb78169c872a81ff25de59dcbc2"
+    },
+    {
+      "path": "tafei/sources/identity_reference.png",
+      "bytes": 787578,
+      "sha256": "0610819f2159c9a7d8f06b0b3d00aa0639d8ace404567fe8f319ba0d2faf441e"
+    },
+    {
+      "path": "tafei/sources/iwo_style_reference.png",
+      "bytes": 8032,
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb"
+    },
+    {
+      "path": "tafei/sources/leiya_style_reference.png",
+      "bytes": 4895,
+      "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f"
+    },
+    {
+      "path": "tafei/sources/mara_style_reference.png",
+      "bytes": 9411,
+      "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd"
+    },
+    {
+      "path": "tafei/sources/master_QA.json",
+      "bytes": 1211,
+      "sha256": "8a3fa1a6f0a3a678be3b0668602732715ee57e6d03c15cb0b73001ac3d0508c8"
+    },
+    {
+      "path": "tafei/sources/master_manifest.json",
+      "bytes": 1921,
+      "sha256": "ac29740d9703ad0fb860491436e7fda5878bcb52753bb7c45d20cab46496bd09"
+    },
+    {
+      "path": "tafei/sources/roster_entry.json",
+      "bytes": 4261,
+      "sha256": "a0d1047722d0561e0287a38ffa48331f37a32d29556588a84f0b3541ddd6cb31"
+    },
+    {
+      "path": "tafei/sources/source_manifest.json",
+      "bytes": 3981,
+      "sha256": "0e85d36af564ab50fd41f8664c39ba66123e9f8e48c00cc3b78cc61791086309"
+    },
+    {
+      "path": "tafei/sources/story_1.md",
+      "bytes": 23485,
+      "sha256": "2d9602fe16015e53ad7d0eb7ede5ff00adf3ca2454b278a951067d0f9dd870fb"
+    },
+    {
+      "path": "tafei/sources/story_2.md",
+      "bytes": 7391,
+      "sha256": "8442ef039b6188860053653f12c89278e80eba64a9f455de47744e6e2d2f4d9e"
+    },
+    {
+      "path": "tafei/sources/tore_style_reference.png",
+      "bytes": 8438,
+      "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1"
+    },
+    {
+      "path": "tafei/spec_lock.md",
+      "bytes": 904,
+      "sha256": "e7e1e2e6ae866cda3b413fc8106a9ebda91b45f73c060686e49b7608ea6d0549"
+    },
+    {
+      "path": "tafei/tool_returns/portrait_v1.json",
+      "bytes": 1682315,
+      "sha256": "eafe7482c9500fa987d59cc4e1c2508267e4be84e66eff8723ba566db470a85f"
+    },
+    {
+      "path": "tafei/tool_returns/portrait_v2.json",
+      "bytes": 1610947,
+      "sha256": "2fafc9dcd6cb2a2e3002135ac9899ce701dc8374ba51fde0981db9a4c2e03dc7"
+    },
+    {
+      "path": "tafei/tool_returns/portrait_v2_rejected_params_error.json",
+      "bytes": 310,
+      "sha256": "5cd2de156d138df1f748c9eaf931ce70fd3dd31f343425481fa49d09dcaf315b"
+    },
+    {
+      "path": "xielan/README.md",
+      "bytes": 1208,
+      "sha256": "cd295775d26bb993ab8fefe16bd406d60388c7c8fae224d8996189193cd2d8e6"
+    },
+    {
+      "path": "xielan/SHA256SUMS",
+      "bytes": 4284,
+      "sha256": "aabc11fb4bf1a51dc768239fa73a8a766d47f2d947ff0fae723a74d9e313aee2"
+    },
+    {
+      "path": "xielan/candidates/portrait_v1_74x100_candidate.png",
+      "bytes": 5841,
+      "sha256": "9a50e6b14a95e837f58186ecf885a78b95c3daab74de5302d1eaca710f42dc1b"
+    },
+    {
+      "path": "xielan/candidates/portrait_v2_74x100_candidate.png",
+      "bytes": 5841,
+      "sha256": "81c343d0fce4935936d320bc9ca7d401c25806055fdf9a7134a35952d2a27143"
+    },
+    {
+      "path": "xielan/derive_portrait.py",
+      "bytes": 3731,
+      "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4"
+    },
+    {
+      "path": "xielan/finalize_manifest.py",
+      "bytes": 2060,
+      "sha256": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3"
+    },
+    {
+      "path": "xielan/manifest.json",
+      "bytes": 20734,
+      "sha256": "6db2678ccc36fc90c8f5d452b91d91fdbf46b46017babd8053f978f3b08ba3b8"
+    },
+    {
+      "path": "xielan/previews/portrait_v1_1x.png",
+      "bytes": 5841,
+      "sha256": "9a50e6b14a95e837f58186ecf885a78b95c3daab74de5302d1eaca710f42dc1b"
+    },
+    {
+      "path": "xielan/previews/portrait_v1_1x_backgrounds.png",
+      "bytes": 7532,
+      "sha256": "3738daf9ffb5d544178cb17d8e7bf1d6aef03376dc41aac5c27e8dc07363f689"
+    },
+    {
+      "path": "xielan/previews/portrait_v1_4x_backgrounds.png",
+      "bytes": 13695,
+      "sha256": "84605333ed79c41f424d4763d333f8744379cae0c1bd666ca163ad168f16595c"
+    },
+    {
+      "path": "xielan/previews/portrait_v1_8x.png",
+      "bytes": 13320,
+      "sha256": "d1629b681b97e740062fa4daeca255550ef8fbe9e680f2889087bd4a8169bd07"
+    },
+    {
+      "path": "xielan/previews/portrait_v2_1x.png",
+      "bytes": 5841,
+      "sha256": "81c343d0fce4935936d320bc9ca7d401c25806055fdf9a7134a35952d2a27143"
+    },
+    {
+      "path": "xielan/previews/portrait_v2_1x_backgrounds.png",
+      "bytes": 7692,
+      "sha256": "081f6ccd55d1acdc68e1ff081faf3d4ef0fd4d36a1c6f7f17d1d2f903d5a11d9"
+    },
+    {
+      "path": "xielan/previews/portrait_v2_4x_backgrounds.png",
+      "bytes": 13995,
+      "sha256": "5b64ba3aa9213ff9bdb5a9c6f10cf51962f6ea9528d8a3afd60d98c8356e07f5"
+    },
+    {
+      "path": "xielan/previews/portrait_v2_8x.png",
+      "bytes": 13272,
+      "sha256": "1a414631ff0863aea1e24bb275d72bd4987e661337b6a9271bb760b23d91006f"
+    },
+    {
+      "path": "xielan/prompts/portrait_v1.json",
+      "bytes": 3681,
+      "sha256": "3642964f56617a5fdc8c1ac5bfaa32493b153212f562d8ef4e281baaba3ffd3d"
+    },
+    {
+      "path": "xielan/prompts/portrait_v1.txt",
+      "bytes": 2830,
+      "sha256": "d759cf42633cf35ce59c928c8cd34ca595251507193a5149a0e7e5df5de419c7"
+    },
+    {
+      "path": "xielan/prompts/portrait_v2.json",
+      "bytes": 3275,
+      "sha256": "c8d8f82b7ba7537f44042e98fdf1c219bf034d8305db4fb2639bc0074796dfad"
+    },
+    {
+      "path": "xielan/prompts/portrait_v2.txt",
+      "bytes": 2424,
+      "sha256": "767b96a4ab383f3dca90308ffb6f0088205bec2fbf8edecbe6be658536574f50"
+    },
+    {
+      "path": "xielan/prompts/portrait_v2_rejected_params.json",
+      "bytes": 3385,
+      "sha256": "339a29594f74233c86cd69ac47173c413842e837c29f1d756f251a19dc796016"
+    },
+    {
+      "path": "xielan/qa/author_v1_review.json",
+      "bytes": 1778,
+      "sha256": "cdcd8b1a34054da48c5997f2f1fecddae19b8b1d71b02689dcddda35fe775dbb"
+    },
+    {
+      "path": "xielan/qa/author_visual_review.json",
+      "bytes": 1508,
+      "sha256": "750d9dcc2150fcef5548645bffefeb2be023ad125821a9f0592f472703c5960b"
+    },
+    {
+      "path": "xielan/qa/independent_review_acceptance.json",
+      "bytes": 823,
+      "sha256": "9053e7b8dd94be97362ea615ec15db3a21c6157b540a3d821408588e8b227dde"
+    },
+    {
+      "path": "xielan/qa/independent_v1_feedback.json",
+      "bytes": 509,
+      "sha256": "443fc21a0fa3a8fd236d69420c838992b5300c346a68f849777028b1a22ca727"
+    },
+    {
+      "path": "xielan/qa/portrait_v1_metrics.json",
+      "bytes": 4917,
+      "sha256": "150309b41fd58305fb04223fa7ed200a0d14d6a0728d10251f755a56e07f41f6"
+    },
+    {
+      "path": "xielan/qa/portrait_v2_metrics.json",
+      "bytes": 4912,
+      "sha256": "16cc94654400f456aa7db5bb46a8cee0cb2a2e235e83c9a54e9806640b5a27b2"
+    },
+    {
+      "path": "xielan/qa/source_hash_recheck.json",
+      "bytes": 4564,
+      "sha256": "bc7644453d8b55401f74ee2b9bf02dc2f60105dcd7406ebfe9e0adba3c3ae045"
+    },
+    {
+      "path": "xielan/raw/portrait_v1_raw_imagegen.png",
+      "bytes": 1263752,
+      "sha256": "f95513624f3218dae8dfda56d60e93c675fdbdd0222fdc9fcede94bcecb567a8"
+    },
+    {
+      "path": "xielan/raw/portrait_v2_raw_imagegen.png",
+      "bytes": 1226625,
+      "sha256": "69d0330dd0117b48293665ae51553997020c5b4e60e22d354aca1374cf935a15"
+    },
+    {
+      "path": "xielan/sources/AGENTS.md",
+      "bytes": 12714,
+      "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4"
+    },
+    {
+      "path": "xielan/sources/character_card.md",
+      "bytes": 1993,
+      "sha256": "8fd6adbbab44f55f1f38518261874626275402c08f58fd5b7cf7b22301d58769"
+    },
+    {
+      "path": "xielan/sources/identity_reference.png",
+      "bytes": 732248,
+      "sha256": "f3bdf275ecd443557c3f10459fedb8426ee9fab80e3c2e7148e846c62a5a9bd1"
+    },
+    {
+      "path": "xielan/sources/iwo_style_reference.png",
+      "bytes": 8032,
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb"
+    },
+    {
+      "path": "xielan/sources/leiya_style_reference.png",
+      "bytes": 4895,
+      "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f"
+    },
+    {
+      "path": "xielan/sources/mara_style_reference.png",
+      "bytes": 9411,
+      "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd"
+    },
+    {
+      "path": "xielan/sources/master_QA.json",
+      "bytes": 1156,
+      "sha256": "38e4ff66a4b5a9fc8ed1a5e599f631f5daa047afc5300419be6340fcd3829c9c"
+    },
+    {
+      "path": "xielan/sources/master_manifest.json",
+      "bytes": 1919,
+      "sha256": "d3b6ad75b81eac48e828dea831b149a5a3f6dc528e84f64dfd0c15ffdf804d45"
+    },
+    {
+      "path": "xielan/sources/roster_entry.json",
+      "bytes": 4200,
+      "sha256": "feaddff2ce6898742e6495af893c2609c780146a22d7620a9951bd9200e752f1"
+    },
+    {
+      "path": "xielan/sources/source_manifest.json",
+      "bytes": 3873,
+      "sha256": "19381ed6fd443da63f7253c34c05c4f346693f4ad953bb8d214a4bb7fc00f143"
+    },
+    {
+      "path": "xielan/sources/story_1.md",
+      "bytes": 16622,
+      "sha256": "e3266647c74491dc03ccdc66675b21489e030971bde8a929d672e67c43f30bc0"
+    },
+    {
+      "path": "xielan/sources/story_2.md",
+      "bytes": 7391,
+      "sha256": "8442ef039b6188860053653f12c89278e80eba64a9f455de47744e6e2d2f4d9e"
+    },
+    {
+      "path": "xielan/sources/tore_style_reference.png",
+      "bytes": 8438,
+      "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1"
+    },
+    {
+      "path": "xielan/spec_lock.md",
+      "bytes": 791,
+      "sha256": "74a36e597d5df578881d647945818794c1fc30558053d828c11370eb2156225a"
+    },
+    {
+      "path": "xielan/tool_returns/portrait_v1.json",
+      "bytes": 1685543,
+      "sha256": "209a0fe0a499ea852b1437e826e7c761135c0b5d377fa807cf99c132f0672559"
+    },
+    {
+      "path": "xielan/tool_returns/portrait_v2.json",
+      "bytes": 1636039,
+      "sha256": "3d2a0e1402276f6e1606c64a9f4dc543374d7361eef6c4f530a7bb24b7c1f496"
+    },
+    {
+      "path": "xielan/tool_returns/portrait_v2_rejected_params_error.json",
+      "bytes": 310,
+      "sha256": "5cd2de156d138df1f748c9eaf931ce70fd3dd31f343425481fa49d09dcaf315b"
+    },
+    {
+      "path": "yuen/README.md",
+      "bytes": 1955,
+      "sha256": "23f8197155292a7c24f2f6a1db840ab5a6a6f570720f6971d7e61da1e295d92e"
+    },
+    {
+      "path": "yuen/SHA256SUMS",
+      "bytes": 4895,
+      "sha256": "eed473620560ea1a0ea396377fc44e6328034906e46e8ca27c1db00985b50a8c"
+    },
+    {
+      "path": "yuen/candidates/portrait_v1_74x100_candidate.png",
+      "bytes": 7510,
+      "sha256": "73f89f73f873099192ac5225560a4fd3bb2958754db81eb2a41c1910278875eb"
+    },
+    {
+      "path": "yuen/candidates/portrait_v2_74x100_candidate.png",
+      "bytes": 6165,
+      "sha256": "7975f5d1e1c07f3101b9aebb249f83f99ed11391ef4b999085a2e2d511f65f2e"
+    },
+    {
+      "path": "yuen/candidates/portrait_v2_inset_74x100_candidate.png",
+      "bytes": 6364,
+      "sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313"
+    },
+    {
+      "path": "yuen/derive_portrait.py",
+      "bytes": 3731,
+      "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4"
+    },
+    {
+      "path": "yuen/finalize_manifest.py",
+      "bytes": 2060,
+      "sha256": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3"
+    },
+    {
+      "path": "yuen/manifest.json",
+      "bytes": 28016,
+      "sha256": "e7ed91bb1f05f6ac1567b84039a8f1d290da764463672bb58026cbecba912d93"
+    },
+    {
+      "path": "yuen/previews/portrait_v1_1x.png",
+      "bytes": 7510,
+      "sha256": "73f89f73f873099192ac5225560a4fd3bb2958754db81eb2a41c1910278875eb"
+    },
+    {
+      "path": "yuen/previews/portrait_v1_1x_backgrounds.png",
+      "bytes": 9312,
+      "sha256": "9c85d6525da7c05a9a5ad21c7cb7325d26c24d1ee65094a52868892852b40007"
+    },
+    {
+      "path": "yuen/previews/portrait_v1_4x_backgrounds.png",
+      "bytes": 16310,
+      "sha256": "c62c0533a942eb6c1e076a360fc4716c2e8186c0a4d2e4c261335fed13ee6ce4"
+    },
+    {
+      "path": "yuen/previews/portrait_v1_8x.png",
+      "bytes": 15869,
+      "sha256": "210aae4e7df1eb489b2f8e58369482ecc0977f16555a812b46c158601ac50dd2"
+    },
+    {
+      "path": "yuen/previews/portrait_v2_1x.png",
+      "bytes": 6165,
+      "sha256": "7975f5d1e1c07f3101b9aebb249f83f99ed11391ef4b999085a2e2d511f65f2e"
+    },
+    {
+      "path": "yuen/previews/portrait_v2_1x_backgrounds.png",
+      "bytes": 7887,
+      "sha256": "a2431455eecad9e81d136345121deba51b48db458d0616bd67f7fc2c51670842"
+    },
+    {
+      "path": "yuen/previews/portrait_v2_4x_backgrounds.png",
+      "bytes": 14187,
+      "sha256": "5916f0a3a7ed65734de4ac46459f80c0ec3ef5f326a78d91f3807d28fb8735c6"
+    },
+    {
+      "path": "yuen/previews/portrait_v2_8x.png",
+      "bytes": 13645,
+      "sha256": "9a816a19c5da7603ba5c7dad243184616f5dc6a5cdefe289e36afd3c2522f0d9"
+    },
+    {
+      "path": "yuen/previews/portrait_v2_inset_1x.png",
+      "bytes": 6364,
+      "sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313"
+    },
+    {
+      "path": "yuen/previews/portrait_v2_inset_1x_backgrounds.png",
+      "bytes": 8023,
+      "sha256": "94e7dbb03696b6e3dac64b01eb096871fee74a72002e821ce6e9d94bfa6a396b"
+    },
+    {
+      "path": "yuen/previews/portrait_v2_inset_4x_backgrounds.png",
+      "bytes": 14226,
+      "sha256": "9eb687643d54f7c1550231b9e98c9c31b0fa4c4e54b70109c44329dc9cf59aab"
+    },
+    {
+      "path": "yuen/previews/portrait_v2_inset_8x.png",
+      "bytes": 13842,
+      "sha256": "d26baeb1747a8f639a82c481dda75603b9e05d3045072e6abd2a3dcf22d5a456"
+    },
+    {
+      "path": "yuen/prompts/portrait_v1.json",
+      "bytes": 3321,
+      "sha256": "0b5856a8b12bef7f77e1aeb1c1fd92a1955630a5ca5268ffc6cb929b5d7e2bae"
+    },
+    {
+      "path": "yuen/prompts/portrait_v1.txt",
+      "bytes": 2480,
+      "sha256": "9737db0e0fac1f6d2dbda96d249bbb8f105feb1c32309fc3015577cc611cbf9d"
+    },
+    {
+      "path": "yuen/prompts/portrait_v2.json",
+      "bytes": 3068,
+      "sha256": "adeba8ade7b0fbbc6e43f4b39e5df84662f014cbcd5f769fd64d57a1e7e32854"
+    },
+    {
+      "path": "yuen/prompts/portrait_v2.txt",
+      "bytes": 2227,
+      "sha256": "2111284c60d6f4d68ab7231f9b6760408906e09575f0c51bb50710a3d6c1d788"
+    },
+    {
+      "path": "yuen/qa/author_v1_review.json",
+      "bytes": 999,
+      "sha256": "1f03b5f21d9f2443df3eb0f9b54cfb3cb53ac91a19edc82ddb7e55b0c11c2bd4"
+    },
+    {
+      "path": "yuen/qa/author_visual_review.json",
+      "bytes": 2280,
+      "sha256": "98235f491b420bc989c53ad05c2072b8edbec01b35e3b91403dce47ee73990b6"
+    },
+    {
+      "path": "yuen/qa/independent_review_acceptance.json",
+      "bytes": 1282,
+      "sha256": "89254968bb49e83d8ed1c81637e6c53573aedf58ab4748e58ba07840d6dcd9fa"
+    },
+    {
+      "path": "yuen/qa/portrait_v1_metrics.json",
+      "bytes": 4933,
+      "sha256": "7fa4ccefc21170809da1c3427ddf41b723c942de07cb105beb6eded5a87f5502"
+    },
+    {
+      "path": "yuen/qa/portrait_v2_inset_metrics.json",
+      "bytes": 4931,
+      "sha256": "d1cb544f514c747c2ffa946b38ffcb7159d4371234f37b36724e9e33c7628554"
+    },
+    {
+      "path": "yuen/qa/portrait_v2_metrics.json",
+      "bytes": 4921,
+      "sha256": "37ef9d7439dfde3ed117077091333a08e832ea7c886de2b1314e501b61d242d4"
+    },
+    {
+      "path": "yuen/qa/reproducibility_check.json",
+      "bytes": 262,
+      "sha256": "604e374d8e7def30afd111f4c5185a6f212d76eb701556ec433508212df06c95"
+    },
+    {
+      "path": "yuen/qa/source_hash_recheck.json",
+      "bytes": 3822,
+      "sha256": "811d266cd7082870ed217412f762e89083a08da2db2a58fced6444de42089f02"
+    },
+    {
+      "path": "yuen/raw/portrait_v1_raw_imagegen.png",
+      "bytes": 1285776,
+      "sha256": "967d9cf48b41628182dbf242557a70d6379a5ed5dc5a94e943833b0fd99f6474"
+    },
+    {
+      "path": "yuen/raw/portrait_v2_raw_imagegen.png",
+      "bytes": 1237778,
+      "sha256": "06196a0bdb499dc30d6b29813a5695c4f69f9358834569e18cfb34fe462c5ba9"
+    },
+    {
+      "path": "yuen/sources/AGENTS.md",
+      "bytes": 12714,
+      "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4"
+    },
+    {
+      "path": "yuen/sources/character_card.md",
+      "bytes": 2054,
+      "sha256": "d213503045e0d5ebe72ec67305990c1b218300362105ce90456e1f5e1947f312"
+    },
+    {
+      "path": "yuen/sources/identity_reference.png",
+      "bytes": 611783,
+      "sha256": "b2e8518c1ffbae8674b33b1ac917e48d074b6b1b3c0a35e22971f0f88f2e42e3"
+    },
+    {
+      "path": "yuen/sources/iwo_style_reference.png",
+      "bytes": 8032,
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb"
+    },
+    {
+      "path": "yuen/sources/leiya_style_reference.png",
+      "bytes": 4895,
+      "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f"
+    },
+    {
+      "path": "yuen/sources/mara_style_reference.png",
+      "bytes": 9411,
+      "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd"
+    },
+    {
+      "path": "yuen/sources/master_QA.json",
+      "bytes": 1168,
+      "sha256": "c853c70c62a64c36f1386ed1b537f6f07eb653ae3eec39af6c4491f945b1c32f"
+    },
+    {
+      "path": "yuen/sources/master_manifest.json",
+      "bytes": 1921,
+      "sha256": "af0723d48c7e5f3d7faea81b7aef290c19db01342bb556ca7612e21f8333dc72"
+    },
+    {
+      "path": "yuen/sources/roster_entry.json",
+      "bytes": 4253,
+      "sha256": "d049d5337c093a91751abf4bd6fc93d443ce3a68825a8a8af25b900b22891893"
+    },
+    {
+      "path": "yuen/sources/source_manifest.json",
+      "bytes": 4459,
+      "sha256": "2fa659345cdf99ab36461b0943db40bc34570c7daa8edbbfb431df6909c77e21"
+    },
+    {
+      "path": "yuen/sources/story_1.md",
+      "bytes": 16570,
+      "sha256": "113501a2873e5469bc0f7fc86f945d88cfd5288624bd8d5de1b612bd45ea49e2"
+    },
+    {
+      "path": "yuen/sources/story_2.md",
+      "bytes": 23485,
+      "sha256": "2d9602fe16015e53ad7d0eb7ede5ff00adf3ca2454b278a951067d0f9dd870fb"
+    },
+    {
+      "path": "yuen/sources/story_3.md",
+      "bytes": 7391,
+      "sha256": "8442ef039b6188860053653f12c89278e80eba64a9f455de47744e6e2d2f4d9e"
+    },
+    {
+      "path": "yuen/sources/tore_style_reference.png",
+      "bytes": 8438,
+      "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1"
+    },
+    {
+      "path": "yuen/spec_lock.md",
+      "bytes": 682,
+      "sha256": "6933b9d4ca755075f76ec2d315914247d94785aaf27e11099303c23052d5bf71"
+    },
+    {
+      "path": "yuen/tool_returns/portrait_v1.json",
+      "bytes": 1714898,
+      "sha256": "01e686858c8b0152934b1b62fd96f94759de5cb61e009597cd98972a0e7fac52"
+    },
+    {
+      "path": "yuen/tool_returns/portrait_v2.json",
+      "bytes": 1650902,
+      "sha256": "2ae449accb83de30ffb974c8fa36ddc1f1cc7b4f66390215962ad8c373cb38a9"
+    },
+    {
+      "path": "yuen/tool_returns/portrait_v2_validation_error.json",
+      "bytes": 3315,
+      "sha256": "e4e53b42d7cff15e564ba5f6435085ac4119e5da37adc04b743ab390d344694d"
+    },
+    {
+      "path": "arlin/README.md",
+      "bytes": 1936,
+      "sha256": "72ae9e2eba303707ec0f66083a47294bbf5b6a86a2f841c4be0035b863a2a6e4"
+    },
+    {
+      "path": "arlin/SHA256SUMS",
+      "bytes": 4895,
+      "sha256": "4b79b833e0b1dd549eef27c2db41c81b6b61004fece1ea63398d05c2eae66b15"
+    },
+    {
+      "path": "arlin/candidates/portrait_v1_74x100_candidate.png",
+      "bytes": 5594,
+      "sha256": "6e808b5b4dc22cf9019a7c151e589d2c76e37680e3272651eeeec9bb8520f686"
+    },
+    {
+      "path": "arlin/candidates/portrait_v2_74x100_candidate.png",
+      "bytes": 5681,
+      "sha256": "6df90b7d51b712bd4e66c04fca7657a6a710171da7673e176b9c724c1c68d49a"
+    },
+    {
+      "path": "arlin/candidates/portrait_v2_inset_74x100_candidate.png",
+      "bytes": 5149,
+      "sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79"
+    },
+    {
+      "path": "arlin/derive_portrait.py",
+      "bytes": 3731,
+      "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4"
+    },
+    {
+      "path": "arlin/finalize_manifest.py",
+      "bytes": 2060,
+      "sha256": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3"
+    },
+    {
+      "path": "arlin/manifest.json",
+      "bytes": 27965,
+      "sha256": "8f1e0f97f1bd5ea75ddd39ad43194955c9b702c4a0c694346086e692114b0351"
+    },
+    {
+      "path": "arlin/previews/portrait_v1_1x.png",
+      "bytes": 5594,
+      "sha256": "6e808b5b4dc22cf9019a7c151e589d2c76e37680e3272651eeeec9bb8520f686"
+    },
+    {
+      "path": "arlin/previews/portrait_v1_1x_backgrounds.png",
+      "bytes": 7437,
+      "sha256": "cd4412be3bbe5fa86f849bbfeff52105b5e17ef7ab81adcbceb6840380c8e237"
+    },
+    {
+      "path": "arlin/previews/portrait_v1_4x_backgrounds.png",
+      "bytes": 13621,
+      "sha256": "6895737e219051127590ce5ab7d9265356f719f3206d78b6659bb206197ea89f"
+    },
+    {
+      "path": "arlin/previews/portrait_v1_8x.png",
+      "bytes": 12861,
+      "sha256": "b2a1bc3b44280a30c3d0884402c3d4fff60d0453cd9a4ff2ea3bd46033f0dc3d"
+    },
+    {
+      "path": "arlin/previews/portrait_v2_1x.png",
+      "bytes": 5681,
+      "sha256": "6df90b7d51b712bd4e66c04fca7657a6a710171da7673e176b9c724c1c68d49a"
+    },
+    {
+      "path": "arlin/previews/portrait_v2_1x_backgrounds.png",
+      "bytes": 7490,
+      "sha256": "7ef9d0602f7b0058b83261513a6bccc351e6c90f0e08260ceb0b80c3612226ee"
+    },
+    {
+      "path": "arlin/previews/portrait_v2_4x_backgrounds.png",
+      "bytes": 13592,
+      "sha256": "e8b9b6b0589e99f55033468c78959d352f9ff1715f6f5c66b6c7939b65b812bf"
+    },
+    {
+      "path": "arlin/previews/portrait_v2_8x.png",
+      "bytes": 12863,
+      "sha256": "baa673d5c6dbff0d9f901fe97c2f73e726dc23a92b86687075b707307a739193"
+    },
+    {
+      "path": "arlin/previews/portrait_v2_inset_1x.png",
+      "bytes": 5149,
+      "sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79"
+    },
+    {
+      "path": "arlin/previews/portrait_v2_inset_1x_backgrounds.png",
+      "bytes": 7018,
+      "sha256": "c4a64f0ed0a040a709755d5f99ea025bd96eb32a7a4581d66d8fe461e6e62fe7"
+    },
+    {
+      "path": "arlin/previews/portrait_v2_inset_4x_backgrounds.png",
+      "bytes": 13112,
+      "sha256": "6d5872664b7ee63524a8864ff2601ee26977ac3bfb2eaed47bfd47ec35eafafc"
+    },
+    {
+      "path": "arlin/previews/portrait_v2_inset_8x.png",
+      "bytes": 12031,
+      "sha256": "15da25c3f969a0954093db4d15dda10ddd261359a69fdeae1f44294c9896a19e"
+    },
+    {
+      "path": "arlin/prompts/portrait_v1.json",
+      "bytes": 3384,
+      "sha256": "aca19cf7857615f0edb8b64ac4e71561ee8448edc5c2f98e31eecb5ba68c734c"
+    },
+    {
+      "path": "arlin/prompts/portrait_v1.txt",
+      "bytes": 2538,
+      "sha256": "a21f661a5291e33f1e35bc0b432a43a57beec80e0cac5ff3ae0af7357a33a4b2"
+    },
+    {
+      "path": "arlin/prompts/portrait_v2.json",
+      "bytes": 3112,
+      "sha256": "b6502c8e9c894e35fc410d634cc3eda0c146c8a9550904073e67e1f7271045c6"
+    },
+    {
+      "path": "arlin/prompts/portrait_v2.txt",
+      "bytes": 2266,
+      "sha256": "504edb7bca91c6bd932aa584233aefe125f546f85499dacb4f78ed30589e108f"
+    },
+    {
+      "path": "arlin/qa/author_v1_review.json",
+      "bytes": 955,
+      "sha256": "0b30f56176c94e1dfcbc3156451f3328e2641e5786ad001a19a0c6249566b083"
+    },
+    {
+      "path": "arlin/qa/author_visual_review.json",
+      "bytes": 2243,
+      "sha256": "5c083647f4d8990b402c9ffc83678fe42db7076e74919b94ad31aefee4c3f8c6"
+    },
+    {
+      "path": "arlin/qa/independent_review_acceptance.json",
+      "bytes": 1397,
+      "sha256": "bc70cd202a8e7429afb1df222f23e6aedabda0a06f71827c1077827b94abc591"
+    },
+    {
+      "path": "arlin/qa/portrait_v1_metrics.json",
+      "bytes": 4911,
+      "sha256": "02f892e364f2560f65041b5a02458b63d9084a41e2e43427830aafcc7fd07af8"
+    },
+    {
+      "path": "arlin/qa/portrait_v2_inset_metrics.json",
+      "bytes": 4915,
+      "sha256": "2f302dac7391f63aed8f179751fc3f6cc2528500251d6f3c6bec3f81444f4939"
+    },
+    {
+      "path": "arlin/qa/portrait_v2_metrics.json",
+      "bytes": 4909,
+      "sha256": "843801f79564c1e07c49513da87f3d0b5e5ac7b00d088aa6283893c0195c643e"
+    },
+    {
+      "path": "arlin/qa/reproducibility_check.json",
+      "bytes": 262,
+      "sha256": "cdf1e8317172fe2958b481b88a7826e00c26c2a81ca34d4c4dcf62fe54d4f6fe"
+    },
+    {
+      "path": "arlin/qa/source_hash_recheck.json",
+      "bytes": 3825,
+      "sha256": "3d3c89e8e65e2509bbfca08b216ed33bcf475c715487b939343911f77c96fc32"
+    },
+    {
+      "path": "arlin/raw/portrait_v1_raw_imagegen.png",
+      "bytes": 1264566,
+      "sha256": "256d622e1d450a10fe108e3f48380121c3a3ba43a47e16245d61e4030abe22ef"
+    },
+    {
+      "path": "arlin/raw/portrait_v2_raw_imagegen.png",
+      "bytes": 1225771,
+      "sha256": "700341f9f4f9070cc6e90d233f3842fa10b33e815982e9fb64077dc630f4d3bb"
+    },
+    {
+      "path": "arlin/sources/AGENTS.md",
+      "bytes": 12714,
+      "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4"
+    },
+    {
+      "path": "arlin/sources/character_card.md",
+      "bytes": 2173,
+      "sha256": "3ab2ee3c7f4e523eabc982363c93a038b4548109df9f04e2e23716be5f572230"
+    },
+    {
+      "path": "arlin/sources/identity_reference.png",
+      "bytes": 841047,
+      "sha256": "ac19c108870791ae40da5a6a2283f500591addc6fbb2aeebc6c52451d40ad139"
+    },
+    {
+      "path": "arlin/sources/iwo_style_reference.png",
+      "bytes": 8032,
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb"
+    },
+    {
+      "path": "arlin/sources/leiya_style_reference.png",
+      "bytes": 4895,
+      "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f"
+    },
+    {
+      "path": "arlin/sources/mara_style_reference.png",
+      "bytes": 9411,
+      "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd"
+    },
+    {
+      "path": "arlin/sources/master_QA.json",
+      "bytes": 1229,
+      "sha256": "6bc8b094c4e5cfdd361713dcd6fa40114e040b8756e26691d7f8d6a798c9a263"
+    },
+    {
+      "path": "arlin/sources/master_manifest.json",
+      "bytes": 1915,
+      "sha256": "6392bf833dfa7b5c5b7a7f5de16297282deba96991e7b4ff7438dcb52c0063c4"
+    },
+    {
+      "path": "arlin/sources/roster_entry.json",
+      "bytes": 4113,
+      "sha256": "830b4d10bd493aa1afdedecc14bfc589d77b99273150eb15c5e043ce2ac1b9f7"
+    },
+    {
+      "path": "arlin/sources/source_manifest.json",
+      "bytes": 4461,
+      "sha256": "4320dad651d8b3bdb05cb9170606e4dc7d59a1802299747a84cba8cb8146a471"
+    },
+    {
+      "path": "arlin/sources/story_1.md",
+      "bytes": 16570,
+      "sha256": "113501a2873e5469bc0f7fc86f945d88cfd5288624bd8d5de1b612bd45ea49e2"
+    },
+    {
+      "path": "arlin/sources/story_2.md",
+      "bytes": 23485,
+      "sha256": "2d9602fe16015e53ad7d0eb7ede5ff00adf3ca2454b278a951067d0f9dd870fb"
+    },
+    {
+      "path": "arlin/sources/story_3.md",
+      "bytes": 7391,
+      "sha256": "8442ef039b6188860053653f12c89278e80eba64a9f455de47744e6e2d2f4d9e"
+    },
+    {
+      "path": "arlin/sources/tore_style_reference.png",
+      "bytes": 8438,
+      "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1"
+    },
+    {
+      "path": "arlin/spec_lock.md",
+      "bytes": 673,
+      "sha256": "719763560439d4b1159404191cf014670d16d3f1a1a9db326214f97550c7d97d"
+    },
+    {
+      "path": "arlin/tool_returns/portrait_v1.json",
+      "bytes": 1686618,
+      "sha256": "a920631fdb4d960e3e55fde4f58958d8a12e7e52ccb12a27ace4e3d5bfeb9269"
+    },
+    {
+      "path": "arlin/tool_returns/portrait_v2.json",
+      "bytes": 1634894,
+      "sha256": "395e2dc5e2bc2e033aff5d3acc9890a072c848bfa8801800a0b1b617b2805714"
+    },
+    {
+      "path": "arlin/tool_returns/portrait_v2_validation_error.json",
+      "bytes": 3360,
+      "sha256": "e10fababcc21e7c4ecab714968d391f5007c242e917fe301aa93d6f7330671e2"
+    }
+  ]
+}

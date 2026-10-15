@@ -1,0 +1,37 @@
+{
+  "reviewer": "portrait author self-review, not independent QA",
+  "reviewed_utc": "2026-10-15T10:59:35.849151+00:00",
+  "selected_version": "portrait_v2",
+  "selected_candidate": "candidates/portrait_v2_74x100_candidate.png",
+  "selected_sha256": "c4f5799a547826db579cd55524605b29ad98cbf19384f17ca997a9620294bb01",
+  "actually_viewed": [
+    "identity master and master QA",
+    "current character card and linked screenplay constraints",
+    "all four approved core style reference images",
+    "v1 raw, 1x and 8x",
+    "v2 raw, 1x three backgrounds and 8x nearest-neighbor candidate"
+  ],
+  "findings": [
+    "唯一一次修订后，绿领明显提高、裸颈缩短；宽下颊长圆脸、低宽鼻、米色包发巾与薄弧暖笑保住。",
+    "眼白收低，但仍有浅色眼白/反光和右侧1px级巾结余量，属于当前候选局限；未第三次生图。",
+    "原始v2四边alpha>=128实色触边数均为0，没有真实裁边；未用padding或inset宣称修复。"
+  ],
+  "generation_calls": 2,
+  "max_imagegen_calls": 2,
+  "third_generation_forbidden": true,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "source_identity_conflict": false,
+  "technical_checks": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "reproduction": "qa/reproduction_check.json",
+  "source_hashes": "qa/source_hash_recheck.json",
+  "status": "pass_candidate_with_notes",
+  "independent_acceptance": "qa/independent_review_acceptance.json"
+}

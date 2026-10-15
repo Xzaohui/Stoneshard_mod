@@ -1,0 +1,128 @@
+{
+  "slug": "luofu",
+  "checked_utc": "2026-10-15T13:28:26.165385+00:00",
+  "status": "accepted_candidate_with_notes",
+  "delivery_eligible": true,
+  "selected_path": "luofu/candidates/portrait_v2_74x100_candidate.png",
+  "selected_sha256": "7c9983c5bd9621243d81b0ad49ec1a667702170e78d0940bc82a86fb571d7bd2",
+  "reviewed_raw_sha256": "a75cf2ef50950b5e7325c7775a6e991209cb52f68b106f26cdab4e1e109cf4e1",
+  "actual_raw_and_integer_NN_viewed": true,
+  "visual_assessment": "扎紧白巾、收拢深发、宽方颌扁宽鼻、小暗眼粗眉与务实紧嘴保持30多岁女性身份，明显区别岱里的灰缕卷发和60岁下颊。v2脸面鼻颧较明确，颈段已缩短；选择full而非inset，因full的暗眼与方脸读取更明确。橄榄旧罩衣/暖褐窄肩无新道具或净水结论。",
+  "source_boundary_assessment": "v1右边缘不足已由v2源图重新生成解决：alpha>=5 bbox[22,186,1064,1444]，右留15px；>=16和>=128右留17px，完整头巾结尾可见。full目标bbox[2,13,73,99]右1列/下1行透明，不是真源裁断。不把额外inset解释为修补。",
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        41,
+        1064,
+        1444
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 9,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": [
+          1182,
+          1190
+        ],
+        "right": null
+      }
+    },
+    "5": {
+      "bbox": [
+        22,
+        186,
+        1064,
+        1444
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        24,
+        186,
+        1062,
+        1442
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        25,
+        187,
+        1062,
+        1441
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        26,
+        201,
+        1061,
+        1434
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "limitations": [
+    "颈与衣区仍比核心多，白巾仍带细条；只作带注候选，不宣称严格最终风格验收。",
+    "头巾所占上部较多；没有第三次生成或脚本改脸。",
+    "NN技术派生候选，未逐像素原生精修、未集成或实机验证。"
+  ],
+  "feedback_rounds": 1,
+  "successful_generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_verified": false
+}

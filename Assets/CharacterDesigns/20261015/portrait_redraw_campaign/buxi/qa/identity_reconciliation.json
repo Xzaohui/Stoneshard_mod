@@ -1,0 +1,46 @@
+{
+  "actor_id": "OSB-NPC-BUXI",
+  "decision": "continue_existing_female_identity",
+  "source_card_unchanged": true,
+  "coordinator_confirmed": true,
+  "evidence": [
+    {
+      "source": "git be19635 character card",
+      "lines": "1–31",
+      "sha256": "a0e89e40202e840b5750cd42572f033f93cb24c3a0d066fd8a8b98f09274e11d",
+      "finding": "No sex or male pronoun; equals mother QA source hash."
+    },
+    {
+      "source": "git 09216ad / latest character card",
+      "lines": "33–47; 44",
+      "sha256": "54027f5f6b5d9997ab447cdec390aeb7bd2838d5c281c6c669276d8a82358265",
+      "finding": "Only S91 detail block added; only new masculine pronoun is 他 in style guard at 44."
+    },
+    {
+      "source": "design/04_人物/人物细描与随身物.md",
+      "lines": "70",
+      "finding": "Same style-guard sentence mirrored, not independent male characterization."
+    },
+    {
+      "source": "master_brief.json",
+      "lines": "50, 93",
+      "finding": "Explicit 成年女性 and 成熟低髻窄脸女性."
+    },
+    {
+      "source": "master_prompt.txt",
+      "lines": "1",
+      "finding": "Explicit mature woman / Around forty."
+    },
+    {
+      "source": "design/05_主线/城市篇章/台本_CM-OSB_留到来年的一袋.md",
+      "lines": "37,41,51,89,93,104,143,175,179",
+      "finding": "Relevant dialogue names Buxi or uses first person; no male identity."
+    }
+  ],
+  "latest_appearance_priority": [
+    "around forty",
+    "plain thick grain-shop apron; double-layer pocket and rolled sleeves off-frame",
+    "subtle flour on nose; no transaction or grain-delivery scene"
+  ],
+  "limitations": "Sex not explicitly stated in old card; female continuity rests on selected historical visual identity and explicit art brief/prompt. Wording anomaly documented, never silently edited."
+}

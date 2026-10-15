@@ -1,0 +1,135 @@
+{
+  "canonical_id": "NPC04",
+  "name": "伊莲·沃斯",
+  "aliases": [],
+  "origin": "main_character_card",
+  "status": "ready_for_identity_preflight",
+  "suggested_slug": "elaine",
+  "work_directory": "Assets/CharacterDesigns/20261015/portrait_redraw_campaign/elaine",
+  "current_cards": [
+    {
+      "path": "design/04_人物/人物_伊莲·沃斯.md",
+      "exists": true,
+      "sha256": "0be7d283d768f5c829b91d3f39e7735f21829236c7fc8fc7672e4c5369d60ca0",
+      "bytes": 2632,
+      "previous_recorded_sha256": "f978ab0706dd9c379cb096bc3d0ede35088b4a5abc147d1ceba05ecec1cc7314",
+      "previous_hash_matches_current": false
+    }
+  ],
+  "current_card_fields": [
+    {
+      "source": "design/04_人物/人物_伊莲·沃斯.md",
+      "fields": {
+        "体貌": "四十多岁，仪态周正，手指有翻账的薄茧；说话时习惯把账页按平。",
+        "衣着与磨损": "官署式的深色长衣，内衬按季换；胸前别着费目牌。",
+        "随身物": "费目牌与港口账页，页边有她自己的批注。",
+        "举止": "说话先报费目；被质疑时会说‘先看公示日期’。",
+        "风格守卫": "不写成国家领袖级授权；她能签的范围明确，也有利益与盲点。"
+      }
+    }
+  ],
+  "story_links": [
+    "世界状态与商队",
+    "主线任务索引",
+    "人物与动机",
+    "人物细描与随身物",
+    "剧情总纲",
+    "势力_城市联盟边地事务署",
+    "台本_DT07_一箱不该开封的货",
+    "台本_N16_谁来保管余烬",
+    "台本_SQ01_港税与自由",
+    "当前任务依赖与状态字典",
+    "当前证据链与结局条件",
+    "支线任务索引",
+    "证据与结局"
+  ],
+  "main_speaking_evidence": [
+    {
+      "chapter": 9,
+      "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+      "speaker_label": "伊莲",
+      "locations": [
+        {
+          "line": 75,
+          "dialogue_key": "X32-L01"
+        }
+      ],
+      "conditional": true
+    },
+    {
+      "chapter": 16,
+      "path": "design/05_主线/台本/台本_N16_谁来保管余烬.md",
+      "speaker_label": "伊莲",
+      "locations": [
+        {
+          "line": 91,
+          "dialogue_key": "X77-L01"
+        },
+        {
+          "line": 107,
+          "dialogue_key": "X82-L01"
+        },
+        {
+          "line": 111,
+          "dialogue_key": "N16-DEFAULT"
+        },
+        {
+          "line": 135,
+          "dialogue_key": "N16-S01-L01"
+        }
+      ],
+      "conditional": true
+    }
+  ],
+  "earliest_documented_main_speech_chapter": 9,
+  "priority_basis": "exact labelled dialogue in current N-series files; appearances may be conditional",
+  "region": null,
+  "identity_master": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/elaine/elaine_raw_imagegen.png",
+    "exists": true,
+    "sha256": "a300870982403abf7715693f473f436e1bae3eae24b4185d5e57dfeb511c1227",
+    "bytes": 752224,
+    "previous_recorded_sha256": "a300870982403abf7715693f473f436e1bae3eae24b4185d5e57dfeb511c1227",
+    "previous_hash_matches_current": true
+  },
+  "historical_master_before_alignment": null,
+  "master_selection_evidence": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/elaine/QA-independent.json",
+    "exists": true,
+    "sha256": "4b5a0a208eef7bd75b1aa10a9ba62a5edbe2f165a7ba026844a1eede09d4a9a5",
+    "bytes": 1318
+  },
+  "master_manifests": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/elaine/manifest.json",
+      "exists": true,
+      "sha256": "b4e13028f81425018f18b5effdbd8297fc80ab114341064bde01209820a35bb3",
+      "bytes": 3422
+    }
+  ],
+  "historical_boards": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch32/123_elaine_voss_local_agent_cast.png",
+      "exists": true,
+      "sha256": "cc566a19d955c71076720fccf27d52a34a0d7942c5865b69d823c177632b3d91",
+      "bytes": 1747550
+    }
+  ],
+  "historical_visual_review": {},
+  "historical_status": "delivered_concept_candidate",
+  "master_alignment_review": null,
+  "same_identity_variant_manifests": [],
+  "variants_add_unique_people": false,
+  "blockers": [],
+  "notes": [],
+  "assigned_batch_file": null,
+  "preflight_required": [
+    "Read current independent cards and exact linked main-scene constraints.",
+    "Actually view selected identity master and approved style references.",
+    "Resolve any identity/age/sex/clothing conflict before generation; source hash change alone is not a failure.",
+    "Keep raw, generation parameters, target 74x100, 1x/NN preview, QA, manifest and SHA separate; no old asset replacement."
+  ],
+  "runtime_integrated": false,
+  "native_pixel_approved": false,
+  "queue_index": 19
+}

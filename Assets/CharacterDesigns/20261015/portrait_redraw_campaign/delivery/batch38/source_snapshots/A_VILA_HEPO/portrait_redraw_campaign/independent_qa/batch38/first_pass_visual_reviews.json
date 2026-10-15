@@ -1,0 +1,67 @@
+{
+  "checked_utc": "2026-10-15T14:13:46.667421+00:00",
+  "actual_views": [
+    "mother_overview_NN.png",
+    "core_style_4x_NN.png",
+    "vila/hepo/siyu full raw",
+    "vila/hepo/siyu 1x and 4x integer-NN three-background previews",
+    "buxi full raw and 1x/4x integer-NN three-background previews"
+  ],
+  "feedback_rule": "Exactly one consolidated initial feedback per actor; max two successful images, no third.",
+  "actors": {
+    "vila": {
+      "version": "portrait_v1",
+      "candidate_sha256": "9b71d442abaaba6ac52b910e79c40d4631886fe0065f4c0f772b87aa489c3e50",
+      "status": "one_consolidated_revision_requested",
+      "identity": "短灰发、左眼透明夹和皮围裙身份正确；整体面偏年轻，约40岁读数不足",
+      "feedback": [
+        "缩暗白眼并压低睫状黑上缘，保双眼透明可见",
+        "鼻梁鼻翼和宽颧用更大平面，少量眉间/眼下年龄块，不画老年皱网",
+        "短露颈、窄衣领/围裙下沿，脸本体更占框",
+        "发耳真实余量保留，勿用padding伪装裁断"
+      ],
+      "boundary": "Raw alpha>=5 four borders clear; alpha1 left-edge specks are not visible hair crop. Full head and ear preserved."
+    },
+    "hepo": {
+      "version": "portrait_v1",
+      "candidate_sha256": "c5b0ca7d4167c967dd657035daa004b25f359da86a20a1d3a787285bdc118cbf",
+      "status": "one_consolidated_revision_requested",
+      "identity": "棕乱发浓短胡、绿披赭衣、40多岁风红皮肤身份成立",
+      "feedback": [
+        "缩暗亮大白眼，保抬内眉温和忧虑，减少惊惶上视",
+        "大鼻颧骨整块替代细斑",
+        "缩绿披和颈下占比，脸更近",
+        "真实发耳余量须保留"
+      ],
+      "boundary": "Raw alpha>=5 borders clear; alpha1 border specks do not represent visible crop."
+    },
+    "siyu": {
+      "version": "portrait_v1",
+      "candidate_sha256": "aaaf53a6d2c43c29936ffe68f2b2e1d7d4ded5da2a36210e4d74c9e520166615",
+      "status": "one_consolidated_revision_requested_v1_fallback_allowed",
+      "identity": "约30多岁女性、低髻、窄长脸直鼻薄嘴、蓝衣浅褐边成立",
+      "feedback": [
+        "压窄压暗白眼为灰褐眼缝，保谨慎侧目与读数轻眯",
+        "下颌至蓝领露颈缩约1/4，脸稍增但保持窄领",
+        "额面细斑并为清楚鼻颧骨块，别加纹显40多岁",
+        "源发髻耳完整及真实余量保持；v2退步可选v1，不第三次"
+      ],
+      "boundary": "Raw alpha>=5 all four borders clear; alpha1 tiny particles at border are not haircut. Output bbox [2,4,72,97]."
+    },
+    "buxi": {
+      "version": "portrait_v1",
+      "candidate_sha256": "c2a21016b64694ac1fe59a3a5cc9d6370d3d5d4381c26f3a0c88a552d666a01a",
+      "status": "one_consolidated_revision_requested",
+      "identity": "棕低髻窄脸/谨慎侧目、蓝衣围裙肩带与鼻粉保留；光滑脸大亮眼读20多岁，约40岁不足",
+      "feedback": [
+        "整头/脸在框稍放大，现留白比四核心多；完整发髻耳真实留边",
+        "露颈缩约1/3，保窄领",
+        "小暗灰褐眼白，减少浓睫，少量眼下/鼻唇成熟块及更硬鼻颧平面，不画老妇",
+        "保窄脸闭薄嘴，少量鼻粉和蓝衣厚围裙肩带"
+      ],
+      "boundary": "Raw examined with real margins, no source clipping; candidate bbox [6,8,69,93]. No padding needed."
+    }
+  },
+  "native_pixel_approved": false,
+  "runtime_verified": false
+}

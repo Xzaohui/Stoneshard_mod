@@ -1,0 +1,48 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T13:56:51.751982+00:00",
+  "actor_id": "ASH-S02-NPC",
+  "selected": null,
+  "selected_sha256": null,
+  "status": "held_composition_scale_and_eye_sclera",
+  "actually_viewed": [
+    "current identity master",
+    "four core style references",
+    "v1 and v2 raw",
+    "v1 and v2 1x/4x three-background previews"
+  ],
+  "identity_findings": [
+    "窄颧长鼻、疲倦紧唇、棕发低髻布绳、梅衣/棕黄披/灰棕围裙边保留，读龄三十多岁。",
+    "厚围裙仅有小领边可见，袖口/手腕在头像范围外，不代表全身装备完成。"
+  ],
+  "limitations": [
+    "最终held：不进入通过肖像画廊；selected=null，v2只保留待用证据。",
+    "小暗眼白改善有限，眼白仍较四核心风格目标明亮。",
+    "头巾或头发束仍有细碎/平行走向，未达到严格逐像素原生标准。",
+    "v2生成raw接近方形，整图等比缩入74×100导致上下留白偏多，脸占高仍偏小。",
+    "保留raw完整轮廓与真实透明余量；不拉伸、不脚本改脸、不用padding掩盖裁断。",
+    "<=32色为临时技术预算，不是原生美术批准；没有游戏集成或运行验收。"
+  ],
+  "source_margin_report": "qa/portrait_v2_raw_margin.json",
+  "technical_checks": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "generation_calls": 2,
+  "max_imagegen_calls": 2,
+  "generation_budget_closed": true,
+  "old_assets_preserved": true,
+  "native_pixel_approved": false,
+  "native_authored": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "decision": "held_composition_scale_and_eye_sclera",
+  "held_evidence": "candidates/portrait_v2_74x100_candidate.png",
+  "held_evidence_sha256": "2ce259d0b712ab6848fcca0222f7112d5e6086c89ef88277744d0183463bacc9",
+  "delivery_eligible": false,
+  "independent_review": "../independent_qa/batch36/oya_final_visual_review.json",
+  "gate_comparison_board": "../independent_qa/batch36/comparison_with_held_gate_4x_NN.png",
+  "final_gate_reason": "一致门槛复核：目标头领主体仅72px高，脸焦点偏小且显著浅眼白仍在，与已held案例同级；相对v1改善不等于过门槛。"
+}

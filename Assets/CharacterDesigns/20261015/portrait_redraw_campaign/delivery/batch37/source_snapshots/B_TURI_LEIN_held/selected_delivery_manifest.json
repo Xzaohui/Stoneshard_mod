@@ -1,0 +1,189 @@
+{
+  "batch": 37,
+  "date": "2026-10-15",
+  "qualified_candidate_count": 3,
+  "held_count": 1,
+  "characters": [
+    {
+      "actor": "aro",
+      "name": "艾萝",
+      "source": "aro/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "e5a2cf8486261fff5a28f6106615891c67c39f0e9dea024780f4b29e646cb164",
+      "delivery_file": "ARO_艾萝_74x100_candidate.png",
+      "delivery_sha256": "e5a2cf8486261fff5a28f6106615891c67c39f0e9dea024780f4b29e646cb164",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "aro/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "内眉略忧、颈稍长；平行发层及皮肤折面碎点仍在",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "gura",
+      "name": "古菈",
+      "source": "gura/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "1626640c4a14b9e39306b817f95e94dc2298315c4f5c0b9b3e32fe239e19e8d5",
+      "delivery_file": "GURA_古菈_74x100_candidate.png",
+      "delivery_sha256": "1626640c4a14b9e39306b817f95e94dc2298315c4f5c0b9b3e32fe239e19e8d5",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "gura/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "内眉略V形、平行发层仍在；源左右余量仅16/10px",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "turi",
+      "name": "图里",
+      "source": "turi/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "995312565126d56e0fa4dc9d57e1741eadcaaf3277e7f53c4a8b8478290a1d2f",
+      "delivery_file": "TURI_图里_74x100_candidate.png",
+      "delivery_sha256": "995312565126d56e0fa4dc9d57e1741eadcaaf3277e7f53c4a8b8478290a1d2f",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "turi/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "眼白偏浅、内眉稍忧；平行发层、短须碎点仍在",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "held": [
+    {
+      "slug": "lein",
+      "name": "蕾因",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "3d8b58d31403e0e6e33bbe0d71ea3f377394e69774d3fca78c8d32471c876476",
+      "production_SHA256SUMS_sha256": "40d91a5fc679c3297e24abbd48e7eab798b7d139f218a18c23b055ff9e9f07c3",
+      "decision": "held_source_contour_margin_and_style",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": false,
+      "residual": [
+        "源轮廓/真实余量门槛未过，selected=null，v2_inset仅保留审查证据，禁止进入交付选稿。",
+        "眼白仍不全暗、上眼线和发层仍强；风格改善不能抵消源边界风险。",
+        "仅74×100 NN技术派生候选，非原生逐像素终稿；未集成游戏、未实机验证。"
+      ],
+      "held_evidence_portrait": "lein/candidates/portrait_v2_inset_74x100_candidate.png",
+      "held_evidence_sha256": "7e1d2ba859c3656cd812b6e3f318665b4faf295c8cc14c422f113aa63a4298a6",
+      "historical_fallback_approved": false
+    }
+  ],
+  "board": {
+    "file": "batch37_三人头像总览_1x_4x.png",
+    "sha256": "97194957a823db2ed5126d355e82e56cc7c45e03284cf8cee00ebe4b26449445",
+    "dimensions": [
+      680,
+      1948
+    ],
+    "portrait_checks": [
+      {
+        "actor": "aro",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "aro",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "gura",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "gura",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "turi",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1258,
+          161,
+          1358
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "turi",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1101,
+          624,
+          1501
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false,
+    "held_portrait_not_displayed": true
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded. All four generated production folders, including held lein evidence, are retained; held is not counted as success."
+}

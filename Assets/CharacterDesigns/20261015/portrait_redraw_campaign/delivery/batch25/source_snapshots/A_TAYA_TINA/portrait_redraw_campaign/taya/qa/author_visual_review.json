@@ -1,0 +1,41 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T12:06:38.163356+00:00",
+  "actor_id": "YOS-NPC-TAY",
+  "selected_version": "portrait_v2_inset",
+  "selected_sha256": "6024fc284d2d8240ffd30056d86bbd4922305e522629315495b610fae75b9957",
+  "decision": "selected_candidate_with_limitations",
+  "actual_views": [
+    "identity master",
+    "four core style portraits",
+    "raw imagegen v1 and v2",
+    "derived v1 and v2 inset 8x",
+    "derived v1 and v2 inset 1x dark/gray/light background sheets"
+  ],
+  "identity_check": "最新卡五十岁上下与深色罩衣优先；旧母图年轻化及亮赭外衣不沿用。保棕低髻、锐眉、抿嘴、紫赭内层识别。",
+  "technical": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "improvements": [
+    "Neck and collar are shorter in v2 than v1; stronger contiguous nose and cheekbone planes.",
+    "Age contrast remains clear: mature 50-ish master and young adult dyer.",
+    "Whole-canvas inset produces all-side transparent export margin without cropping or changing facial geometry."
+  ],
+  "limitations": [
+    "Pale sclera remains too prominent versus four-core ideal; no claim that requested dark slit eyes were fully achieved.",
+    "Hair retains more parallel highlighted strips than the desired three to four broad masses.",
+    "Face ratio and neck still do not literally meet prompt target coordinates.",
+    "Source right margin improved from 1 raw pixel to18 raw pixels, still below requested35; inset is a separate technical clearance step. No factual assertion that the v1 source was definitely cropped."
+  ],
+  "method_boundary": "Imagegen supplies all substantive drawing. Whole-canvas isotropic NEAREST fit, alpha threshold128 and MAXCOVERAGE <=32-color no-dither quantization are disclosed technical derivatives, not native hand-authored pixel art. Inset does not reconstruct clipped source contours.",
+  "imagegen_successful_outputs": 2,
+  "validation_rejected_attempts": 1,
+  "validation_rejection": "Six reference paths exceeded tool maximum5; no image returned; corrected same v2 request to five references. Exact attempted arguments and failure preserved.",
+  "further_generation": "stopped at agreed first draft plus one necessary successful revision",
+  "runtime_integrated": false,
+  "native_pixel_approved": false,
+  "independent_review_status": "Independent reviewer selected v2 inset for candidate freeze, with stated visual limitations."
+}

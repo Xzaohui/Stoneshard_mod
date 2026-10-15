@@ -1,0 +1,159 @@
+{
+  "slug": "gura",
+  "reviewed_utc": "2026-10-15T14:08:58.094238+00:00",
+  "status": "deliverable_as_NN_derived_candidate_with_notes",
+  "delivery_eligible": true,
+  "selected_path": "gura/candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "1626640c4a14b9e39306b817f95e94dc2298315c4f5c0b9b3e32fe239e19e8d5",
+  "held_evidence_path": null,
+  "held_evidence_sha256": null,
+  "actually_viewed": [
+    "full selected mother raw",
+    "four core references in exact4xNN board",
+    "v1 and v2 full raw",
+    "v1 and v2 8x NN",
+    "final variant 1x and 4x backgrounds"
+  ],
+  "findings": [
+    "三十多岁女性维护工、棕低髻与灰厚褂窄领保留；额竖纹消除，眼白缩暗，认真而独立。",
+    "脸占画面主体，鼻颧大块与紧嘴可读；灰领已简化，不添加工约承诺。",
+    "raw alpha≥5 bbox [16,113,1069,1404]，1079×1457四侧仍有真实空隙，发耳没有观察到实际裁断。inset仅整图containment；没有画回或补造轮廓。"
+  ],
+  "limitations": [
+    "内眉仍略V形、发丝平行层仍可见。",
+    "raw左右余量仅16/10源像素，源边距偏窄；inset增加目标透明格不代表满足原提示词的宽源边距要求。",
+    "仅74×100 NN技术派生候选，非原生逐像素终稿；未集成游戏、未实机验证。"
+  ],
+  "raw_sha256": "093acb0765d41353f434ab0485d7c4b2de2c1570ecf417ec23f845b0ffb710a7",
+  "raw_size": [
+    1079,
+    1457
+  ],
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        15,
+        0,
+        1078,
+        1407
+      ],
+      "border_counts": {
+        "top": 15,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": [
+          422,
+          436
+        ],
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "5": {
+      "bbox": [
+        16,
+        113,
+        1069,
+        1404
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        18,
+        113,
+        1067,
+        1402
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        19,
+        113,
+        1067,
+        1401
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        20,
+        117,
+        1066,
+        1400
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "candidate_alpha_bbox": [
+    2,
+    9,
+    72,
+    94
+  ],
+  "byte_reproduced": true,
+  "successful_generations": 2,
+  "parameter_rejections_without_image": [
+    {
+      "path": "tool_returns/portrait_v2_preflight_rejected.json",
+      "has_generated_image": false,
+      "sha256": "2cc6dfda588ad1f5d747877e3059b45e08618f6512a53350dad0049adc4512bf",
+      "error": "`referenced_image_paths` must contain at most 5 paths"
+    }
+  ],
+  "consolidated_feedback_rounds": 1,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

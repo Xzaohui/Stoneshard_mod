@@ -1,0 +1,10 @@
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch22/audit_batch22.py:19: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  pixels = list(image.getdata())
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch22/audit_batch22.py:116: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  row['raw_alpha128_edge_counts'] = {edge: sum(v > 0 for v in mask.crop(box).getdata()) for edge, box in [('left',(0,0,1,im.height)),('right',(im.width-1,0,im.width,im.height)),('top',(0,0,im.width,1)),('bottom',(0,im.height-1,im.width,im.height))]}
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch22/audit_batch22.py:119: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  row['raw_border_max_alpha'] = {edge: max(im.getchannel('A').crop(box).getdata()) for edge, box in [('left',(0,0,1,im.height)),('right',(im.width-1,0,im.width,im.height)),('top',(0,0,im.width,1)),('bottom',(0,im.height-1,im.width,im.height))]}
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch22/audit_batch22.py:54: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  colors = [p[:3] for p, a in zip(sampled.getdata(), alpha.getdata()) if a]
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch22/audit_batch22.py:60: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  result.putdata([p if p[3] else (0, 0, 0, 0) for p in result.getdata()])

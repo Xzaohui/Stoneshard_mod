@@ -1,0 +1,134 @@
+{
+  "actor_id": "n1_ivo",
+  "design_id": "NPC-N-IVO",
+  "date": "2026-10-15",
+  "method": "built-in imagegen; independent portrait and map generations; map one targeted imagegen revision; deterministic mechanical nearest-neighbor/quantized derivatives",
+  "selected_portrait": "candidates/portrait_v1_74x100_candidate.png",
+  "selected_map_for_failure_review": "candidates/map_v2_35x44_candidate.png",
+  "native_qualified": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "parent_qa_required": true,
+  "files": [
+    {
+      "path": "QA.json",
+      "sha256": "15feb4448db279064dd6fa12b81b1eadda550f370aed116ec4e327811978fc72",
+      "bytes": 15082
+    },
+    {
+      "path": "README.md",
+      "sha256": "5d7b77a22d3e441ff2c77865b0de38fe30a76e26953b8b9be61f209b1b486c2d",
+      "bytes": 2871
+    },
+    {
+      "path": "candidates/map_v1_35x44_candidate.png",
+      "sha256": "ef3480815190dbfd1123decd900e02e556770f4c79dc43933d9218e27c686679",
+      "bytes": 1835
+    },
+    {
+      "path": "candidates/map_v2_35x44_candidate.png",
+      "sha256": "867aa7caefa21e5969cf943d33e8db19dd3e55aebb516b834e8f6df42526d007",
+      "bytes": 1673
+    },
+    {
+      "path": "candidates/portrait_v1_74x100_candidate.png",
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb",
+      "bytes": 8032
+    },
+    {
+      "path": "derive_and_check.py",
+      "sha256": "7778c7bcbe60acb2bcbc76451f2677b22cecad1beec86bdb670f3a3667169090",
+      "bytes": 7212
+    },
+    {
+      "path": "prompts/map_v1.txt",
+      "sha256": "d55306cd31208c6809c5bc00c75ffa752e9d56e012f8ca3a710affa993fee7fa",
+      "bytes": 2670
+    },
+    {
+      "path": "prompts/map_v2.txt",
+      "sha256": "f0c284cd4799b2f9232a116709e6888c390a9e12c6976ed4f272a57e5e32957c",
+      "bytes": 2611
+    },
+    {
+      "path": "prompts/portrait_v1.txt",
+      "sha256": "6d7a9026b2f51f449b4fef932e51b250bcaf56fddd36766ab5817149306afe8a",
+      "bytes": 2233
+    },
+    {
+      "path": "qa_run_stdout.json",
+      "sha256": "0e3354b07035c759fb6fcdb61ea3ed330ef07531e0e2149daa697876c2e05e0a",
+      "bytes": 11632
+    },
+    {
+      "path": "raw/map_v1_raw_imagegen.png",
+      "sha256": "6fc873ee82279cf58e59e69557b0ea96150e0753116a00d833596ed2928bc6c3",
+      "bytes": 617271
+    },
+    {
+      "path": "raw/map_v2_raw_imagegen.png",
+      "sha256": "d1bcb4a548c1b521de1f7b92f17f6c09012764d8a5faa7455b4d16e68c0b7088",
+      "bytes": 644343
+    },
+    {
+      "path": "raw/portrait_v1_raw_imagegen.png",
+      "sha256": "673dd1bca1ff1a17199f28bd063a2c2f59623ad2816e3961479d06ea7f279514",
+      "bytes": 1297354
+    },
+    {
+      "path": "review/ivo_pair_candidate_1x_8x_12x.png",
+      "sha256": "93f33128c0dd5fa8049341f49929e4ae6073f657356299079381afbb303fa4eb",
+      "bytes": 44488
+    },
+    {
+      "path": "review/map_v1_1x_12x.png",
+      "sha256": "a98f16de1fd62e85415c56a12b263d65103a1e3c795c893b13968615985707e4",
+      "bytes": 8193
+    },
+    {
+      "path": "review/map_v2_1x_12x.png",
+      "sha256": "4fb2717d2fc5401cba81253f1a0b8aad713756c3dcfa174e8bae1c679e2c9a9c",
+      "bytes": 7858
+    },
+    {
+      "path": "review/portrait_v1_1x_8x.png",
+      "sha256": "980db792fdf4b97613977ea93fa8bd9bdf2034b1dec0b2b7ec09c45c7b0f7ddf",
+      "bytes": 28088
+    },
+    {
+      "path": "sources/ivo_v4_portrait_reference_crop.png",
+      "sha256": "637e6593cd1d814016372c21d69656e5d1f178abfd069931b692aa5f48a80ab0",
+      "bytes": 20005
+    },
+    {
+      "path": "sources/sourcehash.json",
+      "sha256": "3daee7c962d375d2a55ed688ab421d9a10b17fd65f5b82216c831c60870bcce5",
+      "bytes": 344
+    },
+    {
+      "path": "spec_lock.md",
+      "sha256": "811fe534b42b80facc445237f0d2b30a31f509671065a3da30ff8b8501a03dd7",
+      "bytes": 2053
+    },
+    {
+      "path": "tool_returns/map_v1.json",
+      "sha256": "17e4f6c02dcf12a51a23386a77c78d0971e63743dd139590a31cd240a334978e",
+      "bytes": 3846
+    },
+    {
+      "path": "tool_returns/map_v2.json",
+      "sha256": "73dc2cc849bf55c5978002b4c7c582672e1164a69247fb881d67952ab5aa761d",
+      "bytes": 3813
+    },
+    {
+      "path": "tool_returns/portrait_v1.json",
+      "sha256": "70d30517b082960512549d90efe12e1b36c4edb7641be5c6cc84a74dd9b44959",
+      "bytes": 3294
+    }
+  ],
+  "visual_status": {
+    "portrait_v1": "style_candidate_pending_user_acceptance",
+    "map_v1": "failed_visual_gate",
+    "map_v2": "failed_visual_gate_after_one_revision"
+  }
+}

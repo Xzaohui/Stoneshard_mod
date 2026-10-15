@@ -1,0 +1,149 @@
+{
+  "batch": 28,
+  "slug": "ile",
+  "name": "伊蕾",
+  "status": "deliverable_candidate_with_notes",
+  "delivery_eligible": true,
+  "selected_path": "ile/candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "378f6ce15c03de6aacaeaf8dcdfe52e84a462fbb9ae4247e6f66e8fedb7658fb",
+  "held_evidence_path": null,
+  "held_evidence_sha256": null,
+  "method": "Independently actually viewed original identity master, four core references, both raw generations, final 1x three-background panel and 8x integer NN preview; read current card, mother QA, roster and relevant scene passages. Technical reproduction is separate from visual assessment.",
+  "identity_assessment": "40上下、灰缕棕头巾与木夹、苔绿衣锈围裙窄领、成熟疲惫善意，与薇柯区分明确。",
+  "visual_assessment": "v2实质重画了v1被右边裁断的头巾；v1右源41个alpha≥128像素触边，v2相同阈值四边0、alpha≥16四边0；头巾右侧实心轮廓回入源框，源耳发完整。",
+  "limitations": [
+    "眼白仍较亮、发带与颈部细节偏多，短颈/大脸目标仅部分达到。",
+    "源alpha≥16右核心2px，≥128为3px，alpha≥5仍有20个极弱右缘点；未达4%余量目标，不声称全alpha无触边。",
+    "full采样到目标x73属于NN网格贴边；选同源72×98整幅等比inset，不能把inset称作源裁断修复。",
+    "原生像素与实机未经验证。"
+  ],
+  "raw_v2_sha256": "8fec297bfcc41ab501987913947e491a98f62e8f2e61573d3a146c11bab3644e",
+  "raw_v2_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        21,
+        1079,
+        1458
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 86,
+        "left": 31,
+        "right": 32
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": [
+          471,
+          723
+        ],
+        "left": [
+          365,
+          1049
+        ],
+        "right": [
+          673,
+          704
+        ]
+      }
+    },
+    "5": {
+      "bbox": [
+        35,
+        150,
+        1079,
+        1334
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 20
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": [
+          681,
+          700
+        ]
+      }
+    },
+    "16": {
+      "bbox": [
+        37,
+        152,
+        1077,
+        1332
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        37,
+        152,
+        1076,
+        1331
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        48,
+        153,
+        1067,
+        1330
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "target_bbox": [
+    3,
+    11,
+    73,
+    90
+  ],
+  "source_clipping_vs_NN_edge": "Use actual original raw contour and multiple alpha thresholds. Genuine v1 Ile clipping is rejected. Near-zero background alpha or final NN-grid edge contact alone is not a missing hair/ear contour. Inset does not reconstruct missing source pixels.",
+  "feedback_rounds": 1,
+  "successful_generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

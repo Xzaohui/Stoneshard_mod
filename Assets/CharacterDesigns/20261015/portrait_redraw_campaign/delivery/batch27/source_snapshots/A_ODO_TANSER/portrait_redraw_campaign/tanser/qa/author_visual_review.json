@@ -1,0 +1,35 @@
+{
+  "version": "portrait_v2_inset",
+  "actual_viewed": [
+    "v2 raw",
+    "v2 4x dark/mid/light preview",
+    "v2 inset 4x dark/mid/light preview",
+    "true 1x candidate"
+  ],
+  "improvements": [
+    "双眼小而暗，亮眼白明显消失",
+    "短颈、窄棕领成立，面部比初稿更大",
+    "胡茬已由密碎点归并为连续影块",
+    "旧缝痕可读，棕发胡茬约四十岁，不与瑟芬灰须身份混同"
+  ],
+  "residual_issues": [
+    "发丝仍有平行长纹，面部部分小像素阶梯仍细于四核心",
+    "inset仅技术留边，不新增发耳、不视为原生终稿"
+  ],
+  "decision": "selected_candidate_with_limitations",
+  "technical_alternate": "portrait_v2_inset uses same entire raw canvas in 72x98 fit box, centered in 74x100; no crop, no repaint, no imagegen call",
+  "generation_calls": 2,
+  "max_generation_calls": 2,
+  "third_generation_prohibited": true,
+  "native_pixel_approved": false,
+  "runtime_verified": false,
+  "independent_final": "Face enlarged, neck shortened, small dark eyes, beard grouped into planes and healed glabellar scar readable; age and guarded composure retained.",
+  "selected_candidate_must_not_be_promoted_until_qa": false,
+  "limitations": [
+    "源右边y717–729存在低alpha5–21羽边触边，alpha>=16有3像素；不能称所有alpha均留边。",
+    "独立灰底放大核实实心发尖在边前闭合；alpha>=128右侧真实余量10px，inset二值候选留2px侧边。",
+    "仍有平行发纹和局部细像素层次；不是原生逐像素终稿。",
+    "74×100、≤32临时色、二值alpha和等比NEAREST containment为技术派生候选，不是原生像素批准。",
+    "未替换母图、人物卡、代码或冻结索引，未导入游戏、未实机验证、未提交推送。"
+  ]
+}

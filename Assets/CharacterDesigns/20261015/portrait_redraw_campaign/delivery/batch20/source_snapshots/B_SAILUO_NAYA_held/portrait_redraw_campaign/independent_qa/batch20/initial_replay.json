@@ -1,0 +1,132 @@
+{
+  "utc": "2026-10-15T11:11:10.767079+00:00",
+  "script_read_before_execution": true,
+  "allowed_script_sha256": [
+    "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "ed2c082a59492f03afe5938b4cf075194f9eb846d801e517491e95b080e4f6c3"
+  ],
+  "inputs_read_only": true,
+  "sandbox": "independent_qa/batch20/replay",
+  "actors": {
+    "luling": {
+      "script_sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+      "versions": [
+        {
+          "version": "portrait_v1_inset",
+          "command": [
+            "python",
+            "derive_portrait.py",
+            "portrait_v1",
+            "inset"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"version\": \"portrait_v1_inset\", \"candidate\": \"candidates/portrait_v1_inset_74x100_candidate.png\", \"sha\": \"34eca88b918c16d6f9073de4393dc6edbedb6f47d0053a01159746c3da66fd66\", \"raw_dimensions\": [1079, 1458], \"colors\": 32, \"alpha\": [0, 255], \"bbox\": [3, 7, 72, 96], \"checks\": {\"dimensions\": true, \"color_budget\": true, \"binary_alpha\": true, \"full_tool_return_matches_raw\": true}}\n",
+          "stderr": "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch20/replay/luling/derive_portrait.py:17: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  visible=[rgb[:3] for rgb,a in zip(canvas.getdata(),mask.getdata()) if a]\n/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch20/replay/luling/derive_portrait.py:21: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  out=Image.new('RGBA',(74,100)); out.putdata([(*rgb,a) if a else (0,0,0,0) for rgb,a in zip(q.getdata(),mask.getdata())])\n/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch20/replay/luling/derive_portrait.py:31: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  counts=Counter(rgb[:3] for rgb in out.getdata() if rgb[3]); alpha=sorted(set(out.getchannel('A').getdata()))\n/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch20/replay/luling/derive_portrait.py:33: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  metrics={'version':export_tag,'raw':{'path':str(raw.relative_to(W)),'sha256':sha(raw),'dimensions':list(source.size),'byte_identical_to_full_tool_return':same},'candidate':{'path':str(target.relative_to(W)),'sha256':sha(target),'dimensions':list(out.size),'mode':out.mode,'visible_rgb_colors':len(counts),'alpha_values':alpha,'alpha_bbox':out.getchannel('A').getbbox(),'partial_alpha_pixels':sum(0<a<255 for a in out.getchannel('A').getdata()),'palette_by_frequency':[{'rgb':list(c),'count':n} for c,n in counts.most_common()]},'method':{'substantive_imagegen_redraw':True,'native_pixel_authored':False,'resize':'isotropic fit entire canvas with NEAREST, integer-rounded output dimensions; no crop or geometric redrawing','scale':s,'fit_box':fit_box,'same_raw_technical_inset':profile=='inset','resized_dimensions':list(size),'alpha_threshold':128,'palette':'MAXCOVERAGE <=32 visible colors, no dithering','transparent_rgb':'zero','technical_export_only':True},'checks':{'dimensions':out.size==(74,100),'color_budget':len(counts)<=32,'binary_alpha':alpha==[0,255],'full_tool_return_matches_raw':same},'environment':{'python':platform.python_version(),'pillow':PIL_VERSION}}\n",
+          "checks": [
+            {
+              "path": "candidates/portrait_v1_inset_74x100_candidate.png",
+              "source_sha256": "34eca88b918c16d6f9073de4393dc6edbedb6f47d0053a01159746c3da66fd66",
+              "replay_sha256": "34eca88b918c16d6f9073de4393dc6edbedb6f47d0053a01159746c3da66fd66",
+              "byte_identical": true
+            },
+            {
+              "path": "previews/portrait_v1_inset_1x.png",
+              "source_sha256": "34eca88b918c16d6f9073de4393dc6edbedb6f47d0053a01159746c3da66fd66",
+              "replay_sha256": "34eca88b918c16d6f9073de4393dc6edbedb6f47d0053a01159746c3da66fd66",
+              "byte_identical": true
+            },
+            {
+              "path": "previews/portrait_v1_inset_8x.png",
+              "source_sha256": "cdf972f27fd3b9f1da46eec4a40ecbcba880579e5f8231b9522e4b276d557e71",
+              "replay_sha256": "cdf972f27fd3b9f1da46eec4a40ecbcba880579e5f8231b9522e4b276d557e71",
+              "byte_identical": true
+            },
+            {
+              "path": "previews/portrait_v1_inset_1x_backgrounds.png",
+              "source_sha256": "99473b807eb91fcfb00ffe18aad570e883c01a75924cbad34e60b7a63c2964b7",
+              "replay_sha256": "99473b807eb91fcfb00ffe18aad570e883c01a75924cbad34e60b7a63c2964b7",
+              "byte_identical": true
+            },
+            {
+              "path": "previews/portrait_v1_inset_4x_backgrounds.png",
+              "source_sha256": "af9836826c2c337dffefaca103ab5b50bc81cbfa41fa8c4238bedde631993747",
+              "replay_sha256": "af9836826c2c337dffefaca103ab5b50bc81cbfa41fa8c4238bedde631993747",
+              "byte_identical": true
+            },
+            {
+              "path": "qa/portrait_v1_inset_metrics.json",
+              "source_sha256": "ff387f4968d91baf5a05ce8799efd05be2f7d0829439c815fdca4218265d4746",
+              "replay_sha256": "ff387f4968d91baf5a05ce8799efd05be2f7d0829439c815fdca4218265d4746",
+              "byte_identical": true
+            }
+          ]
+        }
+      ]
+    },
+    "naya": {
+      "script_sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+      "versions": [
+        {
+          "version": "portrait_v1_inset",
+          "command": [
+            "python",
+            "derive_portrait.py",
+            "portrait_v1",
+            "inset"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"version\": \"portrait_v1_inset\", \"candidate\": \"candidates/portrait_v1_inset_74x100_candidate.png\", \"sha\": \"5857a603b78da2ea22284ad156f3517836dbb7d572d14483d0899b20c5044ede\", \"raw_dimensions\": [1079, 1458], \"colors\": 32, \"alpha\": [0, 255], \"bbox\": [5, 7, 70, 94], \"checks\": {\"dimensions\": true, \"color_budget\": true, \"binary_alpha\": true, \"full_tool_return_matches_raw\": true}}\n",
+          "stderr": "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch20/replay/naya/derive_portrait.py:17: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  visible=[rgb[:3] for rgb,a in zip(canvas.getdata(),mask.getdata()) if a]\n/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch20/replay/naya/derive_portrait.py:21: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  out=Image.new('RGBA',(74,100)); out.putdata([(*rgb,a) if a else (0,0,0,0) for rgb,a in zip(q.getdata(),mask.getdata())])\n/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch20/replay/naya/derive_portrait.py:31: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  counts=Counter(rgb[:3] for rgb in out.getdata() if rgb[3]); alpha=sorted(set(out.getchannel('A').getdata()))\n/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch20/replay/naya/derive_portrait.py:33: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  metrics={'version':export_tag,'raw':{'path':str(raw.relative_to(W)),'sha256':sha(raw),'dimensions':list(source.size),'byte_identical_to_full_tool_return':same},'candidate':{'path':str(target.relative_to(W)),'sha256':sha(target),'dimensions':list(out.size),'mode':out.mode,'visible_rgb_colors':len(counts),'alpha_values':alpha,'alpha_bbox':out.getchannel('A').getbbox(),'partial_alpha_pixels':sum(0<a<255 for a in out.getchannel('A').getdata()),'palette_by_frequency':[{'rgb':list(c),'count':n} for c,n in counts.most_common()]},'method':{'substantive_imagegen_redraw':True,'native_pixel_authored':False,'resize':'isotropic fit entire canvas with NEAREST, integer-rounded output dimensions; no crop or geometric redrawing','scale':s,'fit_box':fit_box,'same_raw_technical_inset':profile=='inset','resized_dimensions':list(size),'alpha_threshold':128,'palette':'MAXCOVERAGE <=32 visible colors, no dithering','transparent_rgb':'zero','technical_export_only':True},'checks':{'dimensions':out.size==(74,100),'color_budget':len(counts)<=32,'binary_alpha':alpha==[0,255],'full_tool_return_matches_raw':same},'environment':{'python':platform.python_version(),'pillow':PIL_VERSION}}\n",
+          "checks": [
+            {
+              "path": "candidates/portrait_v1_inset_74x100_candidate.png",
+              "source_sha256": "5857a603b78da2ea22284ad156f3517836dbb7d572d14483d0899b20c5044ede",
+              "replay_sha256": "5857a603b78da2ea22284ad156f3517836dbb7d572d14483d0899b20c5044ede",
+              "byte_identical": true
+            },
+            {
+              "path": "previews/portrait_v1_inset_1x.png",
+              "source_sha256": "5857a603b78da2ea22284ad156f3517836dbb7d572d14483d0899b20c5044ede",
+              "replay_sha256": "5857a603b78da2ea22284ad156f3517836dbb7d572d14483d0899b20c5044ede",
+              "byte_identical": true
+            },
+            {
+              "path": "previews/portrait_v1_inset_8x.png",
+              "source_sha256": "cdf5bc4fdf893233be0de6381c0f8110a394d2b2114e6981b58a767805e58822",
+              "replay_sha256": "cdf5bc4fdf893233be0de6381c0f8110a394d2b2114e6981b58a767805e58822",
+              "byte_identical": true
+            },
+            {
+              "path": "previews/portrait_v1_inset_1x_backgrounds.png",
+              "source_sha256": "f52a0119ffcb72111364baafa06bace157893b57213384c1cd849136d4ec1785",
+              "replay_sha256": "f52a0119ffcb72111364baafa06bace157893b57213384c1cd849136d4ec1785",
+              "byte_identical": true
+            },
+            {
+              "path": "previews/portrait_v1_inset_4x_backgrounds.png",
+              "source_sha256": "4f2364254e40666eca302138817ebdadeb1c9d821cdef48027827aeb16be6d27",
+              "replay_sha256": "4f2364254e40666eca302138817ebdadeb1c9d821cdef48027827aeb16be6d27",
+              "byte_identical": true
+            },
+            {
+              "path": "qa/portrait_v1_inset_metrics.json",
+              "source_sha256": "b5ee777ffb965885d20ec4bd48d511e732e8c3c07dc6c90378203e558451906e",
+              "replay_sha256": "b5ee777ffb965885d20ec4bd48d511e732e8c3c07dc6c90378203e558451906e",
+              "byte_identical": true
+            }
+          ]
+        }
+      ]
+    },
+    "noda": {
+      "script_sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+      "versions": []
+    },
+    "sailuo": {
+      "script_sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+      "versions": []
+    }
+  },
+  "errors": [],
+  "pass": true
+}

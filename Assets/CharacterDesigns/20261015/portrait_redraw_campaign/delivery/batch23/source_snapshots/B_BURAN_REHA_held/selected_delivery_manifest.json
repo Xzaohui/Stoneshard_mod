@@ -1,0 +1,189 @@
+{
+  "batch": "23",
+  "date": "2026-10-15",
+  "qualified_candidate_count": 3,
+  "held_count": 1,
+  "characters": [
+    {
+      "actor": "saler",
+      "name": "桑勒",
+      "source": "saler/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "4ff3a2b9c0185b31dcc25f80bdf9f25a4ae24759ea6471a9af897b5e435f5c99",
+      "delivery_file": "SALER_桑勒_74x100_candidate.png",
+      "delivery_sha256": "4ff3a2b9c0185b31dcc25f80bdf9f25a4ae24759ea6471a9af897b5e435f5c99",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "saler/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "眼白仍亮、内眉略抬；帽发占幅与细纹偏多",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "wenno",
+      "name": "温诺",
+      "source": "wenno/candidates/portrait_v2_containment_74x100_candidate.png",
+      "source_sha256": "fce8e52d5a59497c631c65b208c11ab6642b42018940a4919d57bf1619f380e2",
+      "delivery_file": "WENNO_温诺_74x100_candidate.png",
+      "delivery_sha256": "fce8e52d5a59497c631c65b208c11ab6642b42018940a4919d57bf1619f380e2",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_containment",
+      "derivation_metrics": "wenno/qa/portrait_v2_containment_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "眼白与发纹偏碎；原始右发尖余量仅 5px",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "buran",
+      "name": "布岚",
+      "source": "buran/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "0cd388f2397e5ec024dd3ca0b155314b689bb1f179f722b88fae4bfe3c4a6763",
+      "delivery_file": "BURAN_布岚_74x100_candidate.png",
+      "delivery_sha256": "0cd388f2397e5ec024dd3ca0b155314b689bb1f179f722b88fae4bfe3c4a6763",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "buran/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "眼白仍亮、内眉微忧；帽发占幅仍偏大",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "held": [
+    {
+      "slug": "reha",
+      "name": "雷哈",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "a67e4f2aa397ad0a95158d55a5cf3d2840bf58ce2575965b35ddd7d715b1b1c3",
+      "production_SHA256SUMS_sha256": "8b677f777259fb0ce99095d88f4f4eeb342af8e4a5ff4b5d71099717f5bf51dd",
+      "decision": "held_source_clipping",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": false,
+      "residual": [
+        "眼白偏亮且忧眉模板感仍较强。",
+        "原raw左右余量不均，右发卷已真实裁切，不能列入可交候选。",
+        "v1右发边也未达到完整安全留边，不能回选冒充通过；两次已用完，不第三次。"
+      ],
+      "held_evidence_portrait": "reha/candidates/portrait_v2_inset_74x100_candidate.png",
+      "held_evidence_sha256": "f00a999d4e4fad8774b45061f8b696cfd6168d79fefc81c62a5d4d9da20b5e6c",
+      "historical_fallback_approved": false
+    }
+  ],
+  "board": {
+    "file": "batch23_三人头像总览_1x_4x.png",
+    "sha256": "6a40feefd74347af84fff87c10a187895d6cacd569b61129d9ea8ad727454823",
+    "dimensions": [
+      680,
+      1898
+    ],
+    "portrait_checks": [
+      {
+        "actor": "saler",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "saler",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "wenno",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "wenno",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "buran",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1258,
+          161,
+          1358
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "buran",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1101,
+          624,
+          1501
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false,
+    "held_portrait_not_displayed": true
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded. All four generated production folders, including held reha evidence, are retained; held is not counted as success."
+}

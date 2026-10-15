@@ -1,0 +1,32 @@
+{
+  "author_reviewed_utc": "2026-10-15T11:33:46.160440+00:00",
+  "status": "selected_candidate_with_limitations",
+  "selected_version": "portrait_v2_inset",
+  "previous_review": "qa/author_v1_visual_review.json",
+  "actually_viewed": [
+    "identity master",
+    "four core 1x and NN6x style reference",
+    "v1 and v2 raw",
+    "v1 and v2 candidate NN8x",
+    "v1 and v2 candidate 1x dark gray and light backgrounds"
+  ],
+  "identity_conflict": false,
+  "findings": {
+    "identity": "三十多岁瘦男性，短暗棕发与短胡须，灰蓝新工装/棕背心边、无补丁。非妮莎未归弟弟；无英雄化道具或可见囚号。",
+    "expression": "闭口、警觉侧目与坚决眉形；与玛迪成熟忧虑面分开。",
+    "improvements": "短颈和V领明显压缩；肩胸收成窄底条，脸鼻颧骨块清楚；眼白降灰、碎发较v1合并。",
+    "residual_limitations": [
+      "眼部仍有小亮簇，不是纯暗眼缝。",
+      "发束高光仍偏细碎，粗像素簇有提升空间。",
+      "下方透明余量偏大（候选底部13px），脸/头仍可读，但画幅利用不如核心。",
+      "低分辨率派生不等于原生逐像素终稿。"
+    ]
+  },
+  "generation_calls_used": 2,
+  "generation_calls_maximum": 2,
+  "technical_derivation": "Whole source canvas isotropic NEAREST fit in 72x98 then center in 74x100; binary alpha128; MAXCOVERAGE 32 visible colors no dithering. No face painting or cropping. Insets do not repair or disguise a clipped raw silhouette.",
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "no_third_imagegen_call": true
+}

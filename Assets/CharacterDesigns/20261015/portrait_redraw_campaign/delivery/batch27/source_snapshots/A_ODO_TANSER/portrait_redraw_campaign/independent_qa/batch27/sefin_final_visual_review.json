@@ -1,0 +1,158 @@
+{
+  "slug": "sefin",
+  "status": "held_source_clipping",
+  "delivery_eligible": false,
+  "selected_path": null,
+  "selected_sha256": null,
+  "held_evidence_path": "sefin/candidates/portrait_v2_74x100_candidate.png",
+  "held_evidence_sha256": "84098c2068d8de4888d4aebe00f7244e29a9b3501cd8ab6168b09e1ba4783a76",
+  "visual_assessment": "v2小暗低白眼、脸部扩大和短颈窄领明显改善；四十多岁灰缕短须、海风粗肤、沉重关切略回避侧目与蓝褂棕背心可追溯。然而右侧发尖在源画布y809–820连12个alpha>=128像素抵边（最高251），灰底4x局部实看深色轮廓被截，源真留边0。74×100采样错过此发尖而显示1像素留边，不构成源完整证明。",
+  "limitations": [
+    "真实源右发尖裁断；候选NN边距不能代替完整原始轮廓。",
+    "v1虽源完整但亮眼白/长颈风格缺口未关闭，不替回作为选稿。",
+    "两份成功图上限已用完，不第三次，不做padding掩盖。",
+    "只保研究证据，不交付selected，不作原生/实机终稿。"
+  ],
+  "actual_visual_review": [
+    "identity master",
+    "four core reference portraits",
+    "v1 raw and 8x",
+    "v2 raw and 8x",
+    "4x raw right-edge gray-background crop"
+  ],
+  "raw_framing": {
+    "raw_path": "sefin/raw/portrait_v2_raw_imagegen.png",
+    "sha256": "93ab1e2096c48203acdbc033815a64be3f994fd4e857879f180ba0e887ba686f",
+    "size": [
+      1079,
+      1457
+    ],
+    "alpha_threshold_boundaries": {
+      "1": {
+        "bbox": [
+          0,
+          4,
+          1079,
+          1457
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 13,
+          "left": 45,
+          "right": 50
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": [
+            484,
+            555
+          ],
+          "left": [
+            4,
+            1009
+          ],
+          "right": [
+            618,
+            823
+          ]
+        }
+      },
+      "5": {
+        "bbox": [
+          31,
+          111,
+          1079,
+          1406
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 15
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": null,
+          "right": [
+            808,
+            823
+          ]
+        }
+      },
+      "16": {
+        "bbox": [
+          33,
+          111,
+          1079,
+          1404
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 14
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": null,
+          "right": [
+            808,
+            821
+          ]
+        }
+      },
+      "128": {
+        "bbox": [
+          33,
+          112,
+          1079,
+          1403
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 12
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": null,
+          "right": [
+            809,
+            820
+          ]
+        }
+      },
+      "255": {
+        "bbox": [
+          42,
+          129,
+          1064,
+          1401
+        ],
+        "border_counts": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "border_ranges": {
+          "top": null,
+          "bottom": null,
+          "left": null,
+          "right": null
+        }
+      }
+    }
+  },
+  "successful_generations": 2,
+  "feedback_rounds": 1,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

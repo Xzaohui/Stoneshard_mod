@@ -1,0 +1,40 @@
+{
+  "reviewer": "author with independent QA24 disposition",
+  "reviewed_utc": "2026-10-15T11:56:30.908459+00:00",
+  "actor_id": "YOS-NPC-HURE",
+  "decision": "held_composition_scale_eye_sclera",
+  "selected_version": null,
+  "held_best_effort_version": "portrait_v2",
+  "selected_sha256": null,
+  "actual_views": [
+    "both identity masters and all four core references",
+    "raw v1 and v2",
+    "derived v1/v2 8x",
+    "v2 actual 1x dark/grey/light sheet and integer 4x sheet"
+  ],
+  "identity_check": "三十多岁成年女性，栗发后束发髻与耳旁发、深眼窝、坚定关切闭口侧目；米白围巾/灰披巾/紫棕窄领保持母图，素色衣着符合最新卡。不展示隐藏药包或家属病史。",
+  "technical": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "improvements": [
+    "v2围巾/灰披肩压成窄领，裸颈显著缩短。",
+    "成人大鼻与颧骨平面、栗发束起身份连续。"
+  ],
+  "limitations": [
+    "held：近方源画幅1216×1293，全幅等比74×100后主体仅69px高，上下空白明显，侧髻占宽抑制脸占比。",
+    "源有效右边余量极窄（v1 6px / v2 7px），目标NN触右边；实际灰底复核轮廓闭合，不称已证实裁断。",
+    "眼白仍亮，未达到小暗眼目标；眉仍带忧愁倾向，发纹较密。",
+    "两次生图上限已到，不再修订；不进入通过肖像画廊。",
+    "imagegen原图的像素风不等于原生逐像素绘制；74×100、32临时色与二值alpha仅技术派生。",
+    "未替换母图、角色卡、代码或游戏资源；未commit/push。"
+  ],
+  "imagegen_calls": 2,
+  "further_generation": "stopped at first draft plus one necessary revision limit",
+  "source_clipping_proven": false,
+  "independent_review_status": "呼蕾维持held，准确gate为composition/scale + eye_sclera，不是source_clipping；灰底闭合及6/7px源边证据已复核。",
+  "native_pixel_approved": false,
+  "runtime_integrated": false
+}

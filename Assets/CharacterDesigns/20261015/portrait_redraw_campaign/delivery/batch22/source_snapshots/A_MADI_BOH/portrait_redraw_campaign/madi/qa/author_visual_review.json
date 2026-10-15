@@ -1,0 +1,31 @@
+{
+  "author_reviewed_utc": "2026-10-15T11:33:46.052188+00:00",
+  "status": "selected_candidate_with_limitations",
+  "selected_version": "portrait_v2_inset",
+  "previous_review": "qa/author_v1_visual_review.json",
+  "actually_viewed": [
+    "identity master",
+    "four core 1x and NN6x style reference",
+    "v1 and v2 raw",
+    "v1 and v2 candidate NN8x",
+    "v1 and v2 candidate 1x dark gray and light backgrounds"
+  ],
+  "identity_conflict": false,
+  "findings": {
+    "identity": "约五十岁女性，灰缕浅头巾/完整后结、窄长成熟脸、长鼻、口周纹、暗锈与深罩衣色，未与年轻核心脸混同。",
+    "expression": "忧疑但克制的闭口侧目；眉仍略上扬，保有守灯者亏欠与坚持的复杂感。",
+    "improvements": "脸体量增大、头顶空白减少；领口上移，露颈显著缩短，肩胸压成底边。眼白由纯亮白降为灰小簇。",
+    "residual_limitations": [
+      "眼部仍可见小亮簇，未完全成为暗小眼白。",
+      "头巾仍占较大画幅，原raw高alpha左右留边较窄（左9/右7 px），所见轮廓仍完整。",
+      "头发、头巾局部纹理仍较细；不是原生逐像素终稿。"
+    ]
+  },
+  "generation_calls_used": 2,
+  "generation_calls_maximum": 2,
+  "technical_derivation": "Whole source canvas isotropic NEAREST fit in 72x98 then center in 74x100; binary alpha128; MAXCOVERAGE 32 visible colors no dithering. No face painting or cropping. Insets do not repair or disguise a clipped raw silhouette.",
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "no_third_imagegen_call": true
+}

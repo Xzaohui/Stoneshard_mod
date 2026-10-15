@@ -1,0 +1,223 @@
+{
+  "batch": "21",
+  "date": "2026-10-15",
+  "characters": [
+    {
+      "actor": "tafei",
+      "name": "塔斐",
+      "source": "tafei/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a",
+      "delivery_file": "TAFEI_塔斐_74x100_candidate.png",
+      "delivery_sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "tafei/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": [
+        "原raw右侧仅1源像素透明留边，余量极紧；full NN候选采样到右画框，所选72×98 containment仅是技术导出留边，不能声称修复源图裁切。",
+        "发须和帽褶仍有平行条带；小眼白残余偏亮，但明显好于v1。"
+      ],
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "xielan",
+      "name": "榭兰",
+      "source": "xielan/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "81c343d0fce4935936d320bc9ca7d401c25806055fdf9a7134a35952d2a27143",
+      "delivery_file": "XIELAN_榭兰_74x100_candidate.png",
+      "delivery_sha256": "81c343d0fce4935936d320bc9ca7d401c25806055fdf9a7134a35952d2a27143",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "xielan/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": [
+        "灰发和短胡仍保留一些重复条带、细碎像素；表情仍略严肃。",
+        "底部只1候选像素透明留边，构图余量偏紧。"
+      ],
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "yuen",
+      "name": "尤恩",
+      "source": "yuen/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313",
+      "delivery_file": "YUEN_尤恩_74x100_candidate.png",
+      "delivery_sha256": "6a71b2e1db1b5bb27fa0bbe5ebaf9c20352fa2073c29dfa1b5fd3baf987b7313",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "yuen/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": [
+        "额眉皱纹线仍稍多，白发仍有少量连续条带；眼白保留小亮块。",
+        "原raw右侧余量15源像素，selected inset提供更稳候选留边，不是源图修复。"
+      ],
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "arlin",
+      "name": "阿霖",
+      "source": "arlin/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79",
+      "delivery_file": "ARLIN_阿霖_74x100_candidate.png",
+      "delivery_sha256": "8b9a508ee332c9ee39c6d43248ef12ceadc135e57e5fa68e27c91c8a9215eb79",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "arlin/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": [
+        "小眼白仍比四核心略亮；深发仍为条状大分组，少量暗色合并仍存在。",
+        "full版本把部分褐发胡须合成橄榄调，selected inset已明显减轻；32色压缩的细微色差损失保留为限制。"
+      ],
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "board": {
+    "file": "batch21_四人头像总览_1x_4x.png",
+    "sha256": "d4a99a2eb73deb92c9becc2a8b23a39950d6fd0efb1a5bfb0f694e5b4a3a50cf",
+    "dimensions": [
+      680,
+      2184
+    ],
+    "portrait_checks": [
+      {
+        "actor": "tafei",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "tafei",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "xielan",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "xielan",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "yuen",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1258,
+          161,
+          1358
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "yuen",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1101,
+          624,
+          1501
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "arlin",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1724,
+          161,
+          1824
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "arlin",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1567,
+          624,
+          1967
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded from delivery archives. Generated identity/style source references are retained."
+}

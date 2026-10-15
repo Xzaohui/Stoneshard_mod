@@ -1,0 +1,57 @@
+{
+  "threshold": 128,
+  "raw_images_untouched": true,
+  "measurements": [
+    {
+      "version": "portrait_v1",
+      "size": [
+        1079,
+        1458
+      ],
+      "alpha_128_bbox": [
+        33,
+        127,
+        1073,
+        1440
+      ],
+      "effective_margins_ltrb": [
+        33,
+        127,
+        6,
+        18
+      ],
+      "edge_max_alpha": {
+        "left": 1,
+        "right": 1,
+        "top": 0,
+        "bottom": 1
+      }
+    },
+    {
+      "version": "portrait_v2",
+      "size": [
+        1216,
+        1293
+      ],
+      "alpha_128_bbox": [
+        50,
+        96,
+        1209,
+        1233
+      ],
+      "effective_margins_ltrb": [
+        50,
+        96,
+        7,
+        60
+      ],
+      "edge_max_alpha": {
+        "left": 1,
+        "right": 4,
+        "top": 1,
+        "bottom": 0
+      }
+    }
+  ],
+  "note": "Effective opaque edge margins; tiny nonzero edge alpha is not proof of severed contour. Hure source has closed contour with very narrow right margin, target NEAREST hits edge; do not claim confirmed source clipping."
+}

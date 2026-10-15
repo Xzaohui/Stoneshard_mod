@@ -1,0 +1,228 @@
+{
+  "batch": "28",
+  "date": "2026-10-15",
+  "characters": [
+    {
+      "actor": "viko",
+      "name": "薇柯",
+      "source": "viko/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "eb30a2f311779a1cee39bffeebca45e1b3efac8ed23e672201c37e10375bba09",
+      "delivery_file": "VIKO_薇柯_74x100_candidate.png",
+      "delivery_sha256": "eb30a2f311779a1cee39bffeebca45e1b3efac8ed23e672201c37e10375bba09",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "viko/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": [
+        "眼白与眼框仍比四核心稍亮大；不是严格小暗眼终稿。",
+        "头发带状细节仍较多，非原生逐像素终稿。",
+        "源alpha≥16右余4px、≥128右4px；仅一个alpha≥5弱点触右缘，未达4%目标。full网格x73触边，选同源72×98整幅等比inset，未补画源轮廓。"
+      ],
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "ile",
+      "name": "伊蕾",
+      "source": "ile/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "378f6ce15c03de6aacaeaf8dcdfe52e84a462fbb9ae4247e6f66e8fedb7658fb",
+      "delivery_file": "ILE_伊蕾_74x100_candidate.png",
+      "delivery_sha256": "378f6ce15c03de6aacaeaf8dcdfe52e84a462fbb9ae4247e6f66e8fedb7658fb",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "ile/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": [
+        "眼白仍较亮、发带与颈部细节偏多，短颈/大脸目标仅部分达到。",
+        "源alpha≥16右核心2px，≥128为3px，alpha≥5仍有20个极弱右缘点；未达4%余量目标，不声称全alpha无触边。",
+        "full采样到目标x73属于NN网格贴边；选同源72×98整幅等比inset，不能把inset称作源裁断修复。",
+        "原生像素与实机未经验证。"
+      ],
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "harlen",
+      "name": "哈伦",
+      "source": "harlen/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "37e64b70711cfc88486b1c1ae1c9627eee72a452599acaa4c529aed190774ccb",
+      "delivery_file": "HARLEN_哈伦_74x100_candidate.png",
+      "delivery_sha256": "37e64b70711cfc88486b1c1ae1c9627eee72a452599acaa4c529aed190774ccb",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "harlen/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": [
+        "发须仍有较多碎条与点，不是四核心同等简练像素组织。",
+        "眼白仍可见，颈尚略长；作为带限制NN候选交付。",
+        "源实心右余20px，小于约4%提示目标，但完整发/耳轮廓无实质裁断；alpha≥5四边0。"
+      ],
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "belo",
+      "name": "贝洛",
+      "source": "belo/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "1010d438786069d51b0dc54a6365facb7d06c03220f4dd76c2d17c32ec90f432",
+      "delivery_file": "BELO_贝洛_74x100_candidate.png",
+      "delivery_sha256": "1010d438786069d51b0dc54a6365facb7d06c03220f4dd76c2d17c32ec90f432",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "belo/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": [
+        "眼白仍偏亮，颈段仍略长，发束仍多于四核心。",
+        "顶空15px使头占较四核心偏小；完整源不裁剪、不脚本放大脸。",
+        "源实心右余31px，小于约4%提示目标，但无发耳实质裁断；alpha≥5四边0。"
+      ],
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "board": {
+    "file": "batch28_四人头像总览_1x_4x.png",
+    "sha256": "7586af7605f8e6dd95a0ae56e5bf8fe270867c25383e864fa2196181fcf3c5ef",
+    "dimensions": [
+      680,
+      2184
+    ],
+    "portrait_checks": [
+      {
+        "actor": "viko",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "viko",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ile",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ile",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "harlen",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1258,
+          161,
+          1358
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "harlen",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1101,
+          624,
+          1501
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "belo",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1724,
+          161,
+          1824
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "belo",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1567,
+          624,
+          1967
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded from delivery archives. Generated identity/style source references are retained."
+}

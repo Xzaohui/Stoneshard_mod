@@ -1,0 +1,57 @@
+[
+  {
+    "actor": "saler",
+    "successful_image_returns": 2,
+    "raw_files": 2,
+    "author_generation_calls": 2,
+    "non_image_tool_records": [
+      {
+        "path": "tool_returns/portrait_v2_validation_failure.json",
+        "sha256": "b4c5fcd081121ae11c89704ed23786d05546127ea25ed17db55856a6689fa2a3",
+        "record": {
+          "stage": "pre-generation validation",
+          "error": "`referenced_image_paths` must contain at most 5 paths",
+          "images_generated": 0,
+          "request": {
+            "prompt": "Use case: precise-object-edit / style-transfer. This is the ONLY targeted revision of a fantasy RPG portrait. Input 1 is the v1 portrait to revise; input 2 is original identity/color reference; inputs 3–6 are Mara/Iwo/Leiya/Tore coarse-pixel style references only. KEEP the same character, age, hair/beard identity, head orientation, costume colors and actual transparent margins. Substantively REDRAW the lower face-to-collar transition: the neck is too tall. Bring the narrow collar up immediately under the jaw, visible bare neck only about 7–9 pixels on a 74x100 logical grid, not a long bust. Do not shorten by chopping off the bottom canvas. Use released space to enlarge the FACE modestly while retaining all hair/hat/ears fully inside real transparent 3px top/side and 2px bottom margins. Portrait remains one tightly cropped huge head with only a small collar sliver, no shoulders/chest.\nUse broad hard connected pixel clusters, big nose and cheekbone planes, dark compact eyes. Shrink pale sclera into tiny muted dark warm-gray slits, no bright white patches. Reduce fine parallel hair/crease striping; do not add texture. Limited earthy roughly 24–32 colors, transparent RGBA, no antialiasing or dithering. No labels/text/frames/props, no background. Never add a beard to a clean-shaven face or remove an existing beard. This is an image-generation revision, not a resize of the previous image.\nSaler / 桑勒 / SKO-NPC-SALER is about FORTY: retain mature slightly loose cheek skin, deep smile folds, thin dark mustache/jaw beard, narrow long face and prominent nose, brown swept side hair under compact dark-plum soft medieval merchant cap with little ocher tally stitches. Keep cap/hair silhouette complete but simplify and slightly reduce vertical cap bulk to favor the face. Specific expression correction: relax the raised INNER brow to near horizontal; keep vigilant sideways glance and restrained polite asymmetric HALF-SMILE. He is a guarded professional pricing a deal, not worried, mournful or angry. Keep dark-plum collarless outer edge and mustard-ochre rounded slit inner collar in a tiny strip right beneath jaw. Current expression may soften only enough to lose the worried raised inner brow; don't give a broad friendly grin.",
+            "referenced_image_paths": [
+              "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/saler/raw/portrait_v1_raw_imagegen.png",
+              "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/saler/sources/identity_reference.png",
+              "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/saler/sources/mara_style_reference.png",
+              "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/saler/sources/iwo_style_reference.png",
+              "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/saler/sources/leiya_style_reference.png",
+              "/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/saler/sources/tore_style_reference.png"
+            ],
+            "transparent_background": true
+          }
+        },
+        "recognized_pre_generation_validation": true
+      }
+    ],
+    "within_two_image_limit": true
+  },
+  {
+    "actor": "wenno",
+    "successful_image_returns": 2,
+    "raw_files": 2,
+    "author_generation_calls": 2,
+    "non_image_tool_records": [],
+    "within_two_image_limit": true
+  },
+  {
+    "actor": "buran",
+    "successful_image_returns": 2,
+    "raw_files": 2,
+    "author_generation_calls": 2,
+    "non_image_tool_records": [],
+    "within_two_image_limit": true
+  },
+  {
+    "actor": "reha",
+    "successful_image_returns": 2,
+    "raw_files": 2,
+    "author_generation_calls": 2,
+    "non_image_tool_records": [],
+    "within_two_image_limit": true
+  }
+]

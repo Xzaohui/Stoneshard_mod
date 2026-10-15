@@ -4,6 +4,7 @@
 
 ## 2026-10-15
 
+- 新增后续迭代规划（小辉）：`docs/roadmap/ROADMAP.md` 总规划及代码、文案、绘图三份分项规划（后两份为原稿原文）；README 增「后续迭代规划」节，当前版本口径改为 0.3.5。
 - 合并入 main（小辉）：`scene-fixes-035`（0.3.5 场景修复与绘图第一至四批美术：bellhouse/underpass 墙体与地面、n2site 地砖与建筑接地阴影、采石场三/四层、winch/side 外圈纹理、camp 棺材交互回退、manifest 哈希更新）与 `story-s200-s202`（剧情 S200—S203 结构优化：重边 HX01—HX41、终局互斥、阵营利益冲突、城市主线回流、日常变体、弧光分型与对白润色；HX01-26 引擎键登记，待代码复核）。两次 --no-ff 合并均无冲突；`linux-build-035` 无独立提交。Write-StateKeys.py 改为写 CHANGELOG.md。Validate-ReadmeClaims 通过；Validate-*.py 68 通过/36 失败，失败集与合并前一致（新增 Validate-HeavyEdges 通过）。
 
 ## 2026-10-14

@@ -1,0 +1,4276 @@
+{
+  "date": "2026-10-15",
+  "stage": "S204",
+  "scope": "权威人物名册：每个唯一身份一行；类型 主要/次要/野外；出场台本来自人物卡链接、台本对卡的链接与说话人闭合登记。不是美术或运行验收。",
+  "count": 217,
+  "by_type": {
+    "主要": 24,
+    "次要": 157,
+    "野外": 36
+  },
+  "by_canon": {
+    "mod-original": 212,
+    "vanilla": 5
+  },
+  "without_card": [
+    "NPC-N-AREN",
+    "NPC-N-TOR",
+    "NPC-N-RHEA"
+  ],
+  "reconcile": {
+    "fine_details_172": {
+      "value": 172,
+      "source": "research/npc-fine-details.json",
+      "scope": "S89 细描名单：只收 Mod 原创 NPC（城市新增演员、各城已有演员、布林续篇演员、卫星住户、6 名主线原创）；不含原作人物、不含 36 名野外人物，也不含 S200 新增的坎沃"
+    },
+    "cast_roster_165": {
+      "value": 165,
+      "source": "research/cast-roster-validation.json（city_actors + continuation_actors）",
+      "scope": "城市演员名单：15 城城市稿里的演员 158 人 + 布林续篇演员 7 人；不含主线核心、聚落住户与野外人物"
+    },
+    "card_files_218": {
+      "value": 218,
+      "source": "design/04_人物/**/人物_*.md",
+      "scope": "人物卡文件数，不是人数：5 名主线人物各有主卡和城市人物卡两张，玛拉与伊沃共用一张卡；另有 5 篇非人物卡总表（本名册加入后）使目录 md 总数为 224"
+    },
+    "roster": {
+      "value": 217,
+      "formula": "218 张卡 − 5 张重复卡 + 1（共卡拆成两人） + 3 名无卡说话人"
+    }
+  },
+  "persons": [
+    {
+      "id": "NPC-SENA",
+      "name": "塞娜·里德",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "无铭档案会",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-05_凯姆没能改掉的字",
+        "台本_D04_曼恩封存书库",
+        "台本_D05_学院弃置试验庭",
+        "台本_D09_无名修院回声厅",
+        "台本_DT11_两份抄本的交接",
+        "台本_N10_没有写下的见证",
+        "台本_N15_回声不等于真相",
+        "台本_N16_谁来保管余烬",
+        "台本_N6_被封存的页码",
+        "台本_N9_把证据摆上桌",
+        "台本_SQ06_抄本的背面"
+      ],
+      "cards": [
+        "design/04_人物/人物_塞娜·里德.md",
+        "design/04_人物/城市人物/人物_NPC-SENA_塞娜·里德.md"
+      ],
+      "fine_details": true,
+      "note": "主卡与城市人物卡为同一人，两卡并存",
+      "has_card": true,
+      "no": 1
+    },
+    {
+      "id": "NPC-MORREN",
+      "name": "莫伦·海",
+      "canon": "vanilla",
+      "type": "主要",
+      "faction": "王廷封印特使团",
+      "location": "聚落_PAS_柏石关与关外聚落",
+      "appearances": [
+        "台本_CM-PAS_关口两边",
+        "台本_CS-PAS-02_两份点名",
+        "台本_D06_柏石军需地窖",
+        "台本_DT05_驿馆的急用药",
+        "台本_N13_答案的代价",
+        "台本_N7_军需账上的空名",
+        "台本_N8_不会散去的热病",
+        "台本_SQ02_被征用的冬粮",
+        "台本_SQ07_药不是赎罪券"
+      ],
+      "cards": [
+        "design/04_人物/人物_莫伦·海.md",
+        "design/04_人物/城市人物/人物_NPC-MORREN_莫伦·海.md"
+      ],
+      "fine_details": false,
+      "note": "主卡与城市人物卡为同一人，两卡并存",
+      "has_card": true,
+      "no": 2
+    },
+    {
+      "id": "NPC01",
+      "name": "维伦",
+      "canon": "vanilla",
+      "type": "主要",
+      "faction": "路誓行会",
+      "location": "",
+      "appearances": [
+        "台本_N12_失踪者仍有名字",
+        "台本_N13_答案的代价",
+        "台本_N14_可以回去的路",
+        "台本_N16_谁来保管余烬",
+        "台本_N17_残光之井",
+        "台本_N18_誓约之后",
+        "台本_N4_第一张空白债票",
+        "台本_N5_渡口的三种说法",
+        "台本_N9_把证据摆上桌"
+      ],
+      "cards": [
+        "design/04_人物/人物_维伦.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 3
+    },
+    {
+      "id": "NPC-LYD",
+      "name": "莉德",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-02_烧掉之前",
+        "台本_CS-MAE-05_凯姆没能改掉的字",
+        "台本_D05_学院弃置试验庭",
+        "台本_N10_没有写下的见证",
+        "台本_N15_回声不等于真相",
+        "台本_N6_被封存的页码",
+        "台本_SQ06_抄本的背面"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_NPC-LYD_莉德.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 4
+    },
+    {
+      "id": "NPC-MAYA",
+      "name": "玛娅·禾",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "灰色军团地方公议",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-01_被留下的那件袍",
+        "台本_CS-MAE-03_根灯最后的座位",
+        "台本_CS-MAE-04_旧织街的归人",
+        "台本_CS-MAE-06_冷窗不等于空城",
+        "台本_DT10_别让狼靠近夜岗",
+        "台本_N16_谁来保管余烬",
+        "台本_SQ03_没有王旗的面包"
+      ],
+      "cards": [
+        "design/04_人物/人物_玛娅·禾.md",
+        "design/04_人物/城市人物/人物_NPC-MAYA_玛娅·禾.md"
+      ],
+      "fine_details": true,
+      "note": "主卡与城市人物卡为同一人，两卡并存",
+      "has_card": true,
+      "no": 5
+    },
+    {
+      "id": "NPC-REY",
+      "name": "雷奥·凯斯",
+      "canon": "vanilla",
+      "type": "主要",
+      "faction": "王廷封印特使团",
+      "location": "聚落_PAS_柏石关与关外聚落",
+      "appearances": [
+        "台本_CM-PAS_关口两边",
+        "台本_CS-PAS-01_石角的停工",
+        "台本_CS-PAS-03_关外的最后一封",
+        "台本_D06_柏石军需地窖",
+        "台本_DT14_锈印章与假凭证",
+        "台本_N16_谁来保管余烬",
+        "台本_N7_军需账上的空名",
+        "台本_SQ02_被征用的冬粮"
+      ],
+      "cards": [
+        "design/04_人物/人物_雷奥·凯斯.md",
+        "design/04_人物/城市人物/人物_NPC-REY_雷奥·凯斯.md"
+      ],
+      "fine_details": false,
+      "note": "主卡与城市人物卡为同一人，两卡并存",
+      "has_card": true,
+      "no": 6
+    },
+    {
+      "id": "NPC07",
+      "name": "托曼·索",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "路誓行会",
+      "location": "",
+      "appearances": [
+        "台本_D03_断桥税栈",
+        "台本_DT01_粮车的最后一段",
+        "台本_N11_关隘外的交换",
+        "台本_N14_可以回去的路",
+        "台本_N17_残光之井",
+        "台本_N5_渡口的三种说法",
+        "台本_SQ04_一条不卖人的路"
+      ],
+      "cards": [
+        "design/04_人物/人物_托曼·索.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 7
+    },
+    {
+      "id": "NPC09",
+      "name": "欧达·苇",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "自由渡民",
+      "location": "",
+      "appearances": [
+        "台本_DT06_迷路者的路标",
+        "台本_DT13_一锅够分的热汤",
+        "台本_N12_失踪者仍有名字",
+        "台本_N18_誓约之后",
+        "台本_N5_渡口的三种说法",
+        "台本_N9_把证据摆上桌",
+        "台本_SQ05_渡口与姓名"
+      ],
+      "cards": [
+        "design/04_人物/人物_欧达·苇.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 8
+    },
+    {
+      "id": "NPC-MIA",
+      "name": "米娅",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "",
+      "location": "聚落_ASH_寒凉盆地与护理村",
+      "appearances": [
+        "台本_CM-ASH_不是空床的村庄",
+        "台本_CS-ASH-03_冷苇的空碗",
+        "台本_D07_灰烬疫所",
+        "台本_N18_誓约之后",
+        "台本_N8_不会散去的热病",
+        "台本_SQ05_渡口与姓名"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_NPC-MIA_米娅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 9
+    },
+    {
+      "id": "NPC-N-ENA",
+      "name": "艾娜",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "",
+      "location": "",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-06_冷窗不等于空城",
+        "台本_N18_誓约之后",
+        "台本_N2_灰堤没有墓碑",
+        "台本_N3_听审前的灯",
+        "台本_N4_第一张空白债票"
+      ],
+      "cards": [
+        "design/04_人物/人物_艾娜.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 10
+    },
+    {
+      "id": "NPC-HERS",
+      "name": "赫斯·白",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "苍白债契",
+      "location": "聚落_HIG_无名修院山地",
+      "appearances": [
+        "台本_CM-HIG_回程也是答案",
+        "台本_D10_残光之井",
+        "台本_N17_残光之井",
+        "台本_N4_第一张空白债票",
+        "台本_N8_不会散去的热病"
+      ],
+      "cards": [
+        "design/04_人物/人物_赫斯·白.md",
+        "design/04_人物/城市人物/人物_NPC-HERS_赫斯·白.md"
+      ],
+      "fine_details": true,
+      "note": "主卡与城市人物卡为同一人，两卡并存",
+      "has_card": true,
+      "no": 11
+    },
+    {
+      "id": "NPC-S200-KANWO",
+      "name": "坎沃·岩",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "苍白债契",
+      "location": "聚落_PAS_柏石关与关外聚落",
+      "appearances": [
+        "台本_D10_残光之井",
+        "台本_N17_残光之井",
+        "台本_N18_誓约之后",
+        "台本_N7_军需账上的空名",
+        "台本_N8_不会散去的热病"
+      ],
+      "cards": [
+        "design/04_人物/人物_坎沃·岩.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 12
+    },
+    {
+      "id": "NPC02",
+      "name": "葛文涅尔",
+      "canon": "vanilla",
+      "type": "主要",
+      "faction": "无铭档案会",
+      "location": "",
+      "appearances": [
+        "台本_D08_沉水档案井",
+        "台本_N12_失踪者仍有名字",
+        "台本_N13_答案的代价",
+        "台本_N4_第一张空白债票",
+        "台本_SQ07_药不是赎罪券"
+      ],
+      "cards": [
+        "design/04_人物/人物_葛文涅尔.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 13
+    },
+    {
+      "id": "NPC-N-IVO",
+      "name": "伊沃",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "",
+      "location": "旧渡口_场景与通路",
+      "appearances": [
+        "台本_N18_誓约之后",
+        "台本_N1_无钟之夜",
+        "台本_N2_灰堤没有墓碑",
+        "台本_N3_听审前的灯"
+      ],
+      "cards": [
+        "design/04_人物/人物_玛拉与伊沃.md"
+      ],
+      "fine_details": true,
+      "note": "与另一人共用一张卡（人物_玛拉与伊沃）",
+      "has_card": true,
+      "no": 14
+    },
+    {
+      "id": "NPC-N-MARA",
+      "name": "玛拉",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "",
+      "location": "旧渡口_场景与通路",
+      "appearances": [
+        "台本_N18_誓约之后",
+        "台本_N1_无钟之夜",
+        "台本_N2_灰堤没有墓碑",
+        "台本_N3_听审前的灯"
+      ],
+      "cards": [
+        "design/04_人物/人物_玛拉与伊沃.md"
+      ],
+      "fine_details": true,
+      "note": "与另一人共用一张卡（人物_玛拉与伊沃）",
+      "has_card": true,
+      "no": 15
+    },
+    {
+      "id": "NPC-N-NARA",
+      "name": "纳拉",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "",
+      "location": "",
+      "appearances": [
+        "台本_D02_旧渠检修墓室",
+        "台本_N2_灰堤没有墓碑",
+        "台本_N3_听审前的灯",
+        "台本_SQ01_港税与自由"
+      ],
+      "cards": [
+        "design/04_人物/人物_纳拉.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 16
+    },
+    {
+      "id": "NPC04",
+      "name": "伊莲·沃斯",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "城市联盟边地事务署",
+      "location": "",
+      "appearances": [
+        "台本_DT07_一箱不该开封的货",
+        "台本_N16_谁来保管余烬",
+        "台本_N9_把证据摆上桌",
+        "台本_SQ01_港税与自由"
+      ],
+      "cards": [
+        "design/04_人物/人物_伊莲·沃斯.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 17
+    },
+    {
+      "id": "NPC-N-NELL",
+      "name": "妮尔",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "",
+      "location": "",
+      "appearances": [
+        "台本_N10_没有写下的见证",
+        "台本_N3_听审前的灯",
+        "台本_N4_第一张空白债票"
+      ],
+      "cards": [
+        "design/04_人物/人物_妮尔.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 18
+    },
+    {
+      "id": "NPC-N-AREN",
+      "name": "艾伦",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "无",
+      "location": "",
+      "appearances": [
+        "台本_N11_关隘外的交换",
+        "台本_SQ08_逃兵的家书"
+      ],
+      "cards": [],
+      "fine_details": false,
+      "note": "无人物卡；与布林的艾伦（BRY-NPC-ELEN）同名不同人，说话人闭合登记误挂到后者",
+      "has_card": false,
+      "no": 19
+    },
+    {
+      "id": "NPC-N-SEL",
+      "name": "塞尔",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "",
+      "location": "",
+      "appearances": [
+        "台本_N4_第一张空白债票",
+        "台本_SQ04_一条不卖人的路"
+      ],
+      "cards": [
+        "design/04_人物/人物_塞尔.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 20
+    },
+    {
+      "id": "NPC-N-TOR",
+      "name": "托雷",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "无",
+      "location": "",
+      "appearances": [
+        "台本_N1_无钟之夜",
+        "台本_N3_听审前的灯"
+      ],
+      "cards": [],
+      "fine_details": false,
+      "note": "无独立人物卡，只在 [[人物_玛拉与伊沃]] 中提及",
+      "has_card": false,
+      "no": 21
+    },
+    {
+      "id": "NPC11",
+      "name": "罗温·雾",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "黑账中间人",
+      "location": "",
+      "appearances": [
+        "台本_N11_关隘外的交换",
+        "台本_SQ08_逃兵的家书"
+      ],
+      "cards": [
+        "design/04_人物/人物_罗温·雾.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 22
+    },
+    {
+      "id": "NPC-N-RHEA",
+      "name": "蕾雅",
+      "canon": "mod-original",
+      "type": "主要",
+      "faction": "无",
+      "location": "",
+      "appearances": [
+        "台本_N1_无钟之夜"
+      ],
+      "cards": [],
+      "fine_details": false,
+      "note": "无独立人物卡，只在 [[人物_玛拉与伊沃]] 中提及",
+      "has_card": false,
+      "no": 23
+    },
+    {
+      "id": "NPC03",
+      "name": "工匠 Darrel",
+      "canon": "vanilla",
+      "type": "主要",
+      "faction": "路誓行会",
+      "location": "",
+      "appearances": [
+        "台本_N14_可以回去的路"
+      ],
+      "cards": [
+        "design/04_人物/人物_工匠 Darrel.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 24
+    },
+    {
+      "id": "BRY-NPC-MIRO",
+      "name": "米罗·账",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-03_学徒的印",
+        "台本_CS-BRY-04_报纸上没有这条街",
+        "台本_CS-BRY-05_盐穗没有余粮",
+        "台本_CS-BRY-07_药瓶上的商标",
+        "台本_CS-BRY-09_谁关上水门",
+        "台本_CS-BRY-10_夜会之前",
+        "台本_CS-BRY-16_空椅不是赞成"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-MIRO_米罗·账.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 25
+    },
+    {
+      "id": "BRY-NPC-RENA",
+      "name": "蕾娜·维尔",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-01_一年之后",
+        "台本_CS-BRY-02_围城时的房间",
+        "台本_CS-BRY-05_盐穗没有余粮",
+        "台本_CS-BRY-06_一个没被授勋的人",
+        "台本_CS-BRY-09_谁关上水门",
+        "台本_CS-BRY-10_夜会之前",
+        "台本_CS-BRY-16_空椅不是赞成"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-RENA_蕾娜·维尔.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 26
+    },
+    {
+      "id": "BRY-NPC-VIT",
+      "name": "薇特·灰",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-02_围城时的房间",
+        "台本_CS-BRY-04_报纸上没有这条街",
+        "台本_CS-BRY-06_一个没被授勋的人",
+        "台本_CS-BRY-08_旧帆村的空船位",
+        "台本_CS-BRY-10_夜会之前"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-VIT_薇特·灰.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 27
+    },
+    {
+      "id": "BRY-S01-NPC",
+      "name": "鲁坎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY-S01_灰堤工营",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-01_一年之后",
+        "台本_CS-BRY-02_围城时的房间",
+        "台本_CS-BRY-03_学徒的印",
+        "台本_CS-BRY-06_一个没被授勋的人",
+        "台本_CS-BRY-07_药瓶上的商标"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_BRY-S01-NPC_鲁坎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 28
+    },
+    {
+      "id": "ALD-NPC-VIAN",
+      "name": "维安",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-01_白缝的姓",
+        "台本_CS-ALD-03_一件太合身的礼",
+        "台本_CS-ALD-05_师傅没有失去的手",
+        "台本_CS-ALD-06_往布林的空箱"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-VIAN_维安.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 29
+    },
+    {
+      "id": "BRY-NPC-OSIN",
+      "name": "奥辛·锤",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-02_围城时的房间",
+        "台本_CS-BRY-03_学徒的印",
+        "台本_CS-BRY-06_一个没被授勋的人",
+        "台本_CS-BRY-10_夜会之前"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-OSIN_奥辛·锤.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 30
+    },
+    {
+      "id": "ALD-NPC-HEL",
+      "name": "赫莲·金",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-01_白缝的姓",
+        "台本_CS-ALD-05_师傅没有失去的手",
+        "台本_CS-ALD-06_往布林的空箱"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-HEL_赫莲·金.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 31
+    },
+    {
+      "id": "ALD-S03-NPC",
+      "name": "萝铎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD-S03_石礼驿",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-02_两种送别",
+        "台本_CS-ALD-03_一件太合身的礼",
+        "台本_CS-ALD-06_往布林的空箱"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_ALD-S03-NPC_萝铎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 32
+    },
+    {
+      "id": "ASH-NPC-ANNI",
+      "name": "安妮",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ASH_寒凉盆地与护理村",
+      "appearances": [
+        "台本_CM-ASH_不是空床的村庄",
+        "台本_CS-ASH-01_安息村的旧钥匙",
+        "台本_CS-ASH-02_陪护者也会累",
+        "台本_CS-ASH-03_冷苇的空碗"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ASH-NPC-ANNI_安妮.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 33
+    },
+    {
+      "id": "ASH-NPC-LINT",
+      "name": "琳汀·床",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ASH_寒凉盆地与护理村",
+      "appearances": [
+        "台本_CM-ASH_不是空床的村庄",
+        "台本_CS-ASH-01_安息村的旧钥匙",
+        "台本_CS-ASH-02_陪护者也会累",
+        "台本_CS-ASH-03_冷苇的空碗"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ASH-NPC-LINT_琳汀·床.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 34
+    },
+    {
+      "id": "BRY-S02-NPC",
+      "name": "芮莎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY-S02_盐穗小镇",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-04_报纸上没有这条街",
+        "台本_CS-BRY-05_盐穗没有余粮",
+        "台本_CS-BRY-09_谁关上水门"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_BRY-S02-NPC_芮莎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 35
+    },
+    {
+      "id": "DEN-NPC-KAR",
+      "name": "卡蕾·棚",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN_丹布里",
+      "appearances": [
+        "台本_CM-DEN_潮水退去以后",
+        "台本_CS-DEN-01_船上的第四个人",
+        "台本_CS-DEN-02_渔网留下的洞",
+        "台本_CS-DEN-03_苇背的新邻居"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-KAR_卡蕾·棚.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 36
+    },
+    {
+      "id": "EED-NPC-LIN",
+      "name": "黎恩·岗",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED_伊德斯",
+      "appearances": [
+        "台本_CM-EED_林线以外",
+        "台本_CS-EED-01_最后一株不是最后一单",
+        "台本_CS-EED-02_沉木驿的梁",
+        "台本_CS-EED-03_护林岗的口哨"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_EED-NPC-LIN_黎恩·岗.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 37
+    },
+    {
+      "id": "FOR-NPC-KEWEI",
+      "name": "科蔚",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_FOR_佛尔霍特",
+      "appearances": [
+        "台本_CM-FOR_金价之外",
+        "台本_CS-FOR-01_旧骑卫的杯",
+        "台本_CS-FOR-02_洗砂村没有金色的水",
+        "台本_CS-FOR-03_矿份传给谁"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_FOR-NPC-KEWEI_科蔚.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 38
+    },
+    {
+      "id": "MAE-NPC-BENO",
+      "name": "贝诺",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-01_被留下的那件袍",
+        "台本_CS-MAE-03_根灯最后的座位",
+        "台本_CS-MAE-06_冷窗不等于空城"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-BENO_贝诺.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 39
+    },
+    {
+      "id": "MAE-S01-NPC",
+      "name": "缇弗",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE-S01_根灯镇",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-01_被留下的那件袍",
+        "台本_CS-MAE-03_根灯最后的座位",
+        "台本_CS-MAE-04_旧织街的归人"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_MAE-S01-NPC_缇弗.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 40
+    },
+    {
+      "id": "MNS-NPC-ROS",
+      "name": "罗莎·藤",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MNS_曼郡",
+      "appearances": [
+        "台本_CM-MNS_没有年份的酒",
+        "台本_CS-MNS-01_空桶有两个名字",
+        "台本_CS-MNS-02_师傅的第二条刻线",
+        "台本_CS-MNS-03_葡影的种枝"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MNS-NPC-ROS_罗莎·藤.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 41
+    },
+    {
+      "id": "RAT-NPC-ALI",
+      "name": "阿莉·铃",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_RAT_拉滕",
+      "appearances": [
+        "台本_CM-RAT_兽死之后",
+        "台本_CS-RAT-01_鹿栅之外",
+        "台本_CS-RAT-02_一枚仿的纪念章",
+        "台本_CS-RAT-03_静铃的沉默"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_RAT-NPC-ALI_阿莉·铃.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 42
+    },
+    {
+      "id": "SKO-S01-NPC",
+      "name": "布岚",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_SKO-S01_炭背镇",
+      "appearances": [
+        "台本_CM-SKO_第二次赎回",
+        "台本_CS-SKO-01_炭背的预付款",
+        "台本_CS-SKO-02_回来以后",
+        "台本_CS-SKO-03_冷沟的护符"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_SKO-S01-NPC_布岚.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 43
+    },
+    {
+      "id": "ALD-NPC-SIN",
+      "name": "司诺·庭",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-02_两种送别",
+        "台本_CS-ALD-03_一件太合身的礼"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-SIN_司诺·庭.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 44
+    },
+    {
+      "id": "ALD-NPC-SORE",
+      "name": "索芮",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-03_一件太合身的礼",
+        "台本_CS-ALD-05_师傅没有失去的手"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-SORE_索芮.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 45
+    },
+    {
+      "id": "ALD-S02-NPC",
+      "name": "芬珂",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD-S02_白缝村",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-01_白缝的姓",
+        "台本_CS-ALD-05_师傅没有失去的手"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_ALD-S02-NPC_芬珂.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 46
+    },
+    {
+      "id": "ASH-NPC-KUEN",
+      "name": "枯恩",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ASH_寒凉盆地与护理村",
+      "appearances": [
+        "台本_CM-ASH_不是空床的村庄",
+        "台本_CS-ASH-02_陪护者也会累",
+        "台本_CS-ASH-03_冷苇的空碗"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ASH-NPC-KUEN_枯恩.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 47
+    },
+    {
+      "id": "ASH-S02-NPC",
+      "name": "奥娅",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ASH-S02_冷苇集",
+      "appearances": [
+        "台本_CM-ASH_不是空床的村庄",
+        "台本_CS-ASH-02_陪护者也会累",
+        "台本_CS-ASH-03_冷苇的空碗"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_ASH-S02-NPC_奥娅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 48
+    },
+    {
+      "id": "BRY-NPC-DARAN",
+      "name": "达兰",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-13_页边的另一个名字",
+        "台本_CS-BRY-14_地窖之外",
+        "台本_CS-BRY-16_空椅不是赞成"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-DARAN_达兰.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 49
+    },
+    {
+      "id": "BRY-NPC-YANI",
+      "name": "雅尼",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-11_不写船名的夜泊",
+        "台本_CS-BRY-15_招募告示的背面",
+        "台本_CS-BRY-16_空椅不是赞成"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-YANI_雅尼.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 50
+    },
+    {
+      "id": "BRY-S03-NPC",
+      "name": "米蕾",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY-S03_旧帆村",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-08_旧帆村的空船位",
+        "台本_CS-BRY-10_夜会之前"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_BRY-S03-NPC_米蕾.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 51
+    },
+    {
+      "id": "DEN-NPC-SEF",
+      "name": "瑟芬·网",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN_丹布里",
+      "appearances": [
+        "台本_CM-DEN_潮水退去以后",
+        "台本_CS-DEN-02_渔网留下的洞",
+        "台本_CS-DEN-03_苇背的新邻居"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-SEF_瑟芬·网.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 52
+    },
+    {
+      "id": "DEN-S01-NPC",
+      "name": "伊蕾",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN-S01_苇背村",
+      "appearances": [
+        "台本_CM-DEN_潮水退去以后",
+        "台本_CS-DEN-01_船上的第四个人",
+        "台本_CS-DEN-03_苇背的新邻居"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_DEN-S01-NPC_伊蕾.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 53
+    },
+    {
+      "id": "EED-S01-NPC",
+      "name": "欧莎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED-S01_桦阴村",
+      "appearances": [
+        "台本_CM-EED_林线以外",
+        "台本_CS-EED-01_最后一株不是最后一单",
+        "台本_CS-EED-03_护林岗的口哨"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_EED-S01-NPC_欧莎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 54
+    },
+    {
+      "id": "FOR-NPC-QIDUO",
+      "name": "祁铎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_FOR_佛尔霍特",
+      "appearances": [
+        "台本_CM-FOR_金价之外",
+        "台本_CS-FOR-01_旧骑卫的杯",
+        "台本_CS-FOR-03_矿份传给谁"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_FOR-NPC-QIDUO_祁铎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 55
+    },
+    {
+      "id": "FOR-S01-NPC",
+      "name": "艾钦",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_FOR-S01_风口镇",
+      "appearances": [
+        "台本_CM-FOR_金价之外",
+        "台本_CS-FOR-01_旧骑卫的杯",
+        "台本_CS-FOR-03_矿份传给谁"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_FOR-S01-NPC_艾钦.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 56
+    },
+    {
+      "id": "HIG-NPC-ARO",
+      "name": "艾萝·图",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_HIG_无名修院山地",
+      "appearances": [
+        "台本_CM-HIG_回程也是答案",
+        "台本_CS-HIG-02_三刻里少的一格",
+        "台本_CS-HIG-03_留下的人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_HIG-NPC-ARO_艾萝·图.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 57
+    },
+    {
+      "id": "HIG-NPC-TURI",
+      "name": "图里",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_HIG_无名修院山地",
+      "appearances": [
+        "台本_CM-HIG_回程也是答案",
+        "台本_CS-HIG-01_回风驿的停牌",
+        "台本_CS-HIG-03_留下的人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_HIG-NPC-TURI_图里.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 58
+    },
+    {
+      "id": "HIG-S01-NPC",
+      "name": "赫珀",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_HIG-S01_回风驿",
+      "appearances": [
+        "台本_CM-HIG_回程也是答案",
+        "台本_CS-HIG-01_回风驿的停牌",
+        "台本_CS-HIG-03_留下的人"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_HIG-S01-NPC_赫珀.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 59
+    },
+    {
+      "id": "KOR-NPC-NOD",
+      "name": "诺妲·门",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CM-KOR_不是你的姓",
+        "台本_CS-KOR-01_留灯的人",
+        "台本_CS-KOR-03_寄存的陌生画"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-NOD_诺妲·门.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 60
+    },
+    {
+      "id": "KOR-S02-NPC",
+      "name": "玛迪",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR-S02_留灯驿",
+      "appearances": [
+        "台本_CM-KOR_不是你的姓",
+        "台本_CS-KOR-01_留灯的人",
+        "台本_CS-KOR-03_寄存的陌生画"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_KOR-S02-NPC_玛迪.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 61
+    },
+    {
+      "id": "MAE-NPC-KAEM",
+      "name": "凯姆",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-05_凯姆没能改掉的字",
+        "台本_N10_没有写下的见证"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-KAEM_凯姆.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 62
+    },
+    {
+      "id": "MAE-NPC-NIV",
+      "name": "尼芙",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-02_烧掉之前",
+        "台本_CS-MAE-06_冷窗不等于空城"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-NIV_尼芙.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 63
+    },
+    {
+      "id": "MAE-S02-NPC",
+      "name": "薇榆",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE-S02_雪页村",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-02_烧掉之前",
+        "台本_CS-MAE-05_凯姆没能改掉的字"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_MAE-S02-NPC_薇榆.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 64
+    },
+    {
+      "id": "MNS-S02-NPC",
+      "name": "凯诺",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MNS-S02_桶石驿",
+      "appearances": [
+        "台本_CM-MNS_没有年份的酒",
+        "台本_CS-MNS-01_空桶有两个名字",
+        "台本_CS-MNS-02_师傅的第二条刻线"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_MNS-S02-NPC_凯诺.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 65
+    },
+    {
+      "id": "OSB-S01-NPC",
+      "name": "德娅",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB-S01_麦根庄",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋",
+        "台本_CS-OSB-01_父亲没说的价格",
+        "台本_CS-OSB-03_那一口井不是嫁妆"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_OSB-S01-NPC_德娅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 66
+    },
+    {
+      "id": "PAS-S01-NPC",
+      "name": "辛娅",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_PAS-S01_冬秤镇",
+      "appearances": [
+        "台本_CM-PAS_关口两边",
+        "台本_CS-PAS-02_两份点名",
+        "台本_CS-PAS-03_关外的最后一封"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_PAS-S01-NPC_辛娅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 67
+    },
+    {
+      "id": "RAT-NPC-IME",
+      "name": "伊默·栅",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_RAT_拉滕",
+      "appearances": [
+        "台本_CM-RAT_兽死之后",
+        "台本_CS-RAT-01_鹿栅之外",
+        "台本_CS-RAT-03_静铃的沉默"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_RAT-NPC-IME_伊默·栅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 68
+    },
+    {
+      "id": "RAT-S01-NPC",
+      "name": "芬罗",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_RAT-S01_鹿栅村",
+      "appearances": [
+        "台本_CM-RAT_兽死之后",
+        "台本_CS-RAT-01_鹿栅之外",
+        "台本_CS-RAT-03_静铃的沉默"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_RAT-S01-NPC_芬罗.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 69
+    },
+    {
+      "id": "RAT-S02-NPC",
+      "name": "佩菈",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_RAT-S02_静铃驿",
+      "appearances": [
+        "台本_CM-RAT_兽死之后",
+        "台本_CS-RAT-02_一枚仿的纪念章",
+        "台本_CS-RAT-03_静铃的沉默"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_RAT-S02-NPC_佩菈.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 70
+    },
+    {
+      "id": "SKO-NPC-GOREN",
+      "name": "古烈",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_SKO_斯孔弗特",
+      "appearances": [
+        "台本_CM-SKO_第二次赎回",
+        "台本_CS-SKO-01_炭背的预付款",
+        "台本_CS-SKO-03_冷沟的护符"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_SKO-NPC-GOREN_古烈.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 71
+    },
+    {
+      "id": "SKO-NPC-NIS",
+      "name": "妮莎·炉",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_SKO_斯孔弗特",
+      "appearances": [
+        "台本_CM-SKO_第二次赎回",
+        "台本_CS-SKO-01_炭背的预付款",
+        "台本_CS-SKO-03_冷沟的护符"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_SKO-NPC-NIS_妮莎·炉.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 72
+    },
+    {
+      "id": "TRADE-NPC-LIQUI",
+      "name": "莉葵",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "",
+      "appearances": [
+        "台本_CM-SKO_第二次赎回",
+        "台本_CM-YOS_最后一匹家纹",
+        "台本_CS-YOS-01_冬毛的最后一捆"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_TRADE-NPC-LIQUI_莉葵.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 73
+    },
+    {
+      "id": "YOS-NPC-ONDO",
+      "name": "昂朵",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_YOS_约斯特文",
+      "appearances": [
+        "台本_CM-YOS_最后一匹家纹",
+        "台本_CS-YOS-01_冬毛的最后一捆",
+        "台本_CS-YOS-03_水堰上的颜色"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_YOS-NPC-ONDO_昂朵.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 74
+    },
+    {
+      "id": "YOS-NPC-TIN",
+      "name": "缇娜·染",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_YOS_约斯特文",
+      "appearances": [
+        "台本_CM-YOS_最后一匹家纹",
+        "台本_CS-YOS-02_徒弟要走的那天",
+        "台本_CS-YOS-03_水堰上的颜色"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_YOS-NPC-TIN_缇娜·染.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 75
+    },
+    {
+      "id": "YOS-S01-NPC",
+      "name": "梅蓓",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_YOS-S01_缓梭镇",
+      "appearances": [
+        "台本_CM-YOS_最后一匹家纹",
+        "台本_CS-YOS-02_徒弟要走的那天",
+        "台本_CS-YOS-03_水堰上的颜色"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_YOS-S01-NPC_梅蓓.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 76
+    },
+    {
+      "id": "ALD-NPC-EMO",
+      "name": "埃墨·衬",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-05_师傅没有失去的手"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-EMO_埃墨·衬.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 77
+    },
+    {
+      "id": "ALD-NPC-KIEN",
+      "name": "奇恩",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-06_往布林的空箱"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-KIEN_奇恩.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 78
+    },
+    {
+      "id": "ALD-NPC-NAETIN",
+      "name": "奈汀",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-03_一件太合身的礼"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-NAETIN_奈汀.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 79
+    },
+    {
+      "id": "ALD-S01-NPC",
+      "name": "泊恩",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD-S01_铜灯镇",
+      "appearances": [
+        "台本_CM-ALD_护甲里面的名字",
+        "台本_CS-ALD-04_旧墙不是新围城"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_ALD-S01-NPC_泊恩.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 80
+    },
+    {
+      "id": "ASH-NPC-TIAN",
+      "name": "缇安",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ASH_寒凉盆地与护理村",
+      "appearances": [
+        "台本_CM-ASH_不是空床的村庄",
+        "台本_CS-ASH-01_安息村的旧钥匙"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ASH-NPC-TIAN_缇安.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 81
+    },
+    {
+      "id": "ASH-S01-NPC",
+      "name": "妮蔻",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ASH-S01_安息村",
+      "appearances": [
+        "台本_CM-ASH_不是空床的村庄",
+        "台本_CS-ASH-01_安息村的旧钥匙"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_ASH-S01-NPC_妮蔻.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 82
+    },
+    {
+      "id": "BRY-NPC-ANLA",
+      "name": "安菈",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-03_学徒的印"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-ANLA_安菈.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 83
+    },
+    {
+      "id": "BRY-NPC-JOTIN",
+      "name": "乔彤",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-04_报纸上没有这条街",
+        "台本_CS-BRY-13_页边的另一个名字"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-JOTIN_乔彤.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 84
+    },
+    {
+      "id": "BRY-NPC-LODA",
+      "name": "洛妲",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CM-BRY_城墙之内",
+        "台本_CS-BRY-09_谁关上水门"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-LODA_洛妲.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 85
+    },
+    {
+      "id": "BRY-NPC-MARIS",
+      "name": "玛莉丝",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-12_两种火候",
+        "台本_CS-BRY-16_空椅不是赞成"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-MARIS_玛莉丝.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 86
+    },
+    {
+      "id": "BRY-NPC-ROAN",
+      "name": "罗安",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-12_两种火候",
+        "台本_CS-BRY-14_地窖之外"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-ROAN_罗安.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 87
+    },
+    {
+      "id": "DEN-NPC-ELE",
+      "name": "艾蕾",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN_丹布里",
+      "appearances": [
+        "台本_CM-DEN_潮水退去以后",
+        "台本_CS-DEN-01_船上的第四个人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-ELE_艾蕾.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 88
+    },
+    {
+      "id": "DEN-NPC-ODO",
+      "name": "欧铎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN_丹布里",
+      "appearances": [
+        "台本_CM-DEN_潮水退去以后",
+        "台本_CS-DEN-01_船上的第四个人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-ODO_欧铎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 89
+    },
+    {
+      "id": "DEN-S02-NPC",
+      "name": "哈伦",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN-S02_绳口驿",
+      "appearances": [
+        "台本_CM-DEN_潮水退去以后",
+        "台本_CS-DEN-02_渔网留下的洞"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_DEN-S02-NPC_哈伦.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 90
+    },
+    {
+      "id": "EED-NPC-GELI",
+      "name": "葛黎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED_伊德斯",
+      "appearances": [
+        "台本_CM-EED_林线以外",
+        "台本_CS-EED-01_最后一株不是最后一单"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_EED-NPC-GELI_葛黎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 91
+    },
+    {
+      "id": "EED-NPC-RUYA",
+      "name": "芦雅",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED_伊德斯",
+      "appearances": [
+        "台本_CM-EED_林线以外",
+        "台本_CS-EED-02_沉木驿的梁"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_EED-NPC-RUYA_芦雅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 92
+    },
+    {
+      "id": "EED-NPC-SUOYA",
+      "name": "朔娅",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED_伊德斯",
+      "appearances": [
+        "台本_CM-EED_林线以外",
+        "台本_CS-EED-03_护林岗的口哨"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_EED-NPC-SUOYA_朔娅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 93
+    },
+    {
+      "id": "EED-S02-NPC",
+      "name": "岱里",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED-S02_沉木驿",
+      "appearances": [
+        "台本_CM-EED_林线以外",
+        "台本_CS-EED-02_沉木驿的梁"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_EED-S02-NPC_岱里.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 94
+    },
+    {
+      "id": "FOR-NPC-APE",
+      "name": "艾珀·风",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_FOR_佛尔霍特",
+      "appearances": [
+        "台本_CM-FOR_金价之外",
+        "台本_CS-FOR-02_洗砂村没有金色的水"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_FOR-NPC-APE_艾珀·风.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 95
+    },
+    {
+      "id": "FOR-NPC-LUOFU",
+      "name": "洛芙",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_FOR_佛尔霍特",
+      "appearances": [
+        "台本_CM-FOR_金价之外",
+        "台本_CS-FOR-02_洗砂村没有金色的水"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_FOR-NPC-LUOFU_洛芙.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 96
+    },
+    {
+      "id": "FOR-NPC-MAN",
+      "name": "玛诺·灯",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_FOR_佛尔霍特",
+      "appearances": [
+        "台本_CM-FOR_金价之外",
+        "台本_CS-FOR-01_旧骑卫的杯"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_FOR-NPC-MAN_玛诺·灯.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 97
+    },
+    {
+      "id": "FOR-S02-NPC",
+      "name": "蓓娜",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_FOR-S02_洗砂村",
+      "appearances": [
+        "台本_CM-FOR_金价之外",
+        "台本_CS-FOR-02_洗砂村没有金色的水"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_FOR-S02-NPC_蓓娜.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 98
+    },
+    {
+      "id": "HIG-NPC-GURA",
+      "name": "古菈",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_HIG_无名修院山地",
+      "appearances": [
+        "台本_CM-HIG_回程也是答案",
+        "台本_CS-HIG-03_留下的人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_HIG-NPC-GURA_古菈.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 99
+    },
+    {
+      "id": "HIG-NPC-LEIN",
+      "name": "蕾因",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_HIG_无名修院山地",
+      "appearances": [
+        "台本_CM-HIG_回程也是答案",
+        "台本_CS-HIG-01_回风驿的停牌"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_HIG-NPC-LEIN_蕾因.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 100
+    },
+    {
+      "id": "HIG-NPC-VILA",
+      "name": "维菈",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_HIG_无名修院山地",
+      "appearances": [
+        "台本_CM-HIG_回程也是答案",
+        "台本_CS-HIG-02_三刻里少的一格"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_HIG-NPC-VILA_维菈.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 101
+    },
+    {
+      "id": "HIG-S02-NPC",
+      "name": "司榆",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_HIG-S02_三刻站",
+      "appearances": [
+        "台本_CM-HIG_回程也是答案",
+        "台本_CS-HIG-02_三刻里少的一格"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_HIG-S02-NPC_司榆.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 102
+    },
+    {
+      "id": "KOR-S01-NPC",
+      "name": "阿霖",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR-S01_双门里",
+      "appearances": [
+        "台本_CM-KOR_不是你的姓",
+        "台本_CS-KOR-02_双门里的孩子"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_KOR-S01-NPC_阿霖.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 103
+    },
+    {
+      "id": "MAE-NPC-FIL",
+      "name": "菲勒·火",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-04_旧织街的归人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-FIL_菲勒·火.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 104
+    },
+    {
+      "id": "MAE-NPC-GULAN",
+      "name": "古岚",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-03_根灯最后的座位"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-GULAN_古岚.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 105
+    },
+    {
+      "id": "MAE-NPC-OURAN",
+      "name": "欧岚",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-02_烧掉之前"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-OURAN_欧岚.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 106
+    },
+    {
+      "id": "MAE-NPC-ZAHO",
+      "name": "扎禾",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-04_旧织街的归人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-ZAHO_扎禾.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 107
+    },
+    {
+      "id": "MAE-S03-NPC",
+      "name": "艾娜",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE-S03_冷窗驿",
+      "appearances": [
+        "台本_CM-MAE_留下来的城",
+        "台本_CS-MAE-06_冷窗不等于空城"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_MAE-S03-NPC_艾娜.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 108
+    },
+    {
+      "id": "MNS-NPC-BELO",
+      "name": "贝洛",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MNS_曼郡",
+      "appearances": [
+        "台本_CS-MNS-01_空桶有两个名字",
+        "台本_CS-MNS-02_师傅的第二条刻线"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MNS-NPC-BELO_贝洛.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 109
+    },
+    {
+      "id": "MNS-NPC-TIO",
+      "name": "提奥·桶",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MNS_曼郡",
+      "appearances": [
+        "台本_CM-MNS_没有年份的酒",
+        "台本_CS-MNS-02_师傅的第二条刻线"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MNS-NPC-TIO_提奥·桶.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 110
+    },
+    {
+      "id": "MNS-S01-NPC",
+      "name": "赛芙",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MNS-S01_葡影村",
+      "appearances": [
+        "台本_CM-MNS_没有年份的酒",
+        "台本_CS-MNS-03_葡影的种枝"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_MNS-S01-NPC_赛芙.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 111
+    },
+    {
+      "id": "OSB-NPC-DON",
+      "name": "多恩",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋",
+        "台本_CS-OSB-01_父亲没说的价格"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-DON_多恩.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 112
+    },
+    {
+      "id": "OSB-NPC-FUD",
+      "name": "芙朵·谷",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋",
+        "台本_CS-OSB-01_父亲没说的价格"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-FUD_芙朵·谷.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 113
+    },
+    {
+      "id": "OSB-NPC-KOFU",
+      "name": "蔻芙",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋",
+        "台本_CS-OSB-03_那一口井不是嫁妆"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-KOFU_蔻芙.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 114
+    },
+    {
+      "id": "OSB-NPC-LEMA",
+      "name": "雷玛",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋",
+        "台本_CS-OSB-02_三篱的门"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-LEMA_雷玛.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 115
+    },
+    {
+      "id": "OSB-NPC-RUIYIN",
+      "name": "芮茵",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋",
+        "台本_CS-OSB-02_三篱的门"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-RUIYIN_芮茵.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 116
+    },
+    {
+      "id": "OSB-NPC-VAS",
+      "name": "瓦森·磨",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋",
+        "台本_CS-OSB-01_父亲没说的价格"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-VAS_瓦森·磨.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 117
+    },
+    {
+      "id": "OSB-S02-NPC",
+      "name": "沃达",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB-S02_三篱户",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋",
+        "台本_CS-OSB-02_三篱的门"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_OSB-S02-NPC_沃达.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 118
+    },
+    {
+      "id": "PAS-NPC-ELON",
+      "name": "礼昂",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_PAS_柏石关与关外聚落",
+      "appearances": [
+        "台本_CM-PAS_关口两边",
+        "台本_CS-PAS-02_两份点名"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_PAS-NPC-ELON_礼昂.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 119
+    },
+    {
+      "id": "PAS-NPC-LEVAN",
+      "name": "列梵",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_PAS_柏石关与关外聚落",
+      "appearances": [
+        "台本_CM-PAS_关口两边",
+        "台本_CS-PAS-03_关外的最后一封"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_PAS-NPC-LEVAN_列梵.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 120
+    },
+    {
+      "id": "PAS-NPC-QILEN",
+      "name": "绮伦",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_PAS_柏石关与关外聚落",
+      "appearances": [
+        "台本_CM-PAS_关口两边",
+        "台本_CS-PAS-03_关外的最后一封"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_PAS-NPC-QILEN_绮伦.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 121
+    },
+    {
+      "id": "PAS-NPC-SHABO",
+      "name": "莎帛",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_PAS_柏石关与关外聚落",
+      "appearances": [
+        "台本_CM-PAS_关口两边",
+        "台本_CS-PAS-02_两份点名"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_PAS-NPC-SHABO_莎帛.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 122
+    },
+    {
+      "id": "PAS-S02-NPC",
+      "name": "乌珀",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_PAS-S02_石角驿",
+      "appearances": [
+        "台本_CM-PAS_关口两边",
+        "台本_CS-PAS-01_石角的停工"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_PAS-S02-NPC_乌珀.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 123
+    },
+    {
+      "id": "RAT-NPC-MILA",
+      "name": "米菈",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_RAT_拉滕",
+      "appearances": [
+        "台本_CM-RAT_兽死之后",
+        "台本_CS-RAT-02_一枚仿的纪念章"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_RAT-NPC-MILA_米菈.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 124
+    },
+    {
+      "id": "RAT-NPC-NIYE",
+      "name": "妮耶",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_RAT_拉滕",
+      "appearances": [
+        "台本_CM-RAT_兽死之后",
+        "台本_CS-RAT-03_静铃的沉默"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_RAT-NPC-NIYE_妮耶.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 125
+    },
+    {
+      "id": "RAT-NPC-SEDUO",
+      "name": "瑟铎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_RAT_拉滕",
+      "appearances": [
+        "台本_CM-RAT_兽死之后",
+        "台本_CS-RAT-01_鹿栅之外"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_RAT-NPC-SEDUO_瑟铎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 126
+    },
+    {
+      "id": "SKO-NPC-BOH",
+      "name": "博赫·冷",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_SKO_斯孔弗特",
+      "appearances": [
+        "台本_CM-SKO_第二次赎回",
+        "台本_CS-SKO-02_回来以后"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_SKO-NPC-BOH_博赫·冷.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 127
+    },
+    {
+      "id": "SKO-NPC-SALER",
+      "name": "桑勒",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_SKO_斯孔弗特",
+      "appearances": [
+        "台本_CM-SKO_第二次赎回",
+        "台本_CS-SKO-01_炭背的预付款"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_SKO-NPC-SALER_桑勒.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 128
+    },
+    {
+      "id": "SKO-S02-NPC",
+      "name": "雷哈",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_SKO-S02_归火村",
+      "appearances": [
+        "台本_CM-SKO_第二次赎回",
+        "台本_CS-SKO-02_回来以后"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_SKO-S02-NPC_雷哈.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 129
+    },
+    {
+      "id": "YOS-NPC-TAY",
+      "name": "塔雅·梭",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_YOS_约斯特文",
+      "appearances": [
+        "台本_CM-YOS_最后一匹家纹",
+        "台本_CS-YOS-02_徒弟要走的那天"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_YOS-NPC-TAY_塔雅·梭.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 130
+    },
+    {
+      "id": "YOS-S02-NPC",
+      "name": "尤尔",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_YOS-S02_羊坡村",
+      "appearances": [
+        "台本_CM-YOS_最后一匹家纹",
+        "台本_CS-YOS-01_冬毛的最后一捆"
+      ],
+      "cards": [
+        "design/04_人物/聚落人物/人物_YOS-S02-NPC_尤尔.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 131
+    },
+    {
+      "id": "ALD-NPC-BUYA",
+      "name": "布娅",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CS-ALD-04_旧墙不是新围城"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-BUYA_布娅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 132
+    },
+    {
+      "id": "ALD-NPC-CHILER",
+      "name": "齐勒",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CS-ALD-04_旧墙不是新围城"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-CHILER_齐勒.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 133
+    },
+    {
+      "id": "ALD-NPC-KONA",
+      "name": "科纳",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CS-ALD-01_白缝的姓"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-KONA_科纳.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 134
+    },
+    {
+      "id": "ALD-NPC-MUKO",
+      "name": "穆柯",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CS-ALD-02_两种送别"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-MUKO_穆柯.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 135
+    },
+    {
+      "id": "ALD-NPC-YIRONG",
+      "name": "伊榕",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ALD_奥尔德文",
+      "appearances": [
+        "台本_CS-ALD-02_两种送别"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ALD-NPC-YIRONG_伊榕.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 136
+    },
+    {
+      "id": "ASH-NPC-SUNE",
+      "name": "苏奈",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_ASH_寒凉盆地与护理村",
+      "appearances": [
+        "台本_CS-ASH-03_冷苇的空碗"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_ASH-NPC-SUNE_苏奈.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 137
+    },
+    {
+      "id": "BRY-NPC-AVI",
+      "name": "阿薇",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CM-BRY_城墙之内"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-AVI_阿薇.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 138
+    },
+    {
+      "id": "BRY-NPC-ELEN",
+      "name": "艾伦",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-13_页边的另一个名字"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-ELEN_艾伦.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 139
+    },
+    {
+      "id": "BRY-NPC-HASE",
+      "name": "哈塞",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-07_药瓶上的商标"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-HASE_哈塞.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 140
+    },
+    {
+      "id": "BRY-NPC-HERLIN",
+      "name": "赫林",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CM-BRY_城墙之内"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-HERLIN_赫林.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 141
+    },
+    {
+      "id": "BRY-NPC-IVE",
+      "name": "伊芙",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-02_围城时的房间"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-IVE_伊芙.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 142
+    },
+    {
+      "id": "BRY-NPC-MALER",
+      "name": "麦勒",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-01_一年之后"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-MALER_麦勒.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 143
+    },
+    {
+      "id": "BRY-NPC-ODER",
+      "name": "奥德",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-08_旧帆村的空船位"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-ODER_奥德.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 144
+    },
+    {
+      "id": "BRY-NPC-PELAN",
+      "name": "佩兰",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-01_一年之后"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-PELAN_佩兰.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 145
+    },
+    {
+      "id": "BRY-NPC-SELA",
+      "name": "瑟拉",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-11_不写船名的夜泊"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-SELA_瑟拉.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 146
+    },
+    {
+      "id": "BRY-NPC-SEV",
+      "name": "塞芙",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-15_招募告示的背面"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-SEV_塞芙.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 147
+    },
+    {
+      "id": "BRY-NPC-TAORI",
+      "name": "陶芮",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-07_药瓶上的商标"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-TAORI_陶芮.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 148
+    },
+    {
+      "id": "BRY-NPC-VIMON",
+      "name": "维松",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-06_一个没被授勋的人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-VIMON_维松.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 149
+    },
+    {
+      "id": "BRY-NPC-WOLEN",
+      "name": "沃伦",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_BRY_布林",
+      "appearances": [
+        "台本_CS-BRY-03_学徒的印"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_BRY-NPC-WOLEN_沃伦.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 150
+    },
+    {
+      "id": "DEN-NPC-BEVI",
+      "name": "蓓薇",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN_丹布里",
+      "appearances": [
+        "台本_CM-DEN_潮水退去以后"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-BEVI_蓓薇.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 151
+    },
+    {
+      "id": "DEN-NPC-NOZE",
+      "name": "娜泽",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN_丹布里",
+      "appearances": [
+        "台本_CS-DEN-02_渔网留下的洞"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-NOZE_娜泽.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 152
+    },
+    {
+      "id": "DEN-NPC-TANSER",
+      "name": "坦瑟",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN_丹布里",
+      "appearances": [
+        "台本_CS-DEN-01_船上的第四个人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-TANSER_坦瑟.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 153
+    },
+    {
+      "id": "DEN-NPC-VIKO",
+      "name": "薇柯",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_DEN_丹布里",
+      "appearances": [
+        "台本_CS-DEN-03_苇背的新邻居"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_DEN-NPC-VIKO_薇柯.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 154
+    },
+    {
+      "id": "EED-NPC-BUZE",
+      "name": "布泽",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED_伊德斯",
+      "appearances": [
+        "台本_CS-EED-02_沉木驿的梁"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_EED-NPC-BUZE_布泽.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 155
+    },
+    {
+      "id": "EED-NPC-FOLAN",
+      "name": "佛兰",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED_伊德斯",
+      "appearances": [
+        "台本_CS-EED-03_护林岗的口哨"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_EED-NPC-FOLAN_佛兰.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 156
+    },
+    {
+      "id": "EED-NPC-OLA",
+      "name": "奥菈·纹",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED_伊德斯",
+      "appearances": [
+        "台本_CM-EED_林线以外"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_EED-NPC-OLA_奥菈·纹.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 157
+    },
+    {
+      "id": "EED-NPC-SUJIN",
+      "name": "苏槿",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_EED_伊德斯",
+      "appearances": [
+        "台本_CS-EED-01_最后一株不是最后一单"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_EED-NPC-SUJIN_苏槿.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 158
+    },
+    {
+      "id": "FOR-NPC-XIJIE",
+      "name": "西婕",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_FOR_佛尔霍特",
+      "appearances": [
+        "台本_CM-FOR_金价之外"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_FOR-NPC-XIJIE_西婕.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 159
+    },
+    {
+      "id": "KOR-NPC-BILUO",
+      "name": "碧珞",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CS-KOR-03_寄存的陌生画"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-BILUO_碧珞.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 160
+    },
+    {
+      "id": "KOR-NPC-EV",
+      "name": "埃文·行",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CM-KOR_不是你的姓"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-EV_埃文·行.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 161
+    },
+    {
+      "id": "KOR-NPC-LULING",
+      "name": "卢绫",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CS-KOR-02_双门里的孩子"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-LULING_卢绫.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 162
+    },
+    {
+      "id": "KOR-NPC-NAYA",
+      "name": "娜娅",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CS-KOR-01_留灯的人"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-NAYA_娜娅.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 163
+    },
+    {
+      "id": "KOR-NPC-SAILUO",
+      "name": "赛洛",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CS-KOR-02_双门里的孩子"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-SAILUO_赛洛.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 164
+    },
+    {
+      "id": "KOR-NPC-TAFEI",
+      "name": "塔斐",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CM-KOR_不是你的姓"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-TAFEI_塔斐.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 165
+    },
+    {
+      "id": "KOR-NPC-XIELAN",
+      "name": "榭兰",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CS-KOR-03_寄存的陌生画"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-XIELAN_榭兰.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 166
+    },
+    {
+      "id": "KOR-NPC-YUEN",
+      "name": "尤恩",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_KOR_考德",
+      "appearances": [
+        "台本_CS-KOR-02_双门里的孩子"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_KOR-NPC-YUEN_尤恩.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 167
+    },
+    {
+      "id": "MAE-NPC-DORO",
+      "name": "多罗",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CS-MAE-01_被留下的那件袍"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-DORO_多罗.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 168
+    },
+    {
+      "id": "MAE-NPC-VERE",
+      "name": "维芮",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MAE_曼恩",
+      "appearances": [
+        "台本_CS-MAE-01_被留下的那件袍"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MAE-NPC-VERE_维芮.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 169
+    },
+    {
+      "id": "MNS-NPC-FULEN",
+      "name": "芙伦",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MNS_曼郡",
+      "appearances": [
+        "台本_CS-MNS-01_空桶有两个名字"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MNS-NPC-FULEN_芙伦.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 170
+    },
+    {
+      "id": "MNS-NPC-JONHE",
+      "name": "琼荷",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MNS_曼郡",
+      "appearances": [
+        "台本_CS-MNS-03_葡影的种枝"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MNS-NPC-JONHE_琼荷.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 171
+    },
+    {
+      "id": "MNS-NPC-MODA",
+      "name": "墨达",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_MNS_曼郡",
+      "appearances": [
+        "台本_CM-MNS_没有年份的酒"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_MNS-NPC-MODA_墨达.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 172
+    },
+    {
+      "id": "OSB-NPC-BUXI",
+      "name": "布希",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CM-OSB_留到来年的一袋"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-BUXI_布希.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 173
+    },
+    {
+      "id": "OSB-NPC-LUOSHAN",
+      "name": "洛珊",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CS-OSB-01_父亲没说的价格"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-LUOSHAN_洛珊.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 174
+    },
+    {
+      "id": "OSB-NPC-YADUO",
+      "name": "雅铎",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_OSB_奥斯布鲁克",
+      "appearances": [
+        "台本_CS-OSB-03_那一口井不是嫁妆"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_OSB-NPC-YADUO_雅铎.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 175
+    },
+    {
+      "id": "PAS-NPC-WOTIN",
+      "name": "沃汀",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_PAS_柏石关与关外聚落",
+      "appearances": [
+        "台本_CS-PAS-01_石角的停工"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_PAS-NPC-WOTIN_沃汀.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 176
+    },
+    {
+      "id": "RAT-NPC-TUOFEI",
+      "name": "托斐",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_RAT_拉滕",
+      "appearances": [
+        "台本_CM-RAT_兽死之后"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_RAT-NPC-TUOFEI_托斐.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 177
+    },
+    {
+      "id": "SKO-NPC-WENNO",
+      "name": "温诺",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_SKO_斯孔弗特",
+      "appearances": [
+        "台本_CS-SKO-03_冷沟的护符"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_SKO-NPC-WENNO_温诺.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 178
+    },
+    {
+      "id": "YOS-NPC-ARLO",
+      "name": "阿洛",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_YOS_约斯特文",
+      "appearances": [
+        "台本_CS-YOS-03_水堰上的颜色"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_YOS-NPC-ARLO_阿洛.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 179
+    },
+    {
+      "id": "YOS-NPC-HURE",
+      "name": "呼蕾",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_YOS_约斯特文",
+      "appearances": [
+        "台本_CS-YOS-01_冬毛的最后一捆"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_YOS-NPC-HURE_呼蕾.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 180
+    },
+    {
+      "id": "YOS-NPC-XIYOU",
+      "name": "溪悠",
+      "canon": "mod-original",
+      "type": "次要",
+      "faction": "",
+      "location": "聚落_YOS_约斯特文",
+      "appearances": [
+        "台本_CS-YOS-03_水堰上的颜色"
+      ],
+      "cards": [
+        "design/04_人物/城市人物/人物_YOS-NPC-XIYOU_溪悠.md"
+      ],
+      "fine_details": true,
+      "note": "",
+      "has_card": true,
+      "no": 181
+    },
+    {
+      "id": "FX-ABY",
+      "name": "缇菈",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_D09_无名修院回声厅",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-ABY_缇菈.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 182
+    },
+    {
+      "id": "FX-BST",
+      "name": "恩岱",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R04_王廷关隘与边城",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N11_关隘外的交换"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-BST_恩岱.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 183
+    },
+    {
+      "id": "FX-BUR",
+      "name": "库奇",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R01_布林外港与旧渠",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N12_失踪者仍有名字"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-BUR_库奇.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 184
+    },
+    {
+      "id": "FX-CAT",
+      "name": "洛珉",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R05_灰烬湿地与疫村",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N15_回声不等于真相"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CAT_洛珉.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 185
+    },
+    {
+      "id": "FX-CMP",
+      "name": "珥泰",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R04_王廷关隘与边城",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_SQ02_被征用的冬粮"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CMP_珥泰.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 186
+    },
+    {
+      "id": "FX-CP1",
+      "name": "燧珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R04_王廷关隘与边城",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N9_把证据摆上桌"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CP1_燧珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 187
+    },
+    {
+      "id": "FX-CP5",
+      "name": "缶珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R01_布林外港与旧渠",
+      "appearances": [
+        "台本_DT13_一锅够分的热汤",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CP5_缶珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 188
+    },
+    {
+      "id": "FX-CRP",
+      "name": "瑟珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R03_曼恩边地",
+      "appearances": [
+        "台本_DT03_无人认领的墓标",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CRP_瑟珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 189
+    },
+    {
+      "id": "FX-CV1",
+      "name": "珞珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N14_可以回去的路"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CV1_珞珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 190
+    },
+    {
+      "id": "FX-CV2",
+      "name": "芩珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_DT05_驿馆的急用药",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CV2_芩珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 191
+    },
+    {
+      "id": "FX-CV3",
+      "name": "俉珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N9_把证据摆上桌"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CV3_俉珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 192
+    },
+    {
+      "id": "FX-CV4",
+      "name": "佴珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_DT10_别让狼靠近夜岗",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CV4_佴珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 193
+    },
+    {
+      "id": "FX-CV5",
+      "name": "栎珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_DT12_旧钟站的检修",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CV5_栎珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 194
+    },
+    {
+      "id": "FX-CV6",
+      "name": "洄珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_DT06_迷路者的路标",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-CV6_洄珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 195
+    },
+    {
+      "id": "FX-FRM",
+      "name": "蓟珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R02_丹布里西路与渡口",
+      "appearances": [
+        "台本_DT02_干净的井水",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-FRM_蓟珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 196
+    },
+    {
+      "id": "FX-GH2",
+      "name": "埕珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R05_灰烬湿地与疫村",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N16_谁来保管余烬"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-GH2_埕珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 197
+    },
+    {
+      "id": "FX-GHL",
+      "name": "达珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R05_灰烬湿地与疫村",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N16_谁来保管余烬"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-GHL_达珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 198
+    },
+    {
+      "id": "FX-HNT",
+      "name": "珥兰",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R03_曼恩边地",
+      "appearances": [
+        "台本_DT10_别让狼靠近夜岗",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-HNT_珥兰.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 199
+    },
+    {
+      "id": "FX-HNY",
+      "name": "忒曼",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R03_曼恩边地",
+      "appearances": [
+        "台本_DT04_收割前的空地",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-HNY_忒曼.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 200
+    },
+    {
+      "id": "FX-HOM",
+      "name": "苇珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R02_丹布里西路与渡口",
+      "appearances": [
+        "台本_DT06_迷路者的路标",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-HOM_苇珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 201
+    },
+    {
+      "id": "FX-HRP",
+      "name": "妲兰",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R04_王廷关隘与边城",
+      "appearances": [
+        "台本_D06_柏石军需地窖",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-HRP_妲兰.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 202
+    },
+    {
+      "id": "FX-HUT",
+      "name": "珂琳",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_DT05_驿馆的急用药",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-HUT_珂琳.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 203
+    },
+    {
+      "id": "FX-INK",
+      "name": "韦珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R02_丹布里西路与渡口",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N5_渡口的三种说法"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-INK_韦珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 204
+    },
+    {
+      "id": "FX-LEP",
+      "name": "米洛珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R05_灰烬湿地与疫村",
+      "appearances": [
+        "台本_DT16_愿意继续治疗的人",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-LEP_米洛珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 205
+    },
+    {
+      "id": "FX-LOT",
+      "name": "绥珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R03_曼恩边地",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_SQ03_没有王旗的面包"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-LOT_绥珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 206
+    },
+    {
+      "id": "FX-MAN",
+      "name": "岱珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R01_布林外港与旧渠",
+      "appearances": [
+        "台本_DT07_一箱不该开封的货",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-MAN_岱珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 207
+    },
+    {
+      "id": "FX-MIL",
+      "name": "霍珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R02_丹布里西路与渡口",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_SQ04_一条不卖人的路"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-MIL_霍珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 208
+    },
+    {
+      "id": "FX-MIN",
+      "name": "珥德",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_DT15_封存之后的巡查",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-MIN_珥德.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 209
+    },
+    {
+      "id": "FX-MN2",
+      "name": "锉珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R06_无名修院山地",
+      "appearances": [
+        "台本_DT15_封存之后的巡查",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-MN2_锉珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 210
+    },
+    {
+      "id": "FX-PLG",
+      "name": "蔻珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R05_灰烬湿地与疫村",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N8_不会散去的热病"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-PLG_蔻珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 211
+    },
+    {
+      "id": "FX-QRY",
+      "name": "德茹",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R04_王廷关隘与边城",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N7_军需账上的空名"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-QRY_德茹.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 212
+    },
+    {
+      "id": "FX-RLY",
+      "name": "珥薇",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R02_丹布里西路与渡口",
+      "appearances": [
+        "台本_DT08_修好第二块桥板",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-RLY_珥薇.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 213
+    },
+    {
+      "id": "FX-SGE",
+      "name": "瓦顿",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R01_布林外港与旧渠",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N1_无钟之夜"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-SGE_瓦顿.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 214
+    },
+    {
+      "id": "FX-TRS",
+      "name": "谟珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R04_王廷关隘与边城",
+      "appearances": [
+        "台本_FX_野外人物对白",
+        "台本_N3_听审前的灯"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-TRS_谟珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 215
+    },
+    {
+      "id": "FX-WCH",
+      "name": "索妲",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R05_灰烬湿地与疫村",
+      "appearances": [
+        "台本_DT09_药师指认的草",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-WCH_索妲.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 216
+    },
+    {
+      "id": "FX-WIL",
+      "name": "摩珥",
+      "canon": "mod-original",
+      "type": "野外",
+      "faction": "",
+      "location": "区域_R05_灰烬湿地与疫村",
+      "appearances": [
+        "台本_DT14_锈印章与假凭证",
+        "台本_FX_野外人物对白"
+      ],
+      "cards": [
+        "design/04_人物/野外人物/人物_FX-WIL_摩珥.md"
+      ],
+      "fine_details": false,
+      "note": "",
+      "has_card": true,
+      "no": 217
+    }
+  ]
+}

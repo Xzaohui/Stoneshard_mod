@@ -354,17 +354,9 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S146：验证快照依赖登记。工具源码中 11 份 backups/… 快照（城市/戏剧类保留性检查的“变更前”基线）逐份登记大小/哈希/用途，另 1 条为非依赖说明；缺任一份对应校验器无法运行，改动或替换由 Validate-PreservationBaselines.py 报错。入口design/11_管理/验证快照依赖登记.md；不复制、不修改、不删除备份。
 <!-- BASELINE-REG-S146:END -->
 
-<!-- REPLAY-S145:BEGIN -->
-2026-10-13 S145：第五轮全链复跑演练。主库按生成链顺序重跑写手：通过54、需素材跳过6、失败0；重跑后65校验器与Test-DesignVault全通过。最小副本（design/research/tools/src）重跑同序：写手46通过/8中止（缺backups与artifacts输入，下游保留守卫按设计连锁）、校验器49通过/16失败（戏剧城市类读backups、美术类读素材、计数页读已中止写手结果）。结论：主库链路自洽、顺序敏感、环境依赖已清点；未声明整树字节一致。入口design/11_管理/全链复跑演练S145.md；不构建、不部署。
-<!-- REPLAY-S145:END -->
-
 <!-- ROLLBACK-S174:BEGIN -->
 2026-10-13 S174：部署与回滚运行手册。部署五步（退出→构建验收→备份与替换→记录→部署后核对）与回滚六步（定位备份集→校验→还原data.win→还原设置与旧包→复核→留痕）按脚本实际行为写成；当前备份集 direct-20261013-155030-418 哈希已核对；不保证无损卸载、用户数据不动。本轮未执行部署或回滚。入口design/11_管理/部署与回滚运行手册.md；运行Validate-RollbackRunbook.py及既有检查。
 <!-- ROLLBACK-S174:END -->
-
-<!-- REG-COVERAGE-S152:BEGIN -->
-2026-10-13 S152：登记文件覆盖分类。research/ 下 127 份登记按覆盖方式分类：校验器直接 92、间接 24、工具产物 5、调查记录 4、共享输入 2；未归类 0。新增活输入须进前两类，工具产物须由已登记工具生成，调查记录须被设计页引用；出现未归类即报错。入口design/11_管理/登记文件覆盖分类.md；运行Validate-RegistryCoverage.py及既有检查。
-<!-- REG-COVERAGE-S152:END -->
 
 <!-- OPEN-ITEMS-S133:BEGIN -->
 2026-10-13 S133：待办与已知缺口登记。research/open-items.json 汇总 12 项（实现5/制作3/实机3/设计可选1/口径1），标明负责方、前置与证据；设计总览补最新入口块。入口design/11_管理/待办与已知缺口登记.md；只汇总不改门槛。运行Validate-OpenItems.py及既有检查；不部署游戏包。
@@ -398,30 +390,6 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 2026-10-13 S144：工具链离线自检（只读）。Test-MslInput 正对照通过（vanilla.win：34189代码条目/9663对象/1067房间，无已知MSL/EAO标记）、负对照按预期拒绝（组合data.win）；Check-FormalEnvironment属隔离期已停用（快照指向已移除备份）；结构回归输入不在库中暂不可复跑；GameProbe已构建。入口design/11_管理/工具链离线自检记录.md；运行Validate-ToolchainChecks.py及既有检查；不构建、不部署。
 <!-- TOOLCHAIN-S144:END -->
 
-<!-- FIELD-STAGE-S102:BEGIN -->
-2026-10-13 S102：特殊地点与野外NPC阶段收口。入口design/11_管理/特殊地点与野外NPC阶段验收记录.md：清点8区域/44地点/13类型、阅读72槽/17组+npc行为槽与场景族结论、28名野外人物（392条含条件回访）、44地点卡、16迹象、12文书、Mod交叉核对与伏笔台账引用组FS-33..36；剩余经济数值、比例与生成点、运行验证、英文稿与逐地点交互脚本。运行Validate-FieldStage.py及既有检查；不部署游戏包。
-<!-- FIELD-STAGE-S102:END -->
-
-<!-- DIALOGUE-COVERAGE-S137:BEGIN -->
-2026-10-13 S137：逐角色稿完成度核对（结构重算）。131篇台本逐篇核对对话树/场次节、场次标记、说话人行数与版本标记：130篇有对话节（例外为野外人物对白卡格式）；城市稿ASH/HIG各3篇已于S86深化、布林续篇六篇各有场1—3，当前待深化0篇；旧「各四篇/8篇待深化」保留为S84/S85历史记录，计划页旧句改为指向本页。入口design/11_管理/逐角色稿完成度核对.md；运行Validate-DialogueCoverage.py及既有检查；不部署游戏包。
-<!-- DIALOGUE-COVERAGE-S137:END -->
-
-<!-- SPEAKER-CLOSURE-S138:BEGIN -->
-2026-10-13 S138：说话人与人物卡闭合核对。逐行取说话人 232 位全部归类（玩家/人物卡精确/前缀/提及/通用称谓/标记），未闭合 0 位；白名单research/speaker-allowlist.json（通用称谓与标记不建卡）；新增说话人未列入白名单时校验报错。入口design/11_管理/说话人与人物卡闭合核对.md；运行Validate-SpeakerClosure.py及既有检查；不部署游戏包。
-<!-- SPEAKER-CLOSURE-S138:END -->
-
-<!-- DIALOGUE-DISTINCT-S139:BEGIN -->
-2026-10-13 S139：对白去重与独特性核对（整句完全匹配）。逐行抽取2734行、去重2716条；完全重复18组，全部为主章—副本配对（同一人物跨N/D，有意一致），待复核0组。新增重复不属配对时校验报错，须改写或登记理由。入口design/11_管理/对白去重与独特性核对.md；运行Validate-DialogueDistinctiveness.py及既有检查；不部署游戏包。
-<!-- DIALOGUE-DISTINCT-S139:END -->
-
-<!-- QUALITY-GUARDS-S140:BEGIN -->
-2026-10-13 S140：质量守卫总表与两项新守卫。链接完整：13590条双链、未解析0（行内代码段除外）；占位扫描：命中5处且全部登记于research/placeholder-allowlist.json；连同S137结构覆盖、S138说话人闭合、S139对白去重共五项守卫。入口design/11_管理/质量守卫总表.md；运行Validate-LinkIntegrity.py与Validate-PlaceholderScan.py及既有检查；不部署游戏包。
-<!-- QUALITY-GUARDS-S140:END -->
-
-<!-- IMPL-HANDOFF-S122:BEGIN -->
-2026-10-13 S122：实现交接总表。research/impl-handoff.json 列输入清单 18 项、实现顺序 6 步（含每步验收）、不变门槛与尚未确定项；入口design/11_管理/实现交接总表.md；计数取自实时校验报告。不新增设计内容；运行Validate-ImplHandoff.py及既有检查；实现与运行验证仍待进行，不部署游戏包。
-<!-- IMPL-HANDOFF-S122:END -->
-
 <!-- NAV-STATUS-S148:BEGIN -->
 2026-10-13 S148：三张导航页加入机检状态行。台本131篇（晶石51＋城市79＋野外1）、卫星聚落33篇、质量守卫7项；由 Validate-NavStatus.py 现场重算核对（家族计数、卫星笔记数、守卫行数），计数变化须重跑写手刷新。
 <!-- NAV-STATUS-S148:END -->
@@ -453,3 +421,35 @@ draft 表示逻辑初稿，不代表对白全文、数值和美术完成。revie
 <!-- PHASE-CLOSE-S160:BEGIN -->
 2026-10-13 S160：设计阶段收束核对。现场证据：649篇笔记、两份AGENTS（208规则块）、90校验器/135274项检查、131台本、三张原作参照、声望中英（成对1384、可见中文单列0）、74边闭合、59个GML、.sml与MSL副本同哈希、试点3批/18场景；历史待办共14项；用户已授权当前安装开发测试，0.3.5已构建部署，实测证据见artifacts/dev-runtime-20261014.json，完整扩展尚未验收。入口design/11_管理/设计阶段收束核对.md；运行Validate-PhaseClose.py及既有检查。
 <!-- PHASE-CLOSE-S160:END -->
+
+<!-- REPLAY-S145:BEGIN -->
+2026-10-13 S145：第五轮全链复跑演练。主库按生成链顺序重跑写手：通过54、需素材跳过6、失败0；重跑后65校验器与Test-DesignVault全通过。最小副本（design/research/tools/src）重跑同序：写手46通过/8中止（缺backups与artifacts输入，下游保留守卫按设计连锁）、校验器49通过/16失败（戏剧城市类读backups、美术类读素材、计数页读已中止写手结果）。结论：主库链路自洽、顺序敏感、环境依赖已清点；未声明整树字节一致。入口design/11_管理/全链复跑演练S145.md；不构建、不部署。
+<!-- REPLAY-S145:END -->
+
+<!-- REG-COVERAGE-S152:BEGIN -->
+2026-10-13 S152：登记文件覆盖分类。research/ 下 128 份登记按覆盖方式分类：校验器直接 92、间接 24、工具产物 5、调查记录 5、共享输入 2；未归类 0。新增活输入须进前两类，工具产物须由已登记工具生成，调查记录须被设计页引用；出现未归类即报错。入口design/11_管理/登记文件覆盖分类.md；运行Validate-RegistryCoverage.py及既有检查。
+<!-- REG-COVERAGE-S152:END -->
+
+<!-- DIALOGUE-COVERAGE-S137:BEGIN -->
+2026-10-13 S137：逐角色稿完成度核对（结构重算）。131篇台本逐篇核对对话树/场次节、场次标记、说话人行数与版本标记：130篇有对话节（例外为野外人物对白卡格式）；城市稿ASH/HIG各3篇已于S86深化、布林续篇六篇各有场1—3，当前待深化0篇；旧「各四篇/8篇待深化」保留为S84/S85历史记录，计划页旧句改为指向本页。入口design/11_管理/逐角色稿完成度核对.md；运行Validate-DialogueCoverage.py及既有检查；不部署游戏包。
+<!-- DIALOGUE-COVERAGE-S137:END -->
+
+<!-- SPEAKER-CLOSURE-S138:BEGIN -->
+2026-10-13 S138：说话人与人物卡闭合核对。逐行取说话人 250 位全部归类（玩家/人物卡精确/前缀/提及/通用称谓/标记），未闭合 0 位；白名单research/speaker-allowlist.json（通用称谓与标记不建卡）；新增说话人未列入白名单时校验报错。入口design/11_管理/说话人与人物卡闭合核对.md；运行Validate-SpeakerClosure.py及既有检查；不部署游戏包。
+<!-- SPEAKER-CLOSURE-S138:END -->
+
+<!-- DIALOGUE-DISTINCT-S139:BEGIN -->
+2026-10-13 S139：对白去重与独特性核对（整句完全匹配）。逐行抽取2895行、去重2877条；完全重复18组，全部为主章—副本配对（同一人物跨N/D，有意一致），待复核0组。新增重复不属配对时校验报错，须改写或登记理由。入口design/11_管理/对白去重与独特性核对.md；运行Validate-DialogueDistinctiveness.py及既有检查；不部署游戏包。
+<!-- DIALOGUE-DISTINCT-S139:END -->
+
+<!-- QUALITY-GUARDS-S140:BEGIN -->
+2026-10-13 S140：质量守卫总表与两项新守卫。链接完整：13763条双链、未解析0（行内代码段除外）；占位扫描：命中5处且全部登记于research/placeholder-allowlist.json；连同S137结构覆盖、S138说话人闭合、S139对白去重共五项守卫。入口design/11_管理/质量守卫总表.md；运行Validate-LinkIntegrity.py与Validate-PlaceholderScan.py及既有检查；不部署游戏包。
+<!-- QUALITY-GUARDS-S140:END -->
+
+<!-- FIELD-STAGE-S102:BEGIN -->
+2026-10-13 S102：特殊地点与野外NPC阶段收口。入口design/11_管理/特殊地点与野外NPC阶段验收记录.md：清点8区域/44地点/13类型、阅读72槽/17组+npc行为槽与场景族结论、28名野外人物（392条含条件回访）、44地点卡、16迹象、12文书、Mod交叉核对与伏笔台账引用组FS-33..36；剩余经济数值、比例与生成点、运行验证、英文稿与逐地点交互脚本。运行Validate-FieldStage.py及既有检查；不部署游戏包。
+<!-- FIELD-STAGE-S102:END -->
+
+<!-- IMPL-HANDOFF-S122:BEGIN -->
+2026-10-13 S122：实现交接总表。research/impl-handoff.json 列输入清单 18 项、实现顺序 6 步（含每步验收）、不变门槛与尚未确定项；入口design/11_管理/实现交接总表.md；计数取自实时校验报告。不新增设计内容；运行Validate-ImplHandoff.py及既有检查；实现与运行验证仍待进行，不部署游戏包。
+<!-- IMPL-HANDOFF-S122:END -->

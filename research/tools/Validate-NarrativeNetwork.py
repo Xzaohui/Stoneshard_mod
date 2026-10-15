@@ -2,6 +2,7 @@
 from pathlib import Path
 from copy import deepcopy
 import json,itertools
+from HeavyEdges import receive as receive_heavy, evaluate as evaluate_heavy, commit as commit_heavy
 
 ROOT=Path(__file__).resolve().parents[2]
 net=json.loads((ROOT/'research/story-network.json').read_text(encoding='utf-8'))
@@ -40,6 +41,7 @@ class DesignScenario:
             if key in net['sticky_history'] and new.get(key) is True and value is False: continue
             new[key]=value
         self.state=new; self.done.add(qid)
+        commit_heavy(self, model['conditional_influences'], qid)
         return True
     def pay(self,owner):
         if owner.startswith('D') and not owner.startswith('DT'): return False
@@ -275,6 +277,56 @@ def paths():
             done|=new
         check('N18' in done and skip not in done,'safe-main-reachable-skip-'+skip)
 scenario('三路任缺一路仍有基础安全结案',paths)
+
+def heavy_scenarios():
+    influences=model['conditional_influences']
+    for e in influences:
+        for target in [p['task'] for p in e['targets']]:
+            s=DesignScenario()
+            s.state.update({k:v['default'] for k,v in net['heavy_edge_registry']['variables'].items()})
+            s.state.update({k:vs[0] for k,vs in e['when'].items()})
+            if e['id']=='HX07': s.state['order_HX07']=target
+            before=deepcopy(s.__dict__)
+            check(evaluate_heavy(s,e,target) is None and s.__dict__==before,e['id']+'-no-receipt-no-impact')
+            check(not receive_heavy(s,e,delivered=False),e['id']+'-undelivered')
+            check(receive_heavy(s,e),e['id']+'-receipt')
+            before=deepcopy(s.__dict__)
+            result=evaluate_heavy(s,e,target)
+            check(result is not None and result['mode']=='future_parameters' and s.__dict__==before,e['id']+'-read-only-impact')
+            receive_heavy(s,e)
+            check(s.__dict__==before,e['id']+'-receipt-idempotent')
+            for guard in ['alive','present','willing','authorized']:
+                check(evaluate_heavy(s,e,target,**{guard:False})['mode']=='fallback',e['id']+'-guard-'+guard)
+            s.done.add(target); old=deepcopy(s.__dict__)
+            check(evaluate_heavy(s,e,target)['mode']=='local_callback' and s.__dict__==old,e['id']+'-late-no-retcon')
+            s.snapshot={'facts':deepcopy(s.state)}; old=deepcopy(s.__dict__)
+            check(evaluate_heavy(s,e,target)['mode']=='local_callback' and not commit_heavy(s,influences,e['sources'][0]['task']) and s.__dict__==old,e['id']+'-frozen')
+            for branch,condition in e.get('branches',{}).items():
+                s.state.update({k:v[0] for k,v in condition.items()})
+                check(branch in evaluate_heavy(s,e,target)['branches'],e['id']+'-branch-'+branch)
+            for key,values in e['when'].items():
+                s.state[key]='__unmatched__'
+                check(evaluate_heavy(s,e,target) is None,e['id']+'-mismatch-'+key)
+                s.state[key]=values[0]
+    for order in itertools.permutations(['N6','N7','N8']):
+        s=DesignScenario()
+        for q in order:
+            s.done.add(q); commit_heavy(s,influences,q)
+        check(s.state.get('order_HX07')==order[-1],'HX07-last-'+str(order))
+    for route in ['trace','pay','surrender']:
+        s=DesignScenario(); s.state['resolve_N11']=route
+        old=deepcopy(s.state)
+        check(not commit_heavy(s,influences,'N11',executed=False) and s.state==old,'HX09-preview-'+route)
+        commit_heavy(s,influences,'N11')
+        check((s.state.get('sylang_state')=='dead')==(route=='trace'),'HX09-actual-'+route)
+    for skip in ['N6','N7','N8']:
+        done=set()
+        while True:
+            new={q for q in tasks if q.startswith('N') and q!=skip and ready(q,done)}-done
+            if not new: break
+            done|=new
+        check('N18' in done,'HX-mainline-unlocked-'+skip)
+scenario('26条HX条件影响、人物守卫、晚到与冻结、历史提交和三路次序',heavy_scenarios)
 
 report={'date':'2026-10-12','scope':'Original design data and reference evaluator only; no GML, UI, literary quality or runtime certification','screenplays':len(tasks),'routes':sum(len(t['routes']) for t in tasks.values()),'cross_effects':len(net['edges']),'arcs':len(net['arcs']),'checks_passed':len(checks),'scenarios':scenarios,'errors':errors,'passed':not errors}
 (ROOT/'research/story-network-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

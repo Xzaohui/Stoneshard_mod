@@ -2376,5 +2376,1228 @@
     "cross_effects": 82,
     "ensemble_arcs": 14,
     "implemented": false
-  }
+  },
+  "conditional_influences": [
+    {
+      "id": "HX01",
+      "level": "L3",
+      "acts": [
+        "I",
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "N3",
+          "file": "design/05_主线/台本/台本_N3_听审前的灯.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N10",
+          "file": "design/05_主线/台本/台本_N10_没有写下的见证.md"
+        }
+      ],
+      "when": {
+        "resolve_N3": [
+          "audit"
+        ]
+      },
+      "condition_text": "[[台本_N3_听审前的灯]] resolve_N3=audit",
+      "effect": "新增路线N10-R-nielchallenge：妮尔存活、在场、愿谈且底样可核时，当众质疑凯姆印鉴（否则保留原独立核验）。未走audit时，凯姆在私下对质前烧掉一份摘要副本，可选完整参数永久缺失（NE2/3/4不受影响）",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX01",
+      "order_rule": null
+    },
+    {
+      "id": "HX02",
+      "level": "L3",
+      "acts": [
+        "I",
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "N4",
+          "file": "design/05_主线/台本/台本_N4_第一张空白债票.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N17",
+          "file": "design/05_主线/台本/台本_N17_残光之井.md"
+        }
+      ],
+      "when": {
+        "resolve_N4": [
+          "installments",
+          "liquidate",
+          "shift"
+        ]
+      },
+      "condition_text": "[[台本_N4_第一张空白债票]] 任意结案",
+      "effect": "赫斯在N4亲自收走一张空白担保票（见N4 S200段）。N4-R-shift且`n4_shift_remedied`≠true时，该票在N17被赫斯当面出示，作为要挟新雇工的筹码，玩家须在N17额外处理一名被押雇工；已补救时只展示历史票据，不再押人",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "branches": {
+        "unremedied": {
+          "n4_shift_remedied": [
+            false
+          ]
+        },
+        "remedied": {
+          "n4_shift_remedied": [
+            true
+          ]
+        }
+      },
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX02",
+      "order_rule": null
+    },
+    {
+      "id": "HX03",
+      "level": "L3",
+      "acts": [
+        "I",
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "CS-BRY-09",
+          "file": "design/06_支线/城市支线/台本_CS-BRY-09_谁关上水门.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N2",
+          "file": "design/05_主线/台本/台本_N2_灰堤没有墓碑.md"
+        },
+        {
+          "task": "N17",
+          "file": "design/05_主线/台本/台本_N17_残光之井.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_BRY_09": [
+          "splitflow"
+        ]
+      },
+      "condition_text": "[[台本_CS-BRY-09_谁关上水门]] splitflow",
+      "effect": "N2多一条低潮水路入口（绕开工头哨）；N17“没有可调工班”分支改为可调用布林分流工班一组",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX03",
+      "order_rule": null
+    },
+    {
+      "id": "HX04",
+      "level": "L3",
+      "acts": [
+        "II",
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "N5",
+          "file": "design/05_主线/台本/台本_N5_渡口的三种说法.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "D08",
+          "file": "design/08_副本/台本/台本_D08_沉水档案井.md"
+        },
+        {
+          "task": "N11",
+          "file": "design/05_主线/台本/台本_N11_关隘外的交换.md"
+        }
+      ],
+      "when": {
+        "resolve_N5": [
+          "carrier"
+        ]
+      },
+      "condition_text": "[[台本_N5_渡口的三种说法]] resolve_N5=carrier",
+      "effect": "托曼当前仍授权接应（未因N11 surrender撤回）时，亲自带玩家走渡民旧水路进D08，跳过第一层守卫；撤回后只保留已交付的水路草图，须自行通过。N5未走carrier时走正门入口（非方法键，入口后仍按D08-R-people／D08-R-parallel）",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX04",
+      "order_rule": null
+    },
+    {
+      "id": "HX05",
+      "level": "L3",
+      "acts": [
+        "II"
+      ],
+      "sources": [
+        {
+          "task": "SQ01",
+          "file": "design/06_支线/台本/台本_SQ01_港税与自由.md"
+        },
+        {
+          "task": "SQ02",
+          "file": "design/06_支线/台本/台本_SQ02_被征用的冬粮.md"
+        },
+        {
+          "task": "SQ03",
+          "file": "design/06_支线/台本/台本_SQ03_没有王旗的面包.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N7",
+          "file": "design/05_主线/台本/台本_N7_军需账上的空名.md"
+        },
+        {
+          "task": "D06",
+          "file": "design/08_副本/台本/台本_D06_柏石军需地窖.md"
+        }
+      ],
+      "when": {
+        "ferry_depot_claim": [
+          "GA",
+          "CO"
+        ]
+      },
+      "condition_text": "渡口仓归属（[[势力利益冲突矩阵]]）",
+      "effect": "渡口仓归GA（放粮）时，特使团视隔离失守，N7-R-inspection不可用，只能走parallel／D06-R-side；归CO（封检）时SQ01公开赔付推迟一轮，事务署承诺降一级",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX05",
+      "order_rule": null
+    },
+    {
+      "id": "HX06",
+      "level": "L3",
+      "acts": [
+        "II",
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "N8",
+          "file": "design/05_主线/台本/台本_N8_不会散去的热病.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N17",
+          "file": "design/05_主线/台本/台本_N17_残光之井.md"
+        },
+        {
+          "task": "N18",
+          "file": "design/05_主线/台本/台本_N18_誓约之后.md"
+        },
+        {
+          "task": "D10",
+          "file": "design/08_副本/台本/台本_D10_残光之井.md"
+        }
+      ],
+      "when": {
+        "n8_relief": [
+          "accepted",
+          "refused"
+        ]
+      },
+      "condition_text": "[[台本_N8_不会散去的热病]] 接受赫斯缓解药",
+      "effect": "坎沃·岩症状暂缓、知道药从哪来；N17他站在赫斯一侧（见[[人物_坎沃·岩]]）。拒药时坎沃病重卧床，N17不在场，N18回访其家属",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX06",
+      "order_rule": null
+    },
+    {
+      "id": "HX07",
+      "level": "L2",
+      "acts": [
+        "II"
+      ],
+      "sources": [
+        {
+          "task": "N6",
+          "file": "design/05_主线/台本/台本_N6_被封存的页码.md"
+        },
+        {
+          "task": "N7",
+          "file": "design/05_主线/台本/台本_N7_军需账上的空名.md"
+        },
+        {
+          "task": "N8",
+          "file": "design/05_主线/台本/台本_N8_不会散去的热病.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N6",
+          "file": "design/05_主线/台本/台本_N6_被封存的页码.md"
+        },
+        {
+          "task": "N7",
+          "file": "design/05_主线/台本/台本_N7_军需账上的空名.md"
+        },
+        {
+          "task": "N8",
+          "file": "design/05_主线/台本/台本_N8_不会散去的热病.md"
+        }
+      ],
+      "when": {},
+      "condition_text": "N6/N7/N8中最后完成的一路",
+      "effect": "赫斯已提前清场：少一份可选副件；多一名可策反的看守（late变体）",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX07",
+      "order_rule": "last_completed_of_N6_N7_N8"
+    },
+    {
+      "id": "HX08",
+      "level": "L3",
+      "acts": [
+        "III",
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "N11",
+          "file": "design/05_主线/台本/台本_N11_关隘外的交换.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "D08",
+          "file": "design/08_副本/台本/台本_D08_沉水档案井.md"
+        },
+        {
+          "task": "N17",
+          "file": "design/05_主线/台本/台本_N17_残光之井.md"
+        }
+      ],
+      "when": {
+        "resolve_N11": [
+          "surrender"
+        ]
+      },
+      "condition_text": "[[台本_N11_关隘外的交换]] surrender",
+      "effect": "追索者内部通道让D08跳过一层；N17一名债契守卫认出追索人暗号，主动倒戈（defection路线少一场说服）。伤害记录照旧不清除",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX08",
+      "order_rule": null
+    },
+    {
+      "id": "HX09",
+      "level": "L3",
+      "acts": [
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "N11",
+          "file": "design/05_主线/台本/台本_N11_关隘外的交换.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N12",
+          "file": "design/05_主线/台本/台本_N12_失踪者仍有名字.md"
+        },
+        {
+          "task": "N18",
+          "file": "design/05_主线/台本/台本_N18_誓约之后.md"
+        }
+      ],
+      "when": {
+        "resolve_N11": [
+          "trace"
+        ]
+      },
+      "condition_text": "[[台本_N11_关隘外的交换]] trace",
+      "effect": "明示代价：追踪多走两段路。罗温在报价时明说“第二囚室的随工锡朗撑不了那么久”。trace结案后锡朗已死，N12井下见其遗物，N18回访其师傅。pay与surrender不触发",
+      "writes": {
+        "sylang_state": "dead"
+      },
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX09",
+      "order_rule": null
+    },
+    {
+      "id": "HX10",
+      "level": "L3",
+      "acts": [
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "N11",
+          "file": "design/05_主线/台本/台本_N11_关隘外的交换.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N12",
+          "file": "design/05_主线/台本/台本_N12_失踪者仍有名字.md"
+        },
+        {
+          "task": "D08",
+          "file": "design/08_副本/台本/台本_D08_沉水档案井.md"
+        }
+      ],
+      "when": {
+        "resolve_N11": [
+          "surrender"
+        ],
+        "toman_personnel": [
+          false
+        ]
+      },
+      "condition_text": "托曼撤回接应（X22/X23条件成立）",
+      "effect": "中立护理组不熟井道：twofront只能保一个目标；想保两个，玩家须亲守第二驻点并多打一场遭遇。不能再用付费补足同等结果",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX10",
+      "order_rule": null
+    },
+    {
+      "id": "HX11",
+      "level": "L2",
+      "acts": [
+        "II",
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "SQ08",
+          "file": "design/06_支线/台本/台本_SQ08_逃兵的家书.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N11",
+          "file": "design/05_主线/台本/台本_N11_关隘外的交换.md"
+        }
+      ],
+      "when": {
+        "resolve_SQ08": [
+          "relocate"
+        ]
+      },
+      "condition_text": "[[台本_SQ08_逃兵的家书]] relocate",
+      "effect": "艾伦迁走后旧卸货点改作马厩，箱号木牌已拆；trace须在马厩草垛下找回牌并现场重建货流（多一段现场调查，而非少问路）",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX11",
+      "order_rule": null
+    },
+    {
+      "id": "HX12",
+      "level": "L3",
+      "acts": [
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "N16",
+          "file": "design/05_主线/台本/台本_N16_谁来保管余烬.md"
+        },
+        {
+          "task": "N17",
+          "file": "design/05_主线/台本/台本_N17_残光之井.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N18",
+          "file": "design/05_主线/台本/台本_N18_誓约之后.md"
+        }
+      ],
+      "when": {
+        "custody_signed": [
+          "MG",
+          "CO",
+          "GA",
+          "dispersed"
+        ]
+      },
+      "condition_text": "[[台本_N16_谁来保管余烬]] 签署方案",
+      "effect": "互斥条款（见[[终局互斥条款]]）：MG→公议代表退出监督；GA→布林港停航；K03→必然一次维护失败事件",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX12",
+      "order_rule": null
+    },
+    {
+      "id": "HX13",
+      "level": "L2",
+      "acts": [
+        "II"
+      ],
+      "sources": [
+        {
+          "task": "CS-ASH-02",
+          "file": "design/06_支线/城市支线/台本_CS-ASH-02_陪护者也会累.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N8",
+          "file": "design/05_主线/台本/台本_N8_不会散去的热病.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_ASH_02": [
+          "b",
+          "a"
+        ]
+      },
+      "condition_text": "[[台本_CS-ASH-02_陪护者也会累]] b限期轮班",
+      "effect": "轮班表已存在，N8-R-relocate多一组可信接应；a本人换护理时，原陪护者不再参与N8",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX13",
+      "order_rule": null
+    },
+    {
+      "id": "HX14",
+      "level": "L3",
+      "acts": [
+        "II",
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "CS-MAE-02",
+          "file": "design/06_支线/城市支线/台本_CS-MAE-02_烧掉之前.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N6",
+          "file": "design/05_主线/台本/台本_N6_被封存的页码.md"
+        },
+        {
+          "task": "N10",
+          "file": "design/05_主线/台本/台本_N10_没有写下的见证.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_MAE_02": [
+          "b"
+        ]
+      },
+      "condition_text": "[[台本_CS-MAE-02_烧掉之前]] b迁藏封柜",
+      "effect": "迁藏柜里有被调包的一页；N6-R-external多一处来源，但凯姆因此提前得知玩家在查（N10对质开场他已备好说辞）",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX14",
+      "order_rule": null
+    },
+    {
+      "id": "HX15",
+      "level": "L2",
+      "acts": [
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "CS-PAS-02",
+          "file": "design/06_支线/城市支线/台本_CS-PAS-02_两份点名.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N11",
+          "file": "design/05_主线/台本/台本_N11_关隘外的交换.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_PAS_02": [
+          "a"
+        ]
+      },
+      "condition_text": "[[台本_CS-PAS-02_两份点名]] a编号分柜",
+      "effect": "编号分柜让罗温无法核对搬运者实名，surrender报价降为“只卖片区”，伤害仍成立但追索者需多一日",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX15",
+      "order_rule": null
+    },
+    {
+      "id": "HX16",
+      "level": "L2",
+      "acts": [
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "CS-HIG-01",
+          "file": "design/06_支线/城市支线/台本_CS-HIG-01_回风驿的停牌.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N14",
+          "file": "design/05_主线/台本/台本_N14_可以回去的路.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_HIG_01": [
+          "a"
+        ]
+      },
+      "condition_text": "[[台本_CS-HIG-01_回风驿的停牌]] a独立验段",
+      "effect": "已验段可作N14退路之一，省一段修路但不免回程维护费",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "死亡/缺席/拒绝/授权撤回优先；只用已送达回执与固定物证，不代播新台词；保留基础出口与主线回程。",
+      "retroactive": "只重评未执行的未来行动；已结案不回滚、不重奖、不复活；N17确认后只作地方履约回访。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX16",
+      "order_rule": null
+    },
+    {
+      "id": "HX17",
+      "level": "L2",
+      "acts": [
+        "II"
+      ],
+      "sources": [
+        {
+          "task": "CS-DEN-01",
+          "file": "design/06_支线/城市支线/台本_CS-DEN-01_船上的第四个人.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N8",
+          "file": "design/05_主线/台本/台本_N8_不会散去的热病.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_DEN_01": [
+          "a"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-DEN-01_船上的第四个人]]，真实方案`a`（`resolve_CS_DEN_01=a`），L2。",
+      "effect": "两岸已实接的分船记录，可在接收方另行同意且船手本班有余力时，代替一次空船试航；仍逐名核患者目的地，另付本航费用。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，欧铎满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX17-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX17",
+      "order_rule": null
+    },
+    {
+      "id": "HX18",
+      "level": "L2",
+      "acts": [
+        "I"
+      ],
+      "sources": [
+        {
+          "task": "CS-OSB-01",
+          "file": "design/06_支线/城市支线/台本_CS-OSB-01_父亲没说的价格.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N4",
+          "file": "design/05_主线/台本/台本_N4_第一张空白债票.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_OSB_01": [
+          "a"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-OSB-01_父亲没说的价格]]，真实方案`a`（`resolve_CS_OSB_01=a`），L2。",
+      "effect": "受准的限期工约与父债分账副件可供现场对照，省去一次另访劳务柜核退出条款的路程；工坊现金与工资仍须独立查验。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，芙朵·谷满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX18-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX18",
+      "order_rule": null
+    },
+    {
+      "id": "HX19",
+      "level": "L2",
+      "acts": [
+        "II"
+      ],
+      "sources": [
+        {
+          "task": "CS-MNS-01",
+          "file": "design/06_支线/城市支线/台本_CS-MNS-01_空桶有两个名字.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N8",
+          "file": "design/05_主线/台本/台本_N8_不会散去的热病.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_MNS_01": [
+          "b"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-MNS-01_空桶有两个名字]]，真实方案`b`（`resolve_CS_MNS_01=b`），L2。",
+      "effect": "已验替代容器的有限规格可用于留营清水储备，省一笔重新选型检查费；本案已占容器不移走，另购实物仍付费并复验清洁。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，芙伦满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX19-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX19",
+      "order_rule": null
+    },
+    {
+      "id": "HX20",
+      "level": "L2",
+      "acts": [
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "CS-ALD-01",
+          "file": "design/06_支线/城市支线/台本_CS-ALD-01_白缝的姓.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N14",
+          "file": "design/05_主线/台本/台本_N14_可以回去的路.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_ALD_01": [
+          "a"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-ALD-01_白缝的姓]]，真实方案`a`（`resolve_CS_ALD_01=a`），L2。",
+      "effect": "受准针路可供安全外段工具背带改制，玩家完成承重检查后少跑一趟换带；不降低核心装置限制，也不凭此获得维护班。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，芬珂满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX20-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX20",
+      "order_rule": null
+    },
+    {
+      "id": "HX21",
+      "level": "L2",
+      "acts": [
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "CS-SKO-01",
+          "file": "design/06_支线/城市支线/台本_CS-SKO-01_炭背的预付款.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N13",
+          "file": "design/05_主线/台本/台本_N13_答案的代价.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_SKO_01": [
+          "a"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-SKO-01_炭背的预付款]]，真实方案`a`（`resolve_CS_SKO_01=a`），L2。",
+      "effect": "已受准封款明细仅在N13清点中确有同一权利人、同一笔资产时，用于现场标出不可动用的工资与赎款，免一次返城确认用途；无该重合则不触发。可处分资产相应减少，缺额不得借同笔填满，不把妮莎的家产并入研究者资产。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，妮莎·炉满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX21-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX21",
+      "order_rule": null
+    },
+    {
+      "id": "HX22",
+      "level": "L2",
+      "acts": [
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "CS-YOS-01",
+          "file": "design/06_支线/城市支线/台本_CS-YOS-01_冬毛的最后一捆.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N14",
+          "file": "design/05_主线/台本/台本_N14_可以回去的路.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_YOS_01": [
+          "a"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-YOS-01_冬毛的最后一捆]]，真实方案`a`（`resolve_CS_YOS_01=a`），L2。",
+      "effect": "各户冬底量扣除后的真实未占余料，经新约和交接后供有限工具遮雨，减少一次远购运输费；毛料仍按实价，不能抽护理份。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，呼蕾满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX22-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX22",
+      "order_rule": null
+    },
+    {
+      "id": "HX23",
+      "level": "L2",
+      "acts": [
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "CS-KOR-01",
+          "file": "design/06_支线/城市支线/台本_CS-KOR-01_留灯的人.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N11",
+          "file": "design/05_主线/台本/台本_N11_关隘外的交换.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_KOR_01": [
+          "a"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-KOR-01_留灯的人]]，真实方案`a`（`resolve_CS_KOR_01=a`），L2。",
+      "effect": "受准的一晚寄宿日期可作货流时间对照，省去一次追问旅客住址的调查往返；不提供兰衍位置，仍核箱号，HX09追踪代价完整保留。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，娜娅满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX23-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX23",
+      "order_rule": null
+    },
+    {
+      "id": "HX24",
+      "level": "L2",
+      "acts": [
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "CS-EED-01",
+          "file": "design/06_支线/城市支线/台本_CS-EED-01_最后一株不是最后一单.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N14",
+          "file": "design/05_主线/台本/台本_N14_可以回去的路.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_EED_01": [
+          "b"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-EED-01_最后一株不是最后一单]]，真实方案`b`（`resolve_CS_EED_01=b`），L2。",
+      "effect": "已登记旧料的工序记录可供辨认外段垫木缺陷，玩家实测后免买一份试作木料；已交订单的旧料不可再调用，正式用料另核。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，葛黎满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX24-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX24",
+      "order_rule": null
+    },
+    {
+      "id": "HX25",
+      "level": "L2",
+      "acts": [
+        "IV"
+      ],
+      "sources": [
+        {
+          "task": "CS-FOR-01",
+          "file": "design/06_支线/城市支线/台本_CS-FOR-01_旧骑卫的杯.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N16",
+          "file": "design/05_主线/台本/台本_N16_谁来保管余烬.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_FOR_01": [
+          "a"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-FOR-01_旧骑卫的杯]]，真实方案`a`（`resolve_CS_FOR_01=a`），L2。",
+      "effect": "历史限权展示的更正副件可在双边审约时直接剔除虚称现役骑卫支持的一项邀约，免一趟寻访所谓现役担保人的路程；不增加机构承诺或资金。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，艾钦满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX25-L01`，本页不新增主线人物对白。\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX25",
+      "order_rule": null
+    },
+    {
+      "id": "HX26",
+      "level": "L2",
+      "acts": [
+        "III"
+      ],
+      "sources": [
+        {
+          "task": "CS-RAT-01",
+          "file": "design/06_支线/城市支线/台本_CS-RAT-01_鹿栅之外.md"
+        }
+      ],
+      "targets": [
+        {
+          "task": "N13",
+          "file": "design/05_主线/台本/台本_N13_答案的代价.md"
+        }
+      ],
+      "when": {
+        "resolve_CS_RAT_01": [
+          "a"
+        ]
+      },
+      "condition_text": "\n来源：[[台本_CS-RAT-01_鹿栅之外]]，真实方案`a`（`resolve_CS_RAT_01=a`），L2。",
+      "effect": "已受准分案给付凭据只在N13已有申请明确误并本案同一笔已付款时，用于现场拆除重复计项，免一轮回乡核重复申请；不存在误并则不触发。地方畜损不冒充研究赔付，资金池不互挪，不能把未足额写成已结清。",
+      "writes": {},
+      "guards": {
+        "alive": true,
+        "present": true,
+        "willing": true,
+        "authorized": true,
+        "receipt_required": true
+      },
+      "fallback": "来源实际完成，芬罗满足上述本人存活／在场／愿谈／授权守卫，回执真实送达；相关实物、费用与当前用途须再核。否则保留主线原步骤与原成本；主线已结不追溯减免。来源对白见该台本`HX26-L01`，本页不新增主线人物对白。\n\n",
+      "retroactive": "只重评未执行步骤；已结案只留晚到回执，不追退费用、不改选、不重奖；N17确认后不重开签约。",
+      "evidence_writes": [],
+      "snapshot_writes": [],
+      "ending_rule_writes": [],
+      "receiver_source": "design/09_系统逻辑/城市主线回流S201.md",
+      "kind": "conditional_influence",
+      "hard_requires": [],
+      "receipt_key": "receipt_HX26",
+      "order_rule": null
+    }
+  ]
 }

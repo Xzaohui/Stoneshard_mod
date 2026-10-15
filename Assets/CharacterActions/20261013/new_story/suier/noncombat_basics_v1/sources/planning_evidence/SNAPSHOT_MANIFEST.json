@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-14T05:24:17.811708+00:00",
+  "description": "65份原字节输入快照；另存8份逐字prompt与动作树/语义去重、引文及实际view记录。未生成图片，未改旧图。",
+  "source_count": 65,
+  "sources": [
+    {
+      "source_id": "root_agents",
+      "path": "AGENTS.md",
+      "bytes": 68775,
+      "sha256": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+      "role": "root_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/AGENTS.md"
+    },
+    {
+      "source_id": "design_agents",
+      "path": "design/AGENTS.md",
+      "bytes": 64250,
+      "sha256": "302d9d3ef38f2fe27a28cf8cb672ed5cf3b33d5493603588d4dbc22a9932b37e",
+      "role": "design_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/AGENTS.md"
+    },
+    {
+      "source_id": "pixel_asset_skill",
+      "path": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+      "bytes": 16285,
+      "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08",
+      "role": "pixel_asset_skill",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md"
+    },
+    {
+      "source_id": "style_direction",
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "bytes": 6187,
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+      "role": "style_direction",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md"
+    },
+    {
+      "source_id": "roster44",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json",
+      "bytes": 142768,
+      "sha256": "39023b5f3db9980e063b8e57e9bc3cfe3786304f7aef22767c78e10afd631992",
+      "role": "roster44",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json"
+    },
+    {
+      "source_id": "production_sequence",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json",
+      "bytes": 14959,
+      "sha256": "c6e0c04098664bc991ebc62a37cc833b6ae084ff4295fd060d41b15525bf1662",
+      "role": "production_sequence",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json"
+    },
+    {
+      "source_id": "fifth_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_production_brief.json",
+      "bytes": 28725,
+      "sha256": "077fbe1d6087bb17d0bd23a3ae326827c5688390b4e026e8e38a488b431b34db",
+      "role": "fifth_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_production_brief.json"
+    },
+    {
+      "source_id": "fifth_mother_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fifth_four_20261013.json",
+      "bytes": 13759,
+      "sha256": "d9d9d201a2d2ff9a7879b5bc66dfa20b7377086d4e53addd2cd36084bb2274e3",
+      "role": "fifth_mother_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fifth_four_20261013.json"
+    },
+    {
+      "source_id": "fifth_expression_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_expression_brief.json",
+      "bytes": 55479,
+      "sha256": "b0f8633eabdc4808066d7b48e394ecbd4cda602417a09fb230c16a5dace4b11c",
+      "role": "fifth_expression_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_expression_brief.json"
+    },
+    {
+      "source_id": "fifth_expression_final_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_fifth_expression_final_20261014.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "fifth_expression_final_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_fifth_expression_final_20261014.json"
+    },
+    {
+      "source_id": "action_coverage",
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "bytes": 26364,
+      "sha256": "61ed5cd1846ef3017b4b1c72cb5a63432aa22a4c9d151d5b789f586245f498bb",
+      "role": "action_coverage",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterActions/20261013/ACTION_COVERAGE.md"
+    },
+    {
+      "source_id": "master_supplements",
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "bytes": 26988,
+      "sha256": "99fb786c7d83aa9f44e3c96a78fb83f3dac5dc42e7732602736e06ed9716dc59",
+      "role": "master_supplements",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md"
+    },
+    {
+      "source_id": "action_delivery_index",
+      "path": "Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md",
+      "bytes": 7279,
+      "sha256": "03112e2801f3960e27d433a56124920263fa69f2c30be7f4161d814b1fc4b244",
+      "role": "action_delivery_index",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md"
+    },
+    {
+      "source_id": "first_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_brief.json",
+      "bytes": 63732,
+      "sha256": "4c7d2a9fbcc5a7efddd873261c4ae29030d84fcabf0908d066d6e6561e1f4b7b",
+      "role": "first_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "second_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_brief.json",
+      "bytes": 95763,
+      "sha256": "5b8eb607728878267082f133e4c10908b94e055ec25ae62be0ecaaabf9e7659e",
+      "role": "second_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "third_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_new_character_actions_brief.json",
+      "bytes": 106354,
+      "sha256": "a2086f4b93f8886772d5c75b2c4a27bd4aadbd6af6a74e226600d8eaea5033e6",
+      "role": "third_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "fourth_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_brief.json",
+      "bytes": 119235,
+      "sha256": "ee5505e87bba25bac7d0ae7d978d4ea8e3507257a068f33a1c189792321ad11e",
+      "role": "fourth_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "field_dialogue",
+      "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+      "bytes": 105635,
+      "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+      "role": "field_dialogue",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md"
+    },
+    {
+      "source_id": "field_dialogue_registry",
+      "path": "research/field-npc-dialogue.json",
+      "bytes": 132451,
+      "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+      "role": "field_dialogue_registry",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/research/field-npc-dialogue.json"
+    },
+    {
+      "source_id": "N11",
+      "path": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+      "bytes": 12314,
+      "sha256": "8915bb1a1d10716fd12d1795ead8b62db49cd2317b0bafa58af2728217784a63",
+      "role": "N11",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/05_主线/台本/台本_N11_关隘外的交换.md"
+    },
+    {
+      "source_id": "N1",
+      "path": "design/05_主线/台本/台本_N1_无钟之夜.md",
+      "bytes": 12056,
+      "sha256": "ed09f88be8fe4618f819d636ad161b7be48b3dcc009bec4dfdc5d8942488c9b9",
+      "role": "N1",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/05_主线/台本/台本_N1_无钟之夜.md"
+    },
+    {
+      "source_id": "SQ02",
+      "path": "design/06_支线/台本/台本_SQ02_被征用的冬粮.md",
+      "bytes": 11385,
+      "sha256": "63b7003cd83cda98e2d1d68333396808a90a211fca094f20106bfee4ee5abe0b",
+      "role": "SQ02",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/06_支线/台本/台本_SQ02_被征用的冬粮.md"
+    },
+    {
+      "source_id": "N9",
+      "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+      "bytes": 11218,
+      "sha256": "42c1cbcf13cd1426f99dd972cfa77efdb722c8aa7395df995af8d01de8c5f0db",
+      "role": "N9",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/05_主线/台本/台本_N9_把证据摆上桌.md"
+    },
+    {
+      "source_id": "endai_expression_final_status",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/FINAL_STATUS.json",
+      "bytes": 4223,
+      "sha256": "3b2e7308855015fb891d060faa7e3422e8f4a559a9f991b41483e7d9fa4043e8",
+      "role": "endai_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "source_id": "endai_card",
+      "path": "design/04_人物/野外人物/人物_FX-BST_恩岱.md",
+      "bytes": 1071,
+      "sha256": "cc81a5e3ff572cf507505c8fb4eff73b46c08fa007560838c4ba34ce18f4d6ae",
+      "role": "endai_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-BST_恩岱.md"
+    },
+    {
+      "source_id": "endai_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/manifest.json",
+      "bytes": 3498,
+      "sha256": "7fa3b2e15fa8331a8d8dd7674abf6c37f787fb16970513d44cb8bcb84c6d4f1c",
+      "role": "endai_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "endai_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/spec_lock.md",
+      "bytes": 711,
+      "sha256": "692a3587b2cef3df6377a45eeb8ac37252a404262b1ab7a4dedbba06e5f0c60d",
+      "role": "endai_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "endai_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/character_brief.json",
+      "bytes": 6003,
+      "sha256": "9a36465eb0fea0d37b90eafb0284c73c0ad60d97a945a27b792fdcfd80dd2b20",
+      "role": "endai_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "endai_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/manifest.json",
+      "bytes": 7524,
+      "sha256": "0cddf0ea9089e74bb4a8762324b5c801caf46460713658da9a931d743ab89d04",
+      "role": "endai_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "endai_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/QA-independent.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "endai_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "endai_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 42692,
+      "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+      "role": "endai_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "endai_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_v1_raw_imagegen.png",
+      "bytes": 1439498,
+      "sha256": "919e88473c2db45221178c5f2e0bd1703052950c585155df3af4f498ab0b356d",
+      "role": "endai_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "endai_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_transparent.png",
+      "bytes": 921169,
+      "sha256": "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8",
+      "role": "endai_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_transparent.png"
+    },
+    {
+      "source_id": "endai_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/review/endai_mother_expressions_light.png",
+      "bytes": 881097,
+      "sha256": "1aedf795e0df3fc8b6777b7c12e556b369fc3f3fb2bc8b41f0dd334202b06fc1",
+      "role": "endai_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/review/endai_mother_expressions_light.png"
+    },
+    {
+      "source_id": "wadun_card",
+      "path": "design/04_人物/野外人物/人物_FX-SGE_瓦顿.md",
+      "bytes": 1069,
+      "sha256": "133a684d79ffe82ec9b64e75c5064926125f166f796a0324421b2297fd6ef494",
+      "role": "wadun_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-SGE_瓦顿.md"
+    },
+    {
+      "source_id": "wadun_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/manifest.json",
+      "bytes": 3492,
+      "sha256": "bd5caff568fffa294af7b8bc16d02720cc47a30983967b8f8ccc1bc2cc9abeaa",
+      "role": "wadun_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "wadun_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/spec_lock.md",
+      "bytes": 714,
+      "sha256": "cd4882fe7e45b4580569b0135e8cfe07ede44b2cfc4b440d92ecec99ba31306b",
+      "role": "wadun_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "wadun_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/character_brief.json",
+      "bytes": 6096,
+      "sha256": "f4b206641579e4d5dd41e1bd1937be6f489286183da3b4f32faf2d2164a72535",
+      "role": "wadun_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "wadun_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/manifest.json",
+      "bytes": 6793,
+      "sha256": "a72489883282f0baebfeba0cbc1cb9298408a10910672b397424a87766733846",
+      "role": "wadun_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "wadun_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/QA-independent.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "wadun_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "wadun_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 42692,
+      "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+      "role": "wadun_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "wadun_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_v1_raw_imagegen.png",
+      "bytes": 1455183,
+      "sha256": "3317d07c583d3b5170e6d5612e23d7189000c0ac426595c46f54aa2bb745060c",
+      "role": "wadun_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "wadun_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_transparent.png",
+      "bytes": 1002084,
+      "sha256": "221c3e4a6b8c06e00603943fc58c94722513f401e0b08dde5a1859fcdcb670d9",
+      "role": "wadun_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_transparent.png"
+    },
+    {
+      "source_id": "wadun_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/review/wadun_mother_expressions_light.png",
+      "bytes": 1043746,
+      "sha256": "9ea0eb52bea5b66fd30995a327e597aea5d7dbb84b47ebc6e1c7b35a8935c8b7",
+      "role": "wadun_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/review/wadun_mother_expressions_light.png"
+    },
+    {
+      "source_id": "ertai_card",
+      "path": "design/04_人物/野外人物/人物_FX-CMP_珥泰.md",
+      "bytes": 1033,
+      "sha256": "9394c336c2b5c7303601fd46d28be83e0f48a6736924bfac6224fae450fefa97",
+      "role": "ertai_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-CMP_珥泰.md"
+    },
+    {
+      "source_id": "ertai_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/manifest.json",
+      "bytes": 2990,
+      "sha256": "29b1ca231a874c95bbc290c1f79c28f553616f875420cc0e254bdf2aa883c618",
+      "role": "ertai_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "ertai_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/spec_lock.md",
+      "bytes": 718,
+      "sha256": "48a39075a9fbf0d3f4150e8144b21d13894feecab4ffd879858ca9e064a8d1f2",
+      "role": "ertai_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "ertai_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/character_brief.json",
+      "bytes": 5942,
+      "sha256": "7693a641c9e4c6d2ed2de91e336dc47ad2e780b5d3e3350fc2954c0ffcdabd69",
+      "role": "ertai_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "ertai_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/manifest.json",
+      "bytes": 6837,
+      "sha256": "291d79e2788f8d3de5da14df3249622cb1f85680eea790129affe67fe25fe333",
+      "role": "ertai_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "ertai_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/QA-independent.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "ertai_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "ertai_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 42692,
+      "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+      "role": "ertai_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "ertai_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_v1_raw_imagegen.png",
+      "bytes": 741497,
+      "sha256": "3193e5e413e86c4afa88f3c018bbb0066a36ec76332c18cc0d56cb881f39bb39",
+      "role": "ertai_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "ertai_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_transparent.png",
+      "bytes": 665680,
+      "sha256": "e41580f2b6787a2a468d685abae8b390d42d9cd8d78090017699ee12c571de29",
+      "role": "ertai_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_transparent.png"
+    },
+    {
+      "source_id": "ertai_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/review/ertai_mother_expressions_light.png",
+      "bytes": 632970,
+      "sha256": "c68a30b131b24b7ac84900c6cf1aae8327f974a226a532635aaaeeebae2724b4",
+      "role": "ertai_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/review/ertai_mother_expressions_light.png"
+    },
+    {
+      "source_id": "suier_card",
+      "path": "design/04_人物/野外人物/人物_FX-CP1_燧珥.md",
+      "bytes": 1055,
+      "sha256": "4117021d341542e271dcb824ac4dd1b3a5e2e178b05fc911879449907aba1d43",
+      "role": "suier_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-CP1_燧珥.md"
+    },
+    {
+      "source_id": "suier_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/manifest.json",
+      "bytes": 2988,
+      "sha256": "06fad34b72cf3003161db2c217436545249d62e2ee1612343b17952c37a1a78c",
+      "role": "suier_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "suier_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/spec_lock.md",
+      "bytes": 707,
+      "sha256": "55df8d36614439d0a007925a7449c2fb69f80a557cf60dc60581c0ab9a807d8c",
+      "role": "suier_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "suier_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/character_brief.json",
+      "bytes": 5996,
+      "sha256": "d040bcf44de5c0af147e0c8a4adfeb778f79be4a8fb2e8503b97682c145440f2",
+      "role": "suier_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "suier_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/manifest.json",
+      "bytes": 6810,
+      "sha256": "9ce006084bc6d4647e276b0785f0cced65078fbf13db94299f2a77eedc12e870",
+      "role": "suier_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "suier_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/QA-independent.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "suier_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "suier_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 42692,
+      "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+      "role": "suier_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "suier_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_v1_raw_imagegen.png",
+      "bytes": 720682,
+      "sha256": "304e566ce1126c93c75b41481ae8c672b90e59969b17a5af2d533245d5009f2c",
+      "role": "suier_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "suier_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_transparent.png",
+      "bytes": 652653,
+      "sha256": "74b89bd1eca88ce53d6e676d046b694d607969f656302dbee86384cb35ae6c70",
+      "role": "suier_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_transparent.png"
+    },
+    {
+      "source_id": "suier_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/review/suier_mother_expressions_light.png",
+      "bytes": 606254,
+      "sha256": "693106e9a9efc8fbecc650c8f1ae8a1e672fe02d52018519c95b9f3df5282087",
+      "role": "suier_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/review/suier_mother_expressions_light.png"
+    },
+    {
+      "source_id": "endai_failed_E2_initial",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/raw/endai_E2_no_order_no_entry_initial.png",
+      "bytes": 1536398,
+      "sha256": "0e8cf3a5dd3ae5a224682b3b20d66a9f94ce986488e20fba0912e6eec02c6095",
+      "role": "endai_failed_E2_initial",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/raw/endai_E2_no_order_no_entry_initial.png"
+    }
+  ],
+  "derived_files": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+      "sha256": "e2fbbb13deb6b19498267677edd5ef3ff282e2d05c33ceae2034207f47f3d3d0",
+      "bytes": 71409
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/endai_A1_settle_left_bracer_prompt.txt",
+      "sha256": "b229eb9bfa76e83c0af1c61d5e586b78ff751f912084f44eff0a6266c0033f42",
+      "bytes": 3358
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/endai_A2_press_right_cloak_patch_prompt.txt",
+      "sha256": "d3fd05657eb2a4d86af59c06f508e397a51030604d8a95cc7463ee9063a79cc0",
+      "bytes": 3319
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/ertai_A1_level_board_and_rest_rod_prompt.txt",
+      "sha256": "de78928f38fa02a3d420b67d3e8f6592dc235b60ded487f03bcef729ac237b8a",
+      "bytes": 3370
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/ertai_A2_lower_rod_side_carry_board_prompt.txt",
+      "sha256": "7e5ed05e7faaf4e87ab9a361cbaa0e1661a4a19faa4e4d144cc3d0a57c93aae9",
+      "bytes": 3295
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/evidence_excerpts.json",
+      "sha256": "4bd8a3adb1555e5040a4edc79b91a81556f2728513a31aa87536d4c14a84e837",
+      "bytes": 15188
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/semantic_dedup_review.json",
+      "sha256": "d3ac4ec86428c3ea5683cfb525ae811315b65f993a80ec383b54db7ef0c14f97",
+      "bytes": 2676
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/suier_A1_gather_right_tunic_hem_prompt.txt",
+      "sha256": "2e4d0d3cfa186d6a0856ae607421eb9e35c8f4be915e991c195d44cad9013a82",
+      "bytes": 3510
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/suier_A2_shallow_lean_right_thigh_support_prompt.txt",
+      "sha256": "3414103fd204731824f79e9cc39767e5c4b867533e0899588ca2e25b4124db6f",
+      "bytes": 3529
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/visual_source_inspection.json",
+      "sha256": "d3ae89dd2884f1ce14fefc7a6ac3bb9c07a342858913a3d90e4f00ab81dc15fd",
+      "bytes": 4909
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/wadun_A1_low_hold_original_spatula_prompt.txt",
+      "sha256": "28251bc2d2a5ffb7086b10016b3b3d1cd4cd61576dd432d8d58ed6ab0042d542",
+      "bytes": 3375
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/wadun_A2_brace_knees_resettle_squat_prompt.txt",
+      "sha256": "0d8f2dc294b15fee219e01304820cb3bb4c18e53e1fa231bf99e45db05ca2995",
+      "bytes": 3327
+    }
+  ]
+}

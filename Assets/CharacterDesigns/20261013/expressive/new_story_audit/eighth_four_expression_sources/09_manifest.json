@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "frozen_candidate_for_independent_QA",
+  "canonical_id": "NPC-REY",
+  "character": "leo",
+  "name": "雷奥·凯斯",
+  "aliases": [
+    "CITY-NPC-NPC-REY",
+    "NPC05"
+  ],
+  "generator": "built-in image_gen.imagegen",
+  "brief_sha256": "beb493bab5d7b55333708346b3b4026c9ae0fd854b1971f4049f3bcde736a7f8",
+  "source_anchor": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/leo/leo_raw_imagegen.png",
+    "sha256": "cf5d3efee6a62e23c00e3f94f4d1b85dab0e74dd141a5c791b8608e98b05ebf1",
+    "locator": "roster reviewed_artifact",
+    "matches_roster_reviewed_artifact": true,
+    "actually_viewed": true,
+    "view_method": "2026-10-13 tools.view_image 完整原PNG实看，非只读QA。"
+  },
+  "expressions": [
+    {
+      "key": "leo_E1_scope_challenge",
+      "label": "审慎限定",
+      "brows": "一侧眉略挑、另一眉内端下压，形成询问式不对称。",
+      "eyes": "眼裂收窄、瞳孔横看对话者，保原成熟长眼型。",
+      "mouth": "嘴闭合压成短直线，一角轻收，不做轻蔑笑。",
+      "head_pose": "原三分之二角，下颏略收。",
+      "story_support": "N7人物冲突：起初相信封印；N7-S01-L02可以查本地，不先宣布整支军队有罪。",
+      "condition_and_limit": "S61台词仅当前条件下的素材；表情不是已批准检查令，也不是拒绝所有监督或判定全军无罪。"
+    },
+    {
+      "key": "leo_E2_weigh_external_question",
+      "label": "受质询衡量",
+      "brows": "双眉内端略升、两眉趋对称，区别E1挑眉和E3压平。",
+      "eyes": "眼裂比E1打开，目光微下移后落画侧，清醒而无惊恐瞪眼。",
+      "mouth": "双唇微分成窄小竖向口，唇角松开；不得微笑或泪目。",
+      "head_pose": "头略垂但不低头忏悔，肩甲位置固定。",
+      "story_support": "人物卡逐步接受外部监督；N7-R-parallel要求不能把独立查案冒称内部自查。",
+      "condition_and_limit": "仅面对质询的权衡表情；若放在parallel结果回访须真实resolve_N7=parallel及本人在场存活愿谈。不证明他已认罪、接受SQ02监督承诺、失去全部权限或被击败。"
+    },
+    {
+      "key": "leo_E3_state_local_limit",
+      "label": "清楚划权限",
+      "brows": "双眉平稳稍压内端，去掉质问的不对称。",
+      "eyes": "直视听者，上睑打开但较E2坚定，下睑稳住。",
+      "mouth": "小幅横向发言口型，唇角平，不笑、不咆哮露齿。",
+      "head_pose": "近正面、下巴水平，头肩不摆成宣誓。",
+      "story_support": "人物卡只持地方签署资格；N16-S01-L02仅能承诺本地封存队程序；N7-S02-L03只说核查的几例。",
+      "condition_and_limit": "仅清楚说明权限，不证明签约／封存／结盟已完成。N16演出须已有实际SQ02承诺或合法代理资格，不能用脸补未签回执，不能替王廷或缺席者许愿。"
+    }
+  ],
+  "selected_revisions": {
+    "E3": 1
+  },
+  "all_raw_retained": true,
+  "runtime_integrated": false,
+  "roster_changed": false,
+  "freeze_policy": "Manifest frozen before final independent QA. Final QA and FINAL_STATUS are external records, not added afterwards.",
+  "files": [
+    {
+      "path": "QA-author.json",
+      "bytes": 2580,
+      "sha256": "4bfa925f73a382bbd3dbc0bf3f3cc26a33885cc71005e2ed103daa7ccbe7397b"
+    },
+    {
+      "path": "QA-independent-raw-visual.json",
+      "bytes": 2120,
+      "sha256": "3a674c7b5d77d3eece149673abe64ec413950344426ce092bd8d3b82639d3017"
+    },
+    {
+      "path": "README.md",
+      "bytes": 474,
+      "sha256": "05350579f28b9815e3d8c7a91bbecb3ffbe05bc487ab7f8a5831679bd892aad6"
+    },
+    {
+      "path": "build_review.py",
+      "bytes": 4240,
+      "sha256": "93e14b8db647af5ff3e94d2f77a2289144592189c95fc153b55e96085906b3cd"
+    },
+    {
+      "path": "generation-log.json",
+      "bytes": 2099,
+      "sha256": "5eb7b450a75c24f20032f13e3bb935670beb938b039ea2c241f84c6d71509945"
+    },
+    {
+      "path": "prompts/leo_E1_scope_challenge.txt",
+      "bytes": 2361,
+      "sha256": "2bd8d41c93816cf443eebfacfa87c896bacf7eac598aed1d2b266fb562d8befb"
+    },
+    {
+      "path": "prompts/leo_E2_weigh_external_question.txt",
+      "bytes": 2482,
+      "sha256": "a51db7b442f833903e8f01abbb18da366f0397058e759c57a0d74a2a7ce11fc2"
+    },
+    {
+      "path": "prompts/leo_E3_state_local_limit.txt",
+      "bytes": 2436,
+      "sha256": "37d8c04f7bcc3410f921495f4bc15c9359239cbd3393573349e103670e9cbd25"
+    },
+    {
+      "path": "prompts/leo_E3_state_local_limit_revision1.txt",
+      "bytes": 1232,
+      "sha256": "ba8262fc40dcbee2dbace8978792f85e41c7dfddfecd3c426e39219b3efb953f"
+    },
+    {
+      "path": "raw/leo_E1_scope_challenge_raw_imagegen.png",
+      "bytes": 999472,
+      "sha256": "ecf8a6cb318fd811bac41500a24dd90a155d8d61ede3d74d77353168784a1264"
+    },
+    {
+      "path": "raw/leo_E2_weigh_external_question_raw_imagegen.png",
+      "bytes": 979611,
+      "sha256": "d3b30e2db290bb2b8aa4089232d631c404cf35a3f1cb6d7ad1b6df2adddcc837"
+    },
+    {
+      "path": "raw/leo_E3_state_local_limit_raw_imagegen.png",
+      "bytes": 1016663,
+      "sha256": "9c10bd5c86f91dc410b048b5d892fc5e9e851e8de602e07f502a62f0d91761f1"
+    },
+    {
+      "path": "raw/leo_E3_state_local_limit_revision1_raw_imagegen.png",
+      "bytes": 966460,
+      "sha256": "a8837ce51726ad687bfcfe0fb67f8979729c076db272c72108a9f8890cca7b9b"
+    },
+    {
+      "path": "review/leo_expressions_review_zh_dark.png",
+      "bytes": 628400,
+      "sha256": "4ba016476c28d56378958fa8e17b367008044970cab1ad277ba2468b29ff85c1"
+    },
+    {
+      "path": "review/leo_expressions_review_zh_light.png",
+      "bytes": 639566,
+      "sha256": "d75d5fddc940d6c43a18fe4d93499e2a3d391bc54913ba61c0db9368d122beae"
+    },
+    {
+      "path": "selected/leo_E1_scope_challenge_transparent.png",
+      "bytes": 852869,
+      "sha256": "d4cd36eda7831830fe3b173aef0e6026c8bf8e1eb8224faa3bcb64e7cbd8f5b5"
+    },
+    {
+      "path": "selected/leo_E2_weigh_external_question_transparent.png",
+      "bytes": 820802,
+      "sha256": "90502a1516e093bb517a10943413023cfad4df3b55a2f8fd0423f3cb2039ff35"
+    },
+    {
+      "path": "selected/leo_E3_state_local_limit_transparent.png",
+      "bytes": 791290,
+      "sha256": "53b1ddc90c98ef0d899afc745fbedfd531a4c45e5e03573177af6d67f66b54ec"
+    },
+    {
+      "path": "sources/AGENTS.md",
+      "bytes": 20848,
+      "sha256": "ad85e8e7c72914a0096b7c254e7e4feb23e43a2e478616eab549990b3990c8b6"
+    },
+    {
+      "path": "sources/STYLE_DIRECTION.md",
+      "bytes": 6187,
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    {
+      "path": "sources/leo_raw_imagegen.png",
+      "bytes": 648640,
+      "sha256": "cf5d3efee6a62e23c00e3f94f4d1b85dab0e74dd141a5c791b8608e98b05ebf1"
+    },
+    {
+      "path": "sources/next_main_cast_expressions_morren_rey_01.json",
+      "bytes": 20341,
+      "sha256": "beb493bab5d7b55333708346b3b4026c9ae0fd854b1971f4049f3bcde736a7f8"
+    },
+    {
+      "path": "sources/source_index.json",
+      "bytes": 1732,
+      "sha256": "3c4d328d2abec77f589f48926039337a2ade4c8b55c5761ce0482ea31c7b4465"
+    },
+    {
+      "path": "sources/人物_NPC-REY_雷奥·凯斯.md",
+      "bytes": 936,
+      "sha256": "15dd1f5e8268ffea68e170b2d4b14c004f08adc19324ab36f81aff5d4d708a87"
+    },
+    {
+      "path": "sources/人物_雷奥·凯斯.md",
+      "bytes": 1958,
+      "sha256": "2e7159e57480bffc3698f7243b6f1830d4b771ce3d72a4555d2d09d0fde2dfa5"
+    },
+    {
+      "path": "sources/台本_N16_谁来保管余烬.md",
+      "bytes": 14539,
+      "sha256": "92e3d99960d32bc5f183be3cedea8f521d33bae9bbc2d07a5ee430c123950b37"
+    },
+    {
+      "path": "sources/台本_N7_军需账上的空名.md",
+      "bytes": 12369,
+      "sha256": "1ccafe13df70f4e57636c3762f8f232fa966eb1e730d4311963672812380ca79"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "slug": "daer",
+  "canonical_id": "FX-GHL",
+  "name": "达珥",
+  "status": "planned_not_generated",
+  "selection_status": "requested_candidate_retained_no_substitution",
+  "current_card": {
+    "path": "design/04_人物/野外人物/人物_FX-GHL_达珥.md",
+    "bytes": 1057,
+    "sha256": "67dad2a0b24899cb9d59bdf2f20cedef52ff06b107b12a72b0865ebbf0351325",
+    "source_id": "daer_card",
+    "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-GHL_达珥.md"
+  },
+  "source_ids": [
+    "daer_card",
+    "field_dialogue",
+    "field_dialogue_registry",
+    "N16",
+    "daer_mother_raw",
+    "daer_mother_transparent",
+    "daer_mother_manifest",
+    "daer_expression_final_status",
+    "daer_expressions_view"
+  ],
+  "mother_image": {
+    "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/daer_v1_raw_imagegen.png",
+    "raw_sha256": "f079d212f16bb3229e59366954192e74f92a755eadcf31626aae411cf8585d17",
+    "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/daer_transparent.png",
+    "transparent_sha256": "8852643e1b657bc1bc36704bfb8a955579e8a4f494872ca097d0a14f856b1b93",
+    "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/manifest.json",
+    "manifest_sha256": "a8e68c58521920905eb6c40ebacf14b293fb76d7c8cb302c1bf833fc78750dbb",
+    "independent_qa_source_id": "eighth_mother_qa",
+    "independent_qa_selected_status": "final_clean_and_presentation_pass",
+    "actual_visual_observation": "已实际查看raw及透明母图：棕乱发、方颌短胡茬，成年男性脸向画面左。灰绿短衫、两腕浅翻袖及棕绑带，右手画面左和左手画面右在胸腹前相触。单只灰麻空袋瘪薄，挂人物左侧即画面右腰后，单肩带上达画面右肩。E1/E2均保留搓手相触，区别主要在侧听/自嘲眉口。",
+    "fixed_sides": "同一只瘪薄灰麻空袋始终挂人物左侧（画面右腰后），原棕肩带由人物左肩（画面右）连接，不鼓胀、不移到对侧。两侧原袖口扎带都保持扎紧，数量和材质不变。左右手仅按本张独立手位。",
+    "raw_and_transparent_actually_viewed": true,
+    "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/expressions_v1/review/daer_expressions_light_board.png"
+  },
+  "existing_expressions": {
+    "status": "two_selected_passed",
+    "qualified_count": 2,
+    "not_action_coverage": true,
+    "blocked_expression_not_retried": false
+  },
+  "duplicate_check": {
+    "own_action_directory_count": 0,
+    "own_action_semantic_match_found": false,
+    "existing_expressions_actually_compared": true,
+    "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。类似普通动作大类可以跨人物出现，不声称全库首次。"
+  },
+  "story_boundaries": [
+    "只是整理本人衣袖或空袋背带，不重复胸腹搓手、侧听或自嘲表情。",
+    "不加袋内物，不替人作证、带路、收钱或确认N16归属。"
+  ],
+  "risks": [
+    "不把搓手母姿沿用到两张新动作；必须打破两掌互扣的轮廓。",
+    "袖口扎带仍闭合，不把细结是否变化作为验收点；空袋仍空。"
+  ],
+  "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/daer/noncombat_basics_v1",
+  "plans": [
+    {
+      "key": "daer_A1_smooth_left_forearm_sleeve",
+      "title_zh": "右掌抚平左前臂衣袖",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "daer_card",
+          "locator": "体貌与随身",
+          "line_start": 17,
+          "quote": "袖口扎紧"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-GHL／体貌",
+          "line_start": 568,
+          "quote": "背着一只空布袋"
+        }
+      ],
+      "art_inference": "源卡和对白只支持本人身份、随身物、习惯及边界；具体手臂路径、理发/拂衣/扶带/半蹲/托卷是本轮可逆美术提案，台本未记载已经发生。",
+      "start_pose_description_only": "从母图双手在胸腹前相触的站姿开始。",
+      "pose": "双脚平稳分站。左肘向画面右稍外开，左前臂在身体前方接近水平伸出，手掌自然朝下，和胸口之间留出清楚间隙。右手从原搓手位置分开，右前臂斜穿腹前，右掌平贴左前臂外侧灰绿袖面，停在由肘下向腕部顺布的一瞬；接触点在扎紧袖口上方的一大片布面，不在细绳结。两手彼此分开，不扣掌。原两边袖口扎带仍完整扎好；原空袋继续瘪薄挂画面右腰后。脸朝画面左，目光轻落在袖面。",
+      "end_pose_description_only": "右手可离袖，左臂落回；袖口依然原样扎紧。",
+      "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+      "visible_stage_target": "左前臂横伸、右掌贴左袖，两个手掌明确分离；宽阔袖面接触一眼可见。",
+      "pose_specific_sidedness": "左肘向画面右展开，右手由画面左斜过腹前按在左前臂袖面；空袋仍画面右。",
+      "contact_and_support_checks": [
+        "掌对布面形成宽接触，不能两掌重新扣在一起。",
+        "接触位置不覆盖、解开或重打袖口细结。",
+        "空袋仍同侧瘪薄，双靴完整着地。"
+      ],
+      "prop_state_and_retention": [
+        "同一只瘪薄灰麻空袋始终挂人物左侧（画面右腰后），原棕肩带由人物左肩（画面右）连接，不鼓胀、不移到对侧。两侧原袖口扎带都保持扎紧，数量和材质不变。左右手仅按本张独立手位。"
+      ],
+      "difference_from_mother_expression_and_batch": "母图及E1/E2两掌相触搓手；本张左臂横出、右掌在袖面，两手明显分离。不同于A2左手高握肩带和右手下垂。",
+      "risk_level": "medium_pose_and_contact",
+      "new_contact_prop": null,
+      "new_story_fact": false,
+      "sequence_required": false,
+      "animation_claim": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+        "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+        "safety_blocked": "立即停止该动作，记录tool返回；不重试、不换工具、不改写规避。"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/daer_transparent.png"
+      ],
+      "reference_sha256": [
+        "8852643e1b657bc1bc36704bfb8a955579e8a4f494872ca097d0a14f856b1b93"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图紧凑而成熟的成年身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：达珥 FX-GHL。三十来岁的成年男人；棕色蓬短发、方下颌和短胡茬、母图眉眼，脸仍朝画面左。灰绿粗布短衫、浅色翻袖及棕色扎袖带、腰带、棕裤和棕靴保持。\n固定衣装与原物件：同一只瘪薄灰麻空袋始终挂人物左侧（画面右腰后），原棕肩带由人物左肩（画面右）连接，不鼓胀、不移到对侧。两侧原袖口扎带都保持扎紧，数量和材质不变。左右手仅按本张独立手位。\n本张动作：右掌抚平左前臂衣袖。双脚平稳分站。左肘向画面右稍外开，左前臂在身体前方接近水平伸出，手掌自然朝下，和胸口之间留出清楚间隙。右手从原搓手位置分开，右前臂斜穿腹前，右掌平贴左前臂外侧灰绿袖面，停在由肘下向腕部顺布的一瞬；接触点在扎紧袖口上方的一大片布面，不在细绳结。两手彼此分开，不扣掌。原两边袖口扎带仍完整扎好；原空袋继续瘪薄挂画面右腰后。脸朝画面左，目光轻落在袖面。\n本张侧别：左肘向画面右展开，右手由画面左斜过腹前按在左前臂袖面；空袋仍画面右。\n必须明显可见：左前臂横伸、右掌贴左袖，两个手掌明确分离；宽阔袖面接触一眼可见。\n接触与支撑：掌对布面形成宽接触，不能两掌重新扣在一起。；接触位置不覆盖、解开或重打袖口细结。；空袋仍同侧瘪薄，双靴完整着地。。\n",
+      "prompt_sha256": "8ee894d9c65ea56e32a319a1c7c767c763ec64b0d8699ae50c0dee2aa0fe91fa",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/daer_A1_smooth_left_forearm_sleeve_prompt.txt",
+      "negative_constraints": [
+        "只是整理本人衣袖或空袋背带，不重复胸腹搓手、侧听或自嘲表情。",
+        "不加袋内物，不替人作证、带路、收钱或确认N16归属。",
+        "不把搓手母姿沿用到两张新动作；必须打破两掌互扣的轮廓。",
+        "袖口扎带仍闭合，不把细结是否变化作为验收点；空袋仍空。"
+      ],
+      "existing_asset_check": {
+        "own_action_directory_count": 0,
+        "prior_action_found": false,
+        "expression_board_actually_viewed": true,
+        "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/action_tree_scan.json",
+        "semantic_comparison": "母图及E1/E2两掌相触搓手；本张左臂横出、右掌在袖面，两手明显分离。不同于A2左手高握肩带和右手下垂。"
+      }
+    },
+    {
+      "key": "daer_A2_grip_left_bag_strap",
+      "title_zh": "左手上提扶稳空袋背带",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "daer_card",
+          "locator": "体貌与随身",
+          "line_start": 17,
+          "quote": "背着一只空布袋"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-GHL／夜里，仅限定日常随身物，不绘回家结果",
+          "line_start": 578,
+          "quote": "天一黑我就回家。你也该回。"
+        }
+      ],
+      "art_inference": "源卡和对白只支持本人身份、随身物、习惯及边界；具体手臂路径、理发/拂衣/扶带/半蹲/托卷是本轮可逆美术提案，台本未记载已经发生。",
+      "start_pose_description_only": "独立从母图双掌相触站姿开始。",
+      "pose": "双脚分开站稳、躯干基本直立。左肘抬到画面右胸侧，左手在自己左肩前、锁骨下握住原棕肩带，掌指绕带形成可辨的抓握，轻轻向上扶稳；肩带在手的上下两段连续，原灰麻空袋仍挂画面右腰后且保持瘪薄，只随肩带略收近身体。右臂完全离开搓手位，自然向画面左身侧下垂，右手松弛可见。脸仍朝画面左，平静看前侧。",
+      "end_pose_description_only": "左手可松开原带，袋仍由同一肩带背着。",
+      "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+      "visible_stage_target": "左手明显升到肩前握带、左肘侧出；右手明确下垂，与母图搓手轮廓不同。",
+      "pose_specific_sidedness": "左手在画面右锁骨下握原左肩带；右手画面左身侧下垂；袋始终画面右腰后。",
+      "contact_and_support_checks": [
+        "原肩带连续经过左掌，不凭空新增第二带。",
+        "空袋保持瘪薄，不改内容、侧别或悬挂方向。",
+        "右手不残留与左手相扣或按袖的状态。"
+      ],
+      "prop_state_and_retention": [
+        "同一只瘪薄灰麻空袋始终挂人物左侧（画面右腰后），原棕肩带由人物左肩（画面右）连接，不鼓胀、不移到对侧。两侧原袖口扎带都保持扎紧，数量和材质不变。左右手仅按本张独立手位。"
+      ],
+      "difference_from_mother_expression_and_batch": "母图/E1/E2只有两手胸腹相触，本张左手高握自身原肩带、右臂下垂；不是重新表演噤声侧听。",
+      "risk_level": "medium_pose_and_contact",
+      "new_contact_prop": null,
+      "new_story_fact": false,
+      "sequence_required": false,
+      "animation_claim": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+        "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+        "safety_blocked": "立即停止该动作，记录tool返回；不重试、不换工具、不改写规避。"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/daer_transparent.png"
+      ],
+      "reference_sha256": [
+        "8852643e1b657bc1bc36704bfb8a955579e8a4f494872ca097d0a14f856b1b93"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图紧凑而成熟的成年身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：达珥 FX-GHL。三十来岁的成年男人；棕色蓬短发、方下颌和短胡茬、母图眉眼，脸仍朝画面左。灰绿粗布短衫、浅色翻袖及棕色扎袖带、腰带、棕裤和棕靴保持。\n固定衣装与原物件：同一只瘪薄灰麻空袋始终挂人物左侧（画面右腰后），原棕肩带由人物左肩（画面右）连接，不鼓胀、不移到对侧。两侧原袖口扎带都保持扎紧，数量和材质不变。左右手仅按本张独立手位。\n本张动作：左手上提扶稳空袋背带。双脚分开站稳、躯干基本直立。左肘抬到画面右胸侧，左手在自己左肩前、锁骨下握住原棕肩带，掌指绕带形成可辨的抓握，轻轻向上扶稳；肩带在手的上下两段连续，原灰麻空袋仍挂画面右腰后且保持瘪薄，只随肩带略收近身体。右臂完全离开搓手位，自然向画面左身侧下垂，右手松弛可见。脸仍朝画面左，平静看前侧。\n本张侧别：左手在画面右锁骨下握原左肩带；右手画面左身侧下垂；袋始终画面右腰后。\n必须明显可见：左手明显升到肩前握带、左肘侧出；右手明确下垂，与母图搓手轮廓不同。\n接触与支撑：原肩带连续经过左掌，不凭空新增第二带。；空袋保持瘪薄，不改内容、侧别或悬挂方向。；右手不残留与左手相扣或按袖的状态。。\n",
+      "prompt_sha256": "a57731ccf82d0dfd9ab10fc33235bdaa3eda50fba87a66eebf67603f8421fe52",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/daer_A2_grip_left_bag_strap_prompt.txt",
+      "negative_constraints": [
+        "只是整理本人衣袖或空袋背带，不重复胸腹搓手、侧听或自嘲表情。",
+        "不加袋内物，不替人作证、带路、收钱或确认N16归属。",
+        "不把搓手母姿沿用到两张新动作；必须打破两掌互扣的轮廓。",
+        "袖口扎带仍闭合，不把细结是否变化作为验收点；空袋仍空。"
+      ],
+      "existing_asset_check": {
+        "own_action_directory_count": 0,
+        "prior_action_found": false,
+        "expression_board_actually_viewed": true,
+        "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/action_tree_scan.json",
+        "semantic_comparison": "母图/E1/E2只有两手胸腹相触，本张左手高握自身原肩带、右臂下垂；不是重新表演噤声侧听。"
+      }
+    }
+  ]
+}

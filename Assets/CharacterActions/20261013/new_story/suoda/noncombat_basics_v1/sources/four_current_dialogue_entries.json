@@ -1,0 +1,364 @@
+{
+  "source": {
+    "path": "research/field-npc-dialogue.json",
+    "bytes": 132451,
+    "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+    "source_id": "field_dialogue_registry",
+    "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/research/field-npc-dialogue.json"
+  },
+  "locator": "npcs filtered by exact canonical ID",
+  "entries": [
+    {
+      "id": "FX-HUT",
+      "name": "珂琳",
+      "role": "药师的学徒",
+      "site": "rumor_hermitHut1",
+      "region": "R06",
+      "look": "十七八岁的姑娘，围裙上缝着草药袋，手指有切药的细口子；说话先看师父的椅子。",
+      "voice": "规矩、认真，学师父的口气；说到“师父不在”就重复一遍。",
+      "knows": [
+        "哪些药草晾在哪面墙",
+        "师父留下的规矩"
+      ],
+      "not_knows": [
+        "不替师父看病开方",
+        "不动师父的账本"
+      ],
+      "greetings": [
+        [
+          "first",
+          "师父不在。你要抓药，把症状说清，我先记着。"
+        ],
+        [
+          "revisit",
+          "你上次问的方子，我查过书了，还是不能抓。"
+        ],
+        [
+          "night",
+          "夜里我们不接人。山路黑，你先歇门口。"
+        ]
+      ],
+      "chats": [
+        "师父说，药是给认得清的人用的。认不清，就先别用。",
+        "这屋子一半是药，一半是规矩。规矩比药多。",
+        "我记错一味药，师父要罚我抄十遍。抄就抄。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "鞋在门槛外。药怕土。"
+        ],
+        [
+          "warning",
+          "别碰窗台上那罐粉，那是给牲口用的。"
+        ],
+        [
+          "refusal",
+          "要我替你配药带走？不行。得师父点头。"
+        ]
+      ],
+      "links": [
+        "区域_R06_无名修院山地",
+        "人物_HIG-NPC-ARO_艾萝·图"
+      ],
+      "visits": {
+        "task": "台本_DT05_驿馆的急用药",
+        "before": [
+          "驿馆要药，单子先念给我。念错了，我记你一遍。"
+        ],
+        "after": [
+          "药送出去了。师父回来要查账，你自己说清哪味是你送走的。"
+        ],
+        "early": [
+          "你先来的药棚，后去的驿馆。顺序对，方子对得上。"
+        ],
+        "late": [
+          "驿馆的事办完了才来取药？药凉了，话还热着。"
+        ],
+        "proxy": [
+          "学徒不在时，药棚的门只关不锁；账本不许翻。"
+        ]
+      },
+      "english": {
+        "greet.first": "The master is out. If you need medicine, describe the symptoms and I'll note them.",
+        "greet.revisit": "The formula you asked about - I checked the book. Still can't dispense it.",
+        "greet.night": "We don't take anyone at night. The mountain road is dark; rest by the door.",
+        "chat.1": "The master says medicine is for those who know clearly. If it's not clear, don't use it yet.",
+        "chat.2": "Half this house is medicine, half is rules. There are more rules than medicine.",
+        "chat.3": "Get one herb wrong and the master makes me copy the book ten times. I'll copy it.",
+        "site.arrival": "Shoes outside the threshold. Medicine fears soil.",
+        "site.warning": "Hands off the jar on the sill. That powder is for livestock.",
+        "site.refusal": "Mix medicine for you to take away? No. The master has to nod.",
+        "visit.before": "The inn wants medicine - read me the list first. Read it wrong and I'll mark you down.",
+        "visit.after": "The medicine went out. When the master checks the ledger, you explain which herb you took.",
+        "visit.early": "The drying shed came before the inn. Good order; the formula lines up.",
+        "visit.late": "Collecting after the inn is done? The medicine's cold; the words are still warm.",
+        "visit.proxy": "With the apprentice elsewhere, the shed door is shut but not locked. The ledger stays closed."
+      }
+    },
+    {
+      "id": "FX-WCH",
+      "name": "索妲",
+      "role": "女巫的邻居",
+      "site": "rumor_witchHut1",
+      "region": "R05",
+      "look": "四十多岁的农妇，挎着一只空篮，围巾裹到下巴；说到女巫就先看林子方向。",
+      "voice": "压低声音，句子绕弯；拒绝替人传话时改说家常。",
+      "knows": [
+        "女巫什么时候收东西",
+        "村里人夜里绕哪条路走"
+      ],
+      "not_knows": [
+        "不替女巫许诺什么",
+        "不替村里人定罪"
+      ],
+      "greetings": [
+        [
+          "first",
+          "你找错门了。这边不住人——住的是林子。"
+        ],
+        [
+          "revisit",
+          "又是你。篮子还是空的，别多想。"
+        ],
+        [
+          "night",
+          "夜里我不往那边去。你也别去。"
+        ]
+      ],
+      "chats": [
+        "她给过我儿子退烧的草。这事村里人不爱听。",
+        "要说她害人，先说说谁家没求过她。",
+        "我送东西只放门口。敲不敲门，是她的规矩。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "你先说你从哪来。说了我才好装没看见你。"
+        ],
+        [
+          "warning",
+          "别摘路边的红果子，那是她圈的地。"
+        ],
+        [
+          "refusal",
+          "要我带你去见她？不去。要去你自己去，别说是我指的路。"
+        ]
+      ],
+      "links": [
+        "区域_R05_灰烬湿地与疫村",
+        "人物_ASH-NPC-LINT_琳汀·床"
+      ],
+      "visits": {
+        "task": "台本_DT09_药师指认的草",
+        "before": [
+          "你要指认草，别从我这儿听名字。我说的名字，村里要记账。"
+        ],
+        "after": [
+          "草的事定了。她那边照旧不开门，我照旧放篮子。"
+        ],
+        "early": [
+          "你先见的我，后指认的草。顺序好，风不会吹错方向。"
+        ],
+        "late": [
+          "草指认完了才来问我？我早说过，别把我说的话当证词。"
+        ],
+        "proxy": [
+          "邻居不在门口时，篮子照旧放；别替她敲那扇门。"
+        ]
+      },
+      "english": {
+        "greet.first": "Wrong door. Nobody lives here - the woods do.",
+        "greet.revisit": "You again. Basket's still empty. Don't read into it.",
+        "greet.night": "I don't go that way at night. Neither should you.",
+        "chat.1": "She gave me herbs when my son burned with fever. The village dislikes hearing it.",
+        "chat.2": "Before saying she harms people, count who hasn't asked her for help.",
+        "chat.3": "I leave things at the door. Whether to knock is her rule.",
+        "site.arrival": "Say where you came from first. Then I can pretend I didn't see you.",
+        "site.warning": "Don't pick the red berries by the path. That ground is hers.",
+        "site.refusal": "Take you to see her? No. Go yourself, and don't say I pointed the way.",
+        "visit.before": "If you're identifying herbs, don't take names from me. Names I say get written down in the village.",
+        "visit.after": "The herb business is settled. Her door stays shut; my basket still goes out.",
+        "visit.early": "You saw me first, identified the herbs after. Good order; the wind won't blow you wrong.",
+        "visit.late": "Asking me once the herbs were named? I told you - don't use my words as testimony.",
+        "visit.proxy": "Should the neighbour be missing, the basket still goes out. Don't knock for her."
+      }
+    },
+    {
+      "id": "FX-LOT",
+      "name": "绥珥",
+      "role": "裁缝宅子亲属",
+      "site": "rumor_homesteadLooted1",
+      "region": "R03",
+      "look": "四十来岁的妇人，围巾结得紧，手里攥着半截布尺；说话时先看院子里的染缸。",
+      "voice": "先解释自己为什么来，再谈东西；被怀疑就沉默。",
+      "knows": [
+        "哪几匹布是自家的",
+        "抢东西的人往哪边走的"
+      ],
+      "not_knows": [
+        "不认领别人家的东西",
+        "不替宅子新主人说话"
+      ],
+      "greetings": [
+        [
+          "first",
+          "我不是来抢的。那口染缸是我家的。"
+        ],
+        [
+          "revisit",
+          "你又来了。我还没找到那块蓝布。"
+        ],
+        [
+          "night",
+          "夜里我不来。院子里有别人落脚。"
+        ]
+      ],
+      "chats": [
+        "布是我男人染的。他手艺好，脾气差。",
+        "抢东西的人穿得整齐。整齐的人才挑得仔细。",
+        "亲戚两个字，在这儿不管用。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "从门口进，别翻墙。翻墙的人被当成抢东西的。"
+        ],
+        [
+          "warning",
+          "染缸边滑，缸底结着壳。"
+        ],
+        [
+          "refusal",
+          "要我作证是谁抢的？不。我说了，别人就得替我担。"
+        ]
+      ],
+      "links": [
+        "区域_R03_曼恩边地",
+        "台本_SQ03_没有王旗的面包"
+      ],
+      "visits": {
+        "task": "台本_SQ03_没有王旗的面包",
+        "before": [
+          "发粮的事我听说了。先问一句：宅子里的布算不算粮。"
+        ],
+        "after": [
+          "粮发完了。布还是布，没人认领的照旧挂着。"
+        ],
+        "early": [
+          "你先来过宅子，后去发的粮。那你知道这院子缺什么。"
+        ],
+        "late": [
+          "粮的事办完了才来？布匹不等粮车，落灰而已。"
+        ],
+        "proxy": [
+          "亲属不在院子里时，染缸别动；缸底有主。"
+        ]
+      },
+      "english": {
+        "greet.first": "I'm not here to loot. That dye tub belongs to my house.",
+        "greet.revisit": "You again. I still haven't found the blue cloth.",
+        "greet.night": "I don't come at night. Others camp in this yard.",
+        "chat.1": "My man dyed the cloth. Good hands, short temper.",
+        "chat.2": "The looters dressed neatly. Neat people pick more carefully.",
+        "chat.3": "The word kin doesn't count for much here.",
+        "site.arrival": "Come through the door, not over the wall. Wall-climbers get taken for looters.",
+        "site.warning": "The tub edge is slick and the bottom's crusted.",
+        "site.refusal": "Testify who looted it? No. If I speak, someone else carries the weight.",
+        "visit.before": "I heard about the grain handout. One question: does cloth in this yard count as grain?",
+        "visit.after": "The grain's given out. Cloth is cloth; unclaimed things still hang.",
+        "visit.early": "You saw the yard before the handout. So you know what this place is short of.",
+        "visit.late": "So the handout came before the yard? Cloth keeps no schedule; dust does.",
+        "visit.proxy": "Where the relative is not in the yard, leave the dye tub. The bottom has an owner."
+      }
+    },
+    {
+      "id": "FX-FRM",
+      "name": "蓟珥",
+      "role": "安静农宅住户",
+      "site": "rumor_homestead1",
+      "region": "R02",
+      "look": "五十来岁的男人，袖口卷起，指甲缝里是土；说话前先看一眼院门。",
+      "voice": "寡言，答话常比问题短；提水井才多说两句。",
+      "knows": [
+        "院里哪口井还出水",
+        "邻村谁家搬走了"
+      ],
+      "not_knows": [
+        "不替邻村作保",
+        "不说自家存粮"
+      ],
+      "greetings": [
+        [
+          "first",
+          "院门开着不代表能进。你要水，我给你舀。"
+        ],
+        [
+          "revisit",
+          "又是你。水缸还在老地方。"
+        ],
+        [
+          "night",
+          "夜里别敲院门。敲了我不开。"
+        ]
+      ],
+      "chats": [
+        "地还在种。种得少，够吃就行。",
+        "搬走的人家把井填了。填井的人，心里有数。",
+        "我不问外面的事。问多了，睡不好。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "鞋上的泥在门槛外蹭掉。"
+        ],
+        [
+          "warning",
+          "菜畦别踩，种子刚下。"
+        ],
+        [
+          "refusal",
+          "要我留你过夜？不行。屋里就我一个人。"
+        ]
+      ],
+      "links": [
+        "区域_R02_丹布里西路与渡口",
+        "台本_DT02_干净的井水"
+      ],
+      "visits": {
+        "task": "台本_DT02_干净的井水",
+        "before": [
+          "井水的事你要问，先看院里的缸。缸满，说明井好。"
+        ],
+        "after": [
+          "井的事办完了。缸还是那口缸，水还是那样。"
+        ],
+        "early": [
+          "你先来过院子，后去查的井。哪口能喝，你尝过。"
+        ],
+        "late": [
+          "井的事查完了才来？井不问先后，只问桶干不干净。"
+        ],
+        "proxy": [
+          "住户不在院里时，缸盖着；水别自己舀。"
+        ]
+      },
+      "english": {
+        "greet.first": "An open gate doesn't mean come in. If you want water, I'll draw it.",
+        "greet.revisit": "You again. The water vat is where it was.",
+        "greet.night": "Don't knock at night. If you knock, I won't open.",
+        "chat.1": "The field's still worked. A small crop, enough to eat.",
+        "chat.2": "The family that moved out filled their well. Whoever fills a well knows why.",
+        "chat.3": "I don't ask about outside matters. Ask too much and you sleep badly.",
+        "site.arrival": "Scrape the mud off your shoes at the threshold.",
+        "site.warning": "Don't walk the vegetable beds. The seed just went in.",
+        "site.refusal": "Put you up for the night? No. I'm alone in this house.",
+        "visit.before": "Asking about the well water? Look at the vat first. A full vat means a good well.",
+        "visit.after": "The well business is done. Same vat, same water.",
+        "visit.early": "The yard came first, the well second. You've tasted which one is drinkable.",
+        "visit.late": "The well's been checked, so the yard now? Wells keep no order; buckets keep clean.",
+        "visit.proxy": "The householder gone, the vat stays covered. Don't draw water yourself."
+      }
+    }
+  ]
+}

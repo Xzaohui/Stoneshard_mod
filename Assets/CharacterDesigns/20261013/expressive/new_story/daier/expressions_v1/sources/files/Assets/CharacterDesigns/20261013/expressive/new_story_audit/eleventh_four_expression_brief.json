@@ -1,0 +1,854 @@
+{
+  "schema_version": 1,
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。",
+    "planned_selected_images": 8,
+    "safety_blocked_policy": "若工具或审查因安全规则blocked，立即停止该张并如实报告；不换词、换工具、换账户、重编码引用图或绕过审核重试。授权型阻断按上级确认流程处理，不能把安全blocked算成可任意改写prompt的硬错修订。"
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者和独审分别实际view每张raw、选稿transparent及中文浅深板，检查本人母图SHA与实际年龄/比例/五官、眉眼嘴可区分、服装/手/道具侧别和完整轮廓。韦珥空陶杯及右腰钥匙、摩珥斜账板及轻黄指节、岱珥补外套及右腰无用钥匙、谟珥v2背铲和崖灰不得丢失。展示板不写任务、关系、到账或康复结论。manifest冻结真实选稿SHA，首稿与唯一硬错修订均保留。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "prompt_archive_contract": {
+    "status": "planned_prompts_not_executed",
+    "rule": "本文件prompt_text是完整拟用首稿，不冒称已执行prompt。生产时将真实发送的逐字prompt、引用路径与输入SHA、工具参数、时间、输出路径/SHA、首稿或硬错revision1及选废原因写入prompts/与generation-log.json；若改措辞必须存实际版本，不用本brief替代真实调用存档。",
+    "max_calls_per_expression": 2,
+    "revision_rule": "仅一次明确硬错定向修订；实际修订全文及纠错目标须保存，失败则报告，不偷偷增加第三稿。"
+  },
+  "created_utc": "2026-10-14T02:55:51.629278+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "第十一批韦珥、摩珥、岱珥、谟珥四名新剧情人物各2种可逆面部情绪，共8张未来单人全身概念。本任务只新增本brief与来源快照，不生图、不git、不上传、不运行游戏、不改旧文件。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_four_production_brief.json",
+    "sha256": "5991f9659f74853ca391f336e6ec1ec6dae24afaf30925bc1ee084b68577e026"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_eleventh_four_20261013.json",
+    "sha256": "9429cd34d4318eb8485902e2a5aed331ad4c69fd48450f7f46647c26b9d74810"
+  },
+  "format_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_four_expression_brief.json",
+    "sha256": "eaf404168c49eb018ca4a202730db383ea97d25dc0508210fa09dca06f279bdf"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "workflow_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+    "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08"
+  },
+  "shared_locks": [
+    "四人分别以本人最终raw与transparent为身份/服装/道具/实际比例唯一母图。韦珥、摩珥、岱珥用v1，谟珥只用v2背铲，不复用其已废v1。",
+    "画布意图均1118×1407；保持本人原始完整纵向构图及余量，不据相同画布强制相同身高或头身数值。全身含头发、双手、原道具、衣物与双鞋。",
+    "韦珥与摩珥是四十来岁男人，岱珥是五十来岁男人；谟珥是二十多岁且源未定性别的年轻成年人，保持中性可逆外观。",
+    "韦珥weier_ink/FX-INK与苇珥weier/FX-HOM分人；摩珥moer/FX-WIL与谟珥moer_trs/FX-TRS分人。工作slug不是官方英文名。",
+    "表情以眉眼嘴为主，手位和道具尽量不动。韦珥、谟珥保留本人母图固有腰高半摊手，不能再抬高或复制成全员招呼模板；摩珥双手账板、岱珥掸袖停点不变。",
+    "八张为相互独立的可逆情绪提案，不是连续前后结局。本人存活、在场、愿谈与有限见闻才适用，拒绝、缺席和逐项授权优先。",
+    "不从FX旧完成/先后回访推出当前N5、DT14、DT07、N3已完成或角色知晓全貌；地点关联不等于自动跨区在场。不得画付款、治疗、治愈、赦免、承诺、授权或关系成立。",
+    "只规划prompt不执行Step6。未来主执行者须沿现有已授权风格与spec_lock顺序生产，每张首稿最多一次硬错修订；安全blocked停止报告，不绕过。",
+    "不脚本绘人、不硬缩35px或用量化修饰错误；原生网格、part/frame/mask/origin、装备合成、连续动画与运行验证均未覆盖。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "FX-INK",
+      "slug": "weier_ink",
+      "name": "韦珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-INK_韦珥.md",
+        "sha256": "8560eb2122f5f61cd1e1fd616b82ff25b6c5848713fd1058e28cd651ab95bfa3"
+      },
+      "card_matches_eleventh_four_brief": true,
+      "age_identity_lock": "四十来岁的男人；拉尔夫记旅馆旧仆。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1",
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_v1_raw_imagegen.png",
+          "sha256": "fc704120d47eb010c0b71028fa1b9f28eee3c5b001423f5e2857e188b93412c7"
+        },
+        "transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png",
+          "sha256": "99f4fadb215b8def21a3b108a6dbbf74f9c2eb08b9369317fb713364308fa7bf"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/manifest.json",
+          "sha256": "ef898f3e1da247c7ca9784cd7545094f33d666899cdbaff13a8d2829f30f12b0"
+        },
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "raw_canvas": [
+          1118,
+          1407
+        ],
+        "transparent_canvas": [
+          1118,
+          1407
+        ],
+        "raw_mode": "RGBA",
+        "transparent_mode": "RGBA",
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐一实际查看四人最终raw和transparent共8张；不是只读历史QA。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 17
+      },
+      "card_facts": [
+        "拉尔夫记旅馆旧仆，常在 `rumor_ralphSons1` 一带。地域见 [[区域_R02_丹布里西路与渡口]]。",
+        "四十来岁的男人，围裙洗得发白，腰间挂一串旧钥匙；说话先摆好桌上的杯子。",
+        "待客的口气，但一句话里会漏出旧事；被问到东家就转去问菜。",
+        "客房哪间漏雨；东家三兄弟各忙什么。不替东家许诺房钱；不说围城时店里住过谁。"
+      ],
+      "observed_mother_image": "四十来岁的成年男子，圆颧宽面、深褐短发和明显灰鬓，短髭及下颌灰须；粗眉略抬，目光望画面右，嘴在胡须下略张。退色蓝灰上衣、米麻卷边袖、洗白长围裙、褐裤与深褐闭口鞋。画面右手在腰侧稳握唯一空陶杯的侧面与杯柄，杯口朝上；画面左手在腰高外侧原位摊开迎客。旧钥匙串挂画面右腰、在杯下方围裙前，不在手里。双脚完整稳站。",
+      "fixed_prop_sides": [
+        "画面右手稳持腰侧唯一空陶杯，杯口朝上；不举杯祝酒、不递杯、不倒酒、不加酒液或新增托盘。",
+        "钥匙串保留在画面右腰、陶杯下方围裙前，不握取、不递出、不移至左腰；洗白围裙完整不改成庄园长外套。",
+        "画面左手保持本人母图腰高外侧的迎客手位，只允许轻微松指；不再抬高成停止手势，不借手势替代眉眼嘴情绪。",
+        "只用韦珥 / FX-INK / weier_ink，四十来岁男旧仆；苇珥 / FX-HOM / weier是五十来岁拾荒妇，不借其布袋、短棍、对白、年龄或母图。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "all_assets_png_files_scanned": 3254,
+        "all_assets_zip_archives_scanned": 170,
+        "matching_png_count": 4,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_v1_raw_imagegen.png"
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/eleventh_four_delivery_v1/新增剧情人物_韦珥摩珥源包.zip",
+            "sha256": "e22667f8aa7107fb9a379fa0e73412326927da9a8ccfd06bcd3f9d70f444aa74",
+            "bytes": 7780661,
+            "member_count": 42,
+            "matching_member_count": 18,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "outside_concept_hits": [],
+        "matching_current_character_cards": [
+          "design/04_人物/野外人物/人物_FX-INK_韦珥.md"
+        ],
+        "asset_path_scan": "新增来源快照之前，Assets全树PNG及全部ZIP成员按精确目录slug/文件名前缀/中文名核查；moer明确排除moer_trs，weier_ink不同于weier；style_refs他人图不计本人变体。",
+        "existing_expressions_found": 0,
+        "superseded_concept_note": "当前仅本人concept_v1原始概念与其清理/展示副本。",
+        "unexplained_hits": [],
+        "identity_guard": "只用韦珥 / FX-INK / weier_ink，四十来岁男旧仆；苇珥 / FX-HOM / weier是五十来岁拾荒妇，不借其布袋、短棍、对白、年龄或母图。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "weier_ink_E1_attentive_host_question",
+          "label_zh": "待客询问",
+          "scene_proposal": "初次询问来客是住店还是打尖时，礼貌而专注地等对方说清需要；仅表现询问，不代表已接待、收款或安排房间。",
+          "face_changes": "双眉比母图略抬，靠交谈方向的一眉更高，眉间放松；眼帘打开少许，目光仍向画面右但更专注于交谈者；胡须下的嘴形成清晰小幅开口，嘴角温和上扬，读成正在问一句日常问题。露出口唇和开合，不让短髭遮掉嘴形；不大笑、不露整排牙、不扩大眼睛改变年龄。",
+          "minimal_gesture": "头轻偏向原画面右，双肩和脚步不变；右手空陶杯仍在腰侧，左手保持原腰高手位不再抬高，钥匙挂腰。",
+          "difference_from_static_and_pair": "母图侧看而嘴形很短；E1是抬眉、专注开眼与小幅开口询问，E2是收眉避目和闭口停顿。脱离手势也要看得出不同。",
+          "condition_and_limit": "只是礼貌服务口气，不等于熟客关系成立、免费留房、赊账、代东家同意、N5结案或得到渡口情报。不给杯中添饮品或画到账标记。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L472—480体貌、口吻与初次询问；L476不越界；L488拒绝赊账"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-INK].look/voice/greetings[first]/not_knows/site_lines[refusal]"
+          },
+          "output_stem": "weier_ink_E1_attentive_host_question",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw和transparent为唯一身份、服装、道具、朝向与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：韦珥（FX-INK，weier_ink）。四十来岁的男人；拉尔夫记旅馆旧仆。源体貌明确性别/年龄，按原词保留。\n锁定母图：Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_v1_raw_imagegen.png；透明清理版：Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png。不得引用其他人的脸或将废稿当参考。原样保留本人实际头身比例、体型、基础脸型、鼻唇、年龄、发型、肤色与朝向，不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖五官。沿用母图1118×1407纵向完整构图与合理留边，头发、双手、所有衣具、双鞋与全部原道具均完整，不裁切、不缩小道具腾地方。\n母图观察：四十来岁的成年男子，圆颧宽面、深褐短发和明显灰鬓，短髭及下颌灰须；粗眉略抬，目光望画面右，嘴在胡须下略张。退色蓝灰上衣、米麻卷边袖、洗白长围裙、褐裤与深褐闭口鞋。画面右手在腰侧稳握唯一空陶杯的侧面与杯柄，杯口朝上；画面左手在腰高外侧原位摊开迎客。旧钥匙串挂画面右腰、在杯下方围裙前，不在手里。双脚完整稳站。\n固定手位、侧别与道具：画面右手稳持腰侧唯一空陶杯，杯口朝上；不举杯祝酒、不递杯、不倒酒、不加酒液或新增托盘。 钥匙串保留在画面右腰、陶杯下方围裙前，不握取、不递出、不移至左腰；洗白围裙完整不改成庄园长外套。 画面左手保持本人母图腰高外侧的迎客手位，只允许轻微松指；不再抬高成停止手势，不借手势替代眉眼嘴情绪。 只用韦珥 / FX-INK / weier_ink，四十来岁男旧仆；苇珥 / FX-HOM / weier是五十来岁拾荒妇，不借其布袋、短棍、对白、年龄或母图。\n本张可逆表情提案：待客询问。初次询问来客是住店还是打尖时，礼貌而专注地等对方说清需要；仅表现询问，不代表已接待、收款或安排房间。\n脸部：双眉比母图略抬，靠交谈方向的一眉更高，眉间放松；眼帘打开少许，目光仍向画面右但更专注于交谈者；胡须下的嘴形成清晰小幅开口，嘴角温和上扬，读成正在问一句日常问题。露出口唇和开合，不让短髭遮掉嘴形；不大笑、不露整排牙、不扩大眼睛改变年龄。\n最小辅助动作：头轻偏向原画面右，双肩和脚步不变；右手空陶杯仍在腰侧，左手保持原腰高手位不再抬高，钥匙挂腰。\n必须形成可读差异：母图侧看而嘴形很短；E1是抬眉、专注开眼与小幅开口询问，E2是收眉避目和闭口停顿。脱离手势也要看得出不同。\n剧情边界：只是礼貌服务口气，不等于熟客关系成立、免费留房、赊账、代东家同意、N5结案或得到渡口情报。不给杯中添饮品或画到账标记。\n本人存活、在场、愿谈且有相应有限见闻时才适用。表情只是可逆美术提案，不改人物卡；两图不是先后结局，不推定任务完成、付款、治愈、赦免、承诺、授权、信任或关系成立。不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、钱币、信件、账簿或未有道具。情绪主要靠眉眼嘴；保留母图固有手位，但不统一套抬掌模板，不只换手势而复制脸。不得以画面声称原生游戏网格、part/frame/mask/origin、装备兼容、连续动画或runtime通过。"
+        },
+        {
+          "id": "E2",
+          "key": "weier_ink_E2_guarded_siege_silence",
+          "label_zh": "围城收声",
+          "scene_proposal": "话题转到围城那年或旧店名背后的事时，待客口吻短暂停住，选择不继续交代住客与东家的旧事。",
+          "face_changes": "两内眉略靠近并压低，原本迎客的一侧抬眉收回；上眼帘落下、目光向原画面右的更侧处移开，不闭眼；嘴由开口问话收成胡须下可见的一道紧闭短线，唇角微下收。表现守口和避谈，不表现认罪、悲恸或对来客怀恨。",
+          "minimal_gesture": "下巴轻收，握杯手和摊开的左手都停在本人母图位置，手指略放松即可；身体不退场、不转背，不举杯掩嘴。",
+          "difference_from_static_and_pair": "E2的眉低、避开目光和紧闭口与E1抬眉专注开口明确相反；也要比母图客气侧视更有收声感，不靠移杯或换手制造区别。",
+          "condition_and_limit": "只取旧FX闲谈的回避口吻，不推定围城住客身份、旧仆罪责、东家秘密或他对N5三路物流真假的认证；不表现任何证言、授权、宽恕或新关系。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L474被问东家转话；L476不说围城住客；L484—485旧店名与围城回避"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-INK].voice/not_knows/chats[1]/chats[2]"
+          },
+          "output_stem": "weier_ink_E2_guarded_siege_silence",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw和transparent为唯一身份、服装、道具、朝向与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：韦珥（FX-INK，weier_ink）。四十来岁的男人；拉尔夫记旅馆旧仆。源体貌明确性别/年龄，按原词保留。\n锁定母图：Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_v1_raw_imagegen.png；透明清理版：Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png。不得引用其他人的脸或将废稿当参考。原样保留本人实际头身比例、体型、基础脸型、鼻唇、年龄、发型、肤色与朝向，不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖五官。沿用母图1118×1407纵向完整构图与合理留边，头发、双手、所有衣具、双鞋与全部原道具均完整，不裁切、不缩小道具腾地方。\n母图观察：四十来岁的成年男子，圆颧宽面、深褐短发和明显灰鬓，短髭及下颌灰须；粗眉略抬，目光望画面右，嘴在胡须下略张。退色蓝灰上衣、米麻卷边袖、洗白长围裙、褐裤与深褐闭口鞋。画面右手在腰侧稳握唯一空陶杯的侧面与杯柄，杯口朝上；画面左手在腰高外侧原位摊开迎客。旧钥匙串挂画面右腰、在杯下方围裙前，不在手里。双脚完整稳站。\n固定手位、侧别与道具：画面右手稳持腰侧唯一空陶杯，杯口朝上；不举杯祝酒、不递杯、不倒酒、不加酒液或新增托盘。 钥匙串保留在画面右腰、陶杯下方围裙前，不握取、不递出、不移至左腰；洗白围裙完整不改成庄园长外套。 画面左手保持本人母图腰高外侧的迎客手位，只允许轻微松指；不再抬高成停止手势，不借手势替代眉眼嘴情绪。 只用韦珥 / FX-INK / weier_ink，四十来岁男旧仆；苇珥 / FX-HOM / weier是五十来岁拾荒妇，不借其布袋、短棍、对白、年龄或母图。\n本张可逆表情提案：围城收声。话题转到围城那年或旧店名背后的事时，待客口吻短暂停住，选择不继续交代住客与东家的旧事。\n脸部：两内眉略靠近并压低，原本迎客的一侧抬眉收回；上眼帘落下、目光向原画面右的更侧处移开，不闭眼；嘴由开口问话收成胡须下可见的一道紧闭短线，唇角微下收。表现守口和避谈，不表现认罪、悲恸或对来客怀恨。\n最小辅助动作：下巴轻收，握杯手和摊开的左手都停在本人母图位置，手指略放松即可；身体不退场、不转背，不举杯掩嘴。\n必须形成可读差异：E2的眉低、避开目光和紧闭口与E1抬眉专注开口明确相反；也要比母图客气侧视更有收声感，不靠移杯或换手制造区别。\n剧情边界：只取旧FX闲谈的回避口吻，不推定围城住客身份、旧仆罪责、东家秘密或他对N5三路物流真假的认证；不表现任何证言、授权、宽恕或新关系。\n本人存活、在场、愿谈且有相应有限见闻时才适用。表情只是可逆美术提案，不改人物卡；两图不是先后结局，不推定任务完成、付款、治愈、赦免、承诺、授权、信任或关系成立。不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、钱币、信件、账簿或未有道具。情绪主要靠眉眼嘴；保留母图固有手位，但不统一套抬掌模板，不只换手势而复制脸。不得以画面声称原生游戏网格、part/frame/mask/origin、装备兼容、连续动画或runtime通过。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-WIL",
+      "slug": "moer",
+      "name": "摩珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-WIL_摩珥.md",
+        "sha256": "a0ff899e2b4454dfdab89d0dc3613a6f81ae5bda2ede37ed486dcefe21f3791c"
+      },
+      "card_matches_eleventh_four_brief": true,
+      "age_identity_lock": "四十来岁的男人；烂柳酒馆账房。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1",
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_v1_raw_imagegen.png",
+          "sha256": "f6b5057916af807981804c2d020b1702b3d64ff934bdf90a95832896c40636d6"
+        },
+        "transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png",
+          "sha256": "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/manifest.json",
+          "sha256": "f2c45b8d1d0a36cdab8e9ba1b98c5e3bcf97f29d936cf3591af2b8e26b97ce57"
+        },
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "raw_canvas": [
+          1118,
+          1407
+        ],
+        "transparent_canvas": [
+          1118,
+          1407
+        ],
+        "raw_mode": "RGBA",
+        "transparent_mode": "RGBA",
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐一实际查看四人最终raw和transparent共8张；不是只读历史QA。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 17
+      },
+      "card_facts": [
+        "烂柳酒馆账房，常在 `rumor_rottenWillow1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "四十来岁的男人，指节发黄，账板不离手；说话时眼睛先看客人的手。",
+        "生意腔，语速快；一谈欠账就把声音压到桌面高度。",
+        "谁的账板还挂着；后院的旧账埋在哪块砖下。不替帮派收账；不说酒馆东家的去向。"
+      ],
+      "observed_mother_image": "四十来岁成年男子，窄下颌、无须、深褐蓬松后梳短发；眉略蹙、眼睛向画面左下方看、嘴微开。深褐短褂、暗绿开领内衫、米麻袖口、褐裤与深褐鞋。唯一褐木账板斜置腹前，板左上边较高、右下角较低；画面左手稳托板侧和下缘，画面右手食指轻搭板的画面右边缘附近。板只有抽象刻划，无可读姓名；指节有浅黄痕，两手均留在板旁。",
+      "fixed_prop_sides": [
+        "唯一木账板始终斜靠腹前，画面左手托板，画面右手食指留原板边附近；保持原板尺寸、倾斜和抽象刻划，不增笔、不划名、不递板。",
+        "两手黄指节保留为轻色差，不加病变、烟卷或新伤；账板无可读债户姓名、印章、凭证、收据、金额。",
+        "深褐短褂、暗绿内衫、米麻袖口、褐裤与双鞋照母图；四十来岁无须成熟窄面，不变年轻寻宝者。",
+        "只用摩珥 / FX-WIL / moer；谟珥 / FX-TRS / moer_trs是另一人，不借短铲、赭黄外衣、崖灰或同伴剧情。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "all_assets_png_files_scanned": 3254,
+        "all_assets_zip_archives_scanned": 170,
+        "matching_png_count": 4,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_v1_raw_imagegen.png"
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/eleventh_four_delivery_v1/新增剧情人物_韦珥摩珥源包.zip",
+            "sha256": "e22667f8aa7107fb9a379fa0e73412326927da9a8ccfd06bcd3f9d70f444aa74",
+            "bytes": 7780661,
+            "member_count": 42,
+            "matching_member_count": 18,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "outside_concept_hits": [],
+        "matching_current_character_cards": [
+          "design/04_人物/野外人物/人物_FX-WIL_摩珥.md"
+        ],
+        "asset_path_scan": "新增来源快照之前，Assets全树PNG及全部ZIP成员按精确目录slug/文件名前缀/中文名核查；moer明确排除moer_trs，weier_ink不同于weier；style_refs他人图不计本人变体。",
+        "existing_expressions_found": 0,
+        "superseded_concept_note": "当前仅本人concept_v1原始概念与其清理/展示副本。",
+        "unexplained_hits": [],
+        "identity_guard": "只用摩珥 / FX-WIL / moer；谟珥 / FX-TRS / moer_trs是另一人，不借短铲、赭黄外衣、崖灰或同伴剧情。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "moer_E1_rueful_false_slip_memory",
+          "label_zh": "旧账自嘲",
+          "scene_proposal": "提起曾收过一次假凭证，短暂流露对自己那次吃亏的无奈自嘲；这是对原句口气的可逆美术解读，不新增损失数额、骗局细节或责任判定。",
+          "face_changes": "一侧眉缓慢挑起，另一眉保持略拧；半垂眼再稍收，目光仍向画面左下，不看观众；嘴由母图小幅开口变成闭唇的一点偏侧苦笑，只有一侧口角轻挑、另一侧平。成熟而克制，不是得意赚钱、嘲笑病户或甜笑。",
+          "minimal_gesture": "头小幅偏向原侧，双手与账板原位不动；右食指停在板边，不敲打或划除刻痕。",
+          "difference_from_static_and_pair": "母图是审慎下侧视和微开嘴；E1明确非对称眉与闭唇苦笑，E2双眉平压、无笑意直口。三种都靠脸可区分。",
+          "condition_and_limit": "不把假凭证闲谈画成收下本次假牌、受贿、免账、退款、划名或DT14结案；不把他变成病户、看守、卖牌者、护理核验员或帮派收债人。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L600—604体貌与生意腔边界；L613“收过一次”闲谈；L616免账拒绝"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-WIL].look/voice/not_knows/chats[2]/site_lines[refusal]"
+          },
+          "output_stem": "moer_E1_rueful_false_slip_memory",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw和transparent为唯一身份、服装、道具、朝向与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：摩珥（FX-WIL，moer）。四十来岁的男人；烂柳酒馆账房。源体貌明确性别/年龄，按原词保留。\n锁定母图：Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_v1_raw_imagegen.png；透明清理版：Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png。不得引用其他人的脸或将废稿当参考。原样保留本人实际头身比例、体型、基础脸型、鼻唇、年龄、发型、肤色与朝向，不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖五官。沿用母图1118×1407纵向完整构图与合理留边，头发、双手、所有衣具、双鞋与全部原道具均完整，不裁切、不缩小道具腾地方。\n母图观察：四十来岁成年男子，窄下颌、无须、深褐蓬松后梳短发；眉略蹙、眼睛向画面左下方看、嘴微开。深褐短褂、暗绿开领内衫、米麻袖口、褐裤与深褐鞋。唯一褐木账板斜置腹前，板左上边较高、右下角较低；画面左手稳托板侧和下缘，画面右手食指轻搭板的画面右边缘附近。板只有抽象刻划，无可读姓名；指节有浅黄痕，两手均留在板旁。\n固定手位、侧别与道具：唯一木账板始终斜靠腹前，画面左手托板，画面右手食指留原板边附近；保持原板尺寸、倾斜和抽象刻划，不增笔、不划名、不递板。 两手黄指节保留为轻色差，不加病变、烟卷或新伤；账板无可读债户姓名、印章、凭证、收据、金额。 深褐短褂、暗绿内衫、米麻袖口、褐裤与双鞋照母图；四十来岁无须成熟窄面，不变年轻寻宝者。 只用摩珥 / FX-WIL / moer；谟珥 / FX-TRS / moer_trs是另一人，不借短铲、赭黄外衣、崖灰或同伴剧情。\n本张可逆表情提案：旧账自嘲。提起曾收过一次假凭证，短暂流露对自己那次吃亏的无奈自嘲；这是对原句口气的可逆美术解读，不新增损失数额、骗局细节或责任判定。\n脸部：一侧眉缓慢挑起，另一眉保持略拧；半垂眼再稍收，目光仍向画面左下，不看观众；嘴由母图小幅开口变成闭唇的一点偏侧苦笑，只有一侧口角轻挑、另一侧平。成熟而克制，不是得意赚钱、嘲笑病户或甜笑。\n最小辅助动作：头小幅偏向原侧，双手与账板原位不动；右食指停在板边，不敲打或划除刻痕。\n必须形成可读差异：母图是审慎下侧视和微开嘴；E1明确非对称眉与闭唇苦笑，E2双眉平压、无笑意直口。三种都靠脸可区分。\n剧情边界：不把假凭证闲谈画成收下本次假牌、受贿、免账、退款、划名或DT14结案；不把他变成病户、看守、卖牌者、护理核验员或帮派收债人。\n本人存活、在场、愿谈且有相应有限见闻时才适用。表情只是可逆美术提案，不改人物卡；两图不是先后结局，不推定任务完成、付款、治愈、赦免、承诺、授权、信任或关系成立。不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、钱币、信件、账簿或未有道具。情绪主要靠眉眼嘴；保留母图固有手位，但不统一套抬掌模板，不只换手势而复制脸。不得以画面声称原生游戏网格、part/frame/mask/origin、装备兼容、连续动画或runtime通过。"
+        },
+        {
+          "id": "E2",
+          "key": "moer_E2_firm_credit_refusal",
+          "label_zh": "免账正色",
+          "scene_proposal": "听到想免一次账的请求，快速生意口吻收紧成一句平静而坚决的“不行”。",
+          "face_changes": "双眉降为较直的平压形，内眉略靠近但不深怒拧；眼睛稍睁开、视线保持画面左并较集中，仍有先看对方手的下视习惯；嘴闭成平直紧短线，两边唇角不抬。脸部是冷静坚持边界，不咆哮、不龇牙、不蔑视。",
+          "minimal_gesture": "下巴仅略定住，手和账板不改位置，右食指仍在原板边；不伸手索钱、不向前推板、不出现停止掌。",
+          "difference_from_static_and_pair": "E2以双眉平压、集中目光和完全无笑的直口，与E1单眉微挑和苦笑成明确对照；相对母图小幅开口，E2为决定性的闭口停点。",
+          "condition_and_limit": "只拒绝本次免账要求，不判债务性质、不催收他人账、不为帮派收账，不添收据、钱币、签字或病情；不以表情执行DT14护理证明、军籍、赦免或结算。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L602谈欠账压低声音；L604不替帮派收账；L616拒绝免账"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-WIL].voice/not_knows/site_lines[refusal]"
+          },
+          "output_stem": "moer_E2_firm_credit_refusal",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw和transparent为唯一身份、服装、道具、朝向与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：摩珥（FX-WIL，moer）。四十来岁的男人；烂柳酒馆账房。源体貌明确性别/年龄，按原词保留。\n锁定母图：Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_v1_raw_imagegen.png；透明清理版：Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png。不得引用其他人的脸或将废稿当参考。原样保留本人实际头身比例、体型、基础脸型、鼻唇、年龄、发型、肤色与朝向，不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖五官。沿用母图1118×1407纵向完整构图与合理留边，头发、双手、所有衣具、双鞋与全部原道具均完整，不裁切、不缩小道具腾地方。\n母图观察：四十来岁成年男子，窄下颌、无须、深褐蓬松后梳短发；眉略蹙、眼睛向画面左下方看、嘴微开。深褐短褂、暗绿开领内衫、米麻袖口、褐裤与深褐鞋。唯一褐木账板斜置腹前，板左上边较高、右下角较低；画面左手稳托板侧和下缘，画面右手食指轻搭板的画面右边缘附近。板只有抽象刻划，无可读姓名；指节有浅黄痕，两手均留在板旁。\n固定手位、侧别与道具：唯一木账板始终斜靠腹前，画面左手托板，画面右手食指留原板边附近；保持原板尺寸、倾斜和抽象刻划，不增笔、不划名、不递板。 两手黄指节保留为轻色差，不加病变、烟卷或新伤；账板无可读债户姓名、印章、凭证、收据、金额。 深褐短褂、暗绿内衫、米麻袖口、褐裤与双鞋照母图；四十来岁无须成熟窄面，不变年轻寻宝者。 只用摩珥 / FX-WIL / moer；谟珥 / FX-TRS / moer_trs是另一人，不借短铲、赭黄外衣、崖灰或同伴剧情。\n本张可逆表情提案：免账正色。听到想免一次账的请求，快速生意口吻收紧成一句平静而坚决的“不行”。\n脸部：双眉降为较直的平压形，内眉略靠近但不深怒拧；眼睛稍睁开、视线保持画面左并较集中，仍有先看对方手的下视习惯；嘴闭成平直紧短线，两边唇角不抬。脸部是冷静坚持边界，不咆哮、不龇牙、不蔑视。\n最小辅助动作：下巴仅略定住，手和账板不改位置，右食指仍在原板边；不伸手索钱、不向前推板、不出现停止掌。\n必须形成可读差异：E2以双眉平压、集中目光和完全无笑的直口，与E1单眉微挑和苦笑成明确对照；相对母图小幅开口，E2为决定性的闭口停点。\n剧情边界：只拒绝本次免账要求，不判债务性质、不催收他人账、不为帮派收账，不添收据、钱币、签字或病情；不以表情执行DT14护理证明、军籍、赦免或结算。\n本人存活、在场、愿谈且有相应有限见闻时才适用。表情只是可逆美术提案，不改人物卡；两图不是先后结局，不推定任务完成、付款、治愈、赦免、承诺、授权、信任或关系成立。不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、钱币、信件、账簿或未有道具。情绪主要靠眉眼嘴；保留母图固有手位，但不统一套抬掌模板，不只换手势而复制脸。不得以画面声称原生游戏网格、part/frame/mask/origin、装备兼容、连续动画或runtime通过。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-MAN",
+      "slug": "daier",
+      "name": "岱珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-MAN_岱珥.md",
+        "sha256": "92ca69d13c523fc51686400e3a55e68456877b3325f19add44be9e3864ca8786"
+      },
+      "card_matches_eleventh_four_brief": true,
+      "age_identity_lock": "五十来岁的男人；庄园看守。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1",
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_v1_raw_imagegen.png",
+          "sha256": "89a6879812d2a3830ec9a073c350bc85149f890084c1e8e54bdd2f62cae3915a"
+        },
+        "transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png",
+          "sha256": "cfc6697b7aeb2abfd199ff69e560e4913afaca5966382dd83318331ff463cfc8"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/manifest.json",
+          "sha256": "33e591614b422bccf47083646fe0dcf97dbd938b31f7cf36114a32c6ccf72c53"
+        },
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "raw_canvas": [
+          1118,
+          1407
+        ],
+        "transparent_canvas": [
+          1118,
+          1407
+        ],
+        "raw_mode": "RGBA",
+        "transparent_mode": "RGBA",
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐一实际查看四人最终raw和transparent共8张；不是只读历史QA。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 21
+      },
+      "card_facts": [
+        "庄园看守，常在 `rumor_banditRuins1` 一带。地域见 [[区域_R01_布林外港与旧渠]]。",
+        "五十来岁的男人，披着补过的旧外套，腰间一串没用的钥匙；说话前先掸门廊的灰。",
+        "像念清单一样说话；提到旧主人就绕开。",
+        "哪道门廊还站得住；匪帮换过几拨人。不替旧主人认领庄园；不说钥匙能开哪扇门。"
+      ],
+      "observed_mother_image": "五十来岁男子，窄长成熟面、大片灰鬓和额前灰发，深灰褐后梳头发，无须；低平略拧的眉、半垂眼向画面右、嘴短而微张。烟紫灰长外套，画面右肘及两侧下摆有褐补片，麻白内衫和袖口、褐裤与深褐鞋。画面右臂横过腹前、右手接触画面左前臂衣袖，作掸袖习惯的静态停点；画面左前臂低垂、手在左髋前，未拿钥匙。旧钥匙串始终挂画面右腰。",
+      "fixed_prop_sides": [
+        "画面右手持续留画面左前臂袖上，画面左前臂低垂、手在左髋前；可轻停掸袖，但不挥掌拦路、不拔钥匙、不叉腰换模板。",
+        "旧钥匙串始终挂画面右腰，保持母图轮廓与大小；有钥匙不等于钥匙有效，不握钥匙开门、不递钥匙或改成钥匙已找到。",
+        "烟紫灰长外套、右肘与下摆褐补片、麻白内衫、裤鞋完整；不修好补片、不增尘云、不加门廊、箱子或庄园产权。",
+        "只用岱珥 / FX-MAN / daier，五十来岁庄园看守；与韦珥的洗白围裙、持杯待客身份分开。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "all_assets_png_files_scanned": 3254,
+        "all_assets_zip_archives_scanned": 170,
+        "matching_png_count": 4,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_v1_raw_imagegen.png"
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/eleventh_four_delivery_v1/新增剧情人物_岱珥谟珥源包.zip",
+            "sha256": "153f5eb56cda3104bd9037be372c1f65693f84d48578deac4010ca816fa53f2d",
+            "bytes": 14943789,
+            "member_count": 56,
+            "matching_member_count": 22,
+            "expression_or_action_members": []
+          },
+          {
+            "path": "Assets/DeliveryAudits/20261013/delivery_addendum_v1/第十一批_两人最终状态补充_v1.zip",
+            "sha256": "51391d2eab641cd761b0e04fc365c8a76a4e3d6672a4836e41eb3a2d63d81991",
+            "bytes": 2166,
+            "member_count": 3,
+            "matching_member_count": 1,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 4,
+        "excluded_other_identity_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/style_refs/luomin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/style_refs/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/style_refs/miloer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/style_refs/sela_G_raw_imagegen.png"
+        ],
+        "outside_concept_hits": [],
+        "matching_current_character_cards": [
+          "design/04_人物/野外人物/人物_FX-MAN_岱珥.md"
+        ],
+        "asset_path_scan": "新增来源快照之前，Assets全树PNG及全部ZIP成员按精确目录slug/文件名前缀/中文名核查；moer明确排除moer_trs，weier_ink不同于weier；style_refs他人图不计本人变体。",
+        "existing_expressions_found": 0,
+        "superseded_concept_note": "当前仅本人concept_v1原始概念与其清理/展示副本。",
+        "unexplained_hits": [],
+        "identity_guard": "只用岱珥 / FX-MAN / daier，五十来岁庄园看守；与韦珥的洗白围裙、持杯待客身份分开。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "daier_E1_dry_passerby_skepticism",
+          "label_zh": "过客冷嘲",
+          "scene_proposal": "说到几拨人都声称“只是路过”，露出见惯此事的干涩冷嘲；不替任何一拨人认定身份或罪责。",
+          "face_changes": "一眉轻微挑起、另一眉维持平沉，眼帘比母图更低一点但瞳孔可读，仍看画面右；嘴合起，一侧唇角轻斜成极淡无奈冷笑。保持五十来岁疲惫与灰鬓，不露齿大笑、不显恶意幸灾乐祸。",
+          "minimal_gesture": "下巴略偏回原方向，掸袖的右手仍接触左前臂衣袖，只是动作停顿；左手低垂原位、钥匙仍挂右腰。",
+          "difference_from_static_and_pair": "母图平眉微张嘴；E1单眉挑、半垂眼和闭口微斜，E2眉内扬、眼更开且口小幅张开警告。无需改变手势。",
+          "condition_and_limit": "只是对现有“换过三拨人”说法的口吻提案，不认领庄园、不认定匪帮成员，不暗示新的入内许可、旧主人下落或DT07货物内容已知。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L760—764体貌与边界；L772换过三拨人；L776拒绝开侧门"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-MAN].look/voice/not_knows/chats[1]/site_lines[refusal]"
+          },
+          "output_stem": "daier_E1_dry_passerby_skepticism",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw和transparent为唯一身份、服装、道具、朝向与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：岱珥（FX-MAN，daier）。五十来岁的男人；庄园看守。源体貌明确性别/年龄，按原词保留。\n锁定母图：Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_v1_raw_imagegen.png；透明清理版：Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png。不得引用其他人的脸或将废稿当参考。原样保留本人实际头身比例、体型、基础脸型、鼻唇、年龄、发型、肤色与朝向，不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖五官。沿用母图1118×1407纵向完整构图与合理留边，头发、双手、所有衣具、双鞋与全部原道具均完整，不裁切、不缩小道具腾地方。\n母图观察：五十来岁男子，窄长成熟面、大片灰鬓和额前灰发，深灰褐后梳头发，无须；低平略拧的眉、半垂眼向画面右、嘴短而微张。烟紫灰长外套，画面右肘及两侧下摆有褐补片，麻白内衫和袖口、褐裤与深褐鞋。画面右臂横过腹前、右手接触画面左前臂衣袖，作掸袖习惯的静态停点；画面左前臂低垂、手在左髋前，未拿钥匙。旧钥匙串始终挂画面右腰。\n固定手位、侧别与道具：画面右手持续留画面左前臂袖上，画面左前臂低垂、手在左髋前；可轻停掸袖，但不挥掌拦路、不拔钥匙、不叉腰换模板。 旧钥匙串始终挂画面右腰，保持母图轮廓与大小；有钥匙不等于钥匙有效，不握钥匙开门、不递钥匙或改成钥匙已找到。 烟紫灰长外套、右肘与下摆褐补片、麻白内衫、裤鞋完整；不修好补片、不增尘云、不加门廊、箱子或庄园产权。 只用岱珥 / FX-MAN / daier，五十来岁庄园看守；与韦珥的洗白围裙、持杯待客身份分开。\n本张可逆表情提案：过客冷嘲。说到几拨人都声称“只是路过”，露出见惯此事的干涩冷嘲；不替任何一拨人认定身份或罪责。\n脸部：一眉轻微挑起、另一眉维持平沉，眼帘比母图更低一点但瞳孔可读，仍看画面右；嘴合起，一侧唇角轻斜成极淡无奈冷笑。保持五十来岁疲惫与灰鬓，不露齿大笑、不显恶意幸灾乐祸。\n最小辅助动作：下巴略偏回原方向，掸袖的右手仍接触左前臂衣袖，只是动作停顿；左手低垂原位、钥匙仍挂右腰。\n必须形成可读差异：母图平眉微张嘴；E1单眉挑、半垂眼和闭口微斜，E2眉内扬、眼更开且口小幅张开警告。无需改变手势。\n剧情边界：只是对现有“换过三拨人”说法的口吻提案，不认领庄园、不认定匪帮成员，不暗示新的入内许可、旧主人下落或DT07货物内容已知。\n本人存活、在场、愿谈且有相应有限见闻时才适用。表情只是可逆美术提案，不改人物卡；两图不是先后结局，不推定任务完成、付款、治愈、赦免、承诺、授权、信任或关系成立。不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、钱币、信件、账簿或未有道具。情绪主要靠眉眼嘴；保留母图固有手位，但不统一套抬掌模板，不只换手势而复制脸。不得以画面声称原生游戏网格、part/frame/mask/origin、装备兼容、连续动画或runtime通过。"
+        },
+        {
+          "id": "E2",
+          "key": "daier_E2_urgent_structural_warning",
+          "label_zh": "危处警告",
+          "scene_proposal": "看见交谈者似要往危险处走时，认真提醒西厢屋顶快塌或门槛中间是空板；停留在提醒的那一刻。",
+          "face_changes": "两眉内端明显但适度上扬并靠拢，眼帘打开到警觉而不惊恐，目光仍向画面右、比母图更集中；嘴小幅打开成短促警告的口形，唇角不笑。嘴形与母图短横微开拉开可读区别，不张成夸张大圆口。",
+          "minimal_gesture": "头在原方向稍抬，下巴微前倾；右手仍停在左袖，左手低垂，两臂不展开、不指点，钥匙留腰，双脚不迈步。",
+          "difference_from_static_and_pair": "E2警觉开眼、眉内扬与开口提醒，与E1垂眼、单眉轻挑及闭口冷笑明确不同；不把母图只换成抬手。",
+          "condition_and_limit": "警告不等于带路、入内授权、救出遇险者、结构已修好或实际塌楼；不画倒塌背景、新伤或箱子，不因钥匙在腰就画可开门，不推定DT07已开箱或工伤已赔。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L764只知哪道门廊站得住；L774—775空板与屋顶警告；L776侧门拒绝"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-MAN].knows/site_lines[arrival]/site_lines[warning]/site_lines[refusal]"
+          },
+          "output_stem": "daier_E2_urgent_structural_warning",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw和transparent为唯一身份、服装、道具、朝向与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：岱珥（FX-MAN，daier）。五十来岁的男人；庄园看守。源体貌明确性别/年龄，按原词保留。\n锁定母图：Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_v1_raw_imagegen.png；透明清理版：Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png。不得引用其他人的脸或将废稿当参考。原样保留本人实际头身比例、体型、基础脸型、鼻唇、年龄、发型、肤色与朝向，不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖五官。沿用母图1118×1407纵向完整构图与合理留边，头发、双手、所有衣具、双鞋与全部原道具均完整，不裁切、不缩小道具腾地方。\n母图观察：五十来岁男子，窄长成熟面、大片灰鬓和额前灰发，深灰褐后梳头发，无须；低平略拧的眉、半垂眼向画面右、嘴短而微张。烟紫灰长外套，画面右肘及两侧下摆有褐补片，麻白内衫和袖口、褐裤与深褐鞋。画面右臂横过腹前、右手接触画面左前臂衣袖，作掸袖习惯的静态停点；画面左前臂低垂、手在左髋前，未拿钥匙。旧钥匙串始终挂画面右腰。\n固定手位、侧别与道具：画面右手持续留画面左前臂袖上，画面左前臂低垂、手在左髋前；可轻停掸袖，但不挥掌拦路、不拔钥匙、不叉腰换模板。 旧钥匙串始终挂画面右腰，保持母图轮廓与大小；有钥匙不等于钥匙有效，不握钥匙开门、不递钥匙或改成钥匙已找到。 烟紫灰长外套、右肘与下摆褐补片、麻白内衫、裤鞋完整；不修好补片、不增尘云、不加门廊、箱子或庄园产权。 只用岱珥 / FX-MAN / daier，五十来岁庄园看守；与韦珥的洗白围裙、持杯待客身份分开。\n本张可逆表情提案：危处警告。看见交谈者似要往危险处走时，认真提醒西厢屋顶快塌或门槛中间是空板；停留在提醒的那一刻。\n脸部：两眉内端明显但适度上扬并靠拢，眼帘打开到警觉而不惊恐，目光仍向画面右、比母图更集中；嘴小幅打开成短促警告的口形，唇角不笑。嘴形与母图短横微开拉开可读区别，不张成夸张大圆口。\n最小辅助动作：头在原方向稍抬，下巴微前倾；右手仍停在左袖，左手低垂，两臂不展开、不指点，钥匙留腰，双脚不迈步。\n必须形成可读差异：E2警觉开眼、眉内扬与开口提醒，与E1垂眼、单眉轻挑及闭口冷笑明确不同；不把母图只换成抬手。\n剧情边界：警告不等于带路、入内授权、救出遇险者、结构已修好或实际塌楼；不画倒塌背景、新伤或箱子，不因钥匙在腰就画可开门，不推定DT07已开箱或工伤已赔。\n本人存活、在场、愿谈且有相应有限见闻时才适用。表情只是可逆美术提案，不改人物卡；两图不是先后结局，不推定任务完成、付款、治愈、赦免、承诺、授权、信任或关系成立。不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、钱币、信件、账簿或未有道具。情绪主要靠眉眼嘴；保留母图固有手位，但不统一套抬掌模板，不只换手势而复制脸。不得以画面声称原生游戏网格、part/frame/mask/origin、装备兼容、连续动画或runtime通过。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-TRS",
+      "slug": "moer_trs",
+      "name": "谟珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-TRS_谟珥.md",
+        "sha256": "95c9799a2b546eaa3f4cf733170fd84425e28de858a174474df7a69b34e80f9e"
+      },
+      "card_matches_eleventh_four_brief": true,
+      "age_identity_lock": "二十多岁的年轻人；堡垒寻宝者。当前源不明确性别，按中性成年可逆概念；不由名字、职业或文件slug推断canon性别。",
+      "source_anchor": {
+        "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1",
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v2_raw_imagegen.png",
+          "sha256": "fe036b6b160d952f3bca7e5cd49e4a4a579c02c03edfdb331c090cc7ca2bc3f6"
+        },
+        "transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png",
+          "sha256": "45f9ca7a50f6201e4d363d8a7a521fe20da81d5eb242a4e393151b7cf4a68793"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/manifest.json",
+          "sha256": "149a8934db89da5e04478031e26ea62470761b951202042c873375194640c5b9"
+        },
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "raw_canvas": [
+          1118,
+          1407
+        ],
+        "transparent_canvas": [
+          1118,
+          1407
+        ],
+        "raw_mode": "RGBA",
+        "transparent_mode": "RGBA",
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐一实际查看四人最终raw和transparent共8张；不是只读历史QA。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 27
+      },
+      "card_facts": [
+        "堡垒寻宝者，常在 `rumor_remoteBastion2` 一带。地域见 [[区域_R04_王廷关隘与边城]]。",
+        "二十多岁的年轻人，背着一把短铲，鞋上全是崖灰；说话时总往崖下看。",
+        "爱吹又心虚，讲一半就改口；被问同伴就摸铲柄。",
+        "崖下堆石的位置；传言是从哪个酒馆传出来的。不说同伴的下落；不承认自己挖过什么。"
+      ],
+      "observed_mother_image": "二十多岁、源卡未定性别的中性成年外观；年轻短面、无须、厚乱褐发，非对称略高的眉、眼看画面左，嘴角有一点心虚半笑。赭黄短外衣、麻白开领内衫与翻袖、深灰裤、褐靴；裤膝与鞋上保留浅崖灰。最终v2背负唯一短铲：D形木握把从画面右肩后伸出，画面右手留肩旁握把下方；轴中段被躯干遮住，铁灰铲刃从画面左髋后露出。画面左手在腰高外侧原位半摊解释，双脚平稳、不在崖沿。",
+      "fixed_prop_sides": [
+        "只使用最终v2母图：短铲背负，D形木把在画面右肩后，画面右手留握把下方；铁灰刃在画面左髋后，轴中段藏在躯干后。不能复用v1胸腹前轴错误，不能双铲、断铲、换肩或把刃放到身前。",
+        "画面左手保持本人母图腰高外侧半摊手位，只许轻微松指或停顿；不新增抬掌、不指崖、不招人跟随，不拿出宝物。",
+        "赭黄外衣、麻白内衫袖口、暗灰裤、褐靴及膝鞋崖灰照母图；不清洗灰迹、不画新伤、不把二十多岁中性成年面貌改成小孩或四十岁男人。",
+        "只用谟珥 / FX-TRS / moer_trs；不得使用摩珥 / FX-WIL / moer的账板、欠账台词、年龄或母图。源卡性别未明，不替其冻结canon性别。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "all_assets_png_files_scanned": 3254,
+        "all_assets_zip_archives_scanned": 170,
+        "matching_png_count": 8,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v1_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v2_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/superseded_v1/moer_trs_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/superseded_v1/moer_trs_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/superseded_v1/moer_trs_transparent.png"
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/eleventh_four_delivery_v1/新增剧情人物_岱珥谟珥源包.zip",
+            "sha256": "153f5eb56cda3104bd9037be372c1f65693f84d48578deac4010ca816fa53f2d",
+            "bytes": 14943789,
+            "member_count": 56,
+            "matching_member_count": 28,
+            "expression_or_action_members": []
+          },
+          {
+            "path": "Assets/DeliveryAudits/20261013/delivery_addendum_v1/第十一批_两人最终状态补充_v1.zip",
+            "sha256": "51391d2eab641cd761b0e04fc365c8a76a4e3d6672a4836e41eb3a2d63d81991",
+            "bytes": 2166,
+            "member_count": 3,
+            "matching_member_count": 1,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 4,
+        "excluded_other_identity_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/style_refs/luomin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/style_refs/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/style_refs/miloer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/style_refs/sela_G_raw_imagegen.png"
+        ],
+        "outside_concept_hits": [],
+        "matching_current_character_cards": [
+          "design/04_人物/野外人物/人物_FX-TRS_谟珥.md"
+        ],
+        "asset_path_scan": "新增来源快照之前，Assets全树PNG及全部ZIP成员按精确目录slug/文件名前缀/中文名核查；moer明确排除moer_trs，weier_ink不同于weier；style_refs他人图不计本人变体。",
+        "existing_expressions_found": 0,
+        "superseded_concept_note": "谟珥v1及superseded_v1均为已废概念，不是额外表情；只锁最终v2。",
+        "unexplained_hits": [],
+        "identity_guard": "只用谟珥 / FX-TRS / moer_trs；不得使用摩珥 / FX-WIL / moer的账板、欠账台词、年龄或母图。源卡性别未明，不替其冻结canon性别。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "moer_trs_E1_animated_rumour_telling",
+          "label_zh": "传言兴起",
+          "scene_proposal": "说起听来的寻宝传言时，一时讲得起劲，夸口语气超过自己能确认的事实；只是闲谈开始，未见宝藏或得到消息核验。",
+          "face_changes": "两眉比母图更抬起、其中一眉略高，眼帘打开一些，目光保持画面左的交谈方向；原来的小幅闭口半笑变为清楚的半开口讲述，唇角一高一低，有一点兴致和自我卖弄。保持年轻成年人本人面型，不大眼幼化，不仰头狂笑、不满脸胜利。",
+          "minimal_gesture": "下巴轻抬，右手仍触右肩后的铲柄下部，左手保留原腰高半摊位置不再抬高；背铲和双脚不动，不展示物品或招人下崖。",
+          "difference_from_static_and_pair": "母图是心虚侧目小半笑；E1抬眉、较开眼和明显开口讲述，E2是眉内拢、低移视线和收紧口，面部差异不能由手势替代。",
+          "condition_and_limit": "兴致不证明传言真实、找到宝物、曾挖何物、愿意带路或N3证词成立；不画宝物、金币、新土、同伴、听审灯或授权动作。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L824—828体貌、爱吹心虚与边界；L835、L837传言与消息闲谈；L846传言非证词"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-TRS].look/voice/not_knows/chats[0]/chats[2]/visits.before"
+          },
+          "output_stem": "moer_trs_E1_animated_rumour_telling",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw和transparent为唯一身份、服装、道具、朝向与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：谟珥（FX-TRS，moer_trs）。二十多岁的年轻人；堡垒寻宝者。当前源不明确性别，按中性成年可逆概念；不由名字、职业或文件slug推断canon性别。\n锁定母图：Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v2_raw_imagegen.png；透明清理版：Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png。不得引用其他人的脸或将废稿当参考。原样保留本人实际头身比例、体型、基础脸型、鼻唇、年龄、发型、肤色与朝向，不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖五官。沿用母图1118×1407纵向完整构图与合理留边，头发、双手、所有衣具、双鞋与全部原道具均完整，不裁切、不缩小道具腾地方。\n母图观察：二十多岁、源卡未定性别的中性成年外观；年轻短面、无须、厚乱褐发，非对称略高的眉、眼看画面左，嘴角有一点心虚半笑。赭黄短外衣、麻白开领内衫与翻袖、深灰裤、褐靴；裤膝与鞋上保留浅崖灰。最终v2背负唯一短铲：D形木握把从画面右肩后伸出，画面右手留肩旁握把下方；轴中段被躯干遮住，铁灰铲刃从画面左髋后露出。画面左手在腰高外侧原位半摊解释，双脚平稳、不在崖沿。\n固定手位、侧别与道具：只使用最终v2母图：短铲背负，D形木把在画面右肩后，画面右手留握把下方；铁灰刃在画面左髋后，轴中段藏在躯干后。不能复用v1胸腹前轴错误，不能双铲、断铲、换肩或把刃放到身前。 画面左手保持本人母图腰高外侧半摊手位，只许轻微松指或停顿；不新增抬掌、不指崖、不招人跟随，不拿出宝物。 赭黄外衣、麻白内衫袖口、暗灰裤、褐靴及膝鞋崖灰照母图；不清洗灰迹、不画新伤、不把二十多岁中性成年面貌改成小孩或四十岁男人。 只用谟珥 / FX-TRS / moer_trs；不得使用摩珥 / FX-WIL / moer的账板、欠账台词、年龄或母图。源卡性别未明，不替其冻结canon性别。\n本张可逆表情提案：传言兴起。说起听来的寻宝传言时，一时讲得起劲，夸口语气超过自己能确认的事实；只是闲谈开始，未见宝藏或得到消息核验。\n脸部：两眉比母图更抬起、其中一眉略高，眼帘打开一些，目光保持画面左的交谈方向；原来的小幅闭口半笑变为清楚的半开口讲述，唇角一高一低，有一点兴致和自我卖弄。保持年轻成年人本人面型，不大眼幼化，不仰头狂笑、不满脸胜利。\n最小辅助动作：下巴轻抬，右手仍触右肩后的铲柄下部，左手保留原腰高半摊位置不再抬高；背铲和双脚不动，不展示物品或招人下崖。\n必须形成可读差异：母图是心虚侧目小半笑；E1抬眉、较开眼和明显开口讲述，E2是眉内拢、低移视线和收紧口，面部差异不能由手势替代。\n剧情边界：兴致不证明传言真实、找到宝物、曾挖何物、愿意带路或N3证词成立；不画宝物、金币、新土、同伴、听审灯或授权动作。\n本人存活、在场、愿谈且有相应有限见闻时才适用。表情只是可逆美术提案，不改人物卡；两图不是先后结局，不推定任务完成、付款、治愈、赦免、承诺、授权、信任或关系成立。不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、钱币、信件、账簿或未有道具。情绪主要靠眉眼嘴；保留母图固有手位，但不统一套抬掌模板，不只换手势而复制脸。不得以画面声称原生游戏网格、part/frame/mask/origin、装备兼容、连续动画或runtime通过。"
+        },
+        {
+          "id": "E2",
+          "key": "moer_trs_E2_uneasy_companion_question",
+          "label_zh": "问伴心虚",
+          "scene_proposal": "被问到同伴的下落，先前的夸口停住，摸铲柄的习惯停在原位，目光落向原侧下方；不回答对方没被授权得知的事。",
+          "face_changes": "两内眉略抬并轻靠拢，外眉落下，眼帘收窄、瞳孔明确向画面左下移；嘴闭紧，原半笑消失，唇角轻下收，嘴唇像把半句话咽回去。读成心虚迟疑，不是哭泣、惨叫、认罪或确认同伴死亡。",
+          "minimal_gesture": "下巴稍收，右手在原肩后握柄处轻收指但不改变铲位；左手仍留腰高原位，指尖略松、掌不再摊大，不掩脸、不举停掌。",
+          "difference_from_static_and_pair": "E2的眉心紧、下视与紧闭口直接区别E1明亮开眼和开口讲述；相对母图半笑，E2全无笑意。背铲位置不随表情改变。",
+          "condition_and_limit": "不确定同伴死伤、失踪、归来或获救；不把“同伴先下去”当可核下落或认罪，不承认挖过何物，不宣布停挖、出发、带路或N3听审结束。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L826问同伴摸铲柄；L828不说下落/不承认所挖；L836本人说法；L840不带路"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-TRS].voice/not_knows/chats[1]/site_lines[refusal]"
+          },
+          "output_stem": "moer_trs_E2_uneasy_companion_question",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw和transparent为唯一身份、服装、道具、朝向与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：谟珥（FX-TRS，moer_trs）。二十多岁的年轻人；堡垒寻宝者。当前源不明确性别，按中性成年可逆概念；不由名字、职业或文件slug推断canon性别。\n锁定母图：Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v2_raw_imagegen.png；透明清理版：Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png。不得引用其他人的脸或将废稿当参考。原样保留本人实际头身比例、体型、基础脸型、鼻唇、年龄、发型、肤色与朝向，不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖五官。沿用母图1118×1407纵向完整构图与合理留边，头发、双手、所有衣具、双鞋与全部原道具均完整，不裁切、不缩小道具腾地方。\n母图观察：二十多岁、源卡未定性别的中性成年外观；年轻短面、无须、厚乱褐发，非对称略高的眉、眼看画面左，嘴角有一点心虚半笑。赭黄短外衣、麻白开领内衫与翻袖、深灰裤、褐靴；裤膝与鞋上保留浅崖灰。最终v2背负唯一短铲：D形木握把从画面右肩后伸出，画面右手留肩旁握把下方；轴中段被躯干遮住，铁灰铲刃从画面左髋后露出。画面左手在腰高外侧原位半摊解释，双脚平稳、不在崖沿。\n固定手位、侧别与道具：只使用最终v2母图：短铲背负，D形木把在画面右肩后，画面右手留握把下方；铁灰刃在画面左髋后，轴中段藏在躯干后。不能复用v1胸腹前轴错误，不能双铲、断铲、换肩或把刃放到身前。 画面左手保持本人母图腰高外侧半摊手位，只许轻微松指或停顿；不新增抬掌、不指崖、不招人跟随，不拿出宝物。 赭黄外衣、麻白内衫袖口、暗灰裤、褐靴及膝鞋崖灰照母图；不清洗灰迹、不画新伤、不把二十多岁中性成年面貌改成小孩或四十岁男人。 只用谟珥 / FX-TRS / moer_trs；不得使用摩珥 / FX-WIL / moer的账板、欠账台词、年龄或母图。源卡性别未明，不替其冻结canon性别。\n本张可逆表情提案：问伴心虚。被问到同伴的下落，先前的夸口停住，摸铲柄的习惯停在原位，目光落向原侧下方；不回答对方没被授权得知的事。\n脸部：两内眉略抬并轻靠拢，外眉落下，眼帘收窄、瞳孔明确向画面左下移；嘴闭紧，原半笑消失，唇角轻下收，嘴唇像把半句话咽回去。读成心虚迟疑，不是哭泣、惨叫、认罪或确认同伴死亡。\n最小辅助动作：下巴稍收，右手在原肩后握柄处轻收指但不改变铲位；左手仍留腰高原位，指尖略松、掌不再摊大，不掩脸、不举停掌。\n必须形成可读差异：E2的眉心紧、下视与紧闭口直接区别E1明亮开眼和开口讲述；相对母图半笑，E2全无笑意。背铲位置不随表情改变。\n剧情边界：不确定同伴死伤、失踪、归来或获救；不把“同伴先下去”当可核下落或认罪，不承认挖过何物，不宣布停挖、出发、带路或N3听审结束。\n本人存活、在场、愿谈且有相应有限见闻时才适用。表情只是可逆美术提案，不改人物卡；两图不是先后结局，不推定任务完成、付款、治愈、赦免、承诺、授权、信任或关系成立。不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、钱币、信件、账簿或未有道具。情绪主要靠眉眼嘴；保留母图固有手位，但不统一套抬掌模板，不只换手势而复制脸。不得以画面声称原生游戏网格、part/frame/mask/origin、装备兼容、连续动画或runtime通过。"
+        }
+      ]
+    }
+  ],
+  "source_conflicts": [
+    {
+      "character": "weier_ink",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+          "sha256": "83b227451dabc58fcecc00223a4039fa9ee3d2885f817720d217fc6e952c898c"
+        }
+      ],
+      "locator": "FX L494—498及npcs[id=FX-INK].visits；N5 L35—49、L71—85、L124—126、L162—168",
+      "conflict": "FX旧回访把“听全三种说法/认得出真假”压成笼统完成口气；现行N5要分别核三路物流并实际执行inspect/ferry/carrier。韦珥只知客房与东家日常，未获完整物流或围城住客知识。",
+      "disposition": "不采用FX完成/先后槽的真假认证作表情依据；不画留船位、引荐、通关、收款、赠房或N5结案。旧文件保留，不改写。"
+    },
+    {
+      "character": "moer",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT14_锈印章与假凭证.md",
+          "sha256": "604d5303ef69fb4c6daf8d2ec70cca1151898fc68bfba45c0a12cc9383aa435f"
+        }
+      ],
+      "locator": "FX L622—626及npcs[id=FX-WIL].visits；DT14 L22—26、L35—60、L102—118",
+      "conflict": "FX旧槽“账板上的名字我要划/这单我认/凭证的事了了”是酒馆账房口气；现行DT14是R04假工牌与真实护理需求分案，摩珥位于R05，不是本案看守、病户、护理或赦免经办人。",
+      "disposition": "只取普通生意口气、一次假凭证闲谈与拒绝免账；账板刻划全程不变，无划名、付款、免账、假牌鉴定、真实护理证明、军籍或DT14结案。地点链接不使他跨区在场。"
+    },
+    {
+      "character": "daier",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT07_一箱不该开封的货.md",
+          "sha256": "ad6c7be9f76f74216790150378b18626100ac7ea57eb17581138f7d0a3882dac"
+        }
+      ],
+      "locator": "FX L782—786及npcs[id=FX-MAN].visits；DT07 L35—60、L102、L112—118",
+      "conflict": "FX“后去开的箱”默认开箱，而现行DT07有limited有限验泄漏与quarantine不强开隔离退运两条互斥路线；岱珥并非箱主或运货员，也不能由庄园钥匙授予查看箱中商业秘密的权限。",
+      "disposition": "不以开箱、货物已知、隔离解除、工伤赔付或结案设计情绪；只用看守闲谈与结构危险提醒。钥匙不取下，侧门拒绝始终保留。"
+    },
+    {
+      "character": "moer_trs",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+          "sha256": "e14b9d1f5716ef7c5fb3667e10e2757fc8809beb0f1b708d41321fe31ebad082"
+        }
+      ],
+      "locator": "FX L846—850及npcs[id=FX-TRS].visits；N3 L35—49、L71—85、L98、L184—190",
+      "conflict": "FX旧槽“听审完了/才下崖”压缩任务与先后关系；当前N3在R01处理工资篡改，testimony/audit/collective分方法、授权与责任独立，R04谟珥的传言不是妮尔证词、受害人工资证据或NE1认证。",
+      "disposition": "不画听审胜利、证词认证、共同代理、到场授权、下崖带路或同伴归来；两表情只表现传言兴起与问伴迟疑。同伴先下去为角色自述，不确定当前下落。"
+    }
+  ],
+  "source_cautions": [
+    {
+      "character": "weier_ink",
+      "sources": [
+        {
+          "path": "design/04_人物/野外人物/人物_FX-HOM_苇珥.md",
+          "sha256": "1766c607e2967b2c1536ab5b72ae22e1517c68c594c0bb8f3918ed4b390fbc24"
+        },
+        {
+          "path": "design/04_人物/野外人物/人物_FX-INK_韦珥.md",
+          "sha256": "8560eb2122f5f61cd1e1fd616b82ff25b6c5848713fd1058e28cd651ab95bfa3"
+        }
+      ],
+      "locator": "FX-INK与FX-HOM人物卡",
+      "note": "韦珥weier_ink是四十来岁男旧仆；苇珥weier是五十来岁荒宅拾荒妇，严格按ID而非相近汉字或前缀匹配。新表情不能拿旧weier成品抵数。"
+    },
+    {
+      "character": "moer_and_moer_trs",
+      "sources": [
+        {
+          "path": "design/04_人物/野外人物/人物_FX-WIL_摩珥.md",
+          "sha256": "a0ff899e2b4454dfdab89d0dc3613a6f81ae5bda2ede37ed486dcefe21f3791c"
+        },
+        {
+          "path": "design/04_人物/野外人物/人物_FX-TRS_谟珥.md",
+          "sha256": "95c9799a2b546eaa3f4cf733170fd84425e28de858a174474df7a69b34e80f9e"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_eleventh_four_20261013.json",
+          "sha256": "9429cd34d4318eb8485902e2a5aed331ad4c69fd48450f7f46647c26b9d74810"
+        }
+      ],
+      "locator": "FX-WIL与FX-TRS人物卡；独审results[slug=moer_trs].revision_review",
+      "note": "摩珥moer与谟珥moer_trs年龄/身份/道具完全不同。谟珥只锁v2背铲，v1前侧轴错误不可重用；性别保持源未明和中性成年外观，不推为canon男性。"
+    },
+    {
+      "character": "daier",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_eleventh_four_20261013.json",
+          "sha256": "9429cd34d4318eb8485902e2a5aed331ad4c69fd48450f7f46647c26b9d74810"
+        }
+      ],
+      "locator": "FX L760—776；独审results[slug=daier].gesture",
+      "note": "掸袖是母图对门廊掸灰习惯的可逆画面转译，不是脚本明确原动作；不扩大成清扫事件或以新背景证明发生。钥匙无用的身份线索优先于“持钥即可开门”的视觉误读。"
+    },
+    {
+      "character": "all",
+      "sources": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+          "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_eleventh_four_20261013.json",
+          "sha256": "9429cd34d4318eb8485902e2a5aed331ad4c69fd48450f7f46647c26b9d74810"
+        }
+      ],
+      "locator": "STYLE_DIRECTION制作优先级；四人delivery_binding",
+      "note": "旧manifest的pending仅是冻结时状态，已由后续独审绑定最终clean与展示；不改旧manifest。四人均1118×1407，本次维持各自实际比例而非统一头身数字。母图灰鬓、衣色和手势等未写卡细节仍为美术提案，不提升为剧情canon。"
+    }
+  ],
+  "source_notes": "本任务实际view4人最终raw和transparent共8张，复核4份冻结manifest合计82条，以及raw/transparent/manifest对最终独审的三联SHA。快照写入前扫描Assets全树3254张PNG、170个ZIP成员，未发现四人的旧表情或动作；谟珥废v1只作历史概念。现行4张人物卡、FX原对白与N5/DT14/DT07/N3已读。仅规划，0次生图。",
+  "validation": {
+    "source_cards": 4,
+    "viewed_final_raw_images": 4,
+    "viewed_final_transparent_images": 4,
+    "raw_transparent_manifest_hash_triples_verified": 4,
+    "manifest_entries_verified": 82,
+    "planned_expressions": 8,
+    "complete_prompt_texts": 8,
+    "actual_generation_calls": 0,
+    "existing_expressions_found": 0,
+    "zip_scan_errors": [],
+    "scope_note": "只新增eleventh_four_expression_brief.json和eleventh_four_expression_sources；没有design、旧资产/QA/roster/MASTER编辑，没有git、上传、生图或游戏运行。",
+    "source_snapshots": 58,
+    "source_snapshot_readback_verified": true,
+    "source_files_unchanged_readback": true,
+    "all_frozen_manifest_entries_unchanged_readback": true,
+    "direct_path_sha_references_readback_verified": 182,
+    "unique_path_sha_targets_readback_verified": 120,
+    "readback_verified_utc": "2026-10-14T02:55:51.732983+00:00"
+  },
+  "source_snapshot_index": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_four_expression_sources/source_index.json",
+    "sha256": "8bdfcdfc6e03f1bf8b2e8d7a0acbcc9cf4bec91111713ce32e6621a782cf12ba"
+  }
+}

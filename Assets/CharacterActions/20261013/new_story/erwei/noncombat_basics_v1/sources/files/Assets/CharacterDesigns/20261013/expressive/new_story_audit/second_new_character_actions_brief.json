@@ -1,0 +1,1254 @@
+{
+  "schema_version": 2,
+  "created_utc": "2026-10-14T03:14:08.716506+00:00",
+  "status": "planning_complete_not_generated",
+  "purpose": "第二批4名既有新剧情人物的8个独立非战斗身体/手部动作关键姿态，仅规划；不生成、不改已冻结图像或剧情源。",
+  "scope": {
+    "selected_characters": 4,
+    "planned_new_independent_fullbody_keyposes": 8,
+    "generated_images": 0,
+    "revision_images": 0,
+    "new_characters": 0,
+    "full_animation": false,
+    "gif_planned": false,
+    "equipment_or_engine_work": false,
+    "git_or_upload_performed": false,
+    "changed_existing_assets": false
+  },
+  "requested_candidates": [
+    "deru",
+    "hoer",
+    "turi",
+    "cuoer"
+  ],
+  "substitutions": [],
+  "global_boundaries": [
+    "每人2张独立静态动作；起止仅文字说明，编号不表示剧情顺序、连续动画或循环。",
+    "身份、年龄、服装、成熟紧凑比例、旧疤与工具侧别以本人的已审raw/透明母图和当前卡锁定。",
+    "所有8图应有真实手位、道具状态或髋膝重心变化，不再用单一抬掌/微表情充数。",
+    "仅锉珥A2允许脚边最小稳定轨段，其余7图没有新增物件或场景。",
+    "每姿态首稿1次＋至多1次硬错修订；安全blocked立即停，不换工具/改写规避，不无上限追加。",
+    "旧图、旧prompt、manifest、QA、收据和设计源全部保留不修改。",
+    "单图不产生完成、合格、许可、付薪、续班、治疗、痊愈、所有权或游戏状态。",
+    "本文件尚未独立审查；后续生成前需读当前动作spec与母图指纹，输入变化则重核，不静默沿用旧SHA。"
+  ],
+  "source_sha_snapshots": [
+    {
+      "source_id": "roster44",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json",
+      "sha256": "39023b5f3db9980e063b8e57e9bc3cfe3786304f7aef22767c78e10afd631992",
+      "bytes": 142768,
+      "role": "44人稳定身份及当前卡来源；历史production状态不作当前完成计数",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/roster44.json"
+    },
+    {
+      "source_id": "action_coverage",
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "sha256": "61ed5cd1846ef3017b4b1c72cb5a63432aa22a4c9d151d5b789f586245f498bb",
+      "bytes": 26364,
+      "role": "既有动作和停止的自然步行研究范围",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/action_coverage.md"
+    },
+    {
+      "source_id": "master_supplements",
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "99fb786c7d83aa9f44e3c96a78fb83f3dac5dc42e7732602736e06ed9716dc59",
+      "bytes": 26988,
+      "role": "已有职业动作、衣袖/围裙等语义去重",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/master_supplements.md"
+    },
+    {
+      "source_id": "first_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_brief.json",
+      "sha256": "4c7d2a9fbcc5a7efddd873261c4ae29030d84fcabf0908d066d6e6561e1f4b7b",
+      "bytes": 63732,
+      "role": "前批8动作及图里未选原因；本次仅补准备动作，不无目标挥锤",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/first_actions_brief.json"
+    },
+    {
+      "source_id": "action_delivery_index",
+      "path": "Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md",
+      "sha256": "5ae87df1479981dc4e2bd2216558350beccc1d4262f5c21df063f2b8b445371f",
+      "bytes": 1635,
+      "role": "前批安妮/古菈/维菈/洛珉8静态姿态已发送accepted证据",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/action_delivery_index.md"
+    },
+    {
+      "source_id": "style_direction",
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+      "bytes": 6187,
+      "role": "成熟紧凑比例、粗像素风格与概念/引擎边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/style_direction.md"
+    },
+    {
+      "source_id": "root_agents",
+      "path": "AGENTS.md",
+      "sha256": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+      "bytes": 68775,
+      "role": "仓库规则只读快照",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/root_agents.md"
+    },
+    {
+      "source_id": "design_agents",
+      "path": "design/AGENTS.md",
+      "sha256": "302d9d3ef38f2fe27a28cf8cb672ed5cf3b33d5493603588d4dbc22a9932b37e",
+      "bytes": 64250,
+      "role": "设计源规则只读快照；本轮不改design",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/design_agents.md"
+    },
+    {
+      "source_id": "pixel_asset_skill",
+      "path": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+      "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08",
+      "bytes": 16285,
+      "role": "按指定读取的归档像素工作流；本任务只规划，未进入生成阶段",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/pixel_asset_skill.md"
+    },
+    {
+      "source_id": "qa_first",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_first_four_20261013.json",
+      "sha256": "2776c7e8d5bca3661db7bc992505d4708dddb458f3c85290362f37a21daed21f",
+      "bytes": 14266,
+      "role": "德茹/霍珥已选raw和透明母图独审绑定",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/qa_first.json"
+    },
+    {
+      "source_id": "qa_third",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_third_four_20261013.json",
+      "sha256": "1035661926eab047adc4aac950582a6f924f42146aacfee2148206bb1cb267d4",
+      "bytes": 16192,
+      "role": "图里/锉珥已选raw和透明母图独审绑定",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/qa_third.json"
+    },
+    {
+      "source_id": "field_dialogue",
+      "path": "research/field-npc-dialogue.json",
+      "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+      "bytes": 132451,
+      "role": "当前FX-QRY/FX-MIL/FX-MN2完整逐角色对白及知情边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/field_dialogue.json"
+    },
+    {
+      "source_id": "field_script",
+      "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+      "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+      "bytes": 105635,
+      "role": "当前野外台本原句及条件回访",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/field_script.md"
+    },
+    {
+      "source_id": "turi_script01",
+      "path": "design/06_支线/城市支线/台本_CS-HIG-01_回风驿的停牌.md",
+      "sha256": "7dd001f462d125ff3c4e449838f6625187e0a63f4065dcce0a4b5cba62662cb3",
+      "bytes": 16698,
+      "role": "稳定侧检查、限定班、实付/复核/停牌边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_script01.md"
+    },
+    {
+      "source_id": "turi_script03",
+      "path": "design/06_支线/城市支线/台本_CS-HIG-03_留下的人.md",
+      "sha256": "9160ce9972e026fe5209f198a8ad5433a0dd75e8ff6fab5f0135bad3c7831718",
+      "bytes": 17472,
+      "role": "新班费用、交接与本人授权边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_script03.md"
+    },
+    {
+      "source_id": "turi_chapter",
+      "path": "design/05_主线/城市篇章/台本_CM-HIG_回程也是答案.md",
+      "sha256": "9b007f9d374dffae90cc8a392483cd2437b6e3e475a4bbeed223e26cbf7f109b",
+      "bytes": 23761,
+      "role": "外段本班、N17冻结与非全山担保边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_chapter.md"
+    },
+    {
+      "source_id": "deru_card",
+      "path": "design/04_人物/野外人物/人物_FX-QRY_德茹.md",
+      "sha256": "3895a81fd2059349a92af90cba1ad5ebd42f3e9242c37d1fe6b08a7380be005a",
+      "bytes": 1108,
+      "role": "当前人物卡：年龄、道具及身份/能力边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/deru_card.md"
+    },
+    {
+      "source_id": "deru_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/manifest.json",
+      "sha256": "b565f01233f28ed2be272a2c646f93443fb489cbd818b9e9486dbc6a88b06041",
+      "bytes": 3729,
+      "role": "母图/表情来源：冻结选稿与SHA",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/deru_manifest.json"
+    },
+    {
+      "source_id": "deru_spec_lock",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/spec_lock.md",
+      "sha256": "87304b3b4bdb9663bcc43f455c0a621f98cb6e5323e6f4be9dcf7f22c0284228",
+      "bytes": 1157,
+      "role": "母图/表情来源：历史母图生成规格；本轮动作可变但身份/比例不变",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/deru_spec_lock.md"
+    },
+    {
+      "source_id": "deru_character_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/character_brief.json",
+      "sha256": "f13964c7f99e32596d45c68ff84947667a2dc790cd7ef70793191cd04927ab98",
+      "bytes": 3984,
+      "role": "母图/表情来源：母图身份与来源历史",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/deru_character_brief.json"
+    },
+    {
+      "source_id": "deru_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/../expressions_v1/manifest.json",
+      "sha256": "a06c1bb4e5e90c602ed24cd2b3e3736375fd7fd772cfac88486fec305621384e",
+      "bytes": 5574,
+      "role": "母图/表情来源：既有表情/小手势去重",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/deru_expression_manifest.json"
+    },
+    {
+      "source_id": "deru_expression_board",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/expressions_v1/review/deru_expressions_light.png",
+      "sha256": "4f09e7e57ce87dbeb9a40596937fed2008796522900b6e2c339cc90b6582b677",
+      "bytes": 718703,
+      "role": "已实际view的既有表情板；不重审表情，不计新动作"
+    },
+    {
+      "source_id": "deru_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_v2_raw_imagegen.png",
+      "sha256": "0dfc9b5caa66f636ca853b76c9a1a46c597862c64d59d2b2fbe0372e2b21c8e3",
+      "bytes": 783323,
+      "role": "已实际view的母图；只指纹，不复制或修改图像"
+    },
+    {
+      "source_id": "deru_anchor",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_transparent.png",
+      "sha256": "9a335a68915943a6c2c01b8aa30c6a49248b3a5c3e837d39076b6c3c57ec5f8c",
+      "bytes": 693217,
+      "role": "已实际view的母图；只指纹，不复制或修改图像"
+    },
+    {
+      "source_id": "hoer_card",
+      "path": "design/04_人物/野外人物/人物_FX-MIL_霍珥.md",
+      "sha256": "b31ef9937d65c2b8ee708e346ae4aad35c68b52cdd3ec5125a70f5d4a339094b",
+      "bytes": 1122,
+      "role": "当前人物卡：年龄、道具及身份/能力边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/hoer_card.md"
+    },
+    {
+      "source_id": "hoer_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/manifest.json",
+      "sha256": "c26ea63a2e8133810284a7408b06d735b59173e1fa4074c74b013bc352b9ec64",
+      "bytes": 3419,
+      "role": "母图/表情来源：冻结选稿与SHA",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/hoer_manifest.json"
+    },
+    {
+      "source_id": "hoer_spec_lock",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/spec_lock.md",
+      "sha256": "5fa5af4470f11933b109636cdcca203be5b2cff609e0913d127d2e0fde6896be",
+      "bytes": 1264,
+      "role": "母图/表情来源：历史母图生成规格；本轮动作可变但身份/比例不变",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/hoer_spec_lock.md"
+    },
+    {
+      "source_id": "hoer_character_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/character_brief.json",
+      "sha256": "4af89dcbb2c8be8246643c1fe07c02dc22499fdf090c27aceb857f8a51db3695",
+      "bytes": 4116,
+      "role": "母图/表情来源：母图身份与来源历史",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/hoer_character_brief.json"
+    },
+    {
+      "source_id": "hoer_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/../expressions_v1/manifest.json",
+      "sha256": "21b44d27c17af2c9eda607a91902776c58632d6bd0cad6ee4a97c1ceec92a483",
+      "bytes": 5573,
+      "role": "母图/表情来源：既有表情/小手势去重",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/hoer_expression_manifest.json"
+    },
+    {
+      "source_id": "hoer_expression_board",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/expressions_v1/review/hoer_expressions_light.png",
+      "sha256": "2cca61c09df9efb231b35cd4933e54a7c9cc9bc07a79977ad87222a213e58507",
+      "bytes": 745262,
+      "role": "已实际view的既有表情板；不重审表情，不计新动作"
+    },
+    {
+      "source_id": "hoer_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_v1_raw_imagegen.png",
+      "sha256": "2e978cb06e5e71dc342946d2ff2255ae32716afb47ca67be8d95aa7ac365f189",
+      "bytes": 886818,
+      "role": "已实际view的母图；只指纹，不复制或修改图像"
+    },
+    {
+      "source_id": "hoer_anchor",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_transparent.png",
+      "sha256": "2ad7fad3d48561ccefe04f1363c0f382d7eb8f4393cfa5acd9d8c62147680718",
+      "bytes": 806257,
+      "role": "已实际view的母图；只指纹，不复制或修改图像"
+    },
+    {
+      "source_id": "turi_card",
+      "path": "design/04_人物/城市人物/人物_HIG-NPC-TURI_图里.md",
+      "sha256": "80a86f6195ad2093934b9162e5f2418aab3b8c8c62f2912e72dae414c7305dfc",
+      "bytes": 2022,
+      "role": "当前人物卡：年龄、道具及身份/能力边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_card.md"
+    },
+    {
+      "source_id": "turi_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/manifest.json",
+      "sha256": "a26e44e43e20f036f2ae1ed022fcd7b072c0fa73cb67d9d26e0a293cbba33975",
+      "bytes": 3323,
+      "role": "母图/表情来源：冻结选稿与SHA",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_manifest.json"
+    },
+    {
+      "source_id": "turi_spec_lock",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/spec_lock.md",
+      "sha256": "a8593f6d986f7351704e9300c5ee108f5095c9eeeef249e23685b9705b3f86c0",
+      "bytes": 1928,
+      "role": "母图/表情来源：历史母图生成规格；本轮动作可变但身份/比例不变",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_spec_lock.md"
+    },
+    {
+      "source_id": "turi_character_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/character_brief.json",
+      "sha256": "bdbad5daed1834eec5adc35591fb9179e264cbfb7fdbf0691f8c364d9f3c16fb",
+      "bytes": 4749,
+      "role": "母图/表情来源：母图身份与来源历史",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_character_brief.json"
+    },
+    {
+      "source_id": "turi_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/../expressions_v1/manifest.json",
+      "sha256": "189c10ef224005fe09f5c7c4dac2d1485c662a03431fc159725173dc60322d4e",
+      "bytes": 7155,
+      "role": "母图/表情来源：既有表情/小手势去重",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_expression_manifest.json"
+    },
+    {
+      "source_id": "turi_expression_board",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/expressions_v1/review/turi_expressions_light.png",
+      "sha256": "aef9efd9b787bedf5816462a529be4cf8cc7a21430e68a591710fb4f76f8bf92",
+      "bytes": 1147199,
+      "role": "已实际view的既有表情板；不重审表情，不计新动作"
+    },
+    {
+      "source_id": "turi_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_v2_raw_imagegen.png",
+      "sha256": "a7e51617b0bc129bf7dc9406e0e316244e148418fd97184837c270ee003d08e2",
+      "bytes": 698203,
+      "role": "已实际view的母图；只指纹，不复制或修改图像"
+    },
+    {
+      "source_id": "turi_anchor",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png",
+      "sha256": "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695",
+      "bytes": 624295,
+      "role": "已实际view的母图；只指纹，不复制或修改图像"
+    },
+    {
+      "source_id": "cuoer_card",
+      "path": "design/04_人物/野外人物/人物_FX-MN2_锉珥.md",
+      "sha256": "5403f1910562cf020947cedd209d6ea0f870b6536f6d628dc595f3385a28c1be",
+      "bytes": 1039,
+      "role": "当前人物卡：年龄、道具及身份/能力边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_card.md"
+    },
+    {
+      "source_id": "cuoer_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/manifest.json",
+      "sha256": "a28f0f8741d0e81f2c18ae59cb90ca4d85e8e15b4024438e0ccc531764611a76",
+      "bytes": 3733,
+      "role": "母图/表情来源：冻结选稿与SHA",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_manifest.json"
+    },
+    {
+      "source_id": "cuoer_spec_lock",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/spec_lock.md",
+      "sha256": "ca67b1aaab48fbf1a4e45afca4d7bce10973ec5a6cb1b6a3ba618fa0b49108ab",
+      "bytes": 500,
+      "role": "母图/表情来源：历史母图生成规格；本轮动作可变但身份/比例不变",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_spec_lock.md"
+    },
+    {
+      "source_id": "cuoer_character_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/character_brief.json",
+      "sha256": "5e0b3d96fbdab31ae734783ece2035ff56a5004e786978828bf6c5f060054844",
+      "bytes": 5135,
+      "role": "母图/表情来源：母图身份与来源历史",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_character_brief.json"
+    },
+    {
+      "source_id": "cuoer_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/../expressions_v1/manifest.json",
+      "sha256": "2e6433b7385c3a005a7a7539d5390d7b28f74c06702becb3f79ddfb37ac7605a",
+      "bytes": 5122,
+      "role": "母图/表情来源：既有表情/小手势去重",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_expression_manifest.json"
+    },
+    {
+      "source_id": "cuoer_expression_board",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/expressions_v1/review/cuoer_expressions_light_board.png",
+      "sha256": "99d8e1125bc9edf4b6824e667b68188efea721a24dfbb513617835c0e5e1e75f",
+      "bytes": 1370704,
+      "role": "已实际view的既有表情板；不重审表情，不计新动作"
+    },
+    {
+      "source_id": "cuoer_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_v2_raw_imagegen.png",
+      "sha256": "1668632a6d87ef4a7bdac028abe16ba048a7092aeb45edc9f3e5509fabaf1533",
+      "bytes": 1262236,
+      "role": "已实际view的母图；只指纹，不复制或修改图像"
+    },
+    {
+      "source_id": "cuoer_anchor",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png",
+      "sha256": "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662",
+      "bytes": 714133,
+      "role": "已实际view的母图；只指纹，不复制或修改图像"
+    }
+  ],
+  "coverage_audit": {
+    "read_indexes": [
+      "action_coverage",
+      "master_supplements",
+      "action_delivery_index",
+      "first_actions_brief"
+    ],
+    "scan_manifest": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/action_tree_scan.json",
+    "scan_manifest_sha256": "fb39ba331558f920a0e70034a50fd3ce44facfe0725dbac0dabc6c99626122d4",
+    "action_tree_file_count": 2008,
+    "metadata_scanned_count": 682,
+    "candidate_non_source_action_metadata_matches": 0,
+    "candidate_zip_path_matches": 0,
+    "all_four_raw_and_transparent_viewed": true,
+    "all_four_expression_boards_viewed": true,
+    "absence_scope": "本地Assets/CharacterActions全树及4人自身分支；递归查元数据和ZIP成员路径，来源快照不视作原动作。不扩大为外部电脑或未连接云源的全局缺失。",
+    "semantic_near_duplicates_rejected": [
+      "通用抬掌制止/摊掌闲谈已有广泛覆盖",
+      "Osin袖口整理、Vasen拂围裙不复制给霍珥/德茹",
+      "翻簿/纸单/递空碗已有，不给四人硬添文书",
+      "图里无目标空挥锤会泛化，替为低位握持准备；不声称敲三下完成"
+    ],
+    "first_batch_status": "安妮/古菈/维菈/洛珉各2静态动作已交accepted，仍不是连续动画。"
+  },
+  "characters": [
+    {
+      "slug": "deru",
+      "canonical_id": "FX-QRY",
+      "name": "德茹",
+      "status": "planned_only_not_generated",
+      "selection_status": "requested_candidate_suitable_retained",
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "deru_card",
+        "deru_manifest",
+        "deru_spec_lock",
+        "deru_character_brief",
+        "deru_expression_manifest",
+        "deru_expression_board",
+        "deru_raw",
+        "deru_anchor",
+        "qa_first",
+        "field_dialogue",
+        "field_script"
+      ],
+      "mother_image": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_transparent.png",
+        "sha256": "9a335a68915943a6c2c01b8aa30c6a49248b3a5c3e837d39076b6c3c57ec5f8c",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_v2_raw_imagegen.png",
+        "raw_sha256": "0dfc9b5caa66f636ca853b76c9a1a46c597862c64d59d2b2fbe0372e2b21c8e3",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "raw_and_transparent_actually_viewed": true,
+        "viewed_utc": "2026-10-14T03:03:55Z",
+        "hashes_match_manifest_and_independent_qa": true,
+        "existing_expression_board_actually_viewed": true,
+        "old_pose": "直站，右手向画面左下示意，左手近左围裙凿子。表情E1收下右手，E2腰下摊右掌，凿子均未取出。",
+        "identity_lock": "约五十岁的女石工，灰白夹深发后束、熟龄厚下颌、粗指节、结实紧凑成年身体；灰粗布衣、赭棕长围裙、棕靴。人物右肩（画面左）略低于左肩，保留自然旧姿态，不画疼痛或新伤。",
+        "side_lock": "唯一磨秃凿子平时别在人物左侧围裙（画面右）；左右按人物解剖侧，不镜像。只有A1左手取用该凿；A2原位收好。"
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "own_action_directories_found": [],
+        "non_source_action_metadata_matches": [],
+        "existing_expressions_actually_viewed": true,
+        "do_not_recount": [
+          "concept_v1母图",
+          "expressions_v1情绪与小手势",
+          "复制source/交付包内的母图",
+          "仅表情或不改变接触/手脚结构的小变化"
+        ]
+      },
+      "story_boundaries": [
+        "不下坑探路、不复工、不宣布欠薪清偿、不替石场主认领人或石料；不知道军务调动。",
+        "仅日常自有工具与衣物动作；查凿不等于磨锋利，低蹲不指向任何已发现证据。"
+      ],
+      "risks": [
+        "高龄不能幼化成灰发少女；保持粗指节与自然右低肩。",
+        "凿子取用后原挂位必须为空；不增锤、磨石、石料或修磨火花。",
+        "拢裙不是掀衣暴露、下坑许可或越塌方线；双靴和内层灰衣保持完整。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/deru/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "deru_A1_check_blunt_chisel",
+          "title_zh": "双手近身查看钝凿",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "deru_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "围裙上别着一把磨秃的凿子。"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-QRY / chats[1]",
+              "line_start": 44,
+              "quote": "凿子钝了能磨，人手散了磨不回来。"
+            }
+          ],
+          "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+          "start_pose_description_only": "稳站，凿子仍别在人物左侧围裙，双臂收近；左手先握柄取出，右手随后托稳工具中部。",
+          "pose": "双脚原地分开稳立，左肘贴近肋侧，左手从原左侧围裙取出同一磨秃凿子并握住木柄，在腰上方斜横持；右手从下托住钝凿的中部厚实杆身，不碰刃口。凿头朝画面左上且低于胸口，头略前低看钝端，两手之间留出可读工具轮廓；围裙原挂位清楚为空。",
+          "end_pose_description_only": "右手松开托持，左手把同一凿子回到原左围裙挂位；双脚不走动。此结束态不另出图。",
+          "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+          "contact_and_support_checks": [
+            "重心在两靴之间，两脚全掌落在同一隐含平面",
+            "左手握木柄、右手托非刃中段，左右腕无反折，钝端不指向身体",
+            "右低肩保持，手臂收近形成不同于原向下示意的轮廓"
+          ],
+          "prop_state_and_retention": [
+            "一把原凿，原围裙挂位空",
+            "不添磨石/小锤/新石块，钝端保持磨秃，不变亮刃"
+          ],
+          "difference_from_mother_expression_and_batch": "母图及E1/E2均未取凿；此图两手共同承托原凿，区别维菈规贴样品及旧递物动作。",
+          "risk_level": "medium",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_transparent.png"
+          ],
+          "reference_sha256": [
+            "9a335a68915943a6c2c01b8aa30c6a49248b3a5c3e837d39076b6c3c57ec5f8c"
+          ],
+          "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：德茹 / FX-QRY。约五十岁的女石工，灰白夹深发后束、熟龄厚下颌、粗指节、结实紧凑成年身体；灰粗布衣、赭棕长围裙、棕靴。人物右肩（画面左）略低于左肩，保留自然旧姿态，不画疼痛或新伤。\n固定侧别：唯一磨秃凿子平时别在人物左侧围裙（画面右）；左右按人物解剖侧，不镜像。只有A1左手取用该凿；A2原位收好。\n本张动作：双手近身查看钝凿。双脚原地分开稳立，左肘贴近肋侧，左手从原左侧围裙取出同一磨秃凿子并握住木柄，在腰上方斜横持；右手从下托住钝凿的中部厚实杆身，不碰刃口。凿头朝画面左上且低于胸口，头略前低看钝端，两手之间留出可读工具轮廓；围裙原挂位清楚为空。\n支撑与接触：重心在两靴之间，两脚全掌落在同一隐含平面；左手握木柄、右手托非刃中段，左右腕无反折，钝端不指向身体；右低肩保持，手臂收近形成不同于原向下示意的轮廓。\n道具保留：一把原凿，原围裙挂位空；不添磨石/小锤/新石块，钝端保持磨秃，不变亮刃。\n附加约束：不做举凿威胁、磨凿工序或向画外递出。\n剧情边界：不下坑探路、不复工、不宣布欠薪清偿、不替石场主认领人或石料；不知道军务调动。；仅日常自有工具与衣物动作；查凿不等于磨锋利，低蹲不指向任何已发现证据。",
+          "prompt_sha256": "184150ad9a02afd74e203646228eba712b034b3ee72e5e86fd966638fe2bdae7",
+          "negative_constraints": [
+            "高龄不能幼化成灰发少女；保持粗指节与自然右低肩。",
+            "凿子取用后原挂位必须为空；不增锤、磨石、石料或修磨火花。",
+            "拢裙不是掀衣暴露、下坑许可或越塌方线；双靴和内层灰衣保持完整。",
+            "不下坑探路、不复工、不宣布欠薪清偿、不替石场主认领人或石料；不知道军务调动。",
+            "仅日常自有工具与衣物动作；查凿不等于磨锋利，低蹲不指向任何已发现证据。"
+          ],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/deru_A1_check_blunt_chisel_prompt.txt"
+        },
+        {
+          "key": "deru_A2_gather_apron_crouch",
+          "title_zh": "拢住围裙，稳身低蹲",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "deru_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "五十岁上下的女石工，指节粗大，右肩比左肩低；围裙上别着一把磨秃的凿子。"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-QRY / knows[1]",
+              "line_start": 22,
+              "quote": "哪一段岩壁在渗水"
+            }
+          ],
+          "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+          "start_pose_description_only": "在安全平地双靴分开，凿子已在左围裙原位；右手先捏住自己右侧围裙下摆，左手准备撑左大腿。",
+          "pose": "人物保持原三分之四朝向，双膝明显弯曲、髋后移成浅蹲，上身随髋略前倾而非仅低头。右手（画面左）把自己右侧赭棕围裙下缘拢起少许、停在右膝外侧，左掌实贴左大腿膝上作辅助支撑。视线向近脚前下方；两靴完整着地。内层灰衣与裤腿仍遮蔽身体，左围裙凿子仍挂稳，不能变成取凿。",
+          "end_pose_description_only": "凭双腿伸膝回到稳站，再松开围裙；不迈步、不下坑、不拾得物件。",
+          "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+          "contact_and_support_checks": [
+            "双靴脚掌着地、膝朝脚尖方向，髋部重心落在双足支撑区",
+            "左掌压自己大腿不是压空气，右手有明确布料捏持点与褶皱",
+            "围裙只收少量长度避免拦膝，不改衣装层次或露出不该出现的肌肤"
+          ],
+          "prop_state_and_retention": [
+            "原凿一件保留人物左围裙原挂位，不能随围裙收边消失",
+            "无石块、坑沿、白线、背景或新检查结果"
+          ],
+          "difference_from_mother_expression_and_batch": "母图和表情都直站；A1站立持凿，本图下肢/髋位改变并接触自有衣物。不是瓦森拂围裙，也不是洛珉放灯。",
+          "risk_level": "medium_high",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_transparent.png"
+          ],
+          "reference_sha256": [
+            "9a335a68915943a6c2c01b8aa30c6a49248b3a5c3e837d39076b6c3c57ec5f8c"
+          ],
+          "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：德茹 / FX-QRY。约五十岁的女石工，灰白夹深发后束、熟龄厚下颌、粗指节、结实紧凑成年身体；灰粗布衣、赭棕长围裙、棕靴。人物右肩（画面左）略低于左肩，保留自然旧姿态，不画疼痛或新伤。\n固定侧别：唯一磨秃凿子平时别在人物左侧围裙（画面右）；左右按人物解剖侧，不镜像。只有A1左手取用该凿；A2原位收好。\n本张动作：拢住围裙，稳身低蹲。人物保持原三分之四朝向，双膝明显弯曲、髋后移成浅蹲，上身随髋略前倾而非仅低头。右手（画面左）把自己右侧赭棕围裙下缘拢起少许、停在右膝外侧，左掌实贴左大腿膝上作辅助支撑。视线向近脚前下方；两靴完整着地。内层灰衣与裤腿仍遮蔽身体，左围裙凿子仍挂稳，不能变成取凿。\n支撑与接触：双靴脚掌着地、膝朝脚尖方向，髋部重心落在双足支撑区；左掌压自己大腿不是压空气，右手有明确布料捏持点与褶皱；围裙只收少量长度避免拦膝，不改衣装层次或露出不该出现的肌肤。\n道具保留：原凿一件保留人物左围裙原挂位，不能随围裙收边消失；无石块、坑沿、白线、背景或新检查结果。\n附加约束：只是在安全平处为低位观察作准备；不得画已跨线下坑。\n剧情边界：不下坑探路、不复工、不宣布欠薪清偿、不替石场主认领人或石料；不知道军务调动。；仅日常自有工具与衣物动作；查凿不等于磨锋利，低蹲不指向任何已发现证据。",
+          "prompt_sha256": "4e415e1cc0f16040e305152af7a23b01476b413cd4381115ca00ffa41ff2b8cf",
+          "negative_constraints": [
+            "高龄不能幼化成灰发少女；保持粗指节与自然右低肩。",
+            "凿子取用后原挂位必须为空；不增锤、磨石、石料或修磨火花。",
+            "拢裙不是掀衣暴露、下坑许可或越塌方线；双靴和内层灰衣保持完整。",
+            "不下坑探路、不复工、不宣布欠薪清偿、不替石场主认领人或石料；不知道军务调动。",
+            "仅日常自有工具与衣物动作；查凿不等于磨锋利，低蹲不指向任何已发现证据。"
+          ],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/deru_A2_gather_apron_crouch_prompt.txt"
+        }
+      ]
+    },
+    {
+      "slug": "hoer",
+      "canonical_id": "FX-MIL",
+      "name": "霍珥",
+      "status": "planned_only_not_generated",
+      "selection_status": "requested_candidate_suitable_retained",
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "hoer_card",
+        "hoer_manifest",
+        "hoer_spec_lock",
+        "hoer_character_brief",
+        "hoer_expression_manifest",
+        "hoer_expression_board",
+        "hoer_raw",
+        "hoer_anchor",
+        "qa_first",
+        "field_dialogue",
+        "field_script"
+      ],
+      "mother_image": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_transparent.png",
+        "sha256": "2ad7fad3d48561ccefe04f1363c0f382d7eb8f4393cfa5acd9d8c62147680718",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_v1_raw_imagegen.png",
+        "raw_sha256": "2e978cb06e5e71dc342946d2ff2255ae32716afb47ca67be8d95aa7ac365f189",
+        "size": [
+          1049,
+          1499
+        ],
+        "mode": "RGBA",
+        "raw_and_transparent_actually_viewed": true,
+        "viewed_utc": "2026-10-14T03:03:55Z",
+        "hashes_match_manifest_and_independent_qa": true,
+        "existing_expression_board_actually_viewed": true,
+        "old_pose": "直站，右掌举起制止，左手侧落。表情E1降掌闲谈；E2右手近胸压声，均非双手接触或下肢支撑变化。",
+        "identity_lock": "三十来岁成年男子，棕短发、粗眉、短须和结实脸；蓝灰工褂袖至肘，棕腰带与腰围布、深褐裤、旧棕靴；不与瓦森合人，不添工具。",
+        "side_lock": "腰带垂尾保留人物左側（画面右）；左耳后旧疤按卡保留其侧，但母图区域被耳廓/发际遮挡，容许继续遮挡，不凭空在右脸或耳前补大疤。人物右手原在画面左。"
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "own_action_directories_found": [],
+        "non_source_action_metadata_matches": [],
+        "existing_expressions_actually_viewed": true,
+        "do_not_recount": [
+          "concept_v1母图",
+          "expressions_v1情绪与小手势",
+          "复制source/交付包内的母图",
+          "仅表情或不改变接触/手脚结构的小变化"
+        ]
+      },
+      "story_boundaries": [
+        "不开闸放水、不替上游人家作证、不推定修路完成、不掌握军需船期。",
+        "不磨面、不垫粮、不捞上游物品；本人安全在场才可用，未授权事仍未发生。"
+      ],
+      "risks": [
+        "母图无磨杆、闸轮或水桶，不能用职业常识补一件已持工具。",
+        "虎口色块非新伤诊断；轻揉是日常手部动作设计，不画伤口、包扎或康复。",
+        "听水只推导姿态，无具体听到的事件或指认对象；不画临水险站。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/hoer/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "hoer_A1_press_workworn_palm",
+          "title_zh": "收手轻揉虎口",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "hoer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "虎口有磨杆磨出的厚皮"
+            },
+            {
+              "source_id": "hoer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "袖子永远卷到手肘"
+            }
+          ],
+          "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+          "start_pose_description_only": "两脚稳站，原制止右手收至肚腹前，右腕转为掌心朝自身斜上；左手接近。",
+          "pose": "双脚仍稳站，双肘收于腰两侧。右手在腹前低位半张，掌心斜向自身；左手从下托右掌，左拇指轻压右手拇指与食指根部的虎口厚皮，右手其余手指自然微曲放松。头稍低看两手，左右手接触点明确，脸不痛苦。两只袖口仍卷在肘部，绝不补磨杆或夹持空气。",
+          "end_pose_description_only": "左拇指松开，双手自然分开回到近身垂落；不改变厚皮，不宣称治疗或伤愈。",
+          "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+          "contact_and_support_checks": [
+            "两足同平面，骨盆居中",
+            "左手托右掌但不穿掌，左拇指接触虎口；不画额外拇指",
+            "手位低于胸口、不呈举掌说话或心口作证手势"
+          ],
+          "prop_state_and_retention": [
+            "母图无手持物，本张仍零工具",
+            "腰带、左侧垂尾、腰围布、双靴保留；袖不重新展开"
+          ],
+          "difference_from_mother_expression_and_batch": "不同于母图单掌制止与E2右手靠胸；本图双手相触并有局部压力动作。避免已存在的理袖模板。",
+          "risk_level": "medium",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_transparent.png"
+          ],
+          "reference_sha256": [
+            "2ad7fad3d48561ccefe04f1363c0f382d7eb8f4393cfa5acd9d8c62147680718"
+          ],
+          "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：霍珥 / FX-MIL。三十来岁成年男子，棕短发、粗眉、短须和结实脸；蓝灰工褂袖至肘，棕腰带与腰围布、深褐裤、旧棕靴；不与瓦森合人，不添工具。\n固定侧别：腰带垂尾保留人物左側（画面右）；左耳后旧疤按卡保留其侧，但母图区域被耳廓/发际遮挡，容许继续遮挡，不凭空在右脸或耳前补大疤。人物右手原在画面左。\n本张动作：收手轻揉虎口。双脚仍稳站，双肘收于腰两侧。右手在腹前低位半张，掌心斜向自身；左手从下托右掌，左拇指轻压右手拇指与食指根部的虎口厚皮，右手其余手指自然微曲放松。头稍低看两手，左右手接触点明确，脸不痛苦。两只袖口仍卷在肘部，绝不补磨杆或夹持空气。\n支撑与接触：两足同平面，骨盆居中；左手托右掌但不穿掌，左拇指接触虎口；不画额外拇指；手位低于胸口、不呈举掌说话或心口作证手势。\n道具保留：母图无手持物，本张仍零工具；腰带、左侧垂尾、腰围布、双靴保留；袖不重新展开。\n附加约束：只是日常舒展劳作手部的可逆提案，无受伤诊断、流血、绷带、药物或治愈表现。\n剧情边界：不开闸放水、不替上游人家作证、不推定修路完成、不掌握军需船期。；不磨面、不垫粮、不捞上游物品；本人安全在场才可用，未授权事仍未发生。",
+          "prompt_sha256": "64c2c7e4cc33667c7d4d5732dbd5c8b5202c5c802dc0fe270ca6ee945cf1145c",
+          "negative_constraints": [
+            "母图无磨杆、闸轮或水桶，不能用职业常识补一件已持工具。",
+            "虎口色块非新伤诊断；轻揉是日常手部动作设计，不画伤口、包扎或康复。",
+            "听水只推导姿态，无具体听到的事件或指认对象；不画临水险站。",
+            "不开闸放水、不替上游人家作证、不推定修路完成、不掌握军需船期。",
+            "不磨面、不垫粮、不捞上游物品；本人安全在场才可用，未授权事仍未发生。"
+          ],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/hoer_A1_press_workworn_palm_prompt.txt"
+        },
+        {
+          "key": "hoer_A2_brace_thighs_listen",
+          "title_zh": "双手稳膝，俯身听水",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-MIL / greetings[night]",
+              "line_start": 127,
+              "quote": "夜里水声大，出什么事都听不见。你也是来听水的？"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-MIL / site_lines[warning]",
+              "line_start": 142,
+              "quote": "水口那圈石头是滑的，上个月有人在那摔断了腿。"
+            }
+          ],
+          "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+          "start_pose_description_only": "在安全干燥的平处站稳，双手向自己膝上移；两靴保持分开，不朝水口踏出。",
+          "pose": "双膝轻屈、髋向后折，上身有明显前倾，两只掌心分别撑在自己左右大腿的膝上方；肘有自然弯曲。头在保持母图可识別脸朝向的前提下轻偏向画面左的听声方向，侧耳凝听，目光不指认任何人。双靴均完整着地，姿态像在安全位置停下辨听，不是伸手捞水、眩晕或喘病。",
+          "end_pose_description_only": "双腿伸直，双手离开大腿回到直立；没有开闸、移动到滑石或听出结论。",
+          "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+          "contact_and_support_checks": [
+            "掌根各自实贴大腿膝上，不直接锁压膝盖；两臂不能悬空当撑杖",
+            "骨盆后移抵消前倾，重心仍在双足间；不踮脚、跨步或站在水石上",
+            "身体倾斜和双手接触必须明显区别于仅侧头的表情图"
+          ],
+          "prop_state_and_retention": [
+            "零新增道具；原腰围与左侧腰带尾自然垂落",
+            "不画水、石、闸、麦袋、第二人或气泡音效"
+          ],
+          "difference_from_mother_expression_and_batch": "不同于旧静听表情：全身髋膝屈曲与双手支撑改变；德茹浅蹲是单掌撑腿＋拢裙，本图双手撑腿、无拢衣。",
+          "risk_level": "medium_high",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_transparent.png"
+          ],
+          "reference_sha256": [
+            "2ad7fad3d48561ccefe04f1363c0f382d7eb8f4393cfa5acd9d8c62147680718"
+          ],
+          "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：霍珥 / FX-MIL。三十来岁成年男子，棕短发、粗眉、短须和结实脸；蓝灰工褂袖至肘，棕腰带与腰围布、深褐裤、旧棕靴；不与瓦森合人，不添工具。\n固定侧别：腰带垂尾保留人物左側（画面右）；左耳后旧疤按卡保留其侧，但母图区域被耳廓/发际遮挡，容许继续遮挡，不凭空在右脸或耳前补大疤。人物右手原在画面左。\n本张动作：双手稳膝，俯身听水。双膝轻屈、髋向后折，上身有明显前倾，两只掌心分别撑在自己左右大腿的膝上方；肘有自然弯曲。头在保持母图可识別脸朝向的前提下轻偏向画面左的听声方向，侧耳凝听，目光不指认任何人。双靴均完整着地，姿态像在安全位置停下辨听，不是伸手捞水、眩晕或喘病。\n支撑与接触：掌根各自实贴大腿膝上，不直接锁压膝盖；两臂不能悬空当撑杖；骨盆后移抵消前倾，重心仍在双足间；不踮脚、跨步或站在水石上；身体倾斜和双手接触必须明显区别于仅侧头的表情图。\n道具保留：零新增道具；原腰围与左侧腰带尾自然垂落；不画水、石、闸、麦袋、第二人或气泡音效。\n附加约束：听水是由对白推导的身体演出，不表明听见事故、证人或上游秘密。\n剧情边界：不开闸放水、不替上游人家作证、不推定修路完成、不掌握军需船期。；不磨面、不垫粮、不捞上游物品；本人安全在场才可用，未授权事仍未发生。",
+          "prompt_sha256": "784c91697bff0ae1cc4e335187223f87ca2d72bf2dbf851aea20766bacd0dfa2",
+          "negative_constraints": [
+            "母图无磨杆、闸轮或水桶，不能用职业常识补一件已持工具。",
+            "虎口色块非新伤诊断；轻揉是日常手部动作设计，不画伤口、包扎或康复。",
+            "听水只推导姿态，无具体听到的事件或指认对象；不画临水险站。",
+            "不开闸放水、不替上游人家作证、不推定修路完成、不掌握军需船期。",
+            "不磨面、不垫粮、不捞上游物品；本人安全在场才可用，未授权事仍未发生。"
+          ],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/hoer_A2_brace_thighs_listen_prompt.txt"
+        }
+      ]
+    },
+    {
+      "slug": "turi",
+      "canonical_id": "HIG-NPC-TURI",
+      "name": "图里",
+      "status": "planned_only_not_generated",
+      "selection_status": "requested_candidate_suitable_retained",
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "turi_script01",
+        "turi_script03",
+        "turi_chapter",
+        "turi_card",
+        "turi_manifest",
+        "turi_spec_lock",
+        "turi_character_brief",
+        "turi_expression_manifest",
+        "turi_expression_board",
+        "turi_raw",
+        "turi_anchor",
+        "qa_third",
+        "turi_script01",
+        "turi_script03",
+        "turi_chapter"
+      ],
+      "mother_image": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png",
+        "sha256": "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_v2_raw_imagegen.png",
+        "raw_sha256": "a7e51617b0bc129bf7dc9406e0e316244e148418fd97184837c270ee003d08e2",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "raw_and_transparent_actually_viewed": true,
+        "viewed_utc": "2026-10-14T03:03:55Z",
+        "hashes_match_manifest_and_independent_qa": true,
+        "existing_expression_board_actually_viewed": true,
+        "old_pose": "直立，左手抬作局部说明，右手垂下；锤/量角器/簿均在腰上。表情E1左掌下降、E2左掌止步，工具均未取出。",
+        "identity_lock": "四十岁上下成年男性检查匠，精瘦长手指、窄脸、深棕灰鬓短发、短灰须；暗石绿短披、米麻扎袖衣、烟褐厚护腿、棕靴。人物右肩（画面左）自然略低，非新伤。",
+        "side_lock": "母图人物右腰（画面左）是检查簿袋与敲击小锤；人物左腰（画面右）是黄铜色/旧金属框量角器。A1右手取锤，A2左手取量角器；未用的一件与闭合簿袋保持原侧。"
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "own_action_directories_found": [],
+        "non_source_action_metadata_matches": [],
+        "existing_expressions_actually_viewed": true,
+        "do_not_recount": [
+          "concept_v1母图",
+          "expressions_v1情绪与小手势",
+          "复制source/交付包内的母图",
+          "仅表情或不改变接触/手脚结构的小变化"
+        ]
+      },
+      "story_boundaries": [
+        "任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。",
+        "不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。"
+      ],
+      "risks": [
+        "A1只画取锤后的低位握持，不无目标挥锤，不把一张图说成敲三下。",
+        "母图量角器为简明框形，保持原轮廓，不替成现代半圆透明量角器或精密可读刻度。",
+        "工具取用处不能复制，检查簿只保原袋窄边，不造可读检查结果。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/turi/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "turi_A1_low_hold_inspection_hammer",
+          "title_zh": "抽出检查锤，低位稳持",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "turi_card",
+              "locator": "衣着与磨损",
+              "line_start": 38,
+              "quote": "腰间挂着敲击锤与量角器。"
+            },
+            {
+              "source_id": "turi_card",
+              "locator": "举止",
+              "line_start": 42,
+              "quote": "检查时先敲三下"
+            },
+            {
+              "source_id": "turi_script01",
+              "locator": "场1 / 图里",
+              "line_start": 41,
+              "quote": "别先解绳。这段看得见裂，能从稳定侧查。"
+            }
+          ],
+          "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+          "start_pose_description_only": "双脚稳立，右手移向右腰原锤柄，左手在腰带/小披边附近保持身体稳定。",
+          "pose": "右手把同一检查小锤从人物右腰（画面左）取出，握住原木柄中下部，锤头水平且完整，在右大腿外侧低位静持；手肘略弯、锤不抬过腰，锤头与裤腿留缝。左掌轻贴自己腰带上方衣侧作收臂稳姿，头略低看握持处。原右腰锤挂位为空，左腰量角器与右腰检查簿袋仍原位。",
+          "end_pose_description_only": "右手把锤放回原右腰挂位，左手放下；不击打、不触梁、不敲满三下。",
+          "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+          "contact_and_support_checks": [
+            "双靴站实、骨盆不前扑，右低肩自然保留",
+            "右手确握柄，金属头与手/裤有清晰分离；不是抓锤头或空拳",
+            "持锤方向低垂不呈武器起手，左手接触自有衣侧"
+          ],
+          "prop_state_and_retention": [
+            "一件原锤在手，原腰位无第二锤",
+            "量角器仍左腰、检查簿闭合收右袋，不添梁端或读数牌"
+          ],
+          "difference_from_mother_expression_and_batch": "母图及表情工具均未取；只补取用后握持，明确化解前批因无目标挥锤而未选图里的问题。",
+          "risk_level": "medium",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png"
+          ],
+          "reference_sha256": [
+            "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695"
+          ],
+          "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：图里 / HIG-NPC-TURI。四十岁上下成年男性检查匠，精瘦长手指、窄脸、深棕灰鬓短发、短灰须；暗石绿短披、米麻扎袖衣、烟褐厚护腿、棕靴。人物右肩（画面左）自然略低，非新伤。\n固定侧别：母图人物右腰（画面左）是检查簿袋与敲击小锤；人物左腰（画面右）是黄铜色/旧金属框量角器。A1右手取锤，A2左手取量角器；未用的一件与闭合簿袋保持原侧。\n本张动作：抽出检查锤，低位稳持。右手把同一检查小锤从人物右腰（画面左）取出，握住原木柄中下部，锤头水平且完整，在右大腿外侧低位静持；手肘略弯、锤不抬过腰，锤头与裤腿留缝。左掌轻贴自己腰带上方衣侧作收臂稳姿，头略低看握持处。原右腰锤挂位为空，左腰量角器与右腰检查簿袋仍原位。\n支撑与接触：双靴站实、骨盆不前扑，右低肩自然保留；右手确握柄，金属头与手/裤有清晰分离；不是抓锤头或空拳；持锤方向低垂不呈武器起手，左手接触自有衣侧。\n道具保留：一件原锤在手，原腰位无第二锤；量角器仍左腰、检查簿闭合收右袋，不添梁端或读数牌。\n附加约束：不做挥击、敲空气、攻击或安全认证；‘先敲三下’仅来源背景，本图没有完成敲击。\n剧情边界：任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。；不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。",
+          "prompt_sha256": "2204b6fe86a87b876d1163213d4ace2379b97e6e8482507301fa61fa121ad9d9",
+          "negative_constraints": [
+            "A1只画取锤后的低位握持，不无目标挥锤，不把一张图说成敲三下。",
+            "母图量角器为简明框形，保持原轮廓，不替成现代半圆透明量角器或精密可读刻度。",
+            "工具取用处不能复制，检查簿只保原袋窄边，不造可读检查结果。",
+            "任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。",
+            "不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。"
+          ],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_A1_low_hold_inspection_hammer_prompt.txt"
+        },
+        {
+          "key": "turi_A2_turn_angle_gauge",
+          "title_zh": "近身托起量角器转看",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "turi_card",
+              "locator": "随身物",
+              "line_start": 40,
+              "quote": "敲击锤、量角器与自己的检查簿，簿子按段编号。"
+            },
+            {
+              "source_id": "turi_script01",
+              "locator": "场3 / 图里",
+              "line_start": 89,
+              "quote": "我真验过的才写，没开的还停。"
+            }
+          ],
+          "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+          "start_pose_description_only": "原小锤收好；左手从左腰取下框形量角器，右手在近身位置接应框边。",
+          "pose": "保持双足稳站，左肘靠近肋侧。左手从原左腰取下同一框形量角器，掌托其底边，放在腹前稍偏左的位置；右手拇指与食指轻捏其外框上角，让整个量角器较母图悬挂方向小幅转向自己观看。头低看工具，量角器孔洞和原轮廓保持可读，不能改成另一种半圆量具。原左腰挂位空，小锤仍右腰收妥，检查簿未打开。",
+          "end_pose_description_only": "右手松开框角，左手把同一量角器重新挂回原左腰；未实际测梁，不写检查结论。",
+          "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+          "contact_and_support_checks": [
+            "左掌托底、右指只捏框外缘，不把手指画成工具的额外指针",
+            "两肘近身、双脚稳立，手和工具不能漂浮",
+            "框形保原比例/孔洞，转角只为目视，不新增机械活动轴"
+          ],
+          "prop_state_and_retention": [
+            "量角器一件，原左腰位为空；小锤与簿袋各一件保原右腰",
+            "无新目标物、梁、精确数值、钤章或新纸"
+          ],
+          "difference_from_mother_expression_and_batch": "A1单手低持锤，本图双手腹前托转框形量具；不同于维菈用T规贴U支架，本图没有样品测量。",
+          "risk_level": "medium",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png"
+          ],
+          "reference_sha256": [
+            "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695"
+          ],
+          "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：图里 / HIG-NPC-TURI。四十岁上下成年男性检查匠，精瘦长手指、窄脸、深棕灰鬓短发、短灰须；暗石绿短披、米麻扎袖衣、烟褐厚护腿、棕靴。人物右肩（画面左）自然略低，非新伤。\n固定侧别：母图人物右腰（画面左）是检查簿袋与敲击小锤；人物左腰（画面右）是黄铜色/旧金属框量角器。A1右手取锤，A2左手取量角器；未用的一件与闭合簿袋保持原侧。\n本张动作：近身托起量角器转看。保持双足稳站，左肘靠近肋侧。左手从原左腰取下同一框形量角器，掌托其底边，放在腹前稍偏左的位置；右手拇指与食指轻捏其外框上角，让整个量角器较母图悬挂方向小幅转向自己观看。头低看工具，量角器孔洞和原轮廓保持可读，不能改成另一种半圆量具。原左腰挂位空，小锤仍右腰收妥，检查簿未打开。\n支撑与接触：左掌托底、右指只捏框外缘，不把手指画成工具的额外指针；两肘近身、双脚稳立，手和工具不能漂浮；框形保原比例/孔洞，转角只为目视，不新增机械活动轴。\n道具保留：量角器一件，原左腰位为空；小锤与簿袋各一件保原右腰；无新目标物、梁、精确数值、钤章或新纸。\n附加约束：只为辨认/整理自有量角器，不表示测量完成、合格、实付验费或已承接下一班。\n剧情边界：任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。；不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。",
+          "prompt_sha256": "348ee68ddedb2731f7c08b2ab351fa47abf42bf34020636fe0318f8f1144a8a3",
+          "negative_constraints": [
+            "A1只画取锤后的低位握持，不无目标挥锤，不把一张图说成敲三下。",
+            "母图量角器为简明框形，保持原轮廓，不替成现代半圆透明量角器或精密可读刻度。",
+            "工具取用处不能复制，检查簿只保原袋窄边，不造可读检查结果。",
+            "任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。",
+            "不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。"
+          ],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_A2_turn_angle_gauge_prompt.txt"
+        }
+      ]
+    },
+    {
+      "slug": "cuoer",
+      "canonical_id": "FX-MN2",
+      "name": "锉珥",
+      "status": "planned_only_not_generated",
+      "selection_status": "requested_candidate_suitable_retained",
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "cuoer_card",
+        "cuoer_manifest",
+        "cuoer_spec_lock",
+        "cuoer_character_brief",
+        "cuoer_expression_manifest",
+        "cuoer_expression_board",
+        "cuoer_raw",
+        "cuoer_anchor",
+        "qa_third",
+        "field_dialogue",
+        "field_script"
+      ],
+      "mother_image": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png",
+        "sha256": "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_v2_raw_imagegen.png",
+        "raw_sha256": "1668632a6d87ef4a7bdac028abe16ba048a7092aeb45edc9f3e5509fabaf1533",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "raw_and_transparent_actually_viewed": true,
+        "viewed_utc": "2026-10-14T03:03:55Z",
+        "hashes_match_manifest_and_independent_qa": true,
+        "existing_expression_board_actually_viewed": true,
+        "old_pose": "直站，右手近小锉柄、左手低位曲指；表情E1静听、E2左手低幅劝停。已有图未使用短钳、未屈膝接触铁轨。",
+        "identity_lock": "四十来岁成年男性矿车修理工，深棕短乱发、方额短下颌、短胡茬；蓝灰系带卷袖褂、棕腰带、深灰裤、棕靴，不与FX-MIN珥德合人。",
+        "side_lock": "人物右耳后（画面左）夹原小截铁屑；小锉挂人物右腰（画面左），短钳原挂人物左腰（画面右）。两姿均由左侧取同一短钳，左挂位空；小锉与耳后铁屑全程保留原处。"
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "own_action_directories_found": [],
+        "non_source_action_metadata_matches": [],
+        "existing_expressions_actually_viewed": true,
+        "do_not_recount": [
+          "concept_v1母图",
+          "expressions_v1情绪与小手势",
+          "复制source/交付包内的母图",
+          "仅表情或不改变接触/手脚结构的小变化"
+        ]
+      },
+      "story_boundaries": [
+        "仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。",
+        "只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。"
+      ],
+      "risks": [
+        "短钳必须有一个铰轴、两手柄、两钳口，不变剪刀、扳手或第二小锤。",
+        "敲轨原文不指定工具。本案选闭合短钳外侧轻敲，是可逆动作设计，不能写成他既定习惯使用的工具。",
+        "脚边最小轨段是本动作新增接触物视觉提案，无已审造型，首稿须查宽底稳定、钳口接点、手腕可达与双足重心。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/cuoer/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "cuoer_A1_test_pliers_travel",
+          "title_zh": "双手试合短钳",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "cuoer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "腰带上挂着小锉与短钳"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-MN2 / chats[1]",
+              "line_start": 2860,
+              "quote": "修理工只认两件事：撑得住、滑得动。"
+            }
+          ],
+          "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+          "start_pose_description_only": "双脚稳站，左手从左腰取短钳；右手接住另一支柄，两手先保持钳口略开。",
+          "pose": "双肘在腹前收近，两手各握同一短钳的一支手柄、远离铰轴与钳口；钳口朝画面右上但低于胸，停在缓缓合拢而仍留窄缝的瞬间。头低看铰轴与钳口，腕部顺着柄向，不夸大开口，不夹任何材料。短钳原左腰挂位空；小锉仍右腰挂稳，右耳后铁屑仍夹在原发耳交界。",
+          "end_pose_description_only": "放松双手让钳口回到母图小开度，再由左手收回原左腰；没有夹断/修好车件或新增零件。",
+          "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+          "contact_and_support_checks": [
+            "钳子只有一个铰轴、两柄两口，左右手各握一柄，手指远离夹点",
+            "两脚完整稳立，重量居中；工具在腹前自持不向画外递出",
+            "柄口运动关系符合一把交叉钳的结构，不变剪刀或两把工具"
+          ],
+          "prop_state_and_retention": [
+            "短钳在手一件、腰位空；原小锉与耳后铁屑不动",
+            "不夹车件、不拿下耳后铁屑、不增小锤、轨或背景"
+          ],
+          "difference_from_mother_expression_and_batch": "母图与表情未取钳；本图工具有明确合拢操作与两手接点。不同于单纯展示物件，A2另有下肢屈曲和轨接触。",
+          "risk_level": "medium_high",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png"
+          ],
+          "reference_sha256": [
+            "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662"
+          ],
+          "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：锉珥 / FX-MN2。四十来岁成年男性矿车修理工，深棕短乱发、方额短下颌、短胡茬；蓝灰系带卷袖褂、棕腰带、深灰裤、棕靴，不与FX-MIN珥德合人。\n固定侧别：人物右耳后（画面左）夹原小截铁屑；小锉挂人物右腰（画面左），短钳原挂人物左腰（画面右）。两姿均由左侧取同一短钳，左挂位空；小锉与耳后铁屑全程保留原处。\n本张动作：双手试合短钳。双肘在腹前收近，两手各握同一短钳的一支手柄、远离铰轴与钳口；钳口朝画面右上但低于胸，停在缓缓合拢而仍留窄缝的瞬间。头低看铰轴与钳口，腕部顺着柄向，不夸大开口，不夹任何材料。短钳原左腰挂位空；小锉仍右腰挂稳，右耳后铁屑仍夹在原发耳交界。\n支撑与接触：钳子只有一个铰轴、两柄两口，左右手各握一柄，手指远离夹点；两脚完整稳立，重量居中；工具在腹前自持不向画外递出；柄口运动关系符合一把交叉钳的结构，不变剪刀或两把工具。\n道具保留：短钳在手一件、腰位空；原小锉与耳后铁屑不动；不夹车件、不拿下耳后铁屑、不增小锤、轨或背景。\n附加约束：属于日常试手感的可逆推断，源文未说他此刻在保养钳子，不写检查合格或修复完成。\n剧情边界：仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。；只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。",
+          "prompt_sha256": "de1a580f8f25f4e6b8cca600c35dd85dce3b5572edd9a8af712f2a265c34d9b0",
+          "negative_constraints": [
+            "短钳必须有一个铰轴、两手柄、两钳口，不变剪刀、扳手或第二小锤。",
+            "敲轨原文不指定工具。本案选闭合短钳外侧轻敲，是可逆动作设计，不能写成他既定习惯使用的工具。",
+            "脚边最小轨段是本动作新增接触物视觉提案，无已审造型，首稿须查宽底稳定、钳口接点、手腕可达与双足重心。",
+            "仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。",
+            "只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。"
+          ],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_A1_test_pliers_travel_prompt.txt"
+        },
+        {
+          "key": "cuoer_A2_crouch_tap_rail",
+          "title_zh": "屈膝用闭钳轻敲轨顶",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "cuoer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "说话时敲轨。"
+            },
+            {
+              "source_id": "cuoer_card",
+              "locator": "口吻",
+              "line_start": 19,
+              "quote": "先敲两下再开口；谈到深段就压低声音。"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-MN2 / greetings[first]",
+              "line_start": 2847,
+              "quote": "别踩轨心。踩两边，轨会说话。"
+            }
+          ],
+          "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+          "start_pose_description_only": "在安全外段平处，两脚分开站在轨段旁而不踩轨；左手由原左腰取同一短钳并闭合，右手准备撑右大腿。",
+          "pose": "双膝弯曲、髋向后落成较低蹲姿，上身适度前倾。右掌实贴右大腿膝上辅助稳身；左手合握同一短钳的两支手柄，使钳口闭合，左前臂向下，取闭合钳头外侧平缓接触脚边短铁轨顶部的一个轻敲瞬间，手腕不反折。接触点位于左靴前外侧，双靴均在轨旁平处完整着地，绝不踩轨心。只画接触所需的一截低矮直铁轨，宽底平稳坐在与两鞋同一隐含地平面；无枕木群、矿车、洞壁、矿石或延伸环境。小锉仍右腰挂好，耳后铁屑留原右耳后，左腰钳位空。",
+          "end_pose_description_only": "左手把闭钳轻提离轨，身体可回直立并把钳归左腰；本轮不补第二敲、站起帧或敲后读数。",
+          "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+          "contact_and_support_checks": [
+            "右掌接右大腿，双脚落地且不压在轨上；髋重心在支撑区，不靠钳子承重",
+            "左手握闭合的两柄，闭钳头外侧确接轨顶，不能用尖角刺轨或夹断铁轨",
+            "轨的宽底与双靴共享隐含地面；低矮轨段稳定不浮空、不倾倒，接点可及",
+            "手、钳头与轨不互穿；轻敲不画冲击闪、火花、裂纹或受伤"
+          ],
+          "prop_state_and_retention": [
+            "短钳一件在左手，小锉仍右腰、铁屑仍右耳后，左钳挂位空",
+            "仅新增一截接触用轨段；形状是低魔铁轨视觉提案，不宣称对应游戏尺寸或真实矿车工程"
+          ],
+          "difference_from_mother_expression_and_batch": "母图仅低手曲指且无接触；本图髋膝/手臂高度均显著改变并真正接轨。与A1腹前双手试钳、训练样板蹲姿均不相同。",
+          "risk_level": "high_visual_contact",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png"
+          ],
+          "reference_sha256": [
+            "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662"
+          ],
+          "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：锉珥 / FX-MN2。四十来岁成年男性矿车修理工，深棕短乱发、方额短下颌、短胡茬；蓝灰系带卷袖褂、棕腰带、深灰裤、棕靴，不与FX-MIN珥德合人。\n固定侧别：人物右耳后（画面左）夹原小截铁屑；小锉挂人物右腰（画面左），短钳原挂人物左腰（画面右）。两姿均由左侧取同一短钳，左挂位空；小锉与耳后铁屑全程保留原处。\n本张动作：屈膝用闭钳轻敲轨顶。双膝弯曲、髋向后落成较低蹲姿，上身适度前倾。右掌实贴右大腿膝上辅助稳身；左手合握同一短钳的两支手柄，使钳口闭合，左前臂向下，取闭合钳头外侧平缓接触脚边短铁轨顶部的一个轻敲瞬间，手腕不反折。接触点位于左靴前外侧，双靴均在轨旁平处完整着地，绝不踩轨心。只画接触所需的一截低矮直铁轨，宽底平稳坐在与两鞋同一隐含地平面；无枕木群、矿车、洞壁、矿石或延伸环境。小锉仍右腰挂好，耳后铁屑留原右耳后，左腰钳位空。\n支撑与接触：右掌接右大腿，双脚落地且不压在轨上；髋重心在支撑区，不靠钳子承重；左手握闭合的两柄，闭钳头外侧确接轨顶，不能用尖角刺轨或夹断铁轨；轨的宽底与双靴共享隐含地面；低矮轨段稳定不浮空、不倾倒，接点可及；手、钳头与轨不互穿；轻敲不画冲击闪、火花、裂纹或受伤。\n道具保留：短钳一件在左手，小锉仍右腰、铁屑仍右耳后，左钳挂位空；仅新增一截接触用轨段；形状是低魔铁轨视觉提案，不宣称对应游戏尺寸或真实矿车工程。\n附加约束：原文只写敲轨、未指定用哪件工具；本张选现有闭合短钳外侧是可逆设计。不要加新锤。单图不声称已敲完两下、不作轨道测量/检修通过。\n剧情边界：仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。；只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。",
+          "prompt_sha256": "a6e6a4146d4105de4094c4eadf83659fedb6a57d15a948b4e6d21500af625dca",
+          "negative_constraints": [
+            "短钳必须有一个铰轴、两手柄、两钳口，不变剪刀、扳手或第二小锤。",
+            "敲轨原文不指定工具。本案选闭合短钳外侧轻敲，是可逆动作设计，不能写成他既定习惯使用的工具。",
+            "脚边最小轨段是本动作新增接触物视觉提案，无已审造型，首稿须查宽底稳定、钳口接点、手腕可达与双足重心。",
+            "仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。",
+            "只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。"
+          ],
+          "new_contact_prop": {
+            "name": "一截低矮稳定铁轨",
+            "source": "FX-MN2卡与当前对白的轨",
+            "status": "new_reversible_visual_contact_prop_not_canonical_geometry",
+            "limit": "仅接点所需的短段，宽底与鞋底同平面，无完整轨道场景",
+            "tool_inference": "左手合握已有短钳两柄、以闭钳头外侧轻敲；源文未指定工具，不写成既定习惯",
+            "ownership_claim": false
+          },
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_A2_crouch_tap_rail_prompt.txt"
+        }
+      ]
+    }
+  ],
+  "future_acceptance_checks": [
+    "先实际view每张raw、透明、浅深合成；核对alpha，不据隐藏RGB晕影误判背景。",
+    "逐人母图＋两动作并排验身份/年龄/比例/左右侧别；不能只以文件不同计新增动作。",
+    "逐张核两个掌/手指数量、接点与道具数；工具取出时原腰位必须空，未用工具仍在原侧。",
+    "低蹲/俯身三姿态分别核两脚支撑、髋后移、膝方向与掌腿接触；不可用短腿/消失的远脚掩盖错误。",
+    "锉珥A2重点核轨宽底与鞋平面、闭钳头外侧接轨、左手两柄握持、右掌撑腿、没有踩轨；接触硬错则一次修订后仍失败就停。",
+    "霍珥旧疤原被遮挡，不为了确认而补错侧；德茹/图里右低肩不画病痛。",
+    "图里量角器沿用母图框形，检查簿保闭合；不加真实数字、认证或签字。",
+    "不生成GIF、不填补过渡、不改装备/游戏、不把两张独立姿态强称可无缝连接。"
+  ],
+  "verification": {
+    "json_parse": true,
+    "plan_count": 8,
+    "characters_in_roster44": true,
+    "all_evidence_quotes_found_in_current_sources": true,
+    "all_four_anchor_hashes_match_manifest_and_independent_qa": true,
+    "four_mothers_raw_and_transparent_actually_viewed": true,
+    "four_expression_boards_actually_viewed": true,
+    "copied_text_sources_hash_verified": true,
+    "prompt_files_sha_verified": true,
+    "generated_images": 0,
+    "validation_scope": "本新增计划、逐字引文、路径、输入/提示词SHA和全树去重快照；未修改剧情，故未声称全剧情校验或游戏验证。"
+  },
+  "source_snapshot_manifest": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/SNAPSHOT_MANIFEST.json",
+    "sha256": "c599cca90fe61a1559ae24a6393b599eaa5fcf6a40a9f7cd4acc58140d09058b"
+  }
+}

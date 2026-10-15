@@ -1,0 +1,1539 @@
+{
+  "schema_version": 4,
+  "created_utc": "2026-10-14T05:24:17.811708+00:00",
+  "status": "planning_complete_not_generated",
+  "purpose": "第五批4名已有新剧情NPC的8个独立非战斗全身基础动作；只规划，独立计划门审通过前不得生成。",
+  "scope": {
+    "selected_characters": 4,
+    "planned_new_independent_fullbody_keyposes": 8,
+    "generated_images": 0,
+    "revision_images": 0,
+    "new_characters": 0,
+    "full_animation": false,
+    "gif_planned": false,
+    "equipment_or_engine_work": false,
+    "git_or_upload_performed": false,
+    "changed_existing_assets": false
+  },
+  "requested_candidates": [
+    "endai",
+    "wadun",
+    "ertai",
+    "suier"
+  ],
+  "substitutions": [],
+  "selection_order_evidence": {
+    "source_id": "production_sequence",
+    "reason": "沿remaining_36_batch_sequence第5批FX-BST、FX-SGE、FX-CMP、FX-CP1，四人为已审母图人物，尚无本人动作。",
+    "prior_four_batches_characters": [
+      "anni",
+      "gura",
+      "deru",
+      "hoer",
+      "kuen",
+      "sune",
+      "tian",
+      "lein",
+      "turi",
+      "vila",
+      "erde",
+      "cuoer",
+      "luomin",
+      "tila",
+      "miloer",
+      "kouer"
+    ],
+    "prior_four_batches_qualified_poses": 30,
+    "old_missing_actions_not_retried": [
+      "turi_A1",
+      "cuoer_A1"
+    ],
+    "disambiguation": "suier=燧珥FX-CP1；不是suier_lot=绥珥FX-LOT。"
+  },
+  "global_boundaries": [
+    "只规划各2张独立全身关键姿態，无表情补稿、额外人物、连续动画或游戏落地。",
+    "每姿首稿1张，最多一次明确硬错修订；修后仍失败保缺项。",
+    "内置imagegen才可绘人体；计划本身未调用。独立门审是下一环，非本计划已完成。",
+    "当前母图比例/衣装/道具优先，旧长身或统一头身数字不复活。",
+    "朴素低魔中世纪，保守日常姿态和原物件轻操作，不产生新剧情结果或医疗演示。",
+    "不改冻结旧图、manifest、QA、剧情卡、全局索引、游戏/存档、Git或上传。",
+    "图片与文字原证据分别保留；具体动作推断不写回角色canon。",
+    "归档pixel skill包含流程，但最新STYLE_DIRECTION允许继续概念；归档references/executor-pixel.md不存在，本轮没有假称已读或执行生成阶段。",
+    "独立prompt只含该姿的手位与接点；共享原物侧别中不嵌另一个动作的互斥位置。",
+    "本批恩岱旧E2额度耗尽，只作失败历史，不用新动作名变相重试同表情。"
+  ],
+  "source_sha_snapshots": [
+    {
+      "source_id": "root_agents",
+      "path": "AGENTS.md",
+      "bytes": 68775,
+      "sha256": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+      "role": "root_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/AGENTS.md"
+    },
+    {
+      "source_id": "design_agents",
+      "path": "design/AGENTS.md",
+      "bytes": 64250,
+      "sha256": "302d9d3ef38f2fe27a28cf8cb672ed5cf3b33d5493603588d4dbc22a9932b37e",
+      "role": "design_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/AGENTS.md"
+    },
+    {
+      "source_id": "pixel_asset_skill",
+      "path": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+      "bytes": 16285,
+      "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08",
+      "role": "pixel_asset_skill",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md"
+    },
+    {
+      "source_id": "style_direction",
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "bytes": 6187,
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+      "role": "style_direction",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md"
+    },
+    {
+      "source_id": "roster44",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json",
+      "bytes": 142768,
+      "sha256": "39023b5f3db9980e063b8e57e9bc3cfe3786304f7aef22767c78e10afd631992",
+      "role": "roster44",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json"
+    },
+    {
+      "source_id": "production_sequence",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json",
+      "bytes": 14959,
+      "sha256": "c6e0c04098664bc991ebc62a37cc833b6ae084ff4295fd060d41b15525bf1662",
+      "role": "production_sequence",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json"
+    },
+    {
+      "source_id": "fifth_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_production_brief.json",
+      "bytes": 28725,
+      "sha256": "077fbe1d6087bb17d0bd23a3ae326827c5688390b4e026e8e38a488b431b34db",
+      "role": "fifth_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_production_brief.json"
+    },
+    {
+      "source_id": "fifth_mother_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fifth_four_20261013.json",
+      "bytes": 13759,
+      "sha256": "d9d9d201a2d2ff9a7879b5bc66dfa20b7377086d4e53addd2cd36084bb2274e3",
+      "role": "fifth_mother_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fifth_four_20261013.json"
+    },
+    {
+      "source_id": "fifth_expression_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_expression_brief.json",
+      "bytes": 55479,
+      "sha256": "b0f8633eabdc4808066d7b48e394ecbd4cda602417a09fb230c16a5dace4b11c",
+      "role": "fifth_expression_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_expression_brief.json"
+    },
+    {
+      "source_id": "fifth_expression_final_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_fifth_expression_final_20261014.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "fifth_expression_final_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_fifth_expression_final_20261014.json"
+    },
+    {
+      "source_id": "action_coverage",
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "bytes": 26364,
+      "sha256": "61ed5cd1846ef3017b4b1c72cb5a63432aa22a4c9d151d5b789f586245f498bb",
+      "role": "action_coverage",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterActions/20261013/ACTION_COVERAGE.md"
+    },
+    {
+      "source_id": "master_supplements",
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "bytes": 26988,
+      "sha256": "99fb786c7d83aa9f44e3c96a78fb83f3dac5dc42e7732602736e06ed9716dc59",
+      "role": "master_supplements",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md"
+    },
+    {
+      "source_id": "action_delivery_index",
+      "path": "Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md",
+      "bytes": 7279,
+      "sha256": "03112e2801f3960e27d433a56124920263fa69f2c30be7f4161d814b1fc4b244",
+      "role": "action_delivery_index",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md"
+    },
+    {
+      "source_id": "first_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_brief.json",
+      "bytes": 63732,
+      "sha256": "4c7d2a9fbcc5a7efddd873261c4ae29030d84fcabf0908d066d6e6561e1f4b7b",
+      "role": "first_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "second_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_brief.json",
+      "bytes": 95763,
+      "sha256": "5b8eb607728878267082f133e4c10908b94e055ec25ae62be0ecaaabf9e7659e",
+      "role": "second_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "third_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_new_character_actions_brief.json",
+      "bytes": 106354,
+      "sha256": "a2086f4b93f8886772d5c75b2c4a27bd4aadbd6af6a74e226600d8eaea5033e6",
+      "role": "third_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "fourth_actions_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_brief.json",
+      "bytes": 119235,
+      "sha256": "ee5505e87bba25bac7d0ae7d978d4ea8e3507257a068f33a1c189792321ad11e",
+      "role": "fourth_actions_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_new_character_actions_brief.json"
+    },
+    {
+      "source_id": "field_dialogue",
+      "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+      "bytes": 105635,
+      "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+      "role": "field_dialogue",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md"
+    },
+    {
+      "source_id": "field_dialogue_registry",
+      "path": "research/field-npc-dialogue.json",
+      "bytes": 132451,
+      "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+      "role": "field_dialogue_registry",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/research/field-npc-dialogue.json"
+    },
+    {
+      "source_id": "N11",
+      "path": "design/05_主线/台本/台本_N11_关隘外的交换.md",
+      "bytes": 12314,
+      "sha256": "8915bb1a1d10716fd12d1795ead8b62db49cd2317b0bafa58af2728217784a63",
+      "role": "N11",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/05_主线/台本/台本_N11_关隘外的交换.md"
+    },
+    {
+      "source_id": "N1",
+      "path": "design/05_主线/台本/台本_N1_无钟之夜.md",
+      "bytes": 12056,
+      "sha256": "ed09f88be8fe4618f819d636ad161b7be48b3dcc009bec4dfdc5d8942488c9b9",
+      "role": "N1",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/05_主线/台本/台本_N1_无钟之夜.md"
+    },
+    {
+      "source_id": "SQ02",
+      "path": "design/06_支线/台本/台本_SQ02_被征用的冬粮.md",
+      "bytes": 11385,
+      "sha256": "63b7003cd83cda98e2d1d68333396808a90a211fca094f20106bfee4ee5abe0b",
+      "role": "SQ02",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/06_支线/台本/台本_SQ02_被征用的冬粮.md"
+    },
+    {
+      "source_id": "N9",
+      "path": "design/05_主线/台本/台本_N9_把证据摆上桌.md",
+      "bytes": 11218,
+      "sha256": "42c1cbcf13cd1426f99dd972cfa77efdb722c8aa7395df995af8d01de8c5f0db",
+      "role": "N9",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/05_主线/台本/台本_N9_把证据摆上桌.md"
+    },
+    {
+      "source_id": "endai_expression_final_status",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/FINAL_STATUS.json",
+      "bytes": 4223,
+      "sha256": "3b2e7308855015fb891d060faa7e3422e8f4a559a9f991b41483e7d9fa4043e8",
+      "role": "endai_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "source_id": "endai_card",
+      "path": "design/04_人物/野外人物/人物_FX-BST_恩岱.md",
+      "bytes": 1071,
+      "sha256": "cc81a5e3ff572cf507505c8fb4eff73b46c08fa007560838c4ba34ce18f4d6ae",
+      "role": "endai_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-BST_恩岱.md"
+    },
+    {
+      "source_id": "endai_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/manifest.json",
+      "bytes": 3498,
+      "sha256": "7fa3b2e15fa8331a8d8dd7674abf6c37f787fb16970513d44cb8bcb84c6d4f1c",
+      "role": "endai_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "endai_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/spec_lock.md",
+      "bytes": 711,
+      "sha256": "692a3587b2cef3df6377a45eeb8ac37252a404262b1ab7a4dedbba06e5f0c60d",
+      "role": "endai_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "endai_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/character_brief.json",
+      "bytes": 6003,
+      "sha256": "9a36465eb0fea0d37b90eafb0284c73c0ad60d97a945a27b792fdcfd80dd2b20",
+      "role": "endai_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "endai_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/manifest.json",
+      "bytes": 7524,
+      "sha256": "0cddf0ea9089e74bb4a8762324b5c801caf46460713658da9a931d743ab89d04",
+      "role": "endai_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "endai_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/QA-independent.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "endai_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "endai_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 42692,
+      "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+      "role": "endai_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "endai_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_v1_raw_imagegen.png",
+      "bytes": 1439498,
+      "sha256": "919e88473c2db45221178c5f2e0bd1703052950c585155df3af4f498ab0b356d",
+      "role": "endai_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "endai_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_transparent.png",
+      "bytes": 921169,
+      "sha256": "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8",
+      "role": "endai_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_transparent.png"
+    },
+    {
+      "source_id": "endai_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/review/endai_mother_expressions_light.png",
+      "bytes": 881097,
+      "sha256": "1aedf795e0df3fc8b6777b7c12e556b369fc3f3fb2bc8b41f0dd334202b06fc1",
+      "role": "endai_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/review/endai_mother_expressions_light.png"
+    },
+    {
+      "source_id": "wadun_card",
+      "path": "design/04_人物/野外人物/人物_FX-SGE_瓦顿.md",
+      "bytes": 1069,
+      "sha256": "133a684d79ffe82ec9b64e75c5064926125f166f796a0324421b2297fd6ef494",
+      "role": "wadun_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-SGE_瓦顿.md"
+    },
+    {
+      "source_id": "wadun_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/manifest.json",
+      "bytes": 3492,
+      "sha256": "bd5caff568fffa294af7b8bc16d02720cc47a30983967b8f8ccc1bc2cc9abeaa",
+      "role": "wadun_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "wadun_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/spec_lock.md",
+      "bytes": 714,
+      "sha256": "cd4882fe7e45b4580569b0135e8cfe07ede44b2cfc4b440d92ecec99ba31306b",
+      "role": "wadun_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "wadun_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/character_brief.json",
+      "bytes": 6096,
+      "sha256": "f4b206641579e4d5dd41e1bd1937be6f489286183da3b4f32faf2d2164a72535",
+      "role": "wadun_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "wadun_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/manifest.json",
+      "bytes": 6793,
+      "sha256": "a72489883282f0baebfeba0cbc1cb9298408a10910672b397424a87766733846",
+      "role": "wadun_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "wadun_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/QA-independent.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "wadun_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "wadun_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 42692,
+      "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+      "role": "wadun_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "wadun_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_v1_raw_imagegen.png",
+      "bytes": 1455183,
+      "sha256": "3317d07c583d3b5170e6d5612e23d7189000c0ac426595c46f54aa2bb745060c",
+      "role": "wadun_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "wadun_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_transparent.png",
+      "bytes": 1002084,
+      "sha256": "221c3e4a6b8c06e00603943fc58c94722513f401e0b08dde5a1859fcdcb670d9",
+      "role": "wadun_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_transparent.png"
+    },
+    {
+      "source_id": "wadun_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/review/wadun_mother_expressions_light.png",
+      "bytes": 1043746,
+      "sha256": "9ea0eb52bea5b66fd30995a327e597aea5d7dbb84b47ebc6e1c7b35a8935c8b7",
+      "role": "wadun_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/review/wadun_mother_expressions_light.png"
+    },
+    {
+      "source_id": "ertai_card",
+      "path": "design/04_人物/野外人物/人物_FX-CMP_珥泰.md",
+      "bytes": 1033,
+      "sha256": "9394c336c2b5c7303601fd46d28be83e0f48a6736924bfac6224fae450fefa97",
+      "role": "ertai_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-CMP_珥泰.md"
+    },
+    {
+      "source_id": "ertai_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/manifest.json",
+      "bytes": 2990,
+      "sha256": "29b1ca231a874c95bbc290c1f79c28f553616f875420cc0e254bdf2aa883c618",
+      "role": "ertai_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "ertai_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/spec_lock.md",
+      "bytes": 718,
+      "sha256": "48a39075a9fbf0d3f4150e8144b21d13894feecab4ffd879858ca9e064a8d1f2",
+      "role": "ertai_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "ertai_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/character_brief.json",
+      "bytes": 5942,
+      "sha256": "7693a641c9e4c6d2ed2de91e336dc47ad2e780b5d3e3350fc2954c0ffcdabd69",
+      "role": "ertai_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "ertai_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/manifest.json",
+      "bytes": 6837,
+      "sha256": "291d79e2788f8d3de5da14df3249622cb1f85680eea790129affe67fe25fe333",
+      "role": "ertai_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "ertai_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/QA-independent.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "ertai_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "ertai_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 42692,
+      "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+      "role": "ertai_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "ertai_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_v1_raw_imagegen.png",
+      "bytes": 741497,
+      "sha256": "3193e5e413e86c4afa88f3c018bbb0066a36ec76332c18cc0d56cb881f39bb39",
+      "role": "ertai_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "ertai_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_transparent.png",
+      "bytes": 665680,
+      "sha256": "e41580f2b6787a2a468d685abae8b390d42d9cd8d78090017699ee12c571de29",
+      "role": "ertai_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_transparent.png"
+    },
+    {
+      "source_id": "ertai_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/review/ertai_mother_expressions_light.png",
+      "bytes": 632970,
+      "sha256": "c68a30b131b24b7ac84900c6cf1aae8327f974a226a532635aaaeeebae2724b4",
+      "role": "ertai_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/review/ertai_mother_expressions_light.png"
+    },
+    {
+      "source_id": "suier_card",
+      "path": "design/04_人物/野外人物/人物_FX-CP1_燧珥.md",
+      "bytes": 1055,
+      "sha256": "4117021d341542e271dcb824ac4dd1b3a5e2e178b05fc911879449907aba1d43",
+      "role": "suier_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-CP1_燧珥.md"
+    },
+    {
+      "source_id": "suier_mother_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/manifest.json",
+      "bytes": 2988,
+      "sha256": "06fad34b72cf3003161db2c217436545249d62e2ee1612343b17952c37a1a78c",
+      "role": "suier_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/manifest.json"
+    },
+    {
+      "source_id": "suier_mother_spec",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/spec_lock.md",
+      "bytes": 707,
+      "sha256": "55df8d36614439d0a007925a7449c2fb69f80a557cf60dc60581c0ab9a807d8c",
+      "role": "suier_mother_spec",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/spec_lock.md"
+    },
+    {
+      "source_id": "suier_mother_brief",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/character_brief.json",
+      "bytes": 5996,
+      "sha256": "d040bcf44de5c0af147e0c8a4adfeb778f79be4a8fb2e8503b97682c145440f2",
+      "role": "suier_mother_brief",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/character_brief.json"
+    },
+    {
+      "source_id": "suier_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/manifest.json",
+      "bytes": 6810,
+      "sha256": "9ce006084bc6d4647e276b0785f0cced65078fbf13db94299f2a77eedc12e870",
+      "role": "suier_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/manifest.json"
+    },
+    {
+      "source_id": "suier_expression_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/QA-independent.json",
+      "bytes": 48316,
+      "sha256": "6d31404e6912d6735847a9bd33c8a2dea3a5b79924404489b7f2be081f454fa0",
+      "role": "suier_expression_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/QA-independent.json"
+    },
+    {
+      "source_id": "suier_expression_raw_qa",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/QA-independent-raw-visual.json",
+      "bytes": 42692,
+      "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+      "role": "suier_expression_raw_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/QA-independent-raw-visual.json"
+    },
+    {
+      "source_id": "suier_mother_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_v1_raw_imagegen.png",
+      "bytes": 720682,
+      "sha256": "304e566ce1126c93c75b41481ae8c672b90e59969b17a5af2d533245d5009f2c",
+      "role": "suier_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_v1_raw_imagegen.png"
+    },
+    {
+      "source_id": "suier_mother_transparent",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_transparent.png",
+      "bytes": 652653,
+      "sha256": "74b89bd1eca88ce53d6e676d046b694d607969f656302dbee86384cb35ae6c70",
+      "role": "suier_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_transparent.png"
+    },
+    {
+      "source_id": "suier_expressions_view",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/review/suier_mother_expressions_light.png",
+      "bytes": 606254,
+      "sha256": "693106e9a9efc8fbecc650c8f1ae8a1e672fe02d52018519c95b9f3df5282087",
+      "role": "suier_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/review/suier_mother_expressions_light.png"
+    },
+    {
+      "source_id": "endai_failed_E2_initial",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/raw/endai_E2_no_order_no_entry_initial.png",
+      "bytes": 1536398,
+      "sha256": "0e8cf3a5dd3ae5a224682b3b20d66a9f94ce986488e20fba0912e6eec02c6095",
+      "role": "endai_failed_E2_initial",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/raw/endai_E2_no_order_no_entry_initial.png"
+    }
+  ],
+  "coverage_audit": {
+    "read_indexes": [
+      "action_coverage",
+      "master_supplements",
+      "action_delivery_index",
+      "first_actions_brief",
+      "second_actions_brief",
+      "third_actions_brief",
+      "fourth_actions_brief",
+      "production_sequence"
+    ],
+    "scan_manifest": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+    "scan_manifest_sha256": "e2fbbb13deb6b19498267677edd5ef3ff282e2d05c33ceae2034207f47f3d3d0",
+    "action_tree_file_count": 2753,
+    "metadata_scanned_count": 1437,
+    "zip_scanned_count": 55,
+    "zip_members_enumerated_count": 2360,
+    "zip_text_members_read_count": 1365,
+    "zip_read_errors": [],
+    "candidate_raw_text_hits": 48,
+    "candidate_non_source_raw_text_hits": 0,
+    "candidate_zip_text_or_path_hits": 56,
+    "candidate_semantic_action_assets_found": 0,
+    "candidate_own_action_directories_found": 0,
+    "semantic_review": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/semantic_dedup_review.json",
+    "semantic_review_sha256": "d3ac4ec86428c3ea5683cfb525ae811315b65f993a80ec383b54db7ef0c14f97",
+    "absence_scope": "仅本地Assets/CharacterActions全树与55 ZIP文字成员，未遍看全库图像，不推断外部源。",
+    "index_freshness_note": "扫描在第四批目录已形成时进行；冻结输入在第四批发送/索引已完成后。计划不计入16人30合格姿。",
+    "all_four_raw_and_transparent_viewed": true,
+    "all_four_expression_boards_viewed": true
+  },
+  "author_handoff": {
+    "requires_independent_plan_gate": true,
+    "authors": [
+      {
+        "group": "endai_wadun",
+        "slugs": [
+          "endai",
+          "wadun"
+        ],
+        "planned_poses": 4,
+        "focus": "同一恩岱母图比例；瓦顿保持低蹲，A1原铲在手/A2原铲在腰不可混。"
+      },
+      {
+        "group": "ertai_suier",
+        "slugs": [
+          "ertai",
+          "suier"
+        ],
+        "planned_poses": 4,
+        "focus": "珥泰一板一杆持握接点；燧珥FX-CP1，画面左半破靴、画面右整靴，双足完整。"
+      }
+    ],
+    "pre_generation_read": [
+      "本brief、各人的实际卡和台词、母图raw/透明、表情对照与独立计划门审结论。",
+      "逐张调用前重新读该key的逐字prompt/该张母图；只有本人的透明母图可作生成引用。"
+    ],
+    "post_generation_requirements": [
+      "每张首稿raw实际view后才判定；最多一次明确硬错修订。",
+      "只可alpha<=8和隐藏RGB清理、完整图等比nearest排版；不脚本改人体或道具。",
+      "raw/transparent/浅深板均须实际view独审，合格才计数；失败全部保留。"
+    ],
+    "generation_not_authorized_by_this_file_alone": true
+  },
+  "characters": [
+    {
+      "slug": "endai",
+      "canonical_id": "FX-BST",
+      "name": "恩岱",
+      "status": "existing_reviewed_character_new_actions_planned",
+      "selection_status": "candidate_retained_no_existing_action_found",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-BST_恩岱.md",
+        "sha256": "cc81a5e3ff572cf507505c8fb4eff73b46c08fa007560838c4ba34ce18f4d6ae"
+      },
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "endai_expression_final_status",
+        "endai_card",
+        "endai_mother_manifest",
+        "endai_mother_spec",
+        "endai_mother_brief",
+        "endai_expression_manifest",
+        "endai_expression_qa",
+        "endai_expression_raw_qa",
+        "endai_mother_raw",
+        "endai_mother_transparent",
+        "endai_expressions_view",
+        "endai_failed_E2_initial",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "fifth_mother_qa",
+        "fifth_expression_final_qa"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_v1_raw_imagegen.png",
+        "raw_sha256": "919e88473c2db45221178c5f2e0bd1703052950c585155df3af4f498ab0b356d",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_transparent.png",
+        "transparent_sha256": "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/manifest.json",
+        "manifest_sha256": "7fa3b2e15fa8331a8d8dd7674abf6c37f787fb16970513d44cb8bcb84c6d4f1c",
+        "independent_qa_source_id": "fifth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "已逐张看v1 raw和透明母图：身体站稳朝画面右，人物左手（画面右）在腹前握披风边，人物右手（画面左）低位向外伸。三补片为右肩（画面左上）一块及披风两下摆各一块。E1右手降至身侧、左手仍握披风；E2首稿双人合图及修订均仅旧表情证据，修订身体偏长，不能作为比例锚。",
+        "fixed_sides": "三补片位置锁在母图原披风面，右肩补片在画面左；胸腹残甲、两腕甲、腰带和双靴原位。披风颈扣始终扣住，不新增门、门栓、钥匙、徽章或武器。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/review/endai_mother_expressions_light.png"
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "动作要求真实身体/接触变化，不将原母图手势与表情改动重新计数。相邻批次同类人类动作逐姿明确差异，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "只触自己的原护腕或原披风补片；不摸不存在的门栓，不开门、不接受新命令或表现已经放行。",
+        "保留旧甲片与三补片，不升级全甲或王廷新徽，不敬礼、不拔武器。",
+        "旧E2无令不允的首稿和唯一修订均失败且额度耗尽；此处为全新动作，不重试该表情，不使用其偏长体态。"
+      ],
+      "risks": [
+        "三处补片都仍归属原披风，不让衣布撕裂或变成新布片；颈扣不打开。",
+        "护腕甲不取下、不变成独立盾牌；手指不能穿透金属。",
+        "成熟大头短身严格跟母图，不能复制旧E2的小头长腿。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/endai/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "endai_A1_settle_left_bracer",
+          "title_zh": "抬左臂按稳原护腕",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "endai_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "甲片擦得发亮"
+            },
+            {
+              "source_id": "endai_card",
+              "locator": "知情边界",
+              "line_start": 21,
+              "quote": "不替任何人开门"
+            }
+          ],
+          "art_inference": "源卡和台词支持人物、原服装/随身物及行动边界；本具体肘位、身体支撑及原物接触是可逆日常演出提案，不冒充台本已发生、医疗建议或原生动画规格。",
+          "start_pose_description_only": "母图左手原握披风，右手低伸；先释放左侧披风边，颈扣继续承住披风。",
+          "pose": "左臂（画面右）由握披风改为屈肘抬到腰腹前，左前臂向画面右外侧平伸，左手掌朝下自然放松。右臂（画面左）屈肘横过腹前，右掌和并拢指组明确贴在左前臂原有银灰护腕的外表面，轻按稳固；两只手完全分开可数，右手不捏住左手。披风由颈扣稳住自然垂落。双脚保持母图分开全掌着地，头微低观察接触处，面容平静，不握拳备战。",
+          "end_pose_description_only": "右掌可松开，左臂可回原握披风位；不表示修甲完成或换装。",
+          "transition_scope": "起止仅文字，本轮仅生成pose所写的一张独立静态关键姿态。A1/A2无默认先后顺序，不制作过渡/GIF/循环。",
+          "visible_stage_target": "画面必须同时读出左前臂在腰前平伸、右掌贴其护腕、左掌放松露出。",
+          "pose_specific_sidedness": "左臂（画面右）平伸，右掌（画面左起）横过身体接左护腕；左手松开披风，颈扣保持闭合。",
+          "contact_and_support_checks": [
+            "右掌贴左护腕金属外表面，左手在护腕外侧完整露出，手腕与前臂连续。",
+            "左肘弯曲、左前臂平伸，右肘有清楚弯折，不让交叉双臂融成一条。",
+            "披风颈扣承重，双靴全掌落地，三块补片仍可辨。"
+          ],
+          "prop_state_and_retention": [
+            "两腕原护甲均仍戴在原手臂上；胸腹甲、三补片、腰带、双靴保留。",
+            "没有第二副甲、布条、工具或擦亮特效。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图是左手握披风/右手低伸，E1与失败E2是左握披风/右手低收；本姿双臂交叉形成真实右掌到左护腕接触。与安妮扣袖带、米洛珥按袖褶为不同人物和不同原金属接点。",
+          "risk_level": "medium_contact_and_pose",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+            "after_failed_revision": "保留首稿及唯一修订并标缺项；不得第三稿或脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_transparent.png"
+          ],
+          "reference_sha256": [
+            "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体及有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；左右按人物自身解剖侧，并标画面侧。必须画出下述真实手臂、躯干或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚和所有原物件，四周留透明边距。一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减。不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述只为制作说明，本张不画额外帧。没有任务完成、授权、付款、认领、军务指挥、战斗、治疗、伤情变化或新剧情结果。\n人物：恩岱 / FX-BST。五十来岁成年男性老城堡残兵；灰黑后梳发、灰短须、厚眉方脸，母图沉稳日常神情。深灰披风三处赭补片、棕短衣、钢灰胸腹与腕部残甲、棕腰带及棕靴。\n固定原物件与衣装侧别：三补片位置锁在母图原披风面，右肩补片在画面左；胸腹残甲、两腕甲、腰带和双靴原位。披风颈扣始终扣住，不新增门、门栓、钥匙、徽章或武器。\n本张专属手位锁：左臂（画面右）平伸，右掌（画面左起）横过身体接左护腕；左手松开披风，颈扣保持闭合。\n本张动作：抬左臂按稳原护腕。左臂（画面右）由握披风改为屈肘抬到腰腹前，左前臂向画面右外侧平伸，左手掌朝下自然放松。右臂（画面左）屈肘横过腹前，右掌和并拢指组明确贴在左前臂原有银灰护腕的外表面，轻按稳固；两只手完全分开可数，右手不捏住左手。披风由颈扣稳住自然垂落。双脚保持母图分开全掌着地，头微低观察接触处，面容平静，不握拳备战。\n可见阶段目标：画面必须同时读出左前臂在腰前平伸、右掌贴其护腕、左掌放松露出。\n接触与支撑：右掌贴左护腕金属外表面，左手在护腕外侧完整露出，手腕与前臂连续。；左肘弯曲、左前臂平伸，右肘有清楚弯折，不让交叉双臂融成一条。；披风颈扣承重，双靴全掌落地，三块补片仍可辨。。\n物件保留：两腕原护甲均仍戴在原手臂上；胸腹甲、三补片、腰带、双靴保留。；没有第二副甲、布条、工具或擦亮特效。。\n剧情边界：只触自己的原护腕或原披风补片；不摸不存在的门栓，不开门、不接受新命令或表现已经放行。；保留旧甲片与三补片，不升级全甲或王廷新徽，不敬礼、不拔武器。；旧E2无令不允的首稿和唯一修订均失败且额度耗尽；此处为全新动作，不重试该表情，不使用其偏长体态。。\n硬约束：三处补片都仍归属原披风，不让衣布撕裂或变成新布片；颈扣不打开。；护腕甲不取下、不变成独立盾牌；手指不能穿透金属。；成熟大头短身严格跟母图，不能复制旧E2的小头长腿。。",
+          "prompt_sha256": "b229eb9bfa76e83c0af1c61d5e586b78ff751f912084f44eff0a6266c0033f42",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/endai_A1_settle_left_bracer_prompt.txt",
+          "negative_constraints": [
+            "三处补片都仍归属原披风，不让衣布撕裂或变成新布片；颈扣不打开。",
+            "护腕甲不取下、不变成独立盾牌；手指不能穿透金属。",
+            "成熟大头短身严格跟母图，不能复制旧E2的小头长腿。",
+            "只触自己的原护腕或原披风补片；不摸不存在的门栓，不开门、不接受新命令或表现已经放行。",
+            "保留旧甲片与三补片，不升级全甲或王廷新徽，不敬礼、不拔武器。",
+            "旧E2无令不允的首稿和唯一修订均失败且额度耗尽；此处为全新动作，不重试该表情，不使用其偏长体态。"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "本人无已有基础动作；已有母图和表情只作去重，不作新增动作。"
+          }
+        },
+        {
+          "key": "endai_A2_press_right_cloak_patch",
+          "title_zh": "抬肘按平右肩补片",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "endai_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "披着补过三次的旧披风"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-BST／任务完成后边界",
+              "line_start": 431,
+              "quote": "门还是不开，话可以再说。"
+            }
+          ],
+          "art_inference": "源卡和台词支持人物、原服装/随身物及行动边界；本具体肘位、身体支撑及原物接触是可逆日常演出提案，不冒充台本已发生、医疗建议或原生动画规格。",
+          "start_pose_description_only": "左手仍按母图握住腹前披风边；右手从低伸位抬向自己的右肩。",
+          "pose": "左手（画面右）维持腹前轻握披风边。右臂（画面左）明显抬起，右肘向画面左外侧打开、低于肩；右掌转向自己，掌根轻贴本人右肩前外侧那块赭色补片的下缘，指组沿布面向上。手只覆盖补片下缘一小部分，补片主体和缝边清楚可见。肩头轻向右手靠拢但胸腹保持直立，双靴原位，面容平静。布料只是局部压平，不拖动整披风、不开颈扣。",
+          "end_pose_description_only": "右手可放下，补片仍缝在原肩部；不添修补工具、不宣布装备修复。",
+          "transition_scope": "起止仅文字，本轮仅生成pose所写的一张独立静态关键姿态。A1/A2无默认先后顺序，不制作过渡/GIF/循环。",
+          "visible_stage_target": "右肘外展及右掌落在右肩补片下缘必须明显；左手维持腹前握披风。",
+          "pose_specific_sidedness": "右手（画面左）接同侧右肩补片下缘；左手（画面右）保留腹前握披风，不交叉碰左腕。",
+          "contact_and_support_checks": [
+            "右掌真实贴右肩原补片下缘，右肘明显向外打开，不能停在空中。",
+            "左手仍握腹前原披风边，两手不互换，颈扣闭合。",
+            "右肩补片主体和两片下摆补片都可识别，双足原位支撑。"
+          ],
+          "prop_state_and_retention": [
+            "原三补片数目和位置不变；局部胸腹腕甲、腰带、双靴保留。",
+            "不加针线、布条、磨石、徽记或武器。"
+          ],
+          "difference_from_mother_expression_and_batch": "本人母图和既有表情均无抬右肘接肩补片；与A1双臂在腰腹交叉按左护腕明确不同。",
+          "risk_level": "medium_contact_and_pose",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+            "after_failed_revision": "保留首稿及唯一修订并标缺项；不得第三稿或脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/endai_transparent.png"
+          ],
+          "reference_sha256": [
+            "aa4b2b8df9da2a124a45c9908b821acc3306d5a843b75a25b299a7e12cd2afe8"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体及有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；左右按人物自身解剖侧，并标画面侧。必须画出下述真实手臂、躯干或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚和所有原物件，四周留透明边距。一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减。不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述只为制作说明，本张不画额外帧。没有任务完成、授权、付款、认领、军务指挥、战斗、治疗、伤情变化或新剧情结果。\n人物：恩岱 / FX-BST。五十来岁成年男性老城堡残兵；灰黑后梳发、灰短须、厚眉方脸，母图沉稳日常神情。深灰披风三处赭补片、棕短衣、钢灰胸腹与腕部残甲、棕腰带及棕靴。\n固定原物件与衣装侧别：三补片位置锁在母图原披风面，右肩补片在画面左；胸腹残甲、两腕甲、腰带和双靴原位。披风颈扣始终扣住，不新增门、门栓、钥匙、徽章或武器。\n本张专属手位锁：右手（画面左）接同侧右肩补片下缘；左手（画面右）保留腹前握披风，不交叉碰左腕。\n本张动作：抬肘按平右肩补片。左手（画面右）维持腹前轻握披风边。右臂（画面左）明显抬起，右肘向画面左外侧打开、低于肩；右掌转向自己，掌根轻贴本人右肩前外侧那块赭色补片的下缘，指组沿布面向上。手只覆盖补片下缘一小部分，补片主体和缝边清楚可见。肩头轻向右手靠拢但胸腹保持直立，双靴原位，面容平静。布料只是局部压平，不拖动整披风、不开颈扣。\n可见阶段目标：右肘外展及右掌落在右肩补片下缘必须明显；左手维持腹前握披风。\n接触与支撑：右掌真实贴右肩原补片下缘，右肘明显向外打开，不能停在空中。；左手仍握腹前原披风边，两手不互换，颈扣闭合。；右肩补片主体和两片下摆补片都可识别，双足原位支撑。。\n物件保留：原三补片数目和位置不变；局部胸腹腕甲、腰带、双靴保留。；不加针线、布条、磨石、徽记或武器。。\n剧情边界：只触自己的原护腕或原披风补片；不摸不存在的门栓，不开门、不接受新命令或表现已经放行。；保留旧甲片与三补片，不升级全甲或王廷新徽，不敬礼、不拔武器。；旧E2无令不允的首稿和唯一修订均失败且额度耗尽；此处为全新动作，不重试该表情，不使用其偏长体态。。\n硬约束：三处补片都仍归属原披风，不让衣布撕裂或变成新布片；颈扣不打开。；护腕甲不取下、不变成独立盾牌；手指不能穿透金属。；成熟大头短身严格跟母图，不能复制旧E2的小头长腿。。",
+          "prompt_sha256": "d3fd05657eb2a4d86af59c06f508e397a51030604d8a95cc7463ee9063a79cc0",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/endai_A2_press_right_cloak_patch_prompt.txt",
+          "negative_constraints": [
+            "三处补片都仍归属原披风，不让衣布撕裂或变成新布片；颈扣不打开。",
+            "护腕甲不取下、不变成独立盾牌；手指不能穿透金属。",
+            "成熟大头短身严格跟母图，不能复制旧E2的小头长腿。",
+            "只触自己的原护腕或原披风补片；不摸不存在的门栓，不开门、不接受新命令或表现已经放行。",
+            "保留旧甲片与三补片，不升级全甲或王廷新徽，不敬礼、不拔武器。",
+            "旧E2无令不允的首稿和唯一修订均失败且额度耗尽；此处为全新动作，不重试该表情，不使用其偏长体态。"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "本人无已有基础动作；已有母图和表情只作去重，不作新增动作。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wadun",
+      "canonical_id": "FX-SGE",
+      "name": "瓦顿",
+      "status": "existing_reviewed_character_new_actions_planned",
+      "selection_status": "candidate_retained_no_existing_action_found",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-SGE_瓦顿.md",
+        "sha256": "133a684d79ffe82ec9b64e75c5064926125f166f796a0324421b2297fd6ef494"
+      },
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "wadun_card",
+        "wadun_mother_manifest",
+        "wadun_mother_spec",
+        "wadun_mother_brief",
+        "wadun_expression_manifest",
+        "wadun_expression_qa",
+        "wadun_expression_raw_qa",
+        "wadun_mother_raw",
+        "wadun_mother_transparent",
+        "wadun_expressions_view",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "fifth_mother_qa",
+        "fifth_expression_final_qa"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_v1_raw_imagegen.png",
+        "raw_sha256": "3317d07c583d3b5170e6d5612e23d7189000c0ac426595c46f54aa2bb745060c",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_transparent.png",
+        "transparent_sha256": "221c3e4a6b8c06e00603943fc58c94722513f401e0b08dde5a1859fcdcb670d9",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/manifest.json",
+        "manifest_sha256": "bd5caff568fffa294af7b8bc16d02720cc47a30983967b8f8ccc1bc2cc9abeaa",
+        "independent_qa_source_id": "fifth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "已看raw/透明及两表情板：低蹲双膝外分、双靴落地；右半身（画面左）肩/胸残甲，左半身（画面右）无甲灰军衣。唯一宽头木锅铲插左腰（画面右）束带，铲头在上、柄在下。双肘近膝，两手松垂；表情图保持同姿。",
+        "fixed_sides": "半甲固定人物右侧（画面左），唯一木锅铲原收纳位在人物左腰（画面右）。原卷袖、腰带与两靴不镜像；低蹲不是跪地或坐地。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/review/wadun_mother_expressions_light.png"
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "动作要求真实身体/接触变化，不将原母图手势与表情改动重新计数。相邻批次同类人类动作逐姿明确差异，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "保持低蹲与本人原宽头木锅铲，不添锅、炉火、水汽、食物或新的工作完成结果。",
+        "锅铲是普通木制炊具，不能画成短剑、战锤或战斗姿；不敬礼、不带回部队、不添番号军徽。",
+        "保留半边残甲，不能补全盔甲或把成年初生胡茬画成儿童。"
+      ],
+      "risks": [
+        "蹲姿膝、踝与髋须连续，臀部不落地，鞋不穿过裤腿。",
+        "宽扁铲头与窄木柄是一体原形，只有一把；必须说明在手还是在左腰，不能两个同时出现。",
+        "低蹲的头身观感跟母图，不能为了手部空间加长躯干。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/wadun/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "wadun_A1_low_hold_original_spatula",
+          "title_zh": "低蹲抽铲横持",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "wadun_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "锅铲插在腰间"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-SGE／初次见面",
+              "line_start": 192,
+              "quote": "别站着。蹲下说话，站着像查营的。"
+            }
+          ],
+          "art_inference": "源卡和台词支持人物、原服装/随身物及行动边界；本具体肘位、身体支撑及原物接触是可逆日常演出提案，不冒充台本已发生、医疗建议或原生动画规格。",
+          "start_pose_description_only": "原锅铲在左腰束带，双肘近膝；从原位取出这一把，没有第二件炊具。",
+          "pose": "维持母图低蹲与双膝外分，双靴全掌稳住。左手（画面右）握住唯一原锅铲的窄柄，锅铲已经完全离开左腰束带，低位横斜持在自己的左膝前上方：宽扁铲头向画面右外侧略上，柄尾向身体内侧略下，整把都在胸口以下。左前臂离开原膝上松垂位，左肘仍收近左膝，手指绕柄形成握持。右掌（画面左）自然贴右大腿膝上衣料帮助稳蹲。左腰原束带空着但保留，目光轻落向木铲，神情平淡；不举铲指人。",
+          "end_pose_description_only": "可将同一锅铲放回原左腰束带；本图不煮饭、不倒水、不交出工具。",
+          "transition_scope": "起止仅文字，本轮仅生成pose所写的一张独立静态关键姿态。A1/A2无默认先后顺序，不制作过渡/GIF/循环。",
+          "visible_stage_target": "左腰束带空、同一铲完整在左手低持、右掌稳膝三个可见事实共同成立。",
+          "pose_specific_sidedness": "右侧（画面左）残甲不动；左手（画面右）持已取出的原锅铲，原左腰束带空，右掌扶右膝上。",
+          "contact_and_support_checks": [
+            "左手包住窄木柄，铲头、柄和手的连接明确；原左腰束带里不再有第二铲。",
+            "右掌贴右大腿膝上，双靴全掌着地、双膝弯曲，臀部不贴地。",
+            "铲头和双手不与膝盖互穿，铲整体低于胸口且不指向观者。"
+          ],
+          "prop_state_and_retention": [
+            "原右侧残甲保留，左侧不长新甲。",
+            "只移动那一把宽头木锅铲；空的原腰束带仍在，不加锅火或器皿。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图及两表情锅铲均插左腰、双手垂膝；本姿真正把原铲移到左手低持，右掌新增稳膝接触。与图里失败A1抽锤不同，本人原木炊具外形/场景不可挪用。",
+          "risk_level": "medium_contact_and_pose",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+            "after_failed_revision": "保留首稿及唯一修订并标缺项；不得第三稿或脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_transparent.png"
+          ],
+          "reference_sha256": [
+            "221c3e4a6b8c06e00603943fc58c94722513f401e0b08dde5a1859fcdcb670d9"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体及有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；左右按人物自身解剖侧，并标画面侧。必须画出下述真实手臂、躯干或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚和所有原物件，四周留透明边距。一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减。不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述只为制作说明，本张不画额外帧。没有任务完成、授权、付款、认领、军务指挥、战斗、治疗、伤情变化或新剧情结果。\n人物：瓦顿 / FX-SGE。二十多岁成年男性围城营地逃兵，蓬松深棕短发、初生胡茬、成熟宽额，平静克制神情。灰褐宽军衣、米白卷袖、棕裤棕靴，保持母图低蹲体态。\n固定原物件与衣装侧别：半甲固定人物右侧（画面左），唯一木锅铲原收纳位在人物左腰（画面右）。原卷袖、腰带与两靴不镜像；低蹲不是跪地或坐地。\n本张专属手位锁：右侧（画面左）残甲不动；左手（画面右）持已取出的原锅铲，原左腰束带空，右掌扶右膝上。\n本张动作：低蹲抽铲横持。维持母图低蹲与双膝外分，双靴全掌稳住。左手（画面右）握住唯一原锅铲的窄柄，锅铲已经完全离开左腰束带，低位横斜持在自己的左膝前上方：宽扁铲头向画面右外侧略上，柄尾向身体内侧略下，整把都在胸口以下。左前臂离开原膝上松垂位，左肘仍收近左膝，手指绕柄形成握持。右掌（画面左）自然贴右大腿膝上衣料帮助稳蹲。左腰原束带空着但保留，目光轻落向木铲，神情平淡；不举铲指人。\n可见阶段目标：左腰束带空、同一铲完整在左手低持、右掌稳膝三个可见事实共同成立。\n接触与支撑：左手包住窄木柄，铲头、柄和手的连接明确；原左腰束带里不再有第二铲。；右掌贴右大腿膝上，双靴全掌着地、双膝弯曲，臀部不贴地。；铲头和双手不与膝盖互穿，铲整体低于胸口且不指向观者。。\n物件保留：原右侧残甲保留，左侧不长新甲。；只移动那一把宽头木锅铲；空的原腰束带仍在，不加锅火或器皿。。\n剧情边界：保持低蹲与本人原宽头木锅铲，不添锅、炉火、水汽、食物或新的工作完成结果。；锅铲是普通木制炊具，不能画成短剑、战锤或战斗姿；不敬礼、不带回部队、不添番号军徽。；保留半边残甲，不能补全盔甲或把成年初生胡茬画成儿童。。\n硬约束：蹲姿膝、踝与髋须连续，臀部不落地，鞋不穿过裤腿。；宽扁铲头与窄木柄是一体原形，只有一把；必须说明在手还是在左腰，不能两个同时出现。；低蹲的头身观感跟母图，不能为了手部空间加长躯干。。",
+          "prompt_sha256": "28251bc2d2a5ffb7086b10016b3b3d1cd4cd61576dd432d8d58ed6ab0042d542",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/wadun_A1_low_hold_original_spatula_prompt.txt",
+          "negative_constraints": [
+            "蹲姿膝、踝与髋须连续，臀部不落地，鞋不穿过裤腿。",
+            "宽扁铲头与窄木柄是一体原形，只有一把；必须说明在手还是在左腰，不能两个同时出现。",
+            "低蹲的头身观感跟母图，不能为了手部空间加长躯干。",
+            "保持低蹲与本人原宽头木锅铲，不添锅、炉火、水汽、食物或新的工作完成结果。",
+            "锅铲是普通木制炊具，不能画成短剑、战锤或战斗姿；不敬礼、不带回部队、不添番号军徽。",
+            "保留半边残甲，不能补全盔甲或把成年初生胡茬画成儿童。"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "本人无已有基础动作；已有母图和表情只作去重，不作新增动作。"
+          }
+        },
+        {
+          "key": "wadun_A2_brace_knees_resettle_squat",
+          "title_zh": "双掌扶膝重整低蹲",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "wadun_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "说话时习惯蹲着"
+            },
+            {
+              "source_id": "wadun_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "甲片只剩半边"
+            }
+          ],
+          "art_inference": "源卡和台词支持人物、原服装/随身物及行动边界；本具体肘位、身体支撑及原物接触是可逆日常演出提案，不冒充台本已发生、医疗建议或原生动画规格。",
+          "start_pose_description_only": "仍是原来低蹲；本独立姿态的原锅铲留在左腰束带，不承接另一张取铲。",
+          "pose": "原锅铲完整插在左腰（画面右）束带中，位置和方向保持。双手不再松垂：右掌（画面左）落在右膝上方的大腿布面，左掌（画面右）落在左膝上方同样位置，掌根承住、指组沿大腿朝外下。双肘外开并稍伸，肩胸由原窝肩姿小幅向前上方移，背部较直；髋仅略抬，仍明显低于双膝上缘，双膝保持深弯外分，绝不站起。双靴仍原位全掌着地，臀部不坐地。平静调整蹲姿的一个停住瞬间。",
+          "end_pose_description_only": "可再放松落肘，回原低蹲；不含站起、赶路或归队后续。",
+          "transition_scope": "起止仅文字，本轮仅生成pose所写的一张独立静态关键姿态。A1/A2无默认先后顺序，不制作过渡/GIF/循环。",
+          "visible_stage_target": "两掌明确压在膝上大腿、双肘改变、肩胸抬起而髋仍深蹲可见；只变表情不合格。",
+          "pose_specific_sidedness": "右掌落右膝上（画面左），左掌落左膝上（画面右）；锅铲固定左腰束带里，两手均空。",
+          "contact_and_support_checks": [
+            "左右掌各贴自己同侧大腿膝上，不能只悬在膝旁或重画原松垂手。",
+            "双肘稍伸、肩胸小幅前上移构成明显身体变化，髋仍低位。",
+            "双鞋全掌着地、两膝深弯外分，原木铲仍在左腰。"
+          ],
+          "prop_state_and_retention": [
+            "原木铲仍插左腰，同一束带、原右侧残甲及完整两靴保留。",
+            "无取铲、无新锅火、无地面道具。"
+          ],
+          "difference_from_mother_expression_and_batch": "本人所有母图/表情是双肘近膝、手松垂；本姿两掌改为大腿承力、肘稍伸重整低蹲。霍珥也有扶膝，但其站立俯身不同于瓦顿双膝外分的深蹲，不称全库首次扶膝。",
+          "risk_level": "medium_contact_and_pose",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+            "after_failed_revision": "保留首稿及唯一修订并标缺项；不得第三稿或脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/wadun_transparent.png"
+          ],
+          "reference_sha256": [
+            "221c3e4a6b8c06e00603943fc58c94722513f401e0b08dde5a1859fcdcb670d9"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体及有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；左右按人物自身解剖侧，并标画面侧。必须画出下述真实手臂、躯干或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚和所有原物件，四周留透明边距。一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减。不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述只为制作说明，本张不画额外帧。没有任务完成、授权、付款、认领、军务指挥、战斗、治疗、伤情变化或新剧情结果。\n人物：瓦顿 / FX-SGE。二十多岁成年男性围城营地逃兵，蓬松深棕短发、初生胡茬、成熟宽额，平静克制神情。灰褐宽军衣、米白卷袖、棕裤棕靴，保持母图低蹲体态。\n固定原物件与衣装侧别：半甲固定人物右侧（画面左），唯一木锅铲原收纳位在人物左腰（画面右）。原卷袖、腰带与两靴不镜像；低蹲不是跪地或坐地。\n本张专属手位锁：右掌落右膝上（画面左），左掌落左膝上（画面右）；锅铲固定左腰束带里，两手均空。\n本张动作：双掌扶膝重整低蹲。原锅铲完整插在左腰（画面右）束带中，位置和方向保持。双手不再松垂：右掌（画面左）落在右膝上方的大腿布面，左掌（画面右）落在左膝上方同样位置，掌根承住、指组沿大腿朝外下。双肘外开并稍伸，肩胸由原窝肩姿小幅向前上方移，背部较直；髋仅略抬，仍明显低于双膝上缘，双膝保持深弯外分，绝不站起。双靴仍原位全掌着地，臀部不坐地。平静调整蹲姿的一个停住瞬间。\n可见阶段目标：两掌明确压在膝上大腿、双肘改变、肩胸抬起而髋仍深蹲可见；只变表情不合格。\n接触与支撑：左右掌各贴自己同侧大腿膝上，不能只悬在膝旁或重画原松垂手。；双肘稍伸、肩胸小幅前上移构成明显身体变化，髋仍低位。；双鞋全掌着地、两膝深弯外分，原木铲仍在左腰。。\n物件保留：原木铲仍插左腰，同一束带、原右侧残甲及完整两靴保留。；无取铲、无新锅火、无地面道具。。\n剧情边界：保持低蹲与本人原宽头木锅铲，不添锅、炉火、水汽、食物或新的工作完成结果。；锅铲是普通木制炊具，不能画成短剑、战锤或战斗姿；不敬礼、不带回部队、不添番号军徽。；保留半边残甲，不能补全盔甲或把成年初生胡茬画成儿童。。\n硬约束：蹲姿膝、踝与髋须连续，臀部不落地，鞋不穿过裤腿。；宽扁铲头与窄木柄是一体原形，只有一把；必须说明在手还是在左腰，不能两个同时出现。；低蹲的头身观感跟母图，不能为了手部空间加长躯干。。",
+          "prompt_sha256": "0d8f2dc294b15fee219e01304820cb3bb4c18e53e1fa231bf99e45db05ca2995",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/wadun_A2_brace_knees_resettle_squat_prompt.txt",
+          "negative_constraints": [
+            "蹲姿膝、踝与髋须连续，臀部不落地，鞋不穿过裤腿。",
+            "宽扁铲头与窄木柄是一体原形，只有一把；必须说明在手还是在左腰，不能两个同时出现。",
+            "低蹲的头身观感跟母图，不能为了手部空间加长躯干。",
+            "保持低蹲与本人原宽头木锅铲，不添锅、炉火、水汽、食物或新的工作完成结果。",
+            "锅铲是普通木制炊具，不能画成短剑、战锤或战斗姿；不敬礼、不带回部队、不添番号军徽。",
+            "保留半边残甲，不能补全盔甲或把成年初生胡茬画成儿童。"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "本人无已有基础动作；已有母图和表情只作去重，不作新增动作。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ertai",
+      "canonical_id": "FX-CMP",
+      "name": "珥泰",
+      "status": "existing_reviewed_character_new_actions_planned",
+      "selection_status": "candidate_retained_no_existing_action_found",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CMP_珥泰.md",
+        "sha256": "9394c336c2b5c7303601fd46d28be83e0f48a6736924bfac6224fae450fefa97"
+      },
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "ertai_card",
+        "ertai_mother_manifest",
+        "ertai_mother_spec",
+        "ertai_mother_brief",
+        "ertai_expression_manifest",
+        "ertai_expression_qa",
+        "ertai_expression_raw_qa",
+        "ertai_mother_raw",
+        "ertai_mother_transparent",
+        "ertai_expressions_view",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "fifth_mother_qa",
+        "fifth_expression_final_qa"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_v1_raw_imagegen.png",
+        "raw_sha256": "3193e5e413e86c4afa88f3c018bbb0066a36ec76332c18cc0d56cb881f39bb39",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_transparent.png",
+        "transparent_sha256": "e41580f2b6787a2a468d685abae8b390d42d9cd8d78090017699ee12c571de29",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/manifest.json",
+        "manifest_sha256": "29b1ca231a874c95bbc290c1f79c28f553616f875420cc0e254bdf2aa883c618",
+        "independent_qa_source_id": "fifth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "raw/透明母图中左手（画面右）抱住竖斜木板下缘，板贴胸腹；右手（画面左）在胸前拿一根细木笔杆，斜向板侧。两表情只低眼/侧避，板笔姿基本相同。",
+        "fixed_sides": "左臂（画面右）控制唯一木板，右手（画面左）始终握唯一原细木笔杆，不换手、不添名单纸、笔插、墨瓶或现代夹板。木板原木色，无新文字记号。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/review/ertai_mother_expressions_light.png"
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "动作要求真实身体/接触变化，不将原母图手势与表情改动重新计数。相邻批次同类人类动作逐姿明确差异，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "木板与笔杆仅普通持握、调整；不写新名字、不添勾号、盖章、销账或呈递登记板。",
+        "不认领遗落装备、不评军务调令，不画新军衔、旗帜或归队点名结果。",
+        "板原木纹留在板面，不能把纹理画成可读名单或新证明文件。"
+      ],
+      "risks": [
+        "左掌/前臂要真正承住木板，板不能凭空浮在胸前。",
+        "右手完整持原细木笔杆，木杆不要变羽毛笔、短剑或第二块木板。",
+        "两姿都是本人自持；朝向改变不等于把板交给画外人。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/ertai/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "ertai_A1_level_board_and_rest_rod",
+          "title_zh": "平托原板横搁笔杆",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "ertai_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "手里一块点名的木板"
+            },
+            {
+              "source_id": "ertai_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "说话时用笔杆敲板"
+            }
+          ],
+          "art_inference": "源卡和台词支持人物、原服装/随身物及行动边界；本具体肘位、身体支撑及原物接触是可逆日常演出提案，不冒充台本已发生、医疗建议或原生动画规格。",
+          "start_pose_description_only": "母图竖板在胸腹，右手笔杆斜近板边；在自己腰前调整两原物件。",
+          "pose": "左肘（画面右）弯曲向身前伸一小段，左手掌朝上托在原木板底面中下部，将唯一木板从竖斜抱持改为腰前近水平的浅托盘角度：板面朝上略朝自己，板的近侧厚边清楚可见，板仍完全在本人手臂可控范围。右肘（画面左）向外打开，右手握同一细木笔杆中段，把笔杆横向轻搁在板面靠近自己的上边缘，木杆一段与木面明确接触，手仍握杆不放开；不是笔尖写字，不添划痕。头微低仅辅助看接触。双脚原位，身体直立，木板不高举、不外递。",
+          "end_pose_description_only": "可将笔杆提离、左手把木板抱回胸腹；不新增或结清任何登记。",
+          "transition_scope": "起止仅文字，本轮仅生成pose所写的一张独立静态关键姿态。A1/A2无默认先后顺序，不制作过渡/GIF/循环。",
+          "visible_stage_target": "板面朝上与可见近侧厚边、左掌在板底、右手横握笔杆贴边三点必须同时清楚。",
+          "pose_specific_sidedness": "左掌（画面右）朝上托原板底；右手（画面左）持原木笔杆横搁板面近身边缘，板不再竖抱胸前。",
+          "contact_and_support_checks": [
+            "左掌朝上在板底承重，前臂与板有可读支撑，不能仍竖板冒称平托。",
+            "右手握杆中段，杆侧面轻贴原板面边缘，不能以笔尖画新字。",
+            "板笔各一件，双手分开，完整双靴着地。"
+          ],
+          "prop_state_and_retention": [
+            "原一板一木笔杆保持形状与尺寸，板上不添字、勾、印章或纸。",
+            "原军衣宽袖、束带、米白下摆和双靴保留。"
+          ],
+          "difference_from_mother_expression_and_batch": "本人母图/两表情均竖板贴胸腹且笔斜近板侧；本姿板面显著转朝上、左掌承底、笔杆横搁。苏奈A2为双手转板横收，本姿为左掌单托且右手持杆接板，是人物与接点均不同的日常操作。",
+          "risk_level": "medium_contact_and_pose",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+            "after_failed_revision": "保留首稿及唯一修订并标缺项；不得第三稿或脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_transparent.png"
+          ],
+          "reference_sha256": [
+            "e41580f2b6787a2a468d685abae8b390d42d9cd8d78090017699ee12c571de29"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体及有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；左右按人物自身解剖侧，并标画面侧。必须画出下述真实手臂、躯干或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚和所有原物件，四周留透明边距。一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减。不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述只为制作说明，本张不画额外帧。没有任务完成、授权、付款、认领、军务指挥、战斗、治疗、伤情变化或新剧情结果。\n人物：珥泰 / FX-CMP。三十来岁成年男性兵营清点人，深棕侧分发、短须、稍长疲倦脸，神情克制。宽大不合身旧灰军衣、米白领袖下摆、棕腰带与棕靴。\n固定原物件与衣装侧别：左臂（画面右）控制唯一木板，右手（画面左）始终握唯一原细木笔杆，不换手、不添名单纸、笔插、墨瓶或现代夹板。木板原木色，无新文字记号。\n本张专属手位锁：左掌（画面右）朝上托原板底；右手（画面左）持原木笔杆横搁板面近身边缘，板不再竖抱胸前。\n本张动作：平托原板横搁笔杆。左肘（画面右）弯曲向身前伸一小段，左手掌朝上托在原木板底面中下部，将唯一木板从竖斜抱持改为腰前近水平的浅托盘角度：板面朝上略朝自己，板的近侧厚边清楚可见，板仍完全在本人手臂可控范围。右肘（画面左）向外打开，右手握同一细木笔杆中段，把笔杆横向轻搁在板面靠近自己的上边缘，木杆一段与木面明确接触，手仍握杆不放开；不是笔尖写字，不添划痕。头微低仅辅助看接触。双脚原位，身体直立，木板不高举、不外递。\n可见阶段目标：板面朝上与可见近侧厚边、左掌在板底、右手横握笔杆贴边三点必须同时清楚。\n接触与支撑：左掌朝上在板底承重，前臂与板有可读支撑，不能仍竖板冒称平托。；右手握杆中段，杆侧面轻贴原板面边缘，不能以笔尖画新字。；板笔各一件，双手分开，完整双靴着地。。\n物件保留：原一板一木笔杆保持形状与尺寸，板上不添字、勾、印章或纸。；原军衣宽袖、束带、米白下摆和双靴保留。。\n剧情边界：木板与笔杆仅普通持握、调整；不写新名字、不添勾号、盖章、销账或呈递登记板。；不认领遗落装备、不评军务调令，不画新军衔、旗帜或归队点名结果。；板原木纹留在板面，不能把纹理画成可读名单或新证明文件。。\n硬约束：左掌/前臂要真正承住木板，板不能凭空浮在胸前。；右手完整持原细木笔杆，木杆不要变羽毛笔、短剑或第二块木板。；两姿都是本人自持；朝向改变不等于把板交给画外人。。",
+          "prompt_sha256": "de78928f38fa02a3d420b67d3e8f6592dc235b60ded487f03bcef729ac237b8a",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/ertai_A1_level_board_and_rest_rod_prompt.txt",
+          "negative_constraints": [
+            "左掌/前臂要真正承住木板，板不能凭空浮在胸前。",
+            "右手完整持原细木笔杆，木杆不要变羽毛笔、短剑或第二块木板。",
+            "两姿都是本人自持；朝向改变不等于把板交给画外人。",
+            "木板与笔杆仅普通持握、调整；不写新名字、不添勾号、盖章、销账或呈递登记板。",
+            "不认领遗落装备、不评军务调令，不画新军衔、旗帜或归队点名结果。",
+            "板原木纹留在板面，不能把纹理画成可读名单或新证明文件。"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "本人无已有基础动作；已有母图和表情只作去重，不作新增动作。"
+          }
+        },
+        {
+          "key": "ertai_A2_lower_rod_side_carry_board",
+          "title_zh": "垂笔侧抱原木板",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "ertai_card",
+              "locator": "知情边界",
+              "line_start": 21,
+              "quote": "不认领遗落装备"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-CMP／拒绝",
+              "line_start": 808,
+              "quote": "要我交出登记板？不行。"
+            }
+          ],
+          "art_inference": "源卡和台词支持人物、原服装/随身物及行动边界；本具体肘位、身体支撑及原物接触是可逆日常演出提案，不冒充台本已发生、医疗建议或原生动画规格。",
+          "start_pose_description_only": "本人两手各持原物：左手木板、右手笔杆；两件都不转交别人。",
+          "pose": "左臂（画面右）从胸前抱板位向下落，将同一木板竖直贴在自己左腰外侧；左掌托住板的下边缘，左前臂沿板面外缘收住，使板上沿降到下肋附近、板下沿到大腿上部，木板边缘和支撑手都看得见。右手（画面左）握原细木笔杆，右臂自然降到腰带以下、离大腿外侧一小段，笔杆斜向下但不接触衣裤或地面。双肩放松、胸腹不再被板挡住，双靴原位稳站，面部保持克制日常神情。",
+          "end_pose_description_only": "可再次抬板与笔；不意味着交板、清点完毕、放弃登记或军令改变。",
+          "transition_scope": "起止仅文字，本轮仅生成pose所写的一张独立静态关键姿态。A1/A2无默认先后顺序，不制作过渡/GIF/循环。",
+          "visible_stage_target": "木板真正移至左腰侧且上沿低于胸部、右手笔杆低于腰带、左掌托底必须清楚。",
+          "pose_specific_sidedness": "左手（画面右）把原板托在左腰外侧；右手（画面左）持原笔杆降到腰下，板与杆互不接触。",
+          "contact_and_support_checks": [
+            "左掌托板下沿且左前臂收住板侧，板贴左腰不漂浮。",
+            "右手持杆位明显低于腰带，杆尖离衣裤与地面有间隙，不藏进袖内。",
+            "板顶、板底与双手可读，两脚全掌着地，不新增第三手。"
+          ],
+          "prop_state_and_retention": [
+            "一块原木板、一根原细木笔杆，不加文字、墨瓶、印章或文件。",
+            "原宽旧军衣与两靴保留，木板不插不存在的口袋。"
+          ],
+          "difference_from_mother_expression_and_batch": "本人既有图都是胸前板笔组合；本姿板下移至左侧腰/上腿、右手持笔低垂，腾出胸腹；与A1平托接杆不同。",
+          "risk_level": "medium_contact_and_pose",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+            "after_failed_revision": "保留首稿及唯一修订并标缺项；不得第三稿或脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/concept_v1/ertai_transparent.png"
+          ],
+          "reference_sha256": [
+            "e41580f2b6787a2a468d685abae8b390d42d9cd8d78090017699ee12c571de29"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体及有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；左右按人物自身解剖侧，并标画面侧。必须画出下述真实手臂、躯干或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚和所有原物件，四周留透明边距。一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减。不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述只为制作说明，本张不画额外帧。没有任务完成、授权、付款、认领、军务指挥、战斗、治疗、伤情变化或新剧情结果。\n人物：珥泰 / FX-CMP。三十来岁成年男性兵营清点人，深棕侧分发、短须、稍长疲倦脸，神情克制。宽大不合身旧灰军衣、米白领袖下摆、棕腰带与棕靴。\n固定原物件与衣装侧别：左臂（画面右）控制唯一木板，右手（画面左）始终握唯一原细木笔杆，不换手、不添名单纸、笔插、墨瓶或现代夹板。木板原木色，无新文字记号。\n本张专属手位锁：左手（画面右）把原板托在左腰外侧；右手（画面左）持原笔杆降到腰下，板与杆互不接触。\n本张动作：垂笔侧抱原木板。左臂（画面右）从胸前抱板位向下落，将同一木板竖直贴在自己左腰外侧；左掌托住板的下边缘，左前臂沿板面外缘收住，使板上沿降到下肋附近、板下沿到大腿上部，木板边缘和支撑手都看得见。右手（画面左）握原细木笔杆，右臂自然降到腰带以下、离大腿外侧一小段，笔杆斜向下但不接触衣裤或地面。双肩放松、胸腹不再被板挡住，双靴原位稳站，面部保持克制日常神情。\n可见阶段目标：木板真正移至左腰侧且上沿低于胸部、右手笔杆低于腰带、左掌托底必须清楚。\n接触与支撑：左掌托板下沿且左前臂收住板侧，板贴左腰不漂浮。；右手持杆位明显低于腰带，杆尖离衣裤与地面有间隙，不藏进袖内。；板顶、板底与双手可读，两脚全掌着地，不新增第三手。。\n物件保留：一块原木板、一根原细木笔杆，不加文字、墨瓶、印章或文件。；原宽旧军衣与两靴保留，木板不插不存在的口袋。。\n剧情边界：木板与笔杆仅普通持握、调整；不写新名字、不添勾号、盖章、销账或呈递登记板。；不认领遗落装备、不评军务调令，不画新军衔、旗帜或归队点名结果。；板原木纹留在板面，不能把纹理画成可读名单或新证明文件。。\n硬约束：左掌/前臂要真正承住木板，板不能凭空浮在胸前。；右手完整持原细木笔杆，木杆不要变羽毛笔、短剑或第二块木板。；两姿都是本人自持；朝向改变不等于把板交给画外人。。",
+          "prompt_sha256": "7e5ed05e7faaf4e87ab9a361cbaa0e1661a4a19faa4e4d144cc3d0a57c93aae9",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/ertai_A2_lower_rod_side_carry_board_prompt.txt",
+          "negative_constraints": [
+            "左掌/前臂要真正承住木板，板不能凭空浮在胸前。",
+            "右手完整持原细木笔杆，木杆不要变羽毛笔、短剑或第二块木板。",
+            "两姿都是本人自持；朝向改变不等于把板交给画外人。",
+            "木板与笔杆仅普通持握、调整；不写新名字、不添勾号、盖章、销账或呈递登记板。",
+            "不认领遗落装备、不评军务调令，不画新军衔、旗帜或归队点名结果。",
+            "板原木纹留在板面，不能把纹理画成可读名单或新证明文件。"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "本人无已有基础动作；已有母图和表情只作去重，不作新增动作。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "suier",
+      "canonical_id": "FX-CP1",
+      "name": "燧珥",
+      "status": "existing_reviewed_character_new_actions_planned",
+      "selection_status": "candidate_retained_no_existing_action_found",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CP1_燧珥.md",
+        "sha256": "4117021d341542e271dcb824ac4dd1b3a5e2e178b05fc911879449907aba1d43"
+      },
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "suier_card",
+        "suier_mother_manifest",
+        "suier_mother_spec",
+        "suier_mother_brief",
+        "suier_expression_manifest",
+        "suier_expression_qa",
+        "suier_expression_raw_qa",
+        "suier_mother_raw",
+        "suier_mother_transparent",
+        "suier_expressions_view",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "fifth_mother_qa",
+        "fifth_expression_final_qa"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_v1_raw_imagegen.png",
+        "raw_sha256": "304e566ce1126c93c75b41481ae8c672b90e59969b17a5af2d533245d5009f2c",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_transparent.png",
+        "transparent_sha256": "74b89bd1eca88ce53d6e676d046b694d607969f656302dbee86384cb35ae6c70",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/manifest.json",
+        "manifest_sha256": "06fad34b72cf3003161db2c217436545249d62e2ee1612343b17952c37a1a78c",
+        "independent_qa_source_id": "fifth_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "raw/透明母图身体略侧、朝画面左，左手（画面右）护住胸前破领，右手（画面左）低抬掌。右脚（画面左）是半破靴、米白布包前足与露趾，左脚（画面右）是完整棕高靴；双足完整无伤口。两表情都把右手降至身侧，左手仍护领。",
+        "fixed_sides": "左手（画面右）一直护住原破领，米白内衫遮胸。右脚（画面左）半破靴与原包布/露趾不变，左脚（画面右）整靴不变；腰带仍系住，不镜像、不脱鞋。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/review/suier_mother_expressions_light.png"
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "动作要求真实身体/接触变化，不将原母图手势与表情改动重新计数。相邻批次同类人类动作逐姿明确差异，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "只调整自己的原衣布和普通站姿；不添加伤口、痛苦、治疗、康复或补齐破靴结果。",
+        "不传话、不带路、不指营地、不展示哨声事件；画外没有营地空间定义，不把身体朝向当新地理证据。",
+        "不混成绥珥FX-LOT，不新增武器、绷带卷、包裹或逃跑战斗姿。"
+      ],
+      "risks": [
+        "半破靴不是断脚；原露趾和布包前足必须保留且双足完整。",
+        "领口始终有原米白内衫遮挡，手不扒开衣领，腰以下裤装完整。",
+        "原短衣和裤装保持完整，不撕裂、不取走新布条；不可用脚本拉伸或压短人体。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/suier/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "suier_A1_gather_right_tunic_hem",
+          "title_zh": "护领轻拢右侧衣摆",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "suier_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "衣领被扯开过，靴子只剩一只半"
+            },
+            {
+              "source_id": "suier_card",
+              "locator": "知情边界",
+              "line_start": 21,
+              "quote": "不替营里任何人传话"
+            }
+          ],
+          "art_inference": "源卡和台词支持人物、原服装/随身物及行动边界；本具体肘位、身体支撑及原物接触是可逆日常演出提案，不冒充台本已发生、医疗建议或原生动画规格。",
+          "start_pose_description_only": "左手护领，右手从母图低抬掌或旧表情低垂位转向自己的右侧衣摆。",
+          "pose": "左手（画面右）仍在胸前轻拢原破领，米白内衫完整遮胸。右手（画面左）向内下方伸至自己右侧大腿上方的破衣下摆，拇指与并拢指组只捏住原下摆一小段布边，向身体侧上方轻拢，形成一条明显斜向布褶；衣摆只升到原大腿上部，不露腹部、不遮半破靴、不脱腰带。右肘由原外伸改为弯曲靠身，双肩轻向右侧倾一点，双脚原位全掌着地。面容平静，注意力轻落在布边，不惊恐、不痛苦。",
+          "end_pose_description_only": "手可松开，原破衣自然落回；不表示缝补、康复或已经准备带路。",
+          "transition_scope": "起止仅文字，本轮仅生成pose所写的一张独立静态关键姿态。A1/A2无默认先后顺序，不制作过渡/GIF/循环。",
+          "visible_stage_target": "右指捏住画面左短衣下摆并产生斜布褶、左手护领、两鞋原样完整可见。",
+          "pose_specific_sidedness": "左手（画面右）护破领，右手（画面左）捏右侧下摆；右脚（画面左）半破、左脚（画面右）整靴。",
+          "contact_and_support_checks": [
+            "右手真实捏住右侧下摆而非空抓，布褶从接点向腰侧连贯。",
+            "左手仍护领且内衫遮胸，两只手上下分离可数。",
+            "原半破右靴在画面左、整左靴在画面右均完整露出，双足稳定。"
+          ],
+          "prop_state_and_retention": [
+            "原破领、原短衣、腰带、裤、半破右靴与原包布、完整左靴全部保留。",
+            "没有新增布条、针线或鞋件；没有皮肤伤口。"
+          ],
+          "difference_from_mother_expression_and_batch": "本人母图是右掌低抬、表情图是右手低垂；本姿新增右手实际拢原短衣下摆与清楚衣褶。缇菈A2同属拢衣动作，但为左侧长裙看破鞋，本姿右侧短衣、持续左手护领，不能复制其鞋侧。",
+          "risk_level": "medium_contact_and_pose",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+            "after_failed_revision": "保留首稿及唯一修订并标缺项；不得第三稿或脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_transparent.png"
+          ],
+          "reference_sha256": [
+            "74b89bd1eca88ce53d6e676d046b694d607969f656302dbee86384cb35ae6c70"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体及有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；左右按人物自身解剖侧，并标画面侧。必须画出下述真实手臂、躯干或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚和所有原物件，四周留透明边距。一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减。不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述只为制作说明，本张不画额外帧。没有任务完成、授权、付款、认领、军务指挥、战斗、治疗、伤情变化或新剧情结果。\n人物：燧珥 / FX-CP1。燧珥 FX-CP1，三十来岁成年男性营地边缘逃散者。凌乱灰棕短发、短胡茬、窄下颌，灰褐破领短衣、米白内衫、深色短裤、腰带；不是绥珥 FX-LOT。\n固定原物件与衣装侧别：左手（画面右）一直护住原破领，米白内衫遮胸。右脚（画面左）半破靴与原包布/露趾不变，左脚（画面右）整靴不变；腰带仍系住，不镜像、不脱鞋。\n本张专属手位锁：左手（画面右）护破领，右手（画面左）捏右侧下摆；右脚（画面左）半破、左脚（画面右）整靴。\n本张动作：护领轻拢右侧衣摆。左手（画面右）仍在胸前轻拢原破领，米白内衫完整遮胸。右手（画面左）向内下方伸至自己右侧大腿上方的破衣下摆，拇指与并拢指组只捏住原下摆一小段布边，向身体侧上方轻拢，形成一条明显斜向布褶；衣摆只升到原大腿上部，不露腹部、不遮半破靴、不脱腰带。右肘由原外伸改为弯曲靠身，双肩轻向右侧倾一点，双脚原位全掌着地。面容平静，注意力轻落在布边，不惊恐、不痛苦。\n可见阶段目标：右指捏住画面左短衣下摆并产生斜布褶、左手护领、两鞋原样完整可见。\n接触与支撑：右手真实捏住右侧下摆而非空抓，布褶从接点向腰侧连贯。；左手仍护领且内衫遮胸，两只手上下分离可数。；原半破右靴在画面左、整左靴在画面右均完整露出，双足稳定。。\n物件保留：原破领、原短衣、腰带、裤、半破右靴与原包布、完整左靴全部保留。；没有新增布条、针线或鞋件；没有皮肤伤口。。\n剧情边界：只调整自己的原衣布和普通站姿；不添加伤口、痛苦、治疗、康复或补齐破靴结果。；不传话、不带路、不指营地、不展示哨声事件；画外没有营地空间定义，不把身体朝向当新地理证据。；不混成绥珥FX-LOT，不新增武器、绷带卷、包裹或逃跑战斗姿。。\n硬约束：半破靴不是断脚；原露趾和布包前足必须保留且双足完整。；领口始终有原米白内衫遮挡，手不扒开衣领，腰以下裤装完整。；原短衣和裤装保持完整，不撕裂、不取走新布条；不可用脚本拉伸或压短人体。；本张只轻拢原右侧短衣下摆，不撕裂或取走布条；不可用脚本压短人体。。",
+          "prompt_sha256": "2e4d0d3cfa186d6a0856ae607421eb9e35c8f4be915e991c195d44cad9013a82",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/suier_A1_gather_right_tunic_hem_prompt.txt",
+          "negative_constraints": [
+            "半破靴不是断脚；原露趾和布包前足必须保留且双足完整。",
+            "领口始终有原米白内衫遮挡，手不扒开衣领，腰以下裤装完整。",
+            "原短衣和裤装保持完整，不撕裂、不取走新布条；不可用脚本拉伸或压短人体。",
+            "本张只轻拢原右侧短衣下摆，不撕裂或取走布条；不可用脚本压短人体。",
+            "只调整自己的原衣布和普通站姿；不添加伤口、痛苦、治疗、康复或补齐破靴结果。",
+            "不传话、不带路、不指营地、不展示哨声事件；画外没有营地空间定义，不把身体朝向当新地理证据。",
+            "不混成绥珥FX-LOT，不新增武器、绷带卷、包裹或逃跑战斗姿。"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "本人无已有基础动作；已有母图和表情只作去重，不作新增动作。"
+          }
+        },
+        {
+          "key": "suier_A2_shallow_lean_right_thigh_support",
+          "title_zh": "护领扶膝浅俯身",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "suier_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "三十来岁的男人"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-CP1／拒绝边界",
+              "line_start": 1128,
+              "quote": "要我带路进营？不。"
+            }
+          ],
+          "art_inference": "源卡和台词支持人物、原服装/随身物及行动边界；本具体肘位、身体支撑及原物接触是可逆日常演出提案，不冒充台本已发生、医疗建议或原生动画规格。",
+          "start_pose_description_only": "双脚仍在母图站位；左手持续护领，右手空着，不承接上一张拢衣动作。",
+          "pose": "左手（画面右）保留胸前护领，内衫遮胸。人物从髋部温和向前折一小段，双膝略屈但不深蹲、不跪。右臂（画面左）向下伸，右掌掌根真正贴住右膝上方的大腿布面，指组沿大腿向下，右肘稍弯；上背和肩线随躯干一起前倾。右手不碰靴或包布、不揉伤处。双脚保持原位置并全掌承重，两脚大小及破靴露趾不变。头顺着躯干稍低，面容仍日常平静，不表示疼痛、受伤或躲避攻击。",
+          "end_pose_description_only": "可松右掌并站直；不出现治愈、绑鞋、拆布、赶路或进营后续。",
+          "transition_scope": "起止仅文字，本轮仅生成pose所写的一张独立静态关键姿态。A1/A2无默认先后顺序，不制作过渡/GIF/循环。",
+          "visible_stage_target": "髋部浅俯、右掌接右膝上裤布、左手仍护领和双足原位必须一眼可见。",
+          "pose_specific_sidedness": "左手（画面右）护领；右掌（画面左）贴右膝上方裤布；右半破靴在画面左、左整靴在画面右。",
+          "contact_and_support_checks": [
+            "右掌明确压在右膝上方裤布，髋部折线/膝微屈与肩线前倾可读，不能只低头。",
+            "左手一直护领，右手不接触半靴或布包，避免画成护理动作。",
+            "两脚全掌原位、膝不触地、臀不落地；右半靴及左整靴都完整。"
+          ],
+          "prop_state_and_retention": [
+            "破衣、内衫、腰带、裤与两不同鞋完整保留，原布包不加层不拆开。",
+            "不新增手杖、椅子、地面物或治疗用品。"
+          ],
+          "difference_from_mother_expression_and_batch": "本人既有表情均站直/仅头姿变化，本姿髋折、膝微屈并右掌真实扶膝。区别A1捏衣摆；也不复刻瓦顿深蹲或蕾因触小腿绑带。",
+          "risk_level": "medium_contact_and_pose",
+          "extra_pose_constraints": [],
+          "new_contact_prop": null,
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+            "after_failed_revision": "保留首稿及唯一修订并标缺项；不得第三稿或脚本修人体。",
+            "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/suier/concept_v1/suier_transparent.png"
+          ],
+          "reference_sha256": [
+            "74b89bd1eca88ce53d6e676d046b694d607969f656302dbee86384cb35ae6c70"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗基础动作全身关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体及有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；左右按人物自身解剖侧，并标画面侧。必须画出下述真实手臂、躯干或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚和所有原物件，四周留透明边距。一个人物、一个瞬间，纯alpha透明背景；无背景、地板、地面投影、光晕、烟雾、文字、数字、UI、边框、箭头、残影或第二人。原物件数目不增减。不用脚本绘人体、拼接或旋转肢体、插值、拉伸、强量化修错。所有起止描述只为制作说明，本张不画额外帧。没有任务完成、授权、付款、认领、军务指挥、战斗、治疗、伤情变化或新剧情结果。\n人物：燧珥 / FX-CP1。燧珥 FX-CP1，三十来岁成年男性营地边缘逃散者。凌乱灰棕短发、短胡茬、窄下颌，灰褐破领短衣、米白内衫、深色短裤、腰带；不是绥珥 FX-LOT。\n固定原物件与衣装侧别：左手（画面右）一直护住原破领，米白内衫遮胸。右脚（画面左）半破靴与原包布/露趾不变，左脚（画面右）整靴不变；腰带仍系住，不镜像、不脱鞋。\n本张专属手位锁：左手（画面右）护领；右掌（画面左）贴右膝上方裤布；右半破靴在画面左、左整靴在画面右。\n本张动作：护领扶膝浅俯身。左手（画面右）保留胸前护领，内衫遮胸。人物从髋部温和向前折一小段，双膝略屈但不深蹲、不跪。右臂（画面左）向下伸，右掌掌根真正贴住右膝上方的大腿布面，指组沿大腿向下，右肘稍弯；上背和肩线随躯干一起前倾。右手不碰靴或包布、不揉伤处。双脚保持原位置并全掌承重，两脚大小及破靴露趾不变。头顺着躯干稍低，面容仍日常平静，不表示疼痛、受伤或躲避攻击。\n可见阶段目标：髋部浅俯、右掌接右膝上裤布、左手仍护领和双足原位必须一眼可见。\n接触与支撑：右掌明确压在右膝上方裤布，髋部折线/膝微屈与肩线前倾可读，不能只低头。；左手一直护领，右手不接触半靴或布包，避免画成护理动作。；两脚全掌原位、膝不触地、臀不落地；右半靴及左整靴都完整。。\n物件保留：破衣、内衫、腰带、裤与两不同鞋完整保留，原布包不加层不拆开。；不新增手杖、椅子、地面物或治疗用品。。\n剧情边界：只调整自己的原衣布和普通站姿；不添加伤口、痛苦、治疗、康复或补齐破靴结果。；不传话、不带路、不指营地、不展示哨声事件；画外没有营地空间定义，不把身体朝向当新地理证据。；不混成绥珥FX-LOT，不新增武器、绷带卷、包裹或逃跑战斗姿。。\n硬约束：半破靴不是断脚；原露趾和布包前足必须保留且双足完整。；领口始终有原米白内衫遮挡，手不扒开衣领，腰以下裤装完整。；原短衣和裤装保持完整，不撕裂、不取走新布条；不可用脚本拉伸或压短人体。；本张右掌只扶右膝上裤布，不拢衣摆；原下摆自然垂落，不可用脚本压短人体。。",
+          "prompt_sha256": "3414103fd204731824f79e9cc39767e5c4b867533e0899588ca2e25b4124db6f",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/suier_A2_shallow_lean_right_thigh_support_prompt.txt",
+          "negative_constraints": [
+            "半破靴不是断脚；原露趾和布包前足必须保留且双足完整。",
+            "领口始终有原米白内衫遮挡，手不扒开衣领，腰以下裤装完整。",
+            "原短衣和裤装保持完整，不撕裂、不取走新布条；不可用脚本拉伸或压短人体。",
+            "本张右掌只扶右膝上裤布，不拢衣摆；原下摆自然垂落，不可用脚本压短人体。",
+            "只调整自己的原衣布和普通站姿；不添加伤口、痛苦、治疗、康复或补齐破靴结果。",
+            "不传话、不带路、不指营地、不展示哨声事件；画外没有营地空间定义，不把身体朝向当新地理证据。",
+            "不混成绥珥FX-LOT，不新增武器、绷带卷、包裹或逃跑战斗姿。"
+          ],
+          "existing_asset_check": {
+            "own_existing_action_directory_count": 0,
+            "matching_prior_generated_action_found": false,
+            "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/action_tree_scan.json",
+            "existing_expression_comparison_actually_viewed": true,
+            "author_semantic_conclusion": "本人无已有基础动作；已有母图和表情只作去重，不作新增动作。"
+          }
+        }
+      ]
+    }
+  ],
+  "future_acceptance_checks": [
+    "独立门审先核身份、8姿引文、可见变化、侧别与预算；门审通过后才可派图。",
+    "恩岱A1右掌接左护腕、左手释放披风；A2右掌接右肩补片下缘、左手仍握披风。两姿都保持三补片与母图比例。",
+    "瓦顿A1原铲完全离腰在左手、右掌扶膝；A2原铲在左腰、双掌扶膝，仍低蹲不站起。",
+    "珥泰A1板近水平、左掌承底/右手横握杆接板边；A2竖板降左腰、右手笔杆降腰下且与板分离。",
+    "燧珥A1右手拢右短衣摆；A2右掌扶右膝上裤布并浅俯身。两姿左手护领、两鞋异侧正确、原包布不变。",
+    "所有raw/透明/浅深呈现实际view；只改表情不能计新动作。",
+    "首稿与唯一硬错修订完整保存；失败标缺项，不第三稿、不生成GIF、不冒充游戏落地。"
+  ],
+  "verification": {
+    "json_parse": true,
+    "plan_count": 8,
+    "characters_in_roster44": true,
+    "all_evidence_quotes_found_in_current_sources": true,
+    "all_four_anchor_hashes_match_manifest_and_independent_qa": true,
+    "four_mothers_raw_and_transparent_actually_viewed": true,
+    "four_expression_boards_actually_viewed": true,
+    "endai_failed_initial_actually_viewed_for_dedup_only": true,
+    "copied_source_hashes_verified": true,
+    "all_original_source_hashes_still_match": true,
+    "prompt_files_sha_verified": true,
+    "all_prompts_single_pose_only": true,
+    "generated_images": 0,
+    "validation_scope": "新增计划结构、逐字引文与行号、原路径/SHA/字节快照、实际view记录、动作树及ZIP文本去重。未改剧情，不声称全库文学、动作连续性或游戏运行验收。"
+  },
+  "source_snapshot_manifest": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_sources/SNAPSHOT_MANIFEST.json",
+    "sha256": "0b44c72cad7fddc25d54f5dcea1aeee5dd742c7af6b08968b3bce55e3384bef6"
+  },
+  "independent_plan_review_status": "pending_not_generated"
+}

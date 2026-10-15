@@ -1,0 +1,359 @@
+{
+  "source_id": "field_dialogue_registry",
+  "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+  "npcs": [
+    {
+      "id": "FX-CV1",
+      "name": "珞珥",
+      "role": "洞穴向导",
+      "site": "rumor_cave1",
+      "region": "R06",
+      "look": "三十多岁的女子，背着两卷麻绳，靴子补过；说话前先用指节敲墙。",
+      "voice": "只讲判断，不讲故事；被夸就摆手。",
+      "knows": [
+        "洞口起风的时段",
+        "哪段路能原路退回"
+      ],
+      "not_knows": [
+        "不替人进洞取物",
+        "不担保洞里安全"
+      ],
+      "greetings": [
+        [
+          "first",
+          "你要进洞？先说回程。说不出来就别进。"
+        ],
+        [
+          "revisit",
+          "还是你。绳子带了吗？没带就在洞口等。"
+        ],
+        [
+          "night",
+          "夜里的洞比白天深。信不信由你。"
+        ]
+      ],
+      "chats": [
+        "洞不吓人，岔道吓人。岔道多的地方我不去。",
+        "我画路用石头，不用纸。纸会湿。",
+        "有人不听劝。他们的名字我不记。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "三步一停，听风。风停了就回头。"
+        ],
+        [
+          "warning",
+          "左边那条岔口别进，尽头是竖井。"
+        ],
+        [
+          "refusal",
+          "要我领你走全程？不走。我只带到第二处标记。"
+        ]
+      ],
+      "links": [
+        "区域_R06_无名修院山地",
+        "台本_N14_可以回去的路"
+      ],
+      "visits": {
+        "task": "台本_N14_可以回去的路",
+        "before": [
+          "你要找回去的路，先从洞口数标记。别急着往里走。"
+        ],
+        "after": [
+          "路的事定了。洞口的风向照旧，我的标记也照旧。"
+        ],
+        "early": [
+          "你先问过我回程，后去办的路。顺序对，人不容易丢。"
+        ],
+        "late": [
+          "路的事办完了才想进洞？洞不认晚来的人，只认绳长。"
+        ],
+        "proxy": [
+          "向导不在洞口时，石头标记别踢；那是别人的回程。"
+        ]
+      },
+      "english": {
+        "greet.first": "Going in? Name your way back first. Can't name it, don't go.",
+        "greet.revisit": "Still you. Rope with you? Without it, wait at the mouth.",
+        "greet.night": "The cave is deeper at night. Believe it or not.",
+        "chat.1": "The cave doesn't frighten me; forks do. Where forks multiply, I don't go.",
+        "chat.2": "I draw roads with stones, not paper. Paper gets wet.",
+        "chat.3": "Some don't take advice. I don't learn their names.",
+        "site.arrival": "Three steps, pause, listen to the wind. Wind stops, turn back.",
+        "site.warning": "Don't take the left fork. It ends in a shaft.",
+        "site.refusal": "Lead you the whole way? No. I go as far as the second mark.",
+        "visit.before": "Looking for the way back? Count the marks from the mouth first. Don't hurry inward.",
+        "visit.after": "The road business is settled. The wind at the mouth is the same; so are my marks.",
+        "visit.early": "You asked me about the way back before dealing with the road. Good order; people get lost otherwise.",
+        "visit.late": "The road's settled and going in is next? The cave measures rope, not timetables.",
+        "visit.proxy": "If the guide is missing, don't kick the stone marks. They're someone's way back."
+      }
+    },
+    {
+      "id": "FX-CV2",
+      "name": "芩珥",
+      "role": "采药歇脚者",
+      "site": "rumor_cave2",
+      "region": "R06",
+      "look": "四十来岁的女人，背篓里垫着旧布，手指有草汁染出的褐痕；进洞前先把篓子放下。",
+      "voice": "说话慢，先报草名再谈别的；被催就停下来闻一闻。",
+      "knows": [
+        "浅洞哪个角落干燥",
+        "哪几味草这个时节还有"
+      ],
+      "not_knows": [
+        "不替药师开方",
+        "不说自己采的草卖给谁"
+      ],
+      "greetings": [
+        [
+          "first",
+          "进洞前把篓子放下。洞里的土会认草味。"
+        ],
+        [
+          "revisit",
+          "又是你。洞里那堆火是我熄的。"
+        ],
+        [
+          "night",
+          "夜里不进洞。草不怕黑，我怕。"
+        ]
+      ],
+      "chats": [
+        "采药讲时候。早三天是药，晚三天是草。",
+        "洞里歇脚就歇脚，别把火留在苔上。",
+        "有人问我方子。我只报草名，不报剂量。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "脚踩干的那半边。湿的那边滑。"
+        ],
+        [
+          "warning",
+          "别踢苔线，那是别人记的路。"
+        ],
+        [
+          "refusal",
+          "要我带你采？不。采药靠眼，不靠带路。"
+        ]
+      ],
+      "links": [
+        "区域_R06_无名修院山地",
+        "台本_DT05_驿馆的急用药"
+      ],
+      "visits": {
+        "task": "台本_DT05_驿馆的急用药",
+        "before": [
+          "驿馆要的那味草，这个时节只有洞口阴面有。别乱采。"
+        ],
+        "after": [
+          "药送到了。草还长在洞里，谁要就自己来采。"
+        ],
+        "early": [
+          "你先来的洞口，后去的驿馆。顺序对，草不会认错。"
+        ],
+        "late": [
+          "驿馆的事办完了才来采草？草不等单子，只等时节。"
+        ],
+        "proxy": [
+          "采药的人不在洞口时，苔线别踩；那是别人的路。"
+        ]
+      },
+      "english": {
+        "greet.first": "Set the basket down before you go in. The soil in there knows herb smells.",
+        "greet.revisit": "You again. That fire in the cave was mine; I smothered it.",
+        "greet.night": "No cave at night. Herbs don't fear the dark. I do.",
+        "chat.1": "Picking is all about timing. Three days early it's medicine; three days late it's grass.",
+        "chat.2": "Rest if you like, but don't leave a fire on the moss.",
+        "chat.3": "People ask me for formulas. I give herb names, not doses.",
+        "site.arrival": "Step on the dry half. The wet half slips.",
+        "site.warning": "Don't kick the moss line. That's someone's road.",
+        "site.refusal": "Take you picking? No. Picking is eyes, not a guide.",
+        "visit.before": "The one herb the inn wants grows only on the shady side of the mouth. Don't pick it blind.",
+        "visit.after": "The medicine went out. The herb still grows in there; whoever needs it can come.",
+        "visit.early": "Your first stop was the mouth, the inn second. Right order; the herb won't be mistaken.",
+        "visit.late": "So the inn is done and the herbs now? Herbs wait for the season, not for slips.",
+        "visit.proxy": "With the picker gone from the mouth, don't step on the moss line."
+      }
+    },
+    {
+      "id": "FX-CV5",
+      "name": "栎珥",
+      "role": "拾柴人",
+      "site": "rumor_cave5",
+      "region": "R06",
+      "look": "五十来岁的男人，肩上担着两根旧绳，裤脚用麻绳扎紧；走到根洞前先伸脚试地。",
+      "voice": "带笑，爱说树的年纪；谈到水就收起笑。",
+      "knows": [
+        "老梣树哪根枝是枯的",
+        "根洞里积水的深浅"
+      ],
+      "not_knows": [
+        "不替村里认领林界",
+        "不卖树"
+      ],
+      "greetings": [
+        [
+          "first",
+          "先伸脚试，再落脚。根洞不认人。"
+        ],
+        [
+          "revisit",
+          "又是你。枯枝我昨天捡过一轮。"
+        ],
+        [
+          "night",
+          "夜里不进来。根洞里的水夜里涨得快。"
+        ]
+      ],
+      "chats": [
+        "这棵树比我爷爷老。它还记得谁砍过它。",
+        "拾柴只拾枯的。活的砍一根，少一片荫。",
+        "有人拿树说事。树不说话，人就替它说。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "从东边绕。西边根上有青苔。"
+        ],
+        [
+          "warning",
+          "洞底那圈水别看浅，底下是空的。"
+        ],
+        [
+          "refusal",
+          "要我帮你砍活枝？不砍。要柴，枯枝够你背。"
+        ]
+      ],
+      "links": [
+        "区域_R06_无名修院山地",
+        "台本_DT12_旧钟站的检修"
+      ],
+      "visits": {
+        "task": "台本_DT12_旧钟站的检修",
+        "before": [
+          "钟站要修，用枯枝。别去砍活枝，砍了少一片荫。"
+        ],
+        "after": [
+          "钟站修好了。枯枝照旧落，我照旧捡。"
+        ],
+        "early": [
+          "你先来的根洞，后去的钟站。哪根是枯的，你分得清了。"
+        ],
+        "late": [
+          "钟站的事办完了才来捡柴？枯枝不等检修，落下就是落下。"
+        ],
+        "proxy": [
+          "拾柴的人不在时，别砍活枝；枯的够用。"
+        ]
+      },
+      "english": {
+        "greet.first": "Test with your foot before you put weight down. The root hollow knows no faces.",
+        "greet.revisit": "You again. I picked over the dead branches yesterday.",
+        "greet.night": "Not in here at night. The hollow fills fast after dark.",
+        "chat.1": "This tree is older than my grandfather. It still remembers who cut it.",
+        "chat.2": "Gather dead wood only. Cut one live branch and you lose a patch of shade.",
+        "chat.3": "People argue with trees as their evidence. The tree says nothing, so they speak for it.",
+        "site.arrival": "Come round the east side. The west roots carry moss.",
+        "site.warning": "That pool at the bottom looks shallow; underneath it's hollow.",
+        "site.refusal": "Cut a live branch for you? No. Dead wood is enough for your back.",
+        "visit.before": "The bell station needs mending; use dead wood. Don't cut live branches for it.",
+        "visit.after": "The station is mended. Dead wood keeps falling, and I keep picking it.",
+        "visit.early": "The hollow came first, the station second. You can tell dead from live now.",
+        "visit.late": "So the station is mended and wood now? Dead wood falls when it falls, not when repairs finish.",
+        "visit.proxy": "When the woodcutter is away, don't cut live branches. Dead wood will do."
+      }
+    },
+    {
+      "id": "FX-CV6",
+      "name": "洄珥",
+      "role": "谷地行者",
+      "site": "rumor_cave6",
+      "region": "R06",
+      "look": "二十多岁的女人，靴子外裹着草绳，背着一根探路的长杆；说话前先看云。",
+      "voice": "看天说话，句子跟着风走；被问路就报水线不报方向。",
+      "knows": [
+        "谷地哪条沟是新冲的",
+        "雨从哪边来"
+      ],
+      "not_knows": [
+        "不担保谷地通行",
+        "不带人抄近路"
+      ],
+      "greetings": [
+        [
+          "first",
+          "看云再说话。云低，今天别下谷。"
+        ],
+        [
+          "revisit",
+          "又是你。冲沟又宽了一掌。"
+        ],
+        [
+          "night",
+          "夜里谷地起雾。雾里没有路，只有水声。"
+        ]
+      ],
+      "chats": [
+        "雨来得比人快。水线不会等你系鞋带。",
+        "我走谷地不图快，图看得见退路。",
+        "有人抄近路。近路在雨里会变成河。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "站到沟沿上。沟底是上一场雨的路。"
+        ],
+        [
+          "warning",
+          "听见上游有闷响就上坡，别等水。"
+        ],
+        [
+          "refusal",
+          "要我带你穿谷？不。绕半天，比捞人快。"
+        ]
+      ],
+      "links": [
+        "区域_R06_无名修院山地",
+        "台本_DT06_迷路者的路标"
+      ],
+      "visits": {
+        "task": "台本_DT06_迷路者的路标",
+        "before": [
+          "路标要立，先看水线。立在水线上，一场雨就没了。"
+        ],
+        "after": [
+          "路标立起来了。冲沟也宽了，绕行的路得重画。"
+        ],
+        "early": [
+          "你先问过我水线，后去立的路标。位置对得上。"
+        ],
+        "late": [
+          "路标的事完了才来问谷地？雾不看路标，只看水声。"
+        ],
+        "proxy": [
+          "行者不在谷口时，沟沿就是界线；别下沟底。"
+        ]
+      },
+      "english": {
+        "greet.first": "Read the clouds before you speak. Low clouds, no valley today.",
+        "greet.revisit": "You again. The gully is a palm wider.",
+        "greet.night": "Fog rises in the valley at night. In fog there is no road, only water sound.",
+        "chat.1": "Rain arrives faster than people. The water line won't wait for your bootlaces.",
+        "chat.2": "I don't take the valley for speed. I take it to keep the way back in sight.",
+        "chat.3": "Some take shortcuts. In rain a shortcut turns into a river.",
+        "site.arrival": "Stand on the gully lip. The bottom is last storm's road.",
+        "site.warning": "A dull rumble upstream means get uphill. Don't wait for the water.",
+        "site.refusal": "Guide you across? No. Half a day around beats pulling a body out.",
+        "visit.before": "Setting a signpost? Read the water line first. Set it on the line and one rain erases it.",
+        "visit.after": "The signpost is up. The gully is wider too; the detour needs redrawing.",
+        "visit.early": "You asked me about the water line before setting the sign. The spot lines up.",
+        "visit.late": "The sign behind you, the valley now? Fog reads no signposts, only water sound.",
+        "visit.proxy": "If the walker has left the valley mouth, the gully lip is the boundary. Don't go down."
+      }
+    }
+  ],
+  "boundary": "不把condition=after的台词画成无条件发生结果。"
+}

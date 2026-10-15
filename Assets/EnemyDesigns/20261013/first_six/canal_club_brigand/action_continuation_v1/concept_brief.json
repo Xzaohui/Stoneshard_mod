@@ -1,0 +1,187 @@
+{
+  "id": "002",
+  "concept_id": "EAO-CONCEPT-ENEMY-002",
+  "role": "canal_club_brigand",
+  "working_name": "旧渠劫道者",
+  "status": "planned_not_executed",
+  "mother": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png",
+    "sha256": "9683b1a41ba261800702c45617ed6fd2b737b54caf24a1c89010d3f5ce81cceb",
+    "label": "已选静态母图，仅身份与形体锚点",
+    "dimensions": [
+      1214,
+      1295
+    ],
+    "mode": "RGBA",
+    "actually_viewed": true,
+    "view_method": "view_image: selected original transparent PNG, full figure",
+    "viewed_on": "2026-10-14",
+    "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png"
+  },
+  "existing_selected_poses": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+      "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185",
+      "label": "紧凑备击",
+      "dimensions": [
+        1215,
+        1295
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+        "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185"
+      },
+      "pose_id": "club_compact_ready"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+      "sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241",
+      "label": "收势回防",
+      "dimensions": [
+        1215,
+        1295
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+        "sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241"
+      },
+      "pose_id": "club_controlled_recover"
+    }
+  ],
+  "selection_evidence": {
+    "idle_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/independent_QA.json",
+      "sha256": "4650edd3962aa767d9cd8772ac30e48d6cfa9e626d80d09bb62c38f7d4729e00"
+    },
+    "action_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/action_independent_QA_v1/independent_QA.json",
+      "sha256": "5803d55e734536b0ce61577dd0378da4d82ec41e54aba9893ecbe2e3e8785c81"
+    },
+    "catalog": {
+      "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+      "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+    }
+  },
+  "current_execution": {
+    "generation_calls": 0,
+    "raw_outputs": [],
+    "selected_output": null,
+    "hard_error_revisions_used": 0
+  },
+  "future_budget": {
+    "first_drafts": 1,
+    "maximum_hard_error_revisions": 1,
+    "per_role_selected_new_keyposes_maximum": 1,
+    "hard_error_revision_requires_recorded_specific_failure": true,
+    "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+  },
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "continuous_animation_verified": false,
+  "proposed_keypose": {
+    "pose_id": "club_downswing_midarc",
+    "label": "短棍下挥中段",
+    "missing_stage": "出手中段",
+    "count": 1,
+    "status": "planned_not_executed"
+  },
+  "visual_observations_from_actual_views": [
+    "紧凑备击的持棍拳在上胸，棍头斜上左，肘约直角。",
+    "收势回防的拳已收近腰腹，棍头斜下左悬于前膝外；缺由高到低的挥出。"
+  ],
+  "gap_reason": "两旧帧分别是高位预备和低位收势，没有短棍离肩向前下挥的出手。补中弧时持棍臂向前打开，棍头处于胸腹之间，绝不再画高举或低垂。",
+  "proposed_sequence_only_not_verified": [
+    "club_compact_ready",
+    "club_downswing_midarc",
+    "club_controlled_recover"
+  ],
+  "adjacent_reference_roles": [
+    {
+      "input": 1,
+      "relationship": "已选直接前序候选；连续性尚未验证",
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+      "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185"
+    },
+    {
+      "input": 2,
+      "relationship": "拟用后续回收参考",
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+      "sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241"
+    },
+    {
+      "input": 3,
+      "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png",
+      "sha256": "9683b1a41ba261800702c45617ed6fd2b737b54caf24a1c89010d3f5ce81cceb"
+    }
+  ],
+  "new_pose_body_mechanics": "原持棍手H1从肩前送至下胸前侧，肩和肘带动短棍向左前下方走一小段弧；前臂明显比备击打开，但肘不锁直。棍头在腰带以上、胸下区域，位于拳的画面左侧且略低，暂未落至回收稿的前膝外。胸轻跟进、前膝承重，空手H2仍在身体画面右侧下肋作平衡。",
+  "support_and_contact": "两靴接地；前脚全掌承压，后腿仍支撑，不跳跃、不交叉腿。棍只与H1手掌接触，棍头挥过空气，不接触人、地面或自身腿。",
+  "invariants": [
+    "同一矮壮成年宽脸厚胡，褐叠襟短衣、画面右层皮肩护、右腰绳结布袋、左下暗红补丁不换边。",
+    "H1为母图画面左持棍手，始终单手持一根短粗木棍；H2不碰棍。",
+    "钝圆棍头、仅一个灰铁箍；以备击选稿的手持比例为准，不增加棍长或改成锤/狼牙棒。"
+  ],
+  "must_differ_from_existing": "持棍臂前开且拳未回腰，棍头处于胸腹中段而非高于肩或低于膝；是小幅下挥，不是横向刺击。",
+  "proposed_anchor_policy": {
+    "facing": "screen-left mild three-quarter; no mirror",
+    "scale_and_camera_primary_reference": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+      "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185"
+    },
+    "support_or_float_anchor": "两靴接地；前脚全掌承压，后腿仍支撑，不跳跃、不交叉腿。棍只与H1手掌接触，棍头挥过空气，不接触人、地面或自身腿。",
+    "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+    "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+  },
+  "acceptance_checks": [
+    "高举→中弧→低收可形成方向明确的三张候选关系，但不宣称完整循环。",
+    "拳/木柄/铁箍/钝头连贯，头与脸/膝保留负空间。",
+    "身体仍矮壮，前脚接重与后脚支撑可靠，空手未变第二武器手。"
+  ],
+  "hard_failure_conditions": [
+    "新姿和备击或收势仅换角度，无前臂打开与棍头中段位置。",
+    "长棍化、双铁箍、尖刃、换手、棍穿脸/膝或手掌悬空。",
+    "添加受害者、命中特效、喷血、地面。"
+  ],
+  "continuity_still_to_verify": [
+    "尚需按肩肘腕路径验证挥弧能连接两旧稿；没有击中物或碰撞结果。",
+    "后期统一脚底、相机与棍长；三张关键姿势不是流畅动作证明。"
+  ],
+  "planned_generation": {
+    "status": "not_executed",
+    "tool_intended": "builtin image_gen",
+    "transparent_background": true,
+    "reference_order": [
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+        "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+        "sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png",
+        "sha256": "9683b1a41ba261800702c45617ed6fd2b737b54caf24a1c89010d3f5ce81cceb",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png"
+      }
+    ],
+    "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：002 旧渠劫道者。\n新关键姿势：短棍下挥中段，阶段为出手中段。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png。\n\n具体动作：原持棍手H1从肩前送至下胸前侧，肩和肘带动短棍向左前下方走一小段弧；前臂明显比备击打开，但肘不锁直。棍头在腰带以上、胸下区域，位于拳的画面左侧且略低，暂未落至回收稿的前膝外。胸轻跟进、前膝承重，空手H2仍在身体画面右侧下肋作平衡。\n支撑与接触：两靴接地；前脚全掌承压，后腿仍支撑，不跳跃、不交叉腿。棍只与H1手掌接触，棍头挥过空气，不接触人、地面或自身腿。\n身份/道具不可变：同一矮壮成年宽脸厚胡，褐叠襟短衣、画面右层皮肩护、右腰绳结布袋、左下暗红补丁不换边。 H1为母图画面左持棍手，始终单手持一根短粗木棍；H2不碰棍。 钝圆棍头、仅一个灰铁箍；以备击选稿的手持比例为准，不增加棍长或改成锤/狼牙棒。\n与既有姿势必须不同：持棍臂前开且拳未回腰，棍头处于胸腹中段而非高于肩或低于膝；是小幅下挥，不是横向刺击。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+    "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/002_club_downswing_midarc_prompt_v1_not_executed.txt",
+    "prompt_text_sha256": "33c69de1a512b5337ca90546001244723c31a0601fda41e9073fdbecbb1c5e53",
+    "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_continuation_v1/club_downswing_midarc",
+    "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+  }
+}

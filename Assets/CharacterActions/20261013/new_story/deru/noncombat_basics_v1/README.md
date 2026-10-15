@@ -1,0 +1,9 @@
+# deru：两种独立非战斗动作
+
+每张是独立动作关键姿态，编号不表示连续帧或剧情顺序。起止只见spec中的文字说明；未制作过渡帧、GIF、装备组合或游戏实现。
+
+选稿：A1 v2，A2 v1。A1首稿保存在raw并在generation-log标为未选，不能当成新增成功动作。raw保存原生生成PNG和完整原工具返回，包括图像payload；prompts保存实际逐字提示词与完整参数；sources保存已审母图、当前卡、brief和来源快照。
+
+exports只做alpha阈值128的二值清理，透明区隐藏RGB清零；主体可见RGB和几何尺寸不改。review为等比最近邻排版、正确RGBA合成的浅深底核对板。最终审查与状态以QA-independent.json和FINAL_STATUS.json为准，manifest.json记录完整文件SHA。
+
+本ZIP保存本人物完整生产树，另一个ZIP保存另一人物完整树；二者都能独立解压，不是分卷压缩。共享四姿态对照板也在delivery_support中。sources内brief与独审计划为原始历史快照，其planned状态不覆盖本次FINAL_STATUS；包内独审保留验包前状态，最终包装复核另由父任务记录。

@@ -240,3 +240,10 @@ Belo／Kien记录补充：[联合版本绑定说明](delivery_belo_kien_work_v1/
 [近期审计报告](../../DeliveryAudits/20261013/recent_art_delivery_integrity_20261013T170747Z.md)核查范围为15组、88附件、18个ZIP及631成员，全部通过。Belo／Kien旧元数据差异已由版本绑定附录解释闭合。此结果只覆盖报告指定的近期范围，不是全部历史素材的重新全量验证。
 
 MASTER_SUPPLEMENT_INDEX_VERIFICATION.json中的107项引用与空待交列表是12:20首次建表快照，保留原值，不代表当前累计总量。
+
+
+<!-- NEW-STORY-44-STAGE:BEGIN -->
+## 新剧情人物增量阶段（44/44发送accepted）
+
+[全11批最终交付核验报告](../../CharacterDesigns/20261013/expressive/new_story/FINAL_DELIVERY_REPORT_44.md)：新44人全部发送accepted，总概念送达211＝历史167＋新44；旧172范围中的5未完独立保留。消息ID、附件ID、路径与SHA均已绑定；全部ZIP逐成员和冻结manifest核验通过。冻结旧roster、manifest、QA及receipt不重写。怪物首6已启动但未产出，不计人物。新图尚未再次push；accepted不证明已读，也不代表用户逐人认可、动作、装备或runtime通过。
+<!-- NEW-STORY-44-STAGE:END -->

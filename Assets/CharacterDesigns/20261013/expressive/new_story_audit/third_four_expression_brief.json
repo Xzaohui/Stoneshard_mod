@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。",
+    "planned_selected_images": 8
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者与独审实际view每张原图及最终透明/浅深板，逐图核母图SHA、身份、面部情绪、手势、道具侧别和剧情边界；manifest绑定选稿SHA。板上不加剧情已完成标签。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "prompt_archive_contract": {
+    "status": "planned_prompts_not_executed",
+    "rule": "本文件prompt_text是完整拟用首稿，不冒称已执行prompt。生产时将真实发送的逐字prompt、引用路径与输入SHA、工具参数、时间、输出路径/SHA、首稿或硬错revision1及选废原因写入prompts/与generation-log.json；若改措辞必须存实际版本，不用本brief替代真实调用存档。",
+    "max_calls_per_expression": 2,
+    "revision_rule": "仅一次明确硬错定向修订；实际修订全文及纠错目标须保存，失败则报告，不偷偷增加第三稿。"
+  },
+  "created_utc": "2026-10-13T20:49:59.194804+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "第三批四名新剧情人物各两种表情与最小手势，共8张未来概念图。本轮仅新增brief及来源快照，不生图、不上传、不git、不改旧文件。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_four_production_brief.json",
+    "sha256": "003f474a235a37ac0f96e4afbaec32b6249bf6d341378e602e811c5a8d9bf144"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_third_four_20261013.json",
+    "sha256": "1035661926eab047adc4aac950582a6f924f42146aacfee2148206bb1cb267d4"
+  },
+  "format_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_four_expression_brief.json",
+    "sha256": "0447040f77ace6d4386f2badc10ace0dccdf7e0c67222a210c16c74c3b7db322"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "shared_locks": [
+    "每张以该人物selected_raw及最终透明版为唯一身份/服装/比例母图；单人完整全身，头发、双手和鞋完整留边，原有紧凑成年比例、体型和朝向不重设。",
+    "保留本人的年龄、面型、鼻型、发型、眉眼基础形状与肤色；情绪靠眉眼口的协调变化，可有轻微头手变化；不能统一成同一张甜笑脸。",
+    "服装层次、配色、磨损、口袋、道具数量和侧别沿母图；画面左右与人物左右同时标注，禁止整体镜像。合理动作造成的遮挡和细小褶皱变化可接受。",
+    "透明单人全身像素概念，面部清楚且好看；不机械卡眉毛角度、眼睛像素数、绝对头身比或原像素位置，不用缩图掩盖脸和人体问题。",
+    "八幅是各自独立的条件情绪，不是顺序剧情或任务结局。本人须存活、在场、愿谈且具备相应见闻；普通照护、观察、家人关系、共住权、客约和维护各自确认。",
+    "卡定/台本事实优先；本轮表情、手势、微笑与疲倦均为可逆美术演出提案，不回写角色卡或任务状态。",
+    "每人严格继承自己的实际母图比例，不把四人拉到同一头身比；成人不可幼化，表情可读且与母图/配对图区别，不能夸张变脸。",
+    "维菈性别未明，不从姓名或外观推定；人物左眼（画面右）是透明单片放大夹，不是眼罩。",
+    "无新增关键道具，无任务成功、疾病治愈、付款、交付、签约、获准通行或全山担保的暗示。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "HIG-NPC-TURI",
+      "slug": "turi",
+      "name": "图里",
+      "current_card": {
+        "path": "design/04_人物/城市人物/人物_HIG-NPC-TURI_图里.md",
+        "sha256": "80a86f6195ad2093934b9162e5f2418aab3b8c8c62f2912e72dae414c7305dfc"
+      },
+      "card_matches_third_four_brief": true,
+      "age_identity_lock": "四十岁上下、成年男性机械检查匠；卡“他验的是本段与本班”明确男性。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_v2_raw_imagegen.png",
+          "sha256": "a7e51617b0bc129bf7dc9406e0e316244e148418fd97184837c270ee003d08e2"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png",
+          "sha256": "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/manifest.json",
+          "sha256": "a26e44e43e20f036f2ae1ed022fcd7b072c0fa73cb67d9d26e0a293cbba33975"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张查看4个raw与4个transparent完整PNG；不以忽略alpha的raw隐藏RGB判断背景。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "HIG-NPC-TURI",
+        "独立有限班机械检查匠",
+        "查明危险范围、挣真验段工钱。",
+        "修了一段却被拿去给整座山永久保证，或者说停后无人肯付验段钱。",
+        "指固定梁端和载荷范围，拒绝一张漂亮牌替读数。",
+        "01可独立核机械段，也可收已做费后保绕行；主章只签外段能力，03新雇不免费继受过去停班。",
+        "四十岁上下，身量精瘦，手指长；右肩比左肩低，是常年探身检查所致。",
+        "检查用厚护腿与短披，袖口扎紧；腰间挂着敲击锤与量角器。",
+        "敲击锤、量角器与自己的检查簿，簿子按段编号。",
+        "检查时先敲三下；结论只说‘这段能过’或‘这段不行’。",
+        "不写成全山安全官；他验的是本段与本班。"
+      ],
+      "observed_mother_image": "深棕夹灰鬓短发、窄成年脸、灰短须、粗直眉，目光画面右侧、微张口说明；暗石绿短披、米麻扎袖上衣、烟褐厚护腿和棕靴。人物右肩即画面左略低，母图左手画面右抬起说明，右手画面左自然下垂。",
+      "fixed_prop_sides": [
+        "人物左手（画面右）为交流手，人物右手（画面左）自然下垂；右肩略低，不改成疼痛或新伤。",
+        "检查簿腰袋在画面左，小敲击锤在正面偏画面左，量角器在画面右；全程收在腰部，不换侧、不取用、不加新工具。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets/全路径按slug/中文名扫描，除concept_v1内文件未发现人物动作或表情图；本轮8项均为未生产计划。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "turi_E1_consider_load",
+          "label_zh": "审慎衡量",
+          "scene_proposal": "听对方描述新的载荷，先衡量还缺哪些本段信息。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-HIG-01_回风驿的停牌.md",
+            "sha256": "7dd001f462d125ff3c4e449838f6625187e0a63f4065dcce0a4b5cba62662cb3",
+            "locator": "L63、L71；人物卡“所怕/口吻”"
+          },
+          "face_changes": "眼神由侧上转为略低集中，眉心微聚，嘴闭合轻抿，显出思量，不是怀疑人格或怒瞪。",
+          "minimal_gesture": "左交流手由高摊降到腰上方半收，手指松弯；右手仍下垂，双脚不动。",
+          "difference_from_static_and_pair": "母图张口说明改为低眼闭口沉思；与E2稳眼阻止的表情区分。",
+          "condition_and_limit": "仅在听取范围信息，不表示已验、已修、已付、已接受续班或路段可开。",
+          "output_stem": "turi_E1_consider_load",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：图里（HIG-NPC-TURI），四十岁上下、成年男性机械检查匠；卡“他验的是本段与本班”明确男性。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：深棕夹灰鬓短发、窄成年脸、灰短须、粗直眉，目光画面右侧、微张口说明；暗石绿短披、米麻扎袖上衣、烟褐厚护腿和棕靴。人物右肩即画面左略低，母图左手画面右抬起说明，右手画面左自然下垂。\n固定侧别与道具：人物左手（画面右）为交流手，人物右手（画面左）自然下垂；右肩略低，不改成疼痛或新伤。 检查簿腰袋在画面左，小敲击锤在正面偏画面左，量角器在画面右；全程收在腰部，不换侧、不取用、不加新工具。\n本张可逆表情提案：审慎衡量。听对方描述新的载荷，先衡量还缺哪些本段信息。\n脸部：眼神由侧上转为略低集中，眉心微聚，嘴闭合轻抿，显出思量，不是怀疑人格或怒瞪。\n最小手势：左交流手由高摊降到腰上方半收，手指松弯；右手仍下垂，双脚不动。\n必须形成可读区别：母图张口说明改为低眼闭口沉思；与E2稳眼阻止的表情区分。\n剧情边界：仅在听取范围信息，不表示已验、已修、已付、已接受续班或路段可开。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "turi_E2_hold_the_boundary",
+          "label_zh": "严肃止步",
+          "scene_proposal": "面对先解绳再查的催促，认真提醒先停住。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-HIG-01_回风驿的停牌.md",
+            "sha256": "7dd001f462d125ff3c4e449838f6625187e0a63f4065dcce0a4b5cba62662cb3",
+            "locator": "L33、L41"
+          },
+          "face_changes": "双眼抬向交谈者，眉压低但不狰狞；嘴小幅张开作短促提醒，唇角无笑，不画喊叫。",
+          "minimal_gesture": "左手在原侧略收近胸下，掌转斜外作小幅制止，右手仍自然垂；头微收而不后仰。",
+          "difference_from_static_and_pair": "母图偏上目光与松摊掌改为直接目光、收眉与小止掌；E1闭口低眼，E2开口对人。",
+          "condition_and_limit": "不画真的绳梁或玩家，不预设危险消除、已检查结论、撤牌或全山保证。",
+          "output_stem": "turi_E2_hold_the_boundary",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：图里（HIG-NPC-TURI），四十岁上下、成年男性机械检查匠；卡“他验的是本段与本班”明确男性。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：深棕夹灰鬓短发、窄成年脸、灰短须、粗直眉，目光画面右侧、微张口说明；暗石绿短披、米麻扎袖上衣、烟褐厚护腿和棕靴。人物右肩即画面左略低，母图左手画面右抬起说明，右手画面左自然下垂。\n固定侧别与道具：人物左手（画面右）为交流手，人物右手（画面左）自然下垂；右肩略低，不改成疼痛或新伤。 检查簿腰袋在画面左，小敲击锤在正面偏画面左，量角器在画面右；全程收在腰部，不换侧、不取用、不加新工具。\n本张可逆表情提案：严肃止步。面对先解绳再查的催促，认真提醒先停住。\n脸部：双眼抬向交谈者，眉压低但不狰狞；嘴小幅张开作短促提醒，唇角无笑，不画喊叫。\n最小手势：左手在原侧略收近胸下，掌转斜外作小幅制止，右手仍自然垂；头微收而不后仰。\n必须形成可读区别：母图偏上目光与松摊掌改为直接目光、收眉与小止掌；E1闭口低眼，E2开口对人。\n剧情边界：不画真的绳梁或玩家，不预设危险消除、已检查结论、撤牌或全山保证。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "HIG-NPC-VILA",
+      "slug": "vila",
+      "name": "维菈",
+      "current_card": {
+        "path": "design/04_人物/城市人物/人物_HIG-NPC-VILA_维菈.md",
+        "sha256": "657afdd813343fd7a3fff2ee4c0588569cfd96f6e81d7d0b728fb3ffd22201be"
+      },
+      "card_matches_third_four_brief": true,
+      "age_identity_lock": "四十岁上下成年支架匠；当前卡及关联台本未明确性别，不将名字当性别证据。采用中性成年外观可逆提案，不写入canon。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_v2_raw_imagegen.png",
+          "sha256": "9b72e90380efb5e660fb75beef199713bb7889f2defec586f318514d5fe7f31a"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_transparent.png",
+          "sha256": "7a23d1c8361a9ef4570a7c6658200d77a7d9dc18fb7d71e41fb02c1768b5ac52"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/manifest.json",
+          "sha256": "a35e5627aab9d64d7e370e81a55c49b88924ca5dcf22c74329c2ba4954612e32"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张查看4个raw与4个transparent完整PNG；不以忽略alpha的raw隐藏RGB判断背景。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "HIG-NPC-VILA",
+        "制作有限机械支架的匠人",
+        "交能受检查的普通支架，不靠神奇仪器卖价。",
+        "承认误差被当成东西完全无用，或者别人的错全落到自己身上。",
+        "指同一底槽与两次实数，永不替全山或回声判真。",
+        "02可交一架有限中立支架比旧表；主章仍须N15原范围实测，不收买司榆改稳；03不为展示缺款虚称核心失效。",
+        "四十岁上下，手指有金属划出的细痕；左眼戴着单片放大夹。",
+        "金属匠的皮围裙，腕套加厚；口袋里插着量规。",
+        "量规与支架样品，样品上刻着限用范围。",
+        "交货先讲限用；被要求担保全山时会摇头说‘我只做这一副’。",
+        "不写成技术救世主；一副支架只保证一处读数。"
+      ],
+      "observed_mother_image": "短灰发、中性成熟宽颧面与清楚双眼，母图高低眉、张口讲解；左眼（画面右）为透明单片放大夹，非眼罩。炭灰布衫、赭棕皮围裙、米色厚腕套、灰褐裤棕靴，双手托同一U形普通支架。",
+      "fixed_prop_sides": [
+        "左眼（画面右）单片放大夹保持透明、左眼存在且可见，右眼不加镜；不改双目镜、眼罩或伤眼。",
+        "右手（画面左）与左手（画面右）分别托支架原两端；支架留腹前不递出、不增加，口袋量规在画面左，侧皮袋亦在画面左。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets/全路径按slug/中文名扫描，除concept_v1内文件未发现人物动作或表情图；本轮8项均为未生产计划。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "vila_E1_patient_reassurance",
+          "label_zh": "耐心宽慰",
+          "scene_proposal": "面对担心读数不好看的人，温和表明可以如实说出所见。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-HIG-02_三刻里少的一格.md",
+            "sha256": "a603294ce7906c7d473d23dd66a85cfb0eb40ca14e52c99fb6cc3a948875ef07",
+            "locator": "L39"
+          },
+          "face_changes": "两眉放松但继承原眉型，眼神温和看向听者，闭口微笑克制而可见，保留成熟面颊与鼻型，不甜笑幼化。",
+          "minimal_gesture": "头朝听者轻侧，双手仍托同一支架于原腹前，两肘稍放松；不点头认证。",
+          "difference_from_static_and_pair": "母图张口与高低眉改为闭口柔和浅笑；与E2无笑摇头明显不同。",
+          "condition_and_limit": "宽慰不代表旧误差已消除、原谅已获、新架已交或读数正确；不画神奇核心、证书或金钱。",
+          "output_stem": "vila_E1_patient_reassurance",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：维菈（HIG-NPC-VILA），四十岁上下成年支架匠；当前卡及关联台本未明确性别，不将名字当性别证据。采用中性成年外观可逆提案，不写入canon。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：短灰发、中性成熟宽颧面与清楚双眼，母图高低眉、张口讲解；左眼（画面右）为透明单片放大夹，非眼罩。炭灰布衫、赭棕皮围裙、米色厚腕套、灰褐裤棕靴，双手托同一U形普通支架。\n固定侧别与道具：左眼（画面右）单片放大夹保持透明、左眼存在且可见，右眼不加镜；不改双目镜、眼罩或伤眼。 右手（画面左）与左手（画面右）分别托支架原两端；支架留腹前不递出、不增加，口袋量规在画面左，侧皮袋亦在画面左。\n本张可逆表情提案：耐心宽慰。面对担心读数不好看的人，温和表明可以如实说出所见。\n脸部：两眉放松但继承原眉型，眼神温和看向听者，闭口微笑克制而可见，保留成熟面颊与鼻型，不甜笑幼化。\n最小手势：头朝听者轻侧，双手仍托同一支架于原腹前，两肘稍放松；不点头认证。\n必须形成可读区别：母图张口与高低眉改为闭口柔和浅笑；与E2无笑摇头明显不同。\n剧情边界：宽慰不代表旧误差已消除、原谅已获、新架已交或读数正确；不画神奇核心、证书或金钱。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "vila_E2_decline_unlimited_warranty",
+          "label_zh": "拒绝包保",
+          "scene_proposal": "被要求把一副支架当全山保证，清楚地摇头拒绝。",
+          "story_support": {
+            "path": "design/04_人物/城市人物/人物_HIG-NPC-VILA_维菈.md",
+            "sha256": "657afdd813343fd7a3fff2ee4c0588569cfd96f6e81d7d0b728fb3ffd22201be",
+            "locator": "“举止/风格守卫”"
+          },
+          "face_changes": "眉心轻聚，双眼直视对方，嘴闭合平直无笑；成年克制坚决，不做夸张愤怒。",
+          "minimal_gesture": "头轻转形成摇头的一瞬，仍保持脸与双眼、单片夹清楚；两手稳托原支架，身体脚位不变。",
+          "difference_from_static_and_pair": "与母图开口解释及E1柔和浅笑不同，闭口、眉间收紧、头轻拒。",
+          "condition_and_limit": "只拒无限担保，不代表撤销交易、维修成功、全山安全、NE5或回声真相获得认证。",
+          "output_stem": "vila_E2_decline_unlimited_warranty",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：维菈（HIG-NPC-VILA），四十岁上下成年支架匠；当前卡及关联台本未明确性别，不将名字当性别证据。采用中性成年外观可逆提案，不写入canon。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：短灰发、中性成熟宽颧面与清楚双眼，母图高低眉、张口讲解；左眼（画面右）为透明单片放大夹，非眼罩。炭灰布衫、赭棕皮围裙、米色厚腕套、灰褐裤棕靴，双手托同一U形普通支架。\n固定侧别与道具：左眼（画面右）单片放大夹保持透明、左眼存在且可见，右眼不加镜；不改双目镜、眼罩或伤眼。 右手（画面左）与左手（画面右）分别托支架原两端；支架留腹前不递出、不增加，口袋量规在画面左，侧皮袋亦在画面左。\n本张可逆表情提案：拒绝包保。被要求把一副支架当全山保证，清楚地摇头拒绝。\n脸部：眉心轻聚，双眼直视对方，嘴闭合平直无笑；成年克制坚决，不做夸张愤怒。\n最小手势：头轻转形成摇头的一瞬，仍保持脸与双眼、单片夹清楚；两手稳托原支架，身体脚位不变。\n必须形成可读区别：与母图开口解释及E1柔和浅笑不同，闭口、眉间收紧、头轻拒。\n剧情边界：只拒无限担保，不代表撤销交易、维修成功、全山安全、NE5或回声真相获得认证。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-MIN",
+      "slug": "erde",
+      "name": "珥德",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-MIN_珥德.md",
+        "sha256": "a32f6f2284dbc2199f69cee66d101192e16f608ee0d06e6160b2d292ff7f3547"
+      },
+      "card_matches_third_four_brief": true,
+      "age_identity_lock": "五十来岁成年男性、矿洞捡拾者，不是矿主或军人。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_v2_raw_imagegen.png",
+          "sha256": "c48a90b3749828534b843b12434756f467924c8728bfc202f36d7c9da245bb27"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_transparent.png",
+          "sha256": "05b12de343a1a7360e688f480dc75023fbd4a1fbd6b133065a9b6dce92c387ca"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/manifest.json",
+          "sha256": "22509b6b68aa0a15042b06e6f6cf16a76c4fc3e14a148d16c471bea470c3251b"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张查看4个raw与4个transparent完整PNG；不以忽略alpha的raw隐藏RGB判断背景。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "矿洞捡拾者，常在 `rumor_mine1` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "五十来岁的男人，膝盖绑着皮垫，背篓里全是矿车残件；说话时先敲一敲支撑木。",
+        "慢、稳，句子里全是木头与石头的名字。",
+        "哪段支撑木还顶得住；矿车轨哪一节陷了。不替矿主认领工具；不下最深那段。"
+      ],
+      "observed_mother_image": "五十来岁男性、宽鼻、灰棕乱短发和灰须，棕麻卷袖短褂、灰裤、双膝旧皮垫、棕靴。背篓偏画面左，旧木轮片与金属车件轮廓固定；右手画面左扶肩带，左手画面右抬曲指，母图张口慢说。",
+      "fixed_prop_sides": [
+        "人物右手（画面左）始终扶同一背篓肩带，背篓主体和原车件在画面左后方，数量和轮廓不重设。",
+        "人物左手（画面右）为小幅交流手，双膝旧皮垫保留、双脚支撑负重；不添镐、灯盔、矿石或产权标识。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets/全路径按slug/中文名扫描，除concept_v1内文件未发现人物动作或表情图；本轮8项均为未生产计划。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "erde_E1_admit_fear_of_collapse",
+          "label_zh": "坦言忧惧",
+          "scene_proposal": "被问是否怕塌，坦然承认怕的一个短暂瞬间。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L677；人物卡“口吻”"
+          },
+          "face_changes": "内眉稍提而眉间收，目光略落，嘴从母图开口转为闭合紧抿；可读担忧但不惊恐瞪眼、流泪或过度衰老。",
+          "minimal_gesture": "左曲指手缓缓收向胸下，手仍松不握威胁拳；右手稳扶肩带、负重和脚位不变。",
+          "difference_from_static_and_pair": "母图沉稳张口改成低眼紧唇的短暂忧惧；与E2抬眼坚决不去区别。",
+          "condition_and_limit": "只是对塌方风险的担忧，不画塌方发生、新伤、腿病或病愈，不宣称巡查已完成。",
+          "output_stem": "erde_E1_admit_fear_of_collapse",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：珥德（FX-MIN），五十来岁成年男性、矿洞捡拾者，不是矿主或军人。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：五十来岁男性、宽鼻、灰棕乱短发和灰须，棕麻卷袖短褂、灰裤、双膝旧皮垫、棕靴。背篓偏画面左，旧木轮片与金属车件轮廓固定；右手画面左扶肩带，左手画面右抬曲指，母图张口慢说。\n固定侧别与道具：人物右手（画面左）始终扶同一背篓肩带，背篓主体和原车件在画面左后方，数量和轮廓不重设。 人物左手（画面右）为小幅交流手，双膝旧皮垫保留、双脚支撑负重；不添镐、灯盔、矿石或产权标识。\n本张可逆表情提案：坦言忧惧。被问是否怕塌，坦然承认怕的一个短暂瞬间。\n脸部：内眉稍提而眉间收，目光略落，嘴从母图开口转为闭合紧抿；可读担忧但不惊恐瞪眼、流泪或过度衰老。\n最小手势：左曲指手缓缓收向胸下，手仍松不握威胁拳；右手稳扶肩带、负重和脚位不变。\n必须形成可读区别：母图沉稳张口改成低眼紧唇的短暂忧惧；与E2抬眼坚决不去区别。\n剧情边界：只是对塌方风险的担忧，不画塌方发生、新伤、腿病或病愈，不宣称巡查已完成。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "erde_E2_decline_deep_section",
+          "label_zh": "坚定不去",
+          "scene_proposal": "听到陪下深段的请求，平静而明确拒绝。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L680；人物卡“知情边界”"
+          },
+          "face_changes": "视线抬至交谈者，眉保持平稳略压，嘴小幅张开说短句，脸上无笑但不敌意吼叫。",
+          "minimal_gesture": "左手由曲指打开为胸下低幅斜外掌，头轻摇一瞬仍可见正脸；右手稳握带、双脚不迈步。",
+          "difference_from_static_and_pair": "与E1低眼闭口不安形成抬眼开口坚定反差，不复制母图的曲指说明。",
+          "condition_and_limit": "拒入最深段，不扩大为拒一切交流或已护送；不判断矿主工具归属、不拿篓内物证明产权。",
+          "output_stem": "erde_E2_decline_deep_section",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：珥德（FX-MIN），五十来岁成年男性、矿洞捡拾者，不是矿主或军人。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：五十来岁男性、宽鼻、灰棕乱短发和灰须，棕麻卷袖短褂、灰裤、双膝旧皮垫、棕靴。背篓偏画面左，旧木轮片与金属车件轮廓固定；右手画面左扶肩带，左手画面右抬曲指，母图张口慢说。\n固定侧别与道具：人物右手（画面左）始终扶同一背篓肩带，背篓主体和原车件在画面左后方，数量和轮廓不重设。 人物左手（画面右）为小幅交流手，双膝旧皮垫保留、双脚支撑负重；不添镐、灯盔、矿石或产权标识。\n本张可逆表情提案：坚定不去。听到陪下深段的请求，平静而明确拒绝。\n脸部：视线抬至交谈者，眉保持平稳略压，嘴小幅张开说短句，脸上无笑但不敌意吼叫。\n最小手势：左手由曲指打开为胸下低幅斜外掌，头轻摇一瞬仍可见正脸；右手稳握带、双脚不迈步。\n必须形成可读区别：与E1低眼闭口不安形成抬眼开口坚定反差，不复制母图的曲指说明。\n剧情边界：拒入最深段，不扩大为拒一切交流或已护送；不判断矿主工具归属、不拿篓内物证明产权。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-MN2",
+      "slug": "cuoer",
+      "name": "锉珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-MN2_锉珥.md",
+        "sha256": "5403f1910562cf020947cedd209d6ea0f870b6536f6d628dc595f3385a28c1be"
+      },
+      "card_matches_third_four_brief": true,
+      "age_identity_lock": "四十来岁成年男性、矿车修理工，不与FX-MIN捡拾者合并。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_v2_raw_imagegen.png",
+          "sha256": "1668632a6d87ef4a7bdac028abe16ba048a7092aeb45edc9f3e5509fabaf1533"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png",
+          "sha256": "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/manifest.json",
+          "sha256": "a28f0f8741d0e81f2c18ae59cb90ca4d85e8e15b4024438e0ccc531764611a76"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张查看4个raw与4个transparent完整PNG；不以忽略alpha的raw隐藏RGB判断背景。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "矿车修理工，常在 `rumor_mine2` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "四十来岁的男人，腰带上挂着小锉与短钳，耳朵后面夹着一小截铁屑；说话时敲轨。",
+        "先敲两下再开口；谈到深段就压低声音。",
+        "哪节轨下沉了几指；哪根支撑是新换的。不替矿主认领车件；不下最深那段。"
+      ],
+      "observed_mother_image": "四十来岁男性，深棕短乱发、方额和灰棕短胡茬，母图凝眉、目光微低且嘴开一线；蓝灰系带卷袖褂、棕腰带、深灰裤棕靴。耳后金属小片在画面左；右手画面左近小锉，左手画面右低位曲指。",
+      "fixed_prop_sides": [
+        "人物右耳后（画面左）小铁屑保持夹在发耳交界，不移到眼前、不穿耳、不变耳饰或铅笔。",
+        "小锉在画面左腰侧、短钳在画面右腰侧，分开挂好且不取用。右手（画面左）轻近锉柄但不拔出，左手（画面右）为小交流手。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets/全路径按slug/中文名扫描，除concept_v1内文件未发现人物动作或表情图；本轮8项均为未生产计划。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "cuoer_E1_listen_for_detail",
+          "label_zh": "静听细节",
+          "scene_proposal": "听对方描述轨下沉或支撑异响，暂时停下话头，专心听完。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1050、L1052、L1060；从已知范围派生的可逆倾听演出"
+          },
+          "face_changes": "眉间比母图明显放松，目光抬起专注听者，嘴闭合中性，呈仔细倾听，不笑着保证安全。",
+          "minimal_gesture": "头轻侧向听者，左手低位曲指松开自然停于侧，右手仍近腰带而不取锉；两脚不动。",
+          "difference_from_static_and_pair": "母图凝眉低眼开口改为舒眉抬眼闭口静听；与E2皱眉开口劝止不同。",
+          "condition_and_limit": "仅听描述，不宣称已换支撑、修好两节、准确测量、巡查完成或获工具所有权。",
+          "output_stem": "cuoer_E1_listen_for_detail",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：锉珥（FX-MN2），四十来岁成年男性、矿车修理工，不与FX-MIN捡拾者合并。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：四十来岁男性，深棕短乱发、方额和灰棕短胡茬，母图凝眉、目光微低且嘴开一线；蓝灰系带卷袖褂、棕腰带、深灰裤棕靴。耳后金属小片在画面左；右手画面左近小锉，左手画面右低位曲指。\n固定侧别与道具：人物右耳后（画面左）小铁屑保持夹在发耳交界，不移到眼前、不穿耳、不变耳饰或铅笔。 小锉在画面左腰侧、短钳在画面右腰侧，分开挂好且不取用。右手（画面左）轻近锉柄但不拔出，左手（画面右）为小交流手。\n本张可逆表情提案：静听细节。听对方描述轨下沉或支撑异响，暂时停下话头，专心听完。\n脸部：眉间比母图明显放松，目光抬起专注听者，嘴闭合中性，呈仔细倾听，不笑着保证安全。\n最小手势：头轻侧向听者，左手低位曲指松开自然停于侧，右手仍近腰带而不取锉；两脚不动。\n必须形成可读区别：母图凝眉低眼开口改为舒眉抬眼闭口静听；与E2皱眉开口劝止不同。\n剧情边界：仅听描述，不宣称已换支撑、修好两节、准确测量、巡查完成或获工具所有权。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "cuoer_E2_warn_against_false_savings",
+          "label_zh": "不赞成省撑",
+          "scene_proposal": "听见为省钱不换支撑的说法，克制地表示担忧和不赞同。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1061"
+          },
+          "face_changes": "眉心进一步聚拢，目光直向交谈者，嘴小幅张开、唇角沉，显出压低声音的严肃劝诫；不龇牙、不暴怒。",
+          "minimal_gesture": "左手抬至腰旁作低幅掌斜下的劝停，右手仍留腰带附近；头略前收，不举工具威胁。",
+          "difference_from_static_and_pair": "从母图低眼提醒转为直接目光的严肃劝止；E1舒眉闭口静听，E2紧眉开口发言。",
+          "condition_and_limit": "不画实际坍塌、欠款指控或某人已拒修；不暗示新支撑已换、深段开放、结算成功。",
+          "output_stem": "cuoer_E2_warn_against_false_savings",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：锉珥（FX-MN2），四十来岁成年男性、矿车修理工，不与FX-MIN捡拾者合并。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：四十来岁男性，深棕短乱发、方额和灰棕短胡茬，母图凝眉、目光微低且嘴开一线；蓝灰系带卷袖褂、棕腰带、深灰裤棕靴。耳后金属小片在画面左；右手画面左近小锉，左手画面右低位曲指。\n固定侧别与道具：人物右耳后（画面左）小铁屑保持夹在发耳交界，不移到眼前、不穿耳、不变耳饰或铅笔。 小锉在画面左腰侧、短钳在画面右腰侧，分开挂好且不取用。右手（画面左）轻近锉柄但不拔出，左手（画面右）为小交流手。\n本张可逆表情提案：不赞成省撑。听见为省钱不换支撑的说法，克制地表示担忧和不赞同。\n脸部：眉心进一步聚拢，目光直向交谈者，嘴小幅张开、唇角沉，显出压低声音的严肃劝诫；不龇牙、不暴怒。\n最小手势：左手抬至腰旁作低幅掌斜下的劝停，右手仍留腰带附近；头略前收，不举工具威胁。\n必须形成可读区别：从母图低眼提醒转为直接目光的严肃劝止；E1舒眉闭口静听，E2紧眉开口发言。\n剧情边界：不画实际坍塌、欠款指控或某人已拒修；不暗示新支撑已换、深段开放、结算成功。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    }
+  ],
+  "source_notes": "既有manifest候选状态早于独审，采用独审delivery_binding的final_clean_and_presentation_pass并重新核SHA。vendor/pixel-asset-master-skills当前为空目录，使用项目reference/pixel-asset-master/SKILL.md现存快照；与旧生产sources/06_SKILL.md比对哈希。只做当前已授权概念延续的brief，不重启风格/尺寸审批或进入生成。",
+  "source_conflicts": [
+    {
+      "character": "erde",
+      "source": {
+        "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+        "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+      },
+      "locator": "L668与L676；当前人物卡知情边界",
+      "conflict": "边界不替矿主认领工具；闲谈2却说工具留下不算矿主的。",
+      "disposition": "报告父任务并获准完全避开归属；本批只用怕塌与拒入深段，冲突留待剧情审阅，不改旧稿。"
+    }
+  ],
+  "validation": {
+    "source_cards": 4,
+    "viewed_final_raw_images": 4,
+    "viewed_final_transparent_images": 4,
+    "raw_transparent_manifest_hash_triples_verified": 4,
+    "planned_expressions": 8,
+    "actual_generation_calls": 0,
+    "scope_note": "新增本JSON和专用来源快照目录；不修改design/、旧图、旧QA、roster或游戏包。"
+  },
+  "source_snapshot_index": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_four_expression_sources/source_index.json",
+    "sha256": "0e4555ba10f492d75500e3636883e6f33d0a72d46127672c324141708604aca6"
+  }
+}

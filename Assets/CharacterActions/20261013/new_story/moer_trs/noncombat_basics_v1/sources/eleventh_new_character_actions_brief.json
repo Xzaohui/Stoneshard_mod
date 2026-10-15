@@ -1,0 +1,1509 @@
+{
+  "schema_version": 4,
+  "created_utc": "2026-10-14T08:59:14.306483+00:00",
+  "status": "planning_complete_not_generated",
+  "purpose": "第11批最后4名已有新剧情NPC各2张独立非战斗全身基础动作；仅规划，先独立计划门审再由父线程派工。",
+  "scope": {
+    "selected_characters": 4,
+    "planned_new_independent_fullbody_keyposes": 8,
+    "generated_images": 0,
+    "revision_images": 0,
+    "new_characters": 0,
+    "full_animation": false,
+    "gif_planned": false,
+    "equipment_or_engine_work": false,
+    "git_or_upload_performed": false,
+    "changed_existing_assets": false
+  },
+  "requested_candidates": [
+    "weier_ink",
+    "moer",
+    "daier",
+    "moer_trs"
+  ],
+  "substitutions": [],
+  "selection_order_evidence": {
+    "source_id": "production_sequence",
+    "reason": "沿原第11批剩余4名既有人物韦珥FX-INK、摩珥FX-WIL、岱珥FX-MAN、谟珥FX-TRS，均已有已审母图及各2表情；本人此前无基础动作。本批完成即44人物基础动作第一轮覆盖收束，不继续无限增姿。",
+    "prior_frozen_action_characters": [
+      "anni",
+      "chenger",
+      "cuoer",
+      "daer",
+      "dalan",
+      "deru",
+      "endai",
+      "erde",
+      "erlan",
+      "ertai",
+      "erwei",
+      "fouer",
+      "fx_cv4_nier",
+      "gura",
+      "hoer",
+      "huier",
+      "jier",
+      "kelin",
+      "kouer",
+      "kuen",
+      "kuqi",
+      "lein",
+      "lier",
+      "luoer",
+      "luomin",
+      "miloer",
+      "qiner",
+      "seer",
+      "suier",
+      "suier_lot",
+      "sune",
+      "suoda",
+      "teman",
+      "tian",
+      "tila",
+      "turi",
+      "vila",
+      "wadun",
+      "weier",
+      "wuer"
+    ],
+    "prior_frozen_qualified_poses": 76,
+    "production_independent_pass_count": {
+      "groups": 20,
+      "characters": 40,
+      "qualified_poses": 76
+    },
+    "accepted_delivery_count": {
+      "groups": 18,
+      "characters": 36,
+      "qualified_poses": 68
+    },
+    "uncertain_delivery_groups": [
+      {
+        "source_id": "eighth_seer_daer_delivery_attempt",
+        "status": "send_outcome_uncertain_do_not_retry",
+        "message_id": null,
+        "retried": false,
+        "qualified_poses": 4,
+        "attachments": 8,
+        "not_in_accepted": true
+      },
+      {
+        "source_id": "tenth_suoda_kelin_delivery_attempt",
+        "status": "send_outcome_uncertain_do_not_retry",
+        "message_id": null,
+        "retried": false,
+        "qualified_poses": 4,
+        "attachments": 8,
+        "not_in_accepted": true
+      }
+    ],
+    "old_missing_actions_not_retried": [
+      "turi_A1",
+      "cuoer_A1",
+      "weier_A1",
+      "lier_A1"
+    ],
+    "index_status_at_final_freeze": "已按第10实际发送回执更新后的ACTION_DELIVERY_INDEX.md冻结：制作与独审完成20个交付包、40位既有人物、76张合格静态姿态；已确认发送请求accepted为18组、36人、68姿。第8瑟珥／达珥与第10索妲／珂琳各8附件已保存Library，发送结果均uncertain、无accepted消息ID、未重试，不计accepted。第10蓟珥／绥珥9附件accepted。accepted仅代表发送请求被接受，不证明送达或阅读。4张旧缺项图里A1、锉珥A1、苇珥A1、栎珥A1保留，不重试。本第11批8姿仅计划，未加入制作或accepted数字。44名人物基础动作第一轮到这最后4人为止；不再新增无关姿态。ACTION_COVERAGE与MASTER_SUPPLEMENT为旧范围总览，不替代新系列交付索引。"
+  },
+  "global_boundaries": [
+    "仅4名既有人物各2独立全身基础动作；0新增人物、0旧表情补稿、0完整动画。",
+    "每姿1首稿，最多1真实明确硬错修订；失败保缺项，不改名重做。安全block停动作，不重试、不改写规避、不换工具。",
+    "本轮不调用imagegen；独立计划门审先于绘制，作者自查不能替独审。",
+    "朴素低魔中世纪日常自理/原物调整/舒展；全部可逆美术提案，不新增环境、新工具、付款、授权或剧情结果。",
+    "按母图真实年龄和实际紧凑比例、原衣装道具；不统一1:1/1:1.5，不回用旧长身/失败稿。",
+    "逐姿prompt独立，公共字段只锁身份和物件，不混A1/A2互斥手位，不引用另一动作作母图。",
+    "目标以大面积衣物/原物掌位与肘膝轮廓验收；不以微小刻度、针脚或衣结接点作为目标。",
+    "moer与moer_trs严格分人；weier_ink不混weier，daier不混daer。谟珥源卡性别未明示，不另冻结；只用v2背铲。",
+    "不改冻结母图/表情/其manifest和QA、角色卡、既有交付索引、游戏或存档；不Git、不上传。",
+    "根/设计AGENTS相关段、归档pixel skill及STYLE_DIRECTION已读；旧spec只为历史来源，当前已审母图与最新要求优先，本计划不跨入生成。",
+    "第11为44人物基础动作第一轮最后一批；不因为收束而重试旧缺项/uncertain发送，也不自行追加无关姿态。"
+  ],
+  "safety_history": {
+    "current_four_expressions": "4人各2表情已有独立通过记录；本批不补旧表情或其他人物旧缺项。",
+    "per_action_stop": "新动作若被安全阻断立即停止该动作并报告，不能换名称/措辞/工具继续同一内容。"
+  },
+  "source_cautions": [
+    {
+      "issue": "旧表情描述部分以画面侧简称左右手，不能机械解释为解剖侧。",
+      "resolution": "本批逐图核对，所有prompt同时注明画面侧与人物自身侧；不改历史表情文案。韦珥持杯左手在画面右；摩珥主要托板右手在画面左；谟珥持柄左手在画面右。"
+    },
+    {
+      "issue": "谟珥concept_v1目录中同时保留已废v1与已审v2。",
+      "resolution": "仅moer_trs_v2_raw_imagegen.png及当前透明图为锚；母图QA最终binding逐SHA核验。"
+    }
+  ],
+  "source_sha_snapshots": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 68775,
+      "sha256": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+      "source_id": "root_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/AGENTS.md"
+    },
+    {
+      "path": "design/AGENTS.md",
+      "bytes": 64250,
+      "sha256": "302d9d3ef38f2fe27a28cf8cb672ed5cf3b33d5493603588d4dbc22a9932b37e",
+      "source_id": "design_agents",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/AGENTS.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+      "bytes": 16285,
+      "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08",
+      "source_id": "archived_pixel_skill",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "bytes": 6187,
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+      "source_id": "style_direction",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md",
+      "bytes": 24770,
+      "sha256": "33de828f89def09add57830d0be69d30d26fb5d12cc1cab79e46444ef83e3e5f",
+      "source_id": "action_delivery_index",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/ACTION_DELIVERY_INDEX.md"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "bytes": 26364,
+      "sha256": "61ed5cd1846ef3017b4b1c72cb5a63432aa22a4c9d151d5b789f586245f498bb",
+      "source_id": "action_coverage",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterActions/20261013/ACTION_COVERAGE.md"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "bytes": 26988,
+      "sha256": "99fb786c7d83aa9f44e3c96a78fb83f3dac5dc42e7732602736e06ed9716dc59",
+      "source_id": "master_supplements",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md"
+    },
+    {
+      "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+      "bytes": 105635,
+      "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+      "source_id": "field_dialogue",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md"
+    },
+    {
+      "path": "research/field-npc-dialogue.json",
+      "bytes": 132451,
+      "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+      "source_id": "field_dialogue_registry",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/research/field-npc-dialogue.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json",
+      "bytes": 142768,
+      "sha256": "39023b5f3db9980e063b8e57e9bc3cfe3786304f7aef22767c78e10afd631992",
+      "source_id": "roster44",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json",
+      "bytes": 14959,
+      "sha256": "c6e0c04098664bc991ebc62a37cc833b6ae084ff4295fd060d41b15525bf1662",
+      "source_id": "production_sequence",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/remaining_36_batch_sequence.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_eleventh_four_20261013.json",
+      "bytes": 13069,
+      "sha256": "9429cd34d4318eb8485902e2a5aed331ad4c69fd48450f7f46647c26b9d74810",
+      "source_id": "eleventh_mother_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_eleventh_four_20261013.json"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/eighth_noncombat_seer_daer_delivery_v1/DELIVERY_ATTEMPT.json",
+      "bytes": 14714,
+      "sha256": "a51b5c6a9f251a494b6831cec548c0027d965e7d6018f9efab6f621a50fddad3",
+      "source_id": "eighth_seer_daer_delivery_attempt",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/eighth_noncombat_seer_daer_delivery_v1/DELIVERY_ATTEMPT.json"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/tenth_noncombat_suoda_kelin_delivery_v1/DELIVERY_ATTEMPT.json",
+      "bytes": 15906,
+      "sha256": "880e6ef796f464eff79818e982abf8cee1acf2c61b0f132cb98cc252363c2aa0",
+      "source_id": "tenth_suoda_kelin_delivery_attempt",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/tenth_noncombat_suoda_kelin_delivery_v1/DELIVERY_ATTEMPT.json"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/tenth_noncombat_jier_suier_lot_delivery_v1/DELIVERY_RECEIPT.json",
+      "bytes": 19459,
+      "sha256": "03a29f6fc926eed317bae677c6d442758a3b95708c97c0205c9b583164ca4db3",
+      "source_id": "tenth_jier_suier_lot_delivery_receipt",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterActions/20261013/new_story/tenth_noncombat_jier_suier_lot_delivery_v1/DELIVERY_RECEIPT.json"
+    },
+    {
+      "path": "design/04_人物/野外人物/人物_FX-INK_韦珥.md",
+      "bytes": 1096,
+      "sha256": "8560eb2122f5f61cd1e1fd616b82ff25b6c5848713fd1058e28cd651ab95bfa3",
+      "source_id": "weier_ink_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-INK_韦珥.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_v1_raw_imagegen.png",
+      "bytes": 863450,
+      "sha256": "fc704120d47eb010c0b71028fa1b9f28eee3c5b001423f5e2857e188b93412c7",
+      "source_id": "weier_ink_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_v1_raw_imagegen.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png",
+      "bytes": 783056,
+      "sha256": "99f4fadb215b8def21a3b108a6dbbf74f9c2eb08b9369317fb713364308fa7bf",
+      "source_id": "weier_ink_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/manifest.json",
+      "bytes": 3055,
+      "sha256": "ef898f3e1da247c7ca9784cd7545094f33d666899cdbaff13a8d2829f30f12b0",
+      "source_id": "weier_ink_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/spec_lock.md",
+      "bytes": 473,
+      "sha256": "64d86a4b18bf4b0fcb7d0d44e4b25d2e32e20cda5271ce5131f71c851d4fb4ab",
+      "source_id": "weier_ink_mother_spec_historical",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/spec_lock.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/review/weier_ink_light_board.png",
+      "bytes": 609205,
+      "sha256": "4c5ff4416f2d02afcdc7bd265d76792302394779008c78b216a14a3470892865",
+      "source_id": "weier_ink_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/review/weier_ink_light_board.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/manifest.json",
+      "bytes": 10826,
+      "sha256": "c433bb5d6b6a3a9c2963cb42ff8ba5073f871ba3491569c12304ea2f29985afe",
+      "source_id": "weier_ink_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/FINAL_STATUS.json",
+      "bytes": 6381,
+      "sha256": "cf5b5c6c2d57eaf58344d1084b4106ec04175f2b07f8337003ec856db934fc26",
+      "source_id": "weier_ink_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/QA-independent.json",
+      "bytes": 17347,
+      "sha256": "d835bf3d88289905aedfe2cb93717339aca4b8c256ff0a098a02336b02ba3646",
+      "source_id": "weier_ink_expression_independent_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/QA-independent.json"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N5_渡口的三种说法.md",
+      "bytes": 11720,
+      "sha256": "83b227451dabc58fcecc00223a4039fa9ee3d2885f817720d217fc6e952c898c",
+      "source_id": "N5",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/05_主线/台本/台本_N5_渡口的三种说法.md"
+    },
+    {
+      "path": "design/04_人物/野外人物/人物_FX-WIL_摩珥.md",
+      "bytes": 1062,
+      "sha256": "a0ff899e2b4454dfdab89d0dc3613a6f81ae5bda2ede37ed486dcefe21f3791c",
+      "source_id": "moer_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-WIL_摩珥.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_v1_raw_imagegen.png",
+      "bytes": 746948,
+      "sha256": "f6b5057916af807981804c2d020b1702b3d64ff934bdf90a95832896c40636d6",
+      "source_id": "moer_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_v1_raw_imagegen.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png",
+      "bytes": 662762,
+      "sha256": "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e",
+      "source_id": "moer_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/manifest.json",
+      "bytes": 3026,
+      "sha256": "f2c45b8d1d0a36cdab8e9ba1b98c5e3bcf97f29d936cf3591af2b8e26b97ce57",
+      "source_id": "moer_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/spec_lock.md",
+      "bytes": 470,
+      "sha256": "03f7443fcd0c2cfdc5f73624bcb09408c4f48313de7185279fed7ad85737e092",
+      "source_id": "moer_mother_spec_historical",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/spec_lock.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/review/moer_light_board.png",
+      "bytes": 532758,
+      "sha256": "635ac509d39a2fdd5a0c5c00f0eea661bdc7ba9e98895b3122ce35f653b7ffa6",
+      "source_id": "moer_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/review/moer_light_board.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/manifest.json",
+      "bytes": 10636,
+      "sha256": "aa614dd2c4634678ba7f8960d25e4fd0baf4a944b29ddd0b26282fefcf29a31b",
+      "source_id": "moer_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/FINAL_STATUS.json",
+      "bytes": 6267,
+      "sha256": "9782ccbba2960b4e574eda8a02aca0c931105c5dbd2dcde7d21e117ad99d7c7d",
+      "source_id": "moer_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/QA-independent.json",
+      "bytes": 17052,
+      "sha256": "2fc52759dacac340f60e7da84bb1d3857311c093b303f6f066350f45ffc91d6f",
+      "source_id": "moer_expression_independent_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/QA-independent.json"
+    },
+    {
+      "path": "design/07_日常任务/台本/台本_DT14_锈印章与假凭证.md",
+      "bytes": 8392,
+      "sha256": "604d5303ef69fb4c6daf8d2ec70cca1151898fc68bfba45c0a12cc9383aa435f",
+      "source_id": "DT14",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/07_日常任务/台本/台本_DT14_锈印章与假凭证.md"
+    },
+    {
+      "path": "design/04_人物/野外人物/人物_FX-MAN_岱珥.md",
+      "bytes": 1061,
+      "sha256": "92ca69d13c523fc51686400e3a55e68456877b3325f19add44be9e3864ca8786",
+      "source_id": "daier_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-MAN_岱珥.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_v1_raw_imagegen.png",
+      "bytes": 749398,
+      "sha256": "89a6879812d2a3830ec9a073c350bc85149f890084c1e8e54bdd2f62cae3915a",
+      "source_id": "daier_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_v1_raw_imagegen.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png",
+      "bytes": 669912,
+      "sha256": "cfc6697b7aeb2abfd199ff69e560e4913afaca5966382dd83318331ff463cfc8",
+      "source_id": "daier_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/manifest.json",
+      "bytes": 3836,
+      "sha256": "33e591614b422bccf47083646fe0dcf97dbd938b31f7cf36114a32c6ccf72c53",
+      "source_id": "daier_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/spec_lock.md",
+      "bytes": 639,
+      "sha256": "9310d7650bfd07f1b0c7e0a588c0399f8298a63f34d11ba8515b1ecef61cabbb",
+      "source_id": "daier_mother_spec_historical",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/spec_lock.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/review/daier_light_board.png",
+      "bytes": 376664,
+      "sha256": "d5899efb7dec788dba6ff50adc1dddd3251466a7d3a7d3dc4c5cca3642bdaf8b",
+      "source_id": "daier_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/review/daier_light_board.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/manifest.json",
+      "bytes": 12691,
+      "sha256": "d72587f6114e71a4945de5a4bb0c99b10f8b1bcac2ac730885095ef2228b5080",
+      "source_id": "daier_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/FINAL_STATUS.json",
+      "bytes": 1339,
+      "sha256": "1c858ec37f392557b376c4ca07012fc74e76a9d65e1fa870c9c345d1e39d4b85",
+      "source_id": "daier_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/QA-independent.json",
+      "bytes": 17159,
+      "sha256": "7cfbd3d91168109d34a665635619cda195bbb1ccf7f607584b40eb613c774a6e",
+      "source_id": "daier_expression_independent_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/QA-independent.json"
+    },
+    {
+      "path": "design/07_日常任务/台本/台本_DT07_一箱不该开封的货.md",
+      "bytes": 8348,
+      "sha256": "ad6c7be9f76f74216790150378b18626100ac7ea57eb17581138f7d0a3882dac",
+      "source_id": "DT07",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/07_日常任务/台本/台本_DT07_一箱不该开封的货.md"
+    },
+    {
+      "path": "design/04_人物/野外人物/人物_FX-TRS_谟珥.md",
+      "bytes": 1058,
+      "sha256": "95c9799a2b546eaa3f4cf733170fd84425e28de858a174474df7a69b34e80f9e",
+      "source_id": "moer_trs_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-TRS_谟珥.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v2_raw_imagegen.png",
+      "bytes": 770646,
+      "sha256": "fe036b6b160d952f3bca7e5cd49e4a4a579c02c03edfdb331c090cc7ca2bc3f6",
+      "source_id": "moer_trs_mother_raw",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v2_raw_imagegen.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png",
+      "bytes": 694233,
+      "sha256": "45f9ca7a50f6201e4d363d8a7a521fe20da81d5eb242a4e393151b7cf4a68793",
+      "source_id": "moer_trs_mother_transparent",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/manifest.json",
+      "bytes": 4851,
+      "sha256": "149a8934db89da5e04478031e26ea62470761b951202042c873375194640c5b9",
+      "source_id": "moer_trs_mother_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/spec_lock.md",
+      "bytes": 686,
+      "sha256": "ce1e0fefac91122aa368bc988d2c9a73b8e8fc75fba84801278eacf5501b74fa",
+      "source_id": "moer_trs_mother_spec_historical",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/spec_lock.md"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/review/moer_trs_light_board.png",
+      "bytes": 382759,
+      "sha256": "0d14675ce855bb02512d6b93e36c7685cbfa5569a60d52c376e770cbd0c474e8",
+      "source_id": "moer_trs_expressions_view",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/review/moer_trs_light_board.png"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/manifest.json",
+      "bytes": 14327,
+      "sha256": "a40028024503d7e273165135199e7bdf4a85afbbe182eede8eaa93f057e7aa17",
+      "source_id": "moer_trs_expression_manifest",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/manifest.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/FINAL_STATUS.json",
+      "bytes": 1348,
+      "sha256": "130c60b63539bcd669b1eec06bf756b7b5401ac9e2b99e2b4a0ffabab8cd039c",
+      "source_id": "moer_trs_expression_final_status",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/FINAL_STATUS.json"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/QA-independent.json",
+      "bytes": 17394,
+      "sha256": "d164d1c253999bcbe1d880f8a25fa4b306d5d37c1fe8ee22fb911d9893e47aa3",
+      "source_id": "moer_trs_expression_independent_qa",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/QA-independent.json"
+    },
+    {
+      "path": "design/05_主线/台本/台本_N3_听审前的灯.md",
+      "bytes": 12798,
+      "sha256": "e14b9d1f5716ef7c5fb3667e10e2757fc8809beb0f1b708d41321fe31ebad082",
+      "source_id": "N3",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/05_主线/台本/台本_N3_听审前的灯.md"
+    }
+  ],
+  "coverage_audit": {
+    "read_indexes": [
+      "action_coverage",
+      "master_supplements",
+      "action_delivery_index",
+      "production_sequence"
+    ],
+    "scan_manifest": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+    "scan_manifest_sha256": "58460e6ddaf1bb66f8001bec0b31f4505e02ffd3b73838eb786de4c2f18d39e2",
+    "action_tree_file_count": 4642,
+    "zip_scanned_count": 256,
+    "zip_members_enumerated_count": 11255,
+    "candidate_semantic_action_assets_found": 0,
+    "candidate_own_action_directories_found": 0,
+    "semantic_review": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/semantic_dedup_review.json",
+    "semantic_review_sha256": "5a8dfa94c2ff3e108fcf422a39b20b83f0ba8b19d6d2a1d5c3cedb4eabdfd51c",
+    "absence_scope": "本地CharacterActions全树路径、文字与图像SHA；仓库全部ZIP逐个打开枚举成员，对命中精确slug/中文名/ID的成员读取并哈希；不解压、不改资产、不读Git对象。",
+    "index_freshness_note": "已按第10实际发送回执更新后的ACTION_DELIVERY_INDEX.md冻结：制作与独审完成20个交付包、40位既有人物、76张合格静态姿态；已确认发送请求accepted为18组、36人、68姿。第8瑟珥／达珥与第10索妲／珂琳各8附件已保存Library，发送结果均uncertain、无accepted消息ID、未重试，不计accepted。第10蓟珥／绥珥9附件accepted。accepted仅代表发送请求被接受，不证明送达或阅读。4张旧缺项图里A1、锉珥A1、苇珥A1、栎珥A1保留，不重试。本第11批8姿仅计划，未加入制作或accepted数字。44名人物基础动作第一轮到这最后4人为止；不再新增无关姿态。ACTION_COVERAGE与MASTER_SUPPLEMENT为旧范围总览，不替代新系列交付索引。",
+    "all_four_raw_and_transparent_viewed": true,
+    "all_four_expression_boards_viewed": true,
+    "image_view_log": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/image_view_log.json",
+    "image_view_log_sha256": "93d1c9761708f0f5bcbb47dbf4114df4d7278f60d2849513562ca9668aa4eb50"
+  },
+  "author_handoff": {
+    "requires_independent_plan_gate": true,
+    "authors": [
+      {
+        "group": "weier_ink_moer",
+        "slugs": [
+          "weier_ink",
+          "moer"
+        ],
+        "planned_poses": 4,
+        "focus": "韦珥杯在人物左手/画面右，钥匙挂原画面右腰；双手托杯与右掌下拂围裙独立。摩珥主要持板手是人物右手/画面左，胸前双掌托板与身侧右手垂板独立，板始终一块不离手、不改刻划。",
+        "handoff_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/weier_ink_moer_author_handoff.txt",
+        "handoff_sha256": "cee266e9a1b7cdcb64433fd0454d7c119746652738f37a764b148353292e4491"
+      },
+      {
+        "group": "daier_moer_trs",
+        "slugs": [
+          "daier",
+          "moer_trs"
+        ],
+        "planned_poses": 4,
+        "focus": "岱珥两姿必须离开母图左手搭右袖，钥匙仍挂画面右腰，不开门。谟珥只锁v2背铲，人物左手/画面右持续肩旁握柄，D柄画面右肩后、铲刃画面左腰后；右手扶膝与高按发顶独立，源卡不冻结性别。",
+        "handoff_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/daier_moer_trs_author_handoff.txt",
+        "handoff_sha256": "df6ee3e42a981f24b4b7ea2fca41bb41e9c306b2da70b12946b21bb54ad4f2c0"
+      }
+    ],
+    "generation_not_authorized_by_this_file_alone": true
+  },
+  "characters": [
+    {
+      "slug": "weier_ink",
+      "canonical_id": "FX-INK",
+      "name": "韦珥",
+      "status": "planned_not_generated",
+      "selection_status": "requested_candidate_retained_no_substitution",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-INK_韦珥.md",
+        "bytes": 1096,
+        "sha256": "8560eb2122f5f61cd1e1fd616b82ff25b6c5848713fd1058e28cd651ab95bfa3",
+        "source_id": "weier_ink_card",
+        "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-INK_韦珥.md"
+      },
+      "source_ids": [
+        "weier_ink_card",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "N5",
+        "weier_ink_mother_raw",
+        "weier_ink_mother_transparent",
+        "weier_ink_mother_manifest",
+        "weier_ink_expression_final_status",
+        "weier_ink_expressions_view"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_v1_raw_imagegen.png",
+        "raw_sha256": "fc704120d47eb010c0b71028fa1b9f28eee3c5b001423f5e2857e188b93412c7",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png",
+        "transparent_sha256": "99f4fadb215b8def21a3b108a6dbbf74f9c2eb08b9369317fb713364308fa7bf",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/manifest.json",
+        "manifest_sha256": "ef898f3e1da247c7ca9784cd7545094f33d666899cdbaff13a8d2829f30f12b0",
+        "independent_qa_source_id": "eleventh_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "分别实际查看本人raw、透明母图与旧表情浅板：成年灰鬓短髭男旧仆，蓝灰衫、卷袖、洗白围裙、褐裤双鞋。人物左手（画面右）在腰侧握唯一空陶杯，杯口朝上；右手（画面左）腰高向外摊开。旧钥匙串挂在画面右腰前、杯下方。旧待客询问/围城收声只变脸，杯和摊手轮廓未有本轮托杯或下拂围裙动作。",
+        "fixed_sides": "唯一原空陶杯始终由人物左手（画面右）握持原杯身/把手处，杯口朝上、内部空；保留杯大小、褐陶颜色和唯一把手，不换手、不转到画面左、不增饮品。唯一原钥匙串始终挂画面右腰前，钥匙数量和原造型照母图，不摘取、不移位；右手只按本张目标移动。卷袖和围裙原样。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/expressions_v1/review/weier_ink_light_board.png"
+      },
+      "existing_expressions": {
+        "status": "final_clean_and_presentation_pass",
+        "qualified_count": 2,
+        "not_action_coverage": true
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "只自持原空杯或整理本人围裙，不喝酒、不递杯、不倒饮品、不摆桌、不收款、不赊账、不许诺房钱或开门，不画N5结果。",
+        "韦珥weier_ink/FX-INK与苇珥weier/FX-HOM分人；不借布袋、短棍、妇人年龄或对白。"
+      ],
+      "risks": [
+        "杯保持在画面右半侧、左手持续原握；右掌托杯底与右掌低拂围裙是分开的两张，不能拼在一起。",
+        "钥匙串仍挂腰，不把杯把手误画成钥匙环；双手、杯口、杯把手和双脚清楚。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/weier_ink/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "weier_ink_A1_lift_and_support_empty_cup",
+          "title_zh": "双手托起原空杯",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "weier_ink_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "四十来岁的男人，围裙洗得发白"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-INK／初见，仅支持杯具与服务背景",
+              "line_start": 480,
+              "quote": "住店还是打尖？先说清楚，我才好摆杯子。"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图左手腰侧握空杯、右手向外摊开开始。",
+          "pose": "双鞋自然分开稳站。人物左肘在画面右明显弯起，左手保持原杯身/把手握位，将唯一空陶杯从腰旁抬到自己胸前下方偏画面右，杯与嘴仍有明显距离。右手完全离开原腰高摊手位置，右前臂由画面左横过腹上方，右掌朝上、广面贴托同一杯子的底部。杯竖直、口朝上、空腔可见，贴近本人，不伸向画外。钥匙仍挂人物左腰前（画面右侧）、在双手下方。头脸朝画面右，神态平常。",
+          "end_pose_description_only": "右掌可离杯底、左手把原空杯自然放回腰侧；不喝、不放桌、不交出。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "左肘抬弯、杯从腰侧明显升到下胸前，右前臂横腹且右掌托杯底，原迎客摊手完全消失。",
+          "pose_specific_sidedness": "左手始终在画面右握杯，右手从画面左横到杯底；杯始终偏画面右，钥匙串仍在其下方原腰侧。",
+          "contact_and_support_checks": [
+            "左手握原杯身/把手，右掌只托杯底，两手各一、接触分开清楚。",
+            "空杯口和唯一把手完整，杯不贴嘴、不加饮品，不与胡须或钥匙融合。",
+            "双靴全掌支撑，头、杯和两肘留透明边，不拉长身体。"
+          ],
+          "prop_state_and_retention": [
+            "唯一原空陶杯始终由人物左手（画面右）握持原杯身/把手处，杯口朝上、内部空；保留杯大小、褐陶颜色和唯一把手，不换手、不转到画面左、不增饮品。唯一原钥匙串始终挂画面右腰前，钥匙数量和原造型照母图，不摘取、不移位；右手只按本张目标移动。卷袖和围裙原样。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图及旧表情为腰侧单手持杯和另一手外摊；本张杯升高、双前臂收向本人并新增右掌托底，是原物操作而非改脸。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png"
+          ],
+          "reference_sha256": [
+            "99f4fadb215b8def21a3b108a6dbbf74f9c2eb08b9369317fb713364308fa7bf"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：韦珥 FX-INK。四十来岁的旅馆男旧仆，深褐短发带灰鬓，短髭和下颌灰须，宽面成熟脸朝画面右。蓝灰上衣、米麻卷袖、洗白长围裙、褐裤和深棕闭口鞋完整保留。只用韦珥FX-INK/weier_ink，不是拾荒妇苇珥FX-HOM/weier。\n固定衣装与原物件：唯一原空陶杯始终由人物左手（画面右）握持原杯身/把手处，杯口朝上、内部空；保留杯大小、褐陶颜色和唯一把手，不换手、不转到画面左、不增饮品。唯一原钥匙串始终挂画面右腰前，钥匙数量和原造型照母图，不摘取、不移位；右手只按本张目标移动。卷袖和围裙原样。\n本张动作：双手托起原空杯。双鞋自然分开稳站。人物左肘在画面右明显弯起，左手保持原杯身/把手握位，将唯一空陶杯从腰旁抬到自己胸前下方偏画面右，杯与嘴仍有明显距离。右手完全离开原腰高摊手位置，右前臂由画面左横过腹上方，右掌朝上、广面贴托同一杯子的底部。杯竖直、口朝上、空腔可见，贴近本人，不伸向画外。钥匙仍挂人物左腰前（画面右侧）、在双手下方。头脸朝画面右，神态平常。\n本张侧别：左手始终在画面右握杯，右手从画面左横到杯底；杯始终偏画面右，钥匙串仍在其下方原腰侧。\n必须明显可见：左肘抬弯、杯从腰侧明显升到下胸前，右前臂横腹且右掌托杯底，原迎客摊手完全消失。\n接触与支撑：左手握原杯身/把手，右掌只托杯底，两手各一、接触分开清楚。；空杯口和唯一把手完整，杯不贴嘴、不加饮品，不与胡须或钥匙融合。；双靴全掌支撑，头、杯和两肘留透明边，不拉长身体。。\n",
+          "prompt_sha256": "58c27217cf8ddd68c917552cf7ba251a091821f5cb7085d6c44b9610fad2f20b",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/weier_ink_A1_lift_and_support_empty_cup_prompt.txt",
+          "negative_constraints": [
+            "只自持原空杯或整理本人围裙，不喝酒、不递杯、不倒饮品、不摆桌、不收款、不赊账、不许诺房钱或开门，不画N5结果。",
+            "韦珥weier_ink/FX-INK与苇珥weier/FX-HOM分人；不借布袋、短棍、妇人年龄或对白。",
+            "杯保持在画面右半侧、左手持续原握；右掌托杯底与右掌低拂围裙是分开的两张，不能拼在一起。",
+            "钥匙串仍挂腰，不把杯把手误画成钥匙环；双手、杯口、杯把手和双脚清楚。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图及旧表情为腰侧单手持杯和另一手外摊；本张杯升高、双前臂收向本人并新增右掌托底，是原物操作而非改脸。"
+          }
+        },
+        {
+          "key": "weier_ink_A2_smooth_right_apron_panel",
+          "title_zh": "右掌下拂围裙",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "weier_ink_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "围裙洗得发白"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-INK／知情边界",
+              "line_start": 476,
+              "quote": "不替东家许诺房钱"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图左手腰侧握杯、右手腰高摊开开始。",
+          "pose": "双鞋分开稳站，躯干从髋部略前倾。人物左手在画面右仍于原腰侧握唯一空陶杯，杯口竖直朝上。右手完全离开原向外摊开的腰高位置，右臂向画面左下伸，右掌并拢平贴本人右腿上方、洗白围裙画面左侧靠外的宽布面，停在向下顺平围裙的一瞬；手位在腰带以下、膝盖以上。右掌与画面右的杯和钥匙清楚分离，围裙只轻折、不掀起。脸朝画面右，神态平常。",
+          "end_pose_description_only": "右掌可离围裙自然落回身侧，左手仍持原空杯；不宣称衣物已清洁。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "右臂从横向迎客改为向下伸，右掌落到膝上围裙左侧，躯干轻前倾；杯仍低在原腰侧。",
+          "pose_specific_sidedness": "人物右掌在画面左膝上围裙布面；左手和原空杯保持画面右腰侧，钥匙仍画面右腰前。",
+          "contact_and_support_checks": [
+            "右掌只接围裙宽面、不抓衣摆、不伸到杯底，不保留额外迎客手。",
+            "杯仍左手独持、口朝上、内部空，钥匙串不被摘下或移位。",
+            "前倾自然、双鞋全掌稳站，长围裙与裤鞋完整不裁。"
+          ],
+          "prop_state_and_retention": [
+            "唯一原空陶杯始终由人物左手（画面右）握持原杯身/把手处，杯口朝上、内部空；保留杯大小、褐陶颜色和唯一把手，不换手、不转到画面左、不增饮品。唯一原钥匙串始终挂画面右腰前，钥匙数量和原造型照母图，不摘取、不移位；右手只按本张目标移动。卷袖和围裙原样。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情右手腰高外摊，本张右手低到膝上围裙并前倾；与A1胸前双手托杯在手位、接触和整体轮廓上都不同。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png"
+          ],
+          "reference_sha256": [
+            "99f4fadb215b8def21a3b108a6dbbf74f9c2eb08b9369317fb713364308fa7bf"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：韦珥 FX-INK。四十来岁的旅馆男旧仆，深褐短发带灰鬓，短髭和下颌灰须，宽面成熟脸朝画面右。蓝灰上衣、米麻卷袖、洗白长围裙、褐裤和深棕闭口鞋完整保留。只用韦珥FX-INK/weier_ink，不是拾荒妇苇珥FX-HOM/weier。\n固定衣装与原物件：唯一原空陶杯始终由人物左手（画面右）握持原杯身/把手处，杯口朝上、内部空；保留杯大小、褐陶颜色和唯一把手，不换手、不转到画面左、不增饮品。唯一原钥匙串始终挂画面右腰前，钥匙数量和原造型照母图，不摘取、不移位；右手只按本张目标移动。卷袖和围裙原样。\n本张动作：右掌下拂围裙。双鞋分开稳站，躯干从髋部略前倾。人物左手在画面右仍于原腰侧握唯一空陶杯，杯口竖直朝上。右手完全离开原向外摊开的腰高位置，右臂向画面左下伸，右掌并拢平贴本人右腿上方、洗白围裙画面左侧靠外的宽布面，停在向下顺平围裙的一瞬；手位在腰带以下、膝盖以上。右掌与画面右的杯和钥匙清楚分离，围裙只轻折、不掀起。脸朝画面右，神态平常。\n本张侧别：人物右掌在画面左膝上围裙布面；左手和原空杯保持画面右腰侧，钥匙仍画面右腰前。\n必须明显可见：右臂从横向迎客改为向下伸，右掌落到膝上围裙左侧，躯干轻前倾；杯仍低在原腰侧。\n接触与支撑：右掌只接围裙宽面、不抓衣摆、不伸到杯底，不保留额外迎客手。；杯仍左手独持、口朝上、内部空，钥匙串不被摘下或移位。；前倾自然、双鞋全掌稳站，长围裙与裤鞋完整不裁。。\n",
+          "prompt_sha256": "d7e194ecd728d1964c131182244b4f79515b85d8f8f6e86a0681640165dd78de",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/weier_ink_A2_smooth_right_apron_panel_prompt.txt",
+          "negative_constraints": [
+            "只自持原空杯或整理本人围裙，不喝酒、不递杯、不倒饮品、不摆桌、不收款、不赊账、不许诺房钱或开门，不画N5结果。",
+            "韦珥weier_ink/FX-INK与苇珥weier/FX-HOM分人；不借布袋、短棍、妇人年龄或对白。",
+            "杯保持在画面右半侧、左手持续原握；右掌托杯底与右掌低拂围裙是分开的两张，不能拼在一起。",
+            "钥匙串仍挂腰，不把杯把手误画成钥匙环；双手、杯口、杯把手和双脚清楚。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情右手腰高外摊，本张右手低到膝上围裙并前倾；与A1胸前双手托杯在手位、接触和整体轮廓上都不同。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "moer",
+      "canonical_id": "FX-WIL",
+      "name": "摩珥",
+      "status": "planned_not_generated",
+      "selection_status": "requested_candidate_retained_no_substitution",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-WIL_摩珥.md",
+        "bytes": 1062,
+        "sha256": "a0ff899e2b4454dfdab89d0dc3613a6f81ae5bda2ede37ed486dcefe21f3791c",
+        "source_id": "moer_card",
+        "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-WIL_摩珥.md"
+      },
+      "source_ids": [
+        "moer_card",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "DT14",
+        "moer_mother_raw",
+        "moer_mother_transparent",
+        "moer_mother_manifest",
+        "moer_expression_final_status",
+        "moer_expressions_view"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_v1_raw_imagegen.png",
+        "raw_sha256": "f6b5057916af807981804c2d020b1702b3d64ff934bdf90a95832896c40636d6",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png",
+        "transparent_sha256": "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/manifest.json",
+        "manifest_sha256": "f2c45b8d1d0a36cdab8e9ba1b98c5e3bcf97f29d936cf3591af2b8e26b97ce57",
+        "independent_qa_source_id": "eleventh_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "分别实际查看本人raw、透明母图与旧表情浅板：无须成熟窄面男账房，深褐短褂暗绿内衫。唯一褐木账板斜置腹前，画面左边较高、右边较低；人物右手（画面左）托板侧和下缘，左手（画面右）食指靠近板右缘。板面抽象刻划无可读字，指节轻黄。旧旧账自嘲/免账正色沿用腹前板位，未抬至胸前或降到腿外。",
+        "fixed_sides": "保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/review/moer_light_board.png"
+      },
+      "existing_expressions": {
+        "status": "final_clean_and_presentation_pass",
+        "qualified_count": 2,
+        "not_action_coverage": true
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "只调换本人账板的持放高度，板不离手、不挂墙、不交给他人、不擦写/划名、不免账收债、不认证假凭证、不画DT14结果。",
+        "摩珥moer/FX-WIL与谟珥moer_trs/FX-TRS严格分人；不借短铲、赭黄外衣、崖灰、年龄或同伴对白。"
+      ],
+      "risks": [
+        "举板要大幅改变前臂与板高度，不只抬头；垂板以同一右手抓稳上侧边，手与板接触可读。",
+        "板不能挡脸或双脚，抽象刻划不升级成文字账目；另一手不能一边托板一边放下。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/moer/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "moer_A1_raise_ledger_to_chest",
+          "title_zh": "双手抬板到胸前",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "moer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "账板不离手"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-WIL／知情边界",
+              "line_start": 604,
+              "quote": "不替帮派收账"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图右手托腹前斜板、左食指靠板缘开始。",
+          "pose": "两鞋分开稳站，双肘明显弯曲，将唯一原木账板从腹前整体抬到胸前、上缘低于下巴且不遮脸。人物右手仍在画面左稳握板左侧下缘，左手从原食指轻搭板边改为整掌托稳板画面右侧下缘，两掌分别承托同一板的两端。板保留原左高右低的轻斜方向、尺寸和抽象刻划，板面仍可见，贴近自己、不向画外递出。躯干自然直立，脸朝画面左、神态平常。",
+          "end_pose_description_only": "双手可把原板自然降回腹前；不增删刻划、不交付。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "板整体从腹前升至胸前，双肘抬弯，左手由单指轻搭改为掌托板下缘；脸与板仍分开。",
+          "pose_specific_sidedness": "人物右手在画面左托板左侧，左掌画面右托板右侧；板原左高右低方向不镜像。",
+          "contact_and_support_checks": [
+            "只有一块原木板，两掌分接左右下缘，不插进板面、不添第三手。",
+            "抬高不缩板，板顶低于下巴，原抽象刻划不改变成账目文字。",
+            "双臂肘腕自然连接，双鞋完整，动作不解释为展示证据或收债。"
+          ],
+          "prop_state_and_retention": [
+            "保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情账板在腹前、左手食指轻搭；本张整板到胸前，两肘明显弯起并双掌托底，区别于表情变化。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png"
+          ],
+          "reference_sha256": [
+            "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：摩珥 FX-WIL。四十来岁的酒馆男账房，深褐蓬松后梳短发、无须成熟窄面、脸朝画面左。深褐短褂、暗绿开领内衫、米麻袖口、褐裤与深棕鞋完整保留。只用摩珥FX-WIL/moer，不是背铲的谟珥FX-TRS/moer_trs。\n固定衣装与原物件：保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。\n本张动作：双手抬板到胸前。两鞋分开稳站，双肘明显弯曲，将唯一原木账板从腹前整体抬到胸前、上缘低于下巴且不遮脸。人物右手仍在画面左稳握板左侧下缘，左手从原食指轻搭板边改为整掌托稳板画面右侧下缘，两掌分别承托同一板的两端。板保留原左高右低的轻斜方向、尺寸和抽象刻划，板面仍可见，贴近自己、不向画外递出。躯干自然直立，脸朝画面左、神态平常。\n本张侧别：人物右手在画面左托板左侧，左掌画面右托板右侧；板原左高右低方向不镜像。\n必须明显可见：板整体从腹前升至胸前，双肘抬弯，左手由单指轻搭改为掌托板下缘；脸与板仍分开。\n接触与支撑：只有一块原木板，两掌分接左右下缘，不插进板面、不添第三手。；抬高不缩板，板顶低于下巴，原抽象刻划不改变成账目文字。；双臂肘腕自然连接，双鞋完整，动作不解释为展示证据或收债。。\n",
+          "prompt_sha256": "7b48abbb39394b91dfc0f6c0705df14d2798f500ad9be1e0f5806fb4e0bea4e0",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/moer_A1_raise_ledger_to_chest_prompt.txt",
+          "negative_constraints": [
+            "只调换本人账板的持放高度，板不离手、不挂墙、不交给他人、不擦写/划名、不免账收债、不认证假凭证、不画DT14结果。",
+            "摩珥moer/FX-WIL与谟珥moer_trs/FX-TRS严格分人；不借短铲、赭黄外衣、崖灰、年龄或同伴对白。",
+            "举板要大幅改变前臂与板高度，不只抬头；垂板以同一右手抓稳上侧边，手与板接触可读。",
+            "板不能挡脸或双脚，抽象刻划不升级成文字账目；另一手不能一边托板一边放下。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情账板在腹前、左手食指轻搭；本张整板到胸前，两肘明显弯起并双掌托底，区别于表情变化。"
+          }
+        },
+        {
+          "key": "moer_A2_lower_ledger_beside_right_thigh",
+          "title_zh": "右手垂板身侧暂歇",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "moer_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "指节发黄，账板不离手"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-WIL／知情边界",
+              "line_start": 604,
+              "quote": "不说酒馆东家的去向"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图右手托腹前板、左食指在板边开始。",
+          "pose": "双鞋原样分站、躯干直立。人物右臂从画面左腹前降到本人右腿外侧，右手稳抓同一木账板的上侧边，手指自然绕过板厚，让板以近竖直方向低垂在画面左的右大腿外旁；板上端约腰下、下端保持高于鞋顶且不触地，原板尺寸不变、抽象刻划面仍朝外可见。人物左手完全离开板，左臂自然下垂在画面右身侧、手掌放松，手与板不再相接。头脸朝画面左，神态平常。",
+          "end_pose_description_only": "右手可重新把板抬回腹前，左掌再扶；板全程不离本人右手。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "木板明显降到画面左大腿外侧并近竖直，右臂向下，左手离板在另一侧自然下垂，腹前不再横有账板。",
+          "pose_specific_sidedness": "仍由母图画面左的本人右手独持板，板低在画面左本人右腿外；左手低在画面右，不换手、不把板移到左腿旁。",
+          "contact_and_support_checks": [
+            "右手包住原板上侧边，板由该手支撑而不悬空，仍只有一板。",
+            "左手已离板且独立可见，不残留原板缘食指；板和腿之间有清楚外缘。",
+            "原板完整未缩小，离地、双鞋完整可见；没有放下、丢弃或递板结果。"
+          ],
+          "prop_state_and_retention": [
+            "保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情板横斜在腹前且两手靠板；本张同一右手低垂板到腿外、左手放下，明显区别于胸前抬板和改脸。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png"
+          ],
+          "reference_sha256": [
+            "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：摩珥 FX-WIL。四十来岁的酒馆男账房，深褐蓬松后梳短发、无须成熟窄面、脸朝画面左。深褐短褂、暗绿开领内衫、米麻袖口、褐裤与深棕鞋完整保留。只用摩珥FX-WIL/moer，不是背铲的谟珥FX-TRS/moer_trs。\n固定衣装与原物件：保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。\n本张动作：右手垂板身侧暂歇。双鞋原样分站、躯干直立。人物右臂从画面左腹前降到本人右腿外侧，右手稳抓同一木账板的上侧边，手指自然绕过板厚，让板以近竖直方向低垂在画面左的右大腿外旁；板上端约腰下、下端保持高于鞋顶且不触地，原板尺寸不变、抽象刻划面仍朝外可见。人物左手完全离开板，左臂自然下垂在画面右身侧、手掌放松，手与板不再相接。头脸朝画面左，神态平常。\n本张侧别：仍由母图画面左的本人右手独持板，板低在画面左本人右腿外；左手低在画面右，不换手、不把板移到左腿旁。\n必须明显可见：木板明显降到画面左大腿外侧并近竖直，右臂向下，左手离板在另一侧自然下垂，腹前不再横有账板。\n接触与支撑：右手包住原板上侧边，板由该手支撑而不悬空，仍只有一板。；左手已离板且独立可见，不残留原板缘食指；板和腿之间有清楚外缘。；原板完整未缩小，离地、双鞋完整可见；没有放下、丢弃或递板结果。。\n",
+          "prompt_sha256": "35200eb2ef2f336ddcb5ff37492f4dcbdfedc6caad93d5e2604760dce5a2f803",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/moer_A2_lower_ledger_beside_right_thigh_prompt.txt",
+          "negative_constraints": [
+            "只调换本人账板的持放高度，板不离手、不挂墙、不交给他人、不擦写/划名、不免账收债、不认证假凭证、不画DT14结果。",
+            "摩珥moer/FX-WIL与谟珥moer_trs/FX-TRS严格分人；不借短铲、赭黄外衣、崖灰、年龄或同伴对白。",
+            "举板要大幅改变前臂与板高度，不只抬头；垂板以同一右手抓稳上侧边，手与板接触可读。",
+            "板不能挡脸或双脚，抽象刻划不升级成文字账目；另一手不能一边托板一边放下。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情板横斜在腹前且两手靠板；本张同一右手低垂板到腿外、左手放下，明显区别于胸前抬板和改脸。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "daier",
+      "canonical_id": "FX-MAN",
+      "name": "岱珥",
+      "status": "planned_not_generated",
+      "selection_status": "requested_candidate_retained_no_substitution",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-MAN_岱珥.md",
+        "bytes": 1061,
+        "sha256": "92ca69d13c523fc51686400e3a55e68456877b3325f19add44be9e3864ca8786",
+        "source_id": "daier_card",
+        "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-MAN_岱珥.md"
+      },
+      "source_ids": [
+        "daier_card",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "DT07",
+        "daier_mother_raw",
+        "daier_mother_transparent",
+        "daier_mother_manifest",
+        "daier_expression_final_status",
+        "daier_expressions_view"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_v1_raw_imagegen.png",
+        "raw_sha256": "89a6879812d2a3830ec9a073c350bc85149f890084c1e8e54bdd2f62cae3915a",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png",
+        "transparent_sha256": "cfc6697b7aeb2abfd199ff69e560e4913afaca5966382dd83318331ff463cfc8",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/manifest.json",
+        "manifest_sha256": "33e591614b422bccf47083646fe0dcf97dbd938b31f7cf36114a32c6ccf72c53",
+        "independent_qa_source_id": "eleventh_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "分别实际查看本人raw、透明母图与旧表情浅板：五十来岁灰鬓看守，灰紫补丁长外套，画面右上臂和两侧衣摆原棕补丁，米麻衫与袖口。人物左臂从画面右横在身前，左手轻搭画面左的本人右前臂袖布；右臂向画面左下伸。旧钥匙串在画面右腰前，两鞋站地。旧过客冷嘲/危处警告保留这组理袖姿态。",
+        "fixed_sides": "原灰紫旧外套、棕补丁位置、米麻内衫/袖口、腰带和双鞋保持；不新增现代西装翻领或纽扣。唯一原旧钥匙串保持挂在画面右腰前，数量和造型照母图，两手均不拿钥匙。钥匙仍是原没用的旧钥匙，不暗示开门；两手只按本张动作移动。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/expressions_v1/review/daier_light_board.png"
+      },
+      "existing_expressions": {
+        "status": "PASS_FROZEN_CONCEPT_ONLY",
+        "qualified_count": 2,
+        "not_action_coverage": true
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "只理本人外套或舒展双臂，不掸环境门廊、不加扫帚/门/家具，不开锁、不递钥匙、不作庄园归属/通行承诺，不画DT07结果。",
+        "五十来岁成熟年龄照母图，不年轻化；岱珥daier/FX-MAN与达珥daer为不同人物。"
+      ],
+      "risks": [
+        "不能复画母图左手搭右袖；两手必须各自离开原接点，形成明确的双手分开或双臂展开。",
+        "钥匙串必须仍在画面右腰可读，双手理衣只触钥匙上方的外套宽面；不拉开外套露出新内容。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/daier/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "daier_A1_smooth_both_coat_fronts",
+          "title_zh": "双掌顺平外套前片",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "daier_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "披着补过的旧外套"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-MAN／闲谈1，只保旧钥匙边界",
+              "line_start": 771,
+              "quote": "钥匙串是旧的。锁早换了。"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图左手横身搭右袖、右臂向下的站姿开始。",
+          "pose": "两鞋分开稳站，躯干直立。人物左手完全离开原右前臂袖布、右手从画面左低位抬起，两手各自分开到同侧胸腹之间，左右掌心各平贴本人同侧的一片灰紫外套前片宽布面，位置在腰带和钥匙串上方。两肘自然向外打开，双前臂各形成短斜线，停在向下顺平自己外套的一瞬。两掌不交叉、不抓衣领、不拉开外套，原补丁与米麻内衫不改。钥匙仍挂画面右腰前并完整可见。头脸朝画面右、神态平常。",
+          "end_pose_description_only": "两掌可离开外套前片自然放下；不脱衣、不变钥匙状态。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "原左手横身搭右袖的接点解除，两掌左右分开、各贴一侧胸腹外套前片，两肘外开；钥匙在两手下方。",
+          "pose_specific_sidedness": "人物右掌在画面左贴本人右前片，左掌画面右贴本人左前片；原钥匙串仍画面右腰前，双手都在其上方。",
+          "contact_and_support_checks": [
+            "每掌仅贴一侧衣布，不交叉搭袖、不拿钥匙、不抓细小扣结。",
+            "外套前片只轻折、不脱落或翻开，原棕补丁保持原部位。",
+            "双手、腰钥匙与鞋都可读，身体比例和成熟年龄不变。"
+          ],
+          "prop_state_and_retention": [
+            "原灰紫旧外套、棕补丁位置、米麻内衫/袖口、腰带和双鞋保持；不新增现代西装翻领或纽扣。唯一原旧钥匙串保持挂在画面右腰前，数量和造型照母图，两手均不拿钥匙。钥匙仍是原没用的旧钥匙，不暗示开门；两手只按本张动作移动。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情左手搭对侧右袖、右手低垂；本张两掌分别回到各自前片，双肘外开，是真实双臂接触改变。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png"
+          ],
+          "reference_sha256": [
+            "cfc6697b7aeb2abfd199ff69e560e4913afaca5966382dd83318331ff463cfc8"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：岱珥 FX-MAN。五十来岁的男庄园看守，深灰褐头发带明显白鬓、无须成熟长面，脸朝画面右。灰紫旧长外套、原棕补丁、米麻内衫及袖口、棕腰带、褐裤和深棕鞋靴完整保留。只用岱珥FX-MAN/daier，不是达珥daer。\n固定衣装与原物件：原灰紫旧外套、棕补丁位置、米麻内衫/袖口、腰带和双鞋保持；不新增现代西装翻领或纽扣。唯一原旧钥匙串保持挂在画面右腰前，数量和造型照母图，两手均不拿钥匙。钥匙仍是原没用的旧钥匙，不暗示开门；两手只按本张动作移动。\n本张动作：双掌顺平外套前片。两鞋分开稳站，躯干直立。人物左手完全离开原右前臂袖布、右手从画面左低位抬起，两手各自分开到同侧胸腹之间，左右掌心各平贴本人同侧的一片灰紫外套前片宽布面，位置在腰带和钥匙串上方。两肘自然向外打开，双前臂各形成短斜线，停在向下顺平自己外套的一瞬。两掌不交叉、不抓衣领、不拉开外套，原补丁与米麻内衫不改。钥匙仍挂画面右腰前并完整可见。头脸朝画面右、神态平常。\n本张侧别：人物右掌在画面左贴本人右前片，左掌画面右贴本人左前片；原钥匙串仍画面右腰前，双手都在其上方。\n必须明显可见：原左手横身搭右袖的接点解除，两掌左右分开、各贴一侧胸腹外套前片，两肘外开；钥匙在两手下方。\n接触与支撑：每掌仅贴一侧衣布，不交叉搭袖、不拿钥匙、不抓细小扣结。；外套前片只轻折、不脱落或翻开，原棕补丁保持原部位。；双手、腰钥匙与鞋都可读，身体比例和成熟年龄不变。。\n",
+          "prompt_sha256": "dff91b8c154533887c9733885648ef7f5a0fb466cc2b2933021349a94b19e730",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/daier_A1_smooth_both_coat_fronts_prompt.txt",
+          "negative_constraints": [
+            "只理本人外套或舒展双臂，不掸环境门廊、不加扫帚/门/家具，不开锁、不递钥匙、不作庄园归属/通行承诺，不画DT07结果。",
+            "五十来岁成熟年龄照母图，不年轻化；岱珥daier/FX-MAN与达珥daer为不同人物。",
+            "不能复画母图左手搭右袖；两手必须各自离开原接点，形成明确的双手分开或双臂展开。",
+            "钥匙串必须仍在画面右腰可读，双手理衣只触钥匙上方的外套宽面；不拉开外套露出新内容。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情左手搭对侧右袖、右手低垂；本张两掌分别回到各自前片，双肘外开，是真实双臂接触改变。"
+          }
+        },
+        {
+          "key": "daier_A2_open_arms_low_shoulder_stretch",
+          "title_zh": "双臂侧下舒肩",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "daier_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "五十来岁的男人"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-MAN／知情边界",
+              "line_start": 764,
+              "quote": "不替旧主人认领庄园"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从母图左手搭右袖、右臂低伸开始。",
+          "pose": "两鞋约肩宽全掌稳站，躯干自然直立。双手完全离开原理袖位置，两上臂向各自侧下方展开，两肘轻弯，右前臂伸向画面左外侧、左前臂伸向画面右外侧，双手松弛地落在腰高附近且各离开身体侧线至少一个掌宽。掌心朝内下，手指自然并拢微弯，不对人摊掌、不招手。原灰紫长外套随手臂自然舒开但不脱落，钥匙仍低挂画面右腰前。头脸朝画面右、神态平常。",
+          "end_pose_description_only": "两臂可自然放回身侧；不把舒展解释为康复或体力回复。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "两只手都离开身前，双臂同时侧下展开形成明显宽轮廓；原搭袖接点消失，钥匙仍无人触碰。",
+          "pose_specific_sidedness": "人物右臂向画面左展开、左臂向画面右展开；钥匙固定画面右腰前，面朝仍向画面右。",
+          "contact_and_support_checks": [
+            "两肩肘腕自然连贯、双手可见且不多手，不把手留在另一条袖上。",
+            "双手松弛朝内下，不读成阻拦、发令、招手、施法或迎客承诺。",
+            "两脚完整支撑，外套补丁与钥匙仍可见，头身不拉长。"
+          ],
+          "prop_state_and_retention": [
+            "原灰紫旧外套、棕补丁位置、米麻内衫/袖口、腰带和双鞋保持；不新增现代西装翻领或纽扣。唯一原旧钥匙串保持挂在画面右腰前，数量和造型照母图，两手均不拿钥匙。钥匙仍是原没用的旧钥匙，不暗示开门；两手只按本张动作移动。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情是一手横身搭袖，本张双臂离身向两侧展开；与A1双掌贴前片的收拢手位相反，轮廓区别大。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png"
+          ],
+          "reference_sha256": [
+            "cfc6697b7aeb2abfd199ff69e560e4913afaca5966382dd83318331ff463cfc8"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：岱珥 FX-MAN。五十来岁的男庄园看守，深灰褐头发带明显白鬓、无须成熟长面，脸朝画面右。灰紫旧长外套、原棕补丁、米麻内衫及袖口、棕腰带、褐裤和深棕鞋靴完整保留。只用岱珥FX-MAN/daier，不是达珥daer。\n固定衣装与原物件：原灰紫旧外套、棕补丁位置、米麻内衫/袖口、腰带和双鞋保持；不新增现代西装翻领或纽扣。唯一原旧钥匙串保持挂在画面右腰前，数量和造型照母图，两手均不拿钥匙。钥匙仍是原没用的旧钥匙，不暗示开门；两手只按本张动作移动。\n本张动作：双臂侧下舒肩。两鞋约肩宽全掌稳站，躯干自然直立。双手完全离开原理袖位置，两上臂向各自侧下方展开，两肘轻弯，右前臂伸向画面左外侧、左前臂伸向画面右外侧，双手松弛地落在腰高附近且各离开身体侧线至少一个掌宽。掌心朝内下，手指自然并拢微弯，不对人摊掌、不招手。原灰紫长外套随手臂自然舒开但不脱落，钥匙仍低挂画面右腰前。头脸朝画面右、神态平常。\n本张侧别：人物右臂向画面左展开、左臂向画面右展开；钥匙固定画面右腰前，面朝仍向画面右。\n必须明显可见：两只手都离开身前，双臂同时侧下展开形成明显宽轮廓；原搭袖接点消失，钥匙仍无人触碰。\n接触与支撑：两肩肘腕自然连贯、双手可见且不多手，不把手留在另一条袖上。；双手松弛朝内下，不读成阻拦、发令、招手、施法或迎客承诺。；两脚完整支撑，外套补丁与钥匙仍可见，头身不拉长。。\n",
+          "prompt_sha256": "8b1f46c07ee71b61523a0b778d42b639bbbe5d113509a31443cc27f9f4f50e1d",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/daier_A2_open_arms_low_shoulder_stretch_prompt.txt",
+          "negative_constraints": [
+            "只理本人外套或舒展双臂，不掸环境门廊、不加扫帚/门/家具，不开锁、不递钥匙、不作庄园归属/通行承诺，不画DT07结果。",
+            "五十来岁成熟年龄照母图，不年轻化；岱珥daier/FX-MAN与达珥daer为不同人物。",
+            "不能复画母图左手搭右袖；两手必须各自离开原接点，形成明确的双手分开或双臂展开。",
+            "钥匙串必须仍在画面右腰可读，双手理衣只触钥匙上方的外套宽面；不拉开外套露出新内容。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情是一手横身搭袖，本张双臂离身向两侧展开；与A1双掌贴前片的收拢手位相反，轮廓区别大。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "moer_trs",
+      "canonical_id": "FX-TRS",
+      "name": "谟珥",
+      "status": "planned_not_generated",
+      "selection_status": "requested_candidate_retained_no_substitution",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-TRS_谟珥.md",
+        "bytes": 1058,
+        "sha256": "95c9799a2b546eaa3f4cf733170fd84425e28de858a174474df7a69b34e80f9e",
+        "source_id": "moer_trs_card",
+        "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-TRS_谟珥.md"
+      },
+      "source_ids": [
+        "moer_trs_card",
+        "field_dialogue",
+        "field_dialogue_registry",
+        "N3",
+        "moer_trs_mother_raw",
+        "moer_trs_mother_transparent",
+        "moer_trs_mother_manifest",
+        "moer_trs_expression_final_status",
+        "moer_trs_expressions_view"
+      ],
+      "mother_image": {
+        "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_v2_raw_imagegen.png",
+        "raw_sha256": "fe036b6b160d952f3bca7e5cd49e4a4a579c02c03edfdb331c090cc7ca2bc3f6",
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png",
+        "transparent_sha256": "45f9ca7a50f6201e4d363d8a7a521fe20da81d5eb242a4e393151b7cf4a68793",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/manifest.json",
+        "manifest_sha256": "149a8934db89da5e04478031e26ea62470761b951202042c873375194640c5b9",
+        "independent_qa_source_id": "eleventh_mother_qa",
+        "independent_qa_selected_status": "final_clean_and_presentation_pass",
+        "actual_visual_observation": "分别实际查看本人v2 raw、透明母图与旧表情浅板：年轻成人深棕乱发、赭黄衣、米麻袖口、深灰裤及膝部原崖灰、棕靴附崖灰。唯一短铲斜背在身后：D形木柄露画面右肩后，铲刃露画面左腰后；人物左手（画面右）在肩旁握柄下部，右手（画面左）腰高半摊。旧传言兴起/问伴心虚保持背铲和腰高摊手，未屈膝低扶膝或抬手按发顶。",
+        "fixed_sides": "唯一原短铲保持v2斜背在身后，D形木柄露画面右肩后、铲刃露画面左腰后；人物左手（画面右）始终握原柄下部，不换手、不卸铲、不挥铲、不把铲刃挪到身前，不新增背带。背铲可随躯干整体自然倾斜但不改原长度和相对背部位置。右手只按本张动作移动；原裤靴崖灰保留，无扬尘或洗净效果。",
+        "raw_and_transparent_actually_viewed": true,
+        "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/expressions_v1/review/moer_trs_light_board.png"
+      },
+      "existing_expressions": {
+        "status": "PASS_FROZEN_CONCEPT_ONLY",
+        "qualified_count": 2,
+        "not_action_coverage": true
+      },
+      "duplicate_check": {
+        "own_action_directory_count": 0,
+        "own_action_semantic_match_found": false,
+        "existing_expressions_actually_compared": true,
+        "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+      },
+      "story_boundaries": [
+        "普通可逆自理/暂歇，不挖土、不下崖、不带路、不指认宝藏、不新增同伴下落、传言证词、战斗或N3结果。",
+        "源卡只有年轻成年人未明示性别，延续本人母图外观；严格使用moer_trs的已审v2背铲，不引用moer或废v1。"
+      ],
+      "risks": [
+        "背铲必须仍有画面右肩后D柄和画面左腰后铲刃的同一斜向关系，左手不离原握点。",
+        "屈膝动作是两靴完整支撑的浅暂歇；按发顶用掌贴头顶外缘，不遮眼、不抓脸、不摘发饰、不作头痛。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/moer_trs/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "moer_trs_A1_shallow_crouch_right_palm_on_knee",
+          "title_zh": "浅屈膝右掌扶膝",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "moer_trs_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "背着一把短铲，鞋上全是崖灰"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-TRS／拒绝，只限制不带路",
+              "line_start": 840,
+              "quote": "要我带路下崖？不去。"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从v2母图左手肩旁握背铲、右手腰高半摊的站姿开始。",
+          "pose": "双靴分开稳站并全掌支撑，双膝浅屈、髋部稍后下沉，躯干从髋部轻前倾。人物右手完全离开原腰高摊手的位置，右臂向画面左下伸，右掌平贴本人右膝上方的深灰裤面宽处，停在短暂扶膝的一瞬。人物左手仍在画面右肩旁握原铲柄下部，短铲整体随躯干轻倾但始终贴背：D柄仍露画面右肩后、原铲刃仍露画面左腰后。右掌落点低于铲刃，二者不相碰。头脸仍朝画面左、神态平常，原崖灰未清除。",
+          "end_pose_description_only": "右掌可离膝、双腿自然伸直；背铲仍在背后，既不下崖也不挖掘。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "双膝可见浅屈、髋位降低，右掌由腰高摊手降到右膝上裤面；左手及背铲原关系保持。",
+          "pose_specific_sidedness": "人物右掌在画面左的本人右膝上，左手画面右肩旁继续握柄；D柄画面右肩后、铲刃画面左腰后，不镜像。",
+          "contact_and_support_checks": [
+            "双膝和髋位真实改变，双靴全掌支撑，不只缩短人物或弯脖子。",
+            "右掌只贴膝上裤布，不抓铲刃、不摸鞋；左手仍只有一只握原柄。",
+            "短铲仍一把在背后，柄刃相对方向和原尺寸不变；不新增背带、扬尘、疼痛或跌倒。"
+          ],
+          "prop_state_and_retention": [
+            "唯一原短铲保持v2斜背在身后，D形木柄露画面右肩后、铲刃露画面左腰后；人物左手（画面右）始终握原柄下部，不换手、不卸铲、不挥铲、不把铲刃挪到身前，不新增背带。背铲可随躯干整体自然倾斜但不改原长度和相对背部位置。右手只按本张动作移动；原裤靴崖灰保留，无扬尘或洗净效果。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情直立且右手腰高半摊，本张浅屈膝降髋、右掌低到膝上，区别由肢体支撑产生而非问伴情绪。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png"
+          ],
+          "reference_sha256": [
+            "45f9ca7a50f6201e4d363d8a7a521fe20da81d5eb242a4e393151b7cf4a68793"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：谟珥 FX-TRS。二十多岁的年轻成年人，堡垒寻宝者；源卡未明示性别，不另冻结性别。深棕蓬松波发、母图本人年轻成人脸朝画面左，赭黄外衣、米麻内衫与宽袖口、深灰裤及膝部原崖灰、棕腰带和沾崖灰的深棕靴保持。只用谟珥FX-TRS/moer_trs已审v2背铲母图，不用废v1，不是摩珥FX-WIL/moer。\n固定衣装与原物件：唯一原短铲保持v2斜背在身后，D形木柄露画面右肩后、铲刃露画面左腰后；人物左手（画面右）始终握原柄下部，不换手、不卸铲、不挥铲、不把铲刃挪到身前，不新增背带。背铲可随躯干整体自然倾斜但不改原长度和相对背部位置。右手只按本张动作移动；原裤靴崖灰保留，无扬尘或洗净效果。\n本张动作：浅屈膝右掌扶膝。双靴分开稳站并全掌支撑，双膝浅屈、髋部稍后下沉，躯干从髋部轻前倾。人物右手完全离开原腰高摊手的位置，右臂向画面左下伸，右掌平贴本人右膝上方的深灰裤面宽处，停在短暂扶膝的一瞬。人物左手仍在画面右肩旁握原铲柄下部，短铲整体随躯干轻倾但始终贴背：D柄仍露画面右肩后、原铲刃仍露画面左腰后。右掌落点低于铲刃，二者不相碰。头脸仍朝画面左、神态平常，原崖灰未清除。\n本张侧别：人物右掌在画面左的本人右膝上，左手画面右肩旁继续握柄；D柄画面右肩后、铲刃画面左腰后，不镜像。\n必须明显可见：双膝可见浅屈、髋位降低，右掌由腰高摊手降到右膝上裤面；左手及背铲原关系保持。\n接触与支撑：双膝和髋位真实改变，双靴全掌支撑，不只缩短人物或弯脖子。；右掌只贴膝上裤布，不抓铲刃、不摸鞋；左手仍只有一只握原柄。；短铲仍一把在背后，柄刃相对方向和原尺寸不变；不新增背带、扬尘、疼痛或跌倒。。\n",
+          "prompt_sha256": "a080a300d12510acf00ac51960ad1e72a6b1c7ef950de1fa43f33074236a6b34",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/moer_trs_A1_shallow_crouch_right_palm_on_knee_prompt.txt",
+          "negative_constraints": [
+            "普通可逆自理/暂歇，不挖土、不下崖、不带路、不指认宝藏、不新增同伴下落、传言证词、战斗或N3结果。",
+            "源卡只有年轻成年人未明示性别，延续本人母图外观；严格使用moer_trs的已审v2背铲，不引用moer或废v1。",
+            "背铲必须仍有画面右肩后D柄和画面左腰后铲刃的同一斜向关系，左手不离原握点。",
+            "屈膝动作是两靴完整支撑的浅暂歇；按发顶用掌贴头顶外缘，不遮眼、不抓脸、不摘发饰、不作头痛。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情直立且右手腰高半摊，本张浅屈膝降髋、右掌低到膝上，区别由肢体支撑产生而非问伴情绪。"
+          }
+        },
+        {
+          "key": "moer_trs_A2_rest_right_palm_on_hair_crown",
+          "title_zh": "右掌轻按发顶",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "moer_trs_card",
+              "locator": "体貌与随身",
+              "line_start": 17,
+              "quote": "二十多岁的年轻人"
+            },
+            {
+              "source_id": "field_dialogue",
+              "locator": "FX-TRS／知情边界",
+              "line_start": 828,
+              "quote": "不说同伴的下落"
+            }
+          ],
+          "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+          "start_pose_description_only": "独立从v2母图左手肩旁握背铲、右手腰高半摊开始。",
+          "pose": "双靴自然分开稳站、两腿伸直、躯干直立。人物右手完全离开原腰高半摊位置，右肘向画面左上方外抬，右前臂斜向上，右掌自然并拢轻贴本人头顶偏画面左的外层发面，停在顺理自己蓬发的一瞬。掌心接头顶外缘，指组沿发面自然放平，不遮眉眼、不抓头皮、不压扁或换发型。人物左手仍在画面右肩旁握原背铲柄下部，D柄仍在画面右肩后、铲刃仍在画面左腰后。脸朝画面左、神态平常，崖灰与衣装不变。",
+          "end_pose_description_only": "右掌可从发顶自然放下，发型与背铲均保持原样；不新增头痛、伤病或情节。",
+          "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+          "visible_stage_target": "右肘抬到头侧、右掌到发顶外缘，原腰高摊手消失；两腿直立、左手保持背铲，是明显头上手位。",
+          "pose_specific_sidedness": "人物右掌在画面左头顶外缘；左手保持画面右肩旁握柄，背铲D柄与铲刃仍原对角位置。",
+          "contact_and_support_checks": [
+            "右掌只轻贴发顶宽面，额头和眉眼清楚，不遮脸、不抓发或出现第三手。",
+            "右臂高抬不碰背铲D柄，左手仍握原柄且铲身在背后。",
+            "两靴全掌站稳、头与高肘留透明边，原发型和年轻成人比例保留。"
+          ],
+          "prop_state_and_retention": [
+            "唯一原短铲保持v2斜背在身后，D形木柄露画面右肩后、铲刃露画面左腰后；人物左手（画面右）始终握原柄下部，不换手、不卸铲、不挥铲、不把铲刃挪到身前，不新增背带。背铲可随躯干整体自然倾斜但不改原长度和相对背部位置。右手只按本张动作移动；原裤靴崖灰保留，无扬尘或洗净效果。"
+          ],
+          "difference_from_mother_expression_and_batch": "母图/旧表情右手在腰高半摊，本张右手高到头顶、右肘外抬；与低扶膝在腿姿、躯干和手位上都显著不同。",
+          "risk_level": "medium_pose_and_contact",
+          "new_contact_prop": null,
+          "new_story_fact": false,
+          "sequence_required": false,
+          "animation_claim": false,
+          "generation_budget": {
+            "initial": 1,
+            "max_hard_error_revisions": 1,
+            "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+            "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+            "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+          },
+          "review_status": "planning_author_checked; independent_plan_review_pending",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/moer_trs_transparent.png"
+          ],
+          "reference_sha256": [
+            "45f9ca7a50f6201e4d363d8a7a521fe20da81d5eb242a4e393151b7cf4a68793"
+          ],
+          "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：谟珥 FX-TRS。二十多岁的年轻成年人，堡垒寻宝者；源卡未明示性别，不另冻结性别。深棕蓬松波发、母图本人年轻成人脸朝画面左，赭黄外衣、米麻内衫与宽袖口、深灰裤及膝部原崖灰、棕腰带和沾崖灰的深棕靴保持。只用谟珥FX-TRS/moer_trs已审v2背铲母图，不用废v1，不是摩珥FX-WIL/moer。\n固定衣装与原物件：唯一原短铲保持v2斜背在身后，D形木柄露画面右肩后、铲刃露画面左腰后；人物左手（画面右）始终握原柄下部，不换手、不卸铲、不挥铲、不把铲刃挪到身前，不新增背带。背铲可随躯干整体自然倾斜但不改原长度和相对背部位置。右手只按本张动作移动；原裤靴崖灰保留，无扬尘或洗净效果。\n本张动作：右掌轻按发顶。双靴自然分开稳站、两腿伸直、躯干直立。人物右手完全离开原腰高半摊位置，右肘向画面左上方外抬，右前臂斜向上，右掌自然并拢轻贴本人头顶偏画面左的外层发面，停在顺理自己蓬发的一瞬。掌心接头顶外缘，指组沿发面自然放平，不遮眉眼、不抓头皮、不压扁或换发型。人物左手仍在画面右肩旁握原背铲柄下部，D柄仍在画面右肩后、铲刃仍在画面左腰后。脸朝画面左、神态平常，崖灰与衣装不变。\n本张侧别：人物右掌在画面左头顶外缘；左手保持画面右肩旁握柄，背铲D柄与铲刃仍原对角位置。\n必须明显可见：右肘抬到头侧、右掌到发顶外缘，原腰高摊手消失；两腿直立、左手保持背铲，是明显头上手位。\n接触与支撑：右掌只轻贴发顶宽面，额头和眉眼清楚，不遮脸、不抓发或出现第三手。；右臂高抬不碰背铲D柄，左手仍握原柄且铲身在背后。；两靴全掌站稳、头与高肘留透明边，原发型和年轻成人比例保留。。\n",
+          "prompt_sha256": "4ae7636b2d242054118f9d6d9bf57ed32721015931a40e611edfc6799f875d2f",
+          "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/moer_trs_A2_rest_right_palm_on_hair_crown_prompt.txt",
+          "negative_constraints": [
+            "普通可逆自理/暂歇，不挖土、不下崖、不带路、不指认宝藏、不新增同伴下落、传言证词、战斗或N3结果。",
+            "源卡只有年轻成年人未明示性别，延续本人母图外观；严格使用moer_trs的已审v2背铲，不引用moer或废v1。",
+            "背铲必须仍有画面右肩后D柄和画面左腰后铲刃的同一斜向关系，左手不离原握点。",
+            "屈膝动作是两靴完整支撑的浅暂歇；按发顶用掌贴头顶外缘，不遮眼、不抓脸、不摘发饰、不作头痛。"
+          ],
+          "existing_asset_check": {
+            "own_action_directory_count": 0,
+            "prior_action_found": false,
+            "expression_board_actually_viewed": true,
+            "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+            "semantic_comparison": "母图/旧表情右手在腰高半摊，本张右手高到头顶、右肘外抬；与低扶膝在腿姿、躯干和手位上都显著不同。"
+          }
+        }
+      ]
+    }
+  ],
+  "future_acceptance_checks": [
+    "第10两组actual accepted/uncertain和第8uncertain已按实际分别冻结；独立计划门审核身份、源引文、可见目标、接触与逐字prompt，通过后才派图。",
+    "左肘抬弯、杯从腰侧明显升到下胸前，右前臂横腹且右掌托杯底，原迎客摊手完全消失。",
+    "右臂从横向迎客改为向下伸，右掌落到膝上围裙左侧，躯干轻前倾；杯仍低在原腰侧。",
+    "板整体从腹前升至胸前，双肘抬弯，左手由单指轻搭改为掌托板下缘；脸与板仍分开。",
+    "木板明显降到画面左大腿外侧并近竖直，右臂向下，左手离板在另一侧自然下垂，腹前不再横有账板。",
+    "原左手横身搭右袖的接点解除，两掌左右分开、各贴一侧胸腹外套前片，两肘外开；钥匙在两手下方。",
+    "两只手都离开身前，双臂同时侧下展开形成明显宽轮廓；原搭袖接点消失，钥匙仍无人触碰。",
+    "双膝可见浅屈、髋位降低，右掌由腰高摊手降到右膝上裤面；左手及背铲原关系保持。",
+    "右肘抬到头侧、右掌到发顶外缘，原腰高摊手消失；两腿直立、左手保持背铲，是明显头上手位。",
+    "每姿raw、透明、浅深展示分别实际看图；失败留缺项，禁止脚本修人体或第三稿。",
+    "本轮最后4人收束后报告44人覆盖与真实合格姿数、4旧缺项及两组uncertain，不称88姿齐全或全部送达。"
+  ],
+  "first_round_closure": {
+    "roster_characters": 44,
+    "prior_covered_characters": 40,
+    "last_batch_characters": 4,
+    "additional_unrelated_pose_batches_authorized": false,
+    "old_missing_actions_count": 4,
+    "if_all_eight_pass_expected_production": {
+      "groups": 22,
+      "characters": 44,
+      "qualified_poses": 84
+    },
+    "expected_values_are_conditional_not_current": true,
+    "stop_condition": "这4人每人最多2姿按预算制作、独审并记录通过或缺项后结束第一轮；交付状态分开记录，发送uncertain不得重发。"
+  },
+  "verification": {
+    "json_parse": true,
+    "plan_count": 8,
+    "all_evidence_quotes_found_in_current_sources": true,
+    "all_four_anchor_hashes_match_manifest_and_independent_qa": true,
+    "anchor_checks": [
+      {
+        "character": "weier_ink",
+        "all_manifest_entries_verified": true,
+        "manifest_entry_count": 17,
+        "raw_matches_independent_qa": true,
+        "transparent_matches_independent_qa": true
+      },
+      {
+        "character": "moer",
+        "all_manifest_entries_verified": true,
+        "manifest_entry_count": 17,
+        "raw_matches_independent_qa": true,
+        "transparent_matches_independent_qa": true
+      },
+      {
+        "character": "daier",
+        "all_manifest_entries_verified": true,
+        "manifest_entry_count": 21,
+        "raw_matches_independent_qa": true,
+        "transparent_matches_independent_qa": true
+      },
+      {
+        "character": "moer_trs",
+        "all_manifest_entries_verified": true,
+        "manifest_entry_count": 27,
+        "raw_matches_independent_qa": true,
+        "transparent_matches_independent_qa": true
+      }
+    ],
+    "four_mothers_raw_and_transparent_actually_viewed": true,
+    "four_expression_boards_actually_viewed": true,
+    "copied_source_hashes_verified": true,
+    "all_original_source_hashes_still_match": true,
+    "prompt_files_sha_verified": true,
+    "all_prompts_single_pose_only": true,
+    "generated_images": 0,
+    "validation_scope": "计划结构、逐字引文行号、相关完整源快照SHA、实际view与动作树/ZIP去重；不改剧情，不作动画或游戏验收。"
+  },
+  "index_refresh": {
+    "tenth_actual_outcomes_in_current_index": true,
+    "tenth_receipt_checks": [
+      {
+        "source_id": "tenth_jier_suier_lot_delivery_receipt",
+        "status": "sent_accepted_not_read",
+        "message_id": "Sentinel_4e6faabbea54819188d6c3a78f454522",
+        "attachment_count": 9,
+        "qualified_poses": 4
+      }
+    ],
+    "uncertain_send_checks": [
+      {
+        "source_id": "eighth_seer_daer_delivery_attempt",
+        "status": "send_outcome_uncertain_do_not_retry",
+        "message_id": null,
+        "retried": false,
+        "qualified_poses": 4,
+        "attachments": 8,
+        "not_in_accepted": true
+      },
+      {
+        "source_id": "tenth_suoda_kelin_delivery_attempt",
+        "status": "send_outcome_uncertain_do_not_retry",
+        "message_id": null,
+        "retried": false,
+        "qualified_poses": 4,
+        "attachments": 8,
+        "not_in_accepted": true
+      }
+    ],
+    "all_prior_sends_accepted": false,
+    "uncertain_send_blocks_new_planning_or_generation": false,
+    "final_snapshot_ready": true,
+    "read_utc": "2026-10-14T08:59:14.314550+00:00",
+    "requires_refresh_before_generation": false
+  },
+  "independent_plan_review_status": "pending; review_eleventh_character_actions assigned separately; no generation before exact brief SHA gate",
+  "source_snapshot_manifest": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/SNAPSHOT_MANIFEST.json",
+    "sha256": "cea0a137b4f6c5e4c6491e6dd31bed7afc992e13e2cdbfdc9883b427aee0634d"
+  }
+}

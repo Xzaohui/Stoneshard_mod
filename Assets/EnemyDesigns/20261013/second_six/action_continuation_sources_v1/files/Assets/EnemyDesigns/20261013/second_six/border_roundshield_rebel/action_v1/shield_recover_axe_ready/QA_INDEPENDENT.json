@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent review_second_enemy_actions",
+  "reviewed_utc": "2026-10-13T20:20:52Z",
+  "concept_id": "EAO-CONCEPT-ENEMY-007",
+  "pose_id": "shield_recover_axe_ready",
+  "result": "pass_independent_keypose_concept",
+  "actually_viewed": [
+    "final anchor",
+    "border_roundshield_rebel_shield_recover_axe_ready_raw_imagegen.png",
+    "border_roundshield_rebel_shield_recover_axe_ready_transparent.png",
+    "review_light.png",
+    "review_dark.png",
+    "reduced view included on review boards"
+  ],
+  "anchor_sha256": "190a5a27537840219bbd41a9844414cef1d4c31f7e241e49e12ce6161f38aa6b",
+  "selected_sha256": "ff42b66254196fa9b45bdf0002c7b5de85323e765f68e048a773f962dc92e975",
+  "raw_sha256": "61dcd0f61c6a3ff77d5be2011fc6d0cb1bb446e76580f3a66c68211e20892a83",
+  "manifest_sha256": "32de07c68fd4061b8821bddb1325bcbbd08db33e3275c8e2a56e15b31c0eb3a9",
+  "prompt_sha256": "37df1d9ea5594eeb816508246166d57e9f7f541910c0d51c1c809b6e3239f294",
+  "prompt_nonempty_verified": true,
+  "manifest_file_hashes_all_verified": {
+    "review_light.png": true,
+    "alpha_QA.json": true,
+    "border_roundshield_rebel_shield_recover_axe_ready_transparent.png": true,
+    "border_roundshield_rebel_shield_recover_axe_ready_raw_imagegen.png": true,
+    "source_snapshot.json": true,
+    "review_dark.png": true,
+    "prompt.txt": true
+  },
+  "source_brief_sha256_verified": true,
+  "mode": "RGBA",
+  "size": [
+    1118,
+    1407
+  ],
+  "alpha_bbox": [
+    32,
+    96,
+    954,
+    1361
+  ],
+  "raw_to_clean_visible_gt8_unchanged": true,
+  "checks": {
+    "identity": "成年灰鬓短胡、蓝灰肩巾、单肩甲与绗缝衣一致；圆盾和短单刃斧保留原体量。",
+    "anatomy_grip": "肩肘腕与盾后臂遮挡可解释；短斧手掌包握、双足稳定，无多肢穿插。",
+    "pose_pair": "护挡为宽步沉身盾高斧低；收盾为直起收步盾低斧高，两独立姿势核心清楚不同。",
+    "alpha_framing": "真实RGBA、透明空区、头足斧盾末端均留边，浅深底及缩小仍可读。"
+  },
+  "hard_errors": [],
+  "minor_notes": [
+    "像素簇、盾板木纹和衣褶的自然差异不构成硬错。"
+  ],
+  "first_drafts": 1,
+  "hard_error_revisions_used": 0,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "continuous_animation_verified": false,
+  "evidence_correction": {
+    "issue": "prompt.txt initially contained undefined; identified independently before freeze",
+    "resolution": "Author recovered original tool prompt using generation cell store p2 after cell completion, not reconstructed. Full original text and manifest SHA updated before FINAL_STATUS freeze.",
+    "source": "Author collaboration message 2026-10-13T20:20:52Z"
+  }
+}

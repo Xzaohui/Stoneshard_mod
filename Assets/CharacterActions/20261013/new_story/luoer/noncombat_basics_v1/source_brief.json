@@ -1,0 +1,214 @@
+{
+  "slug": "luoer",
+  "canonical_id": "FX-CV1",
+  "name": "珞珥",
+  "status": "existing_reviewed_character_new_actions_planned",
+  "selection_status": "selected_no_prior_own_actions_detected",
+  "current_card": {
+    "path": "design/04_人物/野外人物/人物_FX-CV1_珞珥.md",
+    "sha256": "e2904942fd56174bfb840f6d97c8262669dfb9fa56c43fe2d8ddd6fb25d29689"
+  },
+  "source_card_hash_matches_roster44": true,
+  "source_ids": [
+    "luoer_card",
+    "luoer_mother_manifest",
+    "luoer_mother_spec",
+    "luoer_mother_raw",
+    "luoer_mother_transparent",
+    "luoer_expression_manifest",
+    "luoer_expression_qa",
+    "luoer_expression_raw_qa",
+    "luoer_expression_final_status",
+    "luoer_expressions_view",
+    "luoer_mother_brief",
+    "field_dialogue",
+    "field_dialogue_registry",
+    "seventh_mother_qa",
+    "seventh_expression_final_qa"
+  ],
+  "mother_image": {
+    "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_v1_raw_imagegen.png",
+    "raw_sha256": "dc941c67240ca0e535ac40680fac4a8c1a54dc0fad6fa777de2537a1e36d09b0",
+    "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_transparent.png",
+    "transparent_sha256": "57154d38c3cc91e6480ba95dcc5f01bbd0a26d36a027d6fa6bea410a81461a36",
+    "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/manifest.json",
+    "manifest_sha256": "5fbd06f69a8b759b271130f884a529e98fcfefd23500289a162f65513b3d0064",
+    "independent_qa_source_id": "seventh_mother_qa",
+    "independent_qa_selected_status": "final_clean_and_presentation_pass",
+    "actual_visual_observation": "实际看过raw、透明母图与E1/E2浅色板：身体浅朝画面左，深灰颈巾在喉下，人物左肩后（画面右）上下两卷麻绳，左手握同侧胸前宽背带，右手在画面左曲指外抬。两卷各有深色固定束带；上大下小，均不在手中。补片位于褂下摆及两膝，靴完整。E1仍曲指外抬，E2是外摆淡拒；都没有托下绳卷或摸颈巾。",
+    "fixed_sides": "两卷原枯黄麻绳始终在人物左肩后（画面右）上下分层，由原宽背带与束带承住；两卷不展开、不换侧、不变成两根散绳。灰色发缕、深灰颈巾、原衣裤补片和补靴接缝保留。左右手仅按本张专属手位。",
+    "raw_and_transparent_actually_viewed": true,
+    "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/expressions_v1/review/luoer_light_board_zh.png"
+  },
+  "duplicate_check": {
+    "own_action_directory_count": 0,
+    "own_action_semantic_match_found": false,
+    "existing_expressions_actually_compared": true,
+    "interpretation": "只将本人新身体接点/肢体改变计动作；既有表情、风格参考副本和类似日常动作大类不重计，不声称全库首次。"
+  },
+  "story_boundaries": [
+    "仅整理本人自携绳具与衣物，不给他人绳子、不敲新造墙、不画洞壁或路标。",
+    "不表示全程护送、进洞取物、安全保证或N14回程验证完成。"
+  ],
+  "risks": [
+    "上下两卷由原背带/束带固定，不能穿过身体、断开束带或凭空多出卷。",
+    "颈巾是同一块旧布，不变口罩、项圈、伤口包扎或勒喉姿势。"
+  ],
+  "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/luoer/noncombat_basics_v1",
+  "plans": [
+    {
+      "key": "luoer_A1_support_lower_rope_coil",
+      "title_zh": "右手低托下层绳卷",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "luoer_card",
+          "locator": "体貌与随身",
+          "line_start": 17,
+          "quote": "背着两卷麻绳"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-CV1／复访",
+          "line_start": 705,
+          "quote": "还是你。绳子带了吗？没带就在洞口等。"
+        }
+      ],
+      "art_inference": "源卡/中文台词支持身份、原物件和边界；具体肘位、支撑、阶段与接触是可逆美术演出提案，不是已发生的台本结果、医学建议或原生动画规格。",
+      "start_pose_description_only": "母图站姿，左手握原胸前背带，右手外抬；两卷仍固定在左肩后。",
+      "pose": "双靴分开稳站，身体保持原朝向。左手（画面右）仍握左肩前的原宽背带。右肘从画面左外抬位落下，右前臂低低横过腹前，右掌向上伸到人物左腰外（画面右）的下层小绳卷外侧下缘，掌面与绳卷底边明显相贴，托稳而不举走它；下绳卷仍挂原束带，上绳卷不动。右肩略向前，眼看下绳卷，脸保持平静。手、绳卷和躯干之间正常遮挡，右手不可穿过腰身。",
+      "end_pose_description_only": "右手可放回身侧，两卷仍由原背带固定；没有交出、放绳或绑新结。",
+      "transition_scope": "起止仅文字，每张只生成pose描述的一帧。A1/A2无默认先后关系，不制作过渡、GIF或完整动画。",
+      "visible_stage_target": "右前臂由外抬改成腰下横托，右掌贴下层卷底；左手仍在背带且上下两卷完整。",
+      "pose_specific_sidedness": "左手画面右握原左肩背带；右臂由画面左绕腹前，右掌在画面右下卷的外侧下缘。",
+      "contact_and_support_checks": [
+        "右掌平托可接近的下卷外侧底边，不把手画进身体或卷孔。",
+        "原束带仍围住两卷；手只是辅助稳定，不把卷从背带拆出。",
+        "两脚完整全掌站稳，不用抬脚表现本张动作。"
+      ],
+      "prop_state_and_retention": [
+        "恰好两卷，各自原束带、大小层次不变。",
+        "两卷与腰带不融合；下卷可由托手遮一小段但完整外轮廓仍可辨。"
+      ],
+      "difference_from_mother_expression_and_batch": "母图/E1右手曲指外抬，E2右手外摆；本姿右前臂横腹、掌在下卷底边。与尔德A1同属自携物托稳，但本物为左肩分层双绳卷而非背篓，不声称全库首次托物。",
+      "risk_level": "medium_contact_and_pose",
+      "extra_pose_constraints": [
+        "本张右手只在下绳卷底边，不摸颈巾，不展开任一绳卷。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+        "after_failed_revision": "首稿及唯一修订完整保留，仍失败标缺项；不得第三稿、脚本修人体或借另一动作名重试。",
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_transparent.png"
+      ],
+      "reference_sha256": [
+        "57154d38c3cc91e6480ba95dcc5f01bbd0a26d36a027d6fa6bea410a81461a36"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、实际体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗全身基础动作关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体与有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；所有左右均按人物自身解剖侧，并按本张注明的画面侧核对。必须有下述真实手臂、躯干、腿部或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚及全部原物件，四周有透明余量。一人一个瞬间，纯alpha透明背景，无背景、地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不用脚本绘人体、拼接旋转肢体、插值、拉伸或强量化修错。只画本张动作，不画起止/过渡帧。无魔法、战斗、治疗、伤情变化、任务完成、授权、付款、认领或新剧情结果。\n人物：珞珥 FX-CV1，三十多岁的成年女子、洞穴向导；灰发缕的深棕低束发，直眉、克制眼神，深灰颈巾、暗铁蓝短褂、米灰袖里、泥褐补裤、旧棕靴。\n固定衣装与原物件：两卷原枯黄麻绳始终在人物左肩后（画面右）上下分层，由原宽背带与束带承住；两卷不展开、不换侧、不变成两根散绳。灰色发缕、深灰颈巾、原衣裤补片和补靴接缝保留。左右手仅按本张专属手位。\n本张专属手位与侧别：左手画面右握原左肩背带；右臂由画面左绕腹前，右掌在画面右下卷的外侧下缘。\n本张动作：右手低托下层绳卷。双靴分开稳站，身体保持原朝向。左手（画面右）仍握左肩前的原宽背带。右肘从画面左外抬位落下，右前臂低低横过腹前，右掌向上伸到人物左腰外（画面右）的下层小绳卷外侧下缘，掌面与绳卷底边明显相贴，托稳而不举走它；下绳卷仍挂原束带，上绳卷不动。右肩略向前，眼看下绳卷，脸保持平静。手、绳卷和躯干之间正常遮挡，右手不可穿过腰身。\n可见阶段目标：右前臂由外抬改成腰下横托，右掌贴下层卷底；左手仍在背带且上下两卷完整。\n接触与支撑：右掌平托可接近的下卷外侧底边，不把手画进身体或卷孔。；原束带仍围住两卷；手只是辅助稳定，不把卷从背带拆出。；两脚完整全掌站稳，不用抬脚表现本张动作。\n物件保留：恰好两卷，各自原束带、大小层次不变。；两卷与腰带不融合；下卷可由托手遮一小段但完整外轮廓仍可辨。\n剧情边界：仅整理本人自携绳具与衣物，不给他人绳子、不敲新造墙、不画洞壁或路标。；不表示全程护送、进洞取物、安全保证或N14回程验证完成。\n硬约束：上下两卷由原背带/束带固定，不能穿过身体、断开束带或凭空多出卷。；颈巾是同一块旧布，不变口罩、项圈、伤口包扎或勒喉姿势。；本张右手只在下绳卷底边，不摸颈巾，不展开任一绳卷。\n",
+      "prompt_sha256": "429bfd8c741a5590e5bb93bd484360aa85eb37816653d4c3eead8a6dbdaa0b14",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_new_character_actions_sources/luoer_A1_support_lower_rope_coil_prompt.txt",
+      "negative_constraints": [
+        "上下两卷由原背带/束带固定，不能穿过身体、断开束带或凭空多出卷。",
+        "颈巾是同一块旧布，不变口罩、项圈、伤口包扎或勒喉姿势。",
+        "本张右手只在下绳卷底边，不摸颈巾，不展开任一绳卷。",
+        "仅整理本人自携绳具与衣物，不给他人绳子、不敲新造墙、不画洞壁或路标。",
+        "不表示全程护送、进洞取物、安全保证或N14回程验证完成。"
+      ],
+      "existing_asset_check": {
+        "own_existing_action_directory_count": 0,
+        "matching_prior_generated_action_found": false,
+        "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_new_character_actions_sources/action_tree_scan.json",
+        "existing_expression_comparison_actually_viewed": true,
+        "author_semantic_conclusion": "母图/E1右手曲指外抬，E2右手外摆；本姿右前臂横腹、掌在下卷底边。与尔德A1同属自携物托稳，但本物为左肩分层双绳卷而非背篓，不声称全库首次托物。"
+      }
+    },
+    {
+      "key": "luoer_A2_settle_neck_scarf",
+      "title_zh": "抬右手收稳颈巾",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "luoer_card",
+          "locator": "知情边界",
+          "line_start": 21,
+          "quote": "洞口起风的时段"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-CV1／到场",
+          "line_start": 710,
+          "quote": "三步一停，听风。风停了就回头。"
+        }
+      ],
+      "art_inference": "源卡/中文台词支持身份、原物件和边界；具体肘位、支撑、阶段与接触是可逆美术演出提案，不是已发生的台本结果、医学建议或原生动画规格。",
+      "start_pose_description_only": "独立从母图站姿起势，右手离开外抬谈话位，左手继续握同一肩带。",
+      "pose": "双靴原位稳站。左手（画面右）保持握住原左胸宽背带，两卷麻绳都留在左肩后。右肘在画面左抬到胸侧，右前臂斜向内上，右手拇指与并拢指组轻捏自己喉下深灰颈巾的前下缘，把松布向胸前收近一点；可见手指真正捏住布边与一道浅折，手掌不压喉、不遮嘴。肩线自然，头稍低看手，脸无痛苦。",
+      "end_pose_description_only": "右手可放开，原颈巾自然垂回，不打新结、不摘除。",
+      "transition_scope": "起止仅文字，每张只生成pose描述的一帧。A1/A2无默认先后关系，不制作过渡、GIF或完整动画。",
+      "visible_stage_target": "右肘升到胸侧、右手在喉下布边形成清楚的捏布接点，原深灰布与脸保持分离。",
+      "pose_specific_sidedness": "右手由画面左伸向自己胸前颈巾；左手留画面右原肩带，两卷不换侧。",
+      "contact_and_support_checks": [
+        "指组包住颈巾前下缘的可见布边，不能悬空比手势。",
+        "原布边允许轻折，不能变成细绳或拉紧脖子的环。",
+        "双脚全掌稳站，双肩与肘腕自然连续。"
+      ],
+      "prop_state_and_retention": [
+        "同一深灰颈巾仍在颈部，不能多一条布巾。",
+        "原两卷、肩带、腰带、补裤和旧靴全部保留。"
+      ],
+      "difference_from_mother_expression_and_batch": "母图/E1/E2右手均在身体外侧，无衣物接触；本张右手抬到本人喉下旧颈巾并形成实在布折，与A1低托绳卷的手高和轮廓不同。类似已有拢披肩是动作大类，但对象、接点与身份均独立。",
+      "risk_level": "medium_contact_and_pose",
+      "extra_pose_constraints": [
+        "本张右手只轻捏深灰颈巾下缘；不托绳卷，不画口罩、勒颈或治疗。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "明确可定位的身份、人体、接触支撑、道具数量/侧别、比例、裁切或透明硬错；不作审美无限迭代。",
+        "after_failed_revision": "首稿及唯一修订完整保留，仍失败标缺项；不得第三稿、脚本修人体或借另一动作名重试。",
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_transparent.png"
+      ],
+      "reference_sha256": [
+        "57154d38c3cc91e6480ba95dcc5f01bbd0a26d36a027d6fa6bea410a81461a36"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、脸型、实际体态比例、衣装配色与原道具造型锚，用内置imagegen重新绘制一张独立非战斗全身基础动作关键姿态。保持母图成熟大头、自然短颈、紧凑成年身体与有组织的粗像素簇；不幼化、不拉成长身，不机械统一头身比。禁止镜像；所有左右均按人物自身解剖侧，并按本张注明的画面侧核对。必须有下述真实手臂、躯干、腿部或物件接触变化，不能只改表情或头姿。完整头发、双手、双脚及全部原物件，四周有透明余量。一人一个瞬间，纯alpha透明背景，无背景、地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不用脚本绘人体、拼接旋转肢体、插值、拉伸或强量化修错。只画本张动作，不画起止/过渡帧。无魔法、战斗、治疗、伤情变化、任务完成、授权、付款、认领或新剧情结果。\n人物：珞珥 FX-CV1，三十多岁的成年女子、洞穴向导；灰发缕的深棕低束发，直眉、克制眼神，深灰颈巾、暗铁蓝短褂、米灰袖里、泥褐补裤、旧棕靴。\n固定衣装与原物件：两卷原枯黄麻绳始终在人物左肩后（画面右）上下分层，由原宽背带与束带承住；两卷不展开、不换侧、不变成两根散绳。灰色发缕、深灰颈巾、原衣裤补片和补靴接缝保留。左右手仅按本张专属手位。\n本张专属手位与侧别：右手由画面左伸向自己胸前颈巾；左手留画面右原肩带，两卷不换侧。\n本张动作：抬右手收稳颈巾。双靴原位稳站。左手（画面右）保持握住原左胸宽背带，两卷麻绳都留在左肩后。右肘在画面左抬到胸侧，右前臂斜向内上，右手拇指与并拢指组轻捏自己喉下深灰颈巾的前下缘，把松布向胸前收近一点；可见手指真正捏住布边与一道浅折，手掌不压喉、不遮嘴。肩线自然，头稍低看手，脸无痛苦。\n可见阶段目标：右肘升到胸侧、右手在喉下布边形成清楚的捏布接点，原深灰布与脸保持分离。\n接触与支撑：指组包住颈巾前下缘的可见布边，不能悬空比手势。；原布边允许轻折，不能变成细绳或拉紧脖子的环。；双脚全掌稳站，双肩与肘腕自然连续。\n物件保留：同一深灰颈巾仍在颈部，不能多一条布巾。；原两卷、肩带、腰带、补裤和旧靴全部保留。\n剧情边界：仅整理本人自携绳具与衣物，不给他人绳子、不敲新造墙、不画洞壁或路标。；不表示全程护送、进洞取物、安全保证或N14回程验证完成。\n硬约束：上下两卷由原背带/束带固定，不能穿过身体、断开束带或凭空多出卷。；颈巾是同一块旧布，不变口罩、项圈、伤口包扎或勒喉姿势。；本张右手只轻捏深灰颈巾下缘；不托绳卷，不画口罩、勒颈或治疗。\n",
+      "prompt_sha256": "4ba86c5a827ebfa966017b1154267c29d94994e6e4eab369342e42d62cb1d779",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_new_character_actions_sources/luoer_A2_settle_neck_scarf_prompt.txt",
+      "negative_constraints": [
+        "上下两卷由原背带/束带固定，不能穿过身体、断开束带或凭空多出卷。",
+        "颈巾是同一块旧布，不变口罩、项圈、伤口包扎或勒喉姿势。",
+        "本张右手只轻捏深灰颈巾下缘；不托绳卷，不画口罩、勒颈或治疗。",
+        "仅整理本人自携绳具与衣物，不给他人绳子、不敲新造墙、不画洞壁或路标。",
+        "不表示全程护送、进洞取物、安全保证或N14回程验证完成。"
+      ],
+      "existing_asset_check": {
+        "own_existing_action_directory_count": 0,
+        "matching_prior_generated_action_found": false,
+        "source": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_new_character_actions_sources/action_tree_scan.json",
+        "existing_expression_comparison_actually_viewed": true,
+        "author_semantic_conclusion": "母图/E1/E2右手均在身体外侧，无衣物接触；本张右手抬到本人喉下旧颈巾并形成实在布折，与A1低托绳卷的手高和轮廓不同。类似已有拢披肩是动作大类，但对象、接点与身份均独立。"
+      }
+    }
+  ]
+}

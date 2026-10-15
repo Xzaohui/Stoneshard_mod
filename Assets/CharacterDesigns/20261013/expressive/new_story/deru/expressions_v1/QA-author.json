@@ -1,0 +1,80 @@
+{
+  "status": "author_pass_pending_independent",
+  "actual_viewed": [
+    "source raw",
+    "source transparent",
+    "each generated raw",
+    "each final transparent",
+    "light board",
+    "dark board"
+  ],
+  "source_hashes_verified": true,
+  "identity_proportions_clothing_sides": "保持静态母图成年身份、脸型、发型与紧凑比例；侧别未镜像，德茹凿子仍画面右，霍珥带尾仍画面右。",
+  "face_findings": [
+    "E1闭口、低垂但清醒的眼神与平沉眉形，符合感慨旧工；右手收近，非悲悼。",
+    "E2眼眉舒展、轻张口与腰下摊掌形成问路关注；与母图喝止及E1区别可读。"
+  ],
+  "halo": "真实RGBA验证后，仅alpha<16与hiddenRGB清理；实看浅深底无不透明白底、连续白边或污染晕圈。",
+  "limitations": [
+    "概念像素图，非原生游戏像素网格",
+    "未声明part/frame/mask/origin、装备兼容、动作连续性或游戏实现",
+    "熟龄/成年身份按已认可母图保留，未新增固定头身比",
+    "霍珥人物左耳后疤可能被遮，不据此在另一侧新增"
+  ],
+  "story_limits": "仅条件日常表情，不新增承诺、付款、治愈、复工、开闸、作证或死亡结果。",
+  "revision_budget": {
+    "initial_per_expression": 1,
+    "used_revisions": 0,
+    "allowed_hard_error_revisions_per_expression": 1
+  },
+  "selected_bindings": [
+    {
+      "id": "E1",
+      "label_zh": "感慨旧工",
+      "raw": "raw/deru_E1_remember_scattered_crew_v1.png",
+      "raw_sha256": "6aba72bb22046937c03b58c8f927cff23f4c63529997c741d56381caf093c214",
+      "selected": "selected/deru_E1_remember_scattered_crew_transparent.png",
+      "selected_sha256": "28594bf3eb134c91935f5b4390afc1e0998a79f8f5b76a0ecea9fdac3f2e361d",
+      "size": [
+        1118,
+        1407
+      ],
+      "alpha_zero_pixels": 964307,
+      "alpha_partial_pixels": 606759,
+      "hidden_RGB_nonzero_after": 0,
+      "cleanup": "Only set alpha<16 fringe RGBA to zero; zero hidden RGB. Visible character RGB untouched; no paint or geometry edits.",
+      "bbox": [
+        292,
+        35,
+        918,
+        1395
+      ],
+      "prompt": "prompts/deru_E1_remember_scattered_crew_v1.txt",
+      "revision_count": 0
+    },
+    {
+      "id": "E2",
+      "label_zh": "留意来路",
+      "raw": "raw/deru_E2_ask_road_news_v1.png",
+      "raw_sha256": "c27975680b0b20984004e2d2c3d4fa65decea30d7c8f6dd76b887752a87ad04b",
+      "selected": "selected/deru_E2_ask_road_news_transparent.png",
+      "selected_sha256": "c6e6cddce8e360a176fdec79b13ac2d918c913c5453964c68e11a5198ace6821",
+      "size": [
+        1118,
+        1407
+      ],
+      "alpha_zero_pixels": 952164,
+      "alpha_partial_pixels": 618935,
+      "hidden_RGB_nonzero_after": 0,
+      "cleanup": "Only set alpha<16 fringe RGBA to zero; zero hidden RGB. Visible character RGB untouched; no paint or geometry edits.",
+      "bbox": [
+        174,
+        34,
+        931,
+        1396
+      ],
+      "prompt": "prompts/deru_E2_ask_road_news_v1.txt",
+      "revision_count": 0
+    }
+  ]
+}

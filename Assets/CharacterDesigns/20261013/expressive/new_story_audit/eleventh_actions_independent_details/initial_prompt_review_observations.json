@@ -1,0 +1,20 @@
+{
+  "reviewed_utc": "2026-10-14T09:01:40.347421+00:00",
+  "brief_sha256": "4589bbbeaae96e5d19a5296e8e74918e17a88b328858b4ecc697941ad53cd4d8",
+  "status": "two_prompt_ambiguities_for_planner_correction_before_generation",
+  "observations": [
+    {
+      "pose": "weier_ink_A1",
+      "text": "钥匙仍挂右侧腰前",
+      "correction": "钥匙仍挂人物左腰前（画面右侧）",
+      "reason": "开头定义左右解剖侧，原钥匙实在人物左腰画面右，裸右侧易冲突。"
+    },
+    {
+      "pose": "moer_trs_A1,A2",
+      "text": "深灰补丁裤",
+      "correction": "深灰裤及膝部原崖灰",
+      "reason": "母图膝浅色为崖灰，不把灰迹语义转换成新增缝补。"
+    }
+  ],
+  "other_findings": "No cross-pose hand constraints in the eight actual prompts; ordinary reversible body poses and existing props only; 591 byte/source/quote checks passed."
+}

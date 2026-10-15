@@ -1,0 +1,1175 @@
+{
+  "schema_version": 1,
+  "title": "首六敌人动作补缺规划 v1",
+  "created_utc": "2026-10-14T03:44:51.745534+00:00",
+  "status": "planned_not_executed",
+  "scope": {
+    "enemies": 6,
+    "new_independent_keyposes_planned": 6,
+    "generation_calls_executed": 0,
+    "new_art_generated": false,
+    "existing_assets_modified": false,
+    "git_commit_or_push_performed": false,
+    "zip_created": false,
+    "runtimeIntegrated": false,
+    "runtimeVerified": false,
+    "continuous_animation_verified": false
+  },
+  "evidence_policy": {
+    "selection": "catalog_v1选定图与原独审/FINAL_STATUS交叉核对；旧manifest的pending/selected=false作为冻结时历史状态保留，不覆盖。",
+    "actual_view": "本任务逐一view6母图与12原选姿；005伸爪取已交v2，001保持独审通过前握替案。",
+    "commercial_reference": "优先使用既有核过的本地文本与原创图，不新增公开事实；本任务无需下载或复制原作商业图。未来若需查原作图仅临时查看、不入repo或ZIP。",
+    "narrative_boundary": "只规划可逆美术工作名；不新增剧情、敌对关系、死者身份、病人转化、宗教或战斗机制。"
+  },
+  "execution_limits": {
+    "current_task": "只写规划和独立sources；生图未执行。",
+    "future_per_item": "首稿1次，最多1次硬错修订；不为细碎纹理/污斑/褶皱反复返工。",
+    "on_blocked": "记录具体动作/对象/原因/已完成内容及blocked状态后停止该动作，不换工具或路线绕过。",
+    "no_false_completion": "即使六张后来均通过，也只增加六个独立关键姿势；三张不构成完整循环，无GIF、装备合成、引擎部署或运行验收。",
+    "transparency": "未来如清理只允许经过验证的背景低alpha/隐藏RGB清理，不脚本重画/量化身体；004保留所有有意半透明尾束，不能简单阈值硬切。",
+    "evidence_before_execution": "完整prompt先落盘；逐张验证输入SHA、记录真实工具入参/输出SHA、raw和候选及独审结果；不得把未执行当已生成。"
+  },
+  "source_manifest": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/source_manifest.json",
+    "sha256": "f5e3e86b6fd5681ec4b39c1b8935f23642c8a1c27c7a3fc44c343838d5537b0c"
+  },
+  "existing_manifest_validation": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/existing_manifest_hash_checks.json",
+    "sha256": "09d7afd5b690fb681bbc4c28cc490363a85bbdaadb0c426ef6bd4801663a20e4"
+  },
+  "items": [
+    {
+      "id": "001",
+      "concept_id": "EAO-CONCEPT-ENEMY-001",
+      "role": "border_spear_rebel",
+      "working_name": "边地长矛手",
+      "status": "planned_not_executed",
+      "mother": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png",
+        "sha256": "31f837ac09a3d1f6c93ab771156f1cfc0e78c458f8f97ad4607e8685cfc63121",
+        "label": "已选静态母图，仅身份与形体锚点",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "actually_viewed": true,
+        "view_method": "view_image: selected original transparent PNG, full figure",
+        "viewed_on": "2026-10-14",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png"
+      },
+      "existing_selected_poses": [
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+          "sha256": "a0ddc421c1b763e748a17c5cac686840bbb385011b60d56fe9eac5706d6fbbf6",
+          "label": "架矛戒备",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+            "sha256": "a0ddc421c1b763e748a17c5cac686840bbb385011b60d56fe9eac5706d6fbbf6"
+          },
+          "pose_id": "spear_ready"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+          "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c",
+          "label": "短促前刺",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+            "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c"
+          },
+          "pose_id": "spear_short_thrust"
+        }
+      ],
+      "selection_evidence": {
+        "idle_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/independent_QA.json",
+          "sha256": "810158b3d591753e0a9dbb271c78673841136a7283a82f46ecfd79c26d887907"
+        },
+        "action_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/action_independent_QA_v1/independent_QA.json",
+          "sha256": "5803d55e734536b0ce61577dd0378da4d82ec41e54aba9893ecbe2e3e8785c81"
+        },
+        "catalog": {
+          "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+          "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+        }
+      },
+      "current_execution": {
+        "generation_calls": 0,
+        "raw_outputs": [],
+        "selected_output": null,
+        "hard_error_revisions_used": 0
+      },
+      "future_budget": {
+        "first_drafts": 1,
+        "maximum_hard_error_revisions": 1,
+        "per_role_selected_new_keyposes_maximum": 1,
+        "hard_error_revision_requires_recorded_specific_failure": true,
+        "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+      },
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false,
+      "proposed_keypose": {
+        "pose_id": "spear_retract_weight_back",
+        "label": "短刺后收矛",
+        "missing_stage": "收势／撤回重心",
+        "count": 1,
+        "status": "planned_not_executed"
+      },
+      "visual_observations_from_actual_views": [
+        "母图持矛直立；两张动作都为朝左、H1前握/H2后握。",
+        "架矛戒备的矛轴较陡、肘弯；短促前刺的前臂更开、膝和胸向前，尚无拉回过程。"
+      ],
+      "gap_reason": "现有戒备与短刺已覆盖起手和伸出，缺矛离开前方空间、手肘折回与重心回收的明确阶段。新帧不是把旧戒备平移：保持刺出后的较低矛轴，后手向后髋收、前肘明显折回。",
+      "proposed_sequence_only_not_verified": [
+        "spear_ready",
+        "spear_short_thrust",
+        "spear_retract_weight_back",
+        "spear_ready（未来衔接候选）"
+      ],
+      "adjacent_reference_roles": [
+        {
+          "input": 1,
+          "relationship": "已选直接前序候选；连续性尚未验证",
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+          "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c"
+        },
+        {
+          "input": 2,
+          "relationship": "后续回到戒备的参考；两旧帧精确矛长尚不一致",
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+          "sha256": "a0ddc421c1b763e748a17c5cac686840bbb385011b60d56fe9eac5706d6fbbf6"
+        },
+        {
+          "input": 3,
+          "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png",
+          "sha256": "31f837ac09a3d1f6c93ab771156f1cfc0e78c458f8f97ad4607e8685cfc63121"
+        }
+      ],
+      "new_pose_body_mechanics": "以短促前刺为前一姿：前脚位置先保持，后腿承重增加，骨盆小幅后移；前膝由前压回松，不拔高成直立母图。H1前握手和H2后握手沿同一矛轴向身体拉回，后手到后髋外缘、前肘折回；矛仍指画面左，接近前刺的低轴，暂未抬成戒备陡角。",
+      "support_and_contact": "双靴全掌接地，前脚不在收势中凭空滑回；重心投影回到两脚之间偏后腿。两手持续包住同一实杆，不换手、不放杆、不交叉换握。",
+      "invariants": [
+        "H1=母图画面左侧无披肩手臂；在已选动作中它是前握，H2=披肩下手臂是后握。当前续帧只沿用该已选替案。",
+        "画面右橄榄披肩/圆扣、右下蓝灰补布不换边；完整叶形矛头/黄褐绕带/木杆/铁尾不换形。",
+        "以短刺选稿为本续帧武器尺度和相机主参考；旧戒备仅为走势参照，不能声称跨旧帧矛长已解决。"
+      ],
+      "must_differ_from_existing": "低位矛轴＋双肘回折＋后髋承重三者同时可读，区别于前臂伸开的短刺及矛尖较高的戒备。",
+      "proposed_anchor_policy": {
+        "facing": "screen-left mild three-quarter; no mirror",
+        "scale_and_camera_primary_reference": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+          "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c"
+        },
+        "support_or_float_anchor": "双靴全掌接地，前脚不在收势中凭空滑回；重心投影回到两脚之间偏后腿。两手持续包住同一实杆，不换手、不放杆、不交叉换握。",
+        "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+        "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+      },
+      "acceptance_checks": [
+        "追踪两只袖口到握点，确认H1始终前握、H2后握，木杆只一根且无手腕穿杆。",
+        "与短刺做等比例参考比较，矛头/铁尾尺寸和总长没有可见伸缩；与戒备的既有差异单列待验证。",
+        "前脚保留接地、后膝接重；全矛及双靴边界有余量；不是仅复制戒备。"
+      ],
+      "hard_failure_conditions": [
+        "强行复用旧brief的H1后握导致换手或交叉腕。",
+        "矛缩短、弯折、第二矛、铁尾消失、尖端裁切或穿脸。",
+        "与戒备仅位置变化，没有独立收势肘角/重心。"
+      ],
+      "continuity_still_to_verify": [
+        "旧戒备与旧短刺的精确矛长本就未验；本帧成功也不消除此风险。",
+        "脚底公共基准、头部尺度与收矛轨迹需要逐帧注册；没有已锁定引擎origin。"
+      ],
+      "planned_generation": {
+        "status": "not_executed",
+        "tool_intended": "builtin image_gen",
+        "transparent_background": true,
+        "reference_order": [
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+            "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+            "sha256": "a0ddc421c1b763e748a17c5cac686840bbb385011b60d56fe9eac5706d6fbbf6",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png",
+            "sha256": "31f837ac09a3d1f6c93ab771156f1cfc0e78c458f8f97ad4607e8685cfc63121",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png"
+          }
+        ],
+        "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：001 边地长矛手。\n新关键姿势：短刺后收矛，阶段为收势／撤回重心。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png。\n\n具体动作：以短促前刺为前一姿：前脚位置先保持，后腿承重增加，骨盆小幅后移；前膝由前压回松，不拔高成直立母图。H1前握手和H2后握手沿同一矛轴向身体拉回，后手到后髋外缘、前肘折回；矛仍指画面左，接近前刺的低轴，暂未抬成戒备陡角。\n支撑与接触：双靴全掌接地，前脚不在收势中凭空滑回；重心投影回到两脚之间偏后腿。两手持续包住同一实杆，不换手、不放杆、不交叉换握。\n身份/道具不可变：H1=母图画面左侧无披肩手臂；在已选动作中它是前握，H2=披肩下手臂是后握。当前续帧只沿用该已选替案。 画面右橄榄披肩/圆扣、右下蓝灰补布不换边；完整叶形矛头/黄褐绕带/木杆/铁尾不换形。 以短刺选稿为本续帧武器尺度和相机主参考；旧戒备仅为走势参照，不能声称跨旧帧矛长已解决。\n与既有姿势必须不同：低位矛轴＋双肘回折＋后髋承重三者同时可读，区别于前臂伸开的短刺及矛尖较高的戒备。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+        "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/001_spear_retract_weight_back_prompt_v1_not_executed.txt",
+        "prompt_text_sha256": "71bbe9da6944453159841972ab1dae36cae1bb1912516c4fb5a2b3e59be5d371",
+        "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_continuation_v1/spear_retract_weight_back",
+        "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+      }
+    },
+    {
+      "id": "002",
+      "concept_id": "EAO-CONCEPT-ENEMY-002",
+      "role": "canal_club_brigand",
+      "working_name": "旧渠劫道者",
+      "status": "planned_not_executed",
+      "mother": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png",
+        "sha256": "9683b1a41ba261800702c45617ed6fd2b737b54caf24a1c89010d3f5ce81cceb",
+        "label": "已选静态母图，仅身份与形体锚点",
+        "dimensions": [
+          1214,
+          1295
+        ],
+        "mode": "RGBA",
+        "actually_viewed": true,
+        "view_method": "view_image: selected original transparent PNG, full figure",
+        "viewed_on": "2026-10-14",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png"
+      },
+      "existing_selected_poses": [
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+          "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185",
+          "label": "紧凑备击",
+          "dimensions": [
+            1215,
+            1295
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+            "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185"
+          },
+          "pose_id": "club_compact_ready"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+          "sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241",
+          "label": "收势回防",
+          "dimensions": [
+            1215,
+            1295
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+            "sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241"
+          },
+          "pose_id": "club_controlled_recover"
+        }
+      ],
+      "selection_evidence": {
+        "idle_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/independent_QA.json",
+          "sha256": "4650edd3962aa767d9cd8772ac30e48d6cfa9e626d80d09bb62c38f7d4729e00"
+        },
+        "action_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/action_independent_QA_v1/independent_QA.json",
+          "sha256": "5803d55e734536b0ce61577dd0378da4d82ec41e54aba9893ecbe2e3e8785c81"
+        },
+        "catalog": {
+          "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+          "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+        }
+      },
+      "current_execution": {
+        "generation_calls": 0,
+        "raw_outputs": [],
+        "selected_output": null,
+        "hard_error_revisions_used": 0
+      },
+      "future_budget": {
+        "first_drafts": 1,
+        "maximum_hard_error_revisions": 1,
+        "per_role_selected_new_keyposes_maximum": 1,
+        "hard_error_revision_requires_recorded_specific_failure": true,
+        "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+      },
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false,
+      "proposed_keypose": {
+        "pose_id": "club_downswing_midarc",
+        "label": "短棍下挥中段",
+        "missing_stage": "出手中段",
+        "count": 1,
+        "status": "planned_not_executed"
+      },
+      "visual_observations_from_actual_views": [
+        "紧凑备击的持棍拳在上胸，棍头斜上左，肘约直角。",
+        "收势回防的拳已收近腰腹，棍头斜下左悬于前膝外；缺由高到低的挥出。"
+      ],
+      "gap_reason": "两旧帧分别是高位预备和低位收势，没有短棍离肩向前下挥的出手。补中弧时持棍臂向前打开，棍头处于胸腹之间，绝不再画高举或低垂。",
+      "proposed_sequence_only_not_verified": [
+        "club_compact_ready",
+        "club_downswing_midarc",
+        "club_controlled_recover"
+      ],
+      "adjacent_reference_roles": [
+        {
+          "input": 1,
+          "relationship": "已选直接前序候选；连续性尚未验证",
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+          "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185"
+        },
+        {
+          "input": 2,
+          "relationship": "拟用后续回收参考",
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+          "sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241"
+        },
+        {
+          "input": 3,
+          "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png",
+          "sha256": "9683b1a41ba261800702c45617ed6fd2b737b54caf24a1c89010d3f5ce81cceb"
+        }
+      ],
+      "new_pose_body_mechanics": "原持棍手H1从肩前送至下胸前侧，肩和肘带动短棍向左前下方走一小段弧；前臂明显比备击打开，但肘不锁直。棍头在腰带以上、胸下区域，位于拳的画面左侧且略低，暂未落至回收稿的前膝外。胸轻跟进、前膝承重，空手H2仍在身体画面右侧下肋作平衡。",
+      "support_and_contact": "两靴接地；前脚全掌承压，后腿仍支撑，不跳跃、不交叉腿。棍只与H1手掌接触，棍头挥过空气，不接触人、地面或自身腿。",
+      "invariants": [
+        "同一矮壮成年宽脸厚胡，褐叠襟短衣、画面右层皮肩护、右腰绳结布袋、左下暗红补丁不换边。",
+        "H1为母图画面左持棍手，始终单手持一根短粗木棍；H2不碰棍。",
+        "钝圆棍头、仅一个灰铁箍；以备击选稿的手持比例为准，不增加棍长或改成锤/狼牙棒。"
+      ],
+      "must_differ_from_existing": "持棍臂前开且拳未回腰，棍头处于胸腹中段而非高于肩或低于膝；是小幅下挥，不是横向刺击。",
+      "proposed_anchor_policy": {
+        "facing": "screen-left mild three-quarter; no mirror",
+        "scale_and_camera_primary_reference": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+          "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185"
+        },
+        "support_or_float_anchor": "两靴接地；前脚全掌承压，后腿仍支撑，不跳跃、不交叉腿。棍只与H1手掌接触，棍头挥过空气，不接触人、地面或自身腿。",
+        "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+        "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+      },
+      "acceptance_checks": [
+        "高举→中弧→低收可形成方向明确的三张候选关系，但不宣称完整循环。",
+        "拳/木柄/铁箍/钝头连贯，头与脸/膝保留负空间。",
+        "身体仍矮壮，前脚接重与后脚支撑可靠，空手未变第二武器手。"
+      ],
+      "hard_failure_conditions": [
+        "新姿和备击或收势仅换角度，无前臂打开与棍头中段位置。",
+        "长棍化、双铁箍、尖刃、换手、棍穿脸/膝或手掌悬空。",
+        "添加受害者、命中特效、喷血、地面。"
+      ],
+      "continuity_still_to_verify": [
+        "尚需按肩肘腕路径验证挥弧能连接两旧稿；没有击中物或碰撞结果。",
+        "后期统一脚底、相机与棍长；三张关键姿势不是流畅动作证明。"
+      ],
+      "planned_generation": {
+        "status": "not_executed",
+        "tool_intended": "builtin image_gen",
+        "transparent_background": true,
+        "reference_order": [
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png",
+            "sha256": "d4d60ff702947837e2b0dec065eb3cbc64f41e3c5a4db777b2855eef95bc8185",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png",
+            "sha256": "c81c5a98fd3e63a29f145281b78185a01cc771f8f253859fff9df31a61710241",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png",
+            "sha256": "9683b1a41ba261800702c45617ed6fd2b737b54caf24a1c89010d3f5ce81cceb",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png"
+          }
+        ],
+        "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：002 旧渠劫道者。\n新关键姿势：短棍下挥中段，阶段为出手中段。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_compact_ready/canal_club_brigand_club_compact_ready_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_v1/club_controlled_recover/canal_club_brigand_club_controlled_recover_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/idle_v1/canal_club_brigand_transparent.png。\n\n具体动作：原持棍手H1从肩前送至下胸前侧，肩和肘带动短棍向左前下方走一小段弧；前臂明显比备击打开，但肘不锁直。棍头在腰带以上、胸下区域，位于拳的画面左侧且略低，暂未落至回收稿的前膝外。胸轻跟进、前膝承重，空手H2仍在身体画面右侧下肋作平衡。\n支撑与接触：两靴接地；前脚全掌承压，后腿仍支撑，不跳跃、不交叉腿。棍只与H1手掌接触，棍头挥过空气，不接触人、地面或自身腿。\n身份/道具不可变：同一矮壮成年宽脸厚胡，褐叠襟短衣、画面右层皮肩护、右腰绳结布袋、左下暗红补丁不换边。 H1为母图画面左持棍手，始终单手持一根短粗木棍；H2不碰棍。 钝圆棍头、仅一个灰铁箍；以备击选稿的手持比例为准，不增加棍长或改成锤/狼牙棒。\n与既有姿势必须不同：持棍臂前开且拳未回腰，棍头处于胸腹中段而非高于肩或低于膝；是小幅下挥，不是横向刺击。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+        "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/002_club_downswing_midarc_prompt_v1_not_executed.txt",
+        "prompt_text_sha256": "33c69de1a512b5337ca90546001244723c31a0601fda41e9073fdbecbb1c5e53",
+        "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/canal_club_brigand/action_continuation_v1/club_downswing_midarc",
+        "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+      }
+    },
+    {
+      "id": "003",
+      "concept_id": "EAO-CONCEPT-ENEMY-003",
+      "role": "canal_tomb_restless",
+      "working_name": "渠墓腐尸",
+      "status": "planned_not_executed",
+      "mother": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png",
+        "sha256": "c41f8a32d88a67ffb90f184f893ae299f41730a7e5d955575c7325066ef44426",
+        "label": "已选静态母图，仅身份与形体锚点",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "actually_viewed": true,
+        "view_method": "view_image: selected original transparent PNG, full figure",
+        "viewed_on": "2026-10-14",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png"
+      },
+      "existing_selected_poses": [
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+          "sha256": "61d3a4ca0ec7d763d89e220869645c24397021a2b3092fb90a847d7243c0f28b",
+          "label": "拖步前行",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+            "sha256": "61d3a4ca0ec7d763d89e220869645c24397021a2b3092fb90a847d7243c0f28b"
+          },
+          "pose_id": "drag_step"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+          "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34",
+          "label": "缓慢伸臂",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+            "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34"
+          },
+          "pose_id": "slow_reach"
+        }
+      ],
+      "selection_evidence": {
+        "idle_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/independent_QA.json",
+          "sha256": "1d8420c1f4c10e3beb3bdd307549ea3076ea02f0d357884ec74f0f474b3dd10c"
+        },
+        "action_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/independent_action_QA.json",
+          "sha256": "0e7f92542fdc400133bb30ba1c6b9df9075129a21219c29f1dc3de266eb1bfc4"
+        },
+        "catalog": {
+          "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+          "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+        }
+      },
+      "current_execution": {
+        "generation_calls": 0,
+        "raw_outputs": [],
+        "selected_output": null,
+        "hard_error_revisions_used": 0
+      },
+      "future_budget": {
+        "first_drafts": 1,
+        "maximum_hard_error_revisions": 1,
+        "per_role_selected_new_keyposes_maximum": 1,
+        "hard_error_revision_requires_recorded_specific_failure": true,
+        "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+      },
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false,
+      "proposed_keypose": {
+        "pose_id": "reach_clasp_end",
+        "label": "前压扣抓末端",
+        "missing_stage": "出手末端／支撑转移",
+        "count": 1,
+        "status": "planned_not_executed"
+      },
+      "visual_observations_from_actual_views": [
+        "拖步是两臂低摆、前脚着地、后趾拖地。",
+        "缓慢伸臂已把画面左手抬到胸下，但肘仍明显弯、手掌松张；没有收拢空抓的出手末端。"
+      ],
+      "gap_reason": "现有步态和慢伸属于接近与探出，缺同一条伸臂进一步送到可控末端、手指扣拢且前脚确实接重。选择出手末端而非第三张双臂低垂姿势。",
+      "proposed_sequence_only_not_verified": [
+        "drag_step",
+        "slow_reach",
+        "reach_clasp_end"
+      ],
+      "adjacent_reference_roles": [
+        {
+          "input": 1,
+          "relationship": "已选直接前序候选；连续性尚未验证",
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+          "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34"
+        },
+        {
+          "input": 2,
+          "relationship": "更早拖步上下文，不强行设为扣抓后的下一帧",
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+          "sha256": "61d3a4ca0ec7d763d89e220869645c24397021a2b3092fb90a847d7243c0f28b"
+        },
+        {
+          "input": 3,
+          "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png",
+          "sha256": "c41f8a32d88a67ffb90f184f893ae299f41730a7e5d955575c7325066ef44426"
+        }
+      ],
+      "new_pose_body_mechanics": "沿slow_reach同一画面左臂，将肩向左前再送少许、肘角更开但留弯；手掌在原胸下高度，手指从松张收拢成一个未完全合死的空抓轮廓，不拿任何东西。头仍歪垂，肩胯有迟滞；画面右臂继续低垂且与躯干分开。前足全掌受重，后足脚趾接地、脚跟轻抬，脚距不跨大步。",
+      "support_and_contact": "体重经前髋—前膝—前足真实支撑；后脚趾保留接触点。伸手握空，只做空抓，不接触任何受害者或武器。",
+      "invariants": [
+        "同一瘦斜C塌肩身形、灰黄残皮、稀疏暗发、歪头暗眼窝与松下颌；仍有皮肉，不换纯骷髅。",
+        "旧麻无袖残衣/棕破裤/右腰绳结/泥绑腿与裸趾全部保留，不加新伤口和鲜血。",
+        "两臂两腿完整，只有原画面左臂执行扣抓；无第二条同时平举僵尸臂。"
+      ],
+      "must_differ_from_existing": "比slow_reach更开的肘角、更前的肩和扣拢手指，加上前足明确接重；不能仅靠改几根手指交付。",
+      "proposed_anchor_policy": {
+        "facing": "screen-left mild three-quarter; no mirror",
+        "scale_and_camera_primary_reference": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+          "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34"
+        },
+        "support_or_float_anchor": "体重经前髋—前膝—前足真实支撑；后脚趾保留接触点。伸手握空，只做空抓，不接触任何受害者或武器。",
+        "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+        "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+      },
+      "acceptance_checks": [
+        "同一伸臂的肩—肘—腕连续；臂长与头体尺度不增长。",
+        "至少同时看到肘打开、指扣拢、前足接重三项区别；与drag_step低摆双臂不混。",
+        "后趾与前脚接地位置可读、全身留边；皮肉体积和旧衣身份仍在。"
+      ],
+      "hard_failure_conditions": [
+        "新增长爪、纯白骨手臂、额外手臂、僵直锁肘或胳膊伸长。",
+        "扣抓依赖新增对象/病人/血肉，或画成扑咬。",
+        "只是slow_reach重画，支撑和伸臂差别不可读。"
+      ],
+      "continuity_still_to_verify": [
+        "该新帧之后尚缺回收，不能由drag_step强行闭环。",
+        "旧drag_step与slow_reach脚距和尺度不同，接续需要重新配准审查，未做动画。"
+      ],
+      "planned_generation": {
+        "status": "not_executed",
+        "tool_intended": "builtin image_gen",
+        "transparent_background": true,
+        "reference_order": [
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+            "sha256": "bb0ec16aa92cb2e7be05f6bdd13a25d0df91e2adacc0d90bf8cddb5b82b69c34",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+            "sha256": "61d3a4ca0ec7d763d89e220869645c24397021a2b3092fb90a847d7243c0f28b",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png",
+            "sha256": "c41f8a32d88a67ffb90f184f893ae299f41730a7e5d955575c7325066ef44426",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png"
+          }
+        ],
+        "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：003 渠墓腐尸。\n新关键姿势：前压扣抓末端，阶段为出手末端／支撑转移。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png。\n\n具体动作：沿slow_reach同一画面左臂，将肩向左前再送少许、肘角更开但留弯；手掌在原胸下高度，手指从松张收拢成一个未完全合死的空抓轮廓，不拿任何东西。头仍歪垂，肩胯有迟滞；画面右臂继续低垂且与躯干分开。前足全掌受重，后足脚趾接地、脚跟轻抬，脚距不跨大步。\n支撑与接触：体重经前髋—前膝—前足真实支撑；后脚趾保留接触点。伸手握空，只做空抓，不接触任何受害者或武器。\n身份/道具不可变：同一瘦斜C塌肩身形、灰黄残皮、稀疏暗发、歪头暗眼窝与松下颌；仍有皮肉，不换纯骷髅。 旧麻无袖残衣/棕破裤/右腰绳结/泥绑腿与裸趾全部保留，不加新伤口和鲜血。 两臂两腿完整，只有原画面左臂执行扣抓；无第二条同时平举僵尸臂。\n与既有姿势必须不同：比slow_reach更开的肘角、更前的肩和扣拢手指，加上前足明确接重；不能仅靠改几根手指交付。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+        "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/003_reach_clasp_end_prompt_v1_not_executed.txt",
+        "prompt_text_sha256": "a475c6e61e5df2e88d99dc041140e98f8d57f23a8eb2f07743a20ea46769409f",
+        "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_continuation_v1/reach_clasp_end",
+        "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+      }
+    },
+    {
+      "id": "004",
+      "concept_id": "EAO-CONCEPT-ENEMY-004",
+      "role": "crypt_drifter_wraith",
+      "working_name": "墓龛游魂",
+      "status": "planned_not_executed",
+      "mother": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png",
+        "sha256": "403e4a4dfe2aa04ce216176587ad17a584a74c2692bd306d1067d7acd0e9523c",
+        "label": "已选静态母图，仅身份与形体锚点",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "actually_viewed": true,
+        "view_method": "view_image: selected original transparent PNG, full figure",
+        "viewed_on": "2026-10-14",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png"
+      },
+      "existing_selected_poses": [
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+          "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3",
+          "label": "向前漂移",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+            "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3"
+          },
+          "pose_id": "forward_drift"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+          "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8",
+          "label": "幽影探手",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+            "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8"
+          },
+          "pose_id": "spectral_reach"
+        }
+      ],
+      "selection_evidence": {
+        "idle_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/independent_QA.json",
+          "sha256": "b27264ac57f7b81c64ac5d22edd38c71097b6369753e3a40e5b06d711c5551de"
+        },
+        "action_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/independent_action_QA.json",
+          "sha256": "6f7fd4b478a7aac023fa1c0b4ad6e50d376fd6ade07a3e553b8dc1a1c008c29a"
+        },
+        "catalog": {
+          "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+          "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+        }
+      },
+      "current_execution": {
+        "generation_calls": 0,
+        "raw_outputs": [],
+        "selected_output": null,
+        "hard_error_revisions_used": 0
+      },
+      "future_budget": {
+        "first_drafts": 1,
+        "maximum_hard_error_revisions": 1,
+        "per_role_selected_new_keyposes_maximum": 1,
+        "hard_error_revision_requires_recorded_specific_failure": true,
+        "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+      },
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false,
+      "proposed_keypose": {
+        "pose_id": "spectral_hand_recoil",
+        "label": "探手回束",
+        "missing_stage": "收势／漂浮制动",
+        "count": 1,
+        "status": "planned_not_executed"
+      },
+      "visual_observations_from_actual_views": [
+        "前漂为上身左倾、低手、尾束向右后扬。",
+        "幽影探手较直立，唯一露手向左胸下伸出，尾束较向下；还没有肘回折和漂浮制动姿态。"
+      ],
+      "gap_reason": "新帧补探手回收：单手退到下胸前并下弯，胸兜稍后收，尾束仍有滞后弧。它既不是低手前漂，也不是母图腰侧松垂。",
+      "proposed_sequence_only_not_verified": [
+        "forward_drift",
+        "spectral_reach",
+        "spectral_hand_recoil",
+        "idle（未来静止回归参考）"
+      ],
+      "adjacent_reference_roles": [
+        {
+          "input": 1,
+          "relationship": "已选直接前序候选；连续性尚未验证",
+          "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+          "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8"
+        },
+        {
+          "input": 2,
+          "relationship": "更早漂移上下文，不能当新帧的即时下一帧",
+          "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+          "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3"
+        },
+        {
+          "input": 3,
+          "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+          "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png",
+          "sha256": "403e4a4dfe2aa04ce216176587ad17a584a74c2692bd306d1067d7acd0e9523c"
+        }
+      ],
+      "new_pose_body_mechanics": "同一唯一露出的画面左手从spectral_reach向下胸前撤回，肘明显折起且袖口连接可见，掌根靠近胸边但保留一道负空间；弯曲手指朝下、不遮脸。兜帽与胸腔小幅向后回正，头仍向左；两长一短主尾束从上袍连续垂出，中下段留轻微向右的滞后弧，较前漂收窄但不并成实心裙筒。",
+      "support_and_contact": "此角色没有脚和地面支撑；只检查胸袍到尾束连续、露手到袖口连续、漂浮体态可信。不得为了统一站立锚点增脚、腿、靴、地板或落地影。",
+      "invariants": [
+        "同一深灰青尖兜帽、冷青窄颅面、暗眼窝、层叠短肩披；仅一只露手，另一手一直藏起。",
+        "两长一短碎尾、透明孔洞与小碎片保留；真实半透明不能阈值清成硬裙。",
+        "无武器、法球、符文、链条，不绑定任何死者身份或回声真魂。"
+      ],
+      "must_differ_from_existing": "回折肘与靠胸但分离的手、向后回正的胸、滞后尾弧同时可读；不得只把旧图整体反向旋转或平移。",
+      "proposed_anchor_policy": {
+        "facing": "screen-left mild three-quarter; no mirror",
+        "scale_and_camera_primary_reference": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+          "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8"
+        },
+        "support_or_float_anchor": "此角色没有脚和地面支撑；只检查胸袍到尾束连续、露手到袖口连续、漂浮体态可信。不得为了统一站立锚点增脚、腿、靴、地板或落地影。",
+        "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+        "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+      },
+      "acceptance_checks": [
+        "仅一露手，肘袖连接可追踪，手不黏在胸面或遮脸。",
+        "无实体下肢；尾束根部、两长一短关系和透明缝隙成立。",
+        "浅深背景实看半透明材料、碎片完整留边；低手漂移与高伸手都能与新收势区分。"
+      ],
+      "hard_failure_conditions": [
+        "出现脚/靴/两条实腿、实心裙底、第二只露手。",
+        "为强调收势把碎尾画成地面烟雾、光圈、法球或泛白大晕。",
+        "与静态母图仅平移/旋转，缺折肘和制动尾弧。"
+      ],
+      "continuity_still_to_verify": [
+        "目前没有统一浮空origin或尾尖锚点，尾尖不应当作脚底锚点。",
+        "旧两张prompt文本归档曾写undefined，完整原调用已在addendum；本计划照实保留原错和补充证据。",
+        "漂移、探手、回束的时间和尾部连续性仍需验证，不承诺透明运行实现。"
+      ],
+      "planned_generation": {
+        "status": "not_executed",
+        "tool_intended": "builtin image_gen",
+        "transparent_background": true,
+        "reference_order": [
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+            "sha256": "7eee48e4a91edd60ad88b536fb9b3196347f7415752990feac50e58d595153f8",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+            "sha256": "ea14cfa17e33a3f99320c66fe9ea5ce2c6244ead5ea5231c8fd5a488f3b009b3",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png",
+            "sha256": "403e4a4dfe2aa04ce216176587ad17a584a74c2692bd306d1067d7acd0e9523c",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png"
+          }
+        ],
+        "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：004 墓龛游魂。\n新关键姿势：探手回束，阶段为收势／漂浮制动。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png。\n\n具体动作：同一唯一露出的画面左手从spectral_reach向下胸前撤回，肘明显折起且袖口连接可见，掌根靠近胸边但保留一道负空间；弯曲手指朝下、不遮脸。兜帽与胸腔小幅向后回正，头仍向左；两长一短主尾束从上袍连续垂出，中下段留轻微向右的滞后弧，较前漂收窄但不并成实心裙筒。\n支撑与接触：此角色没有脚和地面支撑；只检查胸袍到尾束连续、露手到袖口连续、漂浮体态可信。不得为了统一站立锚点增脚、腿、靴、地板或落地影。\n身份/道具不可变：同一深灰青尖兜帽、冷青窄颅面、暗眼窝、层叠短肩披；仅一只露手，另一手一直藏起。 两长一短碎尾、透明孔洞与小碎片保留；真实半透明不能阈值清成硬裙。 无武器、法球、符文、链条，不绑定任何死者身份或回声真魂。\n与既有姿势必须不同：回折肘与靠胸但分离的手、向后回正的胸、滞后尾弧同时可读；不得只把旧图整体反向旋转或平移。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+        "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/004_spectral_hand_recoil_prompt_v1_not_executed.txt",
+        "prompt_text_sha256": "ff495dc2f56072e1ed160ec7a227b1cf12b028c935b0f02a49c2cbe5b9143609",
+        "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_continuation_v1/spectral_hand_recoil",
+        "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+      }
+    },
+    {
+      "id": "005",
+      "concept_id": "EAO-CONCEPT-ENEMY-005",
+      "role": "blood_hunger_mutant",
+      "working_name": "饥血潜行体",
+      "status": "planned_not_executed",
+      "mother": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/blood_hunger_mutant_idle_transparent.png",
+        "sha256": "d20e301f5d62e6c22228db8030c393d502cd9a7caebd1c09f7d7fe246237440c",
+        "label": "已选静态母图，仅身份与形体锚点",
+        "dimensions": [
+          1312,
+          1199
+        ],
+        "mode": "RGBA",
+        "actually_viewed": true,
+        "view_method": "view_image: selected original transparent PNG, full figure",
+        "viewed_on": "2026-10-14",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/blood_hunger_mutant_idle_transparent.png"
+      },
+      "existing_selected_poses": [
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/blood_hunger_mutant_low_coil_transparent.png",
+          "sha256": "7b6a3abf7220dca0cd621dfa6460251a0a8175df5226aa7ec9c5f4d19fcefcc9",
+          "label": "低伏蓄势",
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/blood_hunger_mutant_low_coil_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/mutant_warden_actions_delivery_v1/blood_hunger_mutant_low_coil_transparent.png",
+            "sha256": "7b6a3abf7220dca0cd621dfa6460251a0a8175df5226aa7ec9c5f4d19fcefcc9"
+          },
+          "pose_id": "low_coil"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/revision_v2/blood_hunger_mutant_short_claw_extend_transparent_v2.png",
+          "sha256": "e179b84532c94910f5458250b5263aacea6cd38e4745f0e1accad68a0b8846a8",
+          "label": "短爪前伸",
+          "dimensions": [
+            1419,
+            1109
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/revision_v2/blood_hunger_mutant_short_claw_extend_transparent_v2.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/mutant_warden_actions_delivery_v1/blood_hunger_mutant_short_claw_extend_transparent.png",
+            "sha256": "e179b84532c94910f5458250b5263aacea6cd38e4745f0e1accad68a0b8846a8"
+          },
+          "pose_id": "short_claw_extend",
+          "selected_version": "v2"
+        }
+      ],
+      "selection_evidence": {
+        "idle_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/independent_QA.json",
+          "sha256": "8a20fa1c9762510c730918cc0b44b34782340b2aefacfd6d9df7a3a798ac54b9"
+        },
+        "action_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/independent_action_QA.json",
+          "sha256": "2fbd401fe214b8cd34e5ba63654f74528f2f5c0ef6aa7673ee417c6a32463e0c"
+        },
+        "catalog": {
+          "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+          "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+        }
+      },
+      "current_execution": {
+        "generation_calls": 0,
+        "raw_outputs": [],
+        "selected_output": null,
+        "hard_error_revisions_used": 0
+      },
+      "future_budget": {
+        "first_drafts": 1,
+        "maximum_hard_error_revisions": 1,
+        "per_role_selected_new_keyposes_maximum": 1,
+        "hard_error_revision_requires_recorded_specific_failure": true,
+        "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+      },
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false,
+      "proposed_keypose": {
+        "pose_id": "claw_retract_rear_load",
+        "label": "回爪后承重",
+        "missing_stage": "收势／重心后移",
+        "count": 1,
+        "status": "planned_not_executed"
+      },
+      "visual_observations_from_actual_views": [
+        "低伏蓄势是胯更低、双爪接近身体两侧但仍低垂。",
+        "已选伸爪是v2，画面左臂向前送、爪在胸下、前膝承担前压；缺前送长臂撤回后的收势。"
+      ],
+      "gap_reason": "补一侧回爪和后腿接重，而不是第三张低伏。收回手停在下肋外侧、肘有清楚折角，另一爪低置作平衡，使动作方向读成从伸出返回。",
+      "proposed_sequence_only_not_verified": [
+        "low_coil",
+        "short_claw_extend_v2",
+        "claw_retract_rear_load",
+        "low_coil（未来衔接候选）"
+      ],
+      "adjacent_reference_roles": [
+        {
+          "input": 1,
+          "relationship": "已选直接前序候选；连续性尚未验证",
+          "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/revision_v2/blood_hunger_mutant_short_claw_extend_transparent_v2.png",
+          "sha256": "e179b84532c94910f5458250b5263aacea6cd38e4745f0e1accad68a0b8846a8"
+        },
+        {
+          "input": 2,
+          "relationship": "后续蓄势参考，不能照抄低伏双爪姿态",
+          "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/blood_hunger_mutant_low_coil_transparent.png",
+          "sha256": "7b6a3abf7220dca0cd621dfa6460251a0a8175df5226aa7ec9c5f4d19fcefcc9"
+        },
+        {
+          "input": 3,
+          "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+          "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/blood_hunger_mutant_idle_transparent.png",
+          "sha256": "d20e301f5d62e6c22228db8030c393d502cd9a7caebd1c09f7d7fe246237440c"
+        }
+      ],
+      "new_pose_body_mechanics": "沿short_claw_extend v2把同一画面左侧长臂撤回，肘向身侧后折、爪根收到下肋外侧，爪尖斜下且与腹布留空；前臂长度保留，不能缩短成长着人手的短臂。另一只爪保持在画面右下外侧、不贴地。宽厚驼背保持拱起，头仍低朝左并从肩前露出。骨盆向后脚移动一点，后膝加屈接重，前膝稍松；双足仍着地，身体高度介于伸爪和深低伏之间。",
+      "support_and_contact": "双足有承重，后脚完整承压、前足仍接触；两只手爪全程离地。不四足落地、不跪、不飞扑，不用爪撑地伪造平衡。",
+      "invariants": [
+        "保持母图低宽驼背、灰紫窄颌、后折耳、细暗眼、两枚不对称牙、暗红褐肩背隆起、瘦肋腹。",
+        "长前臂、短弯双腿与原弯爪尺度保持；短爪动作不意味着新增刀刃或把母图指爪拉长。",
+        "炭褐腰布覆盖腰臀上腿、画面右腰结及垂带不换边；无武器、翅膀、披风、长舌。",
+        "仅使用已选伸爪v2，不能把右侧爪触边的v1当相邻参考。"
+      ],
+      "must_differ_from_existing": "单爪收在下肋、肘向后折、后腿接重，与low_coil双爪低落及extend前伸张爪均不同。",
+      "proposed_anchor_policy": {
+        "facing": "screen-left mild three-quarter; no mirror",
+        "scale_and_camera_primary_reference": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/revision_v2/blood_hunger_mutant_short_claw_extend_transparent_v2.png",
+          "sha256": "e179b84532c94910f5458250b5263aacea6cd38e4745f0e1accad68a0b8846a8"
+        },
+        "support_or_float_anchor": "双足有承重，后脚完整承压、前足仍接触；两只手爪全程离地。不四足落地、不跪、不飞扑，不用爪撑地伪造平衡。",
+        "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+        "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+      },
+      "acceptance_checks": [
+        "手爪完整留足空边，尤其画面右爪，避免复现旧v1裁切。",
+        "画面左肩—长臂—折肘—爪连通，驼背体积和短腿支撑没有人形化。",
+        "至少同时读到回爪高度、肘折与后腿承重；双爪悬空、双足接地。"
+      ],
+      "hard_failure_conditions": [
+        "把长臂缩短、驼背削平、短腿拉长或将肩背画成翅膀。",
+        "爪尖贴边/裁切，手爪撑地、飞扑、第三条肢体。",
+        "回到原low_coil仅缩放，或新增血液/受害者/撕咬。"
+      ],
+      "continuity_still_to_verify": [
+        "v2与low_coil画布不同，不能按整张画布缩到相同尺寸后冒称注册一致。",
+        "头肩尺度、两足接点、爪轨迹及跨姿身体体积仍需逐张配准。"
+      ],
+      "planned_generation": {
+        "status": "not_executed",
+        "tool_intended": "builtin image_gen",
+        "transparent_background": true,
+        "reference_order": [
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/revision_v2/blood_hunger_mutant_short_claw_extend_transparent_v2.png",
+            "sha256": "e179b84532c94910f5458250b5263aacea6cd38e4745f0e1accad68a0b8846a8",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/revision_v2/blood_hunger_mutant_short_claw_extend_transparent_v2.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/blood_hunger_mutant_low_coil_transparent.png",
+            "sha256": "7b6a3abf7220dca0cd621dfa6460251a0a8175df5226aa7ec9c5f4d19fcefcc9",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/blood_hunger_mutant_low_coil_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/blood_hunger_mutant_idle_transparent.png",
+            "sha256": "d20e301f5d62e6c22228db8030c393d502cd9a7caebd1c09f7d7fe246237440c",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/blood_hunger_mutant_idle_transparent.png"
+          }
+        ],
+        "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：005 饥血潜行体。\n新关键姿势：回爪后承重，阶段为收势／重心后移。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/revision_v2/blood_hunger_mutant_short_claw_extend_transparent_v2.png；2 Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/blood_hunger_mutant_low_coil_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/blood_hunger_mutant_idle_transparent.png。\n\n具体动作：沿short_claw_extend v2把同一画面左侧长臂撤回，肘向身侧后折、爪根收到下肋外侧，爪尖斜下且与腹布留空；前臂长度保留，不能缩短成长着人手的短臂。另一只爪保持在画面右下外侧、不贴地。宽厚驼背保持拱起，头仍低朝左并从肩前露出。骨盆向后脚移动一点，后膝加屈接重，前膝稍松；双足仍着地，身体高度介于伸爪和深低伏之间。\n支撑与接触：双足有承重，后脚完整承压、前足仍接触；两只手爪全程离地。不四足落地、不跪、不飞扑，不用爪撑地伪造平衡。\n身份/道具不可变：保持母图低宽驼背、灰紫窄颌、后折耳、细暗眼、两枚不对称牙、暗红褐肩背隆起、瘦肋腹。 长前臂、短弯双腿与原弯爪尺度保持；短爪动作不意味着新增刀刃或把母图指爪拉长。 炭褐腰布覆盖腰臀上腿、画面右腰结及垂带不换边；无武器、翅膀、披风、长舌。 仅使用已选伸爪v2，不能把右侧爪触边的v1当相邻参考。\n与既有姿势必须不同：单爪收在下肋、肘向后折、后腿接重，与low_coil双爪低落及extend前伸张爪均不同。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+        "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/005_claw_retract_rear_load_prompt_v1_not_executed.txt",
+        "prompt_text_sha256": "ee17a00c295522102a6f511dbcc6467033e814b66de7ec2a5ef5adc9f0d4bf02",
+        "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_continuation_v1/claw_retract_rear_load",
+        "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+      }
+    },
+    {
+      "id": "006",
+      "concept_id": "EAO-CONCEPT-ENEMY-006",
+      "role": "debt_ritual_warden",
+      "working_name": "债契仪式看守",
+      "status": "planned_not_executed",
+      "mother": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png",
+        "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605",
+        "label": "已选静态母图，仅身份与形体锚点",
+        "dimensions": [
+          1163,
+          1353
+        ],
+        "mode": "RGBA",
+        "actually_viewed": true,
+        "view_method": "view_image: selected original transparent PNG, full figure",
+        "viewed_on": "2026-10-14",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png"
+      },
+      "existing_selected_poses": [
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+          "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755",
+          "label": "横杖防备",
+          "dimensions": [
+            1163,
+            1353
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/mutant_warden_actions_delivery_v1/debt_ritual_warden_bar_guard_transparent.png",
+            "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755"
+          },
+          "pose_id": "bar_guard"
+        },
+        {
+          "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+          "sha256": "556dd246df57d34ec50199856ad64001f04eb0908c36e20d023249db857f5797",
+          "label": "侧步守势",
+          "dimensions": [
+            1163,
+            1353
+          ],
+          "mode": "RGBA",
+          "actually_viewed": true,
+          "view_method": "view_image: selected original transparent PNG, full figure",
+          "viewed_on": "2026-10-14",
+          "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+          "catalog_selected_copy": {
+            "path": "Assets/EnemyDesigns/20261013/first_six/mutant_warden_actions_delivery_v1/debt_ritual_warden_side_step_guard_transparent.png",
+            "sha256": "556dd246df57d34ec50199856ad64001f04eb0908c36e20d023249db857f5797"
+          },
+          "pose_id": "side_step_guard"
+        }
+      ],
+      "selection_evidence": {
+        "idle_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/independent_QA.json",
+          "sha256": "6f7b5f0622b3515e0b3ab79a4f5659e028f5131e6d27a74a1694229f6c5ce203"
+        },
+        "action_independent_QA": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/independent_action_QA.json",
+          "sha256": "1b3ca53e6a8db39ba641579c1a3c176784257254bc99225b48b36b0af1e6bdfe"
+        },
+        "catalog": {
+          "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+          "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+        }
+      },
+      "current_execution": {
+        "generation_calls": 0,
+        "raw_outputs": [],
+        "selected_output": null,
+        "hard_error_revisions_used": 0
+      },
+      "future_budget": {
+        "first_drafts": 1,
+        "maximum_hard_error_revisions": 1,
+        "per_role_selected_new_keyposes_maximum": 1,
+        "hard_error_revision_requires_recorded_specific_failure": true,
+        "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+      },
+      "runtimeIntegrated": false,
+      "runtimeVerified": false,
+      "continuous_animation_verified": false,
+      "proposed_keypose": {
+        "pose_id": "guard_lateral_weight_transfer",
+        "label": "侧移换重心",
+        "missing_stage": "横拦到侧护的转重心中段",
+        "count": 1,
+        "status": "planned_not_executed"
+      },
+      "visual_observations_from_actual_views": [
+        "横杖防备是双脚展开、两手低位斜横拦。",
+        "侧步守势已将钝钩杆收至外侧较直立；两旧图均是稳定站姿，侧移过程的支撑交接未画。"
+      ],
+      "gap_reason": "不再加第三种静态守门杆位，补横拦变侧护时的载重转移：画面右后脚接重，画面左前脚抬跟仍趾接触，杆经过中斜角且两手不断握。",
+      "proposed_sequence_only_not_verified": [
+        "bar_guard",
+        "guard_lateral_weight_transfer",
+        "side_step_guard"
+      ],
+      "adjacent_reference_roles": [
+        {
+          "input": 1,
+          "relationship": "已选直接前序候选；连续性尚未验证",
+          "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+          "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755"
+        },
+        {
+          "input": 2,
+          "relationship": "拟用后续侧步守势参考",
+          "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+          "sha256": "556dd246df57d34ec50199856ad64001f04eb0908c36e20d023249db857f5797"
+        },
+        {
+          "input": 3,
+          "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+          "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png",
+          "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605"
+        }
+      ],
+      "new_pose_body_mechanics": "仍朝左三分之四警戒。画面右后脚已经落稳并承重，骨盆小幅向该脚上方移动、后膝轻屈；画面左前脚准备跟进，脚跟轻抬而前掌/脚趾保持接地，双腿不交叉。胸头仍看左，不随侧移扭背。原短钩杆从横拦旋到中等斜度：钩在左上，钝尾在右下，角度介于bar_guard与side_step_guard之间；H1上前握、H2下后扶持续握住，袍摆有重量，开衩露出接地关系。",
+      "support_and_contact": "后靴全掌承压，前靴前掌/趾轻接地、跟离地；双脚不是一起悬空。杆只和两手接触，尾端离地，不当拐杖；袍摆不穿鞋。",
+      "invariants": [
+        "同一活人暖灰瘦长脸、污白短兜帽/开衩窄袍、褐袖、胸口小链甲片、灰方扣、右下酒红短缝线和褐靴。",
+        "H1为母图画面左侧原持杆手，沿两旧动作保持钩头一侧的上前握；H2仅下后扶。",
+        "同一根棕木短杆、小灰铁钝钩；整个钩随杆刚性旋转，不能反向镜像、巨大化、变镰或长矛。"
+      ],
+      "must_differ_from_existing": "两脚支撑份额与前脚抬跟是核心，杆在中斜角只是伴随；仅调整杆角而双足原样不算补缺。",
+      "proposed_anchor_policy": {
+        "facing": "screen-left mild three-quarter; no mirror",
+        "scale_and_camera_primary_reference": {
+          "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+          "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755"
+        },
+        "support_or_float_anchor": "后靴全掌承压，前靴前掌/趾轻接地、跟离地；双脚不是一起悬空。杆只和两手接触，尾端离地，不当拐杖；袍摆不穿鞋。",
+        "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+        "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+      },
+      "acceptance_checks": [
+        "后脚—膝—髋承重可读，前跟轻抬而前掌接触；无穿袍或交叉踝。",
+        "H1/H2同源可追踪、杆连续、钩朝向可由两旧帧刚性转动解释。",
+        "与两旧静态站姿有明确的支撑转换，同时脸/袍/缝线保持。"
+      ],
+      "hard_failure_conditions": [
+        "只变杆角、仍重复旧双脚平均站姿。",
+        "前后脚一起浮空、跟趾接触不可能、袍穿腿。",
+        "钩变利刃/巨镰/长矛、镜像钩头、原手换握或杆落地。"
+      ],
+      "continuity_still_to_verify": [
+        "两旧图并未冻结真实侧移方向或步长；此为可逆动作规划，不设定巡逻/守门机制。",
+        "需要核侧移中段能连接现有脚距与短杆角，三张姿势不证明完整步态循环。"
+      ],
+      "planned_generation": {
+        "status": "not_executed",
+        "tool_intended": "builtin image_gen",
+        "transparent_background": true,
+        "reference_order": [
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+            "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+            "sha256": "556dd246df57d34ec50199856ad64001f04eb0908c36e20d023249db857f5797",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png"
+          },
+          {
+            "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png",
+            "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605",
+            "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png"
+          }
+        ],
+        "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：006 债契仪式看守。\n新关键姿势：侧移换重心，阶段为横拦到侧护的转重心中段。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png。\n\n具体动作：仍朝左三分之四警戒。画面右后脚已经落稳并承重，骨盆小幅向该脚上方移动、后膝轻屈；画面左前脚准备跟进，脚跟轻抬而前掌/脚趾保持接地，双腿不交叉。胸头仍看左，不随侧移扭背。原短钩杆从横拦旋到中等斜度：钩在左上，钝尾在右下，角度介于bar_guard与side_step_guard之间；H1上前握、H2下后扶持续握住，袍摆有重量，开衩露出接地关系。\n支撑与接触：后靴全掌承压，前靴前掌/趾轻接地、跟离地；双脚不是一起悬空。杆只和两手接触，尾端离地，不当拐杖；袍摆不穿鞋。\n身份/道具不可变：同一活人暖灰瘦长脸、污白短兜帽/开衩窄袍、褐袖、胸口小链甲片、灰方扣、右下酒红短缝线和褐靴。 H1为母图画面左侧原持杆手，沿两旧动作保持钩头一侧的上前握；H2仅下后扶。 同一根棕木短杆、小灰铁钝钩；整个钩随杆刚性旋转，不能反向镜像、巨大化、变镰或长矛。\n与既有姿势必须不同：两脚支撑份额与前脚抬跟是核心，杆在中斜角只是伴随；仅调整杆角而双足原样不算补缺。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+        "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/006_guard_lateral_weight_transfer_prompt_v1_not_executed.txt",
+        "prompt_text_sha256": "f131999e00c6e567a59a686370d15ebd35eb0a4c52de82933cfdfd910da71a0f",
+        "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_continuation_v1/guard_lateral_weight_transfer",
+        "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+      }
+    }
+  ],
+  "remaining_after_this_plan": [
+    "所有6项尚未生图、作者检查和独立视觉审查。",
+    "跨帧锚点、相机、尺寸、道具尺度、支撑交接与动作轨迹待验证；不同图片尺寸不是统一帧表。",
+    "不补全伤害、死亡、施法、受击、八向、步态循环或装备落地；本轮最多六项。"
+  ]
+}

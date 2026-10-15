@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T19:28:36.727677+00:00",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "status": "brief_ready_no_images_generated_by_this_task",
+  "scope": "003—006各2张基础动作关键姿势，共8张；仅准备brief，不生图，不改已交静态、剧情文本、游戏包。后续生产沿用主任务已授权范围，由主任务调度。",
+  "generation_started": false,
+  "keypose_count": 8,
+  "animation_frames_produced": 0,
+  "source_brief": {
+    "path": "Assets/EnemyDesigns/reference/20261013/production_brief_first_six.json",
+    "sha256": "61b6afdf16c3b81eed4f00dfc8bb43fdc1c179949ed7058115a29c4f6c8f528f"
+  },
+  "source_registry": {
+    "path": "Assets/EnemyDesigns/reference/20261013/sources.json",
+    "sha256": "27e979ae74c13331b54f6d88c2a773ec178ac82fdabcc1a6b6ac17dae8e00f58"
+  },
+  "static_batch_QA": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/independent_batch_QA.json",
+    "sha256": "2ba5804a9f504930c8c5316a7a329ff257ca36a084fee0c5347d8a476c24150a"
+  },
+  "shared_execution_rules": {
+    "anchor": "生产前实际view本brief指定透明母图并核SHA；不匹配就报告主任务，不能默换锚。静态已独审concept_pass不等于动作已通过。",
+    "orientation": "保留各母图朝画面左的轻三分之四关系；不可镜像换边、背身或朝镜头大幅透视。屏幕左右仅标识母图特征所在侧，不据此杜撰被遮挡解剖。",
+    "style": "沿用各自母图像素簇、材质与配色；005较细的现有肌理不在动作轮强行改版。单体、真实透明背景，全身与末端留边；画布可随姿势扩宽。",
+    "anatomy": "003/005/006各两臂两腿，关节连接可信；004仅保留母图可见的一只手和无足碎尾，另一手继续藏于袍下。动作可自然改变关节角度与布褶，不设精确手位、角度、逐指形状或像素百分比门槛。",
+    "budget": "每姿1首稿+最多1次明确硬错修订；只修身份漂移、肢体/握持断裂、动作不成立、裁切/背景污染或边界违规。合理衣褶、尾碎片、手指简化差异不返工。修订后仍硬错标needs_review并报告，不另开循环。",
+    "evidence": "各姿保存prompt、使用的母图SHA、raw、透明输出、尺寸/SHA、必要alpha处理说明及轻量独审结论；旧稿保留，不覆盖静态和冻结manifest。",
+    "exclusions": [
+      "受害者、第二角色、扑咬接触、喷血、剧情死亡/复活/结算或奖励",
+      "魔法光球、速度线、多重残影代替姿势；靠镜像/旋转静态或拼接肢体伪造动作",
+      "新增装备、身份、教义、疾病传染或战斗机制；不把普通病人变腐尸/吸血体、不把全部圣会变邪教",
+      "宣称原版动作复刻、连续动画、帧率、绑定、碰撞、装备适配或游戏运行通过"
+    ]
+  },
+  "characters": [
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-003",
+      "slug": "canal_tomb_restless",
+      "working_name": "渠墓腐尸",
+      "reference_ids": [
+        "R03",
+        "R04"
+      ],
+      "anchor": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/canal_tomb_restless_idle_transparent.png",
+        "sha256": "c41f8a32d88a67ffb90f184f893ae299f41730a7e5d955575c7325066ef44426",
+        "size": [
+          1024,
+          1536
+        ],
+        "alpha_bbox": [
+          95,
+          47,
+          1009,
+          1514
+        ],
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-13T19:28:36.727677+00:00"
+      },
+      "static_independent_QA": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/idle_v1/independent_QA.json",
+        "sha256": "1d8420c1f4c10e3beb3bdd307549ea3076ea02f0d357884ec74f0f474b3dd10c",
+        "result": "concept_pass"
+      },
+      "identity_lock": {
+        "face_body": "稀疏深褐残发、头向画面左歪、暗红黑眼窝/颊破口、松垂口颌；灰黄死皮仍包住肩臂腿，保留斜C塌肩和长瘦不对称，不能改成纯骷髅或正常病人。",
+        "clothing": "破污米麻无袖罩衣、暗褐残裤、腰间褐麻绳（母图结/垂端偏画面右），泥褐绑腿与裸露脚趾。保留有限干暗红破损，不逐点追锁污斑。",
+        "limbs_props": "空手；两臂不等高、双手屈曲；双脚与拖后腿可读，不新增拐杖/武器/病人腕牌。"
+      },
+      "poses": [
+        {
+          "pose_id": "drag_step",
+          "label": "拖步定格",
+          "description": "前脚向画面左短移承重，后脚脚尖拖地；胯略跟进而肩头滞后，保持塌肩斜C。双臂自然错落摆动，不抬成齐平僵尸手。",
+          "readability": "前脚—拖后脚和肩胯不同步清楚；不是把整张静态平移，不能飞奔或悬空。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/drag_step/canal_tomb_restless_drag_step_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1,
+          "status": "not_started"
+        },
+        {
+          "pose_id": "slow_reach",
+          "label": "慢伸抓定格",
+          "description": "在短拖步支撑上，将母图原已稍抬的画面左侧手向前伸至胸下附近；肘保留弯曲，另一臂低垂，头仍偏斜。只伸向空处，不扑咬。",
+          "readability": "伸出的手与脸/胸留负空间，手臂向左展开而不朝镜头缩短；与拖步的区别集中在伸抓与上身前探。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/canal_tomb_restless/action_v1/slow_reach/canal_tomb_restless_slow_reach_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1,
+          "status": "not_started"
+        }
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-004",
+      "slug": "crypt_drifter_wraith",
+      "working_name": "墓龛游魂",
+      "reference_ids": [
+        "R05"
+      ],
+      "anchor": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/crypt_drifter_wraith_idle_transparent.png",
+        "sha256": "403e4a4dfe2aa04ce216176587ad17a584a74c2692bd306d1067d7acd0e9523c",
+        "size": [
+          1024,
+          1536
+        ],
+        "alpha_bbox": [
+          183,
+          18,
+          894,
+          1514
+        ],
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-13T19:28:36.727677+00:00"
+      },
+      "static_independent_QA": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/idle_v1/independent_QA.json",
+        "sha256": "b27264ac57f7b81c64ac5d22edd38c71097b6369753e3a40e5b06d711c5551de",
+        "result": "concept_pass"
+      },
+      "identity_lock": {
+        "face_body": "深灰青尖兜帽、黑暗面腔、额鼻与长窄颅面冷青棱面；没有活人眼唇或可识别死者面貌。",
+        "clothing": "短层肩披与暗胸层，袍下转为两长一短的主要碎尾，尾间透明缺口、硬边碎簇保留；碎片可随漂移变化，不冻结每个孔洞。",
+        "limbs_props": "母图画面左侧露一只骨感冷青手，另一手不凭空露出；无武器、腿脚、靴、地面阴影或承重要求。"
+      },
+      "poses": [
+        {
+          "pose_id": "forward_drift",
+          "label": "轻微前漂定格",
+          "description": "兜帽肩胸整体轻向画面左倾进，露手保持低位微曲；主尾束向画面右后方轻弯滞后，碎尾有可见弧度变化，仍连回袍身。",
+          "readability": "用上身前倾与尾束后滞说明漂移，不只改变画布坐标；兜帽、脸、单手和三束主尾仍辨得出。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/forward_drift/crypt_drifter_wraith_forward_drift_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1,
+          "status": "not_started"
+        },
+        {
+          "pose_id": "spectral_reach",
+          "label": "单手探出定格",
+          "description": "上身回到较直的悬浮关系，母图同一只手由低位向左前伸到胸下，五指可简化成清楚骨感爪形；尾束较向下收拢但不合成实体裙腿。",
+          "readability": "单手伸展与前漂低手明确不同；手不盖脸，无光球、符文或新锁链，不强加第二手与双脚。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/crypt_drifter_wraith/action_v1/spectral_reach/crypt_drifter_wraith_spectral_reach_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1,
+          "status": "not_started"
+        }
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-005",
+      "slug": "blood_hunger_mutant",
+      "working_name": "饥血潜行体",
+      "reference_ids": [
+        "R06",
+        "R08"
+      ],
+      "anchor": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/blood_hunger_mutant_idle_transparent.png",
+        "sha256": "d20e301f5d62e6c22228db8030c393d502cd9a7caebd1c09f7d7fe246237440c",
+        "size": [
+          1312,
+          1199
+        ],
+        "alpha_bbox": [
+          46,
+          56,
+          1285,
+          1150
+        ],
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-13T19:28:36.727677+00:00"
+      },
+      "static_independent_QA": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/idle_v1/independent_QA.json",
+        "sha256": "8a20fa1c9762510c730918cc0b44b34782340b2aefacfd6d9df7a3a798ac54b9",
+        "result": "concept_pass"
+      },
+      "identity_lock": {
+        "face_body": "灰紫窄长颌、尖后折耳、细暗眼、两枚不对称浅色长齿，暗红褐隆起背肩与干瘦肋腹；保持低宽长臂、短弯腿，非贵族吸血鬼或普通瘦病人。",
+        "clothing": "炭褐破腰布覆盖腰臀与上腿；母图前腰偏画面右的结与垂带关系保留；没有披风盔甲或圣物。",
+        "limbs_props": "双长臂末端大爪，双足短趾爪；不用外加武器、不长舌、不四足落地，肩背肉块不可错读为翅膀。"
+      },
+      "poses": [
+        {
+          "pose_id": "low_coil",
+          "label": "低伏蓄势定格",
+          "description": "双膝进一步弯曲、胯后坐少许，肩背前压但头颌向左抬清；两肘略收，双爪由外张低垂收近身体两侧，仍悬于地面以上。",
+          "readability": "读成可发力的低宽双足蹲势，双爪与膝分开；不只是缩小静态图，不跪地或四足爬行。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/blood_hunger_mutant_low_coil_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/low_coil/blood_hunger_mutant_low_coil_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1,
+          "status": "not_started"
+        },
+        {
+          "pose_id": "short_claw_extend",
+          "label": "短爪伸展定格",
+          "description": "从低伏放开一侧肩肘，将母图画面左侧爪向画面左前送至胸下高度；另一爪留身体外侧作平衡。前膝轻送、后腿支撑，躯干仅小幅扭转，双脚仍落地。",
+          "readability": "前伸长臂和张爪清楚、不能遮没口颌；同样背肩体积/爪长保持，非飞扑、咬合或带受害者的命中帧。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/blood_hunger_mutant_short_claw_extend_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/blood_hunger_mutant/action_v1/short_claw_extend/blood_hunger_mutant_short_claw_extend_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1,
+          "status": "not_started"
+        }
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    },
+    {
+      "concept_id": "EAO-CONCEPT-ENEMY-006",
+      "slug": "debt_ritual_warden",
+      "working_name": "债契仪式看守",
+      "reference_ids": [
+        "R06",
+        "R07"
+      ],
+      "anchor": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png",
+        "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605",
+        "size": [
+          1163,
+          1353
+        ],
+        "alpha_bbox": [
+          277,
+          179,
+          912,
+          1283
+        ],
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-13T19:28:36.727677+00:00"
+      },
+      "static_independent_QA": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/independent_QA.json",
+        "sha256": "6f7b5f0622b3515e0b3ab79a4f5659e028f5131e6d27a74a1694229f6c5ce203",
+        "result": "concept_pass"
+      },
+      "identity_lock": {
+        "face_body": "活人暖灰肤色、成年瘦长脸、压眉严肃嘴、兜帽内深发；窄钟形紧凑身材，不换成幽灵、医护或祥和牧师。",
+        "clothing": "污白短兜帽与开衩外袍、褐袖内衣、胸口小灰链甲片、方灰扣旧皮带、双褐靴；母图画面右侧下袍一小段暗酒红缝线保留，不变纹章/十字。",
+        "limbs_props": "原母图画面左侧持杆手保持主持身份，另一手可加扶，无须固定每次握距。只有一根棕木短杆、小灰铁钝钩，母图钩尖向画面右内弯。换杆角度时钩与木杆整体旋转，不镜像钩头；无大镰刀/新兵刃。杆长和细粗比依母图体高目测保持，不定精确比例。"
+      },
+      "poses": [
+        {
+          "pose_id": "bar_guard",
+          "label": "横杆拦阻定格",
+          "description": "将同一短杆从竖直转为腰腹前的近水平斜拦，钩头在画面左侧且离脸，原持杆手继续主握，空手自然扶住另一段；双膝轻屈、站距略开，袍摆有重量。",
+          "readability": "整根杆两端可见，两手与握柄连接清楚，钩头随杆整体转而非另接一只镰；不是持长枪刺出。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1,
+          "status": "not_started"
+        },
+        {
+          "pose_id": "side_step_guard",
+          "label": "侧步戒备定格",
+          "description": "身躯仍向左警戒，一脚向侧后短移承重、另一脚跟随准备但保持可见；短杆收回身体外侧为较直立的斜护，原手仍主握，另一手自然靠近躯干或辅助稳定。",
+          "readability": "相对横拦有清楚的收杆、站距/重心变化；不强定空手高度，双靴与袍衩不穿插，不画门、病人或施法。",
+          "output_directory": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/",
+          "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_raw_imagegen.png",
+          "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+          "max_first_drafts": 1,
+          "max_hard_error_revisions": 1,
+          "status": "not_started"
+        }
+      ],
+      "runtimeIntegrated": false,
+      "runtimeVerified": false
+    }
+  ],
+  "public_reference_inspection": {
+    "viewed_utc": "2026-10-13T19:28:36.727677+00:00",
+    "scope": "本轮实际view下列本地留存公开参考；R03/R07/R08只看第0帧，R04/R05/R06看静态全图。没有完整动作原版序列核验，八姿均为Mod原创提案，不把原图战斗场景或原版角色装备照搬进输出。未核本地0.9.4.25逐帧一致。",
+    "references": [
+      {
+        "id": "R03",
+        "source_page": "https://store.steampowered.com/news/posts/?appids=625960&enddate=1601569953&feed=steam_community_announcements",
+        "image_url": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/28578038/2a94e1f5fe9094c449a22fd6cec384a0b87b279e.gif",
+        "original_download_sha256": "03210fe83265aa90286f4e8dbbbff84fe702e138ab45633bf9fc1418c20e63c6",
+        "viewed_local_path": "/tmp/stoneshard_refs/restless_frame0.png",
+        "viewed_file_sha256": "0734478cddcfdcab85bbce9dd914903c85f4ddf17569f5551119096846cc54c4",
+        "actual_view_scope": "frame 0 only"
+      },
+      {
+        "id": "R04",
+        "source_page": "https://store.steampowered.com/news/posts/?appids=625960&enddate=1701797492&feed=steam_community_announcements",
+        "image_url": "https://clan.akamai.steamstatic.com/images/28578038/650c35657891c9309a72809e7ef16638baece399.png",
+        "original_download_sha256": "71bd68b80a81fa460bab3d33ded4edf8a602bb5262cdf844e5168d62ce4eb305",
+        "viewed_local_path": "/tmp/stoneshard_refs/undead.png",
+        "viewed_file_sha256": "71bd68b80a81fa460bab3d33ded4edf8a602bb5262cdf844e5168d62ce4eb305",
+        "actual_view_scope": "whole static image"
+      },
+      {
+        "id": "R05",
+        "source_page": "https://store.steampowered.com/news/posts/?appids=625960&enddate=1701797492&feed=steam_community_announcements",
+        "image_url": "https://clan.akamai.steamstatic.com/images/28578038/36f7778d9dce7866d18c1a83124a2bdaf26710d6.png",
+        "original_download_sha256": "6ac367df4e24793871204377cc64eb447615cce3af4e39d4b8c2644fd0f891ff",
+        "viewed_local_path": "/tmp/stoneshard_refs/wraiths.png",
+        "viewed_file_sha256": "6ac367df4e24793871204377cc64eb447615cce3af4e39d4b8c2644fd0f891ff",
+        "actual_view_scope": "whole static image"
+      },
+      {
+        "id": "R06",
+        "source_page": "https://store.steampowered.com/news/posts/?appids=625960&enddate=1656523016&feed=steam_community_announcements",
+        "image_url": "https://clan.fastly.steamstatic.com/images/28578038/7bb35e1aa647abd653c762680c2fe124a6c01ac0.png",
+        "original_download_sha256": "7200c9c8dff7b85e6169fbc8c3df357e01eaf57b08e9eed541bded1acaca8e45",
+        "viewed_local_path": "/tmp/stoneshard_refs/proselytes.png",
+        "viewed_file_sha256": "7200c9c8dff7b85e6169fbc8c3df357e01eaf57b08e9eed541bded1acaca8e45",
+        "actual_view_scope": "whole static image"
+      },
+      {
+        "id": "R07",
+        "source_page": "https://store.steampowered.com/news/posts/?appgroupname=Stoneshard&appids=625960&enddate=1774544408&feed=steam_community_announcements",
+        "image_url": "https://clan.fastly.steamstatic.com/images/28578038/15c5a70f428119ec5ec9ede285a877053f94347b.gif",
+        "original_download_sha256": "30dc3adb2b68afd2d2080bfb6f6bc896d85e87f35fa3d871b3455b1c46d0cfcf",
+        "viewed_local_path": "/tmp/stoneshard_refs/proselytes_2025_low.png",
+        "viewed_file_sha256": "adea5bb23fa15179cfb48b78daa67e5219373fdf9683f9da1f892b0d8a58e971",
+        "actual_view_scope": "frame 0 only"
+      },
+      {
+        "id": "R08",
+        "source_page": "https://store.steampowered.com/news/posts/?appgroupname=Stoneshard&appids=625960&enddate=1774544408&feed=steam_community_announcements",
+        "image_url": "https://clan.fastly.steamstatic.com/images/28578038/0ae75b781e90db512731c300a3505a77f1333a0f.gif",
+        "original_download_sha256": "297b667ade4e937facfaf8ea6b510326336fe24c2fbc4fb95269fd59dc4a7f13",
+        "viewed_local_path": "/tmp/stoneshard_refs/proselytes_2025_high.png",
+        "viewed_file_sha256": "f8cfa6174baed3f2007cc913bf573b047dd7d011dfc9d523bfa031aede76925b",
+        "actual_view_scope": "frame 0 only"
+      }
+    ]
+  },
+  "independent_review_rubric": [
+    {
+      "id": "M1",
+      "check": "实际view每姿与SHA匹配母图：脸颅、体块、衣物与关键材质仍是同一角色，母图明显左右特征不镜像。",
+      "hard_error": "换脸/换种类/换装或重要特征换边；合理布褶、污斑小变化只备注。"
+    },
+    {
+      "id": "M2",
+      "check": "逐项看肢体与轮廓：实体三类双臂双腿连通、支撑可信；幽灵仍无足、单露手、碎尾透明缺口。看守仅一杆且钩/杆/手连接合理。",
+      "hard_error": "多肢、断肢、反关节、武器穿腕/变型、幽灵添脚、爪或杆端裁掉。"
+    },
+    {
+      "id": "M3",
+      "check": "每类两姿通过重心、臂势、杆角或尾势产生核心动作差别；维持轻三分之四向左和可读负空间。",
+      "hard_error": "只改表情/整图平移缩放、严重透视遮没特征，或违反姿势核心。无需二图已形成连续循环。"
+    },
+    {
+      "id": "M4",
+      "check": "独审看透明输出及浅深底；实际验alpha、完整末端、无文字地板/第二角色/受害者。缩小后身份和姿势仍可读。",
+      "hard_error": "背景污染或裁切主体、故事/身份边界违规；不凭孤立小像素噪点耗修订。"
+    },
+    {
+      "id": "M5",
+      "check": "每姿记录pass或needs_review、文件SHA/尺寸、已看证据、1+1预算使用；先报硬错位置和原因，再决定唯一一次修订。",
+      "hard_error": "缺证据标待审，不自动selected；修订后仍硬错报告主任务，不自行扩画。"
+    }
+  ]
+}

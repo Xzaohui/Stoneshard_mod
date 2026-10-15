@@ -1,0 +1,187 @@
+{
+  "id": "006",
+  "concept_id": "EAO-CONCEPT-ENEMY-006",
+  "role": "debt_ritual_warden",
+  "working_name": "债契仪式看守",
+  "status": "planned_not_executed",
+  "mother": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png",
+    "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605",
+    "label": "已选静态母图，仅身份与形体锚点",
+    "dimensions": [
+      1163,
+      1353
+    ],
+    "mode": "RGBA",
+    "actually_viewed": true,
+    "view_method": "view_image: selected original transparent PNG, full figure",
+    "viewed_on": "2026-10-14",
+    "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png"
+  },
+  "existing_selected_poses": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+      "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755",
+      "label": "横杖防备",
+      "dimensions": [
+        1163,
+        1353
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/mutant_warden_actions_delivery_v1/debt_ritual_warden_bar_guard_transparent.png",
+        "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755"
+      },
+      "pose_id": "bar_guard"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+      "sha256": "556dd246df57d34ec50199856ad64001f04eb0908c36e20d023249db857f5797",
+      "label": "侧步守势",
+      "dimensions": [
+        1163,
+        1353
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/mutant_warden_actions_delivery_v1/debt_ritual_warden_side_step_guard_transparent.png",
+        "sha256": "556dd246df57d34ec50199856ad64001f04eb0908c36e20d023249db857f5797"
+      },
+      "pose_id": "side_step_guard"
+    }
+  ],
+  "selection_evidence": {
+    "idle_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/independent_QA.json",
+      "sha256": "6f7b5f0622b3515e0b3ab79a4f5659e028f5131e6d27a74a1694229f6c5ce203"
+    },
+    "action_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/independent_action_QA.json",
+      "sha256": "1b3ca53e6a8db39ba641579c1a3c176784257254bc99225b48b36b0af1e6bdfe"
+    },
+    "catalog": {
+      "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+      "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+    }
+  },
+  "current_execution": {
+    "generation_calls": 0,
+    "raw_outputs": [],
+    "selected_output": null,
+    "hard_error_revisions_used": 0
+  },
+  "future_budget": {
+    "first_drafts": 1,
+    "maximum_hard_error_revisions": 1,
+    "per_role_selected_new_keyposes_maximum": 1,
+    "hard_error_revision_requires_recorded_specific_failure": true,
+    "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+  },
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "continuous_animation_verified": false,
+  "proposed_keypose": {
+    "pose_id": "guard_lateral_weight_transfer",
+    "label": "侧移换重心",
+    "missing_stage": "横拦到侧护的转重心中段",
+    "count": 1,
+    "status": "planned_not_executed"
+  },
+  "visual_observations_from_actual_views": [
+    "横杖防备是双脚展开、两手低位斜横拦。",
+    "侧步守势已将钝钩杆收至外侧较直立；两旧图均是稳定站姿，侧移过程的支撑交接未画。"
+  ],
+  "gap_reason": "不再加第三种静态守门杆位，补横拦变侧护时的载重转移：画面右后脚接重，画面左前脚抬跟仍趾接触，杆经过中斜角且两手不断握。",
+  "proposed_sequence_only_not_verified": [
+    "bar_guard",
+    "guard_lateral_weight_transfer",
+    "side_step_guard"
+  ],
+  "adjacent_reference_roles": [
+    {
+      "input": 1,
+      "relationship": "已选直接前序候选；连续性尚未验证",
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+      "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755"
+    },
+    {
+      "input": 2,
+      "relationship": "拟用后续侧步守势参考",
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+      "sha256": "556dd246df57d34ec50199856ad64001f04eb0908c36e20d023249db857f5797"
+    },
+    {
+      "input": 3,
+      "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png",
+      "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605"
+    }
+  ],
+  "new_pose_body_mechanics": "仍朝左三分之四警戒。画面右后脚已经落稳并承重，骨盆小幅向该脚上方移动、后膝轻屈；画面左前脚准备跟进，脚跟轻抬而前掌/脚趾保持接地，双腿不交叉。胸头仍看左，不随侧移扭背。原短钩杆从横拦旋到中等斜度：钩在左上，钝尾在右下，角度介于bar_guard与side_step_guard之间；H1上前握、H2下后扶持续握住，袍摆有重量，开衩露出接地关系。",
+  "support_and_contact": "后靴全掌承压，前靴前掌/趾轻接地、跟离地；双脚不是一起悬空。杆只和两手接触，尾端离地，不当拐杖；袍摆不穿鞋。",
+  "invariants": [
+    "同一活人暖灰瘦长脸、污白短兜帽/开衩窄袍、褐袖、胸口小链甲片、灰方扣、右下酒红短缝线和褐靴。",
+    "H1为母图画面左侧原持杆手，沿两旧动作保持钩头一侧的上前握；H2仅下后扶。",
+    "同一根棕木短杆、小灰铁钝钩；整个钩随杆刚性旋转，不能反向镜像、巨大化、变镰或长矛。"
+  ],
+  "must_differ_from_existing": "两脚支撑份额与前脚抬跟是核心，杆在中斜角只是伴随；仅调整杆角而双足原样不算补缺。",
+  "proposed_anchor_policy": {
+    "facing": "screen-left mild three-quarter; no mirror",
+    "scale_and_camera_primary_reference": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+      "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755"
+    },
+    "support_or_float_anchor": "后靴全掌承压，前靴前掌/趾轻接地、跟离地；双脚不是一起悬空。杆只和两手接触，尾端离地，不当拐杖；袍摆不穿鞋。",
+    "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+    "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+  },
+  "acceptance_checks": [
+    "后脚—膝—髋承重可读，前跟轻抬而前掌接触；无穿袍或交叉踝。",
+    "H1/H2同源可追踪、杆连续、钩朝向可由两旧帧刚性转动解释。",
+    "与两旧静态站姿有明确的支撑转换，同时脸/袍/缝线保持。"
+  ],
+  "hard_failure_conditions": [
+    "只变杆角、仍重复旧双脚平均站姿。",
+    "前后脚一起浮空、跟趾接触不可能、袍穿腿。",
+    "钩变利刃/巨镰/长矛、镜像钩头、原手换握或杆落地。"
+  ],
+  "continuity_still_to_verify": [
+    "两旧图并未冻结真实侧移方向或步长；此为可逆动作规划，不设定巡逻/守门机制。",
+    "需要核侧移中段能连接现有脚距与短杆角，三张姿势不证明完整步态循环。"
+  ],
+  "planned_generation": {
+    "status": "not_executed",
+    "tool_intended": "builtin image_gen",
+    "transparent_background": true,
+    "reference_order": [
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+        "sha256": "ac647cdcaeda3e203e5f3bde0b089a14b487d57263b57ee15f97b2942a755755",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+        "sha256": "556dd246df57d34ec50199856ad64001f04eb0908c36e20d023249db857f5797",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png",
+        "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png"
+      }
+    ],
+    "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：006 债契仪式看守。\n新关键姿势：侧移换重心，阶段为横拦到侧护的转重心中段。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png。\n\n具体动作：仍朝左三分之四警戒。画面右后脚已经落稳并承重，骨盆小幅向该脚上方移动、后膝轻屈；画面左前脚准备跟进，脚跟轻抬而前掌/脚趾保持接地，双腿不交叉。胸头仍看左，不随侧移扭背。原短钩杆从横拦旋到中等斜度：钩在左上，钝尾在右下，角度介于bar_guard与side_step_guard之间；H1上前握、H2下后扶持续握住，袍摆有重量，开衩露出接地关系。\n支撑与接触：后靴全掌承压，前靴前掌/趾轻接地、跟离地；双脚不是一起悬空。杆只和两手接触，尾端离地，不当拐杖；袍摆不穿鞋。\n身份/道具不可变：同一活人暖灰瘦长脸、污白短兜帽/开衩窄袍、褐袖、胸口小链甲片、灰方扣、右下酒红短缝线和褐靴。 H1为母图画面左侧原持杆手，沿两旧动作保持钩头一侧的上前握；H2仅下后扶。 同一根棕木短杆、小灰铁钝钩；整个钩随杆刚性旋转，不能反向镜像、巨大化、变镰或长矛。\n与既有姿势必须不同：两脚支撑份额与前脚抬跟是核心，杆在中斜角只是伴随；仅调整杆角而双足原样不算补缺。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+    "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/006_guard_lateral_weight_transfer_prompt_v1_not_executed.txt",
+    "prompt_text_sha256": "f131999e00c6e567a59a686370d15ebd35eb0a4c52de82933cfdfd910da71a0f",
+    "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_continuation_v1/guard_lateral_weight_transfer",
+    "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+  }
+}

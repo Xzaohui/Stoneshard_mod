@@ -1,0 +1,116 @@
+{
+  "character": "seer",
+  "pose_version": "seer_A1_brush_left_tunic_hem_v1",
+  "reviewed_utc": "2026-10-14T07:23:30.782257+00:00",
+  "verdict": "pass",
+  "files": [
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A1_brush_left_tunic_hem_v1_transparent.png",
+      "bytes": 590126,
+      "sha256": "7a4592ceb325d739a207868f631735ef031a0f4d3d481cefd032be12c9aecfc5"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A1_brush_left_tunic_hem_v1_dark_inspect.png",
+      "bytes": 483599,
+      "sha256": "efb63f06f3befcb3978c3e3e70302b80ff5becd7a2a27dea82d46a36b9b18a6d"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A1_brush_left_tunic_hem_v1_light_inspect.png",
+      "bytes": 504559,
+      "sha256": "5ff6aa1151881e432a4a4a498c793bc552464c4c9d403de40e112d5094fdc425"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/raw/seer_A1_brush_left_tunic_hem_v1_tool_return.json",
+      "bytes": 881646,
+      "sha256": "48a407cecc7fc21cc90a295b0a03e121af8ec48c78f7eb0ae0e46b93821a7ff9"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/raw/seer_A1_brush_left_tunic_hem_v1_raw_imagegen.png",
+      "bytes": 660835,
+      "sha256": "6fc662864c17c09a1d902d68bb4fc350d70d0b0c42c9ac4245de48ca1671df99"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/prompts/seer_A1_brush_left_tunic_hem_v1.txt",
+      "bytes": 2250,
+      "sha256": "b5413f2749d37dc7a72c5b60d9a7849b453450a48a2f4733309c34fa9893d25e"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/prompts/seer_A1_brush_left_tunic_hem_v1_parameters.json",
+      "bytes": 2489,
+      "sha256": "6cb87547e92cb295b6a0b66e976091573d9a64b3d726c26b65117bb85b8e1b07"
+    },
+    {
+      "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/qa/seer_A1_brush_left_tunic_hem_v1_technical.json",
+      "bytes": 1239,
+      "sha256": "e5e69fc46904a67d0646d5d1aa8f352e7f8f2c3e8f2b24d45f13467cf6dc67c8"
+    }
+  ],
+  "checks": {
+    "raw_matches_decoded_complete_tool_result": true,
+    "decoded_images": 1,
+    "prompt_matches_parameters": true,
+    "source_prompt_saved_before_raw": true,
+    "transparent_requested": true,
+    "raw_and_selected_same_dimensions": true,
+    "raw_mode": "RGBA",
+    "selected_mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "canvas": [
+      1118,
+      1407
+    ],
+    "body_alpha_gt8_bytes_unchanged": true,
+    "all_changed_pixels_raw_alpha_le8": true,
+    "transparent_background_clear": true,
+    "light_dark_composites": [
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A1_brush_left_tunic_hem_v1_dark_inspect.png",
+        "background_rgba": [
+          37,
+          40,
+          45,
+          255
+        ],
+        "matches_true_composite": true
+      },
+      {
+        "path": "Assets/CharacterActions/20261013/new_story/seer/noncombat_basics_v1/review/seer_A1_brush_left_tunic_hem_v1_light_inspect.png",
+        "background_rgba": [
+          238,
+          232,
+          217,
+          255
+        ],
+        "matches_true_composite": true
+      }
+    ],
+    "first_prompt_matches_frozen_brief": true,
+    "provenance_file_present": false,
+    "provenance_all_file_and_reference_hashes_match": true,
+    "provenance_errors": [],
+    "submitted_reference_files_exist": true,
+    "submitted_reference_includes_sha_verified_mother": true
+  },
+  "visual_review": {
+    "actual_viewed": [
+      "raw",
+      "selected_transparent",
+      "true_light_composite",
+      "true_dark_composite"
+    ],
+    "findings": [
+      "已实际查看raw、透明及真实浅深底4项。",
+      "本左掌降至画右大腿前衣摆外缘，掌指与布料接触形成可见拂衣动作；右手仍画左腰旁握同一段双尾原绳。",
+      "成年脸型朝画左，原灰衣、腰带、两靴与站立支撑保留；全身与原道具无裁切；与母图和旧表情有可见手臂差异。"
+    ],
+    "required_revision": null,
+    "nonissues": [
+      "轻微五官/布褶变化不构成身份或动作硬错；alpha≤8及隐藏RGB清理不改可见人体。",
+      "无独立provenance文件，但实参、完整toolreturn与raw、母图参考和真实浅深合成已独立闭合。"
+    ],
+    "remaining_revisions": 0
+  }
+}

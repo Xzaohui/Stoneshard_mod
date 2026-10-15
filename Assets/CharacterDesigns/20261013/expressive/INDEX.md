@@ -323,3 +323,10 @@ INDEX只映射现存登记，不自动判通过。历史队列变化保留在QUE
 | n1_ivo | 伊沃 | delivered_concept_candidate | ivo_raw_imagegen_v2.png |
 | n1_tor | 托雷 | delivered_concept_candidate | tor_period_costume_v2_transparent.png |
 | n1_rhea | 蕾雅 | delivered_concept_candidate | rhea_raw_imagegen.png |
+
+
+<!-- NEW-STORY-44-STAGE:BEGIN -->
+## 新剧情人物增量阶段（44/44发送accepted）
+
+[全11批最终交付核验报告](new_story/FINAL_DELIVERY_REPORT_44.md)：新44人全部发送accepted，总概念送达211＝历史167＋新44；旧172范围中的5未完独立保留。消息ID、附件ID、路径与SHA均已绑定；全部ZIP逐成员和冻结manifest核验通过。冻结旧roster、manifest、QA及receipt不重写。怪物首6已启动但未产出，不计人物。新图尚未再次push；accepted不证明已读，也不代表用户逐人认可、动作、装备或runtime通过。
+<!-- NEW-STORY-44-STAGE:END -->

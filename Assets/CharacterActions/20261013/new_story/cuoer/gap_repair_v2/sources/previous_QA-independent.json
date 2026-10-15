@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/review_second_new_character_actions",
+  "reviewed_utc": "2026-10-14T03:36:52.348795+00:00",
+  "character": "cuoer",
+  "status": "partial_acceptance_one_A2_one_A1_failed_budget_exhausted",
+  "scope": "Static independent noncombat keyposes, no animation/runtime/story-state completion. Author solely owns manifest/FINAL_STATUS; final packaging QA remains external after freeze.",
+  "accepted_count": 1,
+  "missing_count": 1,
+  "selected_key": "cuoer_A2_crouch_tap_rail",
+  "generation_calls": 4,
+  "initial_calls": 2,
+  "hard_error_revisions": 2,
+  "safety_blocked": false,
+  "no_further_generation": true,
+  "records": [
+    {
+      "key": "cuoer_A1_test_pliers_travel",
+      "version": 1,
+      "decision": "hard_error_revision_requested",
+      "selected": false,
+      "raw": "raw/cuoer_A1_test_pliers_travel_v1_raw.png",
+      "raw_sha256": "5c9dca9e1808293bb80b129c766a9f1eb2fd1ad0249979332bda3319f28f36a3",
+      "transparent_candidate": "candidate_previews/cuoer_A1_test_pliers_travel_v1_transparent.png",
+      "transparent_sha256": "281e7de84f1ad0d3f73c3c9a1e78929a3242d3041191ad942c11e7df0eb38366",
+      "actual_raw_transparent_light_dark_viewed": true,
+      "alpha_le8_clearing_exactly_reproduced": true,
+      "hard_errors": [
+        "Mother curved round jaws and metal handles changed to long straight nose jaws with new wooden grips.",
+        "Tool held closer to chest than specified belly."
+      ]
+    },
+    {
+      "key": "cuoer_A1_test_pliers_travel",
+      "version": 2,
+      "decision": "not_accepted_revision_budget_exhausted",
+      "selected": false,
+      "raw": "raw/cuoer_A1_test_pliers_travel_v2_raw.png",
+      "raw_sha256": "15e478a3e379b712c956325d2117b19d6ead14079cab0c07393ca6e4f6114863",
+      "transparent_candidate": "candidate_previews/cuoer_A1_test_pliers_travel_v2_transparent.png",
+      "transparent_sha256": "a1140fcaf9862221eb0226f7f8bc89bd8e9920da078584b0681f311566a94621",
+      "actual_raw_transparent_light_dark_viewed": true,
+      "alpha_le8_clearing_exactly_reproduced": true,
+      "hard_errors": [
+        "New wooden grips and straight long-nose jaw geometry remain instead of mother rounded short metal pliers."
+      ]
+    },
+    {
+      "key": "cuoer_A2_crouch_tap_rail",
+      "version": 1,
+      "decision": "hard_error_revision_requested",
+      "selected": false,
+      "raw": "raw/cuoer_A2_crouch_tap_rail_v1_raw.png",
+      "raw_sha256": "1ba89115ead2b881837fde7ffc0c1299abb290d412630083fbd1037e3bded449",
+      "transparent_candidate": "candidate_previews/cuoer_A2_crouch_tap_rail_v1_transparent.png",
+      "transparent_sha256": "f26991549111cf95eb7e4e12d719df5fe298993ebdda9230eefa1b5166854179",
+      "actual_raw_transparent_light_dark_viewed": true,
+      "alpha_le8_clearing_exactly_reproduced": true,
+      "hard_errors": [
+        "Rail right end clipped outside canvas, missing required prop transparency margin.",
+        "Tool pointed tips contact rail rather than outside of original rounded closed plier head.",
+        "Original rounded jaw shape drifted into straight pointed nose."
+      ]
+    },
+    {
+      "key": "cuoer_A2_crouch_tap_rail",
+      "version": 2,
+      "decision": "accepted_visual_and_provenance",
+      "selected": true,
+      "raw": "raw/cuoer_A2_crouch_tap_rail_v2_raw.png",
+      "raw_sha256": "12048acc4c074aca1cccc1c734d0523492bc5d209733c223ecff23f5a6137d42",
+      "transparent_candidate": "candidate_previews/cuoer_A2_crouch_tap_rail_v2_transparent.png",
+      "transparent_sha256": "b4896d4dc8d121e0c2d8d66eebd7edeb65df5bfb9bbc3cdb917e40a1d6292504",
+      "actual_raw_transparent_light_dark_viewed": true,
+      "alpha_le8_clearing_exactly_reproduced": true,
+      "hard_errors": []
+    }
+  ],
+  "alpha_note": "Only alpha<=8 cleared; original raw preserved. Zero-alpha hidden RGB glow excluded from background pollution. Actual light/dark compositing inspected."
+}

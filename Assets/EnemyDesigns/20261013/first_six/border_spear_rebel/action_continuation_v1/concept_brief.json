@@ -1,0 +1,188 @@
+{
+  "id": "001",
+  "concept_id": "EAO-CONCEPT-ENEMY-001",
+  "role": "border_spear_rebel",
+  "working_name": "边地长矛手",
+  "status": "planned_not_executed",
+  "mother": {
+    "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png",
+    "sha256": "31f837ac09a3d1f6c93ab771156f1cfc0e78c458f8f97ad4607e8685cfc63121",
+    "label": "已选静态母图，仅身份与形体锚点",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "actually_viewed": true,
+    "view_method": "view_image: selected original transparent PNG, full figure",
+    "viewed_on": "2026-10-14",
+    "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png"
+  },
+  "existing_selected_poses": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+      "sha256": "a0ddc421c1b763e748a17c5cac686840bbb385011b60d56fe9eac5706d6fbbf6",
+      "label": "架矛戒备",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+        "sha256": "a0ddc421c1b763e748a17c5cac686840bbb385011b60d56fe9eac5706d6fbbf6"
+      },
+      "pose_id": "spear_ready"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+      "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c",
+      "label": "短促前刺",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "actually_viewed": true,
+      "view_method": "view_image: selected original transparent PNG, full figure",
+      "viewed_on": "2026-10-14",
+      "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+      "catalog_selected_copy": {
+        "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+        "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c"
+      },
+      "pose_id": "spear_short_thrust"
+    }
+  ],
+  "selection_evidence": {
+    "idle_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/independent_QA.json",
+      "sha256": "810158b3d591753e0a9dbb271c78673841136a7283a82f46ecfd79c26d887907"
+    },
+    "action_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/action_independent_QA_v1/independent_QA.json",
+      "sha256": "5803d55e734536b0ce61577dd0378da4d82ec41e54aba9893ecbe2e3e8785c81"
+    },
+    "catalog": {
+      "path": "Assets/EnemyDesigns/20261013/catalog_v1/selected_sources.json",
+      "sha256": "c701e7dcb107acfac8608c56d4de2a2fa10aabca5ed37f64e5af7eeb952826ab"
+    }
+  },
+  "current_execution": {
+    "generation_calls": 0,
+    "raw_outputs": [],
+    "selected_output": null,
+    "hard_error_revisions_used": 0
+  },
+  "future_budget": {
+    "first_drafts": 1,
+    "maximum_hard_error_revisions": 1,
+    "per_role_selected_new_keyposes_maximum": 1,
+    "hard_error_revision_requires_recorded_specific_failure": true,
+    "blocked_action": "stop_and_report_exact_blocker_without_alternate_route"
+  },
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "continuous_animation_verified": false,
+  "proposed_keypose": {
+    "pose_id": "spear_retract_weight_back",
+    "label": "短刺后收矛",
+    "missing_stage": "收势／撤回重心",
+    "count": 1,
+    "status": "planned_not_executed"
+  },
+  "visual_observations_from_actual_views": [
+    "母图持矛直立；两张动作都为朝左、H1前握/H2后握。",
+    "架矛戒备的矛轴较陡、肘弯；短促前刺的前臂更开、膝和胸向前，尚无拉回过程。"
+  ],
+  "gap_reason": "现有戒备与短刺已覆盖起手和伸出，缺矛离开前方空间、手肘折回与重心回收的明确阶段。新帧不是把旧戒备平移：保持刺出后的较低矛轴，后手向后髋收、前肘明显折回。",
+  "proposed_sequence_only_not_verified": [
+    "spear_ready",
+    "spear_short_thrust",
+    "spear_retract_weight_back",
+    "spear_ready（未来衔接候选）"
+  ],
+  "adjacent_reference_roles": [
+    {
+      "input": 1,
+      "relationship": "已选直接前序候选；连续性尚未验证",
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+      "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c"
+    },
+    {
+      "input": 2,
+      "relationship": "后续回到戒备的参考；两旧帧精确矛长尚不一致",
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+      "sha256": "a0ddc421c1b763e748a17c5cac686840bbb385011b60d56fe9eac5706d6fbbf6"
+    },
+    {
+      "input": 3,
+      "relationship": "静态母图，身份/衣物/形体权威；不等同已配准动画帧",
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png",
+      "sha256": "31f837ac09a3d1f6c93ab771156f1cfc0e78c458f8f97ad4607e8685cfc63121"
+    }
+  ],
+  "new_pose_body_mechanics": "以短促前刺为前一姿：前脚位置先保持，后腿承重增加，骨盆小幅后移；前膝由前压回松，不拔高成直立母图。H1前握手和H2后握手沿同一矛轴向身体拉回，后手到后髋外缘、前肘折回；矛仍指画面左，接近前刺的低轴，暂未抬成戒备陡角。",
+  "support_and_contact": "双靴全掌接地，前脚不在收势中凭空滑回；重心投影回到两脚之间偏后腿。两手持续包住同一实杆，不换手、不放杆、不交叉换握。",
+  "invariants": [
+    "H1=母图画面左侧无披肩手臂；在已选动作中它是前握，H2=披肩下手臂是后握。当前续帧只沿用该已选替案。",
+    "画面右橄榄披肩/圆扣、右下蓝灰补布不换边；完整叶形矛头/黄褐绕带/木杆/铁尾不换形。",
+    "以短刺选稿为本续帧武器尺度和相机主参考；旧戒备仅为走势参照，不能声称跨旧帧矛长已解决。"
+  ],
+  "must_differ_from_existing": "低位矛轴＋双肘回折＋后髋承重三者同时可读，区别于前臂伸开的短刺及矛尖较高的戒备。",
+  "proposed_anchor_policy": {
+    "facing": "screen-left mild three-quarter; no mirror",
+    "scale_and_camera_primary_reference": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+      "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c"
+    },
+    "support_or_float_anchor": "双靴全掌接地，前脚不在收势中凭空滑回；重心投影回到两脚之间偏后腿。两手持续包住同一实杆，不换手、不放杆、不交叉换握。",
+    "origin_status": "未冻结共同runtime origin；当前以主相邻帧的头部尺度、支撑点/胸袍参考位置做概念注册，不伪造数值或称已保持像素级锚点。",
+    "no_frame_normalization_shortcut": "不按每张alpha bbox自动缩成同高度，不以画布等大替代身体尺度匹配；只可作等比nearest审查排版。"
+  },
+  "acceptance_checks": [
+    "追踪两只袖口到握点，确认H1始终前握、H2后握，木杆只一根且无手腕穿杆。",
+    "与短刺做等比例参考比较，矛头/铁尾尺寸和总长没有可见伸缩；与戒备的既有差异单列待验证。",
+    "前脚保留接地、后膝接重；全矛及双靴边界有余量；不是仅复制戒备。"
+  ],
+  "hard_failure_conditions": [
+    "强行复用旧brief的H1后握导致换手或交叉腕。",
+    "矛缩短、弯折、第二矛、铁尾消失、尖端裁切或穿脸。",
+    "与戒备仅位置变化，没有独立收势肘角/重心。"
+  ],
+  "continuity_still_to_verify": [
+    "旧戒备与旧短刺的精确矛长本就未验；本帧成功也不消除此风险。",
+    "脚底公共基准、头部尺度与收矛轨迹需要逐帧注册；没有已锁定引擎origin。"
+  ],
+  "planned_generation": {
+    "status": "not_executed",
+    "tool_intended": "builtin image_gen",
+    "transparent_background": true,
+    "reference_order": [
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png",
+        "sha256": "e1942442bdb34af856b4f3dde264e8dbe77c0bc2ebef8451f280f64da211701c",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png",
+        "sha256": "a0ddc421c1b763e748a17c5cac686840bbb385011b60d56fe9eac5706d6fbbf6",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png"
+      },
+      {
+        "path": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png",
+        "sha256": "31f837ac09a3d1f6c93ab771156f1cfc0e78c458f8f97ad4607e8685cfc63121",
+        "snapshot_path": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/files/Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png"
+      }
+    ],
+    "prompt": "用途：延续同一原创低魔中世纪像素风角色的一张独立动作关键姿势。只输出单体全身、真实透明RGBA背景、无文字无图板；不是spritesheet或动画。输入1是相邻动作主参考，用于相机、头部尺度、肢体/道具尺度和方向；输入2是已有另一动作，仅解释阶段差别；输入3是静态母图，严格锁定身份、轮廓、衣物与颜色，不要照抄静态姿态。保持原有清楚大像素簇与有限色阶、硬轮廓，不能变平滑插画或细密写实。始终轻三分之四朝画面左，不镜像，不新增服装、道具、剧情身份或符号。完整保留头、手指、足趾、武器两端或幽灵尾碎片，四边留透明余量，不靠裁切或拉伸安排构图。\n\n角色：001 边地长矛手。\n新关键姿势：短刺后收矛，阶段为收势／撤回重心。\n输入角色顺序：1 Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_short_thrust/border_spear_rebel_spear_short_thrust_transparent.png；2 Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_v1/spear_ready/border_spear_rebel_spear_ready_transparent.png；3 Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/idle_v1/border_spear_rebel_transparent.png。\n\n具体动作：以短促前刺为前一姿：前脚位置先保持，后腿承重增加，骨盆小幅后移；前膝由前压回松，不拔高成直立母图。H1前握手和H2后握手沿同一矛轴向身体拉回，后手到后髋外缘、前肘折回；矛仍指画面左，接近前刺的低轴，暂未抬成戒备陡角。\n支撑与接触：双靴全掌接地，前脚不在收势中凭空滑回；重心投影回到两脚之间偏后腿。两手持续包住同一实杆，不换手、不放杆、不交叉换握。\n身份/道具不可变：H1=母图画面左侧无披肩手臂；在已选动作中它是前握，H2=披肩下手臂是后握。当前续帧只沿用该已选替案。 画面右橄榄披肩/圆扣、右下蓝灰补布不换边；完整叶形矛头/黄褐绕带/木杆/铁尾不换形。 以短刺选稿为本续帧武器尺度和相机主参考；旧戒备仅为走势参照，不能声称跨旧帧矛长已解决。\n与既有姿势必须不同：低位矛轴＋双肘回折＋后髋承重三者同时可读，区别于前臂伸开的短刺及矛尖较高的戒备。\n\n只画这一瞬间，不画运动残影、速度线、第二人、敌手、受害者、血液飞溅、断肢、命中特效、环境、地面或投影。保持参考已有的非血腥怪物身份与旧污渍，不增加伤口或血腥细节。所有接触仅按本项所述发生；不得用新增地板、法术或道具解释悬浮/支撑错误。各关节与轮廓必须真实连通，不做整图刚性旋转/平移的假新姿。此帧只是一张候选概念，不能声称完整动作、连续循环、装备合成、碰撞或游戏实现。",
+    "prompt_text_file": "Assets/EnemyDesigns/20261013/first_six/action_continuation_sources_v1/planned_prompts/001_spear_retract_weight_back_prompt_v1_not_executed.txt",
+    "prompt_text_sha256": "71bbe9da6944453159841972ab1dae36cae1bb1912516c4fb5a2b3e59be5d371",
+    "output_directory_if_later_executed": "Assets/EnemyDesigns/20261013/first_six/border_spear_rebel/action_continuation_v1/spear_retract_weight_back",
+    "execution_gate": "当前仅规划，不能调用生图。未来由获授权执行方先重读本brief、对应母图/相邻选稿、检查SHA，再单项执行；首稿后只允许一次记录明确硬错的修订。"
+  }
+}

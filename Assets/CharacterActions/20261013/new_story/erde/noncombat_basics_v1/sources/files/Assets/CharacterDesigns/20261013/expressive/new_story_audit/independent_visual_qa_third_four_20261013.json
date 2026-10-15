@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "scope": "第三批新剧情人物独立概念视觉审查；不证明原生像素网格、装备或运行兼容。",
+  "reviewed_utc": "2026-10-13T18:24:16.428602+00:00",
+  "sources_read": [
+    "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_four_production_brief.json",
+    "design/04_人物/城市人物/人物_HIG-NPC-TURI_图里.md",
+    "design/04_人物/城市人物/人物_HIG-NPC-VILA_维菈.md",
+    "design/04_人物/野外人物/人物_FX-MIN_珥德.md",
+    "design/04_人物/野外人物/人物_FX-MN2_锉珥.md"
+  ],
+  "reference_images_actually_viewed": [
+    "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+    "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+  ],
+  "reference_note": "本审查会话先前已实际view批准参考，沿用成熟可读情绪与粗像素方向，不机械统一头身数字。",
+  "historical_versions": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_v1_raw_imagegen.png",
+      "sha256": "c9be2a93c9e910e80d0ef529ce0ade2baf680f77ef05c2a2ec8e3c82d9d7383e",
+      "actual_image_viewed": true,
+      "status": "style_revision_needed",
+      "reason": "身份可辨，但细密近写实像素与较长身偏离参考的粗像素大头紧凑方向。"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_v1_raw_imagegen.png",
+      "sha256": "6873f1fd060b40072cbcbb75cacf1a03d9e869fe5600291c3207c8e2a952e24e",
+      "actual_image_viewed": true,
+      "status": "style_revision_needed",
+      "reason": "身份可辨，但细密近写实像素与较长身偏离参考的粗像素大头紧凑方向。"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_v1_raw_imagegen.png",
+      "sha256": "a9acb7eca92383ffca9361b38a52c41e438aa868b7275c16485f72254be416e6",
+      "actual_image_viewed": true,
+      "status": "style_revision_needed",
+      "reason": "细密像素方向不选；此前依据raw显示判棕色背景缺陷已撤回，alpha实测不支持该结论。",
+      "initial_background_assessment_corrected": "raw viewer显示透明区隐藏RGB；抽查显示晕影alpha=0，不可判真背景硬错。后续必须先RGBA合成再判透明。"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_v1_raw_imagegen.png",
+      "sha256": "fdb013d7b2bbd0db123524a8b8118fcb4229c685302b170e26a8f8588ad74908",
+      "actual_image_viewed": true,
+      "status": "style_revision_needed",
+      "reason": "细密像素方向不选；此前依据raw显示判棕色背景缺陷已撤回，alpha实测不支持该结论。",
+      "initial_background_assessment_corrected": "raw viewer显示透明区隐藏RGB；抽查显示晕影alpha=0，不可判真背景硬错。后续必须先RGBA合成再判透明。"
+    }
+  ],
+  "results": [
+    {
+      "slug": "turi",
+      "id": "HIG-NPC-TURI",
+      "name": "图里",
+      "status": "concept_visual_pass",
+      "blocking_issues": [],
+      "artifact": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_v2_raw_imagegen.png",
+      "sha256": "a7e51617b0bc129bf7dc9406e0e316244e148418fd97184837c270ee003d08e2",
+      "face": "四十岁上下成年男性，窄脸、灰鬓与短须、认真估量眉眼和微启嘴可读，区别德茹。",
+      "body": "v2已纠正为明显粗像素大头紧凑身，保持精瘦成年关节与手指，右肩即画面左侧略低，未读为新伤。",
+      "identity": "短披、厚护腿、扎紧袖口、腰侧小敲击锤与金属量角器明确；袋口窄边可作收好检查簿，不强行要求手持。",
+      "gesture": "双脚稳站，一手小范围说明、另一手自然落下；手位合理，不作全山保证、结薪或续班图示。",
+      "pixel_style": "v2使用明确粗块轮廓与清楚像素簇；不声明原生网格或引擎资源。",
+      "evidence": {
+        "actual_image_viewed": true,
+        "mode": "RGBA",
+        "size": [
+          1118,
+          1407
+        ],
+        "alpha_zero_pixels": 1002243,
+        "alpha_partial_pixels": 568554,
+        "alpha_255_pixels": 2229,
+        "alpha_nonzero_bbox": [
+          0,
+          23,
+          1098,
+          1391
+        ],
+        "alpha_128_bbox": [
+          256,
+          62,
+          1055,
+          1386
+        ]
+      },
+      "delivery_binding": {
+        "status": "final_clean_and_presentation_pass",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/manifest.json",
+        "manifest_sha256": "a26e44e43e20f036f2ae1ed022fcd7b072c0fa73cb67d9d26e0a293cbba33975",
+        "manifest_entries_verified": 19,
+        "manifest_mismatches": [],
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png",
+        "transparent_sha256": "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695",
+        "raw_alpha_gt8_rgba_preserved_exactly": true,
+        "canvas_size_unchanged": true,
+        "alpha_lte8_cleared_only": true,
+        "hidden_rgb_note": "隐藏RGB是否保留不影响真实alpha合成；不使用忽略alpha的预览判断背景。",
+        "visual_check": "透明clean与中文浅深板实际view，浅深正确RGBA合成无背景晕影、无截断、字清楚。",
+        "presentations": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_light_board.png",
+            "sha256": "8d381a8e011a662654130e128d195870ce70bf668bce3711cfcc25e1fdf4289f",
+            "actual_image_viewed": true
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_dark_board.png",
+            "sha256": "c1164f7d23a07989de3410011a2bd055026f793ed6a970ad31f114158b3a0a23",
+            "actual_image_viewed": true
+          }
+        ]
+      }
+    },
+    {
+      "slug": "erde",
+      "id": "FX-MIN",
+      "name": "珥德",
+      "status": "concept_visual_pass",
+      "blocking_issues": [],
+      "artifact": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_v2_raw_imagegen.png",
+      "sha256": "c48a90b3749828534b843b12434756f467924c8728bfc202f36d7c9da245bb27",
+      "face": "五十来岁成年男性，灰发灰须、宽鼻和沉稳眼神，张嘴慢说明，未过度衰老或幼童化。",
+      "body": "v2明显转粗簇大头紧凑体态；稍前倾背负重量，双脚完整支撑，双膝旧皮垫清楚。",
+      "identity": "背篓内旧木轮片与小金属车件明确，不是金币或矿石；粗布短褂卷袖、结实长裤旧靴，无矿灯头盔和新增大型武器。",
+      "gesture": "一手扶肩带，另一手曲指准备习惯敲木，幅度低非威胁；无需背景木柱，不暗示已进入最深段或认领矿主工具。",
+      "pixel_style": "v2明确粗块轮廓与清楚像素簇；不声明原生网格或引擎资源。",
+      "evidence": {
+        "actual_image_viewed": true,
+        "mode": "RGBA",
+        "size": [
+          1118,
+          1407
+        ],
+        "alpha_zero_pixels": 758652,
+        "alpha_partial_pixels": 811745,
+        "alpha_255_pixels": 2629,
+        "alpha_nonzero_bbox": [
+          0,
+          20,
+          1102,
+          1407
+        ],
+        "alpha_128_bbox": [
+          70,
+          23,
+          1082,
+          1391
+        ]
+      },
+      "delivery_binding": {
+        "status": "final_clean_and_presentation_pass",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/manifest.json",
+        "manifest_sha256": "22509b6b68aa0a15042b06e6f6cf16a76c4fc3e14a148d16c471bea470c3251b",
+        "manifest_entries_verified": 20,
+        "manifest_mismatches": [],
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_transparent.png",
+        "transparent_sha256": "05b12de343a1a7360e688f480dc75023fbd4a1fbd6b133065a9b6dce92c387ca",
+        "raw_alpha_gt8_rgba_preserved_exactly": true,
+        "canvas_size_unchanged": true,
+        "alpha_lte8_and_hidden_rgb_cleared_only": true,
+        "visual_check": "clean与中文浅深板实际view，真实RGBA合成无晕影，无截断，文字清楚。",
+        "presentations": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_light_board.png",
+            "sha256": "91740c9da37ddbcfe10a15b67f08b3e1f192eba1eeafbde5d0c747ac765acbea",
+            "actual_image_viewed": true
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erde/concept_v1/erde_dark_board.png",
+            "sha256": "308ab82a86606d878d7d3974fd740ec7ebeca95c234776985247001d138b0db9",
+            "actual_image_viewed": true
+          }
+        ]
+      }
+    },
+    {
+      "slug": "vila",
+      "id": "HIG-NPC-VILA",
+      "name": "维菈",
+      "status": "concept_visual_pass",
+      "blocking_issues": [],
+      "artifact": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_v2_raw_imagegen.png",
+      "sha256": "9b72e90380efb5e660fb75beef199713bb7889f2defec586f318514d5fe7f31a",
+      "face": "约四十岁成年中性外观提案，短灰发、宽颧面、抬眉与开口讲限用表情清楚；不据图冻结性别。",
+      "body": "大头紧凑成年匠人站姿，双手完整接触小支架，工具不挡脸。",
+      "identity": "人物左眼即画面右眼戴透明单片放大夹，双眼可见，没有眼罩/缺眼；皮围裙、厚腕套、口袋量规与非发光普通支架样品成立。",
+      "gesture": "双手托样解释，未呈已交货或全山保证；机械细节仅概念，不验证工程。",
+      "pixel_style": "v2粗块像素清楚，成熟脸与手部可读，不声明原生网格。",
+      "evidence": {
+        "actual_image_viewed": true,
+        "alpha_composite_actually_viewed": true,
+        "mode": "RGBA",
+        "size": [
+          1024,
+          1536
+        ],
+        "alpha_zero_pixels": 918798,
+        "alpha_partial_pixels": 654066,
+        "alpha_255_pixels": 0,
+        "alpha_nonzero_bbox": [
+          0,
+          9,
+          992,
+          1536
+        ],
+        "alpha_128_bbox": [
+          169,
+          50,
+          863,
+          1513
+        ],
+        "transparency_note": "raw viewer呈晕影但该区為alpha0隐藏RGB；实际浅深RGBA展示均无晕影。"
+      },
+      "delivery_binding": {
+        "status": "final_clean_and_presentation_pass",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/manifest.json",
+        "manifest_sha256": "a35e5627aab9d64d7e370e81a55c49b88924ca5dcf22c74329c2ba4954612e32",
+        "manifest_entries_verified": 18,
+        "manifest_mismatches": [],
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_transparent.png",
+        "transparent_sha256": "7a23d1c8361a9ef4570a7c6658200d77a7d9dc18fb7d71e41fb02c1768b5ac52",
+        "raw_alpha_gt8_rgba_preserved_exactly": true,
+        "canvas_size_unchanged": true,
+        "alpha_lte8_cleared_only": true,
+        "hidden_rgb_note": "隐藏RGB是否保留不影响真实alpha合成；不使用忽略alpha的预览判断背景。",
+        "visual_check": "透明clean与中文浅深板实际view，浅深正确RGBA合成无背景晕影、无截断、字清楚。",
+        "presentations": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_light_board.png",
+            "sha256": "2a84b028bc97e869f47dd9c4f0e27c4d9cbdf1e462565d567dec162cf8307341",
+            "actual_image_viewed": true
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_dark_board.png",
+            "sha256": "857d79780061774b1aad76c563311e0cc1486cbe03225d66559eb040b66a2348",
+            "actual_image_viewed": true
+          }
+        ]
+      }
+    },
+    {
+      "slug": "cuoer",
+      "id": "FX-MN2",
+      "name": "锉珥",
+      "status": "concept_visual_pass",
+      "blocking_issues": [],
+      "artifact": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_v2_raw_imagegen.png",
+      "sha256": "1668632a6d87ef4a7bdac028abe16ba048a7092aeb45edc9f3e5509fabaf1533",
+      "face": "四十来岁成年男性，方额短下颌、短胡茬，凝眉略向下看，唇开一线作低声提醒；区别珥德年长宽鼻灰须。",
+      "body": "v2粗块大头紧凑劳动体态，完整双手双脚自然支撑。",
+      "identity": "腰侧小锉与短钳分开放且可辨，耳后小截金属片可见，无穿耳伤口；粗布系带褂卷袖、皮带和完整裤靴，无背篓或现代动力工具。",
+      "gesture": "一手近小锉，另一手低位曲指，非举拳威胁；不表示深段开放、认领车件或巡查结算。",
+      "pixel_style": "v2粗像素簇、脸与道具可读，不声明原生网格。",
+      "evidence": {
+        "actual_image_viewed": true,
+        "alpha_composite_actually_viewed": true,
+        "mode": "RGBA",
+        "size": [
+          1024,
+          1536
+        ],
+        "alpha_zero_pixels": 828823,
+        "alpha_partial_pixels": 744041,
+        "alpha_255_pixels": 0,
+        "alpha_nonzero_bbox": [
+          0,
+          23,
+          1008,
+          1536
+        ],
+        "alpha_128_bbox": [
+          105,
+          49,
+          925,
+          1522
+        ],
+        "transparency_note": "raw viewer晕影为alpha0隐藏RGB；抽查额顶500,20为42,26,24,0，实际中文浅深板合成无晕影，不阻塞。"
+      },
+      "delivery_binding": {
+        "status": "final_clean_and_presentation_pass",
+        "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/manifest.json",
+        "manifest_sha256": "a28f0f8741d0e81f2c18ae59cb90ca4d85e8e15b4024438e0ccc531764611a76",
+        "manifest_entries_verified": 20,
+        "manifest_mismatches": [],
+        "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png",
+        "transparent_sha256": "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662",
+        "raw_alpha_gt8_rgba_preserved_exactly": true,
+        "canvas_size_unchanged": true,
+        "alpha_lte8_and_hidden_rgb_cleared_only": true,
+        "visual_check": "clean与中文浅深板实际view，真实RGBA合成无晕影，无截断，文字清楚。",
+        "presentations": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_light_board.png",
+            "sha256": "d6b5722bdc8170780fa53547c15f1463041f4a905b1558ed0ed8015288846bfc",
+            "actual_image_viewed": true
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_dark_board.png",
+            "sha256": "10fcbad551a9e059c3b88c45d895d1d8ae86bef8af8949095a0dcd003be257d3",
+            "actual_image_viewed": true
+          }
+        ]
+      }
+    }
+  ],
+  "pending": [],
+  "delivery_binding_status": "all_four_final_clean_and_presentation_pass",
+  "limitations": [
+    "维菈性别未定，外观只能作为中性成年可逆提案；不由名字或概念推定性别canon。",
+    "机械工具与支架只核视觉身份线索，不核工程尺寸或实际功能。",
+    "不修改图像、作者manifest、前两批冻结QA或旧roster。"
+  ],
+  "overview_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story/third_four_delivery_v1/第三批四人_中文概览.png",
+    "sha256": "200e5d86c416738b493d9bd9872c12705357edc1adefbf78b0866e456cd029e3",
+    "actual_image_viewed": true,
+    "status": "pass",
+    "notes": "人名与ID正确、四人完整、文字清楚；明示中性提案/仅概念/独立等比非相对身高。"
+  },
+  "final_review_utc": "2026-10-13T18:30:05.772481+00:00"
+}

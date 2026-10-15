@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "author": "draw_weier_fouer_actions",
+  "sole_writer": true,
+  "created_utc": "2026-10-14T06:11:35.424960+00:00",
+  "status": "partial_1_selected_1_missing",
+  "planned_pose_count": 2,
+  "selected_pose_count": 1,
+  "initial_generations": 2,
+  "revision_generations": 1,
+  "selected": [
+    {
+      "key": "weier_A2_two_hand_low_crosswise_stick_v1",
+      "title_zh": "双手近身横收原短棍",
+      "path": "Assets/CharacterActions/20261013/new_story/weier/noncombat_basics_v1/exports/weier_A2_two_hand_low_crosswise_stick_v1_transparent.png",
+      "sha256": "31418c1e678cb53167d9e5dc416421b487f846ffe87cd9db7265156b547db7f4",
+      "independent_verdict": "pass"
+    }
+  ],
+  "excluded_versions": [
+    {
+      "key": "weier_A1_toe_probe_with_slanted_stick_v1",
+      "verdict": "hard_error_revision_required",
+      "reason": "右探脚近水平全掌，没有抬跟。"
+    },
+    {
+      "key": "weier_A1_toe_probe_with_slanted_stick_v2",
+      "verdict": "failed_after_single_allowed_revision",
+      "reason": "脚尖上翘、鞋跟偏低，与要求相反；缺项并停止重试。"
+    }
+  ],
+  "missing_poses": [
+    {
+      "key": "weier_A1_toe_probe_with_slanted_stick",
+      "title_zh": "短棍斜探右脚尖点地",
+      "status": "missing_after_single_allowed_revision",
+      "retained_versions": [
+        "v1",
+        "v2"
+      ],
+      "third_attempt_prohibited": true
+    }
+  ],
+  "independent_visual_and_board_pass_for_selected": true,
+  "root_actual_board_view_and_acceptance": true,
+  "package_readback": "Recorded separately after packing in delivery directory; source tree must not change after independent closure.",
+  "runtime_verified": false,
+  "continuous_animation": false,
+  "new_story_result": false,
+  "uploaded_or_git": false,
+  "limits": [
+    "仅独立非战斗全身动作概念，未实现游戏。",
+    "全部首稿与唯一修订的raw及完整工具imagepayload均保留，失败不计为另一动作。",
+    "仅alpha≤8及隐藏RGB清理、整图nearest等比排版，未绘制/拼接/拉伸人体。"
+  ]
+}

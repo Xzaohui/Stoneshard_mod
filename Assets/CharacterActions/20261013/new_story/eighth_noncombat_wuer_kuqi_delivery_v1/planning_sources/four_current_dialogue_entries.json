@@ -1,0 +1,364 @@
+{
+  "source": {
+    "path": "research/field-npc-dialogue.json",
+    "bytes": 132451,
+    "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+    "source_id": "field_dialogue_registry",
+    "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eighth_new_character_actions_sources/files/research/field-npc-dialogue.json"
+  },
+  "locator": "npcs filtered by exact canonical ID",
+  "entries": [
+    {
+      "id": "FX-CRP",
+      "name": "瑟珥",
+      "role": "陵墓盗掘幸存者",
+      "site": "rumor_remoteCrypt1",
+      "region": "R03",
+      "look": "二十多岁的年轻人，衣服上全是灰，右手一直攥着一截断绳；说话时先看出口。",
+      "voice": "语速快，句子短，怕回声；说到同伴就停下来数手指。",
+      "knows": [
+        "墓道第二道门的方向",
+        "同伴最后一次出声的位置"
+      ],
+      "not_knows": [
+        "不知道墓里埋的是谁",
+        "不替死者家属认领遗物"
+      ],
+      "greetings": [
+        [
+          "first",
+          "别喊。里面不能喊。你……你有绳子吗？"
+        ],
+        [
+          "revisit",
+          "你回来了。我还在数，还是三个没出来。"
+        ],
+        [
+          "night",
+          "天黑前我要走。这地方夜里不归活人管。"
+        ]
+      ],
+      "chats": [
+        "我们不是来偷宝的。我们是来量门的，量完就出去。",
+        "第二道门后面有风。有风就说明还有路。",
+        "我同伴说他不怕。他第一个进去的。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "你也要下去？先记住回来的方向，别的都别记。"
+        ],
+        [
+          "warning",
+          "别碰墙上的白灰，沾了手会痒三天。"
+        ],
+        [
+          "refusal",
+          "让我带路？我连自己都带不出去。你自己看着办。"
+        ]
+      ],
+      "links": [
+        "区域_R03_曼恩边地",
+        "聚落_MNS_曼郡"
+      ],
+      "visits": {
+        "task": "台本_DT03_无人认领的墓标",
+        "before": [
+          "你要立标？先等我数完人。少一个名字，标就是错的。"
+        ],
+        "after": [
+          "标立起来了。三个名字里有一个是猜的，你敢不敢写上去。"
+        ],
+        "early": [
+          "你先把墓标的事办了才来问我？那正好，我要说的人还没说完。"
+        ],
+        "late": [
+          "你要是先帮我找人，再去立标，我会把顺序告诉你。现在也不晚。"
+        ],
+        "proxy": [
+          "同伴没回来的那个年轻人，话留在了洞口：别替他数人。"
+        ]
+      },
+      "english": {
+        "greet.first": "Don't shout. No shouting inside. Do you... do you have rope?",
+        "greet.revisit": "You came back. I'm still counting. Still three who didn't come out.",
+        "greet.night": "I leave before dark. This place doesn't belong to the living at night.",
+        "chat.1": "We didn't come to rob the dead. We came to measure the doors, and then leave.",
+        "chat.2": "There's a draft past the second door. A draft means there's still a way.",
+        "chat.3": "My mate said he wasn't afraid. He went in first.",
+        "site.arrival": "You're going down too? Learn the way back first. Forget everything else.",
+        "site.warning": "Leave the white dust on the walls alone. It itches for three days.",
+        "site.refusal": "Guide you? I can't even guide myself out. Do what you like.",
+        "visit.before": "Setting up a grave marker? Let me finish counting first. One name short and the marker lies.",
+        "visit.after": "The marker stands. One of the three names is a guess. See if you dare write it.",
+        "visit.early": "You dealt with the marker before asking me? Good - I hadn't finished the names I owe.",
+        "visit.late": "Help me find them first and I'd have told you the order. It's not too late now.",
+        "visit.proxy": "The young man whose mate never came back left word at the mouth: don't count for him."
+      }
+    },
+    {
+      "id": "FX-BUR",
+      "name": "库奇",
+      "role": "蛛洞拾荒人",
+      "site": "rumor_crawlerBurrow1",
+      "region": "R01",
+      "look": "瘦小的中年人，背着缠满布条的钩杆，腰上挂一圈旧绳；手指关节全是旧咬痕。",
+      "voice": "快、碎、爱插笑话；一提到洞里就立刻改口认真。",
+      "knows": [
+        "洞口什么时候起风",
+        "哪种丝能卖钱，哪种一碰就断"
+      ],
+      "not_knows": [
+        "不替人进洞取东西",
+        "不知道洞里到底有几窝"
+      ],
+      "greetings": [
+        [
+          "first",
+          "买丝？还是找人？买丝有，找人没有。"
+        ],
+        [
+          "revisit",
+          "又是你。我这钩杆还没断，说明今天运气行。"
+        ],
+        [
+          "night",
+          "天黑了洞里最热闹。你要听，站远点听。"
+        ]
+      ],
+      "chats": [
+        "丝是钱，命是命，别拿命换钱。我换过，不划算。",
+        "旧渠底下什么都往下淌，蛛也跟着淌。",
+        "有人问我怕不怕。怕，怕才活得久。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "脚放轻。洞口的土会响。"
+        ],
+        [
+          "warning",
+          "看见新丝网别用手拨，用杆。"
+        ],
+        [
+          "refusal",
+          "让我替你进洞？不去。我这条腿就是替人进去换的。"
+        ]
+      ],
+      "links": [
+        "区域_R01_布林外港与旧渠",
+        "空间_BRY-X11_低潮侧泊棚"
+      ],
+      "visits": {
+        "task": "台本_N12_失踪者仍有名字",
+        "before": [
+          "你要找的人要是进了洞，先告诉我他穿什么。洞不认名字，认布。"
+        ],
+        "after": [
+          "名字对上了，人没对上。我照旧不进洞，你照旧别催我。"
+        ],
+        "early": [
+          "你先来的洞，后去的井。那布条的事你记得比我清。"
+        ],
+        "late": [
+          "井那边的事办完了才来？洞里不等人，丝也不等人。"
+        ],
+        "proxy": [
+          "拾荒人不在洞口时，别动他挂在杆上的绳；那是他的路。"
+        ]
+      },
+      "english": {
+        "greet.first": "Buying silk? Or looking for someone? Silk I have. People I don't.",
+        "greet.revisit": "You again. My hook's still unbroken, so luck's holding.",
+        "greet.night": "The burrow is liveliest after dark. If you want to listen, listen from a distance.",
+        "chat.1": "Silk is money, a life is a life. Don't trade one for the other. I tried; it doesn't pay.",
+        "chat.2": "Everything drains down the old culvert, spiders along with it.",
+        "chat.3": "People ask if I'm scared. I am. Being scared is why I'm still here.",
+        "site.arrival": "Light on your feet. The soil at the mouth carries sound.",
+        "site.warning": "New webbing - use the pole, never your hand.",
+        "site.refusal": "Go in for you? No. This leg is what going in for others cost me.",
+        "visit.before": "If the person you're after went into the burrow, tell me what they wore first. The burrow doesn't know names, only cloth.",
+        "visit.after": "The name matched; the person didn't. I still don't go in, and you still don't rush me.",
+        "visit.early": "First stop, the burrow; second, the well. You recall the cloth strip better than I do.",
+        "visit.late": "You finished at the well before coming here? The burrow doesn't wait, and neither does silk.",
+        "visit.proxy": "Where the scavenger is gone, don't touch the rope on his pole. That's his road."
+      }
+    },
+    {
+      "id": "FX-GHL",
+      "name": "达珥",
+      "role": "食尸鬼巢穴报信人",
+      "site": "rumor_ghoulDen1",
+      "region": "R05",
+      "look": "三十来岁的男人，袖口扎紧，背着一只空布袋；说话时不停搓手。",
+      "voice": "低声、急促，句子重复一半；说到夜里就停下来听。",
+      "knows": [
+        "坟地被翻过的位置",
+        "哪条路夜里不能走"
+      ],
+      "not_knows": [
+        "不替死者的家人作证",
+        "不说自己看见过什么"
+      ],
+      "greetings": [
+        [
+          "first",
+          "别往坟那边去。我说三遍，你听一遍就够。"
+        ],
+        [
+          "revisit",
+          "你还在这一带。夜里听见动静别出去。"
+        ],
+        [
+          "night",
+          "天一黑我就回家。你也该回。"
+        ]
+      ],
+      "chats": [
+        "我报信是收了钱的。收钱的事，别问我向谁收。",
+        "翻土的声音和挖坟不一样。听得出。",
+        "有人说我胆小。胆小的人活得久。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "脚别踩新土。踩了看不出是谁踩的。"
+        ],
+        [
+          "warning",
+          "窖口那圈网别动，动了里面就出来。"
+        ],
+        [
+          "refusal",
+          "要我带路？不。我连自家门口都要绕。"
+        ]
+      ],
+      "links": [
+        "区域_R05_灰烬湿地与疫村",
+        "台本_N16_谁来保管余烬"
+      ],
+      "visits": {
+        "task": "台本_N16_谁来保管余烬",
+        "before": [
+          "你要收余烬，先把坟那边的话听完。听完再动手。"
+        ],
+        "after": [
+          "余烬归谁我不管。坟那边今晚安静，这就够了。"
+        ],
+        "early": [
+          "你先听我报了信，才去办的余烬事。顺序对。"
+        ],
+        "late": [
+          "余烬的事办完了才来？坟不问先后，只问夜里有没有人。"
+        ],
+        "proxy": [
+          "报信的人不在时，新土就是告示；别踩。"
+        ]
+      },
+      "english": {
+        "greet.first": "Don't go toward the graves. I'll say it three times; once should be enough.",
+        "greet.revisit": "Still around here. Hear anything at night - don't go out.",
+        "greet.night": "When it's dark I go home. You should too.",
+        "chat.1": "I carry word for coin. Don't ask whose coin.",
+        "chat.2": "Turning soil sounds different from digging a grave. You can tell.",
+        "chat.3": "Some call me timid. Timid people last longer.",
+        "site.arrival": "Don't step on fresh soil. Step on it and nobody can tell who did.",
+        "site.warning": "Leave the netting at the cellar mouth. Touch it and things come out.",
+        "site.refusal": "Guide you? No. I take the long way around my own gate.",
+        "visit.before": "Collecting embers? Hear the grave-side words out first. Then move.",
+        "visit.after": "Who keeps the embers isn't mine to say. The graves are quiet tonight; that's enough.",
+        "visit.early": "You heard my word before dealing with the embers. Right order.",
+        "visit.late": "Embers settled, and now my word? The graves count nights, not errands.",
+        "visit.proxy": "With the runner not at his post, fresh soil is the notice. Don't step on it."
+      }
+    },
+    {
+      "id": "FX-CV3",
+      "name": "俉珥",
+      "role": "三刀会窝点逃出者",
+      "site": "rumor_cave3",
+      "region": "R06",
+      "look": "二十多岁的年轻人，左手少了半截指头，衣服上还留着洞口的灰；说话时背贴着石壁。",
+      "voice": "半句半句地讲，怕被听见；被问名字就换成“他们都叫我那个”。",
+      "knows": [
+        "洞里哪段挂钩能踩",
+        "帮派几时换班"
+      ],
+      "not_knows": [
+        "不说窝点里还有谁",
+        "不替帮派传话"
+      ],
+      "greetings": [
+        [
+          "first",
+          "别喊。洞里会传声。"
+        ],
+        [
+          "revisit",
+          "你又来了。我还在这儿，说明他们没找着。"
+        ],
+        [
+          "night",
+          "夜里我不生火。火光比人显眼。"
+        ]
+      ],
+      "chats": [
+        "我是从后面爬出来的。前面那道门要口令。",
+        "挂钩是他们挂的，用来吊货，也吊过别的东西。",
+        "你要进洞，我拦不住。我只告诉你哪段能踩。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "脚步轻点。洞口那圈石头会响。"
+        ],
+        [
+          "warning",
+          "别碰墙上的绳头，那是他们的记号。"
+        ],
+        [
+          "refusal",
+          "要我画洞口图？不画。画了就是我的字。"
+        ]
+      ],
+      "links": [
+        "区域_R06_无名修院山地",
+        "台本_N9_把证据摆上桌"
+      ],
+      "visits": {
+        "task": "台本_N9_把证据摆上桌",
+        "before": [
+          "你要摆证据，别把我摆上去。我只说洞口的事。"
+        ],
+        "after": [
+          "证据摆上桌了。洞里的人换没换班，我不知道。"
+        ],
+        "early": [
+          "你先见过我，后去摆的证据。那我说的哪段能踩，你还记得。"
+        ],
+        "late": [
+          "证据的事办完了才来？洞不等结果，只等脚步声。"
+        ],
+        "proxy": [
+          "逃出来的人不在洞口时，绳头记号别动。"
+        ]
+      },
+      "english": {
+        "greet.first": "Don't shout. Sound carries in the cave.",
+        "greet.revisit": "You're back. I'm still here, so they haven't found me.",
+        "greet.night": "I don't light fires at night. Flame shows more than a person does.",
+        "chat.1": "I crawled out the back. The front door wants a watchword.",
+        "chat.2": "They hung those hooks for cargo. They've hung other things too.",
+        "chat.3": "If you go in, I can't stop you. I'll only say which stretch holds weight.",
+        "site.arrival": "Soft steps. The stones at the mouth ring.",
+        "site.warning": "Leave the rope ends on the wall alone. Those are their marks.",
+        "site.refusal": "Draw you a map of the mouth? No. Then the marks would be my handwriting.",
+        "visit.before": "Laying out evidence? Don't lay me on the table. I speak only for the cave mouth.",
+        "visit.after": "The evidence is on the table. Whether the crew changed shifts, I don't know.",
+        "visit.early": "You met me before laying out the evidence. Then you still remember which stretch holds weight.",
+        "visit.late": "The evidence is laid out and you come down after? The cave hears footsteps, not verdicts.",
+        "visit.proxy": "Should the escapee be gone, leave the rope marks alone."
+      }
+    }
+  ]
+}

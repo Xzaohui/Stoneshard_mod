@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。",
+    "planned_selected_images": 8
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者与独审实际view每张原图及最终透明/浅深板，逐图核母图SHA、身份、面部情绪、手势、道具侧别和剧情边界；manifest绑定选稿SHA。板上不加任务已完成、亲密或疗愈结论。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "prompt_archive_contract": {
+    "status": "planned_prompts_not_executed",
+    "rule": "本文件prompt_text是完整拟用首稿，不冒称已执行prompt。生产时将真实发送的逐字prompt、引用路径与输入SHA、工具参数、时间、输出路径/SHA、首稿或硬错revision1及选废原因写入prompts/与generation-log.json；若改措辞必须存实际版本，不用本brief替代真实调用存档。",
+    "max_calls_per_expression": 2,
+    "revision_rule": "仅一次明确硬错定向修订；实际修订全文及纠错目标须保存，失败则报告，不偷偷增加第三稿。"
+  },
+  "created_utc": "2026-10-14T01:49:31.933412+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "第七批珞珥、芩珥、栎珥、洄珥四名新剧情人物各两种独立面部情绪，共8张未来全身概念。本轮仅规划并新增本brief与专用来源快照，不生图、不上传、不git、不改旧文件。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_four_production_brief.json",
+    "sha256": "351b7c4f33ba139b288bc7a61e6a12356a2c3211393af4036ff54e11acddf325"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_seventh_four_20261013.json",
+    "sha256": "a3033967c05c74e0d5e87ad2966e843a3734524beedbd7b4b74e011173d98789"
+  },
+  "format_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/sixth_four_expression_brief.json",
+    "sha256": "8c4c5fcbe444f90225c9945773a7505bbd1a0cc60d0e7477f6778a057ee93036"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "shared_locks": [
+    "每张以该人物selected_raw及最终透明版为唯一身份/服装/比例母图，单人完整全身，保持1118×1407纵向构图意图；各人实际体型、朝向和支撑姿态保留，不统一头身数字。",
+    "年龄按卡：珞珥三十多岁、芩珥四十来岁、栎珥五十来岁、洄珥二十多岁；保留脸型、鼻唇、发型、眉眼基础形状与肤色，不把四人套为同一张脸。",
+    "珞珥两卷绳在画面右背后；芩珥唯一旧布药篓在画面左前落地且双手停篓沿；栎珥两根旧绳搭画面右肩、前脚轻探；洄珥一根长杆竖背画面右、双靴草绳保持。绳卷/散绳/探路杆不得互换。",
+    "情绪主要靠眉眼嘴协调变化；不能只复制母图换手势。只有珞珥受夸图用卡定低幅摆手，其余维持原低位手/篓沿/背带接触，不全套抬手劝停。",
+    "保持自然成年像素概念、清晰有组织粗像素簇和完整轮廓；不硬缩35px、不量化掩盖五官、不机械卡眉角或统一头身比。",
+    "八个情绪与微动作均为可逆美术演出，不回写人物卡、任务结果或关系。本人存活在场愿谈且有有限见闻才适用；两图互不暗示先后结局。",
+    "避用泛任务完成回访槽，不自动赋予N14/DT05/DT12/DT06结果，不画发药、康复、付款、借工同意、维修完成、全程领路、寻人住址、归返或终局安全。",
+    "只按中文名与稳定ID配对；luoer=FX-CV1、qiner=FX-CV2、lier=FX-CV5、huier=FX-CV6。旧style_refs里的洛珉/米洛珥/Sela/Mia不是四人的身体或身份。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "FX-CV1",
+      "slug": "luoer",
+      "name": "珞珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV1_珞珥.md",
+        "sha256": "e2904942fd56174bfb840f6d97c8262669dfb9fa56c43fe2d8ddd6fb25d29689"
+      },
+      "card_matches_seventh_four_brief": true,
+      "age_identity_lock": "三十多岁的女子；洞穴向导。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_v1_raw_imagegen.png",
+          "sha256": "dc941c67240ca0e535ac40680fac4a8c1a54dc0fad6fa777de2537a1e36d09b0"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_transparent.png",
+          "sha256": "57154d38c3cc91e6480ba95dcc5f01bbd0a26d36a027d6fa6bea410a81461a36"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/manifest.json",
+          "sha256": "5fbd06f69a8b759b271130f884a529e98fcfefd23500289a162f65513b3d0064"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐张实际查看4个raw与4个transparent；未以旧QA代替本轮看图。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 22,
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "canvas_mode_verified": "1118×1407 RGBA"
+      },
+      "card_facts": [
+        "洞穴向导，常在 `rumor_cave1` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "三十多岁的女子，背着两卷麻绳，靴子补过；说话前先用指节敲墙。",
+        "只讲判断，不讲故事；被夸就摆手。",
+        "洞口起风的时段；哪段路能原路退回。不替人进洞取物；不担保洞里安全。"
+      ],
+      "observed_mother_image": "深褐松束发、两侧灰白发缕，宽额窄下颌的成年女子脸，眉直略收、双眼望画面左、嘴小幅微启。暗铁蓝短褂、浅麻色翻袖与深灰领巾、棕腰带、带补片的泥褐裤、修补棕靴；身体稳定朝画面左。两卷枯黄麻绳分上下层背在画面右，人物左手在画面右胸前握背绳带，人物右手在画面左曲指略抬。",
+      "fixed_prop_sides": [
+        "两卷麻绳保持背后画面右的上下分层，不换成栎珥的两根散绳，不抽出、不递出、不多加第三卷。人物左手（画面右）持续握原背绳带。",
+        "人物右手（画面左）是空手，只允许原曲指或低幅单次摆手。保持领巾、衣裤补片、双靴原加固接缝；不另添洞墙、地图、石堆或安全证明。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按精确slug分隔符及中文名扫描PNG，读所有ZIP成员；匹配文件均为本人的concept_v1或其概念源包，style_refs只作旧参考不视为本人变体。",
+        "matching_png_count": 8,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_v1_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/luoer_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/style_refs/sela_G_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/style_refs/luomin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/style_refs/miloer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/style_refs/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+        ],
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seventh_four_delivery_v1/新增剧情人物_第七批完整源包.zip",
+            "sha256": "ba1a7ad7734641edaac8ae33d39c4a03518dcb1f31fcc7b89d2b92a0d604b8c3",
+            "member_count": 93,
+            "matching_members": 23,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "unexplained_hits": [],
+        "identity_guard": "只使用珞珥/FX-CV1/luoer的卡与母图。人物卡目录中此中文名仅一张；不凭同音、近名、slug子串借用其他身份。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "luoer_E1_still_listening_to_wind",
+          "label_zh": "凝神听风",
+          "scene_proposal": "她停下说话，按自己的习惯听洞口的风，再作有限判断。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L696、L700、L710；体貌、知情与到场"
+          },
+          "face_changes": "眉内端稍聚、上眼睑轻压，目光在画面左侧近处静定；嘴从母图微启合为放松的短线，面颊安静，呈专心倾听而非愤怒或困倦。",
+          "minimal_gesture": "头只轻偏以侧耳，人物右手仍曲指但稍降至胸前；左手持续握背绳带，躯干和两卷绳不动，不抬手捂耳。",
+          "difference_from_static_and_pair": "母图侧看说话改为静定眼神与闭唇倾听；E2眉眼更松、不对称、目光略避开，并有小幅说话口形。",
+          "condition_and_limit": "仅演听风判断的瞬间，不确认风已经停、洞口安全、进洞获准或已带人走过标记；不代替N14回程试走、工具检查、工班同意与费用。",
+          "output_stem": "luoer_E1_still_listening_to_wind",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：珞珥（FX-CV1，luoer）。三十多岁的女子；洞穴向导。源体貌明确性别/年龄，按原词保留。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化掩盖五官。延续母图1118×1407纵向完整构图与合理留边，不截头发、双手、双鞋、绳、篓或长杆；不靠缩小道具腾空间。\n母图观察：深褐松束发、两侧灰白发缕，宽额窄下颌的成年女子脸，眉直略收、双眼望画面左、嘴小幅微启。暗铁蓝短褂、浅麻色翻袖与深灰领巾、棕腰带、带补片的泥褐裤、修补棕靴；身体稳定朝画面左。两卷枯黄麻绳分上下层背在画面右，人物左手在画面右胸前握背绳带，人物右手在画面左曲指略抬。\n固定侧别与道具：两卷麻绳保持背后画面右的上下分层，不换成栎珥的两根散绳，不抽出、不递出、不多加第三卷。人物左手（画面右）持续握原背绳带。 人物右手（画面左）是空手，只允许原曲指或低幅单次摆手。保持领巾、衣裤补片、双靴原加固接缝；不另添洞墙、地图、石堆或安全证明。\n本张可逆表情提案：凝神听风。她停下说话，按自己的习惯听洞口的风，再作有限判断。\n脸部：眉内端稍聚、上眼睑轻压，目光在画面左侧近处静定；嘴从母图微启合为放松的短线，面颊安静，呈专心倾听而非愤怒或困倦。\n最小手势：头只轻偏以侧耳，人物右手仍曲指但稍降至胸前；左手持续握背绳带，躯干和两卷绳不动，不抬手捂耳。\n必须形成可读区别：母图侧看说话改为静定眼神与闭唇倾听；E2眉眼更松、不对称、目光略避开，并有小幅说话口形。\n剧情边界：仅演听风判断的瞬间，不确认风已经停、洞口安全、进洞获准或已带人走过标记；不代替N14回程试走、工具检查、工班同意与费用。\n本人存活、在场、愿谈且具有相应有限见闻时才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币、账簿或文书。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "luoer_E2_deflecting_praise",
+          "label_zh": "受夸淡拒",
+          "scene_proposal": "被人夸她识路时，她不愿接下夸奖，简短淡淡带过。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L698口吻“被夸就摆手”；人物卡口吻同句"
+          },
+          "face_changes": "一侧眉梢轻提、另一侧眉放松，目光短暂从对方移向左下；唇角轻抿后小幅张开，呈克制、不太自在但不恼怒的淡拒。不得甜笑、脸红、挤眼或翻白眼。",
+          "minimal_gesture": "人物右手由曲指自然松开，只在胸下小幅向外摆一下，肘仍贴近身体；左手不离背绳带，不变成高举开掌拦路。",
+          "difference_from_static_and_pair": "母图专注直视的微启嘴改为稍避视、微不对称眉与抿唇后短答；与E1凝眉定眼闭嘴的倾听清楚分开，不能只换手。",
+          "condition_and_limit": "夸奖对象与原话不写入剧情；这只是卡定受夸反应的可逆演出，不表示亲密、信任升级、同意护送全洞或保证安全，不改变第二处标记的边界。",
+          "output_stem": "luoer_E2_deflecting_praise",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：珞珥（FX-CV1，luoer）。三十多岁的女子；洞穴向导。源体貌明确性别/年龄，按原词保留。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化掩盖五官。延续母图1118×1407纵向完整构图与合理留边，不截头发、双手、双鞋、绳、篓或长杆；不靠缩小道具腾空间。\n母图观察：深褐松束发、两侧灰白发缕，宽额窄下颌的成年女子脸，眉直略收、双眼望画面左、嘴小幅微启。暗铁蓝短褂、浅麻色翻袖与深灰领巾、棕腰带、带补片的泥褐裤、修补棕靴；身体稳定朝画面左。两卷枯黄麻绳分上下层背在画面右，人物左手在画面右胸前握背绳带，人物右手在画面左曲指略抬。\n固定侧别与道具：两卷麻绳保持背后画面右的上下分层，不换成栎珥的两根散绳，不抽出、不递出、不多加第三卷。人物左手（画面右）持续握原背绳带。 人物右手（画面左）是空手，只允许原曲指或低幅单次摆手。保持领巾、衣裤补片、双靴原加固接缝；不另添洞墙、地图、石堆或安全证明。\n本张可逆表情提案：受夸淡拒。被人夸她识路时，她不愿接下夸奖，简短淡淡带过。\n脸部：一侧眉梢轻提、另一侧眉放松，目光短暂从对方移向左下；唇角轻抿后小幅张开，呈克制、不太自在但不恼怒的淡拒。不得甜笑、脸红、挤眼或翻白眼。\n最小手势：人物右手由曲指自然松开，只在胸下小幅向外摆一下，肘仍贴近身体；左手不离背绳带，不变成高举开掌拦路。\n必须形成可读区别：母图专注直视的微启嘴改为稍避视、微不对称眉与抿唇后短答；与E1凝眉定眼闭嘴的倾听清楚分开，不能只换手。\n剧情边界：夸奖对象与原话不写入剧情；这只是卡定受夸反应的可逆演出，不表示亲密、信任升级、同意护送全洞或保证安全，不改变第二处标记的边界。\n本人存活、在场、愿谈且具有相应有限见闻时才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币、账簿或文书。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-CV2",
+      "slug": "qiner",
+      "name": "芩珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV2_芩珥.md",
+        "sha256": "c68893d07a0c22a410957f4c656d44f04e0a34772bcd964e17b02ee2a8308ea5"
+      },
+      "card_matches_seventh_four_brief": true,
+      "age_identity_lock": "四十来岁的女人；采药歇脚者。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_v1_raw_imagegen.png",
+          "sha256": "427c7f31a38a139917236875b80c71e6d3bc18fd309ccb750acadd667f8ba66e"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_transparent.png",
+          "sha256": "690e448af9ebbd854128b19b012c3b76761ab7eaf5b3c4cb23607a2e077ebcb3"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/manifest.json",
+          "sha256": "dbef100c33e166cfee4867caee11395a1ad023113656d774b87cfa9663f6d268"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐张实际查看4个raw与4个transparent；未以旧QA代替本轮看图。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 22,
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "canvas_mode_verified": "1118×1407 RGBA"
+      },
+      "card_facts": [
+        "采药歇脚者，常在 `rumor_cave2` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "四十来岁的女人，背篓里垫着旧布，手指有草汁染出的褐痕；进洞前先把篓子放下。",
+        "说话慢，先报草名再谈别的；被催就停下来闻一闻。",
+        "浅洞哪个角落干燥；哪几味草这个时节还有。不替药师开方；不说自己采的草卖给谁。"
+      ],
+      "observed_mother_image": "浅麻色包头巾，深褐卷发夹灰鬓，圆颧成熟脸，眉眼舒缓侧看画面左、嘴轻开。枯橄榄绿外褂、浅麻袖口与领口、棕腰带、土褐长下装和棕鞋。垫旧浅布的棕编织背篓已落地在画面左前方，篓内少量普通绿草叶；两手轻停篓沿，手指有淡褐草汁痕，不是伤口。",
+      "fixed_prop_sides": [
+        "唯一背篓保持落地在画面左前，原背带、旧布垫、已有少量草叶及篓底全保留。不得端起、背上、递出或把草画成整剂药。",
+        "人物右手在画面左的篓沿、人物左手在画面右的篓沿，双手留在原支撑位置；可微松指尖，淡褐草汁痕保持可见。不得加药方、剂量标记、药瓶、病人或客户信息。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按精确slug分隔符及中文名扫描PNG，读所有ZIP成员；匹配文件均为本人的concept_v1或其概念源包，style_refs只作旧参考不视为本人变体。",
+        "matching_png_count": 8,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_v1_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/qiner_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/style_refs/sela_G_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/style_refs/luomin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/style_refs/miloer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/style_refs/mia_ratio_1_to_1_5_v2_raw_imagegen.png"
+        ],
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seventh_four_delivery_v1/新增剧情人物_第七批完整源包.zip",
+            "sha256": "ba1a7ad7734641edaac8ae33d39c4a03518dcb1f31fcc7b89d2b92a0d604b8c3",
+            "member_count": 93,
+            "matching_members": 23,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "unexplained_hits": [],
+        "identity_guard": "只使用芩珥/FX-CV2/qiner的卡与母图。人物卡目录中此中文名仅一张；不凭同音、近名、slug子串借用其他身份。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "qiner_E1_unhurried_herb_scent",
+          "label_zh": "缓息闻草",
+          "scene_proposal": "被催着回答时，她依旧慢下来，低头闻篓口已有草叶的气味。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L920、L922口吻与体貌；人物卡“被催就停下来闻一闻”"
+          },
+          "face_changes": "双眉放松且内端微提，眼皮轻垂看向篓口，嘴从母图说话口形合拢，唇角自然不下坠；呈沉着专心、把节奏放慢的安定，不画困倦、病弱或嗅闻后的满意结论。",
+          "minimal_gesture": "头和肩向原篓口小幅前倾，双手仍停原篓沿，指尖微松；不提篓、不新取一束草、不把脸埋到篓里，双脚位置不变。",
+          "difference_from_static_and_pair": "母图抬眼开口对人改为低眼闭唇闻辨；E2会抬眼直视、眉更平稳且用窄小的短答口形。",
+          "condition_and_limit": "不辨出具体草种、剂量或疗效，不表示草已交付、病人康复、买卖成立或客户身份被透露；不把被催推断为对方恶意。",
+          "output_stem": "qiner_E1_unhurried_herb_scent",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：芩珥（FX-CV2，qiner）。四十来岁的女人；采药歇脚者。源体貌明确性别/年龄，按原词保留。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化掩盖五官。延续母图1118×1407纵向完整构图与合理留边，不截头发、双手、双鞋、绳、篓或长杆；不靠缩小道具腾空间。\n母图观察：浅麻色包头巾，深褐卷发夹灰鬓，圆颧成熟脸，眉眼舒缓侧看画面左、嘴轻开。枯橄榄绿外褂、浅麻袖口与领口、棕腰带、土褐长下装和棕鞋。垫旧浅布的棕编织背篓已落地在画面左前方，篓内少量普通绿草叶；两手轻停篓沿，手指有淡褐草汁痕，不是伤口。\n固定侧别与道具：唯一背篓保持落地在画面左前，原背带、旧布垫、已有少量草叶及篓底全保留。不得端起、背上、递出或把草画成整剂药。 人物右手在画面左的篓沿、人物左手在画面右的篓沿，双手留在原支撑位置；可微松指尖，淡褐草汁痕保持可见。不得加药方、剂量标记、药瓶、病人或客户信息。\n本张可逆表情提案：缓息闻草。被催着回答时，她依旧慢下来，低头闻篓口已有草叶的气味。\n脸部：双眉放松且内端微提，眼皮轻垂看向篓口，嘴从母图说话口形合拢，唇角自然不下坠；呈沉着专心、把节奏放慢的安定，不画困倦、病弱或嗅闻后的满意结论。\n最小手势：头和肩向原篓口小幅前倾，双手仍停原篓沿，指尖微松；不提篓、不新取一束草、不把脸埋到篓里，双脚位置不变。\n必须形成可读区别：母图抬眼开口对人改为低眼闭唇闻辨；E2会抬眼直视、眉更平稳且用窄小的短答口形。\n剧情边界：不辨出具体草种、剂量或疗效，不表示草已交付、病人康复、买卖成立或客户身份被透露；不把被催推断为对方恶意。\n本人存活、在场、愿谈且具有相应有限见闻时才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币、账簿或文书。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "qiner_E2_names_not_doses",
+          "label_zh": "温和守界",
+          "scene_proposal": "被问能开什么方子时，她只说明自己报草名、不报剂量的分寸。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L924知情边界；L933闲谈3“只报草名，不报剂量”"
+          },
+          "face_changes": "眉由松弧收为较平的认真形，内端略靠近；眼睛抬回画面左的对方，目光稳定但不瞪视。嘴只开一条窄小的短答口形，唇角平稳、下颌略收，温和而明确。",
+          "minimal_gesture": "头回到稳直位置，双手继续停篓沿，靠画面右的一手轻压旧布垫边缘即可；不举掌、不递草、不做数剂量的手指动作。",
+          "difference_from_static_and_pair": "同母图轻松开口相比，本图平眉、直接目光和较紧的窄口形形成坚定边界；与E1垂眼放松闭唇不混。",
+          "condition_and_limit": "不替药师开方，不演发药或选军民病人的顺序；不推断DT05已交付、退款、完成或疗效，不说她把草卖给谁。",
+          "output_stem": "qiner_E2_names_not_doses",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：芩珥（FX-CV2，qiner）。四十来岁的女人；采药歇脚者。源体貌明确性别/年龄，按原词保留。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化掩盖五官。延续母图1118×1407纵向完整构图与合理留边，不截头发、双手、双鞋、绳、篓或长杆；不靠缩小道具腾空间。\n母图观察：浅麻色包头巾，深褐卷发夹灰鬓，圆颧成熟脸，眉眼舒缓侧看画面左、嘴轻开。枯橄榄绿外褂、浅麻袖口与领口、棕腰带、土褐长下装和棕鞋。垫旧浅布的棕编织背篓已落地在画面左前方，篓内少量普通绿草叶；两手轻停篓沿，手指有淡褐草汁痕，不是伤口。\n固定侧别与道具：唯一背篓保持落地在画面左前，原背带、旧布垫、已有少量草叶及篓底全保留。不得端起、背上、递出或把草画成整剂药。 人物右手在画面左的篓沿、人物左手在画面右的篓沿，双手留在原支撑位置；可微松指尖，淡褐草汁痕保持可见。不得加药方、剂量标记、药瓶、病人或客户信息。\n本张可逆表情提案：温和守界。被问能开什么方子时，她只说明自己报草名、不报剂量的分寸。\n脸部：眉由松弧收为较平的认真形，内端略靠近；眼睛抬回画面左的对方，目光稳定但不瞪视。嘴只开一条窄小的短答口形，唇角平稳、下颌略收，温和而明确。\n最小手势：头回到稳直位置，双手继续停篓沿，靠画面右的一手轻压旧布垫边缘即可；不举掌、不递草、不做数剂量的手指动作。\n必须形成可读区别：同母图轻松开口相比，本图平眉、直接目光和较紧的窄口形形成坚定边界；与E1垂眼放松闭唇不混。\n剧情边界：不替药师开方，不演发药或选军民病人的顺序；不推断DT05已交付、退款、完成或疗效，不说她把草卖给谁。\n本人存活、在场、愿谈且具有相应有限见闻时才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币、账簿或文书。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-CV5",
+      "slug": "lier",
+      "name": "栎珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV5_栎珥.md",
+        "sha256": "cfd9ba0a62ebcea123de720f94947c8a7f8b27b8b9020b8396830ca181541c56"
+      },
+      "card_matches_seventh_four_brief": true,
+      "age_identity_lock": "五十来岁的男人；拾柴人。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1/lier_raw_imagegen.png",
+          "sha256": "e26fc822ebcd8aa78e79021b6d56776162901e4dfca67b536a15d7434a7e4211"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1/lier_transparent.png",
+          "sha256": "d7d6d627f511278d56c1c77a86976fcc9ffcb7a465fbe7a6d42909d463ae08e3"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1/manifest.json",
+          "sha256": "21334c32a5377f8ce8dcc2509b78ff076ce921986a96216c9c3dc5237b9cfb54"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐张实际查看4个raw与4个transparent；未以旧QA代替本轮看图。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 19,
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "canvas_mode_verified": "1118×1407 RGBA"
+      },
+      "card_facts": [
+        "拾柴人，常在 `rumor_cave5` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "五十来岁的男人，肩上担着两根旧绳，裤脚用麻绳扎紧；走到根洞前先伸脚试地。",
+        "带笑，爱说树的年纪；谈到水就收起笑。",
+        "老梣树哪根枝是枯的；根洞里积水的深浅。不替村里认领林界；不卖树。"
+      ],
+      "observed_mother_image": "灰褐短发带明显浅灰发缕，五十来岁男子的眼角纹、面颊纹和下巴皱褶清楚，粗眉舒展、目光朝画面右，嘴为温和短闭口笑。灰橄榄粗布短衣配浅麻领边卷袖、细棕腰带、土褐裤和棕靴，裤脚麻绳扎紧。两根旧绳搭人物左肩即画面右，分头垂至大腿；左手胸前握绳，右手在画面左向低处指；画面左前脚轻探、后脚稳定承重。",
+      "fixed_prop_sides": [
+        "两根旧绳留人物左肩（画面右），左手仍在画面右胸前扶绳，两根绳的分头和结尾保留；不改成珞珥的双绳卷，不收紧成捆人绳、不递绳。",
+        "人物右手（画面左）保持低位，允许放松低指动作；前脚轻探、后脚承重及裤脚麻绳不改。不得添斧头、木柴、活树枝、林界契或钟站工具。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按精确slug分隔符及中文名扫描PNG，读所有ZIP成员；匹配文件均为本人的concept_v1或其概念源包，style_refs只作旧参考不视为本人变体。",
+        "matching_png_count": 5,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1/lier_light_composite.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1/lier_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1/lier_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1/lier_dark_composite.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/lier/concept_v1/lier_review_board_zh.png"
+        ],
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seventh_four_delivery_v1/新增剧情人物_第七批完整源包.zip",
+            "sha256": "ba1a7ad7734641edaac8ae33d39c4a03518dcb1f31fcc7b89d2b92a0d604b8c3",
+            "member_count": 93,
+            "matching_members": 20,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "unexplained_hits": [],
+        "identity_guard": "只使用栎珥/FX-CV5/lier的卡与母图。人物卡目录中此中文名仅一张；不凭同音、近名、slug子串借用其他身份。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "lier_E1_fond_old_tree_chuckle",
+          "label_zh": "笑谈树龄",
+          "scene_proposal": "提到老梣树比自己祖父还老时，他带着亲切的趣味轻笑。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L986口吻；L995闲谈1“这棵树比我爷爷老”"
+          },
+          "face_changes": "眉峰舒展稍抬，眼睛仍看画面右但眼角柔和收拢、面颊略提，嘴从母图短闭口笑变为可读的小幅开口轻笑，保留原鼻唇、皱纹与下颌，不做夸张露齿大笑。",
+          "minimal_gesture": "头微偏向听者，画面左的右手只放松原来低指的手指，手仍低于腰；左手扶两根旧绳，前脚试地和承重关系不改。",
+          "difference_from_static_and_pair": "母图只有闭口浅笑，本图必须让抬颊、柔和眼角与小幅开口共同可读；E2完全收笑，平闭唇、聚眉压眼。",
+          "condition_and_limit": "轻笑仅由闲谈树龄触发，不证明爷爷身世、树木通灵、所有权、任何人物关系改变、钟站修好或已给玩家柴。",
+          "output_stem": "lier_E1_fond_old_tree_chuckle",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：栎珥（FX-CV5，lier）。五十来岁的男人；拾柴人。源体貌明确性别/年龄，按原词保留。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化掩盖五官。延续母图1118×1407纵向完整构图与合理留边，不截头发、双手、双鞋、绳、篓或长杆；不靠缩小道具腾空间。\n母图观察：灰褐短发带明显浅灰发缕，五十来岁男子的眼角纹、面颊纹和下巴皱褶清楚，粗眉舒展、目光朝画面右，嘴为温和短闭口笑。灰橄榄粗布短衣配浅麻领边卷袖、细棕腰带、土褐裤和棕靴，裤脚麻绳扎紧。两根旧绳搭人物左肩即画面右，分头垂至大腿；左手胸前握绳，右手在画面左向低处指；画面左前脚轻探、后脚稳定承重。\n固定侧别与道具：两根旧绳留人物左肩（画面右），左手仍在画面右胸前扶绳，两根绳的分头和结尾保留；不改成珞珥的双绳卷，不收紧成捆人绳、不递绳。 人物右手（画面左）保持低位，允许放松低指动作；前脚轻探、后脚承重及裤脚麻绳不改。不得添斧头、木柴、活树枝、林界契或钟站工具。\n本张可逆表情提案：笑谈树龄。提到老梣树比自己祖父还老时，他带着亲切的趣味轻笑。\n脸部：眉峰舒展稍抬，眼睛仍看画面右但眼角柔和收拢、面颊略提，嘴从母图短闭口笑变为可读的小幅开口轻笑，保留原鼻唇、皱纹与下颌，不做夸张露齿大笑。\n最小手势：头微偏向听者，画面左的右手只放松原来低指的手指，手仍低于腰；左手扶两根旧绳，前脚试地和承重关系不改。\n必须形成可读区别：母图只有闭口浅笑，本图必须让抬颊、柔和眼角与小幅开口共同可读；E2完全收笑，平闭唇、聚眉压眼。\n剧情边界：轻笑仅由闲谈树龄触发，不证明爷爷身世、树木通灵、所有权、任何人物关系改变、钟站修好或已给玩家柴。\n本人存活、在场、愿谈且具有相应有限见闻时才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币、账簿或文书。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "lier_E2_sobering_at_hollow_water",
+          "label_zh": "谈水敛笑",
+          "scene_proposal": "说到根洞底看似浅的积水时，他收起笑意，认真提醒底下是空的。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L986口吻“谈到水就收起笑”；L988知情；L999警告"
+          },
+          "face_changes": "眉内侧下压轻聚，目光从对人移到画面右下较近处，眼睑认真收拢；面颊放松落回，嘴合成微紧的平线，原笑纹保留但不再上扬。是切实担忧，不作恐惧崩溃或敌视。",
+          "minimal_gesture": "下颌轻收，画面左的低位右手沿母图方向小幅下示，左手稳定扶绳；不进一步探入洞底、不蹬地跳开、不用绳救人。",
+          "difference_from_static_and_pair": "母图与E1的笑意全部收住，眉眼和嘴同时由温和转慎重；区别不依赖新增水面、指向或大动作。",
+          "condition_and_limit": "只提醒他可知的根洞积水危险，不认定洪水已发生、有人落水或已经获救，不证明地面安全，也不改DT12停工或绕行结果。",
+          "output_stem": "lier_E2_sobering_at_hollow_water",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：栎珥（FX-CV5，lier）。五十来岁的男人；拾柴人。源体貌明确性别/年龄，按原词保留。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化掩盖五官。延续母图1118×1407纵向完整构图与合理留边，不截头发、双手、双鞋、绳、篓或长杆；不靠缩小道具腾空间。\n母图观察：灰褐短发带明显浅灰发缕，五十来岁男子的眼角纹、面颊纹和下巴皱褶清楚，粗眉舒展、目光朝画面右，嘴为温和短闭口笑。灰橄榄粗布短衣配浅麻领边卷袖、细棕腰带、土褐裤和棕靴，裤脚麻绳扎紧。两根旧绳搭人物左肩即画面右，分头垂至大腿；左手胸前握绳，右手在画面左向低处指；画面左前脚轻探、后脚稳定承重。\n固定侧别与道具：两根旧绳留人物左肩（画面右），左手仍在画面右胸前扶绳，两根绳的分头和结尾保留；不改成珞珥的双绳卷，不收紧成捆人绳、不递绳。 人物右手（画面左）保持低位，允许放松低指动作；前脚轻探、后脚承重及裤脚麻绳不改。不得添斧头、木柴、活树枝、林界契或钟站工具。\n本张可逆表情提案：谈水敛笑。说到根洞底看似浅的积水时，他收起笑意，认真提醒底下是空的。\n脸部：眉内侧下压轻聚，目光从对人移到画面右下较近处，眼睑认真收拢；面颊放松落回，嘴合成微紧的平线，原笑纹保留但不再上扬。是切实担忧，不作恐惧崩溃或敌视。\n最小手势：下颌轻收，画面左的低位右手沿母图方向小幅下示，左手稳定扶绳；不进一步探入洞底、不蹬地跳开、不用绳救人。\n必须形成可读区别：母图与E1的笑意全部收住，眉眼和嘴同时由温和转慎重；区别不依赖新增水面、指向或大动作。\n剧情边界：只提醒他可知的根洞积水危险，不认定洪水已发生、有人落水或已经获救，不证明地面安全，也不改DT12停工或绕行结果。\n本人存活、在场、愿谈且具有相应有限见闻时才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币、账簿或文书。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-CV6",
+      "slug": "huier",
+      "name": "洄珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CV6_洄珥.md",
+        "sha256": "7dc135dd6d0aa0b46f0ea8117ff1b0b73b66f32530e34ea783051f2967ed23b6"
+      },
+      "card_matches_seventh_four_brief": true,
+      "age_identity_lock": "二十多岁的女人；谷地行者。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1/huier_raw_imagegen.png",
+          "sha256": "a1c94262686ad3dc9dca596c92ab71128f64d5559ca0ea7d55843405d44affdf"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1/huier_transparent.png",
+          "sha256": "78d3d30497105130a9fd7a0f461a905b0c4abb03870a0d1c9062d0e0b2d308ff"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1/manifest.json",
+          "sha256": "78e188d60b2893edba8b9b39cc923dfbd72823654dc839aa204aa70a261bd93c"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image逐张实际查看4个raw与4个transparent；未以旧QA代替本轮看图。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 19,
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "canvas_mode_verified": "1118×1407 RGBA"
+      },
+      "card_facts": [
+        "谷地行者，常在 `rumor_cave6` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "二十多岁的女人，靴子外裹着草绳，背着一根探路的长杆；说话前先看云。",
+        "看天说话，句子跟着风走；被问路就报水线不报方向。",
+        "谷地哪条沟是新冲的；雨从哪边来。不担保谷地通行；不带人抄近路。"
+      ],
+      "observed_mother_image": "深红褐色蓬松短发，二十多岁成年女子的略宽颧脸，目光抬向画面左上，眉开、嘴小幅微张。退色青灰短褂、浅麻领边与宽翻袖、棕腰带和斜背带、棕裤、草绳缠绕双靴。一根长木探路杆竖背在画面右，上下端都完整可见；人物左手于画面右胸前扶背带，右手于画面左腰旁低幅摊开，双脚稳站。",
+      "fixed_prop_sides": [
+        "唯一长探路杆竖背在画面右，上下端完整入画；人物左手（画面右）持续扶原背带，不拔杆、不持杆指路、不增加第二根。",
+        "人物右手（画面左）只在腰旁低位微收或放松，双靴草绳保留。双脚稳定，不作奔跑、下谷或已经救人的动作，不增云雨洪水背景与路标。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按精确slug分隔符及中文名扫描PNG，读所有ZIP成员；匹配文件均为本人的concept_v1或其概念源包，style_refs只作旧参考不视为本人变体。",
+        "matching_png_count": 5,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1/huier_review_board_zh.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1/huier_light_composite.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1/huier_dark_composite.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1/huier_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/huier/concept_v1/huier_transparent.png"
+        ],
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seventh_four_delivery_v1/新增剧情人物_第七批完整源包.zip",
+            "sha256": "ba1a7ad7734641edaac8ae33d39c4a03518dcb1f31fcc7b89d2b92a0d604b8c3",
+            "member_count": 93,
+            "matching_members": 20,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 0,
+        "excluded_other_identity_paths": [],
+        "unexplained_hits": [],
+        "identity_guard": "只使用洄珥/FX-CV6/huier的卡与母图。人物卡目录中此中文名仅一张；不凭同音、近名、slug子串借用其他身份。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "huier_E1_concerned_cloud_reading",
+          "label_zh": "忧看雨势",
+          "scene_proposal": "她先看低云，衡量今日是否该下谷，担心雨水会改变退路。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1016体貌；L1018口吻；L1024初见；L1027闲谈1"
+          },
+          "face_changes": "仍抬眼看画面左上，但内眉轻提并向中间靠拢、外眉稍落，眼皮收窄为认真辨云；嘴从母图微开合为轻抿的短线，唇角很轻地下收，形成克制的忧虑。",
+          "minimal_gesture": "下颌保持轻抬，画面左的右手从低幅摊开稍收近腰，指尖自然弯曲；左手继续扶背带，单杆和双脚不动。",
+          "difference_from_static_and_pair": "母图是开放眉眼的解释，本图凝眉抿嘴、忧虑观察；E2转向声源，眼更警醒并张嘴短促提醒。",
+          "condition_and_limit": "低云与雨势只作使用语境，不画天气背景或既定灾害；不保证今天能通谷、不确认一条新近路、不把谨慎解读为已决定带队。",
+          "output_stem": "huier_E1_concerned_cloud_reading",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：洄珥（FX-CV6，huier）。二十多岁的女人；谷地行者。源体貌明确性别/年龄，按原词保留。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化掩盖五官。延续母图1118×1407纵向完整构图与合理留边，不截头发、双手、双鞋、绳、篓或长杆；不靠缩小道具腾空间。\n母图观察：深红褐色蓬松短发，二十多岁成年女子的略宽颧脸，目光抬向画面左上，眉开、嘴小幅微张。退色青灰短褂、浅麻领边与宽翻袖、棕腰带和斜背带、棕裤、草绳缠绕双靴。一根长木探路杆竖背在画面右，上下端都完整可见；人物左手于画面右胸前扶背带，右手于画面左腰旁低幅摊开，双脚稳站。\n固定侧别与道具：唯一长探路杆竖背在画面右，上下端完整入画；人物左手（画面右）持续扶原背带，不拔杆、不持杆指路、不增加第二根。 人物右手（画面左）只在腰旁低位微收或放松，双靴草绳保留。双脚稳定，不作奔跑、下谷或已经救人的动作，不增云雨洪水背景与路标。\n本张可逆表情提案：忧看雨势。她先看低云，衡量今日是否该下谷，担心雨水会改变退路。\n脸部：仍抬眼看画面左上，但内眉轻提并向中间靠拢、外眉稍落，眼皮收窄为认真辨云；嘴从母图微开合为轻抿的短线，唇角很轻地下收，形成克制的忧虑。\n最小手势：下颌保持轻抬，画面左的右手从低幅摊开稍收近腰，指尖自然弯曲；左手继续扶背带，单杆和双脚不动。\n必须形成可读区别：母图是开放眉眼的解释，本图凝眉抿嘴、忧虑观察；E2转向声源，眼更警醒并张嘴短促提醒。\n剧情边界：低云与雨势只作使用语境，不画天气背景或既定灾害；不保证今天能通谷、不确认一条新近路、不把谨慎解读为已决定带队。\n本人存活、在场、愿谈且具有相应有限见闻时才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币、账簿或文书。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "huier_E2_alert_to_upstream_rumble",
+          "label_zh": "闻响警觉",
+          "scene_proposal": "若现场听见上游闷响，她立刻注意声源，准备提醒人往坡上避水。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L1020知情；L1031警告“听见上游有闷响就上坡，别等水”"
+          },
+          "face_changes": "眉较E1抬起且内端收拢，目光由高处云层转向画面左侧声源方向；眼睛适度睁开但不放大五官，嘴张成短促清楚的提醒口形，神情警觉、严肃而不惊恐。",
+          "minimal_gesture": "头只小幅回到接近平视的侧听角度，左手在原背带上略握紧；右手仍低位靠腰，手指稍合拢，不高举劝停、不指明一条保证安全的道路、不拔杆。",
+          "difference_from_static_and_pair": "由母图仰看说明变为定向警觉的眉眼与短促口形；同E1闭唇忧看云势形成明确区别，不只是头位变化。",
+          "condition_and_limit": "这是一条有条件的警告演出，不断言闷响已成洪灾或任何人已上坡脱险；不代人选择、不担保通行、不护送抄近路，也不宣布DT06完成、寻人地址公开或旅人自愿归返。",
+          "output_stem": "huier_E2_alert_to_upstream_rumble",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：洄珥（FX-CV6，huier）。二十多岁的女人；谷地行者。源体貌明确性别/年龄，按原词保留。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不要重新按统一头身比塑形，不幼化、不套同一笑脸、不镜像。保持低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化掩盖五官。延续母图1118×1407纵向完整构图与合理留边，不截头发、双手、双鞋、绳、篓或长杆；不靠缩小道具腾空间。\n母图观察：深红褐色蓬松短发，二十多岁成年女子的略宽颧脸，目光抬向画面左上，眉开、嘴小幅微张。退色青灰短褂、浅麻领边与宽翻袖、棕腰带和斜背带、棕裤、草绳缠绕双靴。一根长木探路杆竖背在画面右，上下端都完整可见；人物左手于画面右胸前扶背带，右手于画面左腰旁低幅摊开，双脚稳站。\n固定侧别与道具：唯一长探路杆竖背在画面右，上下端完整入画；人物左手（画面右）持续扶原背带，不拔杆、不持杆指路、不增加第二根。 人物右手（画面左）只在腰旁低位微收或放松，双靴草绳保留。双脚稳定，不作奔跑、下谷或已经救人的动作，不增云雨洪水背景与路标。\n本张可逆表情提案：闻响警觉。若现场听见上游闷响，她立刻注意声源，准备提醒人往坡上避水。\n脸部：眉较E1抬起且内端收拢，目光由高处云层转向画面左侧声源方向；眼睛适度睁开但不放大五官，嘴张成短促清楚的提醒口形，神情警觉、严肃而不惊恐。\n最小手势：头只小幅回到接近平视的侧听角度，左手在原背带上略握紧；右手仍低位靠腰，手指稍合拢，不高举劝停、不指明一条保证安全的道路、不拔杆。\n必须形成可读区别：由母图仰看说明变为定向警觉的眉眼与短促口形；同E1闭唇忧看云势形成明确区别，不只是头位变化。\n剧情边界：这是一条有条件的警告演出，不断言闷响已成洪灾或任何人已上坡脱险；不代人选择、不担保通行、不护送抄近路，也不宣布DT06完成、寻人地址公开或旅人自愿归返。\n本人存活、在场、愿谈且具有相应有限见闻时才适用；两幅不是顺序结局，不以画面推定任务完成、付款、康复、赦免、关系改善或新身份。所有未写入卡的微表情只属美术提案。保留所有原道具，不新增背景、第二人物、文字、对话框、任务成功图标、钱币、账簿或文书。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能靠扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备、动画或runtime已验证。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    }
+  ],
+  "source_notes": "已现场核4个manifest共82条，核raw/transparent/manifest与独审delivery_binding三联SHA；4raw+4transparent均本任务实际view，RGBA模式与原画布读取核验。Assets路径与全部ZIP成员扫描未发现四人的既有动作/表情变体。本轮只规划，不执行pixel-asset-master生成流水线，不改旧图、旧QA、人物卡、台本或游戏包。",
+  "source_conflicts": [
+    {
+      "character": "lier",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT12_旧钟站的检修.md",
+          "sha256": "a1356effc63c5e7f548d9a9111f3cf66a710570b23d1a07d26a34d4040ebdded"
+        }
+      ],
+      "locator": "FX L1006—1009及field.npcs[id=FX-CV5].visits；DT12 L37、L45—46、L52、L58、L112",
+      "conflict": "FX关联槽把DT12简化为拿枯枝维修并笼统宣布钟站修好了；现行DT12是非核心螺栓/走台危险的停工或已验证绕行，专业班另安排维修，结案不等于钟站已修复。",
+      "disposition": "不改历史对白；两图只用树龄闲谈、谈水敛笑与现场警告，不画柴料交付、检修完成、钟站安全或栎珥取得维护停工权。"
+    }
+  ],
+  "source_cautions": [
+    {
+      "character": "qiner",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT05_驿馆的急用药.md",
+          "sha256": "975b36ef49c623c4a34accd32b67b28bd9e9e53aff6362dff4e0de8bcfa253ea"
+        }
+      ],
+      "locator": "FX L942—945；DT05 L22、L24、L45—46、L116—120",
+      "note": "FX回访仍按采草/送药描述，现行DT05是一批普通退热物资被重复预订的分配/替代护理事件，不是无限采药任务。二者地域R06与R04不同，关联不证明芩珥是供应员、药师或现场护理者；不用这些槽认定交付或疗效，也不把篓内草识别为任务指定药。"
+    },
+    {
+      "character": "huier",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT06_迷路者的路标.md",
+          "sha256": "8483bf78879e414aa620b1db83d1a17b99b6b3fb72c6870d5e27812cd7ebf7ff"
+        }
+      ],
+      "locator": "FX L1038—1041；DT06 L22、L24、L45—46、L102",
+      "note": "FX关联槽把完成泛称路标立起，但DT06现行中心是旅人的去向自主与限定合约，结案不能推出某块实体路标或位置已建；R06谷地与R02旅人事件不可混成同一现场。不用回访槽画立标、寻回、公布住址或强制归返。"
+    },
+    {
+      "character": "luoer",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N14_可以回去的路.md",
+          "sha256": "ec4013ee9ff097d4a51b5eb143f49bc820d28f0d2453c3224d5b0c03af24ac84"
+        }
+      ],
+      "locator": "FX L700、L712、L718—721；N14 L45—47、L49、L109—117",
+      "note": "N14试走回程/借工具/工班有各自守卫；珞珥知道洞口与有限退路，不因此等同维护者、工匠Darrel或全程护送者。听风或受夸均不代表N14完成、NE5认证或N17终局安全。"
+    },
+    {
+      "character": "all",
+      "sources": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+          "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_seventh_four_20261013.json",
+          "sha256": "a3033967c05c74e0d5e87ad2966e843a3734524beedbd7b4b74e011173d98789"
+        }
+      ],
+      "locator": "STYLE_DIRECTION 当前制作优先级；四个delivery_binding",
+      "note": "以每人实际母图保留比例、服装与道具；旧concept manifest的pending是冻结时状态，由后续独审终审绑定补足，不改旧manifest。母图提案不是新的人物卡事实；四人均为成年，不把灰发一概变老或年轻化。珞珥靴的原加固接缝照母图保留，不因旧独审提可读性有限而自行新增伤口或夸大补片。"
+    }
+  ],
+  "source_snapshot_index": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/seventh_four_expression_sources/source_index.json",
+    "sha256": "040e8c16389e90d86131c3f8e3a15395dad03cb43d139b1b751f212d2f9877f8"
+  },
+  "validation": {
+    "source_cards": 4,
+    "viewed_final_raw_images": 4,
+    "viewed_final_transparent_images": 4,
+    "raw_transparent_manifest_hash_triples_verified": 4,
+    "manifest_entries_verified": 82,
+    "planned_expressions": 8,
+    "complete_prompt_texts": 8,
+    "actual_generation_calls": 0,
+    "source_snapshots": 42,
+    "existing_expressions_found": 0,
+    "source_snapshot_readback_verified": true,
+    "scope_note": "只新增本JSON与专用来源快照目录；无design/编辑，无旧资产/QA/roster更改，无git、上传或实际落地。",
+    "source_files_unchanged_readback": true,
+    "direct_path_sha_references_readback_verified": 129,
+    "unique_path_sha_targets_readback_verified": 86,
+    "readback_verified_utc": "2026-10-14T01:49:33.503978+00:00"
+  }
+}

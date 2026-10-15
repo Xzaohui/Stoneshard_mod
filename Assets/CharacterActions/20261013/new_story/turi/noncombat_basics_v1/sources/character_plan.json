@@ -1,0 +1,202 @@
+{
+  "slug": "turi",
+  "canonical_id": "HIG-NPC-TURI",
+  "name": "图里",
+  "status": "planned_only_not_generated",
+  "selection_status": "requested_candidate_suitable_retained",
+  "source_card_hash_matches_roster44": true,
+  "source_ids": [
+    "turi_script01",
+    "turi_script03",
+    "turi_chapter",
+    "turi_card",
+    "turi_manifest",
+    "turi_spec_lock",
+    "turi_character_brief",
+    "turi_expression_manifest",
+    "turi_expression_board",
+    "turi_raw",
+    "turi_anchor",
+    "qa_third",
+    "turi_script01",
+    "turi_script03",
+    "turi_chapter"
+  ],
+  "mother_image": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png",
+    "sha256": "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695",
+    "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_v2_raw_imagegen.png",
+    "raw_sha256": "a7e51617b0bc129bf7dc9406e0e316244e148418fd97184837c270ee003d08e2",
+    "size": [
+      1118,
+      1407
+    ],
+    "mode": "RGBA",
+    "raw_and_transparent_actually_viewed": true,
+    "viewed_utc": "2026-10-14T03:03:55Z",
+    "hashes_match_manifest_and_independent_qa": true,
+    "existing_expression_board_actually_viewed": true,
+    "old_pose": "直立，左手抬作局部说明，右手垂下；锤/量角器/簿均在腰上。表情E1左掌下降、E2左掌止步，工具均未取出。",
+    "identity_lock": "四十岁上下成年男性检查匠，精瘦长手指、窄脸、深棕灰鬓短发、短灰须；暗石绿短披、米麻扎袖衣、烟褐厚护腿、棕靴。人物右肩（画面左）自然略低，非新伤。",
+    "side_lock": "母图人物右腰（画面左）是检查簿袋与敲击小锤；人物左腰（画面右）是黄铜色/旧金属框量角器。A1右手取锤，A2左手取量角器；未用的一件与闭合簿袋保持原侧。"
+  },
+  "duplicate_check": {
+    "own_existing_branches": [
+      "concept_v1",
+      "expressions_v1"
+    ],
+    "own_action_directories_found": [],
+    "non_source_action_metadata_matches": [],
+    "existing_expressions_actually_viewed": true,
+    "do_not_recount": [
+      "concept_v1母图",
+      "expressions_v1情绪与小手势",
+      "复制source/交付包内的母图",
+      "仅表情或不改变接触/手脚结构的小变化"
+    ]
+  },
+  "story_boundaries": [
+    "任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。",
+    "不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。"
+  ],
+  "risks": [
+    "A1只画取锤后的低位握持，不无目标挥锤，不把一张图说成敲三下。",
+    "母图量角器为简明框形，保持原轮廓，不替成现代半圆透明量角器或精密可读刻度。",
+    "工具取用处不能复制，检查簿只保原袋窄边，不造可读检查结果。"
+  ],
+  "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/turi/noncombat_basics_v1",
+  "plans": [
+    {
+      "key": "turi_A1_low_hold_inspection_hammer",
+      "title_zh": "抽出检查锤，低位稳持",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "turi_card",
+          "locator": "衣着与磨损",
+          "line_start": 38,
+          "quote": "腰间挂着敲击锤与量角器。"
+        },
+        {
+          "source_id": "turi_card",
+          "locator": "举止",
+          "line_start": 42,
+          "quote": "检查时先敲三下"
+        },
+        {
+          "source_id": "turi_script01",
+          "locator": "场1 / 图里",
+          "line_start": 41,
+          "quote": "别先解绳。这段看得见裂，能从稳定侧查。"
+        }
+      ],
+      "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+      "start_pose_description_only": "双脚稳立，右手移向右腰原锤柄，左手在腰带/小披边附近保持身体稳定。",
+      "pose": "右手把同一检查小锤从人物右腰（画面左）取出，握住原木柄中下部，锤头水平且完整，在右大腿外侧低位静持；手肘略弯、锤不抬过腰，锤头与裤腿留缝。左掌轻贴自己腰带上方衣侧作收臂稳姿，头略低看握持处。原右腰锤挂位为空，左腰量角器与右腰检查簿袋仍原位。",
+      "end_pose_description_only": "右手把锤放回原右腰挂位，左手放下；不击打、不触梁、不敲满三下。",
+      "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+      "contact_and_support_checks": [
+        "双靴站实、骨盆不前扑，右低肩自然保留",
+        "右手确握柄，金属头与手/裤有清晰分离；不是抓锤头或空拳",
+        "持锤方向低垂不呈武器起手，左手接触自有衣侧"
+      ],
+      "prop_state_and_retention": [
+        "一件原锤在手，原腰位无第二锤",
+        "量角器仍左腰、检查簿闭合收右袋，不添梁端或读数牌"
+      ],
+      "difference_from_mother_expression_and_batch": "母图及表情工具均未取；只补取用后握持，明确化解前批因无目标挥锤而未选图里的问题。",
+      "risk_level": "medium",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png"
+      ],
+      "reference_sha256": [
+        "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695"
+      ],
+      "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：图里 / HIG-NPC-TURI。四十岁上下成年男性检查匠，精瘦长手指、窄脸、深棕灰鬓短发、短灰须；暗石绿短披、米麻扎袖衣、烟褐厚护腿、棕靴。人物右肩（画面左）自然略低，非新伤。\n固定侧别：母图人物右腰（画面左）是检查簿袋与敲击小锤；人物左腰（画面右）是黄铜色/旧金属框量角器。A1右手取锤，A2左手取量角器；未用的一件与闭合簿袋保持原侧。\n本张动作：抽出检查锤，低位稳持。右手把同一检查小锤从人物右腰（画面左）取出，握住原木柄中下部，锤头水平且完整，在右大腿外侧低位静持；手肘略弯、锤不抬过腰，锤头与裤腿留缝。左掌轻贴自己腰带上方衣侧作收臂稳姿，头略低看握持处。原右腰锤挂位为空，左腰量角器与右腰检查簿袋仍原位。\n支撑与接触：双靴站实、骨盆不前扑，右低肩自然保留；右手确握柄，金属头与手/裤有清晰分离；不是抓锤头或空拳；持锤方向低垂不呈武器起手，左手接触自有衣侧。\n道具保留：一件原锤在手，原腰位无第二锤；量角器仍左腰、检查簿闭合收右袋，不添梁端或读数牌。\n附加约束：不做挥击、敲空气、攻击或安全认证；‘先敲三下’仅来源背景，本图没有完成敲击。\n剧情边界：任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。；不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。",
+      "prompt_sha256": "2204b6fe86a87b876d1163213d4ace2379b97e6e8482507301fa61fa121ad9d9",
+      "negative_constraints": [
+        "A1只画取锤后的低位握持，不无目标挥锤，不把一张图说成敲三下。",
+        "母图量角器为简明框形，保持原轮廓，不替成现代半圆透明量角器或精密可读刻度。",
+        "工具取用处不能复制，检查簿只保原袋窄边，不造可读检查结果。",
+        "任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。",
+        "不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_A1_low_hold_inspection_hammer_prompt.txt"
+    },
+    {
+      "key": "turi_A2_turn_angle_gauge",
+      "title_zh": "近身托起量角器转看",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "turi_card",
+          "locator": "随身物",
+          "line_start": 40,
+          "quote": "敲击锤、量角器与自己的检查簿，簿子按段编号。"
+        },
+        {
+          "source_id": "turi_script01",
+          "locator": "场3 / 图里",
+          "line_start": 89,
+          "quote": "我真验过的才写，没开的还停。"
+        }
+      ],
+      "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+      "start_pose_description_only": "原小锤收好；左手从左腰取下框形量角器，右手在近身位置接应框边。",
+      "pose": "保持双足稳站，左肘靠近肋侧。左手从原左腰取下同一框形量角器，掌托其底边，放在腹前稍偏左的位置；右手拇指与食指轻捏其外框上角，让整个量角器较母图悬挂方向小幅转向自己观看。头低看工具，量角器孔洞和原轮廓保持可读，不能改成另一种半圆量具。原左腰挂位空，小锤仍右腰收妥，检查簿未打开。",
+      "end_pose_description_only": "右手松开框角，左手把同一量角器重新挂回原左腰；未实际测梁，不写检查结论。",
+      "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+      "contact_and_support_checks": [
+        "左掌托底、右指只捏框外缘，不把手指画成工具的额外指针",
+        "两肘近身、双脚稳立，手和工具不能漂浮",
+        "框形保原比例/孔洞，转角只为目视，不新增机械活动轴"
+      ],
+      "prop_state_and_retention": [
+        "量角器一件，原左腰位为空；小锤与簿袋各一件保原右腰",
+        "无新目标物、梁、精确数值、钤章或新纸"
+      ],
+      "difference_from_mother_expression_and_batch": "A1单手低持锤，本图双手腹前托转框形量具；不同于维菈用T规贴U支架，本图没有样品测量。",
+      "risk_level": "medium",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/turi/concept_v1/turi_transparent.png"
+      ],
+      "reference_sha256": [
+        "5b8269f05aa99d94284bb3c9e8f37550ba2cc171509efe513ea871c8c6d2b695"
+      ],
+      "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：图里 / HIG-NPC-TURI。四十岁上下成年男性检查匠，精瘦长手指、窄脸、深棕灰鬓短发、短灰须；暗石绿短披、米麻扎袖衣、烟褐厚护腿、棕靴。人物右肩（画面左）自然略低，非新伤。\n固定侧别：母图人物右腰（画面左）是检查簿袋与敲击小锤；人物左腰（画面右）是黄铜色/旧金属框量角器。A1右手取锤，A2左手取量角器；未用的一件与闭合簿袋保持原侧。\n本张动作：近身托起量角器转看。保持双足稳站，左肘靠近肋侧。左手从原左腰取下同一框形量角器，掌托其底边，放在腹前稍偏左的位置；右手拇指与食指轻捏其外框上角，让整个量角器较母图悬挂方向小幅转向自己观看。头低看工具，量角器孔洞和原轮廓保持可读，不能改成另一种半圆量具。原左腰挂位空，小锤仍右腰收妥，检查簿未打开。\n支撑与接触：左掌托底、右指只捏框外缘，不把手指画成工具的额外指针；两肘近身、双脚稳立，手和工具不能漂浮；框形保原比例/孔洞，转角只为目视，不新增机械活动轴。\n道具保留：量角器一件，原左腰位为空；小锤与簿袋各一件保原右腰；无新目标物、梁、精确数值、钤章或新纸。\n附加约束：只为辨认/整理自有量角器，不表示测量完成、合格、实付验费或已承接下一班。\n剧情边界：任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。；不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。",
+      "prompt_sha256": "348ee68ddedb2731f7c08b2ab351fa47abf42bf34020636fe0318f8f1144a8a3",
+      "negative_constraints": [
+        "A1只画取锤后的低位握持，不无目标挥锤，不把一张图说成敲三下。",
+        "母图量角器为简明框形，保持原轮廓，不替成现代半圆透明量角器或精密可读刻度。",
+        "工具取用处不能复制，检查簿只保原袋窄边，不造可读检查结果。",
+        "任何真实验段仍需限定班、实付/合法托柜、稳定侧实查；准备动作不证明条件满足。",
+        "不画撤停牌、合格章、真实修复、付薪、新班同意、全山永久安全或N17重新结算。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/turi_A2_turn_angle_gauge_prompt.txt"
+    }
+  ]
+}

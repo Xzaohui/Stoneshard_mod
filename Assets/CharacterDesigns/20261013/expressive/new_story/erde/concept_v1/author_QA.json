@@ -1,0 +1,21 @@
+{
+  "status": "author_visual_checked_pending_independent_review",
+  "selected_raw": "erde_v2_raw_imagegen.png",
+  "generation": "builtin image_gen true transparency; one initial and one hard-error revision",
+  "raw_actually_viewed": [
+    "v1",
+    "v2"
+  ],
+  "identity_and_props": "成年男性身份、各自脸型与必需道具可读；双手双脚完整。",
+  "revision_reason": "v1像素过细，v2改为粗像素；锉珥raw晕影曾被误判为背景，经RGBA检测纠正为alpha=0隐藏RGB。",
+  "postprocess": "Only pixels alpha<=8 zeroed RGBA. Other pixels bit-for-bit unchanged. Full original canvas retained; board nearest aspect-fit only. No body drawing, crop, quantization, flood-fill or background removal.",
+  "alpha_zero_before": 758652,
+  "alpha_le8_cleared": 778778,
+  "opaque_or_near_opaque": 778210,
+  "scope_limit": "Concept only. No runtime, equipment, body-part or animation compatibility verified.",
+  "boards_actually_viewed": [
+    "light",
+    "dark"
+  ],
+  "board_result": "正确RGBA合成，背景纯净无晕影，中文标签完整，双脚与工具不裁切。"
+}

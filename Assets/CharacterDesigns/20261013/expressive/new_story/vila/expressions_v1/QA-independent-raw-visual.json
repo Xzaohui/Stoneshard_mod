@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent third-character-expression reviewer",
+  "reviewed_utc": "2026-10-13T20:59:21.333893+00:00",
+  "status": "pass_with_nonblocking_notes",
+  "character": "vila",
+  "method": "tools.view_image逐张实际查看母图raw/transparent、表情raw/selected与最终中文浅深双图板；Pillow/NumPy只读核RGBA/alpha/SHA。",
+  "mother_images_actually_viewed": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_v2_raw_imagegen.png",
+      "sha256": "9b72e90380efb5e660fb75beef199713bb7889f2defec586f318514d5fe7f31a"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_transparent.png",
+      "sha256": "7a23d1c8361a9ef4570a7c6658200d77a7d9dc18fb7d71e41fb02c1768b5ac52"
+    }
+  ],
+  "expression_images_and_boards_actually_viewed": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/raw/vila_E1_patient_reassurance_initial.png",
+      "sha256": "cb98d82dad5dc915eb2ebb279eda5678cf6d68c9eb722c6f544b726b0583dab1"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/selected/vila_E1_patient_reassurance_transparent.png",
+      "sha256": "45be93d6c6ef6af6338ce4db95b1b156751cff7905b78af94f9edc4202be6a2d"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/raw/vila_E2_decline_unlimited_warranty_initial.png",
+      "sha256": "0aa6cf6e206e8b5cd0977c04543ae6d2089d30b262cf0901838cb54c8632c19d"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/selected/vila_E2_decline_unlimited_warranty_transparent.png",
+      "sha256": "9cd912962d2f491859993a6a9c1c3c83a6506507921406b95fbe76b43eee5e46"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/review/vila_expressions_dark.png",
+      "sha256": "bb4038dd9b02f981327f12c1e7b2fa32e57133e20b0427f2ecd11d96724f3e99"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/review/vila_expressions_light.png",
+      "sha256": "6095abb022b85bb6c0e56a86050a001e2dcac5664d25cf6e4c914e7d81788f8c"
+    }
+  ],
+  "expressions": [
+    {
+      "key": "vila_E1_patient_reassurance",
+      "status": "pass_with_nonblocking_notes",
+      "face": "原灰发、成熟鼻颊与透明单片夹保留；舒眉闭口微笑温和克制。",
+      "identity_props": "灰短发与成年面容、炭灰衫、皮围裙、厚腕套、原U形支架双手托持；量规和侧袋画面左，左眼即画面右透明单片放大夹不是眼罩。",
+      "body_hands": "同一成年紧凑比例，双脚支撑、双手完整，接触/遮挡合理；无新增物件或关键截断。",
+      "boundary": "宽慰不代表旧误差已消除、原谅已获、新架已交或读数正确；不画神奇核心、证书或金钱。",
+      "raw": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/raw/vila_E1_patient_reassurance_initial.png",
+        "sha256": "cb98d82dad5dc915eb2ebb279eda5678cf6d68c9eb722c6f544b726b0583dab1"
+      },
+      "selected": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/selected/vila_E1_patient_reassurance_transparent.png",
+        "sha256": "45be93d6c6ef6af6338ce4db95b1b156751cff7905b78af94f9edc4202be6a2d"
+      },
+      "prompt": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/prompts/vila_E1_patient_reassurance_initial.txt",
+        "sha256": "867b0d3013126d4a442b4ec2b93882f28437b8325db101fc56f1de1466cb9f93"
+      },
+      "prompt_exact_matches_logged_call": true,
+      "input_sha256_verified": true,
+      "raw_selected_RGBA_identical": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_zero_pixels": 963767,
+      "alpha_partial_pixels": 609097,
+      "alpha_bbox": [
+        0,
+        49,
+        1006,
+        1504
+      ],
+      "alpha_gt8_bbox": [
+        187,
+        61,
+        849,
+        1482
+      ],
+      "canvas_edge_alpha_max": 1,
+      "canvas_edge_nonzero_pixels": 11,
+      "alpha_assessment": "浅深RGBA合成无可见背景、棋盘或光晕；极低alpha=1的边缘散点不等于角色被截断，不以隐藏RGB判背景。",
+      "blocking_issues": []
+    },
+    {
+      "key": "vila_E2_decline_unlimited_warranty",
+      "status": "pass_with_nonblocking_notes",
+      "face": "无笑平唇、内眉收聚，与E1微笑明确区分；双眼与左眼单片夹仍清楚，不推定性别。",
+      "identity_props": "灰短发与成年面容、炭灰衫、皮围裙、厚腕套、原U形支架双手托持；量规和侧袋画面左，左眼即画面右透明单片放大夹不是眼罩。",
+      "body_hands": "同一成年紧凑比例，双脚支撑、双手完整，接触/遮挡合理；无新增物件或关键截断。",
+      "boundary": "只拒无限担保，不代表撤销交易、维修成功、全山安全、NE5或回声真相获得认证。",
+      "raw": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/raw/vila_E2_decline_unlimited_warranty_initial.png",
+        "sha256": "0aa6cf6e206e8b5cd0977c04543ae6d2089d30b262cf0901838cb54c8632c19d"
+      },
+      "selected": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/selected/vila_E2_decline_unlimited_warranty_transparent.png",
+        "sha256": "9cd912962d2f491859993a6a9c1c3c83a6506507921406b95fbe76b43eee5e46"
+      },
+      "prompt": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/prompts/vila_E2_decline_unlimited_warranty_initial.txt",
+        "sha256": "b7182d0bc76f4b35ba81f007d1d1f3346d5f97ab8dea1dd15d5d4c04a5c42161"
+      },
+      "prompt_exact_matches_logged_call": true,
+      "input_sha256_verified": true,
+      "raw_selected_RGBA_identical": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "alpha_zero_pixels": 965662,
+      "alpha_partial_pixels": 607202,
+      "alpha_bbox": [
+        0,
+        29,
+        1010,
+        1490
+      ],
+      "alpha_gt8_bbox": [
+        190,
+        59,
+        855,
+        1482
+      ],
+      "canvas_edge_alpha_max": 1,
+      "canvas_edge_nonzero_pixels": 4,
+      "alpha_assessment": "浅深RGBA合成无可见背景、棋盘或光晕；极低alpha=1的边缘散点不等于角色被截断，不以隐藏RGB判背景。",
+      "blocking_issues": []
+    }
+  ],
+  "nonblocking_style_note": "微笑让脸部稍柔和，眼鼻颊与灰发锚点仍同人；未幼化。",
+  "revision_requested": false,
+  "scope": "独立概念视觉审查，不是用户认可、连续动画或游戏运行验收。"
+}

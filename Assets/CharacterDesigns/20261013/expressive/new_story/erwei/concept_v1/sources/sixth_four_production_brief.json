@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "asset_batch": "20261013",
+  "local_date_note": "UTC日期2026-10-13，用户UTC+8日期已2026-10-14，资源目录延续20261013批。",
+  "snapshot_head": "86f630cd71ecfaea3e4a3920c3045477ac0e0ed4",
+  "historical_roster": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/roster.json",
+    "sha256": "6af5b2e027def4ecab0a36b34739dc1a168a78d5c527ece98180e6460897325a"
+  },
+  "master": {
+    "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+    "sha256": "1ef69891ce678f6d8aef940cd03578261b4f27a8ec99a17ba80a34898d30ba22"
+  },
+  "scope": "最新远端九提交新增原创角色概念计划；不更新原roster、MASTER、图像或交付回执。",
+  "style": {
+    "direction": "成熟大头短身、短颈自然肩线、紧凑成年体态、可读五官与人物自己的情绪；低魔中世纪材质、组织清晰像素簇；完整单人透明全身概念。",
+    "style_source": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+    },
+    "references": [
+      {
+        "path": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+        "sha256": "c61337a497f4a6e6cdccb8d1cee8b8a49dba7aa9cfc13057678bce7e9fbc026a"
+      },
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/mia/ratio_1_to_1_5/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+        "sha256": "3f2060ae7a0e1694995540c51160fd515a72c8013e548d2e9313cee857d493fd"
+      }
+    ],
+    "reference_use": "Sela G仅参考成熟美感和脸部情绪；Mia 1:1.5只为单人已认可比例案例，不机械套全员，不复制脸、发型和衣装。",
+    "guardrails": [
+      "先实际看参考，再生图；原始图不可做裁切假装完成",
+      "与下述最新剧情卡冲突时以最新卡/台本为准；服色和未设定发型可提出可逆设计",
+      "没有治疗、付款、续约、宽恕或调查结案图示；不将道具文字当真实承诺",
+      "新目录输出，不覆盖167旧锚/旧receipt；新图先标待独审，不自动通过",
+      "概念不代表目标游戏原部件、身型、帧表、装备兼容或运行通过"
+    ],
+    "age_guard": "成熟感仅用于卡定成年者；其他角色按原年龄，不把17–18岁的FX-HUT画中年。未成年正常完整职业服饰，不性感化。"
+  },
+  "independence_note": "新文件；首批四人brief、历史roster/MASTER/receipt不变。先按真实图片独审，后才记交付。",
+  "created_utc": "2026-10-13T18:22:53.687673+00:00",
+  "batch": "sixth_four",
+  "characters": [
+    {
+      "canonical_id": "FX-RLY",
+      "name": "珥薇",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-RLY_珥薇.md",
+        "sha256": "8325cde9523ed87504bb9e3005cc275b81203efe22dc6ccbf2558453733f0dca"
+      },
+      "card_details": {
+        "工作": "荒废营地中继人，常在 `rumor_camp2` 一带。地域见 [[区域_R02_丹布里西路与渡口]]。",
+        "体貌与随身": "四十来岁的妇人，背着一口旧锅，围裙上缝着补丁；说话时先把锅放下。",
+        "口吻": "热络但谨慎；一谈钱就换成短句。",
+        "知情边界": "哪口灰坑还能用；过路的人一般走哪条路。不替过路人保管东西；不问别人去哪儿。"
+      },
+      "story_links": [
+        "区域_R02_丹布里西路与渡口",
+        "台本_FX_野外人物对白",
+        "台本_DT08_修好第二块桥板",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R02_丹布里西路与渡口",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "荒废营地中继人",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-RLY",
+        "site": "rumor_camp2",
+        "region": "R02",
+        "look": "四十来岁的妇人，背着一口旧锅，围裙上缝着补丁；说话时先把锅放下。",
+        "voice": "热络但谨慎；一谈钱就换成短句。",
+        "knows": [
+          "哪口灰坑还能用",
+          "过路的人一般走哪条路"
+        ],
+        "not_knows": [
+          "不替过路人保管东西",
+          "不问别人去哪儿"
+        ],
+        "visits": {
+          "task": "台本_DT08_修好第二块桥板",
+          "before": [
+            "桥板修到哪了？我这锅还等着过河。"
+          ],
+          "after": [
+            "桥板修好了，绕路的人少了。灰坑照旧能用。"
+          ],
+          "early": [
+            "你先在我这儿歇过脚，后去修的桥。那截路你走过。"
+          ],
+          "late": [
+            "桥修好了才来歇脚？锅还是这口锅，火你自己生。"
+          ],
+          "proxy": [
+            "中继的人不在营地时，锅扣着放；别动。"
+          ]
+        },
+        "first_greeting": "歇脚可以。锅是我的，火你自己生。",
+        "refusal": "要我替你看东西？不看。丢了算谁的，说不清。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "erwei",
+        "age_and_identity": "四十来岁的妇人；荒废营地中继人。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "四十来岁的妇人，背着一口旧锅，围裙上缝着补丁；说话时先把锅放下。",
+        "body_and_silhouette": "四十来岁妇人，补丁围裙与旧锅的大圆轮廓；不加巨大行囊压没人物。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：宽颧圆下颌、轻笑眉眼但目光审慎，嘴半开像热络话到钱处停住。",
+        "costume": "卡定衣装优先：四十来岁的妇人，背着一口旧锅，围裙上缝着补丁；说话时先把锅放下。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "旧苔绿衫、赭灰围裙、黑褐铁锅。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "锅已放在自己脚侧，一手刚离锅耳、另一手开放谈话；锅与脚保持分离。",
+        "source_voice": "热络但谨慎；一谈钱就换成短句。",
+        "required_visible_props": [
+          "补丁围裙",
+          "一口普通旧锅"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "锅可落地显示说话习惯，不画替他人保管行李、收钱或承诺带路。",
+        "knowledge_limits": {
+          "knows": [
+            "哪口灰坑还能用",
+            "过路的人一般走哪条路"
+          ],
+          "not_knows": [
+            "不替过路人保管东西",
+            "不问别人去哪儿"
+          ],
+          "current_refusal": "要我替你看东西？不看。丢了算谁的，说不清。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/erwei/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT08_修好第二块桥板.md",
+          "sha256": "5e6df9cbf184c9c7994f8df7c89d07c0c91bc6c6088d19e8ea9ee005a0cf1c99"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-GH2",
+      "name": "埕珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-GH2_埕珥.md",
+        "sha256": "8cad51d1edb341f917a35af6fd1356f62336411198b656c9f15fb921cf0841cc"
+      },
+      "card_details": {
+        "工作": "窖口守夜人，常在 `rumor_ghoulDen2` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "体貌与随身": "五十来岁的男人，披着两层旧毯，手里提一盏罩灯；坐下前先把灯放在上风处。",
+        "口吻": "低声，句子短，先说灯再谈事；被问细节就摇头。",
+        "知情边界": "窖口夜里什么时候起风；哪段土是新塌的。不说窖里有什么；不替死者家属认领遗物。"
+      },
+      "story_links": [
+        "区域_R05_灰烬湿地与疫村",
+        "台本_FX_野外人物对白",
+        "台本_N16_谁来保管余烬",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R05_灰烬湿地与疫村",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "窖口守夜人",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-GH2",
+        "site": "rumor_ghoulDen2",
+        "region": "R05",
+        "look": "五十来岁的男人，披着两层旧毯，手里提一盏罩灯；坐下前先把灯放在上风处。",
+        "voice": "低声，句子短，先说灯再谈事；被问细节就摇头。",
+        "knows": [
+          "窖口夜里什么时候起风",
+          "哪段土是新塌的"
+        ],
+        "not_knows": [
+          "不说窖里有什么",
+          "不替死者家属认领遗物"
+        ],
+        "visits": {
+          "task": "台本_N16_谁来保管余烬",
+          "before": [
+            "余烬的事先别在窖口谈。土新塌过，声音传得远。"
+          ],
+          "after": [
+            "余烬归谁我不管。窖口今晚安静，灯还亮着，这就够了。"
+          ],
+          "early": [
+            "你先听我守了口，才去办的余烬事。顺序对。"
+          ],
+          "late": [
+            "余烬的事办完了才来？窖口不问先后，只问灯灭没灭。"
+          ],
+          "proxy": [
+            "守夜人不在窖口时，灯留在上风处；别吹。"
+          ]
+        },
+        "first_greeting": "站远些。灯要留着，不能拿来照你。",
+        "refusal": "要我下去看？不。我守口，不下窖。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "chenger",
+        "age_and_identity": "五十来岁的男人；窖口守夜人。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "五十来岁的男人，披着两层旧毯，手里提一盏罩灯；坐下前先把灯放在上风处。",
+        "body_and_silhouette": "五十来岁男子，两层旧毯包肩与一盏罩灯；与CAT泥袍区分为短毯层叠。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：长鼻灰鬓提案、眉平缓下压、嘴小开低声说话，眼睛不画浑浊恐怖。",
+        "costume": "卡定衣装优先：五十来岁的男人，披着两层旧毯，手里提一盏罩灯；坐下前先把灯放在上风处。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "灰蓝外毯、褐米内毯、旧铜灰罩灯。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "稳定坐在低木凳，灯已置身侧，双手落膝；普通安静守口姿态。",
+        "source_voice": "低声，句子短，先说灯再谈事；被问细节就摇头。",
+        "required_visible_props": [
+          "两层旧毯",
+          "罩灯"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "放灯在画外风向上风侧只是构图提案，不新增天气事实；不下地窖、不曝光窖内秘密。",
+        "knowledge_limits": {
+          "knows": [
+            "窖口夜里什么时候起风",
+            "哪段土是新塌的"
+          ],
+          "not_knows": [
+            "不说窖里有什么",
+            "不替死者家属认领遗物"
+          ],
+          "current_refusal": "要我下去看？不。我守口，不下窖。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/chenger/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/05_主线/台本/台本_N16_谁来保管余烬.md",
+          "sha256": "c40d4a31ea24f63229ddcaa3316cc518e8a414b59a787f68bb7048536e2eaeab"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-HOM",
+      "name": "苇珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-HOM_苇珥.md",
+        "sha256": "1766c607e2967b2c1536ab5b72ae22e1517c68c594c0bb8f3918ed4b390fbc24"
+      },
+      "card_details": {
+        "工作": "荒宅拾荒妇，常在 `rumor_homesteadAbandoned1` 一带。地域见 [[区域_R02_丹布里西路与渡口]]。",
+        "体貌与随身": "五十来岁的妇人，背着布袋，手里拎一根探路的短棍；走路时脚尖先落地。",
+        "口吻": "自嘲式，先说“别抢，没什么好抢的”；提到原主就沉默半拍。",
+        "知情边界": "哪间屋子的地板还结实；原主家搬走的大致日子。不替原主认领房屋；不拿别人家的名字说事。"
+      },
+      "story_links": [
+        "区域_R02_丹布里西路与渡口",
+        "台本_FX_野外人物对白",
+        "台本_DT06_迷路者的路标",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R02_丹布里西路与渡口",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "荒宅拾荒妇",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-HOM",
+        "site": "rumor_homesteadAbandoned1",
+        "region": "R02",
+        "look": "五十来岁的妇人，背着布袋，手里拎一根探路的短棍；走路时脚尖先落地。",
+        "voice": "自嘲式，先说“别抢，没什么好抢的”；提到原主就沉默半拍。",
+        "knows": [
+          "哪间屋子的地板还结实",
+          "原主家搬走的大致日子"
+        ],
+        "not_knows": [
+          "不替原主认领房屋",
+          "不拿别人家的名字说事"
+        ],
+        "visits": {
+          "task": "台本_DT06_迷路者的路标",
+          "before": [
+            "路标立在哪我不管。别立在我翻过的屋前，那会引错人。"
+          ],
+          "after": [
+            "路标立起来了。迷路的人少了，荒宅的脚印多了——你还是记着这个。"
+          ],
+          "early": [
+            "你先来过这屋子，后立的路标。顺序对，你知道哪间地板是空的。"
+          ],
+          "late": [
+            "路标的事完了才来？屋子等得起，草等不起。"
+          ],
+          "proxy": [
+            "拾荒的人不在时，里屋别翻；她的布袋挂在门后。"
+          ]
+        },
+        "first_greeting": "别抢，没什么好抢的。我翻过三遍了。",
+        "refusal": "要我陪你翻里屋？不去。里屋我留着自己翻。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "weier",
+        "age_and_identity": "五十来岁的妇人；荒宅拾荒妇。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "五十来岁的妇人，背着布袋，手里拎一根探路的短棍；走路时脚尖先落地。",
+        "body_and_silhouette": "五十来岁妇人，背布袋与手中短探路棍；瘦韧前倾轮廓而非贫困丑化。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：颧面线条明显、眉有微挑、嘴角自嘲轻动，眼看物件边缘。",
+        "costume": "卡定衣装优先：五十来岁的妇人，背着布袋，手里拎一根探路的短棍；走路时脚尖先落地。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "暗棕布衣、褪灰紫头布可选、麻色袋。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "稳定走步预备：一脚前探但承重可信，短棍点地，另一手压布袋带。",
+        "source_voice": "自嘲式，先说“别抢，没什么好抢的”；提到原主就沉默半拍。",
+        "required_visible_props": [
+          "背布袋",
+          "探路短棍"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "短棍不是武器，不画认领房屋、持屋契或替原主发言。",
+        "knowledge_limits": {
+          "knows": [
+            "哪间屋子的地板还结实",
+            "原主家搬走的大致日子"
+          ],
+          "not_knows": [
+            "不替原主认领房屋",
+            "不拿别人家的名字说事"
+          ],
+          "current_refusal": "要我陪你翻里屋？不去。里屋我留着自己翻。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/weier/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT06_迷路者的路标.md",
+          "sha256": "8483bf78879e414aa620b1db83d1a17b99b6b3fb72c6870d5e27812cd7ebf7ff"
+        }
+      ],
+      "source_reverified": true
+    },
+    {
+      "canonical_id": "FX-CP5",
+      "name": "缶珥",
+      "aliases": [],
+      "identity_match": "No canonical ID or alias in existing 172-person roster; no completed art counted",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CP5_缶珥.md",
+        "sha256": "ae1cf7038590aa82daafae8ece807327e7341b9e8448e4a5a5c379d439f90274"
+      },
+      "card_details": {
+        "工作": "帐下的记账人，常在 `rumor_camp5` 一带。地域见 [[区域_R01_布林外港与旧渠]]。",
+        "体貌与随身": "四十来岁的女人，膝盖上垫着木板当桌，袖口插着一截炭笔；说话前先把木板合上。",
+        "口吻": "像念账一样说话；被问人数就先数一遍。",
+        "知情边界": "哪几顶帐子还有人；谁欠过谁一碗汤。不替任何人担保；不把名单给外人。"
+      },
+      "story_links": [
+        "区域_R01_布林外港与旧渠",
+        "台本_FX_野外人物对白",
+        "台本_DT13_一锅够分的热汤",
+        "特殊地点与野外NPC对白扩展计划",
+        "区域_R01_布林外港与旧渠",
+        "野外NPC口吻与闲谈参照"
+      ],
+      "story_role": "帐下的记账人",
+      "existing_anchor": null,
+      "status": "unproduced_original_character",
+      "reference_gate": "none_for_original_concept",
+      "change_evidence": {
+        "range": [
+          "39a466fac4024282a23b30ddbc357d80fc773a9e",
+          "ad1b49c347a340a0b12a6c7a19205b6e0ce17fee"
+        ],
+        "card_git_status": "A",
+        "introduced_by": "09216ad4f314282be81ededcbbed7e2cf5dd235f"
+      },
+      "equipment_and_runtime": "unknown; concept only",
+      "current_dialogue": {
+        "source": {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        "id": "FX-CP5",
+        "site": "rumor_camp5",
+        "region": "R01",
+        "look": "四十来岁的女人，膝盖上垫着木板当桌，袖口插着一截炭笔；说话前先把木板合上。",
+        "voice": "像念账一样说话；被问人数就先数一遍。",
+        "knows": [
+          "哪几顶帐子还有人",
+          "谁欠过谁一碗汤"
+        ],
+        "not_knows": [
+          "不替任何人担保",
+          "不把名单给外人"
+        ],
+        "visits": {
+          "task": "台本_DT13_一锅够分的热汤",
+          "before": [
+            "汤要分，名单要先对。名字错了，饭就发错。"
+          ],
+          "after": [
+            "汤分完了。名字还在板上，少的两顶帐子也还空着。"
+          ],
+          "early": [
+            "你先在帐下看过名单，后去分的汤。顺序对，数得上。"
+          ],
+          "late": [
+            "汤分完了才来对名单？汤不等名字，名字也不等汤。"
+          ],
+          "proxy": [
+            "记账的人不在帐下时，木板别翻；名字是人自己的。"
+          ]
+        },
+        "first_greeting": "名字先说清楚。写错了，饭就发错。",
+        "refusal": "要我报名字给你看？不。名单不给外人。"
+      },
+      "age_policy": "按当前卡年龄体貌，不复制参考脸或强加Mia比例。",
+      "production_brief": {
+        "working_slug": "fouer",
+        "age_and_identity": "四十来岁的女人；帐下的记账人。源体貌明确性别/年龄，按原词保留。",
+        "literal_source_look": "四十来岁的女人，膝盖上垫着木板当桌，袖口插着一截炭笔；说话前先把木板合上。",
+        "body_and_silhouette": "四十来岁女人、坐姿膝上木板作桌、袖口一小截炭笔；与Sune站立记录员不同。",
+        "face_and_hair_proposal": "以下均为可逆美术提案，不把未写面型/发色/胡须写入故事：宽额、紧凑面型、认真数数眉眼，唇闭后将问话放缓；中性朴素发髻提案。",
+        "costume": "卡定衣装优先：四十来岁的女人，膝盖上垫着木板当桌，袖口插着一截炭笔；说话前先把木板合上。；未写衣装采用正常完整、低魔中世纪粗布/麻/皮/木/铁职业服装提案。无近代西装排扣、塑料、安全帽或现代医疗设备。",
+        "palette_proposal": "暗靛粗布、麻灰袖、旧木板。配色可逆，不改当前角色卡。",
+        "pose_and_expression": "普通矮凳坐稳，木板合拢/覆盖名单朝下置膝，两手按板边，眼神抬起来。",
+        "source_voice": "像念账一样说话；被问人数就先数一遍。",
+        "required_visible_props": [
+          "膝上木板",
+          "袖口炭笔"
+        ],
+        "optional_or_stowed_props": [
+          "除上述必要线索，不额外加账簿、巨武器或剧情奖励。背景地点、台词习惯提到的物件不是全部都要画。",
+          "不足以单图说清的精细道具可用后续小物设定；本批单人外观不做动作连续帧。"
+        ],
+        "story_guard": "没有提供可读名单，不画给外人报名字或替任何人担保。",
+        "knowledge_limits": {
+          "knows": [
+            "哪几顶帐子还有人",
+            "谁欠过谁一碗汤"
+          ],
+          "not_knows": [
+            "不替任何人担保",
+            "不把名单给外人"
+          ],
+          "current_refusal": "要我报名字给你看？不。名单不给外人。"
+        },
+        "source_limitations": [
+          "发型/配色/面型和未写衣装均为本轮可逆提案；不冒称角色官方英文名、装备槽或已验证原版体型。"
+        ],
+        "prop_policy": "必需身份线索优先可见；可收纳物合理收好，不要求所有物件都拿在手中。不得添加统一账本或展示剧情已经同意/结算。"
+      },
+      "recommended_output_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/fouer/concept_v1",
+      "script_sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT13_一锅够分的热汤.md",
+          "sha256": "4404134d1c92c4b6f18ec1fa2827338c0f521c3bf74dfbafc28bad3d8b275e9b"
+        }
+      ],
+      "source_reverified": true
+    }
+  ]
+}

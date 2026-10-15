@@ -1,0 +1,208 @@
+{
+  "slug": "kelin",
+  "canonical_id": "FX-HUT",
+  "name": "珂琳",
+  "status": "planned_not_generated",
+  "selection_status": "requested_candidate_retained_no_substitution",
+  "current_card": {
+    "path": "design/04_人物/野外人物/人物_FX-HUT_珂琳.md",
+    "bytes": 1071,
+    "sha256": "ecedc5bb6a4ccd3c2fc4ec3b3aeeb2c649e583ff61e832bffd049ff3e7ea843b",
+    "source_id": "kelin_card",
+    "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-HUT_珂琳.md"
+  },
+  "source_ids": [
+    "kelin_card",
+    "field_dialogue",
+    "field_dialogue_registry",
+    "DT05",
+    "kelin_mother_raw",
+    "kelin_mother_transparent",
+    "kelin_mother_manifest",
+    "kelin_expression_final_status",
+    "kelin_expressions_view"
+  ],
+  "mother_image": {
+    "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_v1_raw_imagegen.png",
+    "raw_sha256": "71d609e7fa7471d5bf64dd818320aefdde9c8dbee5542c19859406687bde0152",
+    "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png",
+    "transparent_sha256": "57e00e9c4581e95b8bfc078deede4c4effd28533798719bf0e1a1440ccffade9",
+    "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/manifest.json",
+    "manifest_sha256": "c646abe3617acb930397ff4b7dbf452246e1a23c52f4a0892d12a5c088ecfa88",
+    "independent_qa_source_id": "tenth_mother_qa",
+    "independent_qa_selected_status": "final_clean_and_presentation_pass",
+    "actual_visual_observation": "本任务分别实际查看raw、透明母图与旧表情浅板：17–18岁年轻学徒，铜棕发辫在画面右肩后，米麻长袖衫、草绿围裙、棕腰带、灰褐长裙。唯一棕色草药袋缝在围裙画面右前，口露原干叶；人物左手在画面右触袋边，右手在画面左低垂。旧表情是规矩苦笑和认真拒配，未有横胸理袖或双手扶腰。",
+    "fixed_sides": "唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。",
+    "raw_and_transparent_actually_viewed": true,
+    "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/review/kelin_expressions_review_zh_light.png"
+  },
+  "existing_expressions": {
+    "status": "final_clean_and_presentation_pass",
+    "qualified_count": 2,
+    "not_action_coverage": true
+  },
+  "duplicate_check": {
+    "own_action_directory_count": 0,
+    "own_action_semantic_match_found": false,
+    "existing_expressions_actually_compared": true,
+    "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+  },
+  "story_boundaries": [
+    "17–18岁真实青年年龄，不幼化、不自动成年化；保持普通完整职业衣装，日常无性感姿态、裸露或成人化身形。",
+    "只理自己的袖布或扶本人衣装侧腰暂歇，不取药、不配药、不持处方账本、不代师承诺、不画DT05完成。",
+    "沿用母图手指，细切痕不显著不是本轮硬错；不新增血、新伤、疼痛或已治愈结果。"
+  ],
+  "risks": [
+    "抬手不能把草药袋摘下来，腰带/袋/辫侧别不换；不把另一动作的手位粘进同一prompt。",
+    "扶腰只接衣服侧面，双肘外开自然，不挺胸摆胯、不收紧服装；横胸理袖不拉下领口。"
+  ],
+  "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/kelin/noncombat_basics_v1",
+  "plans": [
+    {
+      "key": "kelin_A1_smooth_left_upper_sleeve",
+      "title_zh": "右掌横胸理左上袖",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "kelin_card",
+          "locator": "体貌与随身",
+          "line_start": 17,
+          "quote": "十七八岁的姑娘"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-HUT／知情边界",
+          "line_start": 348,
+          "quote": "不替师父看病开方"
+        }
+      ],
+      "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+      "start_pose_description_only": "独立从母图左手在袋边、右手低垂的站姿开始。",
+      "pose": "双鞋自然分开站稳，躯干直立。右手从画面左的低垂位置抬起，右肘向画面左稍外开，右前臂横过胸前，右掌和自然并拢指组平贴本人左肩下方的米麻上袖宽布面，停在顺平上袖的一瞬。左臂从袋边自然落到画面右身侧，左手清楚可见且离开药袋。原衣领、长袖、围裙与长裙仍完整宽松，草药袋缝在原画面右前，干叶未取。头脸朝画面左，神态平常。",
+      "end_pose_description_only": "右掌可离袖放下，两臂自然归位；药袋与药草未动。",
+      "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+      "visible_stage_target": "整条右前臂横胸、宽掌落在对侧上袖；左手已从袋边放低，明确改变两臂轮廓。",
+      "pose_specific_sidedness": "右手由画面左横过胸前到画面右的本人左上袖；左手在画面右腿外低垂，辫和药袋仍画面右。",
+      "contact_and_support_checks": [
+        "右掌广面贴肩下袖布，不抓衣领、不拉下袖子、不碰发辫。",
+        "左手在原药袋外清楚低垂，没有摘袋或暗中握药。",
+        "17–18岁本人脸与体态保留，工作服完整，双鞋全掌稳站。"
+      ],
+      "prop_state_and_retention": [
+        "唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。"
+      ],
+      "difference_from_mother_expression_and_batch": "母图/旧苦笑拒配都为一手袋边一手低垂，本张横胸贴袖并放低另一手，不能只改变情绪。",
+      "risk_level": "medium_pose_and_contact",
+      "new_contact_prop": null,
+      "new_story_fact": false,
+      "sequence_required": false,
+      "animation_claim": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+        "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+        "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png"
+      ],
+      "reference_sha256": [
+        "57e00e9c4581e95b8bfc078deede4c4effd28533798719bf0e1a1440ccffade9"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：珂琳 FX-HUT。十七至十八岁的药师学徒，保持本人年轻脸与母图实际紧凑比例，可能未成年；铜棕发与画面右肩后唯一发辫，脸朝画面左。米麻高领长袖衫、暗草绿全长围裙、棕腰带、灰褐长裙、棕闭口鞋均为原完整宽松普通工作服。\n固定衣装与原物件：唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。\n本张动作：右掌横胸理左上袖。双鞋自然分开站稳，躯干直立。右手从画面左的低垂位置抬起，右肘向画面左稍外开，右前臂横过胸前，右掌和自然并拢指组平贴本人左肩下方的米麻上袖宽布面，停在顺平上袖的一瞬。左臂从袋边自然落到画面右身侧，左手清楚可见且离开药袋。原衣领、长袖、围裙与长裙仍完整宽松，草药袋缝在原画面右前，干叶未取。头脸朝画面左，神态平常。\n本张侧别：右手由画面左横过胸前到画面右的本人左上袖；左手在画面右腿外低垂，辫和药袋仍画面右。\n必须明显可见：整条右前臂横胸、宽掌落在对侧上袖；左手已从袋边放低，明确改变两臂轮廓。\n接触与支撑：右掌广面贴肩下袖布，不抓衣领、不拉下袖子、不碰发辫。；左手在原药袋外清楚低垂，没有摘袋或暗中握药。；17–18岁本人脸与体态保留，工作服完整，双鞋全掌稳站。。\n",
+      "prompt_sha256": "b96f1855660da3d4b1f16667c2c7805ead4c0b0be0ec2d2c69fde73edf07c32c",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/kelin_A1_smooth_left_upper_sleeve_prompt.txt",
+      "negative_constraints": [
+        "17–18岁真实青年年龄，不幼化、不自动成年化；保持普通完整职业衣装，日常无性感姿态、裸露或成人化身形。",
+        "只理自己的袖布或扶本人衣装侧腰暂歇，不取药、不配药、不持处方账本、不代师承诺、不画DT05完成。",
+        "沿用母图手指，细切痕不显著不是本轮硬错；不新增血、新伤、疼痛或已治愈结果。",
+        "抬手不能把草药袋摘下来，腰带/袋/辫侧别不换；不把另一动作的手位粘进同一prompt。",
+        "扶腰只接衣服侧面，双肘外开自然，不挺胸摆胯、不收紧服装；横胸理袖不拉下领口。"
+      ],
+      "existing_asset_check": {
+        "own_action_directory_count": 0,
+        "prior_action_found": false,
+        "expression_board_actually_viewed": true,
+        "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+        "semantic_comparison": "母图/旧苦笑拒配都为一手袋边一手低垂，本张横胸贴袖并放低另一手，不能只改变情绪。"
+      }
+    },
+    {
+      "key": "kelin_A2_rest_hands_on_clothed_waist",
+      "title_zh": "双手扶腰片刻暂歇",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "kelin_card",
+          "locator": "体貌与随身，只保原收纳",
+          "line_start": 17,
+          "quote": "围裙上缝着草药袋"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-HUT／拒绝，只限制不自行配药",
+          "line_start": 360,
+          "quote": "要我替你配药带走？不行。得师父点头。"
+        }
+      ],
+      "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托篮/扶巾/理袖/扶腰/舒肩/半蹲/托尺/拂围裙是本轮可逆美术提案，台本未记载这些动作已经发生。",
+      "start_pose_description_only": "独立从母图一手袋边、一手低垂的站姿开始。",
+      "pose": "双鞋约与肩同宽稳站，重心居中，躯干自然直立。右手从画面左低垂处抬起、左手从画面右药袋边离开，两掌各自平贴本人同侧腰边的原衣布，位于棕腰带两端侧面附近；两肘自然向外打开，左右前臂形成可辨的两个斜角。左掌处在药袋上方的侧面衣布，不压袋、不伸入袋口；原药袋、少量干叶和缝线仍完整可见。双手不交叉、不抓腰带结，衣服不收紧，姿态是普通工作间隙扶腰暂歇。头脸朝画面左、神态平常，不挺胸摆胯。",
+      "end_pose_description_only": "双掌可松开侧腰、双臂自然落下；没有休息恢复数值或工作完成结果。",
+      "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+      "visible_stage_target": "两手分别接触衣装两侧腰面、两肘同时外开，原药袋无人触碰；轮廓区别于单臂横胸和原母图。",
+      "pose_specific_sidedness": "右掌画面左贴本人右腰衣布，左掌画面右贴本人左腰侧衣布；左掌在袋的上方外侧，袋仍缝于画面右前。",
+      "contact_and_support_checks": [
+        "每掌只贴本人同侧衣布，两手可见、两肘各有合理连接。",
+        "左手不遮袋口和干叶、不把袋挤到背后；腰带原样不解。",
+        "高领长袖、完整围裙长裙与鞋保持普通宽松，肩髋自然、双脚平稳。"
+      ],
+      "prop_state_and_retention": [
+        "唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。"
+      ],
+      "difference_from_mother_expression_and_batch": "旧母图/表情一手袋边一手低垂，本张双肘外开双掌侧腰；与横胸理袖不同，是独立暂歇姿态。",
+      "risk_level": "medium_pose_and_contact",
+      "new_contact_prop": null,
+      "new_story_fact": false,
+      "sequence_required": false,
+      "animation_claim": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+        "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+        "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png"
+      ],
+      "reference_sha256": [
+        "57e00e9c4581e95b8bfc078deede4c4effd28533798719bf0e1a1440ccffade9"
+      ],
+      "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：珂琳 FX-HUT。十七至十八岁的药师学徒，保持本人年轻脸与母图实际紧凑比例，可能未成年；铜棕发与画面右肩后唯一发辫，脸朝画面左。米麻高领长袖衫、暗草绿全长围裙、棕腰带、灰褐长裙、棕闭口鞋均为原完整宽松普通工作服。\n固定衣装与原物件：唯一草药袋保持缝在围裙画面右前侧的原位，原针脚、袋口和少量干叶保留；不是可摘腰包，不摘袋、不抽叶、不抓药、不递药。发辫保持画面右肩后。高领、长袖、完整围裙长裙和闭口鞋保持宽松完整；双手只按本张动作移动。\n本张动作：双手扶腰片刻暂歇。双鞋约与肩同宽稳站，重心居中，躯干自然直立。右手从画面左低垂处抬起、左手从画面右药袋边离开，两掌各自平贴本人同侧腰边的原衣布，位于棕腰带两端侧面附近；两肘自然向外打开，左右前臂形成可辨的两个斜角。左掌处在药袋上方的侧面衣布，不压袋、不伸入袋口；原药袋、少量干叶和缝线仍完整可见。双手不交叉、不抓腰带结，衣服不收紧，姿态是普通工作间隙扶腰暂歇。头脸朝画面左、神态平常，不挺胸摆胯。\n本张侧别：右掌画面左贴本人右腰衣布，左掌画面右贴本人左腰侧衣布；左掌在袋的上方外侧，袋仍缝于画面右前。\n必须明显可见：两手分别接触衣装两侧腰面、两肘同时外开，原药袋无人触碰；轮廓区别于单臂横胸和原母图。\n接触与支撑：每掌只贴本人同侧衣布，两手可见、两肘各有合理连接。；左手不遮袋口和干叶、不把袋挤到背后；腰带原样不解。；高领长袖、完整围裙长裙与鞋保持普通宽松，肩髋自然、双脚平稳。。\n",
+      "prompt_sha256": "27aad33cd9950869f319289dcb913a888a7f81152f709129ed4befa749cc9fbf",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/kelin_A2_rest_hands_on_clothed_waist_prompt.txt",
+      "negative_constraints": [
+        "17–18岁真实青年年龄，不幼化、不自动成年化；保持普通完整职业衣装，日常无性感姿态、裸露或成人化身形。",
+        "只理自己的袖布或扶本人衣装侧腰暂歇，不取药、不配药、不持处方账本、不代师承诺、不画DT05完成。",
+        "沿用母图手指，细切痕不显著不是本轮硬错；不新增血、新伤、疼痛或已治愈结果。",
+        "抬手不能把草药袋摘下来，腰带/袋/辫侧别不换；不把另一动作的手位粘进同一prompt。",
+        "扶腰只接衣服侧面，双肘外开自然，不挺胸摆胯、不收紧服装；横胸理袖不拉下领口。"
+      ],
+      "existing_asset_check": {
+        "own_action_directory_count": 0,
+        "prior_action_found": false,
+        "expression_board_actually_viewed": true,
+        "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/action_tree_scan.json",
+        "semantic_comparison": "旧母图/表情一手袋边一手低垂，本张双肘外开双掌侧腰；与横胸理袖不同，是独立暂歇姿态。"
+      }
+    }
+  ]
+}

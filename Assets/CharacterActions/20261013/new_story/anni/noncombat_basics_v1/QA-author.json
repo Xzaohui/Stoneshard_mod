@@ -1,0 +1,49 @@
+{
+  "status": "author_pass_pending_independent_review",
+  "reviewed_utc": "2026-10-14T01:40:56.906273+00:00",
+  "actually_viewed": [
+    "mother",
+    "raw A1 v1",
+    "raw A1 v2",
+    "raw A2 v1",
+    "comparison light",
+    "comparison dark"
+  ],
+  "checks": {
+    "identity_and_mature_proportions": "同一棕色低髻、成年脸、米灰素褂、绿束腰、靴子；细节密度比母图略细，不是引擎像素格冻结。",
+    "prop_laterality": "画面左口袋剪刀/布带与画面右腰木牌保留。",
+    "A1_support": "v2右臂自画面左跨向画面右，捏本人左袖扣带；左腋夹单本闭簿，左前臂和左手完整。",
+    "A2_support": "左掌在书底承重、右掌盖封面，近身窄页缝，无页上可读文字。",
+    "feet": "两脚完整与隐含同一支撑平面一致。",
+    "difference": "A1手/书在左腋与袖带；A2双手在腰前簿上，与母图开簿外指清楚不同。",
+    "alpha": "原生RGBA保留，绝大多数主体alpha为253，浅深合成无明显底色块；不把隐藏RGB误判成背景。",
+    "story": "没有患者/第三人/签名/支付/治疗或交接结果。"
+  },
+  "raw_disposition": [
+    {
+      "raw": "raw/anni_A1_cuff_band_adjust_v1.png",
+      "decision": "rejected_hard_error",
+      "reason": "左右手调袖关系反向；保留原稿。"
+    },
+    {
+      "raw": "raw/anni_A1_cuff_band_adjust_v2.png",
+      "decision": "selected_pending_independent"
+    },
+    {
+      "raw": "raw/anni_A2_close_shift_book_v1.png",
+      "decision": "selected_pending_independent"
+    }
+  ],
+  "revision_budget": {
+    "A1_used": 1,
+    "A1_remaining": 0,
+    "A2_used": 0,
+    "A2_remaining": 1
+  },
+  "not_validated": [
+    "animation continuity",
+    "equipment",
+    "native sprite grid",
+    "engine/runtime"
+  ]
+}

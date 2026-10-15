@@ -1,0 +1,72 @@
+{
+  "key": "weier_ink_A2_smooth_right_apron_panel",
+  "title_zh": "右掌下拂围裙",
+  "status": "planned_not_generated",
+  "output_count": 1,
+  "kind": "independent_full_body_noncombat_keypose",
+  "evidence": [
+    {
+      "source_id": "weier_ink_card",
+      "locator": "体貌与随身",
+      "line_start": 17,
+      "quote": "围裙洗得发白"
+    },
+    {
+      "source_id": "field_dialogue",
+      "locator": "FX-INK／知情边界",
+      "line_start": 476,
+      "quote": "不替东家许诺房钱"
+    }
+  ],
+  "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+  "start_pose_description_only": "独立从母图左手腰侧握杯、右手腰高摊开开始。",
+  "pose": "双鞋分开稳站，躯干从髋部略前倾。人物左手在画面右仍于原腰侧握唯一空陶杯，杯口竖直朝上。右手完全离开原向外摊开的腰高位置，右臂向画面左下伸，右掌并拢平贴本人右腿上方、洗白围裙画面左侧靠外的宽布面，停在向下顺平围裙的一瞬；手位在腰带以下、膝盖以上。右掌与画面右的杯和钥匙清楚分离，围裙只轻折、不掀起。脸朝画面右，神态平常。",
+  "end_pose_description_only": "右掌可离围裙自然落回身侧，左手仍持原空杯；不宣称衣物已清洁。",
+  "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+  "visible_stage_target": "右臂从横向迎客改为向下伸，右掌落到膝上围裙左侧，躯干轻前倾；杯仍低在原腰侧。",
+  "pose_specific_sidedness": "人物右掌在画面左膝上围裙布面；左手和原空杯保持画面右腰侧，钥匙仍画面右腰前。",
+  "contact_and_support_checks": [
+    "右掌只接围裙宽面、不抓衣摆、不伸到杯底，不保留额外迎客手。",
+    "杯仍左手独持、口朝上、内部空，钥匙串不被摘下或移位。",
+    "前倾自然、双鞋全掌稳站，长围裙与裤鞋完整不裁。"
+  ],
+  "prop_state_and_retention": [
+    "唯一原空陶杯始终由人物左手（画面右）握持原杯身/把手处，杯口朝上、内部空；保留杯大小、褐陶颜色和唯一把手，不换手、不转到画面左、不增饮品。唯一原钥匙串始终挂画面右腰前，钥匙数量和原造型照母图，不摘取、不移位；右手只按本张目标移动。卷袖和围裙原样。"
+  ],
+  "difference_from_mother_expression_and_batch": "母图/旧表情右手腰高外摊，本张右手低到膝上围裙并前倾；与A1胸前双手托杯在手位、接触和整体轮廓上都不同。",
+  "risk_level": "medium_pose_and_contact",
+  "new_contact_prop": null,
+  "new_story_fact": false,
+  "sequence_required": false,
+  "animation_claim": false,
+  "generation_budget": {
+    "initial": 1,
+    "max_hard_error_revisions": 1,
+    "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+    "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+    "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+  },
+  "review_status": "planning_author_checked; independent_plan_review_pending",
+  "reference_image_paths": [
+    "Assets/CharacterDesigns/20261013/expressive/new_story/weier_ink/concept_v1/weier_ink_transparent.png"
+  ],
+  "reference_sha256": [
+    "99f4fadb215b8def21a3b108a6dbbf74f9c2eb08b9369317fb713364308fa7bf"
+  ],
+  "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：韦珥 FX-INK。四十来岁的旅馆男旧仆，深褐短发带灰鬓，短髭和下颌灰须，宽面成熟脸朝画面右。蓝灰上衣、米麻卷袖、洗白长围裙、褐裤和深棕闭口鞋完整保留。只用韦珥FX-INK/weier_ink，不是拾荒妇苇珥FX-HOM/weier。\n固定衣装与原物件：唯一原空陶杯始终由人物左手（画面右）握持原杯身/把手处，杯口朝上、内部空；保留杯大小、褐陶颜色和唯一把手，不换手、不转到画面左、不增饮品。唯一原钥匙串始终挂画面右腰前，钥匙数量和原造型照母图，不摘取、不移位；右手只按本张目标移动。卷袖和围裙原样。\n本张动作：右掌下拂围裙。双鞋分开稳站，躯干从髋部略前倾。人物左手在画面右仍于原腰侧握唯一空陶杯，杯口竖直朝上。右手完全离开原向外摊开的腰高位置，右臂向画面左下伸，右掌并拢平贴本人右腿上方、洗白围裙画面左侧靠外的宽布面，停在向下顺平围裙的一瞬；手位在腰带以下、膝盖以上。右掌与画面右的杯和钥匙清楚分离，围裙只轻折、不掀起。脸朝画面右，神态平常。\n本张侧别：人物右掌在画面左膝上围裙布面；左手和原空杯保持画面右腰侧，钥匙仍画面右腰前。\n必须明显可见：右臂从横向迎客改为向下伸，右掌落到膝上围裙左侧，躯干轻前倾；杯仍低在原腰侧。\n接触与支撑：右掌只接围裙宽面、不抓衣摆、不伸到杯底，不保留额外迎客手。；杯仍左手独持、口朝上、内部空，钥匙串不被摘下或移位。；前倾自然、双鞋全掌稳站，长围裙与裤鞋完整不裁。。\n",
+  "prompt_sha256": "d7e194ecd728d1964c131182244b4f79515b85d8f8f6e86a0681640165dd78de",
+  "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/weier_ink_A2_smooth_right_apron_panel_prompt.txt",
+  "negative_constraints": [
+    "只自持原空杯或整理本人围裙，不喝酒、不递杯、不倒饮品、不摆桌、不收款、不赊账、不许诺房钱或开门，不画N5结果。",
+    "韦珥weier_ink/FX-INK与苇珥weier/FX-HOM分人；不借布袋、短棍、妇人年龄或对白。",
+    "杯保持在画面右半侧、左手持续原握；右掌托杯底与右掌低拂围裙是分开的两张，不能拼在一起。",
+    "钥匙串仍挂腰，不把杯把手误画成钥匙环；双手、杯口、杯把手和双脚清楚。"
+  ],
+  "existing_asset_check": {
+    "own_action_directory_count": 0,
+    "prior_action_found": false,
+    "expression_board_actually_viewed": true,
+    "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+    "semantic_comparison": "母图/旧表情右手腰高外摊，本张右手低到膝上围裙并前倾；与A1胸前双手托杯在手位、接触和整体轮廓上都不同。"
+  }
+}

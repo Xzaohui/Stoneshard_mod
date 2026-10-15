@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T19:48:50.799027+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "第二批四名新剧情人物各两种情绪/最小手势，共8张未来概念图；本次只新增brief，不生图、不上传、不改旧资产、剧情或roster。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_four_production_brief.json",
+    "sha256": "d14ec8da47d1eabed5e98bdd287530f5b898836cc9efc74a2b793ab54123be64"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_second_four_20261013.json",
+    "sha256": "6846aeb24bfb1ffaef3f846e03bed73321e95eb40009458e81c958ca58ac343f"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "source_notes": "母图manifest制作冻结字段早于独审；最终通过依据独审results与delivery_binding。不是沿用production_brief中的未生产状态。卡事实与本轮可逆演出提案分列。",
+  "shared_locks": [
+    "每张以该人物selected_raw及最终透明版为唯一身份/服装/比例母图；单人完整全身，头发、双手和鞋完整留边，原有紧凑成年比例、体型和朝向不重设。",
+    "保留本人的年龄、面型、鼻型、发型、眉眼基础形状与肤色；情绪靠眉眼口的协调变化，可有轻微头手变化；不能统一成同一张甜笑脸。",
+    "服装层次、配色、磨损、口袋、道具数量和侧别沿母图；画面左右与人物左右同时标注，禁止整体镜像。合理动作造成的遮挡和细小褶皱变化可接受。",
+    "透明单人全身像素概念，面部清楚且好看；不机械卡眉毛角度、眼睛像素数、绝对头身比或原像素位置，不用缩图掩盖脸和人体问题。",
+    "八幅是各自独立的条件情绪，不是顺序剧情或任务结局。本人须存活、在场、愿谈且具备相应见闻；普通照护、观察、家人关系、共住权、客约和维护各自确认。",
+    "卡定/台本事实优先；本轮表情、手势、微笑与疲倦均为可逆美术演出提案，不回写角色卡或任务状态。",
+    "枯恩全程坐在原木椅上，背卷、披肩、脚部支撑及杯凳保留。不得站立、独立端杯、痊愈、加护理者或现代医疗设备。",
+    "不加任何全新关键道具，不拔炭笔书写，不递钥、不交碗、不展客约作通行证。四人脸型和原眉眼结构分别继承，禁止四人同套眉毛模板。"
+  ],
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。",
+    "planned_selected_images": 8
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者与独审实际view每张原图及最终透明/浅深板，逐图核母图SHA、身份、面部情绪、手势、道具侧别和剧情边界；manifest绑定选稿SHA。板上不加剧情已完成标签。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "characters": [
+    {
+      "canonical_id": "ASH-NPC-KUEN",
+      "slug": "kuen",
+      "name": "枯恩",
+      "current_card": {
+        "path": "design/04_人物/城市人物/人物_ASH-NPC-KUEN_枯恩.md",
+        "sha256": "95bdfc2a724ab4552828a560e0be4ae51d133bbba259488b66004c55c3195fca"
+      },
+      "card_matches_second_four_brief": true,
+      "age_identity_lock": "三十多岁成年男性、奥娅伴侣；CM-ASH对白“枯恩自己的那项问他”支持男性代词，不凭名字推断。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kuen/concept_v1/kuen_v1_raw_imagegen.png",
+          "sha256": "c69e688038a5e806bb5609f0a141351f8cd6f167bfcc3b8805711b702caf93f1"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kuen/concept_v1/kuen_transparent.png",
+          "sha256": "18f4a8f8b77e25529edee1c0d0055d063a22584bf7b625dc1f9660bb5eacdd61"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kuen/concept_v1/manifest.json",
+          "sha256": "50ccdc72b34ef769256f14cded7d9724ce34f9c5ee6853e236d6f9dc272c2370"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本会话tools.view_image分别实看四张最终raw和四张clean完整PNG。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "三十多岁成年患者、奥娅伴侣；男性身份见既有生产brief所核CM-ASH男性代词，不由名字推断。",
+        "气色偏白，坐时背垫布卷；布衫、厚织披肩、松软袜口、温水与需求布条。",
+        "卡述喝水要人扶、翻身不用；被代表时会摇头；拒观察不取消普通照护。"
+      ],
+      "observed_mother_image": "深棕蓬短发、粗眉、短须、偏瘦成年脸；蓝灰布衫、灰褐厚披肩、深褐裤、浅袜和棕鞋。母图张口平缓说明、人物右掌上摊、左手落膝。",
+      "fixed_prop_sides": [
+        "人物右手（画面左）为交流手；人物左手（画面右）落同侧膝，左手背原旧青保留，不加针管。",
+        "水杯、布条、矮木凳保持画面左即人物右侧；背卷在椅背画面右可见，原木椅不镜像。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "kuen_E1_quiet_affection",
+          "label_zh": "含蓄期待",
+          "scene_proposal": "提起仍想见奥娅，短暂流露亲近；不决定由谁接哪班。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-ASH-02_陪护者也会累.md",
+            "sha256": "9dd06cf756a46a20f03a81d6494db0a618dbf28d914e639d873ce3faec62587d",
+            "locator": "L39、L65；人物卡“所求/所怕”"
+          },
+          "face_changes": "目光温和集中在交谈者，眉间放松，嘴闭合为短须下可辨的浅笑；保留原疲倦眼睑和气色，不变红润痊愈脸。",
+          "minimal_gesture": "右手略降向自己右膝上方，手指放松；左手仍落原膝，坐骨及双脚支撑不动。",
+          "difference_from_static_and_pair": "母图张口说明改为安静闭口亲近；与E2轻摇头的严肃界限明显不同。",
+          "condition_and_limit": "想见不等奥娅承诺到班，更不表示患者治愈、伴侣疲劳消失或已交接。",
+          "output_stem": "kuen_E1_quiet_affection",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent作唯一身份、服装、道具和比例母图，制作一张独立透明全身像素概念。角色：枯恩（ASH-NPC-KUEN），三十多岁成年男性、奥娅伴侣；CM-ASH对白“枯恩自己的那项问他”支持男性代词，不凭名字推断。\n保留母图发型、面型、眉眼基础形状、鼻唇、年龄、身型及成熟大头紧凑比例；不套别人的甜笑脸、不重设头身比、不镜像。服装、配色、磨损、鞋和已存在道具完整保留，低魔中世纪材质、清楚有组织像素簇。\n深棕蓬短发、粗眉、短须、偏瘦成年脸；蓝灰布衫、灰褐厚披肩、深褐裤、浅袜和棕鞋。母图张口平缓说明、人物右掌上摊、左手落膝。\n固定侧别：人物右手（画面左）为交流手；人物左手（画面右）落同侧膝，左手背原旧青保留，不加针管。 水杯、布条、矮木凳保持画面左即人物右侧；背卷在椅背画面右可见，原木椅不镜像。\n只作可逆情绪提案：含蓄期待。提起仍想见奥娅，短暂流露亲近；不决定由谁接哪班。\n脸部变化：目光温和集中在交谈者，眉间放松，嘴闭合为短须下可辨的浅笑；保留原疲倦眼睑和气色，不变红润痊愈脸。\n最小手势：右手略降向自己右膝上方，手指放松；左手仍落原膝，坐骨及双脚支撑不动。\n须有可读差异：母图张口说明改为安静闭口亲近；与E2轻摇头的严肃界限明显不同。\n剧情边界：想见不等奥娅承诺到班，更不表示患者治愈、伴侣疲劳消失或已交接。\n枯恩必须仍坐原木椅，背卷、厚披肩、原杯凳与脚部支撑保留。不站起、不独自端杯、不新增伤病或现代医疗物。\n单人完整全身，头发、手、原道具、脚和椅凳（若有）四周留边。无文字标签、对话框、场景背景、额外人物或全新关键道具。不能只复制母图表情再换手势。用途仅概念，不声称游戏原生网格、动画或装备兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "kuen_E2_decline_being_represented",
+          "label_zh": "明确婉拒",
+          "scene_proposal": "听见别人替自己回答观察意愿时，平静摇头表示应问本人。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-ASH-03_冷苇的空碗.md",
+            "sha256": "6315c87fa56eedb8164821d1d175726bab6e73dc5be53a7817ab40e16f8ce560",
+            "locator": "L35、L39、L48；人物卡“举止”"
+          },
+          "face_changes": "眉间轻聚、目光明确看向说话者；嘴闭合平直，原温和笑意收起，读作认真拒代而非愤怒指责。",
+          "minimal_gesture": "头轻转一个摇头瞬间，仍保持可读脸；右掌略收近胸下，不指人；左手、椅、杯凳不动。",
+          "difference_from_static_and_pair": "从母图张口说明改为闭口、短促摇头；与E1柔和浅笑形成明确反差。",
+          "condition_and_limit": "演本人可拒的态度，不预设哪次观察已撤销，不扩大成拒所有普通照护或解除病情。",
+          "output_stem": "kuen_E2_decline_being_represented",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent作唯一身份、服装、道具和比例母图，制作一张独立透明全身像素概念。角色：枯恩（ASH-NPC-KUEN），三十多岁成年男性、奥娅伴侣；CM-ASH对白“枯恩自己的那项问他”支持男性代词，不凭名字推断。\n保留母图发型、面型、眉眼基础形状、鼻唇、年龄、身型及成熟大头紧凑比例；不套别人的甜笑脸、不重设头身比、不镜像。服装、配色、磨损、鞋和已存在道具完整保留，低魔中世纪材质、清楚有组织像素簇。\n深棕蓬短发、粗眉、短须、偏瘦成年脸；蓝灰布衫、灰褐厚披肩、深褐裤、浅袜和棕鞋。母图张口平缓说明、人物右掌上摊、左手落膝。\n固定侧别：人物右手（画面左）为交流手；人物左手（画面右）落同侧膝，左手背原旧青保留，不加针管。 水杯、布条、矮木凳保持画面左即人物右侧；背卷在椅背画面右可见，原木椅不镜像。\n只作可逆情绪提案：明确婉拒。听见别人替自己回答观察意愿时，平静摇头表示应问本人。\n脸部变化：眉间轻聚、目光明确看向说话者；嘴闭合平直，原温和笑意收起，读作认真拒代而非愤怒指责。\n最小手势：头轻转一个摇头瞬间，仍保持可读脸；右掌略收近胸下，不指人；左手、椅、杯凳不动。\n须有可读差异：从母图张口说明改为闭口、短促摇头；与E1柔和浅笑形成明确反差。\n剧情边界：演本人可拒的态度，不预设哪次观察已撤销，不扩大成拒所有普通照护或解除病情。\n枯恩必须仍坐原木椅，背卷、厚披肩、原杯凳与脚部支撑保留。不站起、不独自端杯、不新增伤病或现代医疗物。\n单人完整全身，头发、手、原道具、脚和椅凳（若有）四周留边。无文字标签、对话框、场景背景、额外人物或全新关键道具。不能只复制母图表情再换手势。用途仅概念，不声称游戏原生网格、动画或装备兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "ASH-NPC-SUNE",
+      "slug": "sune",
+      "name": "苏奈",
+      "current_card": {
+        "path": "design/04_人物/城市人物/人物_ASH-NPC-SUNE_苏奈.md",
+        "sha256": "b50948b39e501a3180461ad1d0764105cd2e90363b17f02115ffa5d7ddf9e37b"
+      },
+      "card_matches_second_four_brief": true,
+      "age_identity_lock": "二十多岁成年女性、本批自愿观察记录员；卡内“她怕丢差事”明确。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/sune/concept_v1/sune_v1_raw_imagegen.png",
+          "sha256": "706ff08f411b4088bed973295341e896cc3caf45b1be7dd6e2c6ca3720050bd9"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/sune/concept_v1/sune_transparent.png",
+          "sha256": "16d05f7c04d67d9599a5536cd30003009be790e1936987bcd4538a6bb5547a35"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/sune/concept_v1/manifest.json",
+          "sha256": "c5b22d5ab2bc0e8f59cb52a218b594c34c8dfc2313ad89c6ada3cda8fb4d1c1c"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本会话tools.view_image分别实看四张最终raw和四张clean完整PNG。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "二十多岁成年女性，本批自愿观察记录员；看人先看手再看脸，怕丢有限差事。",
+        "旧抄录罩衫、扎袖、笔插内两支炭笔、分普通与观察两栏的记录板。",
+        "先问许可；旧物资捆绑诱导须留史，肯纠正不自动获患者谅解。"
+      ],
+      "observed_mother_image": "灰棕发侧见短辫、窄长成年脸、直眉基础；暗李紫罩衫与米麻扎袖、棕靴。母图侧上看、抬眉张嘴征询，右手向外摊掌。",
+      "fixed_prop_sides": [
+        "人物左手（画面右）抱同一两栏木记录板，板不换侧、不新增内容或签名。",
+        "人物右手（画面左）是交流手；两支炭笔始终留人物右前腰（画面左）笔插，不取出、不增减。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "sune_E1_listen_to_refusal",
+          "label_zh": "停下倾听",
+          "scene_proposal": "对方说不愿观察，她停下问句听完，不急着填空。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-ASH-03_冷苇的空碗.md",
+            "sha256": "6315c87fa56eedb8164821d1d175726bab6e73dc5be53a7817ab40e16f8ce560",
+            "locator": "L39、L48；卡“口吻/举止”"
+          },
+          "face_changes": "视线从母图侧上方收回听者，眼睑专注，嘴闭合轻抿、唇角平；紧张仍在而不冷酷瞪视，不用微笑暗示满意。",
+          "minimal_gesture": "原外摊右手降到腰旁，手指松开且不碰笔；左手稳抱板，头稍收听。",
+          "difference_from_static_and_pair": "母图张口征询变为静听、闭口与停手；不同于E2正面急切发言。",
+          "condition_and_limit": "停问是可逆演出，不证明已停止整批、撤销旧记录、得到同意或获得宽恕。",
+          "output_stem": "sune_E1_listen_to_refusal",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent作唯一身份、服装、道具和比例母图，制作一张独立透明全身像素概念。角色：苏奈（ASH-NPC-SUNE），二十多岁成年女性、本批自愿观察记录员；卡内“她怕丢差事”明确。\n保留母图发型、面型、眉眼基础形状、鼻唇、年龄、身型及成熟大头紧凑比例；不套别人的甜笑脸、不重设头身比、不镜像。服装、配色、磨损、鞋和已存在道具完整保留，低魔中世纪材质、清楚有组织像素簇。\n灰棕发侧见短辫、窄长成年脸、直眉基础；暗李紫罩衫与米麻扎袖、棕靴。母图侧上看、抬眉张嘴征询，右手向外摊掌。\n固定侧别：人物左手（画面右）抱同一两栏木记录板，板不换侧、不新增内容或签名。 人物右手（画面左）是交流手；两支炭笔始终留人物右前腰（画面左）笔插，不取出、不增减。\n只作可逆情绪提案：停下倾听。对方说不愿观察，她停下问句听完，不急着填空。\n脸部变化：视线从母图侧上方收回听者，眼睑专注，嘴闭合轻抿、唇角平；紧张仍在而不冷酷瞪视，不用微笑暗示满意。\n最小手势：原外摊右手降到腰旁，手指松开且不碰笔；左手稳抱板，头稍收听。\n须有可读差异：母图张口征询变为静听、闭口与停手；不同于E2正面急切发言。\n剧情边界：停问是可逆演出，不证明已停止整批、撤销旧记录、得到同意或获得宽恕。\n保留原站姿及脚位，肩颈自然，不用大动作掩盖脸部情绪。\n单人完整全身，头发、手、原道具、脚和椅凳（若有）四周留边。无文字标签、对话框、场景背景、额外人物或全新关键道具。不能只复制母图表情再换手势。用途仅概念，不声称游戏原生网格、动画或装备兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "sune_E2_anxious_livelihood",
+          "label_zh": "忧虑生计",
+          "scene_proposal": "被问为何把普通物资说成观察名额，显露怕失差事的压力。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-ASH-03_冷苇的空碗.md",
+            "sha256": "6315c87fa56eedb8164821d1d175726bab6e73dc5be53a7817ab40e16f8ce560",
+            "locator": "L59、L61；卡“所怕”"
+          },
+          "face_changes": "视线短暂垂向自己的记录板上缘，眉心上牵而眼尾紧，嘴微张却唇角向下；读作难堪和焦虑，不能复制母图向上征询眼神或画哭诉求原谅。",
+          "minimal_gesture": "右手靠回自己腰侧、指尖轻收但不攥拳，左手抱板不动；仅头稍低，身体不躬成谢罪。",
+          "difference_from_static_and_pair": "母图外向征询变为内收低眼忧虑；E1是闭口听者，本张是迟疑开口说自己的处境。",
+          "condition_and_limit": "承认惧失工不把旧诱导正当化，不拿患者身体保工；不画雇费支付、停批落定、原谅或恢复许可。",
+          "output_stem": "sune_E2_anxious_livelihood",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent作唯一身份、服装、道具和比例母图，制作一张独立透明全身像素概念。角色：苏奈（ASH-NPC-SUNE），二十多岁成年女性、本批自愿观察记录员；卡内“她怕丢差事”明确。\n保留母图发型、面型、眉眼基础形状、鼻唇、年龄、身型及成熟大头紧凑比例；不套别人的甜笑脸、不重设头身比、不镜像。服装、配色、磨损、鞋和已存在道具完整保留，低魔中世纪材质、清楚有组织像素簇。\n灰棕发侧见短辫、窄长成年脸、直眉基础；暗李紫罩衫与米麻扎袖、棕靴。母图侧上看、抬眉张嘴征询，右手向外摊掌。\n固定侧别：人物左手（画面右）抱同一两栏木记录板，板不换侧、不新增内容或签名。 人物右手（画面左）是交流手；两支炭笔始终留人物右前腰（画面左）笔插，不取出、不增减。\n只作可逆情绪提案：忧虑生计。被问为何把普通物资说成观察名额，显露怕失差事的压力。\n脸部变化：视线短暂垂向自己的记录板上缘，眉心上牵而眼尾紧，嘴微张却唇角向下；读作难堪和焦虑，不能复制母图向上征询眼神或画哭诉求原谅。\n最小手势：右手靠回自己腰侧、指尖轻收但不攥拳，左手抱板不动；仅头稍低，身体不躬成谢罪。\n须有可读差异：母图外向征询变为内收低眼忧虑；E1是闭口听者，本张是迟疑开口说自己的处境。\n剧情边界：承认惧失工不把旧诱导正当化，不拿患者身体保工；不画雇费支付、停批落定、原谅或恢复许可。\n保留原站姿及脚位，肩颈自然，不用大动作掩盖脸部情绪。\n单人完整全身，头发、手、原道具、脚和椅凳（若有）四周留边。无文字标签、对话框、场景背景、额外人物或全新关键道具。不能只复制母图表情再换手势。用途仅概念，不声称游戏原生网格、动画或装备兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "ASH-NPC-TIAN",
+      "slug": "tian",
+      "name": "缇安",
+      "current_card": {
+        "path": "design/04_人物/城市人物/人物_ASH-NPC-TIAN_缇安.md",
+        "sha256": "475fd2bb03aa7d73d95d21bac5f6db51ac65aba43bb285d075c9cb8c85be8144"
+      },
+      "card_matches_second_four_brief": true,
+      "age_identity_lock": "三十多岁成年女性、妮蔻姐姐、旧屋另一合法住者，不能与同名近音缇娜染匠合并。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tian/concept_v1/tian_v2_raw_imagegen.png",
+          "sha256": "d26b956ba03124830c8d6d5c4dac542f2d10c8849288ded6d2de8b81d14ae42a"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tian/concept_v1/tian_transparent.png",
+          "sha256": "d8458ff76cc5e9227b95d9df42763977d27c9e3d084dbb4fd4071714754980c2"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tian/concept_v1/manifest.json",
+          "sha256": "37ea0742d13a879ee571233a112572abee782d5d4d398a4cd964b347df0fcce7"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本会话tools.view_image分别实看四张最终raw和四张clean完整PNG。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "三十多岁成年女性，妮蔻姐姐、旧屋另一合法住者；窄肩、长期缺觉眼影。",
+        "厚布衫、改小旧围裙；人物右手惯在围裙口袋，握钥绳；另一手有备用碗。",
+        "害怕与照護有限是真的，但不能据此夺妹妹旧共住权，不等于终身照护义务。"
+      ],
+      "observed_mother_image": "暖棕后束发、窄成年脸、明显下眼疲倦；陶红布衫、灰麻围裙、深褐裙和棕鞋。母图眉心抬起、勉强微笑，右手口袋口握绳，左手碗留身前。",
+      "fixed_prop_sides": [
+        "人物右手（画面左）保持围裙口袋口握短钥绳，同一旧钥匙垂在画面左；不举钥索取、不递出。",
+        "人物左手（画面右）托一只原陶碗于自己腹前，不换手、不递交、不加毯或第二碗。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "tian_E1_fear_without_smile",
+          "label_zh": "坦露害怕",
+          "scene_proposal": "勉强的笑退去，终于直接说出夜里不敢睡的真怕。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-ASH-01_安息村的旧钥匙.md",
+            "sha256": "329fa299a65fcc210e5d6870d1cbd2adb2c9304d1e6a5ffce746b25a819eaf7b",
+            "locator": "L48、L61；卡“所怕/举止”"
+          },
+          "face_changes": "去掉母图闭口微笑，嘴小幅张开、唇角不扬；下眼疲倦保留，目光直接但略不稳，内眉忧虑而不夸张八字哭脸。",
+          "minimal_gesture": "头从母图轻偏稍回正；肩略收，右手仍握口袋边钥绳、左手碗不前递。",
+          "difference_from_static_and_pair": "关键是从遮掩微笑转为坦露恐惧的开口，不能仍画原微笑仅调整眉。",
+          "condition_and_limit": "害怕不是传染诊断或封门理由，不画妹妹被驱逐、钥换毯、长期拒绝或被迫接班。",
+          "output_stem": "tian_E1_fear_without_smile",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent作唯一身份、服装、道具和比例母图，制作一张独立透明全身像素概念。角色：缇安（ASH-NPC-TIAN），三十多岁成年女性、妮蔻姐姐、旧屋另一合法住者，不能与同名近音缇娜染匠合并。\n保留母图发型、面型、眉眼基础形状、鼻唇、年龄、身型及成熟大头紧凑比例；不套别人的甜笑脸、不重设头身比、不镜像。服装、配色、磨损、鞋和已存在道具完整保留，低魔中世纪材质、清楚有组织像素簇。\n暖棕后束发、窄成年脸、明显下眼疲倦；陶红布衫、灰麻围裙、深褐裙和棕鞋。母图眉心抬起、勉强微笑，右手口袋口握绳，左手碗留身前。\n固定侧别：人物右手（画面左）保持围裙口袋口握短钥绳，同一旧钥匙垂在画面左；不举钥索取、不递出。 人物左手（画面右）托一只原陶碗于自己腹前，不换手、不递交、不加毯或第二碗。\n只作可逆情绪提案：坦露害怕。勉强的笑退去，终于直接说出夜里不敢睡的真怕。\n脸部变化：去掉母图闭口微笑，嘴小幅张开、唇角不扬；下眼疲倦保留，目光直接但略不稳，内眉忧虑而不夸张八字哭脸。\n最小手势：头从母图轻偏稍回正；肩略收，右手仍握口袋边钥绳、左手碗不前递。\n须有可读差异：关键是从遮掩微笑转为坦露恐惧的开口，不能仍画原微笑仅调整眉。\n剧情边界：害怕不是传染诊断或封门理由，不画妹妹被驱逐、钥换毯、长期拒绝或被迫接班。\n保留原站姿及脚位，肩颈自然，不用大动作掩盖脸部情绪。\n单人完整全身，头发、手、原道具、脚和椅凳（若有）四周留边。无文字标签、对话框、场景背景、额外人物或全新关键道具。不能只复制母图表情再换手势。用途仅概念，不声称游戏原生网格、动画或装备兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "tian_E2_weigh_shared_limits",
+          "label_zh": "认真倾听",
+          "scene_proposal": "听到要分开谈普通照护、下一班与旧共住范围，认真衡量自己能说的部分。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-ASH-01_安息村的旧钥匙.md",
+            "sha256": "329fa299a65fcc210e5d6870d1cbd2adb2c9304d1e6a5ffce746b25a819eaf7b",
+            "locator": "L59、L94；卡“跨案弧线”"
+          },
+          "face_changes": "眉心降低、不再高挑苦笑，眼神稳稳看听者，闭口唇线中性且略有思量；保留缺觉影，不做释然喜笑或认可式点头。",
+          "minimal_gesture": "头小幅向听者侧倾，肩自然松少许；双手只维持托碗、握绳，脚位不动。",
+          "difference_from_static_and_pair": "母图不安笑改为稳眼、无笑的衡量；E1为开口坦露害怕，本张为闭口思考。",
+          "condition_and_limit": "愿听不是答应共住或照护，也不代表旧权争议解决；不得把钥绳松开画成归还完成。",
+          "output_stem": "tian_E2_weigh_shared_limits",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent作唯一身份、服装、道具和比例母图，制作一张独立透明全身像素概念。角色：缇安（ASH-NPC-TIAN），三十多岁成年女性、妮蔻姐姐、旧屋另一合法住者，不能与同名近音缇娜染匠合并。\n保留母图发型、面型、眉眼基础形状、鼻唇、年龄、身型及成熟大头紧凑比例；不套别人的甜笑脸、不重设头身比、不镜像。服装、配色、磨损、鞋和已存在道具完整保留，低魔中世纪材质、清楚有组织像素簇。\n暖棕后束发、窄成年脸、明显下眼疲倦；陶红布衫、灰麻围裙、深褐裙和棕鞋。母图眉心抬起、勉强微笑，右手口袋口握绳，左手碗留身前。\n固定侧别：人物右手（画面左）保持围裙口袋口握短钥绳，同一旧钥匙垂在画面左；不举钥索取、不递出。 人物左手（画面右）托一只原陶碗于自己腹前，不换手、不递交、不加毯或第二碗。\n只作可逆情绪提案：认真倾听。听到要分开谈普通照护、下一班与旧共住范围，认真衡量自己能说的部分。\n脸部变化：眉心降低、不再高挑苦笑，眼神稳稳看听者，闭口唇线中性且略有思量；保留缺觉影，不做释然喜笑或认可式点头。\n最小手势：头小幅向听者侧倾，肩自然松少许；双手只维持托碗、握绳，脚位不动。\n须有可读差异：母图不安笑改为稳眼、无笑的衡量；E1为开口坦露害怕，本张为闭口思考。\n剧情边界：愿听不是答应共住或照护，也不代表旧权争议解决；不得把钥绳松开画成归还完成。\n保留原站姿及脚位，肩颈自然，不用大动作掩盖脸部情绪。\n单人完整全身，头发、手、原道具、脚和椅凳（若有）四周留边。无文字标签、对话框、场景背景、额外人物或全新关键道具。不能只复制母图表情再换手势。用途仅概念，不声称游戏原生网格、动画或装备兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "HIG-NPC-LEIN",
+      "slug": "lein",
+      "name": "蕾因",
+      "current_card": {
+        "path": "design/04_人物/城市人物/人物_HIG-NPC-LEIN_蕾因.md",
+        "sha256": "4ee32cb54e72718b14be0d2a328313792d84204399d8cab5dbadfdc419be46e1"
+      },
+      "card_matches_second_four_brief": true,
+      "age_identity_lock": "三十多岁成年女性、接过观景客约的向导；卡内免等广告“她的责任”明确。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/lein/concept_v1/lein_v1_raw_imagegen.png",
+          "sha256": "98ff456c0e66c57a6e22c890d19ec636e646a3cd5fa16a9c375411143b4dd6d8"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/lein/concept_v1/lein_transparent.png",
+          "sha256": "195960d4197eb1613e5a8a9d0284ec70570038a5e8566705569a4c313de379a2"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/lein/concept_v1/manifest.json",
+          "sha256": "3050bf92a59a536e843cc8ab9784113a91ce50ea41d2dc44ff42522ef88f919c"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本会话tools.view_image分别实看四张最终raw和四张clean完整PNG。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "三十多岁成年向导；性别沿已独审女性概念与生产brief锁定。说话带手势，小腿紧实。",
+        "短披、耐磨绑腿、软帽别一截粉笔、背包侧袋客约卷。",
+        "怕退订失旅费与信誉，夸大免等承诺由自己承担；不转嫁给维护者，不自动撤停牌。"
+      ],
+      "observed_mother_image": "风晒肤色、较宽颧脸、外翻棕短发、深眉；棕软帽、深绿短披、米褐衣、绑腿旧靴。母图侧看张口解释、右手外摊、左手握背包带。",
+      "fixed_prop_sides": [
+        "人物左手（画面右）握原背包肩带，背包和插着客约卷的侧袋保持画面右；卷不取出、不展开、不变免检凭证。",
+        "人物右手（画面左）为交流手；帽上同一截白粉笔仍在画面右并被帽带中段压住，不复制成两截。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "lein_E1_own_overstatement",
+          "label_zh": "反思自省",
+          "scene_proposal": "听见对自己免等广告的追问，先停嘴意识到话由自己写过。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-HIG-01_回风驿的停牌.md",
+            "sha256": "7dd001f462d125ff3c4e449838f6625187e0a63f4065dcce0a4b5cba62662cb3",
+            "locator": "L47；卡“举止/风格守卫”"
+          },
+          "face_changes": "眼神略下落、眼睑收而不躲闪到看不清；眉间轻压，闭口唇角稍沉，表现短暂难堪和自省，非奸商算计。",
+          "minimal_gesture": "右手由外摊收向腰前、掌半放松；左手仍握带、头略收，双脚站稳。",
+          "difference_from_static_and_pair": "母图张嘴解释改为安静闭口停顿；不同于E2专注抬眼听路况。",
+          "condition_and_limit": "只表现承担言语的态度，不展示广告已改、退款已付、客人谅解或危险段已获通行。",
+          "output_stem": "lein_E1_own_overstatement",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent作唯一身份、服装、道具和比例母图，制作一张独立透明全身像素概念。角色：蕾因（HIG-NPC-LEIN），三十多岁成年女性、接过观景客约的向导；卡内免等广告“她的责任”明确。\n保留母图发型、面型、眉眼基础形状、鼻唇、年龄、身型及成熟大头紧凑比例；不套别人的甜笑脸、不重设头身比、不镜像。服装、配色、磨损、鞋和已存在道具完整保留，低魔中世纪材质、清楚有组织像素簇。\n风晒肤色、较宽颧脸、外翻棕短发、深眉；棕软帽、深绿短披、米褐衣、绑腿旧靴。母图侧看张口解释、右手外摊、左手握背包带。\n固定侧别：人物左手（画面右）握原背包肩带，背包和插着客约卷的侧袋保持画面右；卷不取出、不展开、不变免检凭证。 人物右手（画面左）为交流手；帽上同一截白粉笔仍在画面右并被帽带中段压住，不复制成两截。\n只作可逆情绪提案：反思自省。听见对自己免等广告的追问，先停嘴意识到话由自己写过。\n脸部变化：眼神略下落、眼睑收而不躲闪到看不清；眉间轻压，闭口唇角稍沉，表现短暂难堪和自省，非奸商算计。\n最小手势：右手由外摊收向腰前、掌半放松；左手仍握带、头略收，双脚站稳。\n须有可读差异：母图张嘴解释改为安静闭口停顿；不同于E2专注抬眼听路况。\n剧情边界：只表现承担言语的态度，不展示广告已改、退款已付、客人谅解或危险段已获通行。\n保留原站姿及脚位，肩颈自然，不用大动作掩盖脸部情绪。\n单人完整全身，头发、手、原道具、脚和椅凳（若有）四周留边。无文字标签、对话框、场景背景、额外人物或全新关键道具。不能只复制母图表情再换手势。用途仅概念，不声称游戏原生网格、动画或装备兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "lein_E2_attentive_route_check",
+          "label_zh": "留意路况",
+          "scene_proposal": "听维护者说明当前可查证的路段信息，集中注意，不抢着替对方下结论。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-HIG-01_回风驿的停牌.md",
+            "sha256": "7dd001f462d125ff3c4e449838f6625187e0a63f4065dcce0a4b5cba62662cb3",
+            "locator": "L33、L59；卡“报价先报路况”"
+          },
+          "face_changes": "抬眼转向交谈者，双眼较母图更清楚睁开，眉略舒而保持警觉；嘴闭合自然、唇角平，读作职业专注，不用统一单眉挑起反问。",
+          "minimal_gesture": "头向听者轻侧，右手停在腰下、掌斜上但幅度小于母图；左手握带和双脚不动。",
+          "difference_from_static_and_pair": "从母图侧目张口辩说转为抬眼闭口接收信息；E1低眼内收，本张稳眼向外专注。",
+          "condition_and_limit": "听路况不证明已检查、修复、绕行确认或带客归来；不加地图、路牌、钱袋或粉笔书写。",
+          "output_stem": "lein_E2_attentive_route_check",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent作唯一身份、服装、道具和比例母图，制作一张独立透明全身像素概念。角色：蕾因（HIG-NPC-LEIN），三十多岁成年女性、接过观景客约的向导；卡内免等广告“她的责任”明确。\n保留母图发型、面型、眉眼基础形状、鼻唇、年龄、身型及成熟大头紧凑比例；不套别人的甜笑脸、不重设头身比、不镜像。服装、配色、磨损、鞋和已存在道具完整保留，低魔中世纪材质、清楚有组织像素簇。\n风晒肤色、较宽颧脸、外翻棕短发、深眉；棕软帽、深绿短披、米褐衣、绑腿旧靴。母图侧看张口解释、右手外摊、左手握背包带。\n固定侧别：人物左手（画面右）握原背包肩带，背包和插着客约卷的侧袋保持画面右；卷不取出、不展开、不变免检凭证。 人物右手（画面左）为交流手；帽上同一截白粉笔仍在画面右并被帽带中段压住，不复制成两截。\n只作可逆情绪提案：留意路况。听维护者说明当前可查证的路段信息，集中注意，不抢着替对方下结论。\n脸部变化：抬眼转向交谈者，双眼较母图更清楚睁开，眉略舒而保持警觉；嘴闭合自然、唇角平，读作职业专注，不用统一单眉挑起反问。\n最小手势：头向听者轻侧，右手停在腰下、掌斜上但幅度小于母图；左手握带和双脚不动。\n须有可读差异：从母图侧目张口辩说转为抬眼闭口接收信息；E1低眼内收，本张稳眼向外专注。\n剧情边界：听路况不证明已检查、修复、绕行确认或带客归来；不加地图、路牌、钱袋或粉笔书写。\n保留原站姿及脚位，肩颈自然，不用大动作掩盖脸部情绪。\n单人完整全身，头发、手、原道具、脚和椅凳（若有）四周留边。无文字标签、对话框、场景背景、额外人物或全新关键道具。不能只复制母图表情再换手势。用途仅概念，不声称游戏原生网格、动画或装备兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    }
+  ],
+  "prompt_archive_contract": {
+    "status": "planned_prompts_not_executed",
+    "rule": "本文件prompt_text是完整拟用首稿，不冒称已执行prompt。生产时将真实发送的逐字prompt、引用路径与输入SHA、工具参数、时间、输出路径/SHA、首稿或硬错revision1及选废原因写入prompts/与generation-log.json；若改措辞必须存实际版本，不用本brief替代真实调用存档。",
+    "max_calls_per_expression": 2,
+    "revision_rule": "仅一次明确硬错定向修订；实际修订全文及纠错目标须保存，失败则报告，不偷偷增加第三稿。"
+  },
+  "validation": {
+    "source_cards": 4,
+    "viewed_final_raw_images": 4,
+    "viewed_final_transparent_images": 4,
+    "raw_transparent_manifest_hash_triples_verified": 4,
+    "planned_expressions": 8,
+    "actual_generation_calls": 0,
+    "scope_note": "只新增本JSON；未修改design/、旧图、旧QA、roster或游戏包。"
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "slug": "cuoer",
+  "canonical_id": "FX-MN2",
+  "name": "锉珥",
+  "status": "planned_only_not_generated",
+  "selection_status": "requested_candidate_suitable_retained",
+  "source_card_hash_matches_roster44": true,
+  "source_ids": [
+    "cuoer_card",
+    "cuoer_manifest",
+    "cuoer_spec_lock",
+    "cuoer_character_brief",
+    "cuoer_expression_manifest",
+    "cuoer_expression_board",
+    "cuoer_raw",
+    "cuoer_anchor",
+    "qa_third",
+    "field_dialogue",
+    "field_script"
+  ],
+  "mother_image": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png",
+    "sha256": "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662",
+    "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_v2_raw_imagegen.png",
+    "raw_sha256": "1668632a6d87ef4a7bdac028abe16ba048a7092aeb45edc9f3e5509fabaf1533",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "raw_and_transparent_actually_viewed": true,
+    "viewed_utc": "2026-10-14T03:03:55Z",
+    "hashes_match_manifest_and_independent_qa": true,
+    "existing_expression_board_actually_viewed": true,
+    "old_pose": "直站，右手近小锉柄、左手低位曲指；表情E1静听、E2左手低幅劝停。已有图未使用短钳、未屈膝接触铁轨。",
+    "identity_lock": "四十来岁成年男性矿车修理工，深棕短乱发、方额短下颌、短胡茬；蓝灰系带卷袖褂、棕腰带、深灰裤、棕靴，不与FX-MIN珥德合人。",
+    "side_lock": "人物右耳后（画面左）夹原小截铁屑；小锉挂人物右腰（画面左），短钳原挂人物左腰（画面右）。两姿均由左侧取同一短钳，左挂位空；小锉与耳后铁屑全程保留原处。"
+  },
+  "duplicate_check": {
+    "own_existing_branches": [
+      "concept_v1",
+      "expressions_v1"
+    ],
+    "own_action_directories_found": [],
+    "non_source_action_metadata_matches": [],
+    "existing_expressions_actually_viewed": true,
+    "do_not_recount": [
+      "concept_v1母图",
+      "expressions_v1情绪与小手势",
+      "复制source/交付包内的母图",
+      "仅表情或不改变接触/手脚结构的小变化"
+    ]
+  },
+  "story_boundaries": [
+    "仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。",
+    "只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。"
+  ],
+  "risks": [
+    "短钳必须有一个铰轴、两手柄、两钳口，不变剪刀、扳手或第二小锤。",
+    "敲轨原文不指定工具。本案选闭合短钳外侧轻敲，是可逆动作设计，不能写成他既定习惯使用的工具。",
+    "脚边最小轨段是本动作新增接触物视觉提案，无已审造型，首稿须查宽底稳定、钳口接点、手腕可达与双足重心。"
+  ],
+  "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/cuoer/noncombat_basics_v1",
+  "plans": [
+    {
+      "key": "cuoer_A1_test_pliers_travel",
+      "title_zh": "双手试合短钳",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "cuoer_card",
+          "locator": "体貌与随身",
+          "line_start": 17,
+          "quote": "腰带上挂着小锉与短钳"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-MN2 / chats[1]",
+          "line_start": 2860,
+          "quote": "修理工只认两件事：撑得住、滑得动。"
+        }
+      ],
+      "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+      "start_pose_description_only": "双脚稳站，左手从左腰取短钳；右手接住另一支柄，两手先保持钳口略开。",
+      "pose": "双肘在腹前收近，两手各握同一短钳的一支手柄、远离铰轴与钳口；钳口朝画面右上但低于胸，停在缓缓合拢而仍留窄缝的瞬间。头低看铰轴与钳口，腕部顺着柄向，不夸大开口，不夹任何材料。短钳原左腰挂位空；小锉仍右腰挂稳，右耳后铁屑仍夹在原发耳交界。",
+      "end_pose_description_only": "放松双手让钳口回到母图小开度，再由左手收回原左腰；没有夹断/修好车件或新增零件。",
+      "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+      "contact_and_support_checks": [
+        "钳子只有一个铰轴、两柄两口，左右手各握一柄，手指远离夹点",
+        "两脚完整稳立，重量居中；工具在腹前自持不向画外递出",
+        "柄口运动关系符合一把交叉钳的结构，不变剪刀或两把工具"
+      ],
+      "prop_state_and_retention": [
+        "短钳在手一件、腰位空；原小锉与耳后铁屑不动",
+        "不夹车件、不拿下耳后铁屑、不增小锤、轨或背景"
+      ],
+      "difference_from_mother_expression_and_batch": "母图与表情未取钳；本图工具有明确合拢操作与两手接点。不同于单纯展示物件，A2另有下肢屈曲和轨接触。",
+      "risk_level": "medium_high",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png"
+      ],
+      "reference_sha256": [
+        "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662"
+      ],
+      "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：锉珥 / FX-MN2。四十来岁成年男性矿车修理工，深棕短乱发、方额短下颌、短胡茬；蓝灰系带卷袖褂、棕腰带、深灰裤、棕靴，不与FX-MIN珥德合人。\n固定侧别：人物右耳后（画面左）夹原小截铁屑；小锉挂人物右腰（画面左），短钳原挂人物左腰（画面右）。两姿均由左侧取同一短钳，左挂位空；小锉与耳后铁屑全程保留原处。\n本张动作：双手试合短钳。双肘在腹前收近，两手各握同一短钳的一支手柄、远离铰轴与钳口；钳口朝画面右上但低于胸，停在缓缓合拢而仍留窄缝的瞬间。头低看铰轴与钳口，腕部顺着柄向，不夸大开口，不夹任何材料。短钳原左腰挂位空；小锉仍右腰挂稳，右耳后铁屑仍夹在原发耳交界。\n支撑与接触：钳子只有一个铰轴、两柄两口，左右手各握一柄，手指远离夹点；两脚完整稳立，重量居中；工具在腹前自持不向画外递出；柄口运动关系符合一把交叉钳的结构，不变剪刀或两把工具。\n道具保留：短钳在手一件、腰位空；原小锉与耳后铁屑不动；不夹车件、不拿下耳后铁屑、不增小锤、轨或背景。\n附加约束：属于日常试手感的可逆推断，源文未说他此刻在保养钳子，不写检查合格或修复完成。\n剧情边界：仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。；只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。",
+      "prompt_sha256": "de1a580f8f25f4e6b8cca600c35dd85dce3b5572edd9a8af712f2a265c34d9b0",
+      "negative_constraints": [
+        "短钳必须有一个铰轴、两手柄、两钳口，不变剪刀、扳手或第二小锤。",
+        "敲轨原文不指定工具。本案选闭合短钳外侧轻敲，是可逆动作设计，不能写成他既定习惯使用的工具。",
+        "脚边最小轨段是本动作新增接触物视觉提案，无已审造型，首稿须查宽底稳定、钳口接点、手腕可达与双足重心。",
+        "仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。",
+        "只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。"
+      ],
+      "new_contact_prop": null,
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_A1_test_pliers_travel_prompt.txt"
+    },
+    {
+      "key": "cuoer_A2_crouch_tap_rail",
+      "title_zh": "屈膝用闭钳轻敲轨顶",
+      "status": "planned_not_generated",
+      "output_count": 1,
+      "kind": "independent_full_body_noncombat_keypose",
+      "evidence": [
+        {
+          "source_id": "cuoer_card",
+          "locator": "体貌与随身",
+          "line_start": 17,
+          "quote": "说话时敲轨。"
+        },
+        {
+          "source_id": "cuoer_card",
+          "locator": "口吻",
+          "line_start": 19,
+          "quote": "先敲两下再开口；谈到深段就压低声音。"
+        },
+        {
+          "source_id": "field_dialogue",
+          "locator": "FX-MN2 / greetings[first]",
+          "line_start": 2847,
+          "quote": "别踩轨心。踩两边，轨会说话。"
+        }
+      ],
+      "art_inference": "源文支持身份、物件或习惯；手位、重心、起止姿势及所选瞬间为可逆动作设计，不冒充台本中已经发生的事件。",
+      "start_pose_description_only": "在安全外段平处，两脚分开站在轨段旁而不踩轨；左手由原左腰取同一短钳并闭合，右手准备撑右大腿。",
+      "pose": "双膝弯曲、髋向后落成较低蹲姿，上身适度前倾。右掌实贴右大腿膝上辅助稳身；左手合握同一短钳的两支手柄，使钳口闭合，左前臂向下，取闭合钳头外侧平缓接触脚边短铁轨顶部的一个轻敲瞬间，手腕不反折。接触点位于左靴前外侧，双靴均在轨旁平处完整着地，绝不踩轨心。只画接触所需的一截低矮直铁轨，宽底平稳坐在与两鞋同一隐含地平面；无枕木群、矿车、洞壁、矿石或延伸环境。小锉仍右腰挂好，耳后铁屑留原右耳后，左腰钳位空。",
+      "end_pose_description_only": "左手把闭钳轻提离轨，身体可回直立并把钳归左腰；本轮不补第二敲、站起帧或敲后读数。",
+      "transition_scope": "起止仅供未来动画设计参考，本轮仅计划中间所述一张姿态；未画起止/过渡，不能声称连续或循环。",
+      "contact_and_support_checks": [
+        "右掌接右大腿，双脚落地且不压在轨上；髋重心在支撑区，不靠钳子承重",
+        "左手握闭合的两柄，闭钳头外侧确接轨顶，不能用尖角刺轨或夹断铁轨",
+        "轨的宽底与双靴共享隐含地面；低矮轨段稳定不浮空、不倾倒，接点可及",
+        "手、钳头与轨不互穿；轻敲不画冲击闪、火花、裂纹或受伤"
+      ],
+      "prop_state_and_retention": [
+        "短钳一件在左手，小锉仍右腰、铁屑仍右耳后，左钳挂位空",
+        "仅新增一截接触用轨段；形状是低魔铁轨视觉提案，不宣称对应游戏尺寸或真实矿车工程"
+      ],
+      "difference_from_mother_expression_and_batch": "母图仅低手曲指且无接触；本图髋膝/手臂高度均显著改变并真正接轨。与A1腹前双手试钳、训练样板蹲姿均不相同。",
+      "risk_level": "high_visual_contact",
+      "reference_image_paths": [
+        "Assets/CharacterDesigns/20261013/expressive/new_story/cuoer/concept_v1/cuoer_transparent.png"
+      ],
+      "reference_sha256": [
+        "111e39922e3b5247145a909cb9a572c50bc3745dd11b4ac3384a0825f2470662"
+      ],
+      "prompt": "以所附该人物已审定透明全身母图为唯一人物身份、比例、衣装及已有工具造型锚，重新绘制一张独立非战斗全身动作关键姿态。保持同一脸、年龄、身材、头身比例、发型、服装层次、配色磨损与有组织的粗像素簇；成熟大头紧凑成年人，不幼化、不拉成长身、不套四人统一脸。不镜像，左右以人物自身解剖侧为准并对照画面侧说明。必须有真实手部/身体动作与明确接触，不能只改表情或平移母图。头发、双手、双靴和所有道具完整，四周留透明边距。纯alpha透明背景；除本张明确写出的接触物外，无背景、地板、阴影、光晕、文字、数字、边框、UI或第二个人。只画一个瞬间，不画动作残影、多格、箭头或连播。人体由生图重绘，禁止脚本旋转肢体、变形、拼接、插值或强量化掩盖错误。同一物件恰好一件，从原挂位取出后该位置必须空。动作不宣布任务完成、授权、付款、同意、修复、合格、康复或任何新剧情事实。\n人物：锉珥 / FX-MN2。四十来岁成年男性矿车修理工，深棕短乱发、方额短下颌、短胡茬；蓝灰系带卷袖褂、棕腰带、深灰裤、棕靴，不与FX-MIN珥德合人。\n固定侧别：人物右耳后（画面左）夹原小截铁屑；小锉挂人物右腰（画面左），短钳原挂人物左腰（画面右）。两姿均由左侧取同一短钳，左挂位空；小锉与耳后铁屑全程保留原处。\n本张动作：屈膝用闭钳轻敲轨顶。双膝弯曲、髋向后落成较低蹲姿，上身适度前倾。右掌实贴右大腿膝上辅助稳身；左手合握同一短钳的两支手柄，使钳口闭合，左前臂向下，取闭合钳头外侧平缓接触脚边短铁轨顶部的一个轻敲瞬间，手腕不反折。接触点位于左靴前外侧，双靴均在轨旁平处完整着地，绝不踩轨心。只画接触所需的一截低矮直铁轨，宽底平稳坐在与两鞋同一隐含地平面；无枕木群、矿车、洞壁、矿石或延伸环境。小锉仍右腰挂好，耳后铁屑留原右耳后，左腰钳位空。\n支撑与接触：右掌接右大腿，双脚落地且不压在轨上；髋重心在支撑区，不靠钳子承重；左手握闭合的两柄，闭钳头外侧确接轨顶，不能用尖角刺轨或夹断铁轨；轨的宽底与双靴共享隐含地面；低矮轨段稳定不浮空、不倾倒，接点可及；手、钳头与轨不互穿；轻敲不画冲击闪、火花、裂纹或受伤。\n道具保留：短钳一件在左手，小锉仍右腰、铁屑仍右耳后，左钳挂位空；仅新增一截接触用轨段；形状是低魔铁轨视觉提案，不宣称对应游戏尺寸或真实矿车工程。\n附加约束：原文只写敲轨、未指定用哪件工具；本张选现有闭合短钳外侧是可逆设计。不要加新锤。单图不声称已敲完两下、不作轨道测量/检修通过。\n剧情边界：仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。；只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。",
+      "prompt_sha256": "a6e6a4146d4105de4094c4eadf83659fedb6a57d15a948b4e6d21500af625dca",
+      "negative_constraints": [
+        "短钳必须有一个铰轴、两手柄、两钳口，不变剪刀、扳手或第二小锤。",
+        "敲轨原文不指定工具。本案选闭合短钳外侧轻敲，是可逆动作设计，不能写成他既定习惯使用的工具。",
+        "脚边最小轨段是本动作新增接触物视觉提案，无已审造型，首稿须查宽底稳定、钳口接点、手腕可达与双足重心。",
+        "仅安全外段普通观察/动作提案；不入最深段、不认领矿主车件、不画支撑已换、轨道已修或巡查已结。",
+        "只画一次轻触的单张关键姿态；不能据此声称敲完两下、听出结果、精确沉降量或深段开放。"
+      ],
+      "new_contact_prop": {
+        "name": "一截低矮稳定铁轨",
+        "source": "FX-MN2卡与当前对白的轨",
+        "status": "new_reversible_visual_contact_prop_not_canonical_geometry",
+        "limit": "仅接点所需的短段，宽底与鞋底同平面，无完整轨道场景",
+        "tool_inference": "左手合握已有短钳两柄、以闭钳头外侧轻敲；源文未指定工具，不写成既定习惯",
+        "ownership_claim": false
+      },
+      "animation_claim": false,
+      "sequence_required": false,
+      "new_story_fact": false,
+      "generation_budget": {
+        "initial": 1,
+        "max_hard_error_revisions": 1,
+        "safety_blocked": "stop; no circumvention, prompt laundering or alternate generator"
+      },
+      "review_status": "planning_author_checked; independent_plan_review_pending",
+      "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/second_new_character_actions_sources/cuoer_A2_crouch_tap_rail_prompt.txt"
+    }
+  ]
+}

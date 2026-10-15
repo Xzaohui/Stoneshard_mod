@@ -1,0 +1,912 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-14T01:32:21.443125+00:00",
+  "status": "planning_complete_not_generated",
+  "purpose": "下一轮新剧情人物非战斗基础动作补绘规划；本文件不执行生图、不修改canon、不计完成图。",
+  "scope": {
+    "selected_characters": 4,
+    "planned_new_independent_fullbody_keyposes": 8,
+    "generated_images": 0,
+    "revision_images": 0,
+    "new_characters": 0,
+    "full_animation": false,
+    "gif_planned": false,
+    "equipment_or_engine_work": false,
+    "git_or_upload_performed": false
+  },
+  "selection_criteria": [
+    "限定new_characters_44名单内的已审全身人物。",
+    "逐人当前人物卡有明确衣物/随身物或动作；派生收整动作明标可逆演出推断，不伪装台本原动作。",
+    "现有动作总表、补绘索引及目录/元数据交叉核查缺口，不把表情/原锚复用计动作完成。",
+    "用已有物件构成两种可辨全身关键姿态，不做通用抬手或自然步行循环。"
+  ],
+  "global_boundaries": [
+    "本次仅计划；没有开始生图、制作GIF、git操作、上传或游戏改动。",
+    "未来每张单独用内置imagegen按母图重绘；禁止脚本变形、画人体、复制位移或插值补帧。",
+    "每人2张独立keypose；编号不意味着剧情先后、动画闭环或母图可以无缝接入；不默认连播。",
+    "不画治疗结果、患者康复、同意/续约、付钱、物件交给他人或接收结果。",
+    "任何簿/工单/样品刻字只留不可读记号；名单、姓名、健康资料、迁移去向不准变可读。",
+    "没有新角色或新表情额度；不改既有全身选稿/表情manifest/QA/收据。",
+    "人物存活、在场、授权与剧情状态优先；基础动作本身不写任何游戏状态。",
+    "装备、精确道具工程尺寸、原生帧/方向/origin及runtime均后置，概念制作不等待这些验证。"
+  ],
+  "selection_note": "已实际view四张透明母图，并因维菈透明预览的隐藏RGB另view现有浅色板核对。安妮原锚已指簿、古菈已指单、维菈已双手托样、洛珉灯已落地，8计划均避开直接复刻。",
+  "other_candidates_considered_not_selected": [
+    {
+      "slug": "kuen",
+      "reason": "成年患者动作必须保留明确扶饮/翻身帮助边界，本批不画患者以免无意表达康复或独立能力改变。没有撤销其未来合适动作。"
+    },
+    {
+      "slug": "sune",
+      "reason": "记录板/炭笔身份明确，但本批已有簿/短单两种自有纸件；先让出名额给持灯与机械样品，不扩张隐私记录或重做刚完成表情。"
+    },
+    {
+      "slug": "turi",
+      "reason": "明确敲击习惯依赖梁/目标，若只抽空挥锤容易成泛化动作；本批采用已有样品的维菈，无需编造检验场景。"
+    },
+    {
+      "slug": "wadun",
+      "reason": "蹲姿习惯原文充分，可后续核其母图再规划；本批不额外复用训练样板蹲坐，也不扩成锅灶工序。"
+    }
+  ],
+  "coverage_audit": {
+    "read_indexes": [
+      "action_coverage",
+      "master_supplements"
+    ],
+    "action_metadata_file_count": 648,
+    "scan_manifest": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/action_metadata_scan.json",
+    "scan_manifest_sha256": "7eff41f7cc5afc3af86f2645ebdd691f0b38b25f185daf6f08b29a18207e91d2",
+    "scan_inventory_sha256": "5e0e0171f8573aa2460cd6c886cf7d392722847863a7adae6b4356da747a1708",
+    "selected_character_action_metadata_matches": 0,
+    "selected_character_own_action_directories_found": 0,
+    "new_story_own_branches": [
+      "concept_v1",
+      "expressions_v1"
+    ],
+    "absence_claim_scope": "截至本次扫描：指定角色目录及CharacterActions/20261013当前元数据（不含复制sources）未找到动作资产；不把此结论扩大到未扫描外部电脑/云文件。",
+    "expression_coverage": "4位已有expressions_v1，均保留；本次只检查其目录和manifest去重，不重新审表情、不计表情生产。"
+  },
+  "source_sha_snapshots": [
+    {
+      "source_id": "roster44",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/new_characters_44.json",
+      "sha256": "39023b5f3db9980e063b8e57e9bc3cfe3786304f7aef22767c78e10afd631992",
+      "bytes": 142768,
+      "role": "44人稳定ID与人物卡来源；其中旧production status不作为当前完成数",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/00_roster44.json"
+    },
+    {
+      "source_id": "action_coverage",
+      "path": "Assets/CharacterActions/20261013/ACTION_COVERAGE.md",
+      "sha256": "61ed5cd1846ef3017b4b1c72cb5a63432aa22a4c9d151d5b789f586245f498bb",
+      "bytes": 26364,
+      "role": "既有基础动作与自然步行失败/停止研究边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/01_action_coverage.md"
+    },
+    {
+      "source_id": "master_supplements",
+      "path": "Assets/CharacterActions/20261013/MASTER_SUPPLEMENT_INDEX.md",
+      "sha256": "99fb786c7d83aa9f44e3c96a78fb83f3dac5dc42e7732602736e06ed9716dc59",
+      "bytes": 26988,
+      "role": "逐角色补绘去重和概念/动画边界",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/02_master_supplements.md"
+    },
+    {
+      "source_id": "style_direction",
+      "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+      "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897",
+      "bytes": 6187,
+      "role": "现行美术优先级，历史暂停门槛已被恢复概念生产取代",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/03_style_direction.md"
+    },
+    {
+      "source_id": "root_agents",
+      "path": "AGENTS.md",
+      "sha256": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+      "bytes": 68775,
+      "role": "项目规则只读指纹"
+    },
+    {
+      "source_id": "qa_first",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_first_four_20261013.json",
+      "sha256": "2776c7e8d5bca3661db7bc992505d4708dddb458f3c85290362f37a21daed21f",
+      "bytes": 14266,
+      "role": "安妮、古菈母图的独立选稿与透明导出绑定",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/05_qa_first.json"
+    },
+    {
+      "source_id": "qa_third",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_third_four_20261013.json",
+      "sha256": "1035661926eab047adc4aac950582a6f924f42146aacfee2148206bb1cb267d4",
+      "bytes": 16192,
+      "role": "维菈母图的独立选稿与中性外观、透明合成限制",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/06_qa_third.json"
+    },
+    {
+      "source_id": "qa_fourth",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fourth_four_20261013.json",
+      "sha256": "c49da19d1acd1f65f8ca9de36c9bfef59d011c59a886eedfe336d16a5842b917",
+      "bytes": 13880,
+      "role": "洛珉母图的独立选稿与中性外观、知情限制",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/07_qa_fourth.json"
+    },
+    {
+      "source_id": "anni_card",
+      "path": "design/04_人物/城市人物/人物_ASH-NPC-ANNI_安妮.md",
+      "sha256": "f5cdeb807d06bb736e677fc86687bdeec87a7d9b7ec1d84d649147d32ae52f60",
+      "bytes": 2080,
+      "role": "当前人物卡：身份、随身物与动作依据",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/08_anni_card.md"
+    },
+    {
+      "source_id": "anni_script",
+      "path": "design/06_支线/城市支线/台本_CS-ASH-02_陪护者也会累.md",
+      "sha256": "9dd06cf756a46a20f03a81d6494db0a618dbf28d914e639d873ce3faec62587d",
+      "bytes": 17341,
+      "role": "当前关联剧情的条件与结果边界；不将条件台词当已发生",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/09_anni_script.md"
+    },
+    {
+      "source_id": "anni_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/manifest.json",
+      "sha256": "7e48460bdcb789318cdbda94b0b8a5c56fed6b7f742231b849723d428666d13b",
+      "bytes": 4621,
+      "role": "母图冻结选稿与SHA",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/10_anni_manifest.json"
+    },
+    {
+      "source_id": "anni_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/expressions_v1/manifest.json",
+      "sha256": "acbb21fc300a06c1fa4d1eef8ed42b4077bbed8e16d4f543dcdcf06343a62730",
+      "bytes": 5466,
+      "role": "既有表情去重；本轮不补表情",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/11_anni_expression_manifest.json"
+    },
+    {
+      "source_id": "anni_anchor",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_transparent.png",
+      "sha256": "0111ebebbac68e2f49558a66264e902da534b388e6a1ce0d76f4cf0b1e9bb659",
+      "bytes": 672659,
+      "role": "已实际view的全身透明母图；只记录SHA，不复制图片"
+    },
+    {
+      "source_id": "anni_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_v2_raw_imagegen.png",
+      "sha256": "6491e469ecb2241826121bc633b8e7a242921f4feaba5232f7c288c239415ab9",
+      "bytes": 744001,
+      "role": "母图已选原始生图；不覆盖"
+    },
+    {
+      "source_id": "gura_card",
+      "path": "design/04_人物/城市人物/人物_HIG-NPC-GURA_古菈.md",
+      "sha256": "0df44534ce404b6790cf5d2b42edd2823be75e3dd16a3a6f68be7eb3b1e437b9",
+      "bytes": 1955,
+      "role": "当前人物卡：身份、随身物与动作依据",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/14_gura_card.md"
+    },
+    {
+      "source_id": "gura_script",
+      "path": "design/06_支线/城市支线/台本_CS-HIG-03_留下的人.md",
+      "sha256": "9160ce9972e026fe5209f198a8ad5433a0dd75e8ff6fab5f0135bad3c7831718",
+      "bytes": 17472,
+      "role": "当前关联剧情的条件与结果边界；不将条件台词当已发生",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/15_gura_script.md"
+    },
+    {
+      "source_id": "gura_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/manifest.json",
+      "sha256": "c894cf2844ddfa23a6230fca49f63b5ac2c3d6fe99d1394550b92b0e7f262ee3",
+      "bytes": 3919,
+      "role": "母图冻结选稿与SHA",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/16_gura_manifest.json"
+    },
+    {
+      "source_id": "gura_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/expressions_v1/manifest.json",
+      "sha256": "40e134eb50b2d3157e7aa6ebfe518a9b7b597fdbd805f6a76e4849c7ca693615",
+      "bytes": 5526,
+      "role": "既有表情去重；本轮不补表情",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/17_gura_expression_manifest.json"
+    },
+    {
+      "source_id": "gura_anchor",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_transparent.png",
+      "sha256": "7feeb5c4a3fe495d9ae9aad5c74319ffe6c0f2eb46b946ac02ca5b50eb982942",
+      "bytes": 806387,
+      "role": "已实际view的全身透明母图；只记录SHA，不复制图片"
+    },
+    {
+      "source_id": "gura_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_v1_raw_imagegen.png",
+      "sha256": "0934e8d402693db8835f75f42d7777bb9f23577e645e82cc4d39a0048547d0fb",
+      "bytes": 895513,
+      "role": "母图已选原始生图；不覆盖"
+    },
+    {
+      "source_id": "vila_card",
+      "path": "design/04_人物/城市人物/人物_HIG-NPC-VILA_维菈.md",
+      "sha256": "657afdd813343fd7a3fff2ee4c0588569cfd96f6e81d7d0b728fb3ffd22201be",
+      "bytes": 1988,
+      "role": "当前人物卡：身份、随身物与动作依据",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/20_vila_card.md"
+    },
+    {
+      "source_id": "vila_script",
+      "path": "design/06_支线/城市支线/台本_CS-HIG-02_三刻里少的一格.md",
+      "sha256": "a603294ce7906c7d473d23dd66a85cfb0eb40ca14e52c99fb6cc3a948875ef07",
+      "bytes": 16010,
+      "role": "当前关联剧情的条件与结果边界；不将条件台词当已发生",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/21_vila_script.md"
+    },
+    {
+      "source_id": "vila_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/manifest.json",
+      "sha256": "a35e5627aab9d64d7e370e81a55c49b88924ca5dcf22c74329c2ba4954612e32",
+      "bytes": 3153,
+      "role": "母图冻结选稿与SHA",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/22_vila_manifest.json"
+    },
+    {
+      "source_id": "vila_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/expressions_v1/manifest.json",
+      "sha256": "854644cb7ff5ed91a21932c27ce26eb3ab4248788aae9edf199de669916eb46f",
+      "bytes": 7306,
+      "role": "既有表情去重；本轮不补表情",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/23_vila_expression_manifest.json"
+    },
+    {
+      "source_id": "vila_spec_lock",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/spec_lock.md",
+      "sha256": "abdeccc360744a4eab47ad4584035e30179877692b7b4a1f2ee98d7d66601403",
+      "bytes": 2163,
+      "role": "母图身份细节；历史生成方案仅在不冲突时参考",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/24_vila_spec_lock.md"
+    },
+    {
+      "source_id": "vila_anchor",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_transparent.png",
+      "sha256": "7a23d1c8361a9ef4570a7c6658200d77a7d9dc18fb7d71e41fb02c1768b5ac52",
+      "bytes": 1129549,
+      "role": "已实际view的全身透明母图；只记录SHA，不复制图片"
+    },
+    {
+      "source_id": "vila_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_v2_raw_imagegen.png",
+      "sha256": "9b72e90380efb5e660fb75beef199713bb7889f2defec586f318514d5fe7f31a",
+      "bytes": 1154995,
+      "role": "母图已选原始生图；不覆盖"
+    },
+    {
+      "source_id": "luomin_card",
+      "path": "design/04_人物/野外人物/人物_FX-CAT_洛珉.md",
+      "sha256": "83e4c012254264ef736c07bb9bea72d0f9c3d90ca6998d79246aba8867fcdc26",
+      "bytes": 1112,
+      "role": "当前人物卡：身份、随身物与动作依据",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/27_luomin_card.md"
+    },
+    {
+      "source_id": "luomin_script",
+      "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+      "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+      "bytes": 105635,
+      "role": "当前关联剧情的条件与结果边界；不将条件台词当已发生",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/28_luomin_script.md"
+    },
+    {
+      "source_id": "luomin_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/manifest.json",
+      "sha256": "3b542cc4a4c3b7a044a6d8b67235c84fdb9abc50203794042d22f387efc949e3",
+      "bytes": 3483,
+      "role": "母图冻结选稿与SHA",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/29_luomin_manifest.json"
+    },
+    {
+      "source_id": "luomin_expression_manifest",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/expressions_v1/manifest.json",
+      "sha256": "9a3df7ced0287b22e62b9d9dda427c267ffa05059ca39c3178a14c20439289a4",
+      "bytes": 6273,
+      "role": "既有表情去重；本轮不补表情",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/30_luomin_expression_manifest.json"
+    },
+    {
+      "source_id": "luomin_spec_lock",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/spec_lock.md",
+      "sha256": "1c25704afc87c168ed0f0d297e4309ca4ccdc06f0b47704ffd0deb01d3e507a8",
+      "bytes": 2455,
+      "role": "母图身份细节；历史生成方案仅在不冲突时参考",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_new_character_actions_sources/31_luomin_spec_lock.md"
+    },
+    {
+      "source_id": "luomin_anchor",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/luomin_transparent.png",
+      "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4",
+      "bytes": 629044,
+      "role": "已实际view的全身透明母图；只记录SHA，不复制图片"
+    },
+    {
+      "source_id": "luomin_raw",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/luomin_v1_raw_imagegen.png",
+      "sha256": "8e53d315ac7f8563cc59adb5d0a0b9e145c7e2065e17c5e09bdea676419b1e82",
+      "bytes": 739777,
+      "role": "母图已选原始生图；不覆盖"
+    },
+    {
+      "source_id": "vila_light_board_viewed",
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_light_board.png",
+      "sha256": "2a84b028bc97e869f47dd9c4f0e27c4d9cbdf1e462565d567dec162cf8307341",
+      "bytes": 562886,
+      "role": "已实际view的现有浅色展示板，用于排除忽略alpha预览的隐藏RGB误判；无新图"
+    }
+  ],
+  "characters": [
+    {
+      "slug": "anni",
+      "canonical_id": "ASH-NPC-ANNI",
+      "name": "安妮",
+      "status": "planned_only_not_generated",
+      "priority_reason": "首批新城市角色；护理者的实际准备/收整动作缺口明确，能用现有衣袖、簿与木牌完成，不画治疗或新增患者。已存在的指簿解释及两张表情不再重做。",
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "anni_card",
+        "anni_script",
+        "anni_manifest",
+        "anni_expression_manifest",
+        "qa_first"
+      ],
+      "mother_image": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_transparent.png",
+        "sha256": "0111ebebbac68e2f49558a66264e902da534b388e6a1ce0d76f4cf0b1e9bb659",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_v2_raw_imagegen.png",
+        "raw_sha256": "6491e469ecb2241826121bc633b8e7a242921f4feaba5232f7c288c239415ab9",
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-14T01:26:52Z",
+        "selected_raw_and_clean_hashes_match_manifest_and_qa": true,
+        "visual_observations": {
+          "existing_pose": "直立，左手托着摊开簿子朝外，右手伸指指页，嘴正解释。",
+          "identity_lock": "棕色低髻，素灰米褂、袖上扣带、绿束腰，棕靴；画面左侧口袋内布带与剪刀，另一侧当班木牌。"
+        }
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "has_existing_fullbody_concept": true,
+        "has_existing_expression_branch": true,
+        "own_action_root_exists": false,
+        "existing_distinct_action_assets_found": [],
+        "existing_mother_pose_not_to_recreate": "直立，左手托着摊开簿子朝外，右手伸指指页，嘴正解释。",
+        "do_not_count_as_new": [
+          "concept_v1原锚",
+          "expressions_v1既有胸像/脸部表演",
+          "母图引用及展示排版"
+        ],
+        "action_metadata_matches_excluding_copied_sources": []
+      },
+      "story_boundaries": [
+        "不画枯恩或其他患者，不画扶饮、站起、康复、医疗操作或观察许可。",
+        "扣袖与合簿只是自我整理，不代表真到班、完成交接、离班或答应下一班。",
+        "簿上只许不可读抽象短痕，不得出现患者姓名、病情、名单或新增数字；不写、不签、不盖章。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/anni/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "anni_A1_cuff_band_adjust",
+          "title_zh": "扣紧自己的袖带",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "anni_card",
+              "locator": "形象细描/衣着与磨损",
+              "quote": "护理班的素褂，袖口用扣带；口袋插着备用布带与剪刀。"
+            },
+            {
+              "source_id": "anni_card",
+              "locator": "随身物",
+              "quote": "当班木牌与一本只记本班的簿子。"
+            }
+          ],
+          "art_inference": "由人物卡明载衣物/自有物件推导的可逆动作构图，未声称该瞬间为台本既发生事件。",
+          "pose": "保持站稳，左肘弯起，左前臂横在胸腹前；合上的原小簿被左上臂轻夹在身侧。右手拇指和食指只捏左袖原有扣带，低头看扣带，小幅收紧；木牌仍挂腰，剪刀与布带仍收袋。",
+          "difference_from_mother_and_other_plan": "母图右手向外指摊开页，本图两臂内收、视线落袖口，书合闭夹侧；与A2正前合簿的手/书位置不同。",
+          "contact_and_support_checks": [
+            "双脚全掌支撑，躯干只小幅前倾。",
+            "右手与左袖带接触，左手与前臂完整；不多出第三手。",
+            "书由左上臂与躯干夹稳，不悬空；扣带不变止血带。"
+          ],
+          "prompt": "以所附该人物已审定全身母图为唯一身份和衣装锚，重新绘制一张独立全身非战斗基础动作keypose。保留同一年龄、脸、发型、体型、衣装颜色、磨损、左右身份特征及粗像素簇；成熟大头紧凑成年比例，不变幼童，不拉成长身。手、脚和物件完整，人物与道具留透明边距，纯alpha透明背景，无地面、投影、场景、文字、字幕、边框或第二个人。不得只裁胸像或只改表情。姿态必须由生图重绘，不用脚本旋转肢体、局部变形、拼接身体、平移冒充新动作、插值或强量化。身份设定未明示性别者保留现有中性外观，不新增性别canon。脚底有合理支撑但无步行摆步、攻击或循环；同一物件恰好一件，不复制、不凭空消失，不加新装备。单图是可逆表演提案，不表示剧情已经执行、对方收到东西、同意、支付、签约、痊愈或任务结算。 人物：安妮 / ASH-NPC-ANNI。本张动作：保持站稳，左肘弯起，左前臂横在胸腹前；合上的原小簿被左上臂轻夹在身侧。右手拇指和食指只捏左袖原有扣带，低头看扣带，小幅收紧；木牌仍挂腰，剪刀与布带仍收袋。 这是整理自己的袖口，不做治疗。书封闭，无可读纸页，无另外递来的手。",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_transparent.png"
+          ],
+          "negative_constraints": [
+            "不画枯恩或其他患者，不画扶饮、站起、康复、医疗操作或观察许可。",
+            "扣袖与合簿只是自我整理，不代表真到班、完成交接、离班或答应下一班。",
+            "簿上只许不可读抽象短痕，不得出现患者姓名、病情、名单或新增数字；不写、不签、不盖章。"
+          ],
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "prompt_sha256": "d99795eccf11dfa24d6be7174d1b229013ce460d1812369be485e2424a309074"
+        },
+        {
+          "key": "anni_A2_close_shift_book",
+          "title_zh": "合拢本班小簿",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "anni_card",
+              "locator": "随身物",
+              "quote": "当班木牌与一本只记本班的簿子。"
+            },
+            {
+              "source_id": "anni_card",
+              "locator": "举止",
+              "quote": "先报到班人，再报余量；被塞下一班时会指簿子说‘明天问’。"
+            },
+            {
+              "source_id": "anni_script",
+              "locator": "台本台词，约L89",
+              "quote": "这班我交清再走；愿不愿接下一班，别把今天做过当答案。"
+            }
+          ],
+          "art_inference": "由人物卡明载衣物/自有物件推导的可逆动作构图，未声称该瞬间为台本既发生事件。",
+          "pose": "双脚原地站稳，头略低看自己腰腹前的小簿，左前臂托住簿底，右手掌平放上封面，将同一本小簿合到仅余一条窄页缝；两肘靠近身体，封面朝上并朝自己，不向外递出。",
+          "difference_from_mother_and_other_plan": "母图开簿向外且伸指；本图簿低位近身合拢、手掌盖封面；A1书在身侧且手摸袖带，本图双方手均在书上。",
+          "contact_and_support_checks": [
+            "左掌/前臂真正承担簿重，右掌压封面而非穿页。",
+            "同一本书厚度和封皮不变，闭合仅改变开合状态。",
+            "木牌、剪刀和布带仍在原位置，无新物。"
+          ],
+          "prompt": "以所附该人物已审定全身母图为唯一身份和衣装锚，重新绘制一张独立全身非战斗基础动作keypose。保留同一年龄、脸、发型、体型、衣装颜色、磨损、左右身份特征及粗像素簇；成熟大头紧凑成年比例，不变幼童，不拉成长身。手、脚和物件完整，人物与道具留透明边距，纯alpha透明背景，无地面、投影、场景、文字、字幕、边框或第二个人。不得只裁胸像或只改表情。姿态必须由生图重绘，不用脚本旋转肢体、局部变形、拼接身体、平移冒充新动作、插值或强量化。身份设定未明示性别者保留现有中性外观，不新增性别canon。脚底有合理支撑但无步行摆步、攻击或循环；同一物件恰好一件，不复制、不凭空消失，不加新装备。单图是可逆表演提案，不表示剧情已经执行、对方收到东西、同意、支付、签约、痊愈或任务结算。 人物：安妮 / ASH-NPC-ANNI。本张动作：双脚原地站稳，头略低看自己腰腹前的小簿，左前臂托住簿底，右手掌平放上封面，将同一本小簿合到仅余一条窄页缝；两肘靠近身体，封面朝上并朝自己，不向外递出。 不把合簿演成已经完成交接或离班，不写签名，不盖章，不表达拒绝照护病人。",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_transparent.png"
+          ],
+          "negative_constraints": [
+            "不画枯恩或其他患者，不画扶饮、站起、康复、医疗操作或观察许可。",
+            "扣袖与合簿只是自我整理，不代表真到班、完成交接、离班或答应下一班。",
+            "簿上只许不可读抽象短痕，不得出现患者姓名、病情、名单或新增数字；不写、不签、不盖章。"
+          ],
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "prompt_sha256": "305f8be49ee2095242dc6dc68727d976505874725e7d7704f6b06fbba4b8179b"
+        }
+      ]
+    },
+    {
+      "slug": "gura",
+      "canonical_id": "HIG-NPC-GURA",
+      "name": "古菈",
+      "status": "planned_only_not_generated",
+      "priority_reason": "首批新城市维护者；既有母图已读/指本段工约，优先补收起自有纸与归位自有短工具，表达有限职业日常而不编造承诺。",
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "gura_card",
+        "gura_script",
+        "gura_manifest",
+        "gura_expression_manifest",
+        "qa_first"
+      ],
+      "mother_image": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_transparent.png",
+        "sha256": "7feeb5c4a3fe495d9ae9aad5c74319ffe6c0f2eb46b946ac02ca5b50eb982942",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_v1_raw_imagegen.png",
+        "raw_sha256": "0934e8d402693db8835f75f42d7777bb9f23577e645e82cc4d39a0048547d0fb",
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-14T01:26:52Z",
+        "selected_raw_and_clean_hashes_match_manifest_and_qa": true,
+        "visual_observations": {
+          "existing_pose": "双脚稳立，双手在胸腹前持短单并指条目；短撬棍已插在画面左侧肩袋。",
+          "identity_lock": "棕色后束低髻，灰厚褂、旧黄褐护膝、棕靴棕肩袋；短撬棍钩头向上；旧冻疮只作淡劳作痕。"
+        }
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "has_existing_fullbody_concept": true,
+        "has_existing_expression_branch": true,
+        "own_action_root_exists": false,
+        "existing_distinct_action_assets_found": [],
+        "existing_mother_pose_not_to_recreate": "双脚稳立，双手在胸腹前持短单并指条目；短撬棍已插在画面左侧肩袋。",
+        "do_not_count_as_new": [
+          "concept_v1原锚",
+          "expressions_v1既有胸像/脸部表演",
+          "母图引用及展示排版"
+        ],
+        "action_metadata_matches_excluding_copied_sources": []
+      },
+      "story_boundaries": [
+        "工约仅本段，动作不表示签字、续班、收到旧工资、钥已交回、维护已完成或永久离任。",
+        "不拿撬棍攻击或撬危险结构，不增加场景梁、钥匙、新工具或工程效果。",
+        "短单内容不可读，不放入他人迁移名单或新年份；折收不是销毁或撤约。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/gura/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "gura_A1_fold_segment_slip",
+          "title_zh": "折拢自己的短单",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "gura_card",
+              "locator": "随身物",
+              "quote": "短撬棍与自己的工约短单，单上只写本段。"
+            },
+            {
+              "source_id": "gura_card",
+              "locator": "举止",
+              "quote": "签单前先把段号念一遍；被劝续约时会说‘下次再问’。"
+            }
+          ],
+          "art_inference": "由人物卡明载衣物/自有物件推导的可逆动作构图，未声称该瞬间为台本既发生事件。",
+          "pose": "站姿稳定稍前脚承重，头低看腰前的原工约短单；双手拇指贴纸边，正把单纸沿中间向内对折，纸面转向自己，双肘低于母图。肩袋和里面的短撬棍保持原位。",
+          "difference_from_mother_and_other_plan": "不重复母图在胸前指单；本图腰前双手折纸且无指示手势。第二张手在袋口和撬棍上，空间构图不同。",
+          "contact_and_support_checks": [
+            "纸为单张可折小纸，不撕碎、不增多本账册。",
+            "两手各扶纸边，纸折角不穿掌；双脚有可读支撑。",
+            "撬棍钩头仍从原肩袋露出，不移到手中。"
+          ],
+          "prompt": "以所附该人物已审定全身母图为唯一身份和衣装锚，重新绘制一张独立全身非战斗基础动作keypose。保留同一年龄、脸、发型、体型、衣装颜色、磨损、左右身份特征及粗像素簇；成熟大头紧凑成年比例，不变幼童，不拉成长身。手、脚和物件完整，人物与道具留透明边距，纯alpha透明背景，无地面、投影、场景、文字、字幕、边框或第二个人。不得只裁胸像或只改表情。姿态必须由生图重绘，不用脚本旋转肢体、局部变形、拼接身体、平移冒充新动作、插值或强量化。身份设定未明示性别者保留现有中性外观，不新增性别canon。脚底有合理支撑但无步行摆步、攻击或循环；同一物件恰好一件，不复制、不凭空消失，不加新装备。单图是可逆表演提案，不表示剧情已经执行、对方收到东西、同意、支付、签约、痊愈或任务结算。 人物：古菈 / HIG-NPC-GURA。本张动作：站姿稳定稍前脚承重，头低看腰前的原工约短单；双手拇指贴纸边，正把单纸沿中间向内对折，纸面转向自己，双肘低于母图。肩袋和里面的短撬棍保持原位。 单上最多模糊短痕，完全不可读；不见笔、签章、金币或钥匙，折起不是毁约。",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_transparent.png"
+          ],
+          "negative_constraints": [
+            "工约仅本段，动作不表示签字、续班、收到旧工资、钥已交回、维护已完成或永久离任。",
+            "不拿撬棍攻击或撬危险结构，不增加场景梁、钥匙、新工具或工程效果。",
+            "短单内容不可读，不放入他人迁移名单或新年份；折收不是销毁或撤约。"
+          ],
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "prompt_sha256": "32dde1efe1147a338d910119d82208a341b6ef41f7864fee7771e5a1f543f8ff"
+        },
+        {
+          "key": "gura_A2_settle_crowbar_in_bag",
+          "title_zh": "把短撬棍收稳",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "gura_card",
+              "locator": "衣着与磨损",
+              "quote": "维护工厚褂，膝部绑着旧垫；肩袋里插着短撬棍。"
+            },
+            {
+              "source_id": "gura_card",
+              "locator": "随身物",
+              "quote": "短撬棍与自己的工约短单，单上只写本段。"
+            }
+          ],
+          "art_inference": "由人物卡明载衣物/自有物件推导的可逆动作构图，未声称该瞬间为台本既发生事件。",
+          "pose": "身体略转向自己肩袋所在侧，眼睛下看袋口。一手从上握原短撬棍的杆颈，把它顺原袋口向下收稳，另一手扶袋边；钩头仍露在外，绝不把撬棍举高。原工约短单已完整收在现有肩袋内，被袋体遮挡，不要求纸角可见，不增加口袋或夹层。双脚均着地、不迈步。",
+          "difference_from_mother_and_other_plan": "母图两手指单、撬棍无人接触；本图两臂在同一侧袋口操作工具，短单不在手中。与A1双手腰前折纸明显区别。",
+          "contact_and_support_checks": [
+            "撬棍仍是一根、同一长度/钩头，穿入已有袋口而非身体。",
+            "扶袋手和握杆手分开可辨；短单已被原袋完整遮挡，纸与工具收纳是独立姿态条件，不要求新增夹层。",
+            "仅整理现有袋中工具，不通过画面宣布离任/交钥。"
+          ],
+          "prompt": "以所附该人物已审定全身母图为唯一身份和衣装锚，重新绘制一张独立全身非战斗基础动作keypose。保留同一年龄、脸、发型、体型、衣装颜色、磨损、左右身份特征及粗像素簇；成熟大头紧凑成年比例，不变幼童，不拉成长身。手、脚和物件完整，人物与道具留透明边距，纯alpha透明背景，无地面、投影、场景、文字、字幕、边框或第二个人。不得只裁胸像或只改表情。姿态必须由生图重绘，不用脚本旋转肢体、局部变形、拼接身体、平移冒充新动作、插值或强量化。身份设定未明示性别者保留现有中性外观，不新增性别canon。脚底有合理支撑但无步行摆步、攻击或循环；同一物件恰好一件，不复制、不凭空消失，不加新装备。单图是可逆表演提案，不表示剧情已经执行、对方收到东西、同意、支付、签约、痊愈或任务结算。 人物：古菈 / HIG-NPC-GURA。本张动作：身体略转向自己肩袋所在侧，眼睛下看袋口。一手从上握原短撬棍的杆颈，把它顺原袋口向下收稳，另一手扶袋边；钩头仍露在外，绝不把撬棍举高。原工约短单已完整收在现有肩袋内，被袋体遮挡，不要求纸角可见，不增加口袋或夹层。双脚均着地、不迈步。 短单被原袋遮挡须在元数据注明，不新画额外袋；本张不与母图连播来冒充完整收纳过程。",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_transparent.png"
+          ],
+          "negative_constraints": [
+            "工约仅本段，动作不表示签字、续班、收到旧工资、钥已交回、维护已完成或永久离任。",
+            "不拿撬棍攻击或撬危险结构，不增加场景梁、钥匙、新工具或工程效果。",
+            "短单内容不可读，不放入他人迁移名单或新年份；折收不是销毁或撤约。"
+          ],
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "prompt_sha256": "0f28799078f5abaa4f800217a067a9dc028297541fa63f04be5a0279a3f3e22a"
+        }
+      ]
+    },
+    {
+      "slug": "vila",
+      "canonical_id": "HIG-NPC-VILA",
+      "name": "维菈",
+      "status": "planned_only_not_generated",
+      "priority_reason": "一眼可辨的样品/量规职业动作尚无；保留既有单片镜与普通U形样品，补近身自查和工具归位，可与已经有的双手展示显著区分。",
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "vila_card",
+        "vila_script",
+        "vila_manifest",
+        "vila_expression_manifest",
+        "qa_third"
+      ],
+      "mother_image": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_transparent.png",
+        "sha256": "7a23d1c8361a9ef4570a7c6658200d77a7d9dc18fb7d71e41fb02c1768b5ac52",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_v2_raw_imagegen.png",
+        "raw_sha256": "9b72e90380efb5e660fb75beef199713bb7889f2defec586f318514d5fe7f31a",
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-14T01:26:52Z",
+        "selected_raw_and_clean_hashes_match_manifest_and_qa": true,
+        "visual_observations": {
+          "existing_pose": "直立双手在腹前横托同一小U形金属支架；T形量规收在画面左侧围裙袋中；左眼为画面右眼，戴单片夹。",
+          "identity_lock": "短灰褐发，中性成熟脸，黄赭皮围裙、深灰衣、厚米色腕套、棕靴；U形两立耳各两个暗孔，单片镜不是眼罩。",
+          "transparency_caveat": "透明PNG的忽略alpha预览可显棕色隐藏RGB；另实际view已有light_board，正确合成无晕影，不误记母图透明硬错。"
+        }
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "has_existing_fullbody_concept": true,
+        "has_existing_expression_branch": true,
+        "own_action_root_exists": false,
+        "existing_distinct_action_assets_found": [],
+        "existing_mother_pose_not_to_recreate": "直立双手在腹前横托同一小U形金属支架；T形量规收在画面左侧围裙袋中；左眼为画面右眼，戴单片夹。",
+        "do_not_count_as_new": [
+          "concept_v1原锚",
+          "expressions_v1既有胸像/脸部表演",
+          "母图引用及展示排版"
+        ],
+        "action_metadata_matches_excluding_copied_sources": []
+      },
+      "story_boundaries": [
+        "当前来源未定性别，保持中性概念提案；不把左眼放大夹变双目镜、眼罩或伤眼。",
+        "贴量规只是近身目测/比对姿态，不产生准确测量值、两架结果、真实交货或合格认证。",
+        "不画晶体、能源、NE5、回声真相、全山安全、受赠人或付款。",
+        "U形样品与T形量规形状必须来自母图，不替换现代卡尺或加第二副支架；准确工程尺寸仍未核。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/vila/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "vila_A1_gauge_bracket_selfcheck",
+          "title_zh": "量规贴近样品底槽",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "vila_card",
+              "locator": "口吻",
+              "quote": "指同一底槽与两次实数，永不替全山或回声判真。"
+            },
+            {
+              "source_id": "vila_card",
+              "locator": "随身物",
+              "quote": "量规与支架样品，样品上刻着限用范围。"
+            },
+            {
+              "source_id": "vila_script",
+              "locator": "场2知情边界，约L59",
+              "quote": "两架同底槽的差异保unknown直到有限实测；卖支架不买司榆改口，赫斯敌对/死亡不影响固定替代。"
+            }
+          ],
+          "art_inference": "由人物卡明载衣物/自有物件推导的可逆动作构图，未声称该瞬间为台本既发生事件。",
+          "pose": "站稳、头向下轻倾，用左手从下托同一U形支架，将开口略转向自己但保持两立耳可辨；右手拿原口袋的同一小T形量规，轻贴样品底槽作近身目测比对。量规已离袋，袋中不再重复露出第二把，镜片仍在人物左眼。",
+          "difference_from_mother_and_other_plan": "母图双手向外横托展示样品，量规在袋；本图一手托样、一手量规接触底槽、看向自己物件。第二张量规到袋口而无接触样品。",
+          "contact_and_support_checks": [
+            "支架重心落左掌/前臂，右手握规，接触位置不穿金属。",
+            "支架保持原两耳、底梁与孔位关系；不因旋转消失一耳或多一个底梁。",
+            "量规一件、支架一件，单片镜位置固定。"
+          ],
+          "prompt": "以所附该人物已审定全身母图为唯一身份和衣装锚，重新绘制一张独立全身非战斗基础动作keypose。保留同一年龄、脸、发型、体型、衣装颜色、磨损、左右身份特征及粗像素簇；成熟大头紧凑成年比例，不变幼童，不拉成长身。手、脚和物件完整，人物与道具留透明边距，纯alpha透明背景，无地面、投影、场景、文字、字幕、边框或第二个人。不得只裁胸像或只改表情。姿态必须由生图重绘，不用脚本旋转肢体、局部变形、拼接身体、平移冒充新动作、插值或强量化。身份设定未明示性别者保留现有中性外观，不新增性别canon。脚底有合理支撑但无步行摆步、攻击或循环；同一物件恰好一件，不复制、不凭空消失，不加新装备。单图是可逆表演提案，不表示剧情已经执行、对方收到东西、同意、支付、签约、痊愈或任务结算。 人物：维菈 / HIG-NPC-VILA。本张动作：站稳、头向下轻倾，用左手从下托同一U形支架，将开口略转向自己但保持两立耳可辨；右手拿原口袋的同一小T形量规，轻贴样品底槽作近身目测比对。量规已离袋，袋中不再重复露出第二把，镜片仍在人物左眼。 只作工具接触的概念动作，不写数值/合格章，不承诺实际量测通过。限用刻痕最多不可读短线；无新架、旧表、工作台或他人手。",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_transparent.png"
+          ],
+          "negative_constraints": [
+            "当前来源未定性别，保持中性概念提案；不把左眼放大夹变双目镜、眼罩或伤眼。",
+            "贴量规只是近身目测/比对姿态，不产生准确测量值、两架结果、真实交货或合格认证。",
+            "不画晶体、能源、NE5、回声真相、全山安全、受赠人或付款。",
+            "U形样品与T形量规形状必须来自母图，不替换现代卡尺或加第二副支架；准确工程尺寸仍未核。"
+          ],
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "prompt_sha256": "cc098f7105552f989dfe819d32dff650d6c72b664735c402be3b5d3bf6cdf6be"
+        },
+        {
+          "key": "vila_A2_return_gauge_to_pocket",
+          "title_zh": "样品自持，量规归袋",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "vila_card",
+              "locator": "衣着与磨损",
+              "quote": "金属匠的皮围裙，腕套加厚；口袋里插着量规。"
+            },
+            {
+              "source_id": "vila_card",
+              "locator": "随身物",
+              "quote": "量规与支架样品，样品上刻着限用范围。"
+            }
+          ],
+          "art_inference": "由人物卡明载衣物/自有物件推导的可逆动作构图，未声称该瞬间为台本既发生事件。",
+          "pose": "同一人站稳，左手与左前臂把同一U形样品贴身托在腰上，开口略向上；右手把原T形量规竖直放回母图已有围裙袋，停在一半插入袋口的瞬间，眼睛看袋口，手指和T形横头完整可辨。",
+          "difference_from_mother_and_other_plan": "母图双手展示支架、量规已收；本图一臂贴身托支架、另一手在袋口插规。A1量规贴底槽，本图离开样品归袋。",
+          "contact_and_support_checks": [
+            "支架自持而非悬浮或递给画外人；右手不同时托样品。",
+            "同一袋口、同一T形规，插入长度合理，不出现第二工具。",
+            "左右物件位置相对躯干固定，不镜像改变眼镜眼侧。"
+          ],
+          "prompt": "以所附该人物已审定全身母图为唯一身份和衣装锚，重新绘制一张独立全身非战斗基础动作keypose。保留同一年龄、脸、发型、体型、衣装颜色、磨损、左右身份特征及粗像素簇；成熟大头紧凑成年比例，不变幼童，不拉成长身。手、脚和物件完整，人物与道具留透明边距，纯alpha透明背景，无地面、投影、场景、文字、字幕、边框或第二个人。不得只裁胸像或只改表情。姿态必须由生图重绘，不用脚本旋转肢体、局部变形、拼接身体、平移冒充新动作、插值或强量化。身份设定未明示性别者保留现有中性外观，不新增性别canon。脚底有合理支撑但无步行摆步、攻击或循环；同一物件恰好一件，不复制、不凭空消失，不加新装备。单图是可逆表演提案，不表示剧情已经执行、对方收到东西、同意、支付、签约、痊愈或任务结算。 人物：维菈 / HIG-NPC-VILA。本张动作：同一人站稳，左手与左前臂把同一U形样品贴身托在腰上，开口略向上；右手把原T形量规竖直放回母图已有围裙袋，停在一半插入袋口的瞬间，眼睛看袋口，手指和T形横头完整可辨。 不画满意点头或合格手势，不表示样品已售出/交付，不加围裙新袋或改变既有样品。",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_transparent.png"
+          ],
+          "negative_constraints": [
+            "当前来源未定性别，保持中性概念提案；不把左眼放大夹变双目镜、眼罩或伤眼。",
+            "贴量规只是近身目测/比对姿态，不产生准确测量值、两架结果、真实交货或合格认证。",
+            "不画晶体、能源、NE5、回声真相、全山安全、受赠人或付款。",
+            "U形样品与T形量规形状必须来自母图，不替换现代卡尺或加第二副支架；准确工程尺寸仍未核。"
+          ],
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "prompt_sha256": "21f392301565be1ea4ae3593f1cdabd24116ad80150116455acfb35d908ee9d0"
+        }
+      ]
+    },
+    {
+      "slug": "luomin",
+      "canonical_id": "FX-CAT",
+      "name": "洛珉",
+      "status": "planned_only_not_generated",
+      "priority_reason": "野外人物中有最直接动作原文：手提灯且说话前先放地。现母图只覆盖灯已在脚边和张手说话，缺提持与稳放两个身体关键姿态；无需新增任务物或场景。",
+      "source_card_hash_matches_roster44": true,
+      "source_ids": [
+        "luomin_card",
+        "luomin_script",
+        "luomin_manifest",
+        "luomin_expression_manifest",
+        "qa_fourth"
+      ],
+      "mother_image": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/luomin_transparent.png",
+        "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/luomin_v1_raw_imagegen.png",
+        "raw_sha256": "8e53d315ac7f8563cc59adb5d0a0b9e145c7e2065e17c5e09bdea676419b1e82",
+        "actually_viewed": true,
+        "viewed_utc": "2026-10-14T01:26:52Z",
+        "selected_raw_and_clean_hashes_match_manifest_and_qa": true,
+        "visual_observations": {
+          "existing_pose": "直立，一手腹侧另一手低幅张掌，普通油灯已在画面右脚外侧地上。",
+          "identity_lock": "灰鬓短发、瘦长中性成年脸、灰棕泥袍、暗蓝短披、两只完整鞋；单个普通铁油灯含微小暖黄火芯，不放光晕。"
+        }
+      },
+      "duplicate_check": {
+        "own_existing_branches": [
+          "concept_v1",
+          "expressions_v1"
+        ],
+        "has_existing_fullbody_concept": true,
+        "has_existing_expression_branch": true,
+        "own_action_root_exists": false,
+        "existing_distinct_action_assets_found": [],
+        "existing_mother_pose_not_to_recreate": "直立，一手腹侧另一手低幅张掌，普通油灯已在画面右脚外侧地上。",
+        "do_not_count_as_new": [
+          "concept_v1原锚",
+          "expressions_v1既有胸像/脸部表演",
+          "母图引用及展示排版"
+        ],
+        "action_metadata_matches_excluding_copied_sources": []
+      },
+      "story_boundaries": [
+        "原文年龄/职业不定性别，保留现有中性提案；无具体教派新徽、书、杖、武器、法术。",
+        "只在本人存在且安全停留的一般场合使用；不得用于缺席场景亮灯，亦不许推定祭坛灯/便携灯为同一剧情状态。",
+        "不画墓名、名单、祭坛、遗物、尸体或第二个人；不表示名单交外人、确认墓主、复活、已获信任或进入第三室。",
+        "两图独立动作概念，灯的细小火芯保持同态；不表现点灯/熄灯，也不默认N15完成。"
+      ],
+      "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/luomin/noncombat_basics_v1",
+      "plans": [
+        {
+          "key": "luomin_A1_lantern_low_hold",
+          "title_zh": "低位稳提油灯",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "luomin_card",
+              "locator": "体貌与随身",
+              "quote": "四十多岁的教士，袍角结着泥，手上提一盏常备的油灯；说话前习惯先把灯放在地上。"
+            },
+            {
+              "source_id": "luomin_script",
+              "locator": "FX-CAT体貌，约L120",
+              "quote": "四十多岁的教士，袍角结着泥，手上提一盏常备的油灯；说话前习惯先把灯放在地上。"
+            }
+          ],
+          "art_inference": "由人物卡明载衣物/自有物件推导的可逆动作构图，未声称该瞬间为台本既发生事件。",
+          "pose": "双脚原地稳立，身体较母图收臂并略转向画面右侧的原油灯。一手握同一盏油灯提环，灯垂在腿外侧较膝略低的位置、离地清楚；另一手轻收自己袍边离灯体少许，视线下看灯，灯不摆动、不高举。",
+          "difference_from_mother_and_other_plan": "母图灯在地且双手作对话，本图油灯在手中悬低、另一手近身拢袍。第二张明确屈膝俯身、灯底将落地，主体轮廓明显区别。",
+          "contact_and_support_checks": [
+            "手握完整提环，灯的重量从手腕自然垂下；灯与袍/腿有小空隙。",
+            "灯体/提环/小火芯均沿用一盏原灯，不画地上第二盏。",
+            "两只鞋稳实，不采用迈步或施法站姿。"
+          ],
+          "prompt": "以所附该人物已审定全身母图为唯一身份和衣装锚，重新绘制一张独立全身非战斗基础动作keypose。保留同一年龄、脸、发型、体型、衣装颜色、磨损、左右身份特征及粗像素簇；成熟大头紧凑成年比例，不变幼童，不拉成长身。手、脚和物件完整，人物与道具留透明边距，纯alpha透明背景，无地面、投影、场景、文字、字幕、边框或第二个人。不得只裁胸像或只改表情。姿态必须由生图重绘，不用脚本旋转肢体、局部变形、拼接身体、平移冒充新动作、插值或强量化。身份设定未明示性别者保留现有中性外观，不新增性别canon。脚底有合理支撑但无步行摆步、攻击或循环；同一物件恰好一件，不复制、不凭空消失，不加新装备。单图是可逆表演提案，不表示剧情已经执行、对方收到东西、同意、支付、签约、痊愈或任务结算。 人物：洛珉 / FX-CAT。本张动作：双脚原地稳立，身体较母图收臂并略转向画面右侧的原油灯。一手握同一盏油灯提环，灯垂在腿外侧较膝略低的位置、离地清楚；另一手轻收自己袍边离灯体少许，视线下看灯，灯不摆动、不高举。 是提持普通油灯的单姿态，不是授予通行、带路或举灯审判；小火芯不改变亮灭，无外部光晕。",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/luomin_transparent.png"
+          ],
+          "negative_constraints": [
+            "原文年龄/职业不定性别，保留现有中性提案；无具体教派新徽、书、杖、武器、法术。",
+            "只在本人存在且安全停留的一般场合使用；不得用于缺席场景亮灯，亦不许推定祭坛灯/便携灯为同一剧情状态。",
+            "不画墓名、名单、祭坛、遗物、尸体或第二个人；不表示名单交外人、确认墓主、复活、已获信任或进入第三室。",
+            "两图独立动作概念，灯的细小火芯保持同态；不表现点灯/熄灯，也不默认N15完成。"
+          ],
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "prompt_sha256": "9d49e2131545daa622d7098e5556e701e306d5f8b62d91d8a6a0bef1ac4cafe8"
+        },
+        {
+          "key": "luomin_A2_lower_lantern_to_ground",
+          "title_zh": "俯身稳放油灯",
+          "status": "planned_not_generated",
+          "output_count": 1,
+          "kind": "independent_full_body_noncombat_keypose",
+          "evidence": [
+            {
+              "source_id": "luomin_card",
+              "locator": "体貌与随身",
+              "quote": "手上提一盏常备的油灯；说话前习惯先把灯放在地上。"
+            },
+            {
+              "source_id": "luomin_script",
+              "locator": "FX-CAT知情与拒绝，约L124-137",
+              "quote": "不知道盗掘者的去向；不替任何家族宣告墓主身份。"
+            }
+          ],
+          "art_inference": "由人物卡明载衣物/自有物件推导的可逆动作构图，未声称该瞬间为台本既发生事件。",
+          "pose": "仍朝母图三分之四角，双膝适度弯曲、髋向后移、上身前倾，双脚完整着地。一手握油灯提环，把同一盏灯稳放到原脚外侧；取灯底刚接触脚底同一隐含平面、手还未松开的关键瞬间。另一手收住自己袍摆，避免触灯，目光看落点；不能画成仅弯脖子。",
+          "difference_from_mother_and_other_plan": "不重复母图直站灯已放稳；本图可见屈膝、俯身、手握提环仍低位接触灯。与A1直立提灯有清楚体态高度差。",
+          "contact_and_support_checks": [
+            "双脚不离地，重心位于支撑范围；袍可挡膝但不能把腿缩没。",
+            "灯底接触与脚底的隐含地平面一致；透明背景不添地板或阴影。",
+            "仍只有一盏灯；提环手指、另一手袍边、双鞋均完整。"
+          ],
+          "prompt": "以所附该人物已审定全身母图为唯一身份和衣装锚，重新绘制一张独立全身非战斗基础动作keypose。保留同一年龄、脸、发型、体型、衣装颜色、磨损、左右身份特征及粗像素簇；成熟大头紧凑成年比例，不变幼童，不拉成长身。手、脚和物件完整，人物与道具留透明边距，纯alpha透明背景，无地面、投影、场景、文字、字幕、边框或第二个人。不得只裁胸像或只改表情。姿态必须由生图重绘，不用脚本旋转肢体、局部变形、拼接身体、平移冒充新动作、插值或强量化。身份设定未明示性别者保留现有中性外观，不新增性别canon。脚底有合理支撑但无步行摆步、攻击或循环；同一物件恰好一件，不复制、不凭空消失，不加新装备。单图是可逆表演提案，不表示剧情已经执行、对方收到东西、同意、支付、签约、痊愈或任务结算。 人物：洛珉 / FX-CAT。本张动作：仍朝母图三分之四角，双膝适度弯曲、髋向后移、上身前倾，双脚完整着地。一手握油灯提环，把同一盏灯稳放到原脚外侧；取灯底刚接触脚底同一隐含平面、手还未松开的关键瞬间。另一手收住自己袍摆，避免触灯，目光看落点；不能画成仅弯脖子。 只是放灯动作，无跪拜、挖墓、拾遗物或患者；不要补站起、松手帧或连播GIF。",
+          "reference_image_paths": [
+            "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/luomin_transparent.png"
+          ],
+          "negative_constraints": [
+            "原文年龄/职业不定性别，保留现有中性提案；无具体教派新徽、书、杖、武器、法术。",
+            "只在本人存在且安全停留的一般场合使用；不得用于缺席场景亮灯，亦不许推定祭坛灯/便携灯为同一剧情状态。",
+            "不画墓名、名单、祭坛、遗物、尸体或第二个人；不表示名单交外人、确认墓主、复活、已获信任或进入第三室。",
+            "两图独立动作概念，灯的细小火芯保持同态；不表现点灯/熄灯，也不默认N15完成。"
+          ],
+          "animation_claim": false,
+          "sequence_required": false,
+          "new_story_fact": false,
+          "prompt_sha256": "7233c95768f5eccefc364821355628dbf633a1d8463cc9443caa7c46eb19714c"
+        }
+      ]
+    }
+  ],
+  "future_acceptance_checks": [
+    "每张实际view原始生成图及透明浅/深底合成，先过人物身份/成熟比例/道具数/完整手脚，再评动作可读。",
+    "同一人物两张与母图并排：手位、道具状态或身体支撑必须有实质变化，纯表情或微差不得算新增基础动作。",
+    "安妮袖带/簿支撑，古菈折纸/袋口撬棍，维菈U架/T规/左眼镜，洛珉灯提环/地面接触分别逐项核。",
+    "原稿和每次修订保存；硬错则停止选稿并修订，不用后期身体变形掩盖。",
+    "图像若没有真实alpha或像素边界/隐私文字问题，按实际证据处理，禁止从忽略alpha的viewer晕影误判。",
+    "所有姿态只按独立静态keypose验收；没有连续性、循环、装备或引擎验收声明。"
+  ],
+  "verification": {
+    "json_parse": true,
+    "characters_in_roster44": true,
+    "plan_count": 8,
+    "all_evidence_quotes_found_in_current_sources": true,
+    "all_four_anchor_hashes_match_manifest_and_independent_qa": true,
+    "four_mothers_actually_viewed": true,
+    "copied_text_sources_hash_verified": true,
+    "generated_images": 0,
+    "validation_scope": "只验证本计划JSON、引用路径/逐字引文与SHA；未修改剧情设计，未运行全库剧情校验。"
+  }
+}

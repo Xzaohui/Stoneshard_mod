@@ -1,0 +1,209 @@
+{
+  "brief_sha256": "3988be2e7e6da94b75ffc5df2b830559cd46c6687ed436f9038b073dd9272259",
+  "character": {
+    "slug": "moer",
+    "canonical_id": "FX-WIL",
+    "name": "摩珥",
+    "status": "planned_not_generated",
+    "selection_status": "requested_candidate_retained_no_substitution",
+    "current_card": {
+      "path": "design/04_人物/野外人物/人物_FX-WIL_摩珥.md",
+      "bytes": 1062,
+      "sha256": "a0ff899e2b4454dfdab89d0dc3613a6f81ae5bda2ede37ed486dcefe21f3791c",
+      "source_id": "moer_card",
+      "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/design/04_人物/野外人物/人物_FX-WIL_摩珥.md"
+    },
+    "source_ids": [
+      "moer_card",
+      "field_dialogue",
+      "field_dialogue_registry",
+      "DT14",
+      "moer_mother_raw",
+      "moer_mother_transparent",
+      "moer_mother_manifest",
+      "moer_expression_final_status",
+      "moer_expressions_view"
+    ],
+    "mother_image": {
+      "raw": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_v1_raw_imagegen.png",
+      "raw_sha256": "f6b5057916af807981804c2d020b1702b3d64ff934bdf90a95832896c40636d6",
+      "transparent": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png",
+      "transparent_sha256": "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e",
+      "manifest": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/manifest.json",
+      "manifest_sha256": "f2c45b8d1d0a36cdab8e9ba1b98c5e3bcf97f29d936cf3591af2b8e26b97ce57",
+      "independent_qa_source_id": "eleventh_mother_qa",
+      "independent_qa_selected_status": "final_clean_and_presentation_pass",
+      "actual_visual_observation": "分别实际查看本人raw、透明母图与旧表情浅板：无须成熟窄面男账房，深褐短褂暗绿内衫。唯一褐木账板斜置腹前，画面左边较高、右边较低；人物右手（画面左）托板侧和下缘，左手（画面右）食指靠近板右缘。板面抽象刻划无可读字，指节轻黄。旧旧账自嘲/免账正色沿用腹前板位，未抬至胸前或降到腿外。",
+      "fixed_sides": "保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。",
+      "raw_and_transparent_actually_viewed": true,
+      "expression_board_actually_viewed": "Assets/CharacterDesigns/20261013/expressive/new_story/moer/expressions_v1/review/moer_light_board.png"
+    },
+    "existing_expressions": {
+      "status": "final_clean_and_presentation_pass",
+      "qualified_count": 2,
+      "not_action_coverage": true
+    },
+    "duplicate_check": {
+      "own_action_directory_count": 0,
+      "own_action_semantic_match_found": false,
+      "existing_expressions_actually_compared": true,
+      "interpretation": "只将本人新身体/肢体/接触变化计动作；母图、表情和来源副本不重计。普通动作大类可跨人物出现，不声称全库首次。"
+    },
+    "story_boundaries": [
+      "只调换本人账板的持放高度，板不离手、不挂墙、不交给他人、不擦写/划名、不免账收债、不认证假凭证、不画DT14结果。",
+      "摩珥moer/FX-WIL与谟珥moer_trs/FX-TRS严格分人；不借短铲、赭黄外衣、崖灰、年龄或同伴对白。"
+    ],
+    "risks": [
+      "举板要大幅改变前臂与板高度，不只抬头；垂板以同一右手抓稳上侧边，手与板接触可读。",
+      "板不能挡脸或双脚，抽象刻划不升级成文字账目；另一手不能一边托板一边放下。"
+    ],
+    "proposed_output_directory": "Assets/CharacterActions/20261013/new_story/moer/noncombat_basics_v1",
+    "plans": [
+      {
+        "key": "moer_A1_raise_ledger_to_chest",
+        "title_zh": "双手抬板到胸前",
+        "status": "planned_not_generated",
+        "output_count": 1,
+        "kind": "independent_full_body_noncombat_keypose",
+        "evidence": [
+          {
+            "source_id": "moer_card",
+            "locator": "体貌与随身",
+            "line_start": 17,
+            "quote": "账板不离手"
+          },
+          {
+            "source_id": "field_dialogue",
+            "locator": "FX-WIL／知情边界",
+            "line_start": 604,
+            "quote": "不替帮派收账"
+          }
+        ],
+        "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+        "start_pose_description_only": "独立从母图右手托腹前斜板、左食指靠板缘开始。",
+        "pose": "两鞋分开稳站，双肘明显弯曲，将唯一原木账板从腹前整体抬到胸前、上缘低于下巴且不遮脸。人物右手仍在画面左稳握板左侧下缘，左手从原食指轻搭板边改为整掌托稳板画面右侧下缘，两掌分别承托同一板的两端。板保留原左高右低的轻斜方向、尺寸和抽象刻划，板面仍可见，贴近自己、不向画外递出。躯干自然直立，脸朝画面左、神态平常。",
+        "end_pose_description_only": "双手可把原板自然降回腹前；不增删刻划、不交付。",
+        "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+        "visible_stage_target": "板整体从腹前升至胸前，双肘抬弯，左手由单指轻搭改为掌托板下缘；脸与板仍分开。",
+        "pose_specific_sidedness": "人物右手在画面左托板左侧，左掌画面右托板右侧；板原左高右低方向不镜像。",
+        "contact_and_support_checks": [
+          "只有一块原木板，两掌分接左右下缘，不插进板面、不添第三手。",
+          "抬高不缩板，板顶低于下巴，原抽象刻划不改变成账目文字。",
+          "双臂肘腕自然连接，双鞋完整，动作不解释为展示证据或收债。"
+        ],
+        "prop_state_and_retention": [
+          "保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。"
+        ],
+        "difference_from_mother_expression_and_batch": "母图/旧表情账板在腹前、左手食指轻搭；本张整板到胸前，两肘明显弯起并双掌托底，区别于表情变化。",
+        "risk_level": "medium_pose_and_contact",
+        "new_contact_prop": null,
+        "new_story_fact": false,
+        "sequence_required": false,
+        "animation_claim": false,
+        "generation_budget": {
+          "initial": 1,
+          "max_hard_error_revisions": 1,
+          "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+          "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+          "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+        },
+        "review_status": "planning_author_checked; independent_plan_review_pending",
+        "reference_image_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png"
+        ],
+        "reference_sha256": [
+          "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e"
+        ],
+        "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：摩珥 FX-WIL。四十来岁的酒馆男账房，深褐蓬松后梳短发、无须成熟窄面、脸朝画面左。深褐短褂、暗绿开领内衫、米麻袖口、褐裤与深棕鞋完整保留。只用摩珥FX-WIL/moer，不是背铲的谟珥FX-TRS/moer_trs。\n固定衣装与原物件：保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。\n本张动作：双手抬板到胸前。两鞋分开稳站，双肘明显弯曲，将唯一原木账板从腹前整体抬到胸前、上缘低于下巴且不遮脸。人物右手仍在画面左稳握板左侧下缘，左手从原食指轻搭板边改为整掌托稳板画面右侧下缘，两掌分别承托同一板的两端。板保留原左高右低的轻斜方向、尺寸和抽象刻划，板面仍可见，贴近自己、不向画外递出。躯干自然直立，脸朝画面左、神态平常。\n本张侧别：人物右手在画面左托板左侧，左掌画面右托板右侧；板原左高右低方向不镜像。\n必须明显可见：板整体从腹前升至胸前，双肘抬弯，左手由单指轻搭改为掌托板下缘；脸与板仍分开。\n接触与支撑：只有一块原木板，两掌分接左右下缘，不插进板面、不添第三手。；抬高不缩板，板顶低于下巴，原抽象刻划不改变成账目文字。；双臂肘腕自然连接，双鞋完整，动作不解释为展示证据或收债。。\n",
+        "prompt_sha256": "7b48abbb39394b91dfc0f6c0705df14d2798f500ad9be1e0f5806fb4e0bea4e0",
+        "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/moer_A1_raise_ledger_to_chest_prompt.txt",
+        "negative_constraints": [
+          "只调换本人账板的持放高度，板不离手、不挂墙、不交给他人、不擦写/划名、不免账收债、不认证假凭证、不画DT14结果。",
+          "摩珥moer/FX-WIL与谟珥moer_trs/FX-TRS严格分人；不借短铲、赭黄外衣、崖灰、年龄或同伴对白。",
+          "举板要大幅改变前臂与板高度，不只抬头；垂板以同一右手抓稳上侧边，手与板接触可读。",
+          "板不能挡脸或双脚，抽象刻划不升级成文字账目；另一手不能一边托板一边放下。"
+        ],
+        "existing_asset_check": {
+          "own_action_directory_count": 0,
+          "prior_action_found": false,
+          "expression_board_actually_viewed": true,
+          "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+          "semantic_comparison": "母图/旧表情账板在腹前、左手食指轻搭；本张整板到胸前，两肘明显弯起并双掌托底，区别于表情变化。"
+        }
+      },
+      {
+        "key": "moer_A2_lower_ledger_beside_right_thigh",
+        "title_zh": "右手垂板身侧暂歇",
+        "status": "planned_not_generated",
+        "output_count": 1,
+        "kind": "independent_full_body_noncombat_keypose",
+        "evidence": [
+          {
+            "source_id": "moer_card",
+            "locator": "体貌与随身",
+            "line_start": 17,
+            "quote": "指节发黄，账板不离手"
+          },
+          {
+            "source_id": "field_dialogue",
+            "locator": "FX-WIL／知情边界",
+            "line_start": 604,
+            "quote": "不说酒馆东家的去向"
+          }
+        ],
+        "art_inference": "源卡与对白只支持身份、原随身物、习惯及边界；具体托杯/理围裙/抬板/垂板/理外套/舒肩/扶膝/理发是本轮可逆美术提案，台本未记载这些动作已经发生。",
+        "start_pose_description_only": "独立从母图右手托腹前板、左食指在板边开始。",
+        "pose": "双鞋原样分站、躯干直立。人物右臂从画面左腹前降到本人右腿外侧，右手稳抓同一木账板的上侧边，手指自然绕过板厚，让板以近竖直方向低垂在画面左的右大腿外旁；板上端约腰下、下端保持高于鞋顶且不触地，原板尺寸不变、抽象刻划面仍朝外可见。人物左手完全离开板，左臂自然下垂在画面右身侧、手掌放松，手与板不再相接。头脸朝画面左，神态平常。",
+        "end_pose_description_only": "右手可重新把板抬回腹前，左掌再扶；板全程不离本人右手。",
+        "transition_scope": "起止仅文字；只生成pose所述一帧。A1/A2无顺序依赖，不引用另一姿作为参考。",
+        "visible_stage_target": "木板明显降到画面左大腿外侧并近竖直，右臂向下，左手离板在另一侧自然下垂，腹前不再横有账板。",
+        "pose_specific_sidedness": "仍由母图画面左的本人右手独持板，板低在画面左本人右腿外；左手低在画面右，不换手、不把板移到左腿旁。",
+        "contact_and_support_checks": [
+          "右手包住原板上侧边，板由该手支撑而不悬空，仍只有一板。",
+          "左手已离板且独立可见，不残留原板缘食指；板和腿之间有清楚外缘。",
+          "原板完整未缩小，离地、双鞋完整可见；没有放下、丢弃或递板结果。"
+        ],
+        "prop_state_and_retention": [
+          "保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。"
+        ],
+        "difference_from_mother_expression_and_batch": "母图/旧表情板横斜在腹前且两手靠板；本张同一右手低垂板到腿外、左手放下，明显区别于胸前抬板和改脸。",
+        "risk_level": "medium_pose_and_contact",
+        "new_contact_prop": null,
+        "new_story_fact": false,
+        "sequence_required": false,
+        "animation_claim": false,
+        "generation_budget": {
+          "initial": 1,
+          "max_hard_error_revisions": 1,
+          "revision_only_for": "真实、明确且可定位的身份、人体、原物数量/侧别、目标动作、接触支撑、比例、裁切或透明硬错。",
+          "after_failed_revision": "全部尝试保留，失败标缺项；不得第三稿、脚本修人体或改动作名继续。",
+          "safety_blocked": "立即停止该动作并记录工具返回；不重试、不换工具、不改写规避。"
+        },
+        "review_status": "planning_author_checked; independent_plan_review_pending",
+        "reference_image_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/moer/concept_v1/moer_transparent.png"
+        ],
+        "reference_sha256": [
+          "6e2a3804bd76d2c47cb8cb9e5a60395302eb61c3ddfd6ab7cc2a1455b157f72e"
+        ],
+        "prompt": "以所附本人的已审透明全身母图为唯一身份、年龄、实际体态比例、衣装配色与原物件造型锚，绘制一张独立、普通日常的全身基础动作像素概念。延续母图真实年龄与紧凑身体、自然短颈、本人五官和有组织的粗像素簇；不幼化、不拉成长身、不统一套用头身数字。禁止镜像，左右均按人物自身解剖侧并核对注明的画面侧。必须真实改变下述肢体和接触，不能只改眉眼或头姿。完整头发、双手、双脚及全部原物件，四周保留透明余量。一人、一个瞬间、纯alpha透明背景，无地板、地面投影、光晕、烟雾、文字、UI、箭头、边框、残影或第二人。不新增环境、工具、战斗、魔法或剧情结果。只画本张动作，不画起止或连续帧。\n人物：摩珥 FX-WIL。四十来岁的酒馆男账房，深褐蓬松后梳短发、无须成熟窄面、脸朝画面左。深褐短褂、暗绿开领内衫、米麻袖口、褐裤与深棕鞋完整保留。只用摩珥FX-WIL/moer，不是背铲的谟珥FX-TRS/moer_trs。\n固定衣装与原物件：保留唯一原褐木账板的实际大小、厚度、外形和抽象刻划，始终在本人手中，不能新增第二板、笔、纸、凭证、金额或可读姓名。人物右手（母图画面左）始终是主要持板手，不把板交给左手独持；具体高度和接点只按本张动作改变。黄指节只是原轻色差，不添新伤、烟卷或病变；衣装完整。\n本张动作：右手垂板身侧暂歇。双鞋原样分站、躯干直立。人物右臂从画面左腹前降到本人右腿外侧，右手稳抓同一木账板的上侧边，手指自然绕过板厚，让板以近竖直方向低垂在画面左的右大腿外旁；板上端约腰下、下端保持高于鞋顶且不触地，原板尺寸不变、抽象刻划面仍朝外可见。人物左手完全离开板，左臂自然下垂在画面右身侧、手掌放松，手与板不再相接。头脸朝画面左，神态平常。\n本张侧别：仍由母图画面左的本人右手独持板，板低在画面左本人右腿外；左手低在画面右，不换手、不把板移到左腿旁。\n必须明显可见：木板明显降到画面左大腿外侧并近竖直，右臂向下，左手离板在另一侧自然下垂，腹前不再横有账板。\n接触与支撑：右手包住原板上侧边，板由该手支撑而不悬空，仍只有一板。；左手已离板且独立可见，不残留原板缘食指；板和腿之间有清楚外缘。；原板完整未缩小，离地、双鞋完整可见；没有放下、丢弃或递板结果。。\n",
+        "prompt_sha256": "35200eb2ef2f336ddcb5ff37492f4dcbdfedc6caad93d5e2604760dce5a2f803",
+        "prompt_file": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/moer_A2_lower_ledger_beside_right_thigh_prompt.txt",
+        "negative_constraints": [
+          "只调换本人账板的持放高度，板不离手、不挂墙、不交给他人、不擦写/划名、不免账收债、不认证假凭证、不画DT14结果。",
+          "摩珥moer/FX-WIL与谟珥moer_trs/FX-TRS严格分人；不借短铲、赭黄外衣、崖灰、年龄或同伴对白。",
+          "举板要大幅改变前臂与板高度，不只抬头；垂板以同一右手抓稳上侧边，手与板接触可读。",
+          "板不能挡脸或双脚，抽象刻划不升级成文字账目；另一手不能一边托板一边放下。"
+        ],
+        "existing_asset_check": {
+          "own_action_directory_count": 0,
+          "prior_action_found": false,
+          "expression_board_actually_viewed": true,
+          "scan": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/action_tree_scan.json",
+          "semantic_comparison": "母图/旧表情板横斜在腹前且两手靠板；本张同一右手低垂板到腿外、左手放下，明显区别于胸前抬板和改脸。"
+        }
+      }
+    ]
+  },
+  "policy": "Two independent static noncombat poses only. Current approved mother actual proportions override old numeric specs. Source identity and prop constraints unchanged. Builtin imagegen only. Max one real hard-error revision per pose; stop on safety block."
+}

@@ -1,0 +1,26 @@
+from pathlib import Path
+import json,hashlib,base64,datetime,sys,shutil
+import numpy as np
+from PIL import Image
+r=Path.cwd();slug=sys.argv[1];b=json.loads((r/'Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_brief.json').read_text());c=next(x for x in b['characters'] if x['slug']==slug);d=r/c['proposed_output_directory'];now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+selected=[c['plans'][0]['key']+('_v2' if slug=='wadun' else '_v1'),c['plans'][1]['key']+'_v1']
+rows=[]
+for p in sorted((d/'raw').glob('*_raw.png')):
+ stem=p.name[:-8];a=json.loads((d/'prompts'/f'{stem}_parameters.json').read_text());payload=json.loads((d/'raw'/f'{stem}_tool_return.json').read_text());raw=p.read_bytes();assert base64.b64decode(payload['image_url'].split(',',1)[1])==raw
+ assert (d/'prompts'/f'{stem}.txt').read_text()==a['prompt'];assert a['transparent_background'];assert sha(Path(a['referenced_image_paths'][0]))==c['mother_image']['transparent_sha256']
+ if stem.endswith('_v1'):assert a['prompt']==next(x['prompt'] for x in c['plans'] if x['key']==stem[:-3])
+ src=np.array(Image.open(p).convert('RGBA'));q=d/'exports'/f'{stem}_transparent.png';clean=np.array(Image.open(q).convert('RGBA'));assert src.shape==clean.shape;assert np.array_equal(src[src[:,:,3]>8],clean[src[:,:,3]>8]);assert np.all(clean[src[:,:,3]<=8]==0)
+ rows.append({'stem':stem,'selected':stem in selected,'verdict':'pass' if stem in selected else 'failed_contact_superseded_by_only_revision','raw_path':str(p.relative_to(d)),'raw_sha256':sha(p),'transparent_path':str(q.relative_to(d)),'transparent_sha256':sha(q),'prompt_sha256':hashlib.sha256(a['prompt'].encode()).hexdigest(),'raw_tool_payload_byte_match':True,'exact_prompt_matches_call':True,'source_mother_sha_verified':True,'alpha_gt8_rgba_unchanged':True,'actually_viewed':['raw','transparent','true_light','true_dark'],'visual_notes':('头微俯使投影略小、身形稍长，为轻微可见漂移；独审判未达硬错，保留母图成熟面貌和紧凑体态。' if stem.startswith('endai_A1') else 'Wadun A1 v1右掌仍膝前松垂，未完成指定支撑；v2唯一修订通过，首稿全部保留。' if stem.startswith('wadun_A1') else '身份、指定身体/手位变化、原物侧别、完整支撑与浅深边缘通过。')})
+source_manifest=json.loads((d/'sources/SOURCE_MANIFEST.json').read_text());assert all(sha(d/x['package_path'])==x['sha256'] for x in source_manifest['sources'])
+qa={'author':'draw_endai_wadun_actions','created_utc':now,'character':slug,'selected_count':2,'generated_count':len(rows),'revisions_count':len(rows)-2,'all_sources_snapshot_sha_match':True,'source_count':len(source_manifest['sources']),'input_cards_and_dialogue_read':True,'actual_mother_raw_transparent_and_old_expression_board_viewed':True,'rows':rows,'hidden_rgb_not_a_visual_failure':True,'scripts_allowed_scope':'alpha<=8清理/隐藏RGB归零/完整图等比nearest板；无人体、道具或颜色修改。','not_animation_or_runtime':True}
+(d/'review/QA_author_source_and_pixels.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2))
+manifest={'schema_version':1,'character':slug,'name':c['name'],'canonical_id':c['canonical_id'],'status':'art_complete_independently_reviewed','brief_sha256':hashlib.sha256((r/'Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_new_character_actions_brief.json').read_bytes()).hexdigest(),'mother':c['mother_image'],'selected':[x for x in rows if x['selected']],'preserved_failed':[x for x in rows if not x['selected']],'generated_count':len(rows),'selected_count':2,'complete_animation':False,'runtime_verified':False,'boards':['review/'+c['name']+'_母图动作浅深对照.png'],'independent_gates':['review/independent_visual_gate.json','review/independent_board_gate.json']}
+(d/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
+final={'status':'art_complete_independently_reviewed','character':slug,'qualified_new_actions':2,'planned_new_actions':2,'missing_actions':[],'generation_calls':len(rows),'revision_calls':len(rows)-2,'selected_stems':selected,'failed_versions_preserved':[x['stem'] for x in rows if not x['selected']],'old_endai_E2_not_retried':True,'all_raw_tool_returns_including_image_payload_retained':True,'all_source_hashes_verified':True,'independent_visual_gate':'review/independent_visual_gate.json','independent_board_gate':'review/independent_board_gate.json','freeze_evidence':'Assets/CharacterActions/20261013/new_story/fifth_endai_wadun_delivery_v1/FREEZE_RECORD.json','freeze_requires_external_package_gate':True,'delivery_not_claimed':True,'runtime_verified':False,'full_animation':False}
+(d/'FINAL_STATUS.json').write_text(json.dumps(final,ensure_ascii=False,indent=2))
+readme=f"# {c['name']} {c['canonical_id']} 两张基础动作\n\n本包是Mod原创可逆日常演出提案。两张独立全身关键姿态，不是连续动画，也不代表剧情状态、游戏落地或装备兼容。\n\n"+'\n'.join(f"- {p['title_zh']}：exports/{s}_transparent.png" for p,s in zip(c['plans'],selected))+"\n\n所有首稿、唯一硬错修订（如有）、完整原工具JSON及imagepayload、raw、逐字提示词和参数、来源快照及SHA、透明清理脚本、逐稿浅深QA和中文对照板全部保留。人物图只由内置imagegen生成；没有脚本改人体。\n\n"
+if slug=='endai':readme+='A1俯头后的头部投影略小、身形观感稍长，是已记录的轻微漂移，独审未判硬错。旧E2表情失败只用于去重，未重试或计入新增。\n'
+else:readme+='A1首稿右掌仍膝前松垂，判失败；唯一修订v2右掌贴膝上通过，首稿全部保留。A2原锅铲保留左腰，不承接A1取铲。\n\n瓦顿完整源由两个普通ZIP共同构成，请把两包解压到同一目录。每包的PACKAGE_SET_MANIFEST.json列出全部成员、所属包、字节及SHA；两个包合并后覆盖完整源树，没有丢弃失败稿或工具payload。\n'
+readme+='\n仅经过外部最终ZIP独审后才冻结，以交付目录FREEZE_RECORD.json为准；当前文件本身不宣称已经上传或发送。\n';(d/'README_中文.md').write_text(readme)
+print(slug,len(rows),'raws; 2 selected')

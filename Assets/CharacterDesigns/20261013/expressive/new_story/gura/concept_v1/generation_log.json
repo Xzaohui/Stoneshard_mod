@@ -1,0 +1,27 @@
+{
+  "calls": [
+    {
+      "revision": 1,
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "prompt_v1.txt",
+      "transparent_background": true,
+      "actual_reference_images": [],
+      "raw": "gura_v1_raw_imagegen.png",
+      "selected": true
+    }
+  ],
+  "export": "export_assets.py",
+  "allowed_operations": [
+    "alpha <= 8 clear to zero",
+    "uniform nearest-neighbor display layout",
+    "Chinese board typography outside character"
+  ],
+  "disallowed_operations_not_performed": [
+    "script face/body drawing",
+    "nonuniform stretching",
+    "cropping raw",
+    "quantization",
+    "image replacement of historical characters"
+  ],
+  "final_freeze": "manifest.json freezes production files; subsequent independent review/FINAL_STATUS does not mutate these files."
+}

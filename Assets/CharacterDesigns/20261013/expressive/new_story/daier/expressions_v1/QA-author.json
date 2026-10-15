@@ -1,0 +1,56 @@
+{
+  "reviewer": "draw_daier_moertrs_expressions / author",
+  "reviewed_utc": "2026-10-14T03:07:37.706002+00:00",
+  "scope": "author_visual_and_source_QA_only; independent_review_separate",
+  "actual_view_methods": [
+    "母图raw+transparent分别view_image",
+    "4张本批raw与selected分别view_image",
+    "各角色浅底/深底中文板分别view_image",
+    "raw真正RGBA浅深合成板view_image，未把alpha0隐藏RGB认作可见缺陷",
+    "delivery中文浅深合板view_image"
+  ],
+  "mother_inputs": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_v1_raw_imagegen.png",
+      "sha256": "89a6879812d2a3830ec9a073c350bc85149f890084c1e8e54bdd2f62cae3915a"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/daier_transparent.png",
+      "sha256": "cfc6697b7aeb2abfd199ff69e560e4913afaca5966382dd83318331ff463cfc8"
+    }
+  ],
+  "source_snapshot_hashes_match_current_files": true,
+  "results": [
+    {
+      "expression": "daier_E1_dry_passerby_skepticism",
+      "label_zh": "过客冷嘲",
+      "raw": "raw/daier_E1_dry_passerby_skepticism_v1_raw_imagegen.png",
+      "raw_sha256": "d8b06f4896bf35bfdf30e3c560fe547ede051385b4bf4f8ff0168b561ec4a151",
+      "selected": "selected/daier_E1_dry_passerby_skepticism_transparent.png",
+      "selected_sha256": "0b6861bd738f7f5cfea03dd3ea6af91f80d4f572db1529bf5c0291786c7ee8f0",
+      "actual_raw_and_selected_viewed": true,
+      "pass": true,
+      "tool_return_full_and_decoded_match": true
+    },
+    {
+      "expression": "daier_E2_urgent_structural_warning",
+      "label_zh": "危处警告",
+      "raw": "raw/daier_E2_urgent_structural_warning_v1_raw_imagegen.png",
+      "raw_sha256": "574f702a7029bb918a71cb421691165bf5f1581e1636cf76a462fc48f89a2e5a",
+      "selected": "selected/daier_E2_urgent_structural_warning_transparent.png",
+      "selected_sha256": "dea51f920598d7929cd9380d3622020f83f317b73ede22316364a47d39a3e3b8",
+      "actual_raw_and_selected_viewed": true,
+      "pass": true,
+      "tool_return_full_and_decoded_match": true
+    }
+  ],
+  "observations_zh": "E1单眉挑起、半垂眼、闭口略斜；E2眼更开、眉内端抬起、开口警告。灰鬓、窄成熟面、补外套、右腰旧钥匙和掸袖接触保留；无开门或货物结论。",
+  "hard_errors_found": [],
+  "revisions_used": 0,
+  "alpha_cleanup": "阈值128，仅alpha清理并归零alpha0隐藏RGB；可见RGB保持；不脚本绘制身体或缩放选稿",
+  "board_scaling": "1118×1407到559×704的半尺寸最近邻排板（高度奇数四舍五入）；不拉伸身体部位。",
+  "runtime_verified": false,
+  "continuous_animation_verified": false,
+  "native_grid_verified": false,
+  "equipment_compatibility_verified": false
+}

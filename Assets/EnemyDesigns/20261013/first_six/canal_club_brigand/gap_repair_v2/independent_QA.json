@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent audit_gap_repair_art",
+  "reviewed_utc": "2026-10-14T12:47:10.508271+00:00",
+  "author_image_and_QA_freeze_confirmed": "2026-10-14 12:45 UTC; final packaging pending independent report",
+  "status": "failed_no_selected_budget_exhausted",
+  "asset": "002 canal_club_brigand club_downswing_midarc gap_repair_v2",
+  "selected_output": null,
+  "actual_viewed": [
+    "sources/mother.png",
+    "mother_selected_new_comparison.png",
+    "raw_v1.png",
+    "raw_v2.png",
+    "review_v1_light.png",
+    "review_v1_dark.png",
+    "review_v2_light.png",
+    "review_v2_dark.png"
+  ],
+  "visual_findings": {
+    "v1": "失败：单手前臂已打开，完整棍头在腰带以上，但头端明显高于握拳，棍轴朝左略上；不是要求的朝左下胸腹中弧。",
+    "v2": "失败：棍轴朝左下成立，但棍头中心约y640与绳腰带齐高，底部约y695低于腰带；未同时满足整颗棍头仍处腰带以上的胸腹中弧。坐标为视觉近似定位，非引擎锚点。",
+    "identity": "成年矮壮、浓须、画面右皮肩甲/钱袋、画面左赭补布、深裤及绑带靴保留；本项身份可读不抵消动作硬错。",
+    "weapon_hands": "两稿均为一根短粗钝木棍、一道头部灰铁箍；单手握柄连通，空手不触武器，未见多手或武器重复。",
+    "full_body": "单人头部、双手及双靴鞋底完整；右侧靴离画布右边仅约10至13像素，不满足v2要求大于35px留边，作为次要偏差记录，不额外触发生图。",
+    "style_edges": "浅深底可辨硬阶梯像素边缘；raw仍有细薄低alpha边缘残色，候选未清理。只作失败候选存档，未验原生网格。"
+  },
+  "hard_errors": [
+    {
+      "version": 1,
+      "code": "club_axis_wrong_direction",
+      "detail": "棍头高于拳，向左上。"
+    },
+    {
+      "version": 2,
+      "code": "club_head_below_required_chest_arc",
+      "detail": "棍头中心腰带齐高，底部越过腰线。"
+    }
+  ],
+  "provenance_checks": [
+    {
+      "version": 1,
+      "raw_sha256": "7164968d4c6de9ec5726d65f10f71991bc00f58358858b281b23a110fcc88e7a",
+      "candidate_sha256": "7164968d4c6de9ec5726d65f10f71991bc00f58358858b281b23a110fcc88e7a",
+      "return_sha256": "1656f557190182f52f4c0ba887578e7405b1c0be00cb5264cdb54f76353f1921",
+      "params_sha256": "7f7331702978e607b683f38e76b71e8217a36dc95477cd3ea7560cd8b6519c04",
+      "prompt_sha256": "b122ff3217ca91b07980a1801f376a62509f0f1247085e084a9255bc9429edef",
+      "payload_matches_raw": true,
+      "candidate_exact_raw_bytes": true,
+      "prompt_matches_params": true,
+      "prompt_and_params_mtime_precede_return": true,
+      "size": [
+        1215,
+        1295
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "version": 2,
+      "raw_sha256": "9ada0f524ba86a1b37735e15bc6bc6f21744f2dc60af96a139e195550c4e9d2c",
+      "candidate_sha256": "9ada0f524ba86a1b37735e15bc6bc6f21744f2dc60af96a139e195550c4e9d2c",
+      "return_sha256": "4ee92a54a0a740b4da2fdd81d357301a37614258b81c253b68ec97059cc88f06",
+      "params_sha256": "45a4beebc1a2f206ba812acb451c071a345a4869605ed0d13ae3b9eb7899023f",
+      "prompt_sha256": "b5f2a3581cbae75d814940185175808f0e9247c7ce0583cc6943b3f2d1e4bdd3",
+      "payload_matches_raw": true,
+      "candidate_exact_raw_bytes": true,
+      "prompt_matches_params": true,
+      "prompt_and_params_mtime_precede_return": true,
+      "size": [
+        1214,
+        1295
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "source_manifest_entries_checked": 29,
+  "source_hash_failures": [],
+  "audited_hashes": {
+    "FINAL_STATUS.json": "d499a123cd68305fd51cb86efb3161f38400a5f8c8254cdc5219502ce761057e",
+    "author_QA_v1.json": "0e58dcc088bd9c19b655c564337e1559268bb53457b27df0d3f5500ca09068a9",
+    "author_QA_v2.json": "1834d30170bbe6cc8c6e1c0ab7b8ef572728eeca4516431633c0b0df9483697d",
+    "spec_lock.md": "9a739f3f72f5e66e536aba6cc43679a5052ecf956880ed843f666fb9c3258d2c",
+    "sources/action_continuation_brief_v1.json": "81add92fe6438c2cb74374237e82159e06c92da84753a2ff745f3d268f624a91",
+    "source_manifest.json": "840621db8e0b19cf2c46edb2357f72348d2559d4ca707ad67c505121b88b0282",
+    "review_v1_light.png": "dea59500eddf12688e44611df569147a4a0edfca3a70105d7af34980d5c37512",
+    "review_v1_dark.png": "8394ccfae5a3f9850e309370c81ed86e738dfbefe9b05bdc64a17d73dcb46a54",
+    "review_v2_light.png": "62214f5a92070ec98f5b871253e58385b2aa6aea727041e323be240b461f10ac",
+    "review_v2_dark.png": "c1c95091501e5b8cbf1b90695d124a5876b8d5eed6bda4b639c85cb985047f2c"
+  },
+  "decision": "确认作者两稿失败，无selected。首稿及一次硬错修订预算已耗尽，本轮停止，保留所有失败来源供追溯；不要求再次生成。",
+  "review_limits": [
+    "只新增本independent_QA.json，不改作者FINAL、选稿、源包或旧图。",
+    "预存时间核验依据本地mtime，未旁观原始工具调用。",
+    "本次为静态视觉设计稿独审，不代表用户美感认可、连续动画、原生网格、装备合成或游戏运行验收。"
+  ],
+  "user_acceptance_claimed": false,
+  "native_grid_verified": false,
+  "runtime_verified": false,
+  "continuous_animation_verified": false
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "reviewer": "review_second_enemy_continuations",
+  "reviewed_utc": "2026-10-14T04:23:45.726288+00:00",
+  "result": "pass_independent_keypose_concept",
+  "version": "v1",
+  "actual_views": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_continuation_v1/axe_forward_cut/raw/border_roundshield_rebel_axe_forward_cut_v1_raw_imagegen.png",
+      "sha256": "cf0e917e81a0a941a7987ae2c32ff2ea3eee0c31289e65ec8ad6afc24ffa61bb",
+      "bytes": 927756,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:23:45.726288+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_continuation_v1/axe_forward_cut/border_roundshield_rebel_axe_forward_cut_v1_transparent.png",
+      "sha256": "78099a4ff32483674b24be4865a661f86f97285649c7cb3606f6210dbc0ccfbd",
+      "bytes": 905361,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:23:45.726288+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_continuation_v1/axe_forward_cut/qa/v1_light.png",
+      "sha256": "d4b318779992923a3c7f75942fb102fe29ee512e4a1ce38766c5c1c3f5b537fe",
+      "bytes": 769240,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:23:45.726288+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_continuation_v1/axe_forward_cut/qa/v1_dark.png",
+      "sha256": "0141737d613fc3316c17439ff9dbb6da21568c808b455f569781abcec9452720",
+      "bytes": 719788,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:23:45.726288+00:00"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/second_six/border_roundshield_rebel/action_continuation_v1/axe_forward_cut/qa/v1_neighbor_board.png",
+      "sha256": "e294cfc636a2be107d83c93f35e1b54b119da8055543a89181a22783e9bd46da",
+      "bytes": 640534,
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-14T04:23:45.726288+00:00"
+    }
+  ],
+  "findings": [
+    "身份和原短斧、圆盾、灰鬓胡须、蓝灰肩巾与单肩甲一致；斧保持原手单持，柄在握拳后仍有短尾，盾背与原臂可解释。",
+    "相对旧 shield_brace，胸肩更前送、斧肘更展开、前腿承重而后腿延伸；缩小相邻看能读出前送低切的不同整体力线，差异不只是一两像素。斧位置仍低，但不是仅复制旧低斧护挡。",
+    "前后两靴支持身体，斧刃与腿、盾有空隙，手腕与袖口连续；未见硬性拓扑错误。",
+    "真实浅深背景上无可见背景块、武器/身体裁切或明显边缘光圈；alpha0隐藏RGB不纳入可见缺陷。",
+    "保留关键阶段概念边界：实际挥击时序、命中、三帧连续性及精确pivot均未验证。"
+  ],
+  "hard_errors": [],
+  "revision_required": false,
+  "review_scope": "单张新增动作关键阶段的身份、动作链、支撑与握持可读性及真实RGBA合成；不是连续动画/精确锚点/装备runtime验收。",
+  "complete_animation_verified": false,
+  "gif_created": false,
+  "frame_anchors_verified": false,
+  "equipment_runtime_verified": false,
+  "runtimeIntegrated": false,
+  "runtimeVerified": false,
+  "technical": {
+    "raw_sha256": "cf0e917e81a0a941a7987ae2c32ff2ea3eee0c31289e65ec8ad6afc24ffa61bb",
+    "selected_sha256": "78099a4ff32483674b24be4865a661f86f97285649c7cb3606f6210dbc0ccfbd",
+    "size": [
+      1118,
+      1407
+    ],
+    "mode": "RGBA",
+    "alpha_identical_to_raw": true,
+    "visible_rgba_identical_to_raw": true,
+    "zero_alpha_hidden_rgb_not_visible_failure": true,
+    "candidate_manifest_hashes_passed": 9,
+    "actual_prompt_matches_arguments": true,
+    "tool_return_decoded_raw_sha_match": true,
+    "independent_reference_sha_and_view_checks_passed": 3
+  }
+}

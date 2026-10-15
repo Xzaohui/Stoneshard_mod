@@ -1,0 +1,851 @@
+{
+  "schema_version": 1,
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。",
+    "planned_selected_images": 8
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者与独审分别实际view每张raw、最终透明版及中文浅深板；核母图SHA、本人年龄面貌、两张眉眼嘴区别、衣装道具侧别、手接触和完整轮廓。珂琳保持17–18岁普通完整工作衣装；索妲空篮、蓟珥卷袖与土迹、绥珥半截软布尺不可丢失；suier_lot不得混suier。manifest绑定真实选稿SHA，板上不写任务/关系/康复结论。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "prompt_archive_contract": {
+    "status": "planned_prompts_not_executed",
+    "rule": "本文件prompt_text是完整拟用首稿，不冒称已执行prompt。生产时将真实发送的逐字prompt、引用路径与输入SHA、工具参数、时间、输出路径/SHA、首稿或硬错revision1及选废原因写入prompts/与generation-log.json；若改措辞必须存实际版本，不用本brief替代真实调用存档。",
+    "max_calls_per_expression": 2,
+    "revision_rule": "仅一次明确硬错定向修订；实际修订全文及纠错目标须保存，失败则报告，不偷偷增加第三稿。"
+  },
+  "created_utc": "2026-10-14T02:40:22.736525+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "第十批索妲、珂琳、蓟珥、绥珥四名新剧情人物各两种独立面部情绪，共8张未来单人全身概念。本轮仅新增本brief和独立来源快照，不生图、不上传、不git、不改旧文件或游戏包。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_four_production_brief.json",
+    "sha256": "120dfc8951ccaa5fb7d7f0cf4196ee3cf662a9bf2dfb4677306d5fab95c21175"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_tenth_four_20261013.json",
+    "sha256": "4b90d38a449ab8e35dd5b521c4b75780455144286a8e738ea4198a0a0006184d"
+  },
+  "format_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/ninth_four_expression_brief.json",
+    "sha256": "575b01eac57f54126b132aaca6a5cd918e94314a429a52f9c8f36721b9e7f4a7"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "workflow_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/reference/pixel-asset-master/SKILL.md",
+    "sha256": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08"
+  },
+  "shared_locks": [
+    "四人的最终raw及transparent是各自唯一身份、服装、道具与实际比例母图；四人均选本人concept_v1中的v1，不以风格参考或他人图替代。",
+    "画布意图：索妲1060×1484；珂琳、蓟珥、绥珥各1118×1407。单人纵向完整全身，保头发、双手、所有衣物道具、双鞋及合理留边；不强行统一比例或画布。",
+    "年龄分别为四十多岁农妇、17–18岁姑娘、五十来岁男子、四十来岁妇人。珂琳保母图普通完整工作服与本人年轻面容，不幼化、不成人化、不性感化。",
+    "八张情绪以眉眼嘴为主，微动作辅助。四人都保持本人原手位附近，索妲手仍在巾边与篮柄，珂琳手留袋旁和低垂，蓟珥手留腰前，绥珥握尺托腕；不使用全员抬掌。",
+    "保留空篮、缝在围裙上的草药袋、两卷袖和土迹、半截软布尺及各自侧别；不借表情增加道具、抹痕、换服装、改头身或新伤。",
+    "每组两图是可逆美术提案而非连续结局；本人存活、在场、愿谈且有相应有限见闻才适用。拒绝、缺席、逐项授权优先，不暗示任务完成、付款、治疗、康复、信任或关系改变。",
+    "旧FX任务回访只作语气资料，不用来补全现行DT09署名、DT05有限分配、DT02配水或SQ03救济结果。地理关联不等于同一现场，不假定角色自动跨区到场。",
+    "绥珥FX-LOT必须用suier_lot，严禁与燧珥FX-CP1/suier混同；所有工作slug都不作为官方英文名。",
+    "沿用母图有组织的粗像素簇与低魔中世纪质感，不硬缩35px、不量化掩盖五官，不把概念声称为原生像素网格、part/frame/mask/origin、装备兼容、动画或runtime验证。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "FX-WCH",
+      "slug": "suoda",
+      "name": "索妲",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-WCH_索妲.md",
+        "sha256": "2605d2abd9b7ae74c9e85cb67b75c66a27a4814e0e67f3bb18eeb7528f456600"
+      },
+      "card_matches_tenth_four_brief": true,
+      "age_identity_lock": "四十多岁的农妇；女巫的邻居。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1",
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_v1_raw_imagegen.png",
+          "sha256": "280de0ea4f6c85f3c7c06b4cfa04e9d000b89f3c0514d914c96ee6989e426e1c"
+        },
+        "transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_transparent.png",
+          "sha256": "a6d11e5f13a5515a2ac71066a7b26959ba27aed0b7889e807499f00a083a2953"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/manifest.json",
+          "sha256": "1c03c93d41df1b8ad73a77ffae6292f6e18c441c99f296bfc2bde3bff8012700"
+        },
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "raw_canvas": [
+          1060,
+          1484
+        ],
+        "transparent_canvas": [
+          1060,
+          1484
+        ],
+        "raw_mode": "RGBA",
+        "transparent_mode": "RGBA",
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image分别实际查看四人final raw与transparent，共8张；不以历史QA代替看图。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 21
+      },
+      "card_facts": [
+        "女巫的邻居，常在 `rumor_witchHut1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "四十多岁的农妇，挎着一只空篮，围巾裹到下巴；说到女巫就先看林子方向。",
+        "压低声音，句子绕弯；拒绝替人传话时改说家常。",
+        "女巫什么时候收东西；村里人夜里绕哪条路走。不替女巫许诺什么；不替村里人定罪。"
+      ],
+      "observed_mother_image": "四十多岁农妇的宽面、厚实颊部与略显风霜的眉眼；深褐发夹灰鬓，额前散发从枯紫头巾下露出。头巾从头顶包到下巴下方，脸与嘴均露出。两眉带忧虑，眼睛侧望画面左，嘴小幅张开像压低声音。土灰长袖长裙、褐色围裙与深棕闭口鞋，衣物完整且宽松。画面左手在上胸轻触巾边，画面右手在腰侧握唯一空藤篮的完整弧形把手；篮在画面右低垂，篮内无物，双脚稳站。",
+      "fixed_prop_sides": [
+        "唯一空藤篮在画面右，由画面右手握母图完整弧形把手；始终空篮，不放草、红果、礼品或钱，不换手、不递篮、不把篮收至画外。",
+        "枯紫头巾保持包头并贴到下巴下方，口鼻眉眼仍清楚；不掀巾露发、不盖嘴加秘密感。画面左手只能沿母图巾边轻触或稍松，不能抬掌指林或招呼人跟随。",
+        "灰裙与棕围裙、双鞋、灰鬓和本人宽面轮廓完整保留，不添加巫帽、法杖、符咒、魔法或女巫身份。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "all_assets_png_files_scanned": 3156,
+        "all_assets_zip_archives_scanned": 164,
+        "matching_png_count": 4,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/suoda_v1_raw_imagegen.png"
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_delivery_v1/新增剧情人物_索妲珂琳源包.zip",
+            "sha256": "572fafad01d9d404e4a669145175a6599b9c15257b331215b239adf519ebde11",
+            "bytes": 10955358,
+            "member_count": 50,
+            "matching_member_count": 23,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 4,
+        "excluded_other_identity_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/style_refs/luomin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/style_refs/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/style_refs/miloer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/style_refs/sela_G_raw_imagegen.png"
+        ],
+        "outside_concept_hits": [],
+        "matching_current_character_cards": [
+          "design/04_人物/野外人物/人物_FX-WCH_索妲.md"
+        ],
+        "asset_path_scan": "新增来源快照之前，Assets全树PNG路径按精确slug边界及中文名扫描，并读取全部ZIP成员；他人style_refs仅作排除，不算本人动作表情。",
+        "existing_expressions_found": 0,
+        "unexplained_hits": [],
+        "identity_guard": "只用索妲 / FX-WCH / suoda，四十多岁农妇，是女巫的邻居；不是女巫本人，不借他人身份定罪或背书。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "suoda_E1_evasive_smalltalk",
+          "label_zh": "岔开家常",
+          "scene_proposal": "被要求替人传话时，把话题轻轻绕回家常；这是本人回避的口吻，不新增家常对白。",
+          "face_changes": "原来忧虑的眉稍松，一侧眉尾轻抬；眼帘略收，视线仍偏画面左的林子方向，不正视观众邀约；嘴从母图微张转为短促闭合，一侧唇角很轻地上提、另一侧不动，呈勉强客气的岔话神情。不是开心大笑、亲近或狡诈窃笑。",
+          "minimal_gesture": "头朝原侧向轻偏，画面左手在上胸巾边略松指而不离开太远；画面右手与空篮不动，双脚原地站稳。",
+          "difference_from_static_and_pair": "母图忧眉开口警惕，E1松眉、半收眼帘与不对称闭唇，E2则压眉凝视、短促开口反问；不能只换手位。",
+          "condition_and_limit": "仅本人拒绝传话时的短暂反应；不表示已答应传话、带路、敲门或取得女巫许可。空篮始终无物，不描绘送礼或儿子治愈，不补写家庭状况。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L376体貌；L378口吻；L380边界；L385复访空篮；L392拒绝；L398—402条件回访"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-WCH].look/voice/not_knows/greetings[revisit]/site_lines[refusal]"
+          },
+          "output_stem": "suoda_E1_evasive_smalltalk",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：索妲（FX-WCH，suoda）。四十多岁的农妇；女巫的邻居。源体貌明确性别/年龄，按原词保留。\n原样保留本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖问题。沿用母图1060×1484纵向完整构图及合理留边，头发、所有衣具、双手、双鞋与全部原道具完整保全，不缩小道具腾地方。\n母图观察：四十多岁农妇的宽面、厚实颊部与略显风霜的眉眼；深褐发夹灰鬓，额前散发从枯紫头巾下露出。头巾从头顶包到下巴下方，脸与嘴均露出。两眉带忧虑，眼睛侧望画面左，嘴小幅张开像压低声音。土灰长袖长裙、褐色围裙与深棕闭口鞋，衣物完整且宽松。画面左手在上胸轻触巾边，画面右手在腰侧握唯一空藤篮的完整弧形把手；篮在画面右低垂，篮内无物，双脚稳站。\n固定侧别与道具：唯一空藤篮在画面右，由画面右手握母图完整弧形把手；始终空篮，不放草、红果、礼品或钱，不换手、不递篮、不把篮收至画外。 枯紫头巾保持包头并贴到下巴下方，口鼻眉眼仍清楚；不掀巾露发、不盖嘴加秘密感。画面左手只能沿母图巾边轻触或稍松，不能抬掌指林或招呼人跟随。 灰裙与棕围裙、双鞋、灰鬓和本人宽面轮廓完整保留，不添加巫帽、法杖、符咒、魔法或女巫身份。\n本张可逆表情提案：岔开家常。被要求替人传话时，把话题轻轻绕回家常；这是本人回避的口吻，不新增家常对白。\n脸部：原来忧虑的眉稍松，一侧眉尾轻抬；眼帘略收，视线仍偏画面左的林子方向，不正视观众邀约；嘴从母图微张转为短促闭合，一侧唇角很轻地上提、另一侧不动，呈勉强客气的岔话神情。不是开心大笑、亲近或狡诈窃笑。\n最小手势：头朝原侧向轻偏，画面左手在上胸巾边略松指而不离开太远；画面右手与空篮不动，双脚原地站稳。\n必须形成可读区别：母图忧眉开口警惕，E1松眉、半收眼帘与不对称闭唇，E2则压眉凝视、短促开口反问；不能只换手位。\n剧情边界：仅本人拒绝传话时的短暂反应；不表示已答应传话、带路、敲门或取得女巫许可。空篮始终无物，不描绘送礼或儿子治愈，不补写家庭状况。\n身份边界：只用索妲 / FX-WCH / suoda，四十多岁农妇，是女巫的邻居；不是女巫本人，不借他人身份定罪或背书。\n本人存活、在场、愿谈且有对应有限见闻时才适用。此表情只是可逆美术提案，不改人物卡；两图不是先后结果，不推定任务完成、付款、康复、赦免、关系改善、新身份或授权。保留全部必需衣具与既有细节，不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、账簿、文书、钱币或未有道具。情绪主要靠眉眼嘴，不抬掌套模板，不仅复制母图换手势，不靠扩大眼嘴或改变年龄增强表情。不得称为原生游戏网格、装备兼容、动画或runtime通过。"
+        },
+        {
+          "id": "E2",
+          "key": "suoda_E2_firm_counterquestion",
+          "label_zh": "正色反问",
+          "scene_proposal": "谈到轻率指责女巫时，压着声音反问曾求助过她的人；只借闲谈2的立场张力。",
+          "face_changes": "两眉由忧虑上挑改为较低的内聚直势，眼帘稍压但双眼仍清楚，目光凝在画面左的交谈方向；嘴唇作一个短而窄的开口，唇角不扬，读成克制、不赞同的反问。不要咬牙、怒吼、睁圆巨眼或恶人脸。",
+          "minimal_gesture": "下巴微收，肩膀保持原位；画面左手仍轻按巾边，画面右手稳提空篮，不伸手争辩，不跨步。",
+          "difference_from_static_and_pair": "母图是忧虑的侧望和轻启嘴，E2用较平低眉、聚焦目光和收紧口角形成正色；E1则松眉、非对称闭唇岔话。",
+          "condition_and_limit": "不因她替女巫说一句话就证明女巫清白、给村民定罪或授予草药安全认证；不画法术、药效、康复、DT09完成或来源署名同意。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L376—380体貌/口吻/边界；L387—388闲谈1—2；L398—401不把话当证词"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-WCH].chats[1]/not_knows/visits[before,late]"
+          },
+          "output_stem": "suoda_E2_firm_counterquestion",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：索妲（FX-WCH，suoda）。四十多岁的农妇；女巫的邻居。源体貌明确性别/年龄，按原词保留。\n原样保留本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖问题。沿用母图1060×1484纵向完整构图及合理留边，头发、所有衣具、双手、双鞋与全部原道具完整保全，不缩小道具腾地方。\n母图观察：四十多岁农妇的宽面、厚实颊部与略显风霜的眉眼；深褐发夹灰鬓，额前散发从枯紫头巾下露出。头巾从头顶包到下巴下方，脸与嘴均露出。两眉带忧虑，眼睛侧望画面左，嘴小幅张开像压低声音。土灰长袖长裙、褐色围裙与深棕闭口鞋，衣物完整且宽松。画面左手在上胸轻触巾边，画面右手在腰侧握唯一空藤篮的完整弧形把手；篮在画面右低垂，篮内无物，双脚稳站。\n固定侧别与道具：唯一空藤篮在画面右，由画面右手握母图完整弧形把手；始终空篮，不放草、红果、礼品或钱，不换手、不递篮、不把篮收至画外。 枯紫头巾保持包头并贴到下巴下方，口鼻眉眼仍清楚；不掀巾露发、不盖嘴加秘密感。画面左手只能沿母图巾边轻触或稍松，不能抬掌指林或招呼人跟随。 灰裙与棕围裙、双鞋、灰鬓和本人宽面轮廓完整保留，不添加巫帽、法杖、符咒、魔法或女巫身份。\n本张可逆表情提案：正色反问。谈到轻率指责女巫时，压着声音反问曾求助过她的人；只借闲谈2的立场张力。\n脸部：两眉由忧虑上挑改为较低的内聚直势，眼帘稍压但双眼仍清楚，目光凝在画面左的交谈方向；嘴唇作一个短而窄的开口，唇角不扬，读成克制、不赞同的反问。不要咬牙、怒吼、睁圆巨眼或恶人脸。\n最小手势：下巴微收，肩膀保持原位；画面左手仍轻按巾边，画面右手稳提空篮，不伸手争辩，不跨步。\n必须形成可读区别：母图是忧虑的侧望和轻启嘴，E2用较平低眉、聚焦目光和收紧口角形成正色；E1则松眉、非对称闭唇岔话。\n剧情边界：不因她替女巫说一句话就证明女巫清白、给村民定罪或授予草药安全认证；不画法术、药效、康复、DT09完成或来源署名同意。\n身份边界：只用索妲 / FX-WCH / suoda，四十多岁农妇，是女巫的邻居；不是女巫本人，不借他人身份定罪或背书。\n本人存活、在场、愿谈且有对应有限见闻时才适用。此表情只是可逆美术提案，不改人物卡；两图不是先后结果，不推定任务完成、付款、康复、赦免、关系改善、新身份或授权。保留全部必需衣具与既有细节，不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、账簿、文书、钱币或未有道具。情绪主要靠眉眼嘴，不抬掌套模板，不仅复制母图换手势，不靠扩大眼嘴或改变年龄增强表情。不得称为原生游戏网格、装备兼容、动画或runtime通过。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-HUT",
+      "slug": "kelin",
+      "name": "珂琳",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-HUT_珂琳.md",
+        "sha256": "ecedc5bb6a4ccd3c2fc4ec3b3aeeb2c649e583ff61e832bffd049ff3e7ea843b"
+      },
+      "card_matches_tenth_four_brief": true,
+      "age_identity_lock": "十七八岁的姑娘；药师的学徒。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1",
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_v1_raw_imagegen.png",
+          "sha256": "71d609e7fa7471d5bf64dd818320aefdde9c8dbee5542c19859406687bde0152"
+        },
+        "transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png",
+          "sha256": "57e00e9c4581e95b8bfc078deede4c4effd28533798719bf0e1a1440ccffade9"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/manifest.json",
+          "sha256": "c646abe3617acb930397ff4b7dbf452246e1a23c52f4a0892d12a5c088ecfa88"
+        },
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "raw_canvas": [
+          1118,
+          1407
+        ],
+        "transparent_canvas": [
+          1118,
+          1407
+        ],
+        "raw_mode": "RGBA",
+        "transparent_mode": "RGBA",
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image分别实际查看四人final raw与transparent，共8张；不以历史QA代替看图。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 21
+      },
+      "card_facts": [
+        "药师的学徒，常在 `rumor_hermitHut1` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "十七八岁的姑娘，围裙上缝着草药袋，手指有切药的细口子；说话先看师父的椅子。",
+        "规矩、认真，学师父的口气；说到“师父不在”就重复一遍。",
+        "哪些药草晾在哪面墙；师父留下的规矩。不替师父看病开方；不动师父的账本。"
+      ],
+      "observed_mother_image": "17–18岁姑娘的柔和短下颌、光洁年轻颊部与认真眼神，铜棕侧分发、唯一发辫垂在画面右肩后；不带中年灰鬓。眼看画面左，眉略显踌躇，嘴轻启。米麻高领长袖衫、暗草绿完整围裙、棕腰带、灰褐长裙、棕闭口鞋，普通宽松工作衣装。一个带粗针脚的棕麻草药袋缝在围裙画面右侧，袋口露出既有少量干叶；画面右手轻触袋口外侧，画面左手自然垂放。母图手指细切痕不显著，不能声称逐处已核验；双脚完整站稳。",
+      "fixed_prop_sides": [
+        "唯一草药袋仍缝在围裙画面右侧，保留粗针脚、袋口和原少量干叶；不是腰带挂包，不摘袋、抓药、捏叶、递药或新增瓶罐。",
+        "画面右手只轻触袋口外侧或袋旁布面，画面左手保持低垂；两图都不抬掌，不以指人、举罐或递纸演拒绝。",
+        "唯一铜棕发辫保留画面右肩后；高领长袖衫、全长围裙和长裙、闭口鞋均原样保全。17–18岁普通学徒，保本人年轻脸与实际比例，不幼化、不成人化、不性感化。",
+        "沿用母图手指细节，不为了表现工作伤痕补画新口子、血或疼痛；细切痕不显著并不构成硬错，也不表示伤口已经康复。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "all_assets_png_files_scanned": 3156,
+        "all_assets_zip_archives_scanned": 164,
+        "matching_png_count": 4,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/kelin_v1_raw_imagegen.png"
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_delivery_v1/新增剧情人物_索妲珂琳源包.zip",
+            "sha256": "572fafad01d9d404e4a669145175a6599b9c15257b331215b239adf519ebde11",
+            "bytes": 10955358,
+            "member_count": 50,
+            "matching_member_count": 23,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 4,
+        "excluded_other_identity_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/style_refs/luomin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/style_refs/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/style_refs/miloer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/style_refs/sela_G_raw_imagegen.png"
+        ],
+        "outside_concept_hits": [],
+        "matching_current_character_cards": [
+          "design/04_人物/野外人物/人物_FX-HUT_珂琳.md"
+        ],
+        "asset_path_scan": "新增来源快照之前，Assets全树PNG路径按精确slug边界及中文名扫描，并读取全部ZIP成员；他人style_refs仅作排除，不算本人动作表情。",
+        "existing_expressions_found": 0,
+        "unexplained_hits": [],
+        "identity_guard": "只用珂琳 / FX-HUT / kelin，17–18岁药师学徒。可能未成年，必须保持母图完整普通工作衣装、本人年轻脸和比例；不画小孩、中年模板、成人化身形、裸露或性感姿态。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "kelin_E1_wry_about_rules",
+          "label_zh": "规矩苦笑",
+          "scene_proposal": "讲到屋子里“规矩比药多”时，露出一瞬认真又无奈的浅浅苦笑；是原闲谈的可逆表演提案。",
+          "face_changes": "一侧眉稍抬、另一侧保持原本认真直眉；眼帘轻收，眼神仍清醒地瞟画面左的师父椅子方向；嘴从轻启变成闭合的极小偏侧弧线，只有一边唇角略翘，带无奈而非撒娇。保17–18岁本人脸，不扩大眼睛、不鼓腮、不加腮红、媚眼或露齿大笑。",
+          "minimal_gesture": "头很轻地偏一下，画面右手仍轻靠缝在围裙上的草药袋外侧，画面左手放松低垂；双脚与全套衣装不变。",
+          "difference_from_static_and_pair": "母图忧疑开口，E1眉高低微异与偏侧闭唇的苦笑；E2两眉收平、双眼凝定、嘴线无上扬，不能用相同脸只换手。",
+          "condition_and_limit": "只谈规矩的繁多，不表示反抗师父、已获得独立行医许可、亲密关系或惩罚发生；不演抄书、不拿账本、处方或药瓶，不让袋口叶子变成已配好的药。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L344年龄与衣装；L346口吻；L348界限；L356闲谈2；L360拒绝"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-HUT].look/voice/chats[1]/not_knows"
+          },
+          "output_stem": "kelin_E1_wry_about_rules",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：珂琳（FX-HUT，kelin）。十七八岁的姑娘；药师的学徒。源体貌明确性别/年龄，按原词保留。\n原样保留本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖问题。沿用母图1118×1407纵向完整构图及合理留边，头发、所有衣具、双手、双鞋与全部原道具完整保全，不缩小道具腾地方。\n母图观察：17–18岁姑娘的柔和短下颌、光洁年轻颊部与认真眼神，铜棕侧分发、唯一发辫垂在画面右肩后；不带中年灰鬓。眼看画面左，眉略显踌躇，嘴轻启。米麻高领长袖衫、暗草绿完整围裙、棕腰带、灰褐长裙、棕闭口鞋，普通宽松工作衣装。一个带粗针脚的棕麻草药袋缝在围裙画面右侧，袋口露出既有少量干叶；画面右手轻触袋口外侧，画面左手自然垂放。母图手指细切痕不显著，不能声称逐处已核验；双脚完整站稳。\n固定侧别与道具：唯一草药袋仍缝在围裙画面右侧，保留粗针脚、袋口和原少量干叶；不是腰带挂包，不摘袋、抓药、捏叶、递药或新增瓶罐。 画面右手只轻触袋口外侧或袋旁布面，画面左手保持低垂；两图都不抬掌，不以指人、举罐或递纸演拒绝。 唯一铜棕发辫保留画面右肩后；高领长袖衫、全长围裙和长裙、闭口鞋均原样保全。17–18岁普通学徒，保本人年轻脸与实际比例，不幼化、不成人化、不性感化。 沿用母图手指细节，不为了表现工作伤痕补画新口子、血或疼痛；细切痕不显著并不构成硬错，也不表示伤口已经康复。\n本张可逆表情提案：规矩苦笑。讲到屋子里“规矩比药多”时，露出一瞬认真又无奈的浅浅苦笑；是原闲谈的可逆表演提案。\n脸部：一侧眉稍抬、另一侧保持原本认真直眉；眼帘轻收，眼神仍清醒地瞟画面左的师父椅子方向；嘴从轻启变成闭合的极小偏侧弧线，只有一边唇角略翘，带无奈而非撒娇。保17–18岁本人脸，不扩大眼睛、不鼓腮、不加腮红、媚眼或露齿大笑。\n最小手势：头很轻地偏一下，画面右手仍轻靠缝在围裙上的草药袋外侧，画面左手放松低垂；双脚与全套衣装不变。\n必须形成可读区别：母图忧疑开口，E1眉高低微异与偏侧闭唇的苦笑；E2两眉收平、双眼凝定、嘴线无上扬，不能用相同脸只换手。\n剧情边界：只谈规矩的繁多，不表示反抗师父、已获得独立行医许可、亲密关系或惩罚发生；不演抄书、不拿账本、处方或药瓶，不让袋口叶子变成已配好的药。\n身份边界：只用珂琳 / FX-HUT / kelin，17–18岁药师学徒。可能未成年，必须保持母图完整普通工作衣装、本人年轻脸和比例；不画小孩、中年模板、成人化身形、裸露或性感姿态。\n本人存活、在场、愿谈且有对应有限见闻时才适用。此表情只是可逆美术提案，不改人物卡；两图不是先后结果，不推定任务完成、付款、康复、赦免、关系改善、新身份或授权。保留全部必需衣具与既有细节，不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、账簿、文书、钱币或未有道具。情绪主要靠眉眼嘴，不抬掌套模板，不仅复制母图换手势，不靠扩大眼嘴或改变年龄增强表情。不得称为原生游戏网格、装备兼容、动画或runtime通过。"
+        },
+        {
+          "id": "E2",
+          "key": "kelin_E2_firm_no_dispensing",
+          "label_zh": "认真拒配",
+          "scene_proposal": "听完让她擅自配药带走的要求后，明确说过“不行”，安静守住师父尚未许可的界限。",
+          "face_changes": "两眉收为平而略内聚的认真形状，眼帘比母图稍集中，瞳向画面左侧的画外交谈者凝定；嘴完全合拢成短平线，唇角轻收且无笑意。是有分寸的坚定，不是恐惧欲哭、羞怯或怒吼，保留原年轻面型与眼睛大小。",
+          "minimal_gesture": "下巴略收、头在原朝向上微偏作轻微否意；画面右手自然留袋旁不抓取内容，画面左手低垂，肩足不变，不伸掌拦人。",
+          "difference_from_static_and_pair": "母图轻启嘴、犹疑侧看变为闭唇、平眉与稳定目光；E1有无奈的小幅偏侧唇弧，E2没有上扬嘴角，脸部自己就能区分。",
+          "condition_and_limit": "拒配不等于师父将批准、已核正确方子或病人得到治疗；不配药、不诊断、不发药、不翻账本，不把DT05的分药/替代照护画成完成或康复。保持完整衣装和普通角色姿态。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L344—348体貌/口吻/知识；L353复访仍不能抓；L360拒绝；L366—369关联槽"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-HUT].greetings[revisit]/site_lines[refusal]/not_knows"
+          },
+          "output_stem": "kelin_E2_firm_no_dispensing",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：珂琳（FX-HUT，kelin）。十七八岁的姑娘；药师的学徒。源体貌明确性别/年龄，按原词保留。\n原样保留本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖问题。沿用母图1118×1407纵向完整构图及合理留边，头发、所有衣具、双手、双鞋与全部原道具完整保全，不缩小道具腾地方。\n母图观察：17–18岁姑娘的柔和短下颌、光洁年轻颊部与认真眼神，铜棕侧分发、唯一发辫垂在画面右肩后；不带中年灰鬓。眼看画面左，眉略显踌躇，嘴轻启。米麻高领长袖衫、暗草绿完整围裙、棕腰带、灰褐长裙、棕闭口鞋，普通宽松工作衣装。一个带粗针脚的棕麻草药袋缝在围裙画面右侧，袋口露出既有少量干叶；画面右手轻触袋口外侧，画面左手自然垂放。母图手指细切痕不显著，不能声称逐处已核验；双脚完整站稳。\n固定侧别与道具：唯一草药袋仍缝在围裙画面右侧，保留粗针脚、袋口和原少量干叶；不是腰带挂包，不摘袋、抓药、捏叶、递药或新增瓶罐。 画面右手只轻触袋口外侧或袋旁布面，画面左手保持低垂；两图都不抬掌，不以指人、举罐或递纸演拒绝。 唯一铜棕发辫保留画面右肩后；高领长袖衫、全长围裙和长裙、闭口鞋均原样保全。17–18岁普通学徒，保本人年轻脸与实际比例，不幼化、不成人化、不性感化。 沿用母图手指细节，不为了表现工作伤痕补画新口子、血或疼痛；细切痕不显著并不构成硬错，也不表示伤口已经康复。\n本张可逆表情提案：认真拒配。听完让她擅自配药带走的要求后，明确说过“不行”，安静守住师父尚未许可的界限。\n脸部：两眉收为平而略内聚的认真形状，眼帘比母图稍集中，瞳向画面左侧的画外交谈者凝定；嘴完全合拢成短平线，唇角轻收且无笑意。是有分寸的坚定，不是恐惧欲哭、羞怯或怒吼，保留原年轻面型与眼睛大小。\n最小手势：下巴略收、头在原朝向上微偏作轻微否意；画面右手自然留袋旁不抓取内容，画面左手低垂，肩足不变，不伸掌拦人。\n必须形成可读区别：母图轻启嘴、犹疑侧看变为闭唇、平眉与稳定目光；E1有无奈的小幅偏侧唇弧，E2没有上扬嘴角，脸部自己就能区分。\n剧情边界：拒配不等于师父将批准、已核正确方子或病人得到治疗；不配药、不诊断、不发药、不翻账本，不把DT05的分药/替代照护画成完成或康复。保持完整衣装和普通角色姿态。\n身份边界：只用珂琳 / FX-HUT / kelin，17–18岁药师学徒。可能未成年，必须保持母图完整普通工作衣装、本人年轻脸和比例；不画小孩、中年模板、成人化身形、裸露或性感姿态。\n本人存活、在场、愿谈且有对应有限见闻时才适用。此表情只是可逆美术提案，不改人物卡；两图不是先后结果，不推定任务完成、付款、康复、赦免、关系改善、新身份或授权。保留全部必需衣具与既有细节，不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、账簿、文书、钱币或未有道具。情绪主要靠眉眼嘴，不抬掌套模板，不仅复制母图换手势，不靠扩大眼嘴或改变年龄增强表情。不得称为原生游戏网格、装备兼容、动画或runtime通过。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-FRM",
+      "slug": "jier",
+      "name": "蓟珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-FRM_蓟珥.md",
+        "sha256": "7c22bfa2d44acf4dcea2e44f0f8da5b06483a1fe4798031e553c083974f1d83c"
+      },
+      "card_matches_tenth_four_brief": true,
+      "age_identity_lock": "五十来岁的男人；安静农宅住户。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1",
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_v1_raw_imagegen.png",
+          "sha256": "fecdbec699445ea31d17cffc6371814c620145d1e29304a91a1600554e12e3a5"
+        },
+        "transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_transparent.png",
+          "sha256": "47c591b61400237112425f97f213b3663531eae495465c37bc067fbf1290d239"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/manifest.json",
+          "sha256": "a73663227af6d4cd6ec2f318353d9bd794158ca5d9e3b8227a52ae92199f13b4"
+        },
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "raw_canvas": [
+          1118,
+          1407
+        ],
+        "transparent_canvas": [
+          1118,
+          1407
+        ],
+        "raw_mode": "RGBA",
+        "transparent_mode": "RGBA",
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image分别实际查看四人final raw与transparent，共8张；不以历史QA代替看图。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 21
+      },
+      "card_facts": [
+        "安静农宅住户，常在 `rumor_homestead1` 一带。地域见 [[区域_R02_丹布里西路与渡口]]。",
+        "五十来岁的男人，袖口卷起，指甲缝里是土；说话前先看一眼院门。",
+        "寡言，答话常比问题短；提水井才多说两句。",
+        "院里哪口井还出水；邻村谁家搬走了。不替邻村作保；不说自家存粮。"
+      ],
+      "observed_mother_image": "五十来岁男子，灰棕短发与灰须、宽额、方实鼻和略凹风霜颊面；低眉侧看画面左，嘴短而微启。旧灰蓝粗布衫、米麻领边及两只明显卷起的袖口、棕腰带和褐裤、深棕绑腿鞋靴。两手在腰前，画面左手略高、轻搓画面右手指端的土；指端少量暗色土迹可读，不作逐个甲缝复原声明。两脚分开承重；无工具或容器。",
+      "fixed_prop_sides": [
+        "两手始终在腰前原有低位，画面左手略高、画面右手略低，搓土时手指接触合理；可微停搓动，不能高抬开掌或指向画外院门。",
+        "两袖卷起程度、米麻袖口和少量指端土色保持；土不是血，不添新伤，不把手洗净解释成劳作完成。",
+        "不添加锄、桶、水碗、粮袋、账簿或武器；保持灰发灰须、五十来岁本人脸型及双脚承重，不年轻化或画衰弱倒地。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "all_assets_png_files_scanned": 3156,
+        "all_assets_zip_archives_scanned": 164,
+        "matching_png_count": 4,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/jier_v1_raw_imagegen.png"
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_delivery_v1/新增剧情人物_蓟珥绥珥源包.zip",
+            "sha256": "16903670d9045cc5726d5bf791989ffe396e36e45a308f82e7cbac9861d0da02",
+            "bytes": 10586008,
+            "member_count": 50,
+            "matching_member_count": 23,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 4,
+        "excluded_other_identity_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/style_refs/luomin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/style_refs/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/style_refs/miloer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/style_refs/sela_G_raw_imagegen.png"
+        ],
+        "outside_concept_hits": [],
+        "matching_current_character_cards": [
+          "design/04_人物/野外人物/人物_FX-FRM_蓟珥.md"
+        ],
+        "asset_path_scan": "新增来源快照之前，Assets全树PNG路径按精确slug边界及中文名扫描，并读取全部ZIP成员；他人style_refs仅作排除，不算本人动作表情。",
+        "existing_expressions_found": 0,
+        "unexplained_hits": [],
+        "identity_guard": "只用蓟珥 / FX-FRM / jier，五十来岁男性安静农宅住户；不成为配水官、护理者或受托发粮人。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "jier_E1_attentive_well_talk",
+          "label_zh": "谈井专注",
+          "scene_proposal": "话题转到院里哪口井还有水，他比平时多解释两句，只说自己有限见闻。",
+          "face_changes": "原来压低的眉稍舒展，内眉微抬，双眼比母图略睁开但不扩大眼球，视线仍偏画面左；嘴形成清楚的小开口、唇角放松而不微笑，显出愿意认真说明熟悉事物的专注。保留灰须周围的成熟鼻唇。",
+          "minimal_gesture": "上身仅极轻微倾向谈话，双手保持腰前原接触关系，搓土暂缓；不伸手指井、不拿水、不改变双脚承重。",
+          "difference_from_static_and_pair": "母图低眉寡言，E1眉眼舒展与更清楚的小说话口形；E2眉压低、眼收、嘴合成平线。不得只把原嘴扩大或依赖手势。",
+          "condition_and_limit": "只演谈井的投入，不保证饮水安全、井已恢复、水量足够、DT02配水完成或邻村无事；不出现品尝水、递水或无条件允许入院的动作，不公开粮量。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L888体貌；L890口吻；L892知情范围；L896—897只限本人取水/缸位置；L910—914关联槽"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-FRM].voice/knows/not_knows/greetings"
+          },
+          "output_stem": "jier_E1_attentive_well_talk",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：蓟珥（FX-FRM，jier）。五十来岁的男人；安静农宅住户。源体貌明确性别/年龄，按原词保留。\n原样保留本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖问题。沿用母图1118×1407纵向完整构图及合理留边，头发、所有衣具、双手、双鞋与全部原道具完整保全，不缩小道具腾地方。\n母图观察：五十来岁男子，灰棕短发与灰须、宽额、方实鼻和略凹风霜颊面；低眉侧看画面左，嘴短而微启。旧灰蓝粗布衫、米麻领边及两只明显卷起的袖口、棕腰带和褐裤、深棕绑腿鞋靴。两手在腰前，画面左手略高、轻搓画面右手指端的土；指端少量暗色土迹可读，不作逐个甲缝复原声明。两脚分开承重；无工具或容器。\n固定侧别与道具：两手始终在腰前原有低位，画面左手略高、画面右手略低，搓土时手指接触合理；可微停搓动，不能高抬开掌或指向画外院门。 两袖卷起程度、米麻袖口和少量指端土色保持；土不是血，不添新伤，不把手洗净解释成劳作完成。 不添加锄、桶、水碗、粮袋、账簿或武器；保持灰发灰须、五十来岁本人脸型及双脚承重，不年轻化或画衰弱倒地。\n本张可逆表情提案：谈井专注。话题转到院里哪口井还有水，他比平时多解释两句，只说自己有限见闻。\n脸部：原来压低的眉稍舒展，内眉微抬，双眼比母图略睁开但不扩大眼球，视线仍偏画面左；嘴形成清楚的小开口、唇角放松而不微笑，显出愿意认真说明熟悉事物的专注。保留灰须周围的成熟鼻唇。\n最小手势：上身仅极轻微倾向谈话，双手保持腰前原接触关系，搓土暂缓；不伸手指井、不拿水、不改变双脚承重。\n必须形成可读区别：母图低眉寡言，E1眉眼舒展与更清楚的小说话口形；E2眉压低、眼收、嘴合成平线。不得只把原嘴扩大或依赖手势。\n剧情边界：只演谈井的投入，不保证饮水安全、井已恢复、水量足够、DT02配水完成或邻村无事；不出现品尝水、递水或无条件允许入院的动作，不公开粮量。\n身份边界：只用蓟珥 / FX-FRM / jier，五十来岁男性安静农宅住户；不成为配水官、护理者或受托发粮人。\n本人存活、在场、愿谈且有对应有限见闻时才适用。此表情只是可逆美术提案，不改人物卡；两图不是先后结果，不推定任务完成、付款、康复、赦免、关系改善、新身份或授权。保留全部必需衣具与既有细节，不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、账簿、文书、钱币或未有道具。情绪主要靠眉眼嘴，不抬掌套模板，不仅复制母图换手势，不靠扩大眼嘴或改变年龄增强表情。不得称为原生游戏网格、装备兼容、动画或runtime通过。"
+        },
+        {
+          "id": "E2",
+          "key": "jier_E2_quiet_no_lodging",
+          "label_zh": "闭口谢客",
+          "scene_proposal": "面对留宿的请求，简短拒绝后停下答话，仍留意院门方向。",
+          "face_changes": "两眉压成较平的低线并轻聚，眼帘收一点、目光留在画面左的院门方向；嘴从母图微启变为完整短平闭唇，口角微下压。脸是沉静、有界限的谢客，不能画憎恨、威胁、恐慌或即将哭泣。",
+          "minimal_gesture": "下巴轻收，头向院门方向略偏；双手仍在腰前，搓指动作停住但不握拳，两脚不动，不做赶人挥手。",
+          "difference_from_static_and_pair": "母图微张嘴的短答变为完全闭口的静默；E1眉眼舒展并正说熟悉的井，E2低眉窄眼平唇，不用同一面孔加不同标签。",
+          "condition_and_limit": "只表示这一请求被拒，不把人物定成敌对、不宣告以后永不接待或关系恶化；不画屋门关闭、留宿接受、存粮展示、院门通行权或DT02结案。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L888说话先看院门；L890寡言；L898夜里不开门；L904拒绝留宿；L914本人缺席不自取水"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-FRM].look/voice/greetings[night]/site_lines[refusal]"
+          },
+          "output_stem": "jier_E2_quiet_no_lodging",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：蓟珥（FX-FRM，jier）。五十来岁的男人；安静农宅住户。源体貌明确性别/年龄，按原词保留。\n原样保留本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖问题。沿用母图1118×1407纵向完整构图及合理留边，头发、所有衣具、双手、双鞋与全部原道具完整保全，不缩小道具腾地方。\n母图观察：五十来岁男子，灰棕短发与灰须、宽额、方实鼻和略凹风霜颊面；低眉侧看画面左，嘴短而微启。旧灰蓝粗布衫、米麻领边及两只明显卷起的袖口、棕腰带和褐裤、深棕绑腿鞋靴。两手在腰前，画面左手略高、轻搓画面右手指端的土；指端少量暗色土迹可读，不作逐个甲缝复原声明。两脚分开承重；无工具或容器。\n固定侧别与道具：两手始终在腰前原有低位，画面左手略高、画面右手略低，搓土时手指接触合理；可微停搓动，不能高抬开掌或指向画外院门。 两袖卷起程度、米麻袖口和少量指端土色保持；土不是血，不添新伤，不把手洗净解释成劳作完成。 不添加锄、桶、水碗、粮袋、账簿或武器；保持灰发灰须、五十来岁本人脸型及双脚承重，不年轻化或画衰弱倒地。\n本张可逆表情提案：闭口谢客。面对留宿的请求，简短拒绝后停下答话，仍留意院门方向。\n脸部：两眉压成较平的低线并轻聚，眼帘收一点、目光留在画面左的院门方向；嘴从母图微启变为完整短平闭唇，口角微下压。脸是沉静、有界限的谢客，不能画憎恨、威胁、恐慌或即将哭泣。\n最小手势：下巴轻收，头向院门方向略偏；双手仍在腰前，搓指动作停住但不握拳，两脚不动，不做赶人挥手。\n必须形成可读区别：母图微张嘴的短答变为完全闭口的静默；E1眉眼舒展并正说熟悉的井，E2低眉窄眼平唇，不用同一面孔加不同标签。\n剧情边界：只表示这一请求被拒，不把人物定成敌对、不宣告以后永不接待或关系恶化；不画屋门关闭、留宿接受、存粮展示、院门通行权或DT02结案。\n身份边界：只用蓟珥 / FX-FRM / jier，五十来岁男性安静农宅住户；不成为配水官、护理者或受托发粮人。\n本人存活、在场、愿谈且有对应有限见闻时才适用。此表情只是可逆美术提案，不改人物卡；两图不是先后结果，不推定任务完成、付款、康复、赦免、关系改善、新身份或授权。保留全部必需衣具与既有细节，不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、账簿、文书、钱币或未有道具。情绪主要靠眉眼嘴，不抬掌套模板，不仅复制母图换手势，不靠扩大眼嘴或改变年龄增强表情。不得称为原生游戏网格、装备兼容、动画或runtime通过。"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-LOT",
+      "slug": "suier_lot",
+      "name": "绥珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-LOT_绥珥.md",
+        "sha256": "cbbc691c7ec3456de776e2bdfa4a7cb992bf22490539c6d9ae1c59fc67b4a671"
+      },
+      "card_matches_tenth_four_brief": true,
+      "age_identity_lock": "四十来岁的妇人；裁缝宅子亲属。源体貌明确性别/年龄，按原词保留。",
+      "source_anchor": {
+        "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1",
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_v1_raw_imagegen.png",
+          "sha256": "1e6fafb4253d8d8fe1870303f22fa98c3545c2fe00b77b37c26ff29f772802de"
+        },
+        "transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_transparent.png",
+          "sha256": "3983d4b3de284ebe2e48c818f5d587d68051fef615d1d27f4506523038400d25"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/manifest.json",
+          "sha256": "50a0e2c672474077e3501d0a414c9a374ede11cc95745a98ff890e415a44f8b9"
+        },
+        "existing_review_status": "final_clean_and_presentation_pass",
+        "raw_canvas": [
+          1118,
+          1407
+        ],
+        "transparent_canvas": [
+          1118,
+          1407
+        ],
+        "raw_mode": "RGBA",
+        "transparent_mode": "RGBA",
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-14本任务tools.view_image分别实际查看四人final raw与transparent，共8张；不以历史QA代替看图。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "manifest_entries_reverified": 21
+      },
+      "card_facts": [
+        "裁缝宅子亲属，常在 `rumor_homesteadLooted1` 一带。地域见 [[区域_R03_曼恩边地]]。",
+        "四十来岁的妇人，围巾结得紧，手里攥着半截布尺；说话时先看院子里的染缸。",
+        "先解释自己为什么来，再谈东西；被怀疑就沉默。",
+        "哪几匹布是自家的；抢东西的人往哪边走的。不认领别人家的东西；不替宅子新主人说话。"
+      ],
+      "observed_mother_image": "四十来岁妇人，略尖而成熟的下颌、棕色侧分发与画面右侧低髻、脸侧碎发；忧虑眉、眼望画面左，嘴微张像正在解释。暗蓝灰围巾在颈前紧结，旧陶褐长袖长裙、米麻围裙、深棕闭口鞋。画面左手在腹前攥唯一半截软布尺的上端，画面右手轻托握尺手腕；米麻布尺带少量暗色间隔线，向画面右下方柔软垂弯，断端有毛边，无现代卷尺壳。双脚完整站稳。",
+      "fixed_prop_sides": [
+        "唯一半截软布尺持续由画面左手在腹前握上端，画面右手轻托原手腕；保持母图垂向画面右下的软弯、暗色间隔线和断端毛边，不换侧、不拉直、不修补、不伸长。",
+        "不把布尺变硬木尺、完整长尺、现代卷尺或可读契据，不递尺、不举尺指责，不新增布匹、产权单、染缸或领取物。",
+        "暗蓝灰围巾紧结原位，陶褐长袖长裙、米麻围裙和闭口鞋保持；四十来岁成熟妇人，脸与嘴不被巾遮住。",
+        "身份只可用绥珥 / FX-LOT / suier_lot；燧珥 / FX-CP1 / suier 是另一人，严禁混用其母图、道具、对白或动作。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "all_assets_png_files_scanned": 3156,
+        "all_assets_zip_archives_scanned": 164,
+        "matching_png_count": 4,
+        "matching_png_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_dark_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_light_board.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/suier_lot_v1_raw_imagegen.png"
+        ],
+        "concept_delivery_archives_checked": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_delivery_v1/新增剧情人物_蓟珥绥珥源包.zip",
+            "sha256": "16903670d9045cc5726d5bf791989ffe396e36e45a308f82e7cbac9861d0da02",
+            "bytes": 10586008,
+            "member_count": 50,
+            "matching_member_count": 23,
+            "expression_or_action_members": []
+          }
+        ],
+        "excluded_other_identity_count": 4,
+        "excluded_other_identity_paths": [
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/style_refs/luomin_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/style_refs/mia_ratio_1_to_1_5_v2_raw_imagegen.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/style_refs/miloer_transparent.png",
+          "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/style_refs/sela_G_raw_imagegen.png"
+        ],
+        "outside_concept_hits": [],
+        "matching_current_character_cards": [
+          "design/04_人物/野外人物/人物_FX-LOT_绥珥.md"
+        ],
+        "asset_path_scan": "新增来源快照之前，Assets全树PNG路径按精确slug边界及中文名扫描，并读取全部ZIP成员；他人style_refs仅作排除，不算本人动作表情。",
+        "existing_expressions_found": 0,
+        "unexplained_hits": [],
+        "identity_guard": "只用绥珥 / FX-LOT / suier_lot，四十来岁裁缝宅子亲属；不可混为燧珥 / FX-CP1 / suier。工作slug不是官方英文名。"
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "suier_lot_E1_wry_craft_memory",
+          "label_zh": "说起手艺",
+          "scene_proposal": "说起“我男人”的染布手艺与坏脾气时，短暂露出熟悉又无奈的淡笑；只取原闲谈1，不新增关系事实。",
+          "face_changes": "忧虑的内眉放松，一侧眉微抬如带一点嫌嗔；眼帘稍收、目光仍向画面左的染缸方向而非观众；嘴从母图开口解释变为闭合的一点非对称浅笑，唇角幅度很小，成熟克制。不是甜美撒娇、亲昵邀约、得意炫耀或哭笑。",
+          "minimal_gesture": "头轻轻偏向原侧，肩和两手不变；画面左手继续攥布尺，画面右手轻托手腕，尺自然垂弯，双脚站稳，不展示或拉直尺。",
+          "difference_from_static_and_pair": "母图忧眉开口自辩，E1放松眉和偏侧浅笑，E2则内眉轻拢、目光下移与紧闭口，三者从面部即可区分。",
+          "condition_and_limit": "原话仅支持聊手艺和脾气，不补定男子死亡、失踪、归来、和好或当前关系状态；不找回蓝布、不认领他人物件、不表产权已确认、救济到账或愿作证。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L728体貌与看染缸；L730口吻；L732边界；L737蓝布未找到；L739闲谈1"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-LOT].look/voice/chats[0]/greetings[revisit]/not_knows"
+          },
+          "output_stem": "suier_lot_E1_wry_craft_memory",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：绥珥（FX-LOT，suier_lot）。四十来岁的妇人；裁缝宅子亲属。源体貌明确性别/年龄，按原词保留。\n原样保留本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖问题。沿用母图1118×1407纵向完整构图及合理留边，头发、所有衣具、双手、双鞋与全部原道具完整保全，不缩小道具腾地方。\n母图观察：四十来岁妇人，略尖而成熟的下颌、棕色侧分发与画面右侧低髻、脸侧碎发；忧虑眉、眼望画面左，嘴微张像正在解释。暗蓝灰围巾在颈前紧结，旧陶褐长袖长裙、米麻围裙、深棕闭口鞋。画面左手在腹前攥唯一半截软布尺的上端，画面右手轻托握尺手腕；米麻布尺带少量暗色间隔线，向画面右下方柔软垂弯，断端有毛边，无现代卷尺壳。双脚完整站稳。\n固定侧别与道具：唯一半截软布尺持续由画面左手在腹前握上端，画面右手轻托原手腕；保持母图垂向画面右下的软弯、暗色间隔线和断端毛边，不换侧、不拉直、不修补、不伸长。 不把布尺变硬木尺、完整长尺、现代卷尺或可读契据，不递尺、不举尺指责，不新增布匹、产权单、染缸或领取物。 暗蓝灰围巾紧结原位，陶褐长袖长裙、米麻围裙和闭口鞋保持；四十来岁成熟妇人，脸与嘴不被巾遮住。 身份只可用绥珥 / FX-LOT / suier_lot；燧珥 / FX-CP1 / suier 是另一人，严禁混用其母图、道具、对白或动作。\n本张可逆表情提案：说起手艺。说起“我男人”的染布手艺与坏脾气时，短暂露出熟悉又无奈的淡笑；只取原闲谈1，不新增关系事实。\n脸部：忧虑的内眉放松，一侧眉微抬如带一点嫌嗔；眼帘稍收、目光仍向画面左的染缸方向而非观众；嘴从母图开口解释变为闭合的一点非对称浅笑，唇角幅度很小，成熟克制。不是甜美撒娇、亲昵邀约、得意炫耀或哭笑。\n最小手势：头轻轻偏向原侧，肩和两手不变；画面左手继续攥布尺，画面右手轻托手腕，尺自然垂弯，双脚站稳，不展示或拉直尺。\n必须形成可读区别：母图忧眉开口自辩，E1放松眉和偏侧浅笑，E2则内眉轻拢、目光下移与紧闭口，三者从面部即可区分。\n剧情边界：原话仅支持聊手艺和脾气，不补定男子死亡、失踪、归来、和好或当前关系状态；不找回蓝布、不认领他人物件、不表产权已确认、救济到账或愿作证。\n身份边界：只用绥珥 / FX-LOT / suier_lot，四十来岁裁缝宅子亲属；不可混为燧珥 / FX-CP1 / suier。工作slug不是官方英文名。\n本人存活、在场、愿谈且有对应有限见闻时才适用。此表情只是可逆美术提案，不改人物卡；两图不是先后结果，不推定任务完成、付款、康复、赦免、关系改善、新身份或授权。保留全部必需衣具与既有细节，不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、账簿、文书、钱币或未有道具。情绪主要靠眉眼嘴，不抬掌套模板，不仅复制母图换手势，不靠扩大眼嘴或改变年龄增强表情。不得称为原生游戏网格、装备兼容、动画或runtime通过。"
+        },
+        {
+          "id": "E2",
+          "key": "suier_lot_E2_silent_under_suspicion",
+          "label_zh": "受疑缄默",
+          "scene_proposal": "察觉对方仍在怀疑她的来意，解释到一半停住，转为不再说话。",
+          "face_changes": "两侧内眉略向上并轻拢，眼帘降低但眼睛仍可见，视线向原画面左稍下移、避开交谈者；嘴从半开解释变为紧闭短线，唇角轻下垂，读成受疑后的收声和难堪。不要泪滴、哀嚎、绝望、羞怯红脸或认罪神情。",
+          "minimal_gesture": "下巴微收，画面左手保持原握尺处、只略收指，画面右手原位轻托；不把布尺揉成团、不折断、不递出，不掩面或抬手。",
+          "difference_from_static_and_pair": "母图开口自辩，E2口完全闭合、眼神低移、内眉担忧；E1眉较松且有小幅偏侧浅笑，E2无笑意，不能靠道具变化区分。",
+          "condition_and_limit": "被怀疑后沉默不是承认抢掠、同意作证、放弃自家权利或完成SQ03；不确定抢夺者身份，不代新主人发言，不把亲属身份变成处分他人布匹的授权。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L728体貌；L730被怀疑就沉默；L732不越界；L736解释来意；L744拒绝作证"
+          },
+          "research_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-LOT].voice/not_knows/greetings[first]/site_lines[refusal]"
+          },
+          "output_stem": "suier_lot_E2_silent_under_suspicion",
+          "production_status": "not_generated",
+          "prompt_status": "ready_text_not_executed",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立、真正透明背景的单人完整全身像素概念。角色：绥珥（FX-LOT，suier_lot）。四十来岁的妇人；裁缝宅子亲属。源体貌明确性别/年龄，按原词保留。\n原样保留本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一全员比例、不镜像。保持低魔中世纪衣料皮木的原色层次与磨损、有组织的粗像素簇、可读眉眼嘴；不硬缩35px、不以量化掩盖问题。沿用母图1118×1407纵向完整构图及合理留边，头发、所有衣具、双手、双鞋与全部原道具完整保全，不缩小道具腾地方。\n母图观察：四十来岁妇人，略尖而成熟的下颌、棕色侧分发与画面右侧低髻、脸侧碎发；忧虑眉、眼望画面左，嘴微张像正在解释。暗蓝灰围巾在颈前紧结，旧陶褐长袖长裙、米麻围裙、深棕闭口鞋。画面左手在腹前攥唯一半截软布尺的上端，画面右手轻托握尺手腕；米麻布尺带少量暗色间隔线，向画面右下方柔软垂弯，断端有毛边，无现代卷尺壳。双脚完整站稳。\n固定侧别与道具：唯一半截软布尺持续由画面左手在腹前握上端，画面右手轻托原手腕；保持母图垂向画面右下的软弯、暗色间隔线和断端毛边，不换侧、不拉直、不修补、不伸长。 不把布尺变硬木尺、完整长尺、现代卷尺或可读契据，不递尺、不举尺指责，不新增布匹、产权单、染缸或领取物。 暗蓝灰围巾紧结原位，陶褐长袖长裙、米麻围裙和闭口鞋保持；四十来岁成熟妇人，脸与嘴不被巾遮住。 身份只可用绥珥 / FX-LOT / suier_lot；燧珥 / FX-CP1 / suier 是另一人，严禁混用其母图、道具、对白或动作。\n本张可逆表情提案：受疑缄默。察觉对方仍在怀疑她的来意，解释到一半停住，转为不再说话。\n脸部：两侧内眉略向上并轻拢，眼帘降低但眼睛仍可见，视线向原画面左稍下移、避开交谈者；嘴从半开解释变为紧闭短线，唇角轻下垂，读成受疑后的收声和难堪。不要泪滴、哀嚎、绝望、羞怯红脸或认罪神情。\n最小手势：下巴微收，画面左手保持原握尺处、只略收指，画面右手原位轻托；不把布尺揉成团、不折断、不递出，不掩面或抬手。\n必须形成可读区别：母图开口自辩，E2口完全闭合、眼神低移、内眉担忧；E1眉较松且有小幅偏侧浅笑，E2无笑意，不能靠道具变化区分。\n剧情边界：被怀疑后沉默不是承认抢掠、同意作证、放弃自家权利或完成SQ03；不确定抢夺者身份，不代新主人发言，不把亲属身份变成处分他人布匹的授权。\n身份边界：只用绥珥 / FX-LOT / suier_lot，四十来岁裁缝宅子亲属；不可混为燧珥 / FX-CP1 / suier。工作slug不是官方英文名。\n本人存活、在场、愿谈且有对应有限见闻时才适用。此表情只是可逆美术提案，不改人物卡；两图不是先后结果，不推定任务完成、付款、康复、赦免、关系改善、新身份或授权。保留全部必需衣具与既有细节，不新增背景、地面、投影、烟雾、第二人物、动物、文字、对白框、任务成功图标、账簿、文书、钱币或未有道具。情绪主要靠眉眼嘴，不抬掌套模板，不仅复制母图换手势，不靠扩大眼嘴或改变年龄增强表情。不得称为原生游戏网格、装备兼容、动画或runtime通过。"
+        }
+      ]
+    }
+  ],
+  "source_conflicts": [
+    {
+      "character": "suoda",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT09_药师指认的草.md",
+          "sha256": "e97416f8b52961564f2a95ea7ce51b8c0b6922f12c84be248b51bea7617bcbaa"
+        }
+      ],
+      "locator": "FX L398—402；research.npcs[id=FX-WCH].visits；DT09 L22、L35—46、L50—60、L102、L112、L118",
+      "conflict": "FX关联槽以“指认草/草的事定了”泛称任务，现行DT09核心是乡民知识被助手冒名后的自愿署名或匿名来源授权，且用途有限、效果不能许诺；索妲不是据此被确定的原作者、助手或药效见证人。",
+      "disposition": "旧文件不改；不取泛完成槽作表情依据，只演回避传话与正色反问。不画草药鉴定、署名、证词、获许带路、给付、药效或儿子康复。"
+    },
+    {
+      "character": "kelin",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT05_驿馆的急用药.md",
+          "sha256": "975b36ef49c623c4a34accd32b67b28bd9e9e53aff6362dff4e0de8bcfa253ea"
+        }
+      ],
+      "locator": "FX L348、L353、L360、L366—370；research.npcs[id=FX-HUT].visits；DT05 L22—26、L45—46、L50—60、L118",
+      "conflict": "FX“药送出去了/方子对得上”仍为泛送药槽；现行DT05在R04处理唯一普通退热物资的重复预订，分配与替代护理均须有限核验、接收者同意且不保证治愈。珂琳常在R06，卡明示不能替师父开方或动账。",
+      "disposition": "不把任务关联当同一现场或授予独立配药权；仅取规矩闲谈与拒配情绪，不抓药、不递药、不画师父归来许可、退款、配送完成或康复结果。"
+    },
+    {
+      "character": "jier",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT02_干净的井水.md",
+          "sha256": "1d8d3f4cf601d11a5db45b16ed916678861f8d5130d464223dd46d8468b52f5d"
+        }
+      ],
+      "locator": "FX L886、L892、L896、L910—914；research.npcs[id=FX-FRM].visits；DT02 L22—24、L45—46、L64—70、L124",
+      "conflict": "FX旧回访用“缸满说明井好/哪口能喝你尝过”简化井水调查；现行DT02在R05处理菜田与营地的有限清水配给，双方都不是污染源，须实测水位、共同验标或停灌补偿。蓟珥常在R02，不能合并成同一口井或认证者。",
+      "disposition": "只演谈熟悉水井的专注与拒留宿；不把尝水、满缸当水质或供水安全证据，不画开闸、舀水交付、检测成功、丰收、补偿支付或全体获水。"
+    },
+    {
+      "character": "suier_lot",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "research/field-npc-dialogue.json",
+          "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d"
+        },
+        {
+          "path": "design/06_支线/台本/台本_SQ03_没有王旗的面包.md",
+          "sha256": "aa90cf25f8c4570170fb600ac8f3f6c5fa32e22a7f1d50402c0db5056479adfa"
+        }
+      ],
+      "locator": "FX L730—744、L750—754；research.npcs[id=FX-LOT].visits；SQ03 L45—47、L63—67、L106、L173—175",
+      "conflict": "FX泛称“粮发完了”，现行SQ03有共同配给、匿名商户粮券和报复夺粮三路；报复路线不授救济或承诺，不能概括为普通和平发粮。SQ03结果也不确定裁缝宅子产权、蓝布去向或本人证词。",
+      "disposition": "只演说手艺的复杂淡笑和被疑沉默；不画领粮、衣物归还、蓝布找到、案件查清、亲属获得全宅处分权或同意作证，不替新主人授权。"
+    }
+  ],
+  "source_cautions": [
+    {
+      "character": "kelin",
+      "sources": [
+        {
+          "path": "design/04_人物/野外人物/人物_FX-HUT_珂琳.md",
+          "sha256": "ecedc5bb6a4ccd3c2fc4ec3b3aeeb2c649e583ff61e832bffd049ff3e7ea843b"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/spec_lock.md",
+          "sha256": "1ad4684e6d3578d3359c01321d1405aff20243cae2844db5266287e674fe4f88"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_tenth_four_20261013.json",
+          "sha256": "4b90d38a449ab8e35dd5b521c4b75780455144286a8e738ea4198a0a0006184d"
+        }
+      ],
+      "locator": "人物卡体貌；spec_lock年龄/完整衣装；独审results[slug=kelin].face/identity/limitations",
+      "note": "17–18岁属于可能未成年人，严格保母图完整普通职业服与年轻面型，不套全员“成熟成年”模板。手指细切痕不显著，原QA不声称逐处确证；本批不补新伤、不抹痕宣称康复。"
+    },
+    {
+      "character": "suoda",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/spec_lock.md",
+          "sha256": "39e06f0b1aa68aecd6ec8e49ffb665a40bee038bca4e5a197b994aa69212d3a6"
+        }
+      ],
+      "locator": "FX L376—392；spec_lock空篮/围巾/身份",
+      "note": "头巾包到下巴但不遮嘴，唯一藤篮必须持续空且把手完整。是女巫的邻居，不是女巫；母图灰鬓与服色是保留的美术提案，不另写为故事canon。"
+    },
+    {
+      "character": "jier",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_tenth_four_20261013.json",
+          "sha256": "4b90d38a449ab8e35dd5b521c4b75780455144286a8e738ea4198a0a0006184d"
+        }
+      ],
+      "locator": "FX L888—892、L904；独审results[slug=jier].identity/gesture",
+      "note": "两袖卷起和指端少量土色是识别点；不强求逐个甲缝，也不添加锄桶粮袋。答话较长只是谈熟悉的井，不能作入院、留宿或替邻村作保的同意。"
+    },
+    {
+      "character": "suier_lot",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/spec_lock.md",
+          "sha256": "91e656bc8c32d342c40ed5b9aeee2348950ec0746d154903d5efbcd5da864641"
+        }
+      ],
+      "locator": "FX L728—744；spec_lock Subject身份/软布尺",
+      "note": "suier_lot/FX-LOT绥珥独立于suier/FX-CP1燧珥。半截软布尺是个人随身物，保持柔弯和断口；不举尺认领、不把“我男人”补成已故/失踪/重聚状态，沉默不等于认罪或授权。"
+    },
+    {
+      "character": "all",
+      "sources": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+          "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_tenth_four_20261013.json",
+          "sha256": "4b90d38a449ab8e35dd5b521c4b75780455144286a8e738ea4198a0a0006184d"
+        }
+      ],
+      "locator": "STYLE_DIRECTION制作优先级；独审四人delivery_binding",
+      "note": "四个manifest的pending是冻结时历史状态，后续独审绑定已补终审，本批不改旧manifest。raw与transparent的SHA各自锁定，不把源清理或新brief计作新增表情成品；比例沿用本人，未获游戏运行或装备结论。"
+    }
+  ],
+  "source_notes": "本任务实际view四人raw与transparent共8张，现场核4个冻结manifest共84条及raw/transparent/manifest和独审delivery_binding三联SHA。快照写入前扫描Assets全树3156张PNG和164个ZIP的成员，未发现四人的既有动作或表情变体。现行卡、对白及DT09/DT05/DT02/SQ03均已读；保持普通人物身份、有限知识与各自年龄。只规划，不执行生图流水线。",
+  "validation": {
+    "source_cards": 4,
+    "viewed_final_raw_images": 4,
+    "viewed_final_transparent_images": 4,
+    "raw_transparent_manifest_hash_triples_verified": 4,
+    "manifest_entries_verified": 84,
+    "planned_expressions": 8,
+    "complete_prompt_texts": 8,
+    "actual_generation_calls": 0,
+    "existing_expressions_found": 0,
+    "scope_note": "只新增tenth_four_expression_brief.json与tenth_four_expression_sources快照目录；没有design/编辑、旧资产/QA/roster修改、git、上传、生图或游戏落地。",
+    "source_snapshots": 58,
+    "source_snapshot_readback_verified": true,
+    "source_files_unchanged_readback": true,
+    "all_frozen_manifest_entries_unchanged_readback": true,
+    "direct_path_sha_references_readback_verified": 182,
+    "unique_path_sha_targets_readback_verified": 119,
+    "readback_verified_utc": "2026-10-14T02:40:22.879327+00:00"
+  },
+  "source_snapshot_index": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_four_expression_sources/source_index.json",
+    "sha256": "448b763fbf118127dfcc0617b89c382336cddab3b8bf36db23f64e88718f531c"
+  }
+}

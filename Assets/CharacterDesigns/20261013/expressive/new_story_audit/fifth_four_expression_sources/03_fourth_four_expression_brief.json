@@ -1,0 +1,672 @@
+{
+  "schema_version": 1,
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。",
+    "planned_selected_images": 8
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者与独审实际view每张原图及最终透明/浅深板，逐图核母图SHA、身份、面部情绪、手势、道具侧别和剧情边界；manifest绑定选稿SHA。板上不加剧情已完成标签。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "prompt_archive_contract": {
+    "status": "planned_prompts_not_executed",
+    "rule": "本文件prompt_text是完整拟用首稿，不冒称已执行prompt。生产时将真实发送的逐字prompt、引用路径与输入SHA、工具参数、时间、输出路径/SHA、首稿或硬错revision1及选废原因写入prompts/与generation-log.json；若改措辞必须存实际版本，不用本brief替代真实调用存档。",
+    "max_calls_per_expression": 2,
+    "revision_rule": "仅一次明确硬错定向修订；实际修订全文及纠错目标须保存，失败则报告，不偷偷增加第三稿。"
+  },
+  "created_utc": "2026-10-13T21:01:43.925994+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "第四批四名新剧情人物各两种独立面部情绪，共8张未来全身概念。本轮仅新增brief及来源快照，不生图、不上传、不git、不改旧文件。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_four_production_brief.json",
+    "sha256": "ee431d0113c43ca84d06d8b5c9655e3aa33f962f116f3eaeac67f8ab7aa416d2"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_fourth_four_20261013.json",
+    "sha256": "c49da19d1acd1f65f8ca9de36c9bfef59d011c59a886eedfe336d16a5842b917"
+  },
+  "format_reference": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/third_four_expression_brief.json",
+    "sha256": "524073ce12f47a57494064ab071227492012a0cbbe2d60b2f116eee00e128ba0"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "shared_locks": [
+    "每张以该人物selected_raw及最终透明版为唯一身份/服装/比例母图；单人完整全身，头发、双手和鞋完整留边，原有紧凑成年比例、体型和朝向不重设。",
+    "保留本人的年龄、面型、鼻型、发型、眉眼基础形状与肤色；情绪靠眉眼口的协调变化，可有轻微头手变化；不能统一成同一张甜笑脸。",
+    "服装层次、配色、磨损、口袋、道具数量和侧别沿母图；画面左右与人物左右同时标注，禁止整体镜像。合理动作造成的遮挡和细小褶皱变化可接受。",
+    "透明单人全身像素概念，面部清楚且好看；不机械卡眉毛角度、眼睛像素数、绝对头身比或原像素位置，不用缩图掩盖脸和人体问题。",
+    "八幅各自独立、非顺序结局。本人须存活、在场、愿谈且具备相应见闻；不得把N15/D09/DT16/N8的全局结果自动赋给人物。",
+    "卡定/台本事实优先；本轮表情、手势、微笑与疲倦均为可逆美术演出提案，不回写角色卡或任务状态。",
+    "每人严格继承自己的实际母图比例，不把四人拉到同一头身比；成人不可幼化，表情可读且与母图/配对图区别，不能夸张变脸。",
+    "洛珉性别未在人物卡明确；沿中性成年母图，不根据姓名、职业或造型新增性别、教阶和教派徽。",
+    "表情优先由眉眼嘴协调变化，保留个体持物与站姿；不把所有严肃情绪统一为开掌劝停，不为多样性硬加笑、怒或大动作。",
+    "蔻珥口吻平直、不带情绪，本批两张用观察与决断时的轻微眉眼嘴区别，不强行赋予明显恐惧、喜悦或愤怒。",
+    "无新增关键道具，无任务成功、疾病治愈、送药完成、获救下楼、身份披露、认领遗物或获准通行的暗示。"
+  ],
+  "characters": [
+    {
+      "canonical_id": "FX-CAT",
+      "slug": "luomin",
+      "name": "洛珉",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-CAT_洛珉.md",
+        "sha256": "83e4c012254264ef736c07bb9bea72d0f9c3d90ca6998d79246aba8867fcdc26"
+      },
+      "card_matches_fourth_four_brief": true,
+      "age_identity_lock": "四十多岁成年守墓教士，性别未明；不得重设教阶或教派身份。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/luomin_v1_raw_imagegen.png",
+          "sha256": "8e53d315ac7f8563cc59adb5d0a0b9e145c7e2065e17c5e09bdea676419b1e82"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/luomin_transparent.png",
+          "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luomin/concept_v1/manifest.json",
+          "sha256": "3b542cc4a4c3b7a044a6d8b67235c84fdb9abc50203794042d22f387efc949e3"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张查看4个raw与4个transparent完整PNG；不以忽略alpha的隐藏RGB判定背景。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "废墟守墓教士，常在 `rumor_remoteCatacombs1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "四十多岁的教士，袍角结着泥，手上提一盏常备的油灯；说话前习惯先把灯放在地上。",
+        "平稳，句尾带祝福；拒绝时不说重话，只说“不合规矩”。",
+        "哪些墓室已经塌了；哪几处是后来人挖开的。不知道盗掘者的去向；不替任何家族宣告墓主身份。"
+      ],
+      "observed_mother_image": "灰棕短乱发夹灰鬓、偏瘦中性成年脸，母图眉平、眼向画面左、嘴轻启。暗蓝肩披、灰棕长袍、米白袖里、棕腰带和泥色磨损袍角，双足棕鞋。人物右手在画面左低幅开掌，左手在画面右腹前；油灯立于画面右脚侧地面。",
+      "fixed_prop_sides": [
+        "油灯固定在人物左侧（画面右）脚边地面，保持同一灯笼轮廓、提环和内部暖光；不提起、不移到祭坛、不变法器。",
+        "人物右手（画面左）保持低位自然曲指，左手（画面右）留腹侧；双脚与长袍下摆位置不大变，不新增经书或名单。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug/中文名扫描；本人只有concept_v1，其他命中逐SHA确认是同一transparent风格来源副本；未发现该人物同类表情或动作。",
+        "duplicate_mother_reference_count": 21,
+        "duplicate_mother_references": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fouer/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/teman/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erwei/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kuqi/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seer/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/dalan/concept_v1/sources/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wuer/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fx_cv4_nier/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/chenger/concept_v1/style_refs/luomin_transparent.png",
+            "sha256": "2a165729b8ceae2f6cb69e038fa24cc79b4c1dbb42f3febfda2e5402f3ae3cb4"
+          }
+        ],
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "luomin_E1_gentle_benediction",
+          "label_zh": "温和祝愿",
+          "scene_proposal": "说完给活人的祝愿，停下来看向交谈者的一瞬。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L122、L128；初次见面与句尾祝福"
+          },
+          "face_changes": "眉间比母图放松，眼睑柔和但双眼仍可见，嘴从微启改为轻合、唇角只略微上扬；温和克制，不作甜笑或露齿大笑。",
+          "minimal_gesture": "下颌极轻点头，右手仍低位且指节略放松，左手原位，不新增祝祷手印。",
+          "difference_from_static_and_pair": "母图开口说明改为柔眼轻合嘴；与E2收眉抿唇的惋惜不同。",
+          "condition_and_limit": "只是祝愿，不保证平安、复活或愿望实现；不等于第三室开放或对方已获信任。",
+          "output_stem": "luomin_E1_gentle_benediction",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：洛珉（FX-CAT），四十多岁成年守墓教士，性别未明；不得重设教阶或教派身份。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：灰棕短乱发夹灰鬓、偏瘦中性成年脸，母图眉平、眼向画面左、嘴轻启。暗蓝肩披、灰棕长袍、米白袖里、棕腰带和泥色磨损袍角，双足棕鞋。人物右手在画面左低幅开掌，左手在画面右腹前；油灯立于画面右脚侧地面。\n固定侧别与道具：油灯固定在人物左侧（画面右）脚边地面，保持同一灯笼轮廓、提环和内部暖光；不提起、不移到祭坛、不变法器。 人物右手（画面左）保持低位自然曲指，左手（画面右）留腹侧；双脚与长袍下摆位置不大变，不新增经书或名单。\n本张可逆表情提案：温和祝愿。说完给活人的祝愿，停下来看向交谈者的一瞬。\n脸部：眉间比母图放松，眼睑柔和但双眼仍可见，嘴从微启改为轻合、唇角只略微上扬；温和克制，不作甜笑或露齿大笑。\n最小手势：下颌极轻点头，右手仍低位且指节略放松，左手原位，不新增祝祷手印。\n必须形成可读区别：母图开口说明改为柔眼轻合嘴；与E2收眉抿唇的惋惜不同。\n剧情边界：只是祝愿，不保证平安、复活或愿望实现；不等于第三室开放或对方已获信任。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "luomin_E2_sober_regret_for_ruin",
+          "label_zh": "沉静惋惜",
+          "scene_proposal": "谈到别人把“废墟”二字说得太轻，话尾停顿的克制惋惜。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L132；闲谈2"
+          },
+          "face_changes": "内眉稍提并向中间收，视线微落但仍看得见双眼，嘴闭合、嘴角轻沉；不是哭泣、暴怒或畏惧。",
+          "minimal_gesture": "头略低，右手在原低位自然收拢曲指，左手仍腹侧；灯、衣装、脚位完全保留。",
+          "difference_from_static_and_pair": "母图平眉开口改为内眉收提、低眼紧唇；E1柔和祝愿，E2沉静惋惜。",
+          "condition_and_limit": "不宣告墓主身份、盗掘者去向或新的死亡；不把回声当死人答话，不暗示N15已结案。",
+          "output_stem": "luomin_E2_sober_regret_for_ruin",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：洛珉（FX-CAT），四十多岁成年守墓教士，性别未明；不得重设教阶或教派身份。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：灰棕短乱发夹灰鬓、偏瘦中性成年脸，母图眉平、眼向画面左、嘴轻启。暗蓝肩披、灰棕长袍、米白袖里、棕腰带和泥色磨损袍角，双足棕鞋。人物右手在画面左低幅开掌，左手在画面右腹前；油灯立于画面右脚侧地面。\n固定侧别与道具：油灯固定在人物左侧（画面右）脚边地面，保持同一灯笼轮廓、提环和内部暖光；不提起、不移到祭坛、不变法器。 人物右手（画面左）保持低位自然曲指，左手（画面右）留腹侧；双脚与长袍下摆位置不大变，不新增经书或名单。\n本张可逆表情提案：沉静惋惜。谈到别人把“废墟”二字说得太轻，话尾停顿的克制惋惜。\n脸部：内眉稍提并向中间收，视线微落但仍看得见双眼，嘴闭合、嘴角轻沉；不是哭泣、暴怒或畏惧。\n最小手势：头略低，右手在原低位自然收拢曲指，左手仍腹侧；灯、衣装、脚位完全保留。\n必须形成可读区别：母图平眉开口改为内眉收提、低眼紧唇；E1柔和祝愿，E2沉静惋惜。\n剧情边界：不宣告墓主身份、盗掘者去向或新的死亡；不把回声当死人答话，不暗示N15已结案。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-ABY",
+      "slug": "tila",
+      "name": "缇菈",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-ABY_缇菈.md",
+        "sha256": "fc362a053272610a1422f9e743c423bc7dafe607d08b85b88dceda3dd42af837"
+      },
+      "card_matches_fourth_four_brief": true,
+      "age_identity_lock": "三十多岁成年女性、修院避难者；来处不公开，不能改成少女或获救居民。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_v1_raw_imagegen.png",
+          "sha256": "7fb8a1831263031eec17c24ac021388623447e249ae3a978c35368723f972682"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/tila_transparent.png",
+          "sha256": "f9d1d52f41ee716f749525cc7ad7915a24535121ff877bcf417b8b6e7cbbe173"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tila/concept_v1/manifest.json",
+          "sha256": "2593545f4670c35390977b8d3044c9fb853338ee55e3fbf7c50bc67fe067321e"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张查看4个raw与4个transparent完整PNG；不以忽略alpha的隐藏RGB判定背景。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "修院避难者，常在 `rumor_abbey1` 一带。地域见 [[区域_R06_无名修院山地]]。",
+        "三十多岁的妇人，披着两层旧披巾，脚上只剩一只完整的鞋；总在钟楼阴影里站着。",
+        "轻声，句子常说到一半；被问来历时先问“你是哪边的人”。",
+        "钟楼哪一级台阶是空的；修院后墙哪个洞能过人。不说自己从哪个村来；不替修院解释旧事。"
+      ],
+      "observed_mother_image": "窄脸、深棕乱发露在双层披巾内，母图侧眼画面左、眉微提、嘴开一线。灰蓝外披巾和枯紫内巾，褐色破旧裙装、米白袖口。双手在胸前各扣巾边；人物右足（画面左）完整棕鞋，人物左足（画面右）破鞋露趾、足部完整。",
+      "fixed_prop_sides": [
+        "右手（画面左）扣灰蓝外巾边，左手（画面右）扣胸前巾边，始终保留双手抓巾的个人防御姿态，不变开掌拦路。",
+        "人物右足（画面左）鞋完整，人物左足（画面右）鞋前部破损露趾；不换侧、不修好鞋、不新增断足或伤口。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug/中文名扫描；本人只有concept_v1，其他命中逐SHA确认是同一transparent风格来源副本；未发现该人物同类表情或动作。",
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "tila_E1_guarded_question",
+          "label_zh": "戒备探问",
+          "scene_proposal": "第一次询问来人属于哪边，话到一半等待答复。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L154、L160；初次见面"
+          },
+          "face_changes": "一侧眉轻提、另一侧眉微收，双眼从母图泛侧目转为聚焦来人，唇稍分开成很短的疑问；不放大眼白、不惊叫。",
+          "minimal_gesture": "头稍收回肩间，双手各扣原巾边略紧，肩不耸成新体型，脚位不动。",
+          "difference_from_static_and_pair": "比母图普通警觉侧目更有明显不对称疑问眉与聚焦目光；与E2双眉压平、闭嘴拒绝不同。",
+          "condition_and_limit": "只询问对方，不揭露自己村落、阵营归属或新来历；不推定对方已回答。",
+          "output_stem": "tila_E1_guarded_question",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：缇菈（FX-ABY），三十多岁成年女性、修院避难者；来处不公开，不能改成少女或获救居民。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：窄脸、深棕乱发露在双层披巾内，母图侧眼画面左、眉微提、嘴开一线。灰蓝外披巾和枯紫内巾，褐色破旧裙装、米白袖口。双手在胸前各扣巾边；人物右足（画面左）完整棕鞋，人物左足（画面右）破鞋露趾、足部完整。\n固定侧别与道具：右手（画面左）扣灰蓝外巾边，左手（画面右）扣胸前巾边，始终保留双手抓巾的个人防御姿态，不变开掌拦路。 人物右足（画面左）鞋完整，人物左足（画面右）鞋前部破损露趾；不换侧、不修好鞋、不新增断足或伤口。\n本张可逆表情提案：戒备探问。第一次询问来人属于哪边，话到一半等待答复。\n脸部：一侧眉轻提、另一侧眉微收，双眼从母图泛侧目转为聚焦来人，唇稍分开成很短的疑问；不放大眼白、不惊叫。\n最小手势：头稍收回肩间，双手各扣原巾边略紧，肩不耸成新体型，脚位不动。\n必须形成可读区别：比母图普通警觉侧目更有明显不对称疑问眉与聚焦目光；与E2双眉压平、闭嘴拒绝不同。\n剧情边界：只询问对方，不揭露自己村落、阵营归属或新来历；不推定对方已回答。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "tila_E2_firm_stay_in_tower",
+          "label_zh": "抿唇不下",
+          "scene_proposal": "拒绝从钟楼下来，短句说完后仍守住自己的决定。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L168；拒绝"
+          },
+          "face_changes": "双眉比母图略压平、眉心轻收，目光稳住交谈者，嘴闭合紧抿；坚定而仍谨慎，不龇牙发怒。",
+          "minimal_gesture": "下颌微收、头极小幅偏转表示不愿，双手继续扣披巾，不迈步、不作高处动作。",
+          "difference_from_static_and_pair": "母图开口迟疑改为对称压眉闭口坚持；E1探问尚等答复，E2决定清楚。",
+          "condition_and_limit": "不画下楼、迁居、救援完成、D09开门或新的承诺；无钟楼危险背景，脚部保持完整。",
+          "output_stem": "tila_E2_firm_stay_in_tower",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：缇菈（FX-ABY），三十多岁成年女性、修院避难者；来处不公开，不能改成少女或获救居民。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：窄脸、深棕乱发露在双层披巾内，母图侧眼画面左、眉微提、嘴开一线。灰蓝外披巾和枯紫内巾，褐色破旧裙装、米白袖口。双手在胸前各扣巾边；人物右足（画面左）完整棕鞋，人物左足（画面右）破鞋露趾、足部完整。\n固定侧别与道具：右手（画面左）扣灰蓝外巾边，左手（画面右）扣胸前巾边，始终保留双手抓巾的个人防御姿态，不变开掌拦路。 人物右足（画面左）鞋完整，人物左足（画面右）鞋前部破损露趾；不换侧、不修好鞋、不新增断足或伤口。\n本张可逆表情提案：抿唇不下。拒绝从钟楼下来，短句说完后仍守住自己的决定。\n脸部：双眉比母图略压平、眉心轻收，目光稳住交谈者，嘴闭合紧抿；坚定而仍谨慎，不龇牙发怒。\n最小手势：下颌微收、头极小幅偏转表示不愿，双手继续扣披巾，不迈步、不作高处动作。\n必须形成可读区别：母图开口迟疑改为对称压眉闭口坚持；E1探问尚等答复，E2决定清楚。\n剧情边界：不画下楼、迁居、救援完成、D09开门或新的承诺；无钟楼危险背景，脚部保持完整。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-LEP",
+      "slug": "miloer",
+      "name": "米洛珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-LEP_米洛珥.md",
+        "sha256": "6b3b78cf0f60f7e9f319c158d482dd8a199a44af07cdc05101573f07fa364dda"
+      },
+      "card_matches_fourth_four_brief": true,
+      "age_identity_lock": "四十来岁成年男性、麻风院护理者；不扩成医师新职位或患者身份。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_v1_raw_imagegen.png",
+          "sha256": "669f8424bd7b5b99f822edd12f9da19c48186887df0c3677ce2877251506396f"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/miloer_transparent.png",
+          "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/miloer/concept_v1/manifest.json",
+          "sha256": "37862a490a93abaeb2aeb75f2a10bfd9d53039886239708774e0c5ba7c54c646"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张查看4个raw与4个transparent完整PNG；不以忽略alpha的隐藏RGB判定背景。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "麻风院护理者，常在 `rumor_leprosy1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "四十来岁的男子，袖口用麻绳扎紧，随身带一小罐油膏；进门先洗手，再说话。",
+        "缓慢、克制；说到病人时把声音放低，说到“外人”时站直。",
+        "哪间屋子还在用药；送药的路哪段会积水。不报病人姓名；不替城里人判断该不该放人进来。"
+      ],
+      "observed_mother_image": "厚下颌、深棕后梳短发夹灰鬓、深灰棕须，母图低眉专注、目光向画面右、嘴小幅开。未漂白麻衫、双袖麻绳结、灰绿围裙、棕裤靴；人物左手（画面右）托封口小陶油膏罐，右手（画面左）低幅朝下展开。",
+      "fixed_prop_sides": [
+        "人物左手（画面右）始终承托同一小陶油膏罐，盖与绳结完整；不打开、不倒药、不交换给别人。",
+        "右手（画面左）可从原低掌收回至围裙侧自然曲指，不掩双袖麻绳结；不指患者、不添名单或医疗器械。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug/中文名扫描；本人只有concept_v1，其他命中逐SHA确认是同一transparent风格来源副本；未发现该人物同类表情或动作。",
+        "duplicate_mother_reference_count": 21,
+        "duplicate_mother_references": [
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fouer/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/moer_trs/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/teman/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erwei/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kuqi/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/weier/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/erlan/concept_v1/sources/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daier/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seer/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/qiner/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/luoer/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/daer/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wuer/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fx_cv4_nier/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          },
+          {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/chenger/concept_v1/style_refs/miloer_transparent.png",
+            "sha256": "c1c10e6f1dc19bebb89493b8c0e9a32616272f4fea7f1b5c70c8252b11d47275"
+          }
+        ],
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "miloer_E1_quiet_care_concern",
+          "label_zh": "低声忧虑",
+          "scene_proposal": "谈起油膏紧缺时，停顿思量日常照护的难处。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L218、L228；口吻与闲谈2"
+          },
+          "face_changes": "内眉稍抬向中间收拢，眼神略垂看向手中封好罐子，嘴闭合且唇角轻沉；忧虑克制，不绝望落泪。",
+          "minimal_gesture": "只轻低头，右手从低掌收至围裙侧松曲，左手托罐原位；肩和足维持母图承重。",
+          "difference_from_static_and_pair": "母图面向来人开口改为低眼闭唇忧虑；与E2抬眼、平压眉的坚决拒绝清楚分开。",
+          "condition_and_limit": "仅由日常闲谈派生的忧虑，不宣称药已耗尽、病情恶化或死亡；不把送药当DT16现行解法，不许诺治愈。",
+          "output_stem": "miloer_E1_quiet_care_concern",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：米洛珥（FX-LEP），四十来岁成年男性、麻风院护理者；不扩成医师新职位或患者身份。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：厚下颌、深棕后梳短发夹灰鬓、深灰棕须，母图低眉专注、目光向画面右、嘴小幅开。未漂白麻衫、双袖麻绳结、灰绿围裙、棕裤靴；人物左手（画面右）托封口小陶油膏罐，右手（画面左）低幅朝下展开。\n固定侧别与道具：人物左手（画面右）始终承托同一小陶油膏罐，盖与绳结完整；不打开、不倒药、不交换给别人。 右手（画面左）可从原低掌收回至围裙侧自然曲指，不掩双袖麻绳结；不指患者、不添名单或医疗器械。\n本张可逆表情提案：低声忧虑。谈起油膏紧缺时，停顿思量日常照护的难处。\n脸部：内眉稍抬向中间收拢，眼神略垂看向手中封好罐子，嘴闭合且唇角轻沉；忧虑克制，不绝望落泪。\n最小手势：只轻低头，右手从低掌收至围裙侧松曲，左手托罐原位；肩和足维持母图承重。\n必须形成可读区别：母图面向来人开口改为低眼闭唇忧虑；与E2抬眼、平压眉的坚决拒绝清楚分开。\n剧情边界：仅由日常闲谈派生的忧虑，不宣称药已耗尽、病情恶化或死亡；不把送药当DT16现行解法，不许诺治愈。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "miloer_E2_protect_patient_privacy",
+          "label_zh": "严守私密",
+          "scene_proposal": "有人要求开门看病人，平静明确拒绝后直视对方。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L220、L232；知情边界与拒绝"
+          },
+          "face_changes": "眉比母图压平、目光抬至交谈者，嘴闭合成坚实短线；神情认真坚定，眼睛不瞪大、不怒吼。",
+          "minimal_gesture": "上身微立直但不改变身高比例，右手自然收于围裙侧、手指松曲，左手继续稳托封罐；不用开掌阻拦手势。",
+          "difference_from_static_and_pair": "从母图低眉开口说明改成平眉直视闭唇决断；与E1低眼内眉提的忧虑不同。",
+          "condition_and_limit": "拒绝窥看病人，不公开姓名、不打开院门、不判断城里人是否该接纳谁；不代患者同意继续治疗或退出。",
+          "output_stem": "miloer_E2_protect_patient_privacy",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：米洛珥（FX-LEP），四十来岁成年男性、麻风院护理者；不扩成医师新职位或患者身份。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：厚下颌、深棕后梳短发夹灰鬓、深灰棕须，母图低眉专注、目光向画面右、嘴小幅开。未漂白麻衫、双袖麻绳结、灰绿围裙、棕裤靴；人物左手（画面右）托封口小陶油膏罐，右手（画面左）低幅朝下展开。\n固定侧别与道具：人物左手（画面右）始终承托同一小陶油膏罐，盖与绳结完整；不打开、不倒药、不交换给别人。 右手（画面左）可从原低掌收回至围裙侧自然曲指，不掩双袖麻绳结；不指患者、不添名单或医疗器械。\n本张可逆表情提案：严守私密。有人要求开门看病人，平静明确拒绝后直视对方。\n脸部：眉比母图压平、目光抬至交谈者，嘴闭合成坚实短线；神情认真坚定，眼睛不瞪大、不怒吼。\n最小手势：上身微立直但不改变身高比例，右手自然收于围裙侧、手指松曲，左手继续稳托封罐；不用开掌阻拦手势。\n必须形成可读区别：从母图低眉开口说明改成平眉直视闭唇决断；与E1低眼内眉提的忧虑不同。\n剧情边界：拒绝窥看病人，不公开姓名、不打开院门、不判断城里人是否该接纳谁；不代患者同意继续治疗或退出。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-PLG",
+      "slug": "kouer",
+      "name": "蔻珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-PLG_蔻珥.md",
+        "sha256": "3f9362f9ccb7c29542e7bf0520b139aa7fcc9461f818824749a57c606e55c1b4"
+      },
+      "card_matches_fourth_four_brief": true,
+      "age_identity_lock": "四十多岁成年女性、疫村看守；平直口吻，不判断疫病存亡。",
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_v1_raw_imagegen.png",
+          "sha256": "b58f27d1de28aaeab1f14a003633587680edeb7012127e804593d147ffdb183e"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/kouer_transparent.png",
+          "sha256": "30b2b6ec4a29139a8520b5de382cd93e3cb002a9d94241a0502698a79e385500"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kouer/concept_v1/manifest.json",
+          "sha256": "72529a2d05f1073c4b627c1d0f767fceee5264a159cc506157487d7d4bcfe8e8"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13本任务tools.view_image逐张查看4个raw与4个transparent完整PNG；不以忽略alpha的隐藏RGB判定背景。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "疫村看守，常在 `rumor_plagueVillage1` 一带。地域见 [[区域_R05_灰烬湿地与疫村]]。",
+        "四十多岁的妇人，裹着双层头巾，手边总有一桶石灰；说话前先看风向。",
+        "平直、不带情绪；劝人离开时把话说得像登记。",
+        "封条是哪一年贴的；哪几间屋子还锁着。不替村民认领遗物；不判断病还在不在。"
+      ],
+      "observed_mother_image": "灰蓝外层与米白内层双头巾，方圆成年脸，母图平眉、目光画面右、嘴微开。暗褐长衣、米白袖边与裙摆、棕鞋；落地木桶在身体前方偏画面左，内有白色石灰，两手低搭提把。",
+      "fixed_prop_sides": [
+        "人物右手（画面左）与左手（画面右）始终在原桶把两处搭握，桶保持前方偏人物右侧（画面左）落地，提把弧线与石灰量不变。",
+        "不拎桶、扬灰、蘸灰、按手入灰，不添封条或钥匙。双层头巾完整、双脚站稳，禁止镜像。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "existing_expression_audit": {
+        "character_directory_children": [
+          "concept_v1"
+        ],
+        "existing_expression_directory": false,
+        "asset_path_scan": "Assets全路径按slug/中文名扫描；本人只有concept_v1，其他命中逐SHA确认是同一transparent风格来源副本；未发现该人物同类表情或动作。",
+        "duplicate_mother_reference_count": 0,
+        "duplicate_mother_references": [],
+        "unexplained_hits": []
+      },
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "kouer_E1_quiet_wind_scrutiny",
+          "label_zh": "静默察风",
+          "scene_proposal": "开口前查看风向的一瞬，外在仍平静。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L536、L544；说话前习惯与初次见面"
+          },
+          "face_changes": "平眉基本保留，靠目光方向与上眼睑轻收表现专注：双眼看向原朝向画面右的稍远处，嘴从母图微开改为自然轻合；无惊恐或夸张怀疑。",
+          "minimal_gesture": "头沿母图朝向轻转一点但保留三分之二以上脸部可见；双手原位搭把、桶落地，不转身或抬手探风。",
+          "difference_from_static_and_pair": "母图开口提醒改为闭口侧向专注观察；与E2看住近处交谈者、紧唇的拒绝区别。",
+          "condition_and_limit": "是习惯性观察，不保证上风处安全、不宣布无疫病；不凭风向推知未见事件，不画风烟特效。",
+          "output_stem": "kouer_E1_quiet_wind_scrutiny",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：蔻珥（FX-PLG），四十多岁成年女性、疫村看守；平直口吻，不判断疫病存亡。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：灰蓝外层与米白内层双头巾，方圆成年脸，母图平眉、目光画面右、嘴微开。暗褐长衣、米白袖边与裙摆、棕鞋；落地木桶在身体前方偏画面左，内有白色石灰，两手低搭提把。\n固定侧别与道具：人物右手（画面左）与左手（画面右）始终在原桶把两处搭握，桶保持前方偏人物右侧（画面左）落地，提把弧线与石灰量不变。 不拎桶、扬灰、蘸灰、按手入灰，不添封条或钥匙。双层头巾完整、双脚站稳，禁止镜像。\n本张可逆表情提案：静默察风。开口前查看风向的一瞬，外在仍平静。\n脸部：平眉基本保留，靠目光方向与上眼睑轻收表现专注：双眼看向原朝向画面右的稍远处，嘴从母图微开改为自然轻合；无惊恐或夸张怀疑。\n最小手势：头沿母图朝向轻转一点但保留三分之二以上脸部可见；双手原位搭把、桶落地，不转身或抬手探风。\n必须形成可读区别：母图开口提醒改为闭口侧向专注观察；与E2看住近处交谈者、紧唇的拒绝区别。\n剧情边界：是习惯性观察，不保证上风处安全、不宣布无疫病；不凭风向推知未见事件，不画风烟特效。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        },
+        {
+          "id": "E2",
+          "key": "kouer_E2_flat_refusal_to_unseal",
+          "label_zh": "淡然不拆",
+          "scene_proposal": "被要求拆封条，短促平直回答后不再多说。",
+          "story_support": {
+            "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+            "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a",
+            "locator": "L538、L540、L552；口吻、知情边界与拒绝"
+          },
+          "face_changes": "双眉仍平直仅微压，视线由母图旁望转向近处交谈者，嘴闭紧成短直线、唇角不扬不沉；用专注和收紧形成拒绝，不添怒容。",
+          "minimal_gesture": "下颌轻收，头回向交谈者一点仍维持原三分之四朝向；双手搭原提把，桶与站位完全不动。",
+          "difference_from_static_and_pair": "母图微开嘴旁望改为收紧嘴、直接目光；E1轻合嘴察风，E2嘴线更紧且目光落在交谈者。",
+          "condition_and_limit": "不拆封条、不改变门状态、不认领遗物；不把N8处理本地污染读作疫病清零，不画任务后释然庆祝。",
+          "output_stem": "kouer_E2_flat_refusal_to_unseal",
+          "production_status": "not_generated",
+          "prompt_text": "以所附本角色最终raw及transparent为唯一身份、服装、道具与比例母图，制作一张独立透明单人完整全身像素概念。角色：蔻珥（FX-PLG），四十多岁成年女性、疫村看守；平直口吻，不判断疫病存亡。\n原样继承本人实际头身比例、体型、脸型、眉眼基础形状、鼻唇、年龄、发型、肤色与朝向；不统一四人比例，不幼化，不套同一甜笑脸，不镜像。保留低魔中世纪材质、衣装层次配色磨损和清楚有组织的粗像素簇；不硬缩35px、不用量化遮盖五官。\n母图观察：灰蓝外层与米白内层双头巾，方圆成年脸，母图平眉、目光画面右、嘴微开。暗褐长衣、米白袖边与裙摆、棕鞋；落地木桶在身体前方偏画面左，内有白色石灰，两手低搭提把。\n固定侧别与道具：人物右手（画面左）与左手（画面右）始终在原桶把两处搭握，桶保持前方偏人物右侧（画面左）落地，提把弧线与石灰量不变。 不拎桶、扬灰、蘸灰、按手入灰，不添封条或钥匙。双层头巾完整、双脚站稳，禁止镜像。\n本张可逆表情提案：淡然不拆。被要求拆封条，短促平直回答后不再多说。\n脸部：双眉仍平直仅微压，视线由母图旁望转向近处交谈者，嘴闭紧成短直线、唇角不扬不沉；用专注和收紧形成拒绝，不添怒容。\n最小手势：下颌轻收，头回向交谈者一点仍维持原三分之四朝向；双手搭原提把，桶与站位完全不动。\n必须形成可读区别：母图微开嘴旁望改为收紧嘴、直接目光；E1轻合嘴察风，E2嘴线更紧且目光落在交谈者。\n剧情边界：不拆封条、不改变门状态、不认领遗物；不把N8处理本地污染读作疫病清零，不画任务后释然庆祝。\n本人存活、在场、愿谈且有相应见闻才适用；两张不是顺序结局。保留所有原道具，不新增背景、第二人物、字、对话框、剧情成功图标；头发、手、鞋和道具四周留边。情绪主要靠眉眼嘴，不靠统一开掌劝停；不能只复制母图表情换手势，不能扩大眼嘴或变脸表示情绪。不代表游戏原生网格、装备或动画兼容。",
+          "prompt_status": "ready_text_not_executed"
+        }
+      ]
+    }
+  ],
+  "source_notes": "旧manifest冻结状态早于独审，采用独审delivery_binding的final_clean_and_presentation_pass并重新核SHA。vendor目录为空、不安装；使用已存reference/pixel-asset-master/SKILL.md。沿既有授权概念方向做brief，不生图。洛珉性别未定；所有表情可逆，不改卡/台本。",
+  "source_conflicts": [
+    {
+      "character": "miloer",
+      "sources": [
+        {
+          "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+          "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+        },
+        {
+          "path": "design/07_日常任务/台本/台本_DT16_愿意继续治疗的人.md",
+          "sha256": "a526ddb617b1c2a2f939a8ba1419e8b9d2844e029cea5267a0773a241913aa4b"
+        }
+      ],
+      "locator": "FX L234、L238—239；DT16 任务定位、S62可执行解法、DT16-DEFAULT",
+      "conflict": "FX把关联DT16的进行中/完成后回访写成缺两味药/药到了；DT16现行S62则是患者要求结束有副作用照护，路线为本人退出或有限复评的一次事件，送药不是其当前解法或结案条件。",
+      "disposition": "已报告父任务；本批只用FX日常闲谈与隐私拒绝，不采用两条任务回访、不指定DT16路线或护理者身份绑定；旧稿不改。"
+    }
+  ],
+  "source_cautions": [
+    {
+      "character": "kouer",
+      "source": {
+        "path": "design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md",
+        "sha256": "f599af46e631f3dc9e80d20229d858b594aba754edd5c5e3e99015424ba67a3a"
+      },
+      "locator": "L559与L540；N8-S03-L02及现行路线结果",
+      "note": "“热病的事过去了”是有条件任务回访，不可扩读成疫情清零；本批避开此句，不绘康复/放行/拆封。"
+    },
+    {
+      "character": "miloer",
+      "source": {
+        "path": "design/07_日常任务/台本/台本_DT16_愿意继续治疗的人.md",
+        "sha256": "a526ddb617b1c2a2f939a8ba1419e8b9d2844e029cea5267a0773a241913aa4b"
+      },
+      "locator": "各处通称护理者",
+      "note": "任务台本使用通称护理者，不能仅凭关联链接把每个角色槽确认为米洛珥；本brief不作此身份映射。"
+    }
+  ],
+  "source_snapshot_index": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fourth_four_expression_sources/source_index.json",
+    "sha256": "4611df22e72a41bf7adcb164114fa08498742acb08bd24723130ee329cd3bf65"
+  },
+  "validation": {
+    "source_cards": 4,
+    "viewed_final_raw_images": 4,
+    "viewed_final_transparent_images": 4,
+    "raw_transparent_manifest_hash_triples_verified": 4,
+    "planned_expressions": 8,
+    "actual_generation_calls": 0,
+    "source_snapshots": 28,
+    "existing_expressions_found": 0,
+    "scope_note": "仅新增本JSON和专用来源快照目录；不修改design/、旧图、旧QA、roster或游戏包。"
+  }
+}

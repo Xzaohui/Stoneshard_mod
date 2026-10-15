@@ -1,0 +1,603 @@
+{
+  "status": "PASS",
+  "reviewer": "review_catalog_all_pages",
+  "review_finished_utc": "2026-10-14T03:32:41.147640+00:00",
+  "scope": "最终 PDF 全部 24 页的独立实际视觉排版检查；不重新审核源素材入选资格。",
+  "approval_boundary": "此 PASS 仅表示本次排版与可读性 QA 通过，不表示用户确认或游戏运行验收。",
+  "pdf": {
+    "path": "output/pdf/新增剧情人物44人_概念与表情图册_v1.pdf",
+    "bytes": 18076067,
+    "sha256": "6ba2d44e709548eb288ea80ec83e20cc0aa20d45133a5f3d267efc2570dd62ed",
+    "matches_final_ready_sha256": true,
+    "page_count": 24
+  },
+  "method": {
+    "render_files": "仅使用 FINAL_READY 后指定的 review/final/page-01.png 至 page-24.png；均为 120 dpi / 1200×1700，逐页调用 view_image(detail=original) 实际查看。",
+    "old_renders_used": false,
+    "visual_checks": [
+      "所有中文标题、姓名、标签和说明无缺字方框",
+      "标题、身份说明、图注、脚注和页码无裁切、重叠或溢出",
+      "130 张正文图的人物、手足及随身物无排版造成的裁切",
+      "恩岱 E2 与瑟珥 E1 仅文字占位",
+      "近音人物稳定 ID 及分人文字清楚"
+    ],
+    "supplementary_checks": [
+      "独立计算最终 PDF SHA256 及所有 24 个 PNG SHA256",
+      "PyMuPDF 检查每页文本/图片边界和页码",
+      "pdffonts 显示 Noto Sans CJK SC Regular 与 Nimbus Sans Regular 均嵌入且有 Unicode 映射"
+    ],
+    "font_check": {
+      "chinese_font": "Noto Sans CJK SC Regular",
+      "embedded": true,
+      "unicode_mapping": true
+    }
+  },
+  "totals": {
+    "pages_actually_viewed": 24,
+    "characters": 44,
+    "body_image_instances": 130,
+    "cover_image_instances": 4,
+    "text_only_missing_slots": 2,
+    "visual_defects_found": 0
+  },
+  "placeholder_checks": [
+    {
+      "character": "恩岱",
+      "stable_id": "FX-BST",
+      "slot": "E2",
+      "page": 7,
+      "text_only": true,
+      "visual_status": "PASS"
+    },
+    {
+      "character": "瑟珥",
+      "stable_id": "FX-CRP",
+      "slot": "E1",
+      "page": 10,
+      "text_only": true,
+      "visual_status": "PASS"
+    }
+  ],
+  "disambiguation_checks": [
+    {
+      "ids": [
+        "FX-CP1",
+        "FX-LOT"
+      ],
+      "pages": [
+        9,
+        19
+      ],
+      "status": "PASS"
+    },
+    {
+      "ids": [
+        "FX-HOM",
+        "FX-INK"
+      ],
+      "pages": [
+        16,
+        18
+      ],
+      "status": "PASS"
+    },
+    {
+      "ids": [
+        "FX-TRS",
+        "FX-WIL"
+      ],
+      "pages": [
+        23,
+        24
+      ],
+      "status": "PASS"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "png_path": "review/final/page-01.png",
+      "png_sha256": "d6200d141f1215113e847ae8c6dc627699bc38829ea1a88856a636acf67364cc",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 4,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "封面标题、44 人与 44 母图/86 表情计数、四幅人物预览、阅读说明与 01/24 页码均清楚完整。"
+    },
+    {
+      "page": 2,
+      "png_path": "review/final/page-02.png",
+      "png_sha256": "549adccf783a90978039063de6383f0141df7d8a518543fc7bfa358d02c93b3d",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 0,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "目录 44 人的姓名、稳定 ID、目标页码均清楚；双栏无裁切或相互覆盖。"
+    },
+    {
+      "page": 3,
+      "png_path": "review/final/page-03.png",
+      "png_sha256": "499a30a9b596028c2415700f784a28597a5e7bc9aca6885c1f079a69a5889555",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "安妮/枯恩六图全身与椅凳道具完整；名称、身份、M/E1/E2 标签和脚注清楚。"
+    },
+    {
+      "page": 4,
+      "png_path": "review/final/page-04.png",
+      "png_sha256": "5e0fd01f74ef1b20458393b14a87f59e376e28a4b78af13f33eb64fb9bf9ed98",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "苏奈/缇安六图完整；头顶、手部、鞋底与随身物未被图框切断。"
+    },
+    {
+      "page": 5,
+      "png_path": "review/final/page-05.png",
+      "png_sha256": "62b00c2dc0cefe16ffff22dfa8aa81d66027216216658616bd3f2257c532c28c",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "古菈/蕾因六图完整，纸张与旅行随身物均留在图框内。"
+    },
+    {
+      "page": 6,
+      "png_path": "review/final/page-06.png",
+      "png_sha256": "689ec298d49a42a2888c00a67d9ebf4d0f982be8d2b5d27676b37b55969d0788",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "图里/维菈六图完整；伸手、工具及鞋底均未裁切。"
+    },
+    {
+      "page": 7,
+      "png_path": "review/final/page-07.png",
+      "png_sha256": "5a2125f5784b39d17959eb60680ba8264c8532c933b7e4fc026640fa15b73b9c",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 5,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "缇菈三图、恩岱母图和 E1 完整；恩岱 E2 格仅有暂缺及原因文字，无问题图像。"
+    },
+    {
+      "page": 8,
+      "png_path": "review/final/page-08.png",
+      "png_sha256": "bfb534358fb62ae7483fc37144f3adbb372d9f7da1e791e8d19d9a12df7712d0",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "库奇/洛珉六图完整；长杖两端、提灯和脚部未裁切。"
+    },
+    {
+      "page": 9,
+      "png_path": "review/final/page-09.png",
+      "png_sha256": "e61ca91a2687bb172ef7cf28335929949bf2bc8421015ffbe7ead4c3291695b6",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "珥泰/燧珥六图完整；燧珥 FX-CP1 与绥珥 FX-LOT 的分人说明清楚。"
+    },
+    {
+      "page": 10,
+      "png_path": "review/final/page-10.png",
+      "png_sha256": "8d6fd2d5da8904d31a1d745f4d537484a0f37605c8ed206f9595caf8562be75c",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 5,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "缶珥三图、瑟珥母图与 E2 完整；瑟珥 E1 格只有暂缺及原因文字。"
+    },
+    {
+      "page": 11,
+      "png_path": "review/final/page-11.png",
+      "png_sha256": "a6d43d2a367b7f1148b12da72683b42132d78d293a43202e5575861c44de9c11",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "珞珥/芩珥六图完整；背包、药草篮及双脚未裁切。"
+    },
+    {
+      "page": 12,
+      "png_path": "review/final/page-12.png",
+      "png_sha256": "745f62475ce9ee1bf0131c3087ec909e0625d7d648d737a38d0fd15a28947fc0",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "俉珥/佴珥六图完整；名称和 FX-CV3/FX-CV4 ID 清楚，伸手和外套下缘完整。"
+    },
+    {
+      "page": 13,
+      "png_path": "review/final/page-13.png",
+      "png_sha256": "9fb2d2554a5caeb3351674973f09e0ac5be1faf963a670d5ca2f7f358c385fcd",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "栎珥/洄珥六图完整；绳索、长杖及脚部未裁切，注释完整。"
+    },
+    {
+      "page": 14,
+      "png_path": "review/final/page-14.png",
+      "png_sha256": "05b765d98e4aa3692697c2fa7bdff3e85e9626400ea76c54079f47081f4c7b98",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "蓟珥/埕珥六图完整；坐姿、凳腿及提灯均完整保留。"
+    },
+    {
+      "page": 15,
+      "png_path": "review/final/page-15.png",
+      "png_sha256": "97e9d3007997326d0cf5b27e7775e75d5f543eadf1a8e8297e83d60cf27fa311",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "达珥/珥兰六图完整；E2 不同画布比例提示清楚，无强行拉伸或图框裁切的视觉迹象。"
+    },
+    {
+      "page": 16,
+      "png_path": "review/final/page-16.png",
+      "png_sha256": "26bfaf661bc9082a2e4b4bc4abb8cbf2a382126d8a852a275763447f208cff58",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "忒曼/苇珥六图完整；网帽、手杖完整，苇珥 FX-HOM 与韦珥 FX-INK 的分人说明清楚。"
+    },
+    {
+      "page": 17,
+      "png_path": "review/final/page-17.png",
+      "png_sha256": "fa9cdbad2bfcd22c59b29dfe807533efe2145172a5bef0e7e1c23df00f3b01bd",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "妲兰/珂琳六图完整；弓两端、箭囊、发辫及鞋底未裁切。"
+    },
+    {
+      "page": 18,
+      "png_path": "review/final/page-18.png",
+      "png_sha256": "f7e0ede3a8cd38d4c9fce24f86d3b24794f6c148f866373549b6ef72e698202e",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "韦珥/米洛珥六图完整；韦珥 FX-INK 与苇珥 FX-HOM 的分人说明清楚。"
+    },
+    {
+      "page": 19,
+      "png_path": "review/final/page-19.png",
+      "png_sha256": "e4a8d1c925958abf7acde803277512686930e3ae0002fe6cf1e16bba5469d7ff",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "绥珥/岱珥六图完整；绥珥 FX-LOT 与燧珥 FX-CP1 的分人说明清楚。"
+    },
+    {
+      "page": 20,
+      "png_path": "review/final/page-20.png",
+      "png_sha256": "949b0d013c417e4eaf1bf2f39edda10f2233c480bdee1c7bb0314edbb1e2fdea",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "霍珥/珥德六图完整；头发、鞋底、背篓及右侧伸手仍在图框内。"
+    },
+    {
+      "page": 21,
+      "png_path": "review/final/page-21.png",
+      "png_sha256": "2a051a3b67baaca635ce86d9179762d9bae7a0104039f1b91e15251a9a1b060d",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "锉珥/蔻珥六图完整；掌部、鞋底、水桶和兜帽未裁切。"
+    },
+    {
+      "page": 22,
+      "png_path": "review/final/page-22.png",
+      "png_sha256": "4224eb2e42132783214c56764fc4c30d826a69ea56952bac238415088fd464b0",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "德茹/珥薇六图完整；手部、桶柄及鞋底均保留。"
+    },
+    {
+      "page": 23,
+      "png_path": "review/final/page-23.png",
+      "png_sha256": "18f1b40759db671474e39bee2112ccf2567ad2efb43885562bd08e792c8748c8",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "瓦顿/谟珥六图完整；蹲姿左右边缘、鞋底与背铲完整，FX-TRS 与 FX-WIL 分人注释清楚。"
+    },
+    {
+      "page": 24,
+      "png_path": "review/final/page-24.png",
+      "png_sha256": "90cf10fd65f235c028bbb54c3d4ffb68a6cda348415236de27e038292632acd2",
+      "png_pixels": [
+        1200,
+        1700
+      ],
+      "actually_viewed_with_view_image": true,
+      "view_image_detail": "original",
+      "manual_visual_status": "PASS",
+      "chinese_glyphs_clear": true,
+      "headings_labels_footer_uncropped": true,
+      "character_and_prop_edges_uncropped": true,
+      "visible_footer_correct": true,
+      "image_instances": 6,
+      "text_spans_outside_page": 0,
+      "images_outside_page": 0,
+      "replacement_or_null_char_count": 0,
+      "observation": "索妲/摩珥六图完整；篮子、账板与脚部未裁切，FX-WIL 与 FX-TRS 分人注释和 24/24 页码清楚。"
+    }
+  ],
+  "findings": []
+}

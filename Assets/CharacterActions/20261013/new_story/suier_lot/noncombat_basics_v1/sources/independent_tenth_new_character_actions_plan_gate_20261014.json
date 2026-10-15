@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-14T08:32:56.845350+00:00",
+  "reviewer": "review_tenth_character_actions",
+  "verdict": "PASS_TENTH_NEW_CHARACTER_ACTIONS_PLAN_GATE",
+  "frozen_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_brief.json",
+    "bytes": 119654,
+    "sha256": "d6069b0c3ac36b4beecb7d87fdd79f0f2fe6d8dab727cf354722b3b5da5669c4"
+  },
+  "source_snapshot_manifest": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_new_character_actions_sources/SNAPSHOT_MANIFEST.json",
+    "sha256": "9e037c69f7bddc16684f30a2bda9e1ca994a0f378a82a49cee8e8f835b838e72"
+  },
+  "source_and_prompt_byte_audit": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_actions_independent_details/plan_source_byte_audit.json",
+    "bytes": 7459,
+    "sha256": "586f87330b43ab725c63399be09e89c273d2aa6d5351799c154157a357da3527"
+  },
+  "checks_passed": 532,
+  "source_files_verified": 55,
+  "old_mother_expression_files_unchanged": 274,
+  "existing_action_tree_baseline_files": 4336,
+  "independent_prior_action_scan": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_actions_independent_details/independent_prior_action_scan.json",
+    "bytes": 37910,
+    "sha256": "31d36046f3190cef7de52d1333631e2ea277577582e19df50d743f188373cd05"
+  },
+  "actual_visual_baseline": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_actions_independent_details/baseline_visual_observations.json",
+    "bytes": 1916,
+    "sha256": "6336a1eacd33f82e01b6cff0087d2d95546d77a7d39d91ebb68ed84b403e0df3"
+  },
+  "production_count_at_gate": {
+    "groups": 18,
+    "characters": 36,
+    "qualified_poses": 68
+  },
+  "accepted_count_at_gate": {
+    "groups": 17,
+    "characters": 34,
+    "qualified_poses": 64
+  },
+  "uncertain_seer_daer_excluded_from_accepted": true,
+  "scope": {
+    "existing_characters": 4,
+    "new_planned_static_keyposes": 8,
+    "generated_at_gate": 0,
+    "new_character_identities": 0,
+    "animation_or_runtime_verified": false
+  },
+  "visual_and_semantic_findings": [
+    "四人raw与透明母图在真浅深底合成、既有两表情浅深板实际view，身份、年龄、衣装与持物侧别对齐当前卡。",
+    "索妲原空篮在人物左/画面右持续握柄，托篮与头顶扶巾为各自独立肢体变化；无换手、递物或加内容。",
+    "珂琳17–18岁本人年轻面貌与原紧凑比例，完整普通宽松长袖长裙围裙；理左上袖与双手贴衣腰相互独立，不成人化或幼化。",
+    "蓟珥双臂侧下舒肩与降髋双掌扶膝都明显区别母图腰前拢手；保持原卷袖与双鞋，不增加疾病或工具。",
+    "绥珥严格为suier_lot/FX-LOT，不混燧珥suier；原右手握半截软尺上端，左手托尺和左掌下拂围裙分别独立，不能延长尺或制造第二物。",
+    "八prompt逐字等于各独立txt并核对SHA，16处源引文均在当前源指定行逐字匹配；公共字段不带互斥手位。",
+    "全本地Assets独扫4378PNG、246ZIP未发现四人已有基础动作，表情与图录不计动作；普通动作类别可跨不同人物。"
+  ],
+  "author_entry_conditions": [
+    "只使用本门审SHA绑定brief中每姿独立prompt，不追加整份character risks或negative_constraints导致另姿手位串入。",
+    "每次调用前落盘逐字prompt和完整实际tool arguments，记录母图SHA、真实调用时间、完整工具返回payload及其可解码原PNG。",
+    "首稿后先独审；每姿最多1次真实明确硬错定向修订，非偏好性重画；安全block停止，不改名、不改写、不换工具。",
+    "raw和selected分别真浅深底实际查看，透明只允许低alpha清理，任何人体衣装道具修复不能脚本完成；alpha0隐藏RGB本身不是硬错。",
+    "作者写自己的FINAL/manifest，独审只写audit/evidence；冻结前核板每格全图等比最近邻合成、ZIP CRC/全源bytes SHA及所有失败稿完整保留，单ZIP小于18MiB。",
+    "未有作者最终源包及独立终检前不称本批完成，不提前计入制作/accepted。"
+  ],
+  "hard_errors": [],
+  "source_preservation": "No existing mother, expression, script, game, Git or upload mutation performed by this reviewer."
+}

@@ -1,0 +1,364 @@
+{
+  "source": {
+    "path": "research/field-npc-dialogue.json",
+    "bytes": 132451,
+    "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+    "source_id": "field_dialogue_registry",
+    "snapshot_path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/eleventh_new_character_actions_sources/files/research/field-npc-dialogue.json"
+  },
+  "locator": "npcs filtered by exact canonical ID",
+  "entries": [
+    {
+      "id": "FX-INK",
+      "name": "韦珥",
+      "role": "拉尔夫记旅馆旧仆",
+      "site": "rumor_ralphSons1",
+      "region": "R02",
+      "look": "四十来岁的男人，围裙洗得发白，腰间挂一串旧钥匙；说话先摆好桌上的杯子。",
+      "voice": "待客的口气，但一句话里会漏出旧事；被问到东家就转去问菜。",
+      "knows": [
+        "客房哪间漏雨",
+        "东家三兄弟各忙什么"
+      ],
+      "not_knows": [
+        "不替东家许诺房钱",
+        "不说围城时店里住过谁"
+      ],
+      "greetings": [
+        [
+          "first",
+          "住店还是打尖？先说清楚，我才好摆杯子。"
+        ],
+        [
+          "revisit",
+          "熟客了。老位置还给你留着。"
+        ],
+        [
+          "night",
+          "夜里只有冷灶。要热的，得等天亮。"
+        ]
+      ],
+      "chats": [
+        "面包和盐是店里的规矩。规矩不值钱，但能留人。",
+        "这店名字挂在门口，名字后面的事挂在心里。",
+        "你问我围城那年？那年店门没关，别的记不清。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "马拴东边桩上，别拴门口。"
+        ],
+        [
+          "warning",
+          "二楼西头那间别住，漏雨，被子是潮的。"
+        ],
+        [
+          "refusal",
+          "要我赊账？不行。欠账的客人，最后都不来了。"
+        ]
+      ],
+      "links": [
+        "区域_R02_丹布里西路与渡口",
+        "空间_DEN_丹布里"
+      ],
+      "visits": {
+        "task": "台本_N5_渡口的三种说法",
+        "before": [
+          "渡口的三种说法，我这儿只认一种：住店的先付账。"
+        ],
+        "after": [
+          "渡口的说法你听全了。店里还是那口冷灶，热的要等天亮。"
+        ],
+        "early": [
+          "你先住过我这儿，后去的渡口。那好，你说的话里我认得出真假。"
+        ],
+        "late": [
+          "渡口的事完了才来打尖？杯子还是给你摆，账还是照算。"
+        ],
+        "proxy": [
+          "旧仆不在柜台时，客房照旧上锁；钥匙不问来历。"
+        ]
+      },
+      "english": {
+        "greet.first": "Staying or eating? Say which first, so I can set the cup.",
+        "greet.revisit": "A regular. Your old seat is still kept.",
+        "greet.night": "At night there is only a cold hearth. Want it hot, wait for daylight.",
+        "chat.1": "Bread and salt is the house rule. Rules are not worth coin, but they keep people.",
+        "chat.2": "The name hangs on the sign outside; what is behind the name hangs inside.",
+        "chat.3": "The siege year? The door stayed open that year. The rest I do not recall.",
+        "site.arrival": "Tie the horse to the east post, not the one at the door.",
+        "site.warning": "Do not take the west room upstairs. It leaks and the blanket is damp.",
+        "site.refusal": "Run you a tab? No. Guests who owe stop coming in the end.",
+        "visit.before": "Three versions at the ford - here I honour one: guests pay first.",
+        "visit.after": "You have heard all the ford's versions. Same cold hearth here; hot waits for daylight.",
+        "visit.early": "You lodged here before going to the ford. Good - I can tell true from false in what you say.",
+        "visit.late": "So the ford's behind you and now the cup? I'll pour it; the account stands either way.",
+        "visit.proxy": "Provided the old servant is gone, rooms stay locked. Keys are not questioned."
+      }
+    },
+    {
+      "id": "FX-WIL",
+      "name": "摩珥",
+      "role": "烂柳酒馆账房",
+      "site": "rumor_rottenWillow1",
+      "region": "R05",
+      "look": "四十来岁的男人，指节发黄，账板不离手；说话时眼睛先看客人的手。",
+      "voice": "生意腔，语速快；一谈欠账就把声音压到桌面高度。",
+      "knows": [
+        "谁的账板还挂着",
+        "后院的旧账埋在哪块砖下"
+      ],
+      "not_knows": [
+        "不替帮派收账",
+        "不说酒馆东家的去向"
+      ],
+      "greetings": [
+        [
+          "first",
+          "喝酒先付账，打听先说明白。"
+        ],
+        [
+          "revisit",
+          "熟脸。老位置，账照旧。"
+        ],
+        [
+          "night",
+          "夜里只卖酒，不记账。记了也没人认。"
+        ]
+      ],
+      "chats": [
+        "账板挂久了会长灰。人不来认，灰就厚。",
+        "这儿换过三拨东家。账本没换过。",
+        "有人拿假凭证来抵账。我收过一次，就一次。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "门口的马别拴在柱上，柱子是借的。"
+        ],
+        [
+          "warning",
+          "后院别去，砖底下埋着旧账。"
+        ],
+        [
+          "refusal",
+          "要我免你一次账？不行。免一次，往后都得免。"
+        ]
+      ],
+      "links": [
+        "区域_R05_灰烬湿地与疫村",
+        "台本_DT14_锈印章与假凭证"
+      ],
+      "visits": {
+        "task": "台本_DT14_锈印章与假凭证",
+        "before": [
+          "假凭证的事先跟我说一声。账板上的名字，我要划。"
+        ],
+        "after": [
+          "凭证的事了了。账板照旧挂着，灰照旧厚。"
+        ],
+        "early": [
+          "你先在酒馆听到的凭证事，后去对的章。这单我认。"
+        ],
+        "late": [
+          "章的事对完了才来结账？账不等人，酒也不等。"
+        ],
+        "proxy": [
+          "账房不在柜台时，账板不收；欠账的照旧记着。"
+        ]
+      },
+      "english": {
+        "greet.first": "Drink first, pay first. Questions, state them plainly first.",
+        "greet.revisit": "A familiar face. Same seat, same ledger.",
+        "greet.night": "At night we sell drink, not credit. No one would honour it anyway.",
+        "chat.1": "A ledger left hanging gathers dust. Nobody comes to claim it, the dust thickens.",
+        "chat.2": "Three sets of owners have come through here. The ledger never changed.",
+        "chat.3": "Someone tried to settle with a forged slip once. I took it once. Once.",
+        "site.arrival": "Don't tie your horse to the post at the door. The post is borrowed.",
+        "site.warning": "Keep out of the back yard. Old ledgers are buried under the bricks.",
+        "site.refusal": "Wipe your debt once? No. Wipe it once and it's wiped forever after.",
+        "visit.before": "Tell me about the forged slip before anything else. There's a name on the ledger to strike.",
+        "visit.after": "The slip business is closed. The ledger hangs as before, dust as thick as before.",
+        "visit.early": "You heard about the slip here before checking the seal. I'll allow that account.",
+        "visit.late": "You checked the seal, and settling comes last? The ledger keeps its own hours, and so does drink.",
+        "visit.proxy": "If the bookkeeper is elsewhere, the ledger stays out. Debts stay written."
+      }
+    },
+    {
+      "id": "FX-MAN",
+      "name": "岱珥",
+      "role": "庄园看守",
+      "site": "rumor_banditRuins1",
+      "region": "R01",
+      "look": "五十来岁的男人，披着补过的旧外套，腰间一串没用的钥匙；说话前先掸门廊的灰。",
+      "voice": "像念清单一样说话；提到旧主人就绕开。",
+      "knows": [
+        "哪道门廊还站得住",
+        "匪帮换过几拨人"
+      ],
+      "not_knows": [
+        "不替旧主人认领庄园",
+        "不说钥匙能开哪扇门"
+      ],
+      "greetings": [
+        [
+          "first",
+          "庄园不开放。你要看，就在门廊外看。"
+        ],
+        [
+          "revisit",
+          "又是你。门廊的灰我掸过两遍了。"
+        ],
+        [
+          "night",
+          "夜里有人翻窗。我不拦，我只记。"
+        ]
+      ],
+      "chats": [
+        "钥匙串是旧的。锁早换了。",
+        "换过三拨人，每拨都说自己只是路过。",
+        "我守的是门廊。别的塌了就塌了。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "门槛别踩中间，那块板子空。"
+        ],
+        [
+          "warning",
+          "西厢的顶快塌了，别进去找东西。"
+        ],
+        [
+          "refusal",
+          "要我开侧门？没钥匙。有也不开。"
+        ]
+      ],
+      "links": [
+        "区域_R01_布林外港与旧渠",
+        "台本_DT07_一箱不该开封的货"
+      ],
+      "visits": {
+        "task": "台本_DT07_一箱不该开封的货",
+        "before": [
+          "箱子的事别在门廊里说。墙薄，窗也薄。"
+        ],
+        "after": [
+          "箱子的事结了。侧门照旧锁着，钥匙照旧没用。"
+        ],
+        "early": [
+          "你先在门廊听的话，后去开的箱。哪句能信，你自己掂。"
+        ],
+        "late": [
+          "箱子的事完了才来？门廊不关门，灰照掸。"
+        ],
+        "proxy": [
+          "看守不在门廊时，钥匙串不收；来人自便，后果自担。"
+        ]
+      },
+      "english": {
+        "greet.first": "The manor isn't open. If you want to look, look from outside the porch.",
+        "greet.revisit": "You again. I've dusted the porch twice already.",
+        "greet.night": "People climb through windows at night. I don't stop them; I just note it.",
+        "chat.1": "The key ring is old. The locks were changed long ago.",
+        "chat.2": "Three sets of people have come through. Each said they were just passing.",
+        "chat.3": "I keep the porch. The rest can fall in for all I care.",
+        "site.arrival": "Don't step on the middle of the threshold. That board is hollow.",
+        "site.warning": "The west wing roof is coming down. Don't go in there hunting for things.",
+        "site.refusal": "Open the side door? No key. And if I had one, still no.",
+        "visit.before": "Don't discuss the crate business on the porch. The walls are thin, and so are the windows.",
+        "visit.after": "The crate business is closed. The side door stays locked; the keys stay useless.",
+        "visit.early": "You heard things on the porch before opening the crate. Weigh which words to trust yourself.",
+        "visit.late": "The crate is closed and the porch comes now? The porch never closes; I keep dusting.",
+        "visit.proxy": "Should the keeper have gone, the key ring stays put. Visitors take their own risks."
+      }
+    },
+    {
+      "id": "FX-TRS",
+      "name": "谟珥",
+      "role": "堡垒寻宝者",
+      "site": "rumor_remoteBastion2",
+      "region": "R04",
+      "look": "二十多岁的年轻人，背着一把短铲，鞋上全是崖灰；说话时总往崖下看。",
+      "voice": "爱吹又心虚，讲一半就改口；被问同伴就摸铲柄。",
+      "knows": [
+        "崖下堆石的位置",
+        "传言是从哪个酒馆传出来的"
+      ],
+      "not_knows": [
+        "不说同伴的下落",
+        "不承认自己挖过什么"
+      ],
+      "greetings": [
+        [
+          "first",
+          "你也听说了？别急着下去，石头不认人。"
+        ],
+        [
+          "revisit",
+          "又是你。我今天没挖，真的。"
+        ],
+        [
+          "night",
+          "夜里崖下起风。挖东西的人最怕风。"
+        ]
+      ],
+      "chats": [
+        "传言这东西，越传越像真的。",
+        "我同伴先下去的。我在上面等他喊。",
+        "要真有宝，轮不到我们。轮得到的是消息。"
+      ],
+      "site_lines": [
+        [
+          "arrival",
+          "站到崖边两步外。堆石那边会滑。"
+        ],
+        [
+          "warning",
+          "别顺着新土走，那是别人挖的坡。"
+        ],
+        [
+          "refusal",
+          "要我带路下崖？不去。我等人喊，不等别人催。"
+        ]
+      ],
+      "links": [
+        "区域_R04_王廷关隘与边城",
+        "台本_N3_听审前的灯"
+      ],
+      "visits": {
+        "task": "台本_N3_听审前的灯",
+        "before": [
+          "听审前别把传言当证词。我这儿的话，你听听就行。"
+        ],
+        "after": [
+          "听审完了。传言还是传言，崖下还是堆石。"
+        ],
+        "early": [
+          "你先听我吹的牛，后去的听审。哪些能对上，你自己知道。"
+        ],
+        "late": [
+          "听审完了才下崖？崖不等灯，灯不等证词。"
+        ],
+        "proxy": [
+          "寻宝的人不在崖边时，短铲插在原地；那是他自己的记号。"
+        ]
+      },
+      "english": {
+        "greet.first": "You heard too? Don't rush down. Stone doesn't know faces.",
+        "greet.revisit": "You again. I didn't dig today. Truly.",
+        "greet.night": "Wind comes up under the cliff at night. Diggers fear wind most.",
+        "chat.1": "Rumours grow truer the further they travel.",
+        "chat.2": "My mate went down first. I'm up here waiting for his shout.",
+        "chat.3": "If there was treasure, it wouldn't be ours. What's ours is the rumour.",
+        "site.arrival": "Stand two steps back from the edge. The rubble slope slides.",
+        "site.warning": "Don't follow fresh soil. That's someone else's dig slope.",
+        "site.refusal": "Guide you down the cliff? No. I wait for a shout, not for urging.",
+        "visit.before": "Don't take rumours for testimony before a hearing. What I say here, just listen to.",
+        "visit.after": "The hearing's done. Rumours are still rumours; the rubble's still rubble.",
+        "visit.early": "You heard me brag before the hearing. Which parts line up, you know yourself.",
+        "visit.late": "The hearing is behind you and the cliff ahead? Cliffs keep no lamps; lamps keep no testimony.",
+        "visit.proxy": "If the treasure hunter is gone from the edge, his short spade stays planted. That's his mark."
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "character": {
+    "concept_id": "EAO-CONCEPT-ENEMY-006",
+    "slug": "debt_ritual_warden",
+    "working_name": "债契仪式看守",
+    "reference_ids": [
+      "R06",
+      "R07"
+    ],
+    "anchor": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/debt_ritual_warden_idle_transparent.png",
+      "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605",
+      "size": [
+        1163,
+        1353
+      ],
+      "alpha_bbox": [
+        277,
+        179,
+        912,
+        1283
+      ],
+      "actually_viewed": true,
+      "viewed_utc": "2026-10-13T19:28:36.727677+00:00"
+    },
+    "static_independent_QA": {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/idle_v1/independent_QA.json",
+      "sha256": "6f7b5f0622b3515e0b3ab79a4f5659e028f5131e6d27a74a1694229f6c5ce203",
+      "result": "concept_pass"
+    },
+    "identity_lock": {
+      "face_body": "活人暖灰肤色、成年瘦长脸、压眉严肃嘴、兜帽内深发；窄钟形紧凑身材，不换成幽灵、医护或祥和牧师。",
+      "clothing": "污白短兜帽与开衩外袍、褐袖内衣、胸口小灰链甲片、方灰扣旧皮带、双褐靴；母图画面右侧下袍一小段暗酒红缝线保留，不变纹章/十字。",
+      "limbs_props": "原母图画面左侧持杆手保持主持身份，另一手可加扶，无须固定每次握距。只有一根棕木短杆、小灰铁钝钩，母图钩尖向画面右内弯。换杆角度时钩与木杆整体旋转，不镜像钩头；无大镰刀/新兵刃。杆长和细粗比依母图体高目测保持，不定精确比例。"
+    },
+    "poses": [
+      {
+        "pose_id": "bar_guard",
+        "label": "横杆拦阻定格",
+        "description": "将同一短杆从竖直转为腰腹前的近水平斜拦，钩头在画面左侧且离脸，原持杆手继续主握，空手自然扶住另一段；双膝轻屈、站距略开，袍摆有重量。",
+        "readability": "整根杆两端可见，两手与握柄连接清楚，钩头随杆整体转而非另接一只镰；不是持长枪刺出。",
+        "output_directory": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/",
+        "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_raw_imagegen.png",
+        "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/bar_guard/debt_ritual_warden_bar_guard_transparent.png",
+        "max_first_drafts": 1,
+        "max_hard_error_revisions": 1,
+        "status": "not_started"
+      },
+      {
+        "pose_id": "side_step_guard",
+        "label": "侧步戒备定格",
+        "description": "身躯仍向左警戒，一脚向侧后短移承重、另一脚跟随准备但保持可见；短杆收回身体外侧为较直立的斜护，原手仍主握，另一手自然靠近躯干或辅助稳定。",
+        "readability": "相对横拦有清楚的收杆、站距/重心变化；不强定空手高度，双靴与袍衩不穿插，不画门、病人或施法。",
+        "output_directory": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/",
+        "planned_raw_path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_raw_imagegen.png",
+        "planned_transparent_path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/debt_ritual_warden_side_step_guard_transparent.png",
+        "max_first_drafts": 1,
+        "max_hard_error_revisions": 1,
+        "status": "not_started"
+      }
+    ],
+    "runtimeIntegrated": false,
+    "runtimeVerified": false
+  },
+  "rules": {
+    "anchor": "生产前实际view本brief指定透明母图并核SHA；不匹配就报告主任务，不能默换锚。静态已独审concept_pass不等于动作已通过。",
+    "orientation": "保留各母图朝画面左的轻三分之四关系；不可镜像换边、背身或朝镜头大幅透视。屏幕左右仅标识母图特征所在侧，不据此杜撰被遮挡解剖。",
+    "style": "沿用各自母图像素簇、材质与配色；005较细的现有肌理不在动作轮强行改版。单体、真实透明背景，全身与末端留边；画布可随姿势扩宽。",
+    "anatomy": "003/005/006各两臂两腿，关节连接可信；004仅保留母图可见的一只手和无足碎尾，另一手继续藏于袍下。动作可自然改变关节角度与布褶，不设精确手位、角度、逐指形状或像素百分比门槛。",
+    "budget": "每姿1首稿+最多1次明确硬错修订；只修身份漂移、肢体/握持断裂、动作不成立、裁切/背景污染或边界违规。合理衣褶、尾碎片、手指简化差异不返工。修订后仍硬错标needs_review并报告，不另开循环。",
+    "evidence": "各姿保存prompt、使用的母图SHA、raw、透明输出、尺寸/SHA、必要alpha处理说明及轻量独审结论；旧稿保留，不覆盖静态和冻结manifest。",
+    "exclusions": [
+      "受害者、第二角色、扑咬接触、喷血、剧情死亡/复活/结算或奖励",
+      "魔法光球、速度线、多重残影代替姿势；靠镜像/旋转静态或拼接肢体伪造动作",
+      "新增装备、身份、教义、疾病传染或战斗机制；不把普通病人变腐尸/吸血体、不把全部圣会变邪教",
+      "宣称原版动作复刻、连续动画、帧率、绑定、碰撞、装备适配或游戏运行通过"
+    ]
+  },
+  "files": [
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/sources/action_pilot_monsters_brief.json",
+      "sha256": "371c513968cab2b9df2743f40594f6c8ff2ff7e8261b0a80dd1a95ef2a2a4db7"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/sources/debt_ritual_warden_idle_transparent.png",
+      "sha256": "1c07d09c40b69153d0cba83616714424da2e1f872a61011c71a9699f51c4d605"
+    },
+    {
+      "path": "Assets/EnemyDesigns/20261013/first_six/debt_ritual_warden/action_v1/side_step_guard/sources/independent_QA.json",
+      "sha256": "6f7b5f0622b3515e0b3ab79a4f5659e028f5131e6d27a74a1694229f6c5ce203"
+    }
+  ]
+}

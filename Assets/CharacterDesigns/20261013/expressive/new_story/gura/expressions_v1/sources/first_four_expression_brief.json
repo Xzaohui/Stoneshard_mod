@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T19:38:15.991074+00:00",
+  "status": "brief_only_ready_for_production",
+  "scope": "首四名新剧情人物各两种日常情绪/轻微姿势，共8张未来概念图；本次仅写brief，未生图、上传、改旧资产、实现装备或运行接入。",
+  "source_brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/first_four_production_brief.json",
+    "sha256": "aa8942374a64219658c817011ea0e9e6353faa8e8d639e219c77ade03d935d73"
+  },
+  "source_independent_review": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_first_four_20261013.json",
+    "sha256": "2776c7e8d5bca3661db7bc992505d4708dddb458f3c85290362f37a21daed21f"
+  },
+  "style_source": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+    "sha256": "91f73107e3e965b09687c7cc80598c7e05ba85d867570999216693f7d512a897"
+  },
+  "source_notes": "母图manifest制作冻结字段早于独审；最终通过依据独审results与delivery_binding。不是沿用production_brief中的未生产状态。卡事实与本轮可逆演出提案分列。",
+  "shared_locks": [
+    "每张以该人物selected_raw及最终透明版为唯一身份/服装/比例母图；单人完整全身，头发、双手和鞋完整留边，原有紧凑成年比例、体型和朝向不重设。",
+    "保留本人的年龄、面型、鼻型、发型、眉眼基础形状与肤色；情绪靠眉眼口的协调变化，可有轻微头手变化；不能统一成同一张甜笑脸。",
+    "服装层次、配色、磨损、口袋、道具数量和侧别沿母图；画面左右与人物左右同时标注，禁止整体镜像。合理动作造成的遮挡和细小褶皱变化可接受。",
+    "透明单人全身像素概念，面部清楚且好看；不机械卡眉毛角度、眼睛像素数、绝对头身比或原像素位置，不用缩图掩盖脸和人体问题。",
+    "八幅是彼此独立的条件情绪，不是按顺序发生的故事、完成任务或弧光结局。本人需存活、在场、愿谈且有相应见闻；安妮真实班次独占、古菈新班另问。",
+    "卡定/台本事实优先；本轮表情、手势、微笑与疲倦均为可逆美术演出提案，不回写角色卡或任务状态。"
+  ],
+  "production_budget": {
+    "initial_images_per_expression": 1,
+    "max_hard_error_revisions_per_expression": 1,
+    "maximum_images": 16,
+    "revision_allowed_for": [
+      "身份/年龄/服装/比例明显偏离锁定母图",
+      "肢体或手持接触明显不可能、关键轮廓被截断、必备道具丢失或换侧",
+      "脸部不可读、所要求的情绪未形成或两幅几乎复制母图",
+      "添加承诺/付款/治疗/续约/开闸等未发生结果或违反自主性"
+    ],
+    "not_revision_triggers": [
+      "轻微自然表情差异",
+      "合理遮挡、发丝、褶皱或掌指细节变化",
+      "未达到臆定眉角、单像素位置或统一比例数字"
+    ],
+    "if_revision_still_fails": "保留首稿和唯一修订，标为待处理并报告具体硬错；不无限返工，不假称通过。"
+  },
+  "delivery_plan": {
+    "per_character_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/<slug>/expressions_v1",
+    "structure": [
+      "sources/（母图与卡/台本快照及source_index.json）",
+      "prompts/（两张完整首稿prompt；若修订保留revision1）",
+      "raw/（全部原始输出与废稿保留）",
+      "selected/（两张选稿透明PNG）",
+      "review/（中文名称/两情绪标签浅色板和深色板）",
+      "generation-log.json、QA-author.json、冻结manifest.json、QA-independent-raw-visual.json、QA-independent.json、FINAL_STATUS.json、README.md"
+    ],
+    "borrowed_structure_only": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/leo/expressions_v1/manifest.json",
+      "sha256": "ab047cf3f044be1de6f2f918e1b9211c7d47de51367079c21a8ca3672bd9a69e"
+    },
+    "qa": "生产者与独审实际view每张原图及最终透明/浅深板，逐图核母图SHA、身份、面部情绪、手势、道具侧别和剧情边界；manifest绑定选稿SHA。板上不加剧情已完成标签。",
+    "not_claimed": [
+      "原生游戏像素网格",
+      "part/frame/mask/origin",
+      "装备兼容",
+      "动画连续性",
+      "游戏已实现或运行通过"
+    ]
+  },
+  "characters": [
+    {
+      "canonical_id": "ASH-NPC-ANNI",
+      "slug": "anni",
+      "name": "安妮",
+      "current_card": {
+        "path": "design/04_人物/城市人物/人物_ASH-NPC-ANNI_安妮.md",
+        "sha256": "f5cdeb807d06bb736e677fc86687bdeec87a7d9b7ec1d84d649147d32ae52f60"
+      },
+      "card_matches_first_four_brief": true,
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_v2_raw_imagegen.png",
+          "sha256": "6491e469ecb2241826121bc633b8e7a242921f4feaba5232f7c288c239415ab9"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/anni_transparent.png",
+          "sha256": "0111ebebbac68e2f49558a66264e902da534b388e6a1ce0d76f4cf0b1e9bb659"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/anni/concept_v1/manifest.json",
+          "sha256": "7e48460bdcb789318cdbda94b0b8a5c56fed6b7f742231b849723d428666d13b"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13 tools.view_image逐张实际查看最终raw与clean完整PNG；非以旧QA代替实看。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "限定当班普通护理者，二十多岁；低髻、有力手腕、手背清洗纹。",
+        "素褂收袖扣带；备用布带和剪刀；当班木牌与仅记本班的小簿。",
+        "想把能接的一班做好并按时交班；护理与研究分问，下一班仍须问本人。"
+      ],
+      "observed_mother_image": "棕发低髻、清晰浓眉和棕眼、小巧鼻口；米灰素褂、苔绿束腰、棕靴。母图是抬眉张口解释并指本班小簿。",
+      "fixed_prop_sides": [
+        "人物左手（画面右）始终托同一本打开的小簿，右手（画面左）为指页/轻扶页缘之手，不换手。",
+        "布带与收好的剪刀在人物右侧衣袋（画面左）；木牌在人物左腰（画面右）；不镜像，不取出剪刀。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "anni_E1_patient_listening",
+          "label_zh": "耐心倾听",
+          "scene_proposal": "听对方说明这一班的必要照护需求，先听清再回应。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-ASH-02_陪护者也会累.md",
+            "sha256": "9dd06cf756a46a20f03a81d6494db0a618dbf28d914e639d873ce3faec62587d",
+            "locator": "L61、L71；人物卡“所求”"
+          },
+          "face_changes": "眉眼比母图松开，视线从簿页移到听者；嘴闭合，带很轻的温和弧度，保持她原有眉形、眼型和鼻唇轮廓。",
+          "minimal_gesture": "原指页的右手松为轻扶页缘；头向听者小幅侧倾，躯干双脚不动。",
+          "difference_from_static_and_pair": "从母图的张口解释改为闭口倾听；不靠新道具或大动作表达温和。",
+          "condition_and_limit": "愿听不等接下额外一班、同意观察研究或许诺治愈。",
+          "output_stem": "anni_E1_patient_listening",
+          "production_status": "not_generated"
+        },
+        {
+          "id": "E2",
+          "key": "anni_E2_tired_boundary",
+          "label_zh": "略倦守界",
+          "scene_proposal": "又被把今天做过的班当作明天会来的保证，平静保留自己的时间。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-ASH-02_陪护者也会累.md",
+            "sha256": "9dd06cf756a46a20f03a81d6494db0a618dbf28d914e639d873ce3faec62587d",
+            "locator": "L89、L135；人物卡“举止”"
+          },
+          "face_changes": "上眼睑略沉但目光仍清楚，眉间轻收；嘴闭合微抿、唇角平，读作克制的疲倦与坚定，不画昏睡、怨毒或无助。",
+          "minimal_gesture": "左手照常托簿；右指停回页边，头轻收而不低垂认错，不举拒绝大手势。",
+          "difference_from_static_and_pair": "与E1温和闭口弧度形成清楚的疲倦、抿嘴和收眉区别；也不同于母图张口解释。",
+          "condition_and_limit": "疲倦是可逆日常演出提案，不新增疾病、失职或已完成交班事实；不默认她承担下一班。",
+          "output_stem": "anni_E2_tired_boundary",
+          "production_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "canonical_id": "HIG-NPC-GURA",
+      "slug": "gura",
+      "name": "古菈",
+      "current_card": {
+        "path": "design/04_人物/城市人物/人物_HIG-NPC-GURA_古菈.md",
+        "sha256": "0df44534ce404b6790cf5d2b42edd2823be75e3dd16a3a6f68be7eb3b1e437b9"
+      },
+      "card_matches_first_four_brief": true,
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_v1_raw_imagegen.png",
+          "sha256": "0934e8d402693db8835f75f42d7777bb9f23577e645e82cc4d39a0048547d0fb"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/gura_transparent.png",
+          "sha256": "7feeb5c4a3fe495d9ae9aad5c74319ffe6c0f2eb46b946ac02ca5b50eb982942"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/gura/concept_v1/manifest.json",
+          "sha256": "c894cf2844ddfa23a6230fca49f63b5ac2c3d6fe99d1394550b92b0e7f262ee3"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13 tools.view_image逐张实际查看最终raw与clean完整PNG；非以旧QA代替实看。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "只签本次外段的维护工，三十多岁；手上冻疮旧痕、掌纹深，重心习惯放前脚。",
+        "厚褂、绑带旧护膝、肩袋内短撬棍和只写本段的工约短单。",
+        "已做工钱独立于新签；可以回来，也可以不回来，不是终身守山人。"
+      ],
+      "observed_mother_image": "棕色后束发、稳重厚眉、长眼型、宽实下颌；灰厚褂、旧护膝和棕靴。母图为低眼认真核对短单，双手持/指单。",
+      "fixed_prop_sides": [
+        "人物左手（画面右）持同一张短单，右手（画面左）为指单/停指之手，短单不递给画外人。",
+        "肩袋与短撬棍在人物右髋（画面左），袋带仍沿原肩线；短撬棍始终收在袋中。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "gura_E1_question_overreach",
+          "label_zh": "质疑越界",
+          "scene_proposal": "听见本段被说成一整年，抬眼反问范围。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-HIG-03_留下的人.md",
+            "sha256": "9160ce9972e026fe5209f198a8ad5433a0dd75e8ff6fab5f0135bad3c7831718",
+            "locator": "L39、L49；人物卡“所怕”"
+          },
+          "face_changes": "从纸上抬眼看听者，一眉自然略起、另一眉保持审慎；唇微开成反问口型，面部有不悦但不咆哮或羞辱听者。",
+          "minimal_gesture": "左手稳住短单；右指仍在原条目附近，停住不点戳；头只略抬，身体重心保留。",
+          "difference_from_static_and_pair": "母图低眼闭口查单改为抬眼发问，区别E2安静衡量。",
+          "condition_and_limit": "反问不证明合同已被正式修改，也不画已收款、撕约、出走或强迫留下。",
+          "output_stem": "gura_E1_question_overreach",
+          "production_status": "not_generated"
+        },
+        {
+          "id": "E2",
+          "key": "gura_E2_consider_without_promise",
+          "label_zh": "保留考虑",
+          "scene_proposal": "谈到将来是否回来时，允许自己想一想，不急着给答案。",
+          "story_support": {
+            "path": "design/06_支线/城市支线/台本_CS-HIG-03_留下的人.md",
+            "sha256": "9160ce9972e026fe5209f198a8ad5433a0dd75e8ff6fab5f0135bad3c7831718",
+            "locator": "L63；人物卡“口吻”"
+          },
+          "face_changes": "眉间比母图松，眼神离开纸面轻落向一侧，嘴闭合而唇角略柔；留一点迟疑，不画确认式灿笑或点头同意。",
+          "minimal_gesture": "右指离开条目少许，轻落在短单下缘；左手持单不变，肩仅自然放松，不走动。",
+          "difference_from_static_and_pair": "由母图严肃核对转为柔和、迟疑的侧目思量；与E1张口反问分明。",
+          "condition_and_limit": "只演可考虑的心情，不引用交钥/结薪后的台词作既成结果；不代表续约、宽恕或全员愿留。",
+          "output_stem": "gura_E2_consider_without_promise",
+          "production_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-QRY",
+      "slug": "deru",
+      "name": "德茹",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-QRY_德茹.md",
+        "sha256": "3895a81fd2059349a92af90cba1ad5ebd42f3e9242c37d1fe6b08a7380be005a"
+      },
+      "card_matches_first_four_brief": true,
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_v2_raw_imagegen.png",
+          "sha256": "0dfc9b5caa66f636ca853b76c9a1a46c597862c64d59d2b2fbe0372e2b21c8e3"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/deru_transparent.png",
+          "sha256": "9a335a68915943a6c2c01b8aa30c6a49248b3a5c3e837d39076b6c3c57ec5f8c"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/deru/concept_v1/manifest.json",
+          "sha256": "b565f01233f28ed2be272a2c646f93443fb489cbd818b9e9486dbc6a88b06041"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13 tools.view_image逐张实际查看最终raw与clean完整PNG；非以旧QA代替实看。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "石场看守、五十岁上下女石工；粗指节、人物右肩比左肩低，围裙别磨秃凿子。",
+        "短句，先报数再谈事；不主动提老板。",
+        "知道停工前最后下坑的人和渗水岩壁；不替石场主认领工人或欠薪，不知道军务调动。"
+      ],
+      "observed_mother_image": "灰白夹深发后束、熟龄脸和结实下颌、粗手；灰粗布衣、赭棕围裙、棕靴。母图沉眉张口，右手向画面左下提示安全线。",
+      "fixed_prop_sides": [
+        "钝凿留在人物左侧围裙（画面右），不拔出、不换侧；左手仍靠近围裙但不变成持凿攻击。",
+        "人物右肩在画面左略低；右手是原向下/侧示意之手，可自然收近，但身体不镜像。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "deru_E1_remember_scattered_crew",
+          "label_zh": "感慨旧工",
+          "scene_proposal": "闲谈钝凿可磨、散去的人手难聚，话说完的短暂停顿。",
+          "story_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-QRY].chats[1]"
+          },
+          "face_changes": "眉头松下却留一点沉意，视线轻落向身侧；原张口收为闭口、唇角略沉，眼里清醒而有感慨，不哭泣或大幅衰老。",
+          "minimal_gesture": "右手从外伸稍收至身侧，左手保持围裙近旁；不碰凿、不低头作悼念仪式。",
+          "difference_from_static_and_pair": "从警告式张口转为安静回想；与E2抬眼询问形成情绪区别。",
+          "condition_and_limit": "不画工人死亡、归队、工资已付或石场重开的结局；不让她主动追述老板身份。",
+          "output_stem": "deru_E1_remember_scattered_crew",
+          "production_status": "not_generated"
+        },
+        {
+          "id": "E2",
+          "key": "deru_E2_ask_road_news",
+          "label_zh": "留意来路",
+          "scene_proposal": "问访客从哪条路来，留心是否见过工头。",
+          "story_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-QRY].site_lines[arrival]"
+          },
+          "face_changes": "抬眼看对方，眉稍舒展又带询问；嘴小幅开启，唇角自然，保持熟龄面部厚度，不变成母图的沉眉喝止。",
+          "minimal_gesture": "右手在腰下轻摊掌一次，幅度小于母图外伸；左手及凿子不动，身体双脚稳站。",
+          "difference_from_static_and_pair": "问路的关注感替代母图警告感；眼神和眉口组合必须可辨，不能只换手势。",
+          "condition_and_limit": "询问不证明已看见工头、不替工头作证，不暗示允许下坑。",
+          "output_stem": "deru_E2_ask_road_news",
+          "production_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "canonical_id": "FX-MIL",
+      "slug": "hoer",
+      "name": "霍珥",
+      "current_card": {
+        "path": "design/04_人物/野外人物/人物_FX-MIL_霍珥.md",
+        "sha256": "b31ef9937d65c2b8ee708e346ae4aad35c68b52cdd3ec5125a70f5d4a339094b"
+      },
+      "card_matches_first_four_brief": true,
+      "source_anchor": {
+        "selected_raw": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_v1_raw_imagegen.png",
+          "sha256": "2e978cb06e5e71dc342946d2ff2255ae32716afb47ca67be8d95aa7ac365f189"
+        },
+        "selected_transparent": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/hoer_transparent.png",
+          "sha256": "2ad7fad3d48561ccefe04f1363c0f382d7eb8f4393cfa5acd9d8c62147680718"
+        },
+        "manifest": {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/hoer/concept_v1/manifest.json",
+          "sha256": "c26ea63a2e8133810284a7408b06d735b59173e1fa4074c74b013bc352b9ec64"
+        },
+        "actual_raw_and_transparent_viewed": true,
+        "view_method": "2026-10-13 tools.view_image逐张实际查看最终raw与clean完整PNG；非以旧QA代替实看。",
+        "hashes_verified_against_manifest_and_final_independent_qa": true,
+        "existing_review_status": "final_clean_and_presentation_pass"
+      },
+      "card_facts": [
+        "水磨坊守磨人、三十来岁男子；袖到手肘、虎口厚皮、左耳后旧疤。",
+        "用水声般停顿说话，喜欢磨盘比方，谈水面会压低声音。",
+        "只知上游当地见闻和闸门状况，不替上游人家作证，不知军需船期。"
+      ],
+      "observed_mother_image": "棕短发、粗眉、短须和结实脸；蓝灰卷袖工褂、棕腰带/腰围、深裤旧靴。母图侧目凝眉张口并右掌抬起制止。左耳后旧疤在母图未能清楚确认，不据遮挡新添另一侧伤疤。",
+      "fixed_prop_sides": [
+        "没有手持道具；人物右手（画面左）是母图抬掌之手，左手（画面右）为垂落之手。",
+        "腰带垂尾保留画面右位置；旧疤按人物左耳后卡设，不改成右耳前可见大伤疤；容许原遮挡。"
+      ],
+      "expressions_are_reversible_art_proposals": true,
+      "expressions": [
+        {
+          "id": "E1",
+          "key": "hoer_E1_millstone_smalltalk",
+          "label_zh": "行当闲谈",
+          "scene_proposal": "拿空转磨盘比人闲着生事，带一点守磨人的干幽默。",
+          "story_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-MIL].chats[0]"
+          },
+          "face_changes": "眉间展开，目光回到交谈者，眼尾自然略柔；闭嘴的一侧唇角轻扬，让短须下仍读得出克制笑意，不露满口牙。",
+          "minimal_gesture": "原右掌降低到腰附近，手指自然放松；左手垂落，头稍倾而非点头允诺。",
+          "difference_from_static_and_pair": "母图制止式凝眉张口改为放松的闭口微笑，不能只降手。",
+          "condition_and_limit": "干幽默是美术解释，不把他改成活泼逗趣性格；不画磨坊复工、免费磨面或垫粮。",
+          "output_stem": "hoer_E1_millstone_smalltalk",
+          "production_status": "not_generated"
+        },
+        {
+          "id": "E2",
+          "key": "hoer_E2_lower_voice_water",
+          "label_zh": "压声警觉",
+          "scene_proposal": "谈起夜里水声盖住别的动静，压低声音先听一听。",
+          "story_support": {
+            "path": "research/field-npc-dialogue.json",
+            "sha256": "185900bb86b5b7fbe4586489d664584e28ccef2718c591841ab4a3f86ccd5b4d",
+            "locator": "npcs[id=FX-MIL].greetings[night]；人物卡“口吻”"
+          },
+          "face_changes": "眉间轻凝但不怒瞪，眼神向侧方专注，嘴仅微开成压低声量的窄口；保留原眼型和鼻须结构，不夸张惊恐。",
+          "minimal_gesture": "原右手降至胸下近身处，掌不再正对观者制止；头向听声一侧微转，左手和双脚保留。",
+          "difference_from_static_and_pair": "与母图明显张口抬掌制止区分为近身、压声侧听；与E1松眉微笑形成明确反差。",
+          "condition_and_limit": "仅取夜谈语气，不新画案发、上游凶手、开闸或作证；不加手指嘘声、灯、闸轮、账簿。",
+          "output_stem": "hoer_E2_lower_voice_water",
+          "production_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

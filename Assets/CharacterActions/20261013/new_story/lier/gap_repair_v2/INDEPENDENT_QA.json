@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent audit_gap_repair_art",
+  "reviewed_utc": "2026-10-14T12:51:33.132061+00:00",
+  "author_freeze_confirmed": "2026-10-14 12:49 UTC",
+  "character": "lier",
+  "status": "pass_visual_design_concept_only",
+  "passed_attempt": 1,
+  "candidate": "exports/attempt1_transparent.png",
+  "actual_viewed": [
+    "sources/mother.png",
+    "exports/attempt1_transparent.png",
+    "review/attempt1_light.png",
+    "review/attempt1_dark.png"
+  ],
+  "visual_observations": {
+    "identity": "成熟脸型、大头紧凑比例、衣色与母图身份保持，未幼化或长肢化；单人完整头发、双手、道具及鞋留边。",
+    "action": "左手（画面右）胸前握两绳上段，右前臂从画面左横过腰腹，右掌向上；两个原尾结分开并排落在同一掌面上，指尖越过第二尾结，短毛边在掌近缘可见。两股绳从同一肩到结连续，未合成一结、加新绳或脱手。两脚稳立，踝绳与肩绳独立。",
+    "pixel_background": "粗像素簇、阶梯边与原色调保持。浅深底无可见棋盘或地面，原生alpha未清理；不据此声称工程级边缘适配。"
+  },
+  "hard_errors": [],
+  "revision_required": false,
+  "checks": {
+    "raw_sha256": "cd44105821048ab08892d3a35ad68810ebed06cb54b70f112e1c4d00a651fd67",
+    "full_return_sha256": "6ed990738a261e0d55bb4c93783bde52c71bbab93b5a530225377bd647d7ee96",
+    "params_sha256": "a8743a97802697a0626615d2df9012285740686014e364aa54ee1b1a3022fe0c",
+    "prompt_sha256": "9405b4e8c45d052d14266f8d46d75acd5ec5689f1e3754aa1043bcaf214d1db4",
+    "export_identical_raw": true,
+    "payload_exact_raw": true,
+    "prompt_equals_params": true,
+    "reference_equals_mother": true,
+    "prompt_params_mtime_before_return": true,
+    "size": [
+      1118,
+      1407
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  "frozen_hashes": {
+    "spec_lock.md": "b75ab73f1f25bd7638547cde8e0d06a00e9aa2f586853655278e97032d0a9da2",
+    "review/attempt1_dark.png": "10644f35be7dfba53c27ac7e8e0a6807029c3166c9b761c0f7d32d867b94dc04",
+    "review/attempt1_light.png": "6eb7c802d7b851a67067f4f13e499ca4cae01895c77d2ff6413417b51ab35901",
+    "review/mother_action_comparison.png": "ddbc64f8042675b92041692d1b9a94878c47fcd2b8798295ae79cd2e594cbddb",
+    "review/board_layout.json": "218c02fa7616553a04ece767f64ee7e46ef0dbdfa3dc5fc6153ee555bc7b4780",
+    "review/attempt1_byte_audit.json": "0c2b473c3dbe126e43da3b5e2c2d1101a5b1a5b2f361378711bf2a41f2dfaed7",
+    "raw/attempt1.png": "cd44105821048ab08892d3a35ad68810ebed06cb54b70f112e1c4d00a651fd67",
+    "raw/attempt1_tool_return.json": "6ed990738a261e0d55bb4c93783bde52c71bbab93b5a530225377bd647d7ee96",
+    "sources/previous_failed_v2.png": "f49d271dcec0bb5c7eb48d205a82cb05eb0f79b7692c7791a06a172213f78c6f",
+    "sources/previous_spec_lock.md": "a669526bed0f51364217802835e9f5aa9d2bc39adf07b731a80ea793b1804b81",
+    "sources/process_gap.py": "636ac3d9fcadebb6672586d7bafb3fd5934a95154993b94f4285efc034703781",
+    "sources/repository_rules_snapshot.txt": "39c9dd8f4c8656198bce0acd73739620d66dfc7e420f94e11be764e0671a8988",
+    "sources/setup_gap.py": "9158876e8edc32fc923168e0e648adb825d0340772ad1d0347922b699eee5f61",
+    "sources/previous_FINAL_STATUS.json": "45bb04051fdb734340be9634c83ad8ca8a8feef92f1d25e10ce24a99cfda349e",
+    "sources/previous_independent_visual_gate.json": "c62528d20332834d62b117ac0ce0076b96d6f3276305aca313d054fd3cbbcfef",
+    "sources/recovery_plan.json": "1e239ddff53c086c2e80fe4da3100b2968174ce400dff54d38819c10371f4a81",
+    "sources/mother.png": "d7d6d627f511278d56c1c77a86976fcc9ffcb7a465fbe7a6d42909d463ae08e3",
+    "sources/pixel_asset_master_snapshot.txt": "94a0b5969ab4731ed0576186418a49f18340875304a0bbde6346ed066a10bf08",
+    "exports/attempt1_transparent.png": "cd44105821048ab08892d3a35ad68810ebed06cb54b70f112e1c4d00a651fd67",
+    "prompts/attempt1.txt": "9405b4e8c45d052d14266f8d46d75acd5ec5689f1e3754aa1043bcaf214d1db4",
+    "prompts/attempt1_parameters.json": "a8743a97802697a0626615d2df9012285740686014e364aa54ee1b1a3022fe0c"
+  },
+  "scope_limits": [
+    "仅静态人物动作设计稿；不代表用户美感认可、native grid、连续动画、装备合成或游戏运行验收。",
+    "只写本INDEPENDENT_QA.json，未改作者文件、源图、候选或选稿。",
+    "预存先后依据mtime与作者确认，未旁观原工具调用。"
+  ],
+  "user_acceptance_claimed": false,
+  "native_grid_verified": false,
+  "continuous_animation_verified": false,
+  "runtime_verified": false
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "character": "seer",
+  "name": "瑟珥",
+  "checked_utc": "2026-10-14T02:23:47.875221+00:00",
+  "status": "partial_ready_for_independent_review",
+  "production_method": "builtin image_gen with own raw and transparent references; prompts saved before each call",
+  "mother_images_actually_viewed": true,
+  "source_anchor": {
+    "directory": "Assets/CharacterDesigns/20261013/expressive/new_story/seer/concept_v1",
+    "selected_raw": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seer/concept_v1/seer_v1_raw_imagegen.png",
+      "sha256": "cdde76734857af1f90a6c688c02bb0e25c58389d182ec61c22741773dd2195bb"
+    },
+    "transparent": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seer/concept_v1/seer_transparent.png",
+      "sha256": "b238b55b901eea014c66ba081c248f3c909b62c00f3d61a148b7921e71e154d3"
+    },
+    "manifest": {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/seer/concept_v1/manifest.json",
+      "sha256": "825b1878e5cf15a376d219f4c4d6fc606129df40f8fbe62587b8cfa1a279d261"
+    },
+    "actual_raw_and_transparent_viewed": true,
+    "view_method": "2026-10-14本任务tools.view_image逐张实际查看4个raw与4个transparent；未以历史QA代替本轮看图。",
+    "hashes_verified_against_manifest_and_final_independent_qa": true,
+    "manifest_entries_reverified": 21,
+    "existing_review_status": "final_clean_and_presentation_pass",
+    "canvas_mode_verified": "1118×1407 RGBA"
+  },
+  "expression_count_requested": 2,
+  "raw_outputs": 2,
+  "author_selected_count": 1,
+  "results": [
+    {
+      "status": "not_passed_research_only_blocked",
+      "finding": "首稿头部从母图画面左转向右，超过微低头范围；断绳侧别、衣装和全身仍保留。唯一修订被图像工具输出安全系统拒绝且没有图像返回；已停止，不重试、不改写规避、不换工具。",
+      "selected": false,
+      "expression_id": "E1",
+      "label_zh": "默数牵挂",
+      "raw_path": "raw/seer_E1_silent_counting_worry_v1_raw_imagegen.png",
+      "raw_sha256": "d9e5a9a0c60cea03bbc22e8fe13c3784f215d13730092f9bba843068b7a63abd",
+      "dimensions": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "zero_pixels": 1061805,
+        "opaque_pixels": 1203,
+        "partial_pixels": 510018,
+        "bbox": [
+          0,
+          17,
+          1098,
+          1363
+        ],
+        "boundary_touches": true
+      },
+      "author_actual_view": [
+        "raw",
+        "light_rgba_composite",
+        "dark_rgba_composite"
+      ],
+      "transparency_finding": "浅深RGBA合成后轮廓干净；原alpha0处隐藏RGB不判作污边。未对原图抠色、量化或改形。"
+    },
+    {
+      "status": "author_pass_pending_independent",
+      "finding": "一高一低的眉与更集中的侧视形成急切辩解；小幅开口保留低声说话，左手自然半屈。头朝画面左、本人长脸短发、灰尘衣物与右手画面左断绳保持。",
+      "selected": true,
+      "expression_id": "E2",
+      "label_zh": "急辩来意",
+      "raw_path": "raw/seer_E2_hurried_defence_of_intent_v1_raw_imagegen.png",
+      "raw_sha256": "60f12b54286cbe2691503670b7fac824c5a9945821f1db05eab4d273236e0d8a",
+      "dimensions": [
+        1118,
+        1407
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "zero_pixels": 1035702,
+        "opaque_pixels": 2780,
+        "partial_pixels": 534544,
+        "bbox": [
+          27,
+          32,
+          1098,
+          1383
+        ],
+        "boundary_touches": false
+      },
+      "author_actual_view": [
+        "raw",
+        "light_rgba_composite",
+        "dark_rgba_composite"
+      ],
+      "transparency_finding": "浅深RGBA合成后轮廓干净；原alpha0处隐藏RGB不判作污边。未对原图抠色、量化或改形。",
+      "selected_path": "selected/seer_E2_hurried_defence_of_intent_transparent.png",
+      "selected_sha256": "60f12b54286cbe2691503670b7fac824c5a9945821f1db05eab4d273236e0d8a"
+    }
+  ],
+  "limitations": [
+    "非游戏原生像素网格/part/frame/mask/origin规格",
+    "没有装备兼容、连续动画或runtime验证",
+    "本角色未明设定不由美术补定，图像不证明任务结果"
+  ],
+  "postprocess": "Selected PNGs are byte-identical raw copies with generated alpha preserved. Only review presentation uses equal-aspect nearest scaling and RGBA compositing; no source-image edits."
+}

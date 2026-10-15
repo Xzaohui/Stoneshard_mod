@@ -1,0 +1,781 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/review_tenth_character_expressions",
+  "completed_utc": "2026-10-14T03:02:22.385017+00:00",
+  "status": "independent_visual_and_frozen_delivery_pass",
+  "brief": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/tenth_four_expression_brief.json",
+    "sha256": "eaf404168c49eb018ca4a202730db383ea97d25dc0508210fa09dca06f279bdf",
+    "bytes": 86418
+  },
+  "scope": "第十批索妲、珂琳、蓟珥、绥珥各2表情；独审仅写独立QA与审查RGBA合成，不生图、不改作者raw/selected/manifest/FINAL_STATUS，不git、不上传、不部署。",
+  "totals": {
+    "characters": 4,
+    "selected_expressions": 8,
+    "independently_viewed_mother_raw": 4,
+    "independently_viewed_mother_transparent": 4,
+    "independently_viewed_expression_raw": 8,
+    "independently_viewed_selected": 8,
+    "independently_viewed_character_light_dark_boards": 8,
+    "independently_viewed_reviewer_raw_RGBA_composites": 8,
+    "independently_viewed_delivery_composite_boards": 2,
+    "archived_successful_generation_returns_checked": 8,
+    "reviewer_generation_calls": 0,
+    "hard_error_revisions": 0,
+    "blocked": 0,
+    "failed": 0,
+    "pending_visual_reviews": 0,
+    "delivery_groups": 2,
+    "native_attachments_planned": 14,
+    "complete_source_ZIPs": 4,
+    "source_ZIP_members_verified": 182,
+    "mother_manifest_members_reverified": 84,
+    "expression_manifest_entries_verified": 174
+  },
+  "verification_method": "实际tools.view_image看图后记录视觉结论；脚本校验完整imagegen原返回image_url的PNG字节SHA=raw，prompt全文=tool参数，引用母图SHA、selected保留像素RGB和完整轮廓，冻结manifest/FINAL_STATUS绑定，ZIP每个成员bytes/SHA/CRC与冻结源树一致。未亲历作者工具调用，不伪造调用历史。",
+  "alpha_rule": "按真实alpha在浅深底合成判断；alpha0隐藏RGB不是可见背景污染；raw完整保留，作者两种alpha清理均已核验且视觉通过。",
+  "brief_source_references": {
+    "references": 66,
+    "unique_targets": 34,
+    "unchanged_final_readback": true,
+    "failures": []
+  },
+  "characters": [
+    {
+      "slug": "suoda",
+      "name": "索妲",
+      "canonical_id": "FX-WCH",
+      "status": "passed",
+      "selected_count": 2,
+      "revision_count": 0,
+      "mother_manifest_members_reverified": 21,
+      "mother_manifest_failures": [],
+      "raw_QA": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/QA-independent-raw-visual.json",
+        "sha256": "7fb3d6ce75723298e6d302a4a929414a10aa4ead57a89ccac64cafba0da777c1",
+        "bytes": 15650
+      },
+      "selected_and_presentation_QA": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/QA-independent.json",
+        "sha256": "d2b6d0980a0ce3a77ab9d23f1f0f257337c7440a9a1fd0bfe28cc0f907323098",
+        "bytes": 16508
+      },
+      "frozen_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/manifest.json",
+        "sha256": "fb2c4bfcb9d5f0f763995f075c6310a0920188100b6410eba583110e656550e0",
+        "bytes": 12354
+      },
+      "FINAL_STATUS": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/FINAL_STATUS.json",
+        "sha256": "b4579da9f97a90ca4564b5f9e615d13a2ab4e05e117f4d6101fbef8fed6ed51d",
+        "bytes": 7003
+      },
+      "expression_observations": [
+        {
+          "id": "E1",
+          "label_zh": "岔开家常",
+          "observation": "母图忧眉开口转为稍松眉、半收眼帘、偏侧闭唇的克制小笑；仍侧看，客气岔话可读，无大笑、露齿或诱惑表达。",
+          "selected": {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/selected/suoda_E1_evasive_smalltalk_transparent.png",
+            "sha256": "a968b492c8191f3a319e5f68f7f083a12cd8434a4ec1496f0a290d514e6c567b",
+            "size": [
+              1060,
+              1484
+            ],
+            "mode": "RGBA",
+            "alpha_zero_pixels": 805000,
+            "alpha_1_to_8_pixels": 0,
+            "alpha0_hidden_rgb_pixels": 0,
+            "bbox_alpha_gt0": [
+              179,
+              69,
+              978,
+              1446
+            ],
+            "margins_alpha_gt0": [
+              179,
+              69,
+              82,
+              38
+            ],
+            "bbox_alpha_gt8": [
+              179,
+              69,
+              978,
+              1446
+            ],
+            "margins_alpha_gt8": [
+              179,
+              69,
+              82,
+              38
+            ],
+            "bbox_alpha_gt128": [
+              180,
+              70,
+              975,
+              1445
+            ],
+            "margins_alpha_gt128": [
+              180,
+              70,
+              85,
+              39
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "label_zh": "正色反问",
+          "observation": "双眉转低平内聚、目光更定、嘴短促小开口且唇角不扬；正色反问与母图忧虑及E1闭唇岔话均可区分。",
+          "selected": {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suoda/expressions_v1/selected/suoda_E2_firm_counterquestion_transparent.png",
+            "sha256": "9ae1fbea12672a9a6369d5aa2e945e5abcad1d11b62192ddee2851eb7f17c9a1",
+            "size": [
+              1060,
+              1484
+            ],
+            "mode": "RGBA",
+            "alpha_zero_pixels": 807576,
+            "alpha_1_to_8_pixels": 0,
+            "alpha0_hidden_rgb_pixels": 0,
+            "bbox_alpha_gt0": [
+              181,
+              68,
+              970,
+              1447
+            ],
+            "margins_alpha_gt0": [
+              181,
+              68,
+              90,
+              37
+            ],
+            "bbox_alpha_gt8": [
+              181,
+              68,
+              970,
+              1447
+            ],
+            "margins_alpha_gt8": [
+              181,
+              68,
+              90,
+              37
+            ],
+            "bbox_alpha_gt128": [
+              182,
+              69,
+              970,
+              1445
+            ],
+            "margins_alpha_gt128": [
+              182,
+              69,
+              90,
+              39
+            ]
+          }
+        }
+      ],
+      "limitations": [
+        "表情不表示已答应传话、带路、送礼、敲门或得到女巫许可。",
+        "不确定女巫清白、村民责任、药效、儿子康复或DT09完成。"
+      ]
+    },
+    {
+      "slug": "kelin",
+      "name": "珂琳",
+      "canonical_id": "FX-HUT",
+      "status": "passed",
+      "selected_count": 2,
+      "revision_count": 0,
+      "mother_manifest_members_reverified": 21,
+      "mother_manifest_failures": [],
+      "raw_QA": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/QA-independent-raw-visual.json",
+        "sha256": "ed60a1312061ccd404bf7abf4c1fc9dd52e9ea8dd927279e708040d81e029e85",
+        "bytes": 15808
+      },
+      "selected_and_presentation_QA": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/QA-independent.json",
+        "sha256": "4f31500e82de9ff352d0a9e9120bd9aaed0b03f2464dbfdd5abb3dd55ae8e903",
+        "bytes": 16668
+      },
+      "frozen_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/manifest.json",
+        "sha256": "f1c9a6d6802bd0f1568068400dac71ce9681c3d80e6739a977929399f199f3f0",
+        "bytes": 12302
+      },
+      "FINAL_STATUS": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/FINAL_STATUS.json",
+        "sha256": "a210469c89ecdcc384377f23cdeee7205bb5806c6daf1d7f2004fd874e2af277",
+        "bytes": 6967
+      },
+      "expression_observations": [
+        {
+          "id": "E1",
+          "label_zh": "规矩苦笑",
+          "observation": "一侧眉略抬、眼帘轻收、闭唇作微小偏侧弧线，规矩苦笑可读；与母图轻启口的犹疑不同，无媚眼、露齿笑或新增腮红。",
+          "selected": {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/selected/kelin_E1_wry_about_rules_transparent.png",
+            "sha256": "b4d004697adf8cf0b1db4b0a5b7904aa650a9c306367c1250ff0bf0d5e6dd2c5",
+            "size": [
+              1118,
+              1407
+            ],
+            "mode": "RGBA",
+            "alpha_zero_pixels": 1061491,
+            "alpha_1_to_8_pixels": 0,
+            "alpha0_hidden_rgb_pixels": 0,
+            "bbox_alpha_gt0": [
+              289,
+              73,
+              837,
+              1351
+            ],
+            "margins_alpha_gt0": [
+              289,
+              73,
+              281,
+              56
+            ],
+            "bbox_alpha_gt8": [
+              289,
+              73,
+              837,
+              1351
+            ],
+            "margins_alpha_gt8": [
+              289,
+              73,
+              281,
+              56
+            ],
+            "bbox_alpha_gt128": [
+              290,
+              74,
+              836,
+              1350
+            ],
+            "margins_alpha_gt128": [
+              290,
+              74,
+              282,
+              57
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "label_zh": "认真拒配",
+          "observation": "两眉更平直凝定，嘴闭成略下压短线，认真拒配且有分寸；不同于E1偏侧笑弧，未画哭泣或恐惧，也没有抬掌模板。",
+          "selected": {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/kelin/expressions_v1/selected/kelin_E2_firm_no_dispensing_transparent.png",
+            "sha256": "2d8c7ba1409cdd615eaa006a14618cc97d80da5a28f04f21f2db16cfc95a4583",
+            "size": [
+              1118,
+              1407
+            ],
+            "mode": "RGBA",
+            "alpha_zero_pixels": 1016323,
+            "alpha_1_to_8_pixels": 0,
+            "alpha0_hidden_rgb_pixels": 0,
+            "bbox_alpha_gt0": [
+              274,
+              51,
+              864,
+              1382
+            ],
+            "margins_alpha_gt0": [
+              274,
+              51,
+              254,
+              25
+            ],
+            "bbox_alpha_gt8": [
+              274,
+              51,
+              864,
+              1382
+            ],
+            "margins_alpha_gt8": [
+              274,
+              51,
+              254,
+              25
+            ],
+            "bbox_alpha_gt128": [
+              275,
+              51,
+              863,
+              1381
+            ],
+            "margins_alpha_gt128": [
+              275,
+              51,
+              255,
+              26
+            ]
+          }
+        }
+      ],
+      "limitations": [
+        "手指细切痕仍不显著，不逐处确认、不要求添加新伤，也不把不可见推断为康复。",
+        "拒配不是独立看病开方许可，不表示师父批准、方子已核实、药已交付、DT05完成或病人康复。"
+      ]
+    },
+    {
+      "slug": "jier",
+      "name": "蓟珥",
+      "canonical_id": "FX-FRM",
+      "status": "passed",
+      "selected_count": 2,
+      "revision_count": 0,
+      "mother_manifest_members_reverified": 21,
+      "mother_manifest_failures": [],
+      "raw_QA": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/QA-independent-raw-visual.json",
+        "sha256": "feabcebabe39e0231f21a45c431f5596ade7aaf042d4c61a5d600659f6dda3bb",
+        "bytes": 15653
+      },
+      "selected_and_presentation_QA": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/QA-independent.json",
+        "sha256": "11ca37690010c83b4687898b6e75fdb7aeabe2895b0531203ccff7f712d25a43",
+        "bytes": 16527
+      },
+      "frozen_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/manifest.json",
+        "sha256": "39ed2d0b3073e3aacf8912cfd0a7e6d5b57f196dcc2f2bcadfd7d7c4bfb33e50",
+        "bytes": 9976
+      },
+      "FINAL_STATUS": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/FINAL_STATUS.json",
+        "sha256": "33bd674d0c32d5278c8156d445bc71c37a1e985e9ceb923d9ebc31711b0e963b",
+        "bytes": 5970
+      },
+      "expression_observations": [
+        {
+          "id": "E1",
+          "label_zh": "谈井专注",
+          "observation": "眉较母图舒展、内眉轻抬，眼帘较开而眼球未扩大；嘴形成清楚的小说话口形，认真说明可读，不是笑脸。",
+          "selected": {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/selected/jier_E1_attentive_well_talk_transparent.png",
+            "sha256": "8dff9e97b0eddeb4d1bdaaffda3a898ba5d7d7725378dd6ac47e132fec612943",
+            "size": [
+              1119,
+              1406
+            ],
+            "mode": "RGBA",
+            "alpha_zero_pixels": 1012448,
+            "alpha_1_to_8_pixels": 0,
+            "alpha0_hidden_rgb_pixels": 0,
+            "bbox_alpha_gt0": [
+              279,
+              61,
+              894,
+              1382
+            ],
+            "margins_alpha_gt0": [
+              279,
+              61,
+              225,
+              24
+            ],
+            "bbox_alpha_gt8": [
+              279,
+              61,
+              894,
+              1382
+            ],
+            "margins_alpha_gt8": [
+              279,
+              61,
+              225,
+              24
+            ],
+            "bbox_alpha_gt128": [
+              279,
+              61,
+              894,
+              1382
+            ],
+            "margins_alpha_gt128": [
+              279,
+              61,
+              225,
+              24
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "label_zh": "闭口谢客",
+          "observation": "双眉更平低并轻聚，眼帘收窄、闭唇短线略下压，平静谢客可读；与E1开口专注及母图短答明显有别。",
+          "selected": {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/jier/expressions_v1/selected/jier_E2_quiet_no_lodging_transparent.png",
+            "sha256": "d5e6afdfecb6dc727bc0a43d58ba0c61595b1a989bed48038d86fc45c4f6fad0",
+            "size": [
+              1118,
+              1407
+            ],
+            "mode": "RGBA",
+            "alpha_zero_pixels": 1033675,
+            "alpha_1_to_8_pixels": 0,
+            "alpha0_hidden_rgb_pixels": 0,
+            "bbox_alpha_gt0": [
+              288,
+              70,
+              886,
+              1375
+            ],
+            "margins_alpha_gt0": [
+              288,
+              70,
+              232,
+              32
+            ],
+            "bbox_alpha_gt8": [
+              288,
+              70,
+              886,
+              1375
+            ],
+            "margins_alpha_gt8": [
+              288,
+              70,
+              232,
+              32
+            ],
+            "bbox_alpha_gt128": [
+              288,
+              70,
+              886,
+              1375
+            ],
+            "margins_alpha_gt128": [
+              288,
+              70,
+              232,
+              32
+            ]
+          }
+        }
+      ],
+      "limitations": [
+        "E1真实返回1119×1406，比母图1118×1407相差各1像素；原图保留、不拉伸，未造成关键轮廓或比例错误。",
+        "谈井不是水质认证、DT02配给完成或入院许可；谢客不新增永久敌对或关门结果。"
+      ]
+    },
+    {
+      "slug": "suier_lot",
+      "name": "绥珥",
+      "canonical_id": "FX-LOT",
+      "status": "passed",
+      "selected_count": 2,
+      "revision_count": 0,
+      "mother_manifest_members_reverified": 21,
+      "mother_manifest_failures": [],
+      "raw_QA": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/QA-independent-raw-visual.json",
+        "sha256": "0b8d1ab67c930e2b989ed17be8bc2ba548f59aa81b6b5b352a17b76f926ae044",
+        "bytes": 15929
+      },
+      "selected_and_presentation_QA": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/QA-independent.json",
+        "sha256": "b3e8071bb5364f9cb9caf0ba2ac8f86721e3246caf5b6ddd24105b808e55e261",
+        "bytes": 16818
+      },
+      "frozen_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/manifest.json",
+        "sha256": "b02823c2b0141e4c61c9aa2c1b5039ce8f27b8f3eaa1964a659f5ba6b727ecfc",
+        "bytes": 10184
+      },
+      "FINAL_STATUS": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/FINAL_STATUS.json",
+        "sha256": "e6bad2ee1be4e9fd716b02c87ced30422916f754265718cca42f89afd25e83ad",
+        "bytes": 6040
+      },
+      "expression_observations": [
+        {
+          "id": "E1",
+          "label_zh": "说起手艺",
+          "observation": "母图忧眉开口说明转为略松且微不对称的眉、轻收眼帘和小幅偏侧闭唇笑弧；克制谈起手艺的熟悉与无奈可读，没有露齿大笑或邀约。",
+          "selected": {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/selected/suier_lot_E1_wry_craft_memory_transparent.png",
+            "sha256": "b06bffe844c9d8bf227d1f7b6acc8073cbdd3d3f44f13b0e46aa71f1f01a1251",
+            "size": [
+              1118,
+              1407
+            ],
+            "mode": "RGBA",
+            "alpha_zero_pixels": 1035836,
+            "alpha_1_to_8_pixels": 0,
+            "alpha0_hidden_rgb_pixels": 0,
+            "bbox_alpha_gt0": [
+              306,
+              55,
+              853,
+              1388
+            ],
+            "margins_alpha_gt0": [
+              306,
+              55,
+              265,
+              19
+            ],
+            "bbox_alpha_gt8": [
+              306,
+              55,
+              853,
+              1388
+            ],
+            "margins_alpha_gt8": [
+              306,
+              55,
+              265,
+              19
+            ],
+            "bbox_alpha_gt128": [
+              306,
+              55,
+              853,
+              1388
+            ],
+            "margins_alpha_gt128": [
+              306,
+              55,
+              265,
+              19
+            ]
+          }
+        },
+        {
+          "id": "E2",
+          "label_zh": "受疑缄默",
+          "observation": "内眉轻提聚拢、眼神略低、嘴紧闭短线且无上扬，受疑后收声可读；与母图开口说明及E1浅笑均区分，没有泪滴或认罪符号。",
+          "selected": {
+            "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier_lot/expressions_v1/selected/suier_lot_E2_silent_under_suspicion_transparent.png",
+            "sha256": "58eba68321ced6c1fa00e17d943e126b9d7c235fdcdcadab37761aa1a94ec4b7",
+            "size": [
+              1118,
+              1407
+            ],
+            "mode": "RGBA",
+            "alpha_zero_pixels": 1039069,
+            "alpha_1_to_8_pixels": 0,
+            "alpha0_hidden_rgb_pixels": 0,
+            "bbox_alpha_gt0": [
+              305,
+              54,
+              850,
+              1384
+            ],
+            "margins_alpha_gt0": [
+              305,
+              54,
+              268,
+              23
+            ],
+            "bbox_alpha_gt8": [
+              305,
+              54,
+              850,
+              1384
+            ],
+            "margins_alpha_gt8": [
+              305,
+              54,
+              268,
+              23
+            ],
+            "bbox_alpha_gt128": [
+              305,
+              54,
+              850,
+              1384
+            ],
+            "margins_alpha_gt128": [
+              305,
+              54,
+              268,
+              23
+            ]
+          }
+        }
+      ],
+      "limitations": [
+        "绥珥suier_lot/FX-LOT与燧珥suier/FX-CP1保持分人。",
+        "笑谈不补定丈夫死亡、归来或关系变化；缄默不构成认罪、作证同意、产权处分或SQ03完成。"
+      ]
+    }
+  ],
+  "deliveries": [
+    {
+      "report": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/QA-independent-delivery.json",
+        "sha256": "1fb26d204da769fedcad7eba3c302b668f1cd1c698fa77fe591de7f5b612913e",
+        "bytes": 43796
+      },
+      "status": "passed",
+      "delivery_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/delivery.json",
+        "sha256": "aac17dce8a5928dd412cc0ec0732cfdce116f5efa4865e1e7b86f4d3ae017d47",
+        "bytes": 4714
+      },
+      "attachment_count": 7,
+      "attachment_order": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/索妲珂琳_四种表情_浅深合板.png",
+          "sha256": "ec8cc9bfbe76a06601078413d0ccdc4e6466ba504017b047ab62a01abb59eea2",
+          "bytes": 2342798,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/索妲_E1_岔开家常_透明.png",
+          "sha256": "a968b492c8191f3a319e5f68f7f083a12cd8434a4ec1496f0a290d514e6c567b",
+          "bytes": 807823,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/索妲_E2_正色反问_透明.png",
+          "sha256": "9ae1fbea12672a9a6369d5aa2e945e5abcad1d11b62192ddee2851eb7f17c9a1",
+          "bytes": 814967,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/珂琳_E1_规矩苦笑_透明.png",
+          "sha256": "b4d004697adf8cf0b1db4b0a5b7904aa650a9c306367c1250ff0bf0d5e6dd2c5",
+          "bytes": 678381,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/珂琳_E2_认真拒配_透明.png",
+          "sha256": "2d8c7ba1409cdd615eaa006a14618cc97d80da5a28f04f21f2db16cfc95a4583",
+          "bytes": 673830,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/索妲_两种表情_完整源包.zip",
+          "sha256": "672278775222a8bb49917820d4ef1d806acec91722a15535da5d2abd926d901f",
+          "bytes": 15354049,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/珂琳_两种表情_完整源包.zip",
+          "sha256": "07806009160022b9e9248fe3af4db62a15e2aa057a0f9b295631e186e7c0af68",
+          "bytes": 12688738,
+          "matches_delivery_manifest": true
+        }
+      ],
+      "archives": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/珂琳_两种表情_完整源包.zip",
+          "sha256": "07806009160022b9e9248fe3af4db62a15e2aa057a0f9b295631e186e7c0af68",
+          "bytes": 12688738,
+          "members": 51,
+          "testzip_passed": true,
+          "complete_frozen_source_tree": true,
+          "under_18MiB": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_suoda_kelin_delivery_v1/索妲_两种表情_完整源包.zip",
+          "sha256": "672278775222a8bb49917820d4ef1d806acec91722a15535da5d2abd926d901f",
+          "bytes": 15354049,
+          "members": 51,
+          "testzip_passed": true,
+          "complete_frozen_source_tree": true,
+          "under_18MiB": true
+        }
+      ]
+    },
+    {
+      "report": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/QA-independent-delivery.json",
+        "sha256": "0f78258e9da85652d6cc755520950dc1a57143959c036d7251fe557c6b04692f",
+        "bytes": 37387
+      },
+      "status": "passed",
+      "delivery_manifest": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/delivery_manifest.json",
+        "sha256": "6eedff19cd8ca073438e797813b69febb83250247fcc5edf25fab1402851cd8c",
+        "bytes": 2470
+      },
+      "attachment_count": 7,
+      "attachment_order": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/蓟珥绥珥_四表情_浅深对照.png",
+          "sha256": "81bd39c4ecfcf8a71623a8072382f6b698cb933b857a7d84fcd56a9ff8423044",
+          "bytes": 1856875,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/蓟珥_谈井专注_透明.png",
+          "sha256": "8dff9e97b0eddeb4d1bdaaffda3a898ba5d7d7725378dd6ac47e132fec612943",
+          "bytes": 717589,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/蓟珥_闭口谢客_透明.png",
+          "sha256": "d5e6afdfecb6dc727bc0a43d58ba0c61595b1a989bed48038d86fc45c4f6fad0",
+          "bytes": 678800,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/绥珥_说起手艺_透明.png",
+          "sha256": "b06bffe844c9d8bf227d1f7b6acc8073cbdd3d3f44f13b0e46aa71f1f01a1251",
+          "bytes": 592974,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/绥珥_受疑缄默_透明.png",
+          "sha256": "58eba68321ced6c1fa00e17d943e126b9d7c235fdcdcadab37761aa1a94ec4b7",
+          "bytes": 604012,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/蓟珥_两表情_完整源包.zip",
+          "sha256": "bd9c3194840a67663cb46fbdbc86bb2f9a6e6b4eb85170c67101849d47b22e22",
+          "bytes": 8433779,
+          "matches_delivery_manifest": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/绥珥_两表情_完整源包.zip",
+          "sha256": "3a64a5cfb1553e0d5dd4efdf5d4b523267ad84a6d3f488e612a114ba4d9caadd",
+          "bytes": 7366817,
+          "matches_delivery_manifest": true
+        }
+      ],
+      "archives": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/蓟珥_两表情_完整源包.zip",
+          "sha256": "bd9c3194840a67663cb46fbdbc86bb2f9a6e6b4eb85170c67101849d47b22e22",
+          "bytes": 8433779,
+          "members": 40,
+          "testzip_passed": true,
+          "complete_frozen_source_tree": true,
+          "under_18MiB": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/tenth_four_expressions_jier_suier_lot_delivery_v1/绥珥_两表情_完整源包.zip",
+          "sha256": "3a64a5cfb1553e0d5dd4efdf5d4b523267ad84a6d3f488e612a114ba4d9caadd",
+          "bytes": 7366817,
+          "members": 40,
+          "testzip_passed": true,
+          "complete_frozen_source_tree": true,
+          "under_18MiB": true
+        }
+      ]
+    }
+  ],
+  "delivery_upload_handoff": "两组终审passed与最终manifest SHA已发送给/root/upload_tenth_expression_deliveries；Library上传和实际发送不在本审查完成范围。",
+  "not_claimed": [
+    "用户最终美术认可",
+    "Library已上传或用户已收到",
+    "原生游戏像素网格",
+    "part/frame/mask/origin",
+    "装备兼容",
+    "动画连续性",
+    "游戏runtime通过"
+  ]
+}

@@ -1,0 +1,1023 @@
+{
+  "schema_version": "1.0",
+  "review_type": "independent_final_transparent_and_presentation_review",
+  "created_utc": "2026-10-14T01:18:08.694389+00:00",
+  "scope": "只读复核7张selected、1张pending、8张人物浅深审查板及2张最终交付合板；仅写此独立QA，不修改作者目录、原图、prompt、旧raw报告或游戏。",
+  "brief_binding": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/fifth_four_expression_brief.json",
+    "sha256": "b0f8633eabdc4808066d7b48e394ecbd4cda602417a09fb230c16a5dace4b11c"
+  },
+  "prior_raw_review_binding": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_fifth_expression_recovery_20261014.json",
+    "sha256": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3"
+  },
+  "prior_raw_review_expected_sha": "554e3c7e7470c32999ff0d01fb1aae76d4d1ec4b4451b316d017d50c268595f3",
+  "status": "seven_selected_passed_one_pending_failed",
+  "method": [
+    "tools.view_image逐张实际查看7张selected与恩岱E2 pending PNG，然后实际查看全部8张人物review板与2张已修页脚的最终交付合板。",
+    "独立读raw与透明PNG为RGBA数组，重算expected=raw；仅将raw alpha<=8位置的全部RGBA置零；逐像素对比expected与派生，八张均完全一致。",
+    "逐项核原始SHA与旧raw独审，核派生SHA、大小、模式、alpha包围盒、留边、清除低alpha数与technical_qa数值；所有检查通过。",
+    "实际浅深板复核边缘、头发、手足、道具侧别、标签和表情辨识；不用alpha0隐藏RGB判光晕，也不机械设统一头身比。"
+  ],
+  "technical_document_policy": {
+    "reviewed_paths": [
+      "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/technical_qa.json",
+      "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/technical_qa.json",
+      "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/technical_qa.json",
+      "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/technical_qa.json"
+    ],
+    "whole_document_sha_frozen": false,
+    "reason": "作者将在本报告后将candidate状态改为最终状态。仅数值/处理声明由本报告独立重算固化，不冻结候选文档整体SHA。",
+    "observed_operation": "Only RGBA pixels with alpha<=8 set to zero; alpha>8 unchanged; no body drawing, masking, crop, deformation, recolor or quantization.",
+    "assertion_independently_verified": true
+  },
+  "pose_reviews": [
+    {
+      "character_slug": "endai",
+      "character_name": "恩岱",
+      "canonical_id": "FX-BST",
+      "pose_id": "E1",
+      "label_zh": "迟令沉思",
+      "asset_role": "selected_passed_expression",
+      "raw_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/raw/endai_E1_quiet_waiting_reflection_initial.png",
+        "sha256": "e33a0b8e1994af95113a34be305701a7aca61cc63bc659c6e490161806b6c0cb"
+      },
+      "transparent_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/selected/endai_E1_quiet_waiting_reflection_transparent.png",
+        "sha256": "498f18377eaa15418bfbad96eab6bd36b8805e3fa8e3fd2cfe5178665e815d7f",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "actual_png_viewed": true
+      },
+      "independent_pixel_recomputation": {
+        "slug": "endai",
+        "pose_id": "E1",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/raw/endai_E1_quiet_waiting_reflection_initial.png",
+        "selected_or_pending_path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/selected/endai_E1_quiet_waiting_reflection_transparent.png",
+        "is_selected": true,
+        "raw_sha256": "e33a0b8e1994af95113a34be305701a7aca61cc63bc659c6e490161806b6c0cb",
+        "derivative_sha256": "498f18377eaa15418bfbad96eab6bd36b8805e3fa8e3fd2cfe5178665e815d7f",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "exact_expected_rgba_transform": true,
+        "alpha_gt8_unchanged": true,
+        "alpha_le8_now_rgba_zero": true,
+        "changed_pixels_outside_allowed_mask": 0,
+        "raw_matches_previous_visual_audit_sha": true,
+        "raw_sha_matches_technical_qa": true,
+        "derivative_sha_matches_technical_qa": true,
+        "alpha_zero_count": 855616,
+        "alpha_1_to_8_remaining": 0,
+        "alpha_1_to_8_pixels_removed": 13586,
+        "hidden_rgb_alpha0_remaining": 0,
+        "bbox": [
+          149,
+          110,
+          990,
+          1478
+        ],
+        "margins": [
+          149,
+          110,
+          34,
+          58
+        ],
+        "all_computed_checks_pass": true
+      },
+      "transparent_visual_review": {
+        "actual_individual_png_viewed": true,
+        "same_identity_face_costume_and_pose_as_reviewed_raw": true,
+        "hair_hands_feet_and_required_props_complete": true,
+        "all_visible_alpha_margins_positive": true,
+        "genuine_alpha": true,
+        "low_alpha_scatter_removed_without_visible_detail_loss": true,
+        "broad_visible_halo_in_light_dark_boards": false,
+        "new_anatomy_or_expression_damage_from_cleanup": false,
+        "identity_sidedness_observation": "灰黑后梳发、灰短须、方厚下颌及五十来岁残兵身份稳定；保持本人紧凑体型。 三处赭补片及胸腹、腕部局部甲保留；画面右手握披风，画面左有甲护腕与低收曲指保留，无钥匙、门栓、新徽。",
+        "expression_observation": "母图开口看人变为闭口、低眼，内眉稍上提、唇角沉；与E2较集中的目光、压眉有区别。"
+      },
+      "nonblocking_notes": [],
+      "verdict": "pass_for_selected_artwork_delivery",
+      "ready_for_selected_delivery": true
+    },
+    {
+      "character_slug": "endai",
+      "character_name": "恩岱",
+      "canonical_id": "FX-BST",
+      "pose_id": "E2",
+      "label_zh": "无令不允",
+      "asset_role": "pending_audit_only_not_selected",
+      "raw_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/raw/endai_E2_no_order_no_entry_revision1.png",
+        "sha256": "5ad9fb2bf04c0ac4c90094d3ea6d2c7d4ebdede88be8f8e20ef553f667ce52e3"
+      },
+      "transparent_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/pending/endai_E2_no_order_no_entry_transparent.png",
+        "sha256": "49bf5122af299c431bc79bfebcff9e801097073742ce5873045f3187828a0b23",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "actual_png_viewed": true
+      },
+      "independent_pixel_recomputation": {
+        "slug": "endai",
+        "pose_id": "E2",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/raw/endai_E2_no_order_no_entry_revision1.png",
+        "selected_or_pending_path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/pending/endai_E2_no_order_no_entry_transparent.png",
+        "is_selected": false,
+        "raw_sha256": "5ad9fb2bf04c0ac4c90094d3ea6d2c7d4ebdede88be8f8e20ef553f667ce52e3",
+        "derivative_sha256": "49bf5122af299c431bc79bfebcff9e801097073742ce5873045f3187828a0b23",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "exact_expected_rgba_transform": true,
+        "alpha_gt8_unchanged": true,
+        "alpha_le8_now_rgba_zero": true,
+        "changed_pixels_outside_allowed_mask": 0,
+        "raw_matches_previous_visual_audit_sha": true,
+        "raw_sha_matches_technical_qa": true,
+        "derivative_sha_matches_technical_qa": true,
+        "alpha_zero_count": 867314,
+        "alpha_1_to_8_remaining": 0,
+        "alpha_1_to_8_pixels_removed": 18886,
+        "hidden_rgb_alpha0_remaining": 0,
+        "bbox": [
+          159,
+          61,
+          952,
+          1483
+        ],
+        "margins": [
+          159,
+          61,
+          72,
+          53
+        ],
+        "all_computed_checks_pass": true
+      },
+      "transparent_visual_review": {
+        "actual_individual_png_viewed": true,
+        "same_identity_face_costume_and_pose_as_reviewed_raw": true,
+        "hair_hands_feet_and_required_props_complete": true,
+        "all_visible_alpha_margins_positive": true,
+        "genuine_alpha": true,
+        "low_alpha_scatter_removed_without_visible_detail_loss": true,
+        "broad_visible_halo_in_light_dark_boards": false,
+        "new_anatomy_or_expression_damage_from_cleanup": false,
+        "identity_sidedness_observation": "发型、灰须、服装、补片及老兵身份仍辨认得出；但头相对全身显著缩小、身体与小腿显长，无法只解释为表情或微小抬头。 画面右手仍握披风、画面左手低收；三处补片与局部甲均在，无武器或通行道具。",
+        "expression_observation": "压眉、凝视画面右及闭口坚决可读；表情任务本身成立。"
+      },
+      "nonblocking_notes": [],
+      "verdict": "not_passed_proportion_lock_still_failed",
+      "ready_for_selected_delivery": false,
+      "blocking_issue": {
+        "category": "mother_proportion_continuity",
+        "observation": "E2相较本人母图和E1仍呈头较小、身腿较长。alpha清理没有也不能消除此比例硬错；这里不是机械要求四人统一比例。",
+        "revision_budget": "首稿双人错误，唯一revision1仍有比例问题，按冻结brief不再新增第三稿。",
+        "storage": "pending仅作问题证据；不得进selected或合格表情计数。"
+      }
+    },
+    {
+      "character_slug": "wadun",
+      "character_name": "瓦顿",
+      "canonical_id": "FX-SGE",
+      "pose_id": "E1",
+      "label_zh": "低声干笑",
+      "asset_role": "selected_passed_expression",
+      "raw_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/raw/wadun_E1_dry_chuckle_about_pot_initial_20261014.png",
+        "sha256": "a0d8c893c5ea72b558b7f32c97e7c59c40697c70bdd8a0b566b6e44eb2b854b6"
+      },
+      "transparent_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/selected/wadun_E1_dry_chuckle_about_pot_transparent.png",
+        "sha256": "a8a6fed83cef5479f68c293edffd3a37d1f4fc589fe1b96427f020b521c7916d",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "actual_png_viewed": true
+      },
+      "independent_pixel_recomputation": {
+        "slug": "wadun",
+        "pose_id": "E1",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/raw/wadun_E1_dry_chuckle_about_pot_initial_20261014.png",
+        "selected_or_pending_path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/selected/wadun_E1_dry_chuckle_about_pot_transparent.png",
+        "is_selected": true,
+        "raw_sha256": "a0d8c893c5ea72b558b7f32c97e7c59c40697c70bdd8a0b566b6e44eb2b854b6",
+        "derivative_sha256": "a8a6fed83cef5479f68c293edffd3a37d1f4fc589fe1b96427f020b521c7916d",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "exact_expected_rgba_transform": true,
+        "alpha_gt8_unchanged": true,
+        "alpha_le8_now_rgba_zero": true,
+        "changed_pixels_outside_allowed_mask": 0,
+        "raw_matches_previous_visual_audit_sha": true,
+        "raw_sha_matches_technical_qa": true,
+        "derivative_sha_matches_technical_qa": true,
+        "alpha_zero_count": 716493,
+        "alpha_1_to_8_remaining": 0,
+        "alpha_1_to_8_pixels_removed": 23350,
+        "hidden_rgb_alpha0_remaining": 0,
+        "bbox": [
+          45,
+          95,
+          1008,
+          1490
+        ],
+        "margins": [
+          45,
+          95,
+          16,
+          46
+        ],
+        "all_computed_checks_pass": true
+      },
+      "transparent_visual_review": {
+        "actual_individual_png_viewed": true,
+        "same_identity_face_costume_and_pose_as_reviewed_raw": true,
+        "hair_hands_feet_and_required_props_complete": true,
+        "all_visible_alpha_margins_positive": true,
+        "genuine_alpha": true,
+        "low_alpha_scatter_removed_without_visible_detail_loss": true,
+        "broad_visible_halo_in_light_dark_boards": false,
+        "new_anatomy_or_expression_damage_from_cleanup": false,
+        "identity_sidedness_observation": "二十多岁成年男性的棕蓬短发、宽额、初生胡茬、旧军衣与原低蹲体型保持；没有站起或赋予军衔。 残甲仍在人物右侧（画面左），宽头木锅铲仍插人物左腰（画面右）束带；双肘近膝、双手松垂，无取铲、敬礼、拳头、锅或旗。",
+        "expression_observation": "母图闭嘴小笑变为不对称小幅开口笑，眉稍松、眼神仍警醒；同E2闭嘴防备有清楚差别。"
+      },
+      "nonblocking_notes": [
+        {
+          "severity": "minor_visual_deviation_not_hard_error",
+          "observation": "E1口部有一条窄亮色上齿；brief说“不用整齐白牙”。此处并非整齐逐颗牙齿或夸张露牙大笑，但措辞贴合度应保留备注，不隐去。",
+          "disposition": "不以单一亮色齿线或轻微自然表情差异触发额外硬错修订。"
+        }
+      ],
+      "verdict": "pass_for_selected_artwork_delivery",
+      "ready_for_selected_delivery": true
+    },
+    {
+      "character_slug": "wadun",
+      "character_name": "瓦顿",
+      "canonical_id": "FX-SGE",
+      "pose_id": "E2",
+      "label_zh": "敛笑不归",
+      "asset_role": "selected_passed_expression",
+      "raw_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/raw/wadun_E2_smile_fades_refuse_return_initial_20261014.png",
+        "sha256": "49cbb0d7c970257baa951d3f90b7e45f41d9fa4095eea6294b700c8c6ff62ce5"
+      },
+      "transparent_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/selected/wadun_E2_smile_fades_refuse_return_transparent.png",
+        "sha256": "557acb2e0bb437be6874b46cea4a9cd3c10a5386465b623b23e1fe134bcefaff",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "actual_png_viewed": true
+      },
+      "independent_pixel_recomputation": {
+        "slug": "wadun",
+        "pose_id": "E2",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/raw/wadun_E2_smile_fades_refuse_return_initial_20261014.png",
+        "selected_or_pending_path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/selected/wadun_E2_smile_fades_refuse_return_transparent.png",
+        "is_selected": true,
+        "raw_sha256": "49cbb0d7c970257baa951d3f90b7e45f41d9fa4095eea6294b700c8c6ff62ce5",
+        "derivative_sha256": "557acb2e0bb437be6874b46cea4a9cd3c10a5386465b623b23e1fe134bcefaff",
+        "size": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "exact_expected_rgba_transform": true,
+        "alpha_gt8_unchanged": true,
+        "alpha_le8_now_rgba_zero": true,
+        "changed_pixels_outside_allowed_mask": 0,
+        "raw_matches_previous_visual_audit_sha": true,
+        "raw_sha_matches_technical_qa": true,
+        "derivative_sha_matches_technical_qa": true,
+        "alpha_zero_count": 719228,
+        "alpha_1_to_8_remaining": 0,
+        "alpha_1_to_8_pixels_removed": 23422,
+        "hidden_rgb_alpha0_remaining": 0,
+        "bbox": [
+          42,
+          99,
+          1007,
+          1489
+        ],
+        "margins": [
+          42,
+          99,
+          17,
+          47
+        ],
+        "all_computed_checks_pass": true
+      },
+      "transparent_visual_review": {
+        "actual_individual_png_viewed": true,
+        "same_identity_face_costume_and_pose_as_reviewed_raw": true,
+        "hair_hands_feet_and_required_props_complete": true,
+        "all_visible_alpha_margins_positive": true,
+        "genuine_alpha": true,
+        "low_alpha_scatter_removed_without_visible_detail_loss": true,
+        "broad_visible_halo_in_light_dark_boards": false,
+        "new_anatomy_or_expression_damage_from_cleanup": false,
+        "identity_sidedness_observation": "二十多岁成年男性的棕蓬短发、宽额、初生胡茬、旧军衣与原低蹲体型保持；没有站起或赋予军衔。 残甲仍在人物右侧（画面左），宽头木锅铲仍插人物左腰（画面右）束带；双肘近膝、双手松垂，无取铲、敬礼、拳头、锅或旗。",
+        "expression_observation": "母图轻笑消失、眉眼略下压且目光朝画面右、嘴平合；与E1张口笑可读地区分，未咬牙怒吼。"
+      },
+      "nonblocking_notes": [],
+      "verdict": "pass_for_selected_artwork_delivery",
+      "ready_for_selected_delivery": true
+    },
+    {
+      "character_slug": "ertai",
+      "character_name": "珥泰",
+      "canonical_id": "FX-CMP",
+      "pose_id": "E1",
+      "label_zh": "对板思量",
+      "asset_role": "selected_passed_expression",
+      "raw_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/raw/ertai_E1_quiet_inventory_weight_recovered_initial.png",
+        "sha256": "f44b2bfd2327c5f84fb905c7444d899646f6e477a05c0b71a2a245a14a772c6e"
+      },
+      "transparent_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/selected/ertai_E1_quiet_inventory_weight_transparent.png",
+        "sha256": "c6701cfee4f740aab13e69ba4ae7d6224b5eea6fcc5c5ccc70ae02eb16075892",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "actual_png_viewed": true
+      },
+      "independent_pixel_recomputation": {
+        "slug": "ertai",
+        "pose_id": "E1",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/raw/ertai_E1_quiet_inventory_weight_recovered_initial.png",
+        "selected_or_pending_path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/selected/ertai_E1_quiet_inventory_weight_transparent.png",
+        "is_selected": true,
+        "raw_sha256": "f44b2bfd2327c5f84fb905c7444d899646f6e477a05c0b71a2a245a14a772c6e",
+        "derivative_sha256": "c6701cfee4f740aab13e69ba4ae7d6224b5eea6fcc5c5ccc70ae02eb16075892",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "exact_expected_rgba_transform": true,
+        "alpha_gt8_unchanged": true,
+        "alpha_le8_now_rgba_zero": true,
+        "changed_pixels_outside_allowed_mask": 0,
+        "raw_matches_previous_visual_audit_sha": true,
+        "raw_sha_matches_technical_qa": true,
+        "derivative_sha_matches_technical_qa": true,
+        "alpha_zero_count": 1026527,
+        "alpha_1_to_8_remaining": 0,
+        "alpha_1_to_8_pixels_removed": 16720,
+        "hidden_rgb_alpha0_remaining": 0,
+        "bbox": [
+          260,
+          65,
+          899,
+          1356
+        ],
+        "margins": [
+          260,
+          65,
+          219,
+          51
+        ],
+        "all_computed_checks_pass": true
+      },
+      "transparent_visual_review": {
+        "actual_individual_png_viewed": true,
+        "same_identity_face_costume_and_pose_as_reviewed_raw": true,
+        "hair_hands_feet_and_required_props_complete": true,
+        "all_visible_alpha_margins_positive": true,
+        "genuine_alpha": true,
+        "low_alpha_scatter_removed_without_visible_detail_loss": true,
+        "broad_visible_halo_in_light_dark_boards": false,
+        "new_anatomy_or_expression_damage_from_cleanup": false,
+        "identity_sidedness_observation": "深棕侧分长发、短须与疲倦成年脸保留；灰宽旧军衣、米白领袖下摆及棕靴一致，没有升级军官。 木板仍在画面右由人物左手抱住下缘；同一细笔杆在画面左由人物右手握着，停近板边。板无可读名单、印章或勾号。",
+        "expression_observation": "低头低眼看板，嘴闭合、唇角下沉，区别母图开口看人及E2侧方回避。"
+      },
+      "nonblocking_notes": [
+        {
+          "severity": "nonblocking",
+          "observation": "两张变化克制，靠低眼对板与侧目避答、眉口细变区分；不称剧烈情绪，也不把单张静止画当作连续摇头动画。"
+        }
+      ],
+      "verdict": "pass_for_selected_artwork_delivery",
+      "ready_for_selected_delivery": true
+    },
+    {
+      "character_slug": "ertai",
+      "character_name": "珥泰",
+      "canonical_id": "FX-CMP",
+      "pose_id": "E2",
+      "label_zh": "摇头避军务",
+      "asset_role": "selected_passed_expression",
+      "raw_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/raw/ertai_E2_reserved_shake_no_military_recovered_initial.png",
+        "sha256": "7c8b0732a60cd98055affef404cefa4ec827e9db8d451d8f1cc144dbeb985deb"
+      },
+      "transparent_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/selected/ertai_E2_reserved_shake_no_military_transparent.png",
+        "sha256": "ffd6fdf64c78356b6fcba846cfade794135fe787c360a9854ac34b95c29885c7",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "actual_png_viewed": true
+      },
+      "independent_pixel_recomputation": {
+        "slug": "ertai",
+        "pose_id": "E2",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/raw/ertai_E2_reserved_shake_no_military_recovered_initial.png",
+        "selected_or_pending_path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/selected/ertai_E2_reserved_shake_no_military_transparent.png",
+        "is_selected": true,
+        "raw_sha256": "7c8b0732a60cd98055affef404cefa4ec827e9db8d451d8f1cc144dbeb985deb",
+        "derivative_sha256": "ffd6fdf64c78356b6fcba846cfade794135fe787c360a9854ac34b95c29885c7",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "exact_expected_rgba_transform": true,
+        "alpha_gt8_unchanged": true,
+        "alpha_le8_now_rgba_zero": true,
+        "changed_pixels_outside_allowed_mask": 0,
+        "raw_matches_previous_visual_audit_sha": true,
+        "raw_sha_matches_technical_qa": true,
+        "derivative_sha_matches_technical_qa": true,
+        "alpha_zero_count": 999725,
+        "alpha_1_to_8_remaining": 0,
+        "alpha_1_to_8_pixels_removed": 11940,
+        "hidden_rgb_alpha0_remaining": 0,
+        "bbox": [
+          255,
+          65,
+          911,
+          1391
+        ],
+        "margins": [
+          255,
+          65,
+          207,
+          16
+        ],
+        "all_computed_checks_pass": true
+      },
+      "transparent_visual_review": {
+        "actual_individual_png_viewed": true,
+        "same_identity_face_costume_and_pose_as_reviewed_raw": true,
+        "hair_hands_feet_and_required_props_complete": true,
+        "all_visible_alpha_margins_positive": true,
+        "genuine_alpha": true,
+        "low_alpha_scatter_removed_without_visible_detail_loss": true,
+        "broad_visible_halo_in_light_dark_boards": false,
+        "new_anatomy_or_expression_damage_from_cleanup": false,
+        "identity_sidedness_observation": "与母图成年脸型、侧分发、短须和宽军衣保持连续，未见身份或年龄重设。 左右手、笔杆、木板位置及数量均保持；没有盖章、交板或新的文书。",
+        "expression_observation": "嘴由母图小开口变短闭线，眉眼较平、目光侧避；与E1明显下看有差别。单张能支持回避回答的静止瞬间，不能证明连续摇头动画。"
+      },
+      "nonblocking_notes": [
+        {
+          "severity": "nonblocking",
+          "observation": "两张变化克制，靠低眼对板与侧目避答、眉口细变区分；不称剧烈情绪，也不把单张静止画当作连续摇头动画。"
+        }
+      ],
+      "verdict": "pass_for_selected_artwork_delivery",
+      "ready_for_selected_delivery": true
+    },
+    {
+      "character_slug": "suier",
+      "character_name": "燧珥",
+      "canonical_id": "FX-CP1",
+      "pose_id": "E1",
+      "label_zh": "闻哨噤声",
+      "asset_role": "selected_passed_expression",
+      "raw_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/raw/suier_E1_whistle_silent_alert_recovered_initial.png",
+        "sha256": "f47fd6758705ac2e87138834524378afd24c8788cf23944b9d551c87d8557641"
+      },
+      "transparent_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/selected/suier_E1_whistle_silent_alert_transparent.png",
+        "sha256": "e4ceb92d469100d2b7edf77102323ef2afc6b0191c3814d668d24122ad322c2d",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "actual_png_viewed": true
+      },
+      "independent_pixel_recomputation": {
+        "slug": "suier",
+        "pose_id": "E1",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/raw/suier_E1_whistle_silent_alert_recovered_initial.png",
+        "selected_or_pending_path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/selected/suier_E1_whistle_silent_alert_transparent.png",
+        "is_selected": true,
+        "raw_sha256": "f47fd6758705ac2e87138834524378afd24c8788cf23944b9d551c87d8557641",
+        "derivative_sha256": "e4ceb92d469100d2b7edf77102323ef2afc6b0191c3814d668d24122ad322c2d",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "exact_expected_rgba_transform": true,
+        "alpha_gt8_unchanged": true,
+        "alpha_le8_now_rgba_zero": true,
+        "changed_pixels_outside_allowed_mask": 0,
+        "raw_matches_previous_visual_audit_sha": true,
+        "raw_sha_matches_technical_qa": true,
+        "derivative_sha_matches_technical_qa": true,
+        "alpha_zero_count": 1055217,
+        "alpha_1_to_8_remaining": 0,
+        "alpha_1_to_8_pixels_removed": 12043,
+        "hidden_rgb_alpha0_remaining": 0,
+        "bbox": [
+          277,
+          46,
+          857,
+          1338
+        ],
+        "margins": [
+          277,
+          46,
+          261,
+          69
+        ],
+        "all_computed_checks_pass": true
+      },
+      "transparent_visual_review": {
+        "actual_individual_png_viewed": true,
+        "same_identity_face_costume_and_pose_as_reviewed_raw": true,
+        "hair_hands_feet_and_required_props_complete": true,
+        "all_visible_alpha_margins_positive": true,
+        "genuine_alpha": true,
+        "low_alpha_scatter_removed_without_visible_detail_loss": true,
+        "broad_visible_halo_in_light_dark_boards": false,
+        "new_anatomy_or_expression_damage_from_cleanup": false,
+        "identity_sidedness_observation": "保留FX-CP1成年男性窄下颌、短胡茬、凌乱发和灰褐破衣；未混成FX-LOT绥珥。 画面右手仍护领、米白内衫遮胸；画面左手低收曲指。画面左破半靴/包布/露趾与画面右整高靴正确，没有新道具或截足。",
+        "expression_observation": "看向画面左、嘴从开口变闭合，警觉集中；与E2低头低眼有清楚区别。睁眼变化克制，不是夸张惊恐。"
+      },
+      "nonblocking_notes": [],
+      "verdict": "pass_for_selected_artwork_delivery",
+      "ready_for_selected_delivery": true
+    },
+    {
+      "character_slug": "suier",
+      "character_name": "燧珥",
+      "canonical_id": "FX-CP1",
+      "pose_id": "E2",
+      "label_zh": "低眼自省",
+      "asset_role": "selected_passed_expression",
+      "raw_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/raw/suier_E2_uneasy_self_reflection_recovered_initial.png",
+        "sha256": "98adde9283135129b8bdef770e52c4dce9eef5f09e7d75001036c46ebd5750cc"
+      },
+      "transparent_evidence": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/selected/suier_E2_uneasy_self_reflection_transparent.png",
+        "sha256": "2d1fed92c528b9c63354fc88a167746a36d9511354c3bd5b99397acff8c169b5",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "actual_png_viewed": true
+      },
+      "independent_pixel_recomputation": {
+        "slug": "suier",
+        "pose_id": "E2",
+        "raw_path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/raw/suier_E2_uneasy_self_reflection_recovered_initial.png",
+        "selected_or_pending_path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/selected/suier_E2_uneasy_self_reflection_transparent.png",
+        "is_selected": true,
+        "raw_sha256": "98adde9283135129b8bdef770e52c4dce9eef5f09e7d75001036c46ebd5750cc",
+        "derivative_sha256": "2d1fed92c528b9c63354fc88a167746a36d9511354c3bd5b99397acff8c169b5",
+        "size": [
+          1118,
+          1407
+        ],
+        "mode": "RGBA",
+        "exact_expected_rgba_transform": true,
+        "alpha_gt8_unchanged": true,
+        "alpha_le8_now_rgba_zero": true,
+        "changed_pixels_outside_allowed_mask": 0,
+        "raw_matches_previous_visual_audit_sha": true,
+        "raw_sha_matches_technical_qa": true,
+        "derivative_sha_matches_technical_qa": true,
+        "alpha_zero_count": 1069048,
+        "alpha_1_to_8_remaining": 0,
+        "alpha_1_to_8_pixels_removed": 13913,
+        "hidden_rgb_alpha0_remaining": 0,
+        "bbox": [
+          291,
+          60,
+          854,
+          1359
+        ],
+        "margins": [
+          291,
+          60,
+          264,
+          48
+        ],
+        "all_computed_checks_pass": true
+      },
+      "transparent_visual_review": {
+        "actual_individual_png_viewed": true,
+        "same_identity_face_costume_and_pose_as_reviewed_raw": true,
+        "hair_hands_feet_and_required_props_complete": true,
+        "all_visible_alpha_margins_positive": true,
+        "genuine_alpha": true,
+        "low_alpha_scatter_removed_without_visible_detail_loss": true,
+        "broad_visible_halo_in_light_dark_boards": false,
+        "new_anatomy_or_expression_damage_from_cleanup": false,
+        "identity_sidedness_observation": "同一成年男性、凌乱短发、胡茬、旧衣和母图朝向保留，未幼化或混人。 护领手与低放手侧别正确；画面左破半靴、包布、露趾及画面右整靴保留，脚完整，无新增伤或康复暗示。",
+        "expression_observation": "头稍低、眼睑下垂、眉内端上提且闭口，呈难于启齿；与E1抬眼侧听和母图开口澄清不同。"
+      },
+      "nonblocking_notes": [],
+      "verdict": "pass_for_selected_artwork_delivery",
+      "ready_for_selected_delivery": true
+    }
+  ],
+  "board_reviews": [
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/review/endai_mother_expressions_light.png",
+      "sha256": "1aedf795e0df3fc8b6777b7c12e556b369fc3f3fb2bc8b41f0dd334202b06fc1",
+      "size": [
+        1800,
+        1400
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "individual_mother_and_two_expression_review",
+      "character_slug": "endai",
+      "background": "light",
+      "labels_read": [
+        "已交付母图",
+        "迟令沉思",
+        "无令不允"
+      ],
+      "name_and_canonical_id_match_brief": true,
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "composition_keeps_readable_body_and_face": true,
+      "background_edge_readability": "人物外轮廓、眉眼嘴和物件边缘在本底可读，未见宽晕/方形背景残块。",
+      "disclaimer_read": "原创可逆演出提案｜不是剧情结果｜未验证游戏运行、装备或动画兼容",
+      "verdict": "pass_as_review_board",
+      "pending_label_read": "待处理：头身比例偏离，未通过",
+      "pending_expression_not_mislabeled_passed": true,
+      "includes_failed_expression_for_review_only": true
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/endai/expressions_v1/review/endai_mother_expressions_dark.png",
+      "sha256": "1f94d777f118812ec461ae0efa876901019dd6c96e0c83a5740275acf453e762",
+      "size": [
+        1800,
+        1400
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "individual_mother_and_two_expression_review",
+      "character_slug": "endai",
+      "background": "dark",
+      "labels_read": [
+        "已交付母图",
+        "迟令沉思",
+        "无令不允"
+      ],
+      "name_and_canonical_id_match_brief": true,
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "composition_keeps_readable_body_and_face": true,
+      "background_edge_readability": "人物外轮廓、眉眼嘴和物件边缘在本底可读，未见宽晕/方形背景残块。",
+      "disclaimer_read": "原创可逆演出提案｜不是剧情结果｜未验证游戏运行、装备或动画兼容",
+      "verdict": "pass_as_review_board",
+      "pending_label_read": "待处理：头身比例偏离，未通过",
+      "pending_expression_not_mislabeled_passed": true,
+      "includes_failed_expression_for_review_only": true
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/review/wadun_mother_expressions_light.png",
+      "sha256": "9ea0eb52bea5b66fd30995a327e597aea5d7dbb84b47ebc6e1c7b35a8935c8b7",
+      "size": [
+        1800,
+        1400
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "individual_mother_and_two_expression_review",
+      "character_slug": "wadun",
+      "background": "light",
+      "labels_read": [
+        "已交付母图",
+        "低声干笑",
+        "敛笑不归"
+      ],
+      "name_and_canonical_id_match_brief": true,
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "composition_keeps_readable_body_and_face": true,
+      "background_edge_readability": "人物外轮廓、眉眼嘴和物件边缘在本底可读，未见宽晕/方形背景残块。",
+      "disclaimer_read": "原创可逆演出提案｜不是剧情结果｜未验证游戏运行、装备或动画兼容",
+      "verdict": "pass_as_review_board"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/wadun/expressions_v1/review/wadun_mother_expressions_dark.png",
+      "sha256": "96823d31b6122d74ecbc02feedaa2984cb945afef572fa6f704321711f6e6450",
+      "size": [
+        1800,
+        1400
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "individual_mother_and_two_expression_review",
+      "character_slug": "wadun",
+      "background": "dark",
+      "labels_read": [
+        "已交付母图",
+        "低声干笑",
+        "敛笑不归"
+      ],
+      "name_and_canonical_id_match_brief": true,
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "composition_keeps_readable_body_and_face": true,
+      "background_edge_readability": "人物外轮廓、眉眼嘴和物件边缘在本底可读，未见宽晕/方形背景残块。",
+      "disclaimer_read": "原创可逆演出提案｜不是剧情结果｜未验证游戏运行、装备或动画兼容",
+      "verdict": "pass_as_review_board"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/review/ertai_mother_expressions_light.png",
+      "sha256": "c68a30b131b24b7ac84900c6cf1aae8327f974a226a532635aaaeeebae2724b4",
+      "size": [
+        1800,
+        1400
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "individual_mother_and_two_expression_review",
+      "character_slug": "ertai",
+      "background": "light",
+      "labels_read": [
+        "已交付母图",
+        "对板思量",
+        "摇头避军务"
+      ],
+      "name_and_canonical_id_match_brief": true,
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "composition_keeps_readable_body_and_face": true,
+      "background_edge_readability": "人物外轮廓、眉眼嘴和物件边缘在本底可读，未见宽晕/方形背景残块。",
+      "disclaimer_read": "原创可逆演出提案｜不是剧情结果｜未验证游戏运行、装备或动画兼容",
+      "verdict": "pass_as_review_board"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/ertai/expressions_v1/review/ertai_mother_expressions_dark.png",
+      "sha256": "e1fbf1cf6c30bb736ce07f461f04604cb96e59ba3360180654343615782392f4",
+      "size": [
+        1800,
+        1400
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "individual_mother_and_two_expression_review",
+      "character_slug": "ertai",
+      "background": "dark",
+      "labels_read": [
+        "已交付母图",
+        "对板思量",
+        "摇头避军务"
+      ],
+      "name_and_canonical_id_match_brief": true,
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "composition_keeps_readable_body_and_face": true,
+      "background_edge_readability": "人物外轮廓、眉眼嘴和物件边缘在本底可读，未见宽晕/方形背景残块。",
+      "disclaimer_read": "原创可逆演出提案｜不是剧情结果｜未验证游戏运行、装备或动画兼容",
+      "verdict": "pass_as_review_board"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/review/suier_mother_expressions_light.png",
+      "sha256": "693106e9a9efc8fbecc650c8f1ae8a1e672fe02d52018519c95b9f3df5282087",
+      "size": [
+        1800,
+        1400
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "individual_mother_and_two_expression_review",
+      "character_slug": "suier",
+      "background": "light",
+      "labels_read": [
+        "已交付母图",
+        "闻哨噤声",
+        "低眼自省"
+      ],
+      "name_and_canonical_id_match_brief": true,
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "composition_keeps_readable_body_and_face": true,
+      "background_edge_readability": "人物外轮廓、眉眼嘴和物件边缘在本底可读，未见宽晕/方形背景残块。",
+      "disclaimer_read": "原创可逆演出提案｜不是剧情结果｜未验证游戏运行、装备或动画兼容",
+      "verdict": "pass_as_review_board"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/suier/expressions_v1/review/suier_mother_expressions_dark.png",
+      "sha256": "5813b82937ada7f429cdc6666f4d3c0b2259500045632db987b0e6446a7083cc",
+      "size": [
+        1800,
+        1400
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "individual_mother_and_two_expression_review",
+      "character_slug": "suier",
+      "background": "dark",
+      "labels_read": [
+        "已交付母图",
+        "闻哨噤声",
+        "低眼自省"
+      ],
+      "name_and_canonical_id_match_brief": true,
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "composition_keeps_readable_body_and_face": true,
+      "background_edge_readability": "人物外轮廓、眉眼嘴和物件边缘在本底可读，未见宽晕/方形背景残块。",
+      "disclaimer_read": "原创可逆演出提案｜不是剧情结果｜未验证游戏运行、装备或动画兼容",
+      "verdict": "pass_as_review_board"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_endai_wadun_delivery_v1/恩岱_瓦顿_三种合格表情_浅深对照.png",
+      "sha256": "28f63a066bb771daf98b28d465cc584f66af395fd0676e6106d65f217c2885f7",
+      "size": [
+        1800,
+        1800
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "delivery_light_dark_combined",
+      "group": "endai_wadun",
+      "current_sha_matches_parent_final_board_version": true,
+      "passed_expression_count": 3,
+      "labels_read": [
+        "恩岱｜迟令沉思",
+        "瓦顿｜低声干笑",
+        "瓦顿｜敛笑不归"
+      ],
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "same_expressions_in_light_and_dark_rows": true,
+      "failed_endai_E2_not_present": true,
+      "footer_read": "全身透明原图另附｜未验证游戏运行、装备与动画兼容",
+      "footer_stays_within_its_background_area": true,
+      "footer_notes": "最终版页脚已在浅深分界上方留足空间；浅底与深底均可读。第二板另看原尺寸底部检查裁图，确认页脚完整。",
+      "visual_verdict": "pass_for_delivery_board",
+      "title_read": "恩岱·瓦顿｜三张合格表情",
+      "subtitle_read": "恩岱E2比例未通过，未列入合格图；原稿与问题说明在恩岱源包。"
+    },
+    {
+      "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_ertai_suier_delivery_v1/珥泰_燧珥_四种表情_浅深对照.png",
+      "sha256": "54d1b7257601dbc43461964fe566bebbfda027555e3d19a1b1baad18dec3f1f1",
+      "size": [
+        1800,
+        1800
+      ],
+      "mode": "RGB",
+      "actual_png_viewed": true,
+      "board_type": "delivery_light_dark_combined",
+      "group": "ertai_suier",
+      "current_sha_matches_parent_final_board_version": true,
+      "passed_expression_count": 4,
+      "labels_read": [
+        "珥泰｜对板思量",
+        "珥泰｜摇头避军务",
+        "燧珥｜闻哨噤声",
+        "燧珥｜低眼自省"
+      ],
+      "labels_legible_and_not_clipped": true,
+      "hands_feet_hair_props_complete": true,
+      "same_expressions_in_light_and_dark_rows": true,
+      "failed_endai_E2_not_present": true,
+      "footer_read": "全身透明原图另附｜未验证游戏运行、装备与动画兼容",
+      "footer_stays_within_its_background_area": true,
+      "footer_notes": "最终版页脚已在浅深分界上方留足空间；浅底与深底均可读。第二板另看原尺寸底部检查裁图，确认页脚完整。",
+      "visual_verdict": "pass_for_delivery_board",
+      "title_read": "珥泰·燧珥四种表情",
+      "subtitle_read": "人物表情为可逆演出提案，不代表剧情已完成。"
+    }
+  ],
+  "delivery_groups": [
+    {
+      "group": "endai_wadun",
+      "delivery_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_endai_wadun_delivery_v1",
+      "passed_expression_count": 3,
+      "passed_pose_ids": [
+        "endai_E1",
+        "wadun_E1",
+        "wadun_E2"
+      ],
+      "transparent_delivery_copy_bindings": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_endai_wadun_delivery_v1/endai_E1_quiet_waiting_reflection_transparent.png",
+          "sha256": "498f18377eaa15418bfbad96eab6bd36b8805e3fa8e3fd2cfe5178665e815d7f",
+          "byte_identical_to_selected": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_endai_wadun_delivery_v1/wadun_E1_dry_chuckle_about_pot_transparent.png",
+          "sha256": "a8a6fed83cef5479f68c293edffd3a37d1f4fc589fe1b96427f020b521c7916d",
+          "byte_identical_to_selected": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_endai_wadun_delivery_v1/wadun_E2_smile_fades_refuse_return_transparent.png",
+          "sha256": "557acb2e0bb437be6874b46cea4a9cd3c10a5386465b623b23e1fe134bcefaff",
+          "byte_identical_to_selected": true
+        }
+      ],
+      "delivery_board_binding": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_endai_wadun_delivery_v1/恩岱_瓦顿_三种合格表情_浅深对照.png",
+        "sha256": "28f63a066bb771daf98b28d465cc584f66af395fd0676e6106d65f217c2885f7"
+      },
+      "ready_for_author_manifest_freeze_and_zip": true,
+      "zip_status": "not_created_or_reviewed_by_this_independent_review",
+      "remaining_failed_pose": "endai_E2"
+    },
+    {
+      "group": "ertai_suier",
+      "delivery_directory": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_ertai_suier_delivery_v1",
+      "passed_expression_count": 4,
+      "passed_pose_ids": [
+        "ertai_E1",
+        "ertai_E2",
+        "suier_E1",
+        "suier_E2"
+      ],
+      "transparent_delivery_copy_bindings": [
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_ertai_suier_delivery_v1/ertai_E1_quiet_inventory_weight_transparent.png",
+          "sha256": "c6701cfee4f740aab13e69ba4ae7d6224b5eea6fcc5c5ccc70ae02eb16075892",
+          "byte_identical_to_selected": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_ertai_suier_delivery_v1/ertai_E2_reserved_shake_no_military_transparent.png",
+          "sha256": "ffd6fdf64c78356b6fcba846cfade794135fe787c360a9854ac34b95c29885c7",
+          "byte_identical_to_selected": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_ertai_suier_delivery_v1/suier_E1_whistle_silent_alert_transparent.png",
+          "sha256": "e4ceb92d469100d2b7edf77102323ef2afc6b0191c3814d668d24122ad322c2d",
+          "byte_identical_to_selected": true
+        },
+        {
+          "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_ertai_suier_delivery_v1/suier_E2_uneasy_self_reflection_transparent.png",
+          "sha256": "2d1fed92c528b9c63354fc88a167746a36d9511354c3bd5b99397acff8c169b5",
+          "byte_identical_to_selected": true
+        }
+      ],
+      "delivery_board_binding": {
+        "path": "Assets/CharacterDesigns/20261013/expressive/new_story/fifth_four_expressions_ertai_suier_delivery_v1/珥泰_燧珥_四种表情_浅深对照.png",
+        "sha256": "54d1b7257601dbc43461964fe566bebbfda027555e3d19a1b1baad18dec3f1f1"
+      },
+      "ready_for_author_manifest_freeze_and_zip": true,
+      "zip_status": "not_created_or_reviewed_by_this_independent_review",
+      "remaining_failed_pose": null
+    }
+  ],
+  "summary": {
+    "selected_pngs_passed": 7,
+    "pending_pngs_not_passed": 1,
+    "raw_to_derivative_exact_transform_checks_passed": 8,
+    "individual_review_boards_passed": 8,
+    "delivery_combined_boards_passed": 2,
+    "first_delivery_passed_expressions": 3,
+    "second_delivery_passed_expressions": 4,
+    "expression_task_result": "7完成、1未通过",
+    "all_eight_passed": false,
+    "ready_to_freeze_passed_artwork_and_package": true,
+    "required_status_preservation": "恩岱E2维持未通过/修订额度耗尽，只能保留为raw及pending审查证据；不得将恩岱两表情或8/8标完成。"
+  },
+  "nonblocking_notes": [
+    "珥泰两张表情区别克制，描述应为低眼对板与侧目避答，不称剧烈情绪或连续摇头动画。",
+    "瓦顿E1窄亮上齿线保留前次小偏差备注；没有改变此前视觉通过结论，也不触发额外生图。"
+  ],
+  "limitations": [
+    "本报告通过的是绑定SHA的美术PNG与呈现板，不代表游戏网格、装备、part/frame/mask/origin、动画连续性或实机运行通过。",
+    "本轮不认证无法直接取证的历史生成prompt、输入引用参数或调用时间；原始出处限制沿用前次报告。",
+    "manifest、FINAL_STATUS与ZIP由作者在本报告后冻结/制作；本报告不是尚未创建ZIP的成员或完整性验收。"
+  ]
+}

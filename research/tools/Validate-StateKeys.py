@@ -1,6 +1,7 @@
 """Validate the S114 state-key map by recomputing keys from the sources."""
 from pathlib import Path
 import json, hashlib, re
+from HeavyEdges import resolve_keys
 ROOT = Path(__file__).resolve().parents[2]; V = ROOT / 'design'
 def read(p): return json.loads((ROOT / p).read_text(encoding='utf-8-sig'))
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -50,6 +51,13 @@ for n in fx['npcs']:
     add(f'presence_{k(n["id"])}', 'presence', n['id'], ['present', 'absent', 'dead', 'refused'])
 for e in model['effects']: add(f'receipt_{k(e["id"])}', 'receipt', e['id'], ['false', 'true'])
 for e in cont['effects']: add(f'receipt_{k(e["id"])}', 'receipt', e['id'], ['false', 'true'])
+# Current S62 operational routes supersede the historical choices vocabulary.
+network=read('research/story-network.json')
+for sid, task in network['tasks'].items():
+    name='resolve_'+k(sid)
+    if name in expect and name in resolve_keys(network):
+        kind, script, _ = expect[name]
+        expect[name]=(kind,script,['none']+[r['key'] for r in task['routes']])
 check(set(keys) == set(expect), 'keys-match-sources')
 for key, (kind, script, values) in expect.items():
     item = keys.get(key)

@@ -164,3 +164,7 @@ p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- STATE-KEYS-S114:BEGIN -->.*?<!-- STATE-KEYS-S114:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/09_系统逻辑/状态键映射总表.md', '入口 [状态键映射总表](design/09_系统逻辑/状态键映射总表.md)'), encoding='utf-8')
 print(json.dumps(dict(keys=len(keys), families=fam_counts), ensure_ascii=False))
+
+# Rebuild the independent HX conditional extension after the base projection.
+import runpy
+runpy.run_path(str(ROOT / "research/tools/Write-HeavyEdges.py"))

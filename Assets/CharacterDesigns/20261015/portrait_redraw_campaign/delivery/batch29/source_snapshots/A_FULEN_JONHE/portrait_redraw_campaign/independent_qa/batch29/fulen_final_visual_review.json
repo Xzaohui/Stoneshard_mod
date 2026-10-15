@@ -1,0 +1,61 @@
+{
+  "slug": "fulen",
+  "reviewed_utc": "2026-10-15T12:49:50.537621+00:00",
+  "status": "selected_candidate_with_limitations",
+  "delivery_eligible": true,
+  "selected_path": "fulen/candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "b6e1a7a2ccf76396953d4434fd9f412324b093c558e15b168660faec7c0bef38",
+  "visual_basis": "实际查看母版、v1/v2完整raw与8x、四核心4x及最终选定inset预览；当前卡/母QA/台本独立核对。",
+  "identity_and_age": "宽颧长鼻、米白后结短额发与耳后短发，30+平静审视身份保留；护理素褂/厚围裙按卡优先只露窄上缘。",
+  "revision_result": "眼白明显缩暗，颈领压短、鼻颧骨大块和脸占比改善；同raw inset只处理目标网格采样触边。",
+  "source_boundary_evidence": {
+    "raw_size": [
+      1079,
+      1458
+    ],
+    "alpha_ge5_bbox": [
+      1,
+      103,
+      1070,
+      1359
+    ],
+    "alpha_ge128_bbox": [
+      5,
+      104,
+      1068,
+      1354
+    ],
+    "all_visible_source_border_counts_zero": true,
+    "original_target_alpha_bbox": [
+      0,
+      7,
+      73,
+      93
+    ],
+    "visible_source_clipped": false,
+    "source_margin_caveat": "不透明源轮廓左侧仅5px真实余量，低于一目标逻辑像素；不能把inset后的目标透明边称为源余量改善。",
+    "same_raw_inset": [
+      72,
+      98
+    ],
+    "padding_repairs_source_clipping": false,
+    "target_alpha_bbox": [
+      1,
+      8,
+      72,
+      91
+    ]
+  },
+  "limitations": [
+    "源左发真实余量仅5/1079源像素，安全余量不足仍保留；inset仅解决目标NN采样触边。",
+    "眼白仍局部亮点，米白头巾占幅偏大，发纹需未来原生逐像素整理。",
+    "仅为NN/32色技术派生候选，非原生逐像素终稿；未导入、未实机验证。"
+  ],
+  "feedback_rounds": 1,
+  "successful_generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

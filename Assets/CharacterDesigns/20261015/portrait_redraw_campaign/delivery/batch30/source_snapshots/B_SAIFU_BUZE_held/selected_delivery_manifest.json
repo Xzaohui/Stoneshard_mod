@@ -1,0 +1,166 @@
+{
+  "batch": "30",
+  "date": "2026-10-15",
+  "qualified_candidate_count": 2,
+  "held_count": 2,
+  "characters": [
+    {
+      "actor": "tio",
+      "name": "提奥",
+      "source": "tio/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "c35a5246c4fcfd150604f94b25f94ce3cf1469291095fd7bde8e90d8f8a9f2ed",
+      "delivery_file": "TIO_提奥_74x100_candidate.png",
+      "delivery_sha256": "c35a5246c4fcfd150604f94b25f94ce3cf1469291095fd7bde8e90d8f8a9f2ed",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "tio/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "颈仍稍长、发线偏细；仅为技术派生候选",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "kaino",
+      "name": "凯诺",
+      "source": "kaino/candidates/portrait_v2_safe_74x100_candidate.png",
+      "source_sha256": "2c906c39e1b5e1018eba7e32cfa63e671b707b7772305746806d2b5a414c64f7",
+      "delivery_file": "KAINO_凯诺_74x100_candidate.png",
+      "delivery_sha256": "2c906c39e1b5e1018eba7e32cfa63e671b707b7772305746806d2b5a414c64f7",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_safe",
+      "derivation_metrics": "kaino/qa/portrait_v2_safe_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "肤色稍暖；只选 70×96 safe 技术导出",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "held": [
+    {
+      "slug": "saifu",
+      "name": "赛芙",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "6e9527436efa68b4617660b645587ca09f15d78ea3b68e17fe64cb6be382ac98",
+      "production_SHA256SUMS_sha256": "56a7410d4a2faf382166fdd0dc0b06800bb15ce5da8cc7a9f057d89ad34ae1e4",
+      "decision": "held_after_two_generations_style_composition",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": true,
+      "residual": [
+        "大脸短颈窄领目标未达，眼白/表情仍偏离小暗眼与谨慎自尊的要求。",
+        "肤色仍偏暖，最新卡较浅肤色尚未充分体现在完成稿中；此是外观待改善，不构造新身份冲突。",
+        "仅保留v2为held evidence，selected=null，不得纳入交付选稿。"
+      ],
+      "held_evidence_portrait": "saifu/candidates/portrait_v2_74x100_candidate.png",
+      "held_evidence_sha256": "8aff97e53a78b64a6cbb510f5f204ec4a2edc9b8a8d6c383ec58d4ae2bb11a08",
+      "historical_fallback_approved": false,
+      "source_clipping_confirmed": false,
+      "hold_gate": "held_after_two_generations_style_composition"
+    },
+    {
+      "slug": "buze",
+      "name": "布泽",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "35e1aa1266c8dc6e43183842daa3f9973bbf0bcac7d0d2b68603facf8970eb3b",
+      "production_SHA256SUMS_sha256": "d16dca8c00fffbd2e914e7c00c8ab5b9c6ba338dc0776ec4cfe5c76ffb4ca10d",
+      "decision": "held_after_two_generations_style_composition",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": true,
+      "residual": [
+        "小暗眼白、短颈窄领及个性表情目标未充分满足。",
+        "v2_inset仅保留为held evidence，不可纳入交付选稿。",
+        "NN派生过程图不是原生逐像素或游戏终稿。"
+      ],
+      "held_evidence_portrait": "buze/candidates/portrait_v2_inset_74x100_candidate.png",
+      "held_evidence_sha256": "9bf8151b178c6e7b8327bc2b1e04421fa7d7cf2487c734c725109df6fffc62d6",
+      "historical_fallback_approved": false,
+      "source_clipping_confirmed": false,
+      "hold_gate": "held_after_two_generations_style_composition"
+    }
+  ],
+  "board": {
+    "file": "batch30_两人头像总览_1x_4x.png",
+    "sha256": "f4b363b054e8966c03d7bc089297f9d7c27f3ece55d466218549de5e90fd6c24",
+    "dimensions": [
+      680,
+      1432
+    ],
+    "portrait_checks": [
+      {
+        "actor": "tio",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "tio",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "kaino",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "kaino",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false,
+    "held_portrait_not_displayed": true
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded. All four generated production folders, including held saifu and buze evidence, are retained; held is not counted as success."
+}

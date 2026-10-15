@@ -1,0 +1,48 @@
+{
+  "batch": 31,
+  "feedback_rounds_per_person": 1,
+  "third_successful_generation_allowed": false,
+  "characters": {
+    "folan": {
+      "name": "佛兰",
+      "actor_id": "EED-NPC-FOLAN",
+      "v1_decision": "one_imagegen_revision_required",
+      "v1_findings": [
+        "发耳完整，alpha>=128 bbox(60,77,1055,1433)，边缘零接触，非源裁断。",
+        "大亮眼白压为小暗暖灰缝；长裸颈与深开衩收为短颈窄领，鼻颧保大块。",
+        "眉心上扬偏委屈，收平为谈规矩的务实谨慎；灰发须细碎亮点合并大块，保40+而不再加老。"
+      ]
+    },
+    "geli": {
+      "name": "葛黎",
+      "actor_id": "EED-NPC-GELI",
+      "v1_decision": "one_imagegen_revision_required",
+      "v1_findings": [
+        "raw alpha>=128 bbox(33,83,1075,1441)，右4px仍为真实余量；74x100导出右贴边属于NN紧边风险，不是已源裁断。",
+        "整辫发耳须在新源图留足真实余量；不靠padding伪修。",
+        "眼白过大亮、颈胸过长，改小暗眼白和短颈窄领；弱化眉心竖皱/惊惧上扬，保专注略无奈的年轻成年，不变娃娃、老练贵妇。"
+      ]
+    },
+    "lin": {
+      "name": "黎恩·岗",
+      "actor_id": "EED-NPC-LIN",
+      "v1_decision": "one_imagegen_revision_required",
+      "v1_findings": [
+        "源帽发耳完整，alpha>=128 bbox(66,125,1032,1411)，无真实源裁断。",
+        "帽冠过高、上空9逻辑像素，加上长颈宽披领挤掉脸幅；压低帽冠和上空，短颈窄领，同一清瘦脸更占幅，不靠裁帽发耳。",
+        "眼白缩小压暗为暖灰缝，保鼻颧骨块面与沉静倾听，不加老年皱纹或法官威严。"
+      ]
+    },
+    "ola": {
+      "name": "奥菈·纹",
+      "actor_id": "EED-NPC-OLA",
+      "v1_decision": "one_imagegen_revision_required",
+      "v1_findings": [
+        "源alpha>=128 bbox(36,93,1068,1427)，右有11px真实余量，无真实裁断。",
+        "发髻适度压低但保发型、发髻耳侧足够真实余量；短裸颈、围裙扣肩带减为窄领，让脸更占幅。",
+        "眼白压小压暗、去眼内亮点；平缓上扬眉心/下撇嘴的惊惧委屈，保成熟直接戒备与大鼻颧块面，不变少女或老太。"
+      ]
+    }
+  },
+  "technical": "All four v1 raw files byte-match decoded complete tool returns. Independently reproduced 74x100 RGBA, <=32 visible colors, binary alpha, transparent RGB zero, candidate PNG bytes and integer NN preview PNG bytes. This does not replace visual judgment or source silhouette inspection."
+}

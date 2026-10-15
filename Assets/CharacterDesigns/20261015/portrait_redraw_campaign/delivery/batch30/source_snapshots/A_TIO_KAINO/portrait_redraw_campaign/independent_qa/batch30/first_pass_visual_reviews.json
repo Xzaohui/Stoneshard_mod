@@ -1,0 +1,47 @@
+{
+  "batch": 30,
+  "feedback_rounds_per_person": 1,
+  "third_successful_generation_allowed": false,
+  "characters": {
+    "tio": {
+      "name": "提奥·桶",
+      "actor_id": "MNS-NPC-TIO",
+      "v1_decision": "one_imagegen_revision_required",
+      "v1_findings": [
+        "原始左右发梢在画布边真实截断，不是NN贴边；alpha≥128左22像素(y597–618)、右159像素(y496–752)。技术inset不能补发。",
+        "白眼块偏大亮，裸颈略长，需完整留边、短颈窄领与朴实鼻颧块面，保认真青年。"
+      ]
+    },
+    "saifu": {
+      "name": "赛芙",
+      "actor_id": "MNS-S01-NPC",
+      "v1_decision": "one_imagegen_revision_required",
+      "v1_findings": [
+        "源发巾耳完整，无alpha≥128边界接触；右余量13源像素、NN后仅1逻辑像素，边距需改善。",
+        "上方空15逻辑像素，脸占幅不足；收紧构图，短颈窄领但不能裁巾结。",
+        "眉心上扬偏忧惧，改谨慎自尊；眼白小暗，肤色去较重橙调，保30+。"
+      ]
+    },
+    "kaino": {
+      "name": "凯诺",
+      "actor_id": "MNS-S02-NPC",
+      "v1_decision": "one_imagegen_revision_required",
+      "v1_findings": [
+        "源发耳完整、无边界接触；alpha≥128 bbox(47,124,1041,1408)。",
+        "大亮白眼、斜尖眉读为瞪眼坏脾气；平缓眉眼、缩小压暗眼白。",
+        "裸颈衣领较长，需短颈窄领；灰发须细碎闪花合并为大块，不增加衰老。"
+      ]
+    },
+    "buze": {
+      "name": "布泽",
+      "actor_id": "EED-NPC-BUZE",
+      "v1_decision": "one_imagegen_revision_required",
+      "v1_findings": [
+        "源发耳完整，无alpha≥128边缘接触；bbox(42,137,1053,1433)。",
+        "干瘦与40+成立；眉心上扬及下撇口过于委屈，改谨慎说理/自辩的略收口和平缓不对称眉。",
+        "眼白小暗去亮点，鼻颧大块；裸颈系带衣襟缩短成窄领，保持瘦颊不变宽胖老脸。"
+      ]
+    }
+  },
+  "technical": "Every v1 passes actual raw vs full tool-return byte match, 74x100 RGBA, <=32 visible colors, binary alpha, zero transparent RGB, export byte reproduction, and integer NN preview reproduction. Technical pass never overrides source clipping or visual rejection."
+}

@@ -1,0 +1,1312 @@
+{
+  "batch": "38",
+  "gate_utc": "2026-10-15T14:25:32.732012+00:00",
+  "approved_to_package": true,
+  "freeze_entrypoint": "selection_lock.json",
+  "freeze_manifest_sha256": "0a5a727b005b4ba748260116676a4fd5f7c64d144ba95310132538797784a2f7",
+  "qualified_candidate_count": 4,
+  "held_count": 0,
+  "characters": [
+    {
+      "slug": "vila",
+      "name": "维菈",
+      "selected_portrait": "vila/candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "49f48179cf94d2aaef4db5e5362b0c752a64a861573ef9acb43ef8b620949627",
+      "production_manifest_sha256": "d82b0b31fee9aef9360b6ae8c189f827fdb4e20f3b33b2b385e18989f90d50ce",
+      "limitations": [
+        "性别仍未定，不据中性外观冻结身份canon。",
+        "夹镜边及眼白仍较亮，面部仍有imagegen细簇；仅有注记NN派生候选。",
+        "源边余量偏窄；inset不是重绘或原生像素验收。",
+        "未逐像素原生绘制，未集成或实机验收。"
+      ]
+    },
+    {
+      "slug": "hepo",
+      "name": "赫珀",
+      "selected_portrait": "hepo/candidates/portrait_v2_inset_74x100_candidate.png",
+      "selected_sha256": "a95180b96ffa8cdae43fdfa4b4b42e0bb5d338fdc00b2c71ce7e08894df088be",
+      "production_manifest_sha256": "87b537508d33eec487313ec79e0f9b9df2f2a8787f032780c7dfcf40235522ee",
+      "limitations": [
+        "白眼仍偏浅，绿披及下颈占比仍略大于核心；仅有注记NN派生候选。",
+        "源右边只留很窄的主要轮廓余量，边缘alpha5噪点仍记录；不把inset说成裁断修复。",
+        "未逐像素原生绘制，未集成或实机验收。"
+      ]
+    },
+    {
+      "slug": "siyu",
+      "name": "司榆",
+      "selected_portrait": "siyu/candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "b1fb37e69591762d7d868b20e9367b29f6a0abe49618decfd8871d3645fe696d",
+      "production_manifest_sha256": "be2d1d689c5b345e703796c7aefcb2c9a7ad72f10708ad1ce82ddc8974e761c2",
+      "limitations": [
+        "末S91他与正文她的代词不一致留痕，沿正文及女性母图，不修改源卡。",
+        "眼白仍偏浅，额部有细碎簇；仅有注记NN派生候选。",
+        "未逐像素原生绘制，未集成或实机验收。"
+      ]
+    },
+    {
+      "slug": "buxi",
+      "name": "布希",
+      "selected_portrait": "buxi/candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "f9b70515f015f28b7fa4b004d14abab888b245287c5ac572aec7b54171879ddd",
+      "production_manifest_sha256": "3b5cf54adb25ac8f3bc20faee27ce758b7c37cb5474e6d4c48b807ec57a24356",
+      "limitations": [
+        "现卡S91孤立他与旧女性母设定歧义，经git/brief/prompt及剧情核对后协调保女性继续，未改源卡。",
+        "少量眼白及鼻粉仍浅、面簇偏柔；仅有注记NN派生候选。",
+        "未逐像素原生绘制，未集成或实机验收。"
+      ]
+    }
+  ],
+  "frozen_character_files": {
+    "vila": [
+      {
+        "path": "README.md",
+        "sha256": "8c38537f602fdaca924a5e6015794ab46f0feed7ac0a5a13ef52ccaccebc7835",
+        "bytes": 1792
+      },
+      {
+        "path": "SHA256SUMS",
+        "sha256": "07a1c793e80a385e130faeaf3776f6779048d690690ca8d6f7f2194dcda54f01",
+        "bytes": 5209
+      },
+      {
+        "path": "candidates/portrait_v1_74x100_candidate.png",
+        "sha256": "9b71d442abaaba6ac52b910e79c40d4631886fe0065f4c0f772b87aa489c3e50",
+        "bytes": 5886
+      },
+      {
+        "path": "candidates/portrait_v2_74x100_candidate.png",
+        "sha256": "d8a7eb49cc8ecacc7a90ec46d3301c9ab8d5e68d5a7c497e6f8c455ae827a165",
+        "bytes": 6600
+      },
+      {
+        "path": "candidates/portrait_v2_inset_74x100_candidate.png",
+        "sha256": "49f48179cf94d2aaef4db5e5362b0c752a64a861573ef9acb43ef8b620949627",
+        "bytes": 6643
+      },
+      {
+        "path": "derive_portrait.py",
+        "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+        "bytes": 3731
+      },
+      {
+        "path": "finalize_manifest.py",
+        "sha256": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+        "bytes": 2060
+      },
+      {
+        "path": "manifest.json",
+        "sha256": "d82b0b31fee9aef9360b6ae8c189f827fdb4e20f3b33b2b385e18989f90d50ce",
+        "bytes": 28514
+      },
+      {
+        "path": "previews/portrait_v1_1x.png",
+        "sha256": "9b71d442abaaba6ac52b910e79c40d4631886fe0065f4c0f772b87aa489c3e50",
+        "bytes": 5886
+      },
+      {
+        "path": "previews/portrait_v1_1x_backgrounds.png",
+        "sha256": "9345ddca5367bbdf5bc0593c63164345955cc208948cbc08c4f42a6e2416a9b3",
+        "bytes": 7887
+      },
+      {
+        "path": "previews/portrait_v1_4x_backgrounds.png",
+        "sha256": "5a2328b7fb3822df49adb715fcba4c5ee26ca9b268d0ccf5922f9df42016cdeb",
+        "bytes": 13863
+      },
+      {
+        "path": "previews/portrait_v1_8x.png",
+        "sha256": "396bc2bfd8b7cc853faed90faa975ce8da1b64b68c49478ca6bf6bcc408b5bd6",
+        "bytes": 12992
+      },
+      {
+        "path": "previews/portrait_v2_1x.png",
+        "sha256": "d8a7eb49cc8ecacc7a90ec46d3301c9ab8d5e68d5a7c497e6f8c455ae827a165",
+        "bytes": 6600
+      },
+      {
+        "path": "previews/portrait_v2_1x_backgrounds.png",
+        "sha256": "04ce53e311c7bf749127af2bd93e14aa6ee85b3704defbed3db32d6a34757d91",
+        "bytes": 8573
+      },
+      {
+        "path": "previews/portrait_v2_4x_backgrounds.png",
+        "sha256": "df95670c5f265f4e5e74ed053546d2c449ebab0d12a713762bb45addcdee6718",
+        "bytes": 15390
+      },
+      {
+        "path": "previews/portrait_v2_8x.png",
+        "sha256": "d30f1ebd4ce4d402c7de641eb548405800a84d5620b71db0d568b6059a13940b",
+        "bytes": 14365
+      },
+      {
+        "path": "previews/portrait_v2_inset_1x.png",
+        "sha256": "49f48179cf94d2aaef4db5e5362b0c752a64a861573ef9acb43ef8b620949627",
+        "bytes": 6643
+      },
+      {
+        "path": "previews/portrait_v2_inset_1x_backgrounds.png",
+        "sha256": "a65483e8172d6d80d2160bae17ee9af6ceb9b547f21de5447be469a48b4aba9e",
+        "bytes": 8480
+      },
+      {
+        "path": "previews/portrait_v2_inset_4x_backgrounds.png",
+        "sha256": "4afcbd8c342e145ae01d48d1c968cc75ca7ca4e23833769c751d45337ad314b6",
+        "bytes": 15204
+      },
+      {
+        "path": "previews/portrait_v2_inset_8x.png",
+        "sha256": "5044ee8f896c36f5e359efa62090727dc757efac627b74cce6791ba6aa75d7bd",
+        "bytes": 14348
+      },
+      {
+        "path": "prompts/portrait_v1.json",
+        "sha256": "a14885881005ba420372adee1b2947e00b9f77d23023e00ac9febb60a6287a51",
+        "bytes": 3636
+      },
+      {
+        "path": "prompts/portrait_v1.txt",
+        "sha256": "1c89796c97c6bb2225c5cce86c79b7ec85bfee28f9b11cf577ac9828d3b6f625",
+        "bytes": 2798
+      },
+      {
+        "path": "prompts/portrait_v2.json",
+        "sha256": "dec4009a66ab7703f3d806f588e09d690627c732fa2dab4fe394fe07ccaeeac5",
+        "bytes": 3781
+      },
+      {
+        "path": "prompts/portrait_v2.txt",
+        "sha256": "06db8ccc95bcede187068c6b2621a541e6fbd47a4f520c7e2b465c1d7027e9fe",
+        "bytes": 2940
+      },
+      {
+        "path": "prompts/portrait_v2_schema_rejected_args.json",
+        "sha256": "a5bb9441248d1a77174bd87ad12b58da8b96866035fe9767cc60cbf993d16161",
+        "bytes": 3924
+      },
+      {
+        "path": "qa/author_v1_review.json",
+        "sha256": "bc72363625f67070d9b8df97d5cf5f730ba5938c3503efd7197c784a9453be97",
+        "bytes": 625
+      },
+      {
+        "path": "qa/author_visual_review.json",
+        "sha256": "8962adb44f33a7474e2be5d14d5efaf5b93a019184220c4ed02d7a408d3a6def",
+        "bytes": 957
+      },
+      {
+        "path": "qa/independent_review_acceptance.json",
+        "sha256": "ac9b7543ac94f8b632bb0da8864b963b78cc51addae668dedb3409cbb2a6134b",
+        "bytes": 1435
+      },
+      {
+        "path": "qa/independent_v1_feedback.json",
+        "sha256": "ed17f7c4732bb03dea7a04c9c6724f853597c9c6da934763a0c1b3d1495495fb",
+        "bytes": 1109
+      },
+      {
+        "path": "qa/independent_v2_boundary_evidence.json",
+        "sha256": "c776c07a09dcb034da668b855ad5c7c14a3ad9b64c97e21cada6ab943ec98dc5",
+        "bytes": 1404
+      },
+      {
+        "path": "qa/portrait_v1_metrics.json",
+        "sha256": "8f4392d2b9034bfc696da0b01abdbd4454c2df8eb4851eb3bc55427e62b12a05",
+        "bytes": 4918
+      },
+      {
+        "path": "qa/portrait_v2_inset_metrics.json",
+        "sha256": "ea60e6d3997ce383b07a99a9fe3510d1ad64d622392b96ae38cadc6f4b7e40fd",
+        "bytes": 4930
+      },
+      {
+        "path": "qa/portrait_v2_metrics.json",
+        "sha256": "c06e968bcb384ccd2306282c23a31aa09571906b6f283dac87b9f5b99322684b",
+        "bytes": 4918
+      },
+      {
+        "path": "qa/raw_v2_containment.json",
+        "sha256": "ab49e6a874989398959f449e280f1a006518d4dfda2627cfd3e7c141b2faa592",
+        "bytes": 558
+      },
+      {
+        "path": "qa/source_hash_recheck.json",
+        "sha256": "5d5999f9139092b0347632870b41cb420bb00394386ecbfa3ac30b8928491a06",
+        "bytes": 4958
+      },
+      {
+        "path": "raw/portrait_v1_raw_imagegen.png",
+        "sha256": "3800afe1d8f71abd8a55c51670470103128c436973c31238959a82905c4177da",
+        "bytes": 1092083
+      },
+      {
+        "path": "raw/portrait_v2_raw_imagegen.png",
+        "sha256": "0be2c258f60c0d195963bde800af1b99ccb34a9e8348186c5bc9b4ec9001d257",
+        "bytes": 1298598
+      },
+      {
+        "path": "sources/AGENTS.md",
+        "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4",
+        "bytes": 12714
+      },
+      {
+        "path": "sources/character_card.md",
+        "sha256": "657afdd813343fd7a3fff2ee4c0588569cfd96f6e81d7d0b728fb3ffd22201be",
+        "bytes": 1988
+      },
+      {
+        "path": "sources/identity_reference.png",
+        "sha256": "9b72e90380efb5e660fb75beef199713bb7889f2defec586f318514d5fe7f31a",
+        "bytes": 1154995
+      },
+      {
+        "path": "sources/iwo_style_reference.png",
+        "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb",
+        "bytes": 8032
+      },
+      {
+        "path": "sources/leiya_style_reference.png",
+        "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f",
+        "bytes": 4895
+      },
+      {
+        "path": "sources/mara_style_reference.png",
+        "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd",
+        "bytes": 9411
+      },
+      {
+        "path": "sources/master_QA.json",
+        "sha256": "1035661926eab047adc4aac950582a6f924f42146aacfee2148206bb1cb267d4",
+        "bytes": 16192
+      },
+      {
+        "path": "sources/master_manifest.json",
+        "sha256": "a35e5627aab9d64d7e370e81a55c49b88924ca5dcf22c74329c2ba4954612e32",
+        "bytes": 3153
+      },
+      {
+        "path": "sources/roster_entry.json",
+        "sha256": "a8d6214266385fa9296892222192c6e2f0932898b7bd5e48669ac7259a13d812",
+        "bytes": 4291
+      },
+      {
+        "path": "sources/source_manifest.json",
+        "sha256": "72b785bde713a2f60cf09a6ed657945a879459ef2afbdbc732bf5d9cdeb5dbbe",
+        "bytes": 4442
+      },
+      {
+        "path": "sources/story_1.md",
+        "sha256": "9b007f9d374dffae90cc8a392483cd2437b6e3e475a4bbeed223e26cbf7f109b",
+        "bytes": 23761
+      },
+      {
+        "path": "sources/story_2.md",
+        "sha256": "a603294ce7906c7d473d23dd66a85cfb0eb40ca14e52c99fb6cc3a948875ef07",
+        "bytes": 16010
+      },
+      {
+        "path": "sources/story_3.md",
+        "sha256": "8794b02f07ddab61ecf45962c41fdb29cb1e4150a90342e3868c33796ecb6a86",
+        "bytes": 5890
+      },
+      {
+        "path": "sources/tore_style_reference.png",
+        "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1",
+        "bytes": 8438
+      },
+      {
+        "path": "spec_lock.md",
+        "sha256": "21ea8362b913813bab1517abf726fe233a54b74fd19ba5cd6e7fdfecfcb4a581",
+        "bytes": 1801
+      },
+      {
+        "path": "tool_returns/portrait_v1.json",
+        "sha256": "245dadcba2223d22467bd95fc726796be0c601d10c09438112cdde127b08e76a",
+        "bytes": 1456642
+      },
+      {
+        "path": "tool_returns/portrait_v2.json",
+        "sha256": "6d43bcf825361ee0c903a16ac411a752ca18f5fa6563af21a7f59f94cc861fe5",
+        "bytes": 1731994
+      },
+      {
+        "path": "tool_returns/portrait_v2_schema_rejection.json",
+        "sha256": "2a9b7370c0c51ca007990fb4f759662be6799aabafaa67ff9d0d7f63dc3514e5",
+        "bytes": 295
+      }
+    ],
+    "hepo": [
+      {
+        "path": "README.md",
+        "sha256": "1740c41c0f733a36194a5358eb2a1282a556be2a5f4c7158675fb01be761f872",
+        "bytes": 1749
+      },
+      {
+        "path": "SHA256SUMS",
+        "sha256": "ebf14be0bdfb0e72d2a87fe0526817bd508fc95408eab33cae2fecb41fe90e27",
+        "bytes": 5294
+      },
+      {
+        "path": "candidates/portrait_v1_74x100_candidate.png",
+        "sha256": "c5b0ca7d4167c967dd657035daa004b25f359da86a20a1d3a787285bdc118cbf",
+        "bytes": 5561
+      },
+      {
+        "path": "candidates/portrait_v2_74x100_candidate.png",
+        "sha256": "1ae05a501a486ff0baaaecbaaa44b13d8573b2ea26e55c5991b59fc44907f7b3",
+        "bytes": 6505
+      },
+      {
+        "path": "candidates/portrait_v2_inset_74x100_candidate.png",
+        "sha256": "a95180b96ffa8cdae43fdfa4b4b42e0bb5d338fdc00b2c71ce7e08894df088be",
+        "bytes": 6430
+      },
+      {
+        "path": "derive_portrait.py",
+        "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+        "bytes": 3731
+      },
+      {
+        "path": "finalize_manifest.py",
+        "sha256": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+        "bytes": 2060
+      },
+      {
+        "path": "manifest.json",
+        "sha256": "87b537508d33eec487313ec79e0f9b9df2f2a8787f032780c7dfcf40235522ee",
+        "bytes": 28610
+      },
+      {
+        "path": "previews/portrait_v1_1x.png",
+        "sha256": "c5b0ca7d4167c967dd657035daa004b25f359da86a20a1d3a787285bdc118cbf",
+        "bytes": 5561
+      },
+      {
+        "path": "previews/portrait_v1_1x_backgrounds.png",
+        "sha256": "a993f78b44afd5a72ffcc980140f3cc12b94f6823f225d8ad86313cfdc851a78",
+        "bytes": 7723
+      },
+      {
+        "path": "previews/portrait_v1_4x_backgrounds.png",
+        "sha256": "e11ab3987c745bedad449096ae2a1d916be30e5a08980e3440e36b682e78eb17",
+        "bytes": 13711
+      },
+      {
+        "path": "previews/portrait_v1_8x.png",
+        "sha256": "ec875c56c866492a6cb72a91cb52f71ff47a3ab5dc5b108ef016293fc76cd7c2",
+        "bytes": 12830
+      },
+      {
+        "path": "previews/portrait_v2_1x.png",
+        "sha256": "1ae05a501a486ff0baaaecbaaa44b13d8573b2ea26e55c5991b59fc44907f7b3",
+        "bytes": 6505
+      },
+      {
+        "path": "previews/portrait_v2_1x_backgrounds.png",
+        "sha256": "e51d6381f9586683d0f49eb9670e0bf969ae88355e25fbc343591fb5f8e8f13b",
+        "bytes": 8828
+      },
+      {
+        "path": "previews/portrait_v2_4x_backgrounds.png",
+        "sha256": "d0e1c36f18f0cec737021d451831556e2f77aaef84ff70df104b481a43b5837e",
+        "bytes": 15600
+      },
+      {
+        "path": "previews/portrait_v2_8x.png",
+        "sha256": "f6f3ffa1d40ef61138349999f644b63320c488bdd01c1348e7819afa5ffcd399",
+        "bytes": 14763
+      },
+      {
+        "path": "previews/portrait_v2_inset_1x.png",
+        "sha256": "a95180b96ffa8cdae43fdfa4b4b42e0bb5d338fdc00b2c71ce7e08894df088be",
+        "bytes": 6430
+      },
+      {
+        "path": "previews/portrait_v2_inset_1x_backgrounds.png",
+        "sha256": "0eb9871917b2cb371d8ba79526c9534bce02317a8961caf6a3534aba49f52522",
+        "bytes": 8650
+      },
+      {
+        "path": "previews/portrait_v2_inset_4x_backgrounds.png",
+        "sha256": "1d12ff5e4f29365c3f8bdc325ca04cd24b7b50e65c92d0fe4f851d920ab42432",
+        "bytes": 15461
+      },
+      {
+        "path": "previews/portrait_v2_inset_8x.png",
+        "sha256": "e47453a7d869a59a13bccaa8045700e64d2b9127b6532b3633ef0c9406f46259",
+        "bytes": 14338
+      },
+      {
+        "path": "prompts/portrait_v1.json",
+        "sha256": "0fb406bd5b1812b9e5dae8eda5f78537a974371ec7fca55c038f37418f933a4e",
+        "bytes": 3626
+      },
+      {
+        "path": "prompts/portrait_v1.txt",
+        "sha256": "3622cddbf7e297e77a031bfc304daeb75ae32a016ded5b448b3b83cc773b43f1",
+        "bytes": 2788
+      },
+      {
+        "path": "prompts/portrait_v2.json",
+        "sha256": "8b451ae5fab912d9847941b0db0008c5d6add2b02fbe8e2eb539a4643b9fc189",
+        "bytes": 3643
+      },
+      {
+        "path": "prompts/portrait_v2.txt",
+        "sha256": "a8979019c9b4d16d5dafe38142b34b659d1712fbfb52626bbbed8fc811a04519",
+        "bytes": 2802
+      },
+      {
+        "path": "prompts/portrait_v2_schema_rejected_args.json",
+        "sha256": "79f6f96876e7c7565c6cb172b0fc8643943c4b1df3337cdb5d03e40f7151c28b",
+        "bytes": 3786
+      },
+      {
+        "path": "qa/author_v1_review.json",
+        "sha256": "a304681a935b69e4d577b0fe3429c8da71bcedc9234a6bd90fab549c0bfceadb",
+        "bytes": 607
+      },
+      {
+        "path": "qa/author_visual_review.json",
+        "sha256": "5889630ab68021dbcc096614a13a240bbcd9a79b89ebc71397e25df1b5787715",
+        "bytes": 953
+      },
+      {
+        "path": "qa/independent_review_acceptance.json",
+        "sha256": "07303b6d97abbf69a16b488f2f554682eda9ac76440a0e6dd69aaacfe3467ad8",
+        "bytes": 1435
+      },
+      {
+        "path": "qa/independent_v1_feedback.json",
+        "sha256": "ed17f7c4732bb03dea7a04c9c6724f853597c9c6da934763a0c1b3d1495495fb",
+        "bytes": 1109
+      },
+      {
+        "path": "qa/independent_v2_boundary_evidence.json",
+        "sha256": "7d7e30f05974ef8075e852de76e03144f62baab5b00ddf25cde0e8946d65d8f1",
+        "bytes": 4324
+      },
+      {
+        "path": "qa/portrait_v1_metrics.json",
+        "sha256": "9942237d01cbe6109f827346d71b89045afdab66c8b055fcbc440771e64103b5",
+        "bytes": 4899
+      },
+      {
+        "path": "qa/portrait_v2_inset_metrics.json",
+        "sha256": "8e1b5b34c03791492b7f0b7d0344ab268833d5ce504009bc9565ac16c94717f1",
+        "bytes": 4910
+      },
+      {
+        "path": "qa/portrait_v2_metrics.json",
+        "sha256": "e09495afb6712d4c25389c51753a7ed7553c8bf0ff41c4b2d2d3c0096c34a929",
+        "bytes": 4902
+      },
+      {
+        "path": "qa/raw_v2_containment.json",
+        "sha256": "bbe1df825eecd4f112c69e87b60f288b2a04a53b83de37506dfe933e99fe8dc2",
+        "bytes": 557
+      },
+      {
+        "path": "qa/source_hash_recheck.json",
+        "sha256": "caa8a5ff0107ca55175638d729305556644d8bb2014682987328c57a72df9a06",
+        "bytes": 5258
+      },
+      {
+        "path": "raw/portrait_v1_raw_imagegen.png",
+        "sha256": "142378d52b3b583a6ec42e697def410faf5eb8c264722bbdc3a2c8b55ba4a495",
+        "bytes": 1095481
+      },
+      {
+        "path": "raw/portrait_v2_raw_imagegen.png",
+        "sha256": "7d5220b046fc7a5b674e4cbc523f8a865905d86eb31ace33b58cbdb5b30d80b9",
+        "bytes": 1298492
+      },
+      {
+        "path": "sources/AGENTS.md",
+        "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4",
+        "bytes": 12714
+      },
+      {
+        "path": "sources/character_card.md",
+        "sha256": "d190eaf177a3e0fc52e69912e826888a8f785c89e9ac8407b95c31df3f40dfc3",
+        "bytes": 2731
+      },
+      {
+        "path": "sources/identity_reference.png",
+        "sha256": "18adf2fba2c5481a8fe39f3a51e742499bb3bca1c78d825c61b16edcb3c6ba07",
+        "bytes": 811622
+      },
+      {
+        "path": "sources/iwo_style_reference.png",
+        "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb",
+        "bytes": 8032
+      },
+      {
+        "path": "sources/leiya_style_reference.png",
+        "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f",
+        "bytes": 4895
+      },
+      {
+        "path": "sources/mara_style_reference.png",
+        "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd",
+        "bytes": 9411
+      },
+      {
+        "path": "sources/master_QA.json",
+        "sha256": "b2145b0d041b8f73f6492bd5ad96cdd7e6fc91cb600b433ba6f9c93b201a5098",
+        "bytes": 1132
+      },
+      {
+        "path": "sources/master_manifest.json",
+        "sha256": "16605a4be77a3e932c0ba199bfbf8e650f590b771903283b574cec2b073c898d",
+        "bytes": 1919
+      },
+      {
+        "path": "sources/roster_entry.json",
+        "sha256": "1d1e4586e994383a3c2c8bdf70128df1e87fb7b5bf3ae45a340e24e0316aaf7e",
+        "bytes": 4250
+      },
+      {
+        "path": "sources/source_manifest.json",
+        "sha256": "88c32469fd126a3c4d1f0500ab73c84c9c3ee2fdf7af0ee302a357321efe7a0d",
+        "bytes": 4707
+      },
+      {
+        "path": "sources/story_1.md",
+        "sha256": "9b007f9d374dffae90cc8a392483cd2437b6e3e475a4bbeed223e26cbf7f109b",
+        "bytes": 23761
+      },
+      {
+        "path": "sources/story_2.md",
+        "sha256": "4b5907bb9576ce75be1be1726a66dc45238535c518c73404b347f56d85905bd3",
+        "bytes": 16949
+      },
+      {
+        "path": "sources/story_3.md",
+        "sha256": "9160ce9972e026fe5209f198a8ad5433a0dd75e8ff6fab5f0135bad3c7831718",
+        "bytes": 17472
+      },
+      {
+        "path": "sources/story_4.md",
+        "sha256": "8794b02f07ddab61ecf45962c41fdb29cb1e4150a90342e3868c33796ecb6a86",
+        "bytes": 5890
+      },
+      {
+        "path": "sources/tore_style_reference.png",
+        "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1",
+        "bytes": 8438
+      },
+      {
+        "path": "spec_lock.md",
+        "sha256": "cb7316107805764321150bfe1e22df3c876971923c0718635a0ce9d84325ac4b",
+        "bytes": 1842
+      },
+      {
+        "path": "tool_returns/portrait_v1.json",
+        "sha256": "b1a7ea1c93bb881934021c29c371010f2a1a0a25d7fe7b04ddb87229c0423c12",
+        "bytes": 1461174
+      },
+      {
+        "path": "tool_returns/portrait_v2.json",
+        "sha256": "9ec8d8eb951393fbaa034335cceb022e61225ee17887cc708c13e645bd3e8be9",
+        "bytes": 1731854
+      },
+      {
+        "path": "tool_returns/portrait_v2_schema_rejection.json",
+        "sha256": "2a9b7370c0c51ca007990fb4f759662be6799aabafaa67ff9d0d7f63dc3514e5",
+        "bytes": 295
+      }
+    ],
+    "siyu": [
+      {
+        "path": "README.md",
+        "sha256": "d4808329a8699a21d756c39b7a813813c1c3b6d451bae12c9076e99aeff900e0",
+        "bytes": 1489
+      },
+      {
+        "path": "SHA256SUMS",
+        "sha256": "9e7f8724647e2d0315d053f560daf84334a2dc568a7ce5ae8b5fa455800a18d0",
+        "bytes": 4151
+      },
+      {
+        "path": "candidates/portrait_v1_74x100_candidate.png",
+        "sha256": "aaaf53a6d2c43c29936ffe68f2b2e1d7d4ded5da2a36210e4d74c9e520166615",
+        "bytes": 4964
+      },
+      {
+        "path": "candidates/portrait_v2_74x100_candidate.png",
+        "sha256": "b1fb37e69591762d7d868b20e9367b29f6a0abe49618decfd8871d3645fe696d",
+        "bytes": 5526
+      },
+      {
+        "path": "derive_portrait.py",
+        "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+        "bytes": 3731
+      },
+      {
+        "path": "finalize_manifest.py",
+        "sha256": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+        "bytes": 2060
+      },
+      {
+        "path": "manifest.json",
+        "sha256": "be2d1d689c5b345e703796c7aefcb2c9a7ad72f10708ad1ce82ddc8974e761c2",
+        "bytes": 20525
+      },
+      {
+        "path": "previews/portrait_v1_1x.png",
+        "sha256": "aaaf53a6d2c43c29936ffe68f2b2e1d7d4ded5da2a36210e4d74c9e520166615",
+        "bytes": 4964
+      },
+      {
+        "path": "previews/portrait_v1_1x_backgrounds.png",
+        "sha256": "cef7fed20822819e9621f79654bcd3a2b74889c0653d78253cad162c1887c8f2",
+        "bytes": 6589
+      },
+      {
+        "path": "previews/portrait_v1_4x_backgrounds.png",
+        "sha256": "af76d1c125744c0cafe475cb4f9a51ca44fcb3511248619cdf827d357ed35723",
+        "bytes": 12153
+      },
+      {
+        "path": "previews/portrait_v1_8x.png",
+        "sha256": "1c7659b63fc24a5d3ce63cfa551f6b7928a949f445404aa4e6d09019ebb7ee4b",
+        "bytes": 11678
+      },
+      {
+        "path": "previews/portrait_v2_1x.png",
+        "sha256": "b1fb37e69591762d7d868b20e9367b29f6a0abe49618decfd8871d3645fe696d",
+        "bytes": 5526
+      },
+      {
+        "path": "previews/portrait_v2_1x_backgrounds.png",
+        "sha256": "5c0c11258c7b0c08825398ce0b0fdbf942756e7bd7cfb1ec654b94fad1ac4a11",
+        "bytes": 7324
+      },
+      {
+        "path": "previews/portrait_v2_4x_backgrounds.png",
+        "sha256": "08ee8bbb274f6e6d2302745437730d506baf928618df8dc1ea0d28d35e71d89e",
+        "bytes": 13409
+      },
+      {
+        "path": "previews/portrait_v2_8x.png",
+        "sha256": "fff97e2cd72e0e67ea740b6ddf3de74ab685a078ab30c1f184ef3409aca732c5",
+        "bytes": 12700
+      },
+      {
+        "path": "prompts/portrait_v1.json",
+        "sha256": "9ef8ec930798a1d604c57708d2b5fa49fb32d5ee854f747d35179cbf86ded018",
+        "bytes": 3317
+      },
+      {
+        "path": "prompts/portrait_v1.txt",
+        "sha256": "8e5ac4de01a3c60c8554f6b3e9e96cb8220b928553ab2d137266c2af6f4b123f",
+        "bytes": 2483
+      },
+      {
+        "path": "prompts/portrait_v2.json",
+        "sha256": "6ef508b8673adc75515a5b9685f9555903573d0e6e42a425eac097c3a8743dc3",
+        "bytes": 2608
+      },
+      {
+        "path": "prompts/portrait_v2.txt",
+        "sha256": "46f1de6949aaac883bedcd59ff558576f5fad4e624edd232a0086cfd6fbb62ba",
+        "bytes": 1923
+      },
+      {
+        "path": "qa/author_v1_review.json",
+        "sha256": "b335a897edb5aa26b5788d5297f3afc0e316042243a7ef6afaa1036f6cd37722",
+        "bytes": 482
+      },
+      {
+        "path": "qa/author_visual_review.json",
+        "sha256": "5e6b018ff69bc9b5755b93f45a028cbc8750abc51f3a171ef0485b72376cfc8e",
+        "bytes": 1095
+      },
+      {
+        "path": "qa/identity_reconciliation.json",
+        "sha256": "7c6fbf798eb93982643c982c8b74e4f8e6c7eca397192063bcf3c40c88fe5eb7",
+        "bytes": 1050
+      },
+      {
+        "path": "qa/independent_review_acceptance.json",
+        "sha256": "bb53aea1f455d604d35406619b688d285bc488c916bc9ce6c34c718c4abdaf4a",
+        "bytes": 908
+      },
+      {
+        "path": "qa/portrait_v1_metrics.json",
+        "sha256": "f36aab0a668170abd6f20d0ae73e3db4588af2fef549e4d39c0b6e7034415222",
+        "bytes": 4907
+      },
+      {
+        "path": "qa/portrait_v2_metrics.json",
+        "sha256": "ca1c4b02c1bb624987286b54f5ac0c6897e26fc0d20c8ab53c150c9a9f8538bb",
+        "bytes": 4911
+      },
+      {
+        "path": "qa/source_hash_recheck.json",
+        "sha256": "fabbfa171daef88c8a40baa3491cb5e7c47f7f8a6da471dec787d6e2d6aeccaf",
+        "bytes": 5048
+      },
+      {
+        "path": "raw/portrait_v1_raw_imagegen.png",
+        "sha256": "15ae9f87c006f17982307cf17be89f02ddcf4f20823f5187f9e9b6cb288d65e1",
+        "bytes": 1162485
+      },
+      {
+        "path": "raw/portrait_v2_raw_imagegen.png",
+        "sha256": "54b28cb2827a4832c2bb7aedce4cd9aa31753c5f1a27ae55a5f3431904d20f61",
+        "bytes": 1114319
+      },
+      {
+        "path": "sources/AGENTS.md",
+        "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4",
+        "bytes": 12714
+      },
+      {
+        "path": "sources/character_card.md",
+        "sha256": "d671a5c757a31488d5b003af7c67ec2f8590c098b897cf0586d73b1c5a36b9dd",
+        "bytes": 2674
+      },
+      {
+        "path": "sources/identity_reference.png",
+        "sha256": "425c3d9e681ff5d566b95f70d174251e551503b0fc2ce3f2009b8bcb4b8f3f4f",
+        "bytes": 544222
+      },
+      {
+        "path": "sources/iwo_style_reference.png",
+        "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb",
+        "bytes": 8032
+      },
+      {
+        "path": "sources/leiya_style_reference.png",
+        "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f",
+        "bytes": 4895
+      },
+      {
+        "path": "sources/mara_style_reference.png",
+        "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd",
+        "bytes": 9411
+      },
+      {
+        "path": "sources/master_QA.json",
+        "sha256": "c1df068f83f273e012b6cebd83fd8e382db3bc4ba9a46450ffe8ffa69876956e",
+        "bytes": 1194
+      },
+      {
+        "path": "sources/master_manifest.json",
+        "sha256": "cede87e5dc82a8f761415e1d76c81175299ff41d17d0819b5db80bb5c049193f",
+        "bytes": 1919
+      },
+      {
+        "path": "sources/master_prompt.txt",
+        "sha256": "7411395509f5125501c9bc5c30eede0ab3c7fe503aa0170dec802aeef1ec5db7",
+        "bytes": 1799
+      },
+      {
+        "path": "sources/roster_entry.json",
+        "sha256": "e60a4ae14032f456b7650edb5132bfb9c16138bc9b4a1b870b599dad834f2878",
+        "bytes": 4227
+      },
+      {
+        "path": "sources/source_manifest.json",
+        "sha256": "4892a555f079674e70499cf570ef211bbab38c33bb78b113503610fdf6deb155",
+        "bytes": 4302
+      },
+      {
+        "path": "sources/story_1.md",
+        "sha256": "9b007f9d374dffae90cc8a392483cd2437b6e3e475a4bbeed223e26cbf7f109b",
+        "bytes": 23761
+      },
+      {
+        "path": "sources/story_2.md",
+        "sha256": "a603294ce7906c7d473d23dd66a85cfb0eb40ca14e52c99fb6cc3a948875ef07",
+        "bytes": 16010
+      },
+      {
+        "path": "sources/tore_style_reference.png",
+        "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1",
+        "bytes": 8438
+      },
+      {
+        "path": "spec_lock.md",
+        "sha256": "ffb4dc2b767b17aedb310deb48ad5ac2d3ae7ab3021063c06f17de4ba0121022",
+        "bytes": 781
+      },
+      {
+        "path": "tool_returns/portrait_v1.json",
+        "sha256": "39ed6ef9a8fe2e6f35a978ebaba3b08a93ee41c29acad1fd48960a02ce00d2cc",
+        "bytes": 1550519
+      },
+      {
+        "path": "tool_returns/portrait_v2.json",
+        "sha256": "14b958956068af21e08c8c5c69ea33e1189b06f35d6970ef8431f8b58cbc512a",
+        "bytes": 1486299
+      }
+    ],
+    "buxi": [
+      {
+        "path": "README.md",
+        "sha256": "7e287496848a9a167c05e0ff9a8e250d9d9858276ec1aedd837016db5244077f",
+        "bytes": 1518
+      },
+      {
+        "path": "SHA256SUMS",
+        "sha256": "0fee591193385769379eceaba3a872590f447b2674209341268588e6ebea6e26",
+        "bytes": 4258
+      },
+      {
+        "path": "candidates/portrait_v1_74x100_candidate.png",
+        "sha256": "c2a21016b64694ac1fe59a3a5cc9d6370d3d5d4381c26f3a0c88a552d666a01a",
+        "bytes": 4791
+      },
+      {
+        "path": "candidates/portrait_v2_74x100_candidate.png",
+        "sha256": "f9b70515f015f28b7fa4b004d14abab888b245287c5ac572aec7b54171879ddd",
+        "bytes": 5054
+      },
+      {
+        "path": "derive_portrait.py",
+        "sha256": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+        "bytes": 3731
+      },
+      {
+        "path": "finalize_manifest.py",
+        "sha256": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+        "bytes": 2060
+      },
+      {
+        "path": "manifest.json",
+        "sha256": "3b5cf54adb25ac8f3bc20faee27ce758b7c37cb5474e6d4c48b807ec57a24356",
+        "bytes": 20689
+      },
+      {
+        "path": "previews/portrait_v1_1x.png",
+        "sha256": "c2a21016b64694ac1fe59a3a5cc9d6370d3d5d4381c26f3a0c88a552d666a01a",
+        "bytes": 4791
+      },
+      {
+        "path": "previews/portrait_v1_1x_backgrounds.png",
+        "sha256": "c6f75b2527e2778eb2e782f603a6e548789360f2ffff97dd2f2e8a198cf139e6",
+        "bytes": 6372
+      },
+      {
+        "path": "previews/portrait_v1_4x_backgrounds.png",
+        "sha256": "5d4cfd031f05759926dacba2d214769f0a64ea526fe0775394b0fe8ff4a23c64",
+        "bytes": 11442
+      },
+      {
+        "path": "previews/portrait_v1_8x.png",
+        "sha256": "bfc5b224e4ceb858cf7665a88873803b0d28a35ae2a8a788331a24788478fb26",
+        "bytes": 11159
+      },
+      {
+        "path": "previews/portrait_v2_1x.png",
+        "sha256": "f9b70515f015f28b7fa4b004d14abab888b245287c5ac572aec7b54171879ddd",
+        "bytes": 5054
+      },
+      {
+        "path": "previews/portrait_v2_1x_backgrounds.png",
+        "sha256": "9126256d8f6fe709ed113a1f7343670772a8b5e7a6864fa9136f1a5ca058e81f",
+        "bytes": 6690
+      },
+      {
+        "path": "previews/portrait_v2_4x_backgrounds.png",
+        "sha256": "38dd898e70283ac461c016e43f358c83e30c50b8c2ed310e01218cc7075167aa",
+        "bytes": 11879
+      },
+      {
+        "path": "previews/portrait_v2_8x.png",
+        "sha256": "64444caa15c79d0c8154a7dd89598af198f2901875d055892f4b92282a7401e7",
+        "bytes": 11590
+      },
+      {
+        "path": "prompts/portrait_v1.json",
+        "sha256": "67624557016897588e59d3340da9e1f5566168c3820c8a51f4c20ac7bfcc27d4",
+        "bytes": 3450
+      },
+      {
+        "path": "prompts/portrait_v1.txt",
+        "sha256": "9c195578580f567e5df7dc395fee24cd40cd47b1ad6aec36cd64a17b32e5d415",
+        "bytes": 2616
+      },
+      {
+        "path": "prompts/portrait_v2.json",
+        "sha256": "44123476e452d63b17bf6c43687c3a624dc72444c4e91af2e50a738417b794d0",
+        "bytes": 3157
+      },
+      {
+        "path": "prompts/portrait_v2.txt",
+        "sha256": "689fbe21ae376275b263d4a97e0730b18ac489f2b407d62854ddc0c3e1703698",
+        "bytes": 2322
+      },
+      {
+        "path": "qa/author_v1_review.json",
+        "sha256": "a7cc3d998992d0b8d6441fa580aa4bcb589a90940fee7681b02a0a39b14ac38d",
+        "bytes": 573
+      },
+      {
+        "path": "qa/author_visual_review.json",
+        "sha256": "6c5ac91b1d683e648d69db723ba93debff0598e02d44909c4040bb8afc04e739",
+        "bytes": 1119
+      },
+      {
+        "path": "qa/identity_reconciliation.json",
+        "sha256": "d73990d57e07b8fe3aef4383491d248c6296c12c79bc8f1449691c71a6b50e09",
+        "bytes": 1816
+      },
+      {
+        "path": "qa/independent_review_acceptance.json",
+        "sha256": "5396b3725ff321783b10790480590575d96929609e69145682400f9f7127c63c",
+        "bytes": 1231
+      },
+      {
+        "path": "qa/portrait_v1_metrics.json",
+        "sha256": "070bfcb63e27e8e7c454889aef40eb91519c99aef7a1acbfb7bfb888efe9d054",
+        "bytes": 4906
+      },
+      {
+        "path": "qa/portrait_v2_metrics.json",
+        "sha256": "c3997d417b2b3828350795d0b943a95dcbd772f5ce5717309cc474fd3d95f693",
+        "bytes": 4900
+      },
+      {
+        "path": "qa/source_hash_recheck.json",
+        "sha256": "f521d7d7b63fe291007ec09272a1b1e56d00018e2883490dee051f25647d26f2",
+        "bytes": 5482
+      },
+      {
+        "path": "raw/portrait_v1_raw_imagegen.png",
+        "sha256": "2bc0d448e27c24a19dedadaec6c73c69ad1b88aea6945431015b36759549f217",
+        "bytes": 1001187
+      },
+      {
+        "path": "raw/portrait_v2_raw_imagegen.png",
+        "sha256": "2b3181d2bd20f8dc6d7d693fbd9b0b29c35d52f9e778ba16b7db5cb60c3c76a6",
+        "bytes": 1117168
+      },
+      {
+        "path": "sources/AGENTS.md",
+        "sha256": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4",
+        "bytes": 12714
+      },
+      {
+        "path": "sources/character_card.md",
+        "sha256": "54027f5f6b5d9997ab447cdec390aeb7bd2838d5c281c6c669276d8a82358265",
+        "bytes": 2039
+      },
+      {
+        "path": "sources/character_card_be19635.md",
+        "sha256": "a0e89e40202e840b5750cd42572f033f93cb24c3a0d066fd8a8b98f09274e11d",
+        "bytes": 1409
+      },
+      {
+        "path": "sources/identity_reference.png",
+        "sha256": "4d486efa80a844fcd7d7b4a6103cd295438e2caea9c2cbaf0666233eb41351cf",
+        "bytes": 624674
+      },
+      {
+        "path": "sources/iwo_style_reference.png",
+        "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb",
+        "bytes": 8032
+      },
+      {
+        "path": "sources/leiya_style_reference.png",
+        "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f",
+        "bytes": 4895
+      },
+      {
+        "path": "sources/mara_style_reference.png",
+        "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd",
+        "bytes": 9411
+      },
+      {
+        "path": "sources/master_QA.json",
+        "sha256": "4e7ad9963978333acb9f39ce459e107c82cb85694551efd8718b8c988a5b8a11",
+        "bytes": 2355
+      },
+      {
+        "path": "sources/master_brief.json",
+        "sha256": "2abcfe1f83e08f7c76d0b72eab9065b13e982e43763705047f85e75bd2a34132",
+        "bytes": 9607
+      },
+      {
+        "path": "sources/master_manifest.json",
+        "sha256": "ac8018c242f5f41a6d7ac29ae2510155a849c76e84b7151b6d0de060c8805f75",
+        "bytes": 1912
+      },
+      {
+        "path": "sources/master_prompt.txt",
+        "sha256": "c5909327670bd96ad55fbc2fc4ed0a4ff3931004cd4dbf8c2ff1bb7b6791a491",
+        "bytes": 1637
+      },
+      {
+        "path": "sources/roster_entry.json",
+        "sha256": "0bb598abafe039f00554ecd2fae63f4d2fec5e94065b0ccbee678683e21503ab",
+        "bytes": 4199
+      },
+      {
+        "path": "sources/source_manifest.json",
+        "sha256": "6be35f8feaa1dab0d1b788bb2bd493f567adfd87015c923b992a37ea86d496d7",
+        "bytes": 4736
+      },
+      {
+        "path": "sources/story_1.md",
+        "sha256": "7568b9e8e0069ce33da3f25539d6a4b7583d521c5af301bd9336cc91bc0679f8",
+        "bytes": 25419
+      },
+      {
+        "path": "sources/tore_style_reference.png",
+        "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1",
+        "bytes": 8438
+      },
+      {
+        "path": "spec_lock.md",
+        "sha256": "f2dd9b11d72a131aa6f83ba887bd5bd417c552b90c67de67e82747a6fdcb6112",
+        "bytes": 968
+      },
+      {
+        "path": "tool_returns/portrait_v1.json",
+        "sha256": "63e11c235a73ae96e7527def2552cc9a36916d0e3c3b6ccdff551d5bf6145224",
+        "bytes": 1335455
+      },
+      {
+        "path": "tool_returns/portrait_v2.json",
+        "sha256": "1a3535269c9273bb261e5baabd4bdd5210be2aa109617f1ecb709a8eaea1d659",
+        "bytes": 1490099
+      }
+    ]
+  },
+  "qa_all_files": {
+    "siyu_v1_technical_audit.json": "d203abb83c1e54e7383237dda5ae434407f9e307d1a1056ce12dd1d904bcdf66",
+    "record_preflight_and_first.py": "d80b9bcf4535c6775566c52002254adcdd8be7b90a4b8287e4c1b073106a0e81",
+    "audit_batch.py": "9c7f7eacbed3620faa22b1e9152d601978f5f387b0f8aba88282fc39478cbb5b",
+    "finalize_audit.py": "9c52a7ed0db0181aa41d232056522520128200cd330304603a0f7469bdd5a24e",
+    "mother_overview_NN.png": "3ea2e5e9cc9c0991a49aef3c96e17e0c0667ce1419ab541921fd7ba9019d0e52",
+    "independent_source_final_recheck.json": "cdfd988c704cae3f7a0d4f4bd249a48a03033ac96946a7cb02e4b564dacd37b5",
+    "buxi_v1_technical_audit.json": "ab22350f7ef53c1e7793d2b5e0a60af023881032b6884ef11e222a020e490d91",
+    "prepare_sources.py": "780828ad9662daeffc9c71b63f2e51bcdc858d1ba8ac148470cbd5503a5eab4e",
+    "buxi_final_visual_review.json": "f27f30a77b73da3d7845937c7846bfc19e9b7a17268cc89e4785e7c479683e4a",
+    "selected_contact_4x_NN.png": "8256a02e3ea554d9c1a11f9e6df7a92cab097f3a58ed8b0269b6860a83b7cbd9",
+    "hepo_v1_technical_audit.json": "fe1b4abb2381f042b24b31907c28a304a7d03c3ae8f31c1c83ea3d8bb5d4d100",
+    "first_pass_visual_reviews.json": "206cd123400ec10dd98a0bf623c3d67c197df0f5e078028ee3e2105673b41c84",
+    "QA_summary.json": "515ebb614c82e894731f5827fd8edd5874951dc0118f9c5a473ade5518165493",
+    "core_style_4x_NN.png": "10e0f944cdec55a924eccadd713c34baf4f2e78c8b95b6780db4d6f755073549",
+    "supplemental_source_manifest.json": "ab9765610e2890fe824a436f58aec385a7eed9efdfe5b619a18f5b744f64bcfc",
+    "vila_final_visual_review.json": "7690e9908eed0b90406dc5e0f8aebdfebbf35af1f22f929e11097d50ed3e11f9",
+    "hepo_technical_audit.json": "bd0aafef8c00e5f83b3e42adb0e9c4e69cb63817d19b79f2b3b2af9ec4991e67",
+    "vila_v1_technical_audit.json": "a2a18f34a1e2fcbe47779f48b9a978563a057b92c42f3d38979fd20d53720e27",
+    "buxi_technical_audit.json": "49fbea3c31110b1595f49e1e54504b005a207017dee7f7e4b06b670690019852",
+    "vila_v2_boundary_evidence.json": "c776c07a09dcb034da668b855ad5c7c14a3ad9b64c97e21cada6ab943ec98dc5",
+    "SHA256SUMS": "2ad13119c6428503c55255d2464a4cd5b354f3d23e243724cae9ae445a205a0c",
+    "selection_lock.json": "0a5a727b005b4ba748260116676a4fd5f7c64d144ba95310132538797784a2f7",
+    "FINAL_REVIEW.md": "3e8cad326b4139a67657f8bc64deaeff2364369cad9c85eed3f0e737defac672",
+    "hepo_final_visual_review.json": "da3102cd5eeb7176fc4539984b1bfdb167265e684efd742919595f55e91cd721",
+    "hepo_v2_boundary_evidence.json": "7d7e30f05974ef8075e852de76e03144f62baab5b00ddf25cde0e8946d65d8f1",
+    "siyu_final_visual_review.json": "3f309929528b3680e60fc7931dacfadade173cef3a7934f8b849169698900858",
+    "hepo_v2_right_edge_3x_NN.png": "1c876a437a4a0269bd57020b769e8f85a38f0be52e0eeb985c1219e012877c3b",
+    "vila_v2_right_edge_3x_NN.png": "c091bb620fd2cfe72764274ce8a54558c6dbb69e5345b613e1ec67bfc6341609",
+    "record_final_reviews.py": "72a654bf274a2a1ee6e4f8d0954885553e13732e156d920d86270e76b1352a48",
+    "siyu_technical_audit.json": "0a82c3dc969070a8272af40503db25a4ee314562d7c74a58320512c210d62319",
+    "identity_preflight.json": "dee95db07e4382315a6c6419d26f8b8c15e9920bd07f9760dbd84c3f8c544f1e",
+    "independent_source_manifest.json": "7fe90d1598b77c61640105fbd1d9a410d67b1e6d21f5846b942a2ba71dd1b192",
+    "core_style_NN_audit.json": "6a05a145656e3ee81bdb19bced9e628d7f5c19f18c4f36eee122cc6a0f59b3e5",
+    "check_v2_boundaries.py": "bb30ba877aa831d488a354580328f4fcb93da3042fdf26baa8a5cf4dfe1b86c8",
+    "vila_technical_audit.json": "6249113813168d5780fce64d89af929508ba17c89300659d9f51c252ba71aacf",
+    "manifest.json": "0d29becc94797b037da7d91e4d40ae521b894ccc3cbcf8c83c468bea0dca2058",
+    "source_snapshots/AGENTS.md": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4",
+    "source_snapshots/design/AGENTS.md": "bdf08c300f899b44fd6403f7966ff16e7a4241fb2938474daa9466d574e388c8",
+    "source_snapshots/design/04_人物/人物细描与随身物.md": "a6a75160713defa2b61b37ab7d0c2f6d677c29ddc9ed2af5894714bc500fc1df",
+    "source_snapshots/design/11_管理/寒凉盆地与修院山地人物演出审查.md": "8794b02f07ddab61ecf45962c41fdb29cb1e4150a90342e3868c33796ecb6a86",
+    "source_snapshots/design/04_人物/城市人物/人物_OSB-NPC-BUXI_布希.md": "54027f5f6b5d9997ab447cdec390aeb7bd2838d5c281c6c669276d8a82358265",
+    "source_snapshots/design/04_人物/城市人物/人物_HIG-NPC-VILA_维菈.md": "657afdd813343fd7a3fff2ee4c0588569cfd96f6e81d7d0b728fb3ffd22201be",
+    "source_snapshots/design/04_人物/聚落人物/人物_HIG-S01-NPC_赫珀.md": "d190eaf177a3e0fc52e69912e826888a8f785c89e9ac8407b95c31df3f40dfc3",
+    "source_snapshots/design/04_人物/聚落人物/人物_HIG-S02-NPC_司榆.md": "d671a5c757a31488d5b003af7c67ec2f8590c098b897cf0586d73b1c5a36b9dd",
+    "source_snapshots/design/05_主线/城市篇章/台本_CM-OSB_留到来年的一袋.md": "7568b9e8e0069ce33da3f25539d6a4b7583d521c5af301bd9336cc91bc0679f8",
+    "source_snapshots/design/05_主线/城市篇章/台本_CM-HIG_回程也是答案.md": "9b007f9d374dffae90cc8a392483cd2437b6e3e475a4bbeed223e26cbf7f109b",
+    "source_snapshots/design/06_支线/城市支线/台本_CS-HIG-02_三刻里少的一格.md": "a603294ce7906c7d473d23dd66a85cfb0eb40ca14e52c99fb6cc3a948875ef07",
+    "source_snapshots/design/06_支线/城市支线/台本_CS-HIG-03_留下的人.md": "9160ce9972e026fe5209f198a8ad5433a0dd75e8ff6fab5f0135bad3c7831718",
+    "source_snapshots/design/06_支线/城市支线/台本_CS-HIG-01_回风驿的停牌.md": "4b5907bb9576ce75be1be1726a66dc45238535c518c73404b347f56d85905bd3",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/siyu/siyu_raw_imagegen.png": "425c3d9e681ff5d566b95f70d174251e551503b0fc2ce3f2009b8bcb4b8f3f4f",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/siyu/QA-independent.json": "c1df068f83f273e012b6cebd83fd8e382db3bc4ba9a46450ffe8ffa69876956e",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/siyu/prompt.txt": "7411395509f5125501c9bc5c30eede0ab3c7fe503aa0170dec802aeef1ec5db7",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/siyu/manifest.json": "cede87e5dc82a8f761415e1d76c81175299ff41d17d0819b5db80bb5c049193f",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/buxi/QA-independent.json": "4e7ad9963978333acb9f39ce459e107c82cb85694551efd8718b8c988a5b8a11",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/buxi/buxi_raw_imagegen.png": "4d486efa80a844fcd7d7b4a6103cd295438e2caea9c2cbaf0666233eb41351cf",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/buxi/prompt.txt": "c5909327670bd96ad55fbc2fc4ed0a4ff3931004cd4dbf8c2ff1bb7b6791a491",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/buxi/manifest.json": "ac8018c242f5f41a6d7ac29ae2510155a849c76e84b7151b6d0de060c8805f75",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/hepo/QA-independent.json": "b2145b0d041b8f73f6492bd5ad96cdd7e6fc91cb600b433ba6f9c93b201a5098",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/hepo/hepo_raw_imagegen.png": "18adf2fba2c5481a8fe39f3a51e742499bb3bca1c78d825c61b16edcb3c6ba07",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/hepo/manifest.json": "16605a4be77a3e932c0ba199bfbf8e650f590b771903283b574cec2b073c898d",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_third_four_20261013.json": "1035661926eab047adc4aac950582a6f924f42146aacfee2148206bb1cb267d4",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_osbrook_grain_bounds_40.json": "2abcfe1f83e08f7c76d0b72eab9065b13e982e43763705047f85e75bd2a34132",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_v2_raw_imagegen.png": "9b72e90380efb5e660fb75beef199713bb7889f2defec586f318514d5fe7f31a",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/manifest.json": "a35e5627aab9d64d7e370e81a55c49b88924ca5dcf22c74329c2ba4954612e32",
+    "source_snapshots/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/campaign_roster.json": "804380c0c687528df56845bd4fe21b8148d5757601af39416e6c08b8f381d79b",
+    "source_snapshots/Assets/CharacterDesigns/20261015/native_style_continuation/tore/candidates/portrait_v1_74x100_candidate.png": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1",
+    "source_snapshots/Assets/CharacterDesigns/20261015/native_style_continuation/leiya/candidates/portrait_v2_maxcoverage_74x100_candidate.png": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f",
+    "source_snapshots/Assets/CharacterDesigns/20261015/native_style_pilot/mara/assets/portrait_v2_74x100.png": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd",
+    "source_snapshots/Assets/CharacterDesigns/20261015/native_style_pilot/iwo/candidates/portrait_v1_74x100_candidate.png": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb",
+    "source_snapshots/git/09216ad/buxi_card.md": "54027f5f6b5d9997ab447cdec390aeb7bd2838d5c281c6c669276d8a82358265",
+    "source_snapshots/git/be19635/buxi_card.md": "a0e89e40202e840b5750cd42572f033f93cb24c3a0d066fd8a8b98f09274e11d",
+    "author_evidence/siyu/SHA256SUMS": "9e7f8724647e2d0315d053f560daf84334a2dc568a7ce5ae8b5fa455800a18d0",
+    "author_evidence/siyu/finalize_manifest.py": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+    "author_evidence/siyu/derive_portrait.py": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "author_evidence/siyu/manifest.json": "be2d1d689c5b345e703796c7aefcb2c9a7ad72f10708ad1ce82ddc8974e761c2",
+    "author_evidence/buxi/SHA256SUMS": "0fee591193385769379eceaba3a872590f447b2674209341268588e6ebea6e26",
+    "author_evidence/buxi/finalize_manifest.py": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+    "author_evidence/buxi/derive_portrait.py": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "author_evidence/buxi/manifest.json": "3b5cf54adb25ac8f3bc20faee27ce758b7c37cb5474e6d4c48b807ec57a24356",
+    "author_evidence/vila/SHA256SUMS": "07a1c793e80a385e130faeaf3776f6779048d690690ca8d6f7f2194dcda54f01",
+    "author_evidence/vila/finalize_manifest.py": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+    "author_evidence/vila/derive_portrait.py": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "author_evidence/vila/manifest.json": "d82b0b31fee9aef9360b6ae8c189f827fdb4e20f3b33b2b385e18989f90d50ce",
+    "author_evidence/hepo/SHA256SUMS": "ebf14be0bdfb0e72d2a87fe0526817bd508fc95408eab33cae2fecb41fe90e27",
+    "author_evidence/hepo/finalize_manifest.py": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+    "author_evidence/hepo/derive_portrait.py": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "author_evidence/hepo/manifest.json": "87b537508d33eec487313ec79e0f9b9df2f2a8787f032780c7dfcf40235522ee",
+    "author_evidence/siyu/sources/source_manifest.json": "4892a555f079674e70499cf570ef211bbab38c33bb78b113503610fdf6deb155",
+    "author_evidence/buxi/sources/source_manifest.json": "6be35f8feaa1dab0d1b788bb2bd493f567adfd87015c923b992a37ea86d496d7",
+    "author_evidence/vila/sources/source_manifest.json": "72b785bde713a2f60cf09a6ed657945a879459ef2afbdbc732bf5d9cdeb5dbbe",
+    "author_evidence/hepo/sources/source_manifest.json": "88c32469fd126a3c4d1f0500ab73c84c9c3ee2fdf7af0ee302a357321efe7a0d",
+    "reproduction/siyu/portrait_v1_74x100_candidate.png": "aaaf53a6d2c43c29936ffe68f2b2e1d7d4ded5da2a36210e4d74c9e520166615",
+    "reproduction/siyu/portrait_v2_74x100_candidate.png": "b1fb37e69591762d7d868b20e9367b29f6a0abe49618decfd8871d3645fe696d",
+    "reproduction/siyu/portrait_v2_8x.png": "fff97e2cd72e0e67ea740b6ddf3de74ab685a078ab30c1f184ef3409aca732c5",
+    "reproduction/siyu/portrait_v1_8x.png": "1c7659b63fc24a5d3ce63cfa551f6b7928a949f445404aa4e6d09019ebb7ee4b",
+    "reproduction/buxi/portrait_v1_74x100_candidate.png": "c2a21016b64694ac1fe59a3a5cc9d6370d3d5d4381c26f3a0c88a552d666a01a",
+    "reproduction/buxi/portrait_v2_74x100_candidate.png": "f9b70515f015f28b7fa4b004d14abab888b245287c5ac572aec7b54171879ddd",
+    "reproduction/buxi/portrait_v2_8x.png": "64444caa15c79d0c8154a7dd89598af198f2901875d055892f4b92282a7401e7",
+    "reproduction/buxi/portrait_v1_8x.png": "bfc5b224e4ceb858cf7665a88873803b0d28a35ae2a8a788331a24788478fb26",
+    "reproduction/vila/portrait_v1_74x100_candidate.png": "9b71d442abaaba6ac52b910e79c40d4631886fe0065f4c0f772b87aa489c3e50",
+    "reproduction/vila/portrait_v2_74x100_candidate.png": "d8a7eb49cc8ecacc7a90ec46d3301c9ab8d5e68d5a7c497e6f8c455ae827a165",
+    "reproduction/vila/portrait_v2_8x.png": "d30f1ebd4ce4d402c7de641eb548405800a84d5620b71db0d568b6059a13940b",
+    "reproduction/vila/portrait_v2_inset_8x.png": "5044ee8f896c36f5e359efa62090727dc757efac627b74cce6791ba6aa75d7bd",
+    "reproduction/vila/portrait_v2_inset_74x100_candidate.png": "49f48179cf94d2aaef4db5e5362b0c752a64a861573ef9acb43ef8b620949627",
+    "reproduction/vila/portrait_v1_8x.png": "396bc2bfd8b7cc853faed90faa975ce8da1b64b68c49478ca6bf6bcc408b5bd6",
+    "reproduction/hepo/portrait_v1_74x100_candidate.png": "c5b0ca7d4167c967dd657035daa004b25f359da86a20a1d3a787285bdc118cbf",
+    "reproduction/hepo/portrait_v2_74x100_candidate.png": "1ae05a501a486ff0baaaecbaaa44b13d8573b2ea26e55c5991b59fc44907f7b3",
+    "reproduction/hepo/portrait_v2_8x.png": "f6f3ffa1d40ef61138349999f644b63320c488bdd01c1348e7819afa5ffcd399",
+    "reproduction/hepo/portrait_v2_inset_8x.png": "e47453a7d869a59a13bccaa8045700e64d2b9127b6532b3633ef0c9406f46259",
+    "reproduction/hepo/portrait_v2_inset_74x100_candidate.png": "a95180b96ffa8cdae43fdfa4b4b42e0bb5d338fdc00b2c71ce7e08894df088be",
+    "reproduction/hepo/portrait_v1_8x.png": "ec875c56c866492a6cb72a91cb52f71ff47a3ab5dc5b108ef016293fc76cd7c2"
+  },
+  "qa_files": {
+    "siyu_v1_technical_audit.json": "d203abb83c1e54e7383237dda5ae434407f9e307d1a1056ce12dd1d904bcdf66",
+    "record_preflight_and_first.py": "d80b9bcf4535c6775566c52002254adcdd8be7b90a4b8287e4c1b073106a0e81",
+    "audit_batch.py": "9c7f7eacbed3620faa22b1e9152d601978f5f387b0f8aba88282fc39478cbb5b",
+    "finalize_audit.py": "9c52a7ed0db0181aa41d232056522520128200cd330304603a0f7469bdd5a24e",
+    "mother_overview_NN.png": "3ea2e5e9cc9c0991a49aef3c96e17e0c0667ce1419ab541921fd7ba9019d0e52",
+    "independent_source_final_recheck.json": "cdfd988c704cae3f7a0d4f4bd249a48a03033ac96946a7cb02e4b564dacd37b5",
+    "buxi_v1_technical_audit.json": "ab22350f7ef53c1e7793d2b5e0a60af023881032b6884ef11e222a020e490d91",
+    "prepare_sources.py": "780828ad9662daeffc9c71b63f2e51bcdc858d1ba8ac148470cbd5503a5eab4e",
+    "buxi_final_visual_review.json": "f27f30a77b73da3d7845937c7846bfc19e9b7a17268cc89e4785e7c479683e4a",
+    "selected_contact_4x_NN.png": "8256a02e3ea554d9c1a11f9e6df7a92cab097f3a58ed8b0269b6860a83b7cbd9",
+    "hepo_v1_technical_audit.json": "fe1b4abb2381f042b24b31907c28a304a7d03c3ae8f31c1c83ea3d8bb5d4d100",
+    "first_pass_visual_reviews.json": "206cd123400ec10dd98a0bf623c3d67c197df0f5e078028ee3e2105673b41c84",
+    "QA_summary.json": "515ebb614c82e894731f5827fd8edd5874951dc0118f9c5a473ade5518165493",
+    "core_style_4x_NN.png": "10e0f944cdec55a924eccadd713c34baf4f2e78c8b95b6780db4d6f755073549",
+    "supplemental_source_manifest.json": "ab9765610e2890fe824a436f58aec385a7eed9efdfe5b619a18f5b744f64bcfc",
+    "vila_final_visual_review.json": "7690e9908eed0b90406dc5e0f8aebdfebbf35af1f22f929e11097d50ed3e11f9",
+    "hepo_technical_audit.json": "bd0aafef8c00e5f83b3e42adb0e9c4e69cb63817d19b79f2b3b2af9ec4991e67",
+    "vila_v1_technical_audit.json": "a2a18f34a1e2fcbe47779f48b9a978563a057b92c42f3d38979fd20d53720e27",
+    "buxi_technical_audit.json": "49fbea3c31110b1595f49e1e54504b005a207017dee7f7e4b06b670690019852",
+    "vila_v2_boundary_evidence.json": "c776c07a09dcb034da668b855ad5c7c14a3ad9b64c97e21cada6ab943ec98dc5",
+    "SHA256SUMS": "2ad13119c6428503c55255d2464a4cd5b354f3d23e243724cae9ae445a205a0c",
+    "selection_lock.json": "0a5a727b005b4ba748260116676a4fd5f7c64d144ba95310132538797784a2f7",
+    "FINAL_REVIEW.md": "3e8cad326b4139a67657f8bc64deaeff2364369cad9c85eed3f0e737defac672",
+    "hepo_final_visual_review.json": "da3102cd5eeb7176fc4539984b1bfdb167265e684efd742919595f55e91cd721",
+    "hepo_v2_boundary_evidence.json": "7d7e30f05974ef8075e852de76e03144f62baab5b00ddf25cde0e8946d65d8f1",
+    "siyu_final_visual_review.json": "3f309929528b3680e60fc7931dacfadade173cef3a7934f8b849169698900858",
+    "hepo_v2_right_edge_3x_NN.png": "1c876a437a4a0269bd57020b769e8f85a38f0be52e0eeb985c1219e012877c3b",
+    "vila_v2_right_edge_3x_NN.png": "c091bb620fd2cfe72764274ce8a54558c6dbb69e5345b613e1ec67bfc6341609",
+    "record_final_reviews.py": "72a654bf274a2a1ee6e4f8d0954885553e13732e156d920d86270e76b1352a48",
+    "siyu_technical_audit.json": "0a82c3dc969070a8272af40503db25a4ee314562d7c74a58320512c210d62319",
+    "identity_preflight.json": "dee95db07e4382315a6c6419d26f8b8c15e9920bd07f9760dbd84c3f8c544f1e",
+    "independent_source_manifest.json": "7fe90d1598b77c61640105fbd1d9a410d67b1e6d21f5846b942a2ba71dd1b192",
+    "core_style_NN_audit.json": "6a05a145656e3ee81bdb19bced9e628d7f5c19f18c4f36eee122cc6a0f59b3e5",
+    "check_v2_boundaries.py": "bb30ba877aa831d488a354580328f4fcb93da3042fdf26baa8a5cf4dfe1b86c8",
+    "vila_technical_audit.json": "6249113813168d5780fce64d89af929508ba17c89300659d9f51c252ba71aacf",
+    "manifest.json": "0d29becc94797b037da7d91e4d40ae521b894ccc3cbcf8c83c468bea0dca2058",
+    "source_snapshots/AGENTS.md": "6b3f93de90f8db0d55ed7fa3a0599c4034f7e1b171c71e0f0fa396e80967c4f4",
+    "source_snapshots/design/AGENTS.md": "bdf08c300f899b44fd6403f7966ff16e7a4241fb2938474daa9466d574e388c8",
+    "source_snapshots/design/04_人物/人物细描与随身物.md": "a6a75160713defa2b61b37ab7d0c2f6d677c29ddc9ed2af5894714bc500fc1df",
+    "source_snapshots/design/11_管理/寒凉盆地与修院山地人物演出审查.md": "8794b02f07ddab61ecf45962c41fdb29cb1e4150a90342e3868c33796ecb6a86",
+    "source_snapshots/design/04_人物/城市人物/人物_OSB-NPC-BUXI_布希.md": "54027f5f6b5d9997ab447cdec390aeb7bd2838d5c281c6c669276d8a82358265",
+    "source_snapshots/design/04_人物/城市人物/人物_HIG-NPC-VILA_维菈.md": "657afdd813343fd7a3fff2ee4c0588569cfd96f6e81d7d0b728fb3ffd22201be",
+    "source_snapshots/design/04_人物/聚落人物/人物_HIG-S01-NPC_赫珀.md": "d190eaf177a3e0fc52e69912e826888a8f785c89e9ac8407b95c31df3f40dfc3",
+    "source_snapshots/design/04_人物/聚落人物/人物_HIG-S02-NPC_司榆.md": "d671a5c757a31488d5b003af7c67ec2f8590c098b897cf0586d73b1c5a36b9dd",
+    "source_snapshots/design/05_主线/城市篇章/台本_CM-OSB_留到来年的一袋.md": "7568b9e8e0069ce33da3f25539d6a4b7583d521c5af301bd9336cc91bc0679f8",
+    "source_snapshots/design/05_主线/城市篇章/台本_CM-HIG_回程也是答案.md": "9b007f9d374dffae90cc8a392483cd2437b6e3e475a4bbeed223e26cbf7f109b",
+    "source_snapshots/design/06_支线/城市支线/台本_CS-HIG-02_三刻里少的一格.md": "a603294ce7906c7d473d23dd66a85cfb0eb40ca14e52c99fb6cc3a948875ef07",
+    "source_snapshots/design/06_支线/城市支线/台本_CS-HIG-03_留下的人.md": "9160ce9972e026fe5209f198a8ad5433a0dd75e8ff6fab5f0135bad3c7831718",
+    "source_snapshots/design/06_支线/城市支线/台本_CS-HIG-01_回风驿的停牌.md": "4b5907bb9576ce75be1be1726a66dc45238535c518c73404b347f56d85905bd3",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/siyu/siyu_raw_imagegen.png": "425c3d9e681ff5d566b95f70d174251e551503b0fc2ce3f2009b8bcb4b8f3f4f",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/siyu/QA-independent.json": "c1df068f83f273e012b6cebd83fd8e382db3bc4ba9a46450ffe8ffa69876956e",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/siyu/prompt.txt": "7411395509f5125501c9bc5c30eede0ab3c7fe503aa0170dec802aeef1ec5db7",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/siyu/manifest.json": "cede87e5dc82a8f761415e1d76c81175299ff41d17d0819b5db80bb5c049193f",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/buxi/QA-independent.json": "4e7ad9963978333acb9f39ce459e107c82cb85694551efd8718b8c988a5b8a11",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/buxi/buxi_raw_imagegen.png": "4d486efa80a844fcd7d7b4a6103cd295438e2caea9c2cbaf0666233eb41351cf",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/buxi/prompt.txt": "c5909327670bd96ad55fbc2fc4ed0a4ff3931004cd4dbf8c2ff1bb7b6791a491",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/buxi/manifest.json": "ac8018c242f5f41a6d7ac29ae2510155a849c76e84b7151b6d0de060c8805f75",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/hepo/QA-independent.json": "b2145b0d041b8f73f6492bd5ad96cdd7e6fc91cb600b433ba6f9c93b201a5098",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/hepo/hepo_raw_imagegen.png": "18adf2fba2c5481a8fe39f3a51e742499bb3bca1c78d825c61b16edcb3c6ba07",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/hepo/manifest.json": "16605a4be77a3e932c0ba199bfbf8e650f590b771903283b574cec2b073c898d",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/new_story_audit/independent_visual_qa_third_four_20261013.json": "1035661926eab047adc4aac950582a6f924f42146aacfee2148206bb1cb267d4",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/briefs/batch_next_osbrook_grain_bounds_40.json": "2abcfe1f83e08f7c76d0b72eab9065b13e982e43763705047f85e75bd2a34132",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/vila_v2_raw_imagegen.png": "9b72e90380efb5e660fb75beef199713bb7889f2defec586f318514d5fe7f31a",
+    "source_snapshots/Assets/CharacterDesigns/20261013/expressive/new_story/vila/concept_v1/manifest.json": "a35e5627aab9d64d7e370e81a55c49b88924ca5dcf22c74329c2ba4954612e32",
+    "source_snapshots/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/campaign_roster.json": "804380c0c687528df56845bd4fe21b8148d5757601af39416e6c08b8f381d79b",
+    "source_snapshots/Assets/CharacterDesigns/20261015/native_style_continuation/tore/candidates/portrait_v1_74x100_candidate.png": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1",
+    "source_snapshots/Assets/CharacterDesigns/20261015/native_style_continuation/leiya/candidates/portrait_v2_maxcoverage_74x100_candidate.png": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f",
+    "source_snapshots/Assets/CharacterDesigns/20261015/native_style_pilot/mara/assets/portrait_v2_74x100.png": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd",
+    "source_snapshots/Assets/CharacterDesigns/20261015/native_style_pilot/iwo/candidates/portrait_v1_74x100_candidate.png": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb",
+    "source_snapshots/git/09216ad/buxi_card.md": "54027f5f6b5d9997ab447cdec390aeb7bd2838d5c281c6c669276d8a82358265",
+    "source_snapshots/git/be19635/buxi_card.md": "a0e89e40202e840b5750cd42572f033f93cb24c3a0d066fd8a8b98f09274e11d",
+    "author_evidence/siyu/SHA256SUMS": "9e7f8724647e2d0315d053f560daf84334a2dc568a7ce5ae8b5fa455800a18d0",
+    "author_evidence/siyu/finalize_manifest.py": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+    "author_evidence/siyu/derive_portrait.py": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "author_evidence/siyu/manifest.json": "be2d1d689c5b345e703796c7aefcb2c9a7ad72f10708ad1ce82ddc8974e761c2",
+    "author_evidence/buxi/SHA256SUMS": "0fee591193385769379eceaba3a872590f447b2674209341268588e6ebea6e26",
+    "author_evidence/buxi/finalize_manifest.py": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+    "author_evidence/buxi/derive_portrait.py": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "author_evidence/buxi/manifest.json": "3b5cf54adb25ac8f3bc20faee27ce758b7c37cb5474e6d4c48b807ec57a24356",
+    "author_evidence/vila/SHA256SUMS": "07a1c793e80a385e130faeaf3776f6779048d690690ca8d6f7f2194dcda54f01",
+    "author_evidence/vila/finalize_manifest.py": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+    "author_evidence/vila/derive_portrait.py": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "author_evidence/vila/manifest.json": "d82b0b31fee9aef9360b6ae8c189f827fdb4e20f3b33b2b385e18989f90d50ce",
+    "author_evidence/hepo/SHA256SUMS": "ebf14be0bdfb0e72d2a87fe0526817bd508fc95408eab33cae2fecb41fe90e27",
+    "author_evidence/hepo/finalize_manifest.py": "9bf5099e6433c37215a00da35f27db153fa9e6c1cdec62ce4881cfe4cb1728f3",
+    "author_evidence/hepo/derive_portrait.py": "338febc664682900e78901a9b6ecb24df118d9d0de3e66b82c1a7859fce0e4c4",
+    "author_evidence/hepo/manifest.json": "87b537508d33eec487313ec79e0f9b9df2f2a8787f032780c7dfcf40235522ee",
+    "author_evidence/siyu/sources/source_manifest.json": "4892a555f079674e70499cf570ef211bbab38c33bb78b113503610fdf6deb155",
+    "author_evidence/buxi/sources/source_manifest.json": "6be35f8feaa1dab0d1b788bb2bd493f567adfd87015c923b992a37ea86d496d7",
+    "author_evidence/vila/sources/source_manifest.json": "72b785bde713a2f60cf09a6ed657945a879459ef2afbdbc732bf5d9cdeb5dbbe",
+    "author_evidence/hepo/sources/source_manifest.json": "88c32469fd126a3c4d1f0500ab73c84c9c3ee2fdf7af0ee302a357321efe7a0d",
+    "reproduction/siyu/portrait_v1_74x100_candidate.png": "aaaf53a6d2c43c29936ffe68f2b2e1d7d4ded5da2a36210e4d74c9e520166615",
+    "reproduction/siyu/portrait_v2_74x100_candidate.png": "b1fb37e69591762d7d868b20e9367b29f6a0abe49618decfd8871d3645fe696d",
+    "reproduction/siyu/portrait_v2_8x.png": "fff97e2cd72e0e67ea740b6ddf3de74ab685a078ab30c1f184ef3409aca732c5",
+    "reproduction/siyu/portrait_v1_8x.png": "1c7659b63fc24a5d3ce63cfa551f6b7928a949f445404aa4e6d09019ebb7ee4b",
+    "reproduction/buxi/portrait_v1_74x100_candidate.png": "c2a21016b64694ac1fe59a3a5cc9d6370d3d5d4381c26f3a0c88a552d666a01a",
+    "reproduction/buxi/portrait_v2_74x100_candidate.png": "f9b70515f015f28b7fa4b004d14abab888b245287c5ac572aec7b54171879ddd",
+    "reproduction/buxi/portrait_v2_8x.png": "64444caa15c79d0c8154a7dd89598af198f2901875d055892f4b92282a7401e7",
+    "reproduction/buxi/portrait_v1_8x.png": "bfc5b224e4ceb858cf7665a88873803b0d28a35ae2a8a788331a24788478fb26",
+    "reproduction/vila/portrait_v1_74x100_candidate.png": "9b71d442abaaba6ac52b910e79c40d4631886fe0065f4c0f772b87aa489c3e50",
+    "reproduction/vila/portrait_v2_74x100_candidate.png": "d8a7eb49cc8ecacc7a90ec46d3301c9ab8d5e68d5a7c497e6f8c455ae827a165",
+    "reproduction/vila/portrait_v2_8x.png": "d30f1ebd4ce4d402c7de641eb548405800a84d5620b71db0d568b6059a13940b",
+    "reproduction/vila/portrait_v2_inset_8x.png": "5044ee8f896c36f5e359efa62090727dc757efac627b74cce6791ba6aa75d7bd",
+    "reproduction/vila/portrait_v2_inset_74x100_candidate.png": "49f48179cf94d2aaef4db5e5362b0c752a64a861573ef9acb43ef8b620949627",
+    "reproduction/vila/portrait_v1_8x.png": "396bc2bfd8b7cc853faed90faa975ce8da1b64b68c49478ca6bf6bcc408b5bd6",
+    "reproduction/hepo/portrait_v1_74x100_candidate.png": "c5b0ca7d4167c967dd657035daa004b25f359da86a20a1d3a787285bdc118cbf",
+    "reproduction/hepo/portrait_v2_74x100_candidate.png": "1ae05a501a486ff0baaaecbaaa44b13d8573b2ea26e55c5991b59fc44907f7b3",
+    "reproduction/hepo/portrait_v2_8x.png": "f6f3ffa1d40ef61138349999f644b63320c488bdd01c1348e7819afa5ffcd399",
+    "reproduction/hepo/portrait_v2_inset_8x.png": "e47453a7d869a59a13bccaa8045700e64d2b9127b6532b3633ef0c9406f46259",
+    "reproduction/hepo/portrait_v2_inset_74x100_candidate.png": "a95180b96ffa8cdae43fdfa4b4b42e0bb5d338fdc00b2c71ce7e08894df088be",
+    "reproduction/hepo/portrait_v1_8x.png": "ec875c56c866492a6cb72a91cb52f71ff47a3ab5dc5b108ef016293fc76cd7c2"
+  },
+  "qa_duplicated_replay_files_omitted": [],
+  "qa_sha256sums_entries_verified": 110,
+  "independent_source_file_count": 35,
+  "source_frozen_file_count": 202,
+  "native_pixel_approved": false,
+  "runtime_verified": false
+}

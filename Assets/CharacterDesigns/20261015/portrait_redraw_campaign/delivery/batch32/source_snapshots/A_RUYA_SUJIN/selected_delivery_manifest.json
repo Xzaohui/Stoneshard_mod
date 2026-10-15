@@ -1,0 +1,190 @@
+{
+  "batch": 32,
+  "date": "2026-10-15",
+  "qualified_candidate_count": 3,
+  "held_count": 1,
+  "characters": [
+    {
+      "actor": "ruya",
+      "name": "芦雅",
+      "source": "ruya/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "6d1ac8737309fcc958086a2208817372d2129bd93c1207a691037d6bba61844b",
+      "delivery_file": "RUYA_芦雅_74x100_candidate.png",
+      "delivery_sha256": "6d1ac8737309fcc958086a2208817372d2129bd93c1207a691037d6bba61844b",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "ruya/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "左右边余量较紧；发丝和面部仍有碎色块",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "sujin",
+      "name": "苏槿",
+      "source": "sujin/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "5b196320ec4770973ba897c659e8bd35dbd187ace3449859373988d6e5127e08",
+      "delivery_file": "SUJIN_苏槿_74x100_candidate.png",
+      "delivery_sha256": "5b196320ec4770973ba897c659e8bd35dbd187ace3449859373988d6e5127e08",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "sujin/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "头巾体量偏大，裸颈略长；左右余量较紧",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "suoya",
+      "name": "朔娅",
+      "source": "suoya/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "5e73bc68655674b727afb39acdfa107bab7ecf92dc3c03fe69c954b106444437",
+      "delivery_file": "SUOYA_朔娅_74x100_candidate.png",
+      "delivery_sha256": "5e73bc68655674b727afb39acdfa107bab7ecf92dc3c03fe69c954b106444437",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "suoya/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "眼白仍可收敛，头发体量偏大；左右余量较紧",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "held": [
+    {
+      "slug": "ousha",
+      "name": "欧莎",
+      "selected_portrait": null,
+      "selected_sha256": null,
+      "production_manifest_sha256": "7bebbe5a4355e93d64d0c8d1e559929f51bf15371e8cabe4a6b7851d86121a10",
+      "production_SHA256SUMS_sha256": "d4a89fd88025b5564d2b8df414a44cc51076206cf0793279dd5eb053c6e94d66",
+      "decision": "held_style_not_deliverable",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": false,
+      "residual": [
+        "核心风格未通过：两眼大亮白、偏卡通眼型与细长裸颈；不能因技术格式通过或大脸构图改善而列为可交付选稿。",
+        "原始左右实体透明余量17/13px、底18px，轮廓完整但余量紧；full bbox(1,9,73,99)，inset不修复风格。",
+        "selected为空、delivery_eligible=false；full v2和inset均只留研究审阅证据，不进入选稿交付清单。",
+        "NN等比包含与32色量化为技术派生；未获用户审美终审，未集成或实机验证。"
+      ],
+      "held_evidence_portrait": "ousha/candidates/portrait_v2_74x100_candidate.png",
+      "held_evidence_sha256": "80cdadb272f181747fb6eca76f24e46d79c2f88bd74fabdf47b21188052c7251",
+      "historical_fallback_approved": false
+    }
+  ],
+  "board": {
+    "file": "batch32_三人头像总览_1x_4x.png",
+    "sha256": "48c88e0886a8aa4c86cafbd1d1d1f2add95699b91d9b4cdd42c1f338763a592e",
+    "dimensions": [
+      680,
+      1898
+    ],
+    "portrait_checks": [
+      {
+        "actor": "ruya",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ruya",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "sujin",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "sujin",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "suoya",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1258,
+          161,
+          1358
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "suoya",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1101,
+          624,
+          1501
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false,
+    "held_portrait_not_displayed": true
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded. All four generated production folders, including held ousha evidence, are retained; held is not counted as success."
+}

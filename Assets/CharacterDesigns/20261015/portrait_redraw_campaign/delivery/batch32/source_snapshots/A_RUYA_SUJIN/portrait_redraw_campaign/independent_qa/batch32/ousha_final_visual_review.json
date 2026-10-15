@@ -1,0 +1,169 @@
+{
+  "slug": "ousha",
+  "reviewer": "independent_qa",
+  "checked_utc": "2026-10-15T13:18:13.551722+00:00",
+  "status": "held_style_not_deliverable",
+  "delivery_eligible": false,
+  "selected_path": null,
+  "selected_sha256": null,
+  "held_evidence_path": "ousha/candidates/portrait_v2_74x100_candidate.png",
+  "held_evidence_sha256": "80cdadb272f181747fb6eca76f24e46d79c2f88bd74fabdf47b21188052c7251",
+  "visual_assessment": "实际查看v2 raw、full/inset的三背景1x及8xNN。纵向画幅已解决v1脸偏小，低帽檐/灰缕低髻/褪绿短斗篷符合最新卡，三十多岁身份没有硬冲突，原始轮廓完整。然而两眼保留大片高亮白与偏卡通宽眼型，裸颈仍细长，仍未达到四核心小暗眼白、短颈的整体风格。inset仅增加技术空边，不改善核心问题。本轮暂挂，v2仅保审阅证据，无第三次。",
+  "limitations": [
+    "核心风格未通过：两眼大亮白、偏卡通眼型与细长裸颈；不能因技术格式通过或大脸构图改善而列为可交付选稿。",
+    "原始左右实体透明余量17/13px、底18px，轮廓完整但余量紧；full bbox(1,9,73,99)，inset不修复风格。",
+    "selected为空、delivery_eligible=false；full v2和inset均只留研究审阅证据，不进入选稿交付清单。",
+    "NN等比包含与32色量化为技术派生；未获用户审美终审，未集成或实机验证。"
+  ],
+  "raw_path": "ousha/raw/portrait_v2_raw_imagegen.png",
+  "raw_sha256": "1af3f2b0775b0aed2decb546f907cf3f92cc6cdf9d802f057fc2f397c86ab1e6",
+  "raw_dimensions": [
+    1079,
+    1457
+  ],
+  "raw_subject_bbox_alpha_ge128": [
+    17,
+    130,
+    1066,
+    1439
+  ],
+  "raw_real_margin_px": {
+    "left": 17,
+    "top": 130,
+    "right": 13,
+    "bottom": 18
+  },
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        0,
+        1079,
+        1457
+      ],
+      "border_counts": {
+        "top": 15,
+        "bottom": 22,
+        "left": 118,
+        "right": 1
+      },
+      "border_ranges": {
+        "top": [
+          569,
+          609
+        ],
+        "bottom": [
+          0,
+          995
+        ],
+        "left": [
+          510,
+          1456
+        ],
+        "right": [
+          1085,
+          1085
+        ]
+      }
+    },
+    "5": {
+      "bbox": [
+        15,
+        128,
+        1068,
+        1440
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        17,
+        130,
+        1066,
+        1439
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        17,
+        130,
+        1066,
+        1439
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        21,
+        146,
+        1061,
+        1435
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "raw_true_silhouette_clipping": false,
+  "boundary_judgment": "实际原图轮廓完整，alpha>=5四边均无实体接触。alpha1孤立残余不是头发/耳的真裁断。边距紧记录限制，未通过padding或inset掩盖。",
+  "viewed": [
+    "identity mother",
+    "four core style references",
+    "portrait_v1 raw and NN",
+    "portrait_v2 raw",
+    "portrait_v2 1x three backgrounds",
+    "portrait_v2 8x exact NN",
+    "portrait_v2_inset 1x three backgrounds",
+    "portrait_v2_inset 8x exact NN"
+  ],
+  "feedback_rounds": 1,
+  "successful_image_generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

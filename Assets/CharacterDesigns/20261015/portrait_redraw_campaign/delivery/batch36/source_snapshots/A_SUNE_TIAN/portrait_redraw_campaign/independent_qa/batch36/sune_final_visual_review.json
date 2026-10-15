@@ -1,0 +1,144 @@
+{
+  "batch": 36,
+  "slug": "sune",
+  "checked_utc": "2026-10-15T14:01:26.052015+00:00",
+  "status": "pass_with_limitations",
+  "delivery_eligible": true,
+  "selected_path": "sune/candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "e441f49870d3d5c0365c566cc52bed8c5102a8570a2fe1e19e039f855b483386",
+  "identity_age_clothing": "20多岁记录员，棕短辫、窄长面和暗李紫/米麻衣色保留；上看征询轻启嘴，非冷面强制观察者。",
+  "improvement_from_v1": "眼裂收窄，鼻与颧骨大块更明显，裸颈缩短、衣领更窄，脸较v1占比增大。",
+  "source_boundary_visual_decision": "v2源alpha128 bbox[32,123,1060,1407]，1079×1458画布右真余量19px；alpha>=5四边无触边。可见发顶、两侧发束与外露耳完整。inset最终bbox[3,9,72,95]，目标余量可靠，未掩盖源裁断。",
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        21,
+        1063,
+        1444
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 11,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": [
+          373,
+          1046
+        ],
+        "right": null
+      }
+    },
+    "5": {
+      "bbox": [
+        31,
+        121,
+        1062,
+        1408
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "16": {
+      "bbox": [
+        31,
+        123,
+        1060,
+        1408
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "128": {
+      "bbox": [
+        32,
+        123,
+        1060,
+        1407
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        33,
+        136,
+        1053,
+        1406
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "candidate_bbox": [
+    3,
+    9,
+    72,
+    95
+  ],
+  "actual_views": [
+    "identity master",
+    "four core style comparison at 4x NN",
+    "full v1 and v2 raws",
+    "v1 and selected v2 three-background 4x NN",
+    "selected v2 three-background at actual 1x"
+  ],
+  "limitations": [
+    "眼白仍偏亮，发束仍有平行细线，未达到四核心同等粗簇精修。",
+    "inset是同raw整画布技术缩放，未重画脸或修补头发。",
+    "仅NN技术派生候选；非原生逐像素终稿，未集成游戏或实机验证。"
+  ],
+  "single_first_pass_feedback_rounds": 1,
+  "successful_image_generations": 2,
+  "third_generation_allowed": false,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "same_scale_gate_comparison": "comparison_with_held_gate_4x_NN.png",
+  "same_scale_gate_reason": "At fixed 4x without normalization, Sune/Tian have more vertical face mass from forehead through nose/cheek to jaw than the held heads, with a narrow collar and reduced neck. Their 86/80px silhouettes are not by themselves a pass: the visibly taller facial block and changed slit-like eye shape distinguish them. Bright sclera and hair-line residues remain explicit candidate limitations, consistent with accepted Taya/Tina, not native-final approval."
+}

@@ -1,0 +1,173 @@
+{
+  "slug": "lein",
+  "reviewed_utc": "2026-10-15T14:08:58.094972+00:00",
+  "status": "held_source_contour_margin_and_style",
+  "delivery_eligible": false,
+  "selected_path": null,
+  "selected_sha256": null,
+  "held_evidence_path": "lein/candidates/portrait_v2_inset_74x100_candidate.png",
+  "held_evidence_sha256": "7e1d2ba859c3656cd812b6e3f318665b4faf295c8cc14c422f113aa63a4298a6",
+  "actually_viewed": [
+    "full selected mother raw",
+    "four core references in exact4xNN board",
+    "v1 and v2 full raw",
+    "v1 and v2 8x NN",
+    "final variant 1x and 4x backgrounds",
+    "right raw boundary exact3xNN pale composite"
+  ],
+  "findings": [
+    "v2眉眼较平、眼白变暗、短颈窄绿领与粗鼻颧改善；成年女向导、软棕帽和同一截粉笔身份成立。",
+    "但v2 raw右界 alpha≥5有108像素、≥16有69像素，集中上段y769..847；最大右界alpha47，α≥128右界计数0，主体仅在x1084结束。不是全不透明边界裁断，也不只是目标NN采样贴边。",
+    "实际浅底3x边界裁片显示深发沿源右界呈直立结束；真实透明余量缺失，不能独立证明外层发廓完整。inset不能恢复缺失源空间，因此暂挂。",
+    "v1源图未见真裁断，但亮大眼白、抬内眉焦虑和较长颈领风格未达门槛，不回选v1。"
+  ],
+  "limitations": [
+    "源轮廓/真实余量门槛未过，selected=null，v2_inset仅保留审查证据，禁止进入交付选稿。",
+    "眼白仍不全暗、上眼线和发层仍强；风格改善不能抵消源边界风险。",
+    "仅74×100 NN技术派生候选，非原生逐像素终稿；未集成游戏、未实机验证。"
+  ],
+  "raw_sha256": "0049e04b3eb10f19dac6a098e57676abe47842c9fdf0a4c7ee33bf369987274b",
+  "raw_size": [
+    1086,
+    1449
+  ],
+  "raw_boundary_thresholds": {
+    "1": {
+      "bbox": [
+        0,
+        0,
+        1086,
+        1439
+      ],
+      "border_counts": {
+        "top": 14,
+        "bottom": 0,
+        "left": 30,
+        "right": 113
+      },
+      "border_ranges": {
+        "top": [
+          418,
+          431
+        ],
+        "bottom": null,
+        "left": [
+          271,
+          1223
+        ],
+        "right": [
+          768,
+          997
+        ]
+      }
+    },
+    "5": {
+      "bbox": [
+        15,
+        126,
+        1086,
+        1362
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 108
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": [
+          769,
+          996
+        ]
+      }
+    },
+    "16": {
+      "bbox": [
+        15,
+        126,
+        1086,
+        1360
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 69
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": [
+          769,
+          847
+        ]
+      }
+    },
+    "128": {
+      "bbox": [
+        16,
+        127,
+        1085,
+        1359
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    },
+    "255": {
+      "bbox": [
+        17,
+        134,
+        1084,
+        1358
+      ],
+      "border_counts": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "border_ranges": {
+        "top": null,
+        "bottom": null,
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "candidate_alpha_bbox": [
+    2,
+    10,
+    73,
+    92
+  ],
+  "byte_reproduced": true,
+  "successful_generations": 2,
+  "parameter_rejections_without_image": [
+    {
+      "path": "tool_returns/portrait_v2_preflight_validation_error.json",
+      "has_generated_image": false,
+      "sha256": "07ab71076af3ff6032fcd24e9b7f7b17b82aa71c3679ee4a7bfff0afea7f0992",
+      "error": "`referenced_image_paths` must contain at most 5 paths"
+    }
+  ],
+  "consolidated_feedback_rounds": 1,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

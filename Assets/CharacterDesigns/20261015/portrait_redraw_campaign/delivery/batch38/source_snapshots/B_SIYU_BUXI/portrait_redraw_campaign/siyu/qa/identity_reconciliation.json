@@ -1,0 +1,28 @@
+{
+  "actor_id": "HIG-S02-NPC",
+  "decision": "continue_existing_female_identity",
+  "source_card_unchanged": true,
+  "coordinator_confirmed": true,
+  "evidence": [
+    {
+      "source": "sources/character_card.md",
+      "finding": "Main motivation uses 她 twice, matching explicitly mature adult female master prompt and female mother. Fine-detail style guard alone uses 他.",
+      "lines": "19 (她 twice); 48 (他 style guard)"
+    },
+    {
+      "source": "sources/master_prompt.txt",
+      "lines": "1",
+      "finding": "Explicit mature adult female reading-record clerk Siyu."
+    },
+    {
+      "source": "sources/master_QA.json",
+      "finding": "Narrow long face, low bun, blue wool garment/tan shoulder wrap historically accepted as concept."
+    }
+  ],
+  "latest_appearance_priority": [
+    "mid-thirties",
+    "plain clerk smock in existing slate blue",
+    "cuffs, pens and ledger outside tight portrait frame"
+  ],
+  "limitations": "Single style-guard pronoun inconsistency retained as wording ambiguity, never silently edited."
+}

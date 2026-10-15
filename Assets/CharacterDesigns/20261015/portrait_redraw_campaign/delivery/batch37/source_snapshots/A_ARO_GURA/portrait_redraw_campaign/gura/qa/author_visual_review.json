@@ -1,0 +1,94 @@
+{
+  "actor": "gura",
+  "selected": "candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "1626640c4a14b9e39306b817f95e94dc2298315c4f5c0b9b3e32fe239e19e8d5",
+  "status": "selected_candidate_with_limitations",
+  "successful_imagegen_generations": 2,
+  "validation_rejections_without_generation": 1,
+  "no_third_generation": true,
+  "reviewed_utc": "2026-10-15T14:04:53.007814+00:00",
+  "actually_viewed": [
+    "identity master",
+    "four core style references",
+    "v1 raw and 8x",
+    "v2 raw and 8x",
+    "v2 1x/background previews",
+    "v2 inset 8x and 1x backgrounds"
+  ],
+  "improvements": [
+    "两条额间竖纹移除，尖V怒眉缓和；眼白减少，灰厚褂和棕带合为大块。",
+    "三十多岁成年读感、低髻、深棕侧分发、暖肤和结实骨相与母版连续。"
+  ],
+  "residual_limitations": [
+    "眉形仍略严肃，发束仍有平行走势；源图侧边真余量窄，未完全达到prompt四像素等效余量。",
+    "完整源发耳未裁，inset仅整图等比技术containment，并非补画被裁部位。"
+  ],
+  "source_edges_by_alpha_threshold": {
+    "1": {
+      "bbox": [
+        15,
+        0,
+        1078,
+        1407
+      ],
+      "margins_ltrb": [
+        15,
+        0,
+        1,
+        50
+      ]
+    },
+    "5": {
+      "bbox": [
+        16,
+        113,
+        1069,
+        1404
+      ],
+      "margins_ltrb": [
+        16,
+        113,
+        10,
+        53
+      ]
+    },
+    "128": {
+      "bbox": [
+        19,
+        113,
+        1067,
+        1401
+      ],
+      "margins_ltrb": [
+        19,
+        113,
+        12,
+        56
+      ]
+    }
+  },
+  "technical_method": {
+    "substantive_imagegen_redraw": true,
+    "native_pixel_authored": false,
+    "resize": "isotropic fit entire canvas with NEAREST, integer-rounded output dimensions; no crop or geometric redrawing",
+    "scale": 0.06672845227062095,
+    "fit_box": [
+      72,
+      98
+    ],
+    "same_raw_technical_inset": true,
+    "resized_dimensions": [
+      72,
+      97
+    ],
+    "alpha_threshold": 128,
+    "palette": "MAXCOVERAGE <=32 visible colors, no dithering",
+    "transparent_rgb": "zero",
+    "technical_export_only": true
+  },
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "independent_review": "QA37 approved selected candidate with documented limitations; not native or runtime approval",
+  "independent_residual_summary": "内眉轻V、发束平行层，源侧余量仍窄但发耳完整；inset为整图技术containment，未修复任何裁断。"
+}

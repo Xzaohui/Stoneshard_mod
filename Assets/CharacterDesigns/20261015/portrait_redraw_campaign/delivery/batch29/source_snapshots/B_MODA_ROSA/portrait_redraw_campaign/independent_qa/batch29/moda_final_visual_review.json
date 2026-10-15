@@ -1,0 +1,71 @@
+{
+  "slug": "moda",
+  "reviewed_utc": "2026-10-15T12:49:50.538167+00:00",
+  "status": "selected_candidate_with_limitations",
+  "delivery_eligible": true,
+  "selected_path": "moda/candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "ec29da9943e114082abacdf341675969facf069ce4ab6e183ae6cd53c42a5f0f",
+  "visual_basis": "实际查看母版、v1/v2完整raw与8x、四核心4x及最终选定inset预览；当前卡/母QA/台本独立核对。",
+  "identity_and_age": "40+深棕松卷发/赭黄头巾、红鼻头与评估侧目保留，锈披和石板蓝只余窄衣领，不画醉态笑料。",
+  "revision_result": "短颈窄领与大脸鼻颧骨成立，眼白由大片白收为较小灰暖块；脸部刻画比v1粗块、成熟。",
+  "source_boundary_evidence": {
+    "raw_size": [
+      1079,
+      1457
+    ],
+    "alpha_ge5_bbox": [
+      5,
+      135,
+      1079,
+      1397
+    ],
+    "alpha_ge16_bbox": [
+      7,
+      137,
+      1078,
+      1395
+    ],
+    "alpha_ge128_bbox": [
+      7,
+      137,
+      1077,
+      1394
+    ],
+    "raw_right_border_max_alpha": 7,
+    "raw_right_border_alpha_ge5_pixels": 18,
+    "raw_right_border_alpha_ge16_pixels": 0,
+    "raw_right_border_alpha_ge128_pixels": 0,
+    "original_target_alpha_bbox": [
+      0,
+      9,
+      74,
+      96
+    ],
+    "source_visual_inspection": "右巾边4x局部实看黑外轮廓闭合，无发/耳/结实质断口；最右两列仅半透明边缘，非不透明轮廓被源裁断。",
+    "visible_source_clipped": false,
+    "source_margin_caveat": "不透明源主体右余仅2px，左余7px，边缘羽化达到源最右列；不应称为充足源安全余量，必须保留此限制。",
+    "same_raw_inset": [
+      72,
+      98
+    ],
+    "padding_repairs_source_clipping": false,
+    "target_alpha_bbox": [
+      1,
+      10,
+      73,
+      94
+    ]
+  },
+  "limitations": [
+    "源右侧不透明轮廓仅2/1079源像素余量，极窄且边缘alpha残留触边；inset只避目标网格触边，不修复或提高源余量。",
+    "眼白仍局部偏亮灰暖点，深棕卷发和巾皱纹略碎，面部整体像素组织未原生整理。",
+    "仅为NN/32色技术派生候选，非原生逐像素终稿；未导入、未实机验证。"
+  ],
+  "feedback_rounds": 1,
+  "successful_generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

@@ -52,6 +52,11 @@ if ([version]$taskReport.modVersion -ge [version]'0.3.1') {
         }
     }
 }
+if ([version]$taskReport.modVersion -ge [version]'0.3.5') {
+    foreach ($taskRequired in @('scene-exterior-serialized-collision-matches-independent-footprints','scene-exterior-all-floor-cells-connected','scene-exterior-arrival-markers-before-native-player','scene-exterior-home-restores-native-world-return','scene-assembly-no-quest-reward-or-direct-room-writes')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing native scene assembly check: ' + $taskRequired) }
+    }
+}
 if (!$PackageOnly -and (Get-Process -Name StoneShard -ErrorAction SilentlyContinue)) { throw 'Game is running; close it before updating data.win. No process was stopped.' }
 function Test-TaskNoLink([string]$Path) {
     $taskAbsolute = [IO.Path]::GetFullPath($Path)
@@ -112,7 +117,10 @@ if (Test-Path -LiteralPath $taskPending) { throw 'Pending deployment file exists
 Copy-Item -LiteralPath $taskCandidate -Destination $taskPending
 if ((Get-FileHash -LiteralPath $taskPending -Algorithm SHA256).Hash -ne $taskReport.outputSha256 -or (Get-FileHash -LiteralPath $taskData -Algorithm SHA256).Hash -ne $taskOldHash) { throw 'Deployment race or staged file mismatch.' }
 Copy-Item -LiteralPath $taskPackage -Destination $taskDestination
-[IO.File]::Move($taskPending, $taskData, $true)
+# PS 5.1 (.NET Framework) has no three-argument File.Move overwrite; Copy
+# overwrites and the pending stage is verified again right after (S167 fix).
+[IO.File]::Copy($taskPending, $taskData, $true)
+Remove-Item -LiteralPath $taskPending
 # Local MSL identifies its settings entries by package filename, not the display name.
 $taskConfiguration.EnableMods = @($taskConfiguration.EnableMods | Where-Object { $_ -ne 'EmbersAndOaths' }) + @('EmbersAndOaths')
 [IO.File]::WriteAllText($taskSettings, ($taskConfiguration | ConvertTo-Json -Depth 10), (New-Object System.Text.UTF8Encoding($false)))

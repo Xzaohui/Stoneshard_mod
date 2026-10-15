@@ -8,6 +8,7 @@ namespace EmbersAndOaths;
 // Visual adapters only. N2Quest remains the authority for actors, doors and cells.
 internal static class N2Hd2dArt
 {
+    internal const string Active="!variable_global_exists(\"EAO_dev_enabled\") || !global.EAO_dev_enabled || global.EAO_dev_art";
     internal static void Ensure()
     {
         foreach (var room in N2Quest.Shapes.Keys)
@@ -21,7 +22,7 @@ internal static class N2Hd2dArt
     }
     internal static string DrawFloor()
     {
-        var code = new StringBuilder("if (" + Hd2dArt.Active + ") {\n");
+        var code = new StringBuilder("if (" + Active + ") {\n");
         foreach (var room in N2Quest.Shapes.Keys) {
             code.AppendLine("if (room == " + room + ") {");
             foreach (var layer in new[] { "backing", "floor", "structure" })
@@ -32,7 +33,7 @@ internal static class N2Hd2dArt
     }
     internal static string DrawForeground()
     {
-        var code = new StringBuilder("if (" + Hd2dArt.Active + ") {\n");
+        var code = new StringBuilder("if (" + Active + ") {\n");
         foreach (var room in N2Quest.Shapes.Keys)
             code.AppendLine("if (room == " + room + ") draw_sprite(" + Hd2dArt.Sprite(room+"__foreground") + ",0,0,0);");
         return code.AppendLine("}").ToString();
@@ -41,6 +42,6 @@ internal static class N2Hd2dArt
     {
         set(Msl.GetObject("o_eao_n2_floor"),DrawFloor()+N2Quest.FloorDraw(),EventType.Draw,0);
         foreach (var pair in new[] { ("coffin","r01_coffin_coat"),("winch","r01_winch_socket") })
-            set(Msl.GetObject("o_eao_n2_"+pair.Item1),"if ("+Hd2dArt.Active+") { draw_sprite("+Hd2dArt.Sprite(pair.Item2)+",0,x,y); } else { event_inherited(); }",EventType.Draw,0);
+            set(Msl.GetObject("o_eao_n2_"+pair.Item1),"if ("+Active+") { draw_sprite("+Hd2dArt.Sprite(pair.Item2)+",0,x,y); } else { event_inherited(); }",EventType.Draw,0);
     }
 }

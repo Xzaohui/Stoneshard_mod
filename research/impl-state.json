@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "scope": "S143 implementation-side snapshot: built package, deployed copy, combined data.win and vanilla backup hashed read-only; no build or deployment performed",
   "artifact": {
     "path": "C:/Users/83912/DeskBox/我的桌面/project/Stoneshard_mod/artifacts/EmbersAndOaths.sml",
-    "bytes": 9085863,
-    "sha256": "D8D904FF2B6385C4F0A5389B526F0A0B7807463D00911A33266A44BD399815BD",
-    "mtime": "2026-10-14 20:51"
+    "bytes": 10432956,
+    "sha256": "CF4389B4C6CD10861029758177B303F7E21AB8B006C18F5A6CFD1DAA886E11B3",
+    "mtime": "2026-10-15 02:30"
   },
   "msl_copy": {
     "path": "D:/SteamLibrary/steamapps/common/Stoneshard/msl/Mods/EmbersAndOaths.sml",
-    "bytes": 9085863,
-    "sha256": "D8D904FF2B6385C4F0A5389B526F0A0B7807463D00911A33266A44BD399815BD",
-    "mtime": "2026-10-14 20:51"
+    "bytes": 10432956,
+    "sha256": "CF4389B4C6CD10861029758177B303F7E21AB8B006C18F5A6CFD1DAA886E11B3",
+    "mtime": "2026-10-15 02:30"
   },
   "data_win": {
     "path": "D:/SteamLibrary/steamapps/common/Stoneshard/data.win",
-    "bytes": 168080352,
-    "sha256": "6814FCD70CAE5165F27B74CD93B4D7549C2921ECDDEC3D6537830C9C4742FDFB",
-    "mtime": "2026-10-14 20:53"
+    "bytes": 169759168,
+    "sha256": "D699036DF80886F5B6157F1D27FB2102A01F51CDB05B22BC490049F3E60B3519",
+    "mtime": "2026-10-15 02:31"
   },
   "vanilla_win": {
     "path": "D:/SteamLibrary/steamapps/common/Stoneshard/vanilla.win",
@@ -26,10 +26,10 @@
     "mtime": "2026-10-03 20:58"
   },
   "recorded": {
-    "package_sha256": "D8D904FF2B6385C4F0A5389B526F0A0B7807463D00911A33266A44BD399815BD",
-    "deployed_data_sha256": "6814FCD70CAE5165F27B74CD93B4D7549C2921ECDDEC3D6537830C9C4742FDFB",
-    "version": "0.3.3",
-    "deployment_date": "2026-10-14T20:54:55.8196865+08:00",
+    "package_sha256": "CF4389B4C6CD10861029758177B303F7E21AB8B006C18F5A6CFD1DAA886E11B3",
+    "deployed_data_sha256": "D699036DF80886F5B6157F1D27FB2102A01F51CDB05B22BC490049F3E60B3519",
+    "version": "0.3.5",
+    "deployment_date": "2026-10-15T02:33:40.4908129+08:00",
     "runtime_verified": false
   },
   "runtime_observation": {
@@ -324,12 +324,32 @@
     "finalState": "游戏运行中，原地暂停，观察关闭；未强制结束程序，未恢复或直接修改角色存档。"
   },
   "runtime_evidence_path": "artifacts/dev-runtime-20261014.json",
+  "scene_runtime_observation": {
+    "date": "2026-10-15",
+    "modVersion": "0.3.5",
+    "deployedDataSha256": "D699036DF80886F5B6157F1D27FB2102A01F51CDB05B22BC490049F3E60B3519",
+    "packageSha256": "CF4389B4C6CD10861029758177B303F7E21AB8B006C18F5A6CFD1DAA886E11B3",
+    "backup": "C:\\Users\\83912\\DeskBox\\我的桌面\\project\\Stoneshard_mod\\backups\\direct-20261015-023338-568",
+    "runtimeVerified": false,
+    "sceneVisualSmokeTest": false,
+    "status": "awaiting_user_cloud_warning_decision",
+    "observations": [],
+    "blocker": "Steam normal launch retried after local cloud log reported sync complete; the cloud-out-of-date warning still reappeared. The warning was not accepted. No game window or process started.",
+    "evidence": [
+      "artifacts/scene-runtime-20261015/00-steam-cloud-unsynced.png",
+      "artifacts/scene-runtime-20261015/01-steam-cloud-warning.png"
+    ],
+    "preview": "artifacts/n2-built-layout-preview.png (asset composition, not game screenshot)",
+    "candidateChecks": 246
+  },
+  "scene_runtime_evidence_path": "artifacts/scene-runtime-20261015.json",
+  "pilots_present": true,
   "baseline": {
     "vanilla_sha256": "99965AB8E26A07C913BE4F7E4FB8D3A8D71C7A89D93D77D07B3A3C2174E19444",
     "strg_count": 122200
   },
   "sources": {
-    "gml_codes": 33,
+    "gml_codes": 59,
     "codes": [
       "src/EmbersAndOaths/Codes/annex_entry_draw.gml",
       "src/EmbersAndOaths/Codes/annex_entry_gate.gml",
@@ -341,6 +361,22 @@
       "src/EmbersAndOaths/Codes/courier_click.gml",
       "src/EmbersAndOaths/Codes/courier_create.gml",
       "src/EmbersAndOaths/Codes/courier_draw.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_absent.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_after_city.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_before_city.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_entry.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_feedback_1_early.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_feedback_1_late.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_feedback_2_early.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_feedback_2_late.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_feedback_3_early.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_feedback_3_late.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_hub.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_refusal.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_route_continuity.gml",
+      "src/EmbersAndOaths/Codes/cs_bry_01_route_exit.gml",
+      "src/EmbersAndOaths/Codes/cs_system_helpers.gml",
+      "src/EmbersAndOaths/Codes/cs_trust_toggle.gml",
       "src/EmbersAndOaths/Codes/dev_create.gml",
       "src/EmbersAndOaths/Codes/dev_draw_gui.gml",
       "src/EmbersAndOaths/Codes/dev_draw_world.gml",
@@ -349,6 +385,15 @@
       "src/EmbersAndOaths/Codes/dev_step.gml",
       "src/EmbersAndOaths/Codes/dev_toggle.gml",
       "src/EmbersAndOaths/Codes/dev_visit.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_after.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_before.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_early.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_hub.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_intro.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_late.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_night.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_proxy.gml",
+      "src/EmbersAndOaths/Codes/fx_qry_refusal.gml",
       "src/EmbersAndOaths/Codes/n2_choice_protected.gml",
       "src/EmbersAndOaths/Codes/n2_choice_public.gml",
       "src/EmbersAndOaths/Codes/n2_entry.gml",
@@ -358,6 +403,7 @@
       "src/EmbersAndOaths/Codes/night_door_draw.gml",
       "src/EmbersAndOaths/Codes/night_entry_alarm.gml",
       "src/EmbersAndOaths/Codes/night_return_alarm.gml",
+      "src/EmbersAndOaths/Codes/site_door_draw.gml",
       "src/EmbersAndOaths/Codes/test_teleport_arrival.gml",
       "src/EmbersAndOaths/Codes/test_teleport_commit.gml",
       "src/EmbersAndOaths/Codes/test_teleport_execute.gml",

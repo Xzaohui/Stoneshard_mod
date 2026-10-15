@@ -21,6 +21,7 @@ internal static class DevTools
         set(dev,files.GetCode("dev_step.gml"),EventType.Step,2);
         set(dev,files.GetCode("dev_reset.gml"),EventType.Other,10);
         set(dev,"event_user(0);",EventType.CleanUp,0);
+        set(dev,"if (global.EAO_dev_enabled) dev_panel = !dev_panel;",EventType.KeyPress,116);
         set(dev,files.GetCode("dev_toggle.gml"),EventType.KeyPress,117);
         set(dev,"if (global.EAO_dev_enabled && instance_exists(o_player) && !instance_exists(o_smoothRoomChanger)) { dev_reveal = !dev_reveal; }",EventType.KeyPress,118);
         set(dev,"if (global.EAO_dev_enabled) dev_grid = !dev_grid;",EventType.KeyPress,120);
@@ -28,7 +29,11 @@ internal static class DevTools
         set(dev,files.GetCode("dev_visit.gml"),EventType.KeyPress,122);
         // Use the same world draw pass as the verified grid; the installed game's
         // GUI passes did not display this independent observer during runtime tests.
-        set(dev,Hd2dArt.DrawForeground()+N2Hd2dArt.DrawForeground()+files.GetCode("dev_draw_gui.gml")+files.GetCode("dev_draw_world.gml"),EventType.Draw,0);
+        // Each optional observer section uses exit, so isolate it in a block
+        // guarded at the call site. Foreground remains visible with F6 off.
+        set(dev,Hd2dArt.DrawForeground()+N2Hd2dArt.DrawForeground()+SceneAssembly.DrawForeground()+
+            "if (global.EAO_dev_enabled && dev_grid && instance_exists(o_player) && instance_exists(o_controller)) {\n"+files.GetCode("dev_draw_world.gml")+"\n}\n"+
+            files.GetCode("dev_draw_gui.gml"),EventType.Draw,0);
         set(dev,"// Observer now draws in the world pass.",EventType.Draw,64);
         set(dev,"// Observer now draws in the world pass.",EventType.Draw,(uint)EventSubtypeDraw.DrawGUIEnd);
         var portal=Msl.GetObject("o_eao_dev_portal");

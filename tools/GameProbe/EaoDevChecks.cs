@@ -15,7 +15,7 @@ internal static class EaoDevChecks
         var dev=data.GameObjects.Single(o=>o.Name.Content=="o_eao_devtools");
         Require(dev.Persistent&&dev.Visible,"dev-persistent-visible-controller");
         Require(Asm("gml_Object_o_eao_devtools_Draw_0").Contains("draw_text")&&Asm("gml_Object_o_eao_devtools_Draw_0").Contains("matrix_set"),"dev-panel-world-pass-restores-transform");
-        Require(dev.Events[(int)EventType.KeyPress].Select(e=>e.EventSubtype).Order().SequenceEqual(new uint[]{117,118,120,121,122}),"dev-f6-f7-f9-f10-f11-wired");
+        Require(dev.Events[(int)EventType.KeyPress].Select(e=>e.EventSubtype).Order().SequenceEqual(new uint[]{116,117,118,120,121,122}),"dev-f6-f7-f9-f10-f11-wired");
         Require(Asm("gml_Object_o_eao_controller_Create_0").Contains("instance_create_depth"),"dev-boot-creation");
         var create=Asm("gml_Object_o_eao_devtools_Create_0");
         Require(Regex.IsMatch(create,@"pushi\.e 0\s+pop\.v\.[bi] global.EAO_dev_enabled"),"dev-default-off");
@@ -46,15 +46,21 @@ internal static class EaoDevChecks
             Require(Enumerable.Range(0,40).All(x=>Enumerable.Range(0,30).All(y=>walls.Contains((x,y))!=cells.Contains((x,y)))),room.Name.Content+"-art-matches-serialized-native-collision-cells");
         }
         foreach(var a in n2Manifest.RootElement.GetProperty("assets").EnumerateArray()) sources.Add(a.GetProperty("id").GetString()!,a);
+        using var builtManifest=JsonDocument.Parse(File.ReadAllText(Path.Combine(ProjectPaths.Root(),"src/Art/native-n2-built-v1/manifest.json")));
+        foreach(var source in builtManifest.RootElement.GetProperty("source_sha256").EnumerateObject()) {
+            var hash=Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(File.ReadAllBytes(Path.Combine(ProjectPaths.Root(),source.Name))));
+            Require(hash.Equals(source.Value.GetString(),StringComparison.OrdinalIgnoreCase),"scene-art-source-"+source.Name);
+        }
+        foreach(var a in builtManifest.RootElement.GetProperty("assets").EnumerateArray()) sources.Add(a.GetProperty("id").GetString()!,a);
         var sprites=data.Sprites.Where(s=>s.Name.Content.StartsWith("s_eao_hd2d_")).ToArray();
-        Require(sprites.Length==33,"hd2d-thirty-three-native-sprites");
+        Require(sprites.Length==43,"hd2d-forty-three-native-sprites");
         foreach(var sprite in sprites){
             var id=sprite.Name.Content["s_eao_hd2d_".Length..];var source=sources[id];
             var dimensions=source.GetProperty("size").EnumerateArray().Select(v=>v.GetInt32()).ToArray();
             Require(sprite.Width==dimensions[0]&&sprite.Height==dimensions[1],id+"-dimensions");
             var origin=source.TryGetProperty("sprite_origin",out var p)?p:source.GetProperty("origin");
             Require(sprite.OriginX==origin[0].GetInt32()&&sprite.OriginY==origin[1].GetInt32(),id+"-origin");
-            var folder=id.StartsWith("r_eao_n2_")||id.StartsWith("r01_")?"src/Art/native-n2-hd2d-v1":"src/Art/hd2d_26x26_20261013";
+            var folder=id.StartsWith("n2site_")?"src/Art/native-n2-built-v1":id.StartsWith("r_eao_n2_")||id.StartsWith("r01_")?"src/Art/native-n2-hd2d-v1":"src/Art/hd2d_26x26_20261013";
             var expected=File.ReadAllBytes(Path.Combine(ProjectPaths.Root(),folder,source.GetProperty("path").GetString()!));
             var actual=sprite.Textures.Single().Texture.TexturePage.TextureData.Image.ToSpan(false).ToArray();
             Require(actual.SequenceEqual(expected),id+"-embedded-png-bytes");
@@ -66,6 +72,7 @@ internal static class EaoDevChecks
         Require(n2Rooms.All(i=>References(alarm,i)),"dev-n2-cycle-preserves-first-origin");
         Require(Asm("gml_Object_o_eao_n2_floor_Draw_0").Contains("global.EAO_dev_art"),"n2-floor-visual-toggle-keeps-native-fallback");
         foreach(var id in new[]{"coffin","winch"}) Require(Asm("gml_Object_o_eao_n2_"+id+"_Draw_0").Contains("event_inherited"),"n2-"+id+"-art-keeps-native-draw-fallback");
+        checks.AddRange(EaoSceneAssembly.Validate(data,Asm));
         return checks.ToArray();
     }
 }

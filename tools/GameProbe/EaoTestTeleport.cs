@@ -10,7 +10,7 @@ internal static class EaoTestTeleport
         string Asm(string name) { var c=data.Code.Single(c=>c.Name.Content==name); return c.Disassemble(data.Variables,data.CodeLocals.For(c)); }
         var controller=data.GameObjects.Single(o=>o.Name.Content=="o_eao_controller");
         if(!controller.Visible) throw new InvalidDataException("F8 map status Draw GUI is disabled.");
-        if(controller.Events[(int)EventType.KeyPress].Single().EventSubtype!=119) throw new InvalidDataException("F8 switch missing.");
+        if(!controller.Events[(int)EventType.KeyPress].Any(e=>e.EventSubtype==119)) throw new InvalidDataException("F8 switch missing.");
         var toggle=Asm("gml_Object_o_eao_controller_KeyPress_119");
         var setup=Asm("gml_Object_o_eao_controller_Other_12");
         var click=Asm("gml_Object_o_globalmapInteractiveNormal_Other_20");

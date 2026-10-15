@@ -24,6 +24,10 @@
 - `test-env/`：此前隔离方案的历史副本；不再作为开发前置。`backups/`、`artifacts/`：本地更新备份、临时验收包和产物，不提交商业资源或玩家数据。
 - 根目录：项目入口与协作约定。设计稿不得散落根目录。
 
+## 并行会话领批
+
+多个实现会话可能并行开工且互相看不见（2026-10-14 已发生 P2 撞车，靠“文件已存在”守卫挡下）。任何会话在开始写 `src/`、`tools/` 的实现批次（事件桩、任务类、控制器、校验器扩展）之前，必须先在根目录 `WORK-CLAIMS.md` 登记领批（批次名、范围、开始时间）；完工或让位时回写释放。发现目标批次的文件已存在或登记被占时，让位、不覆盖、在表内备注。实机回归（OI-10）等占机器的批次同样先领批。`design/` 与美术线照旧按各自 AGENTS，不适用本表。
+
 ## 本地环境
 
 游戏目录：`D:\SteamLibrary\steamapps\common\Stoneshard`。截至 2026-10-11，本地 Steam 分支是 `modbranch`，包内版本字符串为 `0.9.4.25`。MSL 为 `0.13.2.0`。这些都是调查快照，不代表以后版本。
@@ -465,7 +469,7 @@
 <!-- EVT-NUM-S163:END -->
 
 <!-- IMPL-STATE-S143:BEGIN -->
-2026-10-14 S143：实现侧现状核对（只读哈希）。部署记录版本0.3.3、本地候选0.3.3，候选与安装副本同哈希、已部署；N2五桩五键三景已接线，0.3.3增加六景巡览与N2 HD2D开发适配，完整验收runtimeVerified=false；实测见artifacts/dev-runtime-20261014.json；GML代码33个、构建/部署/检查脚本Build-Mod/Check-FormalEnvironment/Deploy-Mod/Prepare-TestEnvironment/Start-Hd2dPreview/Test-EaoStructRegression/Test-MslInput；P2/P3与其余S62+设计稿尚未进包。重建包后须重跑本页与校验器。入口design/11_管理/实现侧现状核对.md；运行Validate-ImplState.py及既有检查。
+2026-10-14 S143：实现侧现状核对（只读哈希）。部署记录版本0.3.5、本地候选0.3.5，候选与安装副本同哈希、已部署；N2五桩五键三景已接线，0.3.3增加六景巡览与N2 HD2D开发适配，完整验收runtimeVerified=false；实测见artifacts/dev-runtime-20261014.json；GML代码59个、构建/部署/检查脚本Build-Mod/Check-FormalEnvironment/Deploy-Mod/Prepare-TestEnvironment/Start-Hd2dPreview/Test-EaoStructRegression/Test-MslInput；P2（CS-BRY-01）与 P3（FX-QRY）已进入当前候选，离线检查通过；逐项剧情和存读档实测仍待完成，其余 S62+ 设计稿仍分批实现。重建包后须重跑本页与校验器。入口design/11_管理/实现侧现状核对.md；运行Validate-ImplState.py及既有检查。
 <!-- IMPL-STATE-S143:END -->
 
 <!-- BUILD-READY-S168:BEGIN -->
@@ -473,5 +477,5 @@
 <!-- BUILD-READY-S168:END -->
 
 <!-- PHASE-CLOSE-S160:BEGIN -->
-2026-10-13 S160：设计阶段收束核对。现场证据：649篇笔记、两份AGENTS（208规则块）、90校验器/135274项检查、131台本、三张原作参照、声望中英（成对1384、可见中文单列0）、74边闭合、33个GML、.sml与MSL副本同哈希、试点3批/18场景；历史待办共14项；用户已授权当前安装开发测试，0.3.3已构建部署，实测证据见artifacts/dev-runtime-20261014.json，完整扩展尚未验收。入口design/11_管理/设计阶段收束核对.md；运行Validate-PhaseClose.py及既有检查。
+2026-10-13 S160：设计阶段收束核对。现场证据：649篇笔记、两份AGENTS（208规则块）、90校验器/135274项检查、131台本、三张原作参照、声望中英（成对1384、可见中文单列0）、74边闭合、59个GML、.sml与MSL副本同哈希、试点3批/18场景；历史待办共14项；用户已授权当前安装开发测试，0.3.5已构建部署，实测证据见artifacts/dev-runtime-20261014.json，完整扩展尚未验收。入口design/11_管理/设计阶段收束核对.md；运行Validate-PhaseClose.py及既有检查。
 <!-- PHASE-CLOSE-S160:END -->

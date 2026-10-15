@@ -34,8 +34,11 @@ internal static class NativeDocuments
         new("eao_seal", "仓印对照纸", "Warehouse Seal Comparison",
             "仓印对照纸\n\n仓库留存完整印记与货运收条残角一致；盐封货单与装箱记录都记外港四十七、十二日。\n\n这证明三份记录指向同一批货，不证明申报内容属实。付款人被刮去，收货人未能确认。\n\n下一步：旧渠卸货点；询问搬运者，寻找第二次夜班交接的副件。在其他来源交叉核验前，迟信仍只是一条线索。",
             "Seal comparison\n\nThe retained seal matches the receipt fragment. Manifest and packing record both state Outer Harbor forty-seven, the twelfth.\n\nThis links the records to one shipment; it does not prove the declared contents. The payer was erased and the consignee remains unknown.\n\nNext: the canal unloading point and the second night-shift handover duplicate. The delayed letter remains a lead pending independent corroboration.")
+    }).Concat(new Document[] {
+        new("eao_notice_plg", "封条与撒灰公告", "Seal and Lime Notice",
+            "此地封存，外人不得入内。石灰每七日一撒，由看守记数。代领遗物者，先在篱笆外报名，名字写在木牌背面。\n\n（阅读只给封存与报名规矩，不给通行，也不开启任何房屋。）",
+            "This place is sealed; outsiders may not enter. Lime is spread every seventh day and counted by the keeper. Those claiming effects for others first give their names on the back of the board.\n\n(Reading covers the seal and the claiming rule only; it grants no passage and opens no house.)")
     }).ToArray();
-
     internal static string Quote(string value) => JsonSerializer.Serialize(value, new JsonSerializerOptions { Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping });
     private static string Localized(string cn, string en) => "(global.language == 3 ? " + Quote(cn) + " : " + Quote(en) + ")";
 

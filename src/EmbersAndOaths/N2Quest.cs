@@ -298,7 +298,7 @@ internal static class N2Quest
         void Door(string id, string target, string tag, string cn, string en)
         {
             var obj = Msl.GetObject("o_eao_n2_" + id);
-            set(obj, "event_inherited(); target = " + target + "; position_tag = " + NativeDocuments.Quote(tag) + "; is_lock = false; is_crime_door = false; is_quest = false; dungeon_level_incr = 0; name = global.language == 3 ? " + NativeDocuments.Quote(cn) + " : " + NativeDocuments.Quote(en) + "; scr_locationRoomEntityInitSavable(id, false);", EventType.Create, 0);
+            set(obj, "event_inherited(); target = " + target + "; position_tag = " + NativeDocuments.Quote(tag) + "; is_lock = false; is_crime_door = false; is_quest = false; dungeon_level_incr = 0; name = global.language == 3 ? " + NativeDocuments.Quote(cn) + " : " + NativeDocuments.Quote(en) + "; scr_locationRoomEntityInitSavable(id, false); depth = -y + 1;", EventType.Create, 0);
             set(obj, files.GetCode("night_door_draw.gml"), EventType.Draw, 0);
         }
         Door("entry", Camp, "EAO_N2_camp_in", "灰堤堤道", "Ash embankment path");

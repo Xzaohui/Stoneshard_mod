@@ -158,7 +158,7 @@ internal static class NightQuest
         }
         void Door(string id, string target, string tag, string cn, string en) {
             var obj=Msl.GetObject("o_eao_n1_"+id);
-            set(obj,"event_inherited(); target = "+target+"; position_tag = "+NativeDocuments.Quote(tag)+"; is_lock = false; is_crime_door = false; is_quest = false; dungeon_level_incr = 0; name = global.language == 3 ? "+NativeDocuments.Quote(cn)+" : "+NativeDocuments.Quote(en)+"; scr_locationRoomEntityInitSavable(id, false);",EventType.Create,0);
+            set(obj,"event_inherited(); target = "+target+"; position_tag = "+NativeDocuments.Quote(tag)+"; is_lock = false; is_crime_door = false; is_quest = false; dungeon_level_incr = 0; name = global.language == 3 ? "+NativeDocuments.Quote(cn)+" : "+NativeDocuments.Quote(en)+"; scr_locationRoomEntityInitSavable(id, false); depth = -y + 1;",EventType.Create,0);
             set(obj,files.GetCode("night_door_draw.gml"),EventType.Draw,0);
         }
         Door("entry",NightRooms.Yard,"EAO_N1_yard_in","旧渡口堤道","Old ferry path");

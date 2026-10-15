@@ -2,6 +2,10 @@
 
 本文件收存原 README.md 与根 AGENTS.md 中的逐轮迭代记录，按日期与 S 编号从新到旧排列，正文逐字保留。`<!-- 标识:BEGIN/END -->` 标记块由 research/tools 下的写手脚本维护（重跑时整块替换并追加到文末），对应校验器在本文件中核对；当前状态与使用说明见 [README](README.md)，协作规则见 [AGENTS.md](AGENTS.md)。
 
+## 2026-10-16
+
+- 合并入 main（小辉）：`story-s204-s205`（S204 新对白通读与权威名册、S205 块外润色）与 `code/c1-a3`（含 `story-hxfix` HX01-26 键审查修复、A3 开发小修、art/stage0 外院/采石场复测修正、状态助手与图中图审查）。冲突仅在 research 生成哈希类 JSON：代码侧校验哈希取 code/c1-a3，剧情侧 story-generated/structure-opt 取 story-s204。`code/map-plan` 暂留（大地图方案撰写中）。
+
 ## 2026-10-15
 
 - 新增后续迭代规划（小辉）：`docs/roadmap/ROADMAP.md` 总规划及代码、文案、绘图三份分项规划（后两份为原稿原文）；README 增「后续迭代规划」节，当前版本口径改为 0.3.5。

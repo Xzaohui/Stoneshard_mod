@@ -83,8 +83,10 @@ internal static class SceneAssembly
     {
         void Door(string name,string target,string tag,string cn,string en,bool facade=false) {
             var obj=Msl.GetObject(name);obj.ParentId=Msl.GetObject("o_Doors_all_small");obj.Sprite=SceneDoorAnchor.Ensure();obj.Visible=true;
-            set(obj,"event_inherited(); target = "+target+"; position_tag = "+NativeDocuments.Quote(tag)+"; is_lock=false; is_crime_door=false; is_quest=false; dungeon_level_incr=0; name=global.language==3 ? "+NativeDocuments.Quote(cn)+" : "+NativeDocuments.Quote(en)+"; scr_locationRoomEntityInitSavable(id,false);",EventType.Create,0);
             var interior = N2Hd2dArt.Doorways.Any(d=>d.Object==name);
+            // Standing doors (night_door_draw) sort by row like native props: the
+            // player on the door row or south of it draws over the door.
+            set(obj,"event_inherited(); target = "+target+"; position_tag = "+NativeDocuments.Quote(tag)+"; is_lock=false; is_crime_door=false; is_quest=false; dungeon_level_incr=0; name=global.language==3 ? "+NativeDocuments.Quote(cn)+" : "+NativeDocuments.Quote(en)+"; scr_locationRoomEntityInitSavable(id,false);"+(facade||interior ? "" : " depth = -y + 1;"),EventType.Create,0);
             set(obj,files.GetCode(facade ? "site_door_draw.gml" : interior ? "n2_door_draw.gml" : "night_door_draw.gml"),EventType.Draw,0);
             if (facade) set(obj,files.GetCode("site_door_draw_end.gml"),EventType.Draw,(uint)EventSubtypeDraw.DrawEnd);
         }

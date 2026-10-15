@@ -2,6 +2,9 @@ var _changing=instance_exists(o_smoothRoomChanger);
 event_inherited();
 if (_changing || !instance_exists(o_smoothRoomChanger) || !instance_exists(o_player)) exit;
 if (dev_return) {
+    // Native transition has started; keep the observer through it (dev_step).
+    global.EAO_dev_return_keep = true;
+    global.EAO_dev_return_room = target;
     scr_atr_set_simple("localX",ds_map_find_value(global.characterDataMap,"EAO_N1_origin_x"));
     scr_atr_set_simple("localY",ds_map_find_value(global.characterDataMap,"EAO_N1_origin_y"));
 } else if (room != r_eao_n1_yard && room != r_eao_n1_bellhouse && room != r_eao_n1_underpass && room != r_eao_n2_camp && room != r_eao_n2_winch && room != r_eao_n2_side && room != r_eao_n2_sites && room != r_eao_fx_quarry) {

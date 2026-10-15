@@ -147,15 +147,16 @@ internal static class FieldQuest
     private const string VisitPick =
         "eao_fx_visit_pick = function() {\n" +
         "var _seen = variable_global_exists(\"EAO_fx_qry_seen\") && global.EAO_fx_qry_seen;\n" +
-        "if (ds_map_exists(global.characterDataMap, \"EAO_resolve_N7\")) {\n" +
-        "    if (ds_map_find_value(global.characterDataMap, \"EAO_resolve_N7\") != \"none\") return _seen ? 3 : 1;\n" +
-        "    return _seen ? 2 : 0;\n" +
-        "}\n" +
-        "return 4;\n};\n";
+        "var _r = \"none\";\n" +
+        "if (ds_map_exists(global.characterDataMap, \"EAO_resolve_N7\")) _r = ds_map_find_value(global.characterDataMap, \"EAO_resolve_N7\");\n" +
+        "if (_r != \"none\") return _seen ? 3 : 1;\n" +
+        "return _seen ? 2 : 0;\n};\n";
     private const string RegionPick =
         "eao_fx_region_pick = function() {\n" +
         "if (variable_global_exists(\"timeDataMap\") && is_real(global.timeDataMap) && ds_exists(global.timeDataMap, ds_type_map)) { var _h = ds_map_find_value(global.timeDataMap, \"hours\"); if (_h >= 21 || _h < 5) return 2; }\n" +
-        "if (ds_map_exists(global.characterDataMap, \"EAO_resolve_N7\") && ds_map_find_value(global.characterDataMap, \"EAO_resolve_N7\") != \"none\") return 3;\n" +
+        "var _r = \"none\";\n" +
+        "if (ds_map_exists(global.characterDataMap, \"EAO_resolve_N7\")) _r = ds_map_find_value(global.characterDataMap, \"EAO_resolve_N7\");\n" +
+        "if (_r != \"none\") return 3;\n" +
         "if (!variable_global_exists(\"EAO_fx_region_cursor\")) global.EAO_fx_region_cursor = 0;\n" +
         "global.EAO_fx_region_cursor = 1 - global.EAO_fx_region_cursor;\n" +
         "return global.EAO_fx_region_cursor;\n};\n";
@@ -254,7 +255,7 @@ internal static class FieldQuest
         void Door(string id, string target, string tag, string cn, string en)
         {
             var obj = Msl.GetObject("o_eao_" + id);
-            set(obj, "event_inherited(); target = " + target + "; position_tag = " + NativeDocuments.Quote(tag) + "; is_lock = false; is_crime_door = false; is_quest = false; dungeon_level_incr = 0; name = global.language == 3 ? " + NativeDocuments.Quote(cn) + " : " + NativeDocuments.Quote(en) + "; scr_locationRoomEntityInitSavable(id, false);", EventType.Create, 0);
+            set(obj, "event_inherited(); target = " + target + "; position_tag = " + NativeDocuments.Quote(tag) + "; is_lock = false; is_crime_door = false; is_quest = false; dungeon_level_incr = 0; name = global.language == 3 ? " + NativeDocuments.Quote(cn) + " : " + NativeDocuments.Quote(en) + "; scr_locationRoomEntityInitSavable(id, false); depth = -y + 1;", EventType.Create, 0);
             set(obj, files.GetCode("night_door_draw.gml"), EventType.Draw, 0);
         }
         Door("fx_entry", Quarry, "EAO_FX_quarry_in", "城外石场小径", "Quarry path outside the walls");

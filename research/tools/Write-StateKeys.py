@@ -91,6 +91,11 @@ out = dict(date='2026-10-13', scope='S114 implementation state-key map: determin
                         '`receipt_CX##` 为跨任务回执；接收者与时机见 note'],
            families=fam_counts, keys=keys)
 (ROOT / 'research' / 'state-keys.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+# Documentation refresh is opt-in and includes shared root files.
+import sys, runpy
+if '--update-readme' not in sys.argv:
+    runpy.run_path(str(ROOT / 'research/tools/Write-HeavyEdges.py'))
+    raise SystemExit(0)
 changed = set(); generated = {}
 def put(rel, t):
     p = V / rel; p.parent.mkdir(parents=True, exist_ok=True)

@@ -1,6 +1,14 @@
 if (!global.EAO_dev_enabled) exit;
-if (variable_global_exists("characterDataMap") && global.characterDataMap != dev_character_map) { event_user(0); exit; }
-if (!instance_exists(o_player) && !instance_exists(o_smoothRoomChanger) && !instance_exists(o_abstract_player) && !instance_exists(o_fastTurnController)) { event_user(0); exit; }
+// Shift+F11 return: the native return may swap characterDataMap and briefly
+// have no player. Keep the observer (panel/grid/fog/art) across that one
+// transition only; any other character change still resets as before.
+var _keep = variable_global_exists("EAO_dev_return_keep") && global.EAO_dev_return_keep;
+if (variable_global_exists("characterDataMap") && global.characterDataMap != dev_character_map) {
+    if (_keep) dev_character_map = global.characterDataMap;
+    else { event_user(0); exit; }
+}
+if (!instance_exists(o_player) && !instance_exists(o_smoothRoomChanger) && !instance_exists(o_abstract_player) && !instance_exists(o_fastTurnController)) { if (!_keep) event_user(0); exit; }
+if (_keep && instance_exists(o_player) && !instance_exists(o_smoothRoomChanger) && room == global.EAO_dev_return_room) global.EAO_dev_return_keep = false;
 if (dev_reveal && variable_global_exists("fog")) {
     if (!dev_fog_owned) { dev_fog_before = global.fog; dev_fog_owned = true; }
     global.fog = false;

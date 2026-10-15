@@ -3,6 +3,7 @@ dev_fog_owned = false;
 dev_reveal = false;
 dev_grid = false;
 global.EAO_dev_enabled = false;
+global.EAO_dev_return_keep = false;
 with (o_globalmapFogRender) {
     if (variable_instance_exists(id,"EAO_dev_visible_owned") && EAO_dev_visible_owned) {
         visible = EAO_dev_visible_before;

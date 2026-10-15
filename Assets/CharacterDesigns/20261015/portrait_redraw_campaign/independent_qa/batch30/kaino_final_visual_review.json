@@ -1,0 +1,48 @@
+{
+  "slug": "kaino",
+  "reviewed_utc": "2026-10-15T12:58:11.437798+00:00",
+  "status": "selected_derived_candidate_with_limitations",
+  "delivery_eligible": true,
+  "selected_path": "kaino/candidates/portrait_v2_safe_74x100_candidate.png",
+  "selected_sha256": "2c906c39e1b5e1018eba7e32cfa63e671b707b7772305746806d2b5a414c64f7",
+  "held_evidence_path": null,
+  "held_evidence_sha256": null,
+  "successful_generations": 2,
+  "feedback_rounds": 1,
+  "third_generation_allowed": false,
+  "actual_visual_review": [
+    "identity master",
+    "four core style portraits",
+    "v1 raw and integer NN preview",
+    "v2 raw and integer NN preview",
+    "final derivative preview"
+  ],
+  "observations": [
+    "50岁上下后退发际、灰棕后梳发团与短方灰须、粗眉宽鼻及锈红系带工衣/棕围裙身份成立。",
+    "第二稿将灰发须从细碎高光合为大块，眼白明显收小压暗，裸颈衣领缩短，严肃技术自信与听人说明表情可读。",
+    "右发真实source alpha≥128边界止于x1072，原图宽1079，右有6像素；alpha≥16也不触边。极低alpha噪声不是真实发耳裁断。",
+    "full版最右逻辑格触边来自NN采样；72×98 inset仍只有1px，70×96 safe全画布等比containment得到2px真实透明成品边。"
+  ],
+  "limitations": [
+    "肤色仍稍暖，须保留NN技术派生/临时32色限制。",
+    "只选70×96 safe导出；full与72×98 inset仅过程证据。",
+    "不是原生逐像素、游戏集成或实机验收终稿。"
+  ],
+  "framing_notes": "safe bbox(6,7,72,95)；左/上/右/下余量6/7/2/5。",
+  "actual_final_bbox": [
+    6,
+    7,
+    72,
+    95
+  ],
+  "actual_final_margin_ltrb": [
+    6,
+    7,
+    2,
+    5
+  ],
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false
+}

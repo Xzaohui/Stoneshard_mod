@@ -1,0 +1,21 @@
+from pathlib import Path
+from PIL import Image
+import json,hashlib,base64,sys
+root=Path(sys.argv[1]);sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+slug=root.name
+review={'reviewer':'audit_campaign_third_batch (independent worker)','basis':'Independent reviewer message on 2026-10-15T08:38:19Z; this file is the production author\'s faithful selection summary, not the original review report.','selected':'candidates/portrait_v2_74x100_candidate.png','decision':'pass_concept_candidate_with_notes','visual_findings':(['伊莲脸显著放大、肩退到底部、颈缩短，低髻/成熟审视保住。'] if slug=='elaine' else ['凯姆灰发和灰茬归块、颈缩短，中年早白与防备感保住。']),'non_blocking_notes':(['眼白依然偏暖、发束仍略多。'] if slug=='elaine' else ['灰茬下缘仍有小碎簇/眉间较紧。']),'independent_technical':'Reviewer reports both are 32-color binary-alpha; complete raw return and independent RGBA/PNG export match.','native_pixel_approved':False,'runtime_verified':False,'final_package_sha_recheck':'requested_after_freeze'}
+(root/'qa/independent_selection_summary.json').write_text(json.dumps(review,ensure_ascii=False,indent=2))
+p=root/'qa/author_visual_review.json';a=json.loads(p.read_text());a['independent_review']='pass_concept_candidate_with_notes';a['final_selected']='candidates/portrait_v2_74x100_candidate.png';p.write_text(json.dumps(a,ensure_ascii=False,indent=2))
+p=root/'README.md';s=p.read_text().replace('当前作者推荐：`candidates/portrait_v2_74x100_candidate.png`，待独立QA最终选择。','最终候选：`candidates/portrait_v2_74x100_candidate.png`。独立视觉QA选择v2 MEDIANCUT，通过概念候选并保留非阻断余项。').replace('独立QA由单独复核记录给出。','独立选择摘要见`qa/independent_selection_summary.json`；独立原始报告在本批统一QA目录由审核者维护。');p.write_text(s)
+checks=[]
+for v in ['portrait_v1','portrait_v2']:
+ ret=json.loads((root/'tool_returns'/f'{v}.json').read_text());raw=root/'raw'/f'{v}_raw_imagegen.png';checks.append({'check':v+'_raw_equals_tool_return','pass':raw.read_bytes()==base64.b64decode(ret['image_url'].split(',',1)[1])})
+q=Image.open(root/'candidates/portrait_v2_74x100_candidate.png').convert('RGBA');eight=Image.open(root/'previews/portrait_v2_8x.png').convert('RGBA');checks.append({'check':'8x_is_strict_NN','pass':eight.size==(592,800) and eight.tobytes()==q.resize((592,800),Image.Resampling.NEAREST).tobytes()})
+for item in json.loads((root/'sources/source_manifest.json').read_text()):
+ orig=Path(item['original_path']);snap=root/item['snapshot_path'];checks.append({'check':'source_unchanged','source':str(orig),'pass':sha(orig)==item['sha256']==sha(snap)})
+checks.append({'check':'dimensions_colors_alpha','pass':q.size==(74,100) and len(set(p[:3] for p in q.getdata() if p[3]))<=32 and set(q.getchannel('A').getdata())<={0,255}})
+(root/'qa/final_integrity.json').write_text(json.dumps({'all_pass':all(x['pass'] for x in checks),'checks':checks},ensure_ascii=False,indent=2))
+p=root/'manifest.json';m=json.loads(p.read_text());m.update({'status':'frozen_concept_candidate_with_notes','selected_portrait':'candidates/portrait_v2_74x100_candidate.png','selected_raw':'raw/portrait_v2_raw_imagegen.png','selected_metrics':json.loads((root/'qa/portrait_v2_metrics.json').read_text()),'generation_calls':2,'independent_qa':'pass_concept_candidate_with_notes','independent_selection_summary':'qa/independent_selection_summary.json','native_pixel_approved':False,'native_authored':False,'runtime_integrated':False,'runtime_verified':False,'final_integrity_all_pass':all(x['pass'] for x in checks),'alternatives_retained':['candidates/portrait_v1_74x100_candidate.png','candidates/portrait_v1_maxcoverage_74x100_candidate.png'],'selection_reason':'v2 is the only generated refinement, chosen by independent visual QA for tighter face crop, shorter neck, and simplified clusters while preserving identity and current card age.'})
+m['files']=[{'path':str(f.relative_to(root)),'bytes':f.stat().st_size,'sha256':sha(f)} for f in sorted(root.rglob('*')) if f.is_file() and f.name not in ['manifest.json','SHA256SUMS.txt']];p.write_text(json.dumps(m,ensure_ascii=False,indent=2))
+(root/'SHA256SUMS.txt').write_text('\n'.join(f'{sha(f)}  {f.relative_to(root)}' for f in sorted(root.rglob('*')) if f.is_file() and f.name!='SHA256SUMS.txt')+'\n')
+print(json.dumps({'slug':slug,'all_pass':all(x['pass'] for x in checks),'selected':m['selected_portrait'],'sha256':sha(root/m['selected_portrait']),'manifest_sha256':sha(p),'files':len(m['files'])},ensure_ascii=False))

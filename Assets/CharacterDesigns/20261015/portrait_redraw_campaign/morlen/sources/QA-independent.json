@@ -1,0 +1,51 @@
+{
+  "reviewer": "independent-visual-review",
+  "reviewedAt": "2026-10-13T04:01:42Z",
+  "artifact": "morlen_raw_imagegen.png",
+  "reference": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+  "method": "实际逐张看原图，并读取角色卡；alpha统计仅补充技术验证，不代替审美。",
+  "decision": "deliverable_with_minor_notes",
+  "visual": {
+    "proportion": "头顶至胡须约590px，胡须以下至靴底约680px，头/身约0.87；接近1:1，较Sela G略长身，可接受。",
+    "expression": "灰眉与深色眼裂分开，侧看与下压眉眼表现疲惫、关切和遗憾；鼻、嘴、胡须可读，非套用女性笑脸。",
+    "identity": "明显年长成年男性；灰发、额纹、宽鼻和胡须与Sela G年轻成年女性形成区分。",
+    "aesthetics": "朴素橄榄色长衣、米色围巾和皮包组成稳定配色；脸部有体积且不显婴儿脸。胡须/发丝细簇较基准更密，属于次要风格偏差。",
+    "costumeAndStory": "闭合斜挎医药包、普通衣装符合退役军医；无治疗动作、病患、药物交付或神圣医疗标识，不虚构剧情承诺。",
+    "crop": "头发、双手、皮包、双脚均完整；可见实体离画布边缘有余量。"
+  },
+  "technical": {
+    "mode": "RGBA",
+    "canvas": [
+      1118,
+      1407
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "nonzeroAlphaBounds": [
+      0,
+      27,
+      1096,
+      1382
+    ],
+    "alphaAbove5Bounds": [
+      268,
+      91,
+      880,
+      1361
+    ],
+    "note": "完全透明背景确实存在。个别alpha<=5的极淡噪点延伸到左边缘；主体未裁切，交付非阻断，未来引擎资产化前应清理。"
+  },
+  "sources": [
+    "design/04_人物/人物_莫伦·海.md",
+    "design/04_人物/城市人物/人物_NPC-MORREN_莫伦·海.md",
+    "prompt.txt"
+  ],
+  "limitations": [
+    "仅人物概念验收，不是35×44原生精灵或游戏运行验收。",
+    "未改图、作者manifest或全局索引。",
+    "未验证装备分层、换装遮挡、动画或引擎兼容；通过仅限整身概念。"
+  ],
+  "artifactSha256": "a48e9fa9043104fbb4dea8635cfc509ffdb13a8274db52da09d6e519a87ee7d6"
+}

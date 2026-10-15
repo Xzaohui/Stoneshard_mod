@@ -1,0 +1,50 @@
+{
+  "reviewer": "author_visual_review",
+  "character": "kaem",
+  "actually_viewed": [
+    "sources/identity_reference.png",
+    "sources/mara_style_reference.png",
+    "sources/iwo_style_reference.png",
+    "sources/leiya_style_reference.png",
+    "sources/tore_style_reference.png",
+    "raw/portrait_v1_raw_imagegen.png",
+    "previews/portrait_v1_1x_8x.png",
+    "previews/portrait_v1_maxcoverage_1x_8x.png",
+    "raw/portrait_v2_raw_imagegen.png",
+    "previews/portrait_v2_1x_8x.png"
+  ],
+  "visual_findings": [
+    "中年男性副馆员同一身份；旧侧分、眉形和轻胡茬保留，现卡早花白经大块灰棕前发与鬓发落实，不沿用年轻全黑发。",
+    "略不对称紧眉、侧目和抿唇表现防备与自负，未画成悲哀、认罪、复权或魔法反派。",
+    "细颧骨、长鼻与紧下颌区别伊莲的方厚脸；短胡茬以灰褐面呈现，仍有少量边缘颗粒，未变全须。",
+    "微驼以头微前探和不齐肩领提示；这是脸部紧裁，不能宣称验证了完整背部姿态。",
+    "MEDIANCUT灰鬓较连贯，眼白米领偏暖；MAXCOVERAGE米领与灰发略清晰，但肤面斑驳台阶较多。"
+  ],
+  "initial_recommendation": "v1 MEDIANCUT had better grouped planes than MAXCOVERAGE; independent review requested a single crop/cluster refinement.",
+  "required_regeneration_found_by_author": false,
+  "generation_calls": 2,
+  "remaining_revision_budget": 0,
+  "not_verified": [
+    "native one-pixel authored asset",
+    "runtime integration",
+    "engine compatibility",
+    "user final approval"
+  ],
+  "method_disclosure": "Substantive built-in imagegen drawing, followed by explicit NN resizing and 32-color quantization. Does not constitute native pixel-by-pixel completion.",
+  "v2_review": {
+    "selected_by_author": "candidates/portrait_v2_74x100_candidate.png",
+    "generation_calls": 2,
+    "remaining_revision_budget": 0,
+    "reason": [
+      "Shorter visible neck, collar raised, larger face; identity and card age remain stable.",
+      "No new accessories or story conclusions.",
+      "Both output candidates are 74x100 RGBA, 32 visible RGB colors, binary alpha."
+    ],
+    "character_notes": [
+      "凯姆：早灰发收为更宽的主块，轻胡茬改为较连贯低对比灰褐断面；抬领缩颈，年龄仍中年。",
+      "眼白映射偏暖但小眼侧目读形成立；对完整背部微驼只作构图提示，不声称验证。"
+    ]
+  },
+  "independent_review": "pass_concept_candidate_with_notes",
+  "final_selected": "candidates/portrait_v2_74x100_candidate.png"
+}

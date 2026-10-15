@@ -1,0 +1,15 @@
+{
+  "received_utc": "2026-10-15T12:47:44.824131+00:00",
+  "reviewer_task": "/root/audit_campaign_twentyninth_batch",
+  "scope": "Independent inspection of identity/card/master QA/four style references and v1/v2 raws/candidates; technical byte and hash reproduction.",
+  "decision": "selected_candidate_with_limitations",
+  "selected": "candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "b6e1a7a2ccf76396953d4434fd9f412324b093c558e15b168660faec7c0bef38",
+  "verbatim_feedback": "v2独立实看/复现完成。Fulen可用同raw的72×98 inset技术导出：源alpha≥128 bbox[5,104,1068,1354]，alpha≥5 bbox[1,103,1070,1359]且四边零可见像素，左发真实轮廓未裁，目标x0属于NN采样触边；inset只恢复目标网格余量，不声称修补源。请产出portrait_v2_inset并更新完整manifest/SHA，供最后锁选。Jonhe选现portrait_v2_74x100_candidate.png，低帽冠、短颈窄领、大鼻颧骨改善成立；帽发/灰辫占幅和眼白残亮作为限制，非源裁断。两者均仅NN派生候选、非原生实机终稿，不再生图。请终审文件注明上述，再冻住作者目录。",
+  "limitations": [
+    "Original raw left hair margin is only 5 pixels at alpha>=128 (below one target logical pixel), though visible silhouette is not actually cut; same-raw inset only adds target-grid containment margin, does not repair or prove generous source margin.",
+    "Cream scarf and hair still occupy a large share of the frame; eyes retain some tan brightness and the neck is shorter but not as compressed as the four core portraits."
+  ],
+  "native_pixel_approved": false,
+  "runtime_verified": false
+}

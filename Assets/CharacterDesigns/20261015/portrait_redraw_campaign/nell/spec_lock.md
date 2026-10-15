@@ -1,0 +1,16 @@
+# Identity lock
+
+NPC-N-NELL / 妮尔 / Nell
+
+Authority: sources/character_card.md, updated 2026-10-13. Independent card beats older consolidated references.
+
+Subject: Nell (妮尔, NPC-N-NELL), an ORIGINAL local labor clerk, not the original-game character Neil. A woman in her mid to late forties. Retain her recognizable longer oval face, high cheekbones, long substantial narrow nose, fine straight brows, dark brown hair swept back into a SMALL LOW bun behind her neck. The forehead is comparatively open, with two broad side-swept hair masses; no short blunt fringe. Mature lower cheeks and restrained mouth, not glamorous, cute or youthful. She has faint brick-red under-eye fatigue from years leaning over paperwork, small short crow's-feet and a faint brow crease, clearly adult but not elderly. The expression is guarded self-control and weary attention: lids slightly lowered, one brow subtly tense, lips compressed into a small uneven closed line, not an angry villain or smirking mastermind. Distinguish her from rounder worried Mara and young straight-fringed Leiya through the longer face, older eyes, low swept bun and narrow mouth.
+Costume visible only as a very small bottom edge: dark stone/navy-blue clerk's overgarment with a broad but short oatmeal/cream shawl collar on both sides. The collar fabric reads worn matte cloth. Her shoulders hold slight tension, not a heroic pose. Ink-stained sleeves and pen-callused knuckles belong to her identity but stay outside this tight portrait crop. No jewelry, rank badge, fashion accessories, exposed neckline or ruling document.
+
+
+Framing: EXTREME CLOSE HEAD portrait, crown within a few logical pixels of the top, cheeks dominate the middle width, chin near the bottom. The face and hair occupy almost all the height. Show only the top of the collar and very short shoulder ends for costume identification, no chest, arms, hands or props. Three-quarter head angle turned slightly toward viewer-left, eye contact to the listener near viewer-left.
+Style: Strong warm near-black silhouette outline, firm angular nose bridge and nostril wing, visible cheekbone and adult jaw planes. Broad contiguous matte pixel clusters, purposeful stair steps, only a few flat shadow/highlight tones per material. Low saturation earth palette. Dark eyes naturally small and deep set, muted tiny eye-white slivers, no bright white eye blocks or pupil sparkles. Hair in 4-6 large connected masses, no thin hair strands, bright specks, long thin diagonals, stipple or texture noise. At most 32 visible colors for this temporary batch. No gradients, blur, antialiasing, dithering, glossy highlights or painterly microdetail.
+True transparent alpha outside the silhouette. Single character, single portrait. No text, captions, watermark, panels, frame, decorative background, book, paper, pen, tool, weapon, hand or scene. Do not copy another reference's face, hair or costume.
+
+
+Production: built-in imagegen substantive painting, preserved raw output, whole-canvas nearest-neighbor reduction and non-dithered <=32-color quantization; binary alpha threshold 128. This is not native authored pixel art or game-integrated/runtime-verified content. Initial plus at most one necessary imagegen revision.

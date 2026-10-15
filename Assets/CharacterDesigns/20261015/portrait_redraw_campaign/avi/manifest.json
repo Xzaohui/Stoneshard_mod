@@ -1,0 +1,527 @@
+{
+  "schema_version": 1,
+  "canonical_id": "BRY-NPC-AVI",
+  "actor_id": "BRY-NPC-AVI",
+  "name": "阿薇",
+  "slug": "avi",
+  "date": "2026-10-15",
+  "batch": "batch05",
+  "status": "independently_selected_portrait_candidate",
+  "selected_portrait": "candidates/portrait_v2_74x100_candidate.png",
+  "selected_raw": "raw/portrait_v2_raw_imagegen.png",
+  "selected_portrait_sha256": "4996d1660a9371b748fcf1a4c4b4cfca0846d001e6ab6028ccda512325b99ae2",
+  "generation_calls": 2,
+  "max_generation_calls": 2,
+  "generation_closed": true,
+  "native_authored": false,
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "independent_qa": {
+    "status": "selected_candidate_with_notes",
+    "summary": "qa/independent_selection_summary.json",
+    "final_consolidated_report": "Maintained separately by independent batch05 reviewer"
+  },
+  "residual_limitations": [
+    "眉间仍稍蹙且蓝头巾占比偏宽；不继续生图。",
+    "此为imagegen衍生候选，未原生逐像素绘制、未接入游戏。"
+  ],
+  "color_budget_note": "32 visible RGB colors is this batch temporary ceiling, not project-wide lock; quantization does not prove designed ramp quality.",
+  "method": "Built-in imagegen raw byte-exact preserved. Alpha-bbox crop and uniform nearest-neighbor fit inside72x98 centered74x100, alpha128 binary threshold, no-dither quantization. No manual pixel painting, recoloring or face geometry edits.",
+  "palette_method": "MEDIANCUT",
+  "reproduce": [
+    "python derive_portrait.py . portrait_v2",
+    "python finalize_manifest.py"
+  ],
+  "source_manifest": "sources/source_manifest.json",
+  "identity_master_original": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/avi/avi_raw_imagegen_v2.png",
+    "exists": true,
+    "sha256": "f118bc41ddcb5e02f46f384b4882755ef776b345b5296485585e07543fc98970",
+    "bytes": 643597,
+    "previous_recorded_sha256": "f118bc41ddcb5e02f46f384b4882755ef776b345b5296485585e07543fc98970",
+    "previous_hash_matches_current": true
+  },
+  "source_priority": "Current independent card governs age/identity; historical master retained where consistent. Historical card hash drift acknowledged and checked.",
+  "selected_metrics": {
+    "raw": {
+      "path": "raw/portrait_v2_raw_imagegen.png",
+      "size": [
+        1079,
+        1458
+      ],
+      "mode": "RGBA",
+      "sha256": "1b503d43c4a52294a849e1130ac919c5870a1dee359bd509dbbddb2d3827d886",
+      "visible_rgb_colors": 46918,
+      "alpha_levels": 256,
+      "binary_alpha": false,
+      "alpha_bbox": [
+        0,
+        41,
+        1079,
+        1458
+      ],
+      "visible_pixels": 1172114,
+      "partial_alpha_pixels": 1170172,
+      "palette_by_frequency": null
+    },
+    "target": {
+      "path": "candidates/portrait_v2_74x100_candidate.png",
+      "size": [
+        74,
+        100
+      ],
+      "mode": "RGBA",
+      "sha256": "4996d1660a9371b748fcf1a4c4b4cfca0846d001e6ab6028ccda512325b99ae2",
+      "visible_rgb_colors": 30,
+      "alpha_levels": 2,
+      "binary_alpha": true,
+      "alpha_bbox": [
+        1,
+        5,
+        73,
+        94
+      ],
+      "visible_pixels": 5197,
+      "partial_alpha_pixels": 0,
+      "palette_by_frequency": [
+        {
+          "rgb": [
+            27,
+            13,
+            13
+          ],
+          "pixels": 470
+        },
+        {
+          "rgb": [
+            68,
+            84,
+            119
+          ],
+          "pixels": 370
+        },
+        {
+          "rgb": [
+            104,
+            59,
+            44
+          ],
+          "pixels": 363
+        },
+        {
+          "rgb": [
+            92,
+            115,
+            156
+          ],
+          "pixels": 339
+        },
+        {
+          "rgb": [
+            29,
+            15,
+            16
+          ],
+          "pixels": 337
+        },
+        {
+          "rgb": [
+            252,
+            175,
+            116
+          ],
+          "pixels": 319
+        },
+        {
+          "rgb": [
+            64,
+            36,
+            31
+          ],
+          "pixels": 318
+        },
+        {
+          "rgb": [
+            250,
+            167,
+            110
+          ],
+          "pixels": 248
+        },
+        {
+          "rgb": [
+            32,
+            16,
+            16
+          ],
+          "pixels": 242
+        },
+        {
+          "rgb": [
+            91,
+            115,
+            156
+          ],
+          "pixels": 228
+        },
+        {
+          "rgb": [
+            223,
+            137,
+            92
+          ],
+          "pixels": 217
+        },
+        {
+          "rgb": [
+            207,
+            116,
+            80
+          ],
+          "pixels": 203
+        },
+        {
+          "rgb": [
+            67,
+            38,
+            32
+          ],
+          "pixels": 161
+        },
+        {
+          "rgb": [
+            250,
+            170,
+            112
+          ],
+          "pixels": 160
+        },
+        {
+          "rgb": [
+            233,
+            144,
+            95
+          ],
+          "pixels": 132
+        },
+        {
+          "rgb": [
+            109,
+            58,
+            43
+          ],
+          "pixels": 128
+        },
+        {
+          "rgb": [
+            68,
+            39,
+            33
+          ],
+          "pixels": 112
+        },
+        {
+          "rgb": [
+            120,
+            65,
+            46
+          ],
+          "pixels": 103
+        },
+        {
+          "rgb": [
+            243,
+            163,
+            108
+          ],
+          "pixels": 103
+        },
+        {
+          "rgb": [
+            66,
+            56,
+            68
+          ],
+          "pixels": 95
+        },
+        {
+          "rgb": [
+            251,
+            172,
+            113
+          ],
+          "pixels": 95
+        },
+        {
+          "rgb": [
+            69,
+            86,
+            121
+          ],
+          "pixels": 78
+        },
+        {
+          "rgb": [
+            31,
+            15,
+            15
+          ],
+          "pixels": 74
+        },
+        {
+          "rgb": [
+            93,
+            51,
+            38
+          ],
+          "pixels": 67
+        },
+        {
+          "rgb": [
+            33,
+            17,
+            17
+          ],
+          "pixels": 66
+        },
+        {
+          "rgb": [
+            248,
+            183,
+            130
+          ],
+          "pixels": 57
+        },
+        {
+          "rgb": [
+            148,
+            103,
+            86
+          ],
+          "pixels": 42
+        },
+        {
+          "rgb": [
+            92,
+            117,
+            157
+          ],
+          "pixels": 29
+        },
+        {
+          "rgb": [
+            79,
+            99,
+            136
+          ],
+          "pixels": 27
+        },
+        {
+          "rgb": [
+            44,
+            37,
+            46
+          ],
+          "pixels": 14
+        }
+      ]
+    },
+    "derivation": {
+      "resize": "Pillow NEAREST uniform alpha-bbox fit inside 72x98 on 74x100 canvas",
+      "raw_crop_bbox": [
+        5,
+        60,
+        1079,
+        1390
+      ],
+      "fit_size": [
+        72,
+        89
+      ],
+      "offset": [
+        1,
+        5
+      ],
+      "alpha_threshold": 128,
+      "quantization": "Pillow MEDIANCUT palette from opaque sampled RGB; no dithering",
+      "color_budget": 32,
+      "drawn_character_geometry": false
+    },
+    "raw_equals_full_tool_return": true,
+    "native_target_generation": false,
+    "checks": {
+      "exact_dimensions": true,
+      "visible_color_budget_pass": true,
+      "alpha_binary": true
+    }
+  },
+  "all_raw_verified_against_tool_return": true,
+  "repeat_export_bytes_equal": true,
+  "source_files_unchanged": true,
+  "old_assets_overwritten": false,
+  "committed": false,
+  "pushed": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1486,
+      "sha256": "e7a60ccbdafc74188e808f4299ba4fcea5f8d24fc6946382bdde73e89f5777af"
+    },
+    {
+      "path": "candidates/portrait_v1_74x100_candidate.png",
+      "bytes": 9100,
+      "sha256": "a55793f3bdc57e885b1292c54dbd44f3e9cdb3254bd73d3c893db37f32c41b44"
+    },
+    {
+      "path": "candidates/portrait_v2_74x100_candidate.png",
+      "bytes": 8343,
+      "sha256": "4996d1660a9371b748fcf1a4c4b4cfca0846d001e6ab6028ccda512325b99ae2"
+    },
+    {
+      "path": "derive_portrait.py",
+      "bytes": 5347,
+      "sha256": "30aecb45b024b7dffd36bd8bd66beedc99eeef66cb301d6b4a09ff2b58800f1c"
+    },
+    {
+      "path": "finalize_manifest.py",
+      "bytes": 3569,
+      "sha256": "52dd4c5042d797d8a369bd1f59881ddb3fe1572ed2263983dfb91bba65640708"
+    },
+    {
+      "path": "previews/portrait_v1_1x_8x.png",
+      "bytes": 62264,
+      "sha256": "8ee45a7adb3bc6d6ef9170103c4282f19bb3d867beabff09c878451fc7b5798e"
+    },
+    {
+      "path": "previews/portrait_v1_8x.png",
+      "bytes": 17931,
+      "sha256": "4230e82707b891b8da39b827b1560b0a52c44446d06a26555e01ef5e03588395"
+    },
+    {
+      "path": "previews/portrait_v2_1x_8x.png",
+      "bytes": 60670,
+      "sha256": "3322fdb9be4ca71c84ae3e445efbf6084bb01757cb3d60c19176cbd8f7dc16c0"
+    },
+    {
+      "path": "previews/portrait_v2_8x.png",
+      "bytes": 17165,
+      "sha256": "638d8ed51e73632154561496080fdb7965a2869cd43d978c96588fbecc886f39"
+    },
+    {
+      "path": "prompts/portrait_v1.json",
+      "bytes": 3240,
+      "sha256": "afb58c1903c40a82616798ce5c6cd97b101d232ccbe560d08136a9ec944b35fd"
+    },
+    {
+      "path": "prompts/portrait_v2.json",
+      "bytes": 2455,
+      "sha256": "395fc7450c8ab2ddd8d4cc2539ae93381795362a3f99919bd0a9fbcf7567b152"
+    },
+    {
+      "path": "qa/author_visual_review.json",
+      "bytes": 1441,
+      "sha256": "dc742b3341866f217f4fb8bd7e3f03990222e98e3ea285f67b3b21223bd75247"
+    },
+    {
+      "path": "qa/independent_selection_summary.json",
+      "bytes": 750,
+      "sha256": "43ad556a13eb6ca0cbbd432f2e68bf3d8258fd1027ac00f2bf8993a715410fa8"
+    },
+    {
+      "path": "qa/portrait_v1_metrics.json",
+      "bytes": 5037,
+      "sha256": "78af14e4b00fabedbfc4f9ac3465e11ba82b7d342543cdd0be888a7341f8467f"
+    },
+    {
+      "path": "qa/portrait_v2_metrics.json",
+      "bytes": 4821,
+      "sha256": "3aead0682f9043e2362c8b51c834ee53b9d8cd298e14d5cffeb8b9975c5e145d"
+    },
+    {
+      "path": "qa/reproducibility.json",
+      "bytes": 3252,
+      "sha256": "0bb7e78b773df49bcff8876f89f45864fc3b94ad566d3c0d604f8334e9477f14"
+    },
+    {
+      "path": "raw/portrait_v1_raw_imagegen.png",
+      "bytes": 1222266,
+      "sha256": "2864f05e35a0d85158c62c5b847ec7db9d84ac6b75be3061d88fc1d3acbd9a36"
+    },
+    {
+      "path": "raw/portrait_v2_raw_imagegen.png",
+      "bytes": 1248189,
+      "sha256": "1b503d43c4a52294a849e1130ac919c5870a1dee359bd509dbbddb2d3827d886"
+    },
+    {
+      "path": "sources/character_card.md",
+      "bytes": 2483,
+      "sha256": "d90a660772c4bf636d5b0ed989073ecc50b789ad27740af8ee8222df532a364b"
+    },
+    {
+      "path": "sources/historical_QA.json",
+      "bytes": 1988,
+      "sha256": "0b9f5ef6ff790cd0a93219ca2095ea90cd80ebc12e8e643e6a38ca77ce7e3327"
+    },
+    {
+      "path": "sources/historical_manifest.json",
+      "bytes": 2874,
+      "sha256": "1aa3fcb751822be1bc62197c7f512fbefc07fc847b939bcb755f3f35d9a7633b"
+    },
+    {
+      "path": "sources/identity_reference.png",
+      "bytes": 643597,
+      "sha256": "f118bc41ddcb5e02f46f384b4882755ef776b345b5296485585e07543fc98970"
+    },
+    {
+      "path": "sources/iwo_style_reference.png",
+      "bytes": 8032,
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb"
+    },
+    {
+      "path": "sources/leiya_style_reference.png",
+      "bytes": 4895,
+      "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f"
+    },
+    {
+      "path": "sources/mara_style_reference.png",
+      "bytes": 9411,
+      "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd"
+    },
+    {
+      "path": "sources/roster_entry.json",
+      "bytes": 5251,
+      "sha256": "b20d7f11ce73da77f7e46cc8eb265c2ad210f2a80f76d4cc44d089b5669ebba8"
+    },
+    {
+      "path": "sources/source_manifest.json",
+      "bytes": 2745,
+      "sha256": "0b342617baff5a0e899e8c72fcb5f1854dfa06006afbfeaba5b6f2696879c6ca"
+    },
+    {
+      "path": "sources/story_CM-BRY.md",
+      "bytes": 57055,
+      "sha256": "f4af3f844c5a9cde746b7264cc5ee756aa835606267f74c2cfbba8ee08ec33cc"
+    },
+    {
+      "path": "sources/tore_style_reference.png",
+      "bytes": 8438,
+      "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1"
+    },
+    {
+      "path": "spec_lock.md",
+      "bytes": 636,
+      "sha256": "2f9fd2f303f7da3725e9b26f37ad33de1fe81197bcc9f08a67b70b0ee7285dfe"
+    },
+    {
+      "path": "tool_returns/portrait_v1.json",
+      "bytes": 1630218,
+      "sha256": "c9141e7d1bf4b4d09d3ef8feef9a2dcc01128bc94c11b756c0df9882558bac65"
+    },
+    {
+      "path": "tool_returns/portrait_v2.json",
+      "bytes": 1664782,
+      "sha256": "82e14df4bb7619caaafff521b4d51796188f7388fcc387f27166ffb085a409ab"
+    }
+  ]
+}

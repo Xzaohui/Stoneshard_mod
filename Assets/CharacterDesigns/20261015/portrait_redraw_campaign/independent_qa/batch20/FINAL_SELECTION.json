@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "batch": 20,
+  "frozen_utc": "2026-10-15T11:21:59.294198+00:00",
+  "reviewer": "audit_campaign_twentieth_batch",
+  "concept_pass_count": 3,
+  "held_count": 1,
+  "technical_integrity_pass": true,
+  "native_pixel_approved": false,
+  "runtime_verified": false,
+  "max_substantive_generations_per_actor": 2,
+  "actors": {
+    "luling": {
+      "status": "pass_concept_with_notes",
+      "deliverable": true,
+      "selected_candidate": "candidates/portrait_v2_safe_74x100_candidate.png",
+      "selected_candidate_sha256": "acdd3de3f40b67863b4949227981e1cb6545ec605ac136d4fb4e3f5128e52e47",
+      "displayed_version": "portrait_v2_safe",
+      "selected_version": "portrait_v2_safe",
+      "raw": "raw/portrait_v2_raw_imagegen.png",
+      "raw_sha256": "7e31f396cf26aaef189f92566773a0fb299ffda510e6c000457f5a77d998e4ad",
+      "author_manifest_sha256": "e0337c02363ecd3094962cbb78c6e15f0bfa6fb7fda124c75c1c67891ad535eb",
+      "author_SHA256SUMS_sha256": "9e9b64c42936d41031b9be89774d29174cd2b2a57cb6343fe05f5836a1f891ca",
+      "generation_calls": 2,
+      "residual_limitations": [
+        "短颈窄领、大脸更接近四核心，40+成熟宽颊厚颌/长宽鼻厚唇及浅巾深褂赭衬成立。",
+        "原始发巾耳廓完整，raw四边alpha≥128均清；最窄右留3px，safe只是技术留边，不修raw。",
+        "仍有偏亮眼白、较强眉间折和发巾细条；仅概念候选通过，非原生像素终稿。"
+      ],
+      "native_pixel_approved": false,
+      "runtime_verified": false
+    },
+    "naya": {
+      "status": "held_source_clipping",
+      "deliverable": false,
+      "selected_candidate": null,
+      "selected_candidate_sha256": null,
+      "displayed_version": "portrait_v2_inset",
+      "selected_version": null,
+      "raw": "raw/portrait_v2_raw_imagegen.png",
+      "raw_sha256": "f5e816e746fd35e5c548b93cacce370446d01809dbab12c8b4f6f4cbd031462d",
+      "author_manifest_sha256": "d31ff4b857f1607ba43c4802942ae9efc60ad1d503adafba8fe461273e938189",
+      "author_SHA256SUMS_sha256": "5839109eba841e6a9a34154d1a38dca365d2733ca1242e4b8a7bd4be1ee8e42e",
+      "generation_calls": 2,
+      "residual_limitations": [
+        "短颈窄领明显改善，成年窄脸/直长鼻与棕披蓝领保留。",
+        "源左发边y523–534连续12px平截，缺少真实透明留边，技术inset未补回源轮廓。",
+        "亮眼白和内高眉仍偏忧虑，双绕辫依然较团块；v1仅留历史记录，不回选也不算成功。"
+      ],
+      "native_pixel_approved": false,
+      "runtime_verified": false,
+      "held_evidence_candidate": "candidates/portrait_v2_inset_74x100_candidate.png",
+      "held_evidence_sha256": "fb2b305dafd34a06be1fc03da9ecbd1aea1cd436dc6fcc4c5084d61120760777",
+      "historical_fallback": "candidates/portrait_v1_inset_74x100_candidate.png",
+      "fallback_approved": false,
+      "source_boundary_evidence": "naya_source_boundary_evidence.json"
+    },
+    "noda": {
+      "status": "pass_concept_with_notes",
+      "deliverable": true,
+      "selected_candidate": "candidates/portrait_v2_74x100_candidate.png",
+      "selected_candidate_sha256": "499af7c3c1543222b2d3ba6bdabaf096a71783a9598ff41893e60ba6ba86eab5",
+      "displayed_version": "portrait_v2",
+      "selected_version": "portrait_v2",
+      "raw": "raw/portrait_v2_raw_imagegen.png",
+      "raw_sha256": "9fdac97005702efddc01eabd79b13c8f8036fbd2e675226520f55e95e7dd196b",
+      "author_manifest_sha256": "4ad7b85f48ec63df99205eacd66225dd01d1e79b9b4360e674664a67632a6329",
+      "author_SHA256SUMS_sha256": "93bd7e47ea5494d75bd4a4870bd57a8b7e002662809e812d227a75aec1b41d2c",
+      "generation_calls": 2,
+      "residual_limitations": [
+        "短颈窄领明显改善，大脸、宽鼻和颧骨块成立。",
+        "40+成熟宽颊、暗棕低髻、深灰罩衣窄领与谨慎抿嘴保持；未添加姓名册或剧情完成演出。",
+        "raw完整髻和耳轮廓，alpha≥128四边0；bbox(34,102,1068,1379)。",
+        "仍有偏亮眼白、细发纹与微忧内眉，仅概念通过。"
+      ],
+      "native_pixel_approved": false,
+      "runtime_verified": false
+    },
+    "sailuo": {
+      "status": "pass_concept_with_notes",
+      "deliverable": true,
+      "selected_candidate": "candidates/portrait_v2_74x100_candidate.png",
+      "selected_candidate_sha256": "f659b2656eb727fd7cbb89a9634de8ff09e1c2c93710dff72661ab883d490f55",
+      "displayed_version": "portrait_v2",
+      "selected_version": "portrait_v2",
+      "raw": "raw/portrait_v2_raw_imagegen.png",
+      "raw_sha256": "754a9880b415e0e9f18b86e7d0d512eb825501f05528d5b5cfc9d540ed48d751",
+      "author_manifest_sha256": "7dde258a49ffb86071628b75d85f800dcdb2192936f3ef80aeea7763ab3f6167",
+      "author_SHA256SUMS_sha256": "fff73bd0027568cad2be045be8e111873e15f5ec3fb2b33cbd140b02e2ecbabe",
+      "generation_calls": 2,
+      "residual_limitations": [
+        "短颈窄领和成年清瘦净下颌、直鼻方颌成立，不幼化。",
+        "深棕短发、暗绿领棕灰拼布与自主闭唇正确；无脸伤、钥匙交付或和解演出。",
+        "raw完整发尖和耳轮廓，alpha≥128四边0；bbox(17,91,1070,1384)。",
+        "眉间仍略紧、眼白偏亮、发簇细条与漫画感残留，仅概念通过。"
+      ],
+      "native_pixel_approved": false,
+      "runtime_verified": false
+    }
+  }
+}

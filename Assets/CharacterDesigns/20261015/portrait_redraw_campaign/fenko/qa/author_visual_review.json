@@ -1,0 +1,32 @@
+{
+  "reviewed_utc": "2026-10-15T10:22:26.453152+00:00",
+  "actual_viewed": [
+    "raw/portrait_v1_raw_imagegen.png",
+    "candidates/portrait_v1_74x100_candidate.png",
+    "previews/portrait_v1_8x.png",
+    "previews/portrait_v1_1x_backgrounds.png",
+    "raw/portrait_v2_raw_imagegen.png",
+    "candidates/portrait_v2_74x100_candidate.png",
+    "previews/portrait_v2_8x.png",
+    "previews/portrait_v2_1x_backgrounds.png"
+  ],
+  "decision": "selected_candidate_with_limitations",
+  "technical": "74×100，32可见色，alpha仅0/255；raw与tool_return内base64字节一致。",
+  "method": "实看图后描述；技术统计不代替审美。",
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "versions": {
+    "portrait_v1": {
+      "decision": "superseded_after_independent_revision_request",
+      "notes": "三十多岁感尚可，窄长颧颌、克制平嘴与专注侧目可读；发帽完整。裸颈/上胸约占下部过多，已交独立QA判断是否需修订；小亮眼白与少量发纹保留候选限制。"
+    },
+    "portrait_v2": {
+      "decision": "selected_candidate_with_limitations",
+      "identity_and_expression": "面部长角颧颌、平嘴与三十多岁专注克制自尊保住，颈胸缩短、衣领收窄。帽尾右侧贴边待技术inset处理；眼白亮点和发帽细纹仍为候选限制。"
+    }
+  },
+  "generation_calls": 2,
+  "further_imagegen_allowed": false,
+  "selected_version": "portrait_v2_inset",
+  "final_notes": "30多岁的长角脸和克制自尊抿嘴保留；面部放大、颈领明显缩短。颈领仍比理想略多，眼白小亮块、发帽细线保留候选备注。v2原图完整，alpha≥128 bbox(11,81,1077,1425)，右侧无实际截断；72×98整图等比NN技术inset仅留边。"
+}

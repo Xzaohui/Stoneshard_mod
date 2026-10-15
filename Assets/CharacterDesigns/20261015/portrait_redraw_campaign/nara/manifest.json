@@ -1,0 +1,809 @@
+{
+  "actor_id": "NPC-N-NARA",
+  "name": "纳拉 / Nara",
+  "date": "2026-10-15",
+  "selected_portrait": "candidates/portrait_v2_74x100_candidate.png",
+  "generation_calls": 2,
+  "max_attempts": 2,
+  "native_authored": false,
+  "runtime_integrated": false,
+  "runtime_verified": false,
+  "independent_qa": {
+    "selection_status": "candidate_selected_with_disclosed_limitations",
+    "summary": "qa/independent_selection_summary.json",
+    "formal_reports_directory": "../independent_qa/batch01",
+    "native_art_final_approved": false,
+    "runtime_verified": false
+  },
+  "color_budget_note": "32 visible RGB colors is this batch temporary ceiling, not a project-wide hard lock; numerical quantization does not prove designed ramp quality",
+  "method": "Built-in imagegen raw preserved; explicit nearest-neighbor and quantized 74x100 derivative. No manual pixel painting.",
+  "assets": [
+    {
+      "raw": {
+        "path": "raw/portrait_v1_raw_imagegen.png",
+        "size": [
+          1079,
+          1458
+        ],
+        "mode": "RGBA",
+        "sha256": "a57c96ef05c7aee5ebe98ac8472416ceef3ae3b4361c802e30b7149778a7b49b",
+        "visible_rgb_colors": 34642,
+        "alpha_levels": 256,
+        "binary_alpha": false,
+        "alpha_bbox": [
+          0,
+          0,
+          1068,
+          1458
+        ],
+        "visible_pixels": 1224334,
+        "partial_alpha_pixels": 1222303,
+        "palette_by_frequency": null
+      },
+      "target": {
+        "path": "candidates/portrait_v1_74x100_candidate.png",
+        "size": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "sha256": "127ac63c46b7c7a1f132eb4cd2e4e1c65fc8511f687c3b2ed938cc5741f74157",
+        "visible_rgb_colors": 29,
+        "alpha_levels": 2,
+        "binary_alpha": true,
+        "alpha_bbox": [
+          1,
+          3,
+          73,
+          99
+        ],
+        "visible_pixels": 5707,
+        "partial_alpha_pixels": 0,
+        "palette_by_frequency": [
+          {
+            "rgb": [
+              28,
+              17,
+              18
+            ],
+            "pixels": 952
+          },
+          {
+            "rgb": [
+              69,
+              44,
+              37
+            ],
+            "pixels": 662
+          },
+          {
+            "rgb": [
+              149,
+              60,
+              39
+            ],
+            "pixels": 337
+          },
+          {
+            "rgb": [
+              228,
+              136,
+              85
+            ],
+            "pixels": 311
+          },
+          {
+            "rgb": [
+              251,
+              174,
+              116
+            ],
+            "pixels": 297
+          },
+          {
+            "rgb": [
+              103,
+              63,
+              49
+            ],
+            "pixels": 290
+          },
+          {
+            "rgb": [
+              181,
+              96,
+              63
+            ],
+            "pixels": 245
+          },
+          {
+            "rgb": [
+              231,
+              141,
+              89
+            ],
+            "pixels": 232
+          },
+          {
+            "rgb": [
+              96,
+              39,
+              29
+            ],
+            "pixels": 231
+          },
+          {
+            "rgb": [
+              107,
+              66,
+              54
+            ],
+            "pixels": 212
+          },
+          {
+            "rgb": [
+              22,
+              14,
+              15
+            ],
+            "pixels": 205
+          },
+          {
+            "rgb": [
+              45,
+              29,
+              28
+            ],
+            "pixels": 204
+          },
+          {
+            "rgb": [
+              66,
+              43,
+              37
+            ],
+            "pixels": 203
+          },
+          {
+            "rgb": [
+              60,
+              38,
+              33
+            ],
+            "pixels": 168
+          },
+          {
+            "rgb": [
+              208,
+              117,
+              75
+            ],
+            "pixels": 148
+          },
+          {
+            "rgb": [
+              73,
+              49,
+              42
+            ],
+            "pixels": 135
+          },
+          {
+            "rgb": [
+              51,
+              35,
+              33
+            ],
+            "pixels": 127
+          },
+          {
+            "rgb": [
+              97,
+              52,
+              40
+            ],
+            "pixels": 112
+          },
+          {
+            "rgb": [
+              31,
+              19,
+              20
+            ],
+            "pixels": 105
+          },
+          {
+            "rgb": [
+              35,
+              22,
+              22
+            ],
+            "pixels": 97
+          },
+          {
+            "rgb": [
+              244,
+              160,
+              102
+            ],
+            "pixels": 78
+          },
+          {
+            "rgb": [
+              30,
+              20,
+              20
+            ],
+            "pixels": 75
+          },
+          {
+            "rgb": [
+              70,
+              45,
+              38
+            ],
+            "pixels": 74
+          },
+          {
+            "rgb": [
+              133,
+              55,
+              37
+            ],
+            "pixels": 66
+          },
+          {
+            "rgb": [
+              71,
+              46,
+              39
+            ],
+            "pixels": 44
+          },
+          {
+            "rgb": [
+              124,
+              70,
+              52
+            ],
+            "pixels": 42
+          },
+          {
+            "rgb": [
+              68,
+              45,
+              38
+            ],
+            "pixels": 30
+          },
+          {
+            "rgb": [
+              28,
+              18,
+              18
+            ],
+            "pixels": 13
+          },
+          {
+            "rgb": [
+              30,
+              19,
+              18
+            ],
+            "pixels": 12
+          }
+        ]
+      },
+      "derivation": {
+        "resize": "Pillow NEAREST entire canvas",
+        "crop": null,
+        "alpha_threshold": 128,
+        "quantization": "Pillow MEDIANCUT palette from opaque sampled RGB; no dithering",
+        "color_budget": 32,
+        "drawn_character_geometry": false
+      },
+      "raw_equals_full_tool_return": true,
+      "native_target_generation": false,
+      "checks": {
+        "exact_dimensions": true,
+        "visible_color_budget_pass": true,
+        "alpha_binary": true
+      }
+    },
+    {
+      "raw": {
+        "path": "raw/portrait_v2_raw_imagegen.png",
+        "size": [
+          1079,
+          1458
+        ],
+        "mode": "RGBA",
+        "sha256": "95e5ea50203790f2d7d20ed91f4eb7a49dc5a015f8e4ed7291d8f0ed3b22e185",
+        "visible_rgb_colors": 32371,
+        "alpha_levels": 256,
+        "binary_alpha": false,
+        "alpha_bbox": [
+          0,
+          0,
+          1079,
+          1458
+        ],
+        "visible_pixels": 1344046,
+        "partial_alpha_pixels": 1343013,
+        "palette_by_frequency": null
+      },
+      "target": {
+        "path": "candidates/portrait_v2_74x100_candidate.png",
+        "size": [
+          74,
+          100
+        ],
+        "mode": "RGBA",
+        "sha256": "3fc1469022e4cc1adeb4178f7a57f2b82205b55a50940d99db9984483c48c9e3",
+        "visible_rgb_colors": 30,
+        "alpha_levels": 2,
+        "binary_alpha": true,
+        "alpha_bbox": [
+          0,
+          0,
+          74,
+          100
+        ],
+        "visible_pixels": 6274,
+        "partial_alpha_pixels": 0,
+        "palette_by_frequency": [
+          {
+            "rgb": [
+              57,
+              36,
+              32
+            ],
+            "pixels": 672
+          },
+          {
+            "rgb": [
+              21,
+              11,
+              13
+            ],
+            "pixels": 666
+          },
+          {
+            "rgb": [
+              92,
+              57,
+              46
+            ],
+            "pixels": 480
+          },
+          {
+            "rgb": [
+              22,
+              13,
+              14
+            ],
+            "pixels": 408
+          },
+          {
+            "rgb": [
+              225,
+              134,
+              83
+            ],
+            "pixels": 367
+          },
+          {
+            "rgb": [
+              50,
+              33,
+              29
+            ],
+            "pixels": 340
+          },
+          {
+            "rgb": [
+              252,
+              168,
+              109
+            ],
+            "pixels": 319
+          },
+          {
+            "rgb": [
+              188,
+              101,
+              67
+            ],
+            "pixels": 308
+          },
+          {
+            "rgb": [
+              24,
+              13,
+              15
+            ],
+            "pixels": 296
+          },
+          {
+            "rgb": [
+              138,
+              50,
+              35
+            ],
+            "pixels": 251
+          },
+          {
+            "rgb": [
+              81,
+              52,
+              41
+            ],
+            "pixels": 214
+          },
+          {
+            "rgb": [
+              252,
+              167,
+              109
+            ],
+            "pixels": 212
+          },
+          {
+            "rgb": [
+              226,
+              136,
+              85
+            ],
+            "pixels": 211
+          },
+          {
+            "rgb": [
+              58,
+              37,
+              32
+            ],
+            "pixels": 200
+          },
+          {
+            "rgb": [
+              47,
+              30,
+              27
+            ],
+            "pixels": 188
+          },
+          {
+            "rgb": [
+              36,
+              22,
+              22
+            ],
+            "pixels": 181
+          },
+          {
+            "rgb": [
+              98,
+              54,
+              43
+            ],
+            "pixels": 158
+          },
+          {
+            "rgb": [
+              65,
+              42,
+              35
+            ],
+            "pixels": 109
+          },
+          {
+            "rgb": [
+              197,
+              106,
+              70
+            ],
+            "pixels": 100
+          },
+          {
+            "rgb": [
+              221,
+              128,
+              80
+            ],
+            "pixels": 95
+          },
+          {
+            "rgb": [
+              27,
+              16,
+              17
+            ],
+            "pixels": 93
+          },
+          {
+            "rgb": [
+              96,
+              59,
+              47
+            ],
+            "pixels": 89
+          },
+          {
+            "rgb": [
+              148,
+              76,
+              52
+            ],
+            "pixels": 86
+          },
+          {
+            "rgb": [
+              59,
+              38,
+              33
+            ],
+            "pixels": 62
+          },
+          {
+            "rgb": [
+              53,
+              34,
+              30
+            ],
+            "pixels": 62
+          },
+          {
+            "rgb": [
+              250,
+              175,
+              122
+            ],
+            "pixels": 33
+          },
+          {
+            "rgb": [
+              25,
+              14,
+              16
+            ],
+            "pixels": 30
+          },
+          {
+            "rgb": [
+              239,
+              151,
+              97
+            ],
+            "pixels": 27
+          },
+          {
+            "rgb": [
+              70,
+              37,
+              31
+            ],
+            "pixels": 15
+          },
+          {
+            "rgb": [
+              24,
+              14,
+              15
+            ],
+            "pixels": 2
+          }
+        ]
+      },
+      "derivation": {
+        "resize": "Pillow NEAREST entire canvas",
+        "crop": null,
+        "alpha_threshold": 128,
+        "quantization": "Pillow MEDIANCUT palette from opaque sampled RGB; no dithering",
+        "color_budget": 32,
+        "drawn_character_geometry": false
+      },
+      "raw_equals_full_tool_return": true,
+      "native_target_generation": false,
+      "checks": {
+        "exact_dimensions": true,
+        "visible_color_budget_pass": true,
+        "alpha_binary": true
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1893,
+      "sha256": "8e101ca293fa3526fbd20fd20f8f5fc0542ba9e0f2c9d9a60c0db6489aaf329b"
+    },
+    {
+      "path": "candidates/portrait_v1_74x100_candidate.png",
+      "bytes": 8246,
+      "sha256": "127ac63c46b7c7a1f132eb4cd2e4e1c65fc8511f687c3b2ed938cc5741f74157"
+    },
+    {
+      "path": "candidates/portrait_v2_74x100_candidate.png",
+      "bytes": 8536,
+      "sha256": "3fc1469022e4cc1adeb4178f7a57f2b82205b55a50940d99db9984483c48c9e3"
+    },
+    {
+      "path": "derive_portrait.py",
+      "bytes": 4613,
+      "sha256": "306c6ed037831988aac940740328803de98080466a851bbd88f64f84322a464a"
+    },
+    {
+      "path": "finalize_manifest.py",
+      "bytes": 1324,
+      "sha256": "ab01145110aa20bed3dc3730a3261d32e114a26b7007e8fa10cf00c9b629cd10"
+    },
+    {
+      "path": "previews/portrait_v1_1x_8x.png",
+      "bytes": 59575,
+      "sha256": "016f241f9bace72473049948f3a0c3d47f392b34686b600fdf844e12b9a4e232"
+    },
+    {
+      "path": "previews/portrait_v1_8x.png",
+      "bytes": 16909,
+      "sha256": "07a65394494724c8848bd3ee8054a8045ab95da790507976c8b78a51516a5724"
+    },
+    {
+      "path": "previews/portrait_v2_1x_8x.png",
+      "bytes": 60807,
+      "sha256": "ff304531f38a8fe6e94ed1ba739f7b352de6c3fd38321edaae8f217c04418198"
+    },
+    {
+      "path": "previews/portrait_v2_8x.png",
+      "bytes": 17628,
+      "sha256": "c7758deea218a85eb01fea27cbae7cee1caaad413835e16a8ac19f9ec9cfc1da"
+    },
+    {
+      "path": "prompts/portrait_v1.json",
+      "bytes": 3817,
+      "sha256": "f8b5b0fca59b9e212a48483a0a86fa845944af15c1fc68bb141a7e0c04a1222c"
+    },
+    {
+      "path": "prompts/portrait_v2.json",
+      "bytes": 2543,
+      "sha256": "e99cbfff89c3ce9d6af16ea6bddff8765c31f685d66ee6ea87e10f68490ff031"
+    },
+    {
+      "path": "qa/author_visual_review.json",
+      "bytes": 917,
+      "sha256": "ebd56b1abdf194e121d6cecd32700a07c0a89a814cace5acae7b21c75ee31042"
+    },
+    {
+      "path": "qa/delivery_verification.json",
+      "bytes": 2273,
+      "sha256": "42c1c8014ebae48fba70964394da8b212948932fd6fabaafcf6621a10a871e29"
+    },
+    {
+      "path": "qa/independent_selection_summary.json",
+      "bytes": 1184,
+      "sha256": "57732a0f9ea2a4ec74bdb1f21a46adeb81694f7181004b3517cb7f83a36aee1b"
+    },
+    {
+      "path": "qa/independent_v1_feedback.json",
+      "bytes": 516,
+      "sha256": "5f61406be4c8daae05cbfff5e271d3299c34d5bcca428754b66210dad49b8899"
+    },
+    {
+      "path": "qa/portrait_v1_metrics.json",
+      "bytes": 4516,
+      "sha256": "3f5cb542ff95eede6143f62d6fac301df35e61ca6895df3a35af5830b033f1eb"
+    },
+    {
+      "path": "qa/portrait_v2_metrics.json",
+      "bytes": 4628,
+      "sha256": "5deecd4bd79a741d7a021f1eedb9e3dafab2d87f22c91c7c06658c51036e2398"
+    },
+    {
+      "path": "raw/portrait_v1_raw_imagegen.png",
+      "bytes": 1265493,
+      "sha256": "a57c96ef05c7aee5ebe98ac8472416ceef3ae3b4361c802e30b7149778a7b49b"
+    },
+    {
+      "path": "raw/portrait_v2_raw_imagegen.png",
+      "bytes": 1344991,
+      "sha256": "95e5ea50203790f2d7d20ed91f4eb7a49dc5a015f8e4ed7291d8f0ed3b22e185"
+    },
+    {
+      "path": "sources/character_card.md",
+      "bytes": 1582,
+      "sha256": "68f86116a4eab03f3f94a7ceac1a51c63fd8303e7bdc12a998be59a6686390bf"
+    },
+    {
+      "path": "sources/identity_QA_independent.json",
+      "bytes": 4595,
+      "sha256": "329de24576e52523ad7bd6a10ebd1accfb28d311b11a513bdb02d7069a95ae5c"
+    },
+    {
+      "path": "sources/identity_QA_v2.json",
+      "bytes": 755,
+      "sha256": "06346c5344c78532d05cb5fee40e68895812b8bbf5f2cedf5a9c86427e405749"
+    },
+    {
+      "path": "sources/identity_manifest_v2.json",
+      "bytes": 1935,
+      "sha256": "aa5a2ba4485e487b44d6ab143bb88db2b26bf6f96cb4f92dae2d3e24d2cf8a96"
+    },
+    {
+      "path": "sources/identity_reference.png",
+      "bytes": 881787,
+      "sha256": "f8a42dcd72870582183de2fbe7dfa672dabd31658fc93fc2f9d83245c42c7c1f"
+    },
+    {
+      "path": "sources/iwo_style_reference.png",
+      "bytes": 8032,
+      "sha256": "22f6cf0443949dca64496a37173515624c3c7be82703addce853b82e0b342cdb"
+    },
+    {
+      "path": "sources/leiya_style_reference.png",
+      "bytes": 4895,
+      "sha256": "56bffd334de61ecc1ec12c974e63be78f0a80fd42236af5a166b7e58d55ef40f"
+    },
+    {
+      "path": "sources/mara_style_reference.png",
+      "bytes": 9411,
+      "sha256": "1028aa37cfd433770fda10f2ff3825db78b19825ef9de0ce61b66d957210edbd"
+    },
+    {
+      "path": "sources/source_manifest.json",
+      "bytes": 2780,
+      "sha256": "f0b33411d56440bd2044723c09c3b1e4922ed2c4d460a69ce6730b554d5705e8"
+    },
+    {
+      "path": "sources/tore_style_reference.png",
+      "bytes": 8438,
+      "sha256": "1a48bd8348f3a529b38c56fa637ee88106ebf5a5a5df265a16c1b18222cd95d1"
+    },
+    {
+      "path": "spec_lock.md",
+      "bytes": 2169,
+      "sha256": "cb166a0f4e92c59999098800f5f9222ee9772c41184e57b65b778619e7dd870f"
+    },
+    {
+      "path": "tool_returns/portrait_v1.json",
+      "bytes": 1687863,
+      "sha256": "0afb89c6719c02cac677daf3164c018fda6dc39f3f2b46643361639b78e30d6b"
+    },
+    {
+      "path": "tool_returns/portrait_v2.json",
+      "bytes": 1793863,
+      "sha256": "e486e5b93ce65e40c63beaad0895bc64f2cabdebe8b16264400831c416054ea9"
+    }
+  ],
+  "image_generation_frozen": true,
+  "source_files_frozen_for_delivery": true,
+  "generation_limit_reached": true,
+  "selected_export": {
+    "version": "v2",
+    "palette_method": "Pillow MEDIANCUT",
+    "dither": false,
+    "resize": "whole-canvas NEAREST to 74x100",
+    "alpha_threshold": 128,
+    "geometry_edits": false,
+    "native_pixel_authorship_claim": false
+  },
+  "earlier_exports_retained": [
+    "candidates/portrait_v1_74x100_candidate.png"
+  ],
+  "disclosed_visual_limitations": [
+    "仍有少量短尖发。",
+    "自动量化存在近似色，不等于手工设计色阶。"
+  ],
+  "selected_preview": "previews/portrait_v2_1x_8x.png",
+  "selected_portrait_sha256": "3fc1469022e4cc1adeb4178f7a57f2b82205b55a50940d99db9984483c48c9e3",
+  "scope": "Portrait redraw only; old art, character cards, code, runtime and repository history unchanged.",
+  "source_provenance": "sources/source_manifest.json",
+  "full_tool_parameters": [
+    "prompts/portrait_v1.json",
+    "prompts/portrait_v2.json"
+  ],
+  "full_tool_returns": [
+    "tool_returns/portrait_v1.json",
+    "tool_returns/portrait_v2.json"
+  ],
+  "generated_image_count": 2,
+  "sha256_inventory_excludes_self": true
+}

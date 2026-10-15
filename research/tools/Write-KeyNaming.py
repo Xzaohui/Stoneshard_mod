@@ -99,10 +99,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- KEY-NAMES-S123:BEGIN -->\n2026-10-13 S123：键名口径对账。'
         'research/key-naming-reconciliation.json 把S62旧族级字段名映射到S114按脚本/按路线键；[[状态键映射总表]]为唯一权威，旧名只作阅读别名、不双写；两篇旧文加提示块。'
         '入口design/09_系统逻辑/键名口径对账.md；运行Validate-KeyNaming.py及既有检查；引擎字段与旧档迁移仍待实现。\n<!-- KEY-NAMES-S123:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- KEY-NAMES-S123:BEGIN -->.*?<!-- KEY-NAMES-S123:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- KEY-NAMES-S123:BEGIN -->.*?<!-- KEY-NAMES-S123:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/09_系统逻辑/键名口径对账.md', '入口 [键名口径对账](design/09_系统逻辑/键名口径对账.md)'), encoding='utf-8')
 print(json.dumps(dict(mapping=len(MAPPING), legacy_notes=len(LEGACY_NOTES), notes=len(generated)), ensure_ascii=False))

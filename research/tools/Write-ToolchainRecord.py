@@ -121,10 +121,10 @@ rule = ('\n<!-- TOOLCHAIN-S144:BEGIN -->\n2026-10-13 S144：工具链离线自�
         'Test-MslInput 正对照通过（vanilla.win：34189代码条目/9663对象/1067房间，无已知MSL/EAO标记）、负对照按预期拒绝（组合data.win）；'
         'Check-FormalEnvironment属隔离期已停用（快照指向已移除备份）；结构回归输入不在库中暂不可复跑；GameProbe已构建。'
         '入口design/11_管理/工具链离线自检记录.md；运行Validate-ToolchainChecks.py及既有检查；不构建、不部署。\n<!-- TOOLCHAIN-S144:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- TOOLCHAIN-S144:BEGIN -->.*?<!-- TOOLCHAIN-S144:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- TOOLCHAIN-S144:BEGIN -->.*?<!-- TOOLCHAIN-S144:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(positive=pos['passed'], negative=neg['rejected'], env_rc=rc_env,

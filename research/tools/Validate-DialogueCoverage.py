@@ -66,7 +66,7 @@ check('S84当前65篇逐角色初稿' not in plan, 'old-live-line-gone')
 check('各3篇已于S86深化' in plan, 'plan-corrected-line')
 for lm in re.finditer(r'\[\[([^\]]+)\]\]', card):
     check(lm.group(1) in stems, 'link-' + lm.group(1))
-check('DIALOGUE-COVERAGE-S137:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('DIALOGUE-COVERAGE-S137:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/dialogue-coverage-note-hashes.json')
 check(len(h) == 2, 'own-manifest-2')
 for rel, exp in h.items(): check(sha(ROOT / rel).lower() == exp.lower(), rel + '-hash')

@@ -150,10 +150,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- INTERIOR-AMBIENT-S124:BEGIN -->\n2026-10-13 S124：副本与日常氛围句（原创，中英对照）。'
         f'research/interior-ambient.json 9副本×3现场观察＋16日常×2周边口气共 {len(rows)} 条；不推进任务、不写状态键、不揭未核真相，after 只改未来口气。'
         '入口design/02_世界与地图/特殊地点与野外NPC/副本与日常氛围句.md；运行Validate-InteriorAmbient.py、Validate-DialogueDistinctiveness.py及既有检查；触发与配音待实现。\n<!-- INTERIOR-AMBIENT-S124:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- INTERIOR-AMBIENT-S124:BEGIN -->.*?<!-- INTERIOR-AMBIENT-S124:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- INTERIOR-AMBIENT-S124:BEGIN -->.*?<!-- INTERIOR-AMBIENT-S124:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/副本与日常氛围句.md', '入口 [副本与日常氛围句](design/02_世界与地图/特殊地点与野外NPC/副本与日常氛围句.md)'), encoding='utf-8')
 print(json.dumps(dict(lines=len(rows), dungeons=len(DUN_LINES), dailies=len(DAILY_LINES), notes=len(generated)), ensure_ascii=False))

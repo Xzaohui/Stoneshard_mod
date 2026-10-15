@@ -114,10 +114,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- FIELD-DOCS-S100:BEGIN -->\n2026-10-13 S100：用户要求扩充特殊地点内容。'
         f'research/field-docs.json 登记 {len(DOCS)} 份Mod原创野外地点短文书（原件/副件/残件分记，绑S94/S99人物与S92地点），入口design/02_世界与地图/特殊地点与野外NPC/文书_FX_野外地点短稿.md。'
         '阅读只给信息：不完成任务、不发奖励、不替代当事人同意；不设收集式门槛。运行Validate-FieldDocs.py及既有检查；摆放与交互脚本仍待做，不部署游戏包。\n<!-- FIELD-DOCS-S100:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- FIELD-DOCS-S100:BEGIN -->.*?<!-- FIELD-DOCS-S100:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- FIELD-DOCS-S100:BEGIN -->.*?<!-- FIELD-DOCS-S100:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/文书_FX_野外地点短稿.md', '入口 [文书_FX_野外地点短稿](design/02_世界与地图/特殊地点与野外NPC/文书_FX_野外地点短稿.md)'), encoding='utf-8')
 print(json.dumps(dict(docs=len(DOCS), notes=len(generated)), ensure_ascii=False))

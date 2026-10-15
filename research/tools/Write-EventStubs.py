@@ -169,10 +169,10 @@ rule = ('\n<!-- EVENT-STUBS-S118:BEGIN -->\n2026-10-14 S118：事件桩映射（
         f'research/event-stubs.json 把条件流每个节点映射成事件桩（共 {len(stubs)} 个：命名/触发/读写状态键/冷却），读写键必须在状态键表内；登记投影不声明真实引擎事件号。'
         'OI-02 首批回写：P1（N2）五桩已于 2026-10-14 分配引擎号 10640–10644 并落进 0.3.2 候选（离线检查全过、未部署）；evt_N2_refusal 的 presence 写入差异与 evt_N2_hub 的选择器落地已在页内登记。'
         '入口design/09_系统逻辑/事件桩映射总表.md；运行Validate-EventStubs.py及既有检查；其余桩引擎号、触发距离仍待各批次。\n<!-- EVENT-STUBS-S118:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- EVENT-STUBS-S118:BEGIN -->.*?<!-- EVENT-STUBS-S118:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- EVENT-STUBS-S118:BEGIN -->.*?<!-- EVENT-STUBS-S118:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/09_系统逻辑/事件桩映射总表.md', '入口 [事件桩映射总表](design/09_系统逻辑/事件桩映射总表.md)'), encoding='utf-8')
 print(json.dumps(dict(stubs=len(stubs), triggers=trig_counts, notes=len(generated)), ensure_ascii=False))

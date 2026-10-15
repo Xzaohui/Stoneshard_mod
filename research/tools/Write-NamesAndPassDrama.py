@@ -115,6 +115,6 @@ remaining=sum('dramatic_scenes' not in q for q in m['quests'])
 b+=f'\n## 当前阶段\n\n{73-remaining}/73篇城市任务有逐角色初稿，尚{remaining}篇待同等深化。Validate-NamesAndPassDrama.py核源／渲染、三位身份、同人单床、原技术／资格与28旧边；原设计检查核双链、依赖与条件回执。数值经济、详细时间轴、比例地图、文学终审及游戏运行仍未验收，静态通过不等整体完成。\n\n[[城市与聚落设计总索引]] · [[城市篇章与跨区域任务网]] · [[任务空间与地点关联审查]] · [[城市扩展验收记录]]\n'
 write('11_管理/考德与柏石关人物演出审查.md',b);hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule=f'\n<!-- CITY-DRAMA-S84:BEGIN -->\n2026-10-12 S84：考德／柏石关八案源为korde／passgate各drama.json与feedback.json，入口design/11_管理/考德与柏石关人物演出审查.md；24场、16方法、28回执、12新卡、一封独立家书。考德物／房／代理分，族史unknown；埃文、兰衍、成年赛洛分人。雷奥莫伦同原身体，一床单占，N7／SQ02方法与CO真条件保，不二奖；原信送出不留原件、本人准副件可背包，口信不强纸。当前{73-remaining}篇逐角色稿、{remaining}篇待深化，运行Validate-NamesAndPassDrama.py及既有检查；数值、比例图与游戏未验收。\n<!-- CITY-DRAMA-S84:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S84:BEGIN -->.*?<!-- CITY-DRAMA-S84:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(quests=8,scenes=24,methods=16,choices=48,incoming_pairs=28,actors=20,new_cards=12,world_texts=1,notes=len(hashes),covered=73-remaining,remaining=remaining),ensure_ascii=False))

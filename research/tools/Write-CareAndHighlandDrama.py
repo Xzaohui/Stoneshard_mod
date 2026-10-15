@@ -112,7 +112,7 @@ for p,h in manifests.items():
  p.write_text(json.dumps(h,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 hp.write_text(json.dumps(generated,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule=f'2026-10-12 S86：寒凉盆地/修院山地八案由ashcare/highland的drama.json与feedback.json驱动，入口design/11_管理/{AUDIT}.md。24场/16原方法/31旧回执/八新卡/六短文本；妮蔻与枯恩分别答、奥娅休息非弃人，真实普通护理不买研究/relief；支架非NE5，司榆补笔/赫斯旧控制留史；古菈旧工资独立、新班再问，缺必需交接保待办，N17不改。现73基线+六布林续篇=79逐角色初稿；全网数值/时间/比例/文学与游戏未验收。运行Validate-CareAndHighlandDrama.py及原三项设计检查，本轮不部署。'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:p.write_text(block(p.read_text(encoding='utf-8-sig'),rule),encoding='utf-8')
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:p.write_text(block(p.read_text(encoding='utf-8-sig'),rule),encoding='utf-8')
 print(json.dumps(dict(quests=8,scenes=24,methods=16,incoming_pairs=31,new_cards=8,covered_baseline=73,covered_combined=79),ensure_ascii=False))
 from BrynnContinuation import apply
 apply(ROOT)

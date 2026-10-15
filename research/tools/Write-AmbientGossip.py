@@ -177,10 +177,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- AMBIENT-GOSSIP-S115:BEGIN -->\n2026-10-13 S115：地区闲谈池（原创，中英对照）。'
         f'research/ambient-gossip.json 六地域 {len(LINES)} 条，条件词表 any/night/band:+1/band:-1/after:<台本>；只谈本区生活与旧事，不发奖励、不推进任务、不写状态键。'
         '入口design/02_世界与地图/特殊地点与野外NPC/地区闲谈池.md；运行Validate-AmbientGossip.py、Validate-DialogueDistinctiveness.py及既有检查；触发与配音待实现。\n<!-- AMBIENT-GOSSIP-S115:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- AMBIENT-GOSSIP-S115:BEGIN -->.*?<!-- AMBIENT-GOSSIP-S115:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- AMBIENT-GOSSIP-S115:BEGIN -->.*?<!-- AMBIENT-GOSSIP-S115:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/地区闲谈池.md', '入口 [地区闲谈池](design/02_世界与地图/特殊地点与野外NPC/地区闲谈池.md)'), encoding='utf-8')
 print(json.dumps(dict(lines=len(LINES), regions=6, notes=len(generated)), ensure_ascii=False))

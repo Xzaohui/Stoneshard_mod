@@ -1224,10 +1224,10 @@ rule = ('\n<!-- FIELD-NPC-S94:BEGIN -->\n2026-10-13 S94/S97/S99/S106：用户要
         f'research/field-npc-dialogue.json 登记 {len(NPCS)} 名Mod原创野外人物，覆盖S92地点类型中的28处（石场/磨坊/陵墓/废墟/修院/围城营地/麻风院/蛛洞/哈比巢/蜂巢/药师家/女巫邻居/老堡/荒宅/旅馆/猎场/疫村/食尸鬼巢穴/烂柳酒馆/三刀会窝点/矿洞/洞穴/裁缝宅子/废弃庄园/兵营/堡垒/荒废营地/安静农宅），'
         '每人含体貌、口吻、知情边界与中文先行对白（初次/复访/夜里、三条闲谈、到场/警告/拒绝），并有条件回访：任务进行中/完成后、先做或后做关联任务、本人缺席时旁人可代述的有限句；拒绝有替代出口，不新增奖励、不占原生服务、不做全巡前置。'
         'S106补28人×14槽英文稿（Mod原创新稿，不冒充原版译文，逐条与中文同槽）。入口design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md与各人物卡；运行Validate-FieldNpcDialogue.py、Validate-DialogueDistinctiveness.py及既有检查；比例位置与引擎触发仍待做，不部署游戏包。\n<!-- FIELD-NPC-S94:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- FIELD-NPC-S94:BEGIN -->.*?<!-- FIELD-NPC-S94:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- FIELD-NPC-S94:BEGIN -->.*?<!-- FIELD-NPC-S94:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md', '入口 [台本_FX_野外人物对白](design/02_世界与地图/特殊地点与野外NPC/台本_FX_野外人物对白.md)'), encoding='utf-8')
 print(json.dumps(dict(npcs=len(NPCS), notes=len(generated), lines=len(seen_lines)), ensure_ascii=False))

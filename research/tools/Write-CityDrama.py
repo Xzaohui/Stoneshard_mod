@@ -44,7 +44,7 @@ write('11_管理/布林人物对白与网状演出审查.md',b)
 hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule='\n<!-- CITY-DRAMA-S76:BEGIN -->\n2026-10-12 S76：布林主章＋10支线当前对白由research/brynn-drama.json、brynn-feedback.json驱动；stages只保S63地理骨架，dramatic_scenes是当前文本，不再输出三问模板或把患者/学徒话标在商户名下。20名演员包含13新增配角，56条旧回执分别写早到/晚到回应。入口design/11_管理/布林人物对白与网状演出审查.md。只增剧情细稿，不增新奖励、全巡前置、原作事实或游戏实现；实际签约/交接才提交，已结不改选，不克隆NPC。运行Validate-CityDrama.py及既有设计检查，尚余62篇城市对白与经济数值未终审。\n<!-- CITY-DRAMA-S76:END -->\n'
 rule=rule.replace('尚余62篇',f'尚余{remaining}篇')
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S76:BEGIN -->.*?<!-- CITY-DRAMA-S76:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
-p=ROOT/'README.md';t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S76:BEGIN -->.*?<!-- CITY-DRAMA-S76:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule.replace('入口design/11_管理/布林人物对白与网状演出审查.md','入口 [布林人物对白与网状演出审查](design/11_管理/布林人物对白与网状演出审查.md)'),encoding='utf-8')
+p=ROOT/'CHANGELOG.md';t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S76:BEGIN -->.*?<!-- CITY-DRAMA-S76:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule.replace('入口design/11_管理/布林人物对白与网状演出审查.md','入口 [布林人物对白与网状演出审查](design/11_管理/布林人物对白与网状演出审查.md)'),encoding='utf-8')
 print(json.dumps(dict(quests=len(covered),scenes=sum(len(q['dramatic_scenes']) for q in covered),actors=len(cast),new_actors=sum(not a['existing'] for a in cast.values()),feedbacks=sum(len(q['dramatic_feedback']) for q in covered)),ensure_ascii=False))

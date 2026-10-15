@@ -106,10 +106,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- FIELD-SIGNS-S101:BEGIN -->\n2026-10-13 S101：用户要求扩充各特殊地点。'
         'research/field-signs.json 为剩余16处地点补“迹象与观察”（观察/判定提示/危险退路），入口design/02_世界与地图/特殊地点与野外NPC/野外迹象与观察.md；44处传闻地点至此全部有落点（28人物＋16迹象）。'
         '迹象只给信息：不发奖励、不完成任务、不替代同意；判定不含数值掉落。运行Validate-FieldSigns.py及既有检查；生成点与比例仍待制作，不部署游戏包。\n<!-- FIELD-SIGNS-S101:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- FIELD-SIGNS-S101:BEGIN -->.*?<!-- FIELD-SIGNS-S101:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- FIELD-SIGNS-S101:BEGIN -->.*?<!-- FIELD-SIGNS-S101:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/野外迹象与观察.md', '入口 [野外迹象与观察](design/02_世界与地图/特殊地点与野外NPC/野外迹象与观察.md)'), encoding='utf-8')
 print(json.dumps(dict(signs=len(SIGNS), notes=len(generated)), ensure_ascii=False))

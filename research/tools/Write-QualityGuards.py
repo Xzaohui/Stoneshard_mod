@@ -124,10 +124,10 @@ rule = ('\n<!-- QUALITY-GUARDS-S140:BEGIN -->\n2026-10-13 S140：质量守卫总
         f"链接完整：{total_links}条双链、未解析{len(broken)}（行内代码段除外）；占位扫描：命中{hits}处且全部登记于research/placeholder-allowlist.json；"
         '连同S137结构覆盖、S138说话人闭合、S139对白去重共五项守卫。'
         '入口design/11_管理/质量守卫总表.md；运行Validate-LinkIntegrity.py与Validate-PlaceholderScan.py及既有检查；不部署游戏包。\n<!-- QUALITY-GUARDS-S140:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- QUALITY-GUARDS-S140:BEGIN -->.*?<!-- QUALITY-GUARDS-S140:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- QUALITY-GUARDS-S140:BEGIN -->.*?<!-- QUALITY-GUARDS-S140:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(links=total_links, broken=len(broken), placeholder_hits=hits, notes=len(generated)), ensure_ascii=False))

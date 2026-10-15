@@ -112,10 +112,10 @@ rule = ('\n<!-- DIALOGUE-COVERAGE-S137:BEGIN -->\n2026-10-13 S137：逐角色稿
         '131篇台本逐篇核对对话树/场次节、场次标记、说话人行数与版本标记：130篇有对话节（例外为野外人物对白卡格式）；'
         '城市稿ASH/HIG各3篇已于S86深化、布林续篇六篇各有场1—3，当前待深化0篇；旧「各四篇/8篇待深化」保留为S84/S85历史记录，计划页旧句改为指向本页。'
         '入口design/11_管理/逐角色稿完成度核对.md；运行Validate-DialogueCoverage.py及既有检查；不部署游戏包。\n<!-- DIALOGUE-COVERAGE-S137:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- DIALOGUE-COVERAGE-S137:BEGIN -->.*?<!-- DIALOGUE-COVERAGE-S137:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- DIALOGUE-COVERAGE-S137:BEGIN -->.*?<!-- DIALOGUE-COVERAGE-S137:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(files=len(rows), tree=len(rows) - len(no_tree), markers=dict(markers)), ensure_ascii=False))

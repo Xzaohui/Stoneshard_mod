@@ -119,10 +119,10 @@ for hp in sorted(R.glob('*note-hashes.json')):
 rule = ('\n<!-- NARRATIVE-DEPTH-S177:BEGIN -->\n2026-10-13 S177：网状叙事深度审计（只读计算）。'
         f"按BG3/DOS经验量化反应性：条件节点/先后槽/缺席槽/路线/入出向X边/说话人；城市稿73/73有early+absent；缺口：无先后槽{len(gaps['no_timing'])}篇、无缺席槽{len(gaps['no_absence'])}篇、无入向边{len(gaps['no_inbound'])}篇；附三条优化提案。"
         '入口design/11_管理/网状叙事深度审计.md；运行Validate-NarrativeDepth.py及既有检查；不改内容。\n<!-- NARRATIVE-DEPTH-S177:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- NARRATIVE-DEPTH-S177:BEGIN -->.*?<!-- NARRATIVE-DEPTH-S177:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- NARRATIVE-DEPTH-S177:BEGIN -->.*?<!-- NARRATIVE-DEPTH-S177:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(flows=len(rows), families={k: v['scripts'] for k, v in summary.items()},

@@ -66,7 +66,7 @@ plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text
 check('RX-HEADER-S141:BLOCK:BEGIN' in plan and '[[R-X头部补齐记录]]' in plan, 'plan-block')
 for lm in re.finditer(r'\[\[([^\]]+)\]\]', card):
     check(lm.group(1) in stems, 'link-' + lm.group(1))
-check('RX-HEADERS-S141:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('RX-HEADERS-S141:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/rx-headers-note-hashes.json')
 check(len(h) >= 65, 'own-manifest-65plus')
 for rel, exp in h.items(): check(sha(ROOT / rel).lower() == exp.lower(), rel + '-hash')

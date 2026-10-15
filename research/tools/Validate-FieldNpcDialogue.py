@@ -66,7 +66,7 @@ for n in fd['npcs']:
         check(en[slot] in agg, n['id'] + '-english-rendered-' + slot)
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('FIELD-NPC-S94:BEGIN' in plan and '[[台本_FX_野外人物对白]]' in plan, 'plan-block-and-link')
-check('FIELD-NPC-S94:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('FIELD-NPC-S94:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/field-npc-note-hashes.json')
 check(len(h) == 38 and agg_rel in {rel.replace('design/', '') for rel in h}, 'own-manifest-38')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

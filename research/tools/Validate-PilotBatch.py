@@ -42,7 +42,7 @@ plan = (V / '11_管理/特殊地点与野外NPC对口扩展计划.md').read_text
 check('PILOT-N2-S153:BEGIN' in plan and '[[试点实现批次N2]]' in plan, 'plan-block')
 for lm in re.finditer(r'\[\[([^\]]+)\]\]', card):
     check(lm.group(1) in stems, 'link-' + lm.group(1))
-check('PILOT-N2-S153:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('PILOT-N2-S153:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = json.loads((R / 'pilot-batch-note-hashes.json').read_text(encoding='utf-8'))
 check(len(h) == 2, 'own-manifest-2')
 for rel, exp in h.items(): check(sha(ROOT / rel).lower() == exp.lower(), rel + '-hash')

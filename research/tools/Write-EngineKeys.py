@@ -96,10 +96,10 @@ rule = ('\n<!-- ENGINE-KEYS-S155:BEGIN -->\n2026-10-14 S155：引擎键名前缀
         f"口径＝引擎键 `EAO_`＋登记键名；扫描已实现GML得{len(rows)}个EAO_键（0.3.0期遗留{len(rows) - classes.get('pilot-N2', 0)}＋N2试点{classes.get('pilot-N2', 0)}），映射登记键{sum(1 for r in rows if r['mapped_to_registry'])}个（N2试点，2026-10-14 P1落地）；"
         'OI-03口径定稿：旧字段不迁移、缺键按none/false/present、同脚本不双写（见状态键映射总表）。只读扫描，不改源码与存档。'
         '入口design/11_管理/引擎键名前缀与遗留键登记.md；运行Validate-EngineKeys.py及既有检查。\n<!-- ENGINE-KEYS-S155:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- ENGINE-KEYS-S155:BEGIN -->.*?<!-- ENGINE-KEYS-S155:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- ENGINE-KEYS-S155:BEGIN -->.*?<!-- ENGINE-KEYS-S155:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(keys=len(rows), classes=dict(classes), mapped=sum(1 for r in rows if r['mapped_to_registry'])), ensure_ascii=False))

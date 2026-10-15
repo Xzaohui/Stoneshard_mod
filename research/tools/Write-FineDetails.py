@@ -116,7 +116,7 @@ for p2, h in manifests.items():
 HP.write_text(json.dumps(generated, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 rule = '2026-10-12 S89：用户要求细粒度设计（NPC/物品/装备描述，贴合原作与新作风格）。research/item-registry.json（63条：文书26/信物30/工具7，名称中英＋风格描述＋处置规则＋14条原作术语对照）与research/npc-fine-details.json（172名Mod原创NPC：各城新增与『已有』演员、续篇演员、卫星住户与主线原创人物；体貌/衣着/随身/举止/风格守卫；含同名分人与共用身体说明；原作人物只续写剧情、不重画形象）。入口design/05_主线/原创物品与装备总表.md与design/04_人物/人物细描与随身物.md；描述按原作样例校准（1-2句、来源地/用途/行业视角），不复制原作文本。运行Validate-FineDetails.py及既有检查；数值、美术与游戏未验收，不部署。'
-for p3 in [ROOT / 'AGENTS.md', V / 'AGENTS.md', ROOT / 'README.md']:
+for p3 in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md', ROOT / 'CHANGELOG.md']:
     body = p3.read_text(encoding='utf-8-sig')
     a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'; blk = a + '\n' + rule + '\n' + z
     p3.write_text(re.sub(re.escape(a) + '.*?' + re.escape(z), lambda _: blk, body, flags=re.S) if a in body else body.rstrip() + '\n\n' + blk + '\n')

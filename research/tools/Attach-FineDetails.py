@@ -86,10 +86,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
         if rel in manifest and h[rel] != manifest[rel]: h[rel] = manifest[rel]; touched = True
     if touched: hp.write_text(json.dumps(h, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 rule = ('\n<!-- FINE-DETAILS-S91:BEGIN -->\n2026-10-13 S91：S89的172名人物细描已回灌各自人物卡（块标记FINE-DETAILS-CARD-S91，含体貌/衣着/随身/举止/风格守卫）；补建艾娜、纳拉、妮尔、塞尔四张主线配角卡，玛拉与伊沃共卡双块。十个整篇重写人物卡的生成器已接入NotePreserve保留外部登记块；Attach-FineDetails.py维护research/fine-details-card-note-hashes.json并回写各哈希清单。入口design/04_人物/人物细描与随身物.md；风格描述不替代美术终稿与运行验证。\n<!-- FINE-DETAILS-S91:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- FINE-DETAILS-S91:BEGIN -->.*?<!-- FINE-DETAILS-S91:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- FINE-DETAILS-S91:BEGIN -->.*?<!-- FINE-DETAILS-S91:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/04_人物/人物细描与随身物.md', '入口 [人物细描与随身物](design/04_人物/人物细描与随身物.md)'), encoding='utf-8')
 print(json.dumps(dict(npcs=len(npcs), cards_touched=len(changed), created=created), ensure_ascii=False))

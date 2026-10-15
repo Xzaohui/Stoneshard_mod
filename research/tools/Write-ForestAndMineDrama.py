@@ -75,6 +75,6 @@ remaining=sum('dramatic_scenes' not in q for q in m['quests'])
 b+=f'\n## 阶段与检查\n\n当前{73-remaining}/73篇城市任务有逐角色初稿，尚{remaining}篇待同等深化。Validate-ForestAndMineDrama.py核源／渲染、旧边与领域门槛，原设计检查核双链、依赖及地图通路意图；数值经济、全局时间轴、比例图、最终文学评审与游戏运行仍未验收，不据静态通过称全稿完成。\n\n[[城市与聚落设计总索引]] · [[城市篇章与跨区域任务网]] · [[任务空间与地点关联审查]] · [[城市扩展验收记录]]\n'
 write('11_管理/伊德斯与佛尔霍特人物演出审查.md',b);hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule=f'\n<!-- CITY-DRAMA-S82:BEGIN -->\n2026-10-12 S82：伊德斯／佛尔霍特八案逐角色源为eeders／forholt的drama.json、feedback.json；入口design/11_管理/伊德斯与佛尔霍特人物演出审查.md。24场、16方法、29旧回执，10新卡；住梁未安置不拆，索名撤权不清旧泄露，救援立即执行、伤者真出井才演新句；矿份非金币，底薪／水款／检费／售款各真实占一次。当前{73-remaining}篇逐角色初稿、{remaining}篇待深化；旧314边、NE／奖励／N17保留，运行Validate-ForestAndMineDrama.py与既有检查，数值、比例地图和游戏未验收。\n<!-- CITY-DRAMA-S82:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S82:BEGIN -->.*?<!-- CITY-DRAMA-S82:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(quests=8,scenes=24,methods=16,choices=48,incoming_pairs=29,actors=18,new_cards=10,notes=len(hashes),covered=73-remaining,remaining=remaining),ensure_ascii=False))

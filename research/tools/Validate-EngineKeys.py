@@ -36,7 +36,7 @@ plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text
 check('ENGINE-KEYS-S155:BEGIN' in plan and '[[引擎键名前缀与遗留键登记]]' in plan, 'plan-block')
 for lm in re.finditer(r'\[\[([^\]]+)\]\]', card):
     check(lm.group(1) in stems, 'link-' + lm.group(1))
-check('ENGINE-KEYS-S155:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('ENGINE-KEYS-S155:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = json.loads((R / 'engine-keys-note-hashes.json').read_text(encoding='utf-8'))
 check(set(h) >= {'design/11_管理/引擎键名前缀与遗留键登记.md', 'design/11_管理/特殊地点与野外NPC对白扩展计划.md'}, 'own-manifest-entries')
 for rel, exp in h.items(): check(sha(ROOT / rel).lower() == exp.lower(), rel + '-hash')

@@ -116,10 +116,10 @@ rule = ('\n<!-- RX-HEADERS-S141:BEGIN -->\n2026-10-13 S141：R/X头部补齐。'
         f"城市稿{len(rows)}篇中{out['native']}篇原有R/X头、{out['derived']}篇带派生块（仅用脚本内既有方法小节、resolve_/paid_键与回访名，不新增设定、不改既有文字，逐篇比对保证只增块）。"
         'N/SQ/DT/D另用「可执行解法＋本任务影响的后事」与-R-键名，不在本次范围。'
         '入口design/11_管理/R-X头部补齐记录.md；运行Validate-RXHeaders.py及既有检查；不部署游戏包。\n<!-- RX-HEADERS-S141:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- RX-HEADERS-S141:BEGIN -->.*?<!-- RX-HEADERS-S141:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- RX-HEADERS-S141:BEGIN -->.*?<!-- RX-HEADERS-S141:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(scripts=len(rows), native=out['native'], derived=out['derived'], inserted_this_run=out['inserted_this_run']), ensure_ascii=False))

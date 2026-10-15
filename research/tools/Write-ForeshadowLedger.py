@@ -67,7 +67,7 @@ for p, h in manifests.items():
 HP.write_text(json.dumps(generated, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 rule = f'2026-10-12 S87：用户要求持续埋伏笔并回收。research/foreshadow-ledger.json把主线{len(edges)}条X边、日常16条、副本18条并入线写成闭合丝线；布林续篇15桥与城镇解锁/听闻/回执各15处成组引用；夜船货物、旧市长责任、晶石全貌、全国政体为有意留白。入口design/09_系统逻辑/伏笔与回收台账.md，运行Validate-ForeshadowLedger.py及既有检查；不新增奖励/承诺/结局资格，不部署。'
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md', ROOT / 'README.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md', ROOT / 'CHANGELOG.md']:
     body = p.read_text(encoding='utf-8-sig')
     a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'; n = a + '\n' + rule + '\n' + z
     p.write_text(re.sub(re.escape(a) + '.*?' + re.escape(z), lambda _: n, body, flags=re.S) if a in body else body.rstrip() + '\n\n' + n + '\n')

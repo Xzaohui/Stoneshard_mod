@@ -47,7 +47,7 @@ for g in rd['groups']:
         check(ex['zh'] in card and f"`{ex['index']}`" in card, g['id'] + '-example-rendered')
 check('NPC-READING-S93:BEGIN' in plan and '[[野外NPC口吻与闲谈参照]]' in plan, 'plan-block-and-link')
 check('## 每项设计交付' in plan, 'plan-content-preserved')
-check('NPC-READING-S93:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('NPC-READING-S93:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 # S98 additions
 check(len(rd['npc_tags']) == 6, 'npc-tag-groups-6')
 inv_npc = inv['families']['npc']['entries']

@@ -106,7 +106,7 @@ for rec in records:
 for p,h in hashes.items():(ROOT/p).write_text(json.dumps(h,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 marker='SHORE-VINE-TASK-ART-20261012'
 body='2026-10-12：丹布里／曼郡各新增六面板任务场所概念，逐项映射见design/12_美术参考/丹布里任务场所概念与台本映射.md与曼郡对应卡。完整提示词、原参考、v1/v2和输入输出哈希见research/shore-vine-task-art-20261012.json；不替十五总览或旧选稿。短宿两床、双名同桶、两对师徒及实际回程遵台本，坡面、容量和近景仍须制作；图不代表游戏交互。TaskArtLinks.py维持本批双链，运行Validate-ShoreVineTaskArt.py及既有设计检查。'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- '+marker+r':BEGIN -->.*?<!-- '+marker+r':END -->\n','',t,flags=re.S)
  p.write_text(t.rstrip()+f'\n\n<!-- {marker}:BEGIN -->\n{body}\n<!-- {marker}:END -->\n',encoding='utf-8')
 print(json.dumps(dict(boards=2,panels=12,associated_tasks=8,linked_notes=16,changed_notes=len(changed),runtimeVerified=False),ensure_ascii=False))

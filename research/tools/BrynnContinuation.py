@@ -252,7 +252,7 @@ research/brynn-local-lore-locators.json记录输入SHA、64个同键命中元数
     base['continuation_registries']=[dict(id='BRYNN-S85',file='brynn-continuation.json',quests=6,effects=15,status='draft')]
     (root/'research/city-campaign.json').write_text(json.dumps(base,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     rule=f'\n<!-- {MARK}:BEGIN -->\n2026-10-12 S85：用户追加布林续篇；research/brynn-continuation.json登记六案、18场/18方法、七原创人物、六场景、15组有限条件桥/45方法版本。入口design/00_导航/{INDEX}.md，原作复核另卡；原73篇/314单方法回执基线不删除，合计79篇、71逐角色草稿/8待深化；桥组与旧单方法回执分别计。官方2021正文经Steam API读，本地64命中只存定位/哈希/摘要，不存全文。夜船/旧市长谜底、原商店/地窖/领袖权限保留，礼昂与雅尼分人；空椅不作同意，N17不改/NE不加/奖去重。本轮不部署；Validate-BrynnContinuation.py＋原三项设计检查，数字/比例/游戏尚未验收。\n<!-- {MARK}:END -->\n'
-    for p in [root/'AGENTS.md',v/'AGENTS.md',root/'README.md']:
+    for p in [root/'CHANGELOG.md',v/'AGENTS.md']:
         body=rule.split(f'<!-- {MARK}:BEGIN -->\n',1)[1].split(f'\n<!-- {MARK}:END -->')[0]
         p.write_text(replace_block(p.read_text(encoding='utf-8-sig'),body),encoding='utf-8')
     for p,hs in manifests.items():

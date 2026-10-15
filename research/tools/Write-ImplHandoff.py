@@ -119,10 +119,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- IMPL-HANDOFF-S122:BEGIN -->\n2026-10-13 S122：实现交接总表。'
         f'research/impl-handoff.json 列输入清单 {len(ARTIFACTS)} 项、实现顺序 {len(STEPS)} 步（含每步验收）、不变门槛与尚未确定项；入口design/11_管理/实现交接总表.md；计数取自实时校验报告。'
         '不新增设计内容；运行Validate-ImplHandoff.py及既有检查；实现与运行验证仍待进行，不部署游戏包。\n<!-- IMPL-HANDOFF-S122:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- IMPL-HANDOFF-S122:BEGIN -->.*?<!-- IMPL-HANDOFF-S122:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- IMPL-HANDOFF-S122:BEGIN -->.*?<!-- IMPL-HANDOFF-S122:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/实现交接总表.md', '入口 [实现交接总表](design/11_管理/实现交接总表.md)'), encoding='utf-8')
 print(json.dumps(dict(artifacts=len(ARTIFACTS), steps=len(STEPS), gates=len(GATES), open=len(OPEN_ITEMS), notes=len(generated)), ensure_ascii=False))

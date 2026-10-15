@@ -99,10 +99,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- FIELD-STAGE-S102:BEGIN -->\n2026-10-13 S102：特殊地点与野外NPC阶段收口。'
         '入口design/11_管理/特殊地点与野外NPC阶段验收记录.md：清点8区域/44地点/13类型、阅读72槽/17组+npc行为槽与场景族结论、28名野外人物（392条含条件回访）、44地点卡、16迹象、12文书、Mod交叉核对与伏笔台账引用组FS-33..36；'
         '剩余经济数值、比例与生成点、运行验证、英文稿与逐地点交互脚本。运行Validate-FieldStage.py及既有检查；不部署游戏包。\n<!-- FIELD-STAGE-S102:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- FIELD-STAGE-S102:BEGIN -->.*?<!-- FIELD-STAGE-S102:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- FIELD-STAGE-S102:BEGIN -->.*?<!-- FIELD-STAGE-S102:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/特殊地点与野外NPC阶段验收记录.md', '入口 [特殊地点与野外NPC阶段验收记录](design/11_管理/特殊地点与野外NPC阶段验收记录.md)'), encoding='utf-8')
 print(json.dumps(dict(rows=len(rows), notes=len(generated)), ensure_ascii=False))

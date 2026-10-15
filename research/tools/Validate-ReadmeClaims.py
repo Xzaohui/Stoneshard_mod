@@ -6,7 +6,7 @@ def read(p): return json.loads((ROOT / p).read_text(encoding='utf-8-sig'))
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 checks = []; errors = []
 def check(ok, label): (checks if ok else errors).append(label)
-readme = (ROOT / 'README.md').read_text(encoding='utf-8')
+readme = (ROOT / 'README.md').read_text(encoding='utf-8') + (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8')  # 迭代块已移至 CHANGELOG.md
 cov = read('research/dialogue-coverage.json')
 scripts = len(list(V.rglob('台本_*.md')))
 city = len(list(V.rglob('台本_CS-*.md'))) + len(list(V.rglob('台本_CM-*.md')))

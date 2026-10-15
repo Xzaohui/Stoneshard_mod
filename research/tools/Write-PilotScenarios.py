@@ -85,10 +85,10 @@ for hp in sorted(R.glob('*note-hashes.json')):
 rule = ('\n<!-- PILOT-N2-SCEN-S154:BEGIN -->\n2026-10-13 S154：试点批次验收场景N2。'
         f"6条场景覆盖N2全部5键（encountered/resolve/callback×2/presence），期望写入逐条对照取值集合校验，含拒绝、已结案回访与存读档顺序场景；"
         '仅场景清单与口径，不含实现代码、不部署。入口design/11_管理/试点批次验收场景N2.md；运行Validate-PilotScenarios.py及既有检查。\n<!-- PILOT-N2-SCEN-S154:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PILOT-N2-SCEN-S154:BEGIN -->.*?<!-- PILOT-N2-SCEN-S154:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- PILOT-N2-SCEN-S154:BEGIN -->.*?<!-- PILOT-N2-SCEN-S154:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(scenarios=len(SCEN), writes=len(rows), keys=len(sk)), ensure_ascii=False))

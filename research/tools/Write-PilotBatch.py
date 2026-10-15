@@ -81,10 +81,10 @@ rule = ('\n<!-- PILOT-N2-S153:BEGIN -->\n2026-10-13 S153：试点实现批次N2�
         f"把实现交接六步收敛为首个可验收切片（N2）：{len(n2st)}桩、{len(n2k)}键、{len(n2f['nodes'])}流节点、{len(methods)}解法、X边{len(edges)}条；"
         '给出落地顺序、建议GML文件与验收项；仅排程与输入提取，不含实现代码、不分配事件号、不部署。'
         '入口design/11_管理/试点实现批次N2.md；运行Validate-PilotBatch.py及既有检查。\n<!-- PILOT-N2-S153:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PILOT-N2-S153:BEGIN -->.*?<!-- PILOT-N2-S153:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- PILOT-N2-S153:BEGIN -->.*?<!-- PILOT-N2-S153:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(stubs=len(n2st), keys=len(n2k), nodes=len(n2f['nodes']), methods=len(methods), edges=edges), ensure_ascii=False))

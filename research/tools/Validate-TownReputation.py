@@ -116,7 +116,7 @@ for p in sorted((ROOT / 'research').glob('*note-hashes.json')):
         continue
     for rel, expected in m.items():
         check((ROOT / rel).exists() and sha(ROOT / rel) == expected, rel + '-all-manifests-reconciled')
-check('未映射引擎' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-s87-block-present')
+check('未映射引擎' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-s87-block-present')
 
 report = dict(date='2026-10-12', scope='S87 fifteen-town trust design: layered against original reputation and faction commitments, bands/writes/receipts/anchors grounded in the authored model; not runtime, economy or literary validation', towns=len(towns), bands=sum(len(t['bands']) for t in towns), writes=sum(len(t['writes']) for t in towns), transfers=len(data['transfers']), rules=len(data['rules']), checks_passed=len(checks), errors=errors, passed=not errors, runtimeVerified=False)
 (ROOT / 'research/town-reputation-validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

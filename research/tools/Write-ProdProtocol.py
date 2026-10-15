@@ -93,10 +93,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- PROD-PROTOCOL-S108:BEGIN -->\n2026-10-13 S108：特殊地点阶段剩余四项（经济数值、比例与生成点、运行验证、引擎侧触发）出制作与校准规程。'
         'research/production-protocol.json 定义测量对象/记录字段/采样/通过条件/禁止清单；入口design/11_管理/特殊地点阶段制作与校准规程.md。'
         '不含实测数字，未测量不得补值；运行与数值仍待实机。运行Validate-ProdProtocol.py及既有检查；不部署游戏包。\n<!-- PROD-PROTOCOL-S108:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PROD-PROTOCOL-S108:BEGIN -->.*?<!-- PROD-PROTOCOL-S108:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- PROD-PROTOCOL-S108:BEGIN -->.*?<!-- PROD-PROTOCOL-S108:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/特殊地点阶段制作与校准规程.md', '入口 [特殊地点阶段制作与校准规程](design/11_管理/特殊地点阶段制作与校准规程.md)'), encoding='utf-8')
 print(json.dumps(dict(sections=len(SECTIONS), notes=len(generated)), ensure_ascii=False))

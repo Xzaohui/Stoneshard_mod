@@ -51,7 +51,7 @@ for fam, cnt in bc['families'].items():
     check(f"| {fam}（{cnt}） |" in card, 'card-row-' + fam)
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('BRANCH-COVERAGE-S103:BEGIN' in plan and '[[对白分支覆盖审计]]' in plan, 'plan-block-and-link')
-check('BRANCH-COVERAGE-S103:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('BRANCH-COVERAGE-S103:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/branch-coverage-note-hashes.json')
 check(len(h) == 2, 'own-manifest-2')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

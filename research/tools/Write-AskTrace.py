@@ -81,10 +81,10 @@ for hp in sorted(R.glob('*note-hashes.json')):
 rule = ('\n<!-- ASK-TRACE-S173:BEGIN -->\n2026-10-13 S173：用户要求与交付对照。'
         '12行逐条对应“要求→交付页→守卫→状态”（背景/台词/任务/声望/中英对照/参照游戏/网状/伏笔/NPC/原作参照/设计参考/阶段规则），未完成项指向待办登记。'
         '入口design/11_管理/用户要求与交付对照.md；运行Validate-AskTraceability.py及既有检查。\n<!-- ASK-TRACE-S173:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- ASK-TRACE-S173:BEGIN -->.*?<!-- ASK-TRACE-S173:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- ASK-TRACE-S173:BEGIN -->.*?<!-- ASK-TRACE-S173:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(rows=len(ROWS), pages=sum(len(r['deliver']) for r in ROWS)), ensure_ascii=False))

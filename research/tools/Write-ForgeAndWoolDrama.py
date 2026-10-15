@@ -43,6 +43,6 @@ body+=f'## 覆盖与剩余\n\n全部73篇城市任务中，{73-remaining}篇已�
 write('11_管理/斯孔弗特与约斯特文人物演出审查.md',body)
 hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule=f'\n<!-- CITY-DRAMA-S80:BEGIN -->\n2026-10-12 S80：冶炼／羊毛两地八案作者源为research/skonfert-drama.json、yostwayne-drama.json及各feedback.json，入口design/11_管理/斯孔弗特与约斯特文人物演出审查.md。24场、16原方法、30旧回执；莉葵共一ID、卡、身体和有限款货，博赫不替妮莎未归弟弟归家，缇娜跨两案同人。当前{73-remaining}篇逐角色稿、{remaining}篇待深化。开门归包、信仰与护理、工钱／预款、冬料／外售分别核，拒未来不抹旧欠；晚到只改未来，不重奖／改N17。运行Validate-ForgeAndWoolDrama.py及既有设计检查；数值经济、时间轴、比例地图和游戏实现尚未验收。\n<!-- CITY-DRAMA-S80:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S80:BEGIN -->.*?<!-- CITY-DRAMA-S80:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(quests=8,scenes=24,methods=16,choices=48,incoming_pairs=30,unique_actors=16,new_cards=8,notes=len(hashes),covered=73-remaining,remaining=remaining),ensure_ascii=False))

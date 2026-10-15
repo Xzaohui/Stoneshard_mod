@@ -91,10 +91,10 @@ rule = ('\n<!-- CONTRACT-REF-S134:BEGIN -->\n2026-10-13 S134：原作契据任�
         '6设置项（时限/可领数/按地牢类型声誉收益）、5信息流（%town_name%/%contract_name%/%rep_amount%）、144契据键、60行巨魔契据状态化对白、667标识符名；'
         '对照口径：不用「契据」名、地方信任与原版声望分开、不做重复任务、不引入预支/外溢/竞争。'
         '入口design/01_原作基线/原作契据任务与声誉结构参照.md；片段≤46字。运行Validate-ContractReference.py及既有检查；不部署游戏包。\n<!-- CONTRACT-REF-S134:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- CONTRACT-REF-S134:BEGIN -->.*?<!-- CONTRACT-REF-S134:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- CONTRACT-REF-S134:BEGIN -->.*?<!-- CONTRACT-REF-S134:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(notes=len(generated), keys=probe['contract_key_count'], troll=len(probe['troll_rows'])), ensure_ascii=False))

@@ -27,7 +27,7 @@ for lm in re.finditer(r'\[\[([^\]]+)\]\]', card):
     check(lm.group(1) in stems, 'link-resolves-' + lm.group(1))
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('PROD-PROTOCOL-S108:BEGIN' in plan and '[[特殊地点阶段制作与校准规程]]' in plan, 'plan-block-and-link')
-check('PROD-PROTOCOL-S108:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('PROD-PROTOCOL-S108:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/prod-protocol-note-hashes.json')
 check(len(h) == 2, 'own-manifest-2')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

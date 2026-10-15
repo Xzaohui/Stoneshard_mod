@@ -41,6 +41,6 @@ write('11_管理/曼恩人物对白与去留交叉审查.md',b)
 hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule='\n<!-- CITY-DRAMA-S79:BEGIN -->\n2026-10-12 S79：曼恩主章＋六支线逐角色稿由research/maen-drama.json与maen-feedback.json驱动，dramatic_casts.MAE独立。23场、15原方法、33旧回执；8补充角色卡含N10同一凯姆，不新增第二人生或回授旧认证。入口design/11_管理/曼恩人物对白与去留交叉审查.md。三大城市共25篇当前逐角色稿，48篇待同等深化；病例、住址、技术、物件、政治与去向授权分别核，焚毁/排斥/欠款留史，不强空城或正常学院重开。修改后运行Validate-MaenDrama.py及既有设计检查；数字经济、比例地图、最终对白和游戏运行尚未验收。\n<!-- CITY-DRAMA-S79:END -->\n'
 rule=rule.replace('三大城市共25篇当前逐角色稿，48篇待同等深化',f'当前共{73-remaining}篇逐角色稿，其中三大城市25篇；{remaining}篇待同等深化')
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S79:BEGIN -->.*?<!-- CITY-DRAMA-S79:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(quests=len(qs),scenes=sum(len(q['dramatic_scenes']) for q in qs),actors=len(cast),cards=sum(not a['existing'] for a in cast.values()),legacy_shared=1,feedback=sum(len(q['dramatic_feedback']) for q in qs)),ensure_ascii=False))

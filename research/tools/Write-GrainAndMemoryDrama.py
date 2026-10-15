@@ -79,6 +79,6 @@ remaining=sum('dramatic_scenes' not in q for q in m['quests'])
 b+=f'\n## 阶段与检查\n\n当前{73-remaining}/73篇城市任务有逐角色初稿，尚{remaining}篇待同等深化。Validate-GrainAndMemoryDrama.py核准确源／渲染、两户身份、旧边和有限实际门槛；三项原检查核双链／依赖／网络。数值经济、详细时间轴、比例地图、最终文学评审与游戏运行仍未验收，不能据静态通过称整体完成。\n\n[[城市与聚落设计总索引]] · [[城市篇章与跨区域任务网]] · [[任务空间与地点关联审查]] · [[城市扩展验收记录]]\n'
 write('11_管理/奥斯布鲁克与拉滕人物演出审查.md',b);hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule=f'\n<!-- CITY-DRAMA-S83:BEGIN -->\n2026-10-12 S83：奥斯布鲁克／拉滕八案源为osbrook／ratten的drama.json与feedback.json，入口design/11_管理/奥斯布鲁克与拉滕人物演出审查.md。24场、16方法、29旧回执、11新卡；芙朵学艺／蔻芙婚事分户，种／饭、父债／路费、门钥／互助、婚／地各准；伪响不盖真风险，旧兽仍死，假章不判全部旧史，基本给付不买出席。当前{73-remaining}篇逐角色稿、{remaining}篇待深化，旧314边／NE／奖励／N17保，运行Validate-GrainAndMemoryDrama.py与既有检查；数值、比例地图和游戏未验收。\n<!-- CITY-DRAMA-S83:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S83:BEGIN -->.*?<!-- CITY-DRAMA-S83:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(quests=8,scenes=24,methods=16,choices=48,incoming_pairs=29,actors=19,new_cards=11,notes=len(hashes),covered=73-remaining,remaining=remaining),ensure_ascii=False))

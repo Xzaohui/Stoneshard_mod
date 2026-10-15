@@ -88,7 +88,7 @@ if visual.exists():
   write('11_管理/任务空间与地点关联审查.md',b)
 hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule='\n<!-- CITY-SPACES-S75:BEGIN -->\n2026-10-12 S75：132室内用research/city-space-profiles.json逐街区空间替换通用工作间/侧室，58条CS触发/调查/回访用显式地点表，禁止重新按序号取模。入口design/11_管理/任务空间与地点关联审查.md。方案仅相对布局与互动，不是比例碰撞或运行房间；观察、私密授权、实际处置与奖励分记，新增室内不是全访前置。作者工具Write-CitySpaces.py保留备份差异与哈希，变更后额外运行Validate-CitySpaces.py及既有设计检查。\n<!-- CITY-SPACES-S75:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-SPACES-S75:BEGIN -->.*?<!-- CITY-SPACES-S75:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
-p=ROOT/'README.md';t=p.read_text(encoding='utf-8-sig');block=rule.replace('入口design/11_管理/任务空间与地点关联审查.md','入口 [任务空间与地点关联审查](design/11_管理/任务空间与地点关联审查.md)');t=re.sub(r'\n<!-- CITY-SPACES-S75:BEGIN -->.*?<!-- CITY-SPACES-S75:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+block,encoding='utf-8')
+p=ROOT/'CHANGELOG.md';t=p.read_text(encoding='utf-8-sig');block=rule.replace('入口design/11_管理/任务空间与地点关联审查.md','入口 [任务空间与地点关联审查](design/11_管理/任务空间与地点关联审查.md)');t=re.sub(r'\n<!-- CITY-SPACES-S75:BEGIN -->.*?<!-- CITY-SPACES-S75:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+block,encoding='utf-8')
 print(json.dumps(dict(architecture_notes=len(m['cities']),interiors=132,satellite_scenes=33,satellite_residents=33,explicit_side_placements=58,changed_placements=len(changes)),ensure_ascii=False))

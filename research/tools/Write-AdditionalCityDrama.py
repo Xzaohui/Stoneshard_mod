@@ -44,6 +44,6 @@ write('11_管理/奥尔德文人物对白与交叉演出审查.md',b)
 hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule='\n<!-- CITY-DRAMA-S78:BEGIN -->\n2026-10-12 S78：奥尔德文主章＋六支线当前文本由research/aldwynn-drama.json与aldwynn-feedback.json驱动，独立dramatic_casts.ALD不混布林演员。21场、15方法、32旧回执；9新增配角卡，入口design/11_管理/奥尔德文人物对白与交叉演出审查.md。当前18篇逐角色稿，尚55篇待同等精修；stages为地理素材，S78 dramatic_scenes才是本城现行对白。保旧314边与NE/N17/奖励，拒伤像、共仪、赞助不取消基本出口，赠与撤回不得冒称交付。修改后运行Validate-AdditionalCityDrama.py和既有设计检查；数字经济、比例地图和游戏实现未经验证。\n<!-- CITY-DRAMA-S78:END -->\n'
 rule=rule.replace('当前18篇逐角色稿，尚55篇',f"当前{73-remaining}篇逐角色稿，尚{remaining}篇")
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S78:BEGIN -->.*?<!-- CITY-DRAMA-S78:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(quests=len(qs),scenes=sum(len(q['dramatic_scenes']) for q in qs),actors=len(cast),notes=len(hashes),feedback=sum(len(q['dramatic_feedback']) for q in qs)),ensure_ascii=False))

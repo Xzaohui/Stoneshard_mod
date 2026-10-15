@@ -76,10 +76,10 @@ rule = ('\n<!-- PILOT-INDEX-S158:BEGIN -->\n2026-10-13 S158：试点批次总表
         f"三批合计 {tot['stubs']}桩／{tot['keys']}键／{tot['nodes']}流节点／{tot['methods']}解法／{tot['scenarios']}验收场景，覆盖实现六步全部接线类型；"
         '共享键名口径（EAO_＋登记键名）、前置（OI-02/OI-03）与验收方式（同候选SHA＋按规程记录）；建议顺序 P1→P2→P3。'
         '入口design/11_管理/试点批次总表.md；运行Validate-PilotIndex.py及既有检查。\n<!-- PILOT-INDEX-S158:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PILOT-INDEX-S158:BEGIN -->.*?<!-- PILOT-INDEX-S158:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- PILOT-INDEX-S158:BEGIN -->.*?<!-- PILOT-INDEX-S158:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(batches=len(rows), totals=tot), ensure_ascii=False))

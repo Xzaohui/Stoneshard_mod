@@ -101,10 +101,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- REGION-MAP-S104:BEGIN -->\n2026-10-13 S104：用户要求扩充各特殊地点。'
         'research/region-content-map.json 把8个原作世界地图区域映射到Mod地域/地点卡/野外人物，入口design/02_世界与地图/特殊地点与野外NPC/原作地图区域与Mod内容映射.md；'
         '只做映射与避让口径：不占区域、不改原作地图与任务、不新增服务；比例与生成点仍待做。运行Validate-RegionContentMap.py及既有检查；不部署游戏包。\n<!-- REGION-MAP-S104:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- REGION-MAP-S104:BEGIN -->.*?<!-- REGION-MAP-S104:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- REGION-MAP-S104:BEGIN -->.*?<!-- REGION-MAP-S104:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/原作地图区域与Mod内容映射.md', '入口 [原作地图区域与Mod内容映射](design/02_世界与地图/特殊地点与野外NPC/原作地图区域与Mod内容映射.md)'), encoding='utf-8')
 print(json.dumps(dict(regions=len(ROWS), notes=len(generated)), ensure_ascii=False))

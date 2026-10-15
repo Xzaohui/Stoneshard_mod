@@ -110,10 +110,10 @@ rule = ('\n<!-- EVT-NUM-S163:BEGIN -->\n2026-10-13 S163：事件号分配方案�
         '1,807桩按家族基址（N10000/SQ20000/DT30000/D40000/CS50000/CM60000/FX70000）＋脚本64对齐块确定性预分配，一桩一号不复用，退役不转号；'
         '引擎号实现时分配并回写事件桩映射总表；纸面方案，原生事件号空间未读取。'
         '入口design/11_管理/事件号分配方案.md；运行Validate-EventNumbers.py及既有检查。\n<!-- EVT-NUM-S163:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- EVT-NUM-S163:BEGIN -->.*?<!-- EVT-NUM-S163:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- EVT-NUM-S163:BEGIN -->.*?<!-- EVT-NUM-S163:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(total=len(alloc), families=len(reg['per_family']), ranges={k: v for k, v in rng.items()}), ensure_ascii=False))

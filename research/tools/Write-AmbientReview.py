@@ -92,10 +92,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- AMBIENT-REVIEW-S130:BEGIN -->\n2026-10-13 S130：氛围层总览与冻结建议。'
         f'research/ambient-review.json 清点九层共 {total_lines} 个可播单元并给出冻结口径（只有新增地点/聚落/派系时才加句；不新增室内级逐间台词）；入口design/11_管理/氛围层总览与冻结建议.md。'
         '只做清点与口径；运行Validate-AmbientReview.py及既有检查；触发与配音待实现。\n<!-- AMBIENT-REVIEW-S130:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- AMBIENT-REVIEW-S130:BEGIN -->.*?<!-- AMBIENT-REVIEW-S130:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- AMBIENT-REVIEW-S130:BEGIN -->.*?<!-- AMBIENT-REVIEW-S130:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/氛围层总览与冻结建议.md', '入口 [氛围层总览与冻结建议](design/11_管理/氛围层总览与冻结建议.md)'), encoding='utf-8')
 print(json.dumps(dict(layers=len(LAYERS), total_lines=total_lines, notes=len(generated)), ensure_ascii=False))

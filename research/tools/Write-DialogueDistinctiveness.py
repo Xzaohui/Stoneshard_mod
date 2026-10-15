@@ -94,10 +94,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- DIALOGUE-DISTINCT-S139:BEGIN -->\n2026-10-13 S139：对白去重与独特性核对（整句完全匹配）。'
         f"逐行抽取{total}行、去重{len(texts)}条；完全重复{len(dups)}组，全部为主章—副本配对（同一人物跨N/D，有意一致），待复核{len(reviews)}组。"
         '新增重复不属配对时校验报错，须改写或登记理由。入口design/11_管理/对白去重与独特性核对.md；运行Validate-DialogueDistinctiveness.py及既有检查；不部署游戏包。\n<!-- DIALOGUE-DISTINCT-S139:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- DIALOGUE-DISTINCT-S139:BEGIN -->.*?<!-- DIALOGUE-DISTINCT-S139:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- DIALOGUE-DISTINCT-S139:BEGIN -->.*?<!-- DIALOGUE-DISTINCT-S139:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(total=total, distinct=len(texts), dups=len(dups), classes=dict(classes)), ensure_ascii=False))

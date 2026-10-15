@@ -85,10 +85,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- OPEN-ITEMS-S133:BEGIN -->\n2026-10-13 S133：待办与已知缺口登记。'
         'research/open-items.json 汇总 12 项（实现5/制作3/实机3/设计可选1/口径1），标明负责方、前置与证据；设计总览补最新入口块。'
         '入口design/11_管理/待办与已知缺口登记.md；只汇总不改门槛。运行Validate-OpenItems.py及既有检查；不部署游戏包。\n<!-- OPEN-ITEMS-S133:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- OPEN-ITEMS-S133:BEGIN -->.*?<!-- OPEN-ITEMS-S133:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- OPEN-ITEMS-S133:BEGIN -->.*?<!-- OPEN-ITEMS-S133:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(items=len(ITEMS), notes=len(generated)), ensure_ascii=False))

@@ -12,7 +12,7 @@ for r in data['records']:
  if r['id'] in reviews:r['review']=reviews[r['id']]
  r['review']=r['review'].replace('人工查看生成图','已目视生成图')
 p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-p=ROOT/'README.md';text=p.read_text(encoding='utf-8-sig')
+p=ROOT/'CHANGELOG.md';text=p.read_text(encoding='utf-8-sig')
 start='<!-- CITY-ART-S74:BEGIN -->';end='<!-- CITY-ART-S74:END -->'
 block=start+'\n2026-10-12：已保存15张参考原素材生成的像素概念板，包含33个周边聚落构图。入口 [原素材参考与城市概念图](design/12_美术参考/原素材参考与城市概念图.md)，图片见各城市/聚落笔记；原参考、完整提示词和版本哈希保存在research/city-art-*.json。全部仍是美术草稿，未新增游戏地图或更新游戏包。\n'+end+'\n'
 if start in text:text=re.sub(re.escape(start)+'.*?'+re.escape(end)+r'\s*',lambda _:block,text,flags=re.S)

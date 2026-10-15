@@ -126,10 +126,10 @@ rule = ('\n<!-- IMPL-STATE-S143:BEGIN -->\n2026-10-14 S143：实现侧现状核�
         f"部署记录版本{deployed_version}、本地候选{version}，{'候选与安装副本同哈希、已部署' if artifact_is_deployed else '候选较新、未部署'}；N2五桩五键三景已接线，0.3.3增加六景巡览与N2 HD2D开发适配，完整验收runtimeVerified=false；实测见{dev_evidence}；GML代码{state['sources']['gml_codes']}个、构建/部署/检查脚本{'/'.join(t[:-4] for t in state['sources']['tools'])}；"
         f'{pilot_summary}重建包后须重跑本页与校验器。'
         '入口design/11_管理/实现侧现状核对.md；运行Validate-ImplState.py及既有检查。\n<!-- IMPL-STATE-S143:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- IMPL-STATE-S143:BEGIN -->.*?<!-- IMPL-STATE-S143:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- IMPL-STATE-S143:BEGIN -->.*?<!-- IMPL-STATE-S143:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(checks=[c[0] for c in checks if c[1]], failed=[c[0] for c in checks if not c[1]],

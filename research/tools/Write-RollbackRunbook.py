@@ -112,10 +112,10 @@ for hp in sorted(R.glob('*note-hashes.json')):
 rule = ('\n<!-- ROLLBACK-S174:BEGIN -->\n2026-10-13 S174：部署与回滚运行手册。'
         f"部署五步（退出→构建验收→备份与替换→记录→部署后核对）与回滚六步（定位备份集→校验→还原data.win→还原设置与旧包→复核→留痕）按脚本实际行为写成；当前备份集 {Path(facts['record']['backup']).name} 哈希已核对；不保证无损卸载、用户数据不动。"
         '本轮未执行部署或回滚。入口design/11_管理/部署与回滚运行手册.md；运行Validate-RollbackRunbook.py及既有检查。\n<!-- ROLLBACK-S174:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- ROLLBACK-S174:BEGIN -->.*?<!-- ROLLBACK-S174:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- ROLLBACK-S174:BEGIN -->.*?<!-- ROLLBACK-S174:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(backup=facts['record']['backup'].split('\\')[-1], files=len(facts['backup']['files']),

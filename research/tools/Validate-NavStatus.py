@@ -32,7 +32,7 @@ for rel in ('00_导航/设计总览.md', '00_导航/任务台本总索引.md', '
     check('[[叙事内容清单]]' in t and '[[逐角色稿完成度核对]]' in t, 'pointers-' + rel)
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('NAV-STATUS-S148:BEGIN' in plan, 'plan-block')
-check('NAV-STATUS-S148:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('NAV-STATUS-S148:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/nav-status-note-hashes.json')
 check(len(h) == 4, 'own-manifest-4')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

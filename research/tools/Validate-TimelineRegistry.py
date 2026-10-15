@@ -112,7 +112,7 @@ for p in sorted((ROOT / 'research').glob('*note-hashes.json')):
         continue
     for rel, expected in m.items():
         check((ROOT / rel).exists() and sha(ROOT / rel) == expected, rel + '-all-manifests-reconciled')
-check('TIMELINE-REGISTRY-S88:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block-present')
+check('TIMELINE-REGISTRY-S88:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block-present')
 report = dict(date='2026-10-12', scope='S88 timeline and reward registry: coverage, freshness vs sources, explicit daily windows, entry prerequisites, one-time continuation and rendering; not economy calibration or runtime validation',
               main=len(reg['main']), side=len(reg['side']), daily=len(reg['daily']), dungeon=len(reg['dungeon']), city=len(reg['city']), continuation=len(reg['continuation']),
               checks_passed=len(checks), errors=errors, passed=not errors, runtimeVerified=False)

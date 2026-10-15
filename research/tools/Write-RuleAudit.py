@@ -113,10 +113,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- RULE-AUDIT-S109:BEGIN -->\n2026-10-13 S109：野外内容规则一致性审计。'
         f'research/rule-audit.json 重算 {len(rows)} 项（无奖励/前置/重复任务字段、拒绝与缺席出口、知情边界、中英对齐、服务不新增、44地点落点），入口design/11_管理/野外内容规则一致性审计.md。'
         '只验规则与结构；运行、数值与生成点见制作规程。运行Validate-RuleAudit.py及既有检查；不部署游戏包。\n<!-- RULE-AUDIT-S109:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- RULE-AUDIT-S109:BEGIN -->.*?<!-- RULE-AUDIT-S109:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- RULE-AUDIT-S109:BEGIN -->.*?<!-- RULE-AUDIT-S109:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/野外内容规则一致性审计.md', '入口 [野外内容规则一致性审计](design/11_管理/野外内容规则一致性审计.md)'), encoding='utf-8')
 print(json.dumps(dict(rows=len(rows), failed=[r['rule'] for r in out['failed']]), ensure_ascii=False))

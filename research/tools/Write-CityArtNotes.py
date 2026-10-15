@@ -81,6 +81,6 @@ if (ROOT/'research/shore-vine-task-art-20261012.json').exists():
  b+='\n## 丹布里与曼郡任务场所（S81）\n\n[[丹布里任务场所概念与台本映射]]：旧屋承重、干岸接船、晾网破口、结线比样、两种生活院与短宿安置。\n\n[[曼郡任务场所概念与台本映射]]：封桶通风、旧枝辨芽、新酒小售、双名保桶、刻线试箍与两期葡架。两板十二处已保存，v1/v2与输入输出来源见research/shore-vine-task-art-20261012.json；任务遵当前台本，坡度、容量、近景与运行仍待制作。\n'
 p=V/'12_美术参考/原素材参考与城市概念图.md';p.write_text(b,encoding='utf-8')
 rule='\n<!-- CITY-ART-S74:BEGIN -->\n2026-10-12 S74：参考用户stoneshard-assets-sample生成城市概念板，每板含城市核心与卫星ID构图；入口design/12_美术参考/原素材参考与城市概念图.md。初始/追加/编辑提示词、输入哈希和输出SHA分别存research/city-art-briefs.json、city-art-prompt-additions.json、city-art-manifest.json。参考原图只读，不复制图集；生成板是美术草稿，不作官方地理、最终精灵、碰撞或运行证据。新候选记录必须保留原提示词与版本，不覆盖旧选稿。\n<!-- CITY-ART-S74:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-ART-S74:BEGIN -->.*?<!-- CITY-ART-S74:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(boards=len(rs),satellite_vignettes=sum(len(c['satellites']) for c in m['cities']),selected_reference_frames=len(catalog)),ensure_ascii=False))

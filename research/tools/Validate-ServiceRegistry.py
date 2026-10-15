@@ -56,7 +56,7 @@ for p in sorted((ROOT / 'research').glob('*note-hashes.json')):
         continue
     for rel, exp in m.items():
         check((ROOT / rel).exists() and sha(ROOT / rel) == exp, rel + '-all-manifests-reconciled')
-check('SERVICE-REGISTRY-S90:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block-present')
+check('SERVICE-REGISTRY-S90:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block-present')
 report = dict(date='2026-10-12', scope='S90 fifteen city services: one per city, resolvable operators, finite stock, band conveniences, refresh rules and low-band safety; not price calibration, art or runtime validation',
               services=len(svc), checks_passed=len(checks), errors=errors, passed=not errors, runtimeVerified=False)
 (ROOT / 'research/service-registry-validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

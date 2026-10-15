@@ -38,7 +38,7 @@ for lm in re.finditer(r'\[\[([^\]]+)\]\]', card):
     check(lm.group(1) in stems, 'link-resolves-' + lm.group(1))
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('BILINGUAL-COVERAGE-S120:BEGIN' in plan and '[[中英对照覆盖报告]]' in plan, 'plan-block-and-link')
-check('BILINGUAL-COVERAGE-S120:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('BILINGUAL-COVERAGE-S120:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/bilingual-coverage-note-hashes.json')
 check(len(h) == 2, 'own-manifest-2')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

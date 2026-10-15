@@ -111,10 +111,10 @@ for hp in sorted(R.glob('*note-hashes.json')):
 rule = ('\n<!-- TEXT-INJECT-S176:BEGIN -->\n2026-10-13 S176：文本注入与本地化口径（只读提取）。'
         'NativeDialogue.cs/NativeDocuments.cs 证据：双语数组索引0=EN、1=CN（global.language==3取CN）、__dialogue_flow_data+npc_lines_map以json_parse注入、文书走原生物品原语；不改STRG、不依赖外部文件。'
         '未接线、未构建、未部署。入口design/11_管理/文本注入与本地化口径.md；运行Validate-TextInjection.py及既有检查。\n<!-- TEXT-INJECT-S176:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- TEXT-INJECT-S176:BEGIN -->.*?<!-- TEXT-INJECT-S176:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- TEXT-INJECT-S176:BEGIN -->.*?<!-- TEXT-INJECT-S176:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(lang_line=lang, sample=bool(pair), sample_lines=counts['dialogue_lines'], our_lines=facts['our_content']['dialogue_lines']), ensure_ascii=False))

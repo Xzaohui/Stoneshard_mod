@@ -61,7 +61,7 @@ for p2, h in manifests.items():
 HP.write_text(json.dumps(generated, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 rule = '2026-10-12 S90：用户要求继续完成项目。research/service-registry.json登记十五城各一个普通有偿服务班（名称中英／经办人／职能／有限库存／档位便利／边界），落实「一批案件结束前不刷新库存」与「不刷新成玩家跑腿任务」；同一块挂到十五张城市页（服务/信任/人物细描三链）。入口design/09_系统逻辑/城市服务班与有限库存.md；档位便利与[[城镇声望与信任系统]]配套，只改范围与便利、不越授权、不无限供给。运行Validate-ServiceRegistry.py及既有检查；价格数值、美术与游戏未验收，不部署。'
-for p3 in [ROOT / 'AGENTS.md', V / 'AGENTS.md', ROOT / 'README.md']:
+for p3 in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md', ROOT / 'CHANGELOG.md']:
     body = p3.read_text(encoding='utf-8-sig')
     a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'; blk = a + '\n' + rule + '\n' + z
     p3.write_text(re.sub(re.escape(a) + '.*?' + re.escape(z), lambda _: blk, body, flags=re.S) if a in body else body.rstrip() + '\n\n' + blk + '\n')

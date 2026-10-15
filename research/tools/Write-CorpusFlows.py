@@ -189,10 +189,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- CORPUS-FLOWS-S113:BEGIN -->\n2026-10-13 S113：全库条件流投影（实现桥）。'
         f'research/corpus-flows.json 把 {len(flows)} 个脚本（城市73/续篇6/主线·支线·后章·副本/日常16）投影成固定词表条件图，refs 逐条回指源原句、notes 载守卫与例外；入口design/11_管理/全库条件流投影.md。'
         '投影不新写台词、不含奖励/结算字段、不改台本；运行Validate-CorpusFlows.py及既有检查；引擎触发与部署仍待实现阶段。\n<!-- CORPUS-FLOWS-S113:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- CORPUS-FLOWS-S113:BEGIN -->.*?<!-- CORPUS-FLOWS-S113:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- CORPUS-FLOWS-S113:BEGIN -->.*?<!-- CORPUS-FLOWS-S113:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/全库条件流投影.md', '入口 [全库条件流投影](design/11_管理/全库条件流投影.md)'), encoding='utf-8')
 print(json.dumps(dict(flows=len(flows), families=fam_counts), ensure_ascii=False))

@@ -126,7 +126,7 @@ for sid in ['CS-BRY-01', 'N1', 'CS-BRY-11', 'DT01']:
     check(f"### {sid}（" in card, 'card-sample-' + sid)
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('CORPUS-FLOWS-S113:BEGIN' in plan and '[[全库条件流投影]]' in plan, 'plan-block-and-link')
-check('CORPUS-FLOWS-S113:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('CORPUS-FLOWS-S113:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/corpus-flows-note-hashes.json')
 check(len(h) == 2, 'own-manifest-2')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

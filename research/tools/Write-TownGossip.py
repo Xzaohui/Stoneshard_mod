@@ -147,10 +147,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- TOWN-GOSSIP-S116:BEGIN -->\n2026-10-13 S116：城镇闲谈池（原创，中英对照）。'
         f'research/town-gossip.json 十五城镇各4条共 {len(rows)} 条，条件 any/night/after:<主章台本>；城镇内说行当与街面、城外见地区闲谈池；不发奖励、不推进任务、不写状态键。'
         '入口design/02_世界与地图/特殊地点与野外NPC/城镇闲谈池.md；运行Validate-TownGossip.py、Validate-DialogueDistinctiveness.py及既有检查；触发与配音待实现。\n<!-- TOWN-GOSSIP-S116:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- TOWN-GOSSIP-S116:BEGIN -->.*?<!-- TOWN-GOSSIP-S116:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- TOWN-GOSSIP-S116:BEGIN -->.*?<!-- TOWN-GOSSIP-S116:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/城镇闲谈池.md', '入口 [城镇闲谈池](design/02_世界与地图/特殊地点与野外NPC/城镇闲谈池.md)'), encoding='utf-8')
 print(json.dumps(dict(lines=len(rows), cities=len(CITIES), notes=len(generated)), ensure_ascii=False))

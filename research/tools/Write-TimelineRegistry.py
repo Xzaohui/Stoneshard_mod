@@ -95,7 +95,7 @@ for p2, h in manifests.items():
 HP.write_text(json.dumps(generated, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 rule = '2026-10-12 S88：用户要求持续完善并收口全局逻辑。research/timeline-registry.json把主线18、支线8、日常16、副本9、城市73、续篇6的时序与奖励声明抽为单一审计视图（不新增数字）；入口design/09_系统逻辑/时序与奖励总表.md。全局口径：无隐藏倒计时、日常显式期限与状态机、最终确认后冻结、奖励一次键去重。对白独特性：修复布林续篇BC85-11—15五桥共用默认句、16个日常共用玩家句（源field＋writer模板）、CM-HIG说明文误入台词；Validate-DialogueDistinctiveness.py覆盖2962句源台词＋全库笔记层扫描（精确/规范化克隆、十笔记以上模板、12字短语跨5组、后台标识泄漏）。生成器可重跑：Write-StoryScripts/BrynnContinuation/Write-CityCampaign整篇重写时保留全部外部登记块（城市总写手另携带continuation_registries与dramatic_scope、复现CS-HIG-03入口文案并回写各哈希清单；隔离副本全量重跑后与主库逐字节一致）。另加Validate-CastRoster.py（158城市演员/89新卡/共享身份声明/条件引用/314回执接收者可解析）、奖励区间（N≤0.7B、SQ 0.2–0.3B、DT 0.15–0.3B）、“无限/永久免费”无界承诺、双语纯度与原文对白清点校验（1132条/72说话人槽）。运行新校验及既有检查；经济校准/比例地图/游戏运行未验收，不部署。'
-for p3 in [ROOT / 'AGENTS.md', V / 'AGENTS.md', ROOT / 'README.md']:
+for p3 in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md', ROOT / 'CHANGELOG.md']:
     body = p3.read_text(encoding='utf-8-sig')
     a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'; n = a + '\n' + rule + '\n' + z
     p3.write_text(re.sub(re.escape(a) + '.*?' + re.escape(z), lambda _: n, body, flags=re.S) if a in body else body.rstrip() + '\n\n' + n + '\n')

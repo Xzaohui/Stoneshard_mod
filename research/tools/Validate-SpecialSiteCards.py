@@ -41,7 +41,7 @@ for rid, name in REGIONS:
     check(f"[[地点设计卡_{rid}_{name}]]" in idx, rid + '-index-link')
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('SITE-CARDS-S95:BEGIN' in plan and '[[特殊地点设计卡总表]]' in plan, 'plan-block-and-link')
-check('SITE-CARDS-S95:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('SITE-CARDS-S95:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/site-cards-note-hashes.json')
 check(len(h) == 8, 'own-manifest-8')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

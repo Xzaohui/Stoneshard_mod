@@ -99,10 +99,10 @@ rule = ('\n<!-- HOOK-MAP-S171:BEGIN -->\n2026-10-13 S171：触发器接线点映
         f"{len(stubs)}桩的{len(counts)}种触发逐一接到小样原生钩子（characterDataMap/__dialogue_flow_data/instance_create_depth/event_user/scr_quest_get_complete），附证据行号与口径；"
         '实现轮照此接线并逐桩回写；不改源码、不构建、不部署。'
         '入口design/11_管理/触发器接线点映射.md；运行Validate-HookMapping.py及既有检查。\n<!-- HOOK-MAP-S171:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- HOOK-MAP-S171:BEGIN -->.*?<!-- HOOK-MAP-S171:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- HOOK-MAP-S171:BEGIN -->.*?<!-- HOOK-MAP-S171:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(triggers=len(counts), stubs=len(stubs), once=cooldowns.get('once'), repeatable=cooldowns.get('repeatable')), ensure_ascii=False))

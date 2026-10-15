@@ -154,10 +154,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- DISTRICT-AMBIENT-S129:BEGIN -->\n2026-10-13 S129：街区氛围句（原创，中英对照）。'
         f'research/district-ambient.json 十五城 {len(rows)} 街区各1条，按街区功能写；与四套闲谈池不重复、不发奖励、不推进任务、不写状态键。'
         '入口design/02_世界与地图/特殊地点与野外NPC/街区氛围句.md；运行Validate-DistrictAmbient.py、Validate-DialogueDistinctiveness.py及既有检查；触发与配音待实现。\n<!-- DISTRICT-AMBIENT-S129:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- DISTRICT-AMBIENT-S129:BEGIN -->.*?<!-- DISTRICT-AMBIENT-S129:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- DISTRICT-AMBIENT-S129:BEGIN -->.*?<!-- DISTRICT-AMBIENT-S129:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/街区氛围句.md', '入口 [街区氛围句](design/02_世界与地图/特殊地点与野外NPC/街区氛围句.md)'), encoding='utf-8')
 print(json.dumps(dict(lines=len(rows), districts=len(districts), notes=len(generated)), ensure_ascii=False))

@@ -103,6 +103,6 @@ for rec in records:
             if rel in h:h[rel]=sha(p)
 for p,h in hashes.items():(ROOT/p).write_text(json.dumps(h,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule='\n<!-- CITY-TASK-ART-20261012:BEGIN -->\n2026-10-12：斯孔弗特／约斯特文各新增六面板任务场所概念，入口design/12_美术参考/原素材参考与城市概念图.md，逐项映射与原参考／提示词／候选SHA见research/city-task-art-20261012.json。保留原总览、YOS v1；人物、库存、排水、门与格尺寸须再制作核验。图只为原创草稿，不改变原回执、任务完成状态或游戏包。TaskArtLinks.py维持任务／聚落／空间双链；修改后跑原三项设计检查及图片来源检查。\n<!-- CITY-TASK-ART-20261012:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md']:
     t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-TASK-ART-20261012:BEGIN -->.*?<!-- CITY-TASK-ART-20261012:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(boards=2,panels=12,linked_notes=sum(len(r['linked_notes']) for r in records),changed_notes=len(changed),runtimeVerified=False),ensure_ascii=False))

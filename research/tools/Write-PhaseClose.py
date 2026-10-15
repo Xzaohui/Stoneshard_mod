@@ -26,7 +26,7 @@ for p in R.glob('*-validation.json'):
     d = json.loads(p.read_text(encoding='utf-8'))
     if isinstance(d, dict) and 'checks_passed' in d:
         checks += d['checks_passed']
-agents = [p for p in (ROOT / 'AGENTS.md', V / 'AGENTS.md') if p.exists()]
+agents = [p for p in (ROOT / 'CHANGELOG.md', V / 'AGENTS.md') if p.exists()]
 rules = sum(len(re.findall(r'<!-- [A-Z0-9\-]+:BEGIN -->', p.read_text(encoding='utf-8-sig'))) for p in agents)
 gml = len(list((ROOT / 'src/**/Codes').glob('*.gml'))) if False else len(list((ROOT / 'src').rglob('Codes/*.gml')))
 sml = ROOT / 'artifacts/EmbersAndOaths.sml'
@@ -101,10 +101,10 @@ rule = ('\n<!-- PHASE-CLOSE-S160:BEGIN -->\n2026-10-13 S160：设计阶段收束
         f"现场证据：{notes}篇笔记、两份AGENTS（{rules}规则块）、{validators}校验器/{checks}项检查、131台本、三张原作参照、声望中英（成对1384、可见中文单列0）、74边闭合、{gml}个GML、.sml与MSL副本同哈希、试点3批/18场景；"
         f"历史待办共{len(oi['items'])}项；用户已授权当前安装开发测试，{dep['version']}已构建部署，实测证据见{runtime_evidence}，完整扩展尚未验收。"
         '入口design/11_管理/设计阶段收束核对.md；运行Validate-PhaseClose.py及既有检查。\n<!-- PHASE-CLOSE-S160:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PHASE-CLOSE-S160:BEGIN -->.*?<!-- PHASE-CLOSE-S160:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- PHASE-CLOSE-S160:BEGIN -->.*?<!-- PHASE-CLOSE-S160:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(notes=notes, validators=validators, checks=checks, vault=vault_ok, gml=gml), ensure_ascii=False))

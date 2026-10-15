@@ -77,7 +77,7 @@ for x in receipts[:20]:
     check(f"`{x['key']}`" in card, 'card-receipt-' + x['key'])
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('STATE-KEYS-S114:BEGIN' in plan and '[[状态键映射总表]]' in plan, 'plan-block-and-link')
-check('STATE-KEYS-S114:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('STATE-KEYS-S114:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/state-keys-note-hashes.json')
 check(len(h) == 2, 'own-manifest-2')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

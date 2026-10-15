@@ -120,10 +120,10 @@ rule = ('\n<!-- BUILD-READY-S168:BEGIN -->\n2026-10-13 S168：构建前置核对
         f"dotnet {facts['dotnet']['version']}、构建脚本解析 {facts['build_script_parse']}、NuGet包 {sum(1 for r in pkg if r['offline_dir'])}/{len(pkg)} 就位、MSL程序集 {sum(1 for r in dll if r['dll_present'])}/{len(dll)} 就位；"
         '构建会重写 .sml 与 direct-data.win，构建轮须一并重跑实现侧现状与收束核对页。'
         '入口design/11_管理/构建前置核对.md；运行Validate-BuildReadiness.py及既有检查。\n<!-- BUILD-READY-S168:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- BUILD-READY-S168:BEGIN -->.*?<!-- BUILD-READY-S168:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- BUILD-READY-S168:BEGIN -->.*?<!-- BUILD-READY-S168:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(dotnet=facts['dotnet']['version'], refs=len(refs), pkg_ok=sum(1 for r in pkg if r['offline_dir']), dll_ok=sum(1 for r in dll if r['dll_present'])), ensure_ascii=False))

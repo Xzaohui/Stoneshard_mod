@@ -89,10 +89,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- BASELINE-REG-S146:BEGIN -->\n2026-10-13 S146：验证快照依赖登记。'
         f"工具源码中 {len(base)} 份 backups/… 快照（城市/戏剧类保留性检查的“变更前”基线）逐份登记大小/哈希/用途，另 1 条为非依赖说明；"
         '缺任一份对应校验器无法运行，改动或替换由 Validate-PreservationBaselines.py 报错。入口design/11_管理/验证快照依赖登记.md；不复制、不修改、不删除备份。\n<!-- BASELINE-REG-S146:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- BASELINE-REG-S146:BEGIN -->.*?<!-- BASELINE-REG-S146:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- BASELINE-REG-S146:BEGIN -->.*?<!-- BASELINE-REG-S146:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(entries=len(entries), baselines=len(base), missing=[e['snapshot'] for e in base if not e['bytes']]), ensure_ascii=False))

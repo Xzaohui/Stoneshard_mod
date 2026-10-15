@@ -79,10 +79,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- NAME-COLLISION-S132:BEGIN -->\n2026-10-13 S132：原作名与原创名碰撞核对（只读）。'
         'Probe-NameCollisions.py 扫 7 类原创专名对 STRG 简体槽：精确同名 1（「玛拉」命中程序化女名池 14956—14971，保留并标注同形不同人）、近似 4（仅前缀巧合）；物品/街区/室内/场景 0 命中。'
         '入口design/01_原作基线/原作名与原创名碰撞核对.md；新增专名后重跑扫描。运行Validate-NameCollision.py及既有检查；不部署游戏包。\n<!-- NAME-COLLISION-S132:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- NAME-COLLISION-S132:BEGIN -->.*?<!-- NAME-COLLISION-S132:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- NAME-COLLISION-S132:BEGIN -->.*?<!-- NAME-COLLISION-S132:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/01_原作基线/原作名与原创名碰撞核对.md', '入口 [原作名与原创名碰撞核对](design/01_原作基线/原作名与原创名碰撞核对.md)'), encoding='utf-8')
 print(json.dumps(dict(categories=len(probe['categories']), collisions=len(probe['collisions']), near=len(probe['near_matches']), notes=len(generated)), ensure_ascii=False))

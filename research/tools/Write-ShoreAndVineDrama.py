@@ -39,6 +39,6 @@ if (ROOT/'research/shore-vine-task-art-20261012.json').exists():
  b+='\n## 任务场所图文核对\n\n[[丹布里任务场所概念与台本映射]]与[[曼郡任务场所概念与台本映射]]补十二处场所构图，按本卡八案和稳定空间ID关联。候选v1/v2、生成／编辑提示词与参考哈希见research/shore-vine-task-art-20261012.json；坡面、两床、同桶双签和师徒区别仍按文字与后续制作核，图片不提交任何状态。\n'
 write('11_管理/丹布里与曼郡人物演出审查.md',b);hp.write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 rule=f'\n<!-- CITY-DRAMA-S81:BEGIN -->\n2026-10-12 S81：丹布里／曼郡八案作者源由Author-ShoreAndVineDrama.py生成，两城各drama.json与feedback.json驱动。入口design/11_管理/丹布里与曼郡人物演出审查.md；24场、16原方法、30旧回执，10新卡。三户不从两空间造第三床，坦瑟第二场留原岸，家船三成年人逐人同意；提奥与贝洛分酿酒／箍桶，不替原NPC。当前{73-remaining}篇逐角色初稿、{remaining}篇待深化；床、船、护理、桶、枝、款和工班按实际单记，拒绝有独立出口，晚到不重奖／改N17。运行Validate-ShoreAndVineDrama.py及既有设计检查；数值、时间轴、比例图及游戏未验收。\n<!-- CITY-DRAMA-S81:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-DRAMA-S81:BEGIN -->.*?<!-- CITY-DRAMA-S81:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(quests=8,scenes=24,methods=16,choices=48,incoming_pairs=30,actors=18,new_cards=10,notes=len(hashes),covered=73-remaining,remaining=remaining),ensure_ascii=False))

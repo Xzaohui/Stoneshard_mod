@@ -126,7 +126,7 @@ for p, h in manifests.items():
 HP.write_text(json.dumps(generated, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 rule = f'<!-- {MARK}:BEGIN -->\n2026-10-12 S87：用户要求设计各城镇声望系统并中英对照。research/town-reputation.json定义三层分账（原作声誉/阵营承诺/城镇信任），十五地域各五档（−2..+2）、逐条写入来源、接收入口、受托解锁、听闻与边界。入口design/09_系统逻辑/城镇声望与信任系统.md与[[城镇声望系统中英对照]]；只能实际执行且最小核验写入，每来源一次，±1（重大伤害−1），上限±2；不洗罪、不解锁无限物资、不锁主线与回程，N17后冻结；跨城仅明列传递。运行Validate-TownReputation.py及原三项设计检查；未映射引擎、未部署。\n<!-- {MARK}:END -->'
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md', ROOT / 'README.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md', ROOT / 'CHANGELOG.md']:
     body = p.read_text(encoding='utf-8-sig')
     a = f'<!-- {MARK}:BEGIN -->'; z = f'<!-- {MARK}:END -->'; n = a + '\n' + rule.split('\n', 1)[1].rsplit('\n', 1)[0] + '\n' + z
     p.write_text(re.sub(re.escape(a) + '.*?' + re.escape(z), lambda _: n, body, flags=re.S) if a in body else body.rstrip() + '\n\n' + n + '\n')

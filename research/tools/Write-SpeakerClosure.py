@@ -115,10 +115,10 @@ rule = ('\n<!-- SPEAKER-CLOSURE-S138:BEGIN -->\n2026-10-13 S138：说话人与�
         f"逐行取说话人 {len(rows)} 位全部归类（玩家/人物卡精确/前缀/提及/通用称谓/标记），未闭合 {len(unresolved)} 位；"
         '白名单research/speaker-allowlist.json（通用称谓与标记不建卡）；新增说话人未列入白名单时校验报错。'
         '入口design/11_管理/说话人与人物卡闭合核对.md；运行Validate-SpeakerClosure.py及既有检查；不部署游戏包。\n<!-- SPEAKER-CLOSURE-S138:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- SPEAKER-CLOSURE-S138:BEGIN -->.*?<!-- SPEAKER-CLOSURE-S138:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- SPEAKER-CLOSURE-S138:BEGIN -->.*?<!-- SPEAKER-CLOSURE-S138:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(speakers=len(rows), classes=dict(classes), unresolved=unresolved[:5],

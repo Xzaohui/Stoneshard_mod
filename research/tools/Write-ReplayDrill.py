@@ -118,10 +118,10 @@ rule = ('\n<!-- REPLAY-S145:BEGIN -->\n2026-10-13 S145：第五轮全链复跑�
         f"最小副本（design/research/tools/src）重跑同序：写手46通过/8中止（缺backups与artifacts输入，下游保留守卫按设计连锁）、校验器49通过/16失败（戏剧城市类读backups、美术类读素材、计数页读已中止写手结果）。"
         '结论：主库链路自洽、顺序敏感、环境依赖已清点；未声明整树字节一致。'
         '入口design/11_管理/全链复跑演练S145.md；不构建、不部署。\n<!-- REPLAY-S145:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- REPLAY-S145:BEGIN -->.*?<!-- REPLAY-S145:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- REPLAY-S145:BEGIN -->.*?<!-- REPLAY-S145:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(main_ok=drill['main_run']['writers_ok'], copy_ok=drill['copy_run']['writers_ok'],

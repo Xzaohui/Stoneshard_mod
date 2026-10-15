@@ -190,10 +190,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- SITE-CARDS-S95:BEGIN -->\n2026-10-13 S95：用户要求扩充特殊地点内容。'
         f'44个传闻地点按6个地域拆成地点设计卡（入口/安全回程锚点、观察物、危险、服务=无、原作避让、逐地点关联），入口design/02_世界与地图/特殊地点与野外NPC/特殊地点设计卡总表.md。'
         '设计意图，未定比例/碰撞/运行房间；不新增服务与奖励、不新增前置。运行Validate-SpecialSiteCards.py及既有检查；不部署游戏包。\n<!-- SITE-CARDS-S95:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- SITE-CARDS-S95:BEGIN -->.*?<!-- SITE-CARDS-S95:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- SITE-CARDS-S95:BEGIN -->.*?<!-- SITE-CARDS-S95:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/特殊地点设计卡总表.md', '入口 [特殊地点设计卡总表](design/02_世界与地图/特殊地点与野外NPC/特殊地点设计卡总表.md)'), encoding='utf-8')
 print(json.dumps(dict(regions=len(REGIONS), sites=len(all_sites), notes=len(generated)), ensure_ascii=False))

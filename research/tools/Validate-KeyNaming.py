@@ -39,7 +39,7 @@ for rel in ['09_系统逻辑/当前任务依赖与状态字典.md', '09_系统�
     check('KEY-NAMES-S123:BEGIN' in t and '[[键名口径对账]]' in t, 'pointer-' + Path(rel).stem)
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('KEY-NAMES-S123:BEGIN' in plan and '[[键名口径对账]]' in plan, 'plan-block-and-link')
-check('KEY-NAMES-S123:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('KEY-NAMES-S123:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/key-naming-note-hashes.json')
 check(len(h) == 4, 'own-manifest-4')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

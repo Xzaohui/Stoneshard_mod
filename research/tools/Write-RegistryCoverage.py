@@ -98,10 +98,10 @@ rule = ('\n<!-- REG-COVERAGE-S152:BEGIN -->\n2026-10-13 S152：登记文件覆�
         f"research/ 下 {len(rows)} 份登记按覆盖方式分类：校验器直接 {classes.get('validator-direct',0)}、间接 {classes.get('validator-indirect',0)}、工具产物 {classes.get('tool-output',0)}、调查记录 {classes.get('cited-log',0)}、共享输入 {classes.get('baseline',0)}；未归类 0。"
         '新增活输入须进前两类，工具产物须由已登记工具生成，调查记录须被设计页引用；出现未归类即报错。'
         '入口design/11_管理/登记文件覆盖分类.md；运行Validate-RegistryCoverage.py及既有检查。\n<!-- REG-COVERAGE-S152:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- REG-COVERAGE-S152:BEGIN -->.*?<!-- REG-COVERAGE-S152:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- REG-COVERAGE-S152:BEGIN -->.*?<!-- REG-COVERAGE-S152:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(registries=len(rows), classes=classes, unclassified=len(reg['unclassified'])), ensure_ascii=False))

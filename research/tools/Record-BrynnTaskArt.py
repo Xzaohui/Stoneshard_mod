@@ -28,7 +28,7 @@ t=t.replace('城市概念/BRY-任务场所-v1.png','城市概念/BRY-任务场�
 t=t.replace('目视检查待生成结果保存后记录。','已查看v1与v2：六处场所可区分，标签A—F清晰。v1的泊位被船占据，v2仅针对F补出空泊位与另侧停船；v1保留作修订对照。小刻痕、扣样、两扇返街门及实际水位不据画面认定已完成。')
 p.write_text(t,encoding='utf-8')
 rule='\n<!-- CITY-TASK-ART-S77:BEGIN -->\n2026-10-12 S77：布林六处任务场所概念见design/12_美术参考/布林任务场所概念与台本映射.md，输出v1/v2与完整提示词、输入/输出哈希见research/brynn-task-space-art-s77.json。v2定向修改F空泊位，旧稿保留；A—F非任务顺序，图不定官方地理、NPC身份、门数、碰撞或库存。不覆盖十五城总览，不修改游戏包。后续修改按文字空间/台本核验并更新图文关联。\n<!-- CITY-TASK-ART-S77:END -->\n'
-for p in [ROOT/'AGENTS.md',ROOT/'design/AGENTS.md',ROOT/'README.md']:
+for p in [ROOT/'CHANGELOG.md',ROOT/'design/AGENTS.md',ROOT/'CHANGELOG.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-TASK-ART-S77:BEGIN -->.*?<!-- CITY-TASK-ART-S77:END -->\n','',t,flags=re.S)
  p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
 print(json.dumps(dict(output=record['output'],sha256=record['sha256'],dimensions=record['dimensions'],status='draft'),ensure_ascii=False))

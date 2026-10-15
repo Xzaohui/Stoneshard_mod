@@ -45,7 +45,7 @@ for lm in re.finditer(r'\[\[([^\]]+)\]\]', card):
     check(lm.group(1) in stems, 'link-resolves-' + lm.group(1))
 plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text(encoding='utf-8')
 check('MOD-LOC-XCHECK-S96:BEGIN' in plan and '[[Mod特殊地点与人物交叉核对]]' in plan, 'plan-block-and-link')
-check('MOD-LOC-XCHECK-S96:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('MOD-LOC-XCHECK-S96:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/mod-loc-xcheck-note-hashes.json')
 check(len(h) == 2, 'own-manifest-2')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

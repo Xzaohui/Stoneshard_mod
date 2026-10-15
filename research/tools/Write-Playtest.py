@@ -118,10 +118,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- PLAYTEST-S128:BEGIN -->\n2026-10-13 S128：试玩路线与检查单。'
         f'research/playtest-walkthrough.json 十一试玩段（步骤/观察点/证据项），由既有设计派生；入口design/11_管理/试玩路线与检查单.md。'
         '不新增设计内容；实现后按规程记录运行证据。运行Validate-Playtest.py及既有检查；不部署游戏包。\n<!-- PLAYTEST-S128:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PLAYTEST-S128:BEGIN -->.*?<!-- PLAYTEST-S128:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- PLAYTEST-S128:BEGIN -->.*?<!-- PLAYTEST-S128:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/试玩路线与检查单.md', '入口 [试玩路线与检查单](design/11_管理/试玩路线与检查单.md)'), encoding='utf-8')
 print(json.dumps(dict(segments=len(SEGMENTS), notes=len(generated)), ensure_ascii=False))

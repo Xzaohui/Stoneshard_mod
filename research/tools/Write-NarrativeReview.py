@@ -235,13 +235,13 @@ promote('地图扩张总图',current+' 功能节点数仍54；场景因选择改
 for r in model['regions']:
     promote(Path(r['file']).stem,'区域任务和新状态反馈见[[区域叙事反馈与场景差异]]、[[叙事交叉影响矩阵]]；本区当前逐场稿见[[新区域设计与任务总表]]。旧日常跑腿和循环模板停用，DT以各台本顶部一次事件为准。')
 promote('来源登记','S62（2026-10-12）：用户要求校验对话、去除通马桶任务、人物弧光、网状交叉与不同解决方案。作为原创设计需求，不是原作事实或对相关商业游戏的资料核验。本轮仅审查本项目原创模型并写修订；未新增阅读全文网页声明。见[[叙事逻辑校验与修订记录]]。')
-for p in [ROOT/'AGENTS.md',VAULT/'AGENTS.md']:
+for p in [ROOT/'CHANGELOG.md',VAULT/'AGENTS.md']:
     s=p.read_text(encoding='utf-8-sig'); begin='<!-- S62-RULE:BEGIN -->'; end='<!-- S62-RULE:END -->'
     block=begin+'\n2026-10-12 S62：当前任务须多种实际行动解法、人物跨任务弧光与有条件的后续影响。设计以网状叙事规范、交叉矩阵及各台本顶部R/X为准；S61旧选择停用、场次作有条件素材。16个DT为一次地方人物事件，普通运输、维修、清运不做玩家重复任务。角色获知须有限回执，死亡/缺席/拒绝/授权优先，先后次序重评未来行动而不回滚历史；伤害留痕、奖励去重、终局快照独立冻结。设计改后运行三项设计检查：Validate-StoryScripts.py、Validate-NarrativeNetwork.py、Test-DesignVault.ps1。自动检查不能证明对白质量或游戏运行，本轮不部署新包。\n'+end+'\n\n'
     if begin in s: s=re.sub(re.escape(begin)+'.*?'+re.escape(end)+r'\s*',lambda m:block,s,flags=re.S)
     else: s=re.sub(r'(?m)^(# [^\n]+\n)',lambda m:m[1]+'\n'+block,s,count=1)
     p.write_text(s,encoding='utf-8')
-promote_path=ROOT/'README.md'
+promote_path=ROOT/'CHANGELOG.md'
 s=promote_path.read_text(encoding='utf-8-sig')
 begin='<!-- S62-README:BEGIN -->'; end='<!-- S62-README:END -->'
 block=begin+'\n当前设计修订（2026-10-12）：51篇多解台本、128个实际方法、74条条件交叉与14组人物弧光；16个日常ID改为一次地方事件。入口：[任务台本总索引](design/00_导航/任务台本总索引.md)、[叙事逻辑校验与修订记录](design/11_管理/叙事逻辑校验与修订记录.md)。本轮只改设计，现存0.3.0游戏小样未获得这些新功能。\n'+end+'\n\n'

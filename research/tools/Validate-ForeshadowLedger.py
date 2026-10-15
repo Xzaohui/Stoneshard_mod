@@ -74,7 +74,7 @@ for p in sorted((ROOT / 'research').glob('*note-hashes.json')):
         continue
     for rel, expected in m.items():
         check((ROOT / rel).exists() and sha(ROOT / rel) == expected, rel + '-all-manifests-reconciled')
-check('FORESHADOW-LEDGER-S87:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block-present')
+check('FORESHADOW-LEDGER-S87:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block-present')
 
 report = dict(date='2026-10-12', scope='S87 foreshadow ledger: all 74 X edges closed into threads, reference groups counted, four deliberate open items; not literary or runtime validation', threads=len(threads), must_payoff=sum(t['bucket'] == 'must_payoff' for t in threads), edges_covered=len(covered), references=len(ref), open_items=len([t for t in threads if t['bucket'] == 'deliberate_open']), checks_passed=len(checks), errors=errors, passed=not errors, runtimeVerified=False)
 (ROOT / 'research/foreshadow-ledger-validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

@@ -146,9 +146,9 @@ for c in cs:
   p.write_text(t,encoding='utf-8')
 
 rule='\n<!-- CITY-S63:BEGIN -->\n2026-10-12 S63：城市范围为十二命名聚落＋三原创地域，设计入口为design/00_导航/城市与聚落设计总索引.md。六区54节点仅早期连接场景，旧限制已被扩展纸面设计取代，不能据此缩回八城。N1—N18、NE与终局保持S62规则；CM地方篇章无全城游历前置，PAS/ASH/HIG为现有任务编排而非第二奖励。新版另用research/city-campaign.json管理城市/卫星/任务/条件回执，运行Validate-CityCampaign.py和原三项检查。通路SVG与概念板只作设计参考，房间美术/经济/运行未经验证不能称完成。\n<!-- CITY-S63:END -->\n'
-for p in [ROOT/'AGENTS.md',V/'AGENTS.md']:
+for p in [ROOT/'CHANGELOG.md',V/'AGENTS.md']:
  t=p.read_text(encoding='utf-8-sig');t=re.sub(r'\n<!-- CITY-S63:BEGIN -->.*?<!-- CITY-S63:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+rule,encoding='utf-8')
-p=ROOT/'README.md';t=p.read_text(encoding='utf-8-sig');block='\n<!-- CITY-S63:BEGIN -->\n2026-10-12：新增城市/周边设计入口 [城市与聚落设计总索引](design/00_导航/城市与聚落设计总索引.md)，十五地域章与58支线初稿，48通路SVG和三大城概念板。全稿仍draft，具体限制见 [城市扩展验收记录](design/11_管理/城市扩展验收记录.md)。本轮不构建/部署或改存档。\n<!-- CITY-S63:END -->\n';t=re.sub(r'\n<!-- CITY-S63:BEGIN -->.*?<!-- CITY-S63:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+block,encoding='utf-8')
+p=ROOT/'CHANGELOG.md';t=p.read_text(encoding='utf-8-sig');block='\n<!-- CITY-S63:BEGIN -->\n2026-10-12：新增城市/周边设计入口 [城市与聚落设计总索引](design/00_导航/城市与聚落设计总索引.md)，十五地域章与58支线初稿，48通路SVG和三大城概念板。全稿仍draft，具体限制见 [城市扩展验收记录](design/11_管理/城市扩展验收记录.md)。本轮不构建/部署或改存档。\n<!-- CITY-S63:END -->\n';t=re.sub(r'\n<!-- CITY-S63:BEGIN -->.*?<!-- CITY-S63:END -->\n','',t,flags=re.S);p.write_text(t.rstrip()+'\n'+block,encoding='utf-8')
 # Reconcile every note-hash manifest for the notes this writer regenerated.
 for _hp in sorted((ROOT/'research').glob('*note-hashes.json')):
     try: _h=json.loads(_hp.read_text(encoding='utf-8'))

@@ -98,10 +98,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- MOD-LOC-XCHECK-S96:BEGIN -->\n2026-10-13 S96：按计划第5步交叉核对Mod特殊地点与人物。'
         'research/mod-location-crosscheck.json：9个副本各归R01—R06并只由唯一任务结算、6个布林续篇场景归布林、16名野外人物无重名无重复挂点；入口design/11_管理/Mod特殊地点与人物交叉核对.md。'
         '运行Validate-ModLocationCrosscheck.py及既有检查；坐标、实际排布与英文稿仍待做，不部署游戏包。\n<!-- MOD-LOC-XCHECK-S96:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- MOD-LOC-XCHECK-S96:BEGIN -->.*?<!-- MOD-LOC-XCHECK-S96:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- MOD-LOC-XCHECK-S96:BEGIN -->.*?<!-- MOD-LOC-XCHECK-S96:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/Mod特殊地点与人物交叉核对.md', '入口 [Mod特殊地点与人物交叉核对](design/11_管理/Mod特殊地点与人物交叉核对.md)'), encoding='utf-8')
 print(json.dumps(dict(dungeons=len(dungeons), spaces=len(spaces), npcs=len(npcs), notes=len(generated),

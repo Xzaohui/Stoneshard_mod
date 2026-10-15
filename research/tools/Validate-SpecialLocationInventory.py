@@ -52,7 +52,7 @@ for group in ['map_regions', 'rumor_sites', 'site_types']:
         check(r.get('name_en', '') in card, r['key'] + '-en-name-rendered')
 check('SPECIAL-LOC-S92:BEGIN' in plan and '[[特殊地点与野外NPC清点]]' in plan, 'plan-block-and-link')
 check('## 每项设计交付' in plan and 'SPECIAL-LOC-S92:END' in plan, 'plan-content-preserved')
-check('SPECIAL-LOC-S92:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('SPECIAL-LOC-S92:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = read('research/special-location-note-hashes.json')
 check(set(h) == {'design/01_原作基线/特殊地点与野外NPC清点.md', 'design/11_管理/特殊地点与野外NPC对白扩展计划.md'}, 'own-manifest-two-notes')
 for rel, exp in h.items(): check(sha(ROOT / rel) == exp, rel + '-hash')

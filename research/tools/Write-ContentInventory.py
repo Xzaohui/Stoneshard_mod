@@ -87,10 +87,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- CONTENT-INVENTORY-S125:BEGIN -->\n2026-10-13 S125：叙事内容清单。'
         f'research/content-inventory.json 一页列全叙事资产与桥接层（用户可见文本约 {user_lines} 个单元）；入口design/00_导航/叙事内容清单.md；计数取自源、重跑刷新。'
         '只做索引与计数；运行Validate-ContentInventory.py及既有检查；不部署游戏包。\n<!-- CONTENT-INVENTORY-S125:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- CONTENT-INVENTORY-S125:BEGIN -->.*?<!-- CONTENT-INVENTORY-S125:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- CONTENT-INVENTORY-S125:BEGIN -->.*?<!-- CONTENT-INVENTORY-S125:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/00_导航/叙事内容清单.md', '入口 [叙事内容清单](design/00_导航/叙事内容清单.md)'), encoding='utf-8')
 print(json.dumps(dict(rows=len(ROWS), user_units=user_lines, notes=len(generated)), ensure_ascii=False))

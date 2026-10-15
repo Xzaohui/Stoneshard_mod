@@ -53,7 +53,7 @@ plan = (V / '11_管理/特殊地点与野外NPC对白扩展计划.md').read_text
 check('EVT-NUM-S163:BEGIN' in plan and '[[事件号分配方案]]' in plan, 'plan-block')
 for lm in re.finditer(r'\[\[([^\]]+)\]\]', card):
     check(lm.group(1) in stems, 'link-' + lm.group(1))
-check('EVT-NUM-S163:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('EVT-NUM-S163:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 h = json.loads((R / 'evt-num-note-hashes.json').read_text(encoding='utf-8'))
 check(len(h) == 3, 'own-manifest-3')
 for rel, exp in h.items(): check(sha(ROOT / rel).lower() == exp.lower(), rel + '-hash')

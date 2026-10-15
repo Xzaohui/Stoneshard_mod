@@ -114,10 +114,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- BILINGUAL-COVERAGE-S120:BEGIN -->\n2026-10-13 S120：中英对照覆盖报告。'
         f'research/bilingual-coverage.json 逐登记重算：用户可见文本 {user_pairs} 组成对、中文单语 {user_zh} 条（目标0）；内部散文中文先行不计缺口；英文均为Mod原创。'
         '入口design/11_管理/中英对照覆盖报告.md；运行Validate-BilingualCoverage.py及既有检查；不部署游戏包。\n<!-- BILINGUAL-COVERAGE-S120:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- BILINGUAL-COVERAGE-S120:BEGIN -->.*?<!-- BILINGUAL-COVERAGE-S120:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- BILINGUAL-COVERAGE-S120:BEGIN -->.*?<!-- BILINGUAL-COVERAGE-S120:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/中英对照覆盖报告.md', '入口 [中英对照覆盖报告](design/11_管理/中英对照覆盖报告.md)'), encoding='utf-8')
 print(json.dumps(dict(rows=len(rows), user_pairs=user_pairs, user_zh_only=user_zh, notes=len(generated)), ensure_ascii=False))

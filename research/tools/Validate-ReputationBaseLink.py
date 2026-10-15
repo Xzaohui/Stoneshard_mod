@@ -24,7 +24,7 @@ for lm in re.finditer(r'\[\[([^\]]+)\]\]', sysdoc):
 h = read('research/rep-base-link-note-hashes.json')
 check(set(h) == {'design/09_系统逻辑/城镇声望与信任系统.md', 'design/09_系统逻辑/城镇声望系统中英对照.md'}, 'own-manifest-two-docs')
 for rel, exp in h.items(): check(sha(ROOT / rel).lower() == exp.lower(), rel + '-hash')
-check('REP-BASE-LINK-S136:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block')
+check('REP-BASE-LINK-S136:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block')
 for p in sorted((ROOT / 'research').glob('*note-hashes.json')):
     m = json.loads(p.read_text(encoding='utf-8'))
     if not isinstance(m, dict) or not all(isinstance(v, str) for v in m.values()): continue

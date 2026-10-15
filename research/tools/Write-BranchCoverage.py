@@ -101,10 +101,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- BRANCH-COVERAGE-S103:BEGIN -->\n2026-10-13 S103：按计划剩余项「对白分支」做结构审计。'
         f'research/branch-coverage.json 覆盖 {len(rows)} 个脚本（城市73/续篇6/主线·支线·后章·副本/日常16）：多方法、逐方法先做后做、早晚回执、拒绝或缺席替代、知识守卫与中断恢复齐备，不合口径无。'
         '入口design/11_管理/对白分支覆盖审计.md；只审字段结构，不评文学、不证明运行；运行Validate-BranchCoverage.py及既有检查；不部署游戏包。\n<!-- BRANCH-COVERAGE-S103:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- BRANCH-COVERAGE-S103:BEGIN -->.*?<!-- BRANCH-COVERAGE-S103:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- BRANCH-COVERAGE-S103:BEGIN -->.*?<!-- BRANCH-COVERAGE-S103:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/11_管理/对白分支覆盖审计.md', '入口 [对白分支覆盖审计](design/11_管理/对白分支覆盖审计.md)'), encoding='utf-8')
 print(json.dumps(dict(rows=len(rows), families=fam_counts, gaps=gaps), ensure_ascii=False))

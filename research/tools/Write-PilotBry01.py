@@ -134,10 +134,10 @@ rule = ('\n<!-- PILOT-BRY01-S156:BEGIN -->\n2026-10-13 S156：试点实现批次
         f"{len(qst)}桩、{len(qkeys)}键、{len(qf['nodes'])}流节点、{len(methods)}解法；含服务班/信任档/闲谈池接线与7条验收场景（早到晚到、拒绝缺席、服务档位、闲谈分池）。"
         '键名口径同S155；仅排程与输入提取，不含实现代码、不部署。'
         '入口design/11_管理/试点实现批次CS-BRY-01.md；运行Validate-PilotBry01.py及既有检查。\n<!-- PILOT-BRY01-S156:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PILOT-BRY01-S156:BEGIN -->.*?<!-- PILOT-BRY01-S156:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- PILOT-BRY01-S156:BEGIN -->.*?<!-- PILOT-BRY01-S156:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(stubs=len(qst), keys=len(qkeys), nodes=len(qf['nodes']), methods=len(methods),

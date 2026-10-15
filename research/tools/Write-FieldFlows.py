@@ -90,10 +90,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- FIELD-FLOWS-S105:BEGIN -->\n2026-10-13 S105：把28名野外人物的对白投影成实现可用的条件流。'
         'research/field-scene-flows.json 含固定条件词表与逐人节点图（初遇/夜里/复访、任务进行中/完成后、先做/后做、拒绝出口、缺席替代），节点只引用登记台词；入口design/02_世界与地图/特殊地点与野外NPC/野外对白条件流.md。'
         '不新增奖励与结算、不改台本状态；引擎侧触发距离与生成点仍待做。运行Validate-FieldFlows.py及既有检查；不部署游戏包。\n<!-- FIELD-FLOWS-S105:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- FIELD-FLOWS-S105:BEGIN -->.*?<!-- FIELD-FLOWS-S105:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- FIELD-FLOWS-S105:BEGIN -->.*?<!-- FIELD-FLOWS-S105:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/野外对白条件流.md', '入口 [野外对白条件流](design/02_世界与地图/特殊地点与野外NPC/野外对白条件流.md)'), encoding='utf-8')
 print(json.dumps(dict(flows=len(flows), notes=len(generated)), ensure_ascii=False))

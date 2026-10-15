@@ -58,10 +58,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- NAV-STATUS-S148:BEGIN -->\n2026-10-13 S148：三张导航页加入机检状态行。'
         f"台本{total}篇（晶石{fams.get('N',0)+fams.get('SQ',0)+fams.get('DT',0)+fams.get('D',0)}＋城市{city}＋野外{fams.get('FX',0)}）、卫星聚落{satellites}篇、质量守卫{guards}项；"
         '由 Validate-NavStatus.py 现场重算核对（家族计数、卫星笔记数、守卫行数），计数变化须重跑写手刷新。\n<!-- NAV-STATUS-S148:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- NAV-STATUS-S148:BEGIN -->.*?<!-- NAV-STATUS-S148:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- NAV-STATUS-S148:BEGIN -->.*?<!-- NAV-STATUS-S148:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(total=total, city=city, satellites=satellites, guards=guards, families=fams), ensure_ascii=False))

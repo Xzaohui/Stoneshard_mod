@@ -233,10 +233,10 @@ rule = ('\n<!-- NPC-READING-S93:BEGIN -->\n2026-10-13 S93/S98：用户要求扩�
         'research/original-npc-reading.json 把原版问候446/闲谈125按说话人槽归组（全槽覆盖）并逐组给口吻/主题/结构/短例定位；'
         'S98 增 npc 227 条行为槽分组（工具句、声望7档行为集、角色闲话标签、状态天气、商人变体）与场景族结论（scene 326 键可枚举、文本与分支在引擎侧）。'
         '入口design/01_原作基线/野外NPC口吻与闲谈参照.md。对白全文不入库、短例≤48字；不部署游戏包。\n<!-- NPC-READING-S93:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- NPC-READING-S93:BEGIN -->.*?<!-- NPC-READING-S93:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- NPC-READING-S93:BEGIN -->.*?<!-- NPC-READING-S93:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/01_原作基线/野外NPC口吻与闲谈参照.md', '入口 [野外NPC口吻与闲谈参照](design/01_原作基线/野外NPC口吻与闲谈参照.md)'), encoding='utf-8')
 print(json.dumps(dict(slots=len(slots), groups=len(GROUPS), unassigned=unassigned), ensure_ascii=False))

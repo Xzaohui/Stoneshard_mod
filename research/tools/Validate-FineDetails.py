@@ -116,7 +116,7 @@ for p in sorted((ROOT / 'research').glob('*note-hashes.json')):
         continue
     for rel, exp in m.items():
         check((ROOT / rel).exists() and sha(ROOT / rel) == exp, rel + '-all-manifests-reconciled')
-check('FINE-DETAILS-S89:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-block-present')
+check('FINE-DETAILS-S89:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-block-present')
 
 # ---- S91 card attachment ----
 by_id = {}
@@ -146,7 +146,7 @@ for w in ['Write-CitySpaces', 'Write-CityDrama', 'Write-AdditionalCityDrama', 'W
           'BrynnContinuation']:
     src = (ROOT / 'research/tools' / (w + '.py')).read_text(encoding='utf-8')
     check('NotePreserve import' in src and ('preserve_foreign(' in src or 'keep_foreign(' in src), w + '-preserves-foreign-blocks')
-check('FINE-DETAILS-S91:BEGIN' in (ROOT / 'AGENTS.md').read_text(encoding='utf-8-sig'), 'agents-s91-block')
+check('FINE-DETAILS-S91:BEGIN' in (ROOT / 'CHANGELOG.md').read_text(encoding='utf-8-sig'), 'agents-s91-block')
 h91 = read('research/fine-details-card-note-hashes.json')
 check(len(h91) == 171 and all(rel.startswith('design/') for rel in h91), 's91-own-manifest')
 for rel, exp in h91.items():

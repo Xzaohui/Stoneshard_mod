@@ -82,10 +82,10 @@ for hp in sorted(R.glob('*note-hashes.json')):
 rule = ('\n<!-- N1-KEYS-S161:BEGIN -->\n2026-10-13 S161：N1小样键语义与迁移建议（只读扫描）。'
         f"扫描EAO_N1_*共{len(rows)}处用法：EAO_N1_stage无任何写入点（静态结论，运行时未验证）；建议入口门槛改挂encountered_N1、解法用resolve_N1、stage仅作旧档读取垫片；origin族语义清楚可保留。"
         '供OI-03决策；不改源码、不改存档、不部署。入口design/11_管理/N1小样键语义与迁移建议.md；运行Validate-N1Keys.py及既有检查。\n<!-- N1-KEYS-S161:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- N1-KEYS-S161:BEGIN -->.*?<!-- N1-KEYS-S161:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- N1-KEYS-S161:BEGIN -->.*?<!-- N1-KEYS-S161:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(usages=len(rows), writes=writes, reads=reads, stage_written=stage_written), ensure_ascii=False))

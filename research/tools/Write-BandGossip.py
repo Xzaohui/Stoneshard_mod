@@ -129,10 +129,10 @@ for hp in sorted((ROOT / 'research').glob('*note-hashes.json')):
 rule = ('\n<!-- BAND-GOSSIP-S117:BEGIN -->\n2026-10-13 S117：声望档街头反应（原创，中英对照）。'
         f'research/band-gossip.json 十五城镇与六地域各2条冷/热档口气（band:-1 / band:+2）共 {len(rows)} 条；只写口气与场面，不承诺服务、不发物品、不给情报，且与柜台台词不重复。'
         '入口design/02_世界与地图/特殊地点与野外NPC/声望档街头反应.md；运行Validate-BandGossip.py、Validate-DialogueDistinctiveness.py及既有检查；触发与配音待实现。\n<!-- BAND-GOSSIP-S117:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- BAND-GOSSIP-S117:BEGIN -->.*?<!-- BAND-GOSSIP-S117:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- BAND-GOSSIP-S117:BEGIN -->.*?<!-- BAND-GOSSIP-S117:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/02_世界与地图/特殊地点与野外NPC/声望档街头反应.md', '入口 [声望档街头反应](design/02_世界与地图/特殊地点与野外NPC/声望档街头反应.md)'), encoding='utf-8')
 print(json.dumps(dict(lines=len(rows), notes=len(generated)), ensure_ascii=False))

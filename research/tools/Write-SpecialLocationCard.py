@@ -73,10 +73,10 @@ rule = ('\n<!-- SPECIAL-LOC-S92:BEGIN -->\n2026-10-13 S92：用户要求扩充�
         'research/special-location-inventory.json 只读清点原版特殊地点候选：8个世界地图区域、44个传闻地点、13个地形类型名与对白族规模（场景326/问候446/闲谈125/NPC227/随从8）；'
         '只存键名/STRG序号/中文可用性/短地点名，不存对白全文。入口design/01_原作基线/特殊地点与野外NPC清点.md；逐NPC中英对读、野外遭遇映射、Mod原创地点清点与地点设计卡仍待做。'
         'Probe-SpecialLocations.py与Write-SpecialLocationCard.py为作者工具，运行Validate-SpecialLocationInventory.py及既有设计检查；不部署游戏包。\n<!-- SPECIAL-LOC-S92:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- SPECIAL-LOC-S92:BEGIN -->.*?<!-- SPECIAL-LOC-S92:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- SPECIAL-LOC-S92:BEGIN -->.*?<!-- SPECIAL-LOC-S92:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/01_原作基线/特殊地点与野外NPC清点.md', '入口 [特殊地点与野外NPC清点](design/01_原作基线/特殊地点与野外NPC清点.md)'), encoding='utf-8')
 print(json.dumps(dict(regions=len(inv['map_regions']), sites=len(inv['rumor_sites']), types=len(inv['site_types']), notes=len(generated)), ensure_ascii=False))

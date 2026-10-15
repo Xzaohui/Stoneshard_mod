@@ -101,10 +101,10 @@ rule = ('\n<!-- PILOT-FX-S157:BEGIN -->\n2026-10-13 S157：试点实现批次FX�
         f"以 FX-QRY 为例覆盖野外层（存在性四态/条件回访/文书只给信息/迹象判定/三池闲谈 {pools['ambient-gossip']}／{pools['town-gossip']}／{pools['band-gossip']} 条），5条验收场景；"
         '与 N2（主章）、CS-BRY-01（城市系统）合起来覆盖实现交接六步的全部接线类型；仅排程，不含实现代码、不部署。'
         '入口design/11_管理/试点实现批次FX野外层.md；运行Validate-PilotFx.py及既有检查。\n<!-- PILOT-FX-S157:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- PILOT-FX-S157:BEGIN -->.*?<!-- PILOT-FX-S157:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- PILOT-FX-S157:BEGIN -->.*?<!-- PILOT-FX-S157:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(npc=npc['id'], visits=batch['npc']['visits'], pools=pools, scenarios=len(SCEN)), ensure_ascii=False))

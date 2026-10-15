@@ -101,10 +101,10 @@ rule = ('\n<!-- REP-REF-S135:BEGIN -->\n2026-10-13 S135：原作声誉档位与�
         '10信息流（村落/阵营/全域+界面）、20来源（任务/贸易/犯罪等，均带[声誉%rep_amount%]）、20档位（特殊任务/特色商品/赏金预付/库存±10..50%/交易±5..30%/本地公敌）、两档通缉、15地方状态；'
         '对照口径：地方信任与原版声望分开、信任档只改范围与便利、不照搬数值、不写地方状态修正、不改通缉。'
         '入口design/01_原作基线/原作声誉档位与地方状态参照.md；片段≤46字。运行Validate-ReputationReference.py及既有检查；不部署游戏包。\n<!-- REP-REF-S135:END -->\n')
-for p in [ROOT / 'AGENTS.md', V / 'AGENTS.md']:
+for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- REP-REF-S135:BEGIN -->.*?<!-- REP-REF-S135:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
-p = ROOT / 'README.md'; t = p.read_text(encoding='utf-8-sig')
+p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- REP-REF-S135:BEGIN -->.*?<!-- REP-REF-S135:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(notes=len(generated), feeds=len(probe['feeds']), perks=len(perks), states=len(states)), ensure_ascii=False))

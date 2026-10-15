@@ -233,3 +233,7 @@ model['active_ending_rules']={
 (ROOT/'research/design-model.json').write_text(json.dumps(model,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 HASH_FILE.write_text(json.dumps(generated_hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'screenplays':len(all_tasks),'scenes':sum(len(q['scenes']) for q in all_tasks),'regional_nodes':sum(len(r['nodes']) for r in regions),'scope':'original drafts only; game files untouched'},ensure_ascii=False))
+
+# Rebuild the independent HX conditional extension after the base projection.
+import runpy
+runpy.run_path(str(ROOT / "research/tools/Write-HeavyEdges.py"))

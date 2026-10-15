@@ -106,3 +106,7 @@ p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- HOOK-MAP-S171:BEGIN -->.*?<!-- HOOK-MAP-S171:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')
 print(json.dumps(dict(triggers=len(counts), stubs=len(stubs), once=cooldowns.get('once'), repeatable=cooldowns.get('repeatable')), ensure_ascii=False))
+
+# Rebuild the independent HX conditional extension after the base projection.
+import runpy
+runpy.run_path(str(ROOT / "research/tools/Write-HeavyEdges.py"))

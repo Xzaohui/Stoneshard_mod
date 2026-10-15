@@ -109,5 +109,475 @@
       ],
       "rule": "按房间/时段条件决定是否播；条件不满足时保留基础入口，不吞掉对话。"
     }
-  }
+  },
+  "heavy_edge_bindings": [
+    {
+      "event": "evt_HX01_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX01_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX01_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX02_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX02_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX02_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX03_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX03_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX03_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX04_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX04_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX04_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX05_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX05_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX05_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX06_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX06_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX06_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX07_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX07_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX07_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX08_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX08_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX08_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX09_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX09_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX09_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX10_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX10_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX10_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX11_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX11_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX11_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX12_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX12_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX12_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX13_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX13_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX13_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX14_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX14_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX14_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX15_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX15_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX15_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX16_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX16_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX16_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX17_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX17_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX17_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX18_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX18_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX18_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX19_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX19_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX19_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX20_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX20_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX20_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX21_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX21_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX21_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX22_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX22_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX22_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX23_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX23_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX23_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX24_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX24_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX24_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX25_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX25_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX25_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX26_receipt",
+      "trigger": "on_state_change",
+      "hook": "on_state_change",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX26_evaluate",
+      "trigger": "on_state_read",
+      "hook": "on_state_read",
+      "engine_event": null
+    },
+    {
+      "event": "evt_HX26_commit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null
+    }
+  ]
 }

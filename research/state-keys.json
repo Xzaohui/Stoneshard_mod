@@ -9391,12 +9391,12 @@
       "key": "resolve_N3",
       "kind": "resolve",
       "script": "N3",
-      "source": "research/story-main.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "shield",
-        "attend",
-        "expose"
+        "testimony",
+        "audit",
+        "collective"
       ],
       "note": ""
     },
@@ -9461,12 +9461,12 @@
       "key": "resolve_N4",
       "kind": "resolve",
       "script": "N4",
-      "source": "research/story-main.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
         "installments",
         "liquidate",
-        "sign"
+        "shift"
       ],
       "note": ""
     },
@@ -9531,12 +9531,12 @@
       "key": "resolve_N5",
       "kind": "resolve",
       "script": "N5",
-      "source": "research/story-main.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "north",
-        "pass",
-        "basin"
+        "inspect",
+        "ferry",
+        "carrier"
       ],
       "note": ""
     },
@@ -9601,11 +9601,12 @@
       "key": "resolve_N6",
       "kind": "resolve",
       "script": "N6",
-      "source": "research/story-main.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "sealednames",
-        "expose"
+        "archive",
+        "external",
+        "witness"
       ],
       "note": ""
     },
@@ -9659,11 +9660,12 @@
       "key": "resolve_N7",
       "kind": "resolve",
       "script": "N7",
-      "source": "research/story-main.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "coded",
-        "full"
+        "inspection",
+        "parallel",
+        "withdraw"
       ],
       "note": ""
     },
@@ -9717,11 +9719,12 @@
       "key": "resolve_N8",
       "kind": "resolve",
       "script": "N8",
-      "source": "research/story-main.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "carefirst",
-        "recordfirst"
+        "isolate",
+        "relocate",
+        "publicworks"
       ],
       "note": ""
     },
@@ -9833,11 +9836,12 @@
       "key": "resolve_SQ01",
       "kind": "resolve",
       "script": "SQ01",
-      "source": "research/story-side.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
         "public",
-        "silence"
+        "guild",
+        "buyout"
       ],
       "note": ""
     },
@@ -9891,11 +9895,12 @@
       "key": "resolve_SQ02",
       "kind": "resolve",
       "script": "SQ02",
-      "source": "research/story-side.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "supervise",
-        "merit"
+        "restitution",
+        "rationing",
+        "military"
       ],
       "note": ""
     },
@@ -9949,11 +9954,12 @@
       "key": "resolve_SQ03",
       "kind": "resolve",
       "script": "SQ03",
-      "source": "research/story-side.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "civilian",
-        "revenge"
+        "commons",
+        "voucher",
+        "retaliation"
       ],
       "note": ""
     },
@@ -10239,12 +10245,12 @@
       "key": "resolve_SQ08",
       "kind": "resolve",
       "script": "SQ08",
-      "source": "research/story-side.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "relocate",
-        "witness",
-        "custody"
+        "anonymous",
+        "surrender",
+        "relocate"
       ],
       "note": ""
     },
@@ -10367,7 +10373,7 @@
       "key": "resolve_N11",
       "kind": "resolve",
       "script": "N11",
-      "source": "research/story-main-late.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
         "trace",
@@ -10681,13 +10687,12 @@
       "key": "resolve_N16",
       "kind": "resolve",
       "script": "N16",
-      "source": "research/story-main-late.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "sealed",
-        "custody",
-        "distributed",
-        "seized"
+        "conference",
+        "bilateral",
+        "minimal"
       ],
       "note": ""
     },
@@ -10763,13 +10768,12 @@
       "key": "resolve_N17",
       "kind": "resolve",
       "script": "N17",
-      "source": "research/story-main-late.json",
+      "source": "research/story-network.json",
       "values": [
         "none",
-        "sealed",
-        "custody",
-        "distributed",
-        "seized"
+        "combat",
+        "shutdown",
+        "defection"
       ],
       "note": ""
     },
@@ -15864,6 +15868,743 @@
         "true"
       ],
       "note": "CS-BRY-15→CS-BRY-16；['source_actual_completed', 'limited_receipt_authorized', 'receiver_alive_present_willing', 'target_prerequisite_and_current_resources']"
+    }
+  ],
+  "heavy_edge_keys": [
+    {
+      "key": "custody_intent",
+      "engine_key": "EAO_custody_intent",
+      "values": [
+        "none",
+        "MG",
+        "CO",
+        "GA",
+        "dispersed"
+      ],
+      "default": "none",
+      "script": "N16",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "custody_signed",
+      "engine_key": "EAO_custody_signed",
+      "values": [
+        "none",
+        "MG",
+        "CO",
+        "GA",
+        "dispersed"
+      ],
+      "default": "none",
+      "script": "N17",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "ferry_depot_claim",
+      "engine_key": "EAO_ferry_depot_claim",
+      "values": [
+        "none",
+        "refused",
+        "MG",
+        "CO",
+        "GA"
+      ],
+      "default": "none",
+      "script": "SQ01/SQ02/SQ03",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "n4_shift_remedied",
+      "engine_key": "EAO_n4_shift_remedied",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "SQ01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "n8_relief",
+      "engine_key": "EAO_n8_relief",
+      "values": [
+        "unseen",
+        "accepted",
+        "refused"
+      ],
+      "default": "unseen",
+      "script": "N8",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "order_HX07",
+      "engine_key": "EAO_order_HX07",
+      "values": [
+        "none",
+        "N6",
+        "N7",
+        "N8"
+      ],
+      "default": "none",
+      "script": "HX07",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX01",
+      "engine_key": "EAO_receipt_HX01",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX02",
+      "engine_key": "EAO_receipt_HX02",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX02",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX03",
+      "engine_key": "EAO_receipt_HX03",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX03",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX04",
+      "engine_key": "EAO_receipt_HX04",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX04",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX05",
+      "engine_key": "EAO_receipt_HX05",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX05",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX06",
+      "engine_key": "EAO_receipt_HX06",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX06",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX07",
+      "engine_key": "EAO_receipt_HX07",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX07",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX08",
+      "engine_key": "EAO_receipt_HX08",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX08",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX09",
+      "engine_key": "EAO_receipt_HX09",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX09",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX10",
+      "engine_key": "EAO_receipt_HX10",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX10",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX11",
+      "engine_key": "EAO_receipt_HX11",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX11",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX12",
+      "engine_key": "EAO_receipt_HX12",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX12",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX13",
+      "engine_key": "EAO_receipt_HX13",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX13",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX14",
+      "engine_key": "EAO_receipt_HX14",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX14",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX15",
+      "engine_key": "EAO_receipt_HX15",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX15",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX16",
+      "engine_key": "EAO_receipt_HX16",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX16",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX17",
+      "engine_key": "EAO_receipt_HX17",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX17",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX18",
+      "engine_key": "EAO_receipt_HX18",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX18",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX19",
+      "engine_key": "EAO_receipt_HX19",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX19",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX20",
+      "engine_key": "EAO_receipt_HX20",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX20",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX21",
+      "engine_key": "EAO_receipt_HX21",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX21",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX22",
+      "engine_key": "EAO_receipt_HX22",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX22",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX23",
+      "engine_key": "EAO_receipt_HX23",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX23",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX24",
+      "engine_key": "EAO_receipt_HX24",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX24",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX25",
+      "engine_key": "EAO_receipt_HX25",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX25",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "receipt_HX26",
+      "engine_key": "EAO_receipt_HX26",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX26",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_ALD_01",
+      "engine_key": "EAO_resolve_CS_ALD_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-ALD-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_ASH_02",
+      "engine_key": "EAO_resolve_CS_ASH_02",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-ASH-02",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_BRY_09",
+      "engine_key": "EAO_resolve_CS_BRY_09",
+      "values": [
+        "none",
+        "homes",
+        "splitflow"
+      ],
+      "default": "none",
+      "script": "CS-BRY-09",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_DEN_01",
+      "engine_key": "EAO_resolve_CS_DEN_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-DEN-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_EED_01",
+      "engine_key": "EAO_resolve_CS_EED_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-EED-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_FOR_01",
+      "engine_key": "EAO_resolve_CS_FOR_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-FOR-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_HIG_01",
+      "engine_key": "EAO_resolve_CS_HIG_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-HIG-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_KOR_01",
+      "engine_key": "EAO_resolve_CS_KOR_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-KOR-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_MAE_02",
+      "engine_key": "EAO_resolve_CS_MAE_02",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-MAE-02",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_MNS_01",
+      "engine_key": "EAO_resolve_CS_MNS_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-MNS-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_OSB_01",
+      "engine_key": "EAO_resolve_CS_OSB_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-OSB-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_PAS_02",
+      "engine_key": "EAO_resolve_CS_PAS_02",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-PAS-02",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_RAT_01",
+      "engine_key": "EAO_resolve_CS_RAT_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-RAT-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_SKO_01",
+      "engine_key": "EAO_resolve_CS_SKO_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-SKO-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_CS_YOS_01",
+      "engine_key": "EAO_resolve_CS_YOS_01",
+      "values": [
+        "none",
+        "a",
+        "b"
+      ],
+      "default": "none",
+      "script": "CS-YOS-01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N11",
+      "engine_key": "EAO_resolve_N11",
+      "values": [
+        "none",
+        "trace",
+        "pay",
+        "surrender"
+      ],
+      "default": "none",
+      "script": "N11",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N16",
+      "engine_key": "EAO_resolve_N16",
+      "values": [
+        "none",
+        "conference",
+        "bilateral",
+        "minimal"
+      ],
+      "default": "none",
+      "script": "N16",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N17",
+      "engine_key": "EAO_resolve_N17",
+      "values": [
+        "none",
+        "combat",
+        "shutdown",
+        "defection"
+      ],
+      "default": "none",
+      "script": "N17",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N3",
+      "engine_key": "EAO_resolve_N3",
+      "values": [
+        "none",
+        "testimony",
+        "audit",
+        "collective"
+      ],
+      "default": "none",
+      "script": "N3",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N4",
+      "engine_key": "EAO_resolve_N4",
+      "values": [
+        "none",
+        "installments",
+        "liquidate",
+        "shift"
+      ],
+      "default": "none",
+      "script": "N4",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N5",
+      "engine_key": "EAO_resolve_N5",
+      "values": [
+        "none",
+        "inspect",
+        "ferry",
+        "carrier"
+      ],
+      "default": "none",
+      "script": "N5",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N6",
+      "engine_key": "EAO_resolve_N6",
+      "values": [
+        "none",
+        "archive",
+        "external",
+        "witness"
+      ],
+      "default": "none",
+      "script": "N6",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N7",
+      "engine_key": "EAO_resolve_N7",
+      "values": [
+        "none",
+        "inspection",
+        "parallel",
+        "withdraw"
+      ],
+      "default": "none",
+      "script": "N7",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_N8",
+      "engine_key": "EAO_resolve_N8",
+      "values": [
+        "none",
+        "isolate",
+        "relocate",
+        "publicworks"
+      ],
+      "default": "none",
+      "script": "N8",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_SQ01",
+      "engine_key": "EAO_resolve_SQ01",
+      "values": [
+        "none",
+        "public",
+        "guild",
+        "buyout"
+      ],
+      "default": "none",
+      "script": "SQ01",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_SQ02",
+      "engine_key": "EAO_resolve_SQ02",
+      "values": [
+        "none",
+        "restitution",
+        "rationing",
+        "military"
+      ],
+      "default": "none",
+      "script": "SQ02",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_SQ03",
+      "engine_key": "EAO_resolve_SQ03",
+      "values": [
+        "none",
+        "commons",
+        "voucher",
+        "retaliation"
+      ],
+      "default": "none",
+      "script": "SQ03",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "resolve_SQ08",
+      "engine_key": "EAO_resolve_SQ08",
+      "values": [
+        "none",
+        "anonymous",
+        "surrender",
+        "relocate"
+      ],
+      "default": "none",
+      "script": "SQ08",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "sylang_state",
+      "engine_key": "EAO_sylang_state",
+      "values": [
+        "alive",
+        "dead"
+      ],
+      "default": "alive",
+      "script": "N11",
+      "source": "research/story-network.json"
+    },
+    {
+      "key": "toman_personnel",
+      "engine_key": "EAO_toman_personnel",
+      "values": [
+        false,
+        true
+      ],
+      "default": false,
+      "script": "HX10",
+      "source": "research/story-network.json"
     }
   ]
 }

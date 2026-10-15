@@ -176,3 +176,7 @@ p = ROOT / 'CHANGELOG.md'; t = p.read_text(encoding='utf-8-sig')
 t = re.sub(r'\n<!-- EVENT-STUBS-S118:BEGIN -->.*?<!-- EVENT-STUBS-S118:END -->\n', '', t, flags=re.S)
 p.write_text(t.rstrip() + '\n' + rule.replace('入口design/09_系统逻辑/事件桩映射总表.md', '入口 [事件桩映射总表](design/09_系统逻辑/事件桩映射总表.md)'), encoding='utf-8')
 print(json.dumps(dict(stubs=len(stubs), triggers=trig_counts, notes=len(generated)), ensure_ascii=False))
+
+# Rebuild the independent HX conditional extension after the base projection.
+import runpy
+runpy.run_path(str(ROOT / "research/tools/Write-HeavyEdges.py"))

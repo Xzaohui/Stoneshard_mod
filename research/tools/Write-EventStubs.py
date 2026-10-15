@@ -101,6 +101,11 @@ out = dict(date='2026-10-13', scope='S118 implementation event stubs: naming, tr
                         '本表不声明真实引擎事件号；引擎号在实现阶段分配'],
            trigger_counts=trig_counts, stubs=stubs)
 (ROOT / 'research' / 'event-stubs.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+# Documentation refresh is opt-in and includes shared root files.
+import sys, runpy
+if '--update-readme' not in sys.argv:
+    runpy.run_path(str(ROOT / 'research/tools/Write-HeavyEdges.py'))
+    raise SystemExit(0)
 changed = set(); generated = {}
 def put(rel, t):
     p = V / rel; p.parent.mkdir(parents=True, exist_ok=True)

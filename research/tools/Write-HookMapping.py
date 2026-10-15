@@ -44,6 +44,11 @@ facts = dict(date='2026-10-13',
              scope='S171 hook mapping: eight trigger kinds mapped to concrete engine hook patterns with evidence from the implemented sample; read-only',
              trigger_counts=dict(counts), cooldown_counts=dict(cooldowns), hooks=HOOKS)
 (R / 'hook-mapping.json').write_text(json.dumps(facts, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+# Documentation refresh is opt-in and includes shared root files.
+import sys, runpy
+if '--update-readme' not in sys.argv:
+    runpy.run_path(str(ROOT / 'research/tools/Write-HeavyEdges.py'))
+    raise SystemExit(0)
 changed = set(); generated = {}
 def put(rel, t):
     p = V / rel; p.parent.mkdir(parents=True, exist_ok=True)

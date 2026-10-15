@@ -5,7 +5,7 @@ import hashlib
 import json
 import re
 import sys
-from HeavyEdges import project
+from HeavyEdges import project, support_stubs
 
 ROOT = Path(__file__).resolve().parents[2]
 KEYS = {'ferry_depot_claim', 'custody_intent', 'custody_signed',
@@ -145,9 +145,11 @@ def validate(net, model):
                                       ('state-keys.json','heavy_edge_keys',expected_keys)]:
         data=json.loads((ROOT/'research'/filename).read_text(encoding='utf-8'))
         check(data.get(field)==expected, 'HX-'+field+'-projection')
+    state_data=json.loads((ROOT/'research/state-keys.json').read_text(encoding='utf-8'))
+    check(state_data.get('heavy_edge_families') == {'route':12, 'state':len(expected_keys)-12}, 'HX-family-counts')
     hooks=json.loads((ROOT/'research/hook-mapping.json').read_text(encoding='utf-8'))
     bindings=hooks.get('heavy_edge_bindings',[])
-    check(bindings==[dict(event=s['event'],trigger=s['trigger'],hook=s['trigger'],engine_event=None) for s in expected_stubs], 'HX-hook-bindings')
+    check(bindings==[dict(event=s['event'],trigger=s['trigger'],hook=s['trigger'],engine_event=None, when=s['when']) for s in expected_stubs], 'HX-hook-bindings')
     known={k['key'] for k in expected_keys}
     base_by_key={k['key']:k for k in base_keys}
     for key in expected_keys:
@@ -156,6 +158,30 @@ def validate(net, model):
     for stub in expected_stubs:
         check(set(stub['reads']+stub['writes'])<=known,stub['event']+'-keys')
         check(stub['trigger'] in hooks['hooks'],stub['event']+'-native-hook')
+    event_data=json.loads((ROOT/'research/event-stubs.json').read_text(encoding='utf-8'))
+    actual_support=event_data.get('route_state_stubs', [])
+    check(actual_support == support_stubs(net), 'route-state-projection')
+    check(hooks.get('route_state_bindings') == [dict(event=s['event'], trigger=s['trigger'], hook=s['trigger'], engine_event=None, when=s['when']) for s in actual_support], 'route-state-bindings')
+    domains={k['key']: k['values'] for k in base_keys+expected_keys}
+    writers={}
+    all_stubs=event_data['stubs']+event_data.get('heavy_edge_stubs',[])+actual_support
+    check(len({s['event'] for s in all_stubs}) == len(all_stubs), 'all-event-names-unique')
+    for stub in all_stubs:
+        sets=dict(stub.get('sets', {}))
+        # Historical choice stubs describe their selected value in route(value).
+        route=re.fullmatch(r'route\(([A-Za-z0-9_]+)\)', str(stub['when']))
+        if route:
+            for key in stub['writes']:
+                if key.startswith('resolve_'): sets[key]=route[1]
+        for key,value in sets.items():
+            check(key in domains and value in domains[key], stub['event']+'-write-domain-'+key)
+            check(key in stub['writes'], stub['event']+'-declares-write-'+key)
+            writers.setdefault(key,set()).add(value)
+    for stub in event_data.get('heavy_edge_stubs',[])+actual_support:
+        for key,values in stub['when'].items():
+            check(key in writers, stub['event']+'-has-writer-'+key)
+            for value in values:
+                check(value in writers.get(key,set()), stub['event']+'-reachable-'+key+'='+str(value))
     # HX endpoints must never be installed as hard prerequisite references.
     entries={q['id']:q for q in model['screenplays']}
     authored={}

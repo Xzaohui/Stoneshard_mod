@@ -21,8 +21,8 @@
       "evidence": [
         {
           "file": "night_controller_step.gml",
-          "line": 28,
-          "code": "instance_create_depth(_px, _py, -_py, _obj);"
+          "line": 29,
+          "code": "instance_create_depth(_px, _py, -_py, _actors[_a][0]);"
         },
         {
           "file": "night_controller_step.gml",
@@ -70,7 +70,7 @@
       "evidence": [
         {
           "file": "night_controller_step.gml",
-          "line": 21,
+          "line": 56,
           "code": "if (_n == 1 && (!ds_map_exists(global.characterDataMap, \"EAO_N1_stage\") || ds_map_find_value(global.characterD"
         }
       ],
@@ -115,469 +115,1476 @@
       "event": "evt_HX01_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N3": [
+          "audit"
+        ]
+      }
     },
     {
       "event": "evt_HX01_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N3": [
+          "audit"
+        ]
+      }
     },
     {
       "event": "evt_HX01_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N3": [
+          "audit"
+        ]
+      }
     },
     {
       "event": "evt_HX02_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N4": [
+          "installments",
+          "liquidate",
+          "shift"
+        ]
+      }
     },
     {
       "event": "evt_HX02_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N4": [
+          "installments",
+          "liquidate",
+          "shift"
+        ]
+      }
     },
     {
       "event": "evt_HX02_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N4": [
+          "installments",
+          "liquidate",
+          "shift"
+        ]
+      }
     },
     {
       "event": "evt_HX03_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_BRY_09": [
+          "splitflow"
+        ]
+      }
     },
     {
       "event": "evt_HX03_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_BRY_09": [
+          "splitflow"
+        ]
+      }
     },
     {
       "event": "evt_HX03_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_BRY_09": [
+          "splitflow"
+        ]
+      }
     },
     {
       "event": "evt_HX04_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N5": [
+          "carrier"
+        ]
+      }
     },
     {
       "event": "evt_HX04_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N5": [
+          "carrier"
+        ]
+      }
     },
     {
       "event": "evt_HX04_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_N5": [
+          "carrier"
+        ]
+      }
     },
     {
       "event": "evt_HX05_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "ferry_depot_claim": [
+          "GA",
+          "CO"
+        ]
+      }
     },
     {
       "event": "evt_HX05_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "ferry_depot_claim": [
+          "GA",
+          "CO"
+        ]
+      }
     },
     {
       "event": "evt_HX05_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "ferry_depot_claim": [
+          "GA",
+          "CO"
+        ]
+      }
     },
     {
       "event": "evt_HX06_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "n8_relief": [
+          "accepted",
+          "refused"
+        ]
+      }
     },
     {
       "event": "evt_HX06_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "n8_relief": [
+          "accepted",
+          "refused"
+        ]
+      }
     },
     {
       "event": "evt_HX06_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "n8_relief": [
+          "accepted",
+          "refused"
+        ]
+      }
     },
     {
       "event": "evt_HX07_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {}
     },
     {
       "event": "evt_HX07_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {}
     },
     {
       "event": "evt_HX07_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {}
     },
     {
       "event": "evt_HX08_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "surrender"
+        ]
+      }
     },
     {
       "event": "evt_HX08_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "surrender"
+        ]
+      }
     },
     {
       "event": "evt_HX08_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "surrender"
+        ]
+      }
     },
     {
       "event": "evt_HX09_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "trace"
+        ]
+      }
     },
     {
       "event": "evt_HX09_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "trace"
+        ]
+      }
     },
     {
       "event": "evt_HX09_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "trace"
+        ]
+      }
     },
     {
       "event": "evt_HX10_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "surrender"
+        ],
+        "toman_personnel": [
+          "false"
+        ]
+      }
     },
     {
       "event": "evt_HX10_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "surrender"
+        ],
+        "toman_personnel": [
+          "false"
+        ]
+      }
     },
     {
       "event": "evt_HX10_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_N11": [
+          "surrender"
+        ],
+        "toman_personnel": [
+          "false"
+        ]
+      }
     },
     {
       "event": "evt_HX11_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_SQ08": [
+          "relocate"
+        ]
+      }
     },
     {
       "event": "evt_HX11_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_SQ08": [
+          "relocate"
+        ]
+      }
     },
     {
       "event": "evt_HX11_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "route_SQ08": [
+          "relocate"
+        ]
+      }
     },
     {
       "event": "evt_HX12_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "custody_signed": [
+          "MG",
+          "CO",
+          "GA",
+          "dispersed"
+        ]
+      }
     },
     {
       "event": "evt_HX12_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "custody_signed": [
+          "MG",
+          "CO",
+          "GA",
+          "dispersed"
+        ]
+      }
     },
     {
       "event": "evt_HX12_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "custody_signed": [
+          "MG",
+          "CO",
+          "GA",
+          "dispersed"
+        ]
+      }
     },
     {
       "event": "evt_HX13_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_ASH_02": [
+          "b",
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX13_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_ASH_02": [
+          "b",
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX13_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_ASH_02": [
+          "b",
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX14_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_MAE_02": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX14_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_MAE_02": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX14_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_MAE_02": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX15_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_PAS_02": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX15_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_PAS_02": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX15_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_PAS_02": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX16_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_HIG_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX16_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_HIG_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX16_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_HIG_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX17_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_DEN_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX17_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_DEN_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX17_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_DEN_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX18_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_OSB_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX18_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_OSB_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX18_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_OSB_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX19_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_MNS_01": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX19_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_MNS_01": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX19_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_MNS_01": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX20_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_ALD_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX20_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_ALD_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX20_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_ALD_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX21_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_SKO_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX21_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_SKO_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX21_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_SKO_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX22_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_YOS_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX22_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_YOS_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX22_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_YOS_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX23_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_KOR_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX23_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_KOR_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX23_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_KOR_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX24_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_EED_01": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX24_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_EED_01": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX24_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_EED_01": [
+          "b"
+        ]
+      }
     },
     {
       "event": "evt_HX25_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_FOR_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX25_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_FOR_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX25_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_FOR_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX26_receipt",
       "trigger": "on_state_change",
       "hook": "on_state_change",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_RAT_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX26_evaluate",
       "trigger": "on_state_read",
       "hook": "on_state_read",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_RAT_01": [
+          "a"
+        ]
+      }
     },
     {
       "event": "evt_HX26_commit",
       "trigger": "on_route_selected",
       "hook": "on_route_selected",
-      "engine_event": null
+      "engine_event": null,
+      "when": {
+        "resolve_CS_RAT_01": [
+          "a"
+        ]
+      }
+    }
+  ],
+  "route_state_bindings": [
+    {
+      "event": "evt_N3_route_testimony",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N3_route_audit",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N3_route_collective",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N4_route_installments",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N4_route_liquidate",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N4_route_shift",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N5_route_inspect",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N5_route_ferry",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N5_route_carrier",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N6_route_archive",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N6_route_external",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N6_route_witness",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N7_route_inspection",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N7_route_parallel",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N7_route_withdraw",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N8_route_isolate",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N8_route_relocate",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N8_route_publicworks",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N16_route_conference",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N16_route_bilateral",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N16_route_minimal",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N17_route_combat",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N17_route_shutdown",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N17_route_defection",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ01_route_public",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ01_route_guild",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ01_route_buyout",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ02_route_restitution",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ02_route_rationing",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ02_route_military",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ03_route_commons",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ03_route_voucher",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ03_route_retaliation",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ08_route_anonymous",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ08_route_surrender",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ08_route_relocate",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_ALD_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_ASH_02_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_ASH_02_settle_b",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_BRY_09_settle_splitflow",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_DEN_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_EED_01_settle_b",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_FOR_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_HIG_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_KOR_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_MAE_02_settle_b",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_MNS_01_settle_b",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_OSB_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_PAS_02_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_RAT_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_SKO_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_CS_YOS_01_settle_a",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N11_settle_surrender",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N11_settle_trace",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N16_custody_intent_none",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N16_custody_intent_mg",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N16_custody_intent_co",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N16_custody_intent_ga",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N16_custody_intent_dispersed",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N17_custody_signed_none",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {
+        "custody_intent": [
+          "none"
+        ]
+      }
+    },
+    {
+      "event": "evt_N17_custody_signed_mg",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {
+        "custody_intent": [
+          "MG"
+        ]
+      }
+    },
+    {
+      "event": "evt_N17_custody_signed_co",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {
+        "custody_intent": [
+          "CO"
+        ]
+      }
+    },
+    {
+      "event": "evt_N17_custody_signed_ga",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {
+        "custody_intent": [
+          "GA"
+        ]
+      }
+    },
+    {
+      "event": "evt_N17_custody_signed_dispersed",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {
+        "custody_intent": [
+          "dispersed"
+        ]
+      }
+    },
+    {
+      "event": "evt_N8_n8_relief_accepted",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N8_n8_relief_refused",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N11_sylang_state_dead",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_SQ01_n4_shift_remedied_true",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N12_toman_personnel_false",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
+    },
+    {
+      "event": "evt_N12_toman_personnel_true",
+      "trigger": "on_route_selected",
+      "hook": "on_route_selected",
+      "engine_event": null,
+      "when": {}
     }
   ]
 }

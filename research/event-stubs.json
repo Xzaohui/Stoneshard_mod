@@ -28751,13 +28751,13 @@
       "node": "receipt",
       "trigger": "on_state_change",
       "when": {
-        "resolve_N3": [
+        "route_N3": [
           "audit"
         ]
       },
       "reads": [
         "receipt_HX01",
-        "resolve_N3"
+        "route_N3"
       ],
       "writes": [
         "receipt_HX01"
@@ -28777,7 +28777,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX01": "true"
+      }
     },
     {
       "event": "evt_HX01_evaluate",
@@ -28785,13 +28788,13 @@
       "node": "evaluate",
       "trigger": "on_state_read",
       "when": {
-        "resolve_N3": [
+        "route_N3": [
           "audit"
         ]
       },
       "reads": [
         "receipt_HX01",
-        "resolve_N3"
+        "route_N3"
       ],
       "writes": [],
       "cooldown": "repeatable",
@@ -28809,7 +28812,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX01_commit",
@@ -28817,13 +28821,13 @@
       "node": "commit",
       "trigger": "on_route_selected",
       "when": {
-        "resolve_N3": [
+        "route_N3": [
           "audit"
         ]
       },
       "reads": [
         "receipt_HX01",
-        "resolve_N3"
+        "route_N3"
       ],
       "writes": [],
       "cooldown": "once",
@@ -28841,7 +28845,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX02_receipt",
@@ -28849,7 +28854,7 @@
       "node": "receipt",
       "trigger": "on_state_change",
       "when": {
-        "resolve_N4": [
+        "route_N4": [
           "installments",
           "liquidate",
           "shift"
@@ -28858,7 +28863,7 @@
       "reads": [
         "n4_shift_remedied",
         "receipt_HX02",
-        "resolve_N4"
+        "route_N4"
       ],
       "writes": [
         "receipt_HX02"
@@ -28878,7 +28883,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX02": "true"
+      }
     },
     {
       "event": "evt_HX02_evaluate",
@@ -28886,7 +28894,7 @@
       "node": "evaluate",
       "trigger": "on_state_read",
       "when": {
-        "resolve_N4": [
+        "route_N4": [
           "installments",
           "liquidate",
           "shift"
@@ -28895,7 +28903,7 @@
       "reads": [
         "n4_shift_remedied",
         "receipt_HX02",
-        "resolve_N4"
+        "route_N4"
       ],
       "writes": [],
       "cooldown": "repeatable",
@@ -28913,7 +28921,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX02_commit",
@@ -28921,7 +28930,7 @@
       "node": "commit",
       "trigger": "on_route_selected",
       "when": {
-        "resolve_N4": [
+        "route_N4": [
           "installments",
           "liquidate",
           "shift"
@@ -28930,7 +28939,7 @@
       "reads": [
         "n4_shift_remedied",
         "receipt_HX02",
-        "resolve_N4"
+        "route_N4"
       ],
       "writes": [],
       "cooldown": "once",
@@ -28948,7 +28957,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX03_receipt",
@@ -28983,7 +28993,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX03": "true"
+      }
     },
     {
       "event": "evt_HX03_evaluate",
@@ -29016,7 +29029,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX03_commit",
@@ -29049,7 +29063,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX04_receipt",
@@ -29057,13 +29072,13 @@
       "node": "receipt",
       "trigger": "on_state_change",
       "when": {
-        "resolve_N5": [
+        "route_N5": [
           "carrier"
         ]
       },
       "reads": [
         "receipt_HX04",
-        "resolve_N5"
+        "route_N5"
       ],
       "writes": [
         "receipt_HX04"
@@ -29084,7 +29099,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX04": "true"
+      }
     },
     {
       "event": "evt_HX04_evaluate",
@@ -29092,13 +29110,13 @@
       "node": "evaluate",
       "trigger": "on_state_read",
       "when": {
-        "resolve_N5": [
+        "route_N5": [
           "carrier"
         ]
       },
       "reads": [
         "receipt_HX04",
-        "resolve_N5"
+        "route_N5"
       ],
       "writes": [],
       "cooldown": "repeatable",
@@ -29117,7 +29135,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX04_commit",
@@ -29125,13 +29144,13 @@
       "node": "commit",
       "trigger": "on_route_selected",
       "when": {
-        "resolve_N5": [
+        "route_N5": [
           "carrier"
         ]
       },
       "reads": [
         "receipt_HX04",
-        "resolve_N5"
+        "route_N5"
       ],
       "writes": [],
       "cooldown": "once",
@@ -29150,7 +29169,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX05_receipt",
@@ -29166,9 +29186,9 @@
       "reads": [
         "ferry_depot_claim",
         "receipt_HX05",
-        "resolve_SQ01",
-        "resolve_SQ02",
-        "resolve_SQ03"
+        "route_SQ01",
+        "route_SQ02",
+        "route_SQ03"
       ],
       "writes": [
         "receipt_HX05"
@@ -29191,7 +29211,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX05": "true"
+      }
     },
     {
       "event": "evt_HX05_evaluate",
@@ -29207,9 +29230,9 @@
       "reads": [
         "ferry_depot_claim",
         "receipt_HX05",
-        "resolve_SQ01",
-        "resolve_SQ02",
-        "resolve_SQ03"
+        "route_SQ01",
+        "route_SQ02",
+        "route_SQ03"
       ],
       "writes": [],
       "cooldown": "repeatable",
@@ -29230,7 +29253,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX05_commit",
@@ -29246,9 +29270,9 @@
       "reads": [
         "ferry_depot_claim",
         "receipt_HX05",
-        "resolve_SQ01",
-        "resolve_SQ02",
-        "resolve_SQ03"
+        "route_SQ01",
+        "route_SQ02",
+        "route_SQ03"
       ],
       "writes": [],
       "cooldown": "once",
@@ -29269,7 +29293,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX06_receipt",
@@ -29285,7 +29310,7 @@
       "reads": [
         "n8_relief",
         "receipt_HX06",
-        "resolve_N8"
+        "route_N8"
       ],
       "writes": [
         "receipt_HX06"
@@ -29307,7 +29332,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX06": "true"
+      }
     },
     {
       "event": "evt_HX06_evaluate",
@@ -29323,7 +29351,7 @@
       "reads": [
         "n8_relief",
         "receipt_HX06",
-        "resolve_N8"
+        "route_N8"
       ],
       "writes": [],
       "cooldown": "repeatable",
@@ -29343,7 +29371,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX06_commit",
@@ -29359,7 +29388,7 @@
       "reads": [
         "n8_relief",
         "receipt_HX06",
-        "resolve_N8"
+        "route_N8"
       ],
       "writes": [],
       "cooldown": "once",
@@ -29379,7 +29408,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX07_receipt",
@@ -29390,9 +29420,9 @@
       "reads": [
         "order_HX07",
         "receipt_HX07",
-        "resolve_N6",
-        "resolve_N7",
-        "resolve_N8"
+        "route_N6",
+        "route_N7",
+        "route_N8"
       ],
       "writes": [
         "receipt_HX07"
@@ -29416,7 +29446,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX07": "true"
+      }
     },
     {
       "event": "evt_HX07_evaluate",
@@ -29427,9 +29460,9 @@
       "reads": [
         "order_HX07",
         "receipt_HX07",
-        "resolve_N6",
-        "resolve_N7",
-        "resolve_N8"
+        "route_N6",
+        "route_N7",
+        "route_N8"
       ],
       "writes": [],
       "cooldown": "repeatable",
@@ -29451,7 +29484,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX07_commit",
@@ -29462,9 +29496,9 @@
       "reads": [
         "order_HX07",
         "receipt_HX07",
-        "resolve_N6",
-        "resolve_N7",
-        "resolve_N8"
+        "route_N6",
+        "route_N7",
+        "route_N8"
       ],
       "writes": [],
       "cooldown": "once",
@@ -29486,7 +29520,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX08_receipt",
@@ -29521,7 +29556,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX08": "true"
+      }
     },
     {
       "event": "evt_HX08_evaluate",
@@ -29554,7 +29592,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX08_commit",
@@ -29587,7 +29626,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX09_receipt",
@@ -29622,7 +29662,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX09": "true"
+      }
     },
     {
       "event": "evt_HX09_evaluate",
@@ -29655,7 +29698,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX09_commit",
@@ -29690,7 +29734,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {
+        "sylang_state": "dead"
+      }
     },
     {
       "event": "evt_HX10_receipt",
@@ -29702,7 +29749,7 @@
           "surrender"
         ],
         "toman_personnel": [
-          false
+          "false"
         ]
       },
       "reads": [
@@ -29729,7 +29776,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX10": "true"
+      }
     },
     {
       "event": "evt_HX10_evaluate",
@@ -29741,7 +29791,7 @@
           "surrender"
         ],
         "toman_personnel": [
-          false
+          "false"
         ]
       },
       "reads": [
@@ -29766,7 +29816,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX10_commit",
@@ -29778,7 +29829,7 @@
           "surrender"
         ],
         "toman_personnel": [
-          false
+          "false"
         ]
       },
       "reads": [
@@ -29803,7 +29854,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX11_receipt",
@@ -29811,13 +29863,13 @@
       "node": "receipt",
       "trigger": "on_state_change",
       "when": {
-        "resolve_SQ08": [
+        "route_SQ08": [
           "relocate"
         ]
       },
       "reads": [
         "receipt_HX11",
-        "resolve_SQ08"
+        "route_SQ08"
       ],
       "writes": [
         "receipt_HX11"
@@ -29837,7 +29889,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX11": "true"
+      }
     },
     {
       "event": "evt_HX11_evaluate",
@@ -29845,13 +29900,13 @@
       "node": "evaluate",
       "trigger": "on_state_read",
       "when": {
-        "resolve_SQ08": [
+        "route_SQ08": [
           "relocate"
         ]
       },
       "reads": [
         "receipt_HX11",
-        "resolve_SQ08"
+        "route_SQ08"
       ],
       "writes": [],
       "cooldown": "repeatable",
@@ -29869,7 +29924,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX11_commit",
@@ -29877,13 +29933,13 @@
       "node": "commit",
       "trigger": "on_route_selected",
       "when": {
-        "resolve_SQ08": [
+        "route_SQ08": [
           "relocate"
         ]
       },
       "reads": [
         "receipt_HX11",
-        "resolve_SQ08"
+        "route_SQ08"
       ],
       "writes": [],
       "cooldown": "once",
@@ -29901,7 +29957,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX12_receipt",
@@ -29919,8 +29976,8 @@
       "reads": [
         "custody_signed",
         "receipt_HX12",
-        "resolve_N16",
-        "resolve_N17"
+        "route_N16",
+        "route_N17"
       ],
       "writes": [
         "receipt_HX12"
@@ -29941,7 +29998,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX12": "true"
+      }
     },
     {
       "event": "evt_HX12_evaluate",
@@ -29959,8 +30019,8 @@
       "reads": [
         "custody_signed",
         "receipt_HX12",
-        "resolve_N16",
-        "resolve_N17"
+        "route_N16",
+        "route_N17"
       ],
       "writes": [],
       "cooldown": "repeatable",
@@ -29979,7 +30039,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX12_commit",
@@ -29997,8 +30058,8 @@
       "reads": [
         "custody_signed",
         "receipt_HX12",
-        "resolve_N16",
-        "resolve_N17"
+        "route_N16",
+        "route_N17"
       ],
       "writes": [],
       "cooldown": "once",
@@ -30017,7 +30078,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX13_receipt",
@@ -30052,7 +30114,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX13": "true"
+      }
     },
     {
       "event": "evt_HX13_evaluate",
@@ -30085,7 +30150,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX13_commit",
@@ -30118,7 +30184,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX14_receipt",
@@ -30153,7 +30220,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX14": "true"
+      }
     },
     {
       "event": "evt_HX14_evaluate",
@@ -30186,7 +30256,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX14_commit",
@@ -30219,7 +30290,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX15_receipt",
@@ -30253,7 +30325,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX15": "true"
+      }
     },
     {
       "event": "evt_HX15_evaluate",
@@ -30285,7 +30360,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX15_commit",
@@ -30317,7 +30393,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX16_receipt",
@@ -30351,7 +30428,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX16": "true"
+      }
     },
     {
       "event": "evt_HX16_evaluate",
@@ -30383,7 +30463,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX16_commit",
@@ -30415,7 +30496,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX17_receipt",
@@ -30449,7 +30531,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX17": "true"
+      }
     },
     {
       "event": "evt_HX17_evaluate",
@@ -30481,7 +30566,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX17_commit",
@@ -30513,7 +30599,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX18_receipt",
@@ -30547,7 +30634,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX18": "true"
+      }
     },
     {
       "event": "evt_HX18_evaluate",
@@ -30579,7 +30669,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX18_commit",
@@ -30611,7 +30702,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX19_receipt",
@@ -30645,7 +30737,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX19": "true"
+      }
     },
     {
       "event": "evt_HX19_evaluate",
@@ -30677,7 +30772,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX19_commit",
@@ -30709,7 +30805,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX20_receipt",
@@ -30743,7 +30840,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX20": "true"
+      }
     },
     {
       "event": "evt_HX20_evaluate",
@@ -30775,7 +30875,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX20_commit",
@@ -30807,7 +30908,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX21_receipt",
@@ -30841,7 +30943,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX21": "true"
+      }
     },
     {
       "event": "evt_HX21_evaluate",
@@ -30873,7 +30978,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX21_commit",
@@ -30905,7 +31011,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX22_receipt",
@@ -30939,7 +31046,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX22": "true"
+      }
     },
     {
       "event": "evt_HX22_evaluate",
@@ -30971,7 +31081,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX22_commit",
@@ -31003,7 +31114,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX23_receipt",
@@ -31037,7 +31149,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX23": "true"
+      }
     },
     {
       "event": "evt_HX23_evaluate",
@@ -31069,7 +31184,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX23_commit",
@@ -31101,7 +31217,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX24_receipt",
@@ -31135,7 +31252,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX24": "true"
+      }
     },
     {
       "event": "evt_HX24_evaluate",
@@ -31167,7 +31287,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX24_commit",
@@ -31199,7 +31320,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX25_receipt",
@@ -31233,7 +31355,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX25": "true"
+      }
     },
     {
       "event": "evt_HX25_evaluate",
@@ -31265,7 +31390,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX25_commit",
@@ -31297,7 +31423,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
     },
     {
       "event": "evt_HX26_receipt",
@@ -31331,7 +31458,10 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "源实际结算后交付有限回执"
+      "rule": "源实际结算后交付有限回执",
+      "sets": {
+        "receipt_HX26": "true"
+      }
     },
     {
       "event": "evt_HX26_evaluate",
@@ -31363,7 +31493,8 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口"
+      "rule": "只重评未来参数；人物守卫失败走固定物证/基础出口",
+      "sets": {}
     },
     {
       "event": "evt_HX26_commit",
@@ -31395,7 +31526,1434 @@
         "receipt_required": true
       },
       "engine_event": null,
-      "rule": "仅实际源处置提交历史后果；不以回执或预览提交"
+      "rule": "仅实际源处置提交历史后果；不以回执或预览提交",
+      "sets": {}
+    }
+  ],
+  "route_state_stubs": [
+    {
+      "event": "evt_N3_route_testimony",
+      "script": "N3",
+      "node": "route_testimony",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N3"
+      ],
+      "sets": {
+        "route_N3": "testimony"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N3_route_audit",
+      "script": "N3",
+      "node": "route_audit",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N3"
+      ],
+      "sets": {
+        "route_N3": "audit"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N3_route_collective",
+      "script": "N3",
+      "node": "route_collective",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N3"
+      ],
+      "sets": {
+        "route_N3": "collective"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N4_route_installments",
+      "script": "N4",
+      "node": "route_installments",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N4"
+      ],
+      "sets": {
+        "route_N4": "installments"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N4_route_liquidate",
+      "script": "N4",
+      "node": "route_liquidate",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N4"
+      ],
+      "sets": {
+        "route_N4": "liquidate"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N4_route_shift",
+      "script": "N4",
+      "node": "route_shift",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N4"
+      ],
+      "sets": {
+        "route_N4": "shift"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N5_route_inspect",
+      "script": "N5",
+      "node": "route_inspect",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N5"
+      ],
+      "sets": {
+        "route_N5": "inspect"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N5_route_ferry",
+      "script": "N5",
+      "node": "route_ferry",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N5"
+      ],
+      "sets": {
+        "route_N5": "ferry"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N5_route_carrier",
+      "script": "N5",
+      "node": "route_carrier",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N5"
+      ],
+      "sets": {
+        "route_N5": "carrier"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N6_route_archive",
+      "script": "N6",
+      "node": "route_archive",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N6"
+      ],
+      "sets": {
+        "route_N6": "archive"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N6_route_external",
+      "script": "N6",
+      "node": "route_external",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N6"
+      ],
+      "sets": {
+        "route_N6": "external"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N6_route_witness",
+      "script": "N6",
+      "node": "route_witness",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N6"
+      ],
+      "sets": {
+        "route_N6": "witness"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N7_route_inspection",
+      "script": "N7",
+      "node": "route_inspection",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N7"
+      ],
+      "sets": {
+        "route_N7": "inspection"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N7_route_parallel",
+      "script": "N7",
+      "node": "route_parallel",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N7"
+      ],
+      "sets": {
+        "route_N7": "parallel"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N7_route_withdraw",
+      "script": "N7",
+      "node": "route_withdraw",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N7"
+      ],
+      "sets": {
+        "route_N7": "withdraw"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N8_route_isolate",
+      "script": "N8",
+      "node": "route_isolate",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N8"
+      ],
+      "sets": {
+        "route_N8": "isolate"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N8_route_relocate",
+      "script": "N8",
+      "node": "route_relocate",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N8"
+      ],
+      "sets": {
+        "route_N8": "relocate"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N8_route_publicworks",
+      "script": "N8",
+      "node": "route_publicworks",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N8"
+      ],
+      "sets": {
+        "route_N8": "publicworks"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N16_route_conference",
+      "script": "N16",
+      "node": "route_conference",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N16"
+      ],
+      "sets": {
+        "route_N16": "conference"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N16_route_bilateral",
+      "script": "N16",
+      "node": "route_bilateral",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N16"
+      ],
+      "sets": {
+        "route_N16": "bilateral"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N16_route_minimal",
+      "script": "N16",
+      "node": "route_minimal",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N16"
+      ],
+      "sets": {
+        "route_N16": "minimal"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N17_route_combat",
+      "script": "N17",
+      "node": "route_combat",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N17"
+      ],
+      "sets": {
+        "route_N17": "combat"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N17_route_shutdown",
+      "script": "N17",
+      "node": "route_shutdown",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N17"
+      ],
+      "sets": {
+        "route_N17": "shutdown"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_N17_route_defection",
+      "script": "N17",
+      "node": "route_defection",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_N17"
+      ],
+      "sets": {
+        "route_N17": "defection"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ01_route_public",
+      "script": "SQ01",
+      "node": "route_public",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ01"
+      ],
+      "sets": {
+        "route_SQ01": "public"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ01_route_guild",
+      "script": "SQ01",
+      "node": "route_guild",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ01"
+      ],
+      "sets": {
+        "route_SQ01": "guild"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ01_route_buyout",
+      "script": "SQ01",
+      "node": "route_buyout",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ01"
+      ],
+      "sets": {
+        "route_SQ01": "buyout"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ02_route_restitution",
+      "script": "SQ02",
+      "node": "route_restitution",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ02"
+      ],
+      "sets": {
+        "route_SQ02": "restitution"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ02_route_rationing",
+      "script": "SQ02",
+      "node": "route_rationing",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ02"
+      ],
+      "sets": {
+        "route_SQ02": "rationing"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ02_route_military",
+      "script": "SQ02",
+      "node": "route_military",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ02"
+      ],
+      "sets": {
+        "route_SQ02": "military"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ03_route_commons",
+      "script": "SQ03",
+      "node": "route_commons",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ03"
+      ],
+      "sets": {
+        "route_SQ03": "commons"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ03_route_voucher",
+      "script": "SQ03",
+      "node": "route_voucher",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ03"
+      ],
+      "sets": {
+        "route_SQ03": "voucher"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ03_route_retaliation",
+      "script": "SQ03",
+      "node": "route_retaliation",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ03"
+      ],
+      "sets": {
+        "route_SQ03": "retaliation"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ08_route_anonymous",
+      "script": "SQ08",
+      "node": "route_anonymous",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ08"
+      ],
+      "sets": {
+        "route_SQ08": "anonymous"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ08_route_surrender",
+      "script": "SQ08",
+      "node": "route_surrender",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ08"
+      ],
+      "sets": {
+        "route_SQ08": "surrender"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_SQ08_route_relocate",
+      "script": "SQ08",
+      "node": "route_relocate",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "route_SQ08"
+      ],
+      "sets": {
+        "route_SQ08": "relocate"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
+    },
+    {
+      "event": "evt_CS_ALD_01_settle_a",
+      "script": "CS_ALD_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_ALD_01"
+      ],
+      "sets": {
+        "resolve_CS_ALD_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_ASH_02_settle_a",
+      "script": "CS_ASH_02",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_ASH_02"
+      ],
+      "sets": {
+        "resolve_CS_ASH_02": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_ASH_02_settle_b",
+      "script": "CS_ASH_02",
+      "node": "settle_b",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_ASH_02"
+      ],
+      "sets": {
+        "resolve_CS_ASH_02": "b"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_BRY_09_settle_splitflow",
+      "script": "CS_BRY_09",
+      "node": "settle_splitflow",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_BRY_09"
+      ],
+      "sets": {
+        "resolve_CS_BRY_09": "splitflow"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_DEN_01_settle_a",
+      "script": "CS_DEN_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_DEN_01"
+      ],
+      "sets": {
+        "resolve_CS_DEN_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_EED_01_settle_b",
+      "script": "CS_EED_01",
+      "node": "settle_b",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_EED_01"
+      ],
+      "sets": {
+        "resolve_CS_EED_01": "b"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_FOR_01_settle_a",
+      "script": "CS_FOR_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_FOR_01"
+      ],
+      "sets": {
+        "resolve_CS_FOR_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_HIG_01_settle_a",
+      "script": "CS_HIG_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_HIG_01"
+      ],
+      "sets": {
+        "resolve_CS_HIG_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_KOR_01_settle_a",
+      "script": "CS_KOR_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_KOR_01"
+      ],
+      "sets": {
+        "resolve_CS_KOR_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_MAE_02_settle_b",
+      "script": "CS_MAE_02",
+      "node": "settle_b",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_MAE_02"
+      ],
+      "sets": {
+        "resolve_CS_MAE_02": "b"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_MNS_01_settle_b",
+      "script": "CS_MNS_01",
+      "node": "settle_b",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_MNS_01"
+      ],
+      "sets": {
+        "resolve_CS_MNS_01": "b"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_OSB_01_settle_a",
+      "script": "CS_OSB_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_OSB_01"
+      ],
+      "sets": {
+        "resolve_CS_OSB_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_PAS_02_settle_a",
+      "script": "CS_PAS_02",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_PAS_02"
+      ],
+      "sets": {
+        "resolve_CS_PAS_02": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_RAT_01_settle_a",
+      "script": "CS_RAT_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_RAT_01"
+      ],
+      "sets": {
+        "resolve_CS_RAT_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_SKO_01_settle_a",
+      "script": "CS_SKO_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_SKO_01"
+      ],
+      "sets": {
+        "resolve_CS_SKO_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_CS_YOS_01_settle_a",
+      "script": "CS_YOS_01",
+      "node": "settle_a",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_CS_YOS_01"
+      ],
+      "sets": {
+        "resolve_CS_YOS_01": "a"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_N11_settle_surrender",
+      "script": "N11",
+      "node": "settle_surrender",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_N11"
+      ],
+      "sets": {
+        "resolve_N11": "surrender"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_N11_settle_trace",
+      "script": "N11",
+      "node": "settle_trace",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "resolve_N11"
+      ],
+      "sets": {
+        "resolve_N11": "trace"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_refused",
+      "script": "SQ01",
+      "node": "ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "refused"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_mg",
+      "script": "SQ01",
+      "node": "ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_co",
+      "script": "SQ01",
+      "node": "ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_ga",
+      "script": "SQ01",
+      "node": "ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_refused",
+      "script": "SQ02",
+      "node": "ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "refused"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_mg",
+      "script": "SQ02",
+      "node": "ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_co",
+      "script": "SQ02",
+      "node": "ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_ga",
+      "script": "SQ02",
+      "node": "ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_refused",
+      "script": "SQ03",
+      "node": "ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "refused"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_mg",
+      "script": "SQ03",
+      "node": "ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_co",
+      "script": "SQ03",
+      "node": "ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_ga",
+      "script": "SQ03",
+      "node": "ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_N16_custody_intent_none",
+      "script": "N16",
+      "node": "custody_intent_none",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "none"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N16_custody_intent_mg",
+      "script": "N16",
+      "node": "custody_intent_mg",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N16_custody_intent_co",
+      "script": "N16",
+      "node": "custody_intent_co",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N16_custody_intent_ga",
+      "script": "N16",
+      "node": "custody_intent_ga",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N16_custody_intent_dispersed",
+      "script": "N16",
+      "node": "custody_intent_dispersed",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "dispersed"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N17_custody_signed_none",
+      "script": "N17",
+      "node": "custody_signed_none",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "none"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "none"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N17_custody_signed_mg",
+      "script": "N17",
+      "node": "custody_signed_mg",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "MG"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N17_custody_signed_co",
+      "script": "N17",
+      "node": "custody_signed_co",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "CO"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N17_custody_signed_ga",
+      "script": "N17",
+      "node": "custody_signed_ga",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "GA"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N17_custody_signed_dispersed",
+      "script": "N17",
+      "node": "custody_signed_dispersed",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "dispersed"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "dispersed"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N8_n8_relief_accepted",
+      "script": "N8",
+      "node": "n8_relief_accepted",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "n8_relief"
+      ],
+      "sets": {
+        "n8_relief": "accepted"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N8实际接受或拒绝药后提交；不可由预览、缺席或未授权代答提交。；仅本节点实际执行对应处置后写入；actual_choice_once"
+    },
+    {
+      "event": "evt_N8_n8_relief_refused",
+      "script": "N8",
+      "node": "n8_relief_refused",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "n8_relief"
+      ],
+      "sets": {
+        "n8_relief": "refused"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N8实际接受或拒绝药后提交；不可由预览、缺席或未授权代答提交。；仅本节点实际执行对应处置后写入；actual_choice_once"
+    },
+    {
+      "event": "evt_N11_sylang_state_dead",
+      "script": "N11",
+      "node": "sylang_state_dead",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "sylang_state"
+      ],
+      "sets": {
+        "sylang_state": "dead"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N11 trace执行结案写dead且不可复活；报价须罗温存活、在场、愿谈、授权，缺席不触发HX09。；仅本节点实际执行对应处置后写入；trace_commit_sticky_death"
+    },
+    {
+      "event": "evt_SQ01_n4_shift_remedied_true",
+      "script": "SQ01",
+      "node": "n4_shift_remedied_true",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "n4_shift_remedied"
+      ],
+      "sets": {
+        "n4_shift_remedied": "true"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "复用既有键：SQ01实际撤销担保且完成受害补偿才写true；n4_shift_harm历史不删。；仅本节点实际执行对应处置后写入；revocation_and_compensation_commit_sticky"
+    },
+    {
+      "event": "evt_N12_toman_personnel_false",
+      "script": "N12",
+      "node": "toman_personnel_false",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "toman_personnel"
+      ],
+      "sets": {
+        "toman_personnel": "false"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N12 实际交人写 true；实际拒交写 false；须本人在场、存活且授权，不由预览或回执代写"
+    },
+    {
+      "event": "evt_N12_toman_personnel_true",
+      "script": "N12",
+      "node": "toman_personnel_true",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "toman_personnel"
+      ],
+      "sets": {
+        "toman_personnel": "true"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N12 实际交人写 true；实际拒交写 false；须本人在场、存活且授权，不由预览或回执代写"
     }
   ]
 }

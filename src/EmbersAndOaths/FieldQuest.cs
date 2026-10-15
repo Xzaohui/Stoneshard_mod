@@ -229,7 +229,6 @@ internal static class FieldQuest
     internal static void Configure(Action<UndertaleGameObject, string, EventType, uint> set, ModFile files)
     {
         var stubs = string.Concat(new[] {
-            files.GetCode("eao_state_helpers.gml"),
             files.GetCode("fx_qry_intro.gml"), files.GetCode("fx_qry_night.gml"), files.GetCode("fx_qry_hub.gml"),
             files.GetCode("fx_qry_before.gml"), files.GetCode("fx_qry_after.gml"), files.GetCode("fx_qry_early.gml"),
             files.GetCode("fx_qry_late.gml"), files.GetCode("fx_qry_refusal.gml"), files.GetCode("fx_qry_proxy.gml"),

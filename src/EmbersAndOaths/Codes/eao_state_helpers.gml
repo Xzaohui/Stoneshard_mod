@@ -1,4 +1,6 @@
-// Shared save-key helpers (HX01-26 / M3).
+// Shared save-key helpers (HX01-26 / M3). NOT yet injected into any object:
+// EaoLinkage pins the per-object callback count, so wire this in together
+// with the first N8/N12/N16/N17/SQ01 quest and bump the expected layout.
 // Missing keys return the declared default. All boolean saves use the
 // strings "true" / "false". Callers that run inside an already-pushed
 // dialogue callback should prefer the inlined form below — bare eao_*

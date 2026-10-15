@@ -10,6 +10,7 @@
 | 代码 | Mod 源码、构建、部署、离线检查与 Steam 实机测试（含 Linux 构建）；在自己的分支（如 `linux-build-035`）开发，验证后合入 `main` | `src/EmbersAndOaths/`（素材文件除外）、`tools/`、实现桥相关写手/校验器（状态键、事件桩、钩子映射等 `research/tools/*`）及其 `research/*.json` |
 | 文案 | 主线、支线、日常、副本台本，人物、势力、世界与系统逻辑文字；剧情审查记录 | `design/`（`design/12_美术参考/` 除外）、`design/AGENTS.md`、剧情类写手/校验器（台本、剧情网络、重边等 `research/tools/*`）、`research/剧情*_*.md` |
 | 绘图 | 概念图、像素/HD-2D 素材、动作与场景稿、美术审计 | `src/Art/`、`src/EmbersAndOaths/Assets/`、`Assets/`、`output/`（含 `output/codex-*/`、`output/pixel-production/`）、`design/12_美术参考/`、`research/art-*`、`research/city-art-*` |
+| 资讯 | 资讯收集与整理；除非被要求，不改仓库文件 | 无；被指派时仅限指定的 `research/` 调查笔记 |
 
 共用规则：
 
@@ -19,6 +20,7 @@
 - `src/`、`tools/` 实现批次照旧先在 `WORK-CLAIMS.md` 领批（见下文「并行会话领批」）。
 - 同一时间只开一个 Steam/游戏实例；测试完正常退出，再交给下一个助手。
 - `research/` 下 `*-validation.json`、`*-note-hashes.json` 等生成文件由写手/校验器重新生成，不手改。
+- 大规模批量任务（批量生成、批量改写、批量校验等）优先交给 codex 或 opencode 中的 glm5.3 执行，不要自己逐条做；适用于所有助手（小辉、代码、文案、绘图、资讯）。
 
 ## 当前台本阶段（S61，2026-10-11）
 

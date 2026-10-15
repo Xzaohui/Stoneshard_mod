@@ -1,0 +1,8 @@
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch03/audit_measurements.py:31: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px=list(im.getdata());a=Counter(p[3] for p in px);c=Counter(p[:3] for p in px if p[3]);sizes=[]
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch03/audit_measurements.py:19: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  remain={(i%im.width,i//im.width) for i,p in enumerate(im.getdata()) if p[3]};sizes=[]
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch03/audit_measurements.py:47: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  opaque=[p[:3] for p,a in zip(sampled.getdata(),mask.getdata()) if a]
+/workspace/scratch/5ed8df2c5d81/Stoneshard_mod/Assets/CharacterDesigns/20261015/portrait_redraw_campaign/independent_qa/batch03/audit_measurements.py:52: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  q.putdata([p if p[3] else (0,0,0,0) for p in q.getdata()])

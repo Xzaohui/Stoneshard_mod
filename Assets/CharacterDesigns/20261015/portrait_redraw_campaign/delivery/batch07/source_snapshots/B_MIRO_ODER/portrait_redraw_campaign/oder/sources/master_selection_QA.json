@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent_reviewer_review_updated_character_details",
+  "reviewed_at_utc": "2026-10-13T19:30:30Z",
+  "scope": "Only three visually checked card deltas; no inference that 166 source changes require full redraw. Additive QA, historical/frozen records unchanged.",
+  "canonical_id": "BRY-NPC-ODER",
+  "character": "奥德",
+  "review_method": "Actual view_image of historical selected mother, generated raw, cleaned RGBA, light and dark composites; Oder left-hand enlarged crop. Current cards, STYLE_DIRECTION and source/manifest hashes inspected.",
+  "selected_artifact": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/oder/latest_card_alignment_v1/oder_v1_transparent.png",
+    "sha256": "6b2b7f4475ff6835ca9de42e01fc0673d24667d8aaa9429152f52decbb0481a1"
+  },
+  "raw_artifact": {
+    "path": "Assets/CharacterDesigns/20261013/expressive/oder/latest_card_alignment_v1/oder_v1_raw_imagegen.png",
+    "sha256": "1313f2adb60b01fe6757dcedf1142c50754882d85e5b488868b147cbe5613f33"
+  },
+  "visual_review": {
+    "status": "pass_costume_alignment_with_unverified_left_pinky",
+    "identity_expression": "旧木色肤色、宽肩厚实体型、深发胡须及务实侧望紧嘴表情保留；未因五十余岁而夸张衰老。",
+    "targeted_detail": "蓝色短打水手褂为简洁开口系绳领，无旧母图现代翻领与整排黄纽扣；缆绳腰带、结头和短垂端可读。右手持盘绳，工作身份连贯。",
+    "anatomy_occlusion": "两臂两手两靴完整；腰绳覆盖褂前、持绳手位于盘绳上方，宽稳站姿成立，无可见额外肢体。",
+    "left_pinky": {
+      "status": "unverified",
+      "reason": "画面右侧本人左手为收曲的低分辨率指群，实看原图及最近邻放大仍不能分离小指并确认缺半截。不能将未辨认写成符合，也不能据此确定缺失。",
+      "evidence": "independent_review/oder_left_hand_detail.png"
+    },
+    "caveats": [
+      "服装定向修正通过；不是全部人物卡细节完全通过。",
+      "眉上盐霜、三层补油布、席位木牌和缆刀未在此视图清楚展示，不增加身份或剧情权限。",
+      "本轮无明确硬错，未为小指不可读性触发偏好返工；保留后续需要时单独手部设定核验。"
+    ]
+  },
+  "technical": {
+    "mode": "RGBA",
+    "dimensions": [
+      1118,
+      1407
+    ],
+    "alpha_zero_pixels": 900128,
+    "alpha_partial_pixels": 671719,
+    "alpha_opaque_pixels": 1179,
+    "alpha_bbox": [
+      154,
+      85,
+      1029,
+      1332
+    ],
+    "alpha128_bbox": [
+      155,
+      86,
+      1026,
+      1331
+    ],
+    "border_max_alpha": 0,
+    "cleanup_rgb_changes_where_raw_alpha_ge8": 0,
+    "cleanup_alpha_changes_where_raw_alpha_ge8": 0,
+    "composites": "Actual light/dark checks: no visible matte box, ground shadow plate or clipping. Subject alpha mostly253 retained; raw alpha<8 cleanup verified not anatomy repaint.",
+    "transparent_background": true
+  },
+  "manifest_verification": {
+    "manifest_sha256": "c2b5f93891486ad3300009ef54650dfcf973271ea991dfbbf6c991de1d8991fa",
+    "all_files_match": true,
+    "files": [
+      {
+        "path": "QA-author.json",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "oder_v1_dark_board.png",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "oder_v1_light_board.png",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "oder_v1_raw_imagegen.png",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "oder_v1_transparent.png",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "prompt_v1.txt",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "source_manifest.json",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "sources/AGENTS.md",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "sources/STYLE_DIRECTION.md",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "sources/oder_rework_v3_raw_imagegen.png",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "sources/人物_BRY-NPC-ODER_奥德.md",
+        "sha256_match": true,
+        "bytes_match": true
+      }
+    ],
+    "sources": [
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/oder/rework_v3/oder_rework_v3_raw_imagegen.png",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "design/04_人物/城市人物/人物_BRY-NPC-ODER_奥德.md",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "AGENTS.md",
+        "live_matches": true,
+        "snapshot_matches": true
+      },
+      {
+        "path": "Assets/CharacterDesigns/20261013/expressive/STYLE_DIRECTION.md",
+        "live_matches": true,
+        "snapshot_matches": true
+      }
+    ]
+  },
+  "generation_budget": {
+    "drafts": 1,
+    "hard_error_revisions_requested": 0,
+    "recommendation": "No further redraw for preference details."
+  },
+  "boundaries": {
+    "concept_only": true,
+    "user_acceptance": false,
+    "runtime_verified": false,
+    "historical_selection_or_qa_replaced": false,
+    "frozen_manifest_modified": false
+  }
+}

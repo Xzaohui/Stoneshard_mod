@@ -1,0 +1,181 @@
+{
+  "batch": "16",
+  "date": "2026-10-15",
+  "qualified_candidate_count": 3,
+  "held_count": 1,
+  "characters": [
+    {
+      "actor": "niv",
+      "name": "尼芙",
+      "source": "niv/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "0dd02407beb6b2473447e7201e7fba317c0583db9e9b33d1196070937f5eba0a",
+      "delivery_file": "NIV_尼芙_74x100_candidate.png",
+      "delivery_sha256": "0dd02407beb6b2473447e7201e7fba317c0583db9e9b33d1196070937f5eba0a",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "niv/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "睫眼仍稍大；平行发束高光未完全合并",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "ouran",
+      "name": "欧岚",
+      "source": "ouran/candidates/portrait_v2_inset_74x100_candidate.png",
+      "source_sha256": "a522f895617a4fe50f7fa853dbf5826771ea7d4c42a69fadf2ca0500481134b2",
+      "delivery_file": "OURAN_欧岚_74x100_candidate.png",
+      "delivery_sha256": "a522f895617a4fe50f7fa853dbf5826771ea7d4c42a69fadf2ca0500481134b2",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2_inset",
+      "derivation_metrics": "ouran/qa/portrait_v2_inset_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "眉根仍忧虑；顶部发量与条状高光偏多",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    },
+    {
+      "actor": "zaho",
+      "name": "扎禾",
+      "source": "zaho/candidates/portrait_v2_74x100_candidate.png",
+      "source_sha256": "7ac438e5a85ed4f6dd0aeda758cdcdf60b4f5dbb40a532630cec6440957d8756",
+      "delivery_file": "ZAHO_扎禾_74x100_candidate.png",
+      "delivery_sha256": "7ac438e5a85ed4f6dd0aeda758cdcdf60b4f5dbb40a532630cec6440957d8756",
+      "dimensions": [
+        74,
+        100
+      ],
+      "visible_rgb_colors": 32,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "selected_version": "portrait_v2",
+      "derivation_metrics": "zaho/qa/portrait_v2_metrics.json",
+      "quantization": "MAXCOVERAGE",
+      "limitations": "浅眼白与平行发束；顶部留白较多",
+      "native_authored": false,
+      "runtime_integrated": false,
+      "runtime_verified": false
+    }
+  ],
+  "held": [
+    {
+      "slug": "vere",
+      "name": "维芮",
+      "selected_portrait": "vere/candidates/portrait_v2_74x100_candidate.png",
+      "selected_sha256": "48290922217c2e214b1cdb5d0b7165ca38923a21934f2b9038a680a4dedf2eff",
+      "production_manifest_sha256": "c600913ffd1ed14e0710a0bcc929895c8a9a11f10bfe737932c0ffe0d620a5cf",
+      "decision": "held_review_candidate_source_edge_clipping",
+      "generation_calls": 2,
+      "qualified": false,
+      "approved_to_package": false,
+      "source_contour_gate_pass": false,
+      "residual": "真实源图右侧发束裁边：x1078、y989–1053共65像素alpha>=128。外框padding不修复原始源轮廓。仍有忧眉和眼白/发束细条。"
+    }
+  ],
+  "board": {
+    "file": "batch16_三人头像总览_1x_4x.png",
+    "sha256": "d692c0248169ce2c782d53b8b3c660fa8c435519795cd6d99e711c8034690091",
+    "dimensions": [
+      680,
+      1898
+    ],
+    "portrait_checks": [
+      {
+        "actor": "niv",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          326,
+          161,
+          426
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "niv",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          169,
+          624,
+          569
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ouran",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          792,
+          161,
+          892
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "ouran",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          635,
+          624,
+          1035
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "zaho",
+        "scale": 1,
+        "resampling": "none",
+        "box": [
+          87,
+          1258,
+          161,
+          1358
+        ],
+        "composited_pixels_exact": true
+      },
+      {
+        "actor": "zaho",
+        "scale": 4,
+        "resampling": "NEAREST",
+        "box": [
+          328,
+          1101,
+          624,
+          1501
+        ],
+        "composited_pixels_exact": true
+      }
+    ],
+    "manual_painting": false,
+    "native_art_final_approved": false,
+    "held_portrait_not_displayed": true
+  },
+  "source_limitations": "Commercial native-reference pixels are excluded. All four generated production folders, including held vere evidence, are retained; held is not counted as success."
+}

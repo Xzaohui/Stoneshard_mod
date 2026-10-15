@@ -71,9 +71,17 @@ internal static class FieldQuest
             Add(r, "o_abstract_player", 6, 10, "Controllers");
         }
     }
+    internal static void Ensure()
+    {
+        foreach (var layer in new[] { "backing", "floor", "structure", "foreground" })
+            Hd2dArt.Add("r_eao_fx_quarry__" + layer, 1040, 780, 0, 0);
+    }
+    internal static string DrawForeground() =>
+        "if (" + Hd2dArt.Active + ") { if (room == " + Quarry + ") draw_sprite(" + Hd2dArt.Sprite(Quarry + "__foreground") + ",0,0,0); }\n";
     internal static string FloorDraw()
     {
-        var code = new StringBuilder("var _c = draw_get_color(); var _a = draw_get_alpha(); draw_set_alpha(1); draw_set_color(make_color_rgb(19,21,20)); draw_rectangle(0,0,room_width,room_height,false);\n");
+        var code = new StringBuilder("if (" + Hd2dArt.Active + ") { if (room == " + Quarry + ") { draw_sprite(" + Hd2dArt.Sprite(Quarry + "__backing") + ",0,0,0); draw_sprite(" + Hd2dArt.Sprite(Quarry + "__floor") + ",0,0,0); draw_sprite(" + Hd2dArt.Sprite(Quarry + "__structure") + ",0,0,0); exit; } }\n");
+        code.Append("var _c = draw_get_color(); var _a = draw_get_alpha(); draw_set_alpha(1); draw_set_color(make_color_rgb(19,21,20)); draw_rectangle(0,0,room_width,room_height,false);\n");
         var cells = Cells();
         code.AppendLine("if (room == " + Quarry + ") {");
         foreach (var p in cells.OrderBy(p => p.Item2).ThenBy(p => p.Item1)) {

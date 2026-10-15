@@ -53,7 +53,7 @@ internal static class EaoDevChecks
         }
         foreach(var a in builtManifest.RootElement.GetProperty("assets").EnumerateArray()) sources.Add(a.GetProperty("id").GetString()!,a);
         var sprites=data.Sprites.Where(s=>s.Name.Content.StartsWith("s_eao_hd2d_")).ToArray();
-        Require(sprites.Length==43,"hd2d-forty-three-native-sprites");
+        Require(sprites.Length==47,"hd2d-forty-seven-native-sprites");
         foreach(var sprite in sprites){
             var id=sprite.Name.Content["s_eao_hd2d_".Length..];var source=sources[id];
             var dimensions=source.GetProperty("size").EnumerateArray().Select(v=>v.GetInt32()).ToArray();

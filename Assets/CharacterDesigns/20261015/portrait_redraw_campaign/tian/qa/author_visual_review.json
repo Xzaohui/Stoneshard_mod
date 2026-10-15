@@ -1,0 +1,42 @@
+{
+  "reviewer": "author",
+  "reviewed_utc": "2026-10-15T13:55:00.861696+00:00",
+  "actor_id": "ASH-NPC-TIAN",
+  "selected_version": "portrait_v2_containment",
+  "selected_sha256": "91fde91cb6aa223215a21ba7c134798635f8151ffdffb80f3afc83b1922ad090",
+  "decision": "selected_candidate_with_limitations",
+  "actual_views": [
+    "identity master",
+    "four core style portraits",
+    "v1 and v2 raw imagegen",
+    "v1 and v2 8x NEAREST",
+    "selected v2 technical derivative 8x",
+    "selected v2 technical derivative dark/gray/light 1x"
+  ],
+  "identity_check": "Adult age range, original hairstyle and established collar color retained; no substantive source/card contradiction. Story context not represented as consent or completion.",
+  "improvements": [
+    "v2 eyelids and eye apertures are narrower, adult nose and cheek planes clearer.",
+    "Neck shortened and collar area reduced versus v1, though not a literal 3–4 pixel neck.",
+    "No substantive raw hair/ear contour touches image edges at alpha>=5. Selected whole-canvas containment preserves every source region."
+  ],
+  "limitations": [
+    "Eye whites remain paler than the four-core ideal.",
+    "Hair retains more layered parallel subdivisions than desired.",
+    "Face-to-hair ratio is still conservative and neck still longer than prompt target.",
+    "v2 raw right-side alpha>=5 breathing room is only 2 raw pixels, far below 2 logical pixels. Selected containment restores a 2px candidate margin but does not establish adequate source composition.",
+    "Quantized face contains fragmented intermediate-color pixels; remains below four-core cluster economy."
+  ],
+  "technical_checks": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "imagegen_calls": 2,
+  "max_imagegen_calls": 2,
+  "further_generation": "Stopped at agreed first draft plus one necessary revision. No third call.",
+  "method_boundary": "Built-in imagegen is the only substantive drawing. Full-canvas isotropic NEAREST with integer-rounded dimensions, alpha threshold128, <=32-color MAXCOVERAGE without dithering, and transparent RGB zeroing are technical derivatives only. No facial geometry painted by script.",
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "independent_review_status": "audit_campaign_thirtysixth_batch final selection: pass_with_limitations, technical NN candidate only."
+}

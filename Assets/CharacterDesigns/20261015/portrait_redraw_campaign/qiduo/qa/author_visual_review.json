@@ -1,0 +1,35 @@
+{
+  "reviewed_utc": "2026-10-15T13:35:49.248693+00:00",
+  "actually_viewed": [
+    "sources/identity_reference.png",
+    "sources/mara_style_reference.png",
+    "sources/iwo_style_reference.png",
+    "sources/leiya_style_reference.png",
+    "sources/tore_style_reference.png",
+    "raw/portrait_v1_raw_imagegen.png",
+    "previews/portrait_v1_1x_backgrounds.png",
+    "previews/portrait_v1_8x.png",
+    "raw/portrait_v2_raw_imagegen.png",
+    "previews/portrait_v2_1x_backgrounds.png",
+    "previews/portrait_v2_8x.png",
+    "previews/portrait_v2_inset_4x_backgrounds.png"
+  ],
+  "observations": [
+    "v2颈部缩短且窄灰棕领完整；宽圆颊、短钝鼻、重眼袋、灰尘短发、三十多岁男性身份维持。",
+    "须发纹理有所变粗，但下颌稀短茬仍有细碎点簇，头发部分平行纹与亮眼白仍可见。",
+    "疲惫自决而非悲情英雄；不凭肖像宣称腿伤痊愈、愿意复工或病史公开。"
+  ],
+  "preferred_candidate": "candidates/portrait_v2_inset_74x100_candidate.png",
+  "selection_reason": "Independent QA selects the v2 entire-canvas isotropic NEAREST technical inset with explicit limitations; target has at least two pixels transparent margin. No source hair/ear cutting or scripted feature redraw.",
+  "generations": 2,
+  "third_generation_allowed": false,
+  "native_pixel_approved": false,
+  "runtime_verified": false,
+  "status": "selected_candidate_with_limitations",
+  "remaining_limitations": [
+    "唇颌仍有细点/锯齿须，灰尘短发部分平行细纹仍存。",
+    "眼白偏亮，眉较母QA描述略厚。",
+    "alpha>=5主体四边无真裁断；alpha1低透明边缘杂点存在，不能称全部非零alpha都离边。",
+    "技术量化、二值alpha与containment不构成原生逐像素终稿。"
+  ]
+}

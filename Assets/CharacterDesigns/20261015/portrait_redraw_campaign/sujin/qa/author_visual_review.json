@@ -1,0 +1,85 @@
+{
+  "actor": "sujin",
+  "reviewed_utc": "2026-10-15T13:14:36.365217+00:00",
+  "actually_viewed": [
+    "raw/portrait_v2_raw_imagegen.png",
+    "previews/portrait_v2_1x.png",
+    "previews/portrait_v2_8x.png"
+  ],
+  "compared_to": [
+    "sources/identity_reference.png",
+    "sources/character_card.md",
+    "sources/master_QA.json",
+    "previews/portrait_v1_8x.png",
+    "four core style references"
+  ],
+  "identity_conflict": false,
+  "age_read": "约五十岁女性，眼下与鼻唇/下颌年龄块清楚",
+  "clothing_read": "深森林绿磨旧工装领，窄棕围裙带，按最新卡",
+  "improved": [
+    "眼白大亮块压成低亮小窄眼",
+    "裸颈明显缩短，脸面占比增加",
+    "鼻颧骨大色块较首稿更明确",
+    "无新增道具或身份漂移"
+  ],
+  "residual_limitations": [
+    "图像仍为生成后最近邻/量化的技术候选，非原生像素终稿",
+    "发丝/头巾仍有细条纹而非最少色块",
+    "原始图左右余量偏窄，但源图实体没有边缘接触或被裁断；不得用后加padding声称已修复源图裁边",
+    "独立复审补充：颈部虽明显缩短，仍略显长；头巾体量仍大。"
+  ],
+  "raw_alpha_margin_checks": {
+    "1": {
+      "bbox": [
+        0,
+        0,
+        1064,
+        1458
+      ],
+      "margins": {
+        "left": 0,
+        "top": 0,
+        "right": 15,
+        "bottom": 0
+      }
+    },
+    "5": {
+      "bbox": [
+        8,
+        96,
+        1063,
+        1294
+      ],
+      "margins": {
+        "left": 8,
+        "top": 96,
+        "right": 16,
+        "bottom": 164
+      }
+    },
+    "128": {
+      "bbox": [
+        10,
+        98,
+        1061,
+        1291
+      ],
+      "margins": {
+        "left": 10,
+        "top": 98,
+        "right": 18,
+        "bottom": 167
+      }
+    }
+  },
+  "generation_outputs": 2,
+  "max_generation_outputs": 2,
+  "validation_rejection_before_v2_generation": "六张参考超过工具五张上限，生成前校验失败；保存失败实参与错误，删去冗余身份母图，保留v1编辑目标与四核心参考后成功生成。无额外图像生成。",
+  "decision": "selected_v2_candidate_with_limitations",
+  "native_pixel_approved": false,
+  "runtime_integrated": false,
+  "independent_reviewer": "audit_campaign_thirtysecond_batch",
+  "selected_candidate": "candidates/portrait_v2_74x100_candidate.png",
+  "selected_sha256": "5b196320ec4770973ba897c659e8bd35dbd187ace3449859373988d6e5127e08",
+  "source_margin_status": "full v2 retained; no inset or padding; complete raw silhouette and no edge contact, limited clearance retained as limitation"
+}

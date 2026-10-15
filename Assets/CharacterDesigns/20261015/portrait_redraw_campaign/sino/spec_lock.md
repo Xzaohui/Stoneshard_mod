@@ -1,0 +1,7 @@
+# 身份与绘制锁定
+
+Character: SINO / 司诺·庭 / ALD-NPC-SIN. A man in his THIRTIES, a local ceremony assistant, retaining the historically reviewed masculine visual proposal; the current card does not independently specify sex. Preserve short warm chestnut-brown side-parted hair, clean-shaven narrow/long adult face, softly angular slender jaw, a distinct straight medium-long nose and warm tan skin. Broader mature cheek/nose shadow planes than the cute old full-body drawing. Do not make him a teenager or old man.
+Expression is practiced mild courteous interest with a small CLOSED asymmetrical half-smile and alert appraising gaze slightly left, wanting assent without being smug. Brows are relaxed almost level with a slight single outer lift; NO raised inner ends forming a worried V, NO saintly smile, sneer, grief, anger or excessive wrinkles. Distinct from Sore's focused unsmiling firmer-jawed face.
+Only a tiny dark charcoal ritual-robe collar with muted off-white lining and thin rust-red UNPATTERNED stole corners along bottom. Upright, measured, self-possessed manner. No religious symbol, crown, clerical luxury, document, bracelet, hands or public mourning scene. Ceremony participation is voluntary and must not imply compensation permission or completed reconciliation.
+
+已 actual view 两张旧母版与四核心原图。名册当前卡、母版、旧QA/manifest逐字节SHA匹配。源卡与旧登记hash漂移不是身份冲突。司诺当前卡未定性别，保旧已审男性美术提案而不反写卡；索芮卡与母版均成年女性，短裙/旧裤装差异位于头像裁切外，现卡优先。不得改旧图、人物卡、代码、提交或推送。

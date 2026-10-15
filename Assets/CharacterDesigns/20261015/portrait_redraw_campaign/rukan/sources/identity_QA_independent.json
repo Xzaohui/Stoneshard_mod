@@ -1,0 +1,97 @@
+{
+  "artifact": "rework_v3/rukan_rework_v3_alpha_safe.png",
+  "decision": "deliverable_with_minor_notes",
+  "visual": {
+    "proportion": "短颈肩及胸腰腿结构有效，宽肩结实成年体态自然，小头长身问题已明显改善。",
+    "expression": "成年灰须、收眉侧看和闭嘴自信里带停顿，身份脸方向对。",
+    "identity": "灰堤领班，赭黄翻后兜帽棕工衣、腰手套和低持折量杆成立。",
+    "aesthetics": "灰须停顿审视脸保留，黄兜帽棕工衣、折量杆/腰手套可读；细像素备注，不是native验收。",
+    "costumeAndStory": "无代同伴按印或迁居签约事件，量杆不武器化。",
+    "occlusion": "手握折量杆可辨，腰手套与双手分开；实体肢体完整。",
+    "crop": "所选alpha_safe原图及浅深底对照已实际查看，无棕光晕，全身发顶双手工具及鞋完整。"
+  },
+  "sources": [
+    "design/04_人物/聚落人物/人物_BRY-S01-NPC_鲁坎.md",
+    "briefs/batch_next_brynn_livelihood_11.json"
+  ],
+  "equipmentScope": {
+    "mechanismEvidence": "unknown",
+    "note": "无装备兼容结论，单套不定永久fixed。"
+  },
+  "artifactSha256": "8e73e46338b02802968451876145fec3abe2c964a71ab6ecd2ff295781357258",
+  "reviewer": "independent-visual-review",
+  "reviewedAt": "2026-10-13",
+  "method": "实际逐张查看原图并核人物卡；技术统计不代替审美。",
+  "reference": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+  "technical": {
+    "canvas": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "alphaAbove5Bounds": [
+      149,
+      188,
+      895,
+      1325
+    ],
+    "alphaSafeVerification": "与同目录raw逐像素比对，原alpha>=16所有通道完全不变，低alpha全置0成立；不宣称二值sprite合规。"
+  },
+  "limitations": [
+    "此为概念图，不是原生精灵或游戏运行验收。",
+    "未改图片、作者manifest或全局索引。"
+  ],
+  "previousReview": {
+    "artifact": "rukan_raw_imagegen_v2.png",
+    "decision": "requires_visual_and_alpha_correction",
+    "visual": {
+      "proportion": "头明显偏小、裸颈长、胸腰和腿都拉长，整幅像写实高个像素插画，与当前表情化紧凑群像不相称。",
+      "expression": "成年灰须、收眉侧看和闭嘴自信里带停顿，身份脸方向对。",
+      "identity": "灰堤领班，赭黄翻后兜帽棕工衣、腰手套和低持折量杆成立。",
+      "aesthetics": "脸可读，但细像素长身且周身大面积棕色光晕，明显偏离孤立透明概念要求；不能仅注释交付。",
+      "costumeAndStory": "无代同伴按印或迁居签约事件，量杆不武器化。",
+      "occlusion": "手握折量杆可辨，腰手套与双手分开；实体肢体完整。",
+      "crop": "全身无实体裁切，但背景有肉眼明显棕光晕，真透明孤立交付不通过。"
+    },
+    "sources": [
+      "design/04_人物/聚落人物/人物_BRY-S01-NPC_鲁坎.md",
+      "briefs/batch_next_brynn_livelihood_11.json"
+    ],
+    "equipmentScope": {
+      "mechanismEvidence": "unknown",
+      "note": "无装备兼容结论，单套不定永久fixed。"
+    },
+    "requiredRevision": "去除棕色背景光晕并重新协调明显小头长颈躯腿；此前修订未解决，需root另排明确修复，不当可交付。",
+    "artifactSha256": "69a9c6fa8820cee6f966a3fb62aa0a0574151c411003ee2780a4b4509a433100",
+    "reviewer": "independent-visual-review",
+    "reviewedAt": "2026-10-13",
+    "method": "实际逐张查看原图并核人物卡；技术统计不代替审美。",
+    "reference": "Assets/RedrawStudies/20261013/sela_proportions/facial_refinement/redesign_G/sela_G_raw_imagegen.png",
+    "technical": {
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "alphaAbove5Bounds": [
+        173,
+        74,
+        875,
+        1473
+      ],
+      "fullyTransparentPixels": 935551
+    },
+    "limitations": [
+      "此为概念图，不是原生精灵或游戏运行验收。",
+      "未改图片、作者manifest或全局索引。"
+    ]
+  }
+}

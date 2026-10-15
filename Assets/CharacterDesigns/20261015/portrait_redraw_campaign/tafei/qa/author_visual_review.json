@@ -1,0 +1,49 @@
+{
+  "actor_id": "KOR-NPC-TAFEI",
+  "reviewer": "author",
+  "status": "pass_with_notes_derived_candidate",
+  "reviewed_utc": "2026-10-15T11:22:56.721021+00:00",
+  "actually_viewed": [
+    "v2 raw",
+    "v2 1x triple backgrounds",
+    "v2 8x NN",
+    "v2_inset 4x triple backgrounds"
+  ],
+  "raw_alpha_bbox": [
+    0,
+    0,
+    1079,
+    1405
+  ],
+  "raw_alpha_threshold_128_bbox": [
+    33,
+    125,
+    1078,
+    1400
+  ],
+  "visual_findings": [
+    "v2眼白缩小变灰，瞳孔连上睑，仍保留担忧解释的眼眉和小张嘴。",
+    "帽冠略收、颈明显缩短，蓝灰衣领窄；宽鼻宽颊和八字胡清下巴身份未变。",
+    "源实质alpha>=128右界到1078，raw宽1079，仅1源px间隙但未触原边；全尺寸NN派生会触右边，因此另做72×98等比containment，不改脸不裁切不生成第三稿。",
+    "残余发须条纹和三角眼白仍非完美原生小网格，需终审决定。"
+  ],
+  "technical_checks": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "native_pixel_approved": false,
+  "runtime_verified": false,
+  "successful_image_generation_calls": 2,
+  "generation_budget_exhausted": true,
+  "third_generation_prohibited": true,
+  "selected_portrait": "candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "fdc0757e51e56e41a1684625b9346df19e176fe4801de8949507abc5d269b95a",
+  "independent_visual_acceptance": "qa/independent_review_acceptance.json",
+  "frozen_after_v2": true,
+  "limitations": [
+    "Raw right silhouette has only one source pixel transparent clearance; inset adds export margin only and does not repair the raw.",
+    "Moustache and hat retain some banding; not native pixel-authored final."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "reviewer": "audit_campaign_twentyseventh_batch",
+  "received_utc": "2026-10-15T12:31:32.802129+00:00",
+  "evidence_type": "Direct independent reviewer collaboration message",
+  "verbatim_feedback": "终审：Sefin v2 held_source_clipping，selected=null、delivery_eligible=false。已放大核右边y809–820共12个alpha>=128像素（最高251），深色发尖轮廓横穿到画布边，实际源真裁断，候选NN看似留边不能修复；v1风格未关也不替回。Tanser v2_inset可选，SHA bae249098163e729dbfc8b63a194ede2d06a2b34bc47b210cec88d1a655a87b2；面部扩大、短颈小暗眼、胡茬并块与旧缝痕改善，保40岁上下克制警觉。注意坦瑟源右y717–729还有低alpha5–21羽边触边（alpha>=16有3像素），我已灰底放大证实实心发尖在边前闭合、alpha>=128真实余量10像素；须把此低透明羽边记作限制，不能说所有alpha都留边。请补最终manifest/全SHA后通知，无再生图。",
+  "status": "selected_candidate_with_limitations",
+  "reviewed_version": "portrait_v2_inset",
+  "selected_portrait": "candidates/portrait_v2_inset_74x100_candidate.png",
+  "selected_sha256": "bae249098163e729dbfc8b63a194ede2d06a2b34bc47b210cec88d1a655a87b2",
+  "held_evidence": null,
+  "held_evidence_sha256": null,
+  "deliverable_approved": true,
+  "delivery_eligible": true,
+  "reason": "Face enlarged, neck shortened, small dark eyes, beard grouped into planes and healed glabellar scar readable; age and guarded composure retained.",
+  "limitations": [
+    "源右边y717–729存在低alpha5–21羽边触边，alpha>=16有3像素；不能称所有alpha均留边。",
+    "独立灰底放大核实实心发尖在边前闭合；alpha>=128右侧真实余量10px，inset二值候选留2px侧边。",
+    "仍有平行发纹和局部细像素层次；不是原生逐像素终稿。",
+    "74×100、≤32临时色、二值alpha和等比NEAREST containment为技术派生候选，不是原生像素批准。",
+    "未替换母图、人物卡、代码或冻结索引，未导入游戏、未实机验证、未提交推送。"
+  ],
+  "no_more_generation": true,
+  "native_pixel_approved": false,
+  "runtime_verified": false
+}

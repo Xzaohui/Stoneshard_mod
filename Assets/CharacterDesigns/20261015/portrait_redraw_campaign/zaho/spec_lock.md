@@ -1,0 +1,7 @@
+# 身份与绘制锁定
+
+Character: ZAHO / 扎禾 / MAE-NPC-ZAHO. A woman in her THIRTIES, a returning weaver and self-directed technique maker. Current main and side scenes repeatedly use female pronouns and agree with the reviewed female master; an isolated card sentence contains a conflicting male pronoun and is not used to redesign her sex. Preserve the selected reference's dark chestnut short swept-back hair tied into a small low rear bun, broad side sweep, warm tan skin, mature cheekbones, medium straight nose and stronger less pointed jaw than Vere. Keep hair mass compact, no tall bouffant. No braid, no youthful doll face or elderly wrinkles.
+Expression: firm self-respect with a trace of remembered gratitude, attentive slightly left sidelong eyes, small CLOSED asymmetric mouth with one corner slightly lifted, not a broad smile or sneer. Brows relaxed nearly level, one subtly raised outer end, never a uniform worried V. She can remember kindness and still resent control; no total submission or theatrical rebellion.
+Current card overrides the old rust-red top: show ONLY a narrow muted indigo-blue dyed workwear collar with a tiny dull off-white lining edge, plain working cloth. Bare neck extremely short. No rust-red garment, no luxury, no woven contract, no ownership insignia, no shuttle prop or completed agreement. The lower right shoulder in the card is outside this head-only framing.
+
+已实际查看历史母版、现卡、旧独立QA、四核心8倍NN参考。名册现卡/母版/旧QA/manifest逐字节SHA均匹配。现卡衣色优先，旧图保留。不得改人物卡、旧图、代码、提交或推送。

@@ -1,0 +1,61 @@
+{
+  "actor_id": "KOR-NPC-XIELAN",
+  "reviewer": "author",
+  "status": "initial_candidate_waiting_for_independent_consolidated_feedback",
+  "reviewed_utc": "2026-10-15T11:16:57.338884+00:00",
+  "actually_viewed": [
+    "identity master",
+    "Mara/Iwo/Leiya/Tore style references",
+    "raw v1",
+    "74x100 1x dark/gray/light composites",
+    "8x integer nearest preview"
+  ],
+  "raw_alpha_bbox": [
+    0,
+    3,
+    1067,
+    1442
+  ],
+  "visual_findings": [
+    "约50岁方额长窄脸、直鼻、灰发短胡与深蓝领、棕披边及素签符合最新卡与母图。",
+    "闭口、平眉轻蹙与侧视是审慎购画人，与塔斐明显区分。",
+    "脸部大块结构明确；完整头发与耳缘，不是胸像；二值alpha和32色为技术派生。",
+    "需集中QA重点看眼白：仍偏亮偏大；灰发重复条带偏多，眉间可能偏严厉。底边只有1px透明边。"
+  ],
+  "identity_conflict": false,
+  "technical_checks": {
+    "dimensions": true,
+    "color_budget": true,
+    "binary_alpha": true,
+    "full_tool_return_matches_raw": true
+  },
+  "native_pixel_approved": false,
+  "runtime_verified": false,
+  "revision_budget": {
+    "used_calls": 1,
+    "max_calls": 2,
+    "next_action": "Wait for independent consolidated QA before any imagegen revision; no third call."
+  },
+  "raw_alpha_threshold_128_bbox": [
+    37,
+    54,
+    1056,
+    1439
+  ],
+  "raw_zero_alpha_rgb_note": "Generated raw includes low-alpha edge noise; candidate uses documented threshold128. Actual semantic silhouette assessed visually, no artificial cutting.",
+  "raw_alpha_edge_values": {
+    "left": {
+      "0": 1405,
+      "1": 53
+    },
+    "right": {
+      "0": 1458
+    },
+    "top": {
+      "0": 1079
+    },
+    "bottom": {
+      "0": 1079
+    }
+  }
+}

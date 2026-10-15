@@ -1,5 +1,25 @@
 # 项目协作规则
 
+## 助手分工与目录归属
+
+多个助手共用 box 上的主工作树 `/workspace/projects/Stoneshard_mod`。各自只改归属目录；改别人的目录先找归属者，或经小辉协调。
+
+| 助手 | 职责 | 归属路径 |
+|---|---|---|
+| 小辉（协调/文档） | 跟踪进度、汇总汇报、处理跨助手冲突；维护 README/CHANGELOG 的写入与校验约定 | `README.md`、`AGENTS.md`、`CHANGELOG.md`、`WORK-CLAIMS.md` 表结构、`research/tools/Validate-ReadmeClaims.py` |
+| 代码 | Mod 源码、构建、部署、离线检查与 Steam 实机测试（含 Linux 构建）；在自己的分支（如 `linux-build-035`）开发，验证后合入 `main` | `src/EmbersAndOaths/`（素材文件除外）、`tools/`、实现桥相关写手/校验器（状态键、事件桩、钩子映射等 `research/tools/*`）及其 `research/*.json` |
+| 文案 | 主线、支线、日常、副本台本，人物、势力、世界与系统逻辑文字；剧情审查记录 | `design/`（`design/12_美术参考/` 除外）、`design/AGENTS.md`、剧情类写手/校验器（台本、剧情网络、重边等 `research/tools/*`）、`research/剧情*_*.md` |
+| 绘图 | 概念图、像素/HD-2D 素材、动作与场景稿、美术审计 | `src/Art/`、`src/EmbersAndOaths/Assets/`、`Assets/`、`output/`（含 `output/codex-*/`、`output/pixel-production/`）、`design/12_美术参考/`、`research/art-*`、`research/city-art-*` |
+
+共用规则：
+
+- 只提交自己的路径：`git add -- <路径>` / `git commit -- <路径>`；不用 `git add -A`、`git commit -a`。
+- 不 stash、reset、checkout 或删除别人未提交的文件；工作树里出现不明改动先问小辉。
+- 不在主工作树切换分支；并行分支用 `git worktree add`（如 `/workspace/projects/Stoneshard_mod-<用途>`），用完移除。
+- `src/`、`tools/` 实现批次照旧先在 `WORK-CLAIMS.md` 领批（见下文「并行会话领批」）。
+- 同一时间只开一个 Steam/游戏实例；测试完正常退出，再交给下一个助手。
+- `research/` 下 `*-validation.json`、`*-note-hashes.json` 等生成文件由写手/校验器重新生成，不手改。
+
 ## 当前台本阶段（S61，2026-10-11）
 
 用户最新要求先写每个任务的剧情台本与新区域理念、有关任务。本轮集中设计，不更新游戏包。当前入口为design/00_导航/任务台本总索引.md及design/02_世界与地图/新区域设计与任务总表.md，现行主线N1—N18、证据NE1—NE5；旧MQ图保留历史不作存档迁移。N1现有0.3.0执行小样与新增台词分开，N2以后均为未实现草稿。51篇台本涵盖18主线、8支线链、16日常、9个有效副本；D01不再作为新内容。设计变更须同步状态、证据、区域与分支；现有开发授权不新增审批门槛。文档校验用research/tools/Test-DesignVault.ps1与Validate-StoryScripts.py，不能用通过报告声称文学稿已获用户认可或游戏运行已验收。

@@ -9,7 +9,7 @@ def check(ok, label): (checks if ok else errors).append(label)
 inv = read('research/special-location-inventory.json')
 SITE_NAME = {r['key']: r['name_zh'] for r in inv['rumor_sites']}
 SITE_EN = {r['key']: r.get('name_en', '') for r in inv['rumor_sites']}
-REGIONS = [('R01', '布林外港与旧渠'), ('R02', '丹布里西路与渡口'), ('R03', '曼恩边地'),
+REGIONS = [('R01', '布林外港与旧渠'), ('R02', '布林东侧河口与渡口'), ('R03', '曼恩边地'),
            ('R04', '王廷关隘与边城'), ('R05', '灰烬湿地与疫村'), ('R06', '无名修院山地')]
 stems = {p.stem for p in V.rglob('*.md')}
 covered = {}

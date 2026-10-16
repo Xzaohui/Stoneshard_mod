@@ -20,10 +20,10 @@ aliases: []
 | 曼郡村郊（`map_mannshire`） | 32472 | Map of Mannshire Outskirts | [[区域_R03_曼恩边地]] | [[地点设计卡_R03_曼恩边地]] | [[人物_FX-HNT_珥兰]]、[[人物_FX-HNY_忒曼]]、[[人物_FX-LOT_绥珥]] |
 | 奥斯布鲁克村郊（`map_osbrook`） | 32473 | Map of Osbrook Outskirts | [[区域_R03_曼恩边地]] | [[地点设计卡_R03_曼恩边地]] | [[人物_FX-HNT_珥兰]] |
 | 阿尔内姆村郊（`map_plaguevillage`） | 32466 | Map of Arnem Outskirts | [[区域_R05_灰烬湿地与疫村]] | [[地点设计卡_R05_灰烬湿地与疫村]] | [[人物_FX-PLG_蔻珥]] |
-| 老宅子（`map_oldhomestead`） | 32467 | Map of the Old Homestead Surroundings | [[区域_R02_丹布里西路与渡口]] | [[地点设计卡_R02_丹布里西路与渡口]] | [[人物_FX-HOM_苇珥]]、[[人物_FX-FRM_蓟珥]] |
+| 老宅子（`map_oldhomestead`） | 32467 | Map of the Old Homestead Surroundings | [[区域_R02_布林东侧河口与渡口]] | [[地点设计卡_R02_布林东侧河口与渡口]] | [[人物_FX-HOM_苇珥]]、[[人物_FX-FRM_蓟珥]] |
 | 修院（`map_abbey`） | 32468 | Map of the Abbey Surroundings | [[区域_R06_无名修院山地]] | [[地点设计卡_R06_无名修院山地]] | [[人物_FX-ABY_缇菈]]、[[人物_FX-HUT_珂琳]]、[[人物_FX-CRP_瑟珥]] |
 | 烂柳（`map_rottenwillow`） | 32469 | Map of the Rotten Willow Surroundings | [[区域_R05_灰烬湿地与疫村]] | [[地点设计卡_R05_灰烬湿地与疫村]] | [[人物_FX-WIL_摩珥]] |
-| 自由谷（`map_freevalley`） | 32470 | Map of the Free Vale | [[区域_R02_丹布里西路与渡口]] | [[地点设计卡_R02_丹布里西路与渡口]] | [[人物_FX-RLY_珥薇]] |
+| 自由谷（`map_freevalley`） | 32470 | Map of the Free Vale | [[区域_R02_布林东侧河口与渡口]] | [[地点设计卡_R02_布林东侧河口与渡口]] | [[人物_FX-RLY_珥薇]] |
 
 ## 布林城郊（`map_brynn`）
 
@@ -103,7 +103,7 @@ aliases: []
 
 **原作避让**：不认领原主房屋；不改官方商路走向。
 
-**Mod 落点**：地域 [[区域_R02_丹布里西路与渡口]]；地点卡 [[地点设计卡_R02_丹布里西路与渡口]]；人物 [[人物_FX-HOM_苇珥]]、[[人物_FX-FRM_蓟珥]]。
+**Mod 落点**：地域 [[区域_R02_布林东侧河口与渡口]]；地点卡 [[地点设计卡_R02_布林东侧河口与渡口]]；人物 [[人物_FX-HOM_苇珥]]、[[人物_FX-FRM_蓟珥]]。
 
 ## 修院（`map_abbey`）
 
@@ -151,7 +151,7 @@ aliases: []
 
 **原作避让**：不新增第二个摆渡点；不改原作渡口与旅店人物。
 
-**Mod 落点**：地域 [[区域_R02_丹布里西路与渡口]]；地点卡 [[地点设计卡_R02_丹布里西路与渡口]]；人物 [[人物_FX-RLY_珥薇]]。
+**Mod 落点**：地域 [[区域_R02_布林东侧河口与渡口]]；地点卡 [[地点设计卡_R02_布林东侧河口与渡口]]；人物 [[人物_FX-RLY_珥薇]]。
 
 ## 边界
 

@@ -15,7 +15,7 @@ def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 inv = json.loads((ROOT / 'research/special-location-inventory.json').read_text(encoding='utf-8'))
 SITES = {r['key'] for r in inv['rumor_sites']} | {r['key'] for r in inv['site_types']}
 REGIONS = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06']
-REGN = {'R01': '区域_R01_布林外港与旧渠', 'R02': '区域_R02_丹布里西路与渡口', 'R03': '区域_R03_曼恩边地',
+REGN = {'R01': '区域_R01_布林外港与旧渠', 'R02': '区域_R02_布林东侧河口与渡口', 'R03': '区域_R03_曼恩边地',
         'R04': '区域_R04_王廷关隘与边城', 'R05': '区域_R05_灰烬湿地与疫村', 'R06': '区域_R06_无名修院山地'}
 NPCS = [
  dict(id='FX-QRY', name='德茹', role='石场看守', site='rumor_abandonedQuarry1', region='R01',
@@ -35,7 +35,7 @@ NPCS = [
       greetings=[('first', '磨不转了，人还得吃饭。你是来磨面还是来打听水？'), ('revisit', '又见面了。闸门还是那样，别碰。'), ('night', '夜里水声大，出什么事都听不见。你也是来听水的？')],
       chats=['磨盘空转会裂，人也一样，闲着就生事。', '上游漂下来的东西，我不捞。捞了就得还，还不起。', '你要是想磨面，得自己带麦子，我不替谁垫料。'],
       site_lines=[('arrival', '先看闸，再看我。水要是黄的，今天就别上磨台。'), ('warning', '水口那圈石头是滑的，上个月有人在那摔断了腿。'), ('refusal', '要我替你开闸放水？不行，闸一开，下游的账都算我头上。')],
-      links=['区域_R02_丹布里西路与渡口', '聚落_DEN_丹布里']),
+      links=['区域_R02_布林东侧河口与渡口', '聚落_DEN_丹布里']),
  dict(id='FX-CRP', name='瑟珥', role='陵墓盗掘幸存者', site='rumor_remoteCrypt1', region='R03',
       look='二十多岁的年轻人，衣服上全是灰，右手一直攥着一截断绳；说话时先看出口。',
       voice='语速快，句子短，怕回声；说到同伴就停下来数手指。',
@@ -143,7 +143,7 @@ NPCS = [
       greetings=[('first', '别抢，没什么好抢的。我翻过三遍了。'), ('revisit', '又是你。这回我找到半把剪刀。'), ('night', '夜里我不来。夜里的屋子会响。')],
       chats=['搬走的人家不锁门。锁了也没用，锁挡不住荒。', '我捡东西不捡信。信是别人的日子。', '你说这屋子归谁？归草。草先来的。'],
       site_lines=[('arrival', '从西边进，东边那间的地板塌了。'), ('warning', '灶台别靠，烟道里住着东西。'), ('refusal', '要我陪你翻里屋？不去。里屋我留着自己翻。')],
-      links=['区域_R02_丹布里西路与渡口', '聚落_DEN-S01_苇背村']),
+      links=['区域_R02_布林东侧河口与渡口', '聚落_DEN-S01_苇背村']),
  dict(id='FX-INK', name='韦珥', role='拉尔夫记旅馆旧仆', site='rumor_ralphSons1', region='R02',
       look='四十来岁的男人，围裙洗得发白，腰间挂一串旧钥匙；说话先摆好桌上的杯子。',
       voice='待客的口气，但一句话里会漏出旧事；被问到东家就转去问菜。',
@@ -152,7 +152,7 @@ NPCS = [
       greetings=[('first', '住店还是打尖？先说清楚，我才好摆杯子。'), ('revisit', '熟客了。老位置还给你留着。'), ('night', '夜里只有冷灶。要热的，得等天亮。')],
       chats=['面包和盐是店里的规矩。规矩不值钱，但能留人。', '这店名字挂在门口，名字后面的事挂在心里。', '你问我围城那年？那年店门没关，别的记不清。'],
       site_lines=[('arrival', '马拴东边桩上，别拴门口。'), ('warning', '二楼西头那间别住，漏雨，被子是潮的。'), ('refusal', '要我赊账？不行。欠账的客人，最后都不来了。')],
-      links=['区域_R02_丹布里西路与渡口', '空间_DEN_丹布里']),
+      links=['区域_R02_布林东侧河口与渡口', '空间_DEN_丹布里']),
  dict(id='FX-HNT', name='珥兰', role='猎场设陷者', site='rumor_grazingHG1', region='R03',
       look='三十多岁的女子，腿绑皮护，腰后插着三根削尖的木桩；走路几乎不出声。',
       voice='几乎不说整句，先说“看脚下”；聊到猎物才多说两句。',
@@ -260,7 +260,7 @@ NPCS = [
       greetings=[('first', '歇脚可以。锅是我的，火你自己生。'), ('revisit', '又见面了。灰坑我扫过，能用。'), ('night', '夜里别赶路。这边路上什么人都有。')],
       chats=['我在两个村子之间跑。锅背久了，肩膀就记住了路。', '有人把东西落在这儿。我不收，也不扔。', '桥板修好以前，绕路要多走半天。'],
       site_lines=[('arrival', '帐篷杆别插在旧灰坑上，坑底还烫。'), ('warning', '南边那片草别踩，下面有旧桩。'), ('refusal', '要我替你看东西？不看。丢了算谁的，说不清。')],
-      links=['区域_R02_丹布里西路与渡口', '台本_DT08_修好第二块桥板']),
+      links=['区域_R02_布林东侧河口与渡口', '台本_DT08_修好第二块桥板']),
  dict(id='FX-FRM', name='蓟珥', role='安静农宅住户', site='rumor_homestead1', region='R02',
       look='五十来岁的男人，袖口卷起，指甲缝里是土；说话前先看一眼院门。',
       voice='寡言，答话常比问题短；提水井才多说两句。',
@@ -269,7 +269,7 @@ NPCS = [
       greetings=[('first', '院门开着不代表能进。你要水，我给你舀。'), ('revisit', '又是你。水缸还在老地方。'), ('night', '夜里别敲院门。敲了我不开。')],
       chats=['地还在种。种得少，够吃就行。', '搬走的人家把井填了。填井的人，心里有数。', '我不问外面的事。问多了，睡不好。'],
       site_lines=[('arrival', '鞋上的泥在门槛外蹭掉。'), ('warning', '菜畦别踩，种子刚下。'), ('refusal', '要我留你过夜？不行。屋里就我一个人。')],
-      links=['区域_R02_丹布里西路与渡口', '台本_DT02_干净的井水']),
+      links=['区域_R02_布林东侧河口与渡口', '台本_DT02_干净的井水']),
  dict(id='FX-CV2', name='芩珥', role='采药歇脚者', site='rumor_cave2', region='R06',
       look='四十来岁的女人，背篓里垫着旧布，手指有草汁染出的褐痕；进洞前先把篓子放下。',
       voice='说话慢，先报草名再谈别的；被催就停下来闻一闻。',
@@ -1158,7 +1158,7 @@ def put(rel, t):
     p.write_text(t, encoding='utf-8'); changed.add('design/' + rel); generated['design/' + rel] = sha(p)
 for n in NPCS:
     rel = f"04_人物/野外人物/人物_{n['id']}_{n['name']}.md"
-    geo = '布林以东：石场坡道Q1（本地41,33）／废弃石场Q2（42,32）。' if n['id']=='FX-QRY' else ''
+    geo = '布林以东：石场坡道／废弃石场。' if n['id']=='FX-QRY' else ''
     b = (f"---\ntitle: \"人物_{n['id']}_{n['name']}\"\nid: {n['id']}\ntype: character\nstatus: draft\ncanon: mod-original\n"
          f"baseline: \"0.9.4.25-modbranch\"\nupdated: 2026-10-13\ntags: [stoneshard, S94, field-npc]\naliases: []\n---\n\n# 人物_{n['id']}_{n['name']}\n\n"
          f"**工作**：{n['role']}，常在 `{n['site']}` 一带。地域见 [[{REGN[n['region']]}]]。{geo}\n\n"
@@ -1175,7 +1175,7 @@ agg = ('---\ntitle: "台本_FX_野外人物对白"\nid: FX-FIELD-DIALOGUE\ntype:
        '> [!info] 播放规则\n> 只有本人存活、在场且愿谈时才播新句；死亡或缺席只保留事前有限陈述，不能由旁人代播。同一事实在不同人物口中有不同版本，但不含本人无权知道的内容。\n\n')
 for n in NPCS:
     agg += f"## {n['name']}·{n['role']}（`{n['id']}`）\n\n"
-    agg += f"地点类型：`{n['site']}`；地域：[[{REGN[n['region']]}]]；人物卡：[[人物_{n['id']}_{n['name']}]]。" + ('布林以东：石场坡道Q1（本地41,33）／废弃石场Q2（42,32）。' if n['id']=='FX-QRY' else '') + '\n\n'
+    agg += f"地点类型：`{n['site']}`；地域：[[{REGN[n['region']]}]]；人物卡：[[人物_{n['id']}_{n['name']}]]。" + ('布林以东：石场坡道／废弃石场。' if n['id']=='FX-QRY' else '') + '\n\n'
     agg += f"**体貌**：{n['look']}\n\n**口吻**：{n['voice']}\n\n"
     agg += '**知情**：' + '；'.join(n['knows']) + '。**不越界**：' + '；'.join(n['not_knows']) + '。\n\n'
     en = n['english']

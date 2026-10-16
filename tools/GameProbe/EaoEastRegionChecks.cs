@@ -63,6 +63,14 @@ internal static class EaoEastRegionChecks
         var original=data.Sprites.Single(s=>s.Name.Content=="s_gmount01_paper").Textures[3].Texture;
         Need(ridge.Width==52&&ridge.Height==52&&ridge.Textures.Count==6&&ridge.Textures.All(t=>t.Texture.TexturePage==original.TexturePage&&t.Texture.SourceX>=original.SourceX&&t.Texture.SourceY>=original.SourceY&&t.Texture.SourceX+t.Texture.SourceWidth<=original.SourceX+original.SourceWidth&&t.Texture.SourceY+t.Texture.SourceHeight<=original.SourceY+original.SourceHeight),"east-region-paper-ridge-references-native-atlas-crops-only");
         Need(cache.Contains("global.glmapBatchArrayPaperMountBottom")&&cache.Contains("global.glmapBatchArrayPaperGround"),"east-region-clears-old-border-decals-in-normal-and-paper-batches");
+        Need(cache.Contains("local._eao_cn")&&cache.Contains("local._eao_cw")&&cache.Contains("local._eao_ce")&&cache.Contains("local._eao_cs"),"east-region-unmatched-coast-reconstructs-four-corners");
+        Need(cache.Contains("scr_glmap_addSpriteInArray")&&cache.Contains("scr_glmap_addSpriteInPaperArray"),"east-region-native-ground-details-in-normal-and-paper-batches");
+        foreach(var name in new[]{"s_globalmap_steppedecals","s_globalmap_pinedecals01"}) {
+            var decal=data.Sprites.Single(s=>s.Name.Content==name);
+            Need(decal.OriginX==0&&decal.OriginY==0&&decal.Width*0.8+2<=52&&decal.Height*0.8+4<=52&&decal.Textures.Count==7,"east-region-native-decal-stays-within-cell-"+name);
+        }
+        var bridgeIndex=data.Sprites.IndexOf(data.Sprites.Single(s=>s.Name.Content=="s_gbridge_steppe"));
+        Need(cache.Contains("local._eao_ground_frame")&&cache.Contains("\"growSeed\"")&&Regex.IsMatch(cache,@"push(?:i\.e|\.i)\s+"+bridgeIndex+@"\b"),"east-region-deterministic-decal-variation-and-steppe-bridge-palette");
         return checks.ToArray();
     }
 }

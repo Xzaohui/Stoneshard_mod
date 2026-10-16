@@ -9,6 +9,17 @@ if (variable_global_exists("characterDataMap") && global.characterDataMap != dev
     else { event_user(0); exit; }
 }
 if (!instance_exists(o_player) && !instance_exists(o_smoothRoomChanger) && !instance_exists(o_abstract_player) && !instance_exists(o_fastTurnController)) { if (!_keep) event_user(0); exit; }
+// The native normal map registers right press (5) and callback User15 only.
+// Route its focused interactions through our existing User10 while DEV owns it.
+// User10 forwards every non-left interaction to native User15 unchanged.
+with (o_globalmapInteractiveNormal) {
+    if ((!variable_instance_exists(id,"EAO_dev_map_owned") || !EAO_dev_map_owned) && guiInteractiveEvent==15) {
+        EAO_dev_map_left_before=ds_list_find_index(guiInteractiveStatesList,2)!=-1;
+        EAO_dev_map_owned=true;
+        scr_guiInteractiveStateUpdate(id,2);
+        scr_guiInteractiveEventUpdate(id,10);
+    }
+}
 if (_keep && instance_exists(o_player) && !instance_exists(o_smoothRoomChanger) && room == global.EAO_dev_return_room) global.EAO_dev_return_keep = false;
 // Two world cells can share r_steppe. Require the newly created player as well
 // as room/world coordinates; the old player's final frame must not end keep.

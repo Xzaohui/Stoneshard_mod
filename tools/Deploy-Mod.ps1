@@ -151,6 +151,16 @@ if ([version]$taskReport.modVersion -ge [version]'0.3.20') {
         if ($taskRequired -notin $taskActions.compiledCallbackScenarios) { throw ('Missing native water initialization scenario: ' + $taskRequired) }
     }
 }
+if ([version]$taskReport.modVersion -ge [version]'0.3.21') {
+    foreach ($taskRequired in @('east-region-unmatched-coast-reconstructs-four-corners','east-region-native-ground-details-in-normal-and-paper-batches','east-region-native-decal-stays-within-cell-s_globalmap_steppedecals','east-region-native-decal-stays-within-cell-s_globalmap_pinedecals01','east-region-deterministic-decal-variation-and-steppe-bridge-palette')) {
+        if ($taskRequired -notin $taskRegion.checks) { throw ('Missing east map style check: ' + $taskRequired) }
+    }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.22') {
+    foreach ($taskRequired in @('dev-map-focused-left-state-and-owned-user10-registered','dev-map-disable-restores-native-callback-and-only-owned-left-state')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing developer map registration check: ' + $taskRequired) }
+    }
+}
 function Test-TaskNoLink([string]$Path) {
     $taskAbsolute = [IO.Path]::GetFullPath($Path)
     for ($taskPart = $taskAbsolute; $taskPart; $taskPart = Split-Path $taskPart -Parent) {

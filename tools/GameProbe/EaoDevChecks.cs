@@ -25,6 +25,8 @@ internal static class EaoDevChecks
         Require(Regex.IsMatch(create,@"pushi\.e 0\s+pop\.v\.[bi] global.EAO_dev_enabled"),"dev-default-off");
         var reset=Asm("gml_Object_o_eao_devtools_Other_10");
         var step=Asm("gml_Object_o_eao_devtools_Step_2");
+        Require(new[]{"EAO_dev_map_owned","EAO_dev_map_left_before","scr_guiInteractiveStateUpdate","scr_guiInteractiveEventUpdate","guiInteractiveEvent"}.All(step.Contains),"dev-map-focused-left-state-and-owned-user10-registered");
+        Require(new[]{"EAO_dev_map_owned","EAO_dev_map_left_before","ds_list_delete","guiInteractiveStatesCount","scr_guiInteractiveEventUpdate"}.All(reset.Contains),"dev-map-disable-restores-native-callback-and-only-owned-left-state");
         Require(step.Contains("EAO_dev_warp_keep")&&step.Contains("EAO_dev_warp_player")&&step.Contains("EAO_dev_warp_grid_x")&&reset.Contains("EAO_dev_warp_keep"),"dev-warp-observer-survives-owned-new-player-and-resets-on-disable");
         Require(reset.Contains("dev_fog_before")&&reset.Contains("global.fog")&&reset.Contains("EAO_dev_visible_before")&&step.Contains("dev_character_map"),"dev-fog-restored-on-disable-and-character-change");
         var visit=Asm("gml_Object_o_eao_devtools_KeyPress_122");

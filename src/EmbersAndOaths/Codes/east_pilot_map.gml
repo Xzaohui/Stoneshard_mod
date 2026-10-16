@@ -34,22 +34,34 @@ for(_eao_x=40;_eao_x<_eao_nw;_eao_x++) for(_eao_y=0;_eao_y<_eao_h;_eao_y++) {
     var _eao_biome=ds_map_find_value(_eao_p,"Biome");
     var _eao_steppe_frame=_eao_biome=="Steppe" ? 15 : 0;
     if(_eao_steppe_frame==0 && _eao_biome!="Mount" && _eao_x<_eao_nw-1 && _eao_y>0 && _eao_y<_eao_h-1) {
-        // Native strip bits: NE=1, NW=2, SE=4, SW=8. Extend its soft edge
+        // Native strip bits (checked against pixels): NW=1, NE=2, SW=4, SE=8.
         // across adjacent ground/shore rather than drawing a rectangular patch.
         var _eao_sn=scr_globaltile_get("Biome",_eao_x,_eao_y-1)=="Steppe";
         var _eao_sw=scr_globaltile_get("Biome",_eao_x-1,_eao_y)=="Steppe";
         var _eao_se=scr_globaltile_get("Biome",_eao_x+1,_eao_y)=="Steppe";
         var _eao_ssouth=scr_globaltile_get("Biome",_eao_x,_eao_y+1)=="Steppe";
-        _eao_steppe_frame=(_eao_sn+_eao_se+(scr_globaltile_get("Biome",_eao_x+1,_eao_y-1)=="Steppe")>=2 ? 1 : 0)
-            +(_eao_sn+_eao_sw+(scr_globaltile_get("Biome",_eao_x-1,_eao_y-1)=="Steppe")>=2 ? 2 : 0)
-            +(_eao_ssouth+_eao_se+(scr_globaltile_get("Biome",_eao_x+1,_eao_y+1)=="Steppe")>=2 ? 4 : 0)
-            +(_eao_ssouth+_eao_sw+(scr_globaltile_get("Biome",_eao_x-1,_eao_y+1)=="Steppe")>=2 ? 8 : 0);
+        _eao_steppe_frame=(_eao_sn+_eao_sw+(scr_globaltile_get("Biome",_eao_x-1,_eao_y-1)=="Steppe")>=2 ? 1 : 0)
+            +(_eao_sn+_eao_se+(scr_globaltile_get("Biome",_eao_x+1,_eao_y-1)=="Steppe")>=2 ? 2 : 0)
+            +(_eao_ssouth+_eao_sw+(scr_globaltile_get("Biome",_eao_x-1,_eao_y+1)=="Steppe")>=2 ? 4 : 0)
+            +(_eao_ssouth+_eao_se+(scr_globaltile_get("Biome",_eao_x+1,_eao_y+1)=="Steppe")>=2 ? 8 : 0);
     }
     if(_eao_steppe_frame>0) scr_glmap_addSprite(_eao_x*52,_eao_y*52,s_glmap_steppe_strip16,1,_eao_steppe_frame);
     if(_eao_biome=="Sea") {
         var _eao_frame=scr_glmap_findShoreTile(_eao_x,_eao_y);
-        if(_eao_frame<0) _eao_frame=15;
-        if(_eao_x>=48 || _eao_y<2 || _eao_y>=_eao_h-2) _eao_frame=15;
+        // The native lookup does not include every inlet made by this layout.
+        // Reconstruct its corner bits for unmatched neighbors, never default a
+        // coast to a full water square. Water[0] is read before flags are set.
+        if(_eao_frame<0) {
+            var _eao_cn=scr_globaltile_get("Biome",_eao_x,_eao_y-1)=="Sea";
+            var _eao_cw=scr_globaltile_get("Biome",_eao_x-1,_eao_y)=="Sea";
+            var _eao_ce=scr_globaltile_get("Biome",min(_eao_x+1,_eao_nw-1),_eao_y)=="Sea";
+            var _eao_cs=scr_globaltile_get("Biome",_eao_x,min(_eao_y+1,_eao_h-1))=="Sea";
+            _eao_frame=(_eao_cn+_eao_cw+(scr_globaltile_get("Biome",_eao_x-1,_eao_y-1)=="Sea")>=2 ? 1 : 0)
+                +(_eao_cn+_eao_ce+(scr_globaltile_get("Biome",min(_eao_x+1,_eao_nw-1),_eao_y-1)=="Sea")>=2 ? 2 : 0)
+                +(_eao_cs+_eao_cw+(scr_globaltile_get("Biome",_eao_x-1,min(_eao_y+1,_eao_h-1))=="Sea")>=2 ? 4 : 0)
+                +(_eao_cs+_eao_ce+(scr_globaltile_get("Biome",min(_eao_x+1,_eao_nw-1),min(_eao_y+1,_eao_h-1))=="Sea")>=2 ? 8 : 0);
+        }
+        if(_eao_x>=49 || _eao_y<2 || _eao_y>=_eao_h-2) _eao_frame=15;
         scr_glmap_addSprite(_eao_x*52,_eao_y*52,s_glmap_sea_strip16,4,_eao_frame);
         var _eao_shore_room=-1;var _eao_shore_class="";
         switch(_eao_frame) {
@@ -66,7 +78,7 @@ for(_eao_x=40;_eao_x<_eao_nw;_eao_x++) for(_eao_y=0;_eao_y<_eao_h;_eao_y++) {
                 var _eao_norths=[r_SeaShore_North01,r_SeaShore_North02,r_SeaShore_North03];
                 _eao_shore_room=_eao_norths[(_eao_x+_eao_y) mod 3];break;
         }
-        if(_eao_shore_room!=-1) {
+        if(_eao_shore_room!=-1 && _eao_x<48) {
             ds_map_set(_eao_p,"room_type",room_get_name(_eao_shore_room));
             ds_map_set(_eao_p,"Collision",false);
             if(_eao_shore_class!="") ds_map_set(_eao_p,"ShoreDirection",_eao_shore_class);
@@ -77,6 +89,15 @@ for(_eao_x=40;_eao_x<_eao_nw;_eao_x++) for(_eao_y=0;_eao_y<_eao_h;_eao_y++) {
         ds_map_set(_eao_p,"Water",["Sea",_eao_wn,_eao_ww]);
     }
     var _eao_water=ds_map_find_value(_eao_p,"Water");
+    // Native small ground decals break up the flat color. Keep each specimen
+    // wholly inside its own cell; no decal covers the retained original prefix,
+    // a neighboring biome, sea, road or ridge. No new texture pixels or RNG.
+    if(_eao_biome=="Steppe" || _eao_biome=="Pine" || _eao_biome=="Middle") {
+        var _eao_ground=_eao_biome=="Steppe" ? s_globalmap_steppedecals : s_globalmap_pinedecals01;
+        var _eao_ground_frame=floor(ds_map_find_value(_eao_p,"growSeed")) mod 7;
+        scr_glmap_addSpriteInArray(global.glmapBatchArrayGround,_eao_x*52+2,_eao_y*52+4,_eao_ground,_eao_ground_frame,52,52,0.8,0.8);
+        scr_glmap_addSpriteInPaperArray(global.glmapBatchArrayPaperGround,_eao_x*52+2,_eao_y*52+4,_eao_ground,_eao_ground_frame,52,52,0.8,0.8);
+    }
     if(_eao_water[0]=="River") {
         // Native river geometry; endpoint variation is deterministic, no RNG call.
         var _eao_river_frame=_eao_y==29 ? 6 : _eao_y==37 ? 9 : 1;
@@ -85,7 +106,9 @@ for(_eao_x=40;_eao_x<_eao_nw;_eao_x++) for(_eao_y=0;_eao_y<_eao_h;_eao_y++) {
     if(scr_glmap_hasRoad(_eao_x,_eao_y)) {
         var _eao_rs=_eao_biome=="Steppe" ? s_groad_steppe : s_groad;
         scr_glmap_addSprite(_eao_x*52,_eao_y*52,_eao_rs,5,scr_glmap_findRoadTile(_eao_x,_eao_y));
-        if(_eao_water[0]=="River") scr_glmap_addSprite(_eao_x*52,_eao_y*52,s_gbridge,5,3);
+        // Frame 0 is a horizontal wooden deck over a vertical river. Frame 3
+        // draws a vertical deck and erases a horizontal water strip in the map.
+        if(_eao_water[0]=="River") scr_glmap_addSprite(_eao_x*52,_eao_y*52,s_gbridge_steppe,5,0);
     }
     if(_eao_biome=="Pine") {
         var _eao_tree_frame=3+floor(ds_map_find_value(_eao_p,"seed")) mod 3;

@@ -13,14 +13,14 @@ internal static class EaoEastNativeReference
         foreach (var id in new[] { 340,355,359,360,361,362,363,366,367,368,369,370,302,300 }) {
             var room=data.Rooms[id]; Console.WriteLine($"ROOM {id} {room.Name.Content} {room.Width}x{room.Height}");
         }
-        var names=new[] { "s_glmap_steppe_strip16", "s_glmap_sea_strip16", "s_gmount01_1_strip16", "s_gmount01_2_strip16", "s_gmount01_3_strip16", "s_gmount01_4_strip16" };
+        var names=new[] { "s_glmap_steppe_strip16", "s_glmap_sea_strip16", "s_gmount01_1_strip16", "s_gmount01_2_strip16", "s_gmount01_3_strip16", "s_gmount01_4_strip16", "s_gbridge", "s_gbridge_steppe", "s_globalmap_steppedecals", "s_globalmap_pinedecals01" };
         var atlases=new Dictionary<int,BitmapSource>();
         var canvas=new DrawingVisual();
         using(var dc=canvas.RenderOpen()) {
             dc.DrawRectangle(Brushes.DarkSlateGray,null,new Rect(0,0,16*64,names.Length*86));
             for(var y=0;y<names.Length;y++) {
                 var sprite=data.Sprites.Single(s=>s.Name.Content==names[y]);
-                for(var x=0;x<16;x++) {
+                for(var x=0;x<Math.Min(16,sprite.Textures.Count);x++) {
                     var texture=sprite.Textures[x].Texture;
                     var page=data.EmbeddedTextures.IndexOf(texture.TexturePage);
                     if(!atlases.TryGetValue(page,out var atlas)) {

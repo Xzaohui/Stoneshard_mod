@@ -10,6 +10,20 @@ if (variable_global_exists("characterDataMap") && ds_exists(global.characterData
 }
 global.EAO_dev_return_keep = false;
 global.EAO_dev_warp_keep = false;
+with (o_globalmapInteractiveNormal) {
+    if (variable_instance_exists(id,"EAO_dev_map_owned") && EAO_dev_map_owned) {
+        // A later owner must not be overwritten on reset.
+        if (guiInteractiveEvent==10) {
+            if (!EAO_dev_map_left_before) {
+                var _left_index=ds_list_find_index(guiInteractiveStatesList,2);
+                if (_left_index!=-1) ds_list_delete(guiInteractiveStatesList,_left_index);
+                guiInteractiveStatesCount=ds_list_size(guiInteractiveStatesList);
+            }
+            scr_guiInteractiveEventUpdate(id,15);
+        }
+        EAO_dev_map_owned=false;
+    }
+}
 with (o_globalmapFogRender) {
     if (variable_instance_exists(id,"EAO_dev_visible_owned") && EAO_dev_visible_owned) {
         visible = EAO_dev_visible_before;

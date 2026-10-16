@@ -58,6 +58,16 @@ if (args.Length == 0) {
 using var stream = File.OpenRead(args[0]);
 var data = UndertaleIO.Read(stream);
 Console.WriteLine($"Loaded: {data.Code.Count} code entries, {data.GameObjects.Count} objects, {data.Rooms.Count} rooms.");
+if (args.Length > 1 && args[1] == "--east-style-assets") {
+    bool Ground(UndertaleModLib.Models.UndertaleGameObject? o) => o != null && (o.Name.Content == "o_globalmap_ground" || Ground(o.ParentId));
+    var map = data.Rooms.Single(r => r.Name.Content == "r_GlobalMap");
+    foreach (var group in map.GameObjects.Where(i => Ground(i.ObjectDefinition)).GroupBy(i => i.ObjectDefinition.Sprite)) {
+        if (group.Key == null) continue;
+        var s = group.Key;
+        Console.WriteLine(JsonSerializer.Serialize(new { sprite=s.Name.Content, width=s.Width, height=s.Height, originX=s.OriginX, originY=s.OriginY, frames=s.Textures.Count, count=group.Count(), samples=group.Take(3).Select(i=>new { x=i.X, y=i.Y, frame=i.ImageIndex, xs=i.ScaleX, ys=i.ScaleY }) }));
+    }
+    return;
+}
 if (args.Length > 1 && args[1] == "--east-native-reference") {
     EaoEastNativeReference.Export(data, args[2]); return;
 }

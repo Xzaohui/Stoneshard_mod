@@ -1,0 +1,70 @@
+{
+  "name": "globalmap_east_20261016",
+  "group": 1,
+  "spec": "work/code@831a188f docs/roadmap/大地图扩充方案-20261016.md §6",
+  "created": "2026-10-16",
+  "branch": "work/art",
+  "files": [
+    {
+      "path": "src/Art/globalmap_east_20261016/layout/east_layout.png",
+      "sha256": "8030803ccf756ce84e4bc6f27f0b3aa5da0e0d98e65969861ffc7244bc1efaff",
+      "bytes": 664879,
+      "width": 728,
+      "height": 988
+    },
+    {
+      "path": "src/Art/globalmap_east_20261016/layout/east_layout_cells.txt",
+      "sha256": "995a3efa2cc5d445b7a8dae1ff375f2752bc7a6879995a117e57cc1a551cbb24",
+      "bytes": 1725
+    },
+    {
+      "path": "src/Art/globalmap_east_20261016/layout/east_layout_paper.png",
+      "sha256": "c10f509cc3a12364a622cf9a3025174d8dada3bee338cfe2561e18aea0c678f0",
+      "bytes": 1159299,
+      "width": 728,
+      "height": 988
+    },
+    {
+      "path": "src/Art/globalmap_east_20261016/icons/s_eao_gl_ferry.png",
+      "sha256": "f7b8a6428f878aa384893851992975407d3dfed925894cc2c9fb2148b379471f",
+      "bytes": 6465,
+      "width": 52,
+      "height": 56,
+      "mode": "RGBA"
+    },
+    {
+      "path": "src/Art/globalmap_east_20261016/icons/s_eao_gl_ferry_paper.png",
+      "sha256": "7fd713181148780940456f9b2f2d9cca39c684e303c209a8bcfc374364b101b1",
+      "bytes": 6761,
+      "width": 52,
+      "height": 55,
+      "mode": "RGBA"
+    },
+    {
+      "path": "src/Art/globalmap_east_20261016/icons/s_eao_gl_greybank.png",
+      "sha256": "c4566c6ac752ab8bd50c57b1feca0bcc36af06d3c4781840f7ef50bcb5a0106b",
+      "bytes": 7172,
+      "width": 52,
+      "height": 52,
+      "mode": "RGBA"
+    },
+    {
+      "path": "src/Art/globalmap_east_20261016/icons/s_eao_gl_greybank_paper.png",
+      "sha256": "e8f4d672da4e6325a08fe64f42d9054c2161e6f1fd993b7a29ecdd97735ad33f",
+      "bytes": 7530,
+      "width": 52,
+      "height": 52,
+      "mode": "RGBA"
+    }
+  ],
+  "notes": {
+    "layout": "Code-composited from §4 ASCII grid; palette sampled from stoneshard.com Global_Map.png; ink outlines + wash noise. Planning sketch only (not in-game).",
+    "icons": "Codex local image_gen masters, keyed+downscaled to 52×52 (max h 59). Quarry reuses vanilla s_gabadonedquarry_steppe (not produced).",
+    "deferred": "sites shadow / quarry hard-edge art fixes still deferred per code.",
+    "no_new_tiles": "Decals and terrain tiles reuse originals; none produced."
+  },
+  "routes": {
+    "icons": "local:codex-cli / codex-image_gen",
+    "layout": "code (Pillow) + Global_Map palette sample"
+  }
+}

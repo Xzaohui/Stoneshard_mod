@@ -178,6 +178,12 @@ if (args.Length > 1 && args[1] == "--test-eao-dev") {
     File.WriteAllText(ProjectPaths.Output(Path.Combine(ProjectPaths.Root(),"artifacts","dev-validation.json"),"artifacts"),JsonSerializer.Serialize(report,new JsonSerializerOptions{WriteIndented=true}));
     Console.WriteLine(JsonSerializer.Serialize(report));return;
 }
+if (args.Length > 1 && args[1] == "--test-eao-east") {
+    var checks=EaoEastSurfaceChecks.Validate(data);
+    var report=new {date=DateTimeOffset.Now,checks,inputSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(args[0]))),scope="serialized/native-interface contracts; no GameMaker runtime",runtimeVerified=false};
+    File.WriteAllText(ProjectPaths.Output(Path.Combine(ProjectPaths.Root(),"artifacts","east-surface-validation.json"),"artifacts"),JsonSerializer.Serialize(report,new JsonSerializerOptions{WriteIndented=true}));
+    Console.WriteLine(JsonSerializer.Serialize(report));return;
+}
 if (args.Length > 1 && args[1] == "--test-eao-story") {
     var checks=EaoStory.Validate(data);
     var report=new {date=DateTimeOffset.Now,checks,inputSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(args[0]))),runtimeVerified=false};

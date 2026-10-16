@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "introducedVersion": "0.3.15",
+  "kind": "mod-original-geographical-return-metadata",
+  "characterDataMapKeys": {
+    "EAO_geo_sites_return": {
+      "type": "string",
+      "allowedValues": ["r_eao_n2_sites", "r_eao_n2_world"],
+      "missingOrUnknownFallback": "r_eao_n2_sites",
+      "writer": "three o_eao_site_door_* Alarm 7 events, after a native changer exists",
+      "readers": ["o_eao_n2_home Step 0", "o_eao_site_winch_back Step 0", "o_eao_site_canal_back Step 0"],
+      "purpose": "Preserve legacy/world exterior source through saving and restarting inside an existing N2 building. Does not advance quests or move the world grid."
+    }
+  },
+  "surface": {
+    "room": "r_eao_n2_world",
+    "nativeGeneratorParent": "o_prairieGenerationController",
+    "cells": [90, 90],
+    "pilotWorldCell": [41, 37],
+    "returnMarkers": {"EAO_SITE_shed": [29, 44], "EAO_SITE_winch": [45, 44], "EAO_SITE_canal": [61, 44]},
+    "legacyRoomRetained": "r_eao_n2_sites"
+  },
+  "runtimeVerified": false
+}

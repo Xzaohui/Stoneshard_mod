@@ -1,11 +1,13 @@
-param([switch]$Deploy, [switch]$RepairExistingEao)
+param([switch]$Deploy, [switch]$RepairExistingEao, [string]$PackageCache)
 $ErrorActionPreference = 'Stop'
 $taskRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $taskGame = 'D:\SteamLibrary\steamapps\common\Stoneshard'
 Push-Location $taskRoot
 try {
     $env:DOTNET_CLI_HOME = Join-Path $taskRoot 'tools\.dotnet-home'
-    $env:NUGET_PACKAGES = Join-Path $taskRoot 'tools\packages'
+    # Sparse code worktrees can reuse the main checkout's complete dependency
+    # cache; tracked package metadata alone is not a restored NuGet package.
+    $env:NUGET_PACKAGES = if ($PackageCache) { [IO.Path]::GetFullPath($PackageCache) } else { Join-Path $taskRoot 'tools\packages' }
     $env:MSBuildEnableWorkloadResolver = 'false'
     $env:DOTNET_SKIP_FIRST_TIME_EXPERIENCE = '1'
     $env:DOTNET_CLI_TELEMETRY_OPTOUT = '1'
@@ -33,6 +35,8 @@ try {
     }
     dotnet $taskProbe $taskInput $taskPatchCommand artifacts/EmbersAndOaths.sml artifacts/direct-data.win --direct
     if ($LASTEXITCODE) { throw 'Current combination patch verification failed; nothing deployed.' }
+    dotnet $taskProbe artifacts/direct-data.win --test-eao-east
+    if ($LASTEXITCODE) { throw 'East surface/native generation contracts failed; nothing deployed.' }
     dotnet $taskProbe artifacts/direct-data.win --test-eao-actions
     if ($LASTEXITCODE) { throw 'Compiled document handover/read-state tests failed; nothing deployed.' }
     dotnet $taskProbe artifacts/direct-data.win --test-eao-rooms

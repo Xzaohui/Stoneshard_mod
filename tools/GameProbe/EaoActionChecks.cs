@@ -29,6 +29,11 @@ internal static class EaoActionChecks
             var code=data.Code.Single(c=>c.Name.Content==pair.Item2);
             methods[pair.Item1]=code.Disassemble(data.Variables,data.CodeLocals.For(code));
         }
+        var eastSurface = data.Rooms.Any(r => r.Name.Content == "r_eao_n2_world");
+        if (eastSurface) foreach (var pair in new[] { ("test_geo_return", "gml_Object_o_eao_n2_home_Step_0"), ("test_geo_enter", "gml_Object_o_eao_site_door_shed_Alarm_7") }) {
+            var code = data.Code.Single(c => c.Name.Content == pair.Item2);
+            methods[pair.Item1] = code.Disassemble(data.Variables, data.CodeLocals.For(code));
+        }
         var objects = new[] { "letter", "enclosure", "receipt", "copy", "permit", "manifest", "packing", "seal" }.Select(id => data.GameObjects.IndexOf(data.GameObjects.Single(o => o.Name.Content == "o_inv_eao_" + id))).ToArray();
         int inventoryObject = data.GameObjects.IndexOf(data.GameObjects.Single(o => o.Name.Content == "o_inventory"));
         var passed = new List<string>();
@@ -37,6 +42,26 @@ internal static class EaoActionChecks
             action(vm); passed.Add(name);
         }
         static void Require(bool condition, string message) { if (!condition) throw new InvalidDataException("Compiled EAO action regression: " + message); }
+        if (eastSurface) {
+            foreach (var source in new[] { "missing", "r_eao_n2_sites", "r_eao_n2_world", "r_taverninside1floor" })
+                Test("east-building-return-persisted-source-" + source, vm => {
+                    if (source != "missing") vm.Map["EAO_geo_sites_return"] = source;
+                    vm.Run("test_geo_return");
+                    Require(vm.DoorTarget == vm.RoomIndex(source == "r_eao_n2_world" ? "r_eao_n2_world" : "r_eao_n2_sites") &&
+                        vm.PositionTag == "NA" && vm.GridX == 29 && vm.GridY == 15 && vm.Items.Count == 0, "geographical return must keep native marker/world coordinates and safe legacy fallback");
+                });
+            foreach (var source in new[] { "r_eao_n2_sites", "r_eao_n2_world" })
+                Test("east-building-enter-records-native-source-" + source, vm => {
+                    vm.CurrentRoom = vm.RoomIndex(source); vm.NativeDoorCreatesChanger = true;
+                    vm.Run("test_geo_enter");
+                    Require((string)vm.Map["EAO_geo_sites_return"]! == source && vm.Changer && vm.Map.Count == 1, "successful native door origin");
+                });
+            Test("east-building-failed-or-pending-door-keeps-origin", vm => {
+                vm.Map["EAO_geo_sites_return"] = "r_eao_n2_sites"; vm.CurrentRoom = vm.RoomIndex("r_eao_n2_world");
+                vm.Run("test_geo_enter"); Require((string)vm.Map["EAO_geo_sites_return"]! == "r_eao_n2_sites", "failed native door overwrote origin");
+                vm.Changer = true; vm.Run("test_geo_enter"); Require((string)vm.Map["EAO_geo_sites_return"]! == "r_eao_n2_sites", "pending changer overwrote origin");
+            });
+        }
         Test("accept-places-three-documents-before-state", vm => {
             Require(vm.Run("eao_accept") == 0 && vm.State == 1 && vm.Carried == 3, "accept");
             Require(vm.Run("eao_resume") == 1 && vm.Run("eao_register_verren") == 1 && vm.State == 1, "unread gate");
@@ -269,7 +294,8 @@ internal static class EaoActionChecks
         public bool EntryExists, EntryLocked;
         public int EntryCreations, EntryDepth;
         public string EntryName="";
-        public int GuiState=2, NativeFallbacks;
+        public int GuiState=2, NativeFallbacks, DoorTarget=-1;
+        public bool NativeDoorCreatesChanger;
         public double MapScale=0.5;
         public int CurrentRoom = data.Rooms.ToList().FindIndex(r=>r.Name.Content=="r_taverninside1floor"), RequestedRoom=-4;
         public int GridX=29, GridY=15;
@@ -336,7 +362,8 @@ internal static class EaoActionChecks
                     else if (opcode.EndsWith(".v")) stack.Push(Resolve(operand));
                     else stack.Push(double.Parse(operand, CultureInfo.InvariantCulture));
                 } else if (opcode.StartsWith("pop.")) {
-                    if (operand=="global.position_tag") PositionTag=(string)stack.Pop()!;
+                    if (method=="test_geo_return" && operand=="self.target") DoorTarget=(int)Number(stack.Pop());
+                    else if (operand=="global.position_tag") PositionTag=(string)stack.Pop()!;
                     else if(method=="test_commit" && operand=="global.playerGridX") GridX=(int)Number(stack.Pop());
                     else if(method=="test_commit" && operand=="global.playerGridY") GridY=(int)Number(stack.Pop());
                     else if (operand.StartsWith("local.")) locals[operand[6..]] = stack.Pop();
@@ -385,7 +412,7 @@ internal static class EaoActionChecks
             int Int(int i) => (int)Number(args[i]);
             var paperObject = args.Length > 0 && args[0] is double or int or long ? Int(0) : -1;
             switch (name) {
-                case "event_inherited": return null;
+                case "event_inherited": if (NativeDoorCreatesChanger) Changer=true; return null;
                 case "instance_create_depth":
                     if(Int(0)!=351 || Int(1)!=428 || Int(2)!=-1100 || Int(3)!=ObjectIndex("o_eao_d01_entry")) throw new InvalidDataException("Unexpected customs entrance placement");
                     EntryExists=true;EntryCreations++;return 300002;

@@ -1,7 +1,9 @@
 // EAO GEO-02 east pilot: runs at the start of scr_globalmapCacheInit, i.e. inside
 // o_globalmap_controller User 9, after vanilla generation, ResizeGrid and the
 // random-sequence verification. No random calls here.
-if (variable_global_exists("terrainGrid") && ds_exists(global.terrainGrid, ds_type_grid) && (!variable_global_exists("EAO_east_grid") || global.EAO_east_grid != global.terrainGrid))
+// Dimensions, rather than a recycled DS handle, determine whether this generated
+// world still needs extending. A second cache init on the 50-column grid is a no-op.
+if (variable_global_exists("terrainGrid") && ds_exists(global.terrainGrid, ds_type_grid) && ds_grid_width(global.terrainGrid) == 42)
 {
     global.EAO_east_grid = global.terrainGrid;
     var _eao_ow = ds_grid_width(global.terrainGrid);
@@ -55,8 +57,12 @@ if (variable_global_exists("terrainGrid") && ds_exists(global.terrainGrid, ds_ty
         var _eao_p = ds_grid_get(global.terrainGrid, _eao_px + _eao_i, _eao_py);
         if (!(is_real(_eao_p) && _eao_p >= 0 && ds_exists(_eao_p, ds_type_map))) continue;
         ds_map_set(_eao_p, "Collision", false);
-        if (ds_map_exists(_eao_p, "EAO_east")) { ds_map_set(_eao_p, "Biome", "Steppe"); ds_map_set(_eao_p, "Water", ["None", false, false]); ds_map_set(_eao_p, "room_type", room_get_name(r_steppe)); }
-        if (_eao_i == 1) ds_map_set(_eao_p, "room_type", "r_eao_n2_sites");
+        ds_map_set(_eao_p, "Biome", "Steppe");
+        ds_map_set(_eao_p, "Water", ["None", false, false]);
+        ds_map_set(_eao_p, "Type", "Wild");
+        ds_map_set(_eao_p, "Subtype", "WildFree");
+        ds_map_set(_eao_p, "Preset", "N/A");
+        ds_map_set(_eao_p, "room_type", _eao_i == 0 ? room_get_name(r_steppe) : "r_eao_n2_world");
     }
     global.EAO_east_pilot = [_eao_px, _eao_py, _eao_px + 1, _eao_py];
     global.worldWidth = _eao_nw;

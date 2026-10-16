@@ -109,6 +109,16 @@ if ([version]$taskReport.modVersion -ge [version]'0.3.14') {
         if ($taskRequired -notin $taskDev.checks) { throw ('Missing N1 architecture check: ' + $taskRequired) }
     }
 }
+if ([version]$taskReport.modVersion -ge [version]'0.3.15') {
+    $taskEast = Get-Content -LiteralPath (Join-Path $taskRoot 'artifacts/east-surface-validation.json') -Raw | ConvertFrom-Json
+    if ($taskEast.inputSha256 -ne $taskReport.outputSha256) { throw 'East surface checks do not match this candidate.' }
+    foreach ($taskRequired in @('east-surface-native-ninety-by-ninety-geography','east-surface-legacy-exterior-and-exit-retained','east-surface-cache-hook-updates-task-room-on-repair','east-surface-extension-guard-uses-dimensions-not-recycled-handle','east-surface-all-native-edge-arrivals-and-building-returns-connected-in-authored-geometry')) {
+        if ($taskRequired -notin $taskEast.checks) { throw ('Missing east surface check: ' + $taskRequired) }
+    }
+    foreach ($taskRequired in @('east-building-return-persisted-source-r_eao_n2_world','east-building-return-persisted-source-missing','east-building-failed-or-pending-door-keeps-origin')) {
+        if ($taskRequired -notin $taskActions.compiledCallbackScenarios) { throw ('Missing east building return scenario: ' + $taskRequired) }
+    }
+}
 if (!$PackageOnly -and (Get-Process -Name StoneShard -ErrorAction SilentlyContinue)) { throw 'Game is running; close it before updating data.win. No process was stopped.' }
 function Test-TaskNoLink([string]$Path) {
     $taskAbsolute = [IO.Path]::GetFullPath($Path)

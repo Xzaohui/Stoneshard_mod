@@ -77,5 +77,6 @@ if (variable_global_exists("terrainGrid") && ds_exists(global.terrainGrid, ds_ty
         if (is_string(global.globalmapFogString) && string_length(global.globalmapFogString) == _eao_old) global.globalmapFogString += _eao_pad;
         if (is_string(global.globalmapPaperString) && global.globalmapPaperString != "N/A" && string_length(global.globalmapPaperString) == _eao_old) global.globalmapPaperString += _eao_pad;
     }
+    // EAO_EAST_MAP
     __show_debug_message("EAO east pilot: world " + string(_eao_ow) + "x" + string(_eao_h) + " -> " + string(_eao_nw) + "; pilot " + string(_eao_px) + "," + string(_eao_py));
 }

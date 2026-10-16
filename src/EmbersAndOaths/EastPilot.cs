@@ -47,6 +47,7 @@ internal static class EastPilot
     {
         WidenRoom();
         EastSites.Configure(set, files);
+        var widen = files.GetCode("east_pilot_widen.gml").Replace("// EAO_EAST_MAP", files.GetCode("east_pilot_map.gml"));
         var cache = Msl.GetStringGMLFromFile(CacheInit);
         var head = cache.IndexOf("function scr_globalmapCacheInit", StringComparison.Ordinal);
         var brace = head < 0 ? -1 : cache.IndexOf('{', head);
@@ -61,9 +62,9 @@ internal static class EastPilot
             var owned = cache[start..(end + 1)];
             if (!owned.Contains("EAO_east_grid") || !owned.Contains("EAO east pilot: world"))
                 throw new InvalidOperationException("Unrecognized east pilot hook body.");
-            cache = cache[..start] + files.GetCode("east_pilot_widen.gml") + cache[(end + 1)..];
+            cache = cache[..start] + widen + cache[(end + 1)..];
         } else {
-            cache = cache.Insert(brace + 1, "\n" + files.GetCode("east_pilot_widen.gml") + "\n");
+            cache = cache.Insert(brace + 1, "\n" + widen + "\n");
         }
         Msl.SetStringGMLInFile(cache, CacheInit);
     }

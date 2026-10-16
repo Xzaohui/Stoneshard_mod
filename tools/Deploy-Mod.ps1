@@ -118,6 +118,13 @@ if ([version]$taskReport.modVersion -ge [version]'0.3.15') {
     foreach ($taskRequired in @('east-building-return-persisted-source-r_eao_n2_world','east-building-return-persisted-source-missing','east-building-failed-or-pending-door-keeps-origin')) {
         if ($taskRequired -notin $taskActions.compiledCallbackScenarios) { throw ('Missing east building return scenario: ' + $taskRequired) }
     }
+    if ([version]$taskReport.modVersion -ge [version]'0.3.16') {
+        $taskMap = Get-Content -LiteralPath (Join-Path $taskRoot 'artifacts/east-map-preservation.json') -Raw | ConvertFrom-Json
+        if (!$taskMap.result.passed -or $taskMap.inputSha256 -ne $taskReport.inputSha256 -or $taskMap.candidateSha256 -ne $taskReport.outputSha256) { throw 'Original map preservation does not match input/candidate.' }
+        foreach ($taskRequired in @('east-map-native-batches-updated-before-cache-creation','east-map-road-uses-native-neighbor-frame-and-paper-pair','east-map-extension-does-not-reroll-or-write-character-position')) {
+            if ($taskRequired -notin $taskEast.checks) { throw ('Missing east map rendering check: ' + $taskRequired) }
+        }
+    }
 }
 if (!$PackageOnly -and (Get-Process -Name StoneShard -ErrorAction SilentlyContinue)) { throw 'Game is running; close it before updating data.win. No process was stopped.' }
 function Test-TaskNoLink([string]$Path) {

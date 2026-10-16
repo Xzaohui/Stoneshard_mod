@@ -56,6 +56,19 @@ internal static class EaoEastSurfaceChecks
         // The resize guard must depend on the regenerated 42-column dimensions,
         // not on an allocator handle which can repeat after leaving to the title.
         Require(Regex.IsMatch(cache, @"call\.i ds_grid_width\(argc=1\)\s+pushi\.e 42\s+cmp\.i\.v EQ"), "east-surface-extension-guard-uses-dimensions-not-recycled-handle");
+        foreach (var name in new[] { "Snow", "Steppe", "Sea", "Water", "Road", "Tree", "Encounter", "SingleTree", "Light", "Borders", "PaperSea", "PaperWater", "PaperRoad", "PaperTree", "PaperEncounter", "PaperSingleTree" })
+            Require(cache.Contains("global.glmapBatchGrid" + name), "east-map-resizes-native-batch-" + name);
+        Require(cache.Contains("ds_grid_set_region") && cache.Contains("scr_glmap_addSprite") && cache.IndexOf("global.glmapBatchGridSteppe", StringComparison.Ordinal) < cache.IndexOf("global.globalmapCacheMap", StringComparison.Ordinal),
+            "east-map-native-batches-updated-before-cache-creation");
+        Require(cache.Contains("scr_glmap_hasRoad") && cache.Contains("scr_glmap_findRoadTile") && cache.Contains("global.glmapBatchGridPaperRoad"),
+            "east-map-road-uses-native-neighbor-frame-and-paper-pair");
+        foreach (var name in new[] { "s_glmap_steppe_strip16", "s_glmap_sea_strip16", "s_glmap_sea_strip16_paper", "s_groad_steppe", "s_groad_steppe_paper", "s_groad", "s_groad_paper" }) {
+            var sprite = data.Sprites.Single(s => s.Name.Content == name);
+            Require(sprite.Width == 52 && sprite.Height == 52 && sprite.OriginX == 0 && sprite.OriginY == 0 && sprite.Textures.Count >= 15,
+                "east-map-native-frame-geometry-" + name);
+        }
+        Require(!cache.Contains("call.i random") && !cache.Contains("call.i irandom") && !cache.Contains("random_set_seed") && !cache.Contains("scr_atr_set_simple") && !cache.Contains("room_goto"),
+            "east-map-extension-does-not-reroll-or-write-character-position");
         var alarm = Asm("gml_Object_o_biome_generation_controller_Alarm_2");
         var presetCall = Regex.Match(alarm, @"pushi\.e 8\s+conv\.i\.v\s+call\.i event_user");
         var floraCall = Regex.Match(alarm, @"pushi\.e 9\s+conv\.i\.v\s+call\.i event_user");

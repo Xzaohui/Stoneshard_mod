@@ -9,7 +9,7 @@ var _font=draw_get_font();var _color=draw_get_color();var _alpha=draw_get_alpha(
 draw_set_font(global.f_dmg);draw_set_halign(fa_left);draw_set_valign(fa_top);
 draw_set_alpha(0.82);draw_set_color(c_black);draw_rectangle(10,45,600,253,false);
 draw_set_alpha(1);draw_set_color(c_yellow);
-draw_text(18,51,global.language == 3 ? "EAO 开发 0.3.15 | F5 面板 | F6 关闭 | F8 地图传送" : "EAO DEV 0.3.15 | F5 panel | F6 OFF | F8 map teleport");
+draw_text(18,51,global.language == 3 ? "EAO 开发 0.3.16 | F5 面板 | F6 关闭 | F8 地图传送" : "EAO DEV 0.3.16 | F5 panel | F6 OFF | F8 map teleport");
 draw_set_color(c_white);
 draw_text(18,77,(global.language == 3 ? "F7 揭雾=" : "F7 reveal=")+string(dev_reveal)+(global.language == 3 ? "  F9 格网=" : "  F9 grid=")+string(dev_grid)+"  F10 HD2D="+string(global.EAO_dev_art));
 draw_text(18,103,global.language == 3 ? "F11: N1 > 外院 > N2 > 石场 | Shift+F11: 返回" : "F11: N1 > forecourt > N2 > quarry | Shift+F11: return");
@@ -23,6 +23,12 @@ if (instance_exists(_door) && point_distance(o_player.x,o_player.y,_door.x,_door
     var _pointed=scr_cursor_get_pointed_instance();
     var _pointed_name=instance_exists(_pointed) ? object_get_name(_pointed.object_index) : "none";
     draw_text(18,207,"hit "+string(_door.bbox_left-_door.x)+","+string(_door.bbox_top-_door.y)+".."+string(_door.bbox_right-_door.x)+","+string(_door.bbox_bottom-_door.y)+" | pointed="+_pointed_name);
+}
+else if (global.playerGridX >= 39 && global.playerGridX <= 41 && global.playerGridY == 37) {
+    // Read-only road/map diagnostics for the pilot boundary, never a teleport.
+    var _road_data = scr_globaltile_get("Road", global.playerGridX, global.playerGridY);
+    draw_text(18,155,"road="+string(_road_data)+" frame="+string(scr_glmap_findRoadTile(global.playerGridX,global.playerGridY)));
+    draw_text(18,181,"map batch="+string(ds_grid_width(global.glmapBatchGridSteppe))+" | world="+string(global.worldWidth));
 }
 // Unplaced architectural asset: an inspection specimen, never a collision or new door.
 if (global.EAO_dev_art && room == r_eao_n1_yard) {

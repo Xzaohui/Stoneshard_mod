@@ -58,6 +58,23 @@ if (args.Length == 0) {
 using var stream = File.OpenRead(args[0]);
 var data = UndertaleIO.Read(stream);
 Console.WriteLine($"Loaded: {data.Code.Count} code entries, {data.GameObjects.Count} objects, {data.Rooms.Count} rooms.");
+if (args.Length > 2 && args[1] == "--compare-east-map") {
+    using var baselineStream = File.OpenRead(args[2]);
+    using var baseline = UndertaleIO.Read(baselineStream);
+    var result = EaoEastMapPreservation.Validate(baseline, data);
+    var report = new { result, inputSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(args[2]))), candidateSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(args[0]))) };
+    File.WriteAllText(ProjectPaths.Output(Path.Combine(ProjectPaths.Root(), "artifacts", "east-map-preservation.json"), "artifacts"), JsonSerializer.Serialize(report, new JsonSerializerOptions { WriteIndented=true }));
+    Console.WriteLine(JsonSerializer.Serialize(report)); return;
+}
+if (args.Length > 1 && args[1] == "--east-map-summary") {
+    var room = data.Rooms.Single(r => r.Name.Content == "r_GlobalMap");
+    foreach (var name in new[] { "Biomes", "Sea", "Steppe", "LocalBorders", "RoadCollision" }) {
+        var tilemap = room.Layers.Single(l => l.LayerName.Content == name).TilesData;
+        Console.WriteLine(name);
+        for (var y = 57; y <= 61; y++) Console.WriteLine(y + ": " + string.Join(",", Enumerable.Range(114, 5).Select(x => x + "=" + tilemap.TileData[y][x])));
+    }
+    return;
+}
 if (args.Length > 1 && args[1] == "--sprite-shape") {
     foreach (var name in args.Skip(2)) {
         var sprite = data.Sprites.Single(s => s.Name.Content == name);

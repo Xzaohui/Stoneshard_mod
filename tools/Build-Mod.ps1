@@ -35,6 +35,8 @@ try {
     }
     dotnet $taskProbe $taskInput $taskPatchCommand artifacts/EmbersAndOaths.sml artifacts/direct-data.win --direct
     if ($LASTEXITCODE) { throw 'Current combination patch verification failed; nothing deployed.' }
+    dotnet $taskProbe artifacts/direct-data.win --compare-east-map $taskInput
+    if ($LASTEXITCODE) { throw 'Original map input/readback preservation failed; nothing deployed.' }
     dotnet $taskProbe artifacts/direct-data.win --test-eao-east
     if ($LASTEXITCODE) { throw 'East surface/native generation contracts failed; nothing deployed.' }
     dotnet $taskProbe artifacts/direct-data.win --test-eao-actions

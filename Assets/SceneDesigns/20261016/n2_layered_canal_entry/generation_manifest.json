@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "date": "2026-10-16",
+  "subject": "N2 旧渠检修入口：带干侧台的检修前室剖面候选",
+  "status": "high-resolution layered concept; not native or runtime verified",
+  "image_generation": "built-in image_gen.imagegen",
+  "initial_drafts": 6,
+  "necessary_redraws": 1,
+  "redraw_subject": "roof alignment and rear-wall occlusion; v2 selected",
+  "canvas": [1536, 1024],
+  "layer_count": 6,
+  "raw_count": 7,
+  "raw_preserved": true,
+  "alpha_values": [0, 255],
+  "editing": "ImageMagick selection, alpha threshold, nearest-neighbor exact resize including non-uniform vertical scaling, integer translation and source-over only",
+  "python_image_editing": false,
+  "layers": [
+    {"file":"layers/00_bank_cutaway.png","raw":"raw/00_bank_cutaway_v1.png","prompt":"prompts/00_bank_cutaway_v1.txt","generated_file":"exec-088c3d98-60af-40c4-8078-6df1eef969ac.png","raw_size":[1536,1024],"transform":"alpha threshold only"},
+    {"file":"layers/01_roof.png","raw":"raw/01_roof_v2.png","prompt":"prompts/01_roof_v2.txt","generated_file":"exec-275073be-f3e3-4f58-ab39-37846cb1e49e.png","raw_size":[1536,1024],"transform":"alpha threshold; full-canvas non-uniform resize 1536x840; translate y=-65; pad transparent to 1536x1024"},
+    {"file":"layers/02_maintenance_door.png","raw":"raw/02_maintenance_door_v1.png","prompt":"prompts/02_maintenance_door_v1.txt","generated_file":"exec-a9209845-3c1b-4351-98cd-1020cd8fbbc8.png","raw_size":[1254,1254],"crop":[473,95,384,1058],"size":[110,304],"position":[655,210]},
+    {"file":"layers/03_maintenance_ladder.png","raw":"raw/03_maintenance_ladder_v1.png","prompt":"prompts/03_maintenance_ladder_v1.txt","generated_file":"exec-a4dfd397-0a76-4682-95c9-003a4eb735cc.png","raw_size":[1254,1254],"crop":[430,58,428,1143],"size":[128,342],"position":[275,195]},
+    {"file":"layers/04_bedroll.png","raw":"raw/04_bedroll_v1.png","prompt":"prompts/04_bedroll_v1.txt","generated_file":"exec-4e0f283f-a892-410d-8cc5-51c59641c529.png","raw_size":[1254,1254],"crop":[51,221,1181,921],"size":[310,180],"position":[970,443],"scale_note":"non-uniform resize to match dry landing projection"},
+    {"file":"layers/05_water_jug.png","raw":"raw/05_water_jug_v1.png","prompt":"prompts/05_water_jug_v1.txt","generated_file":"exec-8151873a-07e2-4365-b0d4-b2616f6aa71c.png","raw_size":[1254,1254],"crop":[286,118,707,1018],"size":[67,97],"position":[830,429]}
+  ],
+  "retained_rejected_draft": {"file":"raw/01_roof_v1.png","prompt":"prompts/01_roof_v1.txt","generated_file":"exec-8a3cf2c9-cb4e-4dc3-9ca2-c6f51696a300.png","reason":"rear wall caps and wooden plate protruded above roof"},
+  "roof_off_stack": ["00_bank_cutaway","02_maintenance_door","03_maintenance_ladder","04_bedroll","05_water_jug"],
+  "roof_on_change": "add 01_roof last",
+  "door_hidden_change": "omit 02_maintenance_door from roof-off stack",
+  "implementation_changes": false,
+  "runtime_tested": false,
+  "pushed": false
+}

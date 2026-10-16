@@ -1,0 +1,74 @@
+DT10/A03 layered night-watch art study — 2026-10-16
+All final scene layers: 1536x1024, upper-left origin (0,0).
+Image generation: built-in image_gen.imagegen only.
+Editing/compositing: ImageMagick 7 only; no Python image drawing/editing.
+All raw files are preserved unchanged. No perspective warp, rotation, repaint,
+color grading, procedural texture, or code/engine integration.
+
+BACKGROUND
+raw/00_background_v2.png copied byte-for-byte to layers/00_ground_forest.png.
+Opaque RGB. v1 retained but not delivered as the clean background.
+
+BODY
+raw/01_body_v1.png:
+-channel A -threshold 50% +channel -> work/body_clean.png.
+Entire 1536x1024 canvas nearest-neighbor resized to 614x410.
+Placed at (+800,+170) on transparent 1536x1024.
+Output layers/01_shelter_body.png.
+Alpha bbox: 384x305+946+221.
+
+ROOF
+raw/02_roof_v2.png:
+-channel A -threshold 50% +channel.
+Entire canvas nearest-neighbor resized to 1044x563.
+Placed at (+310,+65) on transparent 1536x1024, producing work/roof_registered.png.
+That registered canvas nearest-neighbor resized to 614x410, exactly as body.
+Placed at (+800,+170) on transparent 1536x1024.
+Output layers/02_shelter_roof.png.
+Alpha bbox: 359x123+966+212.
+v1 retained but not used.
+
+TROUGH / BUCKET / OLD STAIN
+raw/03_props_v1.png:
+-channel A -threshold 50% +channel.
+Entire canvas nearest-neighbor resized to 538x359.
+Placed at (+560,+450) on transparent 1536x1024.
+Output layers/03_trough_bucket_stain.png.
+Alpha bbox: 277x233+692+523.
+
+WOLF TRACKS
+raw/04_pawprints_v2.png:
+-channel A -threshold 50% +channel -> work/paws_clean_v2.png.
+Each source crop is reset with +repage, nearest-neighbor resized, then placed
+on a shared transparent 1536x1024 canvas. Ordinary nonuniform scaling flattens
+prints for the oblique ground plane; no rotation/warp.
+crop WxH+X+Y       resize WxH    output X,Y
+112x122+110+78     18x14         730,340
+122x134+259+178    19x15         780,385
+130x146+405+315    20x16         830,430
+140x156+585+437    21x17         880,475
+160x165+797+550    22x18         935,520
+170x183+1003+673   23x19         970,580
+181x202+1259+750   24x20         1010,645
+181x202+1259+750   25x21         1015,715
+Last source print is intentionally reused once. v1 retained but not used.
+Output layers/04_wolf_tracks.png.
+
+ACTUAL SCENE COMPOSITES
+All operations are source-over at identical canvas origin:
+Roof off: 00_ground_forest +04_wolf_tracks +03_trough_bucket_stain +01_shelter_body.
+Roof on: roof-off +02_shelter_roof.
+Off/on comparison appends both actual scene previews horizontally at full size.
+No generative model is used to create composites.
+
+CLOSE PREVIEWS
+shelter_roof_off_close: cleaned original body on #777777.
+shelter_roof_on_close: cleaned original body +registered roof on #777777.
+These close previews are before their common scene-scale reduction.
+shelter_scene_inspection: scene-on crop 500x400+850+180, nearest resize 1000x800.
+trough_ground_inspection: scene-on crop 430x330+650+490, nearest resize 860x660.
+evidence_path_inspection: scene-on crop 600x560+600+270, nearest resize 900x840.
+eave_joint_inspection: registered building gray crop 940x360+395+80.
+Layer sheet: four final transparent object layers each flattened on #777777
+and nearest resized to 768x512, arranged 2x2. This is only a display sheet.
+

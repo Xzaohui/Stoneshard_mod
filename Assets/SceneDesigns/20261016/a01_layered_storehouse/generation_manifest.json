@@ -1,0 +1,19 @@
+{
+  "date_utc": "2026-10-16",
+  "status": "LAYERED_ART_STUDY_VISUALLY_REGISTERED",
+  "tool": "built-in image_gen.imagegen",
+  "transparent_background_requested": true,
+  "calls": [
+    {"id":"01_body_v1","prompt":"prompts/01_body_v1.txt","reference_inputs":["sources/storehouse_detail_reference.png","sources/main_house_style_reference.png"],"raw":"raw/01_body_v1.png","tool_saved_file":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-9924a1df-77fa-4d1c-994e-2a27f4e1a24a.png","selection":"selected; alpha cleanup and resize/translation only"},
+    {"id":"02_roof_v1","prompt":"prompts/02_roof_v1.txt","reference_inputs":["layers/01_body.png","sources/storehouse_detail_reference.png"],"raw":"raw/02_roof_v1.png","tool_saved_file":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-77c88f01-b464-4522-b20d-230b40d25695.png","selection":"selected; alpha cleanup and vertical scaling/translation only"},
+    {"id":"03_cargo_v1","prompt":"prompts/03_cargo_v1.txt","reference_inputs":["layers/01_body.png","sources/storehouse_detail_reference.png"],"raw":"raw/03_cargo_v1.png","tool_saved_file":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-569f78c8-8aab-4f4b-874e-b590f12c8776.png","selection":"selected; split through empty space, alpha cleanup, resize/translation only"}
+  ],
+  "art_revision_calls":0,
+  "final_canvas":[1536,1024],
+  "composition_order":["layers/01_body.png","layers/03_cargo.png","layers/02_roof.png"],
+  "cargo_alternatives":{"merged":"layers/03_cargo.png","sublayers":["layers/03a_cargo_left.png","layers/03b_cargo_right.png"],"do_not_stack_merged_with_sublayers":true},
+  "editing_tool":"ImageMagick 7.1.1-43",
+  "transforms":"TRANSFORMS.txt",
+  "source_legacy_spec_locks":"Read only; unchanged at their original repository paths.",
+  "claims_not_made":["native pixel production","26px grid compliance","128-color palette compliance","collision or anchor validation","game integration","runtime verification"]
+}

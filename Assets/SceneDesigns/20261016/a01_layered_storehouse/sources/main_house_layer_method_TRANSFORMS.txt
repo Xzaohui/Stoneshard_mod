@@ -1,0 +1,55 @@
+A01 revision_v3 — ImageMagick 7.1.1-43 deterministic layer editing
+All output canvases: 1536x1024. All previews source-over at (0,0).
+No Python image editing. No image_gen calls in v3. No new painted RGB pixels.
+
+BODY
+Source: ../layers/01_body.png
+Operation: byte copy only to layers/01_body_unchanged.png.
+
+ROOF COMMON PREPARATION
+Source: ../layers/02_roof_candidate.png (original standalone roof v2, not revision_v2's reduced roof).
+Alpha only: threshold 50%, generating 0 or 255. RGB not recolored.
+Nearest-neighbor resize full source canvas from 1536x1024 to 1373x851.
+Place resized image at integer offset (+93,+10) on 1536x1024 transparent canvas.
+Result: work/roof_scaled_a.png.
+Exact pre-split scale fractions: x=1373/1536, y=851/1024.
+
+MAIN ROOF SELECTION
+Binary technical selection polygon on common prepared canvas:
+(417,0),(1141,0),(1141,176),(1189,496),(1189,566),(374,566),(374,496),(417,176).
+Intersect existing alpha with selection; no color pixels are drawn.
+Result: layers/02a_main_roof.png. No subsequent transform.
+Side parts use complement of this selection, divided by x=768 through empty space.
+Overlap after relocation is hidden underneath the main roof.
+
+LEFT ROOF
+Select left side part; integer translation (+35,+40).
+Nearest-neighbor full-canvas resize 1536x1024 ->1536x1280 (y scale 1.25).
+Crop canvas back to1536x1024 starting at (0,153), equivalent to y shift -153.
+Result: layers/02b_left_roof.png.
+
+RIGHT ROOF
+Select right side part; integer translation (-20,+45).
+Nearest-neighbor full-canvas resize 1536x1024 ->1536x1208 (y scale1208/1024).
+Crop canvas back to1536x1024 starting at (0,113), equivalent to y shift -113.
+Integer translation (+8,0).
+Nearest-neighbor full-canvas resize 1536x1024 ->1766x1024 (x scale1766/1536).
+Crop canvas back to1536x1024 starting at (201,0), equivalent to x shift -201.
+Result: layers/02c_right_roof.png.
+This last horizontal scale extends the inner overlap while holding the outer eave approximately fixed.
+
+ROOF MERGE
+Source-over: left roof, right roof, main roof; all full-size at(0,0).
+Result: layers/02_roof_aligned.png.
+
+FOREGROUND
+Source: ../revision_v2/layers/03_foreground_candidate.png.
+Alpha only: threshold50%, generating0 or255. RGB not recolored.
+Divide at x=768 through empty transparent space.
+Bench: integer translation(0,+14), no scaling ->layers/03a_bench.png.
+Barrel/crate: integer translation(0,+19), no scaling ->layers/03b_barrel_crate.png.
+Source-over both at(0,0) ->layers/03_foreground_aligned.png.
+
+SOURCE PRESERVATION
+All source PNGs remain at their original paths, unmodified.
+Intermediate technical masks and diagnostic trials remain in work/; they are not deliverable painted assets.

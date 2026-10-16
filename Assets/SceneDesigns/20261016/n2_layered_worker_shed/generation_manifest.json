@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "date": "2026-10-16",
+  "subject": "N2 灰堤雇工棚 / R01-camp",
+  "status": "high-resolution layered art candidate; not native or runtime verified",
+  "image_generation": "built-in image_gen.imagegen",
+  "initial_drafts": 7,
+  "necessary_redraws": 1,
+  "redraw_subject": "roof perspective and depth; v2 selected",
+  "canvas": [1536, 1024],
+  "layer_count": 7,
+  "raw_preserved": true,
+  "editing": "ImageMagick selection, alpha threshold, nearest-neighbor scaling, integer translation and source-over only",
+  "python_image_editing": false,
+  "layers": [
+    {"file": "layers/00_ground.png", "raw": "raw/00_ground_v1.png", "prompt": "prompts/00_ground_v1.txt", "generated_file": "exec-bdcc88c1-abc9-4d66-bd2e-af9ac22df334.png", "bbox": [108,482,1305,472]},
+    {"file": "layers/01_body.png", "raw": "raw/01_body_v1.png", "prompt": "prompts/01_body_v1.txt", "generated_file": "exec-849a4e97-274f-4f98-ac61-fb790231984c.png", "bbox": [149,179,1265,746]},
+    {"file": "layers/02_roof.png", "raw": "raw/02_roof_v2.png", "prompt": "prompts/02_roof_v2.txt", "generated_file": "exec-733c4999-952f-4ae6-bf65-9a7b33ef52e3.png", "bbox": [85,144,1388,560]},
+    {"file": "layers/03_living.png", "raw": "raw/03_living_v1.png", "prompt": "prompts/03_living_v1.txt", "generated_file": "exec-070bd15d-6a3a-4731-96b3-b41ed5c8b4de.png", "bbox": [490,500,300,190]},
+    {"file": "layers/04_empty_coffin.png", "raw": "raw/04_coffin_v1.png", "prompt": "prompts/04_coffin_v1.txt", "generated_file": "exec-43064cda-9c1c-4d7e-af0d-24986f7045c6.png", "bbox": [780,535,300,208]},
+    {"file": "layers/05_loose_lid.png", "raw": "raw/05_lid_v1.png", "prompt": "prompts/05_lid_v1.txt", "generated_file": "exec-2de4f685-e303-4bc4-a59f-ea80caf6236a.png", "bbox": [1095,445,104,215]},
+    {"file": "layers/06_old_coat.png", "raw": "raw/06_coat_v1.png", "prompt": "prompts/06_coat_v1.txt", "generated_file": "exec-bafdb580-77b7-431d-85b2-fb3f4b18490c.png", "bbox": [860,590,180,60]}
+  ],
+  "retained_rejected_draft": {"file": "raw/02_roof_v1.png", "prompt": "prompts/02_roof_v1.txt", "generated_file": "exec-265c2a97-e230-43df-9843-ea72def819ec.png", "reason": "excessive depth and mismatched front eave angle"},
+  "roof_off_stack": ["00_ground", "01_body", "03_living", "05_loose_lid", "04_empty_coffin", "06_old_coat"],
+  "roof_on_change": "add 02_roof last",
+  "coat_removed_change": "omit 06_old_coat",
+  "implementation_changes": false,
+  "runtime_tested": false,
+  "pushed": false
+}

@@ -1,0 +1,113 @@
+{
+  "task": "SQ08 / R04-camp retired-camp shelter layered art study",
+  "date": "2026-10-16",
+  "status": "high-resolution-art-candidate",
+  "drawingTool": "built-in image_gen.imagegen",
+  "initialGenerations": 6,
+  "revisions": 0,
+  "postprocessTool": "ImageMagick 7",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "sources": [
+    {
+      "path": "sources/sq08_camp_reference.png",
+      "source": "Assets/SceneDesigns/20261013/sq08_r04_camp_pilot_v1/raw_v2.png",
+      "role": "Setting and older composition, not extracted into delivered layers"
+    },
+    {
+      "path": "sources/a01_layer_reference.png",
+      "source": "Assets/SceneDesigns/20261016/a01_layered_storehouse/previews/three_layers_actual_stack.png",
+      "role": "Material/rendering and layer method, not warehouse content"
+    },
+    {
+      "path": "sources/a01_layer_method.txt",
+      "source": "Assets/SceneDesigns/20261016/a01_layered_storehouse/TRANSFORMS.txt",
+      "role": "Layer registration method"
+    },
+    {
+      "path": "sources/SQ08_script_snapshot.md",
+      "source": "design/06_支线/台本/台本_SQ08_逃兵的家书.md",
+      "role": "Current story context; SQ08-S02"
+    },
+    {
+      "path": "sources/R04_region_snapshot.md",
+      "source": "design/02_世界与地图/区域_R04_王廷关隘与边城.md",
+      "role": "R04-camp versus R04-drug, return route"
+    }
+  ],
+  "generations": [
+    {
+      "id": "00_ground",
+      "raw": "raw/00_ground_v1.png",
+      "prompt": "prompts/00_ground_v1.txt",
+      "inputs": [
+        "sources/sq08_camp_reference.png"
+      ],
+      "output": "layers/00_ground.png"
+    },
+    {
+      "id": "01_frame",
+      "raw": "raw/01_frame_v1.png",
+      "prompt": "prompts/01_frame_v1.txt",
+      "inputs": [
+        "sources/sq08_camp_reference.png",
+        "sources/a01_layer_reference.png"
+      ],
+      "output": "layers/01_frame.png"
+    },
+    {
+      "id": "02_roof",
+      "raw": "raw/02_roof_v1.png",
+      "prompt": "prompts/02_roof_v1.txt",
+      "inputs": [
+        "raw/01_frame_v1.png",
+        "sources/a01_layer_reference.png"
+      ],
+      "output": "layers/02_roof.png"
+    },
+    {
+      "id": "03_furniture",
+      "raw": "raw/03_furniture_v1.png",
+      "prompt": "prompts/03_furniture_v1.txt",
+      "inputs": [
+        "raw/01_frame_v1.png"
+      ],
+      "output": "layers/03_furniture.png"
+    },
+    {
+      "id": "04_pouch",
+      "raw": "raw/04_pouch_v1.png",
+      "prompt": "prompts/04_pouch_v1.txt",
+      "inputs": [
+        "raw/01_frame_v1.png"
+      ],
+      "output": "layers/04_document_pouch.png"
+    },
+    {
+      "id": "05_foreground",
+      "raw": "raw/05_foreground_v1.png",
+      "prompt": "prompts/05_foreground_v1.txt",
+      "inputs": [
+        "raw/00_ground_v1.png"
+      ],
+      "output": "layers/05_foreground.png"
+    }
+  ],
+  "compositeOrder": [
+    "00_ground",
+    "01_frame",
+    "03_furniture",
+    "04_document_pouch",
+    "02_roof",
+    "05_foreground"
+  ],
+  "restrictions": [
+    "No code or validator changes",
+    "No game integration or collision changes",
+    "No native-pixel production claim",
+    "No story outcome preset",
+    "No push"
+  ]
+}

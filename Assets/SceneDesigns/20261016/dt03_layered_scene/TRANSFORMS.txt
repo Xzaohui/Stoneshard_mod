@@ -1,0 +1,61 @@
+DT03 layered scene — 2026-10-16
+Image creation: built-in image_gen.imagegen, six separate first drafts.
+Image finishing: ImageMagick 7.1.1-43 only; no Python image editing.
+No redraw, recolor, distortion, perspective warp, painting, generated texture,
+or scene-wide replacement image was used.
+
+All final scene layers: 1536x1024 RGBA, upper-left origin (0,0).
+Opaque base: raw/01_ground_v1.png -> alpha set -> layers/01_ground_backdrop.png.
+All other raw files: -channel A -threshold 50% +channel, then trim +repage.
+Scaling uses -filter point (nearest-neighbor), preserving proportional height.
+Each resized cutout is source-over composited on a transparent 1536x1024 canvas.
+
+02 REAR STRUCTURE
+Raw alpha-threshold bounding box:1372x724+97+108.
+Trimmed image:1372x724 ->620x327. Translation:(790,180).
+Output:layers/02_rear_windbreak_records.png.
+
+03 MARKER
+Raw alpha-threshold bounding box:547x711+501+164.
+Trimmed image:547x711 ->180x234. Translation:(520,440).
+Output:layers/03_blank_grave_marker.png.
+
+04 TABLE
+Raw alpha-threshold bounding box:1397x915+68+73.
+Trimmed image:1397x915 ->410x269. Translation:(860,390).
+Output:layers/04_inspection_table_clothing.png.
+
+05 SINGLE WORK TAG
+Raw alpha-threshold bounding box:950x728+293+151.
+Trimmed image:950x728 ->28x21. Translation:(1125,493).
+Output:layers/05_single_worktag.png.
+Closeup:the SAME cleaned950x728 cutout resized to700px wide, flattened on
+#959595, center-extended to768x640. This is not a new drawing or a second tag.
+
+06 FOREGROUND
+Raw alpha-threshold bounding box:1449x508+34+359.
+Split at x768 in the transparent gap, using left and right768x1024 crops.
+Left trim:680x497 ->360x263. Translation:(50,710).
+Right trim:449x437 ->260x253. Translation:(1260,760).
+Outputs:layers/06a_foreground_left.png,06b_foreground_right.png.
+Source-over left then right at(0,0) ->layers/06_foreground.png.
+The two sublayers are alternatives to using their combined layer, not additions.
+
+REAL COMPOSITES
+01 ground ->02 rear ->03 marker ->04 table ->05 tag ->06 foreground.
+All source-over at(0,0), no image-gen pass on the composite.
+previews/dt03_actual_alpha_stack.png is byte-identical to actual_stack_v1.png.
+marker_hidden_actual omits only03.
+rear_and_table_hidden_actual omits02,04,05.
+Off/on comparison pairs are actual preview images horizontally appended,
+then proportionally resized to1536px width.
+
+DETAILS FROM ACTUAL FINAL COMPOSITE
+Table/tag/feet:crop480x310+820+370 ->960x620 point resize.
+Marker:crop250x295+490+410 ->500x590 point resize.
+Rear/cabinet/feet:crop670x390+770+160 ->1005x585 point resize.
+
+SEPARATE LAYERS SHEET
+Each actual scene layer flattened against#959595, resized to512px width,
+then a40px off-white caption strip added. Three columns by two rows.
+Captions describe layer purpose; no caption is embedded in delivered art layers.

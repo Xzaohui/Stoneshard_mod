@@ -1,0 +1,27 @@
+All visual landscape content was painted with built-in image_gen. ImageMagick transformations below are limited to approved crops, scaling, alpha edge cleanup, actual compositing, and diagnostic annotations. No Python image editing was used.
+
+Chunk first drafts: raw/01_NW_v1.png,02_NE_v1.png,03_SW_v1.png,04_SE_v1.png:1254x1254.
+SE single revision:raw/04_SE_v2.png:1254x1254, selected.
+Normalize selected chunk raw files to1040x1040 with ImageMagick -filter point -resize1040x1040!.
+Each base core is cropped832x832+104+104, +repage.
+Shared reference bands from normalized actual neighbors: east208x1040+832+0; south1040x208+0+832.
+
+05_bridge raw1774x887 ->832x416 nearest-neighbor. World origin416,1170.
+06_horizontal raw2171x724; remove generated white letterbox by crop2171x544+0+89, then1664x416 nearest-neighbor. World origin0,624.
+07_vertical raw724x2171; remove generated white letterbox by crop585x2171+69+0, then416x1664 nearest-neighbor. World origin624,0. Nonuniform normalization is recorded; production pixel-scale verification remains pending.
+08_remnant raw1254x1254 ->416x416 nearest-neighbor. World origin624,936.
+09_south_water raw: see generation_manifest size ->832x520 nearest-neighbor. World origin416,1144.
+
+Alpha edge cleanup only:8px linear fade from image edge to opaque center. Horizontal strip fades only its top/bottom; vertical strip only left/right. Southern final strip fades top/left/right and stays opaque at outer map bottom. Bridge/remnant patches fade all four edges. No blur applied to RGB artwork.
+
+Exact source-over operations over the assembled BASE cores:
+seams/05_bridge_overlay.png at+416+1170
+seams/06_horizontal_overlay.png at+0+624
+seams/07_vertical_overlay.png at+624+0
+seams/08_remnant_water_overlay.png at+624+936
+seams/05_bridge_overlay.png at+416+1170 (restore known-level bridge after vertical strip)
+seams/09_south_water_overlay.png at+416+1144
+
+The SAME operations are composited independently on each base core, subtracting that chunk's world origin from every overlay placement. Thus final core files are not cut from a separately generated panorama. Reassembling final four cores equals COMPOSITE.png with AE=0.
+
+Diagnostic-only annotations:3px yellow lines x832,y832. White reference rectangles:345,455..380,499 and1290,455..1325,499 (35x44 people);1360,220..1620,480 (building ground reserve);1040,340..1118,444 (78x104 bell reference). No annotations in final chunk textures.

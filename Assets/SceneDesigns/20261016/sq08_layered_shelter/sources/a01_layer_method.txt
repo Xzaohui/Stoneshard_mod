@@ -1,0 +1,54 @@
+A01 right storehouse layered art study — 2026-10-16
+Image generation: built-in image_gen.imagegen, three first drafts.
+Image editing: ImageMagick 7.1.1-43 only. No Python image editing.
+All final layers are 1536x1024 RGBA with the same upper-left origin.
+All raw files preserved byte-for-byte. No perspective warp, mesh warp, recolor,
+painting, procedural textures, or image-gen registration retry was used.
+
+01 BODY
+Source: raw/01_body_v1.png, 1536x1024.
+Alpha cleanup only: -channel A -threshold 50% +channel.
+Resize entire canvas with nearest-neighbor: 1536x1024 ->1260x840.
+Exact scale x=1260/1536, y=840/1024.
+Place resized canvas at (+138,+100) on transparent1536x1024.
+Output: layers/01_body.png.
+Alpha bounding box: x256 y192 width1035 height656.
+
+02 ROOF
+Source: raw/02_roof_v1.png, 1536x1024.
+Alpha cleanup only: -channel A -threshold50% +channel.
+Resize entire canvas with nearest-neighbor:1536x1024 ->1536x758.
+Exact scale x=1, y=758/1024.
+Place resized canvas at(0,-28) on transparent1536x1024.
+This is ordinary vertical scaling and integer translation; no shear/warp.
+Output: layers/02_roof.png.
+Alpha bounding box:x202 y95 width1163 height411.
+
+03 CARGO
+Source: raw/03_cargo_v1.png,1536x1024.
+Alpha cleanup only:-channel A -threshold50% +channel.
+Divide the image at x768, through the empty gap between the two cargo groups.
+Left: crop768x1024+0+0, reset page; trim transparent margins, reset page.
+Trimmed painted group:409x331. Nearest-neighbor resize to270x219.
+Place at(+414,+432) on transparent1536x1024.
+Output:layers/03a_cargo_left.png; alpha bbox270x219+414+432.
+Right:crop768x1024+768+0, reset page; trim transparent margins, reset page.
+Trimmed painted group:511x315. Nearest-neighbor resize to290x179.
+Place at(+840,+552) on transparent1536x1024.
+Output:layers/03b_cargo_right.png; alpha bbox290x179+840+552.
+Source-over left then right at(0,0) creates layers/03_cargo.png.
+Cargo merged alpha bbox716x299+414+432.
+
+ACTUAL COMPOSITES
+All operations use source-over alpha, no redrawing:
+Roof off:01_body +03_cargo at(0,0).
+Roof on:roof-off composite +02_roof at(0,0).
+Transparent previews preserve the actual resulting alpha.
+Gray previews flatten these actual composites against #959595.
+Roof off/on comparison horizontally appends the two full1536x1024 gray previews.
+Layer inspection sheet contains actual layers each resized to768x512 on gray.
+Eave crops and cargo-ground crop are taken from actual composite pixels.
+
+SOURCE DETAIL REFERENCE
+sources/storehouse_detail_reference.png is a reference-only crop:
+a01_scene_reference.png crop420x410+920+95. No generated layer is cut from this scene.

@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: independently painted NE ground chunk of an expandable large orthographic RPG map. One 1040x1040 image. This is a NEW adjacent chunk, not a restyle, not the whole map.
+Input image 1: actual NORTHWEST neighbor, for identical scale, texture, lighting.
+Input image 2: actual 208x1040 pixel overlap band cut from neighbor's RIGHT edge. This band corresponds EXACTLY to the new image's LEFTMOST 208 pixels. Continue its water ripples, colors, and tiny west bank fragment; do not mirror or redesign it. Match it as closely as possible.
+
+New NE image world origin (728,-104), center core is x104..936,y104..936; one logical cell26px, standing adult35x44px. Scale of stones, grass and road same as neighbor. Absolutely no building, bell, NPC, props, labels, border or grid. Ground ONLY. Keep land going out top/right/bottom for future chunks; no enclosed island.
+
+Geography: left x0..208 reproduces the shared overlap water/reference. EAST shoreline begins at new x=250 (world978), nearly vertical with irregularities15px and low worn limestone lip. From x=250 to image right edge is continuous east bank land. Water extends out top/bottom. The wide river is between the west bank in image1 and this east bank; do not paint another river anywhere.
+
+A worn muted pale-earth footpath 130px wide runs north-south centered x=533; its TOP and BOTTOM bounds are x468..598. Between path and shoreline an open limestone platform x280..480,y270..620, suitable for a future small outdoor bell, but DO NOT DRAW the bell or plinth. East of the path a plain dirt courtyard x650..900,y280..600 reserved for a separate modest bellhouse, DO NOT DRAW foundation outlines or building. Open mixed earth and low olive meadow elsewhere. Tiny tufts and stones; no big trees or boulders.
+Camera high fixed orthographic square-grid, zero vanishing point, identical to image1. Small restrained diagonal ripple clusters with north-to-south flow matching input water, never ocean surf. Cool upper-left light, subdued olive ground, old beige limestone and slate-teal water. Fine crisp painterly pixel-like HD2D texture. Full-bleed terrain, no diorama, no horizon, no vignette. Output only the NEW eastern chunk.

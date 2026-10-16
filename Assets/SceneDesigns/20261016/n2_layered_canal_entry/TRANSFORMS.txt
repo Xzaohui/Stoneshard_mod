@@ -1,0 +1,45 @@
+N2 canal entrance — ImageMagick art-only transform log, 2026-10-16
+All raw PNGs are retained byte-for-byte. No Python image editing. No program-painted architectural pixels, perspective warp, recolouring or code integration.
+All final layers use 1536x1024 RGBA, origin upper left (0,0). Alpha operation on every selected raw: -channel A -threshold 50% +channel. This removes generated soft exterior halo and leaves exact 0/255 alpha.
+
+00_bank_cutaway.png
+Source raw/00_bank_cutaway_v1.png, 1536x1024. Alpha threshold only; no crop, resize or movement. Visible alpha bounding box after threshold: 1498x886+24+95.
+
+01_roof.png
+Source raw/01_roof_v2.png, 1536x1024. V1 is retained but not used.
+After alpha cleanup, nearest-neighbour NON-UNIFORM resize of the whole canvas to 1536x840 (X scale 1.0; Y scale 0.8203125). Then crop 1536x775+0+65, reset page, and extend transparent canvas downwards to 1536x1024. Equivalent to a 65px upward translation after the vertical resize; no visible roof pixels are cropped off the top (the source transparent top margin remains sufficient).
+Exact command core:
+-channel A -threshold 50% +channel -filter point -resize 1536x840! -gravity northwest -crop 1536x775+0+65 +repage -background none -extent 1536x1024
+Reason: clear rear wall caps and fascia; seat the low roof on the front side-wall tops. This is not uniform scaling and is not a new game-camera claim.
+
+02_maintenance_door.png
+Source raw/02_maintenance_door_v1.png, actual generator output 1254x1254 (prompt requested 1024 square).
+After alpha cleanup: crop the alpha bounding box 384x1058+473+95; reset page; nearest-neighbour resize to EXACT 110x304; place at (655,210) on transparent 1536x1024. X and Y factors slightly differ because exact dimensions are used.
+
+03_maintenance_ladder.png
+Source raw/03_maintenance_ladder_v1.png, 1254x1254.
+Alpha bounding box 428x1143+430+58; reset page; nearest-neighbour resize to EXACT 128x342; place at (275,195). Exact dimensions, not a claim of mathematically uniform scaling.
+
+04_bedroll.png
+Source raw/04_bedroll_v1.png, 1254x1254.
+Alpha bounding box 1181x921+51+221; reset page; nearest-neighbour NON-UNIFORM resize to EXACT 310x180; place at (970,443). This flattens its projected footprint to rest completely on the dry landing. Earlier placement was only a process test and is not the delivered layer.
+
+05_water_jug.png
+Source raw/05_water_jug_v1.png, 1254x1254.
+Alpha bounding box 707x1018+286+118; reset page; nearest-neighbour resize to EXACT 67x97; place at (830,429). Exact dimensions, not a claim of mathematically uniform scaling.
+
+Transparent-canvas placement for prop layers uses -gravity northwest -background none -splice XxY -extent 1536x1024 after trim/resize. No painting or geometric warping.
+
+STACKS
+Roof off: 00, 02, 03, 04, 05, each source-over.
+Roof on: roof-off transparent image + 01 source-over.
+Door hidden: 00, 03, 04, 05, source-over.
+No prop placement changes between these states. Grey previews flatten the final transparent stack onto #949494. Grey is a review background only, never part of delivered layer PNGs.
+
+SEPARATION AND DETAILS
+six_layers_separate.png: montage of layers in numeric order, thumbnail 512x341, three columns, two rows, 8px gutters, #949494 review background.
+roof_off_on_actual_comparison.png: horizontal append of final roof-off and roof-on previews.
+passage_door_ladder_detail.png: final roof-off crop 680x570+200+140.
+dry_landing_detail.png: final roof-off crop 610x300+775+390, then nearest-neighbour 1220x600.
+rear_right_roof_seam_detail.png: final roof-on crop 360x370+1160+80, then nearest-neighbour 720x740.
+All are crops/montages of actual delivered layers. No separately regenerated composite.

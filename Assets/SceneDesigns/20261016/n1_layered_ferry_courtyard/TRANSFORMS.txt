@@ -1,0 +1,18 @@
+Art-only ImageMagick selections, alpha cleanup, nearest-neighbor resizing, translation and source-over assembly.
+No Python image editing; no painting by code; no game-code, validator or integration changes.
+Working directory: this delivery directory.
+Sources are never overwritten.
+Canvas: 1536 x 1152. Tool-generated originals: 1448 x 1086.
+
+1. Full opaque water: raw/01_water_v1.png -> nearest-neighbor resize 1536x1152 -> layers/01_water.png.
+2. Masonry: raw/02_masonry_master_v1.png -> alpha threshold 50%. Select floor with polygon in SOURCE pixels:
+157,160 581,160 581,598 612,633 1041,633 1084,594 1084,313 1305,313 1306,801 1098,801 1098,709 1041,709 615,709 580,738 578,806 147,806 150,540 151,450 145,398 152,259
+   Intersect polygon alpha with source alpha -> 02_dry_floor. Complementary source alpha -> 03_shore_edges. The two masks are a disjoint exact partition; their union reconstructs the cleaned masonry. Resize both nearest-neighbor to 1536x1152. No double-painted shore or separate regeneration seam.
+3. Foreground: raw/04_foreground_v1.png alpha threshold 50%; crop each unique source cluster then nearest-neighbor resize and integer translation:
+   West front crop 330x310+0+650 -> trim -> fit 135x130 -> place +105+780.
+   West inner crop 210x210+500+320 -> trim -> fit 70x70 -> place +600+360.
+   East inner crop 190x170+910+380 -> trim -> fit 68x62 -> place +1088+480.
+   East front crop 220x280+1228+670 -> trim -> fit 100x115 -> place +1340+780.
+   Compose on transparent 1536x1152 as 04_foreground. Each cluster used once, never mirrored.
+4. Shared outdoor bell: copied from sibling n1_layered_bellhouse/work/bell_trim.png; nearest-neighbor resize to fit 210x189 and integer translate +1146+312 on transparent 1536x1152 -> 05_outdoor_bell. Original includes the hanging bell, visibly cut short rope, and one loose ground rope end. No extra bell generated.
+5. Source-over in order 01,02,03,04,05 produces the actual composite. The overview and layer/cumulative previews use these exact delivered PNGs, not a separately painted approximation.

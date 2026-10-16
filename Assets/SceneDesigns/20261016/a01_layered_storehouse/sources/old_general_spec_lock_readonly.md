@@ -1,0 +1,182 @@
+# Execution Lock
+
+Confirmed by user: 2026-10-13, 继续 after the six-parameter proposal.
+Scope: full inventory retained; the active production batch is N1. No other region is marked complete.
+
+## canvas
+- base_size: 26x26
+- tile_size: 26x26
+- format: RGBA PNG
+- room_size: 1040x780
+- generation_master: 4:3 scene, ideally 1040x780; preserve original output and document any nearest-neighbor size normalization
+
+## palette
+- name: DEN-N1-128
+- colors:
+  - #DFDCC9
+  - #E5D1AD
+  - #E2CEA9
+  - #E1C8A0
+  - #DEC498
+  - #CBC4AC
+  - #D6B98E
+  - #C5AF8A
+  - #BBA989
+  - #A2AFAB
+  - #C19E77
+  - #B59C7A
+  - #B19978
+  - #AE9676
+  - #A8967B
+  - #A8936C
+  - #959684
+  - #B28866
+  - #A58A6B
+  - #A18869
+  - #9E8869
+  - #9D8061
+  - #98866C
+  - #988559
+  - #977C5E
+  - #8F826C
+  - #8E7A63
+  - #8E7E54
+  - #8D7659
+  - #847D60
+  - #847557
+  - #7B7B67
+  - #697D81
+  - #99694E
+  - #896D52
+  - #856C51
+  - #806E58
+  - #7F6D48
+  - #7F6149
+  - #786A57
+  - #776A43
+  - #776048
+  - #775741
+  - #6F695B
+  - #6E604F
+  - #6E663F
+  - #6D5D40
+  - #6D5845
+  - #6C573B
+  - #6C503D
+  - #5F6666
+  - #635F41
+  - #615945
+  - #605541
+  - #5F5044
+  - #604F3E
+  - #5E4F36
+  - #50656C
+  - #4D5C5F
+  - #525346
+  - #425860
+  - #3E5159
+  - #524D3D
+  - #3D4D52
+  - #684636
+  - #5D4536
+  - #594436
+  - #53483D
+  - #534732
+  - #533F34
+  - #533C2D
+  - #4C473F
+  - #4B4239
+  - #4C452F
+  - #4B3C31
+  - #3A484F
+  - #32454D
+  - #414341
+  - #3B3C3E
+  - #43432F
+  - #413D2F
+  - #41392E
+  - #38392D
+  - #4F332A
+  - #45322A
+  - #41312A
+  - #3D342C
+  - #3D2B26
+  - #39322E
+  - #393024
+  - #392823
+  - #343332
+  - #332E2C
+  - #343024
+  - #332927
+  - #332720
+  - #32201E
+  - #2C3F48
+  - #293A41
+  - #27363C
+  - #2C2F2D
+  - #222F37
+  - #2B2927
+  - #23292C
+  - #292628
+  - #2A2522
+  - #29251D
+  - #1F2528
+  - #282123
+  - #212024
+  - #28201E
+  - #221F1E
+  - #261F19
+  - #1E1F20
+  - #181E22
+  - #23191B
+  - #1D191B
+  - #211715
+  - #1A181C
+  - #191615
+  - #14171C
+  - #141615
+  - #181214
+  - #121115
+  - #130D11
+  - #0E0D12
+  - #090B10
+  - #050408
+
+## style
+- sub_style: textured HD-2D, square-grid orthographic oblique
+- shading: restrained hard clusters
+- light_direction: top-left
+- atmosphere: muted coastal stone, weathered wood, grey teal water, cold night
+- lighting: no baked movable lamps; light effects are separate
+- no_purple: N1 has no visible crystal or supernatural glow
+
+## per_sprite_budget
+- max_colors: 128
+
+## assets
+- r_eao_n1_yard__ground: 1040x780, backgrounds, transparent=False, single frame
+- r_eao_n1_bellhouse__ground: 1040x780, backgrounds, transparent=False, single frame
+- r_eao_n1_underpass__ground: 1040x780, backgrounds, transparent=False, single frame
+- n1_bellhouse_exterior: 312x260, items, transparent=True, single frame
+- n1_story_props: 624x416, items, transparent=True, single frame
+- n1_water_base: 1040x780, opaque nonrepeating room backing
+- derived room floor/structure/foreground/plan/composite: 1040x780
+- derived props: bell78x104, bedding104x78, rope26x26, portal52x78, jug26x26, lantern26x52
+
+## invariants
+- Every N1 floor shape comes from native_layouts.json. Artwork must not change walkable cells.
+- Doors and actor anchors are reserved, no new blockers or invented doors.
+- No baked characters, text, interface, clues that imply a selected quest result.
+- Existing bell remains hanging; only rope is cut. Bedrolls plus small shoes, no new occupied beds.
+- Raw generated pictures remain untouched in raw/; only explicitly recorded skill post-processing and asset export may normalize palette, alpha and canvas.
+- HD-2D depth uses independent structure/foreground/light passes; technical masks are never sold as painted assets.
+
+## forbidden
+- Diamond isometric grid
+- Perspective camera
+- Anti-aliasing in production sprites
+- Unregistered colors
+- Partial alpha in base art
+- Glowing purple decorations in N1
+- Invented safe land in blocked water/void
+- Claiming export is deployment or runtime verification

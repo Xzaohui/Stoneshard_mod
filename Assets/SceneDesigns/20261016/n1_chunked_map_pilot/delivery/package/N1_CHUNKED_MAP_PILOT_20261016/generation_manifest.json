@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-16",
+  "independent_chunk_first_drafts": 4,
+  "chunk_revisions": {
+    "04_SE": 1
+  },
+  "seam_paintings": 5,
+  "calls": [
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/01_NW_v1.png",
+      "prompt": "prompts/01_NW_v1.txt",
+      "reference_inputs": [],
+      "generator_output_basename": "exec-85a557b0-0cb0-498f-88c0-3ee7cd118f09.png",
+      "size": "1254x1254",
+      "sha256": "1a9da35e61893a21a519bdd55cae9235bd86d0f90f347dd0de3225d39d65267e"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/02_NE_v1.png",
+      "prompt": "prompts/02_NE_v1.txt",
+      "reference_inputs": [
+        "normalized/01_NW.png",
+        "sources/NW_east_shared_208.png"
+      ],
+      "generator_output_basename": "exec-731604e9-7aba-4f1c-91d1-e9724bcb0cf5.png",
+      "size": "1254x1254",
+      "sha256": "408335ace79848f59a1398d1179b453567253e124d8ad0b92bb82a90a98b851d"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/03_SW_v1.png",
+      "prompt": "prompts/03_SW_v1.txt",
+      "reference_inputs": [
+        "normalized/01_NW.png",
+        "sources/NW_south_shared_208.png"
+      ],
+      "generator_output_basename": "exec-08231ed2-4981-47b3-b8cf-802e956595a5.png",
+      "size": "1254x1254",
+      "sha256": "3a4374ada4ddd6aeabd7cf3e52e1f09d1b450f83250df991e445d5b1041144c2"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/04_SE_v1.png",
+      "prompt": "prompts/04_SE_v1.txt",
+      "reference_inputs": [
+        "normalized/02_NE.png",
+        "normalized/03_SW.png",
+        "sources/NE_south_shared_208.png",
+        "sources/SW_east_shared_208.png"
+      ],
+      "generator_output_basename": "exec-1ad8eb0c-78a4-4cb5-9e8d-010a8c4677ed.png",
+      "size": "1254x1254",
+      "sha256": "ac1e1c347c3e70c2f4ad0639bea6b4c6034e91ecb7dee2a795f85b1bf01ffa06"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/04_SE_v2.png",
+      "prompt": "prompts/04_SE_v2_alignment.txt",
+      "reference_inputs": [
+        "normalized/04_SE_v1.png",
+        "normalized/03_SW.png",
+        "sources/SW_east_shared_208.png"
+      ],
+      "generator_output_basename": "exec-d8a72018-bae0-4411-8e70-71cb343a47e6.png",
+      "size": "1254x1254",
+      "sha256": "d4191595bb25ee6fe258b501415d9203888a254a690875cc0744a2164681c4c4"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/05_bridge_seam.png",
+      "prompt": "prompts/05_bridge_seam.txt",
+      "reference_inputs": [
+        "seams/bridge_seam_full_input.png"
+      ],
+      "generator_output_basename": "exec-085a50de-5e8b-425c-9451-ee94e6e6188d.png",
+      "size": "1774x887",
+      "sha256": "de187b4cede8623265ea03f9ea85bdd772750b2f162a11d18ff9b30085fbb23d"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/06_horizontal_seam.png",
+      "prompt": "prompts/06_horizontal_seam.txt",
+      "reference_inputs": [
+        "seams/horizontal_continuity_input.png"
+      ],
+      "generator_output_basename": "exec-3cda2d08-4c7a-46ea-9489-da764d7bbb22.png",
+      "size": "2171x724",
+      "sha256": "daaf2ae1be843b5fff215778e24a852565cbaa9f969b3280e30cc4e447a6c97c"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/07_vertical_seam.png",
+      "prompt": "prompts/07_vertical_seam.txt",
+      "reference_inputs": [
+        "seams/vertical_continuity_input.png"
+      ],
+      "generator_output_basename": "exec-8a774d9e-41e3-4020-82b2-68f0cb9fff02.png",
+      "size": "724x2171",
+      "sha256": "12c695dfa10d8e8c604e62308e5f9d69ff895b16afa77da12750283c8e7bbf8c"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/08_remnant_water_seam.png",
+      "prompt": "prompts/08_remnant_water_seam.txt",
+      "reference_inputs": [
+        "seams/remnants_water_input.png"
+      ],
+      "generator_output_basename": "exec-a1a6b8f6-cf1d-4e65-82a3-1953d4dbc48d.png",
+      "size": "1254x1254",
+      "sha256": "2a94c0304e0498ab3687890c7465901ed069c145ea42d6057bda3550854e49d8"
+    },
+    {
+      "tool": "built-in image_gen.imagegen",
+      "raw": "raw/09_south_water_final_seam.png",
+      "prompt": "prompts/09_south_water_final_seam.txt",
+      "reference_inputs": [
+        "seams/south_water_final_input.png"
+      ],
+      "generator_output_basename": "exec-2a50722c-71d7-438f-bda9-47c628bd69e0.png",
+      "size": "1586x992",
+      "sha256": "e80bf9c864da04504c8ea925cfde85e3f8b0743cb23513378a8439c2ef946bf1"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+# Execution Lock — Brynn Core
+
+## authorization
+User continues full sceneart; approved26cell/staticorthographicHD2D/regional128PNG/roofsplit standards persist. NPC/game files owned separately.
+
+## canvas
+- base_size:26x26
+- tile_size:26x26
+- format:RGBA PNG
+- bry_d01: 1196x884
+- bry_d02: 1144x884
+- bry_d03: 1248x884
+- bry_d04: 1196x884
+- bry_d05: 1196x884
+- bry_d06: 1144x884
+- bry_d01_a: 884x624
+- bry_d01_b: 780x624
+- bry_d02_a: 832x676
+- bry_d02_b: 780x624
+- bry_d03_a: 832x624
+- bry_d03_b: 780x676
+- bry_d04_a: 988x676
+- bry_d04_b: 832x676
+- bry_d05_a: 936x572
+- bry_d05_b: 884x676
+- bry_d06_a: 884x728
+- bry_d06_b: 936x676
+- materials_master:1536x1536,four768squarepanels
+- architecture_master:1536x1024,eight384x512slots
+- props_a_master:1536x1024,eight384x512slots
+- props_b_master:1536x1024,eight384x512slots
+- props_c_master:1536x1024,eight384x512slots
+- props_d_master:1536x1024,eight384x512slots
+- interiors_master:1536x1024,three512x1024panels
+- landscape_master:1536x1536,four768squarepanels
+- city:1664x1248,schematic6taskspaces,not officialsixquarters
+- bry_print_arcade: 364x234,origin[182, 216]
+- bry_rental_block: 312x312,origin[156, 294]
+- bry_rope_shed: 260x208,origin[130, 190]
+- bry_berth_canopy: 208x156,origin[104, 140]
+- bry_workshop_house: 364x234,origin[182, 216]
+- bry_water_observation_house: 260x208,origin[130, 190]
+- bry_gate_house: 260x208,origin[130, 190]
+- bry_neutral_meeting_hall: 364x260,origin[182, 242]
+- bry_printing_bench: 130x104,origin[65, 91]
+- bry_movable_type_case: 78x52,origin[39, 43]
+- bry_blank_proof_sheet: 52x26,origin[26, 23]
+- bry_account_witness_table: 130x78,origin[65, 65]
+- bry_sealed_change_pouch: 52x52,origin[26, 39]
+- bry_three_sponsor_chits: 78x26,origin[39, 23]
+- bry_patched_rent_board: 78x104,origin[39, 91]
+- bry_blocked_old_door: 78x130,origin[39, 117]
+- bry_soot_hand_left: 78x78,origin[39, 65]
+- bry_soot_hand_right: 78x78,origin[39, 65]
+- bry_unlit_memorial_lantern: 26x52,origin[13, 39]
+- bry_rope_tally_rack: 104x104,origin[52, 91]
+- bry_cargo_pledge_hook: 52x78,origin[26, 65]
+- bry_mooring_nail: 26x26,origin[13, 23]
+- bry_termination_knot: 52x26,origin[26, 23]
+- bry_reserved_old_seat_board: 78x52,origin[39, 43]
+- bry_unlit_furnace: 104x130,origin[52, 117]
+- bry_riveting_bench: 130x104,origin[65, 91]
+- bry_maker_mark_sample: 52x26,origin[26, 23]
+- bry_broken_rivet: 52x26,origin[26, 23]
+- bry_detached_padding: 78x52,origin[39, 43]
+- bry_closed_medicine_bottle: 26x52,origin[13, 39]
+- bry_blank_instruction_tag: 26x26,origin[13, 23]
+- bry_paired_water_scales: 78x130,origin[39, 117]
+- bry_sluice_lever: 52x104,origin[26, 91]
+- bry_segmented_stop_plug: 52x52,origin[26, 39]
+- bry_drain_sand_model: 130x104,origin[65, 91]
+- bry_short_meeting_table: 104x78,origin[52, 65]
+- bry_three_nomination_chits: 78x26,origin[39, 23]
+- bry_empty_tenant_bench: 104x52,origin[52, 43]
+- bry_privacy_screen: 78x130,origin[39, 117]
+- bry_blank_invitation: 52x26,origin[26, 23]
+
+## palette
+- name:BRY-CORE-128
+- colors:
+  - #DBCAA2
+  - #D1BD98
+  - #CBB792
+  - #C9AE84
+  - #B7AD8F
+  - #C0A177
+  - #B39F7D
+  - #AC9E7F
+  - #9D9C8C
+  - #BA9065
+  - #AD916D
+  - #A9906E
+  - #A39277
+  - #A38A68
+  - #9C8D76
+  - #9C8868
+  - #94886E
+  - #858B82
+  - #AF7855
+  - #9B7C5C
+  - #938067
+  - #937456
+  - #8C7F69
+  - #8B7965
+  - #8B7355
+  - #837766
+  - #827556
+  - #806C56
+  - #78715A
+  - #776A56
+  - #696E5D
+  - #975E45
+  - #875C43
+  - #7F6249
+  - #7F533D
+  - #776251
+  - #785C42
+  - #77503C
+  - #6F6153
+  - #6F5E44
+  - #6F5340
+  - #6F4B38
+  - #676053
+  - #665A4E
+  - #65564C
+  - #666040
+  - #655740
+  - #655041
+  - #64493B
+  - #654834
+  - #5A5A52
+  - #5B583C
+  - #595141
+  - #584D40
+  - #564943
+  - #56473E
+  - #584736
+  - #42575C
+  - #3D4D4E
+  - #3E4947
+  - #43463F
+  - #2E454D
+  - #693E31
+  - #5D3D31
+  - #593C31
+  - #534035
+  - #53362C
+  - #4B403A
+  - #4A3A36
+  - #4C3C2F
+  - #4B322B
+  - #433E3B
+  - #433B36
+  - #433C32
+  - #413633
+  - #413C2C
+  - #42352C
+  - #40312F
+  - #41302A
+  - #412F25
+  - #402824
+  - #304045
+  - #373333
+  - #38372B
+  - #36312B
+  - #342E2E
+  - #352D2A
+  - #342D25
+  - #322A2B
+  - #342924
+  - #312627
+  - #322520
+  - #302221
+  - #301D1D
+  - #2A4049
+  - #293E46
+  - #263D45
+  - #273C43
+  - #263A45
+  - #253942
+  - #223741
+  - #24393E
+  - #22353E
+  - #24353A
+  - #1F343D
+  - #1F323B
+  - #1E2E38
+  - #272A29
+  - #272527
+  - #272521
+  - #192A33
+  - #272226
+  - #272122
+  - #28211D
+  - #1F2123
+  - #241D22
+  - #241C1E
+  - #241B19
+  - #1E1B1F
+  - #171B20
+  - #1B1A19
+  - #1F1619
+  - #191619
+  - #161519
+  - #181115
+  - #0F1218
+  - #0F0E10
+  - #08070B
+
+## style
+- sub_style:texturedHD2Dsquare-gridorthographicoblique
+- light_direction:top-left
+- lighting:UNLITstaticbase,no bakedfire/glow/sunbeams
+- materials:worn timberframe,graystonefooting,rust/slateroofs,riverwood,mutedcloth
+
+## per_sprite_budget
+- max_colors:128
+
+## invariants
+- Six Modtaskspaces anchored in FOUR original cityareas,not six officialdistricts. No copied wholeR01orcommercialmap/atlas. No bank-entry claim,coronationdais or nationalpermission.
+- All twelve A/Bspaces have INDEPENDENT returnstreet doors. Privacy/refusal/closedaccounts do not close publicreturn. No bedroomroute,newbeds or inventedactualcapacity. ExactS75profiles,not ordinalmodulo genericrooms.
+- D03highandlowparallelwalks; illustrativehightideclosesonlyspecifiedlowwalkcells,highreturn and ALLdoors/interactionfeet remain reachable. No actualtime/physics/save/queststate change. Emptyberth,nail,oldseat andretreat onshore,no boat,corpse/missingperson death/return claim.
+- D04visitor bypass avoids restrictedfurnacebehinddoor. Furnace UNLITbase is not storyshutdown. Detachedsample/cloth/medicine/tag never depictsforcedhumantrial,cure or consent.
+- D05twolevers,segmentedplugsandDRYsandmodel; previewmodel changes onlyillustration,no actualsluiceopening,waterdamage,resolve,reward or grain.
+- D06EXACTLY3shorttables around EMPTYcentralground; candidatebench empty not consent. Candidatehall3independentunlitlamps and2streetreturns behindprivacy screens; no forcedcoattendance.
+- Two distinct abstractsoot-handtrace wallpatches,not livinghands/body art. No assignmentofownership,deathorforgiveness. All labels,names,years,moneycounts,sponsor/nominationidentity and permissions engine-owned. Blankpaper/typefields,no readabletext/numbers/crests.
+- No NPCs/people/animals/corpses,fire/magicbeams,cure/consent/quest outcomes. Rawmastersimmutable; recordactualsize,crop/NNnormalization/128palette/binaryalpha/roofmasks/tileedgesharing. Productioncanvas/originexact,alpha nevercollision.

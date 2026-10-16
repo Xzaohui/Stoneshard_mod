@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-16",
+  "scene": "SQ05 / R02-well 渡民岸井",
+  "status": "high-resolution layered art candidate; not native pixel acceptance",
+  "generation_tool": "image_gen.imagegen built-in",
+  "calls": 6,
+  "revisions": 0,
+  "post_processing": "ImageMagick alpha edge cleanup, crop, nearest-neighbor resize, integer translation, real source-over only",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "source_texts": [
+    "sources/SQ05_script_readonly.md",
+    "sources/R02_region_readonly.md"
+  ],
+  "references": [
+    "sources/old_well_composition_reference.png",
+    "sources/a01_material_reference.png",
+    "sources/dt03_layer_method_reference.png"
+  ],
+  "generated": [
+    {
+      "raw": "raw/01_ground_v1.png",
+      "prompt": "prompts/01_ground_v1.txt",
+      "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-71daf1bd-245f-4689-a672-3783633e0ffb.png"
+    },
+    {
+      "raw": "raw/02_body_v1.png",
+      "prompt": "prompts/02_body_v1.txt",
+      "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-095d1ce2-3a26-4592-9d84-c22c937e58e7.png"
+    },
+    {
+      "raw": "raw/03_roof_v1.png",
+      "prompt": "prompts/03_roof_v1.txt",
+      "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-4bfca548-4c8b-48d6-9aaa-37b5cc8be910.png"
+    },
+    {
+      "raw": "raw/04_well_filter_v1.png",
+      "prompt": "prompts/04_well_filter_v1.txt",
+      "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-ea78f9ec-c23c-42e1-9f87-c1350bdd3adf.png"
+    },
+    {
+      "raw": "raw/05_sampling_buckets_v1.png",
+      "prompt": "prompts/05_sampling_buckets_v1.txt",
+      "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-bf40d73b-9470-411e-acf8-ef2ed523987e.png"
+    },
+    {
+      "raw": "raw/06_cabinets_v1.png",
+      "prompt": "prompts/06_cabinets_v1.txt",
+      "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-4703c2f5-c19b-43bb-b1a5-369850ec7c9f.png"
+    }
+  ],
+  "stack": [
+    "01_ground",
+    "02_shelter_body",
+    "06_closed_cabinets",
+    "04_well_filter",
+    "05_sampling_points",
+    "03_roof"
+  ],
+  "ground_alpha": "fully opaque; full terrain base",
+  "other_layers_alpha": "binary 0/255 transparent background",
+  "code_changed": false,
+  "integrated": false,
+  "pushed": false
+}

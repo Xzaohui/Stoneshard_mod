@@ -1,0 +1,112 @@
+{
+  "priority": 4,
+  "id": "SCENE-GAP-DT03-R01-MARKER",
+  "name": "灰堤墓标核验与未辨认记录现场",
+  "node": "R01地方事件局部；不新增第55功能节点",
+  "sources": [
+    {
+      "path": "design/07_日常任务/台本/台本_DT03_无人认领的墓标.md",
+      "sha256": "babdb30fffc6f07ecc1f2c92cd8703a760f211e3c5e5c027ce099ff5022647a0",
+      "ids": [
+        "SCRIPT-DT03",
+        "DT03-R-identify",
+        "DT03-R-unnamed",
+        "DT03-S02",
+        "X43"
+      ],
+      "locators": [
+        {
+          "contains": "两家认同一枚工牌",
+          "lines": [
+            22,
+            37,
+            100
+          ]
+        },
+        {
+          "contains": "用遗留衣物修补",
+          "lines": [
+            45
+          ]
+        },
+        {
+          "contains": "### DT03-S02",
+          "lines": [
+            96
+          ]
+        },
+        {
+          "contains": "后日谈保留未辨认墓",
+          "lines": [
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "path": "design/02_世界与地图/区域_R01_布林外港与旧渠.md",
+      "sha256": "34ab06b1390add73a6ef0dcdfe774a7986d2c65f3ffebd3e199ddd476462d034",
+      "ids": [
+        "MAP-R01",
+        "R01-camp"
+      ],
+      "locators": [
+        {
+          "contains": "R01-camp",
+          "lines": [
+            47
+          ]
+        },
+        {
+          "contains": "DT03",
+          "lines": [
+            89,
+            131
+          ]
+        }
+      ]
+    }
+  ],
+  "source_grounded_need": "N2后两家争认一枚工牌的独立事件：留空墓名/待核记录、衣物修补与工牌分别核对，不能把N2空棺变成纳拉死亡。",
+  "existing_related_art": [
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch06/27_grey_embankment_worker_shelter.png",
+      "sha256": "c9ff45f50664970eedb3489c3875f243be22e2389d61a689eff1cecbac6b2a03",
+      "actually_viewed_this_audit": true,
+      "coverage_and_limit": "实际看为室内开棺仅外套、床桌与码头，是N2活人线索，非DT03辨认墓标。"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch27/103_rat_old_memorial_independent_aid.png",
+      "sha256": "ca2a2f93fbaabf6df3eeabf9c5c13d401b9e6a716481db7a31909ab2ab8d52b9",
+      "actually_viewed_this_audit": true,
+      "coverage_and_limit": "实际看为拉滕旧兽石刻、见证石与独立救助屋，不是R01两家工牌/墓名核验。"
+    },
+    {
+      "path": "src/EmbersAndOaths/Assets/ConceptDrafts/20261012/batch52/194_mns_empty_seat_memorial_hearth.png",
+      "sha256": "ff65b28862cd742f0cb0b0829e111718dd747afd4e9807b015ef64d707463c26",
+      "actually_viewed_this_audit": false,
+      "coverage_and_limit": "曼郡空席灶堂prompt明确禁墓/确认死亡，不据同为哀悼判覆盖。"
+    }
+  ],
+  "confirmed_gap": "墓标、工牌、DT03未见旧概念登记；grave只有否定词或神情词。N2空棺及拉滕纪念浮雕功能不同。",
+  "proposed_shot": "局部低墓标与受遮蔽核验台中近景，空白/不可读名字区、衣物补缀和单枚工牌清晰；两方可分站位置。具体地形属提案，不造大公墓。",
+  "low_magic": "盐灰小石标、褐土、旧木台、素布，无幽灵符文或英雄陵寝。",
+  "key_landmarks": [
+    "未填/不可读姓名区",
+    "一枚争认工牌",
+    "衣物补缀检查区",
+    "关闭的追认记录保管处"
+  ],
+  "guards": [
+    "核验预览不是下葬完成/遗体确认/两家领钱。",
+    "不画纳拉尸体，不混N2空棺与本案遗体，不自动放入FX陵墓NPC。",
+    "空名不替家属授权、死亡证明、补助资格或N18全员归家。"
+  ],
+  "status": "source_grounded_new_scene_candidate_not_generated",
+  "alignment_approved_existing_concept_found": false,
+  "story_is_current_S62": true,
+  "location_geometry_status": "composition_proposal_not_new_canon_or_runtime_geometry",
+  "actors_default": [],
+  "monsters_default": [],
+  "runtime_ready": false
+}

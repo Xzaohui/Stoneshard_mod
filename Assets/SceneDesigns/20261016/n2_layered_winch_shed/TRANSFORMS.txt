@@ -1,0 +1,20 @@
+N2绞盘作业棚：2026-10-16，仅美术图层整理，无Python图像编辑。
+工具：内置image_gen绘图；ImageMagick 7做以下授权范围内操作。
+原始文件保存在raw/不改写。
+
+统一画布1536x1024，RGBA PNG，原点左上角，所有图层0,0叠合。
+所有选中原稿先执行 -channel A -threshold 50% +channel，去除生成透明边缘光晕，alpha归为0/255。
+01_body：raw/01_body_v1.png原位使用（可见bbox1076x590+231+237），不改RGB内容。
+02_roof：raw/02_roof_v1.png清alpha后trim，bbox1428x392+54+230；nearest(point)等比缩至1180x324；平移至+178+98。
+03_dismantled_winch：raw/03_dismantled_winch_v1.png清alpha后trim，bbox1187x713+54+329；nearest等比缩至560x336；平移至+620+430。
+04_tool_stub：raw/04_tools_stub_v2.png清alpha；左半区768x1024+0+0，trim至707x421；nearest等比缩至112x67；平移至+650+693。
+05_carving_knife：raw/04_tools_stub_v2.png清alpha；右半区768x1024+768+0，trim至658x331；nearest等比缩至134x67；平移至+442+702。
+
+真实叠放顺序：01_body -> 04_tool_stub -> 03_dismantled_winch -> 05_carving_knife -> 02_roof（可隐藏）。
+揭顶只省略02；存根置于轴座左滑木下，部分纸角与骑缝小印露出。移除轴座即可查看完整纸件，不补画背景。
+roof_off_actual_transparent与roof_on_actual_transparent均由上述PNG source-over真实叠合生成。
+对应不带transparent后缀的预览只合成#929292背景。
+roof_off_on_actual_comparison为两幅预览水平拼接后nearest缩至1536x512，左揭顶右盖顶。
+five_layers_separate_gray为五层各自统一画布显示，512x341缩小图，3列2行，不是生成的分层示意图。
+两个现场细节均直接从真实揭顶叠图裁切放大，tool_stub_detail为完整存根独立层trim放大。
+未做透视扭曲、色板量化、抹画补画、贴纹理、程序绘画、原生像素转换或代码接入。

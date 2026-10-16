@@ -1,0 +1,64 @@
+N2 worker shed layered art — 2026-10-16
+Built-in image_gen: seven first drafts; one necessary roof redraw (v2 selected).
+ImageMagick 7.1.1-43 only. No Python image editing or procedural image creation.
+Raw images preserved byte-for-byte. All final layers: 1536x1024 RGBA.
+All inputs are 1536x1024. All layer alpha cleanup: -channel A -threshold 70% +channel.
+Scale is ordinary nearest-neighbor (-filter point), with no warp, shear or rotation.
+
+00 GROUND
+Source raw/00_ground_v1.png.
+Clean alpha, resize entire canvas to1398x696, then place at(+70,+350) on transparent1536x1024.
+Exact scale x=1398/1536, y=696/1024. Output layers/00_ground.png.
+Result bbox1305x472+108+482.
+This corrects the first draft's oversized ground depth and moves ash outside doorway.
+
+01 BODY
+Source raw/01_body_v1.png. Alpha cleanup only, no resize or translation.
+Output layers/01_body.png; bbox1265x746+149+179.
+
+02 ROOF
+Source raw/02_roof_v2.png. Alpha cleanup only, no resize or translation.
+Output layers/02_roof.png; bbox1388x560+85+144.
+V1 is retained in raw but not used. V2 corrects excessive depth and eave perspective.
+
+03 LIVING
+Source raw/03_living_v1.png. Alpha cleanup, trim transparent margins, reset page.
+Trim bounds1359x818+85+116. Resize trimmed content to300x190.
+Place at(+490,+500) on transparent1536x1024.
+Output layers/03_living.png; bbox300x190+490+500.
+
+04 EMPTY COFFIN
+Source raw/04_coffin_v1.png. Alpha cleanup, trim/reset page.
+Trim bounds1175x815+212+137. Resize trimmed content to300x208.
+Place at(+780,+535) on transparent1536x1024.
+Output layers/04_empty_coffin.png; bbox300x208+780+535.
+
+05 LOOSE LID
+Source raw/05_lid_v1.png. Alpha cleanup, trim/reset page.
+Trim bounds484x953+553+33. Resize trimmed content to104x215.
+Place at(+1095,+445) on transparent1536x1024.
+Output layers/05_loose_lid.png; bbox104x215+1095+445.
+
+06 OLD COAT
+Source raw/06_coat_v1.png. Alpha cleanup, trim/reset page.
+Trim bounds1063x794+293+141. Resize trimmed content to180x60.
+Place at(+860,+590) on transparent1536x1024.
+Output layers/06_old_coat.png; bbox180x60+860+590.
+Vertical scaling matches its flat placement on the visible coffin floor.
+
+COMPOSITES
+All actual composites: source-over, same canvas origin(0,0).
+Roof off:00_ground +01_body +03_living +05_loose_lid +04_empty_coffin +06_old_coat.
+Roof on:roof-off +02_roof.
+Coat removed:roof-off composition with06_old_coat omitted.
+Transparent versions retain alpha. Gray versions flatten against#959595.
+Roof-off/on comparison appends the two full1536x1024 gray images horizontally.
+Three-state sheet resizes each state to768x512, appends roof-on /roof-off /coat-removed.
+Seven-layer panel resizes each layer to384x256 on#959595; 4columns x2rows, ascending layer number.
+
+DETAIL CROPS
+Coffin/lid/coat:roof-off crop570x300+695+420, nearest-neighbor to1140x600.
+Ash threshold:roof-off crop660x250+400+700, nearest-neighbor to1320x500.
+Left eave:roof-on crop260x220+100+350, nearest-neighbor to780x660.
+Right eave:roof-on crop280x250+1150+480, nearest-neighbor to840x750.
+These are inspection views only, not additional delivery layers.

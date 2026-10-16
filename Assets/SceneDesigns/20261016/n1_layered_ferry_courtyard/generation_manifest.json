@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-16",
+  "scene": "N1 old ferry courtyard / r_eao_n1_yard",
+  "status": "high-resolution layered art candidate",
+  "tool": "image_gen.imagegen built-in",
+  "new_generation_calls": 3,
+  "new_generation_revisions": 0,
+  "shared_generated_assets": 1,
+  "source_canvas": [1448, 1086],
+  "delivery_canvas": [1536, 1152],
+  "normalization": "nearest-neighbor resize; no claim of native 26x26 pixel compliance",
+  "generated": [
+    {"raw": "raw/01_water_v1.png", "prompt": "prompts/01_water_v1.txt", "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-2b142017-2545-4737-8453-8e64aac1d18e.png", "reference_images": [], "transparent_requested": false},
+    {"raw": "raw/02_masonry_master_v1.png", "prompt": "prompts/02_masonry_master_v1.txt", "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-6eb13df3-9e2a-41af-8ada-9496bdd5e363.png", "reference_images": ["sources/old_yard_reference.png", "sources/yard_plan_reference.png"], "transparent_requested": true},
+    {"raw": "raw/04_foreground_v1.png", "prompt": "prompts/04_foreground_v1.txt", "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-34638298-767b-4ff0-9c42-4f492ba419c0.png", "reference_images": [], "transparent_requested": true}
+  ],
+  "shared_asset": {"raw_copy": "raw/05_shared_outdoor_bell_v1.png", "source_raw": "../n1_layered_bellhouse/raw/04_bell_v1.png", "trim_copy": "sources/shared_outdoor_bell_trim.png", "source_trim": "../n1_layered_bellhouse/work/bell_trim.png", "prompt_copy": "sources/shared_outdoor_bell_prompt.txt", "source_prompt": "../n1_layered_bellhouse/prompts/04_bell_v1.txt", "original_generated_path": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-038bba7c-b40f-4ef8-84be-4a07fe139ba8.png"},
+  "stack": ["layers/01_water.png", "layers/02_dry_floor.png", "layers/03_shore_edges.png", "layers/04_foreground.png", "layers/05_outdoor_bell.png"],
+  "post_processing": "ImageMagick selection masks; alpha threshold 50%; nearest-neighbor resize; integer translation; source-over. No Python image editing.",
+  "masonry_partition": {"method": "complementary selection masks of the new masonry master", "overlap_mean": 0, "reconstruction_absolute_error_pixels": 0},
+  "transforms": "TRANSFORMS.txt",
+  "code_changed": false,
+  "integrated": false,
+  "pushed": false,
+  "runtime_verified": false
+}

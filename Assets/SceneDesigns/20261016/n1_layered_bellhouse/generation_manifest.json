@@ -1,0 +1,21 @@
+{
+  "scene": "N1 无声钟房",
+  "date": "2026-10-16",
+  "status": "高分辨率分层美术候选",
+  "tool": "built-in image_gen",
+  "canvas": [1536, 1024],
+  "generation_count": 6,
+  "redraw_count": 0,
+  "raw_images": [
+    {"file":"raw/00_floor_v1.png","prompt":"prompts/00_floor_v1.txt","source_output":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-dda3b4ce-dfc2-45dc-abb5-c02842b43aba.png","role":"independently painted complete floor"},
+    {"file":"raw/01_walls_v1.png","prompt":"prompts/01_walls_v1.txt","source_output":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-509cf0f5-ed79-454a-a690-3c3258ccd1c3.png","role":"independently painted roofless walls"},
+    {"file":"raw/02_roof_v1.png","prompt":"prompts/02_roof_v1.txt","source_output":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-86f9f492-c0cd-4491-ae99-6ac903d96b6e.png","role":"independently painted roof"},
+    {"file":"raw/03_props_v1.png","prompt":"prompts/03_props_v1.txt","source_output":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-28199fa5-b5a7-4aad-bb8d-093b92dfd99e.png","role":"independently painted object sheet; selections become five transparent layers"},
+    {"file":"raw/04_bell_v1.png","prompt":"prompts/04_bell_v1.txt","source_output":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-038bba7c-b40f-4ef8-84be-4a07fe139ba8.png","role":"independent outdoor bell frame and cut rope"},
+    {"file":"raw/05_fittings_v1.png","prompt":"prompts/05_fittings_v1.txt","source_output":"/workspace/scratch/5ed8df2c5d81/generated_images/exec-e2bff588-fa3e-4781-97ac-26f470e0c6ab.png","role":"independent door and window sheet; selections become three layers"}
+  ],
+  "postprocessing": ["binary alpha cleanup", "object selection", "nearest-neighbor resizing", "integer translation", "source-over preview compositing"],
+  "unchanged": ["old assets", "game code", "validators", "integration", "game packages"],
+  "runtime_verified": false,
+  "production_pixel_spec_claimed": false
+}

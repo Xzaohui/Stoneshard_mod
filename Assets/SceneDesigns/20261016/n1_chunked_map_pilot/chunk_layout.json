@@ -1,0 +1,543 @@
+{
+  "schema": "n1-art-chunk-layout/1.0",
+  "date": "2026-10-16",
+  "status": "high_resolution_art_candidate",
+  "scope": "First 2x2 continuity pilot; not the complete N1 map.",
+  "coordinate_system": {
+    "origin": "northwest",
+    "x_positive": "east",
+    "y_positive": "south",
+    "unit": "pixel",
+    "tile_size_px": [
+      26,
+      26
+    ],
+    "chunk_core_cells": [
+      32,
+      32
+    ],
+    "chunk_core_px": [
+      832,
+      832
+    ],
+    "source_normalized_px": [
+      1040,
+      1040
+    ],
+    "source_halo_cells": 4,
+    "pilot_bounds_px": [
+      0,
+      0,
+      1664,
+      1664
+    ],
+    "pilot_cells": [
+      64,
+      64
+    ]
+  },
+  "render_contract": {
+    "default": "Use final 832px textures at world_origin_px; draw whole texture with zero crop offset.",
+    "do_not": "Do not crop final textures at104; do not overlay seam images again; do not render1040px sources with overlap.",
+    "independent_ground_chunks": true,
+    "building_bell_npc_baked": false,
+    "runtime_verified": false,
+    "collision_provided": false
+  },
+  "chunks": [
+    {
+      "id": "01_NW",
+      "label_zh": "西岸来路与追索人院地",
+      "grid_coord": [
+        0,
+        0
+      ],
+      "world_origin_px": [
+        0,
+        0
+      ],
+      "world_rect_px": [
+        0,
+        0,
+        832,
+        832
+      ],
+      "texture": "chunks/01_NW_core.png",
+      "texture_size_px": [
+        832,
+        832
+      ],
+      "render_crop_rect_px": [
+        0,
+        0,
+        832,
+        832
+      ],
+      "source_normalized": "normalized/01_NW.png",
+      "source_size_px": [
+        1040,
+        1040
+      ],
+      "source_world_origin_px": [
+        -104,
+        -104
+      ],
+      "source_core_rect_px": [
+        104,
+        104,
+        832,
+        832
+      ],
+      "source_halo_px": {
+        "left": 104,
+        "top": 104,
+        "right": 104,
+        "bottom": 104
+      },
+      "core_base_texture": "chunks/01_NW_core_base.png",
+      "seams_baked_into_final_core": true,
+      "neighbors": {
+        "east": "02_NE",
+        "south": "03_SW"
+      },
+      "outer_edges_open_for_future_chunks": true
+    },
+    {
+      "id": "02_NE",
+      "label_zh": "东岸钟架平台与钟房预留地",
+      "grid_coord": [
+        1,
+        0
+      ],
+      "world_origin_px": [
+        832,
+        0
+      ],
+      "world_rect_px": [
+        832,
+        0,
+        832,
+        832
+      ],
+      "texture": "chunks/02_NE_core.png",
+      "texture_size_px": [
+        832,
+        832
+      ],
+      "render_crop_rect_px": [
+        0,
+        0,
+        832,
+        832
+      ],
+      "source_normalized": "normalized/02_NE.png",
+      "source_size_px": [
+        1040,
+        1040
+      ],
+      "source_world_origin_px": [
+        728,
+        -104
+      ],
+      "source_core_rect_px": [
+        104,
+        104,
+        832,
+        832
+      ],
+      "source_halo_px": {
+        "left": 104,
+        "top": 104,
+        "right": 104,
+        "bottom": 104
+      },
+      "core_base_texture": "chunks/02_NE_core_base.png",
+      "seams_baked_into_final_core": true,
+      "neighbors": {
+        "west": "01_NW",
+        "south": "04_SE"
+      },
+      "outer_edges_open_for_future_chunks": true
+    },
+    {
+      "id": "03_SW",
+      "label_zh": "西侧南堤与断桥西残端",
+      "grid_coord": [
+        0,
+        1
+      ],
+      "world_origin_px": [
+        0,
+        832
+      ],
+      "world_rect_px": [
+        0,
+        832,
+        832,
+        832
+      ],
+      "texture": "chunks/03_SW_core.png",
+      "texture_size_px": [
+        832,
+        832
+      ],
+      "render_crop_rect_px": [
+        0,
+        0,
+        832,
+        832
+      ],
+      "source_normalized": "normalized/03_SW.png",
+      "source_size_px": [
+        1040,
+        1040
+      ],
+      "source_world_origin_px": [
+        -104,
+        728
+      ],
+      "source_core_rect_px": [
+        104,
+        104,
+        832,
+        832
+      ],
+      "source_halo_px": {
+        "left": 104,
+        "top": 104,
+        "right": 104,
+        "bottom": 104
+      },
+      "core_base_texture": "chunks/03_SW_core_base.png",
+      "seams_baked_into_final_core": true,
+      "neighbors": {
+        "north": "01_NW",
+        "east": "04_SE"
+      },
+      "outer_edges_open_for_future_chunks": true
+    },
+    {
+      "id": "04_SE",
+      "label_zh": "东侧南堤与暗渠方向",
+      "grid_coord": [
+        1,
+        1
+      ],
+      "world_origin_px": [
+        832,
+        832
+      ],
+      "world_rect_px": [
+        832,
+        832,
+        832,
+        832
+      ],
+      "texture": "chunks/04_SE_core.png",
+      "texture_size_px": [
+        832,
+        832
+      ],
+      "render_crop_rect_px": [
+        0,
+        0,
+        832,
+        832
+      ],
+      "source_normalized": "normalized/04_SE.png",
+      "source_size_px": [
+        1040,
+        1040
+      ],
+      "source_world_origin_px": [
+        728,
+        728
+      ],
+      "source_core_rect_px": [
+        104,
+        104,
+        832,
+        832
+      ],
+      "source_halo_px": {
+        "left": 104,
+        "top": 104,
+        "right": 104,
+        "bottom": 104
+      },
+      "core_base_texture": "chunks/04_SE_core_base.png",
+      "seams_baked_into_final_core": true,
+      "neighbors": {
+        "north": "02_NE",
+        "west": "03_SW"
+      },
+      "outer_edges_open_for_future_chunks": true
+    }
+  ],
+  "production_only_seam_operations_in_order": [
+    {
+      "id": "bridge_level",
+      "texture": "seams/05_bridge_overlay.png",
+      "world_rect_px": [
+        416,
+        1170,
+        832,
+        416
+      ],
+      "alpha_edge_px": 8
+    },
+    {
+      "id": "horizontal_continuity",
+      "texture": "seams/06_horizontal_overlay.png",
+      "world_rect_px": [
+        0,
+        624,
+        1664,
+        416
+      ],
+      "alpha_edge_px": 8
+    },
+    {
+      "id": "vertical_continuity",
+      "texture": "seams/07_vertical_overlay.png",
+      "world_rect_px": [
+        624,
+        0,
+        416,
+        1664
+      ],
+      "alpha_edge_px": 8
+    },
+    {
+      "id": "broken_bridge_water",
+      "texture": "seams/08_remnant_water_overlay.png",
+      "world_rect_px": [
+        624,
+        936,
+        416,
+        416
+      ],
+      "alpha_edge_px": 8
+    },
+    {
+      "id": "bridge_restore_level",
+      "texture": "seams/05_bridge_overlay.png",
+      "world_rect_px": [
+        416,
+        1170,
+        832,
+        416
+      ],
+      "alpha_edge_px": 8
+    },
+    {
+      "id": "south_water_continuity",
+      "texture": "seams/09_south_water_overlay.png",
+      "world_rect_px": [
+        416,
+        1144,
+        832,
+        520
+      ],
+      "alpha_edge_px": 8
+    }
+  ],
+  "scale_reference": {
+    "adult_sprite_px": [
+      35,
+      44
+    ],
+    "main_path_observed_width_px": [
+      104,
+      130
+    ],
+    "south_causeway_observed_width_px": [
+      96,
+      104
+    ],
+    "river_observed_width_px": [
+      234,
+      286
+    ],
+    "bell_placeholder_visual_rect_px": [
+      1040,
+      340,
+      78,
+      104
+    ],
+    "bellhouse_placeholder_ground_rect_px": [
+      1360,
+      220,
+      260,
+      260
+    ],
+    "note": "Size boxes only in annotated preview; no commercial character copied. Building and bell remain separate assets."
+  },
+  "boundary_connections_observed": [
+    {
+      "id": "west_north_south_path",
+      "shared_chunks": [
+        "01_NW",
+        "03_SW"
+      ],
+      "world_boundary_y": 832,
+      "world_x_interval_px": [
+        310,
+        420
+      ],
+      "world_center_px": [
+        365,
+        832
+      ],
+      "kind": "land_path",
+      "coordinate_confidence": "visual approximate +/-13px"
+    },
+    {
+      "id": "east_north_south_path",
+      "shared_chunks": [
+        "02_NE",
+        "04_SE"
+      ],
+      "world_boundary_y": 832,
+      "world_x_interval_px": [
+        1250,
+        1360
+      ],
+      "world_center_px": [
+        1305,
+        832
+      ],
+      "kind": "land_path",
+      "coordinate_confidence": "visual approximate +/-13px"
+    },
+    {
+      "id": "north_river",
+      "shared_chunks": [
+        "01_NW",
+        "02_NE"
+      ],
+      "world_boundary_x": 832,
+      "world_y_interval_px": [
+        0,
+        832
+      ],
+      "kind": "water_only_no_walkable_crossing"
+    },
+    {
+      "id": "south_crossing",
+      "shared_chunks": [
+        "03_SW",
+        "04_SE"
+      ],
+      "world_boundary_x": 832,
+      "world_y_interval_px": [
+        1316,
+        1416
+      ],
+      "world_center_px": [
+        832,
+        1366
+      ],
+      "kind": "level_stone_causeway",
+      "coordinate_confidence": "visual approximate +/-8px"
+    },
+    {
+      "id": "central_river_shores",
+      "world_boundary_y": 832,
+      "west_shore_x_px": 750,
+      "east_shore_x_px": 1000,
+      "kind": "water_boundaries",
+      "coordinate_confidence": "visual approximate +/-13px"
+    }
+  ],
+  "anchors_art_only": [
+    {
+      "id": "west_approach",
+      "world_px": [
+        26,
+        370
+      ],
+      "purpose": "future player arrival; verify against gameplay navigation"
+    },
+    {
+      "id": "creditor_court",
+      "world_px": [
+        620,
+        350
+      ],
+      "purpose": "future Tore area"
+    },
+    {
+      "id": "outdoor_bell",
+      "world_px": [
+        1079,
+        444
+      ],
+      "purpose": "future independent bell foot anchor; no bell baked"
+    },
+    {
+      "id": "bellhouse_ground",
+      "world_px": [
+        1490,
+        480
+      ],
+      "purpose": "future independent bellhouse ground anchor"
+    },
+    {
+      "id": "south_causeway",
+      "world_px": [
+        832,
+        1366
+      ],
+      "purpose": "visible southern crossing"
+    },
+    {
+      "id": "underpass_direction",
+      "world_px": [
+        1425,
+        1638
+      ],
+      "purpose": "future extension towards underpass, not a new gameplay portal"
+    }
+  ],
+  "initial_target_vs_painted_candidate": {
+    "initial_west_east_water_x_px": [
+      702,
+      962
+    ],
+    "observed_near_horizontal_join_x_px": [
+      750,
+      1000
+    ],
+    "initial_causeway_y_interval_px": [
+      1300,
+      1404
+    ],
+    "observed_causeway_y_interval_px": [
+      1316,
+      1416
+    ],
+    "note": "Image generation did not honor exact geometric pixels. These observed art guides are not collision boundaries or migrated original room coordinates."
+  },
+  "story_topology": {
+    "source": "sources/N1_scene_topology.md",
+    "sequence": "west arrival / creditor court -> south causeway -> east outdoor bell -> separate bellhouse -> future underpass",
+    "broken_bridge_is_not_walkable": true,
+    "original_three_room_layout_replaced": false
+  },
+  "visual_checks": {
+    "whole": "previews/COMPOSITE.png",
+    "final_cores_reassembled": "previews/FINAL_FROM_FOUR_CORE_FILES.png",
+    "assembly_absolute_error_pixels": 0,
+    "annotation": "previews/CHUNK_BOUNDARIES_AND_SCALE.png",
+    "local_crops": [
+      "previews/QA_center_four_chunk_intersection.png",
+      "previews/QA_west_horizontal.png",
+      "previews/QA_east_horizontal.png",
+      "previews/QA_north_vertical.png",
+      "previews/QA_south_vertical.png",
+      "previews/QA_broken_bridge_water.png",
+      "previews/QA_south_causeway.png"
+    ]
+  }
+}

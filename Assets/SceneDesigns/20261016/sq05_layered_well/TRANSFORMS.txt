@@ -1,0 +1,51 @@
+SQ05 layered well art candidate — 2026-10-16
+Tool: built-in image_gen.imagegen, six first drafts, zero image-generation revisions.
+Post-processing: ImageMagick only; no Python editing, no painting or perspective warp.
+Raw sources preserved byte-for-byte. Final canvas:1536x1024 RGBA8, origin(0,0).
+
+For raw 02..06: -channel A -threshold 50% +channel.
+This removes faint generated alpha edge haze and makes clean binary-alpha silhouettes.
+01 ground: retain entire1536x1024 RGB painting; encode PNG32 with opaque alpha.
+
+02 shelter body:
+alpha trim bbox1218x767+165+135;
+trim +repage, nearest-neighbor resize520x327!, place(+315,+100).
+
+03 roof:
+alpha trim bbox1468x680+37+160;
+trim +repage, nearest-neighbor resize570x185!, place(+300,+70).
+Separate ordinary X/Y scaling, no shear or warp.
+
+04 source1774x887:
+Well:crop896x896+0+0 (clipped at source bottom), +repage, trim ->734x712;
+resize245x238!, place(+565,+415).
+Filter:crop896x896+896+0 (clipped at source right/bottom), +repage, trim ->616x588;
+resize175x167!, place(+870,+440).
+Crop boundaries lie in transparent gap. Composite both into04_well_filter.
+
+05 source2172x724:
+A crop683x768+0+0; trim416x572; resize48x66!; place(+1245,+234).
+B crop683x768+683+0; trim421x570; resize48x66!; place(+1190,+457).
+C crop682x768+1366+0; trim416x578; resize48x66!; place(+952,+655).
+Crop rectangles are clipped at source edge; last crop fully contains third bucket.
+Three disconnected objects only; no duplicating one pail to create more.
+Composite A+B+C into05_sampling_points.
+
+06 source1536x1024:
+Left crop820x1024+0+0; trim687x746; final resize135x147!; place(+410,+190).
+Right crop716x1024+820+0; trim566x925; final resize90x147!; place(+645,+238).
+Initial layout155x168 at390,162 and115x188 at630,180 was adjusted because
+cabinet tops overlapped the front beam in the roof-off view.
+Final scale and position keep whole original cabinet silhouettes below front beam,
+and all cabinet feet on the stone platform. No cabinet paint or alpha erased.
+Composite left+right into06_closed_cabinets.
+
+Final main order source-over at0,0:01ground,02body,06cabinets,04well/filter,05buckets,03roof.
+Roof-off excludes only03. Cumulative step01..06 use same files.
+Gray separate previews flatten against#888885.
+Contact sheet uses nearest-neighbor768x512 tiles, labels in36px top borders;
+3columns x2rows. Labels are only in preview, never in deliverable layers.
+Roof off/on comparison appends actual1536x1024 composites side by side.
+Detail crops are real final-composite pixels enlarged2x with nearest-neighbor.
+Main actual composite equals independent step06 recomposition (AE=0).
+

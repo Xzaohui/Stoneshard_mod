@@ -1,0 +1,113 @@
+{
+  "date_utc": "2026-10-16",
+  "status": "LAYERED_ART_SAMPLE_NOT_REGISTERED",
+  "layers": [
+    {
+      "file": "layers/01_body.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "transparent_pixels": 984888,
+      "opaque_pixels": 0,
+      "partial_alpha_pixels": 587976,
+      "alpha_bbox": [
+        117,
+        19,
+        1460,
+        1024
+      ],
+      "alpha_ge128_bbox": [
+        257,
+        190,
+        1328,
+        856
+      ],
+      "sha256": "1dd79fb7bd2772f67984a69edc4644a16ff5886288b121323289e9f938660398",
+      "binary_alpha": false
+    },
+    {
+      "file": "layers/02_roof_candidate.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1131534,
+      "opaque_pixels": 0,
+      "partial_alpha_pixels": 441330,
+      "alpha_bbox": [
+        33,
+        21,
+        1500,
+        1000
+      ],
+      "alpha_ge128_bbox": [
+        127,
+        119,
+        1414,
+        746
+      ],
+      "sha256": "8370525ee7b49d5f7b126323fcaccca7e6177da08bca47b63ae9348e4b3b3dd6",
+      "binary_alpha": false
+    },
+    {
+      "file": "layers/03_foreground.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_minmax": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1538880,
+      "opaque_pixels": 0,
+      "partial_alpha_pixels": 33984,
+      "alpha_bbox": [
+        63,
+        47,
+        1480,
+        968
+      ],
+      "alpha_ge128_bbox": [
+        428,
+        651,
+        1289,
+        791
+      ],
+      "sha256": "d05202c7e8395bdffa7b1ccd11b265225a1a7e807ad6a2727e19623b2a041b0c",
+      "binary_alpha": false
+    }
+  ],
+  "same_canvas": true,
+  "composition_method": "Pure source-over alpha composition at (0,0), no translations, resizing, rotations, recoloring, masking, drawing or retouching. Gray backgrounds and adjacent comparison panels are preview only.",
+  "registration_pass": false,
+  "runtime_verified": false,
+  "production_palette_checked": false,
+  "production_binary_alpha_pass": false,
+  "declared_shared_review_origin": [
+    780,
+    854
+  ],
+  "origin_note": "Review origin based on visible body doorstep bottom center. Not a verified game anchor; no layer was transformed to this point. Original prompt target (768,900) was not obeyed.",
+  "visual_observations": [
+    "Body has painted interior floor/back wall and side-room upper surfaces rather than transparent roof-shaped holes.",
+    "Roof v2 remains too broad and low relative to the body. Front V ridge near (768,400) versus body gable peak near (780,342), approximately -12,+58px. These are visual approximate coordinates.",
+    "Main roof side eaves around x310 and x1215, versus body wall tops around x420 and x1140: roughly 110px excess left and 75px right, exceeding ordinary modest overhang.",
+    "Roof v3 registration experiment altered the body and was rejected. It is not used as a stack preview.",
+    "Foreground bench feet end around y790, while front stone foundation ends near y800, so bench ground alignment is not accepted; barrel and crate are placed under right porch.",
+    "All PNGs have real alpha, but partial alpha is widespread and there are no fully opaque alpha255 pixels in the sampled body; this is not binary-alpha game-ready output.",
+    "High-resolution textured art; 26px grid, <=128 palette, hard pixel edges and engine anchoring are not claimed."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "scene_id": "ALD-D01-A",
+  "scene_title": "金工旧坯验台",
+  "date": "2026-10-16",
+  "status": "high_resolution_art_candidate",
+  "generator": "built-in image_gen",
+  "canvas": [1536, 1024],
+  "primary_layers": ["00_ground", "01_body", "02_roof", "03_furniture", "04_tools_stock", "05_old_blank"],
+  "stack_order": ["00_ground", "01_body", "03_furniture", "04_tools_stock", "05_old_blank", "02_roof"],
+  "generation_count": 6,
+  "revision_count": 0,
+  "raw_outputs": {
+    "01_body_v1.png": "exec-51e3ad14-d842-4405-bc4e-0bcac32df258.png",
+    "00_ground_v1.png": "exec-04419287-4af0-4efd-a953-c39b696b39ab.png",
+    "02_roof_v1.png": "exec-192fef7c-c9b3-4923-88c0-a1d482115cb4.png",
+    "03_furniture_v1.png": "exec-d3fe049e-7b18-49df-9561-bb4c0db29e3c.png",
+    "04_tools_stock_v1.png": "exec-1e3aacc7-e1d5-44a0-95d8-38c37b5a50e8.png",
+    "05_old_blank_v1.png": "exec-ed1b2f83-3a1c-475b-8788-120293caa04a.png"
+  },
+  "sources": ["SPACE_ALD_snapshot.md ALD-D01-A/B", "CS_ALD_06_snapshot.md 场3", "CS_ALD_01_snapshot.md 场1及署名边界", "CM_ALD_snapshot.md 工艺与身份边界", "ALD_style_reference.png 材质风貌", "layer_method_reference.png 分层方法"],
+  "prompts": "prompts/，与raw文件同名txt",
+  "postprocess": "ImageMagick selection crop, alpha threshold, nearest-neighbor scale, integer placement, source-over compositing",
+  "runtime_verified": false,
+  "code_modified": false,
+  "pushed": false
+}

@@ -1,0 +1,85 @@
+{
+  "project": "DT10 / A03 night watch woodland",
+  "date": "2026-10-16",
+  "status": "high-resolution layered art candidate; not native-pixel production or in-game acceptance",
+  "tool": "built-in image_gen.imagegen",
+  "generation_calls": 8,
+  "canvas": [
+    1536,
+    1024
+  ],
+  "sources": [
+    "sources/a03_dt10_scene_reference.png",
+    "sources/DT10_story_snapshot.md",
+    "sources/repository_AGENTS_snapshot.md",
+    "sources/README_zh.md",
+    "sources/TRANSFORMS.txt"
+  ],
+  "generations": [
+    {
+      "raw": "raw/00_background_v1.png",
+      "prompt": "prompts/00_background_v1.txt",
+      "source_output": "exec-cf38c824-6911-418f-88be-f54dd42e5903.png",
+      "selected": false,
+      "reason": "One unwanted pawprint remained in background."
+    },
+    {
+      "raw": "raw/00_background_v2.png",
+      "prompt": "prompts/00_background_v2_remove_paws.txt",
+      "source_output": "exec-f0a2ba74-d5f5-46c7-b12f-c58a657044f7.png",
+      "selected": true
+    },
+    {
+      "raw": "raw/01_body_v1.png",
+      "prompt": "prompts/01_body_v1.txt",
+      "source_output": "exec-ea810a0c-d514-4936-93ea-121bf740eb12.png",
+      "selected": true
+    },
+    {
+      "raw": "raw/02_roof_v1.png",
+      "prompt": "prompts/02_roof_v1.txt",
+      "source_output": "exec-c3c67496-0ff3-421d-81ce-945334e4c016.png",
+      "selected": false,
+      "reason": "Front edge slope too steep to fit body by scale/translation cleanly."
+    },
+    {
+      "raw": "raw/02_roof_v2.png",
+      "prompt": "prompts/02_roof_v2_perspective.txt",
+      "source_output": "exec-e8024e1f-4a3a-44bb-bbb1-d60501b59533.png",
+      "selected": true
+    },
+    {
+      "raw": "raw/03_props_v1.png",
+      "prompt": "prompts/03_props_v1.txt",
+      "source_output": "exec-b8c0286a-9f0a-488e-844c-b6aa5972582c.png",
+      "selected": true
+    },
+    {
+      "raw": "raw/04_pawprints_v1.png",
+      "prompt": "prompts/04_pawprints_v1.txt",
+      "source_output": "exec-3150d411-cc9d-46a6-9b0a-8e71a6de85d9.png",
+      "selected": false,
+      "reason": "Too much mottled detail for small scene-scale impressions."
+    },
+    {
+      "raw": "raw/04_pawprints_v2.png",
+      "prompt": "prompts/04_pawprints_v2_clarity.txt",
+      "source_output": "exec-a4b7d408-c494-470c-aba1-0054117a9fef.png",
+      "selected": true
+    }
+  ],
+  "layer_order_bottom_to_top": [
+    "layers/00_ground_forest.png",
+    "layers/04_wolf_tracks.png",
+    "layers/03_trough_bucket_stain.png",
+    "layers/01_shelter_body.png",
+    "layers/02_shelter_roof.png"
+  ],
+  "roof_off_omits_only": "layers/02_shelter_roof.png",
+  "limitations": [
+    "Ground/forest is one opaque scene layer, not separate tree occlusion sprites.",
+    "Fixed lantern and bench belong to body; no independent light-switch layer.",
+    "Footprints are illustrative environmental clues, not a simulated gait.",
+    "No native sprite-grid, collision, engine, or game-runtime acceptance."
+  ]
+}

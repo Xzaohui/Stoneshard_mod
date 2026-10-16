@@ -1,0 +1,82 @@
+{
+  "date_utc": "2026-10-16",
+  "tool": "built-in image_gen.imagegen",
+  "transparent_background_requested": true,
+  "calls": [
+    {
+      "id": "01_body_v1",
+      "prompt": "prompts/01_body_v1.txt",
+      "reference_inputs": [
+        "Assets/SceneDesigns/20261015/a01_redraw/a01_brynn_dockyard_candidate_v2.png",
+        "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/assets/items/bry_workshop_house.png"
+      ],
+      "raw": "raw/01_body_v1.png",
+      "tool_saved_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-e2b77811-e46d-4898-b957-8a9deb05b689.png",
+      "raw_sha256": "1dd79fb7bd2772f67984a69edc4644a16ff5886288b121323289e9f938660398",
+      "status": "selected body; real alpha but nonbinary and origin differs from prompt"
+    },
+    {
+      "id": "02_roof_v1",
+      "prompt": "prompts/02_roof_v1.txt",
+      "reference_inputs": [
+        "layers/01_body.png",
+        "Assets/SceneDesigns/20261015/a01_redraw/a01_brynn_dockyard_candidate_v2.png"
+      ],
+      "raw": "raw/02_roof_v1.png",
+      "tool_saved_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-88b01b50-0f67-4fab-9a79-fd4a48a5627b.png",
+      "raw_sha256": "111a2e0c4a1ff92af0100510639f77c0e83174af1b0f06646f0065386450e14a",
+      "status": "rejected: oversized and low"
+    },
+    {
+      "id": "02_roof_v2",
+      "prompt": "prompts/02_roof_v2.txt",
+      "reference_inputs": [
+        "raw/02_roof_v1.png",
+        "layers/01_body.png",
+        "previews/body_roof_v1_actual.png"
+      ],
+      "raw": "raw/02_roof_v2.png",
+      "tool_saved_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-6b168e6b-0921-4348-82ce-7cb162b1b38e.png",
+      "raw_sha256": "8370525ee7b49d5f7b126323fcaccca7e6177da08bca47b63ae9348e4b3b3dd6",
+      "status": "selected as a failed-registration candidate only"
+    },
+    {
+      "id": "02_roof_v3_registration",
+      "prompt": "prompts/02_roof_v3_registration.txt",
+      "reference_inputs": [
+        "layers/01_body.png",
+        "raw/02_roof_v2.png"
+      ],
+      "raw": "raw/02_roof_v3_registration_failed.png",
+      "tool_saved_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-41ea9484-c1f7-4e17-b700-35be32746139.png",
+      "raw_sha256": "bdb2be59d147e160a08b8002a6e773d66adc9d71dcdeb73bf57aefab2e570820",
+      "status": "rejected: changed body scale; never used as stack preview"
+    },
+    {
+      "id": "03_foreground_v1",
+      "prompt": "prompts/03_foreground_v1.txt",
+      "reference_inputs": [
+        "layers/01_body.png",
+        "Assets/SceneDesigns/20261015/a01_redraw/a01_brynn_dockyard_candidate_v2.png"
+      ],
+      "raw": "raw/03_foreground_v1.png",
+      "tool_saved_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-602e1763-7ddf-4608-ade0-ba416d60daad.png",
+      "raw_sha256": "d05202c7e8395bdffa7b1ccd11b265225a1a7e807ad6a2727e19623b2a041b0c",
+      "status": "selected foreground; bench ground alignment not accepted"
+    }
+  ],
+  "selected_layer_copies": {
+    "layers/01_body.png": "raw/01_body_v1.png",
+    "layers/02_roof_candidate.png": "raw/02_roof_v2.png",
+    "layers/03_foreground.png": "raw/03_foreground_v1.png"
+  },
+  "source_docs": [
+    "AGENTS.md",
+    "src/Art/hd2d_26x26_20261013/spec_lock.md",
+    "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/spec_lock.md",
+    "src/Art/hd2d_26x26_20261013/batches/BRY-core-v1/manifest.json",
+    "research/city-art-reference-catalog.json"
+  ],
+  "artwork_postprocessing": "None. Byte-copy only. Pure alpha composites for preview at identity placement. No image pixel edits by program.",
+  "status": "UNREGISTERED_LAYERED_SAMPLE"
+}

@@ -1,0 +1,58 @@
+SQ08 / R04-camp layered shelter art study — 2026-10-16
+Tool: built-in image_gen.imagegen, six initial drafts, zero image-generation revisions.
+Postprocess: ImageMagick only; no Python image editing, painting, recolor, shear, warp, mesh or generated composites.
+All delivered layers are PNG32 1536x1024, origin (0,0). Preserve raw/* byte-for-byte.
+
+COMMON ALPHA CLEANUP
+All six raw generated images contain genuine alpha with low-opacity colored halos.
+Use -channel A -threshold 80% +channel to keep object silhouettes and remove halos.
+Final alpha is binary 0/255. Nearest-neighbor resampling uses -filter point.
+
+00 GROUND
+raw/00_ground_v1.png -> alpha cleanup only -> layers/00_ground.png.
+No scale or translation. Alpha bbox 1502x955+23+28.
+
+01 FRAME
+raw/01_frame_v1.png -> alpha cleanup.
+Resize entire 1536x1024 canvas to 860x573! and place at (+70,+30) on clear 1536x1024.
+Output layers/01_frame.png, alpha bbox 663x391+185+118.
+
+02 ROOF
+raw/02_roof_v1.png -> alpha cleanup.
+Resize entire 1536x1024 canvas to 768x399! and place at (+127,-3) on clear 1536x1024.
+Independent horizontal/vertical scaling aligns the shallow roof to the mounting frame.
+No perspective warp. Output layers/02_roof.png, alpha bbox 704x243+160+82.
+
+03 FURNITURE
+raw/03_furniture_v1.png -> alpha cleanup -> -trim +repage.
+Trimmed content 1308x641. Resize to 300x147, place at (+330,+280).
+Output layers/03_furniture.png, alpha bbox 300x147+330+280.
+Earlier placement (+330,+305) in work/off_test.png and on_test.png is superseded.
+
+04 DOCUMENT POUCH
+raw/04_pouch_v1.png -> alpha cleanup -> -trim +repage.
+Trimmed content 967x580. Resize to 50x30, place at (+449,+308).
+Output layers/04_document_pouch.png, alpha bbox 50x30+449+308.
+
+05 FOREGROUND
+raw/05_foreground_v1.png -> alpha cleanup.
+Left crop 800x1024+0+0, +repage, -trim +repage -> 688x387.
+Resize left to 250x141, place at (+230,+650).
+Right crop 736x1024+800+0, +repage, -trim +repage -> 559x247.
+Resize right to 200x88, place at (+1210,+540).
+The crop division passes only through transparent space.
+Source-over the two placements onto clear 1536x1024.
+Output layers/05_foreground.png, combined alpha bbox 1180x251+230+540.
+
+ACTUAL COMPOSITES
+Roof off source-over at (0,0): 00 ground, 01 frame, 03 furniture, 04 pouch, 05 foreground.
+Roof on: roof-off pixels plus 02 roof at (0,0). Foreground does not overlap the roof.
+Reconstructed canonical order: 00,01,03,04,02,05; compare against roof-on gives AE=0.
+Transparent outputs: previews/roof_off_actual_transparent.png and roof_on_actual_transparent.png.
+Gray previews flatten actual composites against #929292.
+Off/on comparison appends two 1536x1024 gray previews horizontally.
+Six-layer sheet displays actual delivered layers resized to 768x512 on gray in 2 columns x3 rows.
+Left eave/ground crop: 270x260+130+140, enlarged to810x780 using point filter.
+Right eave/ground crop:290x350+610+170, enlarged to580x700 using point filter.
+Furniture/pouch crop from roof-off:400x260+290+240, enlarged to1200x780 using point filter.
+

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "tile": 26,
+  "room": "r_eao_n2_sites",
+  "title": "灰堤外院",
+  "columns": 52,
+  "rows": 38,
+  "walkable_rectangles": [[3,4,48,33]],
+  "buildings": [
+    {"id":"shed","source":"r01_worker_shed","door_cell":[10,14],"blocked":[6,9,14,13],"target":"r_eao_n2_camp","tag":"EAO_N2_camp_in","return_tag":"EAO_SITE_shed","return_cell":[10,16],"cn":"雇工棚","en":"Labor shed"},
+    {"id":"winch","source":"r01_winch_shed","door_cell":[26,14],"blocked":[23,10,29,13],"target":"r_eao_n2_winch","tag":"EAO_N2_winch_in","return_tag":"EAO_SITE_winch","return_cell":[26,16],"cn":"绞盘作业棚","en":"Winch work shed"},
+    {"id":"canal","source":"r01_canal_entry","door_cell":[42,14],"blocked":[38,9,46,13],"target":"r_eao_n2_side","tag":"EAO_N2_side_in","return_tag":"EAO_SITE_canal","return_cell":[42,16],"cn":"旧渠检修入口","en":"Drain maintenance entrance"}
+  ],
+  "arrival": {"tag":"EAO_SITE_in","cell":[26,19]},
+  "home_cell": [26,32],
+  "props": [
+    {"id":"camp_bedroll_a","room":"r_eao_n2_camp","source":"r01_shelter_bedroll","cell":[14,10],"floor":true,"blocking":false},
+    {"id":"camp_bedroll_b","room":"r_eao_n2_camp","source":"r01_shelter_bedroll","cell":[14,22],"floor":true,"blocking":false},
+    {"id":"camp_jug","room":"r_eao_n2_camp","source":"r01_water_jug","cell":[16,8],"floor":false,"blocking":false},
+    {"id":"winch_ladder","room":"r_eao_n2_winch","source":"r01_maintenance_ladder","cell":[11,10],"floor":false,"blocking":false},
+    {"id":"winch_jug","room":"r_eao_n2_winch","source":"r01_water_jug","cell":[15,18],"floor":false,"blocking":false},
+    {"id":"side_bedroll","room":"r_eao_n2_side","source":"r01_shelter_bedroll","cell":[16,9],"floor":true,"blocking":false},
+    {"id":"side_jug","room":"r_eao_n2_side","source":"r01_water_jug","cell":[18,10],"floor":false,"blocking":false},
+    {"id":"side_ladder","room":"r_eao_n2_side","source":"r01_maintenance_ladder","cell":[10,8],"floor":false,"blocking":false}
+  ],
+  "interior_returns": [
+    {"object":"o_eao_n2_home","room":"r_eao_n2_camp","cell":[7,24],"tag":"EAO_SITE_shed","existing":true},
+    {"object":"o_eao_site_winch_back","room":"r_eao_n2_winch","cell":[31,23],"tag":"EAO_SITE_winch","existing":false},
+    {"object":"o_eao_site_canal_back","room":"r_eao_n2_side","cell":[8,22],"tag":"EAO_SITE_canal","existing":false}
+  ],
+  "notes": "Independent authored occupancy, not inferred from art alpha. Bedrolls are walkable floor cloths. Ladder and jug are scenery, without loot, climbing or quest writes. Original N2 actors and interior routes are retained."
+}

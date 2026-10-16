@@ -1,0 +1,65 @@
+{
+  "date_utc": "2026-10-16",
+  "tool": "built-in image_gen.imagegen",
+  "transparent_background_requested": true,
+  "status": "PARTIAL_VISUAL_IMPROVEMENT_REGISTRATION_NOT_COMPLETE",
+  "body_unchanged": true,
+  "selected_files": {
+    "layers/01_body_unchanged.png": "../layers/01_body.png",
+    "layers/02_roof_candidate.png": "raw/02_roof_fit_01.png",
+    "layers/03_foreground_candidate.png": "raw/03_foreground_fit_02.png"
+  },
+  "calls": [
+    {
+      "id": "roof_fit_01",
+      "prompt": "prompts/roof_fit_01.txt",
+      "inputs": [
+        "../layers/02_roof_candidate.png",
+        "../layers/01_body.png",
+        "../previews/three_layers_actual_stack.png"
+      ],
+      "raw": "raw/02_roof_fit_01.png",
+      "generated_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-e03ed2bc-a7ca-4a9f-929b-d1179f8290d8.png",
+      "sha256": "f0644421b3240c087fe2c69cdb3f53587540d48128ca5f7208401dc262e71c7c",
+      "status": "Selected candidate: scale improved, translation still incorrect"
+    },
+    {
+      "id": "foreground_fit_01",
+      "prompt": "prompts/foreground_fit_01.txt",
+      "inputs": [
+        "../layers/03_foreground.png",
+        "../layers/01_body.png"
+      ],
+      "raw": "raw/03_foreground_fit_01.png",
+      "generated_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-218ffcdc-7cbb-4319-8d9f-ce3d0ee99725.png",
+      "sha256": "f9050be3a6061b6096bd01851bbee3f19ffadf58bc2f378fcebb8a97c7d2d9d7",
+      "status": "Rejected: bench and barrel moved upward instead of requested bench downward"
+    },
+    {
+      "id": "roof_fit_02_translation",
+      "prompt": "prompts/roof_fit_02_translation.txt",
+      "inputs": [
+        "raw/02_roof_fit_01.png"
+      ],
+      "raw": "raw/02_roof_fit_02_translation_failed.png",
+      "generated_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-b274d6a0-75fb-47d7-9797-5ce71ccced2e.png",
+      "sha256": "3eb1b5c812a534e72f552eae200929daba99da5dae925313b0e2aa0b93abbeba",
+      "status": "Rejected: requested rigid +12,-45 translation was not followed; shape dimensions changed"
+    },
+    {
+      "id": "foreground_fit_02_translation",
+      "prompt": "prompts/foreground_fit_02_translation.txt",
+      "inputs": [
+        "raw/03_foreground_fit_01.png"
+      ],
+      "raw": "raw/03_foreground_fit_02.png",
+      "generated_file": "/workspace/scratch/5ed8df2c5d81/generated_images/exec-b7adda14-f93b-4537-a982-59c134ed608f.png",
+      "sha256": "34d24858d82bd6bb4ed25b2a06b98c584f358b3744aa040eb8fc6df5352cfeb2",
+      "status": "Selected candidate: visually improved grounding but requested +48 translation was only approximately +33 to +34"
+    }
+  ],
+  "postprocessing": "None to artwork. All layer outputs byte-copied from source. Only source-over alpha composites for preview at identity placement.",
+  "runtime_verified": false,
+  "exact_registration_pass": false,
+  "binary_alpha_pass": false
+}

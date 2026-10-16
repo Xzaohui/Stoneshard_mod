@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "batch": "GEO-14 terrain vegetation layer",
+  "created_at_utc": "2026-10-16T12:41:31.371Z",
+  "tool": "image_gen.imagegen (built-in)",
+  "scope": "Three independent isolated environment sprites. No terrain texture modified; no game operation.",
+  "reference": {
+    "path": "C:/Users/83912/DeskBox/我的桌面/project/Stoneshard_mod/artifacts/dev-coordinate-ui-0326/runtime/00-0326-road-baseline.jpg",
+    "role": "Visual palette, pixel-cluster scale and RPG camera reference only. Screenshot content is not copied.",
+    "input_mode": "Viewed with view_image; initial generate calls have no attached image. Cleanup edits reference only the newly generated sprite."
+  },
+  "postprocessing": "No programmatic image editing, scaling or cropping. Final generator PNG bytes copied unchanged.",
+  "runtime_verified": false,
+  "files": [
+    {
+      "file": "oak-tree.png",
+      "intended_native_canvas": "104x156 px (4x6 ground cells)",
+      "final_relative_path": "raw/oak-tree.png",
+      "source_generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-414b0f3e-c1d4-474d-8ff2-3a8c5e3ca353.png",
+      "transparent_background_requested": true,
+      "status": "saved-and-alpha-verified-with-soft-fringe-limitation",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "74375099180D2802D2EACF35133BD983F9C01A0E10A41CC3553C1E082C7BBFC0",
+      "alpha_validation": {
+        "has_alpha_channel": true,
+        "min_alpha": 0,
+        "max_alpha": 254,
+        "fully_transparent_pixels": 885513,
+        "low_alpha_pixels_1_to_127": 49817,
+        "solid_pixels_128_to_255": 637534,
+        "fully_opaque_pixels": 0,
+        "total_pixels": 1572864,
+        "transparent_fraction": 0.5629940032958984,
+        "nonzero_bounds_xyxy": [
+          0,
+          41,
+          1005,
+          1501
+        ],
+        "alpha128_bounds_xyxy": [
+          30,
+          128,
+          994,
+          1352
+        ],
+        "nonzero_border_pixels": 10
+      },
+      "generation_history": [
+        {
+          "operation": "generate",
+          "exact_prompt": "Use case: stylized-concept.\nAsset type: ONE isolated environment object sprite for a muted medieval 2D pixel-art RPG. Its intended final display scale uses 26-pixel ground cells; produce a clean large source image without resizing it down.\nPrimary request: generate a single complete object on a genuinely transparent RGBA background, with ample transparent margin and no cropping. Do not make a scene, panorama, environment tile, concept sheet, alternate view, grid, or ground patch.\nReference role: the previously viewed Stoneshard gameplay screenshot guides low-saturation dusty olive and gray-brown colors and clean hand-drawn pixel clusters only. Do not copy UI, characters, terrain layout or other screenshot content.\nStyle and view: game-ready 3/4 top-down orthographic RPG sprite, slight overhead view with a visible vertical trunk or grounded base. Clear pixel clusters, restrained outlines, crisp small shapes, coherent muted palette, not photographic, not 3D, not soft painterly blur. Soft fixed upper-left illumination, low contrast.\nConstraints: one complete isolated object only. Background must be genuinely transparent, including corners and around branches, not a checkerboard painted into the image, not white, black or green. No ground plate, no oval base, no cast-shadow ellipse, no terrain surface, no scenery, no text, no frame, no watermark, no character.\nObject: one medium-sized oak tree with a rounded yet irregular dusty olive-leaf canopy. The trunk is gray-brown, visibly extends down from beneath the canopy and ends at a small clearly locatable root-foot point. A few branches are visible within the foliage. Full silhouette from crown top to root foot. Keep medieval RPG restrained colors, avoid lush saturated green. Intended final native canvas is approximately 104 by 156 pixels; keep the source large and ensure readable distinct pixel clusters.",
+          "transparent_background": true,
+          "referenced_image_paths": [],
+          "generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-0ff79cce-6d16-4438-b8b7-eb3088f3fb72.png",
+          "selected": false,
+          "selection_note": "True transparency present, but a faint exterior halo prompted a targeted built-in edit.",
+          "sha256": "22BC2DA85492EF16E8EC32D12F8F8FD569A6BD57E5F845860D75D95C3573304D"
+        },
+        {
+          "operation": "edit",
+          "exact_prompt": "Use case: background-extraction. Edit only the alpha matte and empty background around this single isolated pixel-art game object. Preserve the complete object, its leaf or stone shapes, trunk, roots, internal detail, pixel clusters, colors, size, camera and canvas dimensions. The current transparent background has a faint diffuse colored glow/haze halo outside the silhouette. Remove that entire outer glow and any empty haze so all space outside the actual object is perfectly transparent alpha zero. Do not add any shadow, ground, base plate, border, text or new object. Keep the actual object essentially opaque, allowing only a narrow one-pixel antialiased contour; preserve naturally empty transparent holes between branches. Do not crop, upscale, blur, recolor or redesign the object. Output real RGBA transparency, no checkerboard painted into pixels.",
+          "transparent_background": true,
+          "referenced_image_paths": [
+            "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-0ff79cce-6d16-4438-b8b7-eb3088f3fb72.png"
+          ],
+          "generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-414b0f3e-c1d4-474d-8ff2-3a8c5e3ca353.png",
+          "selected": true,
+          "sha256": "74375099180D2802D2EACF35133BD983F9C01A0E10A41CC3553C1E082C7BBFC0"
+        }
+      ],
+      "visual_review": {
+        "single_complete_object": true,
+        "no_ground_plate_or_scene": true,
+        "root_or_base_visible": true,
+        "palette_muted": true,
+        "note": "Targeted cleanup edit improves contour clarity. Some low-alpha perimeter tail may remain; the alpha statistics below report the actual output rather than claiming a perfect binary matte."
+      },
+      "recorded_at_utc": "2026-10-16T12:42:01.6013261Z"
+    },
+    {
+      "file": "pine-tree.png",
+      "intended_native_canvas": "104x156 px (4x6 ground cells)",
+      "final_relative_path": "raw/pine-tree.png",
+      "source_generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-d381b7a8-5d38-4745-8e63-16d695ec1f61.png",
+      "transparent_background_requested": true,
+      "status": "saved-and-alpha-verified-with-soft-fringe-limitation",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "62057C0F90E9551FFD95830A8258893DB56F8E856ED9DAF9A2F356FB0795467C",
+      "alpha_validation": {
+        "has_alpha_channel": true,
+        "min_alpha": 0,
+        "max_alpha": 254,
+        "fully_transparent_pixels": 1139672,
+        "low_alpha_pixels_1_to_127": 42877,
+        "solid_pixels_128_to_255": 390315,
+        "fully_opaque_pixels": 0,
+        "total_pixels": 1572864,
+        "transparent_fraction": 0.7245839436848959,
+        "nonzero_bounds_xyxy": [
+          43,
+          48,
+          1003,
+          1495
+        ],
+        "alpha128_bounds_xyxy": [
+          172,
+          82,
+          858,
+          1431
+        ],
+        "nonzero_border_pixels": 0
+      },
+      "generation_history": [
+        {
+          "operation": "generate",
+          "exact_prompt": "Use case: stylized-concept.\nAsset type: ONE isolated environment object sprite for a muted medieval 2D pixel-art RPG. Its intended final display scale uses 26-pixel ground cells; produce a clean large source image without resizing it down.\nPrimary request: generate a single complete object on a genuinely transparent RGBA background, with ample transparent margin and no cropping. Do not make a scene, panorama, environment tile, concept sheet, alternate view, grid, or ground patch.\nReference role: the previously viewed Stoneshard gameplay screenshot guides low-saturation dusty olive and gray-brown colors and clean hand-drawn pixel clusters only. Do not copy UI, characters, terrain layout or other screenshot content.\nStyle and view: game-ready 3/4 top-down orthographic RPG sprite, slight overhead view with a visible vertical trunk or grounded base. Clear pixel clusters, restrained outlines, crisp small shapes, coherent muted palette, not photographic, not 3D, not soft painterly blur. Soft fixed upper-left illumination, low contrast.\nConstraints: one complete isolated object only. Background must be genuinely transparent, including corners and around branches, not a checkerboard painted into the image, not white, black or green. No ground plate, no oval base, no cast-shadow ellipse, no terrain surface, no scenery, no text, no frame, no watermark, no character.\nObject: one medium-sized pine tree with an irregular tapered crown of dark muted olive needle foliage. Layered compact branch masses and a gray-brown trunk clearly visible below the lowest bough, ending at a small clearly locatable root-foot point. Full silhouette from crown top to root foot. Match the isolated oak sprite's muted medieval RPG palette and pixel-cluster scale; avoid blue or emerald saturation. Intended final native canvas is approximately 104 by 156 pixels; keep the source large.",
+          "transparent_background": true,
+          "referenced_image_paths": [],
+          "generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-a74fda21-bea3-4875-a9eb-d4c75dd87706.png",
+          "selected": false,
+          "selection_note": "True transparency present, but a faint exterior halo prompted a targeted built-in edit.",
+          "sha256": "B433B59363DEB9B4DD162C52A957FF00FB6CD137A906029EF3C171708A8C8768"
+        },
+        {
+          "operation": "edit",
+          "exact_prompt": "Use case: background-extraction. Edit only the alpha matte and empty background around this single isolated pixel-art game object. Preserve the complete object, its leaf or stone shapes, trunk, roots, internal detail, pixel clusters, colors, size, camera and canvas dimensions. The current transparent background has a faint diffuse colored glow/haze halo outside the silhouette. Remove that entire outer glow and any empty haze so all space outside the actual object is perfectly transparent alpha zero. Do not add any shadow, ground, base plate, border, text or new object. Keep the actual object essentially opaque, allowing only a narrow one-pixel antialiased contour; preserve naturally empty transparent holes between branches. Do not crop, upscale, blur, recolor or redesign the object. Output real RGBA transparency, no checkerboard painted into pixels.",
+          "transparent_background": true,
+          "referenced_image_paths": [
+            "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-a74fda21-bea3-4875-a9eb-d4c75dd87706.png"
+          ],
+          "generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-d381b7a8-5d38-4745-8e63-16d695ec1f61.png",
+          "selected": true,
+          "sha256": "62057C0F90E9551FFD95830A8258893DB56F8E856ED9DAF9A2F356FB0795467C"
+        }
+      ],
+      "visual_review": {
+        "single_complete_object": true,
+        "no_ground_plate_or_scene": true,
+        "root_or_base_visible": true,
+        "palette_muted": true,
+        "note": "Targeted cleanup edit improves contour clarity. Some low-alpha perimeter tail may remain; the alpha statistics below report the actual output rather than claiming a perfect binary matte."
+      },
+      "recorded_at_utc": "2026-10-16T12:42:01.6335567Z"
+    },
+    {
+      "file": "low-rocks.png",
+      "intended_native_canvas": "78x52 px (3x2 ground cells)",
+      "final_relative_path": "raw/low-rocks.png",
+      "source_generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-ef0f9472-705c-4357-9793-22c568d7dbd2.png",
+      "transparent_background_requested": true,
+      "status": "saved-and-alpha-verified-with-soft-fringe-limitation",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8C9E57CAE5D6DFCFF69FBA410A3F12C7CDC1AB90F0B955DF10EA3422E96EA8EE",
+      "alpha_validation": {
+        "has_alpha_channel": true,
+        "min_alpha": 0,
+        "max_alpha": 254,
+        "fully_transparent_pixels": 1374463,
+        "low_alpha_pixels_1_to_127": 5963,
+        "solid_pixels_128_to_255": 192438,
+        "fully_opaque_pixels": 0,
+        "total_pixels": 1572864,
+        "transparent_fraction": 0.8738600413004557,
+        "nonzero_bounds_xyxy": [
+          0,
+          0,
+          1447,
+          975
+        ],
+        "alpha128_bounds_xyxy": [
+          436,
+          287,
+          1104,
+          754
+        ],
+        "nonzero_border_pixels": 1
+      },
+      "generation_history": [
+        {
+          "operation": "generate",
+          "exact_prompt": "Use case: stylized-concept.\nAsset type: ONE isolated environment object sprite for a muted medieval 2D pixel-art RPG. Its intended final display scale uses 26-pixel ground cells; produce a clean large source image without resizing it down.\nPrimary request: generate a single complete object on a genuinely transparent RGBA background, with ample transparent margin and no cropping. Do not make a scene, panorama, environment tile, concept sheet, alternate view, grid, or ground patch.\nReference role: the previously viewed Stoneshard gameplay screenshot guides low-saturation dusty olive and gray-brown colors and clean hand-drawn pixel clusters only. Do not copy UI, characters, terrain layout or other screenshot content.\nStyle and view: game-ready 3/4 top-down orthographic RPG sprite, slight overhead view with a visible vertical trunk or grounded base. Clear pixel clusters, restrained outlines, crisp small shapes, coherent muted palette, not photographic, not 3D, not soft painterly blur. Soft fixed upper-left illumination, low contrast.\nConstraints: one complete isolated object only. Background must be genuinely transparent, including corners and around branches, not a checkerboard painted into the image, not white, black or green. No ground plate, no oval base, no cast-shadow ellipse, no terrain surface, no scenery, no text, no frame, no watermark, no character.\nObject: one compact cluster of two or three low small weathered gray-brown stones, resting together as one isolated low obstacle sprite. Stones have simple angular softened facets and a few subdued cracks, with enough separation to read each small stone. Show complete bottom edges and a clear grounded contact point, without dirt or grass beneath them and without a shadow platform. This is a tiny stone cluster, not a giant boulder, cliff, rock wall, monument, ruin or building. Intended final native canvas is approximately 78 by 52 pixels; keep source large, same muted medieval RPG pixel style as the tree sprites.",
+          "transparent_background": true,
+          "referenced_image_paths": [],
+          "generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-9df17fee-7fb6-4d20-aa48-0ab3d38b1946.png",
+          "selected": false,
+          "selection_note": "True transparency present, but a faint exterior halo prompted a targeted built-in edit.",
+          "sha256": "999CCCE2409BF0D8B084D04495B99CA8C4CE5ABC4EF79266530FB5D205DF5BA6"
+        },
+        {
+          "operation": "edit",
+          "exact_prompt": "Use case: background-extraction. Edit only the alpha matte and empty background around this single isolated pixel-art game object. Preserve the complete object, its leaf or stone shapes, trunk, roots, internal detail, pixel clusters, colors, size, camera and canvas dimensions. The current transparent background has a faint diffuse colored glow/haze halo outside the silhouette. Remove that entire outer glow and any empty haze so all space outside the actual object is perfectly transparent alpha zero. Do not add any shadow, ground, base plate, border, text or new object. Keep the actual object essentially opaque, allowing only a narrow one-pixel antialiased contour; preserve naturally empty transparent holes between branches. Do not crop, upscale, blur, recolor or redesign the object. Output real RGBA transparency, no checkerboard painted into pixels.",
+          "transparent_background": true,
+          "referenced_image_paths": [
+            "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-9df17fee-7fb6-4d20-aa48-0ab3d38b1946.png"
+          ],
+          "generated_path": "C:\\Users\\83912\\.codex\\generated_images\\01a14499-6a7c-70d1-83c0-787c7e444e20\\exec-ef0f9472-705c-4357-9793-22c568d7dbd2.png",
+          "selected": true,
+          "sha256": "8C9E57CAE5D6DFCFF69FBA410A3F12C7CDC1AB90F0B955DF10EA3422E96EA8EE"
+        }
+      ],
+      "visual_review": {
+        "single_complete_object": true,
+        "no_ground_plate_or_scene": true,
+        "root_or_base_visible": true,
+        "palette_muted": true,
+        "note": "Targeted cleanup edit improves contour clarity. Some low-alpha perimeter tail may remain; the alpha statistics below report the actual output rather than claiming a perfect binary matte."
+      },
+      "recorded_at_utc": "2026-10-16T12:42:01.6606699Z"
+    }
+  ]
+}

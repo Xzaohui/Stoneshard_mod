@@ -32144,6 +32144,491 @@
       "rule": "S62 实际路线选择；与旧 choice 独立，不写旧 resolve/callback；HX 回执由 receipt 桩控制，无需新增 callback"
     },
     {
+      "event": "evt_SQ01_ferry_depot_claim_refused",
+      "script": "SQ01",
+      "node": "ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "refused"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_mg",
+      "script": "SQ01",
+      "node": "ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_co",
+      "script": "SQ01",
+      "node": "ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ01_ferry_depot_claim_ga",
+      "script": "SQ01",
+      "node": "ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_refused",
+      "script": "SQ02",
+      "node": "ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "refused"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_mg",
+      "script": "SQ02",
+      "node": "ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_co",
+      "script": "SQ02",
+      "node": "ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ02_ferry_depot_claim_ga",
+      "script": "SQ02",
+      "node": "ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_refused",
+      "script": "SQ03",
+      "node": "ferry_depot_claim_refused",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "refused"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_mg",
+      "script": "SQ03",
+      "node": "ferry_depot_claim_mg",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_co",
+      "script": "SQ03",
+      "node": "ferry_depot_claim_co",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_SQ03_ferry_depot_claim_ga",
+      "script": "SQ03",
+      "node": "ferry_depot_claim_ga",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "ferry_depot_claim"
+      ],
+      "sets": {
+        "ferry_depot_claim": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
+    },
+    {
+      "event": "evt_N16_custody_intent_none",
+      "script": "N16",
+      "node": "custody_intent_none",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "none"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N16_custody_intent_mg",
+      "script": "N16",
+      "node": "custody_intent_mg",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N16_custody_intent_co",
+      "script": "N16",
+      "node": "custody_intent_co",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N16_custody_intent_ga",
+      "script": "N16",
+      "node": "custody_intent_ga",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N16_custody_intent_dispersed",
+      "script": "N16",
+      "node": "custody_intent_dispersed",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "custody_intent"
+      ],
+      "sets": {
+        "custody_intent": "dispersed"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
+    },
+    {
+      "event": "evt_N17_custody_signed_mg",
+      "script": "N17",
+      "node": "custody_signed_mg",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "MG"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "MG"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N17_custody_signed_co",
+      "script": "N17",
+      "node": "custody_signed_co",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "CO"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "CO"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N17_custody_signed_ga",
+      "script": "N17",
+      "node": "custody_signed_ga",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "GA"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "GA"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N17_custody_signed_dispersed",
+      "script": "N17",
+      "node": "custody_signed_dispersed",
+      "trigger": "on_route_selected",
+      "when": {
+        "custody_intent": [
+          "dispersed"
+        ]
+      },
+      "reads": [
+        "custody_intent"
+      ],
+      "writes": [
+        "custody_signed"
+      ],
+      "sets": {
+        "custody_signed": "dispersed"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
+    },
+    {
+      "event": "evt_N8_n8_relief_accepted",
+      "script": "N8",
+      "node": "n8_relief_accepted",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "n8_relief"
+      ],
+      "sets": {
+        "n8_relief": "accepted"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N8实际接受或拒绝药后提交；不可由预览、缺席或未授权代答提交。；仅本节点实际执行对应处置后写入；actual_choice_once"
+    },
+    {
+      "event": "evt_N8_n8_relief_refused",
+      "script": "N8",
+      "node": "n8_relief_refused",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "n8_relief"
+      ],
+      "sets": {
+        "n8_relief": "refused"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N8实际接受或拒绝药后提交；不可由预览、缺席或未授权代答提交。；仅本节点实际执行对应处置后写入；actual_choice_once"
+    },
+    {
+      "event": "evt_N11_sylang_state_dead",
+      "script": "N11",
+      "node": "sylang_state_dead",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "sylang_state"
+      ],
+      "sets": {
+        "sylang_state": "dead"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N11 trace执行结案写dead且不可复活；报价须罗温存活、在场、愿谈、授权，缺席不触发HX09。；仅本节点实际执行对应处置后写入；trace_commit_sticky_death"
+    },
+    {
+      "event": "evt_SQ01_n4_shift_remedied_true",
+      "script": "SQ01",
+      "node": "n4_shift_remedied_true",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "n4_shift_remedied"
+      ],
+      "sets": {
+        "n4_shift_remedied": "true"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "复用既有键：SQ01实际撤销担保且完成受害补偿才写true；n4_shift_harm历史不删。；仅本节点实际执行对应处置后写入；revocation_and_compensation_commit_sticky"
+    },
+    {
+      "event": "evt_N12_toman_personnel_false",
+      "script": "N12",
+      "node": "toman_personnel_false",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "toman_personnel"
+      ],
+      "sets": {
+        "toman_personnel": "false"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N12 实际交人写 true；实际拒交写 false；须本人在场、存活且授权，不由预览或回执代写"
+    },
+    {
+      "event": "evt_N12_toman_personnel_true",
+      "script": "N12",
+      "node": "toman_personnel_true",
+      "trigger": "on_route_selected",
+      "when": {},
+      "reads": [],
+      "writes": [
+        "toman_personnel"
+      ],
+      "sets": {
+        "toman_personnel": "true"
+      },
+      "cooldown": "once",
+      "engine_event": null,
+      "rule": "N12 实际交人写 true；实际拒交写 false；须本人在场、存活且授权，不由预览或回执代写"
+    }
+  ],
+  "resolve_settle_stubs": [
+    {
       "event": "evt_CS_ALD_01_settle_a",
       "script": "CS_ALD_01",
       "node": "settle_a",
@@ -32448,512 +32933,8 @@
       "cooldown": "once",
       "engine_event": null,
       "rule": "对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算"
-    },
-    {
-      "event": "evt_SQ01_ferry_depot_claim_refused",
-      "script": "SQ01",
-      "node": "ferry_depot_claim_refused",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "refused"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ01_ferry_depot_claim_mg",
-      "script": "SQ01",
-      "node": "ferry_depot_claim_mg",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "MG"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ01_ferry_depot_claim_co",
-      "script": "SQ01",
-      "node": "ferry_depot_claim_co",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "CO"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ01_ferry_depot_claim_ga",
-      "script": "SQ01",
-      "node": "ferry_depot_claim_ga",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "GA"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ02_ferry_depot_claim_refused",
-      "script": "SQ02",
-      "node": "ferry_depot_claim_refused",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "refused"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ02_ferry_depot_claim_mg",
-      "script": "SQ02",
-      "node": "ferry_depot_claim_mg",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "MG"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ02_ferry_depot_claim_co",
-      "script": "SQ02",
-      "node": "ferry_depot_claim_co",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "CO"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ02_ferry_depot_claim_ga",
-      "script": "SQ02",
-      "node": "ferry_depot_claim_ga",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "GA"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ03_ferry_depot_claim_refused",
-      "script": "SQ03",
-      "node": "ferry_depot_claim_refused",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "refused"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ03_ferry_depot_claim_mg",
-      "script": "SQ03",
-      "node": "ferry_depot_claim_mg",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "MG"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ03_ferry_depot_claim_co",
-      "script": "SQ03",
-      "node": "ferry_depot_claim_co",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "CO"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_SQ03_ferry_depot_claim_ga",
-      "script": "SQ03",
-      "node": "ferry_depot_claim_ga",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "ferry_depot_claim"
-      ],
-      "sets": {
-        "ferry_depot_claim": "GA"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "SQ01/SQ02/SQ03首个C阶段实际交仓或拒交写入一次；其余支线保留无仓替代出口。；仅本节点实际执行对应处置后写入；first_C_commit_once"
-    },
-    {
-      "event": "evt_N16_custody_intent_none",
-      "script": "N16",
-      "node": "custody_intent_none",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "custody_intent"
-      ],
-      "sets": {
-        "custody_intent": "none"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
-    },
-    {
-      "event": "evt_N16_custody_intent_mg",
-      "script": "N16",
-      "node": "custody_intent_mg",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "custody_intent"
-      ],
-      "sets": {
-        "custody_intent": "MG"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
-    },
-    {
-      "event": "evt_N16_custody_intent_co",
-      "script": "N16",
-      "node": "custody_intent_co",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "custody_intent"
-      ],
-      "sets": {
-        "custody_intent": "CO"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
-    },
-    {
-      "event": "evt_N16_custody_intent_ga",
-      "script": "N16",
-      "node": "custody_intent_ga",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "custody_intent"
-      ],
-      "sets": {
-        "custody_intent": "GA"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
-    },
-    {
-      "event": "evt_N16_custody_intent_dispersed",
-      "script": "N16",
-      "node": "custody_intent_dispersed",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "custody_intent"
-      ],
-      "sets": {
-        "custody_intent": "dispersed"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N16仅记可改意向，N17确认前可撤改；不提前签约。；仅本节点实际执行对应处置后写入；replace_before_N17_confirmation"
-    },
-    {
-      "event": "evt_N17_custody_signed_none",
-      "script": "N17",
-      "node": "custody_signed_none",
-      "trigger": "on_route_selected",
-      "when": {
-        "custody_intent": [
-          "none"
-        ]
-      },
-      "reads": [
-        "custody_intent"
-      ],
-      "writes": [
-        "custody_signed"
-      ],
-      "sets": {
-        "custody_signed": "none"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
-    },
-    {
-      "event": "evt_N17_custody_signed_mg",
-      "script": "N17",
-      "node": "custody_signed_mg",
-      "trigger": "on_route_selected",
-      "when": {
-        "custody_intent": [
-          "MG"
-        ]
-      },
-      "reads": [
-        "custody_intent"
-      ],
-      "writes": [
-        "custody_signed"
-      ],
-      "sets": {
-        "custody_signed": "MG"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
-    },
-    {
-      "event": "evt_N17_custody_signed_co",
-      "script": "N17",
-      "node": "custody_signed_co",
-      "trigger": "on_route_selected",
-      "when": {
-        "custody_intent": [
-          "CO"
-        ]
-      },
-      "reads": [
-        "custody_intent"
-      ],
-      "writes": [
-        "custody_signed"
-      ],
-      "sets": {
-        "custody_signed": "CO"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
-    },
-    {
-      "event": "evt_N17_custody_signed_ga",
-      "script": "N17",
-      "node": "custody_signed_ga",
-      "trigger": "on_route_selected",
-      "when": {
-        "custody_intent": [
-          "GA"
-        ]
-      },
-      "reads": [
-        "custody_intent"
-      ],
-      "writes": [
-        "custody_signed"
-      ],
-      "sets": {
-        "custody_signed": "GA"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
-    },
-    {
-      "event": "evt_N17_custody_signed_dispersed",
-      "script": "N17",
-      "node": "custody_signed_dispersed",
-      "trigger": "on_route_selected",
-      "when": {
-        "custody_intent": [
-          "dispersed"
-        ]
-      },
-      "reads": [
-        "custody_intent"
-      ],
-      "writes": [
-        "custody_signed"
-      ],
-      "sets": {
-        "custody_signed": "dispersed"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N17确认按意向原子写入一次并冻结；其他托管提案失效，已有监督承诺保留；不改原快照时点与资格。；仅本节点实际执行对应处置后写入；copy_intent_on_existing_confirmation_once"
-    },
-    {
-      "event": "evt_N8_n8_relief_accepted",
-      "script": "N8",
-      "node": "n8_relief_accepted",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "n8_relief"
-      ],
-      "sets": {
-        "n8_relief": "accepted"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N8实际接受或拒绝药后提交；不可由预览、缺席或未授权代答提交。；仅本节点实际执行对应处置后写入；actual_choice_once"
-    },
-    {
-      "event": "evt_N8_n8_relief_refused",
-      "script": "N8",
-      "node": "n8_relief_refused",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "n8_relief"
-      ],
-      "sets": {
-        "n8_relief": "refused"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N8实际接受或拒绝药后提交；不可由预览、缺席或未授权代答提交。；仅本节点实际执行对应处置后写入；actual_choice_once"
-    },
-    {
-      "event": "evt_N11_sylang_state_dead",
-      "script": "N11",
-      "node": "sylang_state_dead",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "sylang_state"
-      ],
-      "sets": {
-        "sylang_state": "dead"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N11 trace执行结案写dead且不可复活；报价须罗温存活、在场、愿谈、授权，缺席不触发HX09。；仅本节点实际执行对应处置后写入；trace_commit_sticky_death"
-    },
-    {
-      "event": "evt_SQ01_n4_shift_remedied_true",
-      "script": "SQ01",
-      "node": "n4_shift_remedied_true",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "n4_shift_remedied"
-      ],
-      "sets": {
-        "n4_shift_remedied": "true"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "复用既有键：SQ01实际撤销担保且完成受害补偿才写true；n4_shift_harm历史不删。；仅本节点实际执行对应处置后写入；revocation_and_compensation_commit_sticky"
-    },
-    {
-      "event": "evt_N12_toman_personnel_false",
-      "script": "N12",
-      "node": "toman_personnel_false",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "toman_personnel"
-      ],
-      "sets": {
-        "toman_personnel": "false"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N12 实际交人写 true；实际拒交写 false；须本人在场、存活且授权，不由预览或回执代写"
-    },
-    {
-      "event": "evt_N12_toman_personnel_true",
-      "script": "N12",
-      "node": "toman_personnel_true",
-      "trigger": "on_route_selected",
-      "when": {},
-      "reads": [],
-      "writes": [
-        "toman_personnel"
-      ],
-      "sets": {
-        "toman_personnel": "true"
-      },
-      "cooldown": "once",
-      "engine_event": null,
-      "rule": "N12 实际交人写 true；实际拒交写 false；须本人在场、存活且授权，不由预览或回执代写"
     }
-  ]
+  ],
+  "route_state_rule": "仅写 route_* 或独立状态；不得写 resolve_*，不代播旧 callback。",
+  "resolve_settle_rule": "仅在对应旧 choice 实际处置确认后写 resolve_*；取值限旧 state-keys.keys 值域，不写路线/独立状态。"
 }

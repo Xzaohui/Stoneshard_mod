@@ -22,8 +22,11 @@ def state_value(value):
 def condition_map(condition):
     return {engine_name(k): [state_value(v) for v in vs] for k, vs in condition.items()}
 
-def support_stubs(net):
-    """Executed choices only; these do not play legacy callbacks or give rewards."""
+def support_stubs(net, *, settlement=False):
+    """Executed choices only; settlement=True projects legacy resolve writes separately.
+
+    Neither section plays legacy callbacks or gives rewards.
+    """
     out = []
     def add(task, node, sets, when=None, rule='实际处置并确认后提交；预览、关闭、人物守卫失败不写'):
         out.append(dict(event=f'evt_{task}_{node}', script=task, node=node,
@@ -41,13 +44,20 @@ def support_stubs(net):
         for name,values in edge['when'].items():
             if name.startswith('resolve_') and name[8:] not in ROUTE_TASKS:
                 requested.setdefault(name,set()).update(values)
+    route_end = len(out)
     for name,values in sorted(requested.items()):
         for value in sorted(values):
             add(name[8:], 'settle_'+value, {name:value},
                 rule='对应 choice 的实际处置确认提交点；旧 choice 仍只播 callback，不由回执代写结算')
+    settlements = out[route_end:]
+    del out[route_end:]
+    if settlement:
+        return settlements
     for name, definition in net['heavy_edge_registry']['variables'].items():
         for task in definition['writer_tasks']:
             for value in definition['write_values']:
+                if name == 'custody_signed' and value == definition['default']:
+                    continue  # none means no signed confirmation has occurred.
                 when = {'custody_intent': [value]} if name == 'custody_signed' else {}
                 add(task, name+'_'+str(value).lower(), {name: state_value(value)}, when,
                     definition['commit']+'；仅本节点实际执行对应处置后写入；'+definition['update_mode'])
@@ -111,6 +121,12 @@ def project(net, base_keys=()):
         item['values'] = [state_value(v) for v in item['values']]
         item['default'] = state_value(item['default'])
         if item['key'].startswith('route_'): item['kind'] = 'route'
+        if item['default'] in ('none', 'unseen') or item['key'].startswith('receipt_') or item['key'] in ('n4_shift_remedied', 'toman_personnel'):
+            item['note'] = '缺省值代表未发生；初始化即提供该可读值，无需默认值生产者。'
+        if item['key'] == 'toman_personnel':
+            item['note'] += 'false 表示尚未交人，也可由实际拒交写入；初始 false 不证明拒交事件发生。'
+        if item['key'] == 'sylang_state':
+            item['note'] = 'alive 是初始生存状态，不代表死亡或其他处置发生。'
     for stub, effect in zip(stubs, [e for e in effects for _ in range(3)]):
         stub['when'] = condition_map(stub['when'])
         stub['reads'] = sorted(engine_name(k) for k in stub['reads'])

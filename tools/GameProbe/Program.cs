@@ -58,6 +58,15 @@ if (args.Length == 0) {
 using var stream = File.OpenRead(args[0]);
 var data = UndertaleIO.Read(stream);
 Console.WriteLine($"Loaded: {data.Code.Count} code entries, {data.GameObjects.Count} objects, {data.Rooms.Count} rooms.");
+if (args.Length > 1 && args[1] == "--east-native-reference") {
+    EaoEastNativeReference.Export(data, args[2]); return;
+}
+if (args.Length > 1 && args[1] == "--test-eao-region") {
+    var checks=EaoEastRegionChecks.Validate(data);
+    var report=new {date=DateTimeOffset.Now,checks,inputSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(args[0]))),scope="serialized blueprint, original/native interfaces and authored coarse connectivity; no GameMaker execution",runtimeVerified=false};
+    File.WriteAllText(ProjectPaths.Output(Path.Combine(ProjectPaths.Root(),"artifacts","east-region-validation.json"),"artifacts"),JsonSerializer.Serialize(report,new JsonSerializerOptions{WriteIndented=true}));
+    Console.WriteLine(JsonSerializer.Serialize(report));return;
+}
 if (args.Length > 2 && args[1] == "--compare-east-map") {
     using var baselineStream = File.OpenRead(args[2]);
     using var baseline = UndertaleIO.Read(baselineStream);

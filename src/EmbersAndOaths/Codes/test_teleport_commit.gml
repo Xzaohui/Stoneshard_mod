@@ -11,6 +11,18 @@ if (ds_map_find_value(global.characterDataMap, "EAO_test_map_restore") == 1) {
     ds_map_set(global.characterDataMap, "EAO_test_map_arrival", 0);
     exit;
 }
+// Explicit Shift+F8 return, after saving the current location. Exact original
+// room/local coordinates also support departure from an ordinary interior.
+if (ds_map_exists(global.characterDataMap,"EAO_test_map_home") && ds_map_find_value(global.characterDataMap,"EAO_test_map_home") == 1) {
+    global.playerGridX = ds_map_find_value(global.characterDataMap,"EAO_dev_warp_origin_grid_x");
+    global.playerGridY = ds_map_find_value(global.characterDataMap,"EAO_dev_warp_origin_grid_y");
+    scr_atr_set_simple("localX",ds_map_find_value(global.characterDataMap,"EAO_dev_warp_origin_x"));
+    scr_atr_set_simple("localY",ds_map_find_value(global.characterDataMap,"EAO_dev_warp_origin_y"));
+    global.position_tag = "NA";
+    ds_map_set(global.characterDataMap,"EAO_test_map_home",0);
+    ds_map_set(global.characterDataMap,"EAO_test_map_arrival",0);
+    exit;
+}
 global.playerGridX = ds_map_find_value(global.characterDataMap, "EAO_test_map_x");
 global.playerGridY = ds_map_find_value(global.characterDataMap, "EAO_test_map_y");
 scr_atr_set_simple("localX", undefined);

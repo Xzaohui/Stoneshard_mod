@@ -9,8 +9,9 @@ namespace EmbersAndOaths;
 /// GEO-02 east expansion pilot. Widens r_GlobalMap's editor layers from 119 to 127
 /// cells and appends 8 local columns to the world grid AFTER vanilla generation and
 /// random-sequence verification, so vanilla tiles, forests, roads and old saves keep
-/// their exact random sequence. Only two cells open: (40,37) native steppe and
-/// (41,37) hosting the full-size native-generated task surface. Everything else stays blocked.
+/// their exact random sequence. Native field/pine/steppe/coast terrain fills the
+/// eight-column region. The temporary (41,37) task surface retains its save origin
+/// until the final G1/F1/Q2 room migrations are verified separately.
 /// </summary>
 internal static class EastPilot
 {
@@ -46,8 +47,12 @@ internal static class EastPilot
     internal static void Configure(Action<UndertaleGameObject, string, EventType, uint> set, ModFile files)
     {
         WidenRoom();
+        EastRegion.PrepareMap();
         EastSites.Configure(set, files);
-        var widen = files.GetCode("east_pilot_widen.gml").Replace("// EAO_EAST_MAP", files.GetCode("east_pilot_map.gml"));
+        var widen = files.GetCode("east_pilot_widen.gml")
+            .Replace("// EAO_EAST_REGION", files.GetCode("east_region.gml").Replace("EAO_REGION_ROWS", "["+string.Join(",",EastRegion.Rows.Select(r=>"\""+r+"\""))+"]"))
+            .Replace("// EAO_EAST_ASTAR", files.GetCode("east_region_astar.gml"))
+            .Replace("// EAO_EAST_MAP", files.GetCode("east_pilot_map.gml"));
         var cache = Msl.GetStringGMLFromFile(CacheInit);
         var head = cache.IndexOf("function scr_globalmapCacheInit", StringComparison.Ordinal);
         var brace = head < 0 ? -1 : cache.IndexOf('{', head);

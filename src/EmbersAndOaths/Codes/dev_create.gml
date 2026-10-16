@@ -5,6 +5,7 @@ dev_grid = false;
 dev_panel = true;
 global.EAO_dev_return_keep = false;
 global.EAO_dev_return_room = -1;
+global.EAO_dev_warp_keep = false;
 dev_fog_owned = false;
 dev_fog_before = true;
 dev_character_map = -1;

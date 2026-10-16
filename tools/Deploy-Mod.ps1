@@ -125,8 +125,32 @@ if ([version]$taskReport.modVersion -ge [version]'0.3.15') {
             if ($taskRequired -notin $taskEast.checks) { throw ('Missing east map rendering check: ' + $taskRequired) }
         }
     }
+    if ([version]$taskReport.modVersion -ge [version]'0.3.17') {
+        $taskRegion = Get-Content -LiteralPath (Join-Path $taskRoot 'artifacts/east-region-validation.json') -Raw | ConvertFrom-Json
+        if ($taskRegion.inputSha256 -ne $taskReport.outputSha256) { throw 'East region checks do not match candidate.' }
+        foreach ($taskRequired in @('east-region-compiled-nineteen-rows-match-approved-layout','east-region-all-planned-ground-connected-to-west-entry','east-region-rebuilds-native-buffers-and-retains-original-weights','east-region-native-fog-paper-and-path-weight-order-retained','east-region-no-rng-consumption-save-write-or-live-player-relocation')) {
+            if ($taskRequired -notin $taskRegion.checks) { throw ('Missing east region check: ' + $taskRequired) }
+        }
+    }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.18') {
+    foreach ($taskRequired in @('dev-warp-default-off-cancel-and-malformed-coordinate-noop','dev-warp-coordinate-combat-escape-preserves-source-until-saver','dev-warp-failed-transition-does-not-record-origin','dev-warp-shift-return-preserves-first-room-world-and-local-position','dev-warp-no-origin-lock-dungeon-and-disabled-return-gates')) {
+        if ($taskRequired -notin $taskActions.compiledCallbackScenarios) { throw ('Missing developer teleport scenario: ' + $taskRequired) }
+    }
+    if ('dev-f8-validated-coordinate-modal-and-shift-return' -notin $taskDev.checks -or 'dev-f8-single-modifier-route-keeps-steam-f12-free' -notin $taskDev.checks) { throw 'Developer teleport binding/input checks are missing.' }
 }
 if (!$PackageOnly -and (Get-Process -Name StoneShard -ErrorAction SilentlyContinue)) { throw 'Game is running; close it before updating data.win. No process was stopped.' }
+if ([version]$taskReport.modVersion -ge [version]'0.3.19') {
+    foreach ($taskRequired in @('map-arrival-rejects-swimming-even-when-native-astar-is-open','map-all-water-target-returns-without-spawning-a-swimmer')) {
+        if ($taskRequired -notin $taskActions.compiledCallbackScenarios) { throw ('Missing dry arrival scenario: ' + $taskRequired) }
+    }
+    if ('dev-warp-observer-survives-owned-new-player-and-resets-on-disable' -notin $taskDev.checks -or 'east-region-vertical-river-uses-east-west-walking-bridge' -notin $taskRegion.checks) { throw 'Developer warp continuity or bridge orientation checks are missing.' }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.20') {
+    foreach ($taskRequired in @('map-arrival-waits-for-native-water-markers-abstract','map-arrival-waits-for-native-water-markers-rewind')) {
+        if ($taskRequired -notin $taskActions.compiledCallbackScenarios) { throw ('Missing native water initialization scenario: ' + $taskRequired) }
+    }
+}
 function Test-TaskNoLink([string]$Path) {
     $taskAbsolute = [IO.Path]::GetFullPath($Path)
     for ($taskPart = $taskAbsolute; $taskPart; $taskPart = Split-Path $taskPart -Parent) {

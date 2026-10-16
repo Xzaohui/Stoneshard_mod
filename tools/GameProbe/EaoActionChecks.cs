@@ -30,6 +30,8 @@ internal static class EaoActionChecks
             methods[pair.Item1]=code.Disassemble(data.Variables,data.CodeLocals.For(code));
         }
         var eastSurface = data.Rooms.Any(r => r.Name.Content == "r_eao_n2_world");
+        var devWarp = data.Code.SingleOrDefault(c=>c.Name.Content=="gml_Object_o_eao_devtools_Other_11");
+        if(devWarp!=null) methods["test_dev_warp"]=devWarp.Disassemble(data.Variables,data.CodeLocals.For(devWarp));
         if (eastSurface) foreach (var pair in new[] { ("test_geo_return", "gml_Object_o_eao_n2_home_Step_0"), ("test_geo_enter", "gml_Object_o_eao_site_door_shed_Alarm_7") }) {
             var code = data.Code.Single(c => c.Name.Content == pair.Item2);
             methods[pair.Item1] = code.Disassemble(data.Variables, data.CodeLocals.For(code));
@@ -173,6 +175,40 @@ internal static class EaoActionChecks
             vm.Combat=false;vm.Run("test_click");vm.Dungeon=true;vm.Run("test_execute");Require(!vm.Changer&&NumberValue(vm.Map["EAO_test_map_pending"])==0,"dungeon");
             vm.Dungeon=false;vm.Run("test_click");vm.Locked=true;vm.Run("test_execute");Require(!vm.Changer&&NumberValue(vm.Map["EAO_test_map_pending"])==1,"turn lock");
         });
+        if(devWarp!=null) {
+            Test("dev-warp-default-off-cancel-and-malformed-coordinate-noop",vm=> {
+                vm.DialogText="41,37";vm.Run("test_dev_warp");Require(!vm.Map.ContainsKey("EAO_test_map_pending"),"developer opt-in");
+                vm.Dev=true;
+                foreach(var text in new[]{"","abc","-1,3","1.2,3","1,2,3","1,","1","999,37","41,99"}) {
+                    vm.DialogText=text;vm.Run("test_dev_warp");Require(!vm.Map.ContainsKey("EAO_test_map_pending"),"invalid input: "+text);
+                }
+            });
+            Test("dev-warp-coordinate-combat-escape-preserves-source-until-saver",vm=> {
+                vm.Dev=true;vm.Combat=true;vm.DialogText=" 41, 37 ";vm.Run("test_dev_warp");
+                Require(NumberValue(vm.Map["EAO_test_map_x"])==41&&NumberValue(vm.Map["EAO_test_map_y"])==37,"coordinate parse");
+                vm.Run("test_execute");Require(vm.Changer&&vm.Combat&&vm.GridX==29&&vm.GridY==15,"combat flags/source untouched");
+                vm.Run("test_commit");Require(vm.GridX==41&&vm.GridY==37&&vm.Items.Count==0&&vm.State==0,"native commit/no reward");
+                Require((string)vm.Map["EAO_dev_warp_origin_room"]! == "r_taverninside1floor"&&NumberValue(vm.Map["EAO_dev_warp_origin_x"])==325,"first origin");
+            });
+            Test("dev-warp-failed-transition-does-not-record-origin",vm=> {
+                vm.Dev=true;vm.DialogText="41,37";vm.FailTransition=true;vm.Run("test_dev_warp");vm.Run("test_execute");
+                Require(!vm.Changer&&!vm.Map.ContainsKey("EAO_dev_warp_origin_room")&&vm.GridX==29,"failed start");
+            });
+            Test("dev-warp-shift-return-preserves-first-room-world-and-local-position",vm=> {
+                vm.Dev=true;vm.DialogText="41,37";vm.Run("test_dev_warp");vm.Run("test_execute");vm.Run("test_commit");
+                vm.Changer=false;vm.CurrentRoom=vm.RequestedRoom;vm.DialogText="45,36";vm.Run("test_dev_warp");vm.Run("test_execute");vm.Run("test_commit");
+                Require(NumberValue(vm.Map["EAO_dev_warp_origin_grid_x"])==29,"second hop overwrote origin");
+                vm.Changer=false;vm.Shift=true;vm.Run("test_dev_warp");vm.Run("test_execute");
+                Require(vm.RequestedRoom==vm.RoomIndex("r_taverninside1floor")&&vm.GridX==45,"return exact room/deferred coordinate");
+                vm.Run("test_commit");Require(vm.GridX==29&&vm.GridY==15&&NumberValue(vm.Map["localX"])==325&&NumberValue(vm.Map["localY"])==454&&NumberValue(vm.Map["EAO_test_map_arrival"])==0,"return exact original position");
+            });
+            Test("dev-warp-no-origin-lock-dungeon-and-disabled-return-gates",vm=> {
+                vm.Dev=true;vm.Shift=true;vm.Run("test_dev_warp");Require(vm.Map.Count==0,"no return origin");
+                vm.Shift=false;vm.DialogText="41,37";vm.Locked=true;vm.Run("test_dev_warp");Require(vm.Map.Count==0,"action locked");
+                vm.Locked=false;vm.Dungeon=true;vm.Run("test_dev_warp");Require(vm.Map.Count==0,"dungeon");
+                vm.Dungeon=false;vm.Run("test_dev_warp");vm.Map["EAO_test_map_home"]=1;vm.Dev=false;vm.Run("test_execute");Require(!vm.Changer,"disabled developer return");
+            });
+        }
         Test("map-native-saver-before-coordinate-commit-and-failure-keeps-source",vm=> {
             vm.Run("test_toggle");vm.Run("test_click");vm.FailTransition=true;vm.Run("test_execute");
             Require(!vm.Changer&&!vm.Map.ContainsKey("EAO_test_map_commit")&&vm.GridX==29&&vm.GridY==15,"native creation failure");
@@ -192,6 +228,21 @@ internal static class EaoActionChecks
         Test("map-arrival-rejects-wall-isolated-marked-and-collision-tiles",vm=> {
             ArrivalReady(vm); vm.AbstractExists=true; vm.LandingObstacles=true; vm.Run("test_arrival");
             Require(vm.SpawnX==208&&vm.SpawnY==156,"walkable neighbour / collision / hazard filtering");
+        });
+        Test("map-arrival-rejects-swimming-even-when-native-astar-is-open",vm=> {
+            ArrivalReady(vm);vm.AbstractExists=true;vm.WaterLanding=true;vm.Run("test_arrival");
+            Require(vm.SpawnX==182&&vm.SpawnY==156,"dry landing and dry neighbour");
+        });
+        foreach(var fast in new[]{false,true}) Test("map-arrival-waits-for-native-water-markers-"+(fast?"rewind":"abstract"),vm=> {
+            ArrivalReady(vm);vm.AbstractExists=!fast;vm.FastExists=fast;vm.WaterPending=true;
+            vm.Run("test_arrival");
+            Require(vm.SpawnX==-50&&vm.PlaceholderDelays==2&&!vm.Changer&&NumberValue(vm.Map["EAO_test_map_arrival"])==1,"water marker must finish before landing/spawn");
+            vm.WaterPending=false;vm.WaterLanding=true;vm.Run("test_arrival");
+            Require(vm.SpawnX==182&&vm.SpawnY==156&&NumberValue(vm.Map["EAO_test_map_arrival"])==0,"landing after native water grid initialization");
+        });
+        Test("map-all-water-target-returns-without-spawning-a-swimmer",vm=> {
+            ArrivalReady(vm);vm.AbstractExists=true;vm.AllWater=true;vm.Run("test_arrival");
+            Require(vm.Changer&&NumberValue(vm.Map["EAO_test_map_restore"])==1&&vm.SpawnX==-50,"all-water fallback");
         });
         Test("map-arrival-fast-rewind-placeholder-and-no-live-player-relocation",vm=> {
             ArrivalReady(vm); vm.FastExists=true; vm.PlayerExists=true; vm.Run("test_arrival");Require(vm.SpawnX==-50,"live player untouched");
@@ -289,6 +340,11 @@ internal static class EaoActionChecks
         public readonly Dictionary<int, Paper> Items = new();
         public int Capacity = 4, FailCreation = -1;
         public bool Combat, Dungeon, Changer, FailTransition, Border, MissingRoom, Locked, Drag;
+        public bool Dev, Shift;
+        public bool WaterLanding, AllWater, WaterPending;
+        public int PlaceholderDelays;
+        public readonly Dictionary<string,object?> Globals = new() { ["global.EAO_dev_warp_keep"]=false };
+        public string DialogText="";
         public bool PlayerExists=true, AbstractExists, FastExists, LandingObstacles, NoLanding;
         public double SpawnX=-50, SpawnY=-50;
         public bool EntryExists, EntryLocked;
@@ -321,6 +377,10 @@ internal static class EaoActionChecks
                 if (name == "global.guiMouseX") return 256;
                 if (name == "global.guiMouseY") return 278;
                 if (name == "global.contract_test") return false;
+                if (name == "global.EAO_dev_enabled") return Dev;
+                if (name == "global.worldWidth") return 50;
+                if (name == "global.worldHeight") return 45;
+                if (Globals.TryGetValue(name,out var globalValue)) return globalValue;
                 if (name == "self.guiInteractiveState") return GuiState;
                 if (name == "self.drag") return Drag;
                 if (name == "self.edge") return false;
@@ -366,6 +426,7 @@ internal static class EaoActionChecks
                     else if (operand=="global.position_tag") PositionTag=(string)stack.Pop()!;
                     else if(method=="test_commit" && operand=="global.playerGridX") GridX=(int)Number(stack.Pop());
                     else if(method=="test_commit" && operand=="global.playerGridY") GridY=(int)Number(stack.Pop());
+                    else if ((method=="test_execute"||method=="test_arrival")&&operand.StartsWith("global.EAO_dev_warp_")) Globals[operand]=stack.Pop();
                     else if (operand.StartsWith("local.")) locals[operand[6..]] = stack.Pop();
                     else if(method=="test_annex_gate" && operand=="self.is_lock") EntryLocked=Truth(stack.Pop());
                     else if(method=="test_annex_gate" && operand=="self.depth") EntryDepth=(int)Number(stack.Pop());
@@ -382,6 +443,7 @@ internal static class EaoActionChecks
                     else if(method=="test_arrival" && operand=="[array]self.alarm") {
                         var index=Number(stack.Pop());var receiver=Number(stack.Pop());if(receiver==-9) receiver=Number(stack.Pop());var value=Number(stack.Pop());
                         if(receiver!=300001||index is not (0 or 1)||value!=2) throw new InvalidDataException("Invalid placeholder delay");
+                        PlaceholderDelays++;
                     }
                     else throw new InvalidDataException("Unexpected callback write: " + operand);
                 } else if (opcode == "popz.v") stack.Pop();
@@ -422,6 +484,15 @@ internal static class EaoActionChecks
                 case "audio_play_sound": return 0;
                 case "event_user": if(Int(0)!=15) throw new InvalidDataException("Unexpected native map fallback");NativeFallbacks++;return null;
                 case "floor": return Math.Floor(Number(args[0]));
+                case "keyboard_check": return Shift;
+                case "keyboard_check_pressed": return Shift;
+                case "get_string": return DialogText;
+                case "string_replace_all": return ((string)args[0]!).Replace((string)args[1]!, (string)args[2]!);
+                case "string_pos": return ((string)args[1]!).IndexOf((string)args[0]!,StringComparison.Ordinal)+1;
+                case "string_length": return ((string)args[0]!).Length;
+                case "string_copy": return ((string)args[0]!).Substring(Int(1)-1,Int(2));
+                case "string_digits": return new string(((string)args[0]!).Where(c=>c>='0'&&c<='9').ToArray());
+                case "real": return double.Parse((string)args[0]!,CultureInfo.InvariantCulture);
                 case "is_real": return args[0] is double or int or long or Dictionary<string,object?>; // symbolic DS-map handle
                 case "abs": return Math.Abs(Number(args[0]));
                 case "astar_get_cell":
@@ -430,6 +501,7 @@ internal static class EaoActionChecks
                     if(!LandingObstacles) return 0;
                     return (Int(1),Int(2)) is (6,6) or (4,6) or (4,7) or (6,4) or (6,3) or (8,6) or (9,6) ? 0 : 1;
                 case "scr_check_collision_not_enemy_around": return LandingObstacles&&Int(0)==104;
+                case "scr_water_full_filter": return !AllWater&&(!WaterLanding||Int(2)>156);
                 case "scr_tile_mark_get_instance": return LandingObstacles&&Int(1)==4?400002:-4;
                 case "scr_globalmapIsBorder": return Border;
                 case "scr_globaltile_get_room": return MissingRoom?-1:RoomIndex("r_DockStore1floor");
@@ -441,7 +513,7 @@ internal static class EaoActionChecks
                 case "asset_get_index": return RoomIndex((string)args[0]!);
                 case "scr_smoothRoomChange":
                     var events=(List<object?>)args[1]!;
-                    if((events.Count==1 ? !NoLanding||PlayerExists||Number(events[0])!=10 : events.Count!=2||Number(events[0])!=4||Number(events[1])!=10) || Int(2)!=-1 || !Truth(args[3])) throw new InvalidDataException("Native test transition dropped its source saver / coordinate commit order");
+                    if((events.Count==1 ? !(NoLanding||AllWater)||PlayerExists||Number(events[0])!=10 : events.Count!=2||Number(events[0])!=4||Number(events[1])!=10) || Int(2)!=-1 || !Truth(args[3])) throw new InvalidDataException("Native test transition dropped its source saver / coordinate commit order");
                     if(FailTransition) return -4; RequestedRoom=paperObject; Changer=true; return 200006;
                 case "scr_atr_set_simple": Map[(string)args[0]!]=args[1]; return null;
                 case "ds_map_exists": return ((Dictionary<string, object?>)args[0]!).ContainsKey((string)args[1]!);
@@ -458,6 +530,7 @@ internal static class EaoActionChecks
                     if(paperObject==ObjectIndex("o_player")&&Int(1)==0) return 100001;
                     if (paperObject != inventoryObject || Int(1) != 0) throw new InvalidDataException("Wrong inventory receiver"); return 100000;
                 case "instance_exists":
+                    if(paperObject==ObjectIndex("o_water_grid")) return WaterPending;
                     if(paperObject==ObjectIndex("o_eao_d01_entry")) return EntryExists;
                     if(paperObject==ObjectIndex("o_globalmap")||paperObject==ObjectIndex("o_journal")||paperObject==ObjectIndex("o_dialogue")) return false;
                     if(paperObject==ObjectIndex("o_dungeon_controller")) return Dungeon;

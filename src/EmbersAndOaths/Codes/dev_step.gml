@@ -2,13 +2,17 @@ if (!global.EAO_dev_enabled) exit;
 // Shift+F11 return: the native return may swap characterDataMap and briefly
 // have no player. Keep the observer (panel/grid/fog/art) across that one
 // transition only; any other character change still resets as before.
-var _keep = variable_global_exists("EAO_dev_return_keep") && global.EAO_dev_return_keep;
+var _warp_keep = variable_global_exists("EAO_dev_warp_keep") && global.EAO_dev_warp_keep;
+var _keep = (variable_global_exists("EAO_dev_return_keep") && global.EAO_dev_return_keep) || _warp_keep;
 if (variable_global_exists("characterDataMap") && global.characterDataMap != dev_character_map) {
     if (_keep) dev_character_map = global.characterDataMap;
     else { event_user(0); exit; }
 }
 if (!instance_exists(o_player) && !instance_exists(o_smoothRoomChanger) && !instance_exists(o_abstract_player) && !instance_exists(o_fastTurnController)) { if (!_keep) event_user(0); exit; }
 if (_keep && instance_exists(o_player) && !instance_exists(o_smoothRoomChanger) && room == global.EAO_dev_return_room) global.EAO_dev_return_keep = false;
+// Two world cells can share r_steppe. Require the newly created player as well
+// as room/world coordinates; the old player's final frame must not end keep.
+if (_warp_keep && instance_exists(o_player) && !instance_exists(o_smoothRoomChanger) && instance_find(o_player,0) != global.EAO_dev_warp_player && room == global.EAO_dev_warp_room && global.playerGridX == global.EAO_dev_warp_grid_x && global.playerGridY == global.EAO_dev_warp_grid_y) global.EAO_dev_warp_keep = false;
 if (dev_reveal && variable_global_exists("fog")) {
     if (!dev_fog_owned) { dev_fog_before = global.fog; dev_fog_owned = true; }
     global.fog = false;

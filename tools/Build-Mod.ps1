@@ -37,6 +37,8 @@ try {
     if ($LASTEXITCODE) { throw 'Current combination patch verification failed; nothing deployed.' }
     dotnet $taskProbe artifacts/direct-data.win --compare-east-map $taskInput
     if ($LASTEXITCODE) { throw 'Original map input/readback preservation failed; nothing deployed.' }
+    dotnet $taskProbe artifacts/direct-data.win --test-eao-region
+    if ($LASTEXITCODE) { throw 'East regional geography/native interfaces failed; nothing deployed.' }
     dotnet $taskProbe artifacts/direct-data.win --test-eao-east
     if ($LASTEXITCODE) { throw 'East surface/native generation contracts failed; nothing deployed.' }
     dotnet $taskProbe artifacts/direct-data.win --test-eao-actions

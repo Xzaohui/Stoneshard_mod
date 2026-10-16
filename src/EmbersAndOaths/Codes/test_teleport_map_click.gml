@@ -10,6 +10,7 @@ if (guiInteractiveState == 2 && ds_map_exists(global.characterDataMap, "EAO_test
     }
     ds_map_set(global.characterDataMap, "EAO_test_map_x", _grid_x);
     ds_map_set(global.characterDataMap, "EAO_test_map_y", _grid_y);
+    ds_map_set(global.characterDataMap, "EAO_test_map_home", 0);
     ds_map_set(global.characterDataMap, "EAO_test_map_pending", 1);
     exit;
 }

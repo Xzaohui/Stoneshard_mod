@@ -7,6 +7,14 @@ if (global.playerGridX != ds_map_find_value(global.characterDataMap, "EAO_test_m
 var _spawn = instance_find(o_abstract_player, 0);
 if (!instance_exists(_spawn)) _spawn = instance_find(o_fastTurnController, 0);
 if (!instance_exists(_spawn)) exit; // Generation has not finished yet.
+// Native water markers fill waterGrid only in Alarm 0 (four frames after
+// Create), later than the abstract player's one-frame spawn alarm. Hold only
+// this pending teleport's placeholder until every marker has finished.
+if (instance_exists(o_water_grid)) {
+    _spawn.alarm[0] = 2;
+    _spawn.alarm[1] = 2;
+    exit;
+}
 var _grid = o_controller.newgrid;
 var _width = floor(room_width / 26);
 var _height = floor(room_height / 26);
@@ -23,6 +31,10 @@ for (var _gx = 2; _gx < _width - 2; _gx++) {
         if (astar_get_cell(_grid, _gx - 1, _gy) != 0 && astar_get_cell(_grid, _gx + 1, _gy) != 0 && astar_get_cell(_grid, _gx, _gy - 1) != 0 && astar_get_cell(_grid, _gx, _gy + 1) != 0) continue;
         var _px = _gx * 26;
         var _py = _gy * 26;
+        // Native A* also admits swimming cells. Use the native dry-ground
+        // filter (deep/shallow water and water objects) before player creation.
+        if (!scr_water_full_filter(_px,_py,_px,_py)) continue;
+        if (!((astar_get_cell(_grid,_gx-1,_gy)==0 && scr_water_full_filter(_px,_py,_px-26,_py)) || (astar_get_cell(_grid,_gx+1,_gy)==0 && scr_water_full_filter(_px,_py,_px+26,_py)) || (astar_get_cell(_grid,_gx,_gy-1)==0 && scr_water_full_filter(_px,_py,_px,_py-26)) || (astar_get_cell(_grid,_gx,_gy+1)==0 && scr_water_full_filter(_px,_py,_px,_py+26)))) continue;
         if (scr_check_collision_not_enemy_around(_px, _py) || instance_exists(scr_tile_mark_get_instance(_gx, _gy))) continue;
         _best = _distance;
         _landing_x = _px;
@@ -38,6 +50,11 @@ if (_landing_x < 0) {
     var _source_room = asset_get_index(ds_map_find_value(global.characterDataMap, "EAO_test_map_source_room"));
     var _return = scr_smoothRoomChange(_source_room, [10], -1, true);
     if (instance_exists(_return)) {
+        if (variable_global_exists("EAO_dev_warp_keep") && global.EAO_dev_warp_keep) {
+            global.EAO_dev_warp_room = _source_room;
+            global.EAO_dev_warp_grid_x = ds_map_find_value(global.characterDataMap,"EAO_test_map_source_grid_x");
+            global.EAO_dev_warp_grid_y = ds_map_find_value(global.characterDataMap,"EAO_test_map_source_grid_y");
+        }
         ds_map_set(global.characterDataMap, "EAO_test_map_restore", 1);
         ds_map_set(global.characterDataMap, "EAO_test_map_commit", 1);
         scr_actionsLogAddMessage(global.language == 3 ? "目标没有可行走的落点，返回出发位置。" : "No walkable arrival tile; returning to the departure point.");

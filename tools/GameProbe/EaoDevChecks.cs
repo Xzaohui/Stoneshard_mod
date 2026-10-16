@@ -16,11 +16,16 @@ internal static class EaoDevChecks
         Require(dev.Persistent&&dev.Visible,"dev-persistent-visible-controller");
         Require(Asm("gml_Object_o_eao_devtools_Draw_0").Contains("draw_text")&&Asm("gml_Object_o_eao_devtools_Draw_0").Contains("matrix_set"),"dev-panel-world-pass-restores-transform");
         Require(dev.Events[(int)EventType.KeyPress].Select(e=>e.EventSubtype).Order().SequenceEqual(new uint[]{116,117,118,120,121,122}),"dev-f6-f7-f9-f10-f11-wired");
+        var warp=Asm("gml_Object_o_eao_devtools_Other_11");
+        Require(new[]{"get_string","string_digits","global.worldWidth","global.worldHeight","EAO_test_map_home","EAO_dev_warp_origin_room"}.All(warp.Contains),"dev-f8-validated-coordinate-modal-and-shift-return");
+        var warpRoute=Asm("gml_Object_o_eao_controller_KeyPress_119");
+        Require(warpRoute.Contains("global.EAO_dev_enabled")&&!warpRoute.Contains("keyboard_check")&&warpRoute.Contains("event_user")&&warp.Contains("keyboard_check_pressed")&&dev.Events[(int)EventType.Other].Any(e=>e.EventSubtype==11),"dev-f8-single-modifier-route-keeps-steam-f12-free");
         Require(Asm("gml_Object_o_eao_controller_Create_0").Contains("instance_create_depth"),"dev-boot-creation");
         var create=Asm("gml_Object_o_eao_devtools_Create_0");
         Require(Regex.IsMatch(create,@"pushi\.e 0\s+pop\.v\.[bi] global.EAO_dev_enabled"),"dev-default-off");
         var reset=Asm("gml_Object_o_eao_devtools_Other_10");
         var step=Asm("gml_Object_o_eao_devtools_Step_2");
+        Require(step.Contains("EAO_dev_warp_keep")&&step.Contains("EAO_dev_warp_player")&&step.Contains("EAO_dev_warp_grid_x")&&reset.Contains("EAO_dev_warp_keep"),"dev-warp-observer-survives-owned-new-player-and-resets-on-disable");
         Require(reset.Contains("dev_fog_before")&&reset.Contains("global.fog")&&reset.Contains("EAO_dev_visible_before")&&step.Contains("dev_character_map"),"dev-fog-restored-on-disable-and-character-change");
         var visit=Asm("gml_Object_o_eao_devtools_KeyPress_122");
         Require(new[]{"scr_getAgredMobsCount","ds_list_empty","scr_unitTurnGetTime","EAO_N1_origin_room","event_perform"}.All(visit.Contains),"dev-native-visit-combat-lock-dialogue-return-gates");

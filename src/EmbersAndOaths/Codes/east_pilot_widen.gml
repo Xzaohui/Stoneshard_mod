@@ -45,25 +45,7 @@ if (variable_global_exists("terrainGrid") && ds_exists(global.terrainGrid, ds_ty
             ds_grid_set(global.terrainGrid, _eao_x, _eao_y, _eao_t);
         }
     }
-    // The two former border columns become interior: keep them closed except the pilot pair.
-    for (_eao_x = max(0, _eao_ow - 2); _eao_x < _eao_ow; _eao_x++)
-        for (_eao_y = 0; _eao_y < _eao_h; _eao_y++)
-        {
-            var _eao_c = ds_grid_get(global.terrainGrid, _eao_x, _eao_y);
-            if (is_real(_eao_c) && _eao_c >= 0 && ds_exists(_eao_c, ds_type_map)) ds_map_set(_eao_c, "Collision", true);
-        }
-    for (var _eao_i = 0; _eao_i < 2; _eao_i++)
-    {
-        var _eao_p = ds_grid_get(global.terrainGrid, _eao_px + _eao_i, _eao_py);
-        if (!(is_real(_eao_p) && _eao_p >= 0 && ds_exists(_eao_p, ds_type_map))) continue;
-        ds_map_set(_eao_p, "Collision", false);
-        ds_map_set(_eao_p, "Biome", "Steppe");
-        ds_map_set(_eao_p, "Water", ["None", false, false]);
-        ds_map_set(_eao_p, "Type", "Wild");
-        ds_map_set(_eao_p, "Subtype", "WildFree");
-        ds_map_set(_eao_p, "Preset", "N/A");
-        ds_map_set(_eao_p, "room_type", _eao_i == 0 ? room_get_name(r_steppe) : "r_eao_n2_world");
-    }
+    var _eao_p=-4;
     global.EAO_east_pilot = [_eao_px, _eao_py, _eao_px + 1, _eao_py];
     global.worldWidth = _eao_nw;
     global.glmapEndX = global.worldWidth - 3;
@@ -77,6 +59,8 @@ if (variable_global_exists("terrainGrid") && ds_exists(global.terrainGrid, ds_ty
         if (is_string(global.globalmapFogString) && string_length(global.globalmapFogString) == _eao_old) global.globalmapFogString += _eao_pad;
         if (is_string(global.globalmapPaperString) && global.globalmapPaperString != "N/A" && string_length(global.globalmapPaperString) == _eao_old) global.globalmapPaperString += _eao_pad;
     }
+    // EAO_EAST_REGION
     // EAO_EAST_MAP
+    // EAO_EAST_ASTAR
     __show_debug_message("EAO east pilot: world " + string(_eao_ow) + "x" + string(_eao_h) + " -> " + string(_eao_nw) + "; pilot " + string(_eao_px) + "," + string(_eao_py));
 }

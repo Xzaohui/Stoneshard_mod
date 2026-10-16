@@ -28,6 +28,7 @@ internal static class DevTools
         set(dev,"if (global.EAO_dev_enabled) dev_grid = !dev_grid;",EventType.KeyPress,120);
         set(dev,"if (global.EAO_dev_enabled) global.EAO_dev_art = !global.EAO_dev_art;",EventType.KeyPress,121);
         set(dev,files.GetCode("dev_visit.gml"),EventType.KeyPress,122);
+        set(dev,files.GetCode("dev_warp.gml"),EventType.Other,11);
         // Use the same world draw pass as the verified grid; the installed game's
         // GUI passes did not display this independent observer during runtime tests.
         // Each optional observer section uses exit, so isolate it in a block

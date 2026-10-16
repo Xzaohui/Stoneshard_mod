@@ -1,5 +1,11 @@
 if (!instance_exists(o_player) || instance_exists(o_smoothRoomChanger) || !variable_global_exists("characterDataMap")) exit;
 if (!ds_exists(global.characterDataMap, ds_type_map)) exit;
+// Developer F8 always opens coordinates (Shift returns). A short injected
+// chord can release Ctrl before this event; never fall back to the test toggle.
+if (variable_global_exists("EAO_dev_enabled") && global.EAO_dev_enabled) {
+    with (o_eao_devtools) event_user(1);
+    exit;
+}
 var _enabled = ds_map_exists(global.characterDataMap, "EAO_test_teleport_enabled") && ds_map_find_value(global.characterDataMap, "EAO_test_teleport_enabled") == 1;
 ds_map_set(global.characterDataMap, "EAO_test_map_schema", 1);
 ds_map_set(global.characterDataMap, "EAO_test_teleport_enabled", !_enabled);

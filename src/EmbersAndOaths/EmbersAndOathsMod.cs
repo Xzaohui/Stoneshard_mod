@@ -100,7 +100,7 @@ public sealed class EmbersAndOathsMod : Mod
         var step = ModFiles.GetCode("controller_step.gml").Replace("// Native port-store annex:", "event_user(2); if (instance_exists(o_smoothRoomChanger)) exit;\n// Native port-store annex:");
         SetEvent(controller, ModFiles.GetCode("night_controller_step.gml"), EventType.Step, 1);
         SetEvent(controller, ModFiles.GetCode("annex_entry_spawn.gml"), EventType.Other, 14);
-        SetEvent(controller, ModFiles.GetCode("test_teleport_arrival.gml"), EventType.Step, 2);
+        SetEvent(controller, ModFiles.GetCode("east_pilot_sites.gml") + "\n" + ModFiles.GetCode("test_teleport_arrival.gml"), EventType.Step, 2);
         SetEvent(controller, ModFiles.GetCode("test_teleport_step.gml"), EventType.Other, 12);
         SetEvent(controller, ModFiles.GetCode("test_teleport_toggle.gml"), EventType.KeyPress, 119);
         SetEvent(controller, ModFiles.GetCode("test_teleport_execute.gml"), EventType.Other, 13);
@@ -171,6 +171,7 @@ public sealed class EmbersAndOathsMod : Mod
         N1DoorwayArt.Configure(SetEvent, ModFiles);
         // F4 cycles the dev-only Brynn trust-band override while F6 is on.
         SetEvent(controller, ModFiles.GetCode("cs_trust_toggle.gml"), EventType.KeyPress, 115);
+        EastPilot.Configure(SetEvent, ModFiles);
         NativeRooms.Build();
     }
 }

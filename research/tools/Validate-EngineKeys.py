@@ -19,7 +19,8 @@ for r in reg['keys']:
     check(r['cls'] != 'unclassified', 'classified-' + r['key'])
 check(reg['unclassified'] == [], 'no-unclassified')
 mapped={r['key'] for r in reg['keys'] if r['mapped_to_registry']}
-check(mapped == {r['key'] for r in reg['keys'] if r['cls'].startswith('pilot-N2')}, 'mapped-exactly-pilot-keys')
+regnames = {k['key'] for k in json.loads((R / 'state-keys.json').read_text(encoding='utf-8'))['keys']}
+check(mapped == {r['key'] for r in reg['keys'] if r['cls'].startswith('pilot-') and r['cls'] != 'pilot-infra' and r['key'][4:] in regnames}, 'mapped-exactly-pilot-keys')
 check(reg['classes'].get('test-teleport', 0) >= 15 and reg['classes'].get('sample-N1', 0) >= 5 and reg['classes'].get('pilot-N2', 0) >= 4, 'class-shape')
 card = (V / '11_管理/引擎键名前缀与遗留键登记.md').read_text(encoding='utf-8')
 stems = {p.stem for p in V.rglob('*.md')}

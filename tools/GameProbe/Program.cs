@@ -295,11 +295,16 @@ if (args.Length > 1 && (args[1] == "--patch" || args[1] == "--repair-eao")) {
     EaoInteraction.Validate(data);
     EaoRooms.Validate(data);
     EaoStory.Validate(data);
-    foreach(var room in data.Rooms.Where(r=>originalRooms.ContainsKey(r.Name.Content))) if(EaoRooms.Fingerprint(room)!=originalRooms[room.Name.Content]) throw new InvalidDataException("Original room changed: "+room.Name.Content);
+    // GEO-02 east pilot: the only sanctioned native room change is widening r_GlobalMap's editor layers 119 -> 127 cells.
+    foreach(var room in data.Rooms.Where(r=>originalRooms.ContainsKey(r.Name.Content))) {
+        if(room.Name.Content=="r_GlobalMap" && room.Width==127*52 && room.Layers.Where(l=>l.TilesData!=null).All(l=>l.TilesData.TilesX==127)) continue;
+        if(EaoRooms.Fingerprint(room)!=originalRooms[room.Name.Content]) throw new InvalidDataException("Original room changed: "+room.Name.Content);
+    }
     var patchedCode = data.Code.ToDictionary(c => c.Name.Content);
     foreach (var pair in originalCode) {
         if (repair ? repairCodeNames.Contains(pair.Key) : pair.Key == "gml_Object_o_gameLoader_Create_0") continue;
         var entry = patchedCode[pair.Key];
+        if (pair.Key.EndsWith("scr_globalmapCacheInit") && entry.Disassemble(data.Variables, data.CodeLocals.For(entry)).Contains("EAO_east_grid")) continue; // GEO-02 east pilot hook
         if (entry.Disassemble(data.Variables, data.CodeLocals.For(entry)) != pair.Value) throw new InvalidDataException("Unexpected original code change: " + pair.Key);
     }
     var temporary = ProjectPaths.Output(output + ".building", allowedOutput);
@@ -310,11 +315,15 @@ if (args.Length > 1 && (args[1] == "--patch" || args[1] == "--repair-eao")) {
         EaoInteraction.Validate(readback);
         EaoRooms.Validate(readback);
         EaoStory.Validate(readback);
-        foreach(var room in readback.Rooms.Where(r=>originalRooms.ContainsKey(r.Name.Content))) if(EaoRooms.Fingerprint(room)!=originalRooms[room.Name.Content]) throw new InvalidDataException("Original room changed after serialization: "+room.Name.Content);
+        foreach(var room in readback.Rooms.Where(r=>originalRooms.ContainsKey(r.Name.Content))) {
+            if(room.Name.Content=="r_GlobalMap" && room.Width==127*52 && room.Layers.Where(l=>l.TilesData!=null).All(l=>l.TilesData.TilesX==127 && l.TilesData.TileData.All(row=>row.Length==127))) continue;
+            if(EaoRooms.Fingerprint(room)!=originalRooms[room.Name.Content]) throw new InvalidDataException("Original room changed after serialization: "+room.Name.Content);
+        }
         if (repair) {
             var savedCode = readback.Code.ToDictionary(c => c.Name.Content);
             foreach (var pair in originalCode.Where(p => !repairCodeNames.Contains(p.Key))) {
                 var entry = savedCode[pair.Key];
+                if (pair.Key.EndsWith("scr_globalmapCacheInit") && entry.Disassemble(readback.Variables, readback.CodeLocals.For(entry)).Contains("EAO_east_grid")) continue; // GEO-02 east pilot hook
                 if (entry.Disassemble(readback.Variables, readback.CodeLocals.For(entry)) != pair.Value) throw new InvalidDataException("Original code changed after repair serialization: " + pair.Key);
             }
         }

@@ -29,22 +29,41 @@ for(var _eao_ar=0;_eao_ar<array_length(_eao_arrays);_eao_ar++) {
     }
 }
 
+// Adjacent cells must share the same ground corner, including Steppe cells.
+// Sea here borders the southern grassland: gold under its transparent shore
+// pixels prevents the default green background from making square patches.
+var _eao_steppe_vertices=array_create(_eao_nw+1);
+for(var _eao_vx=40;_eao_vx<=_eao_nw;_eao_vx++) {
+    var _eao_column=array_create(_eao_h+1,0);
+    for(var _eao_vy=0;_eao_vy<=_eao_h;_eao_vy++) {
+        if(_eao_vx==40) {
+            // Inherit the retained west edge from its actual native batch;
+            // do not approximate its authored Steppe outline or rewrite x39.
+            var _eao_west=ds_grid_get(global.glmapBatchGridSteppe,39,min(_eao_vy,_eao_h-1));
+            var _eao_west_frame=0;
+            if(is_array(_eao_west)) for(var _eao_wi=0;_eao_wi<array_length(_eao_west);_eao_wi+=6)
+                if(_eao_west[_eao_wi]==s_glmap_steppe_strip16) _eao_west_frame=floor(_eao_west[_eao_wi+1]);
+            _eao_column[_eao_vy]=(_eao_west_frame & (_eao_vy<_eao_h ? 2 : 8))!=0;
+        } else {
+            var _eao_votes=0;
+            for(var _eao_dx=-1;_eao_dx<=0;_eao_dx++) for(var _eao_dy=-1;_eao_dy<=0;_eao_dy++) {
+                var _eao_corner_biome=scr_globaltile_get("Biome",clamp(_eao_vx+_eao_dx,40,_eao_nw-1),clamp(_eao_vy+_eao_dy,0,_eao_h-1));
+                _eao_votes+=_eao_corner_biome=="Steppe" || _eao_corner_biome=="Sea";
+            }
+            _eao_column[_eao_vy]=_eao_votes>=2;
+        }
+    }
+    _eao_steppe_vertices[_eao_vx]=_eao_column;
+}
+
 for(_eao_x=40;_eao_x<_eao_nw;_eao_x++) for(_eao_y=0;_eao_y<_eao_h;_eao_y++) {
     _eao_p=ds_grid_get(global.terrainGrid,_eao_x,_eao_y);
     var _eao_biome=ds_map_find_value(_eao_p,"Biome");
-    var _eao_steppe_frame=_eao_biome=="Steppe" ? 15 : 0;
-    if(_eao_steppe_frame==0 && _eao_biome!="Mount" && _eao_x<_eao_nw-1 && _eao_y>0 && _eao_y<_eao_h-1) {
-        // Native strip bits (checked against pixels): NW=1, NE=2, SW=4, SE=8.
-        // across adjacent ground/shore rather than drawing a rectangular patch.
-        var _eao_sn=scr_globaltile_get("Biome",_eao_x,_eao_y-1)=="Steppe";
-        var _eao_sw=scr_globaltile_get("Biome",_eao_x-1,_eao_y)=="Steppe";
-        var _eao_se=scr_globaltile_get("Biome",_eao_x+1,_eao_y)=="Steppe";
-        var _eao_ssouth=scr_globaltile_get("Biome",_eao_x,_eao_y+1)=="Steppe";
-        _eao_steppe_frame=(_eao_sn+_eao_sw+(scr_globaltile_get("Biome",_eao_x-1,_eao_y-1)=="Steppe")>=2 ? 1 : 0)
-            +(_eao_sn+_eao_se+(scr_globaltile_get("Biome",_eao_x+1,_eao_y-1)=="Steppe")>=2 ? 2 : 0)
-            +(_eao_ssouth+_eao_sw+(scr_globaltile_get("Biome",_eao_x-1,_eao_y+1)=="Steppe")>=2 ? 4 : 0)
-            +(_eao_ssouth+_eao_se+(scr_globaltile_get("Biome",_eao_x+1,_eao_y+1)=="Steppe")>=2 ? 8 : 0);
-    }
+    var _eao_left=_eao_steppe_vertices[_eao_x];
+    var _eao_right=_eao_steppe_vertices[_eao_x+1];
+    // Native strip bits (checked against pixels): NW=1, NE=2, SW=4, SE=8.
+    var _eao_steppe_frame=_eao_left[_eao_y]+2*_eao_right[_eao_y]
+        +4*_eao_left[_eao_y+1]+8*_eao_right[_eao_y+1];
     if(_eao_steppe_frame>0) scr_glmap_addSprite(_eao_x*52,_eao_y*52,s_glmap_steppe_strip16,1,_eao_steppe_frame);
     if(_eao_biome=="Sea") {
         var _eao_frame=scr_glmap_findShoreTile(_eao_x,_eao_y);

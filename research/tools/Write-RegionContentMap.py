@@ -14,7 +14,7 @@ PLAN = '11_管理/特殊地点与野外NPC对白扩展计划.md'
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 inv = json.loads((ROOT / 'research/special-location-inventory.json').read_text(encoding='utf-8'))
 REGIONS = {r['key']: r for r in inv['map_regions']}
-REGNAME = {'R01': '布林外港与旧渠', 'R02': '丹布里西路与渡口', 'R03': '曼恩边地', 'R04': '王廷关隘与边城', 'R05': '灰烬湿地与疫村', 'R06': '无名修院山地'}
+REGNAME = {'R01': '布林外港与旧渠', 'R02': '布林东侧河口与渡口', 'R03': '曼恩边地', 'R04': '王廷关隘与边城', 'R05': '灰烬湿地与疫村', 'R06': '无名修院山地'}
 REG_EN = {k: v.get('name_en', '') for k, v in REGIONS.items()}
 ROWS = [
  dict(key='map_brynn', name='布林城郊', mod='R01', cards=['地点设计卡_R01_布林外港与旧渠'], people=['人物_FX-BUR_库奇', '人物_FX-SGE_瓦顿', '人物_FX-MAN_岱珥'],
@@ -34,8 +34,8 @@ ROWS = [
       terrain='封门未拆的旧村与湿地边沿；雾天能见度低。', use='封存看管、送药、避居。',
       entry='村口上风处；安全回程认旧风车基座。', obs='门上的封条、晒过的药草捆。', danger='疫源未清、游荡者。',
       avoid='不把疫病写成可治愈奖励线；不动原作病村叙事与医护身份。'),
- dict(key='map_oldhomestead', name='老宅子', mod='R02', cards=['地点设计卡_R02_丹布里西路与渡口'], people=['人物_FX-HOM_苇珥', '人物_FX-FRM_蓟珥'],
-      terrain='西路旁的旧农宅与荒宅；春天路面翻浆。', use='住人、拾荒、过路歇脚。',
+ dict(key='map_oldhomestead', name='老宅子', mod='R02', cards=['地点设计卡_R02_布林东侧河口与渡口'], people=['人物_FX-HOM_苇珥', '人物_FX-FRM_蓟珥'],
+      terrain='河岸路旁的旧农宅与荒宅；春天路面翻浆。', use='住人、拾荒、过路歇脚。',
       entry='沿官道里程碑；安全回程认渡口摆渡棚灯。', obs='灶台旧灰、塌陷地板、烟道里的窝。', danger='地板塌陷、夜路劫道。',
       avoid='不认领原主房屋；不改官方商路走向。'),
  dict(key='map_abbey', name='修院', mod='R06', cards=['地点设计卡_R06_无名修院山地'], people=['人物_FX-ABY_缇菈', '人物_FX-HUT_珂琳', '人物_FX-CRP_瑟珥'],
@@ -46,7 +46,7 @@ ROWS = [
       terrain='据点式酒馆与周边湿地；人来人往、帮派换人。', use='喝酒、听传闻、临时交易。',
       entry='沿湿地木栈道；安全回程认旧风车基座。', obs='拴马桩、后院旧账板。', danger='赌债与帮派纠纷。',
       avoid='不替帮派收账、不改原作酒馆身份与在场人物。'),
- dict(key='map_freevalley', name='自由谷', mod='R02', cards=['地点设计卡_R02_丹布里西路与渡口'], people=['人物_FX-RLY_珥薇'],
+ dict(key='map_freevalley', name='自由谷', mod='R02', cards=['地点设计卡_R02_布林东侧河口与渡口'], people=['人物_FX-RLY_珥薇'],
       terrain='谷地田庄与桥路；桥板坏一次绕半天。', use='过路、中继、歇脚。',
       entry='沿谷地土路；安全回程认中继营地旧锅。', obs='压平的草、旧灰坑、桥板茬口。', danger='旧灰坑未熄透、路面湿滑。',
       avoid='不新增第二个摆渡点；不改原作渡口与旅店人物。'),

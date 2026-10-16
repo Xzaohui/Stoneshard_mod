@@ -43,7 +43,7 @@ aliases: []
 
 | 人物 | 地点类型 | 地域 |
 |---|---|---|
-| [[人物_FX-QRY_德茹]] | `rumor_abandonedQuarry1` | R04 |
+| [[人物_FX-QRY_德茹]] | `rumor_abandonedQuarry1` | R01 |
 | [[人物_FX-MIL_霍珥]] | `rumor_abandonedWatermill1` | R02 |
 | [[人物_FX-CRP_瑟珥]] | `rumor_remoteCrypt1` | R03 |
 | [[人物_FX-CAT_洛珉]] | `rumor_remoteCatacombs1` | R05 |

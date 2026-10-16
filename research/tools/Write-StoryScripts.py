@@ -53,7 +53,8 @@ def write(rel, text):
     text = add_city_links(ROOT,rel,text)
     p=VAULT / rel
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(text, encoding='utf-8')
+    raw=p.read_bytes() if p.exists() else b''
+    p.write_bytes((b'\xef\xbb\xbf' if raw.startswith(b'\xef\xbb\xbf') else b'')+text.replace('\r\n','\n').replace('\n','\r\n').encode('utf-8'))
     generated_hashes['design/' + rel] = hashlib.sha256(p.read_bytes()).hexdigest()
     return 'design/' + rel
 def preserve_foreign(rel, text):
@@ -73,7 +74,8 @@ def supplement(name, body):
         text=re.sub(re.escape(begin)+r'.*?'+re.escape(end)+r'\s*', lambda _:block, text, flags=re.S)
     else:
         text=re.sub(r'(?m)^(# [^\n]+\n)', lambda m:m.group(1)+'\n'+block, text, count=1)
-    p.write_text(text, encoding='utf-8')
+    raw=p.read_bytes() if p.exists() else b''
+    p.write_bytes((b'\xef\xbb\xbf' if raw.startswith(b'\xef\xbb\xbf') else b'')+text.replace('\r\n','\n').replace('\n','\r\n').encode('utf-8'))
 
 for group, folder in [(main,'05_主线/台本'),(side,'06_支线/台本'),(daily,'07_日常任务/台本'),(dungeons,'08_副本/台本')]:
     for q in group:
@@ -185,7 +187,7 @@ for card in model['main_quests']:
 
 for r in regions:
     tasks=[q['id'] for q in all_tasks if q['region']==r['id'] or q.get('secondary_region')==r['id']]
-    english_region={'R01':'Bryn Outer Harbor and Old Canal','R02':'Denbrie West Road and Ferry','R03':'Maen Outskirts','R04':'Royal Pass and Border Settlement','R05':'Ash Basin and Infirmary Villages','R06':'Unnamed Monastery Highlands'}
+    english_region={'R01':'Bryn Outer Harbor and Old Canal','R02':'Brynn East Estuary Ferry（曾用译题 Denbrie West Road and Ferry）','R03':'Maen Outskirts','R04':'Royal Pass and Border Settlement','R05':'Ash Basin and Infirmary Villages','R06':'Unnamed Monastery Highlands'}
     b=f"设计ID：{r['id']}；工作英文区域名：{english_region[r['id']]}（新增区域译题，非官方地图名）。\n\n当前区域主题：**"+r['theme']+'**。\n\n'
     for h,k in [('设计理念','concept'),('视觉与情绪','mood'),('空间玩法','movement')]: b+=f'### {h}\n\n{r[k]}\n\n'
     b+='### 功能节点与通路\n\n节点是设计预算，不是已铺设世界方块；子房间不重复算节点。\n\n| ID | 地点 | 类型 | 叙事与玩法职责 |\n| --- | --- | --- | --- |\n'
@@ -213,7 +215,7 @@ area+='六个原创区域包共54功能节点。它们是可走关系与场所�
 for r in regions:
     def col(group): return tasklinks([q['id'] for q in group if q['region']==r['id'] or q.get('secondary_region')==r['id']])
     area+=f"| {wl(region_names[r['id']])} | {r['theme']} | {len(r['nodes'])} | {col(main)} | {col(side)} | {col(daily)} | {col(dungeons)} |\n"
-area+='\n入口：原作商队→R02旧渡口入门点；N1结案→R01灰堤；N4完成→R02西路；N5公开R03/R04/R05路线；N13后剧情指引上R06。道路可先探索普通区，关键故事段只随任务生成，不能提前删掉后续证人。\n\n'
+area+='\n入口：原作商队→R02河口渡口入门点（布林东侧F1，规划本地格45,36）；N1结案→R01灰堤（布林以东G1）；N4完成→R02河口渡口；N5公开R03/R04/R05路线；N13后剧情指引上R06。道路可先探索普通区，关键故事段只随任务生成，不能提前删掉后续证人。\n\n'
 area+='原世界图坐标尚未核验，R01—R06只表示功能拓扑，不能据它推断原作政治疆界。推荐等级是调试目标：N1入门点6–9，其余R02调查9–15；R01调查6–10、R03 12–20、R04 13–21、R05 16–24、R06 22–28。主线不承诺单独提供全部升级经验。\n\n'
 area+='退役D01预算改作工营／听审与工坊组合中的地表叙事空间；R01由2副本改为1副本，不再用旧封账仓硬凑10个有效副本。其余功能预算按本次节点表，全球格数另定。\n\n'+wl('任务台本总索引')+' · '+wl('地图扩张总图')+' · '+wl('旧渡口_场景与通路')+' · '+wl('地点设定核对与冲突修订')+'。\n'
 write('02_世界与地图/新区域设计与任务总表.md',preserve_foreign('02_世界与地图/新区域设计与任务总表.md',area))

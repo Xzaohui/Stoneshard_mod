@@ -12,6 +12,16 @@ KEYS = {'ferry_depot_claim', 'custody_intent', 'custody_signed',
         'n8_relief', 'sylang_state', 'n4_shift_remedied'}
 ACTS = {'I', 'II', 'III', 'IV'}
 
+def support_section_errors(route, settlements, base_by_key):
+    errors=[]
+    def check(ok,label):
+        if not ok: errors.append(label)
+    for stub in route:
+        check(all(not k.startswith('resolve_') for k in stub['writes']), stub['event']+'-no-legacy-resolve')
+    for stub in settlements:
+        check(bool(stub['writes']) and set(stub['sets']) == set(stub['writes']) and all(k.startswith('resolve_') and k in base_by_key and v in base_by_key[k]['values'] for k,v in stub['sets'].items()), stub['event']+'-legacy-settlement-only')
+    return errors
+
 def validate(net, model):
     errors = []
     def check(ok, label):
@@ -162,9 +172,15 @@ def validate(net, model):
     actual_support=event_data.get('route_state_stubs', [])
     check(actual_support == support_stubs(net), 'route-state-projection')
     check(hooks.get('route_state_bindings') == [dict(event=s['event'], trigger=s['trigger'], hook=s['trigger'], engine_event=None, when=s['when']) for s in actual_support], 'route-state-bindings')
+    settlements=event_data.get('resolve_settle_stubs', [])
+    check(settlements == support_stubs(net, settlement=True), 'resolve-settle-projection')
+    check(hooks.get('resolve_settle_bindings') == [dict(event=s['event'], trigger=s['trigger'], hook=s['trigger'], engine_event=None, when=s['when']) for s in settlements], 'resolve-settle-bindings')
+    errors.extend(support_section_errors(actual_support, settlements, base_by_key))
+    check(not any(s['event']=='evt_N17_custody_signed_none' for s in actual_support), 'no-empty-signature-producer')
     domains={k['key']: k['values'] for k in base_keys+expected_keys}
-    writers={}
-    all_stubs=event_data['stubs']+event_data.get('heavy_edge_stubs',[])+actual_support
+    writers={k['key']:{k['default']} for k in expected_keys}
+    check('none' in writers.get('custody_signed',set()), 'unsigned-default-readable-without-producer')
+    all_stubs=event_data['stubs']+event_data.get('heavy_edge_stubs',[])+actual_support+settlements
     check(len({s['event'] for s in all_stubs}) == len(all_stubs), 'all-event-names-unique')
     for stub in all_stubs:
         sets=dict(stub.get('sets', {}))
@@ -177,7 +193,7 @@ def validate(net, model):
             check(key in domains and value in domains[key], stub['event']+'-write-domain-'+key)
             check(key in stub['writes'], stub['event']+'-declares-write-'+key)
             writers.setdefault(key,set()).add(value)
-    for stub in event_data.get('heavy_edge_stubs',[])+actual_support:
+    for stub in event_data.get('heavy_edge_stubs',[])+actual_support+settlements:
         for key,values in stub['when'].items():
             check(key in writers, stub['event']+'-has-writer-'+key)
             for value in values:
@@ -212,6 +228,16 @@ def main():
     model = json.loads((ROOT / 'research/design-model.json').read_text(encoding='utf-8'))
     errors, counts = validate(net, model)
     if '--self-test' in sys.argv:
+        event_data=json.loads((ROOT/'research/event-stubs.json').read_text(encoding='utf-8'))
+        base_by_key={k['key']:k for k in json.loads((ROOT/'research/state-keys.json').read_text(encoding='utf-8'))['keys']}
+        for label, section, key, value in [
+                ('route-resolve-leak','route_state_stubs','resolve_N11','trace'),
+                ('settle-route-leak','resolve_settle_stubs','route_N3','any'),
+                ('settle-old-domain','resolve_settle_stubs','resolve_N11','invented')]:
+            altered=deepcopy(event_data)
+            altered[section][0]['sets']={key:value}; altered[section][0]['writes']=[key]
+            if not support_section_errors(altered['route_state_stubs'],altered['resolve_settle_stubs'],base_by_key):
+                errors.append('negative-section-not-rejected-'+label)
         mutations = [lambda n: n['heavy_edges'][0]['writes'].update(NE6=True),
                      lambda n: n['heavy_edges'][0]['guards'].update(alive=False),
                      lambda n: n['heavy_edges'][0]['sources'][0].update(file='design/missing.md'),

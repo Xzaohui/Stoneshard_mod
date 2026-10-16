@@ -16,7 +16,7 @@ def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def read(p): return json.loads((ROOT / p).read_text(encoding='utf-8-sig'))
 model = read('research/city-campaign.json'); rep = read('research/town-reputation.json')
 CITIES = {c['id']: c for c in model['cities']}
-REGNAME = {'R01': '布林外港与旧渠', 'R02': '丹布里西路与渡口', 'R03': '曼恩边地', 'R04': '王廷关隘与边城', 'R05': '灰烬湿地与疫村', 'R06': '无名修院山地'}
+REGNAME = {'R01': '布林外港与旧渠', 'R02': '布林东侧河口与渡口', 'R03': '曼恩边地', 'R04': '王廷关隘与边城', 'R05': '灰烬湿地与疫村', 'R06': '无名修院山地'}
 LINES = [
  ('BRY', 'band:-1', '摊主', '布林人不记仇，只记账。你那笔，最近没人替你划。', "Brynn folk keep no grudges, only ledgers. Lately nobody strikes your entry."),
  ('BRY', 'band:+2', '摊主', '你走这条街，摊主会先点头。点头不算折扣，算熟。', "Walk this street and the stalls nod first. A nod is not a discount - it is being known."),
@@ -78,7 +78,7 @@ for cid, when, spk, cn, en in LINES:
     if cid in CITIES:
         link = pathlib.Path(CITIES[cid]['file']).stem
     else:
-        link = {'R01': '区域_R01_布林外港与旧渠', 'R02': '区域_R02_丹布里西路与渡口', 'R03': '区域_R03_曼恩边地',
+        link = {'R01': '区域_R01_布林外港与旧渠', 'R02': '区域_R02_布林东侧河口与渡口', 'R03': '区域_R03_曼恩边地',
                 'R04': '区域_R04_王廷关隘与边城', 'R05': '区域_R05_灰烬湿地与疫村', 'R06': '区域_R06_无名修院山地'}[cid]
     assert link in {p.stem for p in V.rglob('*.md')}, rid + ' link'
     rows.append(dict(id=rid, place=cid, speaker=spk, when=when, cn=cn, en=en, link=link))

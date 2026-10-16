@@ -30,13 +30,13 @@ LINES = [
  dict(id='AG-R01-5', region='R01', speaker='乡民', when='after:台本_N1_无钟之夜',
       cn='那晚上的事过去之后，敲钟的人走路都轻了。你听得出。', en='After that night, the bell-ringer walks lighter. You can hear it.',
       link='台本_N1_无钟之夜'),
- # R02 丹布里西路与渡口
+ # R02 布林东侧河口与渡口
  dict(id='AG-R02-1', region='R02', speaker='渡工', when='any',
       cn='水位看桩，别看天。天说下雨，桩说什么时候能过。', en='Watch the post, not the sky. The sky promises rain; the post says when you can cross.',
-      link='区域_R02_丹布里西路与渡口'),
+      link='区域_R02_布林东侧河口与渡口'),
  dict(id='AG-R02-2', region='R02', speaker='乡民', when='any',
       cn='磨坊停转以后，村里磨面要走到下一个村。走一趟就是一整天。', en='Since the mill stopped, grinding means walking to the next village. A whole day gone.',
-      link='地点设计卡_R02_丹布里西路与渡口'),
+      link='地点设计卡_R02_布林东侧河口与渡口'),
  dict(id='AG-R02-3', region='R02', speaker='旅人', when='night',
       cn='夜里别在荒宅过夜。门是开的，里面的响动不是风。', en='Do not sleep in the empty house at night. The door is open, and what creaks inside is not the wind.',
       link='人物_FX-HOM_苇珥'),
@@ -139,7 +139,7 @@ def put(rel, t):
     p = V / rel; p.parent.mkdir(parents=True, exist_ok=True)
     t = preserve_foreign(V, rel, t)
     p.write_text(t, encoding='utf-8'); changed.add('design/' + rel); generated['design/' + rel] = sha(p)
-REGNAME = {'R01': '布林外港与旧渠', 'R02': '丹布里西路与渡口', 'R03': '曼恩边地', 'R04': '王廷关隘与边城', 'R05': '灰烬湿地与疫村', 'R06': '无名修院山地'}
+REGNAME = {'R01': '布林外港与旧渠', 'R02': '布林东侧河口与渡口', 'R03': '曼恩边地', 'R04': '王廷关隘与边城', 'R05': '灰烬湿地与疫村', 'R06': '无名修院山地'}
 n = ('---\ntitle: "地区闲谈池"\nid: FX-AMBIENT-GOSSIP\ntype: script\nstatus: draft\ncanon: mod-original\n'
      'baseline: "0.9.4.25-modbranch"\nupdated: 2026-10-13\ntags: [stoneshard, S115, dialogue, ambient]\naliases: []\n---\n\n'
      '# 地区闲谈池\n\n'

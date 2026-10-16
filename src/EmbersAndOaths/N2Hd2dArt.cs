@@ -47,8 +47,10 @@ internal static class N2Hd2dArt
         var code = new StringBuilder("if (" + Active + ") {\n");
         foreach (var room in N2Quest.Shapes.Keys) {
             code.AppendLine("if (room == " + room + ") {");
-            foreach (var layer in new[] { "backing", "floor", "structure" })
-                code.AppendLine("draw_sprite(" + Hd2dArt.Sprite(room + "__" + layer) + ",0,0,0);");
+            foreach (var layer in new[] { "backing", "floor", "structure" }) {
+                if (layer=="floor") code.Append(GroundChunks.Draw(room));
+                else code.AppendLine("draw_sprite(" + Hd2dArt.Sprite(room + "__" + layer) + ",0,0,0);");
+            }
             // Architectural stamps belong below actors, so a player standing
             // in the native doorway is not covered by a detached door slab.
             foreach(var door in Doorways)

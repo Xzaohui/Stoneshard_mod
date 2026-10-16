@@ -46,7 +46,10 @@ internal static class Hd2dArt
         var code=new StringBuilder("if ("+Active+") {\n");
         foreach(var room in NightRooms.Shapes.Keys){
             code.AppendLine("if (room == "+room+") {");
-            foreach(var layer in new[]{"backing","floor","structure"})code.AppendLine("draw_sprite("+Sprite(room+"__"+layer)+",0,0,0);");
+            foreach(var layer in new[]{"backing","floor","structure"}) {
+                if(layer=="floor") code.Append(GroundChunks.Draw(room));
+                else code.AppendLine("draw_sprite("+Sprite(room+"__"+layer)+",0,0,0);");
+            }
             if(includeDoorways)code.Append(N1DoorwayArt.DrawStamps(room));
             code.AppendLine("exit; }");
         }

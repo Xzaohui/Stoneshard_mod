@@ -121,7 +121,10 @@ internal static class SceneAssembly
         var floor=Msl.GetObject(Obj("floor"));floor.Visible=true;
         set(floor,"depth=100;",EventType.Create,0);
         var draw=new StringBuilder();
-        foreach(var layer in new[]{"backing","floor","structure"})draw.AppendLine("draw_sprite("+Hd2dArt.Sprite("n2site__"+layer)+",0,0,0);");
+        foreach(var layer in new[]{"backing","floor","structure"}) {
+            if(layer=="floor") draw.Append(GroundChunks.Draw(Sites));
+            else draw.AppendLine("draw_sprite("+Hd2dArt.Sprite("n2site__"+layer)+",0,0,0);");
+        }
         set(floor,draw.ToString(),EventType.Draw,0);
         var hub=Msl.GetRoom(Sites);
         if(hub.GameObjects.Count==0) {

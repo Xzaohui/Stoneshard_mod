@@ -180,6 +180,14 @@ if ([version]$taskReport.modVersion -ge [version]'0.3.26') {
         if ($taskRequired -notin $taskDev.checks) { throw ('Missing coordinate editor layout check: ' + $taskRequired) }
     }
 }
+if ([version]$taskReport.modVersion -ge [version]'0.3.27') {
+    foreach ($taskRequired in @('ground-native-cell-chunk-and-gutter-contract','ground-layout-sha-lock','ground-world-pure-decoration-no-parent-mask-or-persistence','ground-world-excluded-save-and-art-fallback','ground-world-fresh-generation-and-visited-load-restoration','ground-exact-embedded-chunk-count','ground-eight-current-scenes-with-large-native-surface','ground-draw-no-quest-player-collision-or-reward-writes')) {
+        if ($taskRequired -notin $taskDev.checks) { throw ('Missing native terrain chunk check: ' + $taskRequired) }
+    }
+    foreach ($taskRoom in @('r_eao_n1_yard','r_eao_n1_bellhouse','r_eao_n1_underpass','r_eao_n2_camp','r_eao_n2_winch','r_eao_n2_side','r_eao_n2_sites','r_eao_n2_world')) {
+        if (('ground-exactly-once-core-coverage-' + $taskRoom) -notin $taskDev.checks) { throw ('Missing terrain core coverage: ' + $taskRoom) }
+    }
+}
 function Test-TaskNoLink([string]$Path) {
     $taskAbsolute = [IO.Path]::GetFullPath($Path)
     for ($taskPart = $taskAbsolute; $taskPart; $taskPart = Split-Path $taskPart -Parent) {

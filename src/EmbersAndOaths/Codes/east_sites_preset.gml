@@ -3,6 +3,9 @@
 // stay in charge. No live player, arrival coordinates or quest state is changed.
 event_inherited();
 if (room != r_eao_n2_world) exit;
+// Native-size ground chunks are decoration. Keep the native outdoor lifecycle,
+// save identity, collision generation and all three original building anchors.
+if (!instance_exists(o_eao_ground_world)) instance_create_depth(0,0,1,o_eao_ground_world);
 
 // Keep the forecourt clear through native flora, grow and mob placement passes.
 // This grid only reserves generation space; the ground remains walkable grass.

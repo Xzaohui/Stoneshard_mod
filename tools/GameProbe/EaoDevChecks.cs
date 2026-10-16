@@ -141,6 +141,7 @@ internal static class EaoDevChecks
         checks.AddRange(EaoDoorwayHitChecks.Validate(data,Asm));
         checks.AddRange(EaoN1DoorwayChecks.Validate(data,Asm,n1Doors.RootElement));
         checks.AddRange(EaoSceneAssembly.Validate(data,Asm));
+        checks.AddRange(EaoGroundChunkChecks.Validate(data,Asm));
         return checks.ToArray();
     }
 }

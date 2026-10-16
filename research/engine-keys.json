@@ -13,6 +13,15 @@
       "note": "旧 D01 档案访问标记（D01 不再作为新内容）"
     },
     {
+      "key": "EAO_FX_quarry_in",
+      "cls": "scene-arrival-tag",
+      "files": [
+        "dev_visit.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "场景到达标记（原生门 tag，dev_visit 循环与回程复用）；不是存档状态"
+    },
+    {
       "key": "EAO_MQ01",
       "cls": "legacy-quest",
       "files": [
@@ -120,6 +129,68 @@
       "note": "N1 小样键（stage、origin 坐标与 dev_visit 场景标记）；与登记键 resolve_N1/encountered_N1 不是同一套"
     },
     {
+      "key": "EAO_N2_camp_in",
+      "cls": "scene-arrival-tag",
+      "files": [
+        "dev_visit.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "场景到达标记（原生门 tag，dev_visit 循环与回程复用）；不是存档状态"
+    },
+    {
+      "key": "EAO_N2_side_in",
+      "cls": "scene-arrival-tag",
+      "files": [
+        "dev_visit.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "场景到达标记（原生门 tag，dev_visit 循环与回程复用）；不是存档状态"
+    },
+    {
+      "key": "EAO_N2_winch_in",
+      "cls": "scene-arrival-tag",
+      "files": [
+        "dev_visit.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "场景到达标记（原生门 tag，dev_visit 循环与回程复用）；不是存档状态"
+    },
+    {
+      "key": "EAO_SITE_in",
+      "cls": "scene-arrival-tag",
+      "files": [
+        "dev_visit.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "场景到达标记（原生门 tag，dev_visit 循环与回程复用）；不是存档状态"
+    },
+    {
+      "key": "EAO_callback_CS_BRY_01_continuity",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_feedback_1_early.gml",
+        "cs_bry_01_feedback_2_early.gml",
+        "cs_bry_01_feedback_3_early.gml",
+        "cs_bry_01_route_continuity.gml",
+        "cs_system_helpers.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
+      "key": "EAO_callback_CS_BRY_01_exit",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_feedback_1_early.gml",
+        "cs_bry_01_feedback_2_early.gml",
+        "cs_bry_01_feedback_3_early.gml",
+        "cs_bry_01_route_exit.gml",
+        "cs_system_helpers.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
       "key": "EAO_callback_N2_protected",
       "cls": "pilot-N2",
       "files": [
@@ -138,6 +209,80 @@
       "note": "N2 试点批次键（S153/S154）：口径 EAO_＋登记键名，映射 encountered_N2/resolve_N2/callback"
     },
     {
+      "key": "EAO_consent_CS_BRY_01_continuity",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_route_continuity.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
+      "key": "EAO_consent_CS_BRY_01_exit",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_route_exit.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
+      "key": "EAO_cs_runtime_witness",
+      "cls": "pilot-infra",
+      "files": [
+        "cs_bry_01_hub.gml",
+        "cs_system_helpers.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "城市试点运行时容器（见证计数/城镇池游标），非登记键"
+    },
+    {
+      "key": "EAO_custody_intent",
+      "cls": "hx-helper",
+      "files": [
+        "eao_state_helpers.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "HX01-26 重边状态辅助键（eao_state_helpers.gml，未注入对象）；EAO_route_ 为拼接前缀"
+    },
+    {
+      "key": "EAO_custody_signed",
+      "cls": "hx-helper",
+      "files": [
+        "eao_state_helpers.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "HX01-26 重边状态辅助键（eao_state_helpers.gml，未注入对象）；EAO_route_ 为拼接前缀"
+    },
+    {
+      "key": "EAO_dev_enabled",
+      "cls": "dev-tool",
+      "files": [
+        "n1_door_draw.gml",
+        "n2_door_draw.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "开发观察工具键（F6/F7/F9/F10/F11 迷雾/格网/素材/场景/返回）"
+    },
+    {
+      "key": "EAO_dev_return_keep",
+      "cls": "dev-tool",
+      "files": [
+        "dev_step.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "开发观察工具键（F6/F7/F9/F10/F11 迷雾/格网/素材/场景/返回）"
+    },
+    {
+      "key": "EAO_dev_trust_override",
+      "cls": "dev-tool",
+      "files": [
+        "cs_trust_toggle.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "开发观察工具键（F6/F7/F9/F10/F11 迷雾/格网/素材/场景/返回）"
+    },
+    {
       "key": "EAO_dev_visible_owned",
       "cls": "dev-tool",
       "files": [
@@ -148,6 +293,16 @@
       "note": "开发观察工具键（F6/F7/F9/F10/F11 迷雾/格网/素材/场景/返回）"
     },
     {
+      "key": "EAO_encountered_CS_BRY_01",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_entry.gml",
+        "cs_bry_01_hub.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
       "key": "EAO_encountered_N2",
       "cls": "pilot-N2",
       "files": [
@@ -156,6 +311,100 @@
       ],
       "mapped_to_registry": true,
       "note": "N2 试点批次键（S153/S154）：口径 EAO_＋登记键名，映射 encountered_N2/resolve_N2/callback"
+    },
+    {
+      "key": "EAO_ferry_depot_claim",
+      "cls": "hx-helper",
+      "files": [
+        "eao_state_helpers.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "HX01-26 重边状态辅助键（eao_state_helpers.gml，未注入对象）；EAO_route_ 为拼接前缀"
+    },
+    {
+      "key": "EAO_fx_qry_seen",
+      "cls": "pilot-FX",
+      "files": [
+        "fx_qry_early.gml",
+        "fx_qry_intro.gml",
+        "fx_qry_late.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "野外试点 FX-QRY 键（S157）；resolve_N7 为 N7 结算读取"
+    },
+    {
+      "key": "EAO_n8_relief",
+      "cls": "hx-helper",
+      "files": [
+        "eao_state_helpers.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "HX01-26 重边状态辅助键（eao_state_helpers.gml，未注入对象）；EAO_route_ 为拼接前缀"
+    },
+    {
+      "key": "EAO_order_CS_BRY_01",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_after_city.gml",
+        "cs_bry_01_before_city.gml",
+        "cs_bry_01_feedback_1_early.gml",
+        "cs_bry_01_feedback_1_late.gml",
+        "cs_bry_01_feedback_2_early.gml",
+        "cs_bry_01_feedback_2_late.gml",
+        "cs_bry_01_feedback_3_early.gml",
+        "cs_bry_01_feedback_3_late.gml",
+        "cs_system_helpers.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
+      "key": "EAO_paid_CS_BRY_01_continuity",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_route_continuity.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
+      "key": "EAO_paid_CS_BRY_01_exit",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_route_exit.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
+      "key": "EAO_pool_cursor_town",
+      "cls": "pilot-infra",
+      "files": [
+        "cs_system_helpers.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "城市试点运行时容器（见证计数/城镇池游标），非登记键"
+    },
+    {
+      "key": "EAO_presence_CS_BRY_01",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_absent.gml",
+        "cs_bry_01_refusal.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
+      "key": "EAO_presence_FX_QRY",
+      "cls": "pilot-FX",
+      "files": [
+        "fx_qry_hub.gml",
+        "fx_qry_proxy.gml",
+        "fx_qry_refusal.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "野外试点 FX-QRY 键（S157）；resolve_N7 为 N7 结算读取"
     },
     {
       "key": "EAO_presence_N2",
@@ -176,6 +425,30 @@
       "note": "0.3.0 期抄本阅读标记"
     },
     {
+      "key": "EAO_resolve_CM_BRY",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_system_helpers.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
+      "key": "EAO_resolve_CS_BRY_01",
+      "cls": "pilot-BRY01",
+      "files": [
+        "cs_bry_01_feedback_1_early.gml",
+        "cs_bry_01_feedback_2_early.gml",
+        "cs_bry_01_feedback_3_early.gml",
+        "cs_bry_01_refusal.gml",
+        "cs_bry_01_route_continuity.gml",
+        "cs_bry_01_route_exit.gml",
+        "cs_system_helpers.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
+    },
+    {
       "key": "EAO_resolve_N2",
       "cls": "pilot-N2",
       "files": [
@@ -185,6 +458,27 @@
       ],
       "mapped_to_registry": true,
       "note": "N2 试点批次键（S153/S154）：口径 EAO_＋登记键名，映射 encountered_N2/resolve_N2/callback"
+    },
+    {
+      "key": "EAO_resolve_N7",
+      "cls": "pilot-FX",
+      "files": [
+        "fx_qry_after.gml",
+        "fx_qry_before.gml",
+        "fx_qry_early.gml",
+        "fx_qry_late.gml"
+      ],
+      "mapped_to_registry": true,
+      "note": "野外试点 FX-QRY 键（S157）；resolve_N7 为 N7 结算读取"
+    },
+    {
+      "key": "EAO_route_",
+      "cls": "hx-helper",
+      "files": [
+        "eao_state_helpers.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "HX01-26 重边状态辅助键（eao_state_helpers.gml，未注入对象）；EAO_route_ 为拼接前缀"
     },
     {
       "key": "EAO_test_map_arrival",
@@ -383,14 +677,38 @@
       ],
       "mapped_to_registry": false,
       "note": "可选测试传送/返回点（F8 开关）状态键"
+    },
+    {
+      "key": "EAO_toman_personnel",
+      "cls": "hx-helper",
+      "files": [
+        "eao_state_helpers.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "HX01-26 重边状态辅助键（eao_state_helpers.gml，未注入对象）；EAO_route_ 为拼接前缀"
+    },
+    {
+      "key": "EAO_trust_BRY",
+      "cls": "pilot-BRY01",
+      "files": [
+        "n2_choice_protected.gml",
+        "n2_choice_public.gml"
+      ],
+      "mapped_to_registry": false,
+      "note": "城市试点 CS-BRY-01 键（S156）：口径 EAO_＋登记键名；trust_BRY 为布林信任档"
     }
   ],
   "classes": {
     "legacy-flag": 1,
+    "scene-arrival-tag": 5,
     "legacy-quest": 2,
     "sample-N1": 9,
+    "pilot-BRY01": 12,
     "pilot-N2": 5,
-    "dev-tool": 1,
+    "pilot-infra": 2,
+    "hx-helper": 6,
+    "dev-tool": 4,
+    "pilot-FX": 3,
     "legacy-item": 1,
     "test-teleport": 19
   },

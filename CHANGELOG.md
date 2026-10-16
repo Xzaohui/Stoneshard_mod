@@ -2,6 +2,11 @@
 
 本文件收存原 README.md 与根 AGENTS.md 中的逐轮迭代记录，按日期与 S 编号从新到旧排列，正文逐字保留。`<!-- 标识:BEGIN/END -->` 标记块由 research/tools 下的写手脚本维护（重跑时整块替换并追加到文末），对应校验器在本文件中核对；当前状态与使用说明见 [README](README.md)，协作规则见 [AGENTS.md](AGENTS.md)。
 
+## 2026-10-16（午间合并）
+
+- 合并入 main（小辉）：`work/story`（S206a/b 东扩地理、结算桩、校验登记）、`work/art`（东扩大地图第一组布置稿与灰堤/渡口图标）、`code/east-pilot`（含 `work/code` 的 note-hash/EngineKeys 刷新与 GEO-02 东扩 2 格小样及 GameProbe 放行）。哈希冲突按合并后文件内容重算 `research/*note-hashes.json`。
+- 规划同步：ROADMAP 增加「当前进度」；大地图方案 §7 关闭已拍板项；TODO 勾选 GEO-01/02。
+
 ## 2026-10-16
 
 - 合入大地图扩充方案草案（代码→小辉跟进文档）：`docs/roadmap/大地图扩充方案-20261016.md`（原版世界地图结构调研 + 外扩 A/B/C）；方向与第一期规模仍待用户拍板。README 同步候选口径为 0.3.14，并补上地图 TODO、方案与 WORKTREE 链接。

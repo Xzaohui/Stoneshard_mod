@@ -98,6 +98,26 @@
       "evidence": "Write-BuildReadiness.py、Write-BuildRun.py"
     },
     {
+      "file": "character-roster-notes.json",
+      "cls": "tool-output",
+      "evidence": "Write-CharacterRoster.py"
+    },
+    {
+      "file": "character-roster.json",
+      "cls": "tool-output",
+      "evidence": "Write-CharacterRoster.py"
+    },
+    {
+      "file": "character-voice-notes.json",
+      "cls": "tool-output",
+      "evidence": "Write-VoiceSheet.py"
+    },
+    {
+      "file": "character-voice.json",
+      "cls": "tool-output",
+      "evidence": "Write-VoiceSheet.py"
+    },
+    {
       "file": "city-art-briefs.json",
       "cls": "validator-direct",
       "evidence": "Validate-CityArt.py"
@@ -130,7 +150,7 @@
     {
       "file": "city-source-log.json",
       "cls": "validator-indirect",
-      "evidence": "Validate-CityDrama.py"
+      "evidence": "Validate-CityDrama.py、Validate-HeavyEdges.py"
     },
     {
       "file": "city-space-change-log.json",
@@ -275,7 +295,7 @@
     {
       "file": "hook-mapping.json",
       "cls": "validator-direct",
-      "evidence": "Validate-HookMapping.py"
+      "evidence": "Validate-HeavyEdges.py、Validate-HookMapping.py"
     },
     {
       "file": "impl-handoff.json",
@@ -555,7 +575,7 @@
     {
       "file": "state-keys.json",
       "cls": "validator-direct",
-      "evidence": "Validate-ContentInventory.py、Validate-EventStubs.py、Validate-KeyNaming.py"
+      "evidence": "Validate-ContentInventory.py、Validate-EventStubs.py、Validate-HeavyEdges.py"
     },
     {
       "file": "story-branch-lines.json",
@@ -646,7 +666,7 @@
   "classes": {
     "validator-direct": 92,
     "validator-indirect": 24,
-    "tool-output": 5,
+    "tool-output": 9,
     "baseline": 2,
     "cited-log": 5
   },

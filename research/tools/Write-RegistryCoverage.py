@@ -6,7 +6,7 @@ writer/recorder but not validated), cited-log (cited from a design page),
 baseline (the two shared inputs). Anything left unclassified fails the guard.
 """
 from pathlib import Path
-import hashlib, json, re
+import hashlib, json, re, sys
 from NotePreserve import preserve_foreign
 ROOT = Path(__file__).resolve().parents[2]; V = ROOT / 'design'
 MARK = 'REG-COVERAGE-S152'
@@ -51,12 +51,15 @@ for r in rows:
     classes[r['cls']] = classes.get(r['cls'], 0) + 1
 reg = dict(date='2026-10-13', scope='S152 registry coverage classification: how each research JSON is covered (validator direct/indirect, tool output, cited log, baseline); unclassified must be zero',
            rows=rows, classes=classes, unclassified=[r['file'] for r in rows if r['cls'] == 'unclassified'])
-(R / 'registry-coverage.json').write_text(json.dumps(reg, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+registry_path=R / 'registry-coverage.json'
+registry_nl='\r\n' if b'\r\n' in registry_path.read_bytes() else '\n'
+registry_path.write_bytes((json.dumps(reg, ensure_ascii=False, indent=2)+'\n').replace('\n',registry_nl).encode('utf-8'))
 changed = set(); generated = {}
 def put(rel, t):
     p = V / rel; p.parent.mkdir(parents=True, exist_ok=True)
     t = preserve_foreign(V, rel, t)
-    p.write_text(t, encoding='utf-8'); changed.add('design/' + rel); generated['design/' + rel] = hashlib.sha256(p.read_bytes()).hexdigest()
+    raw=p.read_bytes() if p.exists() else b''
+    p.write_bytes((b'\xef\xbb\xbf' if raw.startswith(b'\xef\xbb\xbf') else b'') + t.replace('\r\n','\n').replace('\n','\r\n').encode('utf-8')); changed.add('design/' + rel); generated['design/' + rel] = hashlib.sha256(p.read_bytes()).hexdigest()
 n = ('---\ntitle: "登记文件覆盖分类"\nid: MGMT-REG-COVERAGE-S152\ntype: review\nstatus: draft\ncanon: mod-original\n'
      'baseline: "0.9.4.25-modbranch"\nupdated: 2026-10-13\ntags: [stoneshard, S152, review, registry]\naliases: []\n---\n\n'
      '# 登记文件覆盖分类\n\n'
@@ -98,6 +101,9 @@ rule = ('\n<!-- REG-COVERAGE-S152:BEGIN -->\n2026-10-13 S152：登记文件覆�
         f"research/ 下 {len(rows)} 份登记按覆盖方式分类：校验器直接 {classes.get('validator-direct',0)}、间接 {classes.get('validator-indirect',0)}、工具产物 {classes.get('tool-output',0)}、调查记录 {classes.get('cited-log',0)}、共享输入 {classes.get('baseline',0)}；未归类 0。"
         '新增活输入须进前两类，工具产物须由已登记工具生成，调查记录须被设计页引用；出现未归类即报错。'
         '入口design/11_管理/登记文件覆盖分类.md；运行Validate-RegistryCoverage.py及既有检查。\n<!-- REG-COVERAGE-S152:END -->\n')
+if '--update-shared-rules' not in sys.argv:
+    print(json.dumps(dict(registries=len(rows), classes=classes, unclassified=len(reg['unclassified'])), ensure_ascii=False))
+    raise SystemExit(0)
 for p in [ROOT / 'CHANGELOG.md', V / 'AGENTS.md']:
     t = p.read_text(encoding='utf-8-sig'); t = re.sub(r'\n<!-- REG-COVERAGE-S152:BEGIN -->.*?<!-- REG-COVERAGE-S152:END -->\n', '', t, flags=re.S)
     p.write_text(t.rstrip() + '\n' + rule, encoding='utf-8')

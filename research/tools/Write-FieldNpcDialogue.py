@@ -18,7 +18,7 @@ REGIONS = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06']
 REGN = {'R01': '区域_R01_布林外港与旧渠', 'R02': '区域_R02_丹布里西路与渡口', 'R03': '区域_R03_曼恩边地',
         'R04': '区域_R04_王廷关隘与边城', 'R05': '区域_R05_灰烬湿地与疫村', 'R06': '区域_R06_无名修院山地'}
 NPCS = [
- dict(id='FX-QRY', name='德茹', role='石场看守', site='rumor_abandonedQuarry1', region='R04',
+ dict(id='FX-QRY', name='德茹', role='石场看守', site='rumor_abandonedQuarry1', region='R01',
       look='五十岁上下的女石工，指节粗大，右肩比左肩低；围裙上别着一把磨秃的凿子。',
       voice='短句，先报数再谈事；问价就答“今天不卖”，从不主动提老板。',
       knows=['石场停工时谁最后下过坑', '哪一段岩壁在渗水'],
@@ -26,7 +26,7 @@ NPCS = [
       greetings=[('first', '站住。坑边不许靠近，碎石头不认人。'), ('revisit', '又是你。坑里还是那副样子。'), ('night', '夜里别在坑边转，回声比白天吓人。')],
       chats=['这块岩是打边城的料。城修完了，人也就散了。', '凿子钝了能磨，人手散了磨不回来。', '你说要买石？今天不卖，石头还没算清是谁的。'],
       site_lines=[('arrival', '你从哪条路来的？要是西边，路上看见工头没有。'), ('warning', '再往里三丈是塌方线，我拦过三个不信的。'), ('refusal', '要我替你下坑探路？不行。这坑欠我的工钱还没给。')],
-      links=['区域_R04_王廷关隘与边城', '聚落_PAS_柏石关与关外聚落']),
+      links=['区域_R01_布林外港与旧渠', '聚落_BRY_布林']),
  dict(id='FX-MIL', name='霍珥', role='水磨坊守磨人', site='rumor_abandonedWatermill1', region='R02',
       look='三十来岁的男子，袖子永远卷到手肘，虎口有磨杆磨出的厚皮；左耳后有一道旧疤。',
       voice='说话带水声般的停顿，喜欢拿磨盘打比方；一谈到水面就压低声音。',
@@ -1158,9 +1158,10 @@ def put(rel, t):
     p.write_text(t, encoding='utf-8'); changed.add('design/' + rel); generated['design/' + rel] = sha(p)
 for n in NPCS:
     rel = f"04_人物/野外人物/人物_{n['id']}_{n['name']}.md"
+    geo = '布林以东：石场坡道Q1（本地41,33）／废弃石场Q2（42,32）。' if n['id']=='FX-QRY' else ''
     b = (f"---\ntitle: \"人物_{n['id']}_{n['name']}\"\nid: {n['id']}\ntype: character\nstatus: draft\ncanon: mod-original\n"
          f"baseline: \"0.9.4.25-modbranch\"\nupdated: 2026-10-13\ntags: [stoneshard, S94, field-npc]\naliases: []\n---\n\n# 人物_{n['id']}_{n['name']}\n\n"
-         f"**工作**：{n['role']}，常在 `{n['site']}` 一带。地域见 [[{REGN[n['region']]}]]。\n\n"
+         f"**工作**：{n['role']}，常在 `{n['site']}` 一带。地域见 [[{REGN[n['region']]}]]。{geo}\n\n"
          f"**体貌与随身**：{n['look']}\n\n**口吻**：{n['voice']}\n\n"
          '**知情边界**：' + '；'.join(n['knows']) + '。' + '；'.join(n['not_knows']) + '。\n\n'
          f"当前对白见 [[台本_FX_野外人物对白]]（中英对照，含关联台本 [[{n['visits']['task']}]] 的先做/后做与完成前后回访）；本卡不新增奖励、不替他人授权，拒绝有替代出口。\n\n"
@@ -1174,7 +1175,7 @@ agg = ('---\ntitle: "台本_FX_野外人物对白"\nid: FX-FIELD-DIALOGUE\ntype:
        '> [!info] 播放规则\n> 只有本人存活、在场且愿谈时才播新句；死亡或缺席只保留事前有限陈述，不能由旁人代播。同一事实在不同人物口中有不同版本，但不含本人无权知道的内容。\n\n')
 for n in NPCS:
     agg += f"## {n['name']}·{n['role']}（`{n['id']}`）\n\n"
-    agg += f"地点类型：`{n['site']}`；地域：[[{REGN[n['region']]}]]；人物卡：[[人物_{n['id']}_{n['name']}]]。\n\n"
+    agg += f"地点类型：`{n['site']}`；地域：[[{REGN[n['region']]}]]；人物卡：[[人物_{n['id']}_{n['name']}]]。" + ('布林以东：石场坡道Q1（本地41,33）／废弃石场Q2（42,32）。' if n['id']=='FX-QRY' else '') + '\n\n'
     agg += f"**体貌**：{n['look']}\n\n**口吻**：{n['voice']}\n\n"
     agg += '**知情**：' + '；'.join(n['knows']) + '。**不越界**：' + '；'.join(n['not_knows']) + '。\n\n'
     en = n['english']

@@ -47,10 +47,12 @@ internal static class EastPilot
     internal static void Configure(Action<UndertaleGameObject, string, EventType, uint> set, ModFile files)
     {
         WidenRoom();
-        EastRegion.PrepareMap();
+        var coast=EastRegion.PrepareMap();
         EastSites.Configure(set, files);
         var widen = files.GetCode("east_pilot_widen.gml")
-            .Replace("// EAO_EAST_REGION", files.GetCode("east_region.gml").Replace("EAO_REGION_ROWS", "["+string.Join(",",EastRegion.Rows.Select(r=>"\""+r+"\""))+"]"))
+            .Replace("// EAO_EAST_REGION", files.GetCode("east_region.gml")
+                .Replace("EAO_REGION_ROWS", "["+string.Join(",",EastRegion.Rows.Select(r=>"\""+r+"\""))+"]")
+                .Replace("EAO_REGION_COAST_ROWS", "["+string.Join(",",coast.Select(r=>"\""+r+"\""))+"]"))
             .Replace("// EAO_EAST_ASTAR", files.GetCode("east_region_astar.gml"))
             .Replace("// EAO_EAST_MAP", files.GetCode("east_pilot_map.gml"));
         var cache = Msl.GetStringGMLFromFile(CacheInit);

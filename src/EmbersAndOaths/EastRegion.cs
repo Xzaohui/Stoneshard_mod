@@ -21,21 +21,24 @@ internal static class EastRegion
     internal static char Cell(int x, int y) => x >= 48 ? (y < 35 ? '^' : '~')
         : y >= 22 && y <= 40 ? Rows[y-22][x-40] : y < 22 ? '^' : '~';
 
-    internal static void PrepareMap()
+    internal static string[] PrepareMap()
     {
         PrepareRidgePaper();
         var room=Msl.GetRoom("r_GlobalMap");
         if (Rows.Length != 19 || Rows.Any(r=>r.Length != 8)) throw new InvalidOperationException("East layout shape.");
+        var coast=EastCoast.Bake(room);
         // Only EAO's appended columns are authored; all 119 original editor
         // columns, including the two former border columns, remain byte-exact.
         foreach(var layer in room.Layers.Where(l=>l.TilesData != null && l.LayerName.Content != "map_eao_east")) {
             var tiles=layer.TilesData;
             for(var x=119;x<127;x++) for(var y=0;y<tiles.TileData.Length;y++) {
                 var cell=Cell(x-77,y-22);
+                var frame=EastCoast.Frame(coast,x-77,y-22);
+                if(cell=='~' && frame==0) cell='s';
                 tiles.TileData[y][x] = layer.LayerName.Content switch {
                     "Biomes" => cell switch { '^'=>7u, '~'=>8u, 'p'=>3u, 'm'=>1u, 'r' when y-22 < 33=>1u, _=>2u },
-                    "Steppe" => cell=='s' || cell=='r' && y-22>=33 ? 15u : 0u,
-                    "Sea" => cell=='~' ? 15u : 0u,
+                    "Steppe" => cell is 's' or '~' || cell=='r' && y-22>=33 ? 15u : 0u,
+                    "Sea" => (uint)frame,
                     _=>0u
                 };
             }
@@ -51,6 +54,7 @@ internal static class EastRegion
         var t=paper.TilesData;t.TilesX=127;
         t.TileData=Enumerable.Range(0,(int)t.TilesY).Select(_=>new uint[127]).ToArray();
         for(var x=40;x<=47;x++)for(var y=25;y<=40;y++) t.TileData[y+22][x+77]=1;
+        return coast;
     }
 
     private static void PrepareRidgePaper()

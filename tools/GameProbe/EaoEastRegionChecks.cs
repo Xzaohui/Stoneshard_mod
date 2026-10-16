@@ -17,6 +17,8 @@ internal static class EaoEastRegionChecks
         var rows=Regex.Matches(cache,"push\\.s \"([\\^pmrs~]{8})\"").Select(m=>m.Groups[1].Value).Reverse().ToArray();
         Need(rows.SequenceEqual(expected),"east-region-compiled-nineteen-rows-match-approved-layout");
         char Cell(int x,int y)=>x>=48 ? y<35?'^':'~' : y>=22&&y<=40?rows[y-22][x-40]:y<22?'^':'~';
+        var coast=EaoEastCoastChecks.ReadFrames(cache);
+        checks.AddRange(EaoEastCoastChecks.Validate(data,cache,coast,Cell));
         var room=data.Rooms.Single(r=>r.Name.Content=="r_GlobalMap");
         var paper=room.Layers.Single(l=>l.LayerName.Content=="map_eao_east");
         Need(paper.TilesData!=null&&paper.TilesData.TilesX==127&&paper.TilesData.TilesY==79,"east-region-owned-paper-layer-native-size");
@@ -25,10 +27,12 @@ internal static class EaoEastRegionChecks
             var valid=true;
             for(var x=119;x<127;x++)for(var y=0;y<79;y++) {
                 var cell=Cell(x-77,y-22);
+                var frame=EaoEastCoastChecks.Frame(coast,x-77,y-22);
+                if(cell=='~'&&frame==0)cell='s';
                 uint value=layer.LayerName.Content switch {
                     "Biomes"=>cell switch{'^'=>7u,'~'=>8u,'p'=>3u,'m'=>1u,'r' when y-22<33=>1u,_=>2u},
-                    "Steppe"=>cell=='s'||cell=='r'&&y-22>=33?15u:0u,
-                    "Sea"=>cell=='~'?15u:0u,_=>0u};
+                    "Steppe"=>cell is 's' or '~'||cell=='r'&&y-22>=33?15u:0u,
+                    "Sea"=>(uint)frame,_=>0u};
                 valid &= layer.TilesData.TileData[y][x]==value;
             }
             Need(valid,"east-region-appended-editor-cells-"+layer.LayerName.Content);
@@ -51,7 +55,7 @@ internal static class EaoEastRegionChecks
         Need(cache.Contains("local._eao_steppe_frame")&&cache.Contains("scr_globaltile_get"),"east-region-native-steppe-corner-blend");
         var init=Asm("gml_Object_o_globalmap_controller_Other_19");
         Need(init.IndexOf("scr_globalmapCacheInit",StringComparison.Ordinal)<init.IndexOf("scr_globalmapFogInit",StringComparison.Ordinal)&&init.IndexOf("scr_globalmapPaperInit",StringComparison.Ordinal)<init.IndexOf("scr_glmap_caravanAstarGridUpdate",StringComparison.Ordinal),"east-region-native-fog-paper-and-path-weight-order-retained");
-        Need(cache.Contains("scr_glmap_findShoreTile")&&cache.Contains("ShoreDirection")&&cache.Contains("scr_glmap_findRoadTile")&&cache.Contains("EAO_east_road_join_y"),"east-region-native-shore-road-and-real-west-join-data");
+        Need(cache.Contains("\"EAO_coast_frame\"")&&cache.Contains("ShoreDirection")&&cache.Contains("scr_glmap_findRoadTile")&&cache.Contains("EAO_east_road_join_y"),"east-region-native-shore-road-and-real-west-join-data");
         Need(cache.Contains("\"BridgeWoodV01\"")&&!cache.Contains("\"BridgeWoodH01\""),"east-region-vertical-river-uses-east-west-walking-bridge");
         foreach(var name in new[]{"r_field","r_pineforest","r_steppe","r_SeaShore_North01","r_SeaShore_East01","r_SeaShore_SouthWest","r_River_BridgeWood_vertical_01"}) {
             var native=data.Rooms.Single(r=>r.Name.Content==name);
@@ -63,7 +67,6 @@ internal static class EaoEastRegionChecks
         var original=data.Sprites.Single(s=>s.Name.Content=="s_gmount01_paper").Textures[3].Texture;
         Need(ridge.Width==52&&ridge.Height==52&&ridge.Textures.Count==6&&ridge.Textures.All(t=>t.Texture.TexturePage==original.TexturePage&&t.Texture.SourceX>=original.SourceX&&t.Texture.SourceY>=original.SourceY&&t.Texture.SourceX+t.Texture.SourceWidth<=original.SourceX+original.SourceWidth&&t.Texture.SourceY+t.Texture.SourceHeight<=original.SourceY+original.SourceHeight),"east-region-paper-ridge-references-native-atlas-crops-only");
         Need(cache.Contains("global.glmapBatchArrayPaperMountBottom")&&cache.Contains("global.glmapBatchArrayPaperGround"),"east-region-clears-old-border-decals-in-normal-and-paper-batches");
-        Need(cache.Contains("local._eao_cn")&&cache.Contains("local._eao_cw")&&cache.Contains("local._eao_ce")&&cache.Contains("local._eao_cs"),"east-region-unmatched-coast-reconstructs-four-corners");
         Need(cache.Contains("scr_glmap_addSpriteInArray")&&cache.Contains("scr_glmap_addSpriteInPaperArray"),"east-region-native-ground-details-in-normal-and-paper-batches");
         foreach(var name in new[]{"s_globalmap_steppedecals","s_globalmap_pinedecals01"}) {
             var decal=data.Sprites.Single(s=>s.Name.Content==name);

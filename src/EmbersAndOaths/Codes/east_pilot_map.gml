@@ -66,21 +66,9 @@ for(_eao_x=40;_eao_x<_eao_nw;_eao_x++) for(_eao_y=0;_eao_y<_eao_h;_eao_y++) {
         +4*_eao_left[_eao_y+1]+8*_eao_right[_eao_y+1];
     if(_eao_steppe_frame>0) scr_glmap_addSprite(_eao_x*52,_eao_y*52,s_glmap_steppe_strip16,1,_eao_steppe_frame);
     if(_eao_biome=="Sea") {
-        var _eao_frame=scr_glmap_findShoreTile(_eao_x,_eao_y);
-        // The native lookup does not include every inlet made by this layout.
-        // Reconstruct its corner bits for unmatched neighbors, never default a
-        // coast to a full water square. Water[0] is read before flags are set.
-        if(_eao_frame<0) {
-            var _eao_cn=scr_globaltile_get("Biome",_eao_x,_eao_y-1)=="Sea";
-            var _eao_cw=scr_globaltile_get("Biome",_eao_x-1,_eao_y)=="Sea";
-            var _eao_ce=scr_globaltile_get("Biome",min(_eao_x+1,_eao_nw-1),_eao_y)=="Sea";
-            var _eao_cs=scr_globaltile_get("Biome",_eao_x,min(_eao_y+1,_eao_h-1))=="Sea";
-            _eao_frame=(_eao_cn+_eao_cw+(scr_globaltile_get("Biome",_eao_x-1,_eao_y-1)=="Sea")>=2 ? 1 : 0)
-                +(_eao_cn+_eao_ce+(scr_globaltile_get("Biome",min(_eao_x+1,_eao_nw-1),_eao_y-1)=="Sea")>=2 ? 2 : 0)
-                +(_eao_cs+_eao_cw+(scr_globaltile_get("Biome",_eao_x-1,min(_eao_y+1,_eao_h-1))=="Sea")>=2 ? 4 : 0)
-                +(_eao_cs+_eao_ce+(scr_globaltile_get("Biome",min(_eao_x+1,_eao_nw-1),min(_eao_y+1,_eao_h-1))=="Sea")>=2 ? 8 : 0);
-        }
-        if(_eao_x>=49 || _eao_y<2 || _eao_y>=_eao_h-2) _eao_frame=15;
+        // One baked shared-corner contour drives the editor, actual terrain
+        // and both native draw batches. Never force a border cell to full sea.
+        var _eao_frame=ds_map_find_value(_eao_p,"EAO_coast_frame");
         scr_glmap_addSprite(_eao_x*52,_eao_y*52,s_glmap_sea_strip16,4,_eao_frame);
         var _eao_shore_room=-1;var _eao_shore_class="";
         switch(_eao_frame) {
@@ -95,7 +83,9 @@ for(_eao_x=40;_eao_x<_eao_nw;_eao_x++) for(_eao_y=0;_eao_y<_eao_h;_eao_y++) {
             case 11: _eao_shore_room=r_SeaShore_SouthWestU;_eao_shore_class="SouthWestOutside";break;
             case 12:
                 var _eao_norths=[r_SeaShore_North01,r_SeaShore_North02,r_SeaShore_North03];
-                _eao_shore_room=_eao_norths[(_eao_x+_eao_y) mod 3];break;
+                _eao_shore_room=_eao_norths[(_eao_x+_eao_y) mod 3];_eao_shore_class="north";break;
+            case 13: _eao_shore_room=r_SeaShore_NorthEastU;_eao_shore_class="NorthEastOutside";break;
+            case 14: _eao_shore_room=r_SeaShore_NorthWestU;_eao_shore_class="NorthWestOutside";break;
         }
         if(_eao_shore_room!=-1 && _eao_x<48) {
             ds_map_set(_eao_p,"room_type",room_get_name(_eao_shore_room));

@@ -152,13 +152,19 @@ if ([version]$taskReport.modVersion -ge [version]'0.3.20') {
     }
 }
 if ([version]$taskReport.modVersion -ge [version]'0.3.21') {
-    foreach ($taskRequired in @('east-region-unmatched-coast-reconstructs-four-corners','east-region-native-ground-details-in-normal-and-paper-batches','east-region-native-decal-stays-within-cell-s_globalmap_steppedecals','east-region-native-decal-stays-within-cell-s_globalmap_pinedecals01','east-region-deterministic-decal-variation-and-steppe-bridge-palette')) {
+    $taskCoastCheck=if([version]$taskReport.modVersion -ge [version]'0.3.24'){'east-coast-one-canonical-contour-drives-draw-and-native-terrain-with-dry-inlet'}else{'east-region-unmatched-coast-reconstructs-four-corners'}
+    foreach ($taskRequired in @($taskCoastCheck,'east-region-native-ground-details-in-normal-and-paper-batches','east-region-native-decal-stays-within-cell-s_globalmap_steppedecals','east-region-native-decal-stays-within-cell-s_globalmap_pinedecals01','east-region-deterministic-decal-variation-and-steppe-bridge-palette')) {
         if ($taskRequired -notin $taskRegion.checks) { throw ('Missing east map style check: ' + $taskRequired) }
     }
 }
 if ([version]$taskReport.modVersion -ge [version]'0.3.22') {
     foreach ($taskRequired in @('dev-map-focused-left-state-and-owned-user10-registered','dev-map-disable-restores-native-callback-and-only-owned-left-state')) {
         if ($taskRequired -notin $taskDev.checks) { throw ('Missing developer map registration check: ' + $taskRequired) }
+    }
+}
+if ([version]$taskReport.modVersion -ge [version]'0.3.24') {
+    foreach ($taskRequired in @('east-coast-every-horizontal-water-edge-shares-both-endpoints','east-coast-every-vertical-water-edge-shares-both-endpoints','east-coast-retained-native-west-water-edge-matches','east-coast-all-planned-land-river-and-final-task-cells-stay-dry','east-coast-no-saddle-without-a-native-room','east-coast-every-dry-shore-portion-connects-to-west-land-without-diagonal-only-islands','east-coast-corner-bits-match-actual-embedded-native-water-pixels','east-coast-horizontal-native-water-pixel-coverage-continuous-at-edge-quarters','east-coast-vertical-native-water-pixel-coverage-continuous-at-edge-quarters','east-coast-north-and-both-outside-corner-directions-present')) {
+        if ($taskRequired -notin $taskRegion.checks) { throw ('Missing east coast continuity check: ' + $taskRequired) }
     }
 }
 function Test-TaskNoLink([string]$Path) {

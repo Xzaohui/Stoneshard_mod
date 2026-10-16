@@ -1,6 +1,7 @@
 // Approved east-layout rows, x40..47 / y22..40. Ordinary cells remain native
 // generated wilderness. G1/F1/Q2 scene migration is deliberately separate.
 var _eao_rows = EAO_REGION_ROWS;
+var _eao_coast_rows = EAO_REGION_COAST_ROWS;
 var _eao_source = ds_grid_get(global.terrainGrid, 39, 35);
 var _eao_ss = ds_map_find_value(_eao_source, "SpawnerSettings");
 var _eao_master_seed = real(global.seed);
@@ -10,7 +11,12 @@ for (_eao_x = 40; _eao_x < _eao_nw; _eao_x++) {
         if (_eao_x < 48 && _eao_y >= 22 && _eao_y <= 40)
             _eao_cell = string_char_at(_eao_rows[_eao_y-22], _eao_x-39);
         if (_eao_x >= 48) _eao_cell = _eao_y < 35 ? "^" : "~";
+        var _eao_coast_frame=string_pos(string_char_at(_eao_coast_rows[_eao_y],_eao_x-39),"0123456789abcdef")-1;
+        // A one-cell inlet with no water corners is dry land in both the map
+        // and the actual room; never leave an invisible blocked sea cell.
+        if(_eao_cell=="~" && _eao_coast_frame==0) _eao_cell="s";
         _eao_p = ds_grid_get(global.terrainGrid, _eao_x, _eao_y);
+        ds_map_set(_eao_p,"EAO_coast_frame",_eao_coast_frame);
         var _eao_land = _eao_cell != "^" && _eao_cell != "~";
         var _eao_biome = "Middle";
         var _eao_room = r_field;

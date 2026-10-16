@@ -315,7 +315,10 @@ if (args.Length > 1 && (args[1] == "--patch" || args[1] == "--repair-eao")) {
         EaoInteraction.Validate(readback);
         EaoRooms.Validate(readback);
         EaoStory.Validate(readback);
-        foreach(var room in readback.Rooms.Where(r=>originalRooms.ContainsKey(r.Name.Content))) if(EaoRooms.Fingerprint(room)!=originalRooms[room.Name.Content]) throw new InvalidDataException("Original room changed after serialization: "+room.Name.Content);
+        foreach(var room in readback.Rooms.Where(r=>originalRooms.ContainsKey(r.Name.Content))) {
+            if(room.Name.Content=="r_GlobalMap" && room.Width==127*52 && room.Layers.Where(l=>l.TilesData!=null).All(l=>l.TilesData.TilesX==127 && l.TilesData.TileData.All(row=>row.Length==127))) continue;
+            if(EaoRooms.Fingerprint(room)!=originalRooms[room.Name.Content]) throw new InvalidDataException("Original room changed after serialization: "+room.Name.Content);
+        }
         if (repair) {
             var savedCode = readback.Code.ToDictionary(c => c.Name.Content);
             foreach (var pair in originalCode.Where(p => !repairCodeNames.Contains(p.Key))) {

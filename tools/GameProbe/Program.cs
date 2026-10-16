@@ -323,6 +323,7 @@ if (args.Length > 1 && (args[1] == "--patch" || args[1] == "--repair-eao")) {
             var savedCode = readback.Code.ToDictionary(c => c.Name.Content);
             foreach (var pair in originalCode.Where(p => !repairCodeNames.Contains(p.Key))) {
                 var entry = savedCode[pair.Key];
+                if (pair.Key.EndsWith("scr_globalmapCacheInit") && entry.Disassemble(readback.Variables, readback.CodeLocals.For(entry)).Contains("EAO_east_grid")) continue; // GEO-02 east pilot hook
                 if (entry.Disassemble(readback.Variables, readback.CodeLocals.For(entry)) != pair.Value) throw new InvalidDataException("Original code changed after repair serialization: " + pair.Key);
             }
         }

@@ -1,4 +1,4 @@
-if (!global.EAO_dev_enabled || !instance_exists(o_player) || instance_exists(o_smoothRoomChanger) || instance_exists(o_dialogue) || instance_exists(o_globalmap)) exit;
+if (!global.EAO_dev_enabled || !instance_exists(o_player) || instance_exists(o_smoothRoomChanger) || instance_exists(o_dialogue) || instance_exists(o_globalmap) || instance_exists(o_eao_dev_coordinates)) exit;
 if (o_player.HP <= 0 || instance_exists(o_dungeon_controller) || scr_getAgredMobsCount(false,false,true) != 0 || !ds_list_empty(o_player.lock_turn) || scr_unitTurnGetTime()) exit;
 var _return = keyboard_check(vk_shift) || keyboard_check_pressed(vk_shift);
 var _target = r_eao_n1_yard;

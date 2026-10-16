@@ -1,5 +1,6 @@
 // GUI state 2 is the native focused LEFT press, not a screen-wide mouse poll.
 if (guiInteractiveState == 2 && ds_map_exists(global.characterDataMap, "EAO_test_teleport_enabled") && ds_map_find_value(global.characterDataMap, "EAO_test_teleport_enabled") == 1) {
+    if(instance_exists(o_eao_dev_coordinates)) exit;
     if (drag || edge || !enter || !instance_exists(guiParent) || global.contract_test) exit;
     var _cell = 52 * guiParent.mapScale;
     var _grid_x = floor((guiParent.mapOffsetX + global.guiMouseX - x) / _cell);

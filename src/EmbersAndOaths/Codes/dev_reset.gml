@@ -10,6 +10,11 @@ if (variable_global_exists("characterDataMap") && ds_exists(global.characterData
 }
 global.EAO_dev_return_keep = false;
 global.EAO_dev_warp_keep = false;
+dev_coord_submitting=false;
+dev_coord_text="";
+dev_coord_error="";
+dev_coord_queued=false;
+with(o_eao_dev_coordinates) instance_destroy();
 with (o_globalmapInteractiveNormal) {
     if (variable_instance_exists(id,"EAO_dev_map_owned") && EAO_dev_map_owned) {
         // A later owner must not be overwritten on reset.

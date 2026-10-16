@@ -1,5 +1,7 @@
 if (!ds_map_exists(global.characterDataMap, "EAO_test_map_pending") || ds_map_find_value(global.characterDataMap, "EAO_test_map_pending") != 1) exit;
 if (ds_map_find_value(global.characterDataMap, "EAO_test_teleport_enabled") != 1) { ds_map_set(global.characterDataMap, "EAO_test_map_pending", 0); exit; }
+// Keep the native modal input blocker until its Enter/click has been released.
+if(instance_exists(o_eao_dev_coordinates)) exit;
 var _player = instance_find(o_player, 0);
 // F6 explicitly opts into developer warping, including escape from pursuit.
 // No enemy/turn flags are cleared and no live player coordinates are changed.

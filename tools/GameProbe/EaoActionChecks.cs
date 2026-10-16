@@ -32,6 +32,8 @@ internal static class EaoActionChecks
         var eastSurface = data.Rooms.Any(r => r.Name.Content == "r_eao_n2_world");
         var devWarp = data.Code.SingleOrDefault(c=>c.Name.Content=="gml_Object_o_eao_devtools_Other_11");
         if(devWarp!=null) methods["test_dev_warp"]=devWarp.Disassemble(data.Variables,data.CodeLocals.For(devWarp));
+        var devCancel=data.Code.SingleOrDefault(c=>c.Name.Content=="gml_Object_o_eao_dev_coordinates_Other_11");
+        if(devCancel!=null) methods["test_dev_cancel"]=devCancel.Disassemble(data.Variables,data.CodeLocals.For(devCancel));
         if (eastSurface) foreach (var pair in new[] { ("test_geo_return", "gml_Object_o_eao_n2_home_Step_0"), ("test_geo_enter", "gml_Object_o_eao_site_door_shed_Alarm_7") }) {
             var code = data.Code.Single(c => c.Name.Content == pair.Item2);
             methods[pair.Item1] = code.Disassemble(data.Variables, data.CodeLocals.For(code));
@@ -176,16 +178,39 @@ internal static class EaoActionChecks
             vm.Dungeon=false;vm.Run("test_click");vm.Locked=true;vm.Run("test_execute");Require(!vm.Changer&&NumberValue(vm.Map["EAO_test_map_pending"])==1,"turn lock");
         });
         if(devWarp!=null) {
+            if(devCancel!=null) {
+                Test("dev-coordinate-open-is-single-native-modal-without-queued-travel",vm=>{
+                    vm.Dev=true;vm.ModalSubmitting=false;vm.Run("test_dev_warp");
+                    Require(vm.ModalOpen&&vm.ModalCreations==1&&!vm.Map.ContainsKey("EAO_test_map_pending")&&vm.GridX==29,"opening changed world or queued travel");
+                    vm.Run("test_dev_warp");Require(vm.ModalCreations==1,"duplicate modal");
+                    vm.ModalOpen=false;vm.OtherConfirm=true;vm.Run("test_dev_warp");Require(vm.ModalCreations==1,"nested native confirmation");
+                });
+                Test("dev-coordinate-queued-travel-waits-until-editor-is-gone",vm=>{
+                    vm.Dev=true;vm.DialogText="45,36";vm.Run("test_dev_warp");vm.ModalOpen=true;vm.Run("test_execute");
+                    Require(!vm.Changer&&NumberValue(vm.Map["EAO_test_map_pending"])==1&&vm.GridX==29,"travel began while modal retained trigger");
+                    vm.ModalOpen=false;vm.Run("test_execute");Require(vm.Changer&&vm.GridX==29,"released editor failed to defer native source save");
+                });
+                Test("dev-coordinate-submit-while-shift-held-keeps-typed-target",vm=>{
+                    vm.Dev=true;vm.Shift=true;vm.ModalSubmitting=true;vm.DialogText="45,36";vm.Run("test_dev_warp");
+                    Require(vm.CoordQueued&&NumberValue(vm.Map["EAO_test_map_x"])==45&&NumberValue(vm.Map["EAO_test_map_y"])==36&&NumberValue(vm.Map["EAO_test_map_home"])==0,"Shift during editor submit replaced typed target with departure");
+                });
+                Test("dev-coordinate-cancel-only-clears-own-uncommitted-current-character-request",vm=>{
+                    vm.Map["EAO_test_map_pending"]=1;vm.Run("test_dev_cancel");Require(NumberValue(vm.Map["EAO_test_map_pending"])==1,"empty editor canceled another request");
+                    vm.ModalQueued=true;vm.DifferentCharacter=true;vm.Run("test_dev_cancel");Require(NumberValue(vm.Map["EAO_test_map_pending"])==1,"canceled a different character request");
+                    vm.ModalQueued=true;vm.DifferentCharacter=false;vm.Changer=true;vm.Run("test_dev_cancel");Require(NumberValue(vm.Map["EAO_test_map_pending"])==1,"canceled a running native save");
+                    vm.ModalQueued=true;vm.Changer=false;vm.Run("test_dev_cancel");Require(NumberValue(vm.Map["EAO_test_map_pending"])==0&&vm.ModalClosing,"own cancellation failed");
+                });
+            }
             Test("dev-warp-default-off-cancel-and-malformed-coordinate-noop",vm=> {
                 vm.DialogText="41,37";vm.Run("test_dev_warp");Require(!vm.Map.ContainsKey("EAO_test_map_pending"),"developer opt-in");
                 vm.Dev=true;
-                foreach(var text in new[]{"","abc","-1,3","1.2,3","1,2,3","1,","1","999,37","41,99"}) {
-                    vm.DialogText=text;vm.Run("test_dev_warp");Require(!vm.Map.ContainsKey("EAO_test_map_pending"),"invalid input: "+text);
+                foreach(var text in new[]{"","abc","-1,3","1.2,3","1,2,3","1,","1","999,37","41,99","45,36"+new string(' ',40)+"a"}) {
+                    vm.DialogText=text;vm.Run("test_dev_warp");Require(!vm.Map.ContainsKey("EAO_test_map_pending")&&(devCancel==null||!vm.CoordQueued&&vm.CoordError.Length>0),"invalid input: "+text);
                 }
             });
             Test("dev-warp-coordinate-combat-escape-preserves-source-until-saver",vm=> {
                 vm.Dev=true;vm.Combat=true;vm.DialogText=" 41, 37 ";vm.Run("test_dev_warp");
-                Require(NumberValue(vm.Map["EAO_test_map_x"])==41&&NumberValue(vm.Map["EAO_test_map_y"])==37,"coordinate parse");
+                Require(NumberValue(vm.Map["EAO_test_map_x"])==41&&NumberValue(vm.Map["EAO_test_map_y"])==37&&(devCancel==null||vm.CoordQueued),"coordinate parse");
                 vm.Run("test_execute");Require(vm.Changer&&vm.Combat&&vm.GridX==29&&vm.GridY==15,"combat flags/source untouched");
                 vm.Run("test_commit");Require(vm.GridX==41&&vm.GridY==37&&vm.Items.Count==0&&vm.State==0,"native commit/no reward");
                 Require((string)vm.Map["EAO_dev_warp_origin_room"]! == "r_taverninside1floor"&&NumberValue(vm.Map["EAO_dev_warp_origin_x"])==325,"first origin");
@@ -198,13 +223,13 @@ internal static class EaoActionChecks
                 vm.Dev=true;vm.DialogText="41,37";vm.Run("test_dev_warp");vm.Run("test_execute");vm.Run("test_commit");
                 vm.Changer=false;vm.CurrentRoom=vm.RequestedRoom;vm.DialogText="45,36";vm.Run("test_dev_warp");vm.Run("test_execute");vm.Run("test_commit");
                 Require(NumberValue(vm.Map["EAO_dev_warp_origin_grid_x"])==29,"second hop overwrote origin");
-                vm.Changer=false;vm.Shift=true;vm.Run("test_dev_warp");vm.Run("test_execute");
+                vm.Changer=false;vm.Shift=true;vm.ModalSubmitting=false;vm.Run("test_dev_warp");vm.Run("test_execute");
                 Require(vm.RequestedRoom==vm.RoomIndex("r_taverninside1floor")&&vm.GridX==45,"return exact room/deferred coordinate");
                 vm.Run("test_commit");Require(vm.GridX==29&&vm.GridY==15&&NumberValue(vm.Map["localX"])==325&&NumberValue(vm.Map["localY"])==454&&NumberValue(vm.Map["EAO_test_map_arrival"])==0,"return exact original position");
             });
             Test("dev-warp-no-origin-lock-dungeon-and-disabled-return-gates",vm=> {
-                vm.Dev=true;vm.Shift=true;vm.Run("test_dev_warp");Require(vm.Map.Count==0,"no return origin");
-                vm.Shift=false;vm.DialogText="41,37";vm.Locked=true;vm.Run("test_dev_warp");Require(vm.Map.Count==0,"action locked");
+                vm.Dev=true;vm.Shift=true;vm.ModalSubmitting=false;vm.Run("test_dev_warp");Require(vm.Map.Count==0,"no return origin");
+                vm.Shift=false;vm.ModalSubmitting=true;vm.DialogText="41,37";vm.Locked=true;vm.Run("test_dev_warp");Require(vm.Map.Count==0,"action locked");
                 vm.Locked=false;vm.Dungeon=true;vm.Run("test_dev_warp");Require(vm.Map.Count==0,"dungeon");
                 vm.Dungeon=false;vm.Run("test_dev_warp");vm.Map["EAO_test_map_home"]=1;vm.Dev=false;vm.Run("test_execute");Require(!vm.Changer,"disabled developer return");
             });
@@ -341,6 +366,9 @@ internal static class EaoActionChecks
         public int Capacity = 4, FailCreation = -1;
         public bool Combat, Dungeon, Changer, FailTransition, Border, MissingRoom, Locked, Drag;
         public bool Dev, Shift;
+        public bool ModalSubmitting=true,ModalOpen,OtherConfirm,ModalQueued,ModalClosing,DifferentCharacter,CoordQueued;
+        public int ModalCreations;
+        public string CoordError="";
         public bool WaterLanding, AllWater, WaterPending;
         public int PlaceholderDelays;
         public readonly Dictionary<string,object?> Globals = new() { ["global.EAO_dev_warp_keep"]=false };
@@ -362,7 +390,7 @@ internal static class EaoActionChecks
         public int State => Map.TryGetValue("EAO_MQ01", out var value) ? (int)Number(value) : 0;
         public int Carried => Items.Values.Count(p => p.Carried);
         public void ReadOriginals() { foreach (var id in new[] { "letter", "enclosure", "receipt" }) Map["EAO_read_eao_" + id] = 1; }
-        private static double Number(object? value) => value is bool flag ? (flag ? 1 : 0) : Convert.ToDouble(value, CultureInfo.InvariantCulture);
+        private static double Number(object? value) => value is Dictionary<string,object?> ? 1 : value is bool flag ? (flag ? 1 : 0) : Convert.ToDouble(value, CultureInfo.InvariantCulture);
         private static bool Truth(object? value) => Number(value) >= 0.5; // GML numeric boolean conversion (noone=-4 is false).
         public double Run(string method)
         {
@@ -380,6 +408,12 @@ internal static class EaoActionChecks
                 if (name == "global.EAO_dev_enabled") return Dev;
                 if (name == "global.worldWidth") return 50;
                 if (name == "global.worldHeight") return 45;
+                if (name == "global.guiBaseContainerVisible") return 810000;
+                if (name is "builtin.id" or "self.id") return 810001;
+                if (name == "self.dev_coord_submitting") return ModalSubmitting;
+                if (name == "self.dev_coord_text") return DialogText;
+                if (name == "self.eao_coord_queued") return ModalQueued;
+                if (name == "self.eao_coord_character") return DifferentCharacter?900999:Map;
                 if (Globals.TryGetValue(name,out var globalValue)) return globalValue;
                 if (name == "self.guiInteractiveState") return GuiState;
                 if (name == "self.drag") return Drag;
@@ -422,7 +456,15 @@ internal static class EaoActionChecks
                     else if (opcode.EndsWith(".v")) stack.Push(Resolve(operand));
                     else stack.Push(double.Parse(operand, CultureInfo.InvariantCulture));
                 } else if (opcode.StartsWith("pop.")) {
-                    if (method=="test_geo_return" && operand=="self.target") DoorTarget=(int)Number(stack.Pop());
+                    if(method=="test_dev_warp"&&operand=="self.dev_coord_queued") CoordQueued=Truth(stack.Pop());
+                    else if(method=="test_dev_warp"&&operand=="self.dev_coord_error") CoordError=(string)stack.Pop()!;
+                    else if(method=="test_dev_warp"&&operand=="[stacktop]self.eao_coord_owner") {
+                        var receiver=Number(stack.Pop());if(receiver==-9)receiver=Number(stack.Pop());
+                        if(receiver!=750001||Number(stack.Pop())!=810001)throw new InvalidDataException("Coordinate editor owner mismatch");
+                    }
+                    else if(method=="test_dev_cancel"&&operand=="self.eao_coord_queued") ModalQueued=Truth(stack.Pop());
+                    else if(method=="test_dev_cancel"&&operand=="self.eao_coord_closing") ModalClosing=Truth(stack.Pop());
+                    else if (method=="test_geo_return" && operand=="self.target") DoorTarget=(int)Number(stack.Pop());
                     else if (operand=="global.position_tag") PositionTag=(string)stack.Pop()!;
                     else if(method=="test_commit" && operand=="global.playerGridX") GridX=(int)Number(stack.Pop());
                     else if(method=="test_commit" && operand=="global.playerGridY") GridY=(int)Number(stack.Pop());
@@ -486,7 +528,10 @@ internal static class EaoActionChecks
                 case "floor": return Math.Floor(Number(args[0]));
                 case "keyboard_check": return Shift;
                 case "keyboard_check_pressed": return Shift;
-                case "get_string": return DialogText;
+                case "get_string": return DialogText; // Legacy candidate support only.
+                case "scr_guiCreateContainer":
+                    if(Int(0)!=810000||Int(1)!=ObjectIndex("o_eao_dev_coordinates")) throw new InvalidDataException("Coordinate editor must use native visible GUI container");
+                    ModalOpen=true;ModalCreations++;return 750001;
                 case "string_replace_all": return ((string)args[0]!).Replace((string)args[1]!, (string)args[2]!);
                 case "string_pos": return ((string)args[1]!).IndexOf((string)args[0]!,StringComparison.Ordinal)+1;
                 case "string_length": return ((string)args[0]!).Length;
@@ -530,6 +575,8 @@ internal static class EaoActionChecks
                     if(paperObject==ObjectIndex("o_player")&&Int(1)==0) return 100001;
                     if (paperObject != inventoryObject || Int(1) != 0) throw new InvalidDataException("Wrong inventory receiver"); return 100000;
                 case "instance_exists":
+                    if(paperObject==ObjectIndex("o_eao_dev_coordinates")) return ModalOpen;
+                    if(paperObject==ObjectIndex("o_confirm_panel")) return OtherConfirm||ModalOpen;
                     if(paperObject==ObjectIndex("o_water_grid")) return WaterPending;
                     if(paperObject==ObjectIndex("o_eao_d01_entry")) return EntryExists;
                     if(paperObject==ObjectIndex("o_globalmap")||paperObject==ObjectIndex("o_journal")||paperObject==ObjectIndex("o_dialogue")) return false;

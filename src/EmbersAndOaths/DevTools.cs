@@ -14,6 +14,7 @@ internal static class DevTools
         Msl.AddObject("o_eao_devtools",isVisible:true,isPersistent:true);
         var portal=Msl.AddObject("o_eao_dev_portal",parentName:"o_Doors_all_small",isVisible:false);
         portal.ParentId=Msl.GetObject("o_Doors_all_small");portal.Sprite=Msl.GetObject("o_Doors_all_small").Sprite;
+        DevCoordinates.Prepare();
     }
     internal static void Configure(Action<UndertaleGameObject,string,EventType,uint> set,ModFile files)
     {
@@ -22,13 +23,14 @@ internal static class DevTools
         set(dev,files.GetCode("dev_step.gml"),EventType.Step,2);
         set(dev,files.GetCode("dev_reset.gml"),EventType.Other,10);
         set(dev,"event_user(0);",EventType.CleanUp,0);
-        set(dev,"if (global.EAO_dev_enabled) dev_panel = !dev_panel;",EventType.KeyPress,116);
+        set(dev,"if (global.EAO_dev_enabled && !instance_exists(o_eao_dev_coordinates)) dev_panel = !dev_panel;",EventType.KeyPress,116);
         set(dev,files.GetCode("dev_toggle.gml"),EventType.KeyPress,117);
-        set(dev,"if (global.EAO_dev_enabled && instance_exists(o_player) && !instance_exists(o_smoothRoomChanger)) { dev_reveal = !dev_reveal; }",EventType.KeyPress,118);
-        set(dev,"if (global.EAO_dev_enabled) dev_grid = !dev_grid;",EventType.KeyPress,120);
-        set(dev,"if (global.EAO_dev_enabled) global.EAO_dev_art = !global.EAO_dev_art;",EventType.KeyPress,121);
+        set(dev,"if (global.EAO_dev_enabled && !instance_exists(o_eao_dev_coordinates) && instance_exists(o_player) && !instance_exists(o_smoothRoomChanger)) { dev_reveal = !dev_reveal; }",EventType.KeyPress,118);
+        set(dev,"if (global.EAO_dev_enabled && !instance_exists(o_eao_dev_coordinates)) dev_grid = !dev_grid;",EventType.KeyPress,120);
+        set(dev,"if (global.EAO_dev_enabled && !instance_exists(o_eao_dev_coordinates)) global.EAO_dev_art = !global.EAO_dev_art;",EventType.KeyPress,121);
         set(dev,files.GetCode("dev_visit.gml"),EventType.KeyPress,122);
         set(dev,files.GetCode("dev_warp.gml"),EventType.Other,11);
+        DevCoordinates.Configure(set,files);
         // Use the same world draw pass as the verified grid; the installed game's
         // GUI passes did not display this independent observer during runtime tests.
         // Each optional observer section uses exit, so isolate it in a block

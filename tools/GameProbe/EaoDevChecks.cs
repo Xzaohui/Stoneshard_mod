@@ -17,7 +17,7 @@ internal static class EaoDevChecks
         Require(Asm("gml_Object_o_eao_devtools_Draw_0").Contains("draw_text")&&Asm("gml_Object_o_eao_devtools_Draw_0").Contains("matrix_set"),"dev-panel-world-pass-restores-transform");
         Require(dev.Events[(int)EventType.KeyPress].Select(e=>e.EventSubtype).Order().SequenceEqual(new uint[]{116,117,118,120,121,122}),"dev-f6-f7-f9-f10-f11-wired");
         var warp=Asm("gml_Object_o_eao_devtools_Other_11");
-        Require(new[]{"get_string","string_digits","global.worldWidth","global.worldHeight","EAO_test_map_home","EAO_dev_warp_origin_room"}.All(warp.Contains),"dev-f8-validated-coordinate-modal-and-shift-return");
+        Require(new[]{"scr_guiCreateContainer","dev_coord_submitting","string_digits","global.worldWidth","global.worldHeight","EAO_test_map_home","EAO_dev_warp_origin_room"}.All(warp.Contains)&&!warp.Contains("get_string"),"dev-f8-validated-coordinate-modal-and-shift-return");
         var warpRoute=Asm("gml_Object_o_eao_controller_KeyPress_119");
         Require(warpRoute.Contains("global.EAO_dev_enabled")&&!warpRoute.Contains("keyboard_check")&&warpRoute.Contains("event_user")&&warp.Contains("keyboard_check_pressed")&&dev.Events[(int)EventType.Other].Any(e=>e.EventSubtype==11),"dev-f8-single-modifier-route-keeps-steam-f12-free");
         Require(Asm("gml_Object_o_eao_controller_Create_0").Contains("instance_create_depth"),"dev-boot-creation");
@@ -25,6 +25,7 @@ internal static class EaoDevChecks
         Require(Regex.IsMatch(create,@"pushi\.e 0\s+pop\.v\.[bi] global.EAO_dev_enabled"),"dev-default-off");
         var reset=Asm("gml_Object_o_eao_devtools_Other_10");
         var step=Asm("gml_Object_o_eao_devtools_Step_2");
+        checks.AddRange(EaoDevCoordinateChecks.Validate(data,Asm));
         Require(new[]{"EAO_dev_map_owned","EAO_dev_map_left_before","scr_guiInteractiveStateUpdate","scr_guiInteractiveEventUpdate","guiInteractiveEvent"}.All(step.Contains),"dev-map-focused-left-state-and-owned-user10-registered");
         Require(new[]{"EAO_dev_map_owned","EAO_dev_map_left_before","ds_list_delete","guiInteractiveStatesCount","scr_guiInteractiveEventUpdate"}.All(reset.Contains),"dev-map-disable-restores-native-callback-and-only-owned-left-state");
         Require(step.Contains("EAO_dev_warp_keep")&&step.Contains("EAO_dev_warp_player")&&step.Contains("EAO_dev_warp_grid_x")&&reset.Contains("EAO_dev_warp_keep"),"dev-warp-observer-survives-owned-new-player-and-resets-on-disable");
